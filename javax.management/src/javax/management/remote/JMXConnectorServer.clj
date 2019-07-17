@@ -52,7 +52,7 @@
 
   returns: the MBean server that this connector server is attached
    to, or null if it is not yet attached to an MBean server. - `javax.management.MBeanServer`"
-  ([^javax.management.remote.JMXConnectorServer this]
+  (^javax.management.MBeanServer [^javax.management.remote.JMXConnectorServer this]
     (-> this (.getMBeanServer))))
 
 (defn set-m-bean-server-forwarder
@@ -131,7 +131,7 @@
    to this connector server. - `javax.management.remote.JMXConnector`
 
   throws: java.lang.UnsupportedOperationException - if this connector server does not support the generation of client stubs."
-  ([^javax.management.remote.JMXConnectorServer this ^java.util.Map env]
+  (^javax.management.remote.JMXConnector [^javax.management.remote.JMXConnectorServer this ^java.util.Map env]
     (-> this (.toJMXConnector env))))
 
 (defn post-register
@@ -158,6 +158,6 @@
   returns: The name under which the MBean is to be registered. - `javax.management.ObjectName`
 
   throws: java.lang.NullPointerException - if mbs or name is null."
-  ([^javax.management.remote.JMXConnectorServer this ^javax.management.MBeanServer mbs ^javax.management.ObjectName name]
+  (^javax.management.ObjectName [^javax.management.remote.JMXConnectorServer this ^javax.management.MBeanServer mbs ^javax.management.ObjectName name]
     (-> this (.preRegister mbs name))))
 

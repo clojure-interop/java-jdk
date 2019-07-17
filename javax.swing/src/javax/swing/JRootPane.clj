@@ -275,7 +275,7 @@
           ERROR_DIALOG, COLOR_CHOOSER_DIALOG,
           FILE_CHOOSER_DIALOG, QUESTION_DIALOG or
           WARNING_DIALOG. - `int`"
-  ([^javax.swing.JRootPane this]
+  (^Integer [^javax.swing.JRootPane this]
     (-> this (.getWindowDecorationStyle))))
 
 (defn get-content-pane
@@ -283,7 +283,7 @@
    parented by the root pane.
 
   returns: the Container that holds the component-contents - `java.awt.Container`"
-  ([^javax.swing.JRootPane this]
+  (^java.awt.Container [^javax.swing.JRootPane this]
     (-> this (.getContentPane))))
 
 (defn set-double-buffered
@@ -303,14 +303,14 @@
    that renders this component.
 
   returns: the string `RootPaneUI` - `java.lang.String`"
-  ([^javax.swing.JRootPane this]
+  (^java.lang.String [^javax.swing.JRootPane this]
     (-> this (.getUIClassID))))
 
 (defn get-j-menu-bar
   "Returns the menu bar from the layered pane.
 
   returns: the JMenuBar used in the pane - `javax.swing.JMenuBar`"
-  ([^javax.swing.JRootPane this]
+  (^javax.swing.JMenuBar [^javax.swing.JRootPane this]
     (-> this (.getJMenuBar))))
 
 (defn validate-root?
@@ -323,7 +323,7 @@
    because both classes override isValidateRoot to return true.
 
   returns: true - `boolean`"
-  ([^javax.swing.JRootPane this]
+  (^Boolean [^javax.swing.JRootPane this]
     (-> this (.isValidateRoot))))
 
 (defn add-notify
@@ -365,14 +365,14 @@
   "Returns the L&F object that renders this component.
 
   returns: LabelUI object - `javax.swing.plaf.RootPaneUI`"
-  ([^javax.swing.JRootPane this]
+  (^javax.swing.plaf.RootPaneUI [^javax.swing.JRootPane this]
     (-> this (.getUI))))
 
 (defn get-glass-pane
   "Returns the current glass pane for this JRootPane.
 
   returns: the current glass pane - `java.awt.Component`"
-  ([^javax.swing.JRootPane this]
+  (^java.awt.Component [^javax.swing.JRootPane this]
     (-> this (.getGlassPane))))
 
 (defn get-accessible-context
@@ -384,7 +384,7 @@
 
   returns: an AccessibleJRootPane that serves as the
            AccessibleContext of this JRootPane - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.JRootPane this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.JRootPane this]
     (-> this (.getAccessibleContext))))
 
 (defn set-glass-pane
@@ -417,7 +417,7 @@
   "Returns the value of the defaultButton property.
 
   returns: the JButton which is currently the default button - `javax.swing.JButton`"
-  ([^javax.swing.JRootPane this]
+  (^javax.swing.JButton [^javax.swing.JRootPane this]
     (-> this (.getDefaultButton))))
 
 (defn set-j-menu-bar
@@ -455,7 +455,7 @@
    typically holds a content pane and an optional JMenuBar.
 
   returns: the JLayeredPane currently in use - `javax.swing.JLayeredPane`"
-  ([^javax.swing.JRootPane this]
+  (^javax.swing.JLayeredPane [^javax.swing.JRootPane this]
     (-> this (.getLayeredPane))))
 
 (defn set-default-button
@@ -492,6 +492,6 @@
    glassPane.
 
   returns: true if this component's children don't overlap - `boolean`"
-  ([^javax.swing.JRootPane this]
+  (^Boolean [^javax.swing.JRootPane this]
     (-> this (.isOptimizedDrawingEnabled))))
 

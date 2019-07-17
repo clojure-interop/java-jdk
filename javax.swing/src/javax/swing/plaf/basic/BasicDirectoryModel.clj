@@ -12,7 +12,7 @@
 
 (defn get-files
   "returns: `java.util.Vector<java.io.File>`"
-  ([^javax.swing.plaf.basic.BasicDirectoryModel this]
+  (^java.util.Vector [^javax.swing.plaf.basic.BasicDirectoryModel this]
     (-> this (.getFiles))))
 
 (defn rename-file
@@ -23,7 +23,7 @@
 
   returns: true if rename succeeded,
           otherwise false - `boolean`"
-  ([^javax.swing.plaf.basic.BasicDirectoryModel this ^java.io.File old-file ^java.io.File new-file]
+  (^Boolean [^javax.swing.plaf.basic.BasicDirectoryModel this ^java.io.File old-file ^java.io.File new-file]
     (-> this (.renameFile old-file new-file))))
 
 (defn validate-file-cache
@@ -35,7 +35,7 @@
   "o - `java.lang.Object`
 
   returns: `boolean`"
-  ([^javax.swing.plaf.basic.BasicDirectoryModel this ^java.lang.Object o]
+  (^Boolean [^javax.swing.plaf.basic.BasicDirectoryModel this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn invalidate-file-cache
@@ -56,7 +56,7 @@
   index - the requested index - `int`
 
   returns: the value at index - `java.lang.Object`"
-  ([^javax.swing.plaf.basic.BasicDirectoryModel this ^Integer index]
+  (^java.lang.Object [^javax.swing.plaf.basic.BasicDirectoryModel this ^Integer index]
     (-> this (.getElementAt index))))
 
 (defn remove-property-change-listener
@@ -92,7 +92,7 @@
 
 (defn get-directories
   "returns: `java.util.Vector<java.io.File>`"
-  ([^javax.swing.plaf.basic.BasicDirectoryModel this]
+  (^java.util.Vector [^javax.swing.plaf.basic.BasicDirectoryModel this]
     (-> this (.getDirectories))))
 
 (defn interval-removed
@@ -106,7 +106,7 @@
   "o - `java.lang.Object`
 
   returns: `int`"
-  ([^javax.swing.plaf.basic.BasicDirectoryModel this ^java.lang.Object o]
+  (^Integer [^javax.swing.plaf.basic.BasicDirectoryModel this ^java.lang.Object o]
     (-> this (.indexOf o))))
 
 (defn add-property-change-listener
@@ -124,6 +124,6 @@
   "Description copied from interface: ListModel
 
   returns: the length of the list - `int`"
-  ([^javax.swing.plaf.basic.BasicDirectoryModel this]
+  (^Integer [^javax.swing.plaf.basic.BasicDirectoryModel this]
     (-> this (.getSize))))
 

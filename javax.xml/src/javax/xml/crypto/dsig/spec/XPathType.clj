@@ -51,14 +51,14 @@
   "Returns the XPath expression to be evaluated.
 
   returns: the XPath expression to be evaluated - `java.lang.String`"
-  ([^javax.xml.crypto.dsig.spec.XPathType this]
+  (^java.lang.String [^javax.xml.crypto.dsig.spec.XPathType this]
     (-> this (.getExpression))))
 
 (defn get-filter
   "Returns the filter operation.
 
   returns: the filter operation - `javax.xml.crypto.dsig.spec.XPathType.Filter`"
-  ([^javax.xml.crypto.dsig.spec.XPathType this]
+  (^javax.xml.crypto.dsig.spec.XPathType.Filter [^javax.xml.crypto.dsig.spec.XPathType this]
     (-> this (.getFilter))))
 
 (defn get-namespace-map
@@ -70,6 +70,6 @@
 
   returns: a Map of namespace prefixes to namespace URIs
       (may be empty, but never null) - `java.util.Map`"
-  ([^javax.xml.crypto.dsig.spec.XPathType this]
+  (^java.util.Map [^javax.xml.crypto.dsig.spec.XPathType this]
     (-> this (.getNamespaceMap))))
 

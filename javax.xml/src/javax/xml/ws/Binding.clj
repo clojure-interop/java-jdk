@@ -10,7 +10,7 @@
    is required to configure the binding instance with the new chain.
 
   returns: java.util.List<Handler> Handler chain - `java.util.List<javax.xml.ws.handler.Handler>`"
-  ([^javax.xml.ws.Binding this]
+  (^java.util.List [^javax.xml.ws.Binding this]
     (-> this (.getHandlerChain))))
 
 (defn set-handler-chain
@@ -27,6 +27,6 @@
 
   returns: String The binding identifier for the port.
       Never returns null - `java.lang.String`"
-  ([^javax.xml.ws.Binding this]
+  (^java.lang.String [^javax.xml.ws.Binding this]
     (-> this (.getBindingID))))
 

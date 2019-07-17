@@ -19,7 +19,7 @@
   "Returns the name of the L&F class that renders this component.
 
   returns: the string `ToolBarSeparatorUI` - `java.lang.String`"
-  ([^javax.swing.JToolBar$Separator this]
+  (^java.lang.String [^javax.swing.JToolBar$Separator this]
     (-> this (.getUIClassID))))
 
 (defn set-separator-size
@@ -34,7 +34,7 @@
 
   returns: the Dimension object containing the separator's
            size (This is a reference, NOT a copy!) - `java.awt.Dimension`"
-  ([^javax.swing.JToolBar$Separator this]
+  (^java.awt.Dimension [^javax.swing.JToolBar$Separator this]
     (-> this (.getSeparatorSize))))
 
 (defn get-minimum-size
@@ -42,7 +42,7 @@
 
   returns: the Dimension object containing the separator's
            minimum size - `java.awt.Dimension`"
-  ([^javax.swing.JToolBar$Separator this]
+  (^java.awt.Dimension [^javax.swing.JToolBar$Separator this]
     (-> this (.getMinimumSize))))
 
 (defn get-maximum-size
@@ -50,7 +50,7 @@
 
   returns: the Dimension object containing the separator's
            maximum size - `java.awt.Dimension`"
-  ([^javax.swing.JToolBar$Separator this]
+  (^java.awt.Dimension [^javax.swing.JToolBar$Separator this]
     (-> this (.getMaximumSize))))
 
 (defn get-preferred-size
@@ -58,6 +58,6 @@
 
   returns: the Dimension object containing the separator's
            preferred size - `java.awt.Dimension`"
-  ([^javax.swing.JToolBar$Separator this]
+  (^java.awt.Dimension [^javax.swing.JToolBar$Separator this]
     (-> this (.getPreferredSize))))
 

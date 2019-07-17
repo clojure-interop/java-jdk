@@ -302,7 +302,7 @@
    This context may then be checked at a later point, possibly in another thread.
 
   returns: the AccessControlContext based on the current context. - `java.security.AccessControlContext`"
-  ([]
+  (^java.security.AccessControlContext []
     (AccessController/getContext )))
 
 (defn *check-permission

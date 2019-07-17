@@ -12,7 +12,7 @@
   "x - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent x]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent x]
     (BasicScrollPaneUI/createUI x)))
 
 (defn paint
@@ -29,7 +29,7 @@
   c - the component whose maximum size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: new Dimension(Short.MAX_VALUE, Short.MAX_VALUE) - `java.awt.Dimension`"
-  ([^javax.swing.plaf.basic.BasicScrollPaneUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicScrollPaneUI this ^javax.swing.JComponent c]
     (-> this (.getMaximumSize c))))
 
 (defn install-ui
@@ -57,7 +57,7 @@
                     baseline - `int`
 
   throws: java.lang.NullPointerException - if c is null"
-  ([^javax.swing.plaf.basic.BasicScrollPaneUI this ^javax.swing.JComponent c ^Integer width ^Integer height]
+  (^Integer [^javax.swing.plaf.basic.BasicScrollPaneUI this ^javax.swing.JComponent c ^Integer width ^Integer height]
     (-> this (.getBaseline c width height))))
 
 (defn get-baseline-resize-behavior
@@ -70,6 +70,6 @@
            size changes - `java.awt.Component.BaselineResizeBehavior`
 
   throws: java.lang.NullPointerException - if c is null"
-  ([^javax.swing.plaf.basic.BasicScrollPaneUI this ^javax.swing.JComponent c]
+  (^java.awt.Component.BaselineResizeBehavior [^javax.swing.plaf.basic.BasicScrollPaneUI this ^javax.swing.JComponent c]
     (-> this (.getBaselineResizeBehavior c))))
 

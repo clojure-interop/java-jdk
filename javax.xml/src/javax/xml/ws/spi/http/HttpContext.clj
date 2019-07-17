@@ -44,7 +44,7 @@
          exch.getContextPath()  getPath();
 
   returns: this context's path - `java.lang.String`"
-  ([^javax.xml.ws.spi.http.HttpContext this]
+  (^java.lang.String [^javax.xml.ws.spi.http.HttpContext this]
     (-> this (.getPath))))
 
 (defn get-attribute
@@ -54,7 +54,7 @@
   name - attribute name - `java.lang.String`
 
   returns: attribute value - `java.lang.Object`"
-  ([^javax.xml.ws.spi.http.HttpContext this ^java.lang.String name]
+  (^java.lang.Object [^javax.xml.ws.spi.http.HttpContext this ^java.lang.String name]
     (-> this (.getAttribute name))))
 
 (defn get-attribute-names
@@ -62,6 +62,6 @@
    and other data that can be used by jax-ws runtime.
 
   returns: set of all attribute names - `java.util.Set<java.lang.String>`"
-  ([^javax.xml.ws.spi.http.HttpContext this]
+  (^java.util.Set [^javax.xml.ws.spi.http.HttpContext this]
     (-> this (.getAttributeNames))))
 

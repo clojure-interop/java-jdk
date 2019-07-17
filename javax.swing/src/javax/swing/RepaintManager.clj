@@ -26,7 +26,7 @@
   c - a Component -- unused in the default implementation, but could be used by an overridden version to return a different RepaintManager depending on the Component - `java.awt.Component`
 
   returns: the RepaintManager object - `javax.swing.RepaintManager`"
-  ([^java.awt.Component c]
+  (^javax.swing.RepaintManager [^java.awt.Component c]
     (RepaintManager/currentManager c)))
 
 (defn *set-current-manager
@@ -66,14 +66,14 @@
   a-component - `javax.swing.JComponent`
 
   returns: `java.awt.Rectangle`"
-  ([^javax.swing.RepaintManager this ^javax.swing.JComponent a-component]
+  (^java.awt.Rectangle [^javax.swing.RepaintManager this ^javax.swing.JComponent a-component]
     (-> this (.getDirtyRegion a-component))))
 
 (defn get-double-buffer-maximum-size
   "Returns the maximum double buffer size.
 
   returns: a Dimension object representing the maximum size - `java.awt.Dimension`"
-  ([^javax.swing.RepaintManager this]
+  (^java.awt.Dimension [^javax.swing.RepaintManager this]
     (-> this (.getDoubleBufferMaximumSize))))
 
 (defn to-string
@@ -81,7 +81,7 @@
    object's properties.
 
   returns: a String representation of this object - `java.lang.String`"
-  ([^javax.swing.RepaintManager this]
+  (^java.lang.String [^javax.swing.RepaintManager this]
     (-> this (.toString))))
 
 (defn completely-dirty?
@@ -93,7 +93,7 @@
   a-component - `javax.swing.JComponent`
 
   returns: `boolean`"
-  ([^javax.swing.RepaintManager this ^javax.swing.JComponent a-component]
+  (^Boolean [^javax.swing.RepaintManager this ^javax.swing.JComponent a-component]
     (-> this (.isCompletelyDirty a-component))))
 
 (defn mark-completely-dirty
@@ -117,7 +117,7 @@
   proposed-height - `int`
 
   returns: `java.awt.Image`"
-  ([^javax.swing.RepaintManager this ^java.awt.Component c ^Integer proposed-width ^Integer proposed-height]
+  (^java.awt.Image [^javax.swing.RepaintManager this ^java.awt.Component c ^Integer proposed-width ^Integer proposed-height]
     (-> this (.getOffscreenBuffer c proposed-width proposed-height))))
 
 (defn remove-invalid-component
@@ -141,7 +141,7 @@
   proposed-height - `int`
 
   returns: `java.awt.Image`"
-  ([^javax.swing.RepaintManager this ^java.awt.Component c ^Integer proposed-width ^Integer proposed-height]
+  (^java.awt.Image [^javax.swing.RepaintManager this ^java.awt.Component c ^Integer proposed-width ^Integer proposed-height]
     (-> this (.getVolatileOffscreenBuffer c proposed-width proposed-height))))
 
 (defn paint-dirty-regions
@@ -191,6 +191,6 @@
    the default value will be true.
 
   returns: true if this object is double buffered - `boolean`"
-  ([^javax.swing.RepaintManager this]
+  (^Boolean [^javax.swing.RepaintManager this]
     (-> this (.isDoubleBufferingEnabled))))
 

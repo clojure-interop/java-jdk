@@ -151,14 +151,14 @@
 
   returns: true if this dialog window is modal;
               false otherwise - `boolean`"
-  ([^java.awt.Dialog this]
+  (^Boolean [^java.awt.Dialog this]
     (-> this (.isModal))))
 
 (defn get-modality-type
   "Returns the modality type of this dialog.
 
   returns: modality type of this dialog - `java.awt.Dialog.ModalityType`"
-  ([^java.awt.Dialog this]
+  (^java.awt.Dialog.ModalityType [^java.awt.Dialog this]
     (-> this (.getModalityType))))
 
 (defn set-background
@@ -220,7 +220,7 @@
 
   returns: true if dialog is undecorated;
                           false otherwise. - `boolean`"
-  ([^java.awt.Dialog this]
+  (^Boolean [^java.awt.Dialog this]
     (-> this (.isUndecorated))))
 
 (defn add-notify
@@ -246,7 +246,7 @@
 
   returns: true if the user can resize the dialog;
               false otherwise. - `boolean`"
-  ([^java.awt.Dialog this]
+  (^Boolean [^java.awt.Dialog this]
     (-> this (.isResizable))))
 
 (defn set-modality-type
@@ -301,7 +301,7 @@
 
   returns: an AccessibleAWTDialog that serves as the
            AccessibleContext of this Dialog - `javax.accessibility.AccessibleContext`"
-  ([^java.awt.Dialog this]
+  (^javax.accessibility.AccessibleContext [^java.awt.Dialog this]
     (-> this (.getAccessibleContext))))
 
 (defn set-visible
@@ -352,7 +352,7 @@
 
   returns: the title of this dialog window. The title may be
               null. - `java.lang.String`"
-  ([^java.awt.Dialog this]
+  (^java.lang.String [^java.awt.Dialog this]
     (-> this (.getTitle))))
 
 (defn set-title

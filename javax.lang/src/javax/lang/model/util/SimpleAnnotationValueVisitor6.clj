@@ -43,7 +43,7 @@
   p - a visitor-specified parameter - `SimpleAnnotationValueVisitor6.P`
 
   returns: the result of defaultAction - `SimpleAnnotationValueVisitor6.R`"
-  ([^javax.lang.model.util.SimpleAnnotationValueVisitor6 this ^Double d ^SimpleAnnotationValueVisitor6.P p]
+  (^SimpleAnnotationValueVisitor6.R [^javax.lang.model.util.SimpleAnnotationValueVisitor6 this ^Double d ^SimpleAnnotationValueVisitor6.P p]
     (-> this (.visitDouble d p))))
 
 (defn visit-annotation
@@ -53,7 +53,7 @@
   p - a visitor-specified parameter - `SimpleAnnotationValueVisitor6.P`
 
   returns: the result of defaultAction - `SimpleAnnotationValueVisitor6.R`"
-  ([^javax.lang.model.util.SimpleAnnotationValueVisitor6 this ^javax.lang.model.element.AnnotationMirror a ^SimpleAnnotationValueVisitor6.P p]
+  (^SimpleAnnotationValueVisitor6.R [^javax.lang.model.util.SimpleAnnotationValueVisitor6 this ^javax.lang.model.element.AnnotationMirror a ^SimpleAnnotationValueVisitor6.P p]
     (-> this (.visitAnnotation a p))))
 
 (defn visit-long
@@ -63,7 +63,7 @@
   p - a visitor-specified parameter - `SimpleAnnotationValueVisitor6.P`
 
   returns: the result of defaultAction - `SimpleAnnotationValueVisitor6.R`"
-  ([^javax.lang.model.util.SimpleAnnotationValueVisitor6 this ^Long i ^SimpleAnnotationValueVisitor6.P p]
+  (^SimpleAnnotationValueVisitor6.R [^javax.lang.model.util.SimpleAnnotationValueVisitor6 this ^Long i ^SimpleAnnotationValueVisitor6.P p]
     (-> this (.visitLong i p))))
 
 (defn visit-short
@@ -73,7 +73,7 @@
   p - a visitor-specified parameter - `SimpleAnnotationValueVisitor6.P`
 
   returns: the result of defaultAction - `SimpleAnnotationValueVisitor6.R`"
-  ([^javax.lang.model.util.SimpleAnnotationValueVisitor6 this ^Short s ^SimpleAnnotationValueVisitor6.P p]
+  (^SimpleAnnotationValueVisitor6.R [^javax.lang.model.util.SimpleAnnotationValueVisitor6 this ^Short s ^SimpleAnnotationValueVisitor6.P p]
     (-> this (.visitShort s p))))
 
 (defn visit-string
@@ -83,7 +83,7 @@
   p - a visitor-specified parameter - `SimpleAnnotationValueVisitor6.P`
 
   returns: the result of defaultAction - `SimpleAnnotationValueVisitor6.R`"
-  ([^javax.lang.model.util.SimpleAnnotationValueVisitor6 this ^java.lang.String s ^SimpleAnnotationValueVisitor6.P p]
+  (^SimpleAnnotationValueVisitor6.R [^javax.lang.model.util.SimpleAnnotationValueVisitor6 this ^java.lang.String s ^SimpleAnnotationValueVisitor6.P p]
     (-> this (.visitString s p))))
 
 (defn visit-float
@@ -93,7 +93,7 @@
   p - a visitor-specified parameter - `SimpleAnnotationValueVisitor6.P`
 
   returns: the result of defaultAction - `SimpleAnnotationValueVisitor6.R`"
-  ([^javax.lang.model.util.SimpleAnnotationValueVisitor6 this ^Float f ^SimpleAnnotationValueVisitor6.P p]
+  (^SimpleAnnotationValueVisitor6.R [^javax.lang.model.util.SimpleAnnotationValueVisitor6 this ^Float f ^SimpleAnnotationValueVisitor6.P p]
     (-> this (.visitFloat f p))))
 
 (defn visit-char
@@ -103,7 +103,7 @@
   p - a visitor-specified parameter - `SimpleAnnotationValueVisitor6.P`
 
   returns: the result of defaultAction - `SimpleAnnotationValueVisitor6.R`"
-  ([^javax.lang.model.util.SimpleAnnotationValueVisitor6 this ^Character c ^SimpleAnnotationValueVisitor6.P p]
+  (^SimpleAnnotationValueVisitor6.R [^javax.lang.model.util.SimpleAnnotationValueVisitor6 this ^Character c ^SimpleAnnotationValueVisitor6.P p]
     (-> this (.visitChar c p))))
 
 (defn visit-array
@@ -113,7 +113,7 @@
   p - a visitor-specified parameter - `SimpleAnnotationValueVisitor6.P`
 
   returns: the result of defaultAction - `SimpleAnnotationValueVisitor6.R`"
-  ([^javax.lang.model.util.SimpleAnnotationValueVisitor6 this ^javax.lang.model.element.AnnotationValue> vals ^SimpleAnnotationValueVisitor6.P p]
+  (^SimpleAnnotationValueVisitor6.R [^javax.lang.model.util.SimpleAnnotationValueVisitor6 this ^javax.lang.model.element.AnnotationValue> vals ^SimpleAnnotationValueVisitor6.P p]
     (-> this (.visitArray vals p))))
 
 (defn visit-int
@@ -123,7 +123,7 @@
   p - a visitor-specified parameter - `SimpleAnnotationValueVisitor6.P`
 
   returns: the result of defaultAction - `SimpleAnnotationValueVisitor6.R`"
-  ([^javax.lang.model.util.SimpleAnnotationValueVisitor6 this ^Integer i ^SimpleAnnotationValueVisitor6.P p]
+  (^SimpleAnnotationValueVisitor6.R [^javax.lang.model.util.SimpleAnnotationValueVisitor6 this ^Integer i ^SimpleAnnotationValueVisitor6.P p]
     (-> this (.visitInt i p))))
 
 (defn visit-enum-constant
@@ -133,7 +133,7 @@
   p - a visitor-specified parameter - `SimpleAnnotationValueVisitor6.P`
 
   returns: the result of defaultAction - `SimpleAnnotationValueVisitor6.R`"
-  ([^javax.lang.model.util.SimpleAnnotationValueVisitor6 this ^javax.lang.model.element.VariableElement c ^SimpleAnnotationValueVisitor6.P p]
+  (^SimpleAnnotationValueVisitor6.R [^javax.lang.model.util.SimpleAnnotationValueVisitor6 this ^javax.lang.model.element.VariableElement c ^SimpleAnnotationValueVisitor6.P p]
     (-> this (.visitEnumConstant c p))))
 
 (defn visit-type
@@ -143,7 +143,7 @@
   p - a visitor-specified parameter - `SimpleAnnotationValueVisitor6.P`
 
   returns: the result of defaultAction - `SimpleAnnotationValueVisitor6.R`"
-  ([^javax.lang.model.util.SimpleAnnotationValueVisitor6 this ^javax.lang.model.type.TypeMirror t ^SimpleAnnotationValueVisitor6.P p]
+  (^SimpleAnnotationValueVisitor6.R [^javax.lang.model.util.SimpleAnnotationValueVisitor6 this ^javax.lang.model.type.TypeMirror t ^SimpleAnnotationValueVisitor6.P p]
     (-> this (.visitType t p))))
 
 (defn visit-byte
@@ -153,7 +153,7 @@
   p - a visitor-specified parameter - `SimpleAnnotationValueVisitor6.P`
 
   returns: the result of defaultAction - `SimpleAnnotationValueVisitor6.R`"
-  ([^javax.lang.model.util.SimpleAnnotationValueVisitor6 this ^Byte b ^SimpleAnnotationValueVisitor6.P p]
+  (^SimpleAnnotationValueVisitor6.R [^javax.lang.model.util.SimpleAnnotationValueVisitor6 this ^Byte b ^SimpleAnnotationValueVisitor6.P p]
     (-> this (.visitByte b p))))
 
 (defn visit-boolean
@@ -163,6 +163,6 @@
   p - a visitor-specified parameter - `SimpleAnnotationValueVisitor6.P`
 
   returns: the result of defaultAction - `SimpleAnnotationValueVisitor6.R`"
-  ([^javax.lang.model.util.SimpleAnnotationValueVisitor6 this ^Boolean b ^SimpleAnnotationValueVisitor6.P p]
+  (^SimpleAnnotationValueVisitor6.R [^javax.lang.model.util.SimpleAnnotationValueVisitor6 this ^Boolean b ^SimpleAnnotationValueVisitor6.P p]
     (-> this (.visitBoolean b p))))
 

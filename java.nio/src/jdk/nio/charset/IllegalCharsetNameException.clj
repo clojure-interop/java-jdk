@@ -17,6 +17,6 @@
   "Retrieves the illegal charset name.
 
   returns: The illegal charset name - `java.lang.String`"
-  ([^java.nio.charset.IllegalCharsetNameException this]
+  (^java.lang.String [^java.nio.charset.IllegalCharsetNameException this]
     (-> this (.getCharsetName))))
 

@@ -16,7 +16,7 @@
   "Returns the event kind.
 
   returns: the event kind - `java.nio.file.WatchEvent.Kind<WatchEvent.T>`"
-  ([^java.nio.file.WatchEvent this]
+  (^java.nio.file.WatchEvent.Kind [^java.nio.file.WatchEvent this]
     (-> this (.kind))))
 
 (defn count
@@ -24,7 +24,7 @@
    then this is a repeated event.
 
   returns: the event count - `int`"
-  ([^java.nio.file.WatchEvent this]
+  (^Integer [^java.nio.file.WatchEvent this]
     (-> this (.count))))
 
 (defn context
@@ -37,6 +37,6 @@
    created, deleted, or modified.
 
   returns: the event context; may be null - `WatchEvent.T`"
-  ([^java.nio.file.WatchEvent this]
+  (^WatchEvent.T [^java.nio.file.WatchEvent this]
     (-> this (.context))))
 

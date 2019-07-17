@@ -48,7 +48,7 @@
   returns: `java.lang.String`
 
   throws: java.io.IOException"
-  ([^javax.swing.text.html.parser.Parser this]
+  (^java.lang.String [^javax.swing.text.html.parser.Parser this]
     (-> this (.parseDTDMarkup))))
 
 (defn parse

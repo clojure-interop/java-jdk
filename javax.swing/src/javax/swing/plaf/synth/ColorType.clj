@@ -85,7 +85,7 @@
   "Returns a unique id, as an integer, for this ColorType.
 
   returns: a unique id, as an integer, for this ColorType. - `int`"
-  ([^javax.swing.plaf.synth.ColorType this]
+  (^Integer [^javax.swing.plaf.synth.ColorType this]
     (-> this (.getID))))
 
 (defn to-string
@@ -94,6 +94,6 @@
    with.
 
   returns: the description of the string - `java.lang.String`"
-  ([^javax.swing.plaf.synth.ColorType this]
+  (^java.lang.String [^javax.swing.plaf.synth.ColorType this]
     (-> this (.toString))))
 

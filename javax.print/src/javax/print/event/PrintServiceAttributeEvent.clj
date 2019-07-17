@@ -21,7 +21,7 @@
   "Returns the print service.
 
   returns: Print Service object. - `javax.print.PrintService`"
-  ([^javax.print.event.PrintServiceAttributeEvent this]
+  (^javax.print.PrintService [^javax.print.event.PrintServiceAttributeEvent this]
     (-> this (.getPrintService))))
 
 (defn get-attributes
@@ -30,6 +30,6 @@
 
   returns: Attributes containing the new values for the service
    attributes that changed. The returned set may be unmodifiable. - `javax.print.attribute.PrintServiceAttributeSet`"
-  ([^javax.print.event.PrintServiceAttributeEvent this]
+  (^javax.print.attribute.PrintServiceAttributeSet [^javax.print.event.PrintServiceAttributeEvent this]
     (-> this (.getAttributes))))
 

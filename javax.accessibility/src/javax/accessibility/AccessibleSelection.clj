@@ -16,7 +16,7 @@
    If no children are selected, the return value will be 0.
 
   returns: the number of items currently selected. - `int`"
-  ([^javax.accessibility.AccessibleSelection this]
+  (^Integer [^javax.accessibility.AccessibleSelection this]
     (-> this (.getAccessibleSelectionCount))))
 
 (defn get-accessible-selection
@@ -30,7 +30,7 @@
   i - the zero-based index of selected children - `int`
 
   returns: the i-th selected child - `javax.accessibility.Accessible`"
-  ([^javax.accessibility.AccessibleSelection this ^Integer i]
+  (^javax.accessibility.Accessible [^javax.accessibility.AccessibleSelection this ^Integer i]
     (-> this (.getAccessibleSelection i))))
 
 (defn accessible-child-selected?
@@ -39,7 +39,7 @@
   i - the zero-based index of the child in this Accessible object. - `int`
 
   returns: true if the current child of this object is selected; else false. - `boolean`"
-  ([^javax.accessibility.AccessibleSelection this ^Integer i]
+  (^Boolean [^javax.accessibility.AccessibleSelection this ^Integer i]
     (-> this (.isAccessibleChildSelected i))))
 
 (defn add-accessible-selection

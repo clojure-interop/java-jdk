@@ -57,7 +57,7 @@
    (e.g. `CRAM-MD5`, `GSSAPI`).
 
   returns: A non-null string representing the IANA-registered mechanism name. - `java.lang.String`"
-  ([^javax.security.sasl.SaslServer this]
+  (^java.lang.String [^javax.security.sasl.SaslServer this]
     (-> this (.getMechanismName))))
 
 (defn evaluate-response
@@ -91,7 +91,7 @@
    authentication has completed successfully or should be continued.
 
   returns: true if the authentication exchange has completed; false otherwise. - `boolean`"
-  ([^javax.security.sasl.SaslServer this]
+  (^Boolean [^javax.security.sasl.SaslServer this]
     (-> this (.isComplete))))
 
 (defn get-authorization-id
@@ -102,7 +102,7 @@
   returns: The authorization ID of the client. - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if this authentication session has not completed"
-  ([^javax.security.sasl.SaslServer this]
+  (^java.lang.String [^javax.security.sasl.SaslServer this]
     (-> this (.getAuthorizationID))))
 
 (defn unwrap
@@ -163,7 +163,7 @@
    not negotiated or is not applicable to this mechanism. - `java.lang.Object`
 
   throws: java.lang.IllegalStateException - if this authentication exchange has not completed"
-  ([^javax.security.sasl.SaslServer this ^java.lang.String prop-name]
+  (^java.lang.Object [^javax.security.sasl.SaslServer this ^java.lang.String prop-name]
     (-> this (.getNegotiatedProperty prop-name))))
 
 (defn dispose

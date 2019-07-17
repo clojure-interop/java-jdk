@@ -44,6 +44,6 @@
   returns: the enum constant with the specified name - `java.util.Locale.Category`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^java.util.Locale.Category [^java.lang.String name]
     (Locale$Category/valueOf name)))
 

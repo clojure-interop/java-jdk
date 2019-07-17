@@ -33,6 +33,6 @@
   returns: the guarded object. - `java.lang.Object`
 
   throws: java.lang.SecurityException - if access to the guarded object is denied."
-  ([^java.security.GuardedObject this]
+  (^java.lang.Object [^java.security.GuardedObject this]
     (-> this (.getObject))))
 

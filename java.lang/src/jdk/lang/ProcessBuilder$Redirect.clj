@@ -67,7 +67,7 @@
   returns: a redirect to read from the specified file - `java.lang.ProcessBuilder.Redirect`
 
   throws: java.lang.NullPointerException - if the specified file is null"
-  ([^java.io.File file]
+  (^java.lang.ProcessBuilder.Redirect [^java.io.File file]
     (ProcessBuilder$Redirect/from file)))
 
 (defn *to
@@ -86,7 +86,7 @@
   returns: a redirect to write to the specified file - `java.lang.ProcessBuilder.Redirect`
 
   throws: java.lang.NullPointerException - if the specified file is null"
-  ([^java.io.File file]
+  (^java.lang.ProcessBuilder.Redirect [^java.io.File file]
     (ProcessBuilder$Redirect/to file)))
 
 (defn *append-to
@@ -108,14 +108,14 @@
   returns: a redirect to append to the specified file - `java.lang.ProcessBuilder.Redirect`
 
   throws: java.lang.NullPointerException - if the specified file is null"
-  ([^java.io.File file]
+  (^java.lang.ProcessBuilder.Redirect [^java.io.File file]
     (ProcessBuilder$Redirect/appendTo file)))
 
 (defn type
   "Returns the type of this Redirect.
 
   returns: the type of this Redirect - `java.lang.ProcessBuilder.Redirect.Type`"
-  ([^java.lang.ProcessBuilder$Redirect this]
+  (^java.lang.ProcessBuilder.Redirect.Type [^java.lang.ProcessBuilder$Redirect this]
     (-> this (.type))))
 
 (defn file
@@ -124,7 +124,7 @@
 
   returns: the file associated with this redirect,
            or null if there is no such file - `java.io.File`"
-  ([^java.lang.ProcessBuilder$Redirect this]
+  (^java.io.File [^java.lang.ProcessBuilder$Redirect this]
     (-> this (.file))))
 
 (defn equals
@@ -138,13 +138,13 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([^java.lang.ProcessBuilder$Redirect this ^java.lang.Object obj]
+  (^Boolean [^java.lang.ProcessBuilder$Redirect this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Returns a hash code value for this Redirect.
 
   returns: a hash code value for this Redirect - `int`"
-  ([^java.lang.ProcessBuilder$Redirect this]
+  (^Integer [^java.lang.ProcessBuilder$Redirect this]
     (-> this (.hashCode))))
 

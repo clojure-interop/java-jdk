@@ -17,7 +17,7 @@
   returns: the visit result - `java.nio.file.FileVisitResult`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([^java.nio.file.SimpleFileVisitor this ^SimpleFileVisitor.T dir ^java.nio.file.attribute.BasicFileAttributes attrs]
+  (^java.nio.file.FileVisitResult [^java.nio.file.SimpleFileVisitor this ^SimpleFileVisitor.T dir ^java.nio.file.attribute.BasicFileAttributes attrs]
     (-> this (.preVisitDirectory dir attrs))))
 
 (defn visit-file
@@ -31,7 +31,7 @@
   returns: the visit result - `java.nio.file.FileVisitResult`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([^java.nio.file.SimpleFileVisitor this ^SimpleFileVisitor.T file ^java.nio.file.attribute.BasicFileAttributes attrs]
+  (^java.nio.file.FileVisitResult [^java.nio.file.SimpleFileVisitor this ^SimpleFileVisitor.T file ^java.nio.file.attribute.BasicFileAttributes attrs]
     (-> this (.visitFile file attrs))))
 
 (defn visit-file-failed
@@ -46,7 +46,7 @@
   returns: the visit result - `java.nio.file.FileVisitResult`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([^java.nio.file.SimpleFileVisitor this ^SimpleFileVisitor.T file ^java.io.IOException exc]
+  (^java.nio.file.FileVisitResult [^java.nio.file.SimpleFileVisitor this ^SimpleFileVisitor.T file ^java.io.IOException exc]
     (-> this (.visitFileFailed file exc))))
 
 (defn post-visit-directory
@@ -63,6 +63,6 @@
   returns: the visit result - `java.nio.file.FileVisitResult`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([^java.nio.file.SimpleFileVisitor this ^SimpleFileVisitor.T dir ^java.io.IOException exc]
+  (^java.nio.file.FileVisitResult [^java.nio.file.SimpleFileVisitor this ^SimpleFileVisitor.T dir ^java.io.IOException exc]
     (-> this (.postVisitDirectory dir exc))))
 

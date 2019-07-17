@@ -82,7 +82,7 @@
   "Gets the reason for this event.
 
   returns: reason int. - `int`"
-  ([^javax.print.event.PrintJobEvent this]
+  (^Integer [^javax.print.event.PrintJobEvent this]
     (-> this (.getPrintEventType))))
 
 (defn get-print-job
@@ -92,6 +92,6 @@
   returns: the DocPrintJob object that represents the
             print job that reports the events encapsulated by this
             PrintJobEvent. - `javax.print.DocPrintJob`"
-  ([^javax.print.event.PrintJobEvent this]
+  (^javax.print.DocPrintJob [^javax.print.event.PrintJobEvent this]
     (-> this (.getPrintJob))))
 

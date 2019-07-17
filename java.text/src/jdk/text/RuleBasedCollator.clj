@@ -214,7 +214,7 @@
 
   returns: returns the collation rules that the table collation object
    was created from. - `java.lang.String`"
-  ([^java.text.RuleBasedCollator this]
+  (^java.lang.String [^java.text.RuleBasedCollator this]
     (-> this (.getRules))))
 
 (defn get-collation-element-iterator
@@ -223,7 +223,7 @@
   source - the string to be collated - `java.lang.String`
 
   returns: a CollationElementIterator object - `java.text.CollationElementIterator`"
-  ([^java.text.RuleBasedCollator this ^java.lang.String source]
+  (^java.text.CollationElementIterator [^java.text.RuleBasedCollator this ^java.lang.String source]
     (-> this (.getCollationElementIterator source))))
 
 (defn compare
@@ -240,7 +240,7 @@
    if source is greater than target. - `int`
 
   throws: java.lang.NullPointerException - if source or target is null."
-  ([^java.text.RuleBasedCollator this ^java.lang.String source ^java.lang.String target]
+  (^Integer [^java.text.RuleBasedCollator this ^java.lang.String source ^java.lang.String target]
     (-> this (.compare source target))))
 
 (defn get-collation-key
@@ -252,14 +252,14 @@
 
   returns: the CollationKey for the given String based on this Collator's collation
    rules. If the source String is null, a null CollationKey is returned. - `java.text.CollationKey`"
-  ([^java.text.RuleBasedCollator this ^java.lang.String source]
+  (^java.text.CollationKey [^java.text.RuleBasedCollator this ^java.lang.String source]
     (-> this (.getCollationKey source))))
 
 (defn clone
   "Standard override; no change in semantics.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([^java.text.RuleBasedCollator this]
+  (^java.lang.Object [^java.text.RuleBasedCollator this]
     (-> this (.clone))))
 
 (defn equals
@@ -269,13 +269,13 @@
 
   returns: true if the current table-based collation object is the same
    as the table-based collation object obj; false otherwise. - `boolean`"
-  ([^java.text.RuleBasedCollator this ^java.lang.Object obj]
+  (^Boolean [^java.text.RuleBasedCollator this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Generates the hash code for the table-based collation object
 
   returns: a hash code value for this object. - `int`"
-  ([^java.text.RuleBasedCollator this]
+  (^Integer [^java.text.RuleBasedCollator this]
     (-> this (.hashCode))))
 

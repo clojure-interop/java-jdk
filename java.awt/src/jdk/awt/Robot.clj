@@ -55,7 +55,7 @@
   y - Y position of pixel - `int`
 
   returns: Color of the pixel - `java.awt.Color`"
-  ([^java.awt.Robot this ^Integer x ^Integer y]
+  (^java.awt.Color [^java.awt.Robot this ^Integer x ^Integer y]
     (-> this (.getPixelColor x y))))
 
 (defn mouse-release
@@ -71,7 +71,7 @@
   "Returns the number of milliseconds this Robot sleeps after generating an event.
 
   returns: `int`"
-  ([^java.awt.Robot this]
+  (^Integer [^java.awt.Robot this]
     (-> this (.getAutoDelay))))
 
 (defn create-screen-capture
@@ -83,7 +83,7 @@
   returns: The captured image - `java.awt.image.BufferedImage`
 
   throws: java.lang.IllegalArgumentException - if screenRect width and height are not greater than zero"
-  ([^java.awt.Robot this ^java.awt.Rectangle screen-rect]
+  (^java.awt.image.BufferedImage [^java.awt.Robot this ^java.awt.Rectangle screen-rect]
     (-> this (.createScreenCapture screen-rect))))
 
 (defn set-auto-wait-for-idle
@@ -98,7 +98,7 @@
   "Returns a string representation of this Robot.
 
   returns: the string representation. - `java.lang.String`"
-  ([^java.awt.Robot this]
+  (^java.lang.String [^java.awt.Robot this]
     (-> this (.toString))))
 
 (defn key-press
@@ -160,7 +160,7 @@
    after generating an event.
 
   returns: Whether waitForIdle is automatically called - `boolean`"
-  ([^java.awt.Robot this]
+  (^Boolean [^java.awt.Robot this]
     (-> this (.isAutoWaitForIdle))))
 
 (defn delay

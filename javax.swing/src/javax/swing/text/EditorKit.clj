@@ -28,7 +28,7 @@
    kit.
 
   returns: the factory - `javax.swing.text.ViewFactory`"
-  ([^javax.swing.text.EditorKit this]
+  (^javax.swing.text.ViewFactory [^javax.swing.text.EditorKit this]
     (-> this (.getViewFactory))))
 
 (defn create-default-document
@@ -36,7 +36,7 @@
    that is appropriate for this type of editor.
 
   returns: the model - `javax.swing.text.Document`"
-  ([^javax.swing.text.EditorKit this]
+  (^javax.swing.text.Document [^javax.swing.text.EditorKit this]
     (-> this (.createDefaultDocument))))
 
 (defn read
@@ -66,7 +66,7 @@
    kit represents support for.
 
   returns: the type - `java.lang.String`"
-  ([^javax.swing.text.EditorKit this]
+  (^java.lang.String [^javax.swing.text.EditorKit this]
     (-> this (.getContentType))))
 
 (defn install
@@ -92,7 +92,7 @@
    null is returned.
 
   returns: the copy - `java.lang.Object`"
-  ([^javax.swing.text.EditorKit this]
+  (^java.lang.Object [^javax.swing.text.EditorKit this]
     (-> this (.clone))))
 
 (defn write
@@ -113,6 +113,6 @@
    produced by the associated ViewFactory.
 
   returns: the caret - `javax.swing.text.Caret`"
-  ([^javax.swing.text.EditorKit this]
+  (^javax.swing.text.Caret [^javax.swing.text.EditorKit this]
     (-> this (.createCaret))))
 

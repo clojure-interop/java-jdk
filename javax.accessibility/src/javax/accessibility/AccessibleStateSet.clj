@@ -13,7 +13,7 @@
    the array of states passed in.  Duplicate entries are ignored.
 
   states - an array of AccessibleState describing the state set. - `javax.accessibility.AccessibleState[]`"
-  ([^javax.accessibility.AccessibleState[] states]
+  ([states]
     (new AccessibleStateSet states))
   ([]
     (new AccessibleStateSet )))
@@ -29,7 +29,7 @@
 
   returns: true if state is added to the state set; false if the state set
    is unchanged - `boolean`"
-  ([^javax.accessibility.AccessibleStateSet this ^javax.accessibility.AccessibleState state]
+  (^Boolean [^javax.accessibility.AccessibleStateSet this ^javax.accessibility.AccessibleState state]
     (-> this (.add state))))
 
 (defn add-all
@@ -37,7 +37,7 @@
    are ignored.
 
   states - AccessibleState array describing the state set. - `javax.accessibility.AccessibleState[]`"
-  ([^javax.accessibility.AccessibleStateSet this ^javax.accessibility.AccessibleState[] states]
+  ([^javax.accessibility.AccessibleStateSet this states]
     (-> this (.addAll states))))
 
 (defn remove
@@ -50,7 +50,7 @@
 
   returns: true if the state is in the state set; false if the state set
    will be unchanged - `boolean`"
-  ([^javax.accessibility.AccessibleStateSet this ^javax.accessibility.AccessibleState state]
+  (^Boolean [^javax.accessibility.AccessibleStateSet this ^javax.accessibility.AccessibleState state]
     (-> this (.remove state))))
 
 (defn clear
@@ -64,7 +64,7 @@
   state - the state - `javax.accessibility.AccessibleState`
 
   returns: true if the state is in the state set; otherwise false - `boolean`"
-  ([^javax.accessibility.AccessibleStateSet this ^javax.accessibility.AccessibleState state]
+  (^Boolean [^javax.accessibility.AccessibleStateSet this ^javax.accessibility.AccessibleState state]
     (-> this (.contains state))))
 
 (defn to-array
@@ -79,6 +79,6 @@
    using the default locale.
 
   returns: comma separated localized String - `java.lang.String`"
-  ([^javax.accessibility.AccessibleStateSet this]
+  (^java.lang.String [^javax.accessibility.AccessibleStateSet this]
     (-> this (.toString))))
 

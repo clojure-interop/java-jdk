@@ -25,6 +25,6 @@
    associated with this DropTargetEvent.
 
   returns: the DropTargetContext - `java.awt.dnd.DropTargetContext`"
-  ([^java.awt.dnd.DropTargetEvent this]
+  (^java.awt.dnd.DropTargetContext [^java.awt.dnd.DropTargetEvent this]
     (-> this (.getDropTargetContext))))
 

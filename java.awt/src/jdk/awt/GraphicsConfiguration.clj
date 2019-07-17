@@ -66,7 +66,7 @@
 
   returns: the image capabilities of this graphics
    configuration object - `java.awt.ImageCapabilities`"
-  ([^java.awt.GraphicsConfiguration this]
+  (^java.awt.ImageCapabilities [^java.awt.GraphicsConfiguration this]
     (-> this (.getImageCapabilities))))
 
 (defn get-default-transform
@@ -88,7 +88,7 @@
 
   returns: the default AffineTransform for this
    GraphicsConfiguration. - `java.awt.geom.AffineTransform`"
-  ([^java.awt.GraphicsConfiguration this]
+  (^java.awt.geom.AffineTransform [^java.awt.GraphicsConfiguration this]
     (-> this (.getDefaultTransform))))
 
 (defn create-compatible-volatile-image
@@ -113,11 +113,11 @@
    model is compatible with this GraphicsConfiguration. - `java.awt.image.VolatileImage`
 
   throws: java.lang.IllegalArgumentException - if the transparency is not a valid value"
-  ([^java.awt.GraphicsConfiguration this ^Integer width ^Integer height ^java.awt.ImageCapabilities caps ^Integer transparency]
+  (^java.awt.image.VolatileImage [^java.awt.GraphicsConfiguration this ^Integer width ^Integer height ^java.awt.ImageCapabilities caps ^Integer transparency]
     (-> this (.createCompatibleVolatileImage width height caps transparency)))
-  ([^java.awt.GraphicsConfiguration this ^Integer width ^Integer height ^Integer transparency]
+  (^java.awt.image.VolatileImage [^java.awt.GraphicsConfiguration this ^Integer width ^Integer height ^Integer transparency]
     (-> this (.createCompatibleVolatileImage width height transparency)))
-  ([^java.awt.GraphicsConfiguration this ^Integer width ^Integer height]
+  (^java.awt.image.VolatileImage [^java.awt.GraphicsConfiguration this ^Integer width ^Integer height]
     (-> this (.createCompatibleVolatileImage width height))))
 
 (defn create-compatible-image
@@ -138,9 +138,9 @@
    and also supports the specified transparency. - `java.awt.image.BufferedImage`
 
   throws: java.lang.IllegalArgumentException - if the transparency is not a valid value"
-  ([^java.awt.GraphicsConfiguration this ^Integer width ^Integer height ^Integer transparency]
+  (^java.awt.image.BufferedImage [^java.awt.GraphicsConfiguration this ^Integer width ^Integer height ^Integer transparency]
     (-> this (.createCompatibleImage width height transparency)))
-  ([^java.awt.GraphicsConfiguration this ^Integer width ^Integer height]
+  (^java.awt.image.BufferedImage [^java.awt.GraphicsConfiguration this ^Integer width ^Integer height]
     (-> this (.createCompatibleImage width height))))
 
 (defn get-device
@@ -149,7 +149,7 @@
 
   returns: a GraphicsDevice object that is
    associated with this GraphicsConfiguration. - `java.awt.GraphicsDevice`"
-  ([^java.awt.GraphicsConfiguration this]
+  (^java.awt.GraphicsDevice [^java.awt.GraphicsConfiguration this]
     (-> this (.getDevice))))
 
 (defn get-normalizing-transform
@@ -179,7 +179,7 @@
   returns: an AffineTransform to concatenate to the
    default AffineTransform so that 72 units in user
    space is mapped to 1 inch in device space. - `java.awt.geom.AffineTransform`"
-  ([^java.awt.GraphicsConfiguration this]
+  (^java.awt.geom.AffineTransform [^java.awt.GraphicsConfiguration this]
     (-> this (.getNormalizingTransform))))
 
 (defn translucency-capable?
@@ -188,7 +188,7 @@
 
   returns: whether the given GraphicsConfiguration supports
            the translucency effects. - `boolean`"
-  ([^java.awt.GraphicsConfiguration this]
+  (^Boolean [^java.awt.GraphicsConfiguration this]
     (-> this (.isTranslucencyCapable))))
 
 (defn get-bounds
@@ -199,7 +199,7 @@
 
   returns: the bounds of the area covered by this
    GraphicsConfiguration. - `java.awt.Rectangle`"
-  ([^java.awt.GraphicsConfiguration this]
+  (^java.awt.Rectangle [^java.awt.GraphicsConfiguration this]
     (-> this (.getBounds))))
 
 (defn get-buffer-capabilities
@@ -208,7 +208,7 @@
 
   returns: the buffering capabilities of this graphics
    configuration object - `java.awt.BufferCapabilities`"
-  ([^java.awt.GraphicsConfiguration this]
+  (^java.awt.BufferCapabilities [^java.awt.GraphicsConfiguration this]
     (-> this (.getBufferCapabilities))))
 
 (defn get-color-model
@@ -222,8 +222,8 @@
    this GraphicsConfiguration and supports the
    specified transparency or null if the transparency is not a valid
    value. - `java.awt.image.ColorModel`"
-  ([^java.awt.GraphicsConfiguration this ^Integer transparency]
+  (^java.awt.image.ColorModel [^java.awt.GraphicsConfiguration this ^Integer transparency]
     (-> this (.getColorModel transparency)))
-  ([^java.awt.GraphicsConfiguration this]
+  (^java.awt.image.ColorModel [^java.awt.GraphicsConfiguration this]
     (-> this (.getColorModel))))
 

@@ -21,7 +21,7 @@
            SOAPConnectionFactory object - `javax.xml.soap.SOAPConnectionFactory`
 
   throws: javax.xml.soap.SOAPException - if there was an error creating the SOAPConnectionFactory"
-  ([]
+  (^javax.xml.soap.SOAPConnectionFactory []
     (SOAPConnectionFactory/newInstance )))
 
 (defn create-connection
@@ -30,6 +30,6 @@
   returns: the new SOAPConnection object. - `javax.xml.soap.SOAPConnection`
 
   throws: javax.xml.soap.SOAPException - if there was an exception creating the SOAPConnection object."
-  ([^javax.xml.soap.SOAPConnectionFactory this]
+  (^javax.xml.soap.SOAPConnection [^javax.xml.soap.SOAPConnectionFactory this]
     (-> this (.createConnection))))
 

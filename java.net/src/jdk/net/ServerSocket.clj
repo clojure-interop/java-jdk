@@ -114,7 +114,7 @@
 
   returns: the port number to which this socket is listening or
             -1 if the socket is not bound yet. - `int`"
-  ([^java.net.ServerSocket this]
+  (^Integer [^java.net.ServerSocket this]
     (-> this (.getLocalPort))))
 
 (defn set-so-timeout
@@ -201,7 +201,7 @@
    the implementation address.
 
   returns: a string representation of this socket. - `java.lang.String`"
-  ([^java.net.ServerSocket this]
+  (^java.lang.String [^java.net.ServerSocket this]
     (-> this (.toString))))
 
 (defn get-so-timeout
@@ -211,14 +211,14 @@
   returns: the SO_TIMEOUT value - `int`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([^java.net.ServerSocket this]
+  (^Integer [^java.net.ServerSocket this]
     (-> this (.getSoTimeout))))
 
 (defn closed?
   "Returns the closed state of the ServerSocket.
 
   returns: true if the socket has been closed - `boolean`"
-  ([^java.net.ServerSocket this]
+  (^Boolean [^java.net.ServerSocket this]
     (-> this (.isClosed))))
 
 (defn accept
@@ -236,7 +236,7 @@
   returns: the new Socket - `java.net.Socket`
 
   throws: java.io.IOException - if an I/O error occurs when waiting for a connection."
-  ([^java.net.ServerSocket this]
+  (^java.net.Socket [^java.net.ServerSocket this]
     (-> this (.accept))))
 
 (defn get-reuse-address?
@@ -246,7 +246,7 @@
            SO_REUSEADDR is enabled. - `boolean`
 
   throws: java.net.SocketException - if there is an error in the underlying protocol, such as a TCP error."
-  ([^java.net.ServerSocket this]
+  (^Boolean [^java.net.ServerSocket this]
     (-> this (.getReuseAddress))))
 
 (defn get-local-socket-address
@@ -267,7 +267,7 @@
            this socket, or a SocketAddress representing the
            loopback address if denied by the security manager,
            or null if the socket is not bound yet. - `java.net.SocketAddress`"
-  ([^java.net.ServerSocket this]
+  (^java.net.SocketAddress [^java.net.ServerSocket this]
     (-> this (.getLocalSocketAddress))))
 
 (defn close
@@ -295,7 +295,7 @@
            option for this Socket. - `int`
 
   throws: java.net.SocketException - if there is an error in the underlying protocol, such as a TCP error."
-  ([^java.net.ServerSocket this]
+  (^Integer [^java.net.ServerSocket this]
     (-> this (.getReceiveBufferSize))))
 
 (defn set-receive-buffer-size
@@ -332,7 +332,7 @@
   "Returns the binding state of the ServerSocket.
 
   returns: true if the ServerSocket successfully bound to an address - `boolean`"
-  ([^java.net.ServerSocket this]
+  (^Boolean [^java.net.ServerSocket this]
     (-> this (.isBound))))
 
 (defn get-channel
@@ -346,7 +346,7 @@
   returns: the server-socket channel associated with this socket,
             or null if this socket was not created
             for a channel - `java.nio.channels.ServerSocketChannel`"
-  ([^java.net.ServerSocket this]
+  (^java.nio.channels.ServerSocketChannel [^java.net.ServerSocket this]
     (-> this (.getChannel))))
 
 (defn get-inet-address
@@ -364,6 +364,6 @@
   returns: the address to which this socket is bound,
             or the loopback address if denied by the security manager,
             or null if the socket is unbound. - `java.net.InetAddress`"
-  ([^java.net.ServerSocket this]
+  (^java.net.InetAddress [^java.net.ServerSocket this]
     (-> this (.getInetAddress))))
 

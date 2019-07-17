@@ -10,7 +10,7 @@
   c - component to create UI object for - `javax.swing.JComponent`
 
   returns: the UI object - `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent c]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent c]
     (SynthSliderUI/createUI c)))
 
 (defn get-minimum-size
@@ -24,7 +24,7 @@
   c - the component whose minimum size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: a Dimension object or null - `java.awt.Dimension`"
-  ([^javax.swing.plaf.synth.SynthSliderUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^javax.swing.plaf.synth.SynthSliderUI this ^javax.swing.JComponent c]
     (-> this (.getMinimumSize c))))
 
 (defn paint-border
@@ -48,7 +48,7 @@
   y-pos - `int`
 
   returns: `int`"
-  ([^javax.swing.plaf.synth.SynthSliderUI this ^Integer y-pos]
+  (^Integer [^javax.swing.plaf.synth.SynthSliderUI this ^Integer y-pos]
     (-> this (.valueForYPosition y-pos))))
 
 (defn value-for-x-position
@@ -60,7 +60,7 @@
   x-pos - `int`
 
   returns: `int`"
-  ([^javax.swing.plaf.synth.SynthSliderUI this ^Integer x-pos]
+  (^Integer [^javax.swing.plaf.synth.SynthSliderUI this ^Integer x-pos]
     (-> this (.valueForXPosition x-pos))))
 
 (defn update
@@ -105,7 +105,7 @@
   c - Component requesting SynthContext. - `javax.swing.JComponent`
 
   returns: SynthContext describing component. - `javax.swing.plaf.synth.SynthContext`"
-  ([^javax.swing.plaf.synth.SynthSliderUI this ^javax.swing.JComponent c]
+  (^javax.swing.plaf.synth.SynthContext [^javax.swing.plaf.synth.SynthSliderUI this ^javax.swing.JComponent c]
     (-> this (.getContext c))))
 
 (defn get-baseline
@@ -117,7 +117,7 @@
 
   returns: baseline or a value < 0 indicating there is no reasonable
                     baseline - `int`"
-  ([^javax.swing.plaf.synth.SynthSliderUI this ^javax.swing.JComponent c ^Integer width ^Integer height]
+  (^Integer [^javax.swing.plaf.synth.SynthSliderUI this ^javax.swing.JComponent c ^Integer width ^Integer height]
     (-> this (.getBaseline c width height))))
 
 (defn get-preferred-size
@@ -131,6 +131,6 @@
   c - the component whose preferred size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: `java.awt.Dimension`"
-  ([^javax.swing.plaf.synth.SynthSliderUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^javax.swing.plaf.synth.SynthSliderUI this ^javax.swing.JComponent c]
     (-> this (.getPreferredSize c))))
 

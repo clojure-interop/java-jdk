@@ -20,7 +20,7 @@
   c - the JFileChooser which needs a UI - `javax.swing.JComponent`
 
   returns: the BasicFileChooserUI object - `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent c]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent c]
     (BasicFileChooserUI/createUI c)))
 
 (defn install-ui
@@ -37,12 +37,12 @@
 
 (defn get-file-chooser
   "returns: `javax.swing.JFileChooser`"
-  ([^javax.swing.plaf.basic.BasicFileChooserUI this]
+  (^javax.swing.JFileChooser [^javax.swing.plaf.basic.BasicFileChooserUI this]
     (-> this (.getFileChooser))))
 
 (defn get-file-name
   "returns: `java.lang.String`"
-  ([^javax.swing.plaf.basic.BasicFileChooserUI this]
+  (^java.lang.String [^javax.swing.plaf.basic.BasicFileChooserUI this]
     (-> this (.getFileName))))
 
 (defn set-file-name
@@ -52,36 +52,36 @@
 
 (defn get-approve-selection-action
   "returns: `javax.swing.Action`"
-  ([^javax.swing.plaf.basic.BasicFileChooserUI this]
+  (^javax.swing.Action [^javax.swing.plaf.basic.BasicFileChooserUI this]
     (-> this (.getApproveSelectionAction))))
 
 (defn get-new-folder-action
   "returns: `javax.swing.Action`"
-  ([^javax.swing.plaf.basic.BasicFileChooserUI this]
+  (^javax.swing.Action [^javax.swing.plaf.basic.BasicFileChooserUI this]
     (-> this (.getNewFolderAction))))
 
 (defn create-property-change-listener
   "fc - `javax.swing.JFileChooser`
 
   returns: `java.beans.PropertyChangeListener`"
-  ([^javax.swing.plaf.basic.BasicFileChooserUI this ^javax.swing.JFileChooser fc]
+  (^java.beans.PropertyChangeListener [^javax.swing.plaf.basic.BasicFileChooserUI this ^javax.swing.JFileChooser fc]
     (-> this (.createPropertyChangeListener fc))))
 
 (defn get-accessory-panel
   "returns: `javax.swing.JPanel`"
-  ([^javax.swing.plaf.basic.BasicFileChooserUI this]
+  (^javax.swing.JPanel [^javax.swing.plaf.basic.BasicFileChooserUI this]
     (-> this (.getAccessoryPanel))))
 
 (defn get-approve-button-text
   "fc - `javax.swing.JFileChooser`
 
   returns: `java.lang.String`"
-  ([^javax.swing.plaf.basic.BasicFileChooserUI this ^javax.swing.JFileChooser fc]
+  (^java.lang.String [^javax.swing.plaf.basic.BasicFileChooserUI this ^javax.swing.JFileChooser fc]
     (-> this (.getApproveButtonText fc))))
 
 (defn get-cancel-selection-action
   "returns: `javax.swing.Action`"
-  ([^javax.swing.plaf.basic.BasicFileChooserUI this]
+  (^javax.swing.Action [^javax.swing.plaf.basic.BasicFileChooserUI this]
     (-> this (.getCancelSelectionAction))))
 
 (defn uninstall-ui
@@ -97,14 +97,14 @@
   fc - `javax.swing.JFileChooser`
 
   returns: `javax.swing.filechooser.FileFilter`"
-  ([^javax.swing.plaf.basic.BasicFileChooserUI this ^javax.swing.JFileChooser fc]
+  (^javax.swing.filechooser.FileFilter [^javax.swing.plaf.basic.BasicFileChooserUI this ^javax.swing.JFileChooser fc]
     (-> this (.getAcceptAllFileFilter fc))))
 
 (defn get-approve-button-tool-tip-text
   "fc - `javax.swing.JFileChooser`
 
   returns: `java.lang.String`"
-  ([^javax.swing.plaf.basic.BasicFileChooserUI this ^javax.swing.JFileChooser fc]
+  (^java.lang.String [^javax.swing.plaf.basic.BasicFileChooserUI this ^javax.swing.JFileChooser fc]
     (-> this (.getApproveButtonToolTipText fc))))
 
 (defn set-directory-name
@@ -114,12 +114,12 @@
 
 (defn get-directory-name
   "returns: `java.lang.String`"
-  ([^javax.swing.plaf.basic.BasicFileChooserUI this]
+  (^java.lang.String [^javax.swing.plaf.basic.BasicFileChooserUI this]
     (-> this (.getDirectoryName))))
 
 (defn get-go-home-action
   "returns: `javax.swing.Action`"
-  ([^javax.swing.plaf.basic.BasicFileChooserUI this]
+  (^javax.swing.Action [^javax.swing.plaf.basic.BasicFileChooserUI this]
     (-> this (.getGoHomeAction))))
 
 (defn get-dialog-title
@@ -128,7 +128,7 @@
   fc - `javax.swing.JFileChooser`
 
   returns: `java.lang.String`"
-  ([^javax.swing.plaf.basic.BasicFileChooserUI this ^javax.swing.JFileChooser fc]
+  (^java.lang.String [^javax.swing.plaf.basic.BasicFileChooserUI this ^javax.swing.JFileChooser fc]
     (-> this (.getDialogTitle fc))))
 
 (defn ensure-file-is-visible
@@ -146,7 +146,7 @@
   "fc - `javax.swing.JFileChooser`
 
   returns: `javax.swing.event.ListSelectionListener`"
-  ([^javax.swing.plaf.basic.BasicFileChooserUI this ^javax.swing.JFileChooser fc]
+  (^javax.swing.event.ListSelectionListener [^javax.swing.plaf.basic.BasicFileChooserUI this ^javax.swing.JFileChooser fc]
     (-> this (.createListSelectionListener fc))))
 
 (defn get-default-button
@@ -155,7 +155,7 @@
   fc - `javax.swing.JFileChooser`
 
   returns: `javax.swing.JButton`"
-  ([^javax.swing.plaf.basic.BasicFileChooserUI this ^javax.swing.JFileChooser fc]
+  (^javax.swing.JButton [^javax.swing.plaf.basic.BasicFileChooserUI this ^javax.swing.JFileChooser fc]
     (-> this (.getDefaultButton fc))))
 
 (defn clear-icon-cache
@@ -167,24 +167,24 @@
   "fc - `javax.swing.JFileChooser`
 
   returns: `int`"
-  ([^javax.swing.plaf.basic.BasicFileChooserUI this ^javax.swing.JFileChooser fc]
+  (^Integer [^javax.swing.plaf.basic.BasicFileChooserUI this ^javax.swing.JFileChooser fc]
     (-> this (.getApproveButtonMnemonic fc))))
 
 (defn get-model
   "returns: `javax.swing.plaf.basic.BasicDirectoryModel`"
-  ([^javax.swing.plaf.basic.BasicFileChooserUI this]
+  (^javax.swing.plaf.basic.BasicDirectoryModel [^javax.swing.plaf.basic.BasicFileChooserUI this]
     (-> this (.getModel))))
 
 (defn get-change-to-parent-directory-action
   "returns: `javax.swing.Action`"
-  ([^javax.swing.plaf.basic.BasicFileChooserUI this]
+  (^javax.swing.Action [^javax.swing.plaf.basic.BasicFileChooserUI this]
     (-> this (.getChangeToParentDirectoryAction))))
 
 (defn get-file-view
   "fc - `javax.swing.JFileChooser`
 
   returns: `javax.swing.filechooser.FileView`"
-  ([^javax.swing.plaf.basic.BasicFileChooserUI this ^javax.swing.JFileChooser fc]
+  (^javax.swing.filechooser.FileView [^javax.swing.plaf.basic.BasicFileChooserUI this ^javax.swing.JFileChooser fc]
     (-> this (.getFileView fc))))
 
 (defn uninstall-components
@@ -194,6 +194,6 @@
 
 (defn get-update-action
   "returns: `javax.swing.Action`"
-  ([^javax.swing.plaf.basic.BasicFileChooserUI this]
+  (^javax.swing.Action [^javax.swing.plaf.basic.BasicFileChooserUI this]
     (-> this (.getUpdateAction))))
 

@@ -25,7 +25,7 @@
 
   returns: The Class object that represents the runtime
            class of this object. - `java.lang.Class<?>`"
-  ([^java.lang.Object this]
+  (^java.lang.Class [^java.lang.Object this]
     (-> this (.getClass))))
 
 (defn hash-code
@@ -60,7 +60,7 @@
    Java™ programming language.)
 
   returns: a hash code value for this object. - `int`"
-  ([^java.lang.Object this]
+  (^Integer [^java.lang.Object this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -107,7 +107,7 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([^java.lang.Object this ^java.lang.Object obj]
+  (^Boolean [^java.lang.Object this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn to-string
@@ -130,7 +130,7 @@
    getClass().getName()  '@'  Integer.toHexString(hashCode())
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^java.lang.Object this]
+  (^java.lang.String [^java.lang.Object this]
     (-> this (.toString))))
 
 (defn notify

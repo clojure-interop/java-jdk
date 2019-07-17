@@ -90,7 +90,7 @@
 
   returns: A double value that represents the starting angle
    of the arc in degrees. - `double`"
-  ([^java.awt.geom.Arc2D$Float this]
+  (^Double [^java.awt.geom.Arc2D$Float this]
     (-> this (.getAngleStart))))
 
 (defn get-width
@@ -101,7 +101,7 @@
    the framing rectangle of this RectangularShape.
 
   returns: the width of the framing rectangle. - `double`"
-  ([^java.awt.geom.Arc2D$Float this]
+  (^Double [^java.awt.geom.Arc2D$Float this]
     (-> this (.getWidth))))
 
 (defn set-arc
@@ -143,7 +143,7 @@
 
   returns: the Y coordinate of the upper-left corner of
    the framing rectangle. - `double`"
-  ([^java.awt.geom.Arc2D$Float this]
+  (^Double [^java.awt.geom.Arc2D$Float this]
     (-> this (.getY))))
 
 (defn get-x
@@ -155,7 +155,7 @@
 
   returns: the X coordinate of the upper-left corner of
    the framing rectangle. - `double`"
-  ([^java.awt.geom.Arc2D$Float this]
+  (^Double [^java.awt.geom.Arc2D$Float this]
     (-> this (.getX))))
 
 (defn get-height
@@ -166,7 +166,7 @@
    the framing rectangle of this RectangularShape.
 
   returns: the height of the framing rectangle. - `double`"
-  ([^java.awt.geom.Arc2D$Float this]
+  (^Double [^java.awt.geom.Arc2D$Float this]
     (-> this (.getHeight))))
 
 (defn empty?
@@ -176,7 +176,7 @@
 
   returns: true if the RectangularShape is empty;
             false otherwise. - `boolean`"
-  ([^java.awt.geom.Arc2D$Float this]
+  (^Boolean [^java.awt.geom.Arc2D$Float this]
     (-> this (.isEmpty))))
 
 (defn get-angle-extent
@@ -184,6 +184,6 @@
 
   returns: A double value that represents the angular extent
    of the arc in degrees. - `double`"
-  ([^java.awt.geom.Arc2D$Float this]
+  (^Double [^java.awt.geom.Arc2D$Float this]
     (-> this (.getAngleExtent))))
 

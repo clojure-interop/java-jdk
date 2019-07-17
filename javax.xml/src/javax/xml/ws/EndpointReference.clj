@@ -57,7 +57,7 @@
       never null - `javax.xml.ws.EndpointReference`
 
   throws: javax.xml.ws.WebServiceException - if an error occurs while creating the EndpointReference from the eprInfoset"
-  ([^javax.xml.transform.Source epr-infoset]
+  (^javax.xml.ws.EndpointReference [^javax.xml.transform.Source epr-infoset]
     (EndpointReference/readFrom epr-infoset)))
 
 (defn write-to
@@ -109,6 +109,6 @@
   "Displays EPR infoset for debugging convenience.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^javax.xml.ws.EndpointReference this]
+  (^java.lang.String [^javax.xml.ws.EndpointReference this]
     (-> this (.toString))))
 

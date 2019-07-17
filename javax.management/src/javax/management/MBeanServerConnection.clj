@@ -48,7 +48,7 @@
    the result of invoking the operation on the MBean specified. - `java.lang.Object`
 
   throws: javax.management.InstanceNotFoundException - The MBean specified is not registered in the MBean server."
-  ([^javax.management.MBeanServerConnection this ^javax.management.ObjectName name ^java.lang.String operation-name ^java.lang.Object[] params ^java.lang.String[] signature]
+  (^java.lang.Object [^javax.management.MBeanServerConnection this ^javax.management.ObjectName name ^java.lang.String operation-name params signature]
     (-> this (.invoke name operation-name params signature))))
 
 (defn query-m-beans
@@ -71,7 +71,7 @@
    query an empty list is returned. - `java.util.Set<javax.management.ObjectInstance>`
 
   throws: java.io.IOException - A communication problem occurred when talking to the MBean server."
-  ([^javax.management.MBeanServerConnection this ^javax.management.ObjectName name ^javax.management.QueryExp query]
+  (^java.util.Set [^javax.management.MBeanServerConnection this ^javax.management.ObjectName name ^javax.management.QueryExp query]
     (-> this (.queryMBeans name query))))
 
 (defn query-names
@@ -93,7 +93,7 @@
    returned. - `java.util.Set<javax.management.ObjectName>`
 
   throws: java.io.IOException - A communication problem occurred when talking to the MBean server."
-  ([^javax.management.MBeanServerConnection this ^javax.management.ObjectName name ^javax.management.QueryExp query]
+  (^java.util.Set [^javax.management.MBeanServerConnection this ^javax.management.ObjectName name ^javax.management.QueryExp query]
     (-> this (.queryNames name query))))
 
 (defn remove-notification-listener
@@ -129,7 +129,7 @@
   returns: The value of the retrieved attribute. - `java.lang.Object`
 
   throws: javax.management.AttributeNotFoundException - The attribute specified is not accessible in the MBean."
-  ([^javax.management.MBeanServerConnection this ^javax.management.ObjectName name ^java.lang.String attribute]
+  (^java.lang.Object [^javax.management.MBeanServerConnection this ^javax.management.ObjectName name ^java.lang.String attribute]
     (-> this (.getAttribute name attribute))))
 
 (defn get-m-bean-info
@@ -142,7 +142,7 @@
    retrieval of all attributes and operations of this MBean. - `javax.management.MBeanInfo`
 
   throws: javax.management.IntrospectionException - An exception occurred during introspection."
-  ([^javax.management.MBeanServerConnection this ^javax.management.ObjectName name]
+  (^javax.management.MBeanInfo [^javax.management.MBeanServerConnection this ^javax.management.ObjectName name]
     (-> this (.getMBeanInfo name))))
 
 (defn create-m-bean
@@ -168,13 +168,13 @@
    getMBeanInfo(n).getClassName(). - `javax.management.ObjectInstance`
 
   throws: javax.management.MBeanException - The constructor of the MBean has thrown an exception"
-  ([^javax.management.MBeanServerConnection this ^java.lang.String class-name ^javax.management.ObjectName name ^javax.management.ObjectName loader-name ^java.lang.Object[] params ^java.lang.String[] signature]
+  (^javax.management.ObjectInstance [^javax.management.MBeanServerConnection this ^java.lang.String class-name ^javax.management.ObjectName name ^javax.management.ObjectName loader-name params signature]
     (-> this (.createMBean class-name name loader-name params signature)))
-  ([^javax.management.MBeanServerConnection this ^java.lang.String class-name ^javax.management.ObjectName name ^java.lang.Object[] params ^java.lang.String[] signature]
+  (^javax.management.ObjectInstance [^javax.management.MBeanServerConnection this ^java.lang.String class-name ^javax.management.ObjectName name params signature]
     (-> this (.createMBean class-name name params signature)))
-  ([^javax.management.MBeanServerConnection this ^java.lang.String class-name ^javax.management.ObjectName name ^javax.management.ObjectName loader-name]
+  (^javax.management.ObjectInstance [^javax.management.MBeanServerConnection this ^java.lang.String class-name ^javax.management.ObjectName name ^javax.management.ObjectName loader-name]
     (-> this (.createMBean class-name name loader-name)))
-  ([^javax.management.MBeanServerConnection this ^java.lang.String class-name ^javax.management.ObjectName name]
+  (^javax.management.ObjectInstance [^javax.management.MBeanServerConnection this ^java.lang.String class-name ^javax.management.ObjectName name]
     (-> this (.createMBean class-name name))))
 
 (defn get-m-bean-count
@@ -183,7 +183,7 @@
   returns: the number of MBeans registered. - `java.lang.Integer`
 
   throws: java.io.IOException - A communication problem occurred when talking to the MBean server."
-  ([^javax.management.MBeanServerConnection this]
+  (^java.lang.Integer [^javax.management.MBeanServerConnection this]
     (-> this (.getMBeanCount))))
 
 (defn registered?
@@ -196,7 +196,7 @@
    server, false otherwise. - `boolean`
 
   throws: javax.management.RuntimeOperationsException - Wraps a java.lang.IllegalArgumentException: The object name in parameter is null."
-  ([^javax.management.MBeanServerConnection this ^javax.management.ObjectName name]
+  (^Boolean [^javax.management.MBeanServerConnection this ^javax.management.ObjectName name]
     (-> this (.isRegistered name))))
 
 (defn unregister-m-bean
@@ -219,7 +219,7 @@
   returns: the default domain. - `java.lang.String`
 
   throws: java.io.IOException - A communication problem occurred when talking to the MBean server."
-  ([^javax.management.MBeanServerConnection this]
+  (^java.lang.String [^javax.management.MBeanServerConnection this]
     (-> this (.getDefaultDomain))))
 
 (defn set-attribute
@@ -245,7 +245,7 @@
    getMBeanInfo(name).getClassName(). - `javax.management.ObjectInstance`
 
   throws: javax.management.InstanceNotFoundException - The MBean specified is not registered in the MBean server."
-  ([^javax.management.MBeanServerConnection this ^javax.management.ObjectName name]
+  (^javax.management.ObjectInstance [^javax.management.MBeanServerConnection this ^javax.management.ObjectName name]
     (-> this (.getObjectInstance name))))
 
 (defn get-domains
@@ -302,7 +302,7 @@
    values. - `javax.management.AttributeList`
 
   throws: javax.management.InstanceNotFoundException - The MBean specified is not registered in the MBean server."
-  ([^javax.management.MBeanServerConnection this ^javax.management.ObjectName name ^javax.management.AttributeList attributes]
+  (^javax.management.AttributeList [^javax.management.MBeanServerConnection this ^javax.management.ObjectName name ^javax.management.AttributeList attributes]
     (-> this (.setAttributes name attributes))))
 
 (defn add-notification-listener
@@ -351,7 +351,7 @@
   returns: The list of the retrieved attributes. - `javax.management.AttributeList`
 
   throws: javax.management.InstanceNotFoundException - The MBean specified is not registered in the MBean server."
-  ([^javax.management.MBeanServerConnection this ^javax.management.ObjectName name ^java.lang.String[] attributes]
+  (^javax.management.AttributeList [^javax.management.MBeanServerConnection this ^javax.management.ObjectName name attributes]
     (-> this (.getAttributes name attributes))))
 
 (defn instance-of?
@@ -384,6 +384,6 @@
    specified class according to the rules above, false otherwise. - `boolean`
 
   throws: javax.management.InstanceNotFoundException - The MBean specified is not registered in the MBean server."
-  ([^javax.management.MBeanServerConnection this ^javax.management.ObjectName name ^java.lang.String class-name]
+  (^Boolean [^javax.management.MBeanServerConnection this ^javax.management.ObjectName name ^java.lang.String class-name]
     (-> this (.isInstanceOf name class-name))))
 

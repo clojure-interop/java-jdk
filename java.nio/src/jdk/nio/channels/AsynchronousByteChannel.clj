@@ -58,7 +58,7 @@
   throws: java.lang.IllegalArgumentException - If the buffer is read-only"
   ([^java.nio.channels.AsynchronousByteChannel this ^java.nio.ByteBuffer dst attachment handler]
     (-> this (.read dst attachment handler)))
-  ([^java.nio.channels.AsynchronousByteChannel this ^java.nio.ByteBuffer dst]
+  (^java.util.concurrent.Future [^java.nio.channels.AsynchronousByteChannel this ^java.nio.ByteBuffer dst]
     (-> this (.read dst))))
 
 (defn write
@@ -102,6 +102,6 @@
   throws: java.nio.channels.WritePendingException - If the channel does not allow more than one write to be outstanding and a previous write has not completed"
   ([^java.nio.channels.AsynchronousByteChannel this ^java.nio.ByteBuffer src attachment handler]
     (-> this (.write src attachment handler)))
-  ([^java.nio.channels.AsynchronousByteChannel this ^java.nio.ByteBuffer src]
+  (^java.util.concurrent.Future [^java.nio.channels.AsynchronousByteChannel this ^java.nio.ByteBuffer src]
     (-> this (.write src))))
 

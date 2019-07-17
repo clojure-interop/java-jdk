@@ -46,7 +46,7 @@
 
   returns: The Component this DragGestureRecognizer
    is associated with - `java.awt.Component`"
-  ([^java.awt.dnd.DragGestureRecognizer this]
+  (^java.awt.Component [^java.awt.dnd.DragGestureRecognizer this]
     (-> this (.getComponent))))
 
 (defn get-source-actions
@@ -55,7 +55,7 @@
    operation will support.
 
   returns: the currently permitted source action(s) - `int`"
-  ([^java.awt.dnd.DragGestureRecognizer this]
+  (^Integer [^java.awt.dnd.DragGestureRecognizer this]
     (-> this (.getSourceActions))))
 
 (defn get-drag-source
@@ -65,7 +65,7 @@
    operation.
 
   returns: the DragSource - `java.awt.dnd.DragSource`"
-  ([^java.awt.dnd.DragGestureRecognizer this]
+  (^java.awt.dnd.DragSource [^java.awt.dnd.DragGestureRecognizer this]
     (-> this (.getDragSource))))
 
 (defn get-trigger-event
@@ -74,7 +74,7 @@
    the Drag and Drop operation.
 
   returns: the initial event that triggered the drag gesture - `java.awt.event.InputEvent`"
-  ([^java.awt.dnd.DragGestureRecognizer this]
+  (^java.awt.event.InputEvent [^java.awt.dnd.DragGestureRecognizer this]
     (-> this (.getTriggerEvent))))
 
 (defn set-source-actions

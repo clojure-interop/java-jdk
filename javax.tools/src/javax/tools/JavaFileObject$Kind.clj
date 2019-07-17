@@ -70,6 +70,6 @@
   returns: the enum constant with the specified name - `javax.tools.JavaFileObject.Kind`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^javax.tools.JavaFileObject.Kind [^java.lang.String name]
     (JavaFileObject$Kind/valueOf name)))
 

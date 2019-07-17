@@ -124,14 +124,14 @@
   returns: list of tasks that never commenced execution - `java.util.List<java.lang.Runnable>`
 
   throws: java.lang.SecurityException - if a security manager exists and shutting down this ExecutorService may manipulate threads that the caller is not permitted to modify because it does not hold RuntimePermission(`modifyThread`), or the security manager's checkAccess method denies access."
-  ([^java.util.concurrent.ExecutorService this]
+  (^java.util.List [^java.util.concurrent.ExecutorService this]
     (-> this (.shutdownNow))))
 
 (defn shutdown?
   "Returns true if this executor has been shut down.
 
   returns: true if this executor has been shut down - `boolean`"
-  ([^java.util.concurrent.ExecutorService this]
+  (^Boolean [^java.util.concurrent.ExecutorService this]
     (-> this (.isShutdown))))
 
 (defn terminated?
@@ -140,7 +140,7 @@
    either shutdown or shutdownNow was called first.
 
   returns: true if all tasks have completed following shut down - `boolean`"
-  ([^java.util.concurrent.ExecutorService this]
+  (^Boolean [^java.util.concurrent.ExecutorService this]
     (-> this (.isTerminated))))
 
 (defn await-termination
@@ -155,7 +155,7 @@
            false if the timeout elapsed before termination - `boolean`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([^java.util.concurrent.ExecutorService this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^Boolean [^java.util.concurrent.ExecutorService this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.awaitTermination timeout unit))))
 
 (defn submit

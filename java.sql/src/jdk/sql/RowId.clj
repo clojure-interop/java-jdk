@@ -48,7 +48,7 @@
   obj - the Object to compare this RowId object against. - `java.lang.Object`
 
   returns: true if the RowIds are equal; false otherwise - `boolean`"
-  ([^java.sql.RowId this ^java.lang.Object obj]
+  (^Boolean [^java.sql.RowId this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn get-bytes
@@ -75,13 +75,13 @@
   returns: a String whose format is determined by the driver supplying the
        connection, representing the value of the ROWID designated
        by this java.sql.RowId  object. - `java.lang.String`"
-  ([^java.sql.RowId this]
+  (^java.lang.String [^java.sql.RowId this]
     (-> this (.toString))))
 
 (defn hash-code
   "Returns a hash code value of this RowId object.
 
   returns: a hash code for the RowId - `int`"
-  ([^java.sql.RowId this]
+  (^Integer [^java.sql.RowId this]
     (-> this (.hashCode))))
 

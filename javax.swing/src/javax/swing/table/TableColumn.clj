@@ -117,7 +117,7 @@
    by the user or programmatically.
 
   returns: the minWidth property - `int`"
-  ([^javax.swing.table.TableColumn this]
+  (^Integer [^javax.swing.table.TableColumn this]
     (-> this (.getMinWidth))))
 
 (defn set-header-renderer
@@ -139,7 +139,7 @@
    is Integer.MAX_VALUE.
 
   returns: the maxWidth property - `int`"
-  ([^javax.swing.table.TableColumn this]
+  (^Integer [^javax.swing.table.TableColumn this]
     (-> this (.getMaxWidth))))
 
 (defn get-width
@@ -147,7 +147,7 @@
    75.
 
   returns: the width property - `int`"
-  ([^javax.swing.table.TableColumn this]
+  (^Integer [^javax.swing.table.TableColumn this]
     (-> this (.getWidth))))
 
 (defn set-cell-renderer
@@ -192,7 +192,7 @@
    regardless of this setting.  The default is true.
 
   returns: the isResizable property - `boolean`"
-  ([^javax.swing.table.TableColumn this]
+  (^Boolean [^javax.swing.table.TableColumn this]
     (-> this (.getResizable))))
 
 (defn enable-resized-posting
@@ -211,7 +211,7 @@
    cellEditor is null.
 
   returns: the cellEditor property - `javax.swing.table.TableCellEditor`"
-  ([^javax.swing.table.TableColumn this]
+  (^javax.swing.table.TableCellEditor [^javax.swing.table.TableColumn this]
     (-> this (.getCellEditor))))
 
 (defn remove-property-change-listener
@@ -235,7 +235,7 @@
    cellRenderer is null.
 
   returns: the cellRenderer property - `javax.swing.table.TableCellRenderer`"
-  ([^javax.swing.table.TableColumn this]
+  (^javax.swing.table.TableCellRenderer [^javax.swing.table.TableColumn this]
     (-> this (.getCellRenderer))))
 
 (defn get-identifier
@@ -247,7 +247,7 @@
     as a default.
 
   returns: the identifier property - `java.lang.Object`"
-  ([^javax.swing.table.TableColumn this]
+  (^java.lang.Object [^javax.swing.table.TableColumn this]
     (-> this (.getIdentifier))))
 
 (defn get-header-value
@@ -255,7 +255,7 @@
    renderer.
 
   returns: the headerValue property - `java.lang.Object`"
-  ([^javax.swing.table.TableColumn this]
+  (^java.lang.Object [^javax.swing.table.TableColumn this]
     (-> this (.getHeaderValue))))
 
 (defn set-preferred-width
@@ -314,7 +314,7 @@
    headerRenderer is null.
 
   returns: the headerRenderer property - `javax.swing.table.TableCellRenderer`"
-  ([^javax.swing.table.TableColumn this]
+  (^javax.swing.table.TableCellRenderer [^javax.swing.table.TableColumn this]
     (-> this (.getHeaderRenderer))))
 
 (defn size-width-to-fit
@@ -363,7 +363,7 @@
   "Returns the model index for this column.
 
   returns: the modelIndex property - `int`"
-  ([^javax.swing.table.TableColumn this]
+  (^Integer [^javax.swing.table.TableColumn this]
     (-> this (.getModelIndex))))
 
 (defn add-property-change-listener
@@ -408,6 +408,6 @@
    The default preferred width is 75.
 
   returns: the preferredWidth property - `int`"
-  ([^javax.swing.table.TableColumn this]
+  (^Integer [^javax.swing.table.TableColumn this]
     (-> this (.getPreferredWidth))))
 

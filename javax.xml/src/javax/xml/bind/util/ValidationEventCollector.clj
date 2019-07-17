@@ -35,7 +35,7 @@
 
   returns: true if this event collector contains at least one
            ValidationEvent, false otherwise - `boolean`"
-  ([^javax.xml.bind.util.ValidationEventCollector this]
+  (^Boolean [^javax.xml.bind.util.ValidationEventCollector this]
     (-> this (.hasEvents))))
 
 (defn handle-event
@@ -48,6 +48,6 @@
            warning/error, false if the provider should terminate the current
            operation with the appropriate UnmarshalException,
            ValidationException, or MarshalException. - `boolean`"
-  ([^javax.xml.bind.util.ValidationEventCollector this ^javax.xml.bind.ValidationEvent event]
+  (^Boolean [^javax.xml.bind.util.ValidationEventCollector this ^javax.xml.bind.ValidationEvent event]
     (-> this (.handleEvent event))))
 

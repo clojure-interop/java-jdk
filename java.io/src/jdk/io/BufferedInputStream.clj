@@ -73,9 +73,9 @@
                the stream has been reached. - `int`
 
   throws: java.io.IOException - if this input stream has been closed by invoking its close() method, or an I/O error occurs."
-  ([^java.io.BufferedInputStream this b ^Integer off ^Integer len]
+  (^Integer [^java.io.BufferedInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  ([^java.io.BufferedInputStream this]
+  (^Integer [^java.io.BufferedInputStream this]
     (-> this (.read))))
 
 (defn skip
@@ -87,7 +87,7 @@
   returns: the actual number of bytes skipped. - `long`
 
   throws: java.io.IOException - if the stream does not support seek, or if this input stream has been closed by invoking its close() method, or an I/O error occurs."
-  ([^java.io.BufferedInputStream this ^Long n]
+  (^Long [^java.io.BufferedInputStream this ^Long n]
     (-> this (.skip n))))
 
 (defn available
@@ -105,7 +105,7 @@
                over) from this input stream without blocking. - `int`
 
   throws: java.io.IOException - if this input stream has been closed by invoking its close() method, or an I/O error occurs."
-  ([^java.io.BufferedInputStream this]
+  (^Integer [^java.io.BufferedInputStream this]
     (-> this (.available))))
 
 (defn mark
@@ -138,7 +138,7 @@
 
   returns: a boolean indicating if this stream type supports
             the mark and reset methods. - `boolean`"
-  ([^java.io.BufferedInputStream this]
+  (^Boolean [^java.io.BufferedInputStream this]
     (-> this (.markSupported))))
 
 (defn close

@@ -39,9 +39,9 @@
   p - a visitor-specified parameter - `AbstractAnnotationValueVisitor6.P`
 
   returns: a visitor-specified result - `AbstractAnnotationValueVisitor6.R`"
-  ([^javax.lang.model.util.AbstractAnnotationValueVisitor6 this ^javax.lang.model.element.AnnotationValue av ^AbstractAnnotationValueVisitor6.P p]
+  (^AbstractAnnotationValueVisitor6.R [^javax.lang.model.util.AbstractAnnotationValueVisitor6 this ^javax.lang.model.element.AnnotationValue av ^AbstractAnnotationValueVisitor6.P p]
     (-> this (.visit av p)))
-  ([^javax.lang.model.util.AbstractAnnotationValueVisitor6 this ^javax.lang.model.element.AnnotationValue av]
+  (^AbstractAnnotationValueVisitor6.R [^javax.lang.model.util.AbstractAnnotationValueVisitor6 this ^javax.lang.model.element.AnnotationValue av]
     (-> this (.visit av))))
 
 (defn visit-unknown
@@ -56,6 +56,6 @@
   p - a visitor-specified parameter - `AbstractAnnotationValueVisitor6.P`
 
   returns: the result of the visit - `AbstractAnnotationValueVisitor6.R`"
-  ([^javax.lang.model.util.AbstractAnnotationValueVisitor6 this ^javax.lang.model.element.AnnotationValue av ^AbstractAnnotationValueVisitor6.P p]
+  (^AbstractAnnotationValueVisitor6.R [^javax.lang.model.util.AbstractAnnotationValueVisitor6 this ^javax.lang.model.element.AnnotationValue av ^AbstractAnnotationValueVisitor6.P p]
     (-> this (.visitUnknown av p))))
 

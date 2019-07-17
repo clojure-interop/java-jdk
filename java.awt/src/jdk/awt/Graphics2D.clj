@@ -416,7 +416,7 @@
   y - the y coordinate of the location in user space where the upper left corner of the image is rendered - `int`"
   ([^java.awt.Graphics2D this ^java.awt.image.BufferedImage img ^java.awt.image.BufferedImageOp op ^Integer x ^Integer y]
     (-> this (.drawImage img op x y)))
-  ([^java.awt.Graphics2D this ^java.awt.Image img ^java.awt.geom.AffineTransform xform ^java.awt.image.ImageObserver obs]
+  (^Boolean [^java.awt.Graphics2D this ^java.awt.Image img ^java.awt.geom.AffineTransform xform ^java.awt.image.ImageObserver obs]
     (-> this (.drawImage img xform obs))))
 
 (defn get-rendering-hints
@@ -430,7 +430,7 @@
 
   returns: a reference to an instance of RenderingHints
    that contains the current preferences. - `java.awt.RenderingHints`"
-  ([^java.awt.Graphics2D this]
+  (^java.awt.RenderingHints [^java.awt.Graphics2D this]
     (-> this (.getRenderingHints))))
 
 (defn get-composite
@@ -439,7 +439,7 @@
 
   returns: the current Graphics2D Composite,
                 which defines a compositing style. - `java.awt.Composite`"
-  ([^java.awt.Graphics2D this]
+  (^java.awt.Composite [^java.awt.Graphics2D this]
     (-> this (.getComposite))))
 
 (defn translate
@@ -511,7 +511,7 @@
 
   returns: the current Graphics2D Paint,
    which defines a color or pattern. - `java.awt.Paint`"
-  ([^java.awt.Graphics2D this]
+  (^java.awt.Paint [^java.awt.Graphics2D this]
     (-> this (.getPaint))))
 
 (defn transform
@@ -560,7 +560,7 @@
   returns: an object representing the value for the specified hint key.
    Some of the keys and their associated values are defined in the
    RenderingHints class. - `java.lang.Object`"
-  ([^java.awt.Graphics2D this ^java.awt.RenderingHints.Key hint-key]
+  (^java.lang.Object [^java.awt.Graphics2D this ^java.awt.RenderingHints.Key hint-key]
     (-> this (.getRenderingHint hint-key))))
 
 (defn get-stroke
@@ -569,7 +569,7 @@
 
   returns: the current Graphics2D Stroke,
                    which defines the line style. - `java.awt.Stroke`"
-  ([^java.awt.Graphics2D this]
+  (^java.awt.Stroke [^java.awt.Graphics2D this]
     (-> this (.getStroke))))
 
 (defn set-rendering-hint
@@ -682,7 +682,7 @@
    Graphics2D.
 
   returns: the device configuration of this Graphics2D. - `java.awt.GraphicsConfiguration`"
-  ([^java.awt.Graphics2D this]
+  (^java.awt.GraphicsConfiguration [^java.awt.Graphics2D this]
     (-> this (.getDeviceConfiguration))))
 
 (defn draw-3-d-rect
@@ -733,7 +733,7 @@
    the text rendering.
 
   returns: a reference to an instance of FontRenderContext. - `java.awt.font.FontRenderContext`"
-  ([^java.awt.Graphics2D this]
+  (^java.awt.font.FontRenderContext [^java.awt.Graphics2D this]
     (-> this (.getFontRenderContext))))
 
 (defn hit
@@ -756,7 +756,7 @@
 
   returns: true if there is a hit; false
    otherwise. - `boolean`"
-  ([^java.awt.Graphics2D this ^java.awt.Rectangle rect ^java.awt.Shape s ^Boolean on-stroke]
+  (^Boolean [^java.awt.Graphics2D this ^java.awt.Rectangle rect ^java.awt.Shape s ^Boolean on-stroke]
     (-> this (.hit rect s on-stroke))))
 
 (defn shear
@@ -783,7 +783,7 @@
 
   returns: the current Graphics2D Color,
    which defines the background color. - `java.awt.Color`"
-  ([^java.awt.Graphics2D this]
+  (^java.awt.Color [^java.awt.Graphics2D this]
     (-> this (.getBackground))))
 
 (defn draw-renderable-image
@@ -848,7 +848,7 @@
 
   returns: the current AffineTransform in the
                Graphics2D context. - `java.awt.geom.AffineTransform`"
-  ([^java.awt.Graphics2D this]
+  (^java.awt.geom.AffineTransform [^java.awt.Graphics2D this]
     (-> this (.getTransform))))
 
 (defn rotate

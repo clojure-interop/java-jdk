@@ -15,7 +15,7 @@
   x - component to create UI object for - `javax.swing.JComponent`
 
   returns: the UI object - `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent x]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent x]
     (SynthScrollPaneUI/createUI x)))
 
 (defn update
@@ -59,7 +59,7 @@
   c - Component requesting SynthContext. - `javax.swing.JComponent`
 
   returns: SynthContext describing component. - `javax.swing.plaf.synth.SynthContext`"
-  ([^javax.swing.plaf.synth.SynthScrollPaneUI this ^javax.swing.JComponent c]
+  (^javax.swing.plaf.synth.SynthContext [^javax.swing.plaf.synth.SynthScrollPaneUI this ^javax.swing.JComponent c]
     (-> this (.getContext c))))
 
 (defn property-change

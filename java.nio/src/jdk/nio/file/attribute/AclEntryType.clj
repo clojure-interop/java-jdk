@@ -60,6 +60,6 @@
   returns: the enum constant with the specified name - `java.nio.file.attribute.AclEntryType`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^java.nio.file.attribute.AclEntryType [^java.lang.String name]
     (AclEntryType/valueOf name)))
 

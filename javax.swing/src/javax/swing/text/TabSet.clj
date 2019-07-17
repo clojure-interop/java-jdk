@@ -21,14 +21,14 @@
    passed in must be sorted in ascending order.
 
   tabs - `javax.swing.text.TabStop[]`"
-  ([^javax.swing.text.TabStop[] tabs]
+  ([tabs]
     (new TabSet tabs)))
 
 (defn get-tab-count
   "Returns the number of Tab instances the receiver contains.
 
   returns: `int`"
-  ([^javax.swing.text.TabSet this]
+  (^Integer [^javax.swing.text.TabSet this]
     (-> this (.getTabCount))))
 
 (defn get-tab
@@ -39,7 +39,7 @@
   index - `int`
 
   returns: `javax.swing.text.TabStop`"
-  ([^javax.swing.text.TabSet this ^Integer index]
+  (^javax.swing.text.TabStop [^javax.swing.text.TabSet this ^Integer index]
     (-> this (.getTab index))))
 
 (defn get-tab-after
@@ -49,7 +49,7 @@
   location - `float`
 
   returns: `javax.swing.text.TabStop`"
-  ([^javax.swing.text.TabSet this ^Float location]
+  (^javax.swing.text.TabStop [^javax.swing.text.TabSet this ^Float location]
     (-> this (.getTabAfter location))))
 
 (defn get-tab-index
@@ -57,7 +57,7 @@
 
   returns: the index of the TabStop tab, or -1 if
    tab is not contained in the receiver. - `int`"
-  ([^javax.swing.text.TabSet this ^javax.swing.text.TabStop tab]
+  (^Integer [^javax.swing.text.TabSet this ^javax.swing.text.TabStop tab]
     (-> this (.getTabIndex tab))))
 
 (defn get-tab-index-after
@@ -67,7 +67,7 @@
   location - `float`
 
   returns: `int`"
-  ([^javax.swing.text.TabSet this ^Float location]
+  (^Integer [^javax.swing.text.TabSet this ^Float location]
     (-> this (.getTabIndexAfter location))))
 
 (defn equals
@@ -78,20 +78,20 @@
   returns: true if o is the instance of
    TabSet, has the same number of TabStops
    and they are all equal, false otherwise. - `boolean`"
-  ([^javax.swing.text.TabSet this ^java.lang.Object o]
+  (^Boolean [^javax.swing.text.TabSet this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn hash-code
   "Returns a hashcode for this set of TabStops.
 
   returns: a hashcode value for this set of TabStops. - `int`"
-  ([^javax.swing.text.TabSet this]
+  (^Integer [^javax.swing.text.TabSet this]
     (-> this (.hashCode))))
 
 (defn to-string
   "Returns the string representation of the set of tabs.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^javax.swing.text.TabSet this]
+  (^java.lang.String [^javax.swing.text.TabSet this]
     (-> this (.toString))))
 

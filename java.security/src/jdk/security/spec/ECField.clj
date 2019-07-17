@@ -10,6 +10,6 @@
    For characteristic 2 finite field ECFieldF2m, m is returned.
 
   returns: the field size in bits. - `int`"
-  ([^java.security.spec.ECField this]
+  (^Integer [^java.security.spec.ECField this]
     (-> this (.getFieldSize))))
 

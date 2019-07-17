@@ -106,6 +106,6 @@
   returns: the enum constant with the specified name - `java.lang.annotation.ElementType`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^java.lang.annotation.ElementType [^java.lang.String name]
     (ElementType/valueOf name)))
 

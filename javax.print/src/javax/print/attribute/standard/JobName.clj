@@ -49,7 +49,7 @@
 
   returns: True if object is equivalent to this job name
             attribute, false otherwise. - `boolean`"
-  ([^javax.print.attribute.standard.JobName this ^java.lang.Object object]
+  (^Boolean [^javax.print.attribute.standard.JobName this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -70,6 +70,6 @@
    For class JobName, the category name is `job-name`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.JobName this]
+  (^java.lang.String [^javax.print.attribute.standard.JobName this]
     (-> this (.getName))))
 

@@ -51,7 +51,7 @@
   returns: a new PathIterator that iterates along the boundary
            of this Shape and provides access to the geometry
            of this Shape's outline - `java.awt.geom.PathIterator`"
-  ([^java.awt.geom.Path2D$Double this ^java.awt.geom.AffineTransform at]
+  (^java.awt.geom.PathIterator [^java.awt.geom.Path2D$Double this ^java.awt.geom.AffineTransform at]
     (-> this (.getPathIterator at))))
 
 (defn line-to
@@ -131,7 +131,7 @@
 
   returns: an instance of Rectangle2D that is a
                    high-precision bounding box of the Shape. - `java.awt.geom.Rectangle2D`"
-  ([^java.awt.geom.Path2D$Double this]
+  (^java.awt.geom.Rectangle2D [^java.awt.geom.Path2D$Double this]
     (-> this (.getBounds2D))))
 
 (defn move-to
@@ -170,7 +170,7 @@
   returns: a clone of this instance. - `java.lang.Object`
 
   throws: java.lang.OutOfMemoryError - if there is not enough memory."
-  ([^java.awt.geom.Path2D$Double this]
+  (^java.lang.Object [^java.awt.geom.Path2D$Double this]
     (-> this (.clone))))
 
 (defn quad-to

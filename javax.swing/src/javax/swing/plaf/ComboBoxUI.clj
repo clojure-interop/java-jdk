@@ -22,7 +22,7 @@
   c - `javax.swing.JComboBox`
 
   returns: `boolean`"
-  ([^javax.swing.plaf.ComboBoxUI this ^javax.swing.JComboBox c]
+  (^Boolean [^javax.swing.plaf.ComboBoxUI this ^javax.swing.JComboBox c]
     (-> this (.isPopupVisible c))))
 
 (defn focus-traversable?
@@ -31,6 +31,6 @@
   c - `javax.swing.JComboBox`
 
   returns: `boolean`"
-  ([^javax.swing.plaf.ComboBoxUI this ^javax.swing.JComboBox c]
+  (^Boolean [^javax.swing.plaf.ComboBoxUI this ^javax.swing.JComboBox c]
     (-> this (.isFocusTraversable c))))
 

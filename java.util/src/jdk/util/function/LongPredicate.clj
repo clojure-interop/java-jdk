@@ -15,7 +15,7 @@
 
   returns: true if the input argument matches the predicate,
    otherwise false - `boolean`"
-  ([^java.util.function.LongPredicate this ^Long value]
+  (^Boolean [^java.util.function.LongPredicate this ^Long value]
     (-> this (.test value))))
 
 (defn and

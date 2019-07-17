@@ -10,7 +10,7 @@
    an array of objects.
 
   items - an array of Object objects - `DefaultComboBoxModel.E[]`"
-  ([^DefaultComboBoxModel.E[] items]
+  ([items]
     (new DefaultComboBoxModel items))
   ([]
     (new DefaultComboBoxModel )))
@@ -29,7 +29,7 @@
 
   returns: an int representing the index position, where 0 is
            the first position - `int`"
-  ([^javax.swing.DefaultComboBoxModel this ^java.lang.Object an-object]
+  (^Integer [^javax.swing.DefaultComboBoxModel this ^java.lang.Object an-object]
     (-> this (.getIndexOf an-object))))
 
 (defn add-element
@@ -58,7 +58,7 @@
   index - the requested index - `int`
 
   returns: the value at index - `DefaultComboBoxModel.E`"
-  ([^javax.swing.DefaultComboBoxModel this ^Integer index]
+  (^DefaultComboBoxModel.E [^javax.swing.DefaultComboBoxModel this ^Integer index]
     (-> this (.getElementAt index))))
 
 (defn remove-element
@@ -72,14 +72,14 @@
   "Description copied from interface: ComboBoxModel
 
   returns: The selected item or null if there is no selection - `java.lang.Object`"
-  ([^javax.swing.DefaultComboBoxModel this]
+  (^java.lang.Object [^javax.swing.DefaultComboBoxModel this]
     (-> this (.getSelectedItem))))
 
 (defn get-size
   "Description copied from interface: ListModel
 
   returns: the length of the list - `int`"
-  ([^javax.swing.DefaultComboBoxModel this]
+  (^Integer [^javax.swing.DefaultComboBoxModel this]
     (-> this (.getSize))))
 
 (defn remove-element-at

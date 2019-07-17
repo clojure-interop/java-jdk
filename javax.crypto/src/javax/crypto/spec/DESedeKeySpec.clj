@@ -41,7 +41,7 @@
    otherwise - `boolean`
 
   throws: java.lang.NullPointerException - if key is null."
-  ([key ^Integer offset]
+  (^Boolean [key ^Integer offset]
     (DESedeKeySpec/isParityAdjusted key offset)))
 
 (defn get-key

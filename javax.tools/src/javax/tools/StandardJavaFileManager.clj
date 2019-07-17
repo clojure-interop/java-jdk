@@ -117,7 +117,7 @@
    canonical file or zip file entry; false otherwise - `boolean`
 
   throws: java.lang.IllegalArgumentException - if either of the arguments were created with another file manager implementation"
-  ([^javax.tools.StandardJavaFileManager this ^javax.tools.FileObject a ^javax.tools.FileObject b]
+  (^Boolean [^javax.tools.StandardJavaFileManager this ^javax.tools.FileObject a ^javax.tools.FileObject b]
     (-> this (.isSameFile a b))))
 
 (defn get-java-file-objects-from-files

@@ -54,7 +54,7 @@
   "Returns the count of values recorded.
 
   returns: the count of values - `long`"
-  ([^java.util.IntSummaryStatistics this]
+  (^Long [^java.util.IntSummaryStatistics this]
     (-> this (.getCount))))
 
 (defn get-sum
@@ -62,7 +62,7 @@
    recorded.
 
   returns: the sum of values, or zero if none - `long`"
-  ([^java.util.IntSummaryStatistics this]
+  (^Long [^java.util.IntSummaryStatistics this]
     (-> this (.getSum))))
 
 (defn get-min
@@ -70,7 +70,7 @@
    values have been recorded.
 
   returns: the minimum value, or Integer.MAX_VALUE if none - `int`"
-  ([^java.util.IntSummaryStatistics this]
+  (^Integer [^java.util.IntSummaryStatistics this]
     (-> this (.getMin))))
 
 (defn get-max
@@ -78,7 +78,7 @@
    values have been recorded.
 
   returns: the maximum value, or Integer.MIN_VALUE if none - `int`"
-  ([^java.util.IntSummaryStatistics this]
+  (^Integer [^java.util.IntSummaryStatistics this]
     (-> this (.getMax))))
 
 (defn get-average
@@ -86,13 +86,13 @@
    recorded.
 
   returns: the arithmetic mean of values, or zero if none - `double`"
-  ([^java.util.IntSummaryStatistics this]
+  (^Double [^java.util.IntSummaryStatistics this]
     (-> this (.getAverage))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^java.util.IntSummaryStatistics this]
+  (^java.lang.String [^java.util.IntSummaryStatistics this]
     (-> this (.toString))))
 

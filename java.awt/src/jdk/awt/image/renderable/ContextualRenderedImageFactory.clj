@@ -34,7 +34,7 @@
   returns: a RenderContext for
            the source at the specified index of the parameters
            Vector contained in the specified ParameterBlock. - `java.awt.image.renderable.RenderContext`"
-  ([^java.awt.image.renderable.ContextualRenderedImageFactory this ^Integer i ^java.awt.image.renderable.RenderContext render-context ^java.awt.image.renderable.ParameterBlock param-block ^java.awt.image.renderable.RenderableImage image]
+  (^java.awt.image.renderable.RenderContext [^java.awt.image.renderable.ContextualRenderedImageFactory this ^Integer i ^java.awt.image.renderable.RenderContext render-context ^java.awt.image.renderable.ParameterBlock param-block ^java.awt.image.renderable.RenderableImage image]
     (-> this (.mapRenderContext i render-context param-block image))))
 
 (defn create
@@ -52,7 +52,7 @@
   returns: a RenderedImage from the sources and parameters
            in the specified ParameterBlock and according to the
            rendering instructions in the specified RenderContext. - `java.awt.image.RenderedImage`"
-  ([^java.awt.image.renderable.ContextualRenderedImageFactory this ^java.awt.image.renderable.RenderContext render-context ^java.awt.image.renderable.ParameterBlock param-block]
+  (^java.awt.image.RenderedImage [^java.awt.image.renderable.ContextualRenderedImageFactory this ^java.awt.image.renderable.RenderContext render-context ^java.awt.image.renderable.ParameterBlock param-block]
     (-> this (.create render-context param-block))))
 
 (defn get-bounds-2-d
@@ -65,7 +65,7 @@
 
   returns: a Rectangle2D specifying the rendering-independent
            bounding box of the output. - `java.awt.geom.Rectangle2D`"
-  ([^java.awt.image.renderable.ContextualRenderedImageFactory this ^java.awt.image.renderable.ParameterBlock param-block]
+  (^java.awt.geom.Rectangle2D [^java.awt.image.renderable.ContextualRenderedImageFactory this ^java.awt.image.renderable.ParameterBlock param-block]
     (-> this (.getBounds2D param-block))))
 
 (defn get-property
@@ -77,7 +77,7 @@
   name - a String naming the desired property. - `java.lang.String`
 
   returns: an object reference to the value of the property requested. - `java.lang.Object`"
-  ([^java.awt.image.renderable.ContextualRenderedImageFactory this ^java.awt.image.renderable.ParameterBlock param-block ^java.lang.String name]
+  (^java.lang.Object [^java.awt.image.renderable.ContextualRenderedImageFactory this ^java.awt.image.renderable.ParameterBlock param-block ^java.lang.String name]
     (-> this (.getProperty param-block name))))
 
 (defn get-property-names
@@ -97,6 +97,6 @@
   returns: true if successive renderings with the
            same arguments might produce different results;
            false otherwise. - `boolean`"
-  ([^java.awt.image.renderable.ContextualRenderedImageFactory this]
+  (^Boolean [^java.awt.image.renderable.ContextualRenderedImageFactory this]
     (-> this (.isDynamic))))
 

@@ -38,7 +38,7 @@
   c - JLayer to return preferred size for - `javax.swing.JComponent`
 
   returns: minimal size for the passed JLayer - `java.awt.Dimension`"
-  ([^javax.swing.plaf.LayerUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^javax.swing.plaf.LayerUI this ^javax.swing.JComponent c]
     (-> this (.getMinimumSize c))))
 
 (defn get-maximum-size
@@ -49,7 +49,7 @@
   c - JLayer to return preferred size for - `javax.swing.JComponent`
 
   returns: maximum size for the passed JLayer - `java.awt.Dimension`"
-  ([^javax.swing.plaf.LayerUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^javax.swing.plaf.LayerUI this ^javax.swing.JComponent c]
     (-> this (.getMaximumSize c))))
 
 (defn uninstall-ui
@@ -71,7 +71,7 @@
 
   returns: an enum indicating how the baseline changes as the component
            size changes - `java.awt.Component.BaselineResizeBehavior`"
-  ([^javax.swing.plaf.LayerUI this ^javax.swing.JComponent c]
+  (^java.awt.Component.BaselineResizeBehavior [^javax.swing.plaf.LayerUI this ^javax.swing.JComponent c]
     (-> this (.getBaselineResizeBehavior c))))
 
 (defn remove-property-change-listener
@@ -180,7 +180,7 @@
 
   returns: baseline or a value < 0 indicating there is no reasonable
                     baseline - `int`"
-  ([^javax.swing.plaf.LayerUI this ^javax.swing.JComponent c ^Integer width ^Integer height]
+  (^Integer [^javax.swing.plaf.LayerUI this ^javax.swing.JComponent c ^Integer width ^Integer height]
     (-> this (.getBaseline c width height))))
 
 (defn add-property-change-listener
@@ -213,6 +213,6 @@
   c - JLayer to return preferred size for - `javax.swing.JComponent`
 
   returns: preferred size for the passed JLayer - `java.awt.Dimension`"
-  ([^javax.swing.plaf.LayerUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^javax.swing.plaf.LayerUI this ^javax.swing.JComponent c]
     (-> this (.getPreferredSize c))))
 

@@ -78,9 +78,9 @@
   i - The data array element you want to get. - `int`
 
   returns: The requested data array element as an integer. - `int`"
-  ([^java.awt.image.DataBufferUShort this ^Integer bank ^Integer i]
+  (^Integer [^java.awt.image.DataBufferUShort this ^Integer bank ^Integer i]
     (-> this (.getElem bank i)))
-  ([^java.awt.image.DataBufferUShort this ^Integer i]
+  (^Integer [^java.awt.image.DataBufferUShort this ^Integer i]
     (-> this (.getElem i))))
 
 (defn set-elem

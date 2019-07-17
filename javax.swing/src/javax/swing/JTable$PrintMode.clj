@@ -45,6 +45,6 @@
   returns: the enum constant with the specified name - `javax.swing.JTable.PrintMode`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^javax.swing.JTable.PrintMode [^java.lang.String name]
     (JTable$PrintMode/valueOf name)))
 

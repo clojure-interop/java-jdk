@@ -23,21 +23,21 @@
   "Returns the file used to create this exception.
 
   returns: the file (can be null) - `java.lang.String`"
-  ([^java.nio.file.FileSystemException this]
+  (^java.lang.String [^java.nio.file.FileSystemException this]
     (-> this (.getFile))))
 
 (defn get-other-file
   "Returns the other file used to create this exception.
 
   returns: the other file (can be null) - `java.lang.String`"
-  ([^java.nio.file.FileSystemException this]
+  (^java.lang.String [^java.nio.file.FileSystemException this]
     (-> this (.getOtherFile))))
 
 (defn get-reason
   "Returns the string explaining why the file system operation failed.
 
   returns: the string explaining why the file system operation failed - `java.lang.String`"
-  ([^java.nio.file.FileSystemException this]
+  (^java.lang.String [^java.nio.file.FileSystemException this]
     (-> this (.getReason))))
 
 (defn get-message
@@ -45,6 +45,6 @@
 
   returns: the detail message string of this Throwable instance
             (which may be null). - `java.lang.String`"
-  ([^java.nio.file.FileSystemException this]
+  (^java.lang.String [^java.nio.file.FileSystemException this]
     (-> this (.getMessage))))
 

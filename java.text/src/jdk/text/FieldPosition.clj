@@ -62,14 +62,14 @@
    requested field.
 
   returns: the end index - `int`"
-  ([^java.text.FieldPosition this]
+  (^Integer [^java.text.FieldPosition this]
     (-> this (.getEndIndex))))
 
 (defn to-string
   "Return a string representation of this FieldPosition.
 
   returns: a string representation of this object - `java.lang.String`"
-  ([^java.text.FieldPosition this]
+  (^java.lang.String [^java.text.FieldPosition this]
     (-> this (.toString))))
 
 (defn set-begin-index
@@ -83,14 +83,14 @@
   "Retrieves the index of the first character in the requested field.
 
   returns: the begin index - `int`"
-  ([^java.text.FieldPosition this]
+  (^Integer [^java.text.FieldPosition this]
     (-> this (.getBeginIndex))))
 
 (defn get-field
   "Retrieves the field identifier.
 
   returns: the field identifier - `int`"
-  ([^java.text.FieldPosition this]
+  (^Integer [^java.text.FieldPosition this]
     (-> this (.getField))))
 
 (defn get-field-attribute
@@ -99,14 +99,14 @@
    the field is specified only by an integer field ID.
 
   returns: Identifier for the field - `java.text.Format.Field`"
-  ([^java.text.FieldPosition this]
+  (^java.text.Format.Field [^java.text.FieldPosition this]
     (-> this (.getFieldAttribute))))
 
 (defn hash-code
   "Returns a hash code for this FieldPosition.
 
   returns: a hash code value for this object - `int`"
-  ([^java.text.FieldPosition this]
+  (^Integer [^java.text.FieldPosition this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -116,6 +116,6 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([^java.text.FieldPosition this ^java.lang.Object obj]
+  (^Boolean [^java.text.FieldPosition this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

@@ -42,9 +42,9 @@
   p - a visitor-specified parameter - `ElementVisitor.P`
 
   returns: a visitor-specified result - `ElementVisitor.R`"
-  ([^javax.lang.model.element.ElementVisitor this ^javax.lang.model.element.Element e ^ElementVisitor.P p]
+  (^ElementVisitor.R [^javax.lang.model.element.ElementVisitor this ^javax.lang.model.element.Element e ^ElementVisitor.P p]
     (-> this (.visit e p)))
-  ([^javax.lang.model.element.ElementVisitor this ^javax.lang.model.element.Element e]
+  (^ElementVisitor.R [^javax.lang.model.element.ElementVisitor this ^javax.lang.model.element.Element e]
     (-> this (.visit e))))
 
 (defn visit-package
@@ -54,7 +54,7 @@
   p - a visitor-specified parameter - `ElementVisitor.P`
 
   returns: a visitor-specified result - `ElementVisitor.R`"
-  ([^javax.lang.model.element.ElementVisitor this ^javax.lang.model.element.PackageElement e ^ElementVisitor.P p]
+  (^ElementVisitor.R [^javax.lang.model.element.ElementVisitor this ^javax.lang.model.element.PackageElement e ^ElementVisitor.P p]
     (-> this (.visitPackage e p))))
 
 (defn visit-type
@@ -64,7 +64,7 @@
   p - a visitor-specified parameter - `ElementVisitor.P`
 
   returns: a visitor-specified result - `ElementVisitor.R`"
-  ([^javax.lang.model.element.ElementVisitor this ^javax.lang.model.element.TypeElement e ^ElementVisitor.P p]
+  (^ElementVisitor.R [^javax.lang.model.element.ElementVisitor this ^javax.lang.model.element.TypeElement e ^ElementVisitor.P p]
     (-> this (.visitType e p))))
 
 (defn visit-variable
@@ -74,7 +74,7 @@
   p - a visitor-specified parameter - `ElementVisitor.P`
 
   returns: a visitor-specified result - `ElementVisitor.R`"
-  ([^javax.lang.model.element.ElementVisitor this ^javax.lang.model.element.VariableElement e ^ElementVisitor.P p]
+  (^ElementVisitor.R [^javax.lang.model.element.ElementVisitor this ^javax.lang.model.element.VariableElement e ^ElementVisitor.P p]
     (-> this (.visitVariable e p))))
 
 (defn visit-executable
@@ -84,7 +84,7 @@
   p - a visitor-specified parameter - `ElementVisitor.P`
 
   returns: a visitor-specified result - `ElementVisitor.R`"
-  ([^javax.lang.model.element.ElementVisitor this ^javax.lang.model.element.ExecutableElement e ^ElementVisitor.P p]
+  (^ElementVisitor.R [^javax.lang.model.element.ElementVisitor this ^javax.lang.model.element.ExecutableElement e ^ElementVisitor.P p]
     (-> this (.visitExecutable e p))))
 
 (defn visit-type-parameter
@@ -94,7 +94,7 @@
   p - a visitor-specified parameter - `ElementVisitor.P`
 
   returns: a visitor-specified result - `ElementVisitor.R`"
-  ([^javax.lang.model.element.ElementVisitor this ^javax.lang.model.element.TypeParameterElement e ^ElementVisitor.P p]
+  (^ElementVisitor.R [^javax.lang.model.element.ElementVisitor this ^javax.lang.model.element.TypeParameterElement e ^ElementVisitor.P p]
     (-> this (.visitTypeParameter e p))))
 
 (defn visit-unknown
@@ -108,6 +108,6 @@
   returns: a visitor-specified result - `ElementVisitor.R`
 
   throws: javax.lang.model.element.UnknownElementException - a visitor implementation may optionally throw this exception"
-  ([^javax.lang.model.element.ElementVisitor this ^javax.lang.model.element.Element e ^ElementVisitor.P p]
+  (^ElementVisitor.R [^javax.lang.model.element.ElementVisitor this ^javax.lang.model.element.Element e ^ElementVisitor.P p]
     (-> this (.visitUnknown e p))))
 

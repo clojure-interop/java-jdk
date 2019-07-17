@@ -194,6 +194,6 @@
   entry - a non-null object that wraps the underlying object from the model - `RowFilter.I>`
 
   returns: true if the entry should be shown - `boolean`"
-  ([^javax.swing.RowFilter this ^RowFilter.I> entry]
+  (^Boolean [^javax.swing.RowFilter this ^RowFilter.I> entry]
     (-> this (.include entry))))
 

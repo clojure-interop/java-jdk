@@ -51,7 +51,7 @@
 
   returns: a RenderingHints object that represents
    the rendering hints of this RenderContext. - `java.awt.RenderingHints`"
-  ([^java.awt.image.renderable.RenderContext this]
+  (^java.awt.RenderingHints [^java.awt.image.renderable.RenderContext this]
     (-> this (.getRenderingHints))))
 
 (defn pre-concetenate-transform
@@ -99,7 +99,7 @@
 
   returns: a reference to the area of interest of the RenderContext,
            or null if none is specified. - `java.awt.Shape`"
-  ([^java.awt.image.renderable.RenderContext this]
+  (^java.awt.Shape [^java.awt.image.renderable.RenderContext this]
     (-> this (.getAreaOfInterest))))
 
 (defn clone
@@ -108,7 +108,7 @@
    while the area of interest is copied by reference.
 
   returns: the new cloned RenderContext. - `java.lang.Object`"
-  ([^java.awt.image.renderable.RenderContext this]
+  (^java.lang.Object [^java.awt.image.renderable.RenderContext this]
     (-> this (.clone))))
 
 (defn set-transform
@@ -123,7 +123,7 @@
   "Gets the current user-to-device AffineTransform.
 
   returns: a reference to the current AffineTransform. - `java.awt.geom.AffineTransform`"
-  ([^java.awt.image.renderable.RenderContext this]
+  (^java.awt.geom.AffineTransform [^java.awt.image.renderable.RenderContext this]
     (-> this (.getTransform))))
 
 (defn set-rendering-hints

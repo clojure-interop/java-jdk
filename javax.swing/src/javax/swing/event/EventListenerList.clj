@@ -108,9 +108,9 @@
   t - `java.lang.Class<?>`
 
   returns: `int`"
-  ([^javax.swing.event.EventListenerList this ^java.lang.Class t]
+  (^Integer [^javax.swing.event.EventListenerList this ^java.lang.Class t]
     (-> this (.getListenerCount t)))
-  ([^javax.swing.event.EventListenerList this]
+  (^Integer [^javax.swing.event.EventListenerList this]
     (-> this (.getListenerCount))))
 
 (defn add
@@ -137,6 +137,6 @@
   "Returns a string representation of the EventListenerList.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^javax.swing.event.EventListenerList this]
+  (^java.lang.String [^javax.swing.event.EventListenerList this]
     (-> this (.toString))))
 

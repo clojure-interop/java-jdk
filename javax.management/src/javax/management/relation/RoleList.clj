@@ -35,7 +35,7 @@
    be added. - `java.util.List<javax.management.relation.Role>`
 
   throws: java.lang.IllegalArgumentException - if this RoleList contains an element that is not a Role."
-  ([^javax.management.relation.RoleList this]
+  (^java.util.List [^javax.management.relation.RoleList this]
     (-> this (.asList))))
 
 (defn add
@@ -75,8 +75,8 @@
   returns: true if this list changed as a result of the call. - `boolean`
 
   throws: java.lang.IllegalArgumentException - if the role is null."
-  ([^javax.management.relation.RoleList this ^Integer index ^javax.management.relation.RoleList role-list]
+  (^Boolean [^javax.management.relation.RoleList this ^Integer index ^javax.management.relation.RoleList role-list]
     (-> this (.addAll index role-list)))
-  ([^javax.management.relation.RoleList this ^javax.management.relation.RoleList role-list]
+  (^Boolean [^javax.management.relation.RoleList this ^javax.management.relation.RoleList role-list]
     (-> this (.addAll role-list))))
 

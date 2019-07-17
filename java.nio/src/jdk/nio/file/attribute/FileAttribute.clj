@@ -8,13 +8,13 @@
   "Returns the attribute name.
 
   returns: The attribute name - `java.lang.String`"
-  ([^java.nio.file.attribute.FileAttribute this]
+  (^java.lang.String [^java.nio.file.attribute.FileAttribute this]
     (-> this (.name))))
 
 (defn value
   "Returns the attribute value.
 
   returns: The attribute value - `FileAttribute.T`"
-  ([^java.nio.file.attribute.FileAttribute this]
+  (^FileAttribute.T [^java.nio.file.attribute.FileAttribute this]
     (-> this (.value))))
 

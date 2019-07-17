@@ -22,7 +22,7 @@
   "Returns the Method object for the incorrectly typed element.
 
   returns: the Method object for the incorrectly typed element - `java.lang.reflect.Method`"
-  ([^java.lang.annotation.AnnotationTypeMismatchException this]
+  (^java.lang.reflect.Method [^java.lang.annotation.AnnotationTypeMismatchException this]
     (-> this (.element))))
 
 (defn found-type
@@ -31,6 +31,6 @@
    as well.  The exact format of the string is unspecified.
 
   returns: the type of data found in the incorrectly typed element - `java.lang.String`"
-  ([^java.lang.annotation.AnnotationTypeMismatchException this]
+  (^java.lang.String [^java.lang.annotation.AnnotationTypeMismatchException this]
     (-> this (.foundType))))
 

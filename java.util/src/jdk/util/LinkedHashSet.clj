@@ -105,6 +105,6 @@
    should document the reporting of additional characteristic values.
 
   returns: a Spliterator over the elements in this set - `java.util.Spliterator<LinkedHashSet.E>`"
-  ([^java.util.LinkedHashSet this]
+  (^java.util.Spliterator [^java.util.LinkedHashSet this]
     (-> this (.spliterator))))
 

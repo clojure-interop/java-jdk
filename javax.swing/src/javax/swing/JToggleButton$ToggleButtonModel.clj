@@ -23,7 +23,7 @@
   "Checks if the button is selected.
 
   returns: true if the button is selected - `boolean`"
-  ([^javax.swing.JToggleButton$ToggleButtonModel this]
+  (^Boolean [^javax.swing.JToggleButton$ToggleButtonModel this]
     (-> this (.isSelected))))
 
 (defn set-selected

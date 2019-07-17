@@ -100,7 +100,7 @@
   returns: true if the specified permission is not
                     null and is implied by this object,
                     false otherwise. - `boolean`"
-  ([^java.io.FilePermission this ^java.security.Permission p]
+  (^Boolean [^java.io.FilePermission this ^java.security.Permission p]
     (-> this (.implies p))))
 
 (defn equals
@@ -112,14 +112,14 @@
   returns: true if obj is a FilePermission, and has the same
             pathname and actions as this FilePermission object,
             false otherwise. - `boolean`"
-  ([^java.io.FilePermission this ^java.lang.Object obj]
+  (^Boolean [^java.io.FilePermission this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Returns the hash code value for this object.
 
   returns: a hash code value for this object. - `int`"
-  ([^java.io.FilePermission this]
+  (^Integer [^java.io.FilePermission this]
     (-> this (.hashCode))))
 
 (defn get-actions
@@ -130,7 +130,7 @@
    will return the string `read,write`.
 
   returns: the canonical string representation of the actions. - `java.lang.String`"
-  ([^java.io.FilePermission this]
+  (^java.lang.String [^java.io.FilePermission this]
     (-> this (.getActions))))
 
 (defn new-permission-collection
@@ -163,6 +163,6 @@
 
   returns: a new PermissionCollection object suitable for storing
    FilePermissions. - `java.security.PermissionCollection`"
-  ([^java.io.FilePermission this]
+  (^java.security.PermissionCollection [^java.io.FilePermission this]
     (-> this (.newPermissionCollection))))
 

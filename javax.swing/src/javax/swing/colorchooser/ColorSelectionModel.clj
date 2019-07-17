@@ -8,7 +8,7 @@
    non-null.
 
   returns: the selected Color - `java.awt.Color`"
-  ([^javax.swing.colorchooser.ColorSelectionModel this]
+  (^java.awt.Color [^javax.swing.colorchooser.ColorSelectionModel this]
     (-> this (.getSelectedColor))))
 
 (defn set-selected-color

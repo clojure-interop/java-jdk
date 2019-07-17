@@ -23,14 +23,14 @@
   "Get the vendor specific error code
 
   returns: a string specifying the vendor specific error code - `java.lang.String`"
-  ([^javax.xml.bind.JAXBException this]
+  (^java.lang.String [^javax.xml.bind.JAXBException this]
     (-> this (.getErrorCode))))
 
 (defn get-linked-exception
   "Get the linked exception
 
   returns: the linked Exception, null if none exists - `java.lang.Throwable`"
-  ([^javax.xml.bind.JAXBException this]
+  (^java.lang.Throwable [^javax.xml.bind.JAXBException this]
     (-> this (.getLinkedException))))
 
 (defn set-linked-exception
@@ -44,7 +44,7 @@
   "Returns a short description of this JAXBException.
 
   returns: a string representation of this throwable. - `java.lang.String`"
-  ([^javax.xml.bind.JAXBException this]
+  (^java.lang.String [^javax.xml.bind.JAXBException this]
     (-> this (.toString))))
 
 (defn print-stack-trace
@@ -62,6 +62,6 @@
 
   returns: the cause of this throwable or null if the
             cause is nonexistent or unknown. - `java.lang.Throwable`"
-  ([^javax.xml.bind.JAXBException this]
+  (^java.lang.Throwable [^javax.xml.bind.JAXBException this]
     (-> this (.getCause))))
 

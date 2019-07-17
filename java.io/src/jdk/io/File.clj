@@ -267,9 +267,9 @@
   returns: An abstract pathname denoting a newly-created empty file - `java.io.File`
 
   throws: java.lang.IllegalArgumentException - If the prefix argument contains fewer than three characters"
-  ([^java.lang.String prefix ^java.lang.String suffix ^java.io.File directory]
+  (^java.io.File [^java.lang.String prefix ^java.lang.String suffix ^java.io.File directory]
     (File/createTempFile prefix suffix directory))
-  ([^java.lang.String prefix ^java.lang.String suffix]
+  (^java.io.File [^java.lang.String prefix ^java.lang.String suffix]
     (File/createTempFile prefix suffix)))
 
 (defn last-modified
@@ -287,7 +287,7 @@
             file does not exist or if an I/O error occurs - `long`
 
   throws: java.lang.SecurityException - If a security manager exists and its SecurityManager.checkRead(java.lang.String) method denies read access to the file"
-  ([^java.io.File this]
+  (^Long [^java.io.File this]
     (-> this (.lastModified))))
 
 (defn file?
@@ -305,7 +305,7 @@
             false otherwise - `boolean`
 
   throws: java.lang.SecurityException - If a security manager exists and its SecurityManager.checkRead(java.lang.String) method denies read access to the file"
-  ([^java.io.File this]
+  (^Boolean [^java.io.File this]
     (-> this (.isFile))))
 
 (defn set-read-only
@@ -321,7 +321,7 @@
             false otherwise - `boolean`
 
   throws: java.lang.SecurityException - If a security manager exists and its SecurityManager.checkWrite(java.lang.String) method denies write access to the named file"
-  ([^java.io.File this]
+  (^Boolean [^java.io.File this]
     (-> this (.setReadOnly))))
 
 (defn list
@@ -363,7 +363,7 @@
             successfully deleted; false otherwise - `boolean`
 
   throws: java.lang.SecurityException - If a security manager exists and its SecurityManager.checkDelete(java.lang.String) method denies delete access to the file"
-  ([^java.io.File this]
+  (^Boolean [^java.io.File this]
     (-> this (.delete))))
 
 (defn delete-on-exit
@@ -422,7 +422,7 @@
             and undefined authority, query, and fragment components - `java.net.URI`
 
   throws: java.lang.SecurityException - If a required system property value cannot be accessed."
-  ([^java.io.File this]
+  (^java.net.URI [^java.io.File this]
     (-> this (.toURI))))
 
 (defn mkdirs
@@ -436,7 +436,7 @@
             otherwise - `boolean`
 
   throws: java.lang.SecurityException - If a security manager exists and its SecurityManager.checkRead(java.lang.String) method does not permit verification of the existence of the named directory and all necessary parent directories; or if the SecurityManager.checkWrite(java.lang.String) method does not permit the named directory and all necessary parent directories to be created"
-  ([^java.io.File this]
+  (^Boolean [^java.io.File this]
     (-> this (.mkdirs))))
 
 (defn get-canonical-path
@@ -464,7 +464,7 @@
             directory as this abstract pathname - `java.lang.String`
 
   throws: java.io.IOException - If an I/O error occurs, which is possible because the construction of the canonical pathname may require filesystem queries"
-  ([^java.io.File this]
+  (^java.lang.String [^java.io.File this]
     (-> this (.getCanonicalPath))))
 
 (defn to-string
@@ -472,7 +472,7 @@
    string returned by the getPath() method.
 
   returns: The string form of this abstract pathname - `java.lang.String`"
-  ([^java.io.File this]
+  (^java.lang.String [^java.io.File this]
     (-> this (.toString))))
 
 (defn get-path
@@ -481,7 +481,7 @@
    separate the names in the name sequence.
 
   returns: The string form of this abstract pathname - `java.lang.String`"
-  ([^java.io.File this]
+  (^java.lang.String [^java.io.File this]
     (-> this (.getPath))))
 
 (defn get-free-space
@@ -502,7 +502,7 @@
             returned by getTotalSpace(). - `long`
 
   throws: java.lang.SecurityException - If a security manager has been installed and it denies RuntimePermission(`getFileSystemAttributes`) or its SecurityManager.checkRead(String) method denies read access to the file named by this abstract pathname"
-  ([^java.io.File this]
+  (^Long [^java.io.File this]
     (-> this (.getFreeSpace))))
 
 (defn get-total-space
@@ -513,7 +513,7 @@
             abstract pathname does not name a partition - `long`
 
   throws: java.lang.SecurityException - If a security manager has been installed and it denies RuntimePermission(`getFileSystemAttributes`) or its SecurityManager.checkRead(String) method denies read access to the file named by this abstract pathname"
-  ([^java.io.File this]
+  (^Long [^java.io.File this]
     (-> this (.getTotalSpace))))
 
 (defn get-name
@@ -525,7 +525,7 @@
   returns: The name of the file or directory denoted by this abstract
             pathname, or the empty string if this pathname's name sequence
             is empty - `java.lang.String`"
-  ([^java.io.File this]
+  (^java.lang.String [^java.io.File this]
     (-> this (.getName))))
 
 (defn rename-to
@@ -547,7 +547,7 @@
             false otherwise - `boolean`
 
   throws: java.lang.SecurityException - If a security manager exists and its SecurityManager.checkWrite(java.lang.String) method denies write access to either the old or new pathnames"
-  ([^java.io.File this ^java.io.File dest]
+  (^Boolean [^java.io.File this ^java.io.File dest]
     (-> this (.renameTo dest))))
 
 (defn can-read?
@@ -562,7 +562,7 @@
             application; false otherwise - `boolean`
 
   throws: java.lang.SecurityException - If a security manager exists and its SecurityManager.checkRead(java.lang.String) method denies read access to the file"
-  ([^java.io.File this]
+  (^Boolean [^java.io.File this]
     (-> this (.canRead))))
 
 (defn directory?
@@ -578,7 +578,7 @@
             false otherwise - `boolean`
 
   throws: java.lang.SecurityException - If a security manager exists and its SecurityManager.checkRead(java.lang.String) method denies read access to the file"
-  ([^java.io.File this]
+  (^Boolean [^java.io.File this]
     (-> this (.isDirectory))))
 
 (defn get-parent
@@ -593,7 +593,7 @@
   returns: The pathname string of the parent directory named by this
             abstract pathname, or null if this pathname
             does not name a parent - `java.lang.String`"
-  ([^java.io.File this]
+  (^java.lang.String [^java.io.File this]
     (-> this (.getParent))))
 
 (defn hidden?
@@ -608,7 +608,7 @@
             underlying platform - `boolean`
 
   throws: java.lang.SecurityException - If a security manager exists and its SecurityManager.checkRead(java.lang.String) method denies read access to the file"
-  ([^java.io.File this]
+  (^Boolean [^java.io.File this]
     (-> this (.isHidden))))
 
 (defn set-last-modified
@@ -628,7 +628,7 @@
             false otherwise - `boolean`
 
   throws: java.lang.IllegalArgumentException - If the argument is negative"
-  ([^java.io.File this ^Long time]
+  (^Boolean [^java.io.File this ^Long time]
     (-> this (.setLastModified time))))
 
 (defn get-usable-space
@@ -652,7 +652,7 @@
             will be equivalent to a call to getFreeSpace(). - `long`
 
   throws: java.lang.SecurityException - If a security manager has been installed and it denies RuntimePermission(`getFileSystemAttributes`) or its SecurityManager.checkRead(String) method denies read access to the file named by this abstract pathname"
-  ([^java.io.File this]
+  (^Long [^java.io.File this]
     (-> this (.getUsableSpace))))
 
 (defn length
@@ -669,7 +669,7 @@
             denoting system-dependent entities such as devices or pipes. - `long`
 
   throws: java.lang.SecurityException - If a security manager exists and its SecurityManager.checkRead(java.lang.String) method denies read access to the file"
-  ([^java.io.File this]
+  (^Long [^java.io.File this]
     (-> this (.length))))
 
 (defn set-readable
@@ -693,9 +693,9 @@
             operation will fail. - `boolean`
 
   throws: java.lang.SecurityException - If a security manager exists and its SecurityManager.checkWrite(java.lang.String) method denies write access to the file"
-  ([^java.io.File this ^Boolean readable ^Boolean owner-only]
+  (^Boolean [^java.io.File this ^Boolean readable ^Boolean owner-only]
     (-> this (.setReadable readable owner-only)))
-  ([^java.io.File this ^Boolean readable]
+  (^Boolean [^java.io.File this ^Boolean readable]
     (-> this (.setReadable readable))))
 
 (defn list-files
@@ -743,7 +743,7 @@
   returns: a Path constructed from this abstract path - `java.nio.file.Path`
 
   throws: java.nio.file.InvalidPathException - if a Path object cannot be constructed from the abstract path (see FileSystem.getPath)"
-  ([^java.io.File this]
+  (^java.nio.file.Path [^java.io.File this]
     (-> this (.toPath))))
 
 (defn set-writable
@@ -764,9 +764,9 @@
             the access permissions of this abstract pathname. - `boolean`
 
   throws: java.lang.SecurityException - If a security manager exists and its SecurityManager.checkWrite(java.lang.String) method denies write access to the named file"
-  ([^java.io.File this ^Boolean writable ^Boolean owner-only]
+  (^Boolean [^java.io.File this ^Boolean writable ^Boolean owner-only]
     (-> this (.setWritable writable owner-only)))
-  ([^java.io.File this ^Boolean writable]
+  (^Boolean [^java.io.File this ^Boolean writable]
     (-> this (.setWritable writable))))
 
 (defn can-execute?
@@ -780,7 +780,7 @@
             and the application is allowed to execute the file - `boolean`
 
   throws: java.lang.SecurityException - If a security manager exists and its SecurityManager.checkExec(java.lang.String) method denies execute access to the file"
-  ([^java.io.File this]
+  (^Boolean [^java.io.File this]
     (-> this (.canExecute))))
 
 (defn create-new-file
@@ -800,7 +800,7 @@
             already exists - `boolean`
 
   throws: java.io.IOException - If an I/O error occurred"
-  ([^java.io.File this]
+  (^Boolean [^java.io.File this]
     (-> this (.createNewFile))))
 
 (defn hash-code
@@ -816,7 +816,7 @@
    lowercasing the pathname string.
 
   returns: A hash code for this abstract pathname - `int`"
-  ([^java.io.File this]
+  (^Integer [^java.io.File this]
     (-> this (.hashCode))))
 
 (defn can-write?
@@ -832,7 +832,7 @@
             false otherwise. - `boolean`
 
   throws: java.lang.SecurityException - If a security manager exists and its SecurityManager.checkWrite(java.lang.String) method denies write access to the file"
-  ([^java.io.File this]
+  (^Boolean [^java.io.File this]
     (-> this (.canWrite))))
 
 (defn exists?
@@ -843,7 +843,7 @@
             by this abstract pathname exists; false otherwise - `boolean`
 
   throws: java.lang.SecurityException - If a security manager exists and its SecurityManager.checkRead(java.lang.String) method denies read access to the file or directory"
-  ([^java.io.File this]
+  (^Boolean [^java.io.File this]
     (-> this (.exists))))
 
 (defn get-parent-file
@@ -859,7 +859,7 @@
   returns: The abstract pathname of the parent directory named by this
             abstract pathname, or null if this pathname
             does not name a parent - `java.io.File`"
-  ([^java.io.File this]
+  (^java.io.File [^java.io.File this]
     (-> this (.getParentFile))))
 
 (defn compare-to
@@ -875,7 +875,7 @@
             lexicographically less than the argument, or a value greater
             than zero if this abstract pathname is lexicographically
             greater than the argument - `int`"
-  ([^java.io.File this ^java.io.File pathname]
+  (^Integer [^java.io.File this ^java.io.File pathname]
     (-> this (.compareTo pathname))))
 
 (defn set-executable
@@ -899,9 +899,9 @@
             operation will fail. - `boolean`
 
   throws: java.lang.SecurityException - If a security manager exists and its SecurityManager.checkWrite(java.lang.String) method denies write access to the file"
-  ([^java.io.File this ^Boolean executable ^Boolean owner-only]
+  (^Boolean [^java.io.File this ^Boolean executable ^Boolean owner-only]
     (-> this (.setExecutable executable owner-only)))
-  ([^java.io.File this ^Boolean executable]
+  (^Boolean [^java.io.File this ^Boolean executable]
     (-> this (.setExecutable executable))))
 
 (defn get-absolute-path
@@ -923,7 +923,7 @@
             directory as this abstract pathname - `java.lang.String`
 
   throws: java.lang.SecurityException - If a required system property value cannot be accessed."
-  ([^java.io.File this]
+  (^java.lang.String [^java.io.File this]
     (-> this (.getAbsolutePath))))
 
 (defn get-absolute-file
@@ -934,7 +934,7 @@
             directory as this abstract pathname - `java.io.File`
 
   throws: java.lang.SecurityException - If a required system property value cannot be accessed."
-  ([^java.io.File this]
+  (^java.io.File [^java.io.File this]
     (-> this (.getAbsoluteFile))))
 
 (defn equals
@@ -950,7 +950,7 @@
 
   returns: true if and only if the objects are the same;
             false otherwise - `boolean`"
-  ([^java.io.File this ^java.lang.Object obj]
+  (^Boolean [^java.io.File this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn to-url
@@ -975,7 +975,7 @@
 
   returns: true if this abstract pathname is absolute,
             false otherwise - `boolean`"
-  ([^java.io.File this]
+  (^Boolean [^java.io.File this]
     (-> this (.isAbsolute))))
 
 (defn mkdir
@@ -985,7 +985,7 @@
             created; false otherwise - `boolean`
 
   throws: java.lang.SecurityException - If a security manager exists and its SecurityManager.checkWrite(java.lang.String) method does not permit the named directory to be created"
-  ([^java.io.File this]
+  (^Boolean [^java.io.File this]
     (-> this (.mkdir))))
 
 (defn get-canonical-file
@@ -996,6 +996,6 @@
             directory as this abstract pathname - `java.io.File`
 
   throws: java.io.IOException - If an I/O error occurs, which is possible because the construction of the canonical pathname may require filesystem queries"
-  ([^java.io.File this]
+  (^java.io.File [^java.io.File this]
     (-> this (.getCanonicalFile))))
 

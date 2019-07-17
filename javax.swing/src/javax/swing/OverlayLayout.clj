@@ -45,7 +45,7 @@
   target - the container - `java.awt.Container`
 
   returns: the alignment >= 0.0f && <= 1.0f - `float`"
-  ([^javax.swing.OverlayLayout this ^java.awt.Container target]
+  (^Float [^javax.swing.OverlayLayout this ^java.awt.Container target]
     (-> this (.getLayoutAlignmentY target))))
 
 (defn preferred-layout-size
@@ -57,7 +57,7 @@
   target - the component which needs to be laid out - `java.awt.Container`
 
   returns: a Dimension object containing the preferred dimensions - `java.awt.Dimension`"
-  ([^javax.swing.OverlayLayout this ^java.awt.Container target]
+  (^java.awt.Dimension [^javax.swing.OverlayLayout this ^java.awt.Container target]
     (-> this (.preferredLayoutSize target))))
 
 (defn get-layout-alignment-x
@@ -66,7 +66,7 @@
   target - the container - `java.awt.Container`
 
   returns: the alignment >= 0.0f && <= 1.0f - `float`"
-  ([^javax.swing.OverlayLayout this ^java.awt.Container target]
+  (^Float [^javax.swing.OverlayLayout this ^java.awt.Container target]
     (-> this (.getLayoutAlignmentX target))))
 
 (defn minimum-layout-size
@@ -77,14 +77,14 @@
   target - the component which needs to be laid out - `java.awt.Container`
 
   returns: a Dimension object containing the minimum dimensions - `java.awt.Dimension`"
-  ([^javax.swing.OverlayLayout this ^java.awt.Container target]
+  (^java.awt.Dimension [^javax.swing.OverlayLayout this ^java.awt.Container target]
     (-> this (.minimumLayoutSize target))))
 
 (defn get-target
   "Returns the container that uses this layout manager.
 
   returns: the container that uses this layout manager - `java.awt.Container`"
-  ([^javax.swing.OverlayLayout this]
+  (^java.awt.Container [^javax.swing.OverlayLayout this]
     (-> this (.getTarget))))
 
 (defn maximum-layout-size
@@ -97,7 +97,7 @@
 
   returns: a Dimension object containing the maximum
            dimensions - `java.awt.Dimension`"
-  ([^javax.swing.OverlayLayout this ^java.awt.Container target]
+  (^java.awt.Dimension [^javax.swing.OverlayLayout this ^java.awt.Container target]
     (-> this (.maximumLayoutSize target))))
 
 (defn add-layout-component

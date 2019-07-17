@@ -93,7 +93,7 @@
   record - a LogRecord - `java.util.logging.LogRecord`
 
   returns: true if the LogRecord would be logged. - `boolean`"
-  ([^java.util.logging.StreamHandler this ^java.util.logging.LogRecord record]
+  (^Boolean [^java.util.logging.StreamHandler this ^java.util.logging.LogRecord record]
     (-> this (.isLoggable record))))
 
 (defn flush

@@ -60,7 +60,7 @@
   returns: the reinitialized insets parameter - `java.awt.Insets`
 
   throws: java.lang.NullPointerException - if the specified insets is null"
-  ([^javax.swing.border.StrokeBorder this ^java.awt.Component c ^java.awt.Insets insets]
+  (^java.awt.Insets [^javax.swing.border.StrokeBorder this ^java.awt.Component c ^java.awt.Insets insets]
     (-> this (.getBorderInsets c insets))))
 
 (defn get-stroke
@@ -68,7 +68,7 @@
    during the border rendering.
 
   returns: the BasicStroke object - `java.awt.BasicStroke`"
-  ([^javax.swing.border.StrokeBorder this]
+  (^java.awt.BasicStroke [^javax.swing.border.StrokeBorder this]
     (-> this (.getStroke))))
 
 (defn get-paint
@@ -77,6 +77,6 @@
 
   returns: the Paint object or null
            if the paint parameter is not set - `java.awt.Paint`"
-  ([^javax.swing.border.StrokeBorder this]
+  (^java.awt.Paint [^javax.swing.border.StrokeBorder this]
     (-> this (.getPaint))))
 

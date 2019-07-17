@@ -54,9 +54,9 @@
   returns: a new instance of a MessageFactory - `javax.xml.soap.MessageFactory`
 
   throws: javax.xml.soap.SOAPException - if there was an error in creating the specified implementation of MessageFactory."
-  ([^java.lang.String protocol]
+  (^javax.xml.soap.MessageFactory [^java.lang.String protocol]
     (MessageFactory/newInstance protocol))
-  ([]
+  (^javax.xml.soap.MessageFactory []
     (MessageFactory/newInstance )))
 
 (defn create-message
@@ -71,8 +71,8 @@
            the given InputStream object - `javax.xml.soap.SOAPMessage`
 
   throws: java.io.IOException - if there is a problem in reading data from the input stream"
-  ([^javax.xml.soap.MessageFactory this ^javax.xml.soap.MimeHeaders headers ^java.io.InputStream in]
+  (^javax.xml.soap.SOAPMessage [^javax.xml.soap.MessageFactory this ^javax.xml.soap.MimeHeaders headers ^java.io.InputStream in]
     (-> this (.createMessage headers in)))
-  ([^javax.xml.soap.MessageFactory this]
+  (^javax.xml.soap.SOAPMessage [^javax.xml.soap.MessageFactory this]
     (-> this (.createMessage))))
 

@@ -54,6 +54,6 @@
    `ipp-attribute-fidelity`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.Fidelity this]
+  (^java.lang.String [^javax.print.attribute.standard.Fidelity this]
     (-> this (.getName))))
 

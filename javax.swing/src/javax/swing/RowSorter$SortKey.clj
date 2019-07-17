@@ -22,21 +22,21 @@
   "Returns the index of the column.
 
   returns: index of column - `int`"
-  ([^javax.swing.RowSorter$SortKey this]
+  (^Integer [^javax.swing.RowSorter$SortKey this]
     (-> this (.getColumn))))
 
 (defn get-sort-order
   "Returns the sort order of the column.
 
   returns: the sort order of the column - `javax.swing.SortOrder`"
-  ([^javax.swing.RowSorter$SortKey this]
+  (^javax.swing.SortOrder [^javax.swing.RowSorter$SortKey this]
     (-> this (.getSortOrder))))
 
 (defn hash-code
   "Returns the hash code for this SortKey.
 
   returns: hash code - `int`"
-  ([^javax.swing.RowSorter$SortKey this]
+  (^Integer [^javax.swing.RowSorter$SortKey this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -48,6 +48,6 @@
   o - the object to compare to - `java.lang.Object`
 
   returns: true if o is equal to this SortKey - `boolean`"
-  ([^javax.swing.RowSorter$SortKey this ^java.lang.Object o]
+  (^Boolean [^javax.swing.RowSorter$SortKey this ^java.lang.Object o]
     (-> this (.equals o))))
 

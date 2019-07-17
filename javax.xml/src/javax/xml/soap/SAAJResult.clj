@@ -32,6 +32,6 @@
 
 (defn get-result
   "returns: the resulting Tree that was created under the specified root Node. - `javax.xml.soap.Node`"
-  ([^javax.xml.soap.SAAJResult this]
+  (^javax.xml.soap.Node [^javax.xml.soap.SAAJResult this]
     (-> this (.getResult))))
 

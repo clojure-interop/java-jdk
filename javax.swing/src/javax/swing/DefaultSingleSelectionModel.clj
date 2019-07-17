@@ -21,7 +21,7 @@
   "Description copied from interface: SingleSelectionModel
 
   returns: the model's selection, or -1 if there is no selection - `int`"
-  ([^javax.swing.DefaultSingleSelectionModel this]
+  (^Integer [^javax.swing.DefaultSingleSelectionModel this]
     (-> this (.getSelectedIndex))))
 
 (defn set-selected-index
@@ -40,7 +40,7 @@
   "Description copied from interface: SingleSelectionModel
 
   returns: true if a value is currently selected - `boolean`"
-  ([^javax.swing.DefaultSingleSelectionModel this]
+  (^Boolean [^javax.swing.DefaultSingleSelectionModel this]
     (-> this (.isSelected))))
 
 (defn add-change-listener

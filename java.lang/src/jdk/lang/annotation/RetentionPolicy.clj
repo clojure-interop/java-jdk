@@ -53,6 +53,6 @@
   returns: the enum constant with the specified name - `java.lang.annotation.RetentionPolicy`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^java.lang.annotation.RetentionPolicy [^java.lang.String name]
     (RetentionPolicy/valueOf name)))
 

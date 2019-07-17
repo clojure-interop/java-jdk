@@ -28,7 +28,7 @@
   returns: `java.rmi.Remote`
 
   throws: java.rmi.NoSuchObjectException"
-  ([^javax.rmi.CORBA.PortableRemoteObjectDelegate this ^java.rmi.Remote obj]
+  (^java.rmi.Remote [^javax.rmi.CORBA.PortableRemoteObjectDelegate this ^java.rmi.Remote obj]
     (-> this (.toStub obj))))
 
 (defn unexport-object
@@ -49,7 +49,7 @@
   returns: `java.lang.Object`
 
   throws: java.lang.ClassCastException"
-  ([^javax.rmi.CORBA.PortableRemoteObjectDelegate this ^java.lang.Object narrow-from ^java.lang.Class narrow-to]
+  (^java.lang.Object [^javax.rmi.CORBA.PortableRemoteObjectDelegate this ^java.lang.Object narrow-from ^java.lang.Class narrow-to]
     (-> this (.narrow narrow-from narrow-to))))
 
 (defn connect

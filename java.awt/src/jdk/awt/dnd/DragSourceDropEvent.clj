@@ -46,7 +46,7 @@
            false if the drop target rejected the drop or
            if the drop target accepted the drop, but failed to perform
            a drop action. - `boolean`"
-  ([^java.awt.dnd.DragSourceDropEvent this]
+  (^Boolean [^java.awt.dnd.DragSourceDropEvent this]
     (-> this (.getDropSuccess))))
 
 (defn get-drop-action
@@ -57,6 +57,6 @@
            if the drop target accepted the drop and the target drop action
            is supported by the drag source; otherwise,
            DnDConstants.ACTION_NONE. - `int`"
-  ([^java.awt.dnd.DragSourceDropEvent this]
+  (^Integer [^java.awt.dnd.DragSourceDropEvent this]
     (-> this (.getDropAction))))
 

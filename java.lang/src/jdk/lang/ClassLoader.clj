@@ -114,7 +114,7 @@
 
   returns: A URL object for reading the
             resource, or null if the resource could not be found - `java.net.URL`"
-  ([^java.lang.String name]
+  (^java.net.URL [^java.lang.String name]
     (ClassLoader/getSystemResource name)))
 
 (defn *get-system-resources
@@ -130,7 +130,7 @@
             objects - `java.util.Enumeration<java.net.URL>`
 
   throws: java.io.IOException - If I/O errors occur"
-  ([^java.lang.String name]
+  (^java.util.Enumeration [^java.lang.String name]
     (ClassLoader/getSystemResources name)))
 
 (defn *get-system-resource-as-stream
@@ -142,7 +142,7 @@
 
   returns: An input stream for reading the resource, or null
             if the resource could not be found - `java.io.InputStream`"
-  ([^java.lang.String name]
+  (^java.io.InputStream [^java.lang.String name]
     (ClassLoader/getSystemResourceAsStream name)))
 
 (defn *get-system-class-loader
@@ -178,7 +178,7 @@
             null if none - `java.lang.ClassLoader`
 
   throws: java.lang.SecurityException - If a security manager exists and its checkPermission method doesn't allow access to the system class loader."
-  ([]
+  (^java.lang.ClassLoader []
     (ClassLoader/getSystemClassLoader )))
 
 (defn get-resources
@@ -199,7 +199,7 @@
             access to will not be in the enumeration. - `java.util.Enumeration<java.net.URL>`
 
   throws: java.io.IOException - If I/O errors occur"
-  ([^java.lang.ClassLoader this ^java.lang.String name]
+  (^java.util.Enumeration [^java.lang.ClassLoader this ^java.lang.String name]
     (-> this (.getResources name))))
 
 (defn clear-assertion-status
@@ -245,7 +245,7 @@
   returns: A URL object for reading the resource, or
             null if the resource could not be found or the invoker
             doesn't have adequate  privileges to get the resource. - `java.net.URL`"
-  ([^java.lang.ClassLoader this ^java.lang.String name]
+  (^java.net.URL [^java.lang.ClassLoader this ^java.lang.String name]
     (-> this (.getResource name))))
 
 (defn get-resource-as-stream
@@ -257,7 +257,7 @@
 
   returns: An input stream for reading the resource, or null
             if the resource could not be found - `java.io.InputStream`"
-  ([^java.lang.ClassLoader this ^java.lang.String name]
+  (^java.io.InputStream [^java.lang.ClassLoader this ^java.lang.String name]
     (-> this (.getResourceAsStream name))))
 
 (defn set-default-assertion-status
@@ -283,7 +283,7 @@
   returns: The resulting Class object - `java.lang.Class<?>`
 
   throws: java.lang.ClassNotFoundException - If the class was not found"
-  ([^java.lang.ClassLoader this ^java.lang.String name]
+  (^java.lang.Class [^java.lang.ClassLoader this ^java.lang.String name]
     (-> this (.loadClass name))))
 
 (defn set-package-assertion-status
@@ -328,6 +328,6 @@
   returns: The parent ClassLoader - `java.lang.ClassLoader`
 
   throws: java.lang.SecurityException - If a security manager exists and its checkPermission method doesn't allow access to this class loader's parent class loader."
-  ([^java.lang.ClassLoader this]
+  (^java.lang.ClassLoader [^java.lang.ClassLoader this]
     (-> this (.getParent))))
 

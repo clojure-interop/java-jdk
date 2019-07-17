@@ -123,7 +123,7 @@
   "Returns true if logging is enabled.
 
   returns: true if logging is enabled; otherwise, false - `boolean`"
-  ([]
+  (^Boolean []
     (Timer/getLogTimers )))
 
 (defn stop
@@ -159,7 +159,7 @@
    multiple pending action events.
 
   returns: `boolean`"
-  ([^javax.swing.Timer this]
+  (^Boolean [^javax.swing.Timer this]
     (-> this (.isCoalesce))))
 
 (defn get-delay
@@ -167,7 +167,7 @@
    between firings of action events.
 
   returns: `int`"
-  ([^javax.swing.Timer this]
+  (^Integer [^javax.swing.Timer this]
     (-> this (.getDelay))))
 
 (defn set-repeats
@@ -193,14 +193,14 @@
    to its listeners multiple times.
 
   returns: `boolean`"
-  ([^javax.swing.Timer this]
+  (^Boolean [^javax.swing.Timer this]
     (-> this (.isRepeats))))
 
 (defn get-initial-delay
   "Returns the Timer's initial delay.
 
   returns: `int`"
-  ([^javax.swing.Timer this]
+  (^Integer [^javax.swing.Timer this]
     (-> this (.getInitialDelay))))
 
 (defn start
@@ -230,7 +230,7 @@
   "Returns true if the Timer is running.
 
   returns: `boolean`"
-  ([^javax.swing.Timer this]
+  (^Boolean [^javax.swing.Timer this]
     (-> this (.isRunning))))
 
 (defn remove-action-listener
@@ -279,7 +279,7 @@
    null, which is also the default.
 
   returns: the action command used in firing events - `java.lang.String`"
-  ([^javax.swing.Timer this]
+  (^java.lang.String [^javax.swing.Timer this]
     (-> this (.getActionCommand))))
 
 (defn set-coalesce

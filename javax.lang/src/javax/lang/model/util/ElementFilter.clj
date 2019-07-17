@@ -28,7 +28,7 @@
   elements - the elements to filter - `javax.lang.model.element.Element>`
 
   returns: a list of fields in elements - `java.util.List<javax.lang.model.element.VariableElement>`"
-  ([^javax.lang.model.element.Element> elements]
+  (^java.util.List [^javax.lang.model.element.Element> elements]
     (ElementFilter/fieldsIn elements)))
 
 (defn *constructors-in
@@ -37,7 +37,7 @@
   elements - the elements to filter - `javax.lang.model.element.Element>`
 
   returns: a list of constructors in elements - `java.util.List<javax.lang.model.element.ExecutableElement>`"
-  ([^javax.lang.model.element.Element> elements]
+  (^java.util.List [^javax.lang.model.element.Element> elements]
     (ElementFilter/constructorsIn elements)))
 
 (defn *methods-in
@@ -46,7 +46,7 @@
   elements - the elements to filter - `javax.lang.model.element.Element>`
 
   returns: a list of methods in elements - `java.util.List<javax.lang.model.element.ExecutableElement>`"
-  ([^javax.lang.model.element.Element> elements]
+  (^java.util.List [^javax.lang.model.element.Element> elements]
     (ElementFilter/methodsIn elements)))
 
 (defn *types-in
@@ -55,7 +55,7 @@
   elements - the elements to filter - `javax.lang.model.element.Element>`
 
   returns: a list of types in elements - `java.util.List<javax.lang.model.element.TypeElement>`"
-  ([^javax.lang.model.element.Element> elements]
+  (^java.util.List [^javax.lang.model.element.Element> elements]
     (ElementFilter/typesIn elements)))
 
 (defn *packages-in
@@ -64,6 +64,6 @@
   elements - the elements to filter - `javax.lang.model.element.Element>`
 
   returns: a list of packages in elements - `java.util.List<javax.lang.model.element.PackageElement>`"
-  ([^javax.lang.model.element.Element> elements]
+  (^java.util.List [^javax.lang.model.element.Element> elements]
     (ElementFilter/packagesIn elements)))
 

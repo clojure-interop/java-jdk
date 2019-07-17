@@ -49,7 +49,7 @@
   returns: a window with special characteristics for use by input methods - `java.awt.Window`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless returns true"
-  ([^java.awt.im.spi.InputMethodContext this ^java.lang.String title ^Boolean attach-to-input-context]
+  (^java.awt.Window [^java.awt.im.spi.InputMethodContext this ^java.lang.String title ^Boolean attach-to-input-context]
     (-> this (.createInputMethodWindow title attach-to-input-context))))
 
 (defn create-input-method-j-frame
@@ -79,7 +79,7 @@
   returns: a JFrame with special characteristics for use by input methods - `javax.swing.JFrame`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless returns true"
-  ([^java.awt.im.spi.InputMethodContext this ^java.lang.String title ^Boolean attach-to-input-context]
+  (^javax.swing.JFrame [^java.awt.im.spi.InputMethodContext this ^java.lang.String title ^Boolean attach-to-input-context]
     (-> this (.createInputMethodJFrame title attach-to-input-context))))
 
 (defn enable-client-window-notification

@@ -108,7 +108,7 @@
   "Fetches the current position of the caret.
 
   returns: the position >= 0 - `int`"
-  ([^javax.swing.text.DefaultCaret this]
+  (^Integer [^javax.swing.text.DefaultCaret this]
     (-> this (.getDot))))
 
 (defn move-dot
@@ -142,7 +142,7 @@
    isVisible method.
 
   returns: true if active else false - `boolean`"
-  ([^javax.swing.text.DefaultCaret this]
+  (^Boolean [^javax.swing.text.DefaultCaret this]
     (-> this (.isActive))))
 
 (defn mouse-moved
@@ -157,7 +157,7 @@
 
   returns: the position
    see #setMagicCaretPosition - `java.awt.Point`"
-  ([^javax.swing.text.DefaultCaret this]
+  (^java.awt.Point [^javax.swing.text.DefaultCaret this]
     (-> this (.getMagicCaretPosition))))
 
 (defn focus-gained
@@ -227,14 +227,14 @@
 
   returns: a String representing this
                  Rectangle object's coordinate and size values. - `java.lang.String`"
-  ([^javax.swing.text.DefaultCaret this]
+  (^java.lang.String [^javax.swing.text.DefaultCaret this]
     (-> this (.toString))))
 
 (defn get-mark-bias
   "Returns the bias of the mark.
 
   returns: the bias of the mark - `javax.swing.text.Position.Bias`"
-  ([^javax.swing.text.DefaultCaret this]
+  (^javax.swing.text.Position.Bias [^javax.swing.text.DefaultCaret this]
     (-> this (.getMarkBias))))
 
 (defn mouse-pressed
@@ -309,7 +309,7 @@
 
   returns: the delay in milliseconds.  If this is
     zero the caret will not blink. - `int`"
-  ([^javax.swing.text.DefaultCaret this]
+  (^Integer [^javax.swing.text.DefaultCaret this]
     (-> this (.getBlinkRate))))
 
 (defn mouse-exited
@@ -324,7 +324,7 @@
    the dot and mark will not be the same.
 
   returns: the position >= 0 - `int`"
-  ([^javax.swing.text.DefaultCaret this]
+  (^Integer [^javax.swing.text.DefaultCaret this]
     (-> this (.getMark))))
 
 (defn paint
@@ -348,7 +348,7 @@
   "Checks whether the current selection is visible.
 
   returns: true if the selection is visible - `boolean`"
-  ([^javax.swing.text.DefaultCaret this]
+  (^Boolean [^javax.swing.text.DefaultCaret this]
     (-> this (.isSelectionVisible))))
 
 (defn set-visible
@@ -414,7 +414,7 @@
    returns true.
 
   returns: true if visible else false - `boolean`"
-  ([^javax.swing.text.DefaultCaret this]
+  (^Boolean [^javax.swing.text.DefaultCaret this]
     (-> this (.isVisible))))
 
 (defn set-selection-visible
@@ -463,7 +463,7 @@
 
   returns: one of the following values : UPDATE_WHEN_ON_EDT,
    NEVER_UPDATE, ALWAYS_UPDATE - `int`"
-  ([^javax.swing.text.DefaultCaret this]
+  (^Integer [^javax.swing.text.DefaultCaret this]
     (-> this (.getUpdatePolicy))))
 
 (defn mouse-dragged
@@ -481,7 +481,7 @@
   "Returns the bias of the caret position.
 
   returns: the bias of the caret position - `javax.swing.text.Position.Bias`"
-  ([^javax.swing.text.DefaultCaret this]
+  (^javax.swing.text.Position.Bias [^javax.swing.text.DefaultCaret this]
     (-> this (.getDotBias))))
 
 (defn equals
@@ -494,7 +494,7 @@
 
   returns: true if the objects are equal;
               false otherwise - `boolean`"
-  ([^javax.swing.text.DefaultCaret this ^java.lang.Object obj]
+  (^Boolean [^javax.swing.text.DefaultCaret this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn mouse-clicked

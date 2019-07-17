@@ -65,7 +65,7 @@
   returns: the Reason Text associated with locale - `java.lang.String`
 
   throws: javax.xml.soap.SOAPException - if there was an error in retrieving the fault Reason text for the specified locale ."
-  ([^javax.xml.soap.SOAPFault this ^java.util.Locale locale]
+  (^java.lang.String [^javax.xml.soap.SOAPFault this ^java.util.Locale locale]
     (-> this (.getFaultReasonText locale))))
 
 (defn set-fault-actor
@@ -91,7 +91,7 @@
 
   returns: a String giving the actor in the message path
            that caused this SOAPFault object - `java.lang.String`"
-  ([^javax.xml.soap.SOAPFault this]
+  (^java.lang.String [^javax.xml.soap.SOAPFault this]
     (-> this (.getFaultActor))))
 
 (defn get-fault-subcodes
@@ -105,7 +105,7 @@
         in the fault from top to bottom. - `java.util.Iterator`
 
   throws: java.lang.UnsupportedOperationException - if this message does not support the SOAP 1.2 concept of Subcode."
-  ([^javax.xml.soap.SOAPFault this]
+  (^java.util.Iterator [^javax.xml.soap.SOAPFault this]
     (-> this (.getFaultSubcodes))))
 
 (defn get-fault-reason-locales
@@ -119,7 +119,7 @@
         objects for which there are associated Reason Text items. - `java.util.Iterator`
 
   throws: javax.xml.soap.SOAPException - if there was an error in retrieving the fault Reason locales."
-  ([^javax.xml.soap.SOAPFault this]
+  (^java.util.Iterator [^javax.xml.soap.SOAPFault this]
     (-> this (.getFaultReasonLocales))))
 
 (defn remove-all-fault-subcodes
@@ -143,7 +143,7 @@
    additional parsing.
 
   returns: a Name representing the faultcode - `javax.xml.soap.Name`"
-  ([^javax.xml.soap.SOAPFault this]
+  (^javax.xml.soap.Name [^javax.xml.soap.SOAPFault this]
     (-> this (.getFaultCodeAsName))))
 
 (defn set-fault-node
@@ -166,7 +166,7 @@
    or null if none - `java.lang.String`
 
   throws: java.lang.UnsupportedOperationException - if this message does not support the SOAP 1.2 concept of Fault Node."
-  ([^javax.xml.soap.SOAPFault this]
+  (^java.lang.String [^javax.xml.soap.SOAPFault this]
     (-> this (.getFaultNode))))
 
 (defn set-fault-role
@@ -196,7 +196,7 @@
   "Gets the fault code for this SOAPFault object.
 
   returns: a String with the fault code - `java.lang.String`"
-  ([^javax.xml.soap.SOAPFault this]
+  (^java.lang.String [^javax.xml.soap.SOAPFault this]
     (-> this (.getFaultCode))))
 
 (defn get-fault-role
@@ -208,7 +208,7 @@
    or null if none - `java.lang.String`
 
   throws: java.lang.UnsupportedOperationException - if this message does not support the SOAP 1.2 concept of Fault Role."
-  ([^javax.xml.soap.SOAPFault this]
+  (^java.lang.String [^javax.xml.soap.SOAPFault this]
     (-> this (.getFaultRole))))
 
 (defn get-fault-code-as-q-name
@@ -216,7 +216,7 @@
    SOAPFault object as a QName object.
 
   returns: a QName representing the faultcode - `javax.xml.namespace.QName`"
-  ([^javax.xml.soap.SOAPFault this]
+  (^javax.xml.namespace.QName [^javax.xml.soap.SOAPFault this]
     (-> this (.getFaultCodeAsQName))))
 
 (defn has-detail?
@@ -226,7 +226,7 @@
 
   returns: true if this SOAPFault has a Detail
    subelement and false otherwise. - `boolean`"
-  ([^javax.xml.soap.SOAPFault this]
+  (^Boolean [^javax.xml.soap.SOAPFault this]
     (-> this (.hasDetail))))
 
 (defn get-fault-string
@@ -245,7 +245,7 @@
 
   returns: a String giving an explanation of
           the fault - `java.lang.String`"
-  ([^javax.xml.soap.SOAPFault this]
+  (^java.lang.String [^javax.xml.soap.SOAPFault this]
     (-> this (.getFaultString))))
 
 (defn get-fault-reason-texts
@@ -256,7 +256,7 @@
   returns: an Iterator over env:Fault/env:Reason/env:Text items. - `java.util.Iterator`
 
   throws: javax.xml.soap.SOAPException - if there was an error in retrieving the fault Reason texts."
-  ([^javax.xml.soap.SOAPFault this]
+  (^java.util.Iterator [^javax.xml.soap.SOAPFault this]
     (-> this (.getFaultReasonTexts))))
 
 (defn add-detail
@@ -271,7 +271,7 @@
   returns: the new Detail object - `javax.xml.soap.Detail`
 
   throws: javax.xml.soap.SOAPException - if this SOAPFault object already contains a valid Detail object"
-  ([^javax.xml.soap.SOAPFault this]
+  (^javax.xml.soap.Detail [^javax.xml.soap.SOAPFault this]
     (-> this (.addDetail))))
 
 (defn get-detail
@@ -285,7 +285,7 @@
 
   returns: a Detail object with application-specific
            error information if present, null otherwise - `javax.xml.soap.Detail`"
-  ([^javax.xml.soap.SOAPFault this]
+  (^javax.xml.soap.Detail [^javax.xml.soap.SOAPFault this]
     (-> this (.getDetail))))
 
 (defn set-fault-code
@@ -331,6 +331,6 @@
 
   returns: a Locale object indicating the native language of
             the fault string or null if no locale was specified - `java.util.Locale`"
-  ([^javax.xml.soap.SOAPFault this]
+  (^java.util.Locale [^javax.xml.soap.SOAPFault this]
     (-> this (.getFaultStringLocale))))
 

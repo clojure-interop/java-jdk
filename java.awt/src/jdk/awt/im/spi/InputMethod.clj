@@ -109,7 +109,7 @@
        user interface.
 
   returns: the current input locale, or null - `java.util.Locale`"
-  ([^java.awt.im.spi.InputMethod this]
+  (^java.util.Locale [^java.awt.im.spi.InputMethod this]
     (-> this (.getLocale))))
 
 (defn hide-windows
@@ -185,7 +185,7 @@
    composition; false otherwise. - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if this input method does not support checking whether it is enabled for composition"
-  ([^java.awt.im.spi.InputMethod this]
+  (^Boolean [^java.awt.im.spi.InputMethod this]
     (-> this (.isCompositionEnabled))))
 
 (defn set-locale
@@ -207,7 +207,7 @@
   returns: whether the specified locale is supported - `boolean`
 
   throws: java.lang.NullPointerException - if locale is null"
-  ([^java.awt.im.spi.InputMethod this ^java.util.Locale locale]
+  (^Boolean [^java.awt.im.spi.InputMethod this ^java.util.Locale locale]
     (-> this (.setLocale locale))))
 
 (defn get-control-object
@@ -223,7 +223,7 @@
    InputContext.getInputMethodControlObject.
 
   returns: a control object from this input method, or null - `java.lang.Object`"
-  ([^java.awt.im.spi.InputMethod this]
+  (^java.lang.Object [^java.awt.im.spi.InputMethod this]
     (-> this (.getControlObject))))
 
 (defn dispatch-event
@@ -260,7 +260,7 @@
    by InputContext.setCharacterSubsets.
 
   subsets - the subsets of the Unicode character set from which characters may be input - `java.lang.Character.Subset[]`"
-  ([^java.awt.im.spi.InputMethod this ^java.lang.Character.Subset[] subsets]
+  ([^java.awt.im.spi.InputMethod this subsets]
     (-> this (.setCharacterSubsets subsets))))
 
 (defn set-composition-enabled

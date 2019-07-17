@@ -19,6 +19,6 @@
 
   returns: the detail message string of this Throwable instance
             (which may be null). - `java.lang.String`"
-  ([^java.awt.HeadlessException this]
+  (^java.lang.String [^java.awt.HeadlessException this]
     (-> this (.getMessage))))
 

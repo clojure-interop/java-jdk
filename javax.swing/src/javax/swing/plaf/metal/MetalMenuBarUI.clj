@@ -18,7 +18,7 @@
   returns: ComponentUI implementation for x - `javax.swing.plaf.ComponentUI`
 
   throws: java.lang.NullPointerException - if x is null"
-  ([^javax.swing.JComponent x]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent x]
     (MetalMenuBarUI/createUI x)))
 
 (defn install-ui

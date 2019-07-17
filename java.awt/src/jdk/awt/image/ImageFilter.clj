@@ -30,7 +30,7 @@
 
   returns: an ImageFilter used to perform the
            filtering for the specified ImageConsumer. - `java.awt.image.ImageFilter`"
-  ([^java.awt.image.ImageFilter this ^java.awt.image.ImageConsumer ic]
+  (^java.awt.image.ImageFilter [^java.awt.image.ImageFilter this ^java.awt.image.ImageConsumer ic]
     (-> this (.getFilterInstance ic))))
 
 (defn set-dimensions
@@ -163,7 +163,7 @@
   "Clones this object.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([^java.awt.image.ImageFilter this]
+  (^java.lang.Object [^java.awt.image.ImageFilter this]
     (-> this (.clone))))
 
 (defn image-complete

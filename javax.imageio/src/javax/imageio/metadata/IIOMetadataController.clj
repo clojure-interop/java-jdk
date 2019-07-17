@@ -46,6 +46,6 @@
    modified, false otherwise. - `boolean`
 
   throws: java.lang.IllegalArgumentException - if metadata is null or is not an instance of the correct class."
-  ([^javax.imageio.metadata.IIOMetadataController this ^javax.imageio.metadata.IIOMetadata metadata]
+  (^Boolean [^javax.imageio.metadata.IIOMetadataController this ^javax.imageio.metadata.IIOMetadata metadata]
     (-> this (.activate metadata))))
 

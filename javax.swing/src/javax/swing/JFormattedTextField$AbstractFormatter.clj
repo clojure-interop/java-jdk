@@ -85,7 +85,7 @@
   returns: Object representation of text - `java.lang.Object`
 
   throws: java.text.ParseException - if there is an error in the conversion"
-  ([^javax.swing.JFormattedTextField$AbstractFormatter this ^java.lang.String text]
+  (^java.lang.Object [^javax.swing.JFormattedTextField$AbstractFormatter this ^java.lang.String text]
     (-> this (.stringToValue text))))
 
 (defn value-to-string
@@ -96,6 +96,6 @@
   returns: String representation of value - `java.lang.String`
 
   throws: java.text.ParseException - if there is an error in the conversion"
-  ([^javax.swing.JFormattedTextField$AbstractFormatter this ^java.lang.Object value]
+  (^java.lang.String [^javax.swing.JFormattedTextField$AbstractFormatter this ^java.lang.Object value]
     (-> this (.valueToString value))))
 

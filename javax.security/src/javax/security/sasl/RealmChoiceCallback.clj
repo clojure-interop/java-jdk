@@ -16,6 +16,6 @@
   multiple - true if multiple choices allowed; false otherwise - `boolean`
 
   throws: java.lang.IllegalArgumentException - If prompt is null or the empty string, if choices has a length of 0, if any element from choices is null or empty, or if defaultChoice does not fall within the array boundary of choices"
-  ([^java.lang.String prompt ^java.lang.String[] choices ^Integer default-choice ^Boolean multiple]
+  ([^java.lang.String prompt choices ^Integer default-choice ^Boolean multiple]
     (new RealmChoiceCallback prompt choices default-choice multiple)))
 

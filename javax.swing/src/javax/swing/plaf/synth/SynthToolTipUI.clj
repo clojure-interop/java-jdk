@@ -15,7 +15,7 @@
   c - component to create UI object for - `javax.swing.JComponent`
 
   returns: the UI object - `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent c]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent c]
     (SynthToolTipUI/createUI c)))
 
 (defn get-context
@@ -24,7 +24,7 @@
   c - Component requesting SynthContext. - `javax.swing.JComponent`
 
   returns: SynthContext describing component. - `javax.swing.plaf.synth.SynthContext`"
-  ([^javax.swing.plaf.synth.SynthToolTipUI this ^javax.swing.JComponent c]
+  (^javax.swing.plaf.synth.SynthContext [^javax.swing.plaf.synth.SynthToolTipUI this ^javax.swing.JComponent c]
     (-> this (.getContext c))))
 
 (defn update
@@ -73,7 +73,7 @@
   c - the component whose preferred size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: `java.awt.Dimension`"
-  ([^javax.swing.plaf.synth.SynthToolTipUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^javax.swing.plaf.synth.SynthToolTipUI this ^javax.swing.JComponent c]
     (-> this (.getPreferredSize c))))
 
 (defn property-change

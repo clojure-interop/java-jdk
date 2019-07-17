@@ -86,7 +86,7 @@
 
   returns: the amount of pressure for that note, from 0 to 127
    (127 = maximum pressure) - `int`"
-  ([^javax.sound.midi.MidiChannel this ^Integer note-number]
+  (^Integer [^javax.sound.midi.MidiChannel this ^Integer note-number]
     (-> this (.getPolyPressure note-number))))
 
 (defn get-omni?
@@ -97,7 +97,7 @@
 
   returns: true if omni mode is on, otherwise
    false (meaning omni mode is off). - `boolean`"
-  ([^javax.sound.midi.MidiChannel this]
+  (^Boolean [^javax.sound.midi.MidiChannel this]
     (-> this (.getOmni))))
 
 (defn set-mute
@@ -145,7 +145,7 @@
    setPitchBend will have no effect then.
 
   returns: bend amount, as a nonnegative 14-bit value (8192 = no bend) - `int`"
-  ([^javax.sound.midi.MidiChannel this]
+  (^Integer [^javax.sound.midi.MidiChannel this]
     (-> this (.getPitchBend))))
 
 (defn all-sound-off
@@ -222,7 +222,7 @@
   "Obtains the current program number for this channel.
 
   returns: the program number of the currently selected patch - `int`"
-  ([^javax.sound.midi.MidiChannel this]
+  (^Integer [^javax.sound.midi.MidiChannel this]
     (-> this (.getProgram))))
 
 (defn get-mute?
@@ -233,7 +233,7 @@
 
   returns: true the channel is muted,
            or false if not - `boolean`"
-  ([^javax.sound.midi.MidiChannel this]
+  (^Boolean [^javax.sound.midi.MidiChannel this]
     (-> this (.getMute))))
 
 (defn get-channel-pressure
@@ -244,7 +244,7 @@
 
   returns: the amount of pressure for that note,
            from 0 to 127 (127 = maximum pressure) - `int`"
-  ([^javax.sound.midi.MidiChannel this]
+  (^Integer [^javax.sound.midi.MidiChannel this]
     (-> this (.getChannelPressure))))
 
 (defn note-off
@@ -272,7 +272,7 @@
 
   returns: true if mono mode is on, otherwise
    false (meaning poly mode is on). - `boolean`"
-  ([^javax.sound.midi.MidiChannel this]
+  (^Boolean [^javax.sound.midi.MidiChannel this]
     (-> this (.getMono))))
 
 (defn reset-all-controllers
@@ -288,7 +288,7 @@
 
   returns: true the channel is solo,
            or false if not - `boolean`"
-  ([^javax.sound.midi.MidiChannel this]
+  (^Boolean [^javax.sound.midi.MidiChannel this]
     (-> this (.getSolo))))
 
 (defn program-change
@@ -364,7 +364,7 @@
   controller - the number of the controller whose value is desired. The allowed range is 0-127; see the MIDI 1.0 Specification for the interpretation. - `int`
 
   returns: the current value of the specified controller (0 to 127) - `int`"
-  ([^javax.sound.midi.MidiChannel this ^Integer controller]
+  (^Integer [^javax.sound.midi.MidiChannel this ^Integer controller]
     (-> this (.getController controller))))
 
 (defn local-control
@@ -386,7 +386,7 @@
 
   returns: the new local-control value, or false
            if local control is not supported - `boolean`"
-  ([^javax.sound.midi.MidiChannel this ^Boolean on]
+  (^Boolean [^javax.sound.midi.MidiChannel this ^Boolean on]
     (-> this (.localControl on))))
 
 (defn set-poly-pressure

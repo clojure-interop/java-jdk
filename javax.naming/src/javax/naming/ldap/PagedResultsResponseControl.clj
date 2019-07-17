@@ -49,7 +49,7 @@
   "Retrieves (an estimate of) the number of entries in the search result.
 
   returns: The number of entries in the search result, or zero if unknown. - `int`"
-  ([^javax.naming.ldap.PagedResultsResponseControl this]
+  (^Integer [^javax.naming.ldap.PagedResultsResponseControl this]
     (-> this (.getResultSize))))
 
 (defn get-cookie

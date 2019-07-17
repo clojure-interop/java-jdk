@@ -32,7 +32,7 @@
 
   returns: the target URI of this SignatureProperty (never
       null) - `java.lang.String`"
-  ([^javax.xml.crypto.dsig.SignatureProperty this]
+  (^java.lang.String [^javax.xml.crypto.dsig.SignatureProperty this]
     (-> this (.getTarget))))
 
 (defn get-id
@@ -40,7 +40,7 @@
 
   returns: the Id of this SignatureProperty (or
       null if not specified) - `java.lang.String`"
-  ([^javax.xml.crypto.dsig.SignatureProperty this]
+  (^java.lang.String [^javax.xml.crypto.dsig.SignatureProperty this]
     (-> this (.getId))))
 
 (defn get-content
@@ -52,6 +52,6 @@
    in signature generation).
 
   returns: an unmodifiable list of one or more XMLStructures - `java.util.List`"
-  ([^javax.xml.crypto.dsig.SignatureProperty this]
+  (^java.util.List [^javax.xml.crypto.dsig.SignatureProperty this]
     (-> this (.getContent))))
 

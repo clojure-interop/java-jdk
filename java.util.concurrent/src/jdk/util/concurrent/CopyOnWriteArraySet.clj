@@ -73,7 +73,7 @@
   returns: true if this set changed as a result of the call - `boolean`
 
   throws: java.lang.NullPointerException - if the specified collection is null"
-  ([^java.util.concurrent.CopyOnWriteArraySet this ^CopyOnWriteArraySet.E> c]
+  (^Boolean [^java.util.concurrent.CopyOnWriteArraySet this ^CopyOnWriteArraySet.E> c]
     (-> this (.addAll c))))
 
 (defn spliterator
@@ -89,7 +89,7 @@
    operating on the spliterator.
 
   returns: a Spliterator over the elements in this set - `java.util.Spliterator<CopyOnWriteArraySet.E>`"
-  ([^java.util.concurrent.CopyOnWriteArraySet this]
+  (^java.util.Spliterator [^java.util.concurrent.CopyOnWriteArraySet this]
     (-> this (.spliterator))))
 
 (defn for-each
@@ -105,7 +105,7 @@
   filter - a predicate which returns true for elements to be removed - `CopyOnWriteArraySet.E>`
 
   returns: true if any elements were removed - `boolean`"
-  ([^java.util.concurrent.CopyOnWriteArraySet this ^CopyOnWriteArraySet.E> filter]
+  (^Boolean [^java.util.concurrent.CopyOnWriteArraySet this ^CopyOnWriteArraySet.E> filter]
     (-> this (.removeIf filter))))
 
 (defn contains
@@ -117,7 +117,7 @@
   o - element whose presence in this set is to be tested - `java.lang.Object`
 
   returns: true if this set contains the specified element - `boolean`"
-  ([^java.util.concurrent.CopyOnWriteArraySet this ^java.lang.Object o]
+  (^Boolean [^java.util.concurrent.CopyOnWriteArraySet this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn iterator
@@ -130,7 +130,7 @@
    remove method.
 
   returns: an iterator over the elements in this set - `java.util.Iterator<CopyOnWriteArraySet.E>`"
-  ([^java.util.concurrent.CopyOnWriteArraySet this]
+  (^java.util.Iterator [^java.util.concurrent.CopyOnWriteArraySet this]
     (-> this (.iterator))))
 
 (defn remove
@@ -145,7 +145,7 @@
   o - object to be removed from this set, if present - `java.lang.Object`
 
   returns: true if this set contained the specified element - `boolean`"
-  ([^java.util.concurrent.CopyOnWriteArraySet this ^java.lang.Object o]
+  (^Boolean [^java.util.concurrent.CopyOnWriteArraySet this ^java.lang.Object o]
     (-> this (.remove o))))
 
 (defn add
@@ -160,21 +160,21 @@
 
   returns: true if this set did not already contain the specified
            element - `boolean`"
-  ([^java.util.concurrent.CopyOnWriteArraySet this ^CopyOnWriteArraySet.E e]
+  (^Boolean [^java.util.concurrent.CopyOnWriteArraySet this ^CopyOnWriteArraySet.E e]
     (-> this (.add e))))
 
 (defn empty?
   "Returns true if this set contains no elements.
 
   returns: true if this set contains no elements - `boolean`"
-  ([^java.util.concurrent.CopyOnWriteArraySet this]
+  (^Boolean [^java.util.concurrent.CopyOnWriteArraySet this]
     (-> this (.isEmpty))))
 
 (defn size
   "Returns the number of elements in this set.
 
   returns: the number of elements in this set - `int`"
-  ([^java.util.concurrent.CopyOnWriteArraySet this]
+  (^Integer [^java.util.concurrent.CopyOnWriteArraySet this]
     (-> this (.size))))
 
 (defn retain-all
@@ -190,7 +190,7 @@
   returns: true if this set changed as a result of the call - `boolean`
 
   throws: java.lang.ClassCastException - if the class of an element of this set is incompatible with the specified collection (optional)"
-  ([^java.util.concurrent.CopyOnWriteArraySet this ^java.util.Collection c]
+  (^Boolean [^java.util.concurrent.CopyOnWriteArraySet this ^java.util.Collection c]
     (-> this (.retainAll c))))
 
 (defn clear
@@ -254,7 +254,7 @@
   returns: true if this set changed as a result of the call - `boolean`
 
   throws: java.lang.ClassCastException - if the class of an element of this set is incompatible with the specified collection (optional)"
-  ([^java.util.concurrent.CopyOnWriteArraySet this ^java.util.Collection c]
+  (^Boolean [^java.util.concurrent.CopyOnWriteArraySet this ^java.util.Collection c]
     (-> this (.removeAll c))))
 
 (defn equals
@@ -273,7 +273,7 @@
   o - object to be compared for equality with this set - `java.lang.Object`
 
   returns: true if the specified object is equal to this set - `boolean`"
-  ([^java.util.concurrent.CopyOnWriteArraySet this ^java.lang.Object o]
+  (^Boolean [^java.util.concurrent.CopyOnWriteArraySet this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn contains-all
@@ -287,6 +287,6 @@
            specified collection - `boolean`
 
   throws: java.lang.NullPointerException - if the specified collection is null"
-  ([^java.util.concurrent.CopyOnWriteArraySet this ^java.util.Collection c]
+  (^Boolean [^java.util.concurrent.CopyOnWriteArraySet this ^java.util.Collection c]
     (-> this (.containsAll c))))
 

@@ -195,7 +195,7 @@
    the value returned by getVisibleAmount.
 
   returns: the visible amount of this scroll bar - `int`"
-  ([^java.awt.Scrollbar this]
+  (^Integer [^java.awt.Scrollbar this]
     (-> this (.getVisibleAmount))))
 
 (defn set-block-increment
@@ -218,7 +218,7 @@
    result of actions being taken by the user.
 
   returns: the value of the valueIsAdjusting property - `boolean`"
-  ([^java.awt.Scrollbar this]
+  (^Boolean [^java.awt.Scrollbar this]
     (-> this (.getValueIsAdjusting))))
 
 (defn get-orientation
@@ -227,14 +227,14 @@
   returns: the orientation of this scroll bar, either
                  Scrollbar.HORIZONTAL or
                  Scrollbar.VERTICAL - `int`"
-  ([^java.awt.Scrollbar this]
+  (^Integer [^java.awt.Scrollbar this]
     (-> this (.getOrientation))))
 
 (defn get-minimum
   "Gets the minimum value of this scroll bar.
 
   returns: the minimum value of this scroll bar - `int`"
-  ([^java.awt.Scrollbar this]
+  (^Integer [^java.awt.Scrollbar this]
     (-> this (.getMinimum))))
 
 (defn get-unit-increment
@@ -250,7 +250,7 @@
    can be ignored by the underlying controls.
 
   returns: the unit increment of this scroll bar - `int`"
-  ([^java.awt.Scrollbar this]
+  (^Integer [^java.awt.Scrollbar this]
     (-> this (.getUnitIncrement))))
 
 (defn get-block-increment
@@ -263,7 +263,7 @@
    The block increment must be greater than zero.
 
   returns: the block increment of this scroll bar - `int`"
-  ([^java.awt.Scrollbar this]
+  (^Integer [^java.awt.Scrollbar this]
     (-> this (.getBlockIncrement))))
 
 (defn add-adjustment-listener
@@ -291,7 +291,7 @@
   "Gets the current value of this scroll bar.
 
   returns: the current value of this scroll bar - `int`"
-  ([^java.awt.Scrollbar this]
+  (^Integer [^java.awt.Scrollbar this]
     (-> this (.getValue))))
 
 (defn remove-adjustment-listener
@@ -351,7 +351,7 @@
 
   returns: an AccessibleAWTScrollBar that serves as the
            AccessibleContext of this ScrollBar - `javax.accessibility.AccessibleContext`"
-  ([^java.awt.Scrollbar this]
+  (^javax.accessibility.AccessibleContext [^java.awt.Scrollbar this]
     (-> this (.getAccessibleContext))))
 
 (defn set-values
@@ -551,7 +551,7 @@
   "Gets the maximum value of this scroll bar.
 
   returns: the maximum value of this scroll bar - `int`"
-  ([^java.awt.Scrollbar this]
+  (^Integer [^java.awt.Scrollbar this]
     (-> this (.getMaximum))))
 
 (defn get-page-increment

@@ -22,7 +22,7 @@
   "Returns the user name.
 
   returns: the user name - `java.lang.String`"
-  ([^java.net.PasswordAuthentication this]
+  (^java.lang.String [^java.net.PasswordAuthentication this]
     (-> this (.getUserName))))
 
 (defn get-password

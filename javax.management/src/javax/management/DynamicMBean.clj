@@ -12,7 +12,7 @@
   returns: The value of the attribute retrieved. - `java.lang.Object`
 
   throws: javax.management.AttributeNotFoundException"
-  ([^javax.management.DynamicMBean this ^java.lang.String attribute]
+  (^java.lang.Object [^javax.management.DynamicMBean this ^java.lang.String attribute]
     (-> this (.getAttribute attribute))))
 
 (defn set-attribute
@@ -30,7 +30,7 @@
   attributes - A list of the attributes to be retrieved. - `java.lang.String[]`
 
   returns: The list of attributes retrieved. - `javax.management.AttributeList`"
-  ([^javax.management.DynamicMBean this ^java.lang.String[] attributes]
+  (^javax.management.AttributeList [^javax.management.DynamicMBean this attributes]
     (-> this (.getAttributes attributes))))
 
 (defn set-attributes
@@ -39,7 +39,7 @@
   attributes - A list of attributes: The identification of the attributes to be set and the values they are to be set to. - `javax.management.AttributeList`
 
   returns: The list of attributes that were set, with their new values. - `javax.management.AttributeList`"
-  ([^javax.management.DynamicMBean this ^javax.management.AttributeList attributes]
+  (^javax.management.AttributeList [^javax.management.DynamicMBean this ^javax.management.AttributeList attributes]
     (-> this (.setAttributes attributes))))
 
 (defn invoke
@@ -53,7 +53,7 @@
    invoking the action on the MBean specified. - `java.lang.Object`
 
   throws: javax.management.MBeanException - Wraps a java.lang.Exception thrown by the MBean's invoked method."
-  ([^javax.management.DynamicMBean this ^java.lang.String action-name ^java.lang.Object[] params ^java.lang.String[] signature]
+  (^java.lang.Object [^javax.management.DynamicMBean this ^java.lang.String action-name params signature]
     (-> this (.invoke action-name params signature))))
 
 (defn get-m-bean-info
@@ -61,6 +61,6 @@
 
   returns: An instance of MBeanInfo allowing all attributes and actions
    exposed by this Dynamic MBean to be retrieved. - `javax.management.MBeanInfo`"
-  ([^javax.management.DynamicMBean this]
+  (^javax.management.MBeanInfo [^javax.management.DynamicMBean this]
     (-> this (.getMBeanInfo))))
 

@@ -54,7 +54,7 @@
     than maxAdvance in graphical width - `int`
 
   throws: java.lang.IllegalArgumentException - if start is less than the beginning of the paragraph."
-  ([^java.awt.font.TextMeasurer this ^Integer start ^Float max-advance]
+  (^Integer [^java.awt.font.TextMeasurer this ^Integer start ^Float max-advance]
     (-> this (.getLineBreakIndex start max-advance))))
 
 (defn get-advance-between
@@ -70,7 +70,7 @@
      and including characters up to limit - `float`
 
   throws: java.lang.IndexOutOfBoundsException - if limit is less than start"
-  ([^java.awt.font.TextMeasurer this ^Integer start ^Integer limit]
+  (^Float [^java.awt.font.TextMeasurer this ^Integer start ^Integer limit]
     (-> this (.getAdvanceBetween start limit))))
 
 (defn get-layout
@@ -83,7 +83,7 @@
     start up to (but not including) limit - `java.awt.font.TextLayout`
 
   throws: java.lang.IndexOutOfBoundsException - if limit is less than start"
-  ([^java.awt.font.TextMeasurer this ^Integer start ^Integer limit]
+  (^java.awt.font.TextLayout [^java.awt.font.TextMeasurer this ^Integer start ^Integer limit]
     (-> this (.getLayout start limit))))
 
 (defn insert-char

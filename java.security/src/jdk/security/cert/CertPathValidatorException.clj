@@ -54,7 +54,7 @@
 
   returns: the CertPath that was being validated when
    the exception was thrown (or null if not specified) - `java.security.cert.CertPath`"
-  ([^java.security.cert.CertPathValidatorException this]
+  (^java.security.cert.CertPath [^java.security.cert.CertPathValidatorException this]
     (-> this (.getCertPath))))
 
 (defn get-index
@@ -64,7 +64,7 @@
    index has been set, -1 is returned.
 
   returns: the index that has been set, or -1 if none has been set - `int`"
-  ([^java.security.cert.CertPathValidatorException this]
+  (^Integer [^java.security.cert.CertPathValidatorException this]
     (-> this (.getIndex))))
 
 (defn get-reason
@@ -75,6 +75,6 @@
   returns: the reason that the validation failed, or
       BasicReason.UNSPECIFIED if a reason has not been
       specified - `java.security.cert.CertPathValidatorException.Reason`"
-  ([^java.security.cert.CertPathValidatorException this]
+  (^java.security.cert.CertPathValidatorException.Reason [^java.security.cert.CertPathValidatorException this]
     (-> this (.getReason))))
 

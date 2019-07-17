@@ -91,7 +91,7 @@
   returns: the zone-offset, not null - `java.time.ZoneOffset`
 
   throws: java.time.DateTimeException - if the offset ID is invalid"
-  ([^java.lang.String offset-id]
+  (^java.time.ZoneOffset [^java.lang.String offset-id]
     (ZoneOffset/of offset-id)))
 
 (defn *of-hours
@@ -102,7 +102,7 @@
   returns: the zone-offset, not null - `java.time.ZoneOffset`
 
   throws: java.time.DateTimeException - if the offset is not in the required range"
-  ([^Integer hours]
+  (^java.time.ZoneOffset [^Integer hours]
     (ZoneOffset/ofHours hours)))
 
 (defn *of-hours-minutes
@@ -119,7 +119,7 @@
   returns: the zone-offset, not null - `java.time.ZoneOffset`
 
   throws: java.time.DateTimeException - if the offset is not in the required range"
-  ([^Integer hours ^Integer minutes]
+  (^java.time.ZoneOffset [^Integer hours ^Integer minutes]
     (ZoneOffset/ofHoursMinutes hours minutes)))
 
 (defn *of-hours-minutes-seconds
@@ -136,7 +136,7 @@
   returns: the zone-offset, not null - `java.time.ZoneOffset`
 
   throws: java.time.DateTimeException - if the offset is not in the required range"
-  ([^Integer hours ^Integer minutes ^Integer seconds]
+  (^java.time.ZoneOffset [^Integer hours ^Integer minutes ^Integer seconds]
     (ZoneOffset/ofHoursMinutesSeconds hours minutes seconds)))
 
 (defn *from
@@ -160,7 +160,7 @@
   returns: the zone-offset, not null - `java.time.ZoneOffset`
 
   throws: java.time.DateTimeException - if unable to convert to an ZoneOffset"
-  ([^java.time.temporal.TemporalAccessor temporal]
+  (^java.time.ZoneOffset [^java.time.temporal.TemporalAccessor temporal]
     (ZoneOffset/from temporal)))
 
 (defn *of-total-seconds
@@ -173,7 +173,7 @@
   returns: the ZoneOffset, not null - `java.time.ZoneOffset`
 
   throws: java.time.DateTimeException - if the offset is not in the required range"
-  ([^Integer total-seconds]
+  (^java.time.ZoneOffset [^Integer total-seconds]
     (ZoneOffset/ofTotalSeconds total-seconds)))
 
 (defn range
@@ -199,7 +199,7 @@
   returns: the range of valid values for the field, not null - `java.time.temporal.ValueRange`
 
   throws: java.time.DateTimeException - if the range for the field cannot be obtained"
-  ([^java.time.ZoneOffset this ^java.time.temporal.TemporalField field]
+  (^java.time.temporal.ValueRange [^java.time.ZoneOffset this ^java.time.temporal.TemporalField field]
     (-> this (.range field))))
 
 (defn query
@@ -226,7 +226,7 @@
   "Outputs this offset as a String, using the normalized ID.
 
   returns: a string representation of this offset, not null - `java.lang.String`"
-  ([^java.time.ZoneOffset this]
+  (^java.lang.String [^java.time.ZoneOffset this]
     (-> this (.toString))))
 
 (defn get-long
@@ -250,7 +250,7 @@
   returns: the value for the field - `long`
 
   throws: java.time.DateTimeException - if a value for the field cannot be obtained"
-  ([^java.time.ZoneOffset this ^java.time.temporal.TemporalField field]
+  (^Long [^java.time.ZoneOffset this ^java.time.temporal.TemporalField field]
     (-> this (.getLong field))))
 
 (defn get-rules
@@ -260,7 +260,7 @@
    The implementation class is immutable, thread-safe and serializable.
 
   returns: the rules, not null - `java.time.zone.ZoneRules`"
-  ([^java.time.ZoneOffset this]
+  (^java.time.zone.ZoneRules [^java.time.ZoneOffset this]
     (-> this (.getRules))))
 
 (defn get-id
@@ -274,7 +274,7 @@
    +hh:mm:ss or -hh:mm:ss - if the seconds are non-zero (not ISO-8601)
 
   returns: the zone offset ID, not null - `java.lang.String`"
-  ([^java.time.ZoneOffset this]
+  (^java.lang.String [^java.time.ZoneOffset this]
     (-> this (.getId))))
 
 (defn supported?
@@ -296,14 +296,14 @@
   field - the field to check, null returns false - `java.time.temporal.TemporalField`
 
   returns: true if the field is supported on this offset, false if not - `boolean`"
-  ([^java.time.ZoneOffset this ^java.time.temporal.TemporalField field]
+  (^Boolean [^java.time.ZoneOffset this ^java.time.temporal.TemporalField field]
     (-> this (.isSupported field))))
 
 (defn hash-code
   "A hash code for this offset.
 
   returns: a suitable hash code - `int`"
-  ([^java.time.ZoneOffset this]
+  (^Integer [^java.time.ZoneOffset this]
     (-> this (.hashCode))))
 
 (defn get-total-seconds
@@ -314,7 +314,7 @@
    single offset that can be added to a time.
 
   returns: the total zone offset amount in seconds - `int`"
-  ([^java.time.ZoneOffset this]
+  (^Integer [^java.time.ZoneOffset this]
     (-> this (.getTotalSeconds))))
 
 (defn adjust-into
@@ -341,7 +341,7 @@
   returns: the adjusted object, not null - `java.time.temporal.Temporal`
 
   throws: java.time.DateTimeException - if unable to make the adjustment"
-  ([^java.time.ZoneOffset this ^java.time.temporal.Temporal temporal]
+  (^java.time.temporal.Temporal [^java.time.ZoneOffset this ^java.time.temporal.Temporal temporal]
     (-> this (.adjustInto temporal))))
 
 (defn compare-to
@@ -358,7 +358,7 @@
   returns: the comparator value, negative if less, positive if greater - `int`
 
   throws: java.lang.NullPointerException - if other is null"
-  ([^java.time.ZoneOffset this ^java.time.ZoneOffset other]
+  (^Integer [^java.time.ZoneOffset this ^java.time.ZoneOffset other]
     (-> this (.compareTo other))))
 
 (defn get
@@ -383,7 +383,7 @@
   returns: the value for the field - `int`
 
   throws: java.time.DateTimeException - if a value for the field cannot be obtained or the value is outside the range of valid values for the field"
-  ([^java.time.ZoneOffset this ^java.time.temporal.TemporalField field]
+  (^Integer [^java.time.ZoneOffset this ^java.time.temporal.TemporalField field]
     (-> this (.get field))))
 
 (defn equals
@@ -395,6 +395,6 @@
   obj - the object to check, null returns false - `java.lang.Object`
 
   returns: true if this is equal to the other offset - `boolean`"
-  ([^java.time.ZoneOffset this ^java.lang.Object obj]
+  (^Boolean [^java.time.ZoneOffset this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

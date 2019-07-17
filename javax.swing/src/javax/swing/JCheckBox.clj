@@ -76,7 +76,7 @@
   "Gets the value of the borderPaintedFlat property.
 
   returns: the value of the borderPaintedFlat property - `boolean`"
-  ([^javax.swing.JCheckBox this]
+  (^Boolean [^javax.swing.JCheckBox this]
     (-> this (.isBorderPaintedFlat))))
 
 (defn update-ui
@@ -89,7 +89,7 @@
    that renders this component.
 
   returns: the string `CheckBoxUI` - `java.lang.String`"
-  ([^javax.swing.JCheckBox this]
+  (^java.lang.String [^javax.swing.JCheckBox this]
     (-> this (.getUIClassID))))
 
 (defn get-accessible-context
@@ -100,6 +100,6 @@
 
   returns: an AccessibleJCheckBox that serves as the
            AccessibleContext of this JCheckBox - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.JCheckBox this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.JCheckBox this]
     (-> this (.getAccessibleContext))))
 

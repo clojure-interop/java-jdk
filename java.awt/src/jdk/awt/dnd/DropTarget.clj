@@ -47,7 +47,7 @@
    with this DropTarget.
 
   returns: the current Component - `java.awt.Component`"
-  ([^java.awt.dnd.DropTarget this]
+  (^java.awt.Component [^java.awt.dnd.DropTarget this]
     (-> this (.getComponent))))
 
 (defn active?
@@ -56,7 +56,7 @@
    is currently active (ready to accept drops).
 
   returns: true if active, false if not - `boolean`"
-  ([^java.awt.dnd.DropTarget this]
+  (^Boolean [^java.awt.dnd.DropTarget this]
     (-> this (.isActive))))
 
 (defn get-drop-target-context
@@ -64,7 +64,7 @@
    with this DropTarget.
 
   returns: the DropTargetContext associated with this DropTarget. - `java.awt.dnd.DropTargetContext`"
-  ([^java.awt.dnd.DropTarget this]
+  (^java.awt.dnd.DropTargetContext [^java.awt.dnd.DropTarget this]
     (-> this (.getDropTargetContext))))
 
 (defn get-flavor-map
@@ -75,7 +75,7 @@
    FlavorMap.
 
   returns: the FlavorMap for this DropTarget - `java.awt.datatransfer.FlavorMap`"
-  ([^java.awt.dnd.DropTarget this]
+  (^java.awt.datatransfer.FlavorMap [^java.awt.dnd.DropTarget this]
     (-> this (.getFlavorMap))))
 
 (defn set-default-actions
@@ -133,7 +133,7 @@
    current action(s) supported by this DropTarget.
 
   returns: the current default actions - `int`"
-  ([^java.awt.dnd.DropTarget this]
+  (^Integer [^java.awt.dnd.DropTarget this]
     (-> this (.getDefaultActions))))
 
 (defn remove-notify

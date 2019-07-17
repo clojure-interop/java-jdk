@@ -72,7 +72,7 @@
   "Obtains the type of the MetaMessage.
 
   returns: an integer representing the MetaMessage type - `int`"
-  ([^javax.sound.midi.MetaMessage this]
+  (^Integer [^javax.sound.midi.MetaMessage this]
     (-> this (.getType))))
 
 (defn get-data
@@ -92,6 +92,6 @@
    as this object.
 
   returns: a clone of this instance - `java.lang.Object`"
-  ([^javax.sound.midi.MetaMessage this]
+  (^java.lang.Object [^javax.sound.midi.MetaMessage this]
     (-> this (.clone))))
 

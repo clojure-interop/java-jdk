@@ -35,7 +35,7 @@
   returns: The constructed Object. - `java.lang.Object`
 
   throws: java.awt.datatransfer.UnsupportedFlavorException - if the handler doesn't support the requested flavor"
-  ([^javax.activation.DataContentHandler this ^java.awt.datatransfer.DataFlavor df ^javax.activation.DataSource ds]
+  (^java.lang.Object [^javax.activation.DataContentHandler this ^java.awt.datatransfer.DataFlavor df ^javax.activation.DataSource ds]
     (-> this (.getTransferData df ds))))
 
 (defn get-content
@@ -48,7 +48,7 @@
   returns: The constructed Object. - `java.lang.Object`
 
   throws: java.io.IOException - if the data can't be accessed"
-  ([^javax.activation.DataContentHandler this ^javax.activation.DataSource ds]
+  (^java.lang.Object [^javax.activation.DataContentHandler this ^javax.activation.DataSource ds]
     (-> this (.getContent ds))))
 
 (defn write-to

@@ -143,7 +143,7 @@
            null otherwise. - `java.lang.management.MemoryNotificationInfo`
 
   throws: java.lang.IllegalArgumentException - if cd does not represent a MemoryNotificationInfo object."
-  ([^javax.management.openmbean.CompositeData cd]
+  (^java.lang.management.MemoryNotificationInfo [^javax.management.openmbean.CompositeData cd]
     (MemoryNotificationInfo/from cd)))
 
 (defn get-pool-name
@@ -151,7 +151,7 @@
    The memory pool usage has crossed a threshold.
 
   returns: the name of the memory pool that triggers this notification. - `java.lang.String`"
-  ([^java.lang.management.MemoryNotificationInfo this]
+  (^java.lang.String [^java.lang.management.MemoryNotificationInfo this]
     (-> this (.getPoolName))))
 
 (defn get-usage
@@ -160,7 +160,7 @@
 
   returns: the memory usage of the memory pool
    when this notification was constructed. - `java.lang.management.MemoryUsage`"
-  ([^java.lang.management.MemoryNotificationInfo this]
+  (^java.lang.management.MemoryUsage [^java.lang.management.MemoryNotificationInfo this]
     (-> this (.getUsage))))
 
 (defn get-count
@@ -174,6 +174,6 @@
 
   returns: the number of times that the memory usage has crossed
    a threshold when the notification was constructed. - `long`"
-  ([^java.lang.management.MemoryNotificationInfo this]
+  (^Long [^java.lang.management.MemoryNotificationInfo this]
     (-> this (.getCount))))
 

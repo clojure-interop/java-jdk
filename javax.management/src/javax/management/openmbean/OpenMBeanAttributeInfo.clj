@@ -12,7 +12,7 @@
    false otherwise.
 
   returns: true if the attribute is readable. - `boolean`"
-  ([^javax.management.openmbean.OpenMBeanAttributeInfo this]
+  (^Boolean [^javax.management.openmbean.OpenMBeanAttributeInfo this]
     (-> this (.isReadable))))
 
 (defn writable?
@@ -20,7 +20,7 @@
    false otherwise.
 
   returns: true if the attribute is writable. - `boolean`"
-  ([^javax.management.openmbean.OpenMBeanAttributeInfo this]
+  (^Boolean [^javax.management.openmbean.OpenMBeanAttributeInfo this]
     (-> this (.isWritable))))
 
 (defn is?
@@ -29,7 +29,7 @@
    false otherwise.
 
   returns: true if the attribute is accessed through isXXX. - `boolean`"
-  ([^javax.management.openmbean.OpenMBeanAttributeInfo this]
+  (^Boolean [^javax.management.openmbean.OpenMBeanAttributeInfo this]
     (-> this (.isIs))))
 
 (defn equals
@@ -50,7 +50,7 @@
   obj - the object to be compared for equality with this OpenMBeanAttributeInfo instance; - `java.lang.Object`
 
   returns: true if the specified object is equal to this OpenMBeanAttributeInfo instance. - `boolean`"
-  ([^javax.management.openmbean.OpenMBeanAttributeInfo this ^java.lang.Object obj]
+  (^Boolean [^javax.management.openmbean.OpenMBeanAttributeInfo this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -66,7 +66,7 @@
    Object.hashCode().
 
   returns: the hash code value for this OpenMBeanAttributeInfo instance - `int`"
-  ([^javax.management.openmbean.OpenMBeanAttributeInfo this]
+  (^Integer [^javax.management.openmbean.OpenMBeanAttributeInfo this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -77,6 +77,6 @@
    and the string representation of its default, min, max and legal values.
 
   returns: a string representation of this OpenMBeanAttributeInfo instance - `java.lang.String`"
-  ([^javax.management.openmbean.OpenMBeanAttributeInfo this]
+  (^java.lang.String [^javax.management.openmbean.OpenMBeanAttributeInfo this]
     (-> this (.toString))))
 

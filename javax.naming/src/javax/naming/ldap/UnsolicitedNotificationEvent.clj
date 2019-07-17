@@ -19,7 +19,7 @@
 
   returns: The non-null unsolicited notification that caused this
    event to be fired. - `javax.naming.ldap.UnsolicitedNotification`"
-  ([^javax.naming.ldap.UnsolicitedNotificationEvent this]
+  (^javax.naming.ldap.UnsolicitedNotification [^javax.naming.ldap.UnsolicitedNotificationEvent this]
     (-> this (.getNotification))))
 
 (defn dispatch

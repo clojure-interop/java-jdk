@@ -79,7 +79,7 @@
   returns: A reference to the Exception if one was thrown; null if no
             Exception was thrown or if this InvocationEvent does not
             catch exceptions - `java.lang.Exception`"
-  ([^java.awt.event.InvocationEvent this]
+  (^java.lang.Exception [^java.awt.event.InvocationEvent this]
     (-> this (.getException))))
 
 (defn get-throwable
@@ -89,14 +89,14 @@
   returns: A reference to the Throwable if one was thrown; null if no
             Throwable was thrown or if this InvocationEvent does not
             catch Throwables - `java.lang.Throwable`"
-  ([^java.awt.event.InvocationEvent this]
+  (^java.lang.Throwable [^java.awt.event.InvocationEvent this]
     (-> this (.getThrowable))))
 
 (defn get-when
   "Returns the timestamp of when this event occurred.
 
   returns: this event's timestamp - `long`"
-  ([^java.awt.event.InvocationEvent this]
+  (^Long [^java.awt.event.InvocationEvent this]
     (-> this (.getWhen))))
 
 (defn dispatched?
@@ -124,7 +124,7 @@
 
   returns: true if the event has been dispatched, or any exception
    has been thrown while dispatching, false otherwise - `boolean`"
-  ([^java.awt.event.InvocationEvent this]
+  (^Boolean [^java.awt.event.InvocationEvent this]
     (-> this (.isDispatched))))
 
 (defn param-string
@@ -132,6 +132,6 @@
    This method is useful for event-logging and for debugging.
 
   returns: A string identifying the event and its attributes - `java.lang.String`"
-  ([^java.awt.event.InvocationEvent this]
+  (^java.lang.String [^java.awt.event.InvocationEvent this]
     (-> this (.paramString))))
 

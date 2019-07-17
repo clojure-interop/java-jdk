@@ -51,6 +51,6 @@
 
   returns: the inclusive namespace prefix list (may be empty but never
       null) - `java.util.List`"
-  ([^javax.xml.crypto.dsig.spec.ExcC14NParameterSpec this]
+  (^java.util.List [^javax.xml.crypto.dsig.spec.ExcC14NParameterSpec this]
     (-> this (.getPrefixList))))
 

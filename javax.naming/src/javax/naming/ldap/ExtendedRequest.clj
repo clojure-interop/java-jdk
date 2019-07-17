@@ -54,7 +54,7 @@
 
   returns: The non-null object identifier string representing the LDAP
            ExtendedRequest.requestName component. - `java.lang.String`"
-  ([^javax.naming.ldap.ExtendedRequest this]
+  (^java.lang.String [^javax.naming.ldap.ExtendedRequest this]
     (-> this (.getID))))
 
 (defn get-encoded-value
@@ -98,6 +98,6 @@
   returns: A non-null object. - `javax.naming.ldap.ExtendedResponse`
 
   throws: javax.naming.NamingException - if cannot create extended response due to an error."
-  ([^javax.naming.ldap.ExtendedRequest this ^java.lang.String id ber-value ^Integer offset ^Integer length]
+  (^javax.naming.ldap.ExtendedResponse [^javax.naming.ldap.ExtendedRequest this ^java.lang.String id ber-value ^Integer offset ^Integer length]
     (-> this (.createExtendedResponse id ber-value offset length))))
 

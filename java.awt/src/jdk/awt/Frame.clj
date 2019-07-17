@@ -316,7 +316,7 @@
    that system supplied values for this field must be used.
 
   returns: maximized bounds for this frame;  may be null - `java.awt.Rectangle`"
-  ([^java.awt.Frame this]
+  (^java.awt.Rectangle [^java.awt.Frame this]
     (-> this (.getMaximizedBounds))))
 
 (defn set-shape
@@ -485,7 +485,7 @@
 
   returns: true if frame is undecorated;
                           false otherwise. - `boolean`"
-  ([^java.awt.Frame this]
+  (^Boolean [^java.awt.Frame this]
     (-> this (.isUndecorated))))
 
 (defn get-state
@@ -501,7 +501,7 @@
    frame state are not reported by this method.
 
   returns: Frame.NORMAL or Frame.ICONIFIED. - `int`"
-  ([^java.awt.Frame this]
+  (^Integer [^java.awt.Frame this]
     (-> this (.getState))))
 
 (defn get-icon-image
@@ -515,7 +515,7 @@
 
   returns: the icon image for this frame, or null
                       if this frame doesn't have an icon image. - `java.awt.Image`"
-  ([^java.awt.Frame this]
+  (^java.awt.Image [^java.awt.Frame this]
     (-> this (.getIconImage))))
 
 (defn add-notify
@@ -548,7 +548,7 @@
    and MAXIMIZED_VERT.
 
   returns: a bitwise mask of frame state constants - `int`"
-  ([^java.awt.Frame this]
+  (^Integer [^java.awt.Frame this]
     (-> this (.getExtendedState))))
 
 (defn remove-notify
@@ -566,7 +566,7 @@
 
   returns: true if the user can resize this frame;
                           false otherwise. - `boolean`"
-  ([^java.awt.Frame this]
+  (^Boolean [^java.awt.Frame this]
     (-> this (.isResizable))))
 
 (defn remove
@@ -584,7 +584,7 @@
 
   returns: an AccessibleAWTFrame that serves as the
            AccessibleContext of this Frame - `javax.accessibility.AccessibleContext`"
-  ([^java.awt.Frame this]
+  (^javax.accessibility.AccessibleContext [^java.awt.Frame this]
     (-> this (.getAccessibleContext))))
 
 (defn set-undecorated
@@ -632,7 +632,7 @@
 
   returns: the menu bar for this frame, or null
                      if this frame doesn't have a menu bar. - `java.awt.MenuBar`"
-  ([^java.awt.Frame this]
+  (^java.awt.MenuBar [^java.awt.Frame this]
     (-> this (.getMenuBar))))
 
 (defn set-cursor
@@ -697,7 +697,7 @@
 
   returns: the title of this frame, or an empty string (``)
                   if this frame doesn't have a title. - `java.lang.String`"
-  ([^java.awt.Frame this]
+  (^java.lang.String [^java.awt.Frame this]
     (-> this (.getTitle))))
 
 (defn set-title

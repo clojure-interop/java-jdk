@@ -83,28 +83,28 @@
   "nm - `java.lang.String`
 
   returns: `int`"
-  ([^java.lang.String nm]
+  (^Integer [^java.lang.String nm]
     (Element/name2type nm)))
 
 (defn get-type
   "Get type.
 
   returns: `int`"
-  ([^javax.swing.text.html.parser.Element this]
+  (^Integer [^javax.swing.text.html.parser.Element this]
     (-> this (.getType))))
 
 (defn get-index
   "Get index.
 
   returns: `int`"
-  ([^javax.swing.text.html.parser.Element this]
+  (^Integer [^javax.swing.text.html.parser.Element this]
     (-> this (.getIndex))))
 
 (defn omit-end
   "Return true if the end tag can be omitted.
 
   returns: `boolean`"
-  ([^javax.swing.text.html.parser.Element this]
+  (^Boolean [^javax.swing.text.html.parser.Element this]
     (-> this (.omitEnd))))
 
 (defn get-attribute-by-value
@@ -113,14 +113,14 @@
   name - `java.lang.String`
 
   returns: `javax.swing.text.html.parser.AttributeList`"
-  ([^javax.swing.text.html.parser.Element this ^java.lang.String name]
+  (^javax.swing.text.html.parser.AttributeList [^javax.swing.text.html.parser.Element this ^java.lang.String name]
     (-> this (.getAttributeByValue name))))
 
 (defn to-string
   "Convert to a string.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^javax.swing.text.html.parser.Element this]
+  (^java.lang.String [^javax.swing.text.html.parser.Element this]
     (-> this (.toString))))
 
 (defn get-attribute
@@ -129,41 +129,41 @@
   name - `java.lang.String`
 
   returns: `javax.swing.text.html.parser.AttributeList`"
-  ([^javax.swing.text.html.parser.Element this ^java.lang.String name]
+  (^javax.swing.text.html.parser.AttributeList [^javax.swing.text.html.parser.Element this ^java.lang.String name]
     (-> this (.getAttribute name))))
 
 (defn get-name
   "Get the name of the element.
 
   returns: `java.lang.String`"
-  ([^javax.swing.text.html.parser.Element this]
+  (^java.lang.String [^javax.swing.text.html.parser.Element this]
     (-> this (.getName))))
 
 (defn empty?
   "Check if empty
 
   returns: `boolean`"
-  ([^javax.swing.text.html.parser.Element this]
+  (^Boolean [^javax.swing.text.html.parser.Element this]
     (-> this (.isEmpty))))
 
 (defn omit-start
   "Return true if the start tag can be omitted.
 
   returns: `boolean`"
-  ([^javax.swing.text.html.parser.Element this]
+  (^Boolean [^javax.swing.text.html.parser.Element this]
     (-> this (.omitStart))))
 
 (defn get-attributes
   "Get the attributes.
 
   returns: `javax.swing.text.html.parser.AttributeList`"
-  ([^javax.swing.text.html.parser.Element this]
+  (^javax.swing.text.html.parser.AttributeList [^javax.swing.text.html.parser.Element this]
     (-> this (.getAttributes))))
 
 (defn get-content
   "Get content model
 
   returns: `javax.swing.text.html.parser.ContentModel`"
-  ([^javax.swing.text.html.parser.Element this]
+  (^javax.swing.text.html.parser.ContentModel [^javax.swing.text.html.parser.Element this]
     (-> this (.getContent))))
 

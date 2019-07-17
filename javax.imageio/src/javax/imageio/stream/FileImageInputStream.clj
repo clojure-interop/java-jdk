@@ -33,9 +33,9 @@
    to indicate EOF. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^javax.imageio.stream.FileImageInputStream this b ^Integer off ^Integer len]
+  (^Integer [^javax.imageio.stream.FileImageInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  ([^javax.imageio.stream.FileImageInputStream this]
+  (^Integer [^javax.imageio.stream.FileImageInputStream this]
     (-> this (.read))))
 
 (defn length
@@ -44,7 +44,7 @@
 
   returns: the file length as a long, or
    -1. - `long`"
-  ([^javax.imageio.stream.FileImageInputStream this]
+  (^Long [^javax.imageio.stream.FileImageInputStream this]
     (-> this (.length))))
 
 (defn seek

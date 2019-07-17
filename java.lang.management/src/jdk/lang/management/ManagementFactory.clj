@@ -250,7 +250,7 @@
    the Java virtual machine.
 
   returns: a MemoryMXBean object for the Java virtual machine. - `java.lang.management.MemoryMXBean`"
-  ([]
+  (^java.lang.management.MemoryMXBean []
     (ManagementFactory/getMemoryMXBean )))
 
 (defn *new-platform-mx-bean-proxy
@@ -356,7 +356,7 @@
            at the first time this method is called. - `javax.management.MBeanServer`
 
   throws: java.lang.SecurityException - if there is a security manager and the caller does not have the permission required by MBeanServerFactory.createMBeanServer()."
-  ([]
+  (^javax.management.MBeanServer []
     (ManagementFactory/getPlatformMBeanServer )))
 
 (defn *get-compilation-mx-bean
@@ -367,7 +367,7 @@
   returns: a CompilationMXBean object for the Java virtual
      machine or null if the Java virtual machine has
      no compilation system. - `java.lang.management.CompilationMXBean`"
-  ([]
+  (^java.lang.management.CompilationMXBean []
     (ManagementFactory/getCompilationMXBean )))
 
 (defn *get-garbage-collector-mx-beans
@@ -379,7 +379,7 @@
    during execution.
 
   returns: a list of GarbageCollectorMXBean objects. - `java.util.List<java.lang.management.GarbageCollectorMXBean>`"
-  ([]
+  (^java.util.List []
     (ManagementFactory/getGarbageCollectorMXBeans )))
 
 (defn *get-platform-management-interfaces
@@ -402,7 +402,7 @@
    It may add or remove memory pools during execution.
 
   returns: a list of MemoryPoolMXBean objects. - `java.util.List<java.lang.management.MemoryPoolMXBean>`"
-  ([]
+  (^java.util.List []
     (ManagementFactory/getMemoryPoolMXBeans )))
 
 (defn *get-operating-system-mx-bean
@@ -411,7 +411,7 @@
 
   returns: an OperatingSystemMXBean object for
    the Java virtual machine. - `java.lang.management.OperatingSystemMXBean`"
-  ([]
+  (^java.lang.management.OperatingSystemMXBean []
     (ManagementFactory/getOperatingSystemMXBean )))
 
 (defn *get-runtime-mx-bean
@@ -419,7 +419,7 @@
    the Java virtual machine.
 
   returns: a RuntimeMXBean object for the Java virtual machine. - `java.lang.management.RuntimeMXBean`"
-  ([]
+  (^java.lang.management.RuntimeMXBean []
     (ManagementFactory/getRuntimeMXBean )))
 
 (defn *get-class-loading-mx-bean
@@ -428,7 +428,7 @@
 
   returns: a ClassLoadingMXBean object for
    the Java virtual machine. - `java.lang.management.ClassLoadingMXBean`"
-  ([]
+  (^java.lang.management.ClassLoadingMXBean []
     (ManagementFactory/getClassLoadingMXBean )))
 
 (defn *get-thread-mx-bean
@@ -436,7 +436,7 @@
    the Java virtual machine.
 
   returns: a ThreadMXBean object for the Java virtual machine. - `java.lang.management.ThreadMXBean`"
-  ([]
+  (^java.lang.management.ThreadMXBean []
     (ManagementFactory/getThreadMXBean )))
 
 (defn *get-memory-manager-mx-beans
@@ -446,7 +446,7 @@
    It may add or remove memory managers during execution.
 
   returns: a list of MemoryManagerMXBean objects. - `java.util.List<java.lang.management.MemoryManagerMXBean>`"
-  ([]
+  (^java.util.List []
     (ManagementFactory/getMemoryManagerMXBeans )))
 
 (defn *get-platform-mx-bean

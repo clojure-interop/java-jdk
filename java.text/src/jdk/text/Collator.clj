@@ -173,9 +173,9 @@
   desired-locale - the desired locale. - `java.util.Locale`
 
   returns: the Collator for the desired locale. - `java.text.Collator`"
-  ([^java.util.Locale desired-locale]
+  (^java.text.Collator [^java.util.Locale desired-locale]
     (Collator/getInstance desired-locale))
-  ([]
+  (^java.text.Collator []
     (Collator/getInstance )))
 
 (defn *get-available-locales
@@ -211,7 +211,7 @@
   returns: Returns an integer value. Value is less than zero if source is less than
    target, value is zero if source and target are equal, value is greater than zero
    if source is greater than target. - `int`"
-  ([^java.text.Collator this ^java.lang.String source ^java.lang.String target]
+  (^Integer [^java.text.Collator this ^java.lang.String source ^java.lang.String target]
     (-> this (.compare source target))))
 
 (defn get-decomposition
@@ -229,7 +229,7 @@
    of their meaning.
 
   returns: the decomposition mode - `int`"
-  ([^java.text.Collator this]
+  (^Integer [^java.text.Collator this]
     (-> this (.getDecomposition))))
 
 (defn set-decomposition
@@ -252,7 +252,7 @@
 
   returns: the CollationKey for the given String based on this Collator's collation
    rules. If the source String is null, a null CollationKey is returned. - `java.text.CollationKey`"
-  ([^java.text.Collator this ^java.lang.String source]
+  (^java.text.CollationKey [^java.text.Collator this ^java.lang.String source]
     (-> this (.getCollationKey source))))
 
 (defn set-strength
@@ -270,14 +270,14 @@
   "Overrides Cloneable
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([^java.text.Collator this]
+  (^java.lang.Object [^java.text.Collator this]
     (-> this (.clone))))
 
 (defn hash-code
   "Generates the hash code for this Collator.
 
   returns: a hash code value for this object. - `int`"
-  ([^java.text.Collator this]
+  (^Integer [^java.text.Collator this]
     (-> this (.hashCode))))
 
 (defn get-strength
@@ -286,7 +286,7 @@
    See the Collator class description for an example of use.
 
   returns: this Collator's current strength property. - `int`"
-  ([^java.text.Collator this]
+  (^Integer [^java.text.Collator this]
     (-> this (.getStrength))))
 
 (defn equals
@@ -298,8 +298,8 @@
 
   returns: true if the strings are equal according to the collation
    rules.  false, otherwise. - `boolean`"
-  ([^java.text.Collator this ^java.lang.String source ^java.lang.String target]
+  (^Boolean [^java.text.Collator this ^java.lang.String source ^java.lang.String target]
     (-> this (.equals source target)))
-  ([^java.text.Collator this ^java.lang.Object that]
+  (^Boolean [^java.text.Collator this ^java.lang.Object that]
     (-> this (.equals that))))
 

@@ -123,7 +123,7 @@
   cmd-name - the command name - `java.lang.String`
 
   returns: the CommandInfo object corresponding to the command. - `javax.activation.CommandInfo`"
-  ([^javax.activation.MailcapCommandMap this ^java.lang.String mime-type ^java.lang.String cmd-name]
+  (^javax.activation.CommandInfo [^javax.activation.MailcapCommandMap this ^java.lang.String mime-type ^java.lang.String cmd-name]
     (-> this (.getCommand mime-type cmd-name))))
 
 (defn add-mailcap
@@ -143,7 +143,7 @@
   mime-type - the MIME type - `java.lang.String`
 
   returns: the DataContentHandler - `javax.activation.DataContentHandler`"
-  ([^javax.activation.MailcapCommandMap this ^java.lang.String mime-type]
+  (^javax.activation.DataContentHandler [^javax.activation.MailcapCommandMap this ^java.lang.String mime-type]
     (-> this (.createDataContentHandler mime-type))))
 
 (defn get-mime-types

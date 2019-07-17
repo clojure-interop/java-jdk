@@ -14,6 +14,6 @@
   reader - the event to test - `javax.xml.stream.XMLStreamReader`
 
   returns: true if this filter accepts this event, false otherwise - `boolean`"
-  ([^javax.xml.stream.StreamFilter this ^javax.xml.stream.XMLStreamReader reader]
+  (^Boolean [^javax.xml.stream.StreamFilter this ^javax.xml.stream.XMLStreamReader reader]
     (-> this (.accept reader))))
 

@@ -76,7 +76,7 @@
    file does not exist - `javax.tools.JavaFileObject`
 
   throws: java.lang.IllegalArgumentException - if the location is not known to this file manager and the file manager does not support unknown locations, or if the kind is not valid"
-  ([^javax.tools.JavaFileManager this ^javax.tools.JavaFileManager.Location location ^java.lang.String class-name ^javax.tools.JavaFileObject.Kind kind]
+  (^javax.tools.JavaFileObject [^javax.tools.JavaFileManager this ^javax.tools.JavaFileManager.Location location ^java.lang.String class-name ^javax.tools.JavaFileObject.Kind kind]
     (-> this (.getJavaFileForInput location class-name kind))))
 
 (defn list
@@ -96,7 +96,7 @@
   returns: an Iterable of file objects matching the given criteria - `java.lang.Iterable<javax.tools.JavaFileObject>`
 
   throws: java.io.IOException - if an I/O error occurred, or if close() has been called and this file manager cannot be reopened"
-  ([^javax.tools.JavaFileManager this ^javax.tools.JavaFileManager.Location location ^java.lang.String package-name ^java.util.Set kinds ^Boolean recurse]
+  (^java.lang.Iterable [^javax.tools.JavaFileManager this ^javax.tools.JavaFileManager.Location location ^java.lang.String package-name ^java.util.Set kinds ^Boolean recurse]
     (-> this (.list location package-name kinds recurse))))
 
 (defn handle-option
@@ -111,7 +111,7 @@
    false otherwise - `boolean`
 
   throws: java.lang.IllegalArgumentException - if this option to this file manager is used incorrectly"
-  ([^javax.tools.JavaFileManager this ^java.lang.String current ^java.util.Iterator remaining]
+  (^Boolean [^javax.tools.JavaFileManager this ^java.lang.String current ^java.util.Iterator remaining]
     (-> this (.handleOption current remaining))))
 
 (defn infer-binary-name
@@ -126,7 +126,7 @@
    found in the given location - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if close() has been called and this file manager cannot be reopened"
-  ([^javax.tools.JavaFileManager this ^javax.tools.JavaFileManager.Location location ^javax.tools.JavaFileObject file]
+  (^java.lang.String [^javax.tools.JavaFileManager this ^javax.tools.JavaFileManager.Location location ^javax.tools.JavaFileObject file]
     (-> this (.inferBinaryName location file))))
 
 (defn flush
@@ -149,7 +149,7 @@
    underlying object - `boolean`
 
   throws: java.lang.IllegalArgumentException - if either of the arguments were created with another file manager and this file manager does not support foreign file objects"
-  ([^javax.tools.JavaFileManager this ^javax.tools.FileObject a ^javax.tools.FileObject b]
+  (^Boolean [^javax.tools.JavaFileManager this ^javax.tools.FileObject a ^javax.tools.FileObject b]
     (-> this (.isSameFile a b))))
 
 (defn get-class-loader
@@ -164,7 +164,7 @@
    the location is not known - `java.lang.ClassLoader`
 
   throws: java.lang.SecurityException - if a class loader can not be created in the current security context"
-  ([^javax.tools.JavaFileManager this ^javax.tools.JavaFileManager.Location location]
+  (^java.lang.ClassLoader [^javax.tools.JavaFileManager this ^javax.tools.JavaFileManager.Location location]
     (-> this (.getClassLoader location))))
 
 (defn close
@@ -185,7 +185,7 @@
   location - a location - `javax.tools.JavaFileManager.Location`
 
   returns: true if the location is known - `boolean`"
-  ([^javax.tools.JavaFileManager this ^javax.tools.JavaFileManager.Location location]
+  (^Boolean [^javax.tools.JavaFileManager this ^javax.tools.JavaFileManager.Location location]
     (-> this (.hasLocation location))))
 
 (defn get-file-for-input
@@ -220,7 +220,7 @@
    does not exist - `javax.tools.FileObject`
 
   throws: java.lang.IllegalArgumentException - if the location is not known to this file manager and the file manager does not support unknown locations, or if relativeName is not valid"
-  ([^javax.tools.JavaFileManager this ^javax.tools.JavaFileManager.Location location ^java.lang.String package-name ^java.lang.String relative-name]
+  (^javax.tools.FileObject [^javax.tools.JavaFileManager this ^javax.tools.JavaFileManager.Location location ^java.lang.String package-name ^java.lang.String relative-name]
     (-> this (.getFileForInput location package-name relative-name))))
 
 (defn get-java-file-for-output
@@ -245,7 +245,7 @@
   returns: a file object for output - `javax.tools.JavaFileObject`
 
   throws: java.lang.IllegalArgumentException - if sibling is not known to this file manager, or if the location is not known to this file manager and the file manager does not support unknown locations, or if the kind is not valid"
-  ([^javax.tools.JavaFileManager this ^javax.tools.JavaFileManager.Location location ^java.lang.String class-name ^javax.tools.JavaFileObject.Kind kind ^javax.tools.FileObject sibling]
+  (^javax.tools.JavaFileObject [^javax.tools.JavaFileManager this ^javax.tools.JavaFileManager.Location location ^java.lang.String class-name ^javax.tools.JavaFileObject.Kind kind ^javax.tools.FileObject sibling]
     (-> this (.getJavaFileForOutput location class-name kind sibling))))
 
 (defn get-file-for-output
@@ -277,6 +277,6 @@
   returns: a file object - `javax.tools.FileObject`
 
   throws: java.lang.IllegalArgumentException - if sibling is not known to this file manager, or if the location is not known to this file manager and the file manager does not support unknown locations, or if relativeName is not valid"
-  ([^javax.tools.JavaFileManager this ^javax.tools.JavaFileManager.Location location ^java.lang.String package-name ^java.lang.String relative-name ^javax.tools.FileObject sibling]
+  (^javax.tools.FileObject [^javax.tools.JavaFileManager this ^javax.tools.JavaFileManager.Location location ^java.lang.String package-name ^java.lang.String relative-name ^javax.tools.FileObject sibling]
     (-> this (.getFileForOutput location package-name relative-name sibling))))
 

@@ -220,7 +220,7 @@
   "Returns the vertical gap between components.
 
   returns: `int`"
-  ([^java.awt.BorderLayout this]
+  (^Integer [^java.awt.BorderLayout this]
     (-> this (.getVgap))))
 
 (defn invalidate-layout
@@ -241,7 +241,7 @@
   parent - `java.awt.Container`
 
   returns: `float`"
-  ([^java.awt.BorderLayout this ^java.awt.Container parent]
+  (^Float [^java.awt.BorderLayout this ^java.awt.Container parent]
     (-> this (.getLayoutAlignmentY parent))))
 
 (defn set-hgap
@@ -268,9 +268,9 @@
             the location is empty - `java.awt.Component`
 
   throws: java.lang.IllegalArgumentException - if the constraint object is not one of the five specified constants"
-  ([^java.awt.BorderLayout this ^java.awt.Container target ^java.lang.Object constraints]
+  (^java.awt.Component [^java.awt.BorderLayout this ^java.awt.Container target ^java.lang.Object constraints]
     (-> this (.getLayoutComponent target constraints)))
-  ([^java.awt.BorderLayout this ^java.lang.Object constraints]
+  (^java.awt.Component [^java.awt.BorderLayout this ^java.lang.Object constraints]
     (-> this (.getLayoutComponent constraints))))
 
 (defn set-vgap
@@ -293,21 +293,21 @@
 
   returns: the preferred dimensions to lay out the subcomponents
             of the specified container. - `java.awt.Dimension`"
-  ([^java.awt.BorderLayout this ^java.awt.Container target]
+  (^java.awt.Dimension [^java.awt.BorderLayout this ^java.awt.Container target]
     (-> this (.preferredLayoutSize target))))
 
 (defn to-string
   "Returns a string representation of the state of this border layout.
 
   returns: a string representation of this border layout. - `java.lang.String`"
-  ([^java.awt.BorderLayout this]
+  (^java.lang.String [^java.awt.BorderLayout this]
     (-> this (.toString))))
 
 (defn get-hgap
   "Returns the horizontal gap between components.
 
   returns: `int`"
-  ([^java.awt.BorderLayout this]
+  (^Integer [^java.awt.BorderLayout this]
     (-> this (.getHgap))))
 
 (defn get-layout-alignment-x
@@ -320,7 +320,7 @@
   parent - `java.awt.Container`
 
   returns: `float`"
-  ([^java.awt.BorderLayout this ^java.awt.Container parent]
+  (^Float [^java.awt.BorderLayout this ^java.awt.Container parent]
     (-> this (.getLayoutAlignmentX parent))))
 
 (defn minimum-layout-size
@@ -335,7 +335,7 @@
 
   returns: the minimum dimensions needed to lay out the subcomponents
             of the specified container. - `java.awt.Dimension`"
-  ([^java.awt.BorderLayout this ^java.awt.Container target]
+  (^java.awt.Dimension [^java.awt.BorderLayout this ^java.awt.Container target]
     (-> this (.minimumLayoutSize target))))
 
 (defn get-constraints
@@ -346,7 +346,7 @@
   returns: the constraint for the specified component,
             or null if component is null or is not present
             in this layout - `java.lang.Object`"
-  ([^java.awt.BorderLayout this ^java.awt.Component comp]
+  (^java.lang.Object [^java.awt.BorderLayout this ^java.awt.Component comp]
     (-> this (.getConstraints comp))))
 
 (defn maximum-layout-size
@@ -356,7 +356,7 @@
   target - the component which needs to be laid out - `java.awt.Container`
 
   returns: `java.awt.Dimension`"
-  ([^java.awt.BorderLayout this ^java.awt.Container target]
+  (^java.awt.Dimension [^java.awt.BorderLayout this ^java.awt.Container target]
     (-> this (.maximumLayoutSize target))))
 
 (defn add-layout-component

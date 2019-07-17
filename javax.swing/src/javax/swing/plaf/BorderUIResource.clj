@@ -14,22 +14,22 @@
 
 (defn *get-etched-border-ui-resource
   "returns: `javax.swing.border.Border`"
-  ([]
+  (^javax.swing.border.Border []
     (BorderUIResource/getEtchedBorderUIResource )))
 
 (defn *get-lowered-bevel-border-ui-resource
   "returns: `javax.swing.border.Border`"
-  ([]
+  (^javax.swing.border.Border []
     (BorderUIResource/getLoweredBevelBorderUIResource )))
 
 (defn *get-raised-bevel-border-ui-resource
   "returns: `javax.swing.border.Border`"
-  ([]
+  (^javax.swing.border.Border []
     (BorderUIResource/getRaisedBevelBorderUIResource )))
 
 (defn *get-black-line-border-ui-resource
   "returns: `javax.swing.border.Border`"
-  ([]
+  (^javax.swing.border.Border []
     (BorderUIResource/getBlackLineBorderUIResource )))
 
 (defn paint-border
@@ -50,13 +50,13 @@
   c - the component for which this border insets value applies - `java.awt.Component`
 
   returns: `java.awt.Insets`"
-  ([^javax.swing.plaf.BorderUIResource this ^java.awt.Component c]
+  (^java.awt.Insets [^javax.swing.plaf.BorderUIResource this ^java.awt.Component c]
     (-> this (.getBorderInsets c))))
 
 (defn border-opaque?
   "Description copied from interface: Border
 
   returns: `boolean`"
-  ([^javax.swing.plaf.BorderUIResource this]
+  (^Boolean [^javax.swing.plaf.BorderUIResource this]
     (-> this (.isBorderOpaque))))
 

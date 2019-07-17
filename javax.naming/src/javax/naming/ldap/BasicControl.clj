@@ -22,14 +22,14 @@
   "Retrieves the control's object identifier string.
 
   returns: The non-null object identifier string. - `java.lang.String`"
-  ([^javax.naming.ldap.BasicControl this]
+  (^java.lang.String [^javax.naming.ldap.BasicControl this]
     (-> this (.getID))))
 
 (defn critical?
   "Determines the control's criticality.
 
   returns: true if the control is critical; false otherwise. - `boolean`"
-  ([^javax.naming.ldap.BasicControl this]
+  (^Boolean [^javax.naming.ldap.BasicControl this]
     (-> this (.isCritical))))
 
 (defn get-encoded-value

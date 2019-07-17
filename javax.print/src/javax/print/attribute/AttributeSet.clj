@@ -83,7 +83,7 @@
             call. - `boolean`
 
   throws: javax.print.attribute.UnmodifiableSetException - (Unchecked exception) Thrown if this attribute set does not support the addAll(AttributeSet) method."
-  ([^javax.print.attribute.AttributeSet this ^javax.print.attribute.AttributeSet attributes]
+  (^Boolean [^javax.print.attribute.AttributeSet this ^javax.print.attribute.AttributeSet attributes]
     (-> this (.addAll attributes))))
 
 (defn contains-value
@@ -94,7 +94,7 @@
 
   returns: true if this attribute set contains the given
         attribute  value. - `boolean`"
-  ([^javax.print.attribute.AttributeSet this ^javax.print.attribute.Attribute attribute]
+  (^Boolean [^javax.print.attribute.AttributeSet this ^javax.print.attribute.Attribute attribute]
     (-> this (.containsValue attribute))))
 
 (defn remove
@@ -109,7 +109,7 @@
             attribute set. - `boolean`
 
   throws: javax.print.attribute.UnmodifiableSetException - (unchecked exception) Thrown if this attribute set does not support the remove() operation."
-  ([^javax.print.attribute.AttributeSet this ^java.lang.Class category]
+  (^Boolean [^javax.print.attribute.AttributeSet this ^java.lang.Class category]
     (-> this (.remove category))))
 
 (defn hash-code
@@ -122,7 +122,7 @@
    Object.hashCode().
 
   returns: The hash code value for this attribute set. - `int`"
-  ([^javax.print.attribute.AttributeSet this]
+  (^Integer [^javax.print.attribute.AttributeSet this]
     (-> this (.hashCode))))
 
 (defn add
@@ -137,14 +137,14 @@
             of this attribute set. - `boolean`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if the attribute is null."
-  ([^javax.print.attribute.AttributeSet this ^javax.print.attribute.Attribute attribute]
+  (^Boolean [^javax.print.attribute.AttributeSet this ^javax.print.attribute.Attribute attribute]
     (-> this (.add attribute))))
 
 (defn empty?
   "Returns true if this attribute set contains no attributes.
 
   returns: true if this attribute set contains no attributes. - `boolean`"
-  ([^javax.print.attribute.AttributeSet this]
+  (^Boolean [^javax.print.attribute.AttributeSet this]
     (-> this (.isEmpty))))
 
 (defn size
@@ -153,7 +153,7 @@
    returns  Integer.MAX_VALUE.
 
   returns: The number of attributes in this attribute set. - `int`"
-  ([^javax.print.attribute.AttributeSet this]
+  (^Integer [^javax.print.attribute.AttributeSet this]
     (-> this (.size))))
 
 (defn clear
@@ -179,7 +179,7 @@
 
   returns: true if this attribute set contains an attribute
            value for the specified category. - `boolean`"
-  ([^javax.print.attribute.AttributeSet this ^java.lang.Class category]
+  (^Boolean [^javax.print.attribute.AttributeSet this ^java.lang.Class category]
     (-> this (.containsKey category))))
 
 (defn get
@@ -195,7 +195,7 @@
             category. - `javax.print.attribute.Attribute`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if the category is null."
-  ([^javax.print.attribute.AttributeSet this ^java.lang.Class category]
+  (^javax.print.attribute.Attribute [^javax.print.attribute.AttributeSet this ^java.lang.Class category]
     (-> this (.get category))))
 
 (defn equals
@@ -210,6 +210,6 @@
 
   returns: true if the specified object is equal to this
          attribute   set. - `boolean`"
-  ([^javax.print.attribute.AttributeSet this ^java.lang.Object object]
+  (^Boolean [^javax.print.attribute.AttributeSet this ^java.lang.Object object]
     (-> this (.equals object))))
 

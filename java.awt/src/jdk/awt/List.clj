@@ -108,9 +108,9 @@
 
   returns: the minimum dimensions for displaying this scrolling list
                given that the specified number of rows must be visible - `java.awt.Dimension`"
-  ([^java.awt.List this ^Integer rows]
+  (^java.awt.Dimension [^java.awt.List this ^Integer rows]
     (-> this (.getMinimumSize rows)))
-  ([^java.awt.List this]
+  (^java.awt.Dimension [^java.awt.List this]
     (-> this (.getMinimumSize))))
 
 (defn add-item
@@ -131,14 +131,14 @@
 
   returns: an item that is associated with
                       the specified index - `java.lang.String`"
-  ([^java.awt.List this ^Integer index]
+  (^java.lang.String [^java.awt.List this ^Integer index]
     (-> this (.getItem index))))
 
 (defn get-item-count
   "Gets the number of items in the list.
 
   returns: the number of items in the list - `int`"
-  ([^java.awt.List this]
+  (^Integer [^java.awt.List this]
     (-> this (.getItemCount))))
 
 (defn set-multiple-selections
@@ -192,7 +192,7 @@
   returns: the index of the selected item;
                   if no item is selected, or if multiple items are
                   selected, -1 is returned. - `int`"
-  ([^java.awt.List this]
+  (^Integer [^java.awt.List this]
     (-> this (.getSelectedIndex))))
 
 (defn del-items
@@ -219,7 +219,7 @@
    the method makeVisible.
 
   returns: the index of the item that was last made visible - `int`"
-  ([^java.awt.List this]
+  (^Integer [^java.awt.List this]
     (-> this (.getVisibleIndex))))
 
 (defn remove-notify
@@ -270,7 +270,7 @@
 
   returns: true if the specified item has been
                          selected; false otherwise - `boolean`"
-  ([^java.awt.List this ^Integer index]
+  (^Boolean [^java.awt.List this ^Integer index]
     (-> this (.isIndexSelected index))))
 
 (defn make-visible
@@ -342,7 +342,7 @@
    will never change.
 
   returns: the number of visible lines in this scrolling list - `int`"
-  ([^java.awt.List this]
+  (^Integer [^java.awt.List this]
     (-> this (.getRows))))
 
 (defn get-accessible-context
@@ -353,7 +353,7 @@
 
   returns: an AccessibleAWTList that serves as the
            AccessibleContext of this List - `javax.accessibility.AccessibleContext`"
-  ([^java.awt.List this]
+  (^javax.accessibility.AccessibleContext [^java.awt.List this]
     (-> this (.getAccessibleContext))))
 
 (defn multiple-mode?
@@ -361,7 +361,7 @@
 
   returns: true if this list allows multiple
                    selections; otherwise, false - `boolean`"
-  ([^java.awt.List this]
+  (^Boolean [^java.awt.List this]
     (-> this (.isMultipleMode))))
 
 (defn get-selected-item
@@ -370,7 +370,7 @@
   returns: the selected item on the list;
                   if no item is selected, or if multiple items are
                   selected, null is returned. - `java.lang.String`"
-  ([^java.awt.List this]
+  (^java.lang.String [^java.awt.List this]
     (-> this (.getSelectedItem))))
 
 (defn is-selected
@@ -511,9 +511,9 @@
 
   returns: the preferred dimensions for displaying this scrolling list
                given that the specified number of rows must be visible - `java.awt.Dimension`"
-  ([^java.awt.List this ^Integer rows]
+  (^java.awt.Dimension [^java.awt.List this ^Integer rows]
     (-> this (.getPreferredSize rows)))
-  ([^java.awt.List this]
+  (^java.awt.Dimension [^java.awt.List this]
     (-> this (.getPreferredSize))))
 
 (defn get-selected-items

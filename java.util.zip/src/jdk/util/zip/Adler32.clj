@@ -37,6 +37,6 @@
   "Returns the checksum value.
 
   returns: the current checksum value - `long`"
-  ([^java.util.zip.Adler32 this]
+  (^Long [^java.util.zip.Adler32 this]
     (-> this (.getValue))))
 

@@ -13,7 +13,7 @@
 
   returns: true if the input argument matches the predicate,
    otherwise false - `boolean`"
-  ([^java.util.function.Predicate this ^Predicate.T t]
+  (^Boolean [^java.util.function.Predicate this ^Predicate.T t]
     (-> this (.test t))))
 
 (defn and

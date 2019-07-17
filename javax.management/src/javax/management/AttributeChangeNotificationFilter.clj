@@ -23,7 +23,7 @@
   notification - The attribute change notification to be sent. - `javax.management.Notification`
 
   returns: true if the notification has to be sent to the listener, false otherwise. - `boolean`"
-  ([^javax.management.AttributeChangeNotificationFilter this ^javax.management.Notification notification]
+  (^Boolean [^javax.management.AttributeChangeNotificationFilter this ^javax.management.Notification notification]
     (-> this (.isNotificationEnabled notification))))
 
 (defn enable-attribute
@@ -57,6 +57,6 @@
   "Gets all the enabled attribute names for this filter.
 
   returns: The list containing all the enabled attribute names. - `java.util.Vector<java.lang.String>`"
-  ([^javax.management.AttributeChangeNotificationFilter this]
+  (^java.util.Vector [^javax.management.AttributeChangeNotificationFilter this]
     (-> this (.getEnabledAttributes))))
 

@@ -53,7 +53,7 @@
 
   returns: the width in pixels of the region of image data
             that this SampleModel describes. - `int`"
-  ([^java.awt.image.SampleModel this]
+  (^Integer [^java.awt.image.SampleModel this]
     (-> this (.getWidth))))
 
 (defn get-sample-float
@@ -70,14 +70,14 @@
   returns: the sample in a specified band for the specified pixel. - `float`
 
   throws: java.lang.NullPointerException - if data is null."
-  ([^java.awt.image.SampleModel this ^Integer x ^Integer y ^Integer b ^java.awt.image.DataBuffer data]
+  (^Float [^java.awt.image.SampleModel this ^Integer x ^Integer y ^Integer b ^java.awt.image.DataBuffer data]
     (-> this (.getSampleFloat x y b data))))
 
 (defn get-data-type
   "Returns the data type of the DataBuffer storing the pixel data.
 
   returns: the data type. - `int`"
-  ([^java.awt.image.SampleModel this]
+  (^Integer [^java.awt.image.SampleModel this]
     (-> this (.getDataType))))
 
 (defn get-transfer-type
@@ -92,7 +92,7 @@
     defined in DataBuffer.
 
   returns: the transfer type. - `int`"
-  ([^java.awt.image.SampleModel this]
+  (^Integer [^java.awt.image.SampleModel this]
     (-> this (.getTransferType))))
 
 (defn create-data-buffer
@@ -101,7 +101,7 @@
 
   returns: a DataBuffer corresponding to this
            SampleModel. - `java.awt.image.DataBuffer`"
-  ([^java.awt.image.SampleModel this]
+  (^java.awt.image.DataBuffer [^java.awt.image.SampleModel this]
     (-> this (.createDataBuffer))))
 
 (defn get-data-elements
@@ -149,9 +149,9 @@
   returns: the data elements for the specified region of pixels. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if data is null."
-  ([^java.awt.image.SampleModel this ^Integer x ^Integer y ^Integer w ^Integer h ^java.lang.Object obj ^java.awt.image.DataBuffer data]
+  (^java.lang.Object [^java.awt.image.SampleModel this ^Integer x ^Integer y ^Integer w ^Integer h ^java.lang.Object obj ^java.awt.image.DataBuffer data]
     (-> this (.getDataElements x y w h obj data)))
-  ([^java.awt.image.SampleModel this ^Integer x ^Integer y ^java.lang.Object obj ^java.awt.image.DataBuffer data]
+  (^java.lang.Object [^java.awt.image.SampleModel this ^Integer x ^Integer y ^java.lang.Object obj ^java.awt.image.DataBuffer data]
     (-> this (.getDataElements x y obj data))))
 
 (defn create-subset-sample-model
@@ -163,7 +163,7 @@
 
   returns: a SampleModel with a subset of bands of this
            SampleModel. - `java.awt.image.SampleModel`"
-  ([^java.awt.image.SampleModel this bands]
+  (^java.awt.image.SampleModel [^java.awt.image.SampleModel this bands]
     (-> this (.createSubsetSampleModel bands))))
 
 (defn get-num-bands
@@ -171,7 +171,7 @@
 
   returns: the number of bands of image data that this
             SampleModel describes. - `int`"
-  ([^java.awt.image.SampleModel this]
+  (^Integer [^java.awt.image.SampleModel this]
     (-> this (.getNumBands))))
 
 (defn get-pixels
@@ -207,7 +207,7 @@
   returns: the sample in a specified band for the specified pixel. - `double`
 
   throws: java.lang.NullPointerException - if data is null."
-  ([^java.awt.image.SampleModel this ^Integer x ^Integer y ^Integer b ^java.awt.image.DataBuffer data]
+  (^Double [^java.awt.image.SampleModel this ^Integer x ^Integer y ^Integer b ^java.awt.image.DataBuffer data]
     (-> this (.getSampleDouble x y b data))))
 
 (defn set-pixels
@@ -238,7 +238,7 @@
     as the storage DataType.
 
   returns: the number of data elements. - `int`"
-  ([^java.awt.image.SampleModel this]
+  (^Integer [^java.awt.image.SampleModel this]
     (-> this (.getNumDataElements))))
 
 (defn get-sample
@@ -255,7 +255,7 @@
   returns: the sample in a specified band for the specified pixel. - `int`
 
   throws: java.lang.NullPointerException - if data is null."
-  ([^java.awt.image.SampleModel this ^Integer x ^Integer y ^Integer b ^java.awt.image.DataBuffer data]
+  (^Integer [^java.awt.image.SampleModel this ^Integer x ^Integer y ^Integer b ^java.awt.image.DataBuffer data]
     (-> this (.getSample x y b data))))
 
 (defn set-sample
@@ -279,7 +279,7 @@
 
   returns: the height in pixels of the region of image data
             that this SampleModel describes. - `int`"
-  ([^java.awt.image.SampleModel this]
+  (^Integer [^java.awt.image.SampleModel this]
     (-> this (.getHeight))))
 
 (defn set-pixel
@@ -319,7 +319,7 @@
   band - the specified band - `int`
 
   returns: the size of the samples of the specified band. - `int`"
-  ([^java.awt.image.SampleModel this ^Integer band]
+  (^Integer [^java.awt.image.SampleModel this ^Integer band]
     (-> this (.getSampleSize band)))
   ([^java.awt.image.SampleModel this]
     (-> this (.getSampleSize))))
@@ -334,7 +334,7 @@
   returns: a SampleModel describing the same image
             data as this SampleModel, but with a
             different size. - `java.awt.image.SampleModel`"
-  ([^java.awt.image.SampleModel this ^Integer w ^Integer h]
+  (^java.awt.image.SampleModel [^java.awt.image.SampleModel this ^Integer w ^Integer h]
     (-> this (.createCompatibleSampleModel w h))))
 
 (defn set-data-elements

@@ -15,7 +15,7 @@
   c - the JSpinner (not used) - `javax.swing.JComponent`
 
   returns: a new SynthSpinnerUI object - `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent c]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent c]
     (SynthSpinnerUI/createUI c)))
 
 (defn get-context
@@ -24,7 +24,7 @@
   c - Component requesting SynthContext. - `javax.swing.JComponent`
 
   returns: SynthContext describing component. - `javax.swing.plaf.synth.SynthContext`"
-  ([^javax.swing.plaf.synth.SynthSpinnerUI this ^javax.swing.JComponent c]
+  (^javax.swing.plaf.synth.SynthContext [^javax.swing.plaf.synth.SynthSpinnerUI this ^javax.swing.JComponent c]
     (-> this (.getContext c))))
 
 (defn update

@@ -39,7 +39,7 @@
    which case the parameter and read fields should be ignored.
 
   returns: the index of the truncated parameter or column value - `int`"
-  ([^java.sql.DataTruncation this]
+  (^Integer [^java.sql.DataTruncation this]
     (-> this (.getIndex))))
 
 (defn get-parameter?
@@ -48,7 +48,7 @@
 
   returns: true if the value truncated was a parameter;
            false if it was a column value - `boolean`"
-  ([^java.sql.DataTruncation this]
+  (^Boolean [^java.sql.DataTruncation this]
     (-> this (.getParameter))))
 
 (defn get-read?
@@ -56,7 +56,7 @@
 
   returns: true if the value was truncated when read from
            the database; false if the data was truncated on a write - `boolean`"
-  ([^java.sql.DataTruncation this]
+  (^Boolean [^java.sql.DataTruncation this]
     (-> this (.getRead))))
 
 (defn get-data-size
@@ -65,7 +65,7 @@
    performed.  The value may be -1 if the size is unknown.
 
   returns: the number of bytes of data that should have been transferred - `int`"
-  ([^java.sql.DataTruncation this]
+  (^Integer [^java.sql.DataTruncation this]
     (-> this (.getDataSize))))
 
 (defn get-transfer-size
@@ -73,6 +73,6 @@
    The value may be -1 if the size is unknown.
 
   returns: the number of bytes of data actually transferred - `int`"
-  ([^java.sql.DataTruncation this]
+  (^Integer [^java.sql.DataTruncation this]
     (-> this (.getTransferSize))))
 

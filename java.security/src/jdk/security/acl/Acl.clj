@@ -67,7 +67,7 @@
   "Returns the name of this ACL.
 
   returns: the name of this ACL. - `java.lang.String`"
-  ([^java.security.acl.Acl this]
+  (^java.lang.String [^java.security.acl.Acl this]
     (-> this (.getName))))
 
 (defn add-entry
@@ -87,7 +87,7 @@
    present in this ACL. - `boolean`
 
   throws: java.security.acl.NotOwnerException - if the caller principal is not an owner of this ACL."
-  ([^java.security.acl.Acl this ^java.security.Principal caller ^java.security.acl.AclEntry entry]
+  (^Boolean [^java.security.acl.Acl this ^java.security.Principal caller ^java.security.acl.AclEntry entry]
     (-> this (.addEntry caller entry))))
 
 (defn remove-entry
@@ -99,7 +99,7 @@
   returns: true on success, false if the entry is not part of this ACL. - `boolean`
 
   throws: java.security.acl.NotOwnerException - if the caller principal is not an owner of this Acl."
-  ([^java.security.acl.Acl this ^java.security.Principal caller ^java.security.acl.AclEntry entry]
+  (^Boolean [^java.security.acl.Acl this ^java.security.Principal caller ^java.security.acl.AclEntry entry]
     (-> this (.removeEntry caller entry))))
 
 (defn get-permissions
@@ -144,7 +144,7 @@
 
   returns: the permission set specifying the permissions the principal
    is allowed. - `java.util.Enumeration<java.security.acl.Permission>`"
-  ([^java.security.acl.Acl this ^java.security.Principal user]
+  (^java.util.Enumeration [^java.security.acl.Acl this ^java.security.Principal user]
     (-> this (.getPermissions user))))
 
 (defn entries
@@ -152,7 +152,7 @@
    the enumeration is of type AclEntry.
 
   returns: an enumeration of the entries in this ACL. - `java.util.Enumeration<java.security.acl.AclEntry>`"
-  ([^java.security.acl.Acl this]
+  (^java.util.Enumeration [^java.security.acl.Acl this]
     (-> this (.entries))))
 
 (defn check-permission
@@ -169,7 +169,7 @@
 
   returns: true if the principal has the specified permission, false
    otherwise. - `boolean`"
-  ([^java.security.acl.Acl this ^java.security.Principal principal ^java.security.acl.Permission permission]
+  (^Boolean [^java.security.acl.Acl this ^java.security.Principal principal ^java.security.acl.Permission permission]
     (-> this (.checkPermission principal permission))))
 
 (defn to-string
@@ -177,6 +177,6 @@
    ACL contents.
 
   returns: a string representation of the ACL contents. - `java.lang.String`"
-  ([^java.security.acl.Acl this]
+  (^java.lang.String [^java.security.acl.Acl this]
     (-> this (.toString))))
 

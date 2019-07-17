@@ -72,7 +72,7 @@
             by this FileOutputStream object. - `java.io.FileDescriptor`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.FileOutputStream this]
+  (^java.io.FileDescriptor [^java.io.FileOutputStream this]
     (-> this (.getFD))))
 
 (defn get-channel
@@ -87,6 +87,6 @@
    writing, will change this stream's file position.
 
   returns: the file channel associated with this file output stream - `java.nio.channels.FileChannel`"
-  ([^java.io.FileOutputStream this]
+  (^java.nio.channels.FileChannel [^java.io.FileOutputStream this]
     (-> this (.getChannel))))
 

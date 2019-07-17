@@ -103,9 +103,9 @@
   returns: the new SecureRandom object. - `java.security.SecureRandom`
 
   throws: java.security.NoSuchAlgorithmException - if a SecureRandomSpi implementation for the specified algorithm is not available from the specified provider."
-  ([^java.lang.String algorithm ^java.lang.String provider]
+  (^java.security.SecureRandom [^java.lang.String algorithm ^java.lang.String provider]
     (SecureRandom/getInstance algorithm provider))
-  ([^java.lang.String algorithm]
+  (^java.security.SecureRandom [^java.lang.String algorithm]
     (SecureRandom/getInstance algorithm)))
 
 (defn *get-seed
@@ -144,14 +144,14 @@
    by the securerandom.strongAlgorithms Security property - `java.security.SecureRandom`
 
   throws: java.security.NoSuchAlgorithmException - if no algorithm is available"
-  ([]
+  (^java.security.SecureRandom []
     (SecureRandom/getInstanceStrong )))
 
 (defn get-provider
   "Returns the provider of this SecureRandom object.
 
   returns: the provider of this SecureRandom object. - `java.security.Provider`"
-  ([^java.security.SecureRandom this]
+  (^java.security.Provider [^java.security.SecureRandom this]
     (-> this (.getProvider))))
 
 (defn get-algorithm
@@ -160,7 +160,7 @@
 
   returns: the name of the algorithm or unknown
             if the algorithm name cannot be determined. - `java.lang.String`"
-  ([^java.security.SecureRandom this]
+  (^java.lang.String [^java.security.SecureRandom this]
     (-> this (.getAlgorithm))))
 
 (defn set-seed

@@ -15,7 +15,7 @@
   "Returns the value.
 
   returns: the value - `java.lang.Object`"
-  ([^javax.lang.model.element.AnnotationValue this]
+  (^java.lang.Object [^javax.lang.model.element.AnnotationValue this]
     (-> this (.getValue))))
 
 (defn to-string
@@ -24,7 +24,7 @@
    in the source code of an annotation.
 
   returns: a string representation of this value - `java.lang.String`"
-  ([^javax.lang.model.element.AnnotationValue this]
+  (^java.lang.String [^javax.lang.model.element.AnnotationValue this]
     (-> this (.toString))))
 
 (defn accept

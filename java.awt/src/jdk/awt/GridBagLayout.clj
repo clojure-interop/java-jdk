@@ -426,7 +426,7 @@
   parent - `java.awt.Container`
 
   returns: the value 0.5f to indicate centered - `float`"
-  ([^java.awt.GridBagLayout this ^java.awt.Container parent]
+  (^Float [^java.awt.GridBagLayout this ^java.awt.Container parent]
     (-> this (.getLayoutAlignmentY parent))))
 
 (defn preferred-layout-size
@@ -439,14 +439,14 @@
 
   returns: the preferred size of the parent
     container - `java.awt.Dimension`"
-  ([^java.awt.GridBagLayout this ^java.awt.Container parent]
+  (^java.awt.Dimension [^java.awt.GridBagLayout this ^java.awt.Container parent]
     (-> this (.preferredLayoutSize parent))))
 
 (defn to-string
   "Returns a string representation of this grid bag layout's values.
 
   returns: a string representation of this grid bag layout. - `java.lang.String`"
-  ([^java.awt.GridBagLayout this]
+  (^java.lang.String [^java.awt.GridBagLayout this]
     (-> this (.toString))))
 
 (defn location
@@ -475,7 +475,7 @@
   returns: an ordered pair of indexes that indicate which cell
                in the layout grid contains the point
                (x, y). - `java.awt.Point`"
-  ([^java.awt.GridBagLayout this ^Integer x ^Integer y]
+  (^java.awt.Point [^java.awt.GridBagLayout this ^Integer x ^Integer y]
     (-> this (.location x y))))
 
 (defn get-layout-alignment-x
@@ -488,7 +488,7 @@
   parent - `java.awt.Container`
 
   returns: the value 0.5f to indicate centered - `float`"
-  ([^java.awt.GridBagLayout this ^java.awt.Container parent]
+  (^Float [^java.awt.GridBagLayout this ^java.awt.Container parent]
     (-> this (.getLayoutAlignmentX parent))))
 
 (defn minimum-layout-size
@@ -500,7 +500,7 @@
   parent - the container in which to do the layout - `java.awt.Container`
 
   returns: the minimum size of the parent container - `java.awt.Dimension`"
-  ([^java.awt.GridBagLayout this ^java.awt.Container parent]
+  (^java.awt.Dimension [^java.awt.GridBagLayout this ^java.awt.Container parent]
     (-> this (.minimumLayoutSize parent))))
 
 (defn get-constraints
@@ -512,7 +512,7 @@
   returns: the constraint for the specified component in this
                     grid bag layout; a copy of the actual constraint
                     object is returned - `java.awt.GridBagConstraints`"
-  ([^java.awt.GridBagLayout this ^java.awt.Component comp]
+  (^java.awt.GridBagConstraints [^java.awt.GridBagLayout this ^java.awt.Component comp]
     (-> this (.getConstraints comp))))
 
 (defn set-constraints
@@ -533,7 +533,7 @@
 
   returns: the graphics origin of the cell in the top-left
                corner of the layout grid - `java.awt.Point`"
-  ([^java.awt.GridBagLayout this]
+  (^java.awt.Point [^java.awt.GridBagLayout this]
     (-> this (.getLayoutOrigin))))
 
 (defn maximum-layout-size
@@ -543,7 +543,7 @@
   target - the container which needs to be laid out - `java.awt.Container`
 
   returns: the maximum dimensions for this layout - `java.awt.Dimension`"
-  ([^java.awt.GridBagLayout this ^java.awt.Container target]
+  (^java.awt.Dimension [^java.awt.GridBagLayout this ^java.awt.Container target]
     (-> this (.maximumLayoutSize target))))
 
 (defn get-layout-dimensions

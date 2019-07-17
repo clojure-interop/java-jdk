@@ -53,7 +53,7 @@
   "Retrieves the StartTLS response's object identifier string.
 
   returns: The object identifier string, `1.3.6.1.4.1.1466.20037`. - `java.lang.String`"
-  ([^javax.naming.ldap.StartTlsResponse this]
+  (^java.lang.String [^javax.naming.ldap.StartTlsResponse this]
     (-> this (.getID))))
 
 (defn get-encoded-value
@@ -74,7 +74,7 @@
    (and private keys) are not available.
 
   suites - The non-null list of names of all the cipher suites to enable. - `java.lang.String[]`"
-  ([^javax.naming.ldap.StartTlsResponse this ^java.lang.String[] suites]
+  ([^javax.naming.ldap.StartTlsResponse this suites]
     (-> this (.setEnabledCipherSuites suites))))
 
 (defn set-hostname-verifier
@@ -117,9 +117,9 @@
   returns: The negotiated SSL session - `javax.net.ssl.SSLSession`
 
   throws: java.io.IOException - If an IO error was encountered while establishing the TLS session."
-  ([^javax.naming.ldap.StartTlsResponse this ^javax.net.ssl.SSLSocketFactory factory]
+  (^javax.net.ssl.SSLSession [^javax.naming.ldap.StartTlsResponse this ^javax.net.ssl.SSLSocketFactory factory]
     (-> this (.negotiate factory)))
-  ([^javax.naming.ldap.StartTlsResponse this]
+  (^javax.net.ssl.SSLSession [^javax.naming.ldap.StartTlsResponse this]
     (-> this (.negotiate))))
 
 (defn close

@@ -13,14 +13,14 @@
 
   url - the location (URL). - `java.net.URL`
   certs - the certificate(s). It may be null. The contents of the array are copied to protect against subsequent modification. - `java.security.cert.Certificate[]`"
-  ([^java.net.URL url ^java.security.cert.Certificate[] certs]
+  ([^java.net.URL url certs]
     (new CodeSource url certs)))
 
 (defn hash-code
   "Returns the hash code value for this object.
 
   returns: a hash code value for this object. - `int`"
-  ([^java.security.CodeSource this]
+  (^Integer [^java.security.CodeSource this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -33,14 +33,14 @@
   obj - the object to test for equality with this object. - `java.lang.Object`
 
   returns: true if the objects are considered equal, false otherwise. - `boolean`"
-  ([^java.security.CodeSource this ^java.lang.Object obj]
+  (^Boolean [^java.security.CodeSource this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn get-location
   "Returns the location associated with this CodeSource.
 
   returns: the location (URL). - `java.net.URL`"
-  ([^java.security.CodeSource this]
+  (^java.net.URL [^java.security.CodeSource this]
     (-> this (.getLocation))))
 
 (defn get-certificates
@@ -140,7 +140,7 @@
 
   returns: true if the specified codesource is implied by this codesource,
    false if not. - `boolean`"
-  ([^java.security.CodeSource this ^java.security.CodeSource codesource]
+  (^Boolean [^java.security.CodeSource this ^java.security.CodeSource codesource]
     (-> this (.implies codesource))))
 
 (defn to-string
@@ -148,6 +148,6 @@
    URL and certificates.
 
   returns: information about this CodeSource. - `java.lang.String`"
-  ([^java.security.CodeSource this]
+  (^java.lang.String [^java.security.CodeSource this]
     (-> this (.toString))))
 

@@ -27,13 +27,13 @@
   "Returns the size in bits of the prime modulus.
 
   returns: the size in bits of the prime modulus - `int`"
-  ([^javax.crypto.spec.DHGenParameterSpec this]
+  (^Integer [^javax.crypto.spec.DHGenParameterSpec this]
     (-> this (.getPrimeSize))))
 
 (defn get-exponent-size
   "Returns the size in bits of the random exponent (private value).
 
   returns: the size in bits of the random exponent (private value) - `int`"
-  ([^javax.crypto.spec.DHGenParameterSpec this]
+  (^Integer [^javax.crypto.spec.DHGenParameterSpec this]
     (-> this (.getExponentSize))))
 

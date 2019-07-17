@@ -53,13 +53,13 @@
   "Returns the parent node.
 
   returns: the parent node (never null) - `org.w3c.dom.Node`"
-  ([^javax.xml.crypto.dsig.dom.DOMSignContext this]
+  (^org.w3c.dom.Node [^javax.xml.crypto.dsig.dom.DOMSignContext this]
     (-> this (.getParent))))
 
 (defn get-next-sibling
   "Returns the nextSibling node.
 
   returns: the nextSibling node, or null if not specified. - `org.w3c.dom.Node`"
-  ([^javax.xml.crypto.dsig.dom.DOMSignContext this]
+  (^org.w3c.dom.Node [^javax.xml.crypto.dsig.dom.DOMSignContext this]
     (-> this (.getNextSibling))))
 

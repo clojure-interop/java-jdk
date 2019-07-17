@@ -161,9 +161,9 @@
   returns: A new asynchronous file channel - `java.nio.channels.AsynchronousFileChannel`
 
   throws: java.lang.IllegalArgumentException - If the set contains an invalid combination of options"
-  ([^java.nio.file.Path file ^java.nio.file.OpenOption> options ^java.util.concurrent.ExecutorService executor ^java.nio.file.attribute.FileAttribute attrs]
+  (^java.nio.channels.AsynchronousFileChannel [^java.nio.file.Path file ^java.nio.file.OpenOption> options ^java.util.concurrent.ExecutorService executor ^java.nio.file.attribute.FileAttribute attrs]
     (AsynchronousFileChannel/open file options executor attrs))
-  ([^java.nio.file.Path file ^java.nio.file.OpenOption options]
+  (^java.nio.channels.AsynchronousFileChannel [^java.nio.file.Path file ^java.nio.file.OpenOption options]
     (AsynchronousFileChannel/open file options)))
 
 (defn size
@@ -172,7 +172,7 @@
   returns: The current size of this channel's file, measured in bytes - `long`
 
   throws: java.nio.channels.ClosedChannelException - If this channel is closed"
-  ([^java.nio.channels.AsynchronousFileChannel this]
+  (^Long [^java.nio.channels.AsynchronousFileChannel this]
     (-> this (.size))))
 
 (defn truncate
@@ -188,7 +188,7 @@
   returns: This file channel - `java.nio.channels.AsynchronousFileChannel`
 
   throws: java.nio.channels.NonWritableChannelException - If this channel was not opened for writing"
-  ([^java.nio.channels.AsynchronousFileChannel this ^Long size]
+  (^java.nio.channels.AsynchronousFileChannel [^java.nio.channels.AsynchronousFileChannel this ^Long size]
     (-> this (.truncate size))))
 
 (defn force
@@ -278,11 +278,11 @@
   throws: java.nio.channels.OverlappingFileLockException - If a lock that overlaps the requested region is already held by this Java virtual machine, or there is already a pending attempt to lock an overlapping region"
   ([^java.nio.channels.AsynchronousFileChannel this ^Long position ^Long size ^Boolean shared attachment handler]
     (-> this (.lock position size shared attachment handler)))
-  ([^java.nio.channels.AsynchronousFileChannel this ^Long position ^Long size ^Boolean shared]
+  (^java.util.concurrent.Future [^java.nio.channels.AsynchronousFileChannel this ^Long position ^Long size ^Boolean shared]
     (-> this (.lock position size shared)))
   ([^java.nio.channels.AsynchronousFileChannel this attachment handler]
     (-> this (.lock attachment handler)))
-  ([^java.nio.channels.AsynchronousFileChannel this]
+  (^java.util.concurrent.Future [^java.nio.channels.AsynchronousFileChannel this]
     (-> this (.lock))))
 
 (defn try-lock
@@ -303,9 +303,9 @@
             because another program holds an overlapping lock - `java.nio.channels.FileLock`
 
   throws: java.lang.IllegalArgumentException - If the preconditions on the parameters do not hold"
-  ([^java.nio.channels.AsynchronousFileChannel this ^Long position ^Long size ^Boolean shared]
+  (^java.nio.channels.FileLock [^java.nio.channels.AsynchronousFileChannel this ^Long position ^Long size ^Boolean shared]
     (-> this (.tryLock position size shared)))
-  ([^java.nio.channels.AsynchronousFileChannel this]
+  (^java.nio.channels.FileLock [^java.nio.channels.AsynchronousFileChannel this]
     (-> this (.tryLock))))
 
 (defn read
@@ -333,7 +333,7 @@
   throws: java.lang.IllegalArgumentException - If the position is negative or the buffer is read-only"
   ([^java.nio.channels.AsynchronousFileChannel this ^java.nio.ByteBuffer dst ^Long position attachment handler]
     (-> this (.read dst position attachment handler)))
-  ([^java.nio.channels.AsynchronousFileChannel this ^java.nio.ByteBuffer dst ^Long position]
+  (^java.util.concurrent.Future [^java.nio.channels.AsynchronousFileChannel this ^java.nio.ByteBuffer dst ^Long position]
     (-> this (.read dst position))))
 
 (defn write
@@ -357,6 +357,6 @@
   throws: java.lang.IllegalArgumentException - If the position is negative"
   ([^java.nio.channels.AsynchronousFileChannel this ^java.nio.ByteBuffer src ^Long position attachment handler]
     (-> this (.write src position attachment handler)))
-  ([^java.nio.channels.AsynchronousFileChannel this ^java.nio.ByteBuffer src ^Long position]
+  (^java.util.concurrent.Future [^java.nio.channels.AsynchronousFileChannel this ^java.nio.ByteBuffer src ^Long position]
     (-> this (.write src position))))
 

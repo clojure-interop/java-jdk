@@ -25,6 +25,6 @@
    to-be-generated EC domain parameters.
 
   returns: the standard or predefined name. - `java.lang.String`"
-  ([^java.security.spec.ECGenParameterSpec this]
+  (^java.lang.String [^java.security.spec.ECGenParameterSpec this]
     (-> this (.getName))))
 

@@ -103,6 +103,6 @@
    cancelled the dialog. - `javax.print.PrintService`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true."
-  ([^java.awt.GraphicsConfiguration gc ^Integer x ^Integer y ^javax.print.PrintService[] services ^javax.print.PrintService default-service ^javax.print.DocFlavor flavor ^javax.print.attribute.PrintRequestAttributeSet attributes]
+  (^javax.print.PrintService [^java.awt.GraphicsConfiguration gc ^Integer x ^Integer y services ^javax.print.PrintService default-service ^javax.print.DocFlavor flavor ^javax.print.attribute.PrintRequestAttributeSet attributes]
     (ServiceUI/printDialog gc x y services default-service flavor attributes)))
 

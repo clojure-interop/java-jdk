@@ -56,9 +56,9 @@
    of a given delegation subject. - `javax.management.MBeanServerConnection`
 
   throws: java.io.IOException - if a valid MBeanServerConnection cannot be created, for instance because the connection to the remote MBean server has not yet been established (with the connect method), or it has been closed, or it has broken."
-  ([^javax.management.remote.JMXConnector this ^javax.security.auth.Subject delegation-subject]
+  (^javax.management.MBeanServerConnection [^javax.management.remote.JMXConnector this ^javax.security.auth.Subject delegation-subject]
     (-> this (.getMBeanServerConnection delegation-subject)))
-  ([^javax.management.remote.JMXConnector this]
+  (^javax.management.MBeanServerConnection [^javax.management.remote.JMXConnector this]
     (-> this (.getMBeanServerConnection))))
 
 (defn close
@@ -132,6 +132,6 @@
    conventions for connection IDs. - `java.lang.String`
 
   throws: java.io.IOException - if the connection ID cannot be obtained, for instance because the connection is closed or broken."
-  ([^javax.management.remote.JMXConnector this]
+  (^java.lang.String [^javax.management.remote.JMXConnector this]
     (-> this (.getConnectionId))))
 

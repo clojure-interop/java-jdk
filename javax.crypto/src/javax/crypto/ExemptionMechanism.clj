@@ -26,9 +26,9 @@
   returns: the new ExemptionMechanism object. - `javax.crypto.ExemptionMechanism`
 
   throws: java.lang.NullPointerException - if algorithm is null."
-  ([^java.lang.String algorithm ^java.lang.String provider]
+  (^javax.crypto.ExemptionMechanism [^java.lang.String algorithm ^java.lang.String provider]
     (ExemptionMechanism/getInstance algorithm provider))
-  ([^java.lang.String algorithm]
+  (^javax.crypto.ExemptionMechanism [^java.lang.String algorithm]
     (ExemptionMechanism/getInstance algorithm)))
 
 (defn get-name
@@ -41,14 +41,14 @@
 
   returns: the exemption mechanism name of this
    ExemptionMechanism object. - `java.lang.String`"
-  ([^javax.crypto.ExemptionMechanism this]
+  (^java.lang.String [^javax.crypto.ExemptionMechanism this]
     (-> this (.getName))))
 
 (defn get-provider
   "Returns the provider of this ExemptionMechanism object.
 
   returns: the provider of this ExemptionMechanism object. - `java.security.Provider`"
-  ([^javax.crypto.ExemptionMechanism this]
+  (^java.security.Provider [^javax.crypto.ExemptionMechanism this]
     (-> this (.getProvider))))
 
 (defn crypto-allowed?
@@ -66,7 +66,7 @@
    is null. - `boolean`
 
   throws: javax.crypto.ExemptionMechanismException - if problem(s) encountered while determining whether the result blob has been generated successfully by this exemption mechanism object."
-  ([^javax.crypto.ExemptionMechanism this ^java.security.Key key]
+  (^Boolean [^javax.crypto.ExemptionMechanism this ^java.security.Key key]
     (-> this (.isCryptoAllowed key))))
 
 (defn get-output-size
@@ -84,7 +84,7 @@
   returns: the required output buffer size (in bytes) - `int`
 
   throws: java.lang.IllegalStateException - if this exemption mechanism is in a wrong state (e.g., has not yet been initialized)"
-  ([^javax.crypto.ExemptionMechanism this ^Integer input-len]
+  (^Integer [^javax.crypto.ExemptionMechanism this ^Integer input-len]
     (-> this (.getOutputSize input-len))))
 
 (defn init
@@ -124,9 +124,9 @@
   returns: the number of bytes stored in output - `int`
 
   throws: java.lang.IllegalStateException - if this exemption mechanism is in a wrong state (e.g., has not been initialized)."
-  ([^javax.crypto.ExemptionMechanism this output ^Integer output-offset]
+  (^Integer [^javax.crypto.ExemptionMechanism this output ^Integer output-offset]
     (-> this (.genExemptionBlob output output-offset)))
-  ([^javax.crypto.ExemptionMechanism this output]
+  (^Integer [^javax.crypto.ExemptionMechanism this output]
     (-> this (.genExemptionBlob output)))
   ([^javax.crypto.ExemptionMechanism this]
     (-> this (.genExemptionBlob))))

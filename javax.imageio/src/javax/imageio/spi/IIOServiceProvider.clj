@@ -63,7 +63,7 @@
 
   returns: a non-null String containing
    the name of the vendor. - `java.lang.String`"
-  ([^javax.imageio.spi.IIOServiceProvider this]
+  (^java.lang.String [^javax.imageio.spi.IIOServiceProvider this]
     (-> this (.getVendorName))))
 
 (defn get-version
@@ -78,7 +78,7 @@
 
   returns: a non-null String containing
    the version of this service provider. - `java.lang.String`"
-  ([^javax.imageio.spi.IIOServiceProvider this]
+  (^java.lang.String [^javax.imageio.spi.IIOServiceProvider this]
     (-> this (.getVersion))))
 
 (defn get-description
@@ -91,6 +91,6 @@
 
   returns: a String containing a description of this
    service provider. - `java.lang.String`"
-  ([^javax.imageio.spi.IIOServiceProvider this ^java.util.Locale locale]
+  (^java.lang.String [^javax.imageio.spi.IIOServiceProvider this ^java.util.Locale locale]
     (-> this (.getDescription locale))))
 

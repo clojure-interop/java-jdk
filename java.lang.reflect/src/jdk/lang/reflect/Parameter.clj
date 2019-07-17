@@ -39,7 +39,7 @@
 
   returns: true if and only if the parameter has a name according
    to the class file. - `boolean`"
-  ([^java.lang.reflect.Parameter this]
+  (^Boolean [^java.lang.reflect.Parameter this]
     (-> this (.isNamePresent))))
 
 (defn get-type
@@ -49,7 +49,7 @@
 
   returns: a Class object identifying the declared
    type of the parameter represented by this object - `java.lang.Class<?>`"
-  ([^java.lang.reflect.Parameter this]
+  (^java.lang.Class [^java.lang.reflect.Parameter this]
     (-> this (.getType))))
 
 (defn var-args?
@@ -58,7 +58,7 @@
 
   returns: true if an only if this parameter represents a
    variable argument list. - `boolean`"
-  ([^java.lang.reflect.Parameter this]
+  (^Boolean [^java.lang.reflect.Parameter this]
     (-> this (.isVarArgs))))
 
 (defn get-modifiers
@@ -66,7 +66,7 @@
    this Parameter object.
 
   returns: The modifier flags for this parameter. - `int`"
-  ([^java.lang.reflect.Parameter this]
+  (^Integer [^java.lang.reflect.Parameter this]
     (-> this (.getModifiers))))
 
 (defn synthetic?
@@ -77,7 +77,7 @@
   returns: true if and only if this parameter is a synthetic
    construct as defined by
    The Java™ Language Specification. - `boolean`"
-  ([^java.lang.reflect.Parameter this]
+  (^Boolean [^java.lang.reflect.Parameter this]
     (-> this (.isSynthetic))))
 
 (defn to-string
@@ -92,7 +92,7 @@
 
   returns: A string representation of the parameter and associated
    information. - `java.lang.String`"
-  ([^java.lang.reflect.Parameter this]
+  (^java.lang.String [^java.lang.reflect.Parameter this]
     (-> this (.toString))))
 
 (defn get-annotation
@@ -133,7 +133,7 @@
   returns: The name of the parameter, either provided by the class
            file or synthesized if the class file does not provide
            a name. - `java.lang.String`"
-  ([^java.lang.reflect.Parameter this]
+  (^java.lang.String [^java.lang.reflect.Parameter this]
     (-> this (.getName))))
 
 (defn get-annotations
@@ -156,7 +156,7 @@
 
   returns: a Type object identifying the parameterized
    type of the parameter represented by this object - `java.lang.reflect.Type`"
-  ([^java.lang.reflect.Parameter this]
+  (^java.lang.reflect.Type [^java.lang.reflect.Parameter this]
     (-> this (.getParameterizedType))))
 
 (defn get-annotated-type
@@ -166,14 +166,14 @@
   returns: an AnnotatedType object representing the use of a type
            to specify the type of the formal parameter represented by this
            Parameter - `java.lang.reflect.AnnotatedType`"
-  ([^java.lang.reflect.Parameter this]
+  (^java.lang.reflect.AnnotatedType [^java.lang.reflect.Parameter this]
     (-> this (.getAnnotatedType))))
 
 (defn get-declaring-executable
   "Return the Executable which declares this parameter.
 
   returns: The Executable declaring this parameter. - `java.lang.reflect.Executable`"
-  ([^java.lang.reflect.Parameter this]
+  (^java.lang.reflect.Executable [^java.lang.reflect.Parameter this]
     (-> this (.getDeclaringExecutable))))
 
 (defn implicit?
@@ -183,7 +183,7 @@
   returns: true if and only if this parameter is implicitly
    declared as defined by The Java™ Language
    Specification. - `boolean`"
-  ([^java.lang.reflect.Parameter this]
+  (^Boolean [^java.lang.reflect.Parameter this]
     (-> this (.isImplicit))))
 
 (defn get-annotations-by-type
@@ -215,7 +215,7 @@
    index.
 
   returns: A hash code based on the executable's hash code. - `int`"
-  ([^java.lang.reflect.Parameter this]
+  (^Integer [^java.lang.reflect.Parameter this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -224,6 +224,6 @@
   obj - The object to compare. - `java.lang.Object`
 
   returns: Whether or not this is equal to the argument. - `boolean`"
-  ([^java.lang.reflect.Parameter this ^java.lang.Object obj]
+  (^Boolean [^java.lang.reflect.Parameter this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

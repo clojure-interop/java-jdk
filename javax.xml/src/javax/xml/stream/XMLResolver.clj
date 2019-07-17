@@ -19,6 +19,6 @@
   returns: The resource requested or null. - `java.lang.Object`
 
   throws: javax.xml.stream.XMLStreamException - if there was a failure attempting to resolve the resource."
-  ([^javax.xml.stream.XMLResolver this ^java.lang.String public-id ^java.lang.String system-id ^java.lang.String base-uri ^java.lang.String namespace]
+  (^java.lang.Object [^javax.xml.stream.XMLResolver this ^java.lang.String public-id ^java.lang.String system-id ^java.lang.String base-uri ^java.lang.String namespace]
     (-> this (.resolveEntity public-id system-id base-uri namespace))))
 

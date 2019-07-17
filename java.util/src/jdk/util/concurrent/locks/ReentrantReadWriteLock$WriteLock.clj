@@ -152,9 +152,9 @@
    elapsed before the lock could be acquired. - `boolean`
 
   throws: java.lang.InterruptedException - if the current thread is interrupted"
-  ([^java.util.concurrent.locks.ReentrantReadWriteLock$WriteLock this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^Boolean [^java.util.concurrent.locks.ReentrantReadWriteLock$WriteLock this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.tryLock timeout unit)))
-  ([^java.util.concurrent.locks.ReentrantReadWriteLock$WriteLock this]
+  (^Boolean [^java.util.concurrent.locks.ReentrantReadWriteLock$WriteLock this]
     (-> this (.tryLock))))
 
 (defn unlock
@@ -204,7 +204,7 @@
    waiting the longest.
 
   returns: the Condition object - `java.util.concurrent.locks.Condition`"
-  ([^java.util.concurrent.locks.ReentrantReadWriteLock$WriteLock this]
+  (^java.util.concurrent.locks.Condition [^java.util.concurrent.locks.ReentrantReadWriteLock$WriteLock this]
     (-> this (.newCondition))))
 
 (defn to-string
@@ -214,7 +214,7 @@
    followed by the name of the owning thread.
 
   returns: a string identifying this lock, as well as its lock state - `java.lang.String`"
-  ([^java.util.concurrent.locks.ReentrantReadWriteLock$WriteLock this]
+  (^java.lang.String [^java.util.concurrent.locks.ReentrantReadWriteLock$WriteLock this]
     (-> this (.toString))))
 
 (defn held-by-current-thread?
@@ -223,7 +223,7 @@
 
   returns: true if the current thread holds this lock and
            false otherwise - `boolean`"
-  ([^java.util.concurrent.locks.ReentrantReadWriteLock$WriteLock this]
+  (^Boolean [^java.util.concurrent.locks.ReentrantReadWriteLock$WriteLock this]
     (-> this (.isHeldByCurrentThread))))
 
 (defn get-hold-count
@@ -234,6 +234,6 @@
 
   returns: the number of holds on this lock by the current thread,
            or zero if this lock is not held by the current thread - `int`"
-  ([^java.util.concurrent.locks.ReentrantReadWriteLock$WriteLock this]
+  (^Integer [^java.util.concurrent.locks.ReentrantReadWriteLock$WriteLock this]
     (-> this (.getHoldCount))))
 

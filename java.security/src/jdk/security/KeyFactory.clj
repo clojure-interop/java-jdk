@@ -63,16 +63,16 @@
   returns: the new KeyFactory object. - `java.security.KeyFactory`
 
   throws: java.security.NoSuchAlgorithmException - if a KeyFactorySpi implementation for the specified algorithm is not available from the specified provider."
-  ([^java.lang.String algorithm ^java.lang.String provider]
+  (^java.security.KeyFactory [^java.lang.String algorithm ^java.lang.String provider]
     (KeyFactory/getInstance algorithm provider))
-  ([^java.lang.String algorithm]
+  (^java.security.KeyFactory [^java.lang.String algorithm]
     (KeyFactory/getInstance algorithm)))
 
 (defn get-provider
   "Returns the provider of this key factory object.
 
   returns: the provider of this key factory object - `java.security.Provider`"
-  ([^java.security.KeyFactory this]
+  (^java.security.Provider [^java.security.KeyFactory this]
     (-> this (.getProvider))))
 
 (defn get-algorithm
@@ -81,7 +81,7 @@
 
   returns: the name of the algorithm associated with this
    KeyFactory - `java.lang.String`"
-  ([^java.security.KeyFactory this]
+  (^java.lang.String [^java.security.KeyFactory this]
     (-> this (.getAlgorithm))))
 
 (defn generate-public
@@ -93,7 +93,7 @@
   returns: the public key. - `java.security.PublicKey`
 
   throws: java.security.spec.InvalidKeySpecException - if the given key specification is inappropriate for this key factory to produce a public key."
-  ([^java.security.KeyFactory this ^java.security.spec.KeySpec key-spec]
+  (^java.security.PublicKey [^java.security.KeyFactory this ^java.security.spec.KeySpec key-spec]
     (-> this (.generatePublic key-spec))))
 
 (defn generate-private
@@ -105,7 +105,7 @@
   returns: the private key. - `java.security.PrivateKey`
 
   throws: java.security.spec.InvalidKeySpecException - if the given key specification is inappropriate for this key factory to produce a private key."
-  ([^java.security.KeyFactory this ^java.security.spec.KeySpec key-spec]
+  (^java.security.PrivateKey [^java.security.KeyFactory this ^java.security.spec.KeySpec key-spec]
     (-> this (.generatePrivate key-spec))))
 
 (defn get-key-spec
@@ -135,6 +135,6 @@
   returns: the translated key. - `java.security.Key`
 
   throws: java.security.InvalidKeyException - if the given key cannot be processed by this key factory."
-  ([^java.security.KeyFactory this ^java.security.Key key]
+  (^java.security.Key [^java.security.KeyFactory this ^java.security.Key key]
     (-> this (.translateKey key))))
 

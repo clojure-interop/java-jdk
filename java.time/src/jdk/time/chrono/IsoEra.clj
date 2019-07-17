@@ -44,7 +44,7 @@
   returns: the enum constant with the specified name - `java.time.chrono.IsoEra`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^java.time.chrono.IsoEra [^java.lang.String name]
     (IsoEra/valueOf name)))
 
 (defn *of
@@ -58,7 +58,7 @@
   returns: the era singleton, not null - `java.time.chrono.IsoEra`
 
   throws: java.time.DateTimeException - if the value is invalid"
-  ([^Integer iso-era]
+  (^java.time.chrono.IsoEra [^Integer iso-era]
     (IsoEra/of iso-era)))
 
 (defn get-value
@@ -67,6 +67,6 @@
    The era BCE has the value 0, while the era CE has the value 1.
 
   returns: the era value, from 0 (BCE) to 1 (CE) - `int`"
-  ([^java.time.chrono.IsoEra this]
+  (^Integer [^java.time.chrono.IsoEra this]
     (-> this (.getValue))))
 

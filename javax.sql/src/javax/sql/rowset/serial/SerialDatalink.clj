@@ -39,7 +39,7 @@
    URL object in the Java programming language. - `java.net.URL`
 
   throws: javax.sql.rowset.serial.SerialException - if the URL object cannot be de-serialized"
-  ([^javax.sql.rowset.serial.SerialDatalink this]
+  (^java.net.URL [^javax.sql.rowset.serial.SerialDatalink this]
     (-> this (.getDatalink))))
 
 (defn equals
@@ -52,7 +52,7 @@
 
   returns: true if the given object represents a SerialDatalink
             equivalent to this SerialDatalink, false otherwise - `boolean`"
-  ([^javax.sql.rowset.serial.SerialDatalink this ^java.lang.Object obj]
+  (^Boolean [^javax.sql.rowset.serial.SerialDatalink this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -61,13 +61,13 @@
    the URL it stores
 
   returns: a hash code value for this object. - `int`"
-  ([^javax.sql.rowset.serial.SerialDatalink this]
+  (^Integer [^javax.sql.rowset.serial.SerialDatalink this]
     (-> this (.hashCode))))
 
 (defn clone
   "Returns a clone of this SerialDatalink.
 
   returns: a clone of this SerialDatalink - `java.lang.Object`"
-  ([^javax.sql.rowset.serial.SerialDatalink this]
+  (^java.lang.Object [^javax.sql.rowset.serial.SerialDatalink this]
     (-> this (.clone))))
 

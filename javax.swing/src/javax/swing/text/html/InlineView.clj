@@ -53,7 +53,7 @@
    model with a StyleSheet.
 
   returns: `javax.swing.text.AttributeSet`"
-  ([^javax.swing.text.html.InlineView this]
+  (^javax.swing.text.AttributeSet [^javax.swing.text.html.InlineView this]
     (-> this (.getAttributes))))
 
 (defn get-break-weight
@@ -85,7 +85,7 @@
 
   returns: the weight, which should be a value between
      ForcedBreakWeight and BadBreakWeight. - `int`"
-  ([^javax.swing.text.html.InlineView this ^Integer axis ^Float pos ^Float len]
+  (^Integer [^javax.swing.text.html.InlineView this ^Integer axis ^Float pos ^Float len]
     (-> this (.getBreakWeight axis pos len))))
 
 (defn break-view
@@ -104,6 +104,6 @@
 
   returns: the fragment of the view that represents the
     given span. - `javax.swing.text.View`"
-  ([^javax.swing.text.html.InlineView this ^Integer axis ^Integer offset ^Float pos ^Float len]
+  (^javax.swing.text.View [^javax.swing.text.html.InlineView this ^Integer axis ^Integer offset ^Float pos ^Float len]
     (-> this (.breakView axis offset pos len))))
 

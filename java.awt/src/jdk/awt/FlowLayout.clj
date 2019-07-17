@@ -138,7 +138,7 @@
   returns: the vertical gap between components
                and between the components and the borders
                of the Container - `int`"
-  ([^java.awt.FlowLayout this]
+  (^Integer [^java.awt.FlowLayout this]
     (-> this (.getVgap))))
 
 (defn set-hgap
@@ -166,7 +166,7 @@
 
   returns: the preferred dimensions to lay out the
               subcomponents of the specified container - `java.awt.Dimension`"
-  ([^java.awt.FlowLayout this ^java.awt.Container target]
+  (^java.awt.Dimension [^java.awt.FlowLayout this ^java.awt.Container target]
     (-> this (.preferredLayoutSize target))))
 
 (defn to-string
@@ -174,7 +174,7 @@
    object and its values.
 
   returns: a string representation of this layout - `java.lang.String`"
-  ([^java.awt.FlowLayout this]
+  (^java.lang.String [^java.awt.FlowLayout this]
     (-> this (.toString))))
 
 (defn get-hgap
@@ -185,7 +185,7 @@
   returns: the horizontal gap between components
                and between the components and the borders
                of the Container - `int`"
-  ([^java.awt.FlowLayout this]
+  (^Integer [^java.awt.FlowLayout this]
     (-> this (.getHgap))))
 
 (defn get-align-on-baseline?
@@ -194,7 +194,7 @@
 
   returns: true if components are to be vertically aligned along
                 their baseline - `boolean`"
-  ([^java.awt.FlowLayout this]
+  (^Boolean [^java.awt.FlowLayout this]
     (-> this (.getAlignOnBaseline))))
 
 (defn minimum-layout-size
@@ -205,7 +205,7 @@
 
   returns: the minimum dimensions to lay out the
               subcomponents of the specified container - `java.awt.Dimension`"
-  ([^java.awt.FlowLayout this ^java.awt.Container target]
+  (^java.awt.Dimension [^java.awt.FlowLayout this ^java.awt.Container target]
     (-> this (.minimumLayoutSize target))))
 
 (defn get-alignment
@@ -216,7 +216,7 @@
    or FlowLayout.TRAILING.
 
   returns: the alignment value for this layout - `int`"
-  ([^java.awt.FlowLayout this]
+  (^Integer [^java.awt.FlowLayout this]
     (-> this (.getAlignment))))
 
 (defn set-align-on-baseline

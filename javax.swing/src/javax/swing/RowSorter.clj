@@ -166,7 +166,7 @@
   returns: row index in terms of the view - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if index is outside the range of the view"
-  ([^javax.swing.RowSorter this ^Integer index]
+  (^Integer [^javax.swing.RowSorter this ^Integer index]
     (-> this (.convertRowIndexToModel index))))
 
 (defn get-sort-keys
@@ -185,7 +185,7 @@
    underlying model.
 
   returns: number of rows in the view - `int`"
-  ([^javax.swing.RowSorter this]
+  (^Integer [^javax.swing.RowSorter this]
     (-> this (.getViewRowCount))))
 
 (defn add-row-sorter-listener
@@ -219,14 +219,14 @@
            filtered out of the view - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if index is outside the range of the model"
-  ([^javax.swing.RowSorter this ^Integer index]
+  (^Integer [^javax.swing.RowSorter this ^Integer index]
     (-> this (.convertRowIndexToView index))))
 
 (defn get-model
   "Returns the underlying model.
 
   returns: the underlying model - `RowSorter.M`"
-  ([^javax.swing.RowSorter this]
+  (^RowSorter.M [^javax.swing.RowSorter this]
     (-> this (.getModel))))
 
 (defn rows-deleted
@@ -252,6 +252,6 @@
   "Returns the number of rows in the underlying model.
 
   returns: number of rows in the underlying model - `int`"
-  ([^javax.swing.RowSorter this]
+  (^Integer [^javax.swing.RowSorter this]
     (-> this (.getModelRowCount))))
 

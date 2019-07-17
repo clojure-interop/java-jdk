@@ -96,7 +96,7 @@
     multicast packets. - `java.net.InetAddress`
 
   throws: java.net.SocketException - if there is an error in the underlying protocol, such as a TCP error."
-  ([^java.net.MulticastSocket this]
+  (^java.net.InetAddress [^java.net.MulticastSocket this]
     (-> this (.getInterface))))
 
 (defn get-network-interface
@@ -105,7 +105,7 @@
   returns: the multicast NetworkInterface currently set - `java.net.NetworkInterface`
 
   throws: java.net.SocketException - if there is an error in the underlying protocol, such as a TCP error."
-  ([^java.net.MulticastSocket this]
+  (^java.net.NetworkInterface [^java.net.MulticastSocket this]
     (-> this (.getNetworkInterface))))
 
 (defn send
@@ -143,7 +143,7 @@
   returns: the default time-to-live value - `int`
 
   throws: java.io.IOException - if an I/O exception occurs while getting the default time-to-live value"
-  ([^java.net.MulticastSocket this]
+  (^Integer [^java.net.MulticastSocket this]
     (-> this (.getTimeToLive))))
 
 (defn set-interface
@@ -235,6 +235,6 @@
   returns: true if the LoopbackMode has been disabled - `boolean`
 
   throws: java.net.SocketException - if an error occurs while getting the value"
-  ([^java.net.MulticastSocket this]
+  (^Boolean [^java.net.MulticastSocket this]
     (-> this (.getLoopbackMode))))
 

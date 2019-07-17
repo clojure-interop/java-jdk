@@ -54,7 +54,7 @@
   returns: true if the file descriptor object represents a
             valid, open file, socket, or other active I/O connection;
             false otherwise. - `boolean`"
-  ([^java.io.FileDescriptor this]
+  (^Boolean [^java.io.FileDescriptor this]
     (-> this (.valid))))
 
 (defn sync

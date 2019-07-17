@@ -45,9 +45,9 @@
   mbeandescriptor - descriptor to be used as the MBeanDescriptor containing MBean wide policy. If the descriptor is null, a default descriptor will be constructed. The default descriptor is: name=className, descriptorType=`mbean`, displayName=className, persistPolicy=`never`, log=`F`, visibility=`1`. If the descriptor does not contain all of these fields, the missing ones are added with these default values. - `javax.management.Descriptor`
 
   throws: javax.management.RuntimeOperationsException - Wraps an IllegalArgumentException for invalid descriptor passed in parameter. (see getMBeanDescriptor for the definition of a valid MBean descriptor.)"
-  ([^java.lang.String class-name ^java.lang.String description ^javax.management.modelmbean.ModelMBeanAttributeInfo[] attributes ^javax.management.modelmbean.ModelMBeanConstructorInfo[] constructors ^javax.management.modelmbean.ModelMBeanOperationInfo[] operations ^javax.management.modelmbean.ModelMBeanNotificationInfo[] notifications ^javax.management.Descriptor mbeandescriptor]
+  ([^java.lang.String class-name ^java.lang.String description attributes constructors operations notifications ^javax.management.Descriptor mbeandescriptor]
     (new ModelMBeanInfoSupport class-name description attributes constructors operations notifications mbeandescriptor))
-  ([^java.lang.String class-name ^java.lang.String description ^javax.management.modelmbean.ModelMBeanAttributeInfo[] attributes ^javax.management.modelmbean.ModelMBeanConstructorInfo[] constructors ^javax.management.modelmbean.ModelMBeanOperationInfo[] operations ^javax.management.modelmbean.ModelMBeanNotificationInfo[] notifications]
+  ([^java.lang.String class-name ^java.lang.String description attributes constructors operations notifications]
     (new ModelMBeanInfoSupport class-name description attributes constructors operations notifications))
   ([^javax.management.modelmbean.ModelMBeanInfo mbi]
     (new ModelMBeanInfoSupport mbi)))
@@ -58,7 +58,7 @@
   returns: the MBean descriptor. - `javax.management.Descriptor`
 
   throws: javax.management.MBeanException - Wraps a distributed communication Exception."
-  ([^javax.management.modelmbean.ModelMBeanInfoSupport this]
+  (^javax.management.Descriptor [^javax.management.modelmbean.ModelMBeanInfoSupport this]
     (-> this (.getMBeanDescriptor))))
 
 (defn set-m-bean-descriptor
@@ -81,11 +81,11 @@
    found, null is returned. - `javax.management.Descriptor`
 
   throws: javax.management.MBeanException - Wraps a distributed communication Exception."
-  ([^javax.management.modelmbean.ModelMBeanInfoSupport this ^java.lang.String in-descriptor-name ^java.lang.String in-descriptor-type]
+  (^javax.management.Descriptor [^javax.management.modelmbean.ModelMBeanInfoSupport this ^java.lang.String in-descriptor-name ^java.lang.String in-descriptor-type]
     (-> this (.getDescriptor in-descriptor-name in-descriptor-type)))
-  ([^javax.management.modelmbean.ModelMBeanInfoSupport this ^java.lang.String in-descriptor-name]
+  (^javax.management.Descriptor [^javax.management.modelmbean.ModelMBeanInfoSupport this ^java.lang.String in-descriptor-name]
     (-> this (.getDescriptor in-descriptor-name)))
-  ([^javax.management.modelmbean.ModelMBeanInfoSupport this]
+  (^javax.management.Descriptor [^javax.management.modelmbean.ModelMBeanInfoSupport this]
     (-> this (.getDescriptor))))
 
 (defn set-descriptors
@@ -94,7 +94,7 @@
   in-descriptors - The descriptors to be set in the ModelMBeanInfo. Null elements of the list will be ignored. All descriptors must have name and descriptorType fields. - `javax.management.Descriptor[]`
 
   throws: javax.management.MBeanException - Wraps a distributed communication Exception."
-  ([^javax.management.modelmbean.ModelMBeanInfoSupport this ^javax.management.Descriptor[] in-descriptors]
+  ([^javax.management.modelmbean.ModelMBeanInfoSupport this in-descriptors]
     (-> this (.setDescriptors in-descriptors))))
 
 (defn get-descriptors
@@ -117,7 +117,7 @@
    if there is none. - `javax.management.modelmbean.ModelMBeanAttributeInfo`
 
   throws: javax.management.MBeanException - Wraps a distributed communication Exception."
-  ([^javax.management.modelmbean.ModelMBeanInfoSupport this ^java.lang.String in-name]
+  (^javax.management.modelmbean.ModelMBeanAttributeInfo [^javax.management.modelmbean.ModelMBeanInfoSupport this ^java.lang.String in-name]
     (-> this (.getAttribute in-name))))
 
 (defn get-constructor
@@ -130,7 +130,7 @@
    if there is none. - `javax.management.modelmbean.ModelMBeanConstructorInfo`
 
   throws: javax.management.MBeanException - Wraps a distributed communication Exception."
-  ([^javax.management.modelmbean.ModelMBeanInfoSupport this ^java.lang.String in-name]
+  (^javax.management.modelmbean.ModelMBeanConstructorInfo [^javax.management.modelmbean.ModelMBeanInfoSupport this ^java.lang.String in-name]
     (-> this (.getConstructor in-name))))
 
 (defn set-descriptor
@@ -151,7 +151,7 @@
    the Descriptor of the original object.
 
   returns: a shallow clone of this instance. - `java.lang.Object`"
-  ([^javax.management.modelmbean.ModelMBeanInfoSupport this]
+  (^java.lang.Object [^javax.management.modelmbean.ModelMBeanInfoSupport this]
     (-> this (.clone))))
 
 (defn get-notification
@@ -163,7 +163,7 @@
    is none. - `javax.management.modelmbean.ModelMBeanNotificationInfo`
 
   throws: javax.management.MBeanException - Wraps a distributed communication Exception."
-  ([^javax.management.modelmbean.ModelMBeanInfoSupport this ^java.lang.String in-name]
+  (^javax.management.modelmbean.ModelMBeanNotificationInfo [^javax.management.modelmbean.ModelMBeanInfoSupport this ^java.lang.String in-name]
     (-> this (.getNotification in-name))))
 
 (defn get-operation
@@ -175,6 +175,6 @@
    if there is none. - `javax.management.modelmbean.ModelMBeanOperationInfo`
 
   throws: javax.management.MBeanException - Wraps a distributed communication Exception."
-  ([^javax.management.modelmbean.ModelMBeanInfoSupport this ^java.lang.String in-name]
+  (^javax.management.modelmbean.ModelMBeanOperationInfo [^javax.management.modelmbean.ModelMBeanInfoSupport this ^java.lang.String in-name]
     (-> this (.getOperation in-name))))
 

@@ -75,9 +75,9 @@
   returns: true if this Vector changed as a result of the call - `boolean`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if the index is out of range (index < 0 || index > size())"
-  ([^java.util.Vector this ^Integer index ^Vector.E> c]
+  (^Boolean [^java.util.Vector this ^Integer index ^Vector.E> c]
     (-> this (.addAll index c)))
-  ([^java.util.Vector this ^Vector.E> c]
+  (^Boolean [^java.util.Vector this ^Vector.E> c]
     (-> this (.addAll c))))
 
 (defn first-element
@@ -87,7 +87,7 @@
   returns: the first component of this vector - `Vector.E`
 
   throws: java.util.NoSuchElementException - if this vector has no components"
-  ([^java.util.Vector this]
+  (^Vector.E [^java.util.Vector this]
     (-> this (.firstElement))))
 
 (defn spliterator
@@ -101,7 +101,7 @@
    characteristic values.
 
   returns: a Spliterator over the elements in this list - `java.util.Spliterator<Vector.E>`"
-  ([^java.util.Vector this]
+  (^java.util.Spliterator [^java.util.Vector this]
     (-> this (.spliterator))))
 
 (defn for-each
@@ -124,7 +124,7 @@
   filter - a predicate which returns true for elements to be removed - `Vector.E>`
 
   returns: true if any elements were removed - `boolean`"
-  ([^java.util.Vector this ^Vector.E> filter]
+  (^Boolean [^java.util.Vector this ^Vector.E> filter]
     (-> this (.removeIf filter))))
 
 (defn add-element
@@ -149,7 +149,7 @@
   o - element whose presence in this vector is to be tested - `java.lang.Object`
 
   returns: true if this vector contains the specified element - `boolean`"
-  ([^java.util.Vector this ^java.lang.Object o]
+  (^Boolean [^java.util.Vector this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn to-string
@@ -157,7 +157,7 @@
    the String representation of each element.
 
   returns: a string representation of this collection - `java.lang.String`"
-  ([^java.util.Vector this]
+  (^java.lang.String [^java.util.Vector this]
     (-> this (.toString))))
 
 (defn insert-element-at
@@ -201,9 +201,9 @@
            sequence), starting at the specified position in the list - `java.util.ListIterator<Vector.E>`
 
   throws: java.lang.IndexOutOfBoundsException - if the index is out of range (index < 0 || index > size())"
-  ([^java.util.Vector this ^Integer index]
+  (^java.util.ListIterator [^java.util.Vector this ^Integer index]
     (-> this (.listIterator index)))
-  ([^java.util.Vector this]
+  (^java.util.ListIterator [^java.util.Vector this]
     (-> this (.listIterator))))
 
 (defn sort
@@ -219,7 +219,7 @@
    The returned iterator is fail-fast.
 
   returns: an iterator over the elements in this list in proper sequence - `java.util.Iterator<Vector.E>`"
-  ([^java.util.Vector this]
+  (^java.util.Iterator [^java.util.Vector this]
     (-> this (.iterator))))
 
 (defn remove-all-elements
@@ -262,7 +262,7 @@
   returns: a view of the specified range within this List - `java.util.List<Vector.E>`
 
   throws: java.lang.IndexOutOfBoundsException - if an endpoint index value is out of range (fromIndex < 0 || toIndex > size)"
-  ([^java.util.Vector this ^Integer from-index ^Integer to-index]
+  (^java.util.List [^java.util.Vector this ^Integer from-index ^Integer to-index]
     (-> this (.subList from-index to-index))))
 
 (defn last-index-of
@@ -281,9 +281,9 @@
            -1 if the element is not found. - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if the specified index is greater than or equal to the current size of this vector"
-  ([^java.util.Vector this ^java.lang.Object o ^Integer index]
+  (^Integer [^java.util.Vector this ^java.lang.Object o ^Integer index]
     (-> this (.lastIndexOf o index)))
-  ([^java.util.Vector this ^java.lang.Object o]
+  (^Integer [^java.util.Vector this ^java.lang.Object o]
     (-> this (.lastIndexOf o))))
 
 (defn remove-element
@@ -301,7 +301,7 @@
 
   returns: true if the argument was a component of this
             vector; false otherwise. - `boolean`"
-  ([^java.util.Vector this ^java.lang.Object obj]
+  (^Boolean [^java.util.Vector this ^java.lang.Object obj]
     (-> this (.removeElement obj))))
 
 (defn set-element-at
@@ -336,7 +336,7 @@
   o - element to be removed from this Vector, if present - `java.lang.Object`
 
   returns: true if the Vector contained the specified element - `boolean`"
-  ([^java.util.Vector this ^java.lang.Object o]
+  (^Boolean [^java.util.Vector this ^java.lang.Object o]
     (-> this (.remove o))))
 
 (defn copy-into
@@ -347,7 +347,7 @@
   an-array - the array into which the components get copied - `java.lang.Object[]`
 
   throws: java.lang.NullPointerException - if the given array is null"
-  ([^java.util.Vector this ^java.lang.Object[] an-array]
+  ([^java.util.Vector this an-array]
     (-> this (.copyInto an-array))))
 
 (defn ensure-capacity
@@ -380,7 +380,7 @@
   returns: the component at the specified index - `Vector.E`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if the index is out of range (index < 0 || index >= size())"
-  ([^java.util.Vector this ^Integer index]
+  (^Vector.E [^java.util.Vector this ^Integer index]
     (-> this (.elementAt index))))
 
 (defn set-size
@@ -401,14 +401,14 @@
    to the original internal data array of this Vector object.
 
   returns: a clone of this vector - `java.lang.Object`"
-  ([^java.util.Vector this]
+  (^java.lang.Object [^java.util.Vector this]
     (-> this (.clone))))
 
 (defn hash-code
   "Returns the hash code value for this Vector.
 
   returns: the hash code value for this list - `int`"
-  ([^java.util.Vector this]
+  (^Integer [^java.util.Vector this]
     (-> this (.hashCode))))
 
 (defn add
@@ -422,7 +422,7 @@
   throws: java.lang.ArrayIndexOutOfBoundsException - if the index is out of range (index < 0 || index > size())"
   ([^java.util.Vector this ^Integer index ^Vector.E element]
     (-> this (.add index element)))
-  ([^java.util.Vector this ^Vector.E e]
+  (^Boolean [^java.util.Vector this ^Vector.E e]
     (-> this (.add e))))
 
 (defn set
@@ -435,7 +435,7 @@
   returns: the element previously at the specified position - `Vector.E`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if the index is out of range (index < 0 || index >= size())"
-  ([^java.util.Vector this ^Integer index ^Vector.E element]
+  (^Vector.E [^java.util.Vector this ^Integer index ^Vector.E element]
     (-> this (.set index element))))
 
 (defn empty?
@@ -444,14 +444,14 @@
   returns: true if and only if this vector has
             no components, that is, its size is zero;
             false otherwise. - `boolean`"
-  ([^java.util.Vector this]
+  (^Boolean [^java.util.Vector this]
     (-> this (.isEmpty))))
 
 (defn size
   "Returns the number of components in this vector.
 
   returns: the number of components in this vector - `int`"
-  ([^java.util.Vector this]
+  (^Integer [^java.util.Vector this]
     (-> this (.size))))
 
 (defn retain-all
@@ -464,7 +464,7 @@
   returns: true if this Vector changed as a result of the call - `boolean`
 
   throws: java.lang.ClassCastException - if the types of one or more elements in this vector are incompatible with the specified collection (optional)"
-  ([^java.util.Vector this ^java.util.Collection c]
+  (^Boolean [^java.util.Vector this ^java.util.Collection c]
     (-> this (.retainAll c))))
 
 (defn clear
@@ -489,9 +489,9 @@
            -1 if the element is not found. - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if the specified index is negative"
-  ([^java.util.Vector this ^java.lang.Object o ^Integer index]
+  (^Integer [^java.util.Vector this ^java.lang.Object o ^Integer index]
     (-> this (.indexOf o index)))
-  ([^java.util.Vector this ^java.lang.Object o]
+  (^Integer [^java.util.Vector this ^java.lang.Object o]
     (-> this (.indexOf o))))
 
 (defn to-array
@@ -525,7 +525,7 @@
             size() - 1. - `Vector.E`
 
   throws: java.util.NoSuchElementException - if this vector is empty"
-  ([^java.util.Vector this]
+  (^Vector.E [^java.util.Vector this]
     (-> this (.lastElement))))
 
 (defn remove-all
@@ -537,7 +537,7 @@
   returns: true if this Vector changed as a result of the call - `boolean`
 
   throws: java.lang.ClassCastException - if the types of one or more elements in this vector are incompatible with the specified collection (optional)"
-  ([^java.util.Vector this ^java.util.Collection c]
+  (^Boolean [^java.util.Vector this ^java.util.Collection c]
     (-> this (.removeAll c))))
 
 (defn get
@@ -548,7 +548,7 @@
   returns: object at the specified index - `Vector.E`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if the index is out of range (index < 0 || index >= size())"
-  ([^java.util.Vector this ^Integer index]
+  (^Vector.E [^java.util.Vector this ^Integer index]
     (-> this (.get index))))
 
 (defn capacity
@@ -557,7 +557,7 @@
   returns: the current capacity (the length of its internal
             data array, kept in the field elementData
             of this vector) - `int`"
-  ([^java.util.Vector this]
+  (^Integer [^java.util.Vector this]
     (-> this (.capacity))))
 
 (defn remove-element-at
@@ -593,7 +593,7 @@
   o - the Object to be compared for equality with this Vector - `java.lang.Object`
 
   returns: true if the specified Object is equal to this Vector - `boolean`"
-  ([^java.util.Vector this ^java.lang.Object o]
+  (^Boolean [^java.util.Vector this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn elements
@@ -603,7 +603,7 @@
    then the item at index 1, and so on.
 
   returns: an enumeration of the components of this vector - `java.util.Enumeration<Vector.E>`"
-  ([^java.util.Vector this]
+  (^java.util.Enumeration [^java.util.Vector this]
     (-> this (.elements))))
 
 (defn trim-to-size
@@ -626,6 +626,6 @@
            specified collection - `boolean`
 
   throws: java.lang.NullPointerException - if the specified collection is null"
-  ([^java.util.Vector this ^java.util.Collection c]
+  (^Boolean [^java.util.Vector this ^java.util.Collection c]
     (-> this (.containsAll c))))
 

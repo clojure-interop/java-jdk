@@ -37,7 +37,7 @@
   "Gets the type of event.
 
   returns: the type - `javax.swing.event.HyperlinkEvent.EventType`"
-  ([^javax.swing.event.HyperlinkEvent this]
+  (^javax.swing.event.HyperlinkEvent.EventType [^javax.swing.event.HyperlinkEvent this]
     (-> this (.getEventType))))
 
 (defn get-description
@@ -47,14 +47,14 @@
    URL would be null.
 
   returns: `java.lang.String`"
-  ([^javax.swing.event.HyperlinkEvent this]
+  (^java.lang.String [^javax.swing.event.HyperlinkEvent this]
     (-> this (.getDescription))))
 
 (defn get-url
   "Gets the URL that the link refers to.
 
   returns: the URL - `java.net.URL`"
-  ([^javax.swing.event.HyperlinkEvent this]
+  (^java.net.URL [^javax.swing.event.HyperlinkEvent this]
     (-> this (.getURL))))
 
 (defn get-source-element
@@ -65,7 +65,7 @@
    Element, this will return null.
 
   returns: Element indicating source of event, or null - `javax.swing.text.Element`"
-  ([^javax.swing.event.HyperlinkEvent this]
+  (^javax.swing.text.Element [^javax.swing.event.HyperlinkEvent this]
     (-> this (.getSourceElement))))
 
 (defn get-input-event
@@ -75,6 +75,6 @@
    was specified as the InputEvent, this returns null.
 
   returns: InputEvent that triggered the hyperlink event, or null - `java.awt.event.InputEvent`"
-  ([^javax.swing.event.HyperlinkEvent this]
+  (^java.awt.event.InputEvent [^javax.swing.event.HyperlinkEvent this]
     (-> this (.getInputEvent))))
 

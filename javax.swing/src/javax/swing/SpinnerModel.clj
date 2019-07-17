@@ -33,7 +33,7 @@
    displayed by the editor part of a JSpinner.
 
   returns: the current spinner value. - `java.lang.Object`"
-  ([^javax.swing.SpinnerModel this]
+  (^java.lang.Object [^javax.swing.SpinnerModel this]
     (-> this (.getValue))))
 
 (defn set-value
@@ -58,7 +58,7 @@
    then return null.  Calling this method does not effect value.
 
   returns: the next legal value or null if one doesn't exist - `java.lang.Object`"
-  ([^javax.swing.SpinnerModel this]
+  (^java.lang.Object [^javax.swing.SpinnerModel this]
     (-> this (.getNextValue))))
 
 (defn get-previous-value
@@ -67,7 +67,7 @@
    return null. Calling this method does not effect value.
 
   returns: the previous legal value or null if one doesn't exist - `java.lang.Object`"
-  ([^javax.swing.SpinnerModel this]
+  (^java.lang.Object [^javax.swing.SpinnerModel this]
     (-> this (.getPreviousValue))))
 
 (defn add-change-listener

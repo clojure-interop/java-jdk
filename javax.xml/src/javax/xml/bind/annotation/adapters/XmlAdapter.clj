@@ -130,7 +130,7 @@
   returns: `XmlAdapter.BoundType`
 
   throws: java.lang.Exception - if there's an error during the conversion. The caller is responsible for reporting the error to the user through ValidationEventHandler."
-  ([^javax.xml.bind.annotation.adapters.XmlAdapter this ^XmlAdapter.ValueType v]
+  (^XmlAdapter.BoundType [^javax.xml.bind.annotation.adapters.XmlAdapter this ^XmlAdapter.ValueType v]
     (-> this (.unmarshal v))))
 
 (defn marshal
@@ -141,6 +141,6 @@
   returns: `XmlAdapter.ValueType`
 
   throws: java.lang.Exception - if there's an error during the conversion. The caller is responsible for reporting the error to the user through ValidationEventHandler."
-  ([^javax.xml.bind.annotation.adapters.XmlAdapter this ^XmlAdapter.BoundType v]
+  (^XmlAdapter.ValueType [^javax.xml.bind.annotation.adapters.XmlAdapter this ^XmlAdapter.BoundType v]
     (-> this (.marshal v))))
 

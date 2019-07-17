@@ -56,7 +56,7 @@
 
   returns: True if object is equivalent to this printer
             message from operator attribute, false otherwise. - `boolean`"
-  ([^javax.print.attribute.standard.PrinterMessageFromOperator this ^java.lang.Object object]
+  (^Boolean [^javax.print.attribute.standard.PrinterMessageFromOperator this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -79,6 +79,6 @@
    the category name is `printer-message-from-operator`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.PrinterMessageFromOperator this]
+  (^java.lang.String [^javax.print.attribute.standard.PrinterMessageFromOperator this]
     (-> this (.getName))))
 

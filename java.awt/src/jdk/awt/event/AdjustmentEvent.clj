@@ -110,14 +110,14 @@
   "Returns the Adjustable object where this event originated.
 
   returns: the Adjustable object where this event originated - `java.awt.Adjustable`"
-  ([^java.awt.event.AdjustmentEvent this]
+  (^java.awt.Adjustable [^java.awt.event.AdjustmentEvent this]
     (-> this (.getAdjustable))))
 
 (defn get-value
   "Returns the current value in the adjustment event.
 
   returns: the current value in the adjustment event - `int`"
-  ([^java.awt.event.AdjustmentEvent this]
+  (^Integer [^java.awt.event.AdjustmentEvent this]
     (-> this (.getValue))))
 
 (defn get-adjustment-type
@@ -131,7 +131,7 @@
    TRACK
 
   returns: one of the adjustment values listed above - `int`"
-  ([^java.awt.event.AdjustmentEvent this]
+  (^Integer [^java.awt.event.AdjustmentEvent this]
     (-> this (.getAdjustmentType))))
 
 (defn get-value-is-adjusting?
@@ -140,13 +140,13 @@
 
   returns: true if this is one of multiple
            adjustment events, otherwise returns false - `boolean`"
-  ([^java.awt.event.AdjustmentEvent this]
+  (^Boolean [^java.awt.event.AdjustmentEvent this]
     (-> this (.getValueIsAdjusting))))
 
 (defn param-string
   "Description copied from class: AWTEvent
 
   returns: a string representation of this event - `java.lang.String`"
-  ([^java.awt.event.AdjustmentEvent this]
+  (^java.lang.String [^java.awt.event.AdjustmentEvent this]
     (-> this (.paramString))))
 

@@ -24,7 +24,7 @@
    object that specifies where an error occurred.
 
   returns: A SourceLocator object, or null if none was specified. - `javax.xml.transform.SourceLocator`"
-  ([^javax.xml.transform.TransformerException this]
+  (^javax.xml.transform.SourceLocator [^javax.xml.transform.TransformerException this]
     (-> this (.getLocator))))
 
 (defn set-locator
@@ -39,7 +39,7 @@
   "This method retrieves an exception that this exception wraps.
 
   returns: An Throwable object, or null. - `java.lang.Throwable`"
-  ([^javax.xml.transform.TransformerException this]
+  (^java.lang.Throwable [^javax.xml.transform.TransformerException this]
     (-> this (.getException))))
 
 (defn get-cause
@@ -48,7 +48,7 @@
    caused this throwable to get thrown.)
 
   returns: the cause, or null if unknown - `java.lang.Throwable`"
-  ([^javax.xml.transform.TransformerException this]
+  (^java.lang.Throwable [^javax.xml.transform.TransformerException this]
     (-> this (.getCause))))
 
 (defn init-cause
@@ -67,7 +67,7 @@
   returns: a reference to this Throwable instance. - `java.lang.Throwable`
 
   throws: java.lang.IllegalArgumentException - if cause is this throwable. (A throwable cannot be its own cause.)"
-  ([^javax.xml.transform.TransformerException this ^java.lang.Throwable cause]
+  (^java.lang.Throwable [^javax.xml.transform.TransformerException this ^java.lang.Throwable cause]
     (-> this (.initCause cause))))
 
 (defn get-message-and-location
@@ -76,7 +76,7 @@
 
   returns: A String representing the error message with
            location information appended. - `java.lang.String`"
-  ([^javax.xml.transform.TransformerException this]
+  (^java.lang.String [^javax.xml.transform.TransformerException this]
     (-> this (.getMessageAndLocation))))
 
 (defn get-location-as-string
@@ -84,7 +84,7 @@
 
   returns: A string with location info, or null
    if there is no location information. - `java.lang.String`"
-  ([^javax.xml.transform.TransformerException this]
+  (^java.lang.String [^javax.xml.transform.TransformerException this]
     (-> this (.getLocationAsString))))
 
 (defn print-stack-trace

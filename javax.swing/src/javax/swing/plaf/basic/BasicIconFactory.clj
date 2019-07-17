@@ -19,41 +19,41 @@
 
 (defn *get-menu-item-check-icon
   "returns: `javax.swing.Icon`"
-  ([]
+  (^javax.swing.Icon []
     (BasicIconFactory/getMenuItemCheckIcon )))
 
 (defn *get-menu-item-arrow-icon
   "returns: `javax.swing.Icon`"
-  ([]
+  (^javax.swing.Icon []
     (BasicIconFactory/getMenuItemArrowIcon )))
 
 (defn *get-menu-arrow-icon
   "returns: `javax.swing.Icon`"
-  ([]
+  (^javax.swing.Icon []
     (BasicIconFactory/getMenuArrowIcon )))
 
 (defn *get-check-box-icon
   "returns: `javax.swing.Icon`"
-  ([]
+  (^javax.swing.Icon []
     (BasicIconFactory/getCheckBoxIcon )))
 
 (defn *get-radio-button-icon
   "returns: `javax.swing.Icon`"
-  ([]
+  (^javax.swing.Icon []
     (BasicIconFactory/getRadioButtonIcon )))
 
 (defn *get-check-box-menu-item-icon
   "returns: `javax.swing.Icon`"
-  ([]
+  (^javax.swing.Icon []
     (BasicIconFactory/getCheckBoxMenuItemIcon )))
 
 (defn *get-radio-button-menu-item-icon
   "returns: `javax.swing.Icon`"
-  ([]
+  (^javax.swing.Icon []
     (BasicIconFactory/getRadioButtonMenuItemIcon )))
 
 (defn *create-empty-frame-icon
   "returns: `javax.swing.Icon`"
-  ([]
+  (^javax.swing.Icon []
     (BasicIconFactory/createEmptyFrameIcon )))
 

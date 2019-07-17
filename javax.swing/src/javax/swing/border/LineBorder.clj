@@ -33,14 +33,14 @@
   "Convenience method for getting the Color.black LineBorder of thickness 1.
 
   returns: `javax.swing.border.Border`"
-  ([]
+  (^javax.swing.border.Border []
     (LineBorder/createBlackLineBorder )))
 
 (defn *create-gray-line-border
   "Convenience method for getting the Color.gray LineBorder of thickness 1.
 
   returns: `javax.swing.border.Border`"
-  ([]
+  (^javax.swing.border.Border []
     (LineBorder/createGrayLineBorder )))
 
 (defn paint-border
@@ -63,34 +63,34 @@
   insets - the object to be reinitialized - `java.awt.Insets`
 
   returns: the insets object - `java.awt.Insets`"
-  ([^javax.swing.border.LineBorder this ^java.awt.Component c ^java.awt.Insets insets]
+  (^java.awt.Insets [^javax.swing.border.LineBorder this ^java.awt.Component c ^java.awt.Insets insets]
     (-> this (.getBorderInsets c insets))))
 
 (defn get-line-color
   "Returns the color of the border.
 
   returns: `java.awt.Color`"
-  ([^javax.swing.border.LineBorder this]
+  (^java.awt.Color [^javax.swing.border.LineBorder this]
     (-> this (.getLineColor))))
 
 (defn get-thickness
   "Returns the thickness of the border.
 
   returns: `int`"
-  ([^javax.swing.border.LineBorder this]
+  (^Integer [^javax.swing.border.LineBorder this]
     (-> this (.getThickness))))
 
 (defn get-rounded-corners?
   "Returns whether this border will be drawn with rounded corners.
 
   returns: `boolean`"
-  ([^javax.swing.border.LineBorder this]
+  (^Boolean [^javax.swing.border.LineBorder this]
     (-> this (.getRoundedCorners))))
 
 (defn border-opaque?
   "Returns whether or not the border is opaque.
 
   returns: false - `boolean`"
-  ([^javax.swing.border.LineBorder this]
+  (^Boolean [^javax.swing.border.LineBorder this]
     (-> this (.isBorderOpaque))))
 

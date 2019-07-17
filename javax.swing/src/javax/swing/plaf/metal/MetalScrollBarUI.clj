@@ -18,7 +18,7 @@
   "c - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent c]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent c]
     (MetalScrollBarUI/createUI c)))
 
 (defn get-preferred-size
@@ -27,6 +27,6 @@
   c - the JScrollBar that's delegating this method to us - `javax.swing.JComponent`
 
   returns: the preferred size of a Basic JScrollBar - `java.awt.Dimension`"
-  ([^javax.swing.plaf.metal.MetalScrollBarUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^javax.swing.plaf.metal.MetalScrollBarUI this ^javax.swing.JComponent c]
     (-> this (.getPreferredSize c))))
 

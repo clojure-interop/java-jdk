@@ -27,9 +27,9 @@
   descriptor - The descriptor for the MBean. This may be null which is equivalent to an empty descriptor. - `javax.management.Descriptor`
 
   throws: java.lang.ArrayStoreException - If openAttributes, openConstructors or openOperations is not an array of instances of a subclass of MBeanAttributeInfo, MBeanConstructorInfo or MBeanOperationInfo respectively."
-  ([^java.lang.String class-name ^java.lang.String description ^javax.management.openmbean.OpenMBeanAttributeInfo[] open-attributes ^javax.management.openmbean.OpenMBeanConstructorInfo[] open-constructors ^javax.management.openmbean.OpenMBeanOperationInfo[] open-operations ^javax.management.MBeanNotificationInfo[] notifications ^javax.management.Descriptor descriptor]
+  ([^java.lang.String class-name ^java.lang.String description open-attributes open-constructors open-operations notifications ^javax.management.Descriptor descriptor]
     (new OpenMBeanInfoSupport class-name description open-attributes open-constructors open-operations notifications descriptor))
-  ([^java.lang.String class-name ^java.lang.String description ^javax.management.openmbean.OpenMBeanAttributeInfo[] open-attributes ^javax.management.openmbean.OpenMBeanConstructorInfo[] open-constructors ^javax.management.openmbean.OpenMBeanOperationInfo[] open-operations ^javax.management.MBeanNotificationInfo[] notifications]
+  ([^java.lang.String class-name ^java.lang.String description open-attributes open-constructors open-operations notifications]
     (new OpenMBeanInfoSupport class-name description open-attributes open-constructors open-operations notifications)))
 
 (defn equals
@@ -56,7 +56,7 @@
 
   returns: true if the specified object is equal to this
    OpenMBeanInfoSupport instance. - `boolean`"
-  ([^javax.management.openmbean.OpenMBeanInfoSupport this ^java.lang.Object obj]
+  (^Boolean [^javax.management.openmbean.OpenMBeanInfoSupport this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -83,7 +83,7 @@
    for subsequent calls.
 
   returns: the hash code value for this OpenMBeanInfoSupport instance - `int`"
-  ([^javax.management.openmbean.OpenMBeanInfoSupport this]
+  (^Integer [^javax.management.openmbean.OpenMBeanInfoSupport this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -101,6 +101,6 @@
    returned for subsequent calls.
 
   returns: a string representation of this OpenMBeanInfoSupport instance - `java.lang.String`"
-  ([^javax.management.openmbean.OpenMBeanInfoSupport this]
+  (^java.lang.String [^javax.management.openmbean.OpenMBeanInfoSupport this]
     (-> this (.toString))))
 

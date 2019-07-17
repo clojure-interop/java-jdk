@@ -24,7 +24,7 @@
 
   returns: a String containing the fully-qualified
    class name of the ImageReaderSpi implementation class. - `java.lang.String`"
-  ([^javax.imageio.spi.ImageTranscoderSpi this]
+  (^java.lang.String [^javax.imageio.spi.ImageTranscoderSpi this]
     (-> this (.getReaderServiceProviderName))))
 
 (defn get-writer-service-provider-name
@@ -35,7 +35,7 @@
 
   returns: a String containing the fully-qualified
    class name of the ImageWriterSpi implementation class. - `java.lang.String`"
-  ([^javax.imageio.spi.ImageTranscoderSpi this]
+  (^java.lang.String [^javax.imageio.spi.ImageTranscoderSpi this]
     (-> this (.getWriterServiceProviderName))))
 
 (defn create-transcoder-instance
@@ -43,6 +43,6 @@
    implementation associated with this service provider.
 
   returns: an ImageTranscoder instance. - `javax.imageio.ImageTranscoder`"
-  ([^javax.imageio.spi.ImageTranscoderSpi this]
+  (^javax.imageio.ImageTranscoder [^javax.imageio.spi.ImageTranscoderSpi this]
     (-> this (.createTranscoderInstance))))
 

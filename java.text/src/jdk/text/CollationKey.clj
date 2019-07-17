@@ -63,14 +63,14 @@
   returns: Returns an integer value. Value is less than zero if this is less
    than target, value is zero if this and target are equal and value is greater than
    zero if this is greater than target. - `int`"
-  ([^java.text.CollationKey this ^java.text.CollationKey target]
+  (^Integer [^java.text.CollationKey this ^java.text.CollationKey target]
     (-> this (.compareTo target))))
 
 (defn get-source-string
   "Returns the String that this CollationKey represents.
 
   returns: the source string of this CollationKey - `java.lang.String`"
-  ([^java.text.CollationKey this]
+  (^java.lang.String [^java.text.CollationKey this]
     (-> this (.getSourceString))))
 
 (defn to-byte-array

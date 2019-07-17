@@ -22,7 +22,7 @@
   returns: an unsigned byte value from the stream. - `int`
 
   throws: java.io.EOFException - if the end of the stream is reached."
-  ([^javax.imageio.stream.ImageInputStreamImpl this]
+  (^Integer [^javax.imageio.stream.ImageInputStreamImpl this]
     (-> this (.readUnsignedByte))))
 
 (defn read-bytes
@@ -42,7 +42,7 @@
    or 1. - `int`
 
   throws: java.io.EOFException - if the stream reaches the end before reading all the bits."
-  ([^javax.imageio.stream.ImageInputStreamImpl this]
+  (^Integer [^javax.imageio.stream.ImageInputStreamImpl this]
     (-> this (.readBit))))
 
 (defn set-byte-order
@@ -58,7 +58,7 @@
   returns: a signed byte value from the stream. - `byte`
 
   throws: java.io.EOFException - if the end of the stream is reached."
-  ([^javax.imageio.stream.ImageInputStreamImpl this]
+  (^Byte [^javax.imageio.stream.ImageInputStreamImpl this]
     (-> this (.readByte))))
 
 (defn read-fully
@@ -81,7 +81,7 @@
    0 and 7, inclusive. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^javax.imageio.stream.ImageInputStreamImpl this]
+  (^Integer [^javax.imageio.stream.ImageInputStreamImpl this]
     (-> this (.getBitOffset))))
 
 (defn read-char
@@ -90,7 +90,7 @@
   returns: an unsigned char value from the stream. - `char`
 
   throws: java.io.EOFException - if the stream reaches the end before reading all the bytes."
-  ([^javax.imageio.stream.ImageInputStreamImpl this]
+  (^Character [^javax.imageio.stream.ImageInputStreamImpl this]
     (-> this (.readChar))))
 
 (defn set-bit-offset
@@ -108,7 +108,7 @@
   returns: a long containing the position of the stream. - `long`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^javax.imageio.stream.ImageInputStreamImpl this]
+  (^Long [^javax.imageio.stream.ImageInputStreamImpl this]
     (-> this (.getStreamPosition))))
 
 (defn read-float
@@ -117,7 +117,7 @@
   returns: a float value from the stream. - `float`
 
   throws: java.io.EOFException - if the stream reaches the end before reading all the bytes."
-  ([^javax.imageio.stream.ImageInputStreamImpl this]
+  (^Float [^javax.imageio.stream.ImageInputStreamImpl this]
     (-> this (.readFloat))))
 
 (defn flush-before
@@ -157,11 +157,11 @@
    to indicate EOF. - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if off is negative, len is negative, or off len is greater than b.length."
-  ([^javax.imageio.stream.ImageInputStreamImpl this b ^Integer off ^Integer len]
+  (^Integer [^javax.imageio.stream.ImageInputStreamImpl this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  ([^javax.imageio.stream.ImageInputStreamImpl this b]
+  (^Integer [^javax.imageio.stream.ImageInputStreamImpl this b]
     (-> this (.read b)))
-  ([^javax.imageio.stream.ImageInputStreamImpl this]
+  (^Integer [^javax.imageio.stream.ImageInputStreamImpl this]
     (-> this (.read))))
 
 (defn reset
@@ -190,7 +190,7 @@
   returns: a boolean value from the stream. - `boolean`
 
   throws: java.io.EOFException - if the end of the stream is reached."
-  ([^javax.imageio.stream.ImageInputStreamImpl this]
+  (^Boolean [^javax.imageio.stream.ImageInputStreamImpl this]
     (-> this (.readBoolean))))
 
 (defn read-int
@@ -199,7 +199,7 @@
   returns: a signed int value from the stream. - `int`
 
   throws: java.io.EOFException - if the stream reaches the end before reading all the bytes."
-  ([^javax.imageio.stream.ImageInputStreamImpl this]
+  (^Integer [^javax.imageio.stream.ImageInputStreamImpl this]
     (-> this (.readInt))))
 
 (defn read-long
@@ -208,7 +208,7 @@
   returns: a signed long value from the stream. - `long`
 
   throws: java.io.EOFException - if the stream reaches the end before reading all the bytes."
-  ([^javax.imageio.stream.ImageInputStreamImpl this]
+  (^Long [^javax.imageio.stream.ImageInputStreamImpl this]
     (-> this (.readLong))))
 
 (defn cached-memory?
@@ -217,7 +217,7 @@
 
   returns: true if this ImageInputStream
    caches data in main memory. - `boolean`"
-  ([^javax.imageio.stream.ImageInputStreamImpl this]
+  (^Boolean [^javax.imageio.stream.ImageInputStreamImpl this]
     (-> this (.isCachedMemory))))
 
 (defn length
@@ -226,7 +226,7 @@
    length information.
 
   returns: -1L to indicate unknown length. - `long`"
-  ([^javax.imageio.stream.ImageInputStreamImpl this]
+  (^Long [^javax.imageio.stream.ImageInputStreamImpl this]
     (-> this (.length))))
 
 (defn close
@@ -242,7 +242,7 @@
   returns: one of ByteOrder.BIG_ENDIAN or
    ByteOrder.LITTLE_ENDIAN, indicating which byte
    order is being used. - `java.nio.ByteOrder`"
-  ([^javax.imageio.stream.ImageInputStreamImpl this]
+  (^java.nio.ByteOrder [^javax.imageio.stream.ImageInputStreamImpl this]
     (-> this (.getByteOrder))))
 
 (defn read-short
@@ -251,7 +251,7 @@
   returns: a signed short value from the stream. - `short`
 
   throws: java.io.EOFException - if the stream reaches the end before reading all the bytes."
-  ([^javax.imageio.stream.ImageInputStreamImpl this]
+  (^Short [^javax.imageio.stream.ImageInputStreamImpl this]
     (-> this (.readShort))))
 
 (defn skip-bytes
@@ -266,7 +266,7 @@
    skipped. - `int`
 
   throws: java.io.IOException - if getStreamPosition throws an IOException when computing either the starting or ending position."
-  ([^javax.imageio.stream.ImageInputStreamImpl this ^Integer n]
+  (^Integer [^javax.imageio.stream.ImageInputStreamImpl this ^Integer n]
     (-> this (.skipBytes n))))
 
 (defn cached-file?
@@ -275,7 +275,7 @@
 
   returns: true if this ImageInputStream
    caches data in a temporary file. - `boolean`"
-  ([^javax.imageio.stream.ImageInputStreamImpl this]
+  (^Boolean [^javax.imageio.stream.ImageInputStreamImpl this]
     (-> this (.isCachedFile))))
 
 (defn read-utf
@@ -284,7 +284,7 @@
   returns: a String read from the stream. - `java.lang.String`
 
   throws: java.io.EOFException - if this stream reaches the end before reading all the bytes."
-  ([^javax.imageio.stream.ImageInputStreamImpl this]
+  (^java.lang.String [^javax.imageio.stream.ImageInputStreamImpl this]
     (-> this (.readUTF))))
 
 (defn read-bits
@@ -296,7 +296,7 @@
    read stored in the least significant bit. - `long`
 
   throws: java.io.EOFException - if the stream reaches the end before reading all the bits."
-  ([^javax.imageio.stream.ImageInputStreamImpl this ^Integer num-bits]
+  (^Long [^javax.imageio.stream.ImageInputStreamImpl this ^Integer num-bits]
     (-> this (.readBits num-bits))))
 
 (defn mark
@@ -311,7 +311,7 @@
   returns: a double value from the stream. - `double`
 
   throws: java.io.EOFException - if the stream reaches the end before reading all the bytes."
-  ([^javax.imageio.stream.ImageInputStreamImpl this]
+  (^Double [^javax.imageio.stream.ImageInputStreamImpl this]
     (-> this (.readDouble))))
 
 (defn get-flushed-position
@@ -319,7 +319,7 @@
 
   returns: the earliest legal position for seeking, as a
    long. - `long`"
-  ([^javax.imageio.stream.ImageInputStreamImpl this]
+  (^Long [^javax.imageio.stream.ImageInputStreamImpl this]
     (-> this (.getFlushedPosition))))
 
 (defn read-unsigned-int
@@ -328,7 +328,7 @@
   returns: an unsigned int value from the stream, as a long. - `long`
 
   throws: java.io.EOFException - if the stream reaches the end before reading all the bytes."
-  ([^javax.imageio.stream.ImageInputStreamImpl this]
+  (^Long [^javax.imageio.stream.ImageInputStreamImpl this]
     (-> this (.readUnsignedInt))))
 
 (defn cached?
@@ -337,7 +337,7 @@
 
   returns: true if this ImageInputStream
    caches data. - `boolean`"
-  ([^javax.imageio.stream.ImageInputStreamImpl this]
+  (^Boolean [^javax.imageio.stream.ImageInputStreamImpl this]
     (-> this (.isCached))))
 
 (defn read-line
@@ -346,7 +346,7 @@
   returns: a String containing a line of text from the stream. - `java.lang.String`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^javax.imageio.stream.ImageInputStreamImpl this]
+  (^java.lang.String [^javax.imageio.stream.ImageInputStreamImpl this]
     (-> this (.readLine))))
 
 (defn read-unsigned-short
@@ -355,6 +355,6 @@
   returns: an unsigned short value from the stream, as an int. - `int`
 
   throws: java.io.EOFException - if the stream reaches the end before reading all the bytes."
-  ([^javax.imageio.stream.ImageInputStreamImpl this]
+  (^Integer [^javax.imageio.stream.ImageInputStreamImpl this]
     (-> this (.readUnsignedShort))))
 

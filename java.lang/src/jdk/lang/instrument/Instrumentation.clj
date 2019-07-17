@@ -90,7 +90,7 @@
 
   returns: true if the current JVM configuration supports retransformation of
             classes, false if not. - `boolean`"
-  ([^java.lang.instrument.Instrumentation this]
+  (^Boolean [^java.lang.instrument.Instrumentation this]
     (-> this (.isRetransformClassesSupported))))
 
 (defn modifiable-class?
@@ -115,7 +115,7 @@
   returns: whether or not the argument class is modifiable - `boolean`
 
   throws: java.lang.NullPointerException - if the specified class is null."
-  ([^java.lang.instrument.Instrumentation this ^java.lang.Class the-class]
+  (^Boolean [^java.lang.instrument.Instrumentation this ^java.lang.Class the-class]
     (-> this (.isModifiableClass the-class))))
 
 (defn redefine-classes-supported?
@@ -133,7 +133,7 @@
 
   returns: true if the current JVM configuration supports redefinition of classes,
    false if not. - `boolean`"
-  ([^java.lang.instrument.Instrumentation this]
+  (^Boolean [^java.lang.instrument.Instrumentation this]
     (-> this (.isRedefineClassesSupported))))
 
 (defn get-initiated-classes
@@ -163,7 +163,7 @@
 
   returns: true if the current JVM configuration supports
    setting a native method prefix, false if not. - `boolean`"
-  ([^java.lang.instrument.Instrumentation this]
+  (^Boolean [^java.lang.instrument.Instrumentation this]
     (-> this (.isNativeMethodPrefixSupported))))
 
 (defn get-all-loaded-classes
@@ -227,7 +227,7 @@
              transformer was not found - `boolean`
 
   throws: java.lang.NullPointerException - if passed a null transformer"
-  ([^java.lang.instrument.Instrumentation this ^java.lang.instrument.ClassFileTransformer transformer]
+  (^Boolean [^java.lang.instrument.Instrumentation this ^java.lang.instrument.ClassFileTransformer transformer]
     (-> this (.removeTransformer transformer))))
 
 (defn get-object-size
@@ -242,7 +242,7 @@
   returns: an implementation-specific approximation of the amount of storage consumed by the specified object - `long`
 
   throws: java.lang.NullPointerException - if the supplied Object is null."
-  ([^java.lang.instrument.Instrumentation this ^java.lang.Object object-to-size]
+  (^Long [^java.lang.instrument.Instrumentation this ^java.lang.Object object-to-size]
     (-> this (.getObjectSize object-to-size))))
 
 (defn add-transformer

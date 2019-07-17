@@ -41,7 +41,7 @@
    with this DragGestureEvent.
 
   returns: the Component - `java.awt.Component`"
-  ([^java.awt.dnd.DragGestureEvent this]
+  (^java.awt.Component [^java.awt.dnd.DragGestureEvent this]
     (-> this (.getComponent))))
 
 (defn iterator
@@ -49,28 +49,28 @@
    comprising the gesture.
 
   returns: an Iterator for the events comprising the gesture - `java.util.Iterator<java.awt.event.InputEvent>`"
-  ([^java.awt.dnd.DragGestureEvent this]
+  (^java.util.Iterator [^java.awt.dnd.DragGestureEvent this]
     (-> this (.iterator))))
 
 (defn get-source-as-drag-gesture-recognizer
   "Returns the source as a DragGestureRecognizer.
 
   returns: the source as a DragGestureRecognizer - `java.awt.dnd.DragGestureRecognizer`"
-  ([^java.awt.dnd.DragGestureEvent this]
+  (^java.awt.dnd.DragGestureRecognizer [^java.awt.dnd.DragGestureEvent this]
     (-> this (.getSourceAsDragGestureRecognizer))))
 
 (defn get-drag-source
   "Returns the DragSource.
 
   returns: the DragSource - `java.awt.dnd.DragSource`"
-  ([^java.awt.dnd.DragGestureEvent this]
+  (^java.awt.dnd.DragSource [^java.awt.dnd.DragGestureEvent this]
     (-> this (.getDragSource))))
 
 (defn get-trigger-event
   "Returns the initial event that triggered the gesture.
 
   returns: the first `triggering` event in the sequence of the gesture - `java.awt.event.InputEvent`"
-  ([^java.awt.dnd.DragGestureEvent this]
+  (^java.awt.event.InputEvent [^java.awt.dnd.DragGestureEvent this]
     (-> this (.getTriggerEvent))))
 
 (defn get-drag-action
@@ -78,7 +78,7 @@
    action selected by the user.
 
   returns: the action selected by the user - `int`"
-  ([^java.awt.dnd.DragGestureEvent this]
+  (^Integer [^java.awt.dnd.DragGestureEvent this]
     (-> this (.getDragAction))))
 
 (defn get-drag-origin
@@ -86,7 +86,7 @@
    of the Component over which the drag originated.
 
   returns: the Point where the drag originated in Component coords. - `java.awt.Point`"
-  ([^java.awt.dnd.DragGestureEvent this]
+  (^java.awt.Point [^java.awt.dnd.DragGestureEvent this]
     (-> this (.getDragOrigin))))
 
 (defn start-drag
@@ -116,7 +116,7 @@
   array - the array of EventObject sub(types) - `java.lang.Object[]`
 
   returns: an array of the events comprising the gesture - `java.lang.Object[]`"
-  ([^java.awt.dnd.DragGestureEvent this ^java.lang.Object[] array]
+  ([^java.awt.dnd.DragGestureEvent this array]
     (-> this (.toArray array)))
   ([^java.awt.dnd.DragGestureEvent this]
     (-> this (.toArray))))

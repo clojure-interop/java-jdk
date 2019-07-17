@@ -385,6 +385,6 @@
    category name is `job-state-reason`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.JobStateReason this]
+  (^java.lang.String [^javax.print.attribute.standard.JobStateReason this]
     (-> this (.getName))))
 

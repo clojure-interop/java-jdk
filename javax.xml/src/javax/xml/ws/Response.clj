@@ -17,6 +17,6 @@
 
   returns: The contained response context. May be null if a
    response is not yet available. - `java.util.Map<java.lang.String,java.lang.Object>`"
-  ([^javax.xml.ws.Response this]
+  (^java.util.Map [^javax.xml.ws.Response this]
     (-> this (.getContext))))
 

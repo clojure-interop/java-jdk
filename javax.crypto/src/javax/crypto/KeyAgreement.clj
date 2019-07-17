@@ -48,9 +48,9 @@
   returns: the new KeyAgreement object. - `javax.crypto.KeyAgreement`
 
   throws: java.lang.NullPointerException - if the specified algorithm is null."
-  ([^java.lang.String algorithm ^java.lang.String provider]
+  (^javax.crypto.KeyAgreement [^java.lang.String algorithm ^java.lang.String provider]
     (KeyAgreement/getInstance algorithm provider))
-  ([^java.lang.String algorithm]
+  (^javax.crypto.KeyAgreement [^java.lang.String algorithm]
     (KeyAgreement/getInstance algorithm)))
 
 (defn get-algorithm
@@ -61,14 +61,14 @@
    KeyAgreement object.
 
   returns: the algorithm name of this KeyAgreement object. - `java.lang.String`"
-  ([^javax.crypto.KeyAgreement this]
+  (^java.lang.String [^javax.crypto.KeyAgreement this]
     (-> this (.getAlgorithm))))
 
 (defn get-provider
   "Returns the provider of this KeyAgreement object.
 
   returns: the provider of this KeyAgreement object - `java.security.Provider`"
-  ([^javax.crypto.KeyAgreement this]
+  (^java.security.Provider [^javax.crypto.KeyAgreement this]
     (-> this (.getProvider))))
 
 (defn init
@@ -99,7 +99,7 @@
    if this phase does not yield a key - `java.security.Key`
 
   throws: java.security.InvalidKeyException - if the given key is inappropriate for this phase."
-  ([^javax.crypto.KeyAgreement this ^java.security.Key key ^Boolean last-phase]
+  (^java.security.Key [^javax.crypto.KeyAgreement this ^java.security.Key key ^Boolean last-phase]
     (-> this (.doPhase key last-phase))))
 
 (defn generate-secret
@@ -122,9 +122,9 @@
   returns: the number of bytes placed into sharedSecret - `int`
 
   throws: java.lang.IllegalStateException - if this key agreement has not been completed yet"
-  ([^javax.crypto.KeyAgreement this shared-secret ^Integer offset]
+  (^Integer [^javax.crypto.KeyAgreement this shared-secret ^Integer offset]
     (-> this (.generateSecret shared-secret offset)))
-  ([^javax.crypto.KeyAgreement this ^java.lang.String algorithm]
+  (^javax.crypto.SecretKey [^javax.crypto.KeyAgreement this ^java.lang.String algorithm]
     (-> this (.generateSecret algorithm)))
   ([^javax.crypto.KeyAgreement this]
     (-> this (.generateSecret))))

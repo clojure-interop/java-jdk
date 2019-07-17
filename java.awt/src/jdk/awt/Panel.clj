@@ -33,6 +33,6 @@
 
   returns: an AccessibleAWTPanel that serves as the
            AccessibleContext of this Panel - `javax.accessibility.AccessibleContext`"
-  ([^java.awt.Panel this]
+  (^javax.accessibility.AccessibleContext [^java.awt.Panel this]
     (-> this (.getAccessibleContext))))
 

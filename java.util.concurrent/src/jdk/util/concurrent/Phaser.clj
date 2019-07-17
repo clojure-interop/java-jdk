@@ -235,7 +235,7 @@
    terminated, the returned value is meaningless and arbitrary.
 
   returns: the number of unarrived parties - `int`"
-  ([^java.util.concurrent.Phaser this]
+  (^Integer [^java.util.concurrent.Phaser this]
     (-> this (.getUnarrivedParties))))
 
 (defn get-arrived-parties
@@ -244,7 +244,7 @@
    the returned value is meaningless and arbitrary.
 
   returns: the number of arrived parties - `int`"
-  ([^java.util.concurrent.Phaser this]
+  (^Integer [^java.util.concurrent.Phaser this]
     (-> this (.getArrivedParties))))
 
 (defn arrive-and-await-advance
@@ -262,14 +262,14 @@
    current phase if terminated - `int`
 
   throws: java.lang.IllegalStateException - if not terminated and the number of unarrived parties would become negative"
-  ([^java.util.concurrent.Phaser this]
+  (^Integer [^java.util.concurrent.Phaser this]
     (-> this (.arriveAndAwaitAdvance))))
 
 (defn get-registered-parties
   "Returns the number of parties registered at this phaser.
 
   returns: the number of parties - `int`"
-  ([^java.util.concurrent.Phaser this]
+  (^Integer [^java.util.concurrent.Phaser this]
     (-> this (.getRegisteredParties))))
 
 (defn await-advance-interruptibly
@@ -287,9 +287,9 @@
    if terminated - `int`
 
   throws: java.lang.InterruptedException - if thread interrupted while waiting"
-  ([^java.util.concurrent.Phaser this ^Integer phase ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^Integer [^java.util.concurrent.Phaser this ^Integer phase ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.awaitAdvanceInterruptibly phase timeout unit)))
-  ([^java.util.concurrent.Phaser this ^Integer phase]
+  (^Integer [^java.util.concurrent.Phaser this ^Integer phase]
     (-> this (.awaitAdvanceInterruptibly phase))))
 
 (defn to-string
@@ -298,7 +298,7 @@
    followed by the number of registered parties, and `arrived = ` followed by the number of arrived parties.
 
   returns: a string identifying this phaser, as well as its state - `java.lang.String`"
-  ([^java.util.concurrent.Phaser this]
+  (^java.lang.String [^java.util.concurrent.Phaser this]
     (-> this (.toString))))
 
 (defn get-phase
@@ -309,7 +309,7 @@
    may be obtained via getPhase()  Integer.MIN_VALUE.
 
   returns: the phase number, or a negative value if terminated - `int`"
-  ([^java.util.concurrent.Phaser this]
+  (^Integer [^java.util.concurrent.Phaser this]
     (-> this (.getPhase))))
 
 (defn bulk-register
@@ -329,14 +329,14 @@
    terminated, in which case registration has no effect. - `int`
 
   throws: java.lang.IllegalStateException - if attempting to register more than the maximum supported number of parties"
-  ([^java.util.concurrent.Phaser this ^Integer parties]
+  (^Integer [^java.util.concurrent.Phaser this ^Integer parties]
     (-> this (.bulkRegister parties))))
 
 (defn get-parent
   "Returns the parent of this phaser, or null if none.
 
   returns: the parent of this phaser, or null if none - `java.util.concurrent.Phaser`"
-  ([^java.util.concurrent.Phaser this]
+  (^java.util.concurrent.Phaser [^java.util.concurrent.Phaser this]
     (-> this (.getParent))))
 
 (defn get-root
@@ -344,7 +344,7 @@
    this phaser if it has no parent.
 
   returns: the root ancestor of this phaser - `java.util.concurrent.Phaser`"
-  ([^java.util.concurrent.Phaser this]
+  (^java.util.concurrent.Phaser [^java.util.concurrent.Phaser this]
     (-> this (.getRoot))))
 
 (defn register
@@ -361,7 +361,7 @@
    terminated, in which case registration has no effect. - `int`
 
   throws: java.lang.IllegalStateException - if attempting to register more than the maximum supported number of parties"
-  ([^java.util.concurrent.Phaser this]
+  (^Integer [^java.util.concurrent.Phaser this]
     (-> this (.register))))
 
 (defn force-termination
@@ -385,14 +385,14 @@
   returns: the arrival phase number, or a negative value if terminated - `int`
 
   throws: java.lang.IllegalStateException - if not terminated and the number of unarrived parties would become negative"
-  ([^java.util.concurrent.Phaser this]
+  (^Integer [^java.util.concurrent.Phaser this]
     (-> this (.arrive))))
 
 (defn terminated?
   "Returns true if this phaser has been terminated.
 
   returns: true if this phaser has been terminated - `boolean`"
-  ([^java.util.concurrent.Phaser this]
+  (^Boolean [^java.util.concurrent.Phaser this]
     (-> this (.isTerminated))))
 
 (defn arrive-and-deregister
@@ -409,7 +409,7 @@
   returns: the arrival phase number, or a negative value if terminated - `int`
 
   throws: java.lang.IllegalStateException - if not terminated and the number of registered or unarrived parties would become negative"
-  ([^java.util.concurrent.Phaser this]
+  (^Integer [^java.util.concurrent.Phaser this]
     (-> this (.arriveAndDeregister))))
 
 (defn await-advance
@@ -422,6 +422,6 @@
   returns: the next arrival phase number, or the argument if it is
    negative, or the (negative) current phase
    if terminated - `int`"
-  ([^java.util.concurrent.Phaser this ^Integer phase]
+  (^Integer [^java.util.concurrent.Phaser this ^Integer phase]
     (-> this (.awaitAdvance phase))))
 

@@ -43,6 +43,6 @@
 
   returns: an AccessibleBoxFiller that serves as the
            AccessibleContext of this Box.Filler. - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.Box$Filler this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.Box$Filler this]
     (-> this (.getAccessibleContext))))
 

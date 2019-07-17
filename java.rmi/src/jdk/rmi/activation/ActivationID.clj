@@ -44,7 +44,7 @@
   returns: the reference to the active remote object - `java.rmi.Remote`
 
   throws: java.rmi.activation.ActivationException - if activation fails"
-  ([^java.rmi.activation.ActivationID this ^Boolean force]
+  (^java.rmi.Remote [^java.rmi.activation.ActivationID this ^Boolean force]
     (-> this (.activate force))))
 
 (defn hash-code
@@ -52,7 +52,7 @@
    refer to the same remote object will have the same hash code.
 
   returns: a hash code value for this object. - `int`"
-  ([^java.rmi.activation.ActivationID this]
+  (^Integer [^java.rmi.activation.ActivationID this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -65,6 +65,6 @@
   obj - the Object to compare with - `java.lang.Object`
 
   returns: true if these Objects are equal; false otherwise. - `boolean`"
-  ([^java.rmi.activation.ActivationID this ^java.lang.Object obj]
+  (^Boolean [^java.rmi.activation.ActivationID this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

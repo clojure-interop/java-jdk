@@ -85,6 +85,6 @@
    For class Chromaticity, the category name is `chromaticity`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.Chromaticity this]
+  (^java.lang.String [^javax.print.attribute.standard.Chromaticity this]
     (-> this (.getName))))
 

@@ -74,7 +74,7 @@
 
   returns: true if forward checking is supported,
    false otherwise - `boolean`"
-  ([^java.security.cert.PKIXCertPathChecker this]
+  (^Boolean [^java.security.cert.PKIXCertPathChecker this]
     (-> this (.isForwardCheckingSupported))))
 
 (defn get-supported-extensions
@@ -94,7 +94,7 @@
    String format) supported by this
    PKIXCertPathChecker, or null if no
    extensions are supported - `java.util.Set<java.lang.String>`"
-  ([^java.security.cert.PKIXCertPathChecker this]
+  (^java.util.Set [^java.security.cert.PKIXCertPathChecker this]
     (-> this (.getSupportedExtensions))))
 
 (defn check
@@ -120,6 +120,6 @@
    override this method, if necessary.
 
   returns: a copy of this PKIXCertPathChecker - `java.lang.Object`"
-  ([^java.security.cert.PKIXCertPathChecker this]
+  (^java.lang.Object [^java.security.cert.PKIXCertPathChecker this]
     (-> this (.clone))))
 

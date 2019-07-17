@@ -18,6 +18,6 @@
   port-info - Contains information about the port being accessed. - `javax.xml.ws.handler.PortInfo`
 
   returns: java.util.List<Handler> chain - `java.util.List<javax.xml.ws.handler.Handler>`"
-  ([^javax.xml.ws.handler.HandlerResolver this ^javax.xml.ws.handler.PortInfo port-info]
+  (^java.util.List [^javax.xml.ws.handler.HandlerResolver this ^javax.xml.ws.handler.PortInfo port-info]
     (-> this (.getHandlerChain port-info))))
 

@@ -37,7 +37,7 @@
    element which declares the parameter is returned.
 
   returns: the enclosing element, or null if there is none - `javax.lang.model.element.Element`"
-  ([^javax.lang.model.element.Element this]
+  (^javax.lang.model.element.Element [^javax.lang.model.element.Element this]
     (-> this (.getEnclosingElement))))
 
 (defn get-annotation-mirrors
@@ -55,7 +55,7 @@
   "Returns the kind of this element.
 
   returns: the kind of this element - `javax.lang.model.element.ElementKind`"
-  ([^javax.lang.model.element.Element this]
+  (^javax.lang.model.element.ElementKind [^javax.lang.model.element.Element this]
     (-> this (.getKind))))
 
 (defn get-enclosed-elements
@@ -87,7 +87,7 @@
    modifiers of interface members, are included.
 
   returns: the modifiers of this element, or an empty set if there are none - `java.util.Set<javax.lang.model.element.Modifier>`"
-  ([^javax.lang.model.element.Element this]
+  (^java.util.Set [^javax.lang.model.element.Element this]
     (-> this (.getModifiers))))
 
 (defn as-type
@@ -104,7 +104,7 @@
    for obtaining the full range of types defined by an element.
 
   returns: the type defined by this element - `javax.lang.model.type.TypeMirror`"
-  ([^javax.lang.model.element.Element this]
+  (^javax.lang.model.type.TypeMirror [^javax.lang.model.element.Element this]
     (-> this (.asType))))
 
 (defn get-annotation
@@ -156,7 +156,7 @@
   "Obeys the general contract of Object.hashCode.
 
   returns: a hash code value for this object. - `int`"
-  ([^javax.lang.model.element.Element this]
+  (^Integer [^javax.lang.model.element.Element this]
     (-> this (.hashCode))))
 
 (defn get-simple-name
@@ -176,7 +176,7 @@
    If it represents an anonymous class or instance initializer, an empty name is returned.
 
   returns: the simple name of this element - `javax.lang.model.element.Name`"
-  ([^javax.lang.model.element.Element this]
+  (^javax.lang.model.element.Name [^javax.lang.model.element.Element this]
     (-> this (.getSimpleName))))
 
 (defn equals
@@ -196,6 +196,6 @@
 
   returns: true if the specified object represents the same
             element as this - `boolean`"
-  ([^javax.lang.model.element.Element this ^java.lang.Object obj]
+  (^Boolean [^javax.lang.model.element.Element this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

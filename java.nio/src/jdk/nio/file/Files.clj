@@ -43,9 +43,9 @@
             this method was invoked - `java.nio.file.Path`
 
   throws: java.lang.IllegalArgumentException - if the prefix or suffix parameters cannot be used to generate a candidate file name"
-  ([^java.nio.file.Path dir ^java.lang.String prefix ^java.lang.String suffix ^java.nio.file.attribute.FileAttribute attrs]
+  (^java.nio.file.Path [^java.nio.file.Path dir ^java.lang.String prefix ^java.lang.String suffix ^java.nio.file.attribute.FileAttribute attrs]
     (Files/createTempFile dir prefix suffix attrs))
-  ([^java.lang.String prefix ^java.lang.String suffix ^java.nio.file.attribute.FileAttribute attrs]
+  (^java.nio.file.Path [^java.lang.String prefix ^java.lang.String suffix ^java.nio.file.attribute.FileAttribute attrs]
     (Files/createTempFile prefix suffix attrs)))
 
 (defn *not-exists
@@ -71,7 +71,7 @@
             file exists or its existence cannot be determined - `boolean`
 
   throws: java.lang.SecurityException - In the case of the default provider, the SecurityManager.checkRead(String) is invoked to check read access to the file."
-  ([^java.nio.file.Path path ^java.nio.file.LinkOption options]
+  (^Boolean [^java.nio.file.Path path ^java.nio.file.LinkOption options]
     (Files/notExists path options)))
 
 (defn *create-symbolic-link
@@ -99,7 +99,7 @@
   returns: the path to the symbolic link - `java.nio.file.Path`
 
   throws: java.lang.UnsupportedOperationException - if the implementation does not support symbolic links or the array contains an attribute that cannot be set atomically when creating the symbolic link"
-  ([^java.nio.file.Path link ^java.nio.file.Path target ^java.nio.file.attribute.FileAttribute attrs]
+  (^java.nio.file.Path [^java.nio.file.Path link ^java.nio.file.Path target ^java.nio.file.attribute.FileAttribute attrs]
     (Files/createSymbolicLink link target attrs)))
 
 (defn *list
@@ -137,7 +137,7 @@
             directory - `java.util.stream.Stream<java.nio.file.Path>`
 
   throws: java.nio.file.NotDirectoryException - if the file could not otherwise be opened because it is not a directory (optional specific exception)"
-  ([^java.nio.file.Path dir]
+  (^java.util.stream.Stream [^java.nio.file.Path dir]
     (Files/list dir)))
 
 (defn *readable?
@@ -162,7 +162,7 @@
             cannot be determined - `boolean`
 
   throws: java.lang.SecurityException - In the case of the default provider, and a security manager is installed, the checkRead is invoked to check read access to the file."
-  ([^java.nio.file.Path path]
+  (^Boolean [^java.nio.file.Path path]
     (Files/isReadable path)))
 
 (defn *create-file
@@ -182,7 +182,7 @@
   returns: the file - `java.nio.file.Path`
 
   throws: java.lang.UnsupportedOperationException - if the array contains an attribute that cannot be set atomically when creating the file"
-  ([^java.nio.file.Path path ^java.nio.file.attribute.FileAttribute attrs]
+  (^java.nio.file.Path [^java.nio.file.Path path ^java.nio.file.attribute.FileAttribute attrs]
     (Files/createFile path attrs)))
 
 (defn *set-posix-file-permissions
@@ -200,7 +200,7 @@
   returns: The path - `java.nio.file.Path`
 
   throws: java.lang.UnsupportedOperationException - if the associated file system does not support the PosixFileAttributeView"
-  ([^java.nio.file.Path path ^java.util.Set perms]
+  (^java.nio.file.Path [^java.nio.file.Path path ^java.util.Set perms]
     (Files/setPosixFilePermissions path perms)))
 
 (defn *copy
@@ -275,9 +275,9 @@
   returns: the path to the target file - `java.nio.file.Path`
 
   throws: java.lang.UnsupportedOperationException - if the array contains a copy option that is not supported"
-  ([^java.nio.file.Path source ^java.nio.file.Path target ^java.nio.file.CopyOption options]
+  (^java.nio.file.Path [^java.nio.file.Path source ^java.nio.file.Path target ^java.nio.file.CopyOption options]
     (Files/copy source target options))
-  ([^java.nio.file.Path source ^java.io.OutputStream out]
+  (^Long [^java.nio.file.Path source ^java.io.OutputStream out]
     (Files/copy source out)))
 
 (defn *find
@@ -311,7 +311,7 @@
   returns: the Stream of Path - `java.util.stream.Stream<java.nio.file.Path>`
 
   throws: java.lang.IllegalArgumentException - if the maxDepth parameter is negative"
-  ([^java.nio.file.Path start ^Integer max-depth ^java.util.function.BiPredicate matcher ^java.nio.file.FileVisitOption options]
+  (^java.util.stream.Stream [^java.nio.file.Path start ^Integer max-depth ^java.util.function.BiPredicate matcher ^java.nio.file.FileVisitOption options]
     (Files/find start max-depth matcher options)))
 
 (defn *set-owner
@@ -337,7 +337,7 @@
   returns: The path - `java.nio.file.Path`
 
   throws: java.lang.UnsupportedOperationException - if the associated file system does not support the FileOwnerAttributeView"
-  ([^java.nio.file.Path path ^java.nio.file.attribute.UserPrincipal owner]
+  (^java.nio.file.Path [^java.nio.file.Path path ^java.nio.file.attribute.UserPrincipal owner]
     (Files/setOwner path owner)))
 
 (defn *lines
@@ -368,9 +368,9 @@
   returns: the lines from the file as a Stream - `java.util.stream.Stream<java.lang.String>`
 
   throws: java.io.IOException - if an I/O error occurs opening the file"
-  ([^java.nio.file.Path path ^java.nio.charset.Charset cs]
+  (^java.util.stream.Stream [^java.nio.file.Path path ^java.nio.charset.Charset cs]
     (Files/lines path cs))
-  ([^java.nio.file.Path path]
+  (^java.util.stream.Stream [^java.nio.file.Path path]
     (Files/lines path)))
 
 (defn *delete
@@ -418,9 +418,9 @@
             to the file - `java.io.BufferedWriter`
 
   throws: java.io.IOException - if an I/O error occurs opening or creating the file"
-  ([^java.nio.file.Path path ^java.nio.charset.Charset cs ^java.nio.file.OpenOption options]
+  (^java.io.BufferedWriter [^java.nio.file.Path path ^java.nio.charset.Charset cs ^java.nio.file.OpenOption options]
     (Files/newBufferedWriter path cs options))
-  ([^java.nio.file.Path path ^java.nio.file.OpenOption options]
+  (^java.io.BufferedWriter [^java.nio.file.Path path ^java.nio.file.OpenOption options]
     (Files/newBufferedWriter path options)))
 
 (defn *read-attributes
@@ -476,9 +476,9 @@
             from the file - `java.io.BufferedReader`
 
   throws: java.io.IOException - if an I/O error occurs opening the file"
-  ([^java.nio.file.Path path ^java.nio.charset.Charset cs]
+  (^java.io.BufferedReader [^java.nio.file.Path path ^java.nio.charset.Charset cs]
     (Files/newBufferedReader path cs))
-  ([^java.nio.file.Path path]
+  (^java.io.BufferedReader [^java.nio.file.Path path]
     (Files/newBufferedReader path)))
 
 (defn *create-temp-directory
@@ -507,9 +507,9 @@
             this method was invoked - `java.nio.file.Path`
 
   throws: java.lang.IllegalArgumentException - if the prefix cannot be used to generate a candidate directory name"
-  ([^java.nio.file.Path dir ^java.lang.String prefix ^java.nio.file.attribute.FileAttribute attrs]
+  (^java.nio.file.Path [^java.nio.file.Path dir ^java.lang.String prefix ^java.nio.file.attribute.FileAttribute attrs]
     (Files/createTempDirectory dir prefix attrs))
-  ([^java.lang.String prefix ^java.nio.file.attribute.FileAttribute attrs]
+  (^java.nio.file.Path [^java.lang.String prefix ^java.nio.file.attribute.FileAttribute attrs]
     (Files/createTempDirectory prefix attrs)))
 
 (defn *get-file-attribute-view
@@ -573,7 +573,7 @@
   returns: the path to the link (directory entry) - `java.nio.file.Path`
 
   throws: java.lang.UnsupportedOperationException - if the implementation does not support adding an existing file to a directory"
-  ([^java.nio.file.Path link ^java.nio.file.Path existing]
+  (^java.nio.file.Path [^java.nio.file.Path link ^java.nio.file.Path existing]
     (Files/createLink link existing)))
 
 (defn *same-file?
@@ -604,7 +604,7 @@
   returns: true if, and only if, the two paths locate the same file - `boolean`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([^java.nio.file.Path path ^java.nio.file.Path path-2]
+  (^Boolean [^java.nio.file.Path path ^java.nio.file.Path path-2]
     (Files/isSameFile path path-2)))
 
 (defn *create-directories
@@ -626,7 +626,7 @@
   returns: the directory - `java.nio.file.Path`
 
   throws: java.lang.UnsupportedOperationException - if the array contains an attribute that cannot be set atomically when creating the directory"
-  ([^java.nio.file.Path dir ^java.nio.file.attribute.FileAttribute attrs]
+  (^java.nio.file.Path [^java.nio.file.Path dir ^java.nio.file.attribute.FileAttribute attrs]
     (Files/createDirectories dir attrs)))
 
 (defn *get-attribute
@@ -665,7 +665,7 @@
   returns: the attribute value - `java.lang.Object`
 
   throws: java.lang.UnsupportedOperationException - if the attribute view is not available"
-  ([^java.nio.file.Path path ^java.lang.String attribute ^java.nio.file.LinkOption options]
+  (^java.lang.Object [^java.nio.file.Path path ^java.lang.String attribute ^java.nio.file.LinkOption options]
     (Files/getAttribute path attribute options)))
 
 (defn *symbolic-link?
@@ -682,7 +682,7 @@
             be determined if the file is a symbolic link or not. - `boolean`
 
   throws: java.lang.SecurityException - In the case of the default provider, and a security manager is installed, its checkRead method denies read access to the file."
-  ([^java.nio.file.Path path]
+  (^Boolean [^java.nio.file.Path path]
     (Files/isSymbolicLink path)))
 
 (defn *regular-file?
@@ -705,7 +705,7 @@
             cannot be determined if the file is a regular file or not. - `boolean`
 
   throws: java.lang.SecurityException - In the case of the default provider, and a security manager is installed, its checkRead method denies read access to the file."
-  ([^java.nio.file.Path path ^java.nio.file.LinkOption options]
+  (^Boolean [^java.nio.file.Path path ^java.nio.file.LinkOption options]
     (Files/isRegularFile path options)))
 
 (defn *directory?
@@ -728,7 +728,7 @@
             be determined if the file is a directory or not. - `boolean`
 
   throws: java.lang.SecurityException - In the case of the default provider, and a security manager is installed, its checkRead method denies read access to the file."
-  ([^java.nio.file.Path path ^java.nio.file.LinkOption options]
+  (^Boolean [^java.nio.file.Path path ^java.nio.file.LinkOption options]
     (Files/isDirectory path options)))
 
 (defn *read-all-bytes
@@ -767,7 +767,7 @@
   returns: a new input stream - `java.io.InputStream`
 
   throws: java.lang.IllegalArgumentException - if an invalid combination of options is specified"
-  ([^java.nio.file.Path path ^java.nio.file.OpenOption options]
+  (^java.io.InputStream [^java.nio.file.Path path ^java.nio.file.OpenOption options]
     (Files/newInputStream path options)))
 
 (defn *delete-if-exists
@@ -793,7 +793,7 @@
             exist - `boolean`
 
   throws: java.nio.file.DirectoryNotEmptyException - if the file is a directory and could not otherwise be deleted because the directory is not empty (optional specific exception)"
-  ([^java.nio.file.Path path]
+  (^Boolean [^java.nio.file.Path path]
     (Files/deleteIfExists path)))
 
 (defn *get-file-store
@@ -812,7 +812,7 @@
   returns: the file store where the file is stored - `java.nio.file.FileStore`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([^java.nio.file.Path path]
+  (^java.nio.file.FileStore [^java.nio.file.Path path]
     (Files/getFileStore path)))
 
 (defn *probe-content-type
@@ -856,7 +856,7 @@
             type cannot be determined - `java.lang.String`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([^java.nio.file.Path path]
+  (^java.lang.String [^java.nio.file.Path path]
     (Files/probeContentType path)))
 
 (defn *get-owner
@@ -872,7 +872,7 @@
   returns: A user principal representing the owner of the file - `java.nio.file.attribute.UserPrincipal`
 
   throws: java.lang.UnsupportedOperationException - if the associated file system does not support the FileOwnerAttributeView"
-  ([^java.nio.file.Path path ^java.nio.file.LinkOption options]
+  (^java.nio.file.attribute.UserPrincipal [^java.nio.file.Path path ^java.nio.file.LinkOption options]
     (Files/getOwner path options)))
 
 (defn *walk
@@ -935,9 +935,9 @@
   returns: the Stream of Path - `java.util.stream.Stream<java.nio.file.Path>`
 
   throws: java.lang.IllegalArgumentException - if the maxDepth parameter is negative"
-  ([^java.nio.file.Path start ^Integer max-depth ^java.nio.file.FileVisitOption options]
+  (^java.util.stream.Stream [^java.nio.file.Path start ^Integer max-depth ^java.nio.file.FileVisitOption options]
     (Files/walk start max-depth options))
-  ([^java.nio.file.Path start ^java.nio.file.FileVisitOption options]
+  (^java.util.stream.Stream [^java.nio.file.Path start ^java.nio.file.FileVisitOption options]
     (Files/walk start options)))
 
 (defn *read-symbolic-link
@@ -954,7 +954,7 @@
   returns: a Path object representing the target of the link - `java.nio.file.Path`
 
   throws: java.lang.UnsupportedOperationException - if the implementation does not support symbolic links"
-  ([^java.nio.file.Path link]
+  (^java.nio.file.Path [^java.nio.file.Path link]
     (Files/readSymbolicLink link)))
 
 (defn *hidden?
@@ -973,7 +973,7 @@
   returns: true if the file is considered hidden - `boolean`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([^java.nio.file.Path path]
+  (^Boolean [^java.nio.file.Path path]
     (Files/isHidden path)))
 
 (defn *set-attribute
@@ -1013,7 +1013,7 @@
   returns: the path parameter - `java.nio.file.Path`
 
   throws: java.lang.UnsupportedOperationException - if the attribute view is not available"
-  ([^java.nio.file.Path path ^java.lang.String attribute ^java.lang.Object value ^java.nio.file.LinkOption options]
+  (^java.nio.file.Path [^java.nio.file.Path path ^java.lang.String attribute ^java.lang.Object value ^java.nio.file.LinkOption options]
     (Files/setAttribute path attribute value options)))
 
 (defn *set-last-modified-time
@@ -1039,7 +1039,7 @@
   returns: the path - `java.nio.file.Path`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([^java.nio.file.Path path ^java.nio.file.attribute.FileTime time]
+  (^java.nio.file.Path [^java.nio.file.Path path ^java.nio.file.attribute.FileTime time]
     (Files/setLastModifiedTime path time)))
 
 (defn *get-posix-file-permissions
@@ -1062,7 +1062,7 @@
   returns: the file permissions - `java.util.Set<java.nio.file.attribute.PosixFilePermission>`
 
   throws: java.lang.UnsupportedOperationException - if the associated file system does not support the PosixFileAttributeView"
-  ([^java.nio.file.Path path ^java.nio.file.LinkOption options]
+  (^java.util.Set [^java.nio.file.Path path ^java.nio.file.LinkOption options]
     (Files/getPosixFilePermissions path options)))
 
 (defn *new-byte-channel
@@ -1170,9 +1170,9 @@
   returns: a new seekable byte channel - `java.nio.channels.SeekableByteChannel`
 
   throws: java.lang.IllegalArgumentException - if the set contains an invalid combination of options"
-  ([^java.nio.file.Path path ^java.nio.file.OpenOption> options ^java.nio.file.attribute.FileAttribute attrs]
+  (^java.nio.channels.SeekableByteChannel [^java.nio.file.Path path ^java.nio.file.OpenOption> options ^java.nio.file.attribute.FileAttribute attrs]
     (Files/newByteChannel path options attrs))
-  ([^java.nio.file.Path path ^java.nio.file.OpenOption options]
+  (^java.nio.channels.SeekableByteChannel [^java.nio.file.Path path ^java.nio.file.OpenOption options]
     (Files/newByteChannel path options)))
 
 (defn *get-last-modified-time
@@ -1192,7 +1192,7 @@
             by the file system - `java.nio.file.attribute.FileTime`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([^java.nio.file.Path path ^java.nio.file.LinkOption options]
+  (^java.nio.file.attribute.FileTime [^java.nio.file.Path path ^java.nio.file.LinkOption options]
     (Files/getLastModifiedTime path options)))
 
 (defn *move
@@ -1273,7 +1273,7 @@
   returns: the path to the target file - `java.nio.file.Path`
 
   throws: java.lang.UnsupportedOperationException - if the array contains a copy option that is not supported"
-  ([^java.nio.file.Path source ^java.nio.file.Path target ^java.nio.file.CopyOption options]
+  (^java.nio.file.Path [^java.nio.file.Path source ^java.nio.file.Path target ^java.nio.file.CopyOption options]
     (Files/move source target options)))
 
 (defn *walk-file-tree
@@ -1342,9 +1342,9 @@
   returns: the starting file - `java.nio.file.Path`
 
   throws: java.lang.IllegalArgumentException - if the maxDepth parameter is negative"
-  ([^java.nio.file.Path start ^java.util.Set options ^Integer max-depth ^java.nio.file.Path> visitor]
+  (^java.nio.file.Path [^java.nio.file.Path start ^java.util.Set options ^Integer max-depth ^java.nio.file.Path> visitor]
     (Files/walkFileTree start options max-depth visitor))
-  ([^java.nio.file.Path start ^java.nio.file.Path> visitor]
+  (^java.nio.file.Path [^java.nio.file.Path start ^java.nio.file.Path> visitor]
     (Files/walkFileTree start visitor)))
 
 (defn *exists?
@@ -1366,7 +1366,7 @@
             not exist or its existence cannot be determined. - `boolean`
 
   throws: java.lang.SecurityException - In the case of the default provider, the SecurityManager.checkRead(String) is invoked to check read access to the file."
-  ([^java.nio.file.Path path ^java.nio.file.LinkOption options]
+  (^Boolean [^java.nio.file.Path path ^java.nio.file.LinkOption options]
     (Files/exists path options)))
 
 (defn *size
@@ -1380,7 +1380,7 @@
   returns: the file size, in bytes - `long`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([^java.nio.file.Path path]
+  (^Long [^java.nio.file.Path path]
     (Files/size path)))
 
 (defn *executable?
@@ -1408,7 +1408,7 @@
             cannot be determined - `boolean`
 
   throws: java.lang.SecurityException - In the case of the default provider, and a security manager is installed, the checkExec is invoked to check execute access to the file."
-  ([^java.nio.file.Path path]
+  (^Boolean [^java.nio.file.Path path]
     (Files/isExecutable path)))
 
 (defn *writable?
@@ -1433,7 +1433,7 @@
             cannot be determined - `boolean`
 
   throws: java.lang.SecurityException - In the case of the default provider, and a security manager is installed, the checkWrite is invoked to check write access to the file."
-  ([^java.nio.file.Path path]
+  (^Boolean [^java.nio.file.Path path]
     (Files/isWritable path)))
 
 (defn *new-directory-stream
@@ -1470,9 +1470,9 @@
   returns: a new and open DirectoryStream object - `java.nio.file.DirectoryStream<java.nio.file.Path>`
 
   throws: java.util.regex.PatternSyntaxException - if the pattern is invalid"
-  ([^java.nio.file.Path dir ^java.lang.String glob]
+  (^java.nio.file.DirectoryStream [^java.nio.file.Path dir ^java.lang.String glob]
     (Files/newDirectoryStream dir glob))
-  ([^java.nio.file.Path dir]
+  (^java.nio.file.DirectoryStream [^java.nio.file.Path dir]
     (Files/newDirectoryStream dir)))
 
 (defn *write
@@ -1499,9 +1499,9 @@
   returns: the path - `java.nio.file.Path`
 
   throws: java.io.IOException - if an I/O error occurs writing to or creating the file, or the text cannot be encoded using the specified charset"
-  ([^java.nio.file.Path path ^java.lang.CharSequence> lines ^java.nio.charset.Charset cs ^java.nio.file.OpenOption options]
+  (^java.nio.file.Path [^java.nio.file.Path path ^java.lang.CharSequence> lines ^java.nio.charset.Charset cs ^java.nio.file.OpenOption options]
     (Files/write path lines cs options))
-  ([^java.nio.file.Path path bytes ^java.nio.file.OpenOption options]
+  (^java.nio.file.Path [^java.nio.file.Path path bytes ^java.nio.file.OpenOption options]
     (Files/write path bytes options)))
 
 (defn *create-directory
@@ -1523,7 +1523,7 @@
   returns: the directory - `java.nio.file.Path`
 
   throws: java.lang.UnsupportedOperationException - if the array contains an attribute that cannot be set atomically when creating the directory"
-  ([^java.nio.file.Path dir ^java.nio.file.attribute.FileAttribute attrs]
+  (^java.nio.file.Path [^java.nio.file.Path dir ^java.nio.file.attribute.FileAttribute attrs]
     (Files/createDirectory dir attrs)))
 
 (defn *new-output-stream
@@ -1567,7 +1567,7 @@
   returns: a new output stream - `java.io.OutputStream`
 
   throws: java.lang.IllegalArgumentException - if options contains an invalid combination of options"
-  ([^java.nio.file.Path path ^java.nio.file.OpenOption options]
+  (^java.io.OutputStream [^java.nio.file.Path path ^java.nio.file.OpenOption options]
     (Files/newOutputStream path options)))
 
 (defn *read-all-lines
@@ -1597,8 +1597,8 @@
             therefore not specified - `java.util.List<java.lang.String>`
 
   throws: java.io.IOException - if an I/O error occurs reading from the file or a malformed or unmappable byte sequence is read"
-  ([^java.nio.file.Path path ^java.nio.charset.Charset cs]
+  (^java.util.List [^java.nio.file.Path path ^java.nio.charset.Charset cs]
     (Files/readAllLines path cs))
-  ([^java.nio.file.Path path]
+  (^java.util.List [^java.nio.file.Path path]
     (Files/readAllLines path)))
 

@@ -103,17 +103,17 @@
 
   returns: false if the image pixels are still changing;
              true otherwise. - `boolean`"
-  ([^java.awt.Graphics this ^java.awt.Image img ^Integer dx-1 ^Integer dy-1 ^Integer dx-2 ^Integer dy-2 ^Integer sx-1 ^Integer sy-1 ^Integer sx-2 ^Integer sy-2 ^java.awt.Color bgcolor ^java.awt.image.ImageObserver observer]
+  (^Boolean [^java.awt.Graphics this ^java.awt.Image img ^Integer dx-1 ^Integer dy-1 ^Integer dx-2 ^Integer dy-2 ^Integer sx-1 ^Integer sy-1 ^Integer sx-2 ^Integer sy-2 ^java.awt.Color bgcolor ^java.awt.image.ImageObserver observer]
     (-> this (.drawImage img dx-1 dy-1 dx-2 dy-2 sx-1 sy-1 sx-2 sy-2 bgcolor observer)))
-  ([^java.awt.Graphics this ^java.awt.Image img ^Integer dx-1 ^Integer dy-1 ^Integer dx-2 ^Integer dy-2 ^Integer sx-1 ^Integer sy-1 ^Integer sx-2 ^Integer sy-2 ^java.awt.image.ImageObserver observer]
+  (^Boolean [^java.awt.Graphics this ^java.awt.Image img ^Integer dx-1 ^Integer dy-1 ^Integer dx-2 ^Integer dy-2 ^Integer sx-1 ^Integer sy-1 ^Integer sx-2 ^Integer sy-2 ^java.awt.image.ImageObserver observer]
     (-> this (.drawImage img dx-1 dy-1 dx-2 dy-2 sx-1 sy-1 sx-2 sy-2 observer)))
-  ([^java.awt.Graphics this ^java.awt.Image img ^Integer x ^Integer y ^Integer width ^Integer height ^java.awt.Color bgcolor ^java.awt.image.ImageObserver observer]
+  (^Boolean [^java.awt.Graphics this ^java.awt.Image img ^Integer x ^Integer y ^Integer width ^Integer height ^java.awt.Color bgcolor ^java.awt.image.ImageObserver observer]
     (-> this (.drawImage img x y width height bgcolor observer)))
-  ([^java.awt.Graphics this ^java.awt.Image img ^Integer x ^Integer y ^Integer width ^Integer height ^java.awt.image.ImageObserver observer]
+  (^Boolean [^java.awt.Graphics this ^java.awt.Image img ^Integer x ^Integer y ^Integer width ^Integer height ^java.awt.image.ImageObserver observer]
     (-> this (.drawImage img x y width height observer)))
-  ([^java.awt.Graphics this ^java.awt.Image img ^Integer x ^Integer y ^java.awt.Color bgcolor ^java.awt.image.ImageObserver observer]
+  (^Boolean [^java.awt.Graphics this ^java.awt.Image img ^Integer x ^Integer y ^java.awt.Color bgcolor ^java.awt.image.ImageObserver observer]
     (-> this (.drawImage img x y bgcolor observer)))
-  ([^java.awt.Graphics this ^java.awt.Image img ^Integer x ^Integer y ^java.awt.image.ImageObserver observer]
+  (^Boolean [^java.awt.Graphics this ^java.awt.Image img ^Integer x ^Integer y ^java.awt.image.ImageObserver observer]
     (-> this (.drawImage img x y observer))))
 
 (defn draw-arc
@@ -202,7 +202,7 @@
   returns: a Shape object representing the
                 current clipping area, or null if
                 no clip is set. - `java.awt.Shape`"
-  ([^java.awt.Graphics this]
+  (^java.awt.Shape [^java.awt.Graphics this]
     (-> this (.getClip))))
 
 (defn translate
@@ -278,7 +278,7 @@
   returns: true if the specified rectangle intersects
            the bounds of the current clip; false
            otherwise. - `boolean`"
-  ([^java.awt.Graphics this ^Integer x ^Integer y ^Integer width ^Integer height]
+  (^Boolean [^java.awt.Graphics this ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.hitClip x y width height))))
 
 (defn dispose
@@ -334,7 +334,7 @@
                           Graphics object's value.
 
   returns: a string representation of this graphics context. - `java.lang.String`"
-  ([^java.awt.Graphics this]
+  (^java.lang.String [^java.awt.Graphics this]
     (-> this (.toString))))
 
 (defn get-clip-bounds
@@ -352,9 +352,9 @@
   r - the rectangle where the current clipping area is copied to. Any current values in this rectangle are overwritten. - `java.awt.Rectangle`
 
   returns: the bounding rectangle of the current clipping area. - `java.awt.Rectangle`"
-  ([^java.awt.Graphics this ^java.awt.Rectangle r]
+  (^java.awt.Rectangle [^java.awt.Graphics this ^java.awt.Rectangle r]
     (-> this (.getClipBounds r)))
-  ([^java.awt.Graphics this]
+  (^java.awt.Rectangle [^java.awt.Graphics this]
     (-> this (.getClipBounds))))
 
 (defn fill-3-d-rect
@@ -432,9 +432,9 @@
   f - the specified font - `java.awt.Font`
 
   returns: the font metrics for the specified font. - `java.awt.FontMetrics`"
-  ([^java.awt.Graphics this ^java.awt.Font f]
+  (^java.awt.FontMetrics [^java.awt.Graphics this ^java.awt.Font f]
     (-> this (.getFontMetrics f)))
-  ([^java.awt.Graphics this]
+  (^java.awt.FontMetrics [^java.awt.Graphics this]
     (-> this (.getFontMetrics))))
 
 (defn draw-string
@@ -619,9 +619,9 @@
   height - the height of the clipping rectangle. - `int`
 
   returns: a new graphics context. - `java.awt.Graphics`"
-  ([^java.awt.Graphics this ^Integer x ^Integer y ^Integer width ^Integer height]
+  (^java.awt.Graphics [^java.awt.Graphics this ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.create x y width height)))
-  ([^java.awt.Graphics this]
+  (^java.awt.Graphics [^java.awt.Graphics this]
     (-> this (.create))))
 
 (defn set-paint-mode
@@ -637,7 +637,7 @@
   "Gets the current font.
 
   returns: this graphics context's current font. - `java.awt.Font`"
-  ([^java.awt.Graphics this]
+  (^java.awt.Font [^java.awt.Graphics this]
     (-> this (.getFont))))
 
 (defn draw-round-rect
@@ -676,7 +676,7 @@
   "Gets this graphics context's current color.
 
   returns: this graphics context's current color. - `java.awt.Color`"
-  ([^java.awt.Graphics this]
+  (^java.awt.Color [^java.awt.Graphics this]
     (-> this (.getColor))))
 
 (defn clear-rect

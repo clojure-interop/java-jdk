@@ -20,6 +20,6 @@
   "Gets the HTTP status code.
 
   returns: HTTP status code - `int`"
-  ([^javax.xml.ws.http.HTTPException this]
+  (^Integer [^javax.xml.ws.http.HTTPException this]
     (-> this (.getStatusCode))))
 

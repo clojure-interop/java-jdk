@@ -106,7 +106,7 @@
    upon entry to this method, else true. - `boolean`
 
   throws: java.lang.NullPointerException - if the specified action is null"
-  ([^java.util.Spliterator this ^Spliterator.T> action]
+  (^Boolean [^java.util.Spliterator this ^Spliterator.T> action]
     (-> this (.tryAdvance action))))
 
 (defn for-each-remaining
@@ -152,7 +152,7 @@
 
   returns: a Spliterator covering some portion of the
    elements, or null if this spliterator cannot be split - `java.util.Spliterator<Spliterator.T>`"
-  ([^java.util.Spliterator this]
+  (^java.util.Spliterator [^java.util.Spliterator this]
     (-> this (.trySplit))))
 
 (defn estimate-size
@@ -168,7 +168,7 @@
 
   returns: the estimated size, or Long.MAX_VALUE if infinite,
            unknown, or too expensive to compute. - `long`"
-  ([^java.util.Spliterator this]
+  (^Long [^java.util.Spliterator this]
     (-> this (.estimateSize))))
 
 (defn get-exact-size-if-known
@@ -193,7 +193,7 @@
    about any computation using this Spliterator.
 
   returns: a representation of characteristics - `int`"
-  ([^java.util.Spliterator this]
+  (^Integer [^java.util.Spliterator this]
     (-> this (.characteristics))))
 
 (defn has-characteristics

@@ -145,6 +145,6 @@
    For class SheetCollate, the category name is `sheet-collate`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.SheetCollate this]
+  (^java.lang.String [^javax.print.attribute.standard.SheetCollate this]
     (-> this (.getName))))
 

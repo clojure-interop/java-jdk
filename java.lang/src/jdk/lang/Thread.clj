@@ -235,7 +235,7 @@
    there is no default.
 
   returns: the default uncaught exception handler for all threads - `java.lang.Thread.UncaughtExceptionHandler`"
-  ([]
+  (^java.lang.Thread.UncaughtExceptionHandler []
     (Thread/getDefaultUncaughtExceptionHandler )))
 
 (defn *set-default-uncaught-exception-handler
@@ -296,7 +296,7 @@
 
   returns: true if the current thread has been interrupted;
             false otherwise. - `boolean`"
-  ([]
+  (^Boolean []
     (Thread/interrupted )))
 
 (defn *enumerate
@@ -321,7 +321,7 @@
   returns: the number of threads put into the array - `int`
 
   throws: java.lang.SecurityException - if ThreadGroup.checkAccess() determines that the current thread cannot access its thread group"
-  ([^java.lang.Thread[] tarray]
+  (^Integer [tarray]
     (Thread/enumerate tarray)))
 
 (defn *holds-lock
@@ -340,7 +340,7 @@
            the specified object. - `boolean`
 
   throws: java.lang.NullPointerException - if obj is null"
-  ([^java.lang.Object obj]
+  (^Boolean [^java.lang.Object obj]
     (Thread/holdsLock obj)))
 
 (defn *active-count
@@ -358,14 +358,14 @@
   returns: an estimate of the number of active threads in the current
             thread's thread group and in any other thread group that
             has the current thread's thread group as an ancestor - `int`"
-  ([]
+  (^Integer []
     (Thread/activeCount )))
 
 (defn *current-thread
   "Returns a reference to the currently executing thread object.
 
   returns: the currently executing thread. - `java.lang.Thread`"
-  ([]
+  (^java.lang.Thread []
     (Thread/currentThread )))
 
 (defn set-context-class-loader
@@ -449,7 +449,7 @@
    (been stopped).
 
   returns: this thread's thread group. - `java.lang.ThreadGroup`"
-  ([^java.lang.Thread this]
+  (^java.lang.ThreadGroup [^java.lang.Thread this]
     (-> this (.getThreadGroup))))
 
 (defn alive?
@@ -458,7 +458,7 @@
 
   returns: true if this thread is alive;
             false otherwise. - `boolean`"
-  ([^java.lang.Thread this]
+  (^Boolean [^java.lang.Thread this]
     (-> this (.isAlive))))
 
 (defn suspend
@@ -511,7 +511,7 @@
    has terminated, in which case null is returned.
 
   returns: the uncaught exception handler for this thread - `java.lang.Thread.UncaughtExceptionHandler`"
-  ([^java.lang.Thread this]
+  (^java.lang.Thread.UncaughtExceptionHandler [^java.lang.Thread this]
     (-> this (.getUncaughtExceptionHandler))))
 
 (defn to-string
@@ -519,7 +519,7 @@
    thread's name, priority, and thread group.
 
   returns: a string representation of this thread. - `java.lang.String`"
-  ([^java.lang.Thread this]
+  (^java.lang.String [^java.lang.Thread this]
     (-> this (.toString))))
 
 (defn check-access
@@ -538,7 +538,7 @@
   "Returns this thread's name.
 
   returns: this thread's name. - `java.lang.String`"
-  ([^java.lang.Thread this]
+  (^java.lang.String [^java.lang.Thread this]
     (-> this (.getName))))
 
 (defn get-state
@@ -547,7 +547,7 @@
    not for synchronization control.
 
   returns: this thread's state. - `java.lang.Thread.State`"
-  ([^java.lang.Thread this]
+  (^java.lang.Thread.State [^java.lang.Thread this]
     (-> this (.getState))))
 
 (defn get-context-class-loader
@@ -570,7 +570,7 @@
             bootstrap class loader) - `java.lang.ClassLoader`
 
   throws: java.lang.SecurityException - if the current thread cannot get the context ClassLoader"
-  ([^java.lang.Thread this]
+  (^java.lang.ClassLoader [^java.lang.Thread this]
     (-> this (.getContextClassLoader))))
 
 (defn destroy
@@ -603,7 +603,7 @@
 
   returns: true if this thread has been interrupted;
             false otherwise. - `boolean`"
-  ([^java.lang.Thread this]
+  (^Boolean [^java.lang.Thread this]
     (-> this (.isInterrupted))))
 
 (defn start
@@ -658,7 +658,7 @@
    When a thread is terminated, this thread ID may be reused.
 
   returns: this thread's ID. - `long`"
-  ([^java.lang.Thread this]
+  (^Long [^java.lang.Thread this]
     (-> this (.getId))))
 
 (defn interrupt
@@ -696,7 +696,7 @@
 
   returns: true if this thread is a daemon thread;
             false otherwise. - `boolean`"
-  ([^java.lang.Thread this]
+  (^Boolean [^java.lang.Thread this]
     (-> this (.isDaemon))))
 
 (defn join
@@ -737,7 +737,7 @@
   "Returns this thread's priority.
 
   returns: this thread's priority. - `int`"
-  ([^java.lang.Thread this]
+  (^Integer [^java.lang.Thread this]
     (-> this (.getPriority))))
 
 (defn set-uncaught-exception-handler

@@ -24,20 +24,20 @@
   "Returns the public value y.
 
   returns: the public value y - `java.math.BigInteger`"
-  ([^javax.crypto.spec.DHPublicKeySpec this]
+  (^java.math.BigInteger [^javax.crypto.spec.DHPublicKeySpec this]
     (-> this (.getY))))
 
 (defn get-p
   "Returns the prime modulus p.
 
   returns: the prime modulus p - `java.math.BigInteger`"
-  ([^javax.crypto.spec.DHPublicKeySpec this]
+  (^java.math.BigInteger [^javax.crypto.spec.DHPublicKeySpec this]
     (-> this (.getP))))
 
 (defn get-g
   "Returns the base generator g.
 
   returns: the base generator g - `java.math.BigInteger`"
-  ([^javax.crypto.spec.DHPublicKeySpec this]
+  (^java.math.BigInteger [^javax.crypto.spec.DHPublicKeySpec this]
     (-> this (.getG))))
 

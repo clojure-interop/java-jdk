@@ -86,7 +86,7 @@
   returns: unmarshalled ObjID instance - `java.rmi.server.ObjID`
 
   throws: java.io.IOException - if an I/O error occurs while performing this operation"
-  ([^java.io.ObjectInput in]
+  (^java.rmi.server.ObjID [^java.io.ObjectInput in]
     (ObjID/read in)))
 
 (defn write
@@ -110,7 +110,7 @@
    object number.
 
   returns: the hash code value for this object identifier - `int`"
-  ([^java.rmi.server.ObjID this]
+  (^Integer [^java.rmi.server.ObjID this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -125,13 +125,13 @@
 
   returns: true if the given object is equivalent to
    this one, and false otherwise - `boolean`"
-  ([^java.rmi.server.ObjID this ^java.lang.Object obj]
+  (^Boolean [^java.rmi.server.ObjID this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn to-string
   "Returns a string representation of this object identifier.
 
   returns: a string representation of this object identifier - `java.lang.String`"
-  ([^java.rmi.server.ObjID this]
+  (^java.lang.String [^java.rmi.server.ObjID this]
     (-> this (.toString))))
 

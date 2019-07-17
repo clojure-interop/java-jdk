@@ -70,7 +70,7 @@
   "Returns the algorithm that was used to seal this object.
 
   returns: the algorithm that was used to seal this object. - `java.lang.String`"
-  ([^javax.crypto.SealedObject this]
+  (^java.lang.String [^javax.crypto.SealedObject this]
     (-> this (.getAlgorithm))))
 
 (defn get-object
@@ -92,8 +92,8 @@
   returns: the original object. - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if the given provider is null or empty."
-  ([^javax.crypto.SealedObject this ^java.security.Key key ^java.lang.String provider]
+  (^java.lang.Object [^javax.crypto.SealedObject this ^java.security.Key key ^java.lang.String provider]
     (-> this (.getObject key provider)))
-  ([^javax.crypto.SealedObject this ^java.security.Key key]
+  (^java.lang.Object [^javax.crypto.SealedObject this ^java.security.Key key]
     (-> this (.getObject key))))
 

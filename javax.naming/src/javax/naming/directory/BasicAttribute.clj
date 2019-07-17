@@ -51,7 +51,7 @@
   "Description copied from interface: Attribute
 
   returns: true if this attribute's values are ordered; false otherwise. - `boolean`"
-  ([^javax.naming.directory.BasicAttribute this]
+  (^Boolean [^javax.naming.directory.BasicAttribute this]
     (-> this (.isOrdered))))
 
 (defn contains
@@ -67,7 +67,7 @@
   attr-val - The possibly null value to check. If null, check whether the attribute has an attribute value whose value is null. - `java.lang.Object`
 
   returns: true if attrVal is one of this attribute's values; false otherwise. - `boolean`"
-  ([^javax.naming.directory.BasicAttribute this ^java.lang.Object attr-val]
+  (^Boolean [^javax.naming.directory.BasicAttribute this ^java.lang.Object attr-val]
     (-> this (.contains attr-val))))
 
 (defn get-all
@@ -86,7 +86,7 @@
    is returned. - `javax.naming.NamingEnumeration<?>`
 
   throws: javax.naming.NamingException - If a naming exception was encountered while retrieving the values."
-  ([^javax.naming.directory.BasicAttribute this]
+  (^javax.naming.NamingEnumeration [^javax.naming.directory.BasicAttribute this]
     (-> this (.getAll))))
 
 (defn to-string
@@ -96,7 +96,7 @@
    interpreted programmatically.
 
   returns: The non-null string representation of this attribute. - `java.lang.String`"
-  ([^javax.naming.directory.BasicAttribute this]
+  (^java.lang.String [^javax.naming.directory.BasicAttribute this]
     (-> this (.toString))))
 
 (defn get-attribute-definition
@@ -110,7 +110,7 @@
        any schema information. - `javax.naming.directory.DirContext`
 
   throws: javax.naming.OperationNotSupportedException - If getting the schema is not supported."
-  ([^javax.naming.directory.BasicAttribute this]
+  (^javax.naming.directory.DirContext [^javax.naming.directory.BasicAttribute this]
     (-> this (.getAttributeDefinition))))
 
 (defn get-attribute-syntax-definition
@@ -124,7 +124,7 @@
       any schema information. - `javax.naming.directory.DirContext`
 
   throws: javax.naming.OperationNotSupportedException - If getting the schema is not supported."
-  ([^javax.naming.directory.BasicAttribute this]
+  (^javax.naming.directory.DirContext [^javax.naming.directory.BasicAttribute this]
     (-> this (.getAttributeSyntaxDefinition))))
 
 (defn remove
@@ -139,14 +139,14 @@
   attrval - The possibly null value to remove from this attribute. If null, remove the attribute value that is null. - `java.lang.Object`
 
   returns: true if the value was removed; false otherwise. - `boolean`"
-  ([^javax.naming.directory.BasicAttribute this ^java.lang.Object attrval]
+  (^Boolean [^javax.naming.directory.BasicAttribute this ^java.lang.Object attrval]
     (-> this (.remove attrval))))
 
 (defn clone
   "Description copied from class: Object
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([^javax.naming.directory.BasicAttribute this]
+  (^java.lang.Object [^javax.naming.directory.BasicAttribute this]
     (-> this (.clone))))
 
 (defn hash-code
@@ -161,14 +161,14 @@
    as well so that two attributes that are equal have the same hash code.
 
   returns: an int representing the hash code of this attribute. - `int`"
-  ([^javax.naming.directory.BasicAttribute this]
+  (^Integer [^javax.naming.directory.BasicAttribute this]
     (-> this (.hashCode))))
 
 (defn get-id
   "Description copied from interface: Attribute
 
   returns: The id of this attribute. It cannot be null. - `java.lang.String`"
-  ([^javax.naming.directory.BasicAttribute this]
+  (^java.lang.String [^javax.naming.directory.BasicAttribute this]
     (-> this (.getID))))
 
 (defn add
@@ -178,7 +178,7 @@
   attr-val - The possibly null attribute value to add; if null, null is the value added. - `java.lang.Object`"
   ([^javax.naming.directory.BasicAttribute this ^Integer ix ^java.lang.Object attr-val]
     (-> this (.add ix attr-val)))
-  ([^javax.naming.directory.BasicAttribute this ^java.lang.Object attr-val]
+  (^Boolean [^javax.naming.directory.BasicAttribute this ^java.lang.Object attr-val]
     (-> this (.add attr-val))))
 
 (defn set
@@ -189,14 +189,14 @@
 
   returns: The possibly null attribute value at index ix that was replaced.
      Null if the attribute value was null. - `java.lang.Object`"
-  ([^javax.naming.directory.BasicAttribute this ^Integer ix ^java.lang.Object attr-val]
+  (^java.lang.Object [^javax.naming.directory.BasicAttribute this ^Integer ix ^java.lang.Object attr-val]
     (-> this (.set ix attr-val))))
 
 (defn size
   "Description copied from interface: Attribute
 
   returns: The nonnegative number of values in this attribute. - `int`"
-  ([^javax.naming.directory.BasicAttribute this]
+  (^Integer [^javax.naming.directory.BasicAttribute this]
     (-> this (.size))))
 
 (defn clear
@@ -213,9 +213,9 @@
      null if the attribute value is null. - `java.lang.Object`
 
   throws: javax.naming.NamingException - If a naming exception was encountered while retrieving the value."
-  ([^javax.naming.directory.BasicAttribute this ^Integer ix]
+  (^java.lang.Object [^javax.naming.directory.BasicAttribute this ^Integer ix]
     (-> this (.get ix)))
-  ([^javax.naming.directory.BasicAttribute this]
+  (^java.lang.Object [^javax.naming.directory.BasicAttribute this]
     (-> this (.get))))
 
 (defn equals
@@ -242,6 +242,6 @@
   obj - The possibly null object to check. - `java.lang.Object`
 
   returns: true if obj is equal to this attribute; false otherwise. - `boolean`"
-  ([^javax.naming.directory.BasicAttribute this ^java.lang.Object obj]
+  (^Boolean [^javax.naming.directory.BasicAttribute this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

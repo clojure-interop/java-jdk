@@ -14,7 +14,7 @@
   operand - the operand - `int`
 
   returns: the operator result - `int`"
-  ([^java.util.function.IntUnaryOperator this ^Integer operand]
+  (^Integer [^java.util.function.IntUnaryOperator this ^Integer operand]
     (-> this (.applyAsInt operand))))
 
 (defn compose
@@ -51,6 +51,6 @@
   "Returns a unary operator that always returns its input argument.
 
   returns: a unary operator that always returns its input argument - `java.util.function.IntUnaryOperator`"
-  ([]
+  (^java.util.function.IntUnaryOperator []
     (IntUnaryOperator/identity )))
 

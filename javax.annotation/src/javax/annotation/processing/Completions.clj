@@ -10,8 +10,8 @@
   message - a message about the completion - `java.lang.String`
 
   returns: a completion of the provided value and message - `javax.annotation.processing.Completion`"
-  ([^java.lang.String value ^java.lang.String message]
+  (^javax.annotation.processing.Completion [^java.lang.String value ^java.lang.String message]
     (Completions/of value message))
-  ([^java.lang.String value]
+  (^javax.annotation.processing.Completion [^java.lang.String value]
     (Completions/of value)))
 

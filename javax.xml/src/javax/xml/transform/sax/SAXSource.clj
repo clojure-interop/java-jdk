@@ -44,7 +44,7 @@
   source - Must be a non-null Source reference. - `javax.xml.transform.Source`
 
   returns: An InputSource, or null if Source can not be converted. - `org.xml.sax.InputSource`"
-  ([^javax.xml.transform.Source source]
+  (^org.xml.sax.InputSource [^javax.xml.transform.Source source]
     (SAXSource/sourceToInputSource source)))
 
 (defn set-xml-reader
@@ -58,7 +58,7 @@
   "Get the XMLReader to be used for the Source.
 
   returns: A valid XMLReader or XMLFilter reference, or null. - `org.xml.sax.XMLReader`"
-  ([^javax.xml.transform.sax.SAXSource this]
+  (^org.xml.sax.XMLReader [^javax.xml.transform.sax.SAXSource this]
     (-> this (.getXMLReader))))
 
 (defn set-input-source
@@ -72,7 +72,7 @@
   "Get the SAX InputSource to be used for the Source.
 
   returns: A valid InputSource reference, or null. - `org.xml.sax.InputSource`"
-  ([^javax.xml.transform.sax.SAXSource this]
+  (^org.xml.sax.InputSource [^javax.xml.transform.sax.SAXSource this]
     (-> this (.getInputSource))))
 
 (defn set-system-id
@@ -96,6 +96,6 @@
    will be resolved.
 
   returns: Base URL for the Source, or null. - `java.lang.String`"
-  ([^javax.xml.transform.sax.SAXSource this]
+  (^java.lang.String [^javax.xml.transform.sax.SAXSource this]
     (-> this (.getSystemId))))
 

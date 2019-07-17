@@ -34,7 +34,7 @@
   c - the JRootPane the RootPaneUI will be created for - `javax.swing.JComponent`
 
   returns: the RootPaneUI implementation for the passed in JRootPane - `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent c]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent c]
     (MetalRootPaneUI/createUI c)))
 
 (defn install-ui

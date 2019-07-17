@@ -38,7 +38,7 @@
            false otherwise - `boolean`
 
   throws: java.lang.NullPointerException - if flavor is null"
-  ([^java.awt.datatransfer.Clipboard this ^java.awt.datatransfer.DataFlavor flavor]
+  (^Boolean [^java.awt.datatransfer.Clipboard this ^java.awt.datatransfer.DataFlavor flavor]
     (-> this (.isDataFlavorAvailable flavor))))
 
 (defn get-data
@@ -53,7 +53,7 @@
            in the specified DataFlavor - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if flavor is null"
-  ([^java.awt.datatransfer.Clipboard this ^java.awt.datatransfer.DataFlavor flavor]
+  (^java.lang.Object [^java.awt.datatransfer.Clipboard this ^java.awt.datatransfer.DataFlavor flavor]
     (-> this (.getData flavor))))
 
 (defn set-contents
@@ -109,7 +109,7 @@
   "Returns the name of this clipboard object.
 
   returns: `java.lang.String`"
-  ([^java.awt.datatransfer.Clipboard this]
+  (^java.lang.String [^java.awt.datatransfer.Clipboard this]
     (-> this (.getName))))
 
 (defn remove-flavor-listener
@@ -139,6 +139,6 @@
   returns: the current transferable object on the clipboard - `java.awt.datatransfer.Transferable`
 
   throws: java.lang.IllegalStateException - if the clipboard is currently unavailable"
-  ([^java.awt.datatransfer.Clipboard this ^java.lang.Object requestor]
+  (^java.awt.datatransfer.Transferable [^java.awt.datatransfer.Clipboard this ^java.lang.Object requestor]
     (-> this (.getContents requestor))))
 

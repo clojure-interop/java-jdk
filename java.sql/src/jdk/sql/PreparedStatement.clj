@@ -400,7 +400,7 @@
            ResultSetMetaData object - `java.sql.ResultSetMetaData`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed PreparedStatement"
-  ([^java.sql.PreparedStatement this]
+  (^java.sql.ResultSetMetaData [^java.sql.PreparedStatement this]
     (-> this (.getMetaData))))
 
 (defn set-byte
@@ -508,7 +508,7 @@
            count or there is no result - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs; this method is called on a closed PreparedStatement or an argument is supplied to this method"
-  ([^java.sql.PreparedStatement this]
+  (^Boolean [^java.sql.PreparedStatement this]
     (-> this (.execute))))
 
 (defn set-character-stream
@@ -555,7 +555,7 @@
     parameter marker of this PreparedStatement object - `java.sql.ParameterMetaData`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed PreparedStatement"
-  ([^java.sql.PreparedStatement this]
+  (^java.sql.ParameterMetaData [^java.sql.PreparedStatement this]
     (-> this (.getParameterMetaData))))
 
 (defn set-unicode-stream
@@ -581,7 +581,7 @@
            or (2) 0 for SQL statements that return nothing - `int`
 
   throws: java.sql.SQLException - if a database access error occurs; this method is called on a closed PreparedStatement or the SQL statement returns a ResultSet object"
-  ([^java.sql.PreparedStatement this]
+  (^Integer [^java.sql.PreparedStatement this]
     (-> this (.executeUpdate))))
 
 (defn execute-query
@@ -592,7 +592,7 @@
            query; never null - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if a database access error occurs; this method is called on a closed PreparedStatement or the SQL statement does not return a ResultSet object"
-  ([^java.sql.PreparedStatement this]
+  (^java.sql.ResultSet [^java.sql.PreparedStatement this]
     (-> this (.executeQuery))))
 
 (defn set-sqlxml

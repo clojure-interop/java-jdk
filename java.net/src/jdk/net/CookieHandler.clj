@@ -27,7 +27,7 @@
           there is no system-wide cookie handler currently set. - `java.net.CookieHandler`
 
   throws: java.lang.SecurityException - If a security manager has been installed and it denies NetPermission(`getCookieHandler`)"
-  ([]
+  (^java.net.CookieHandler []
     (CookieHandler/getDefault )))
 
 (defn *set-default
@@ -66,7 +66,7 @@
               cookies containing state information - `java.util.Map<java.lang.String,java.util.List<java.lang.String>>`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([^java.net.CookieHandler this ^java.net.URI uri ^java.util.Map> request-headers]
+  (^java.util.Map> [^java.net.CookieHandler this ^java.net.URI uri ^java.util.Map> request-headers]
     (-> this (.get uri request-headers))))
 
 (defn put

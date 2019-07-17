@@ -82,7 +82,7 @@
   key - the key for the desired object - `java.lang.String`
 
   returns: the object for the given key, or null - `java.lang.Object`"
-  ([^java.util.ListResourceBundle this ^java.lang.String key]
+  (^java.lang.Object [^java.util.ListResourceBundle this ^java.lang.String key]
     (-> this (.handleGetObject key))))
 
 (defn get-keys
@@ -91,6 +91,6 @@
 
   returns: an Enumeration of the keys contained in
            this ResourceBundle and its parent bundles. - `java.util.Enumeration<java.lang.String>`"
-  ([^java.util.ListResourceBundle this]
+  (^java.util.Enumeration [^java.util.ListResourceBundle this]
     (-> this (.getKeys))))
 

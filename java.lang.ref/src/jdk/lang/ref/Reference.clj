@@ -13,7 +13,7 @@
 
   returns: The object to which this reference refers, or
              null if this reference object has been cleared - `Reference.T`"
-  ([^java.lang.ref.Reference this]
+  (^Reference.T [^java.lang.ref.Reference this]
     (-> this (.get))))
 
 (defn clear
@@ -33,7 +33,7 @@
 
   returns: true if and only if this reference object has
              been enqueued - `boolean`"
-  ([^java.lang.ref.Reference this]
+  (^Boolean [^java.lang.ref.Reference this]
     (-> this (.isEnqueued))))
 
 (defn enqueue
@@ -46,6 +46,6 @@
   returns: true if this reference object was successfully
              enqueued; false if it was already enqueued or if
              it was not registered with a queue when it was created - `boolean`"
-  ([^java.lang.ref.Reference this]
+  (^Boolean [^java.lang.ref.Reference this]
     (-> this (.enqueue))))
 

@@ -37,7 +37,7 @@
            given date - `java.sql.Date`
 
   throws: java.lang.IllegalArgumentException - if the date given is not in the JDBC date escape format (yyyy-[m]m-[d]d)"
-  ([^java.lang.String s]
+  (^java.sql.Date [^java.lang.String s]
     (Date/valueOf s)))
 
 (defn to-instant
@@ -49,7 +49,7 @@
     this Date object - `java.time.Instant`
 
   throws: java.lang.UnsupportedOperationException - if this method is invoked"
-  ([^java.sql.Date this]
+  (^java.time.Instant [^java.sql.Date this]
     (-> this (.toInstant))))
 
 (defn set-seconds
@@ -99,7 +99,7 @@
   "Formats a date in the date escape format yyyy-mm-dd.
 
   returns: a String in yyyy-mm-dd format - `java.lang.String`"
-  ([^java.sql.Date this]
+  (^java.lang.String [^java.sql.Date this]
     (-> this (.toString))))
 
 (defn set-minutes
@@ -129,7 +129,7 @@
    date value as this Date in local time zone
 
   returns: a LocalDate object representing the same date value - `java.time.LocalDate`"
-  ([^java.sql.Date this]
+  (^java.time.LocalDate [^java.sql.Date this]
     (-> this (.toLocalDate))))
 
 (defn get-minutes

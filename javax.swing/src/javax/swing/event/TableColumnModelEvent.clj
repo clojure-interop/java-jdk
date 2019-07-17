@@ -29,13 +29,13 @@
   "Returns the fromIndex.  Valid for removed or moved events
 
   returns: `int`"
-  ([^javax.swing.event.TableColumnModelEvent this]
+  (^Integer [^javax.swing.event.TableColumnModelEvent this]
     (-> this (.getFromIndex))))
 
 (defn get-to-index
   "Returns the toIndex.  Valid for add and moved events
 
   returns: `int`"
-  ([^javax.swing.event.TableColumnModelEvent this]
+  (^Integer [^javax.swing.event.TableColumnModelEvent this]
     (-> this (.getToIndex))))
 

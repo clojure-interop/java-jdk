@@ -1831,7 +1831,7 @@
             Unicode block of which this character is a member, or
             null if the character is not a member of any
             Unicode block - `java.lang.Character.UnicodeBlock`"
-  ([^Character c]
+  (^java.lang.Character.UnicodeBlock [^Character c]
     (Character$UnicodeBlock/of c)))
 
 (defn *for-name
@@ -1868,6 +1868,6 @@
            by blockName - `java.lang.Character.UnicodeBlock`
 
   throws: java.lang.IllegalArgumentException - if blockName is an invalid name"
-  ([^java.lang.String block-name]
+  (^java.lang.Character.UnicodeBlock [^java.lang.String block-name]
     (Character$UnicodeBlock/forName block-name)))
 

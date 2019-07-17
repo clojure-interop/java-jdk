@@ -194,7 +194,7 @@
   "Gets the owner of this encoder.
 
   returns: The owner of this encoder. - `java.lang.Object`"
-  ([^java.beans.XMLEncoder this]
+  (^java.lang.Object [^java.beans.XMLEncoder this]
     (-> this (.getOwner))))
 
 (defn write-object

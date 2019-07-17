@@ -59,6 +59,6 @@
   returns: the enum constant with the specified name - `java.sql.ClientInfoStatus`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^java.sql.ClientInfoStatus [^java.lang.String name]
     (ClientInfoStatus/valueOf name)))
 

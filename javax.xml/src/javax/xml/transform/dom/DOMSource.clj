@@ -45,7 +45,7 @@
   "Get the node that represents a Source DOM tree.
 
   returns: The node that is to be transformed. - `org.w3c.dom.Node`"
-  ([^javax.xml.transform.dom.DOMSource this]
+  (^org.w3c.dom.Node [^javax.xml.transform.dom.DOMSource this]
     (-> this (.getNode))))
 
 (defn set-system-id
@@ -61,6 +61,6 @@
    will be resolved.
 
   returns: Base URL for this DOM tree. - `java.lang.String`"
-  ([^javax.xml.transform.dom.DOMSource this]
+  (^java.lang.String [^javax.xml.transform.dom.DOMSource this]
     (-> this (.getSystemId))))
 

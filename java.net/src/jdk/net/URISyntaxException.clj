@@ -24,14 +24,14 @@
   "Returns the input string.
 
   returns: The input string - `java.lang.String`"
-  ([^java.net.URISyntaxException this]
+  (^java.lang.String [^java.net.URISyntaxException this]
     (-> this (.getInput))))
 
 (defn get-reason
   "Returns a string explaining why the input string could not be parsed.
 
   returns: The reason string - `java.lang.String`"
-  ([^java.net.URISyntaxException this]
+  (^java.lang.String [^java.net.URISyntaxException this]
     (-> this (.getReason))))
 
 (defn get-index
@@ -39,7 +39,7 @@
    parse error occurred, or -1 if this position is not known.
 
   returns: The error index - `int`"
-  ([^java.net.URISyntaxException this]
+  (^Integer [^java.net.URISyntaxException this]
     (-> this (.getIndex))))
 
 (defn get-message
@@ -51,6 +51,6 @@
    character.
 
   returns: A string describing the parse error - `java.lang.String`"
-  ([^java.net.URISyntaxException this]
+  (^java.lang.String [^java.net.URISyntaxException this]
     (-> this (.getMessage))))
 

@@ -22,13 +22,13 @@
   "Returns the actual Exception thrown.
 
   returns: the wrapped Exception. - `java.lang.Exception`"
-  ([^javax.management.ReflectionException this]
+  (^java.lang.Exception [^javax.management.ReflectionException this]
     (-> this (.getTargetException))))
 
 (defn get-cause
   "Returns the actual Exception thrown.
 
   returns: the wrapped Exception. - `java.lang.Throwable`"
-  ([^javax.management.ReflectionException this]
+  (^java.lang.Throwable [^javax.management.ReflectionException this]
     (-> this (.getCause))))
 

@@ -22,7 +22,7 @@
   "Returns the unmatched format specifier.
 
   returns: The unmatched format specifier - `java.lang.String`"
-  ([^java.util.MissingFormatArgumentException this]
+  (^java.lang.String [^java.util.MissingFormatArgumentException this]
     (-> this (.getFormatSpecifier))))
 
 (defn get-message
@@ -30,6 +30,6 @@
 
   returns: the detail message string of this Throwable instance
             (which may be null). - `java.lang.String`"
-  ([^java.util.MissingFormatArgumentException this]
+  (^java.lang.String [^java.util.MissingFormatArgumentException this]
     (-> this (.getMessage))))
 

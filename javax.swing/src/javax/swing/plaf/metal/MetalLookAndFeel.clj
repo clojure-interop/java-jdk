@@ -37,7 +37,7 @@
    cover method for getCurrentTheme().getTextHighlightColor().
 
   returns: the text highlight color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getTextHighlightColor )))
 
 (defn *get-control-text-color
@@ -45,7 +45,7 @@
    cover method for getCurrentTheme().getControlTextColor().
 
   returns: the control text color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getControlTextColor )))
 
 (defn *get-control-disabled
@@ -53,7 +53,7 @@
    cover method for getCurrentTheme().getControlDisabled().
 
   returns: the control disabled color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getControlDisabled )))
 
 (defn *get-window-title-background
@@ -61,7 +61,7 @@
    theme. This is a cover method for getCurrentTheme().getWindowTitleBackground().
 
   returns: the window title background color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getWindowTitleBackground )))
 
 (defn *get-window-title-inactive-background
@@ -69,7 +69,7 @@
    theme. This is a cover method for getCurrentTheme().getWindowTitleInactiveBackground().
 
   returns: the window title inactive background color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getWindowTitleInactiveBackground )))
 
 (defn *get-user-text-color
@@ -77,7 +77,7 @@
    cover method for getCurrentTheme().getUserTextColor().
 
   returns: the user text color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getUserTextColor )))
 
 (defn *get-primary-control-dark-shadow
@@ -85,7 +85,7 @@
    theme. This is a cover method for getCurrentTheme().getPrimaryControlDarkShadow().
 
   returns: the primary control dark shadow color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getPrimaryControlDarkShadow )))
 
 (defn *get-window-title-foreground
@@ -93,7 +93,7 @@
    theme. This is a cover method for getCurrentTheme().getWindowTitleForeground().
 
   returns: the window title foreground color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getWindowTitleForeground )))
 
 (defn *get-current-theme
@@ -101,7 +101,7 @@
    If the current theme is null, the default theme is created.
 
   returns: the current theme - `javax.swing.plaf.metal.MetalTheme`"
-  ([]
+  (^javax.swing.plaf.metal.MetalTheme []
     (MetalLookAndFeel/getCurrentTheme )))
 
 (defn *set-current-theme
@@ -133,7 +133,7 @@
    cover method for getCurrentTheme().getControlDarkShadow().
 
   returns: the control dark shadow color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getControlDarkShadow )))
 
 (defn *get-menu-background
@@ -141,7 +141,7 @@
    a cover method for getCurrentTheme().getMenuBackground().
 
   returns: the menu background color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getMenuBackground )))
 
 (defn *get-inactive-system-text-color
@@ -149,7 +149,7 @@
    cover method for getCurrentTheme().getInactiveSystemTextColor().
 
   returns: the inactive system text color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getInactiveSystemTextColor )))
 
 (defn *get-control-shadow
@@ -157,7 +157,7 @@
    cover method for getCurrentTheme().getControlShadow().
 
   returns: the control shadow color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getControlShadow )))
 
 (defn *get-menu-text-font
@@ -165,7 +165,7 @@
    cover method for getCurrentTheme().getMenuTextFont().
 
   returns: the menu text font - `javax.swing.plaf.FontUIResource`"
-  ([]
+  (^javax.swing.plaf.FontUIResource []
     (MetalLookAndFeel/getMenuTextFont )))
 
 (defn *get-user-text-font
@@ -173,7 +173,7 @@
    cover method for getCurrentTheme().getUserTextFont().
 
   returns: the user text font - `javax.swing.plaf.FontUIResource`"
-  ([]
+  (^javax.swing.plaf.FontUIResource []
     (MetalLookAndFeel/getUserTextFont )))
 
 (defn *get-primary-control-shadow
@@ -181,7 +181,7 @@
    cover method for getCurrentTheme().getPrimaryControlShadow().
 
   returns: the primary control shadow color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getPrimaryControlShadow )))
 
 (defn *get-control-text-font
@@ -189,7 +189,7 @@
    cover method for getCurrentTheme().getControlTextColor().
 
   returns: the control text font - `javax.swing.plaf.FontUIResource`"
-  ([]
+  (^javax.swing.plaf.FontUIResource []
     (MetalLookAndFeel/getControlTextFont )))
 
 (defn *get-menu-selected-foreground
@@ -198,7 +198,7 @@
    getCurrentTheme().getMenuSelectedForeground().
 
   returns: the menu selected foreground color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getMenuSelectedForeground )))
 
 (defn *get-primary-control
@@ -206,7 +206,7 @@
    cover method for getCurrentTheme().getPrimaryControl().
 
   returns: the primary control color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getPrimaryControl )))
 
 (defn *get-focus-color
@@ -214,7 +214,7 @@
    cover method for getCurrentTheme().getFocusColor().
 
   returns: the focus color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getFocusColor )))
 
 (defn *get-control
@@ -222,7 +222,7 @@
    cover method for getCurrentTheme().getControl().
 
   returns: the control color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getControl )))
 
 (defn *get-control-highlight
@@ -230,7 +230,7 @@
    cover method for getCurrentTheme().getControlHighlight().
 
   returns: the control highlight color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getControlHighlight )))
 
 (defn *get-menu-foreground
@@ -238,7 +238,7 @@
    a cover method for getCurrentTheme().getMenuForeground().
 
   returns: the menu foreground color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getMenuForeground )))
 
 (defn *get-desktop-color
@@ -246,7 +246,7 @@
    cover method for getCurrentTheme().getDesktopColor().
 
   returns: the desktop color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getDesktopColor )))
 
 (defn *get-highlighted-text-color
@@ -254,7 +254,7 @@
    cover method for getCurrentTheme().getHighlightedTextColor().
 
   returns: the highlighted text color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getHighlightedTextColor )))
 
 (defn *get-window-title-font
@@ -262,7 +262,7 @@
    cover method for getCurrentTheme().getWindowTitleFont().
 
   returns: the window title font - `javax.swing.plaf.FontUIResource`"
-  ([]
+  (^javax.swing.plaf.FontUIResource []
     (MetalLookAndFeel/getWindowTitleFont )))
 
 (defn *get-separator-foreground
@@ -270,7 +270,7 @@
    a cover method for getCurrentTheme().getSeparatorForeground().
 
   returns: the separator foreground color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getSeparatorForeground )))
 
 (defn *get-sub-text-font
@@ -278,7 +278,7 @@
    cover method for getCurrentTheme().getSubTextFont().
 
   returns: the sub-text font - `javax.swing.plaf.FontUIResource`"
-  ([]
+  (^javax.swing.plaf.FontUIResource []
     (MetalLookAndFeel/getSubTextFont )))
 
 (defn *get-accelerator-foreground
@@ -286,7 +286,7 @@
    a cover method for getCurrentTheme().getAcceleratorForeground().
 
   returns: the separator accelerator foreground color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getAcceleratorForeground )))
 
 (defn *get-separator-background
@@ -294,7 +294,7 @@
    a cover method for getCurrentTheme().getSeparatorBackground().
 
   returns: the separator background color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getSeparatorBackground )))
 
 (defn *get-accelerator-selected-foreground
@@ -302,7 +302,7 @@
    current theme. This is a cover method for getCurrentTheme().getAcceleratorSelectedForeground().
 
   returns: the accelerator selected foreground color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getAcceleratorSelectedForeground )))
 
 (defn *get-white
@@ -310,7 +310,7 @@
    cover method for getCurrentTheme().getWhite().
 
   returns: the white color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getWhite )))
 
 (defn *get-system-text-color
@@ -318,7 +318,7 @@
    cover method for getCurrentTheme().getSystemTextColor().
 
   returns: the system text color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getSystemTextColor )))
 
 (defn *get-black
@@ -326,7 +326,7 @@
    cover method for getCurrentTheme().getBlack().
 
   returns: the black color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getBlack )))
 
 (defn *get-window-background
@@ -334,7 +334,7 @@
    cover method for getCurrentTheme().getWindowBackground().
 
   returns: the window background color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getWindowBackground )))
 
 (defn *get-menu-disabled-foreground
@@ -343,7 +343,7 @@
    getCurrentTheme().getMenuDisabledForeground().
 
   returns: the menu disabled foreground color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getMenuDisabledForeground )))
 
 (defn *get-primary-control-info
@@ -351,7 +351,7 @@
    cover method for getCurrentTheme().getPrimaryControlInfo().
 
   returns: the primary control info color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getPrimaryControlInfo )))
 
 (defn *get-menu-selected-background
@@ -360,7 +360,7 @@
    getCurrentTheme().getMenuSelectedBackground().
 
   returns: the menu selected background color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getMenuSelectedBackground )))
 
 (defn *get-inactive-control-text-color
@@ -368,7 +368,7 @@
    cover method for getCurrentTheme().getInactiveControlTextColor().
 
   returns: the inactive control text color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getInactiveControlTextColor )))
 
 (defn *get-control-info
@@ -376,7 +376,7 @@
    cover method for getCurrentTheme().getControlInfo().
 
   returns: the control info color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getControlInfo )))
 
 (defn *get-window-title-inactive-foreground
@@ -384,7 +384,7 @@
    theme. This is a cover method for getCurrentTheme().getWindowTitleInactiveForeground().
 
   returns: the window title inactive foreground color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getWindowTitleInactiveForeground )))
 
 (defn *get-system-text-font
@@ -392,7 +392,7 @@
    cover method for getCurrentTheme().getSystemTextFont().
 
   returns: the system text font - `javax.swing.plaf.FontUIResource`"
-  ([]
+  (^javax.swing.plaf.FontUIResource []
     (MetalLookAndFeel/getSystemTextFont )))
 
 (defn *get-primary-control-highlight
@@ -400,7 +400,7 @@
    theme. This is a cover method for getCurrentTheme().getPrimaryControlHighlight().
 
   returns: the primary control highlight color - `javax.swing.plaf.ColorUIResource`"
-  ([]
+  (^javax.swing.plaf.ColorUIResource []
     (MetalLookAndFeel/getPrimaryControlHighlight )))
 
 (defn get-disabled-selected-icon
@@ -422,7 +422,7 @@
 
   returns: Disabled and Selected icon, or null if a suitable Icon can not
            be generated. - `javax.swing.Icon`"
-  ([^javax.swing.plaf.metal.MetalLookAndFeel this ^javax.swing.JComponent component ^javax.swing.Icon icon]
+  (^javax.swing.Icon [^javax.swing.plaf.metal.MetalLookAndFeel this ^javax.swing.JComponent component ^javax.swing.Icon icon]
     (-> this (.getDisabledSelectedIcon component icon))))
 
 (defn get-supports-window-decorations?
@@ -430,7 +430,7 @@
    decorations.
 
   returns: true - `boolean`"
-  ([^javax.swing.plaf.metal.MetalLookAndFeel this]
+  (^Boolean [^javax.swing.plaf.metal.MetalLookAndFeel this]
     (-> this (.getSupportsWindowDecorations))))
 
 (defn get-defaults
@@ -443,7 +443,7 @@
    look and feel and after initialize has been invoked.
 
   returns: the look and feel defaults - `javax.swing.UIDefaults`"
-  ([^javax.swing.plaf.metal.MetalLookAndFeel this]
+  (^javax.swing.UIDefaults [^javax.swing.plaf.metal.MetalLookAndFeel this]
     (-> this (.getDefaults))))
 
 (defn get-name
@@ -451,7 +451,7 @@
    `Metal`.
 
   returns: the name of this look and feel - `java.lang.String`"
-  ([^javax.swing.plaf.metal.MetalLookAndFeel this]
+  (^java.lang.String [^javax.swing.plaf.metal.MetalLookAndFeel this]
     (-> this (.getName))))
 
 (defn get-layout-style
@@ -461,7 +461,7 @@
 
   returns: LayoutStyle implementing the Java look and feel design
            guidelines - `javax.swing.LayoutStyle`"
-  ([^javax.swing.plaf.metal.MetalLookAndFeel this]
+  (^javax.swing.LayoutStyle [^javax.swing.plaf.metal.MetalLookAndFeel this]
     (-> this (.getLayoutStyle))))
 
 (defn get-description
@@ -469,7 +469,7 @@
    `The Java(tm) Look and Feel`.
 
   returns: a short description for the look and feel - `java.lang.String`"
-  ([^javax.swing.plaf.metal.MetalLookAndFeel this]
+  (^java.lang.String [^javax.swing.plaf.metal.MetalLookAndFeel this]
     (-> this (.getDescription))))
 
 (defn supported-look-and-feel?
@@ -477,7 +477,7 @@
    any platform.
 
   returns: true - `boolean`"
-  ([^javax.swing.plaf.metal.MetalLookAndFeel this]
+  (^Boolean [^javax.swing.plaf.metal.MetalLookAndFeel this]
     (-> this (.isSupportedLookAndFeel))))
 
 (defn provide-error-feedback
@@ -496,7 +496,7 @@
    look and feel.
 
   returns: false - `boolean`"
-  ([^javax.swing.plaf.metal.MetalLookAndFeel this]
+  (^Boolean [^javax.swing.plaf.metal.MetalLookAndFeel this]
     (-> this (.isNativeLookAndFeel))))
 
 (defn get-id
@@ -504,7 +504,7 @@
    `Metal`.
 
   returns: the identifier of this look and feel - `java.lang.String`"
-  ([^javax.swing.plaf.metal.MetalLookAndFeel this]
+  (^java.lang.String [^javax.swing.plaf.metal.MetalLookAndFeel this]
     (-> this (.getID))))
 
 (defn get-disabled-icon
@@ -524,6 +524,6 @@
 
   returns: Disabled icon, or null if a suitable Icon can not be
            generated. - `javax.swing.Icon`"
-  ([^javax.swing.plaf.metal.MetalLookAndFeel this ^javax.swing.JComponent component ^javax.swing.Icon icon]
+  (^javax.swing.Icon [^javax.swing.plaf.metal.MetalLookAndFeel this ^javax.swing.JComponent component ^javax.swing.Icon icon]
     (-> this (.getDisabledIcon component icon))))
 

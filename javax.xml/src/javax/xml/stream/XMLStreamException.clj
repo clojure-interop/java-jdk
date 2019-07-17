@@ -26,13 +26,13 @@
   "Gets the nested exception.
 
   returns: Nested exception - `java.lang.Throwable`"
-  ([^javax.xml.stream.XMLStreamException this]
+  (^java.lang.Throwable [^javax.xml.stream.XMLStreamException this]
     (-> this (.getNestedException))))
 
 (defn get-location
   "Gets the location of the exception
 
   returns: the location of the exception, may be null if none is available - `javax.xml.stream.Location`"
-  ([^javax.xml.stream.XMLStreamException this]
+  (^javax.xml.stream.Location [^javax.xml.stream.XMLStreamException this]
     (-> this (.getLocation))))
 

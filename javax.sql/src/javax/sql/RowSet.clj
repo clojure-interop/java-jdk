@@ -191,7 +191,7 @@
   returns: a string url - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^javax.sql.RowSet this]
+  (^java.lang.String [^javax.sql.RowSet this]
     (-> this (.getUrl))))
 
 (defn set-command
@@ -274,7 +274,7 @@
         Connection.TRANSACTION_READ_COMMITTED,
         Connection.TRANSACTION_REPEATABLE_READ, or
         Connection.TRANSACTION_SERIALIZABLE - `int`"
-  ([^javax.sql.RowSet this]
+  (^Integer [^javax.sql.RowSet this]
     (-> this (.getTransactionIsolation))))
 
 (defn set-password
@@ -336,7 +336,7 @@
    The default value is null.
 
   returns: the command string; may be null - `java.lang.String`"
-  ([^javax.sql.RowSet this]
+  (^java.lang.String [^javax.sql.RowSet this]
     (-> this (.getCommand))))
 
 (defn set-blob
@@ -446,7 +446,7 @@
    not usually part of the serialized state of a RowSet object.
 
   returns: the username property - `java.lang.String`"
-  ([^javax.sql.RowSet this]
+  (^java.lang.String [^javax.sql.RowSet this]
     (-> this (.getUsername))))
 
 (defn clear-parameters
@@ -494,7 +494,7 @@
             is no limit - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^javax.sql.RowSet this]
+  (^Integer [^javax.sql.RowSet this]
     (-> this (.getMaxFieldSize))))
 
 (defn set-clob
@@ -682,7 +682,7 @@
            object can contain; zero means unlimited - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^javax.sql.RowSet this]
+  (^Integer [^javax.sql.RowSet this]
     (-> this (.getMaxRows))))
 
 (defn set-int
@@ -706,7 +706,7 @@
             unlimited - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^javax.sql.RowSet this]
+  (^Integer [^javax.sql.RowSet this]
     (-> this (.getQueryTimeout))))
 
 (defn execute
@@ -770,7 +770,7 @@
            to be mapped - `java.util.Map<java.lang.String,java.lang.Class<?>>`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^javax.sql.RowSet this]
+  (^java.util.Map> [^javax.sql.RowSet this]
     (-> this (.getTypeMap))))
 
 (defn get-data-source-name
@@ -778,7 +778,7 @@
    RowSet object.
 
   returns: a data source name - `java.lang.String`"
-  ([^javax.sql.RowSet this]
+  (^java.lang.String [^javax.sql.RowSet this]
     (-> this (.getDataSourceName))))
 
 (defn set-data-source-name
@@ -806,7 +806,7 @@
 
   returns: true if this RowSet object is
            read-only; false if it is updatable - `boolean`"
-  ([^javax.sql.RowSet this]
+  (^Boolean [^javax.sql.RowSet this]
     (-> this (.isReadOnly))))
 
 (defn set-url
@@ -831,7 +831,7 @@
            false if it is disabled - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^javax.sql.RowSet this]
+  (^Boolean [^javax.sql.RowSet this]
     (-> this (.getEscapeProcessing))))
 
 (defn set-sqlxml
@@ -876,6 +876,6 @@
    of a RowSet object.
 
   returns: the password for making a database connection - `java.lang.String`"
-  ([^javax.sql.RowSet this]
+  (^java.lang.String [^javax.sql.RowSet this]
     (-> this (.getPassword))))
 

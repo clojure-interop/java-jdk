@@ -22,7 +22,7 @@
   "Tells whether or not this channel is open.
 
   returns: true if, and only if, this channel is open - `boolean`"
-  ([^java.nio.channels.Channel this]
+  (^Boolean [^java.nio.channels.Channel this]
     (-> this (.isOpen))))
 
 (defn close

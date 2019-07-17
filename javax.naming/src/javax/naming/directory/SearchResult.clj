@@ -30,7 +30,7 @@
   "Retrieves the attributes in this search result.
 
   returns: The non-null attributes in this search result. Can be empty. - `javax.naming.directory.Attributes`"
-  ([^javax.naming.directory.SearchResult this]
+  (^javax.naming.directory.Attributes [^javax.naming.directory.SearchResult this]
     (-> this (.getAttributes))))
 
 (defn set-attributes
@@ -49,6 +49,6 @@
    for debugging and is not meant to be interpreted programmatically.
 
   returns: The string representation of this SearchResult. Cannot be null. - `java.lang.String`"
-  ([^javax.naming.directory.SearchResult this]
+  (^java.lang.String [^javax.naming.directory.SearchResult this]
     (-> this (.toString))))
 

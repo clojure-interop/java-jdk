@@ -70,7 +70,7 @@
   returns: the transaction timeout value in seconds. - `int`
 
   throws: javax.transaction.xa.XAException - An error has occurred. Possible exception values are XAER_RMERR and XAER_RMFAIL."
-  ([^javax.transaction.xa.XAResource this]
+  (^Integer [^javax.transaction.xa.XAResource this]
     (-> this (.getTransactionTimeout))))
 
 (defn set-transaction-timeout
@@ -91,7 +91,7 @@
          otherwise false. - `boolean`
 
   throws: javax.transaction.xa.XAException - An error has occurred. Possible exception values are XAER_RMERR, XAER_RMFAIL, or XAER_INVAL."
-  ([^javax.transaction.xa.XAResource this ^Integer seconds]
+  (^Boolean [^javax.transaction.xa.XAResource this ^Integer seconds]
     (-> this (.setTransactionTimeout seconds))))
 
 (defn commit
@@ -136,7 +136,7 @@
          false. - `boolean`
 
   throws: javax.transaction.xa.XAException - An error has occurred. Possible exception values are XAER_RMERR and XAER_RMFAIL."
-  ([^javax.transaction.xa.XAResource this ^javax.transaction.xa.XAResource xares]
+  (^Boolean [^javax.transaction.xa.XAResource this ^javax.transaction.xa.XAResource xares]
     (-> this (.isSameRM xares))))
 
 (defn rollback
@@ -162,7 +162,7 @@
    in the prepare method. - `int`
 
   throws: javax.transaction.xa.XAException - An error has occurred. Possible exception values are: XA_RB*, XAER_RMERR, XAER_RMFAIL, XAER_NOTA, XAER_INVAL, or XAER_PROTO."
-  ([^javax.transaction.xa.XAResource this ^javax.transaction.xa.Xid xid]
+  (^Integer [^javax.transaction.xa.XAResource this ^javax.transaction.xa.Xid xid]
     (-> this (.prepare xid))))
 
 (defn end

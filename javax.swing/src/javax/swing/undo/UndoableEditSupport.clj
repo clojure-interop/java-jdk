@@ -51,7 +51,7 @@
   "Returns the update level value.
 
   returns: an integer representing the update level - `int`"
-  ([^javax.swing.undo.UndoableEditSupport this]
+  (^Integer [^javax.swing.undo.UndoableEditSupport this]
     (-> this (.getUpdateLevel))))
 
 (defn begin-update
@@ -71,6 +71,6 @@
    object's properties.
 
   returns: a String representation of this object - `java.lang.String`"
-  ([^javax.swing.undo.UndoableEditSupport this]
+  (^java.lang.String [^javax.swing.undo.UndoableEditSupport this]
     (-> this (.toString))))
 

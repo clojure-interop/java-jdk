@@ -69,7 +69,7 @@
   "Returns the Color used to flash drawing operations.
 
   returns: `java.awt.Color`"
-  ([]
+  (^java.awt.Color []
     (DebugGraphics/flashColor )))
 
 (defn *set-flash-time
@@ -83,7 +83,7 @@
   "Returns the time delay of drawing operation flashing.
 
   returns: `int`"
-  ([]
+  (^Integer []
     (DebugGraphics/flashTime )))
 
 (defn *set-flash-count
@@ -97,7 +97,7 @@
   "Returns the number of times that drawing operations will flash.
 
   returns: `int`"
-  ([]
+  (^Integer []
     (DebugGraphics/flashCount )))
 
 (defn *set-log-stream
@@ -111,7 +111,7 @@
   "Returns the stream to which the DebugGraphics logs drawing operations.
 
   returns: `java.io.PrintStream`"
-  ([]
+  (^java.io.PrintStream []
     (DebugGraphics/logStream )))
 
 (defn set-debug-options
@@ -144,17 +144,17 @@
 
   returns: false if the image pixels are still changing;
              true otherwise. - `boolean`"
-  ([^javax.swing.DebugGraphics this ^java.awt.Image img ^Integer dx-1 ^Integer dy-1 ^Integer dx-2 ^Integer dy-2 ^Integer sx-1 ^Integer sy-1 ^Integer sx-2 ^Integer sy-2 ^java.awt.Color bgcolor ^java.awt.image.ImageObserver observer]
+  (^Boolean [^javax.swing.DebugGraphics this ^java.awt.Image img ^Integer dx-1 ^Integer dy-1 ^Integer dx-2 ^Integer dy-2 ^Integer sx-1 ^Integer sy-1 ^Integer sx-2 ^Integer sy-2 ^java.awt.Color bgcolor ^java.awt.image.ImageObserver observer]
     (-> this (.drawImage img dx-1 dy-1 dx-2 dy-2 sx-1 sy-1 sx-2 sy-2 bgcolor observer)))
-  ([^javax.swing.DebugGraphics this ^java.awt.Image img ^Integer dx-1 ^Integer dy-1 ^Integer dx-2 ^Integer dy-2 ^Integer sx-1 ^Integer sy-1 ^Integer sx-2 ^Integer sy-2 ^java.awt.image.ImageObserver observer]
+  (^Boolean [^javax.swing.DebugGraphics this ^java.awt.Image img ^Integer dx-1 ^Integer dy-1 ^Integer dx-2 ^Integer dy-2 ^Integer sx-1 ^Integer sy-1 ^Integer sx-2 ^Integer sy-2 ^java.awt.image.ImageObserver observer]
     (-> this (.drawImage img dx-1 dy-1 dx-2 dy-2 sx-1 sy-1 sx-2 sy-2 observer)))
-  ([^javax.swing.DebugGraphics this ^java.awt.Image img ^Integer x ^Integer y ^Integer width ^Integer height ^java.awt.Color bgcolor ^java.awt.image.ImageObserver observer]
+  (^Boolean [^javax.swing.DebugGraphics this ^java.awt.Image img ^Integer x ^Integer y ^Integer width ^Integer height ^java.awt.Color bgcolor ^java.awt.image.ImageObserver observer]
     (-> this (.drawImage img x y width height bgcolor observer)))
-  ([^javax.swing.DebugGraphics this ^java.awt.Image img ^Integer x ^Integer y ^Integer width ^Integer height ^java.awt.image.ImageObserver observer]
+  (^Boolean [^javax.swing.DebugGraphics this ^java.awt.Image img ^Integer x ^Integer y ^Integer width ^Integer height ^java.awt.image.ImageObserver observer]
     (-> this (.drawImage img x y width height observer)))
-  ([^javax.swing.DebugGraphics this ^java.awt.Image img ^Integer x ^Integer y ^java.awt.Color bgcolor ^java.awt.image.ImageObserver observer]
+  (^Boolean [^javax.swing.DebugGraphics this ^java.awt.Image img ^Integer x ^Integer y ^java.awt.Color bgcolor ^java.awt.image.ImageObserver observer]
     (-> this (.drawImage img x y bgcolor observer)))
-  ([^javax.swing.DebugGraphics this ^java.awt.Image img ^Integer x ^Integer y ^java.awt.image.ImageObserver observer]
+  (^Boolean [^javax.swing.DebugGraphics this ^java.awt.Image img ^Integer x ^Integer y ^java.awt.image.ImageObserver observer]
     (-> this (.drawImage img x y observer))))
 
 (defn draw-arc
@@ -197,14 +197,14 @@
   returns: a Shape object representing the
                 current clipping area, or null if
                 no clip is set. - `java.awt.Shape`"
-  ([^javax.swing.DebugGraphics this]
+  (^java.awt.Shape [^javax.swing.DebugGraphics this]
     (-> this (.getClip))))
 
 (defn drawing-buffer?
   "Returns the drawingBuffer value.
 
   returns: true if this object is drawing from a Buffer - `boolean`"
-  ([^javax.swing.DebugGraphics this]
+  (^Boolean [^javax.swing.DebugGraphics this]
     (-> this (.isDrawingBuffer))))
 
 (defn translate
@@ -253,7 +253,7 @@
 
   returns: the bounding rectangle of the current clipping area,
                 or null if no clip is set. - `java.awt.Rectangle`"
-  ([^javax.swing.DebugGraphics this]
+  (^java.awt.Rectangle [^javax.swing.DebugGraphics this]
     (-> this (.getClipBounds))))
 
 (defn fill-3-d-rect
@@ -303,9 +303,9 @@
   f - the specified font - `java.awt.Font`
 
   returns: the font metrics for the specified font. - `java.awt.FontMetrics`"
-  ([^javax.swing.DebugGraphics this ^java.awt.Font f]
+  (^java.awt.FontMetrics [^javax.swing.DebugGraphics this ^java.awt.Font f]
     (-> this (.getFontMetrics f)))
-  ([^javax.swing.DebugGraphics this]
+  (^java.awt.FontMetrics [^javax.swing.DebugGraphics this]
     (-> this (.getFontMetrics))))
 
 (defn draw-string
@@ -381,7 +381,7 @@
   "Returns the current debugging options for this DebugGraphics.
 
   returns: `int`"
-  ([^javax.swing.DebugGraphics this]
+  (^Integer [^javax.swing.DebugGraphics this]
     (-> this (.getDebugOptions))))
 
 (defn set-font
@@ -411,9 +411,9 @@
   height - the height of the clipping rectangle. - `int`
 
   returns: a new graphics context. - `java.awt.Graphics`"
-  ([^javax.swing.DebugGraphics this ^Integer x ^Integer y ^Integer width ^Integer height]
+  (^java.awt.Graphics [^javax.swing.DebugGraphics this ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.create x y width height)))
-  ([^javax.swing.DebugGraphics this]
+  (^java.awt.Graphics [^javax.swing.DebugGraphics this]
     (-> this (.create))))
 
 (defn set-paint-mode
@@ -425,7 +425,7 @@
   "Returns the Font used for text drawing operations.
 
   returns: this graphics context's current font. - `java.awt.Font`"
-  ([^javax.swing.DebugGraphics this]
+  (^java.awt.Font [^javax.swing.DebugGraphics this]
     (-> this (.getFont))))
 
 (defn draw-round-rect
@@ -455,7 +455,7 @@
   "Returns the Color used for text drawing operations.
 
   returns: this graphics context's current color. - `java.awt.Color`"
-  ([^javax.swing.DebugGraphics this]
+  (^java.awt.Color [^javax.swing.DebugGraphics this]
     (-> this (.getColor))))
 
 (defn clear-rect

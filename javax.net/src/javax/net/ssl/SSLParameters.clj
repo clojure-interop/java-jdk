@@ -35,9 +35,9 @@
 
   cipher-suites - the array of ciphersuites (or null) - `java.lang.String[]`
   protocols - the array of protocols (or null) - `java.lang.String[]`"
-  ([^java.lang.String[] cipher-suites ^java.lang.String[] protocols]
+  ([cipher-suites protocols]
     (new SSLParameters cipher-suites protocols))
-  ([^java.lang.String[] cipher-suites]
+  ([cipher-suites]
     (new SSLParameters cipher-suites))
   ([]
     (new SSLParameters )))
@@ -46,7 +46,7 @@
   "Returns whether client authentication should be required.
 
   returns: whether client authentication should be required. - `boolean`"
-  ([^javax.net.ssl.SSLParameters this]
+  (^Boolean [^javax.net.ssl.SSLParameters this]
     (-> this (.getNeedClientAuth))))
 
 (defn get-use-cipher-suites-order?
@@ -54,7 +54,7 @@
 
   returns: whether local cipher suites order in #getCipherSuites
            should be honored during SSL/TLS handshaking. - `boolean`"
-  ([^javax.net.ssl.SSLParameters this]
+  (^Boolean [^javax.net.ssl.SSLParameters this]
     (-> this (.getUseCipherSuitesOrder))))
 
 (defn set-use-cipher-suites-order
@@ -92,7 +92,7 @@
    extension and continue the handshake.
 
   returns: null or an immutable collection of non-null SNIMatchers - `java.util.Collection<javax.net.ssl.SNIMatcher>`"
-  ([^javax.net.ssl.SSLParameters this]
+  (^java.util.Collection [^javax.net.ssl.SSLParameters this]
     (-> this (.getSNIMatchers))))
 
 (defn set-algorithm-constraints
@@ -120,14 +120,14 @@
 
   returns: the cryptographic algorithm constraints, or null if the
        constraints have not been set - `java.security.AlgorithmConstraints`"
-  ([^javax.net.ssl.SSLParameters this]
+  (^java.security.AlgorithmConstraints [^javax.net.ssl.SSLParameters this]
     (-> this (.getAlgorithmConstraints))))
 
 (defn set-cipher-suites
   "Sets the array of ciphersuites.
 
   cipher-suites - the array of ciphersuites (or null) - `java.lang.String[]`"
-  ([^javax.net.ssl.SSLParameters this ^java.lang.String[] cipher-suites]
+  ([^javax.net.ssl.SSLParameters this cipher-suites]
     (-> this (.setCipherSuites cipher-suites))))
 
 (defn set-sni-matchers
@@ -177,7 +177,7 @@
            sslContext.createSSLEngine(`www.example.com`, 443);
 
   returns: null or an immutable list of non-null SNIServerNames - `java.util.List<javax.net.ssl.SNIServerName>`"
-  ([^javax.net.ssl.SSLParameters this]
+  (^java.util.List [^javax.net.ssl.SSLParameters this]
     (-> this (.getServerNames))))
 
 (defn get-protocols
@@ -203,7 +203,7 @@
 
   returns: the endpoint identification algorithm, or null if none
    has been set. - `java.lang.String`"
-  ([^javax.net.ssl.SSLParameters this]
+  (^java.lang.String [^javax.net.ssl.SSLParameters this]
     (-> this (.getEndpointIdentificationAlgorithm))))
 
 (defn set-endpoint-identification-algorithm
@@ -229,13 +229,13 @@
   "Returns whether client authentication should be requested.
 
   returns: whether client authentication should be requested. - `boolean`"
-  ([^javax.net.ssl.SSLParameters this]
+  (^Boolean [^javax.net.ssl.SSLParameters this]
     (-> this (.getWantClientAuth))))
 
 (defn set-protocols
   "Sets the array of protocols.
 
   protocols - the array of protocols (or null) - `java.lang.String[]`"
-  ([^javax.net.ssl.SSLParameters this ^java.lang.String[] protocols]
+  ([^javax.net.ssl.SSLParameters this protocols]
     (-> this (.setProtocols protocols))))
 

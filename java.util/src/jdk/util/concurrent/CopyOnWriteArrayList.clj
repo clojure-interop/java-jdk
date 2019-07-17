@@ -62,9 +62,9 @@
   returns: true if this list changed as a result of the call - `boolean`
 
   throws: java.lang.IndexOutOfBoundsException - if the index is out of range (index < 0 || index > size())"
-  ([^java.util.concurrent.CopyOnWriteArrayList this ^Integer index ^CopyOnWriteArrayList.E> c]
+  (^Boolean [^java.util.concurrent.CopyOnWriteArrayList this ^Integer index ^CopyOnWriteArrayList.E> c]
     (-> this (.addAll index c)))
-  ([^java.util.concurrent.CopyOnWriteArrayList this ^CopyOnWriteArrayList.E> c]
+  (^Boolean [^java.util.concurrent.CopyOnWriteArrayList this ^CopyOnWriteArrayList.E> c]
     (-> this (.addAll c))))
 
 (defn spliterator
@@ -79,7 +79,7 @@
    operating on the spliterator.
 
   returns: a Spliterator over the elements in this list - `java.util.Spliterator<CopyOnWriteArrayList.E>`"
-  ([^java.util.concurrent.CopyOnWriteArrayList this]
+  (^java.util.Spliterator [^java.util.concurrent.CopyOnWriteArrayList this]
     (-> this (.spliterator))))
 
 (defn for-each
@@ -102,7 +102,7 @@
   filter - a predicate which returns true for elements to be removed - `CopyOnWriteArrayList.E>`
 
   returns: true if any elements were removed - `boolean`"
-  ([^java.util.concurrent.CopyOnWriteArrayList this ^CopyOnWriteArrayList.E> filter]
+  (^Boolean [^java.util.concurrent.CopyOnWriteArrayList this ^CopyOnWriteArrayList.E> filter]
     (-> this (.removeIf filter))))
 
 (defn contains
@@ -114,7 +114,7 @@
   o - element whose presence in this list is to be tested - `java.lang.Object`
 
   returns: true if this list contains the specified element - `boolean`"
-  ([^java.util.concurrent.CopyOnWriteArrayList this ^java.lang.Object o]
+  (^Boolean [^java.util.concurrent.CopyOnWriteArrayList this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn to-string
@@ -126,7 +126,7 @@
    converted to strings as by String.valueOf(Object).
 
   returns: a string representation of this list - `java.lang.String`"
-  ([^java.util.concurrent.CopyOnWriteArrayList this]
+  (^java.lang.String [^java.util.concurrent.CopyOnWriteArrayList this]
     (-> this (.toString))))
 
 (defn list-iterator
@@ -148,9 +148,9 @@
            sequence), starting at the specified position in the list - `java.util.ListIterator<CopyOnWriteArrayList.E>`
 
   throws: java.lang.IndexOutOfBoundsException - if the index is out of range (index < 0 || index > size())"
-  ([^java.util.concurrent.CopyOnWriteArrayList this ^Integer index]
+  (^java.util.ListIterator [^java.util.concurrent.CopyOnWriteArrayList this ^Integer index]
     (-> this (.listIterator index)))
-  ([^java.util.concurrent.CopyOnWriteArrayList this]
+  (^java.util.ListIterator [^java.util.concurrent.CopyOnWriteArrayList this]
     (-> this (.listIterator))))
 
 (defn sort
@@ -169,7 +169,7 @@
    remove method.
 
   returns: an iterator over the elements in this list in proper sequence - `java.util.Iterator<CopyOnWriteArrayList.E>`"
-  ([^java.util.concurrent.CopyOnWriteArrayList this]
+  (^java.util.Iterator [^java.util.concurrent.CopyOnWriteArrayList this]
     (-> this (.iterator))))
 
 (defn add-if-absent
@@ -178,7 +178,7 @@
   e - element to be added to this list, if absent - `CopyOnWriteArrayList.E`
 
   returns: true if the element was added - `boolean`"
-  ([^java.util.concurrent.CopyOnWriteArrayList this ^CopyOnWriteArrayList.E e]
+  (^Boolean [^java.util.concurrent.CopyOnWriteArrayList this ^CopyOnWriteArrayList.E e]
     (-> this (.addIfAbsent e))))
 
 (defn sub-list
@@ -197,7 +197,7 @@
   returns: a view of the specified range within this list - `java.util.List<CopyOnWriteArrayList.E>`
 
   throws: java.lang.IndexOutOfBoundsException - for an illegal endpoint index value (fromIndex < 0 || toIndex > size || fromIndex > toIndex)"
-  ([^java.util.concurrent.CopyOnWriteArrayList this ^Integer from-index ^Integer to-index]
+  (^java.util.List [^java.util.concurrent.CopyOnWriteArrayList this ^Integer from-index ^Integer to-index]
     (-> this (.subList from-index to-index))))
 
 (defn last-index-of
@@ -216,9 +216,9 @@
            -1 if the element is not found. - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if the specified index is greater than or equal to the current size of this list"
-  ([^java.util.concurrent.CopyOnWriteArrayList this ^CopyOnWriteArrayList.E e ^Integer index]
+  (^Integer [^java.util.concurrent.CopyOnWriteArrayList this ^CopyOnWriteArrayList.E e ^Integer index]
     (-> this (.lastIndexOf e index)))
-  ([^java.util.concurrent.CopyOnWriteArrayList this ^java.lang.Object o]
+  (^Integer [^java.util.concurrent.CopyOnWriteArrayList this ^java.lang.Object o]
     (-> this (.lastIndexOf o))))
 
 (defn remove
@@ -231,7 +231,7 @@
   returns: the element previously at the specified position - `CopyOnWriteArrayList.E`
 
   throws: java.lang.IndexOutOfBoundsException - if the index is out of range (index < 0 || index >= size())"
-  ([^java.util.concurrent.CopyOnWriteArrayList this ^Integer index]
+  (^CopyOnWriteArrayList.E [^java.util.concurrent.CopyOnWriteArrayList this ^Integer index]
     (-> this (.remove index))))
 
 (defn clone
@@ -239,7 +239,7 @@
    are not copied.)
 
   returns: a clone of this list - `java.lang.Object`"
-  ([^java.util.concurrent.CopyOnWriteArrayList this]
+  (^java.lang.Object [^java.util.concurrent.CopyOnWriteArrayList this]
     (-> this (.clone))))
 
 (defn hash-code
@@ -248,7 +248,7 @@
    This implementation uses the definition in List.hashCode().
 
   returns: the hash code value for this list - `int`"
-  ([^java.util.concurrent.CopyOnWriteArrayList this]
+  (^Integer [^java.util.concurrent.CopyOnWriteArrayList this]
     (-> this (.hashCode))))
 
 (defn add
@@ -262,7 +262,7 @@
   throws: java.lang.IndexOutOfBoundsException - if the index is out of range (index < 0 || index > size())"
   ([^java.util.concurrent.CopyOnWriteArrayList this ^Integer index ^CopyOnWriteArrayList.E element]
     (-> this (.add index element)))
-  ([^java.util.concurrent.CopyOnWriteArrayList this ^CopyOnWriteArrayList.E e]
+  (^Boolean [^java.util.concurrent.CopyOnWriteArrayList this ^CopyOnWriteArrayList.E e]
     (-> this (.add e))))
 
 (defn set
@@ -275,21 +275,21 @@
   returns: the element previously at the specified position - `CopyOnWriteArrayList.E`
 
   throws: java.lang.IndexOutOfBoundsException - if the index is out of range (index < 0 || index >= size())"
-  ([^java.util.concurrent.CopyOnWriteArrayList this ^Integer index ^CopyOnWriteArrayList.E element]
+  (^CopyOnWriteArrayList.E [^java.util.concurrent.CopyOnWriteArrayList this ^Integer index ^CopyOnWriteArrayList.E element]
     (-> this (.set index element))))
 
 (defn empty?
   "Returns true if this list contains no elements.
 
   returns: true if this list contains no elements - `boolean`"
-  ([^java.util.concurrent.CopyOnWriteArrayList this]
+  (^Boolean [^java.util.concurrent.CopyOnWriteArrayList this]
     (-> this (.isEmpty))))
 
 (defn size
   "Returns the number of elements in this list.
 
   returns: the number of elements in this list - `int`"
-  ([^java.util.concurrent.CopyOnWriteArrayList this]
+  (^Integer [^java.util.concurrent.CopyOnWriteArrayList this]
     (-> this (.size))))
 
 (defn retain-all
@@ -302,7 +302,7 @@
   returns: true if this list changed as a result of the call - `boolean`
 
   throws: java.lang.ClassCastException - if the class of an element of this list is incompatible with the specified collection (optional)"
-  ([^java.util.concurrent.CopyOnWriteArrayList this ^java.util.Collection c]
+  (^Boolean [^java.util.concurrent.CopyOnWriteArrayList this ^java.util.Collection c]
     (-> this (.retainAll c))))
 
 (defn clear
@@ -327,9 +327,9 @@
            -1 if the element is not found. - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if the specified index is negative"
-  ([^java.util.concurrent.CopyOnWriteArrayList this ^CopyOnWriteArrayList.E e ^Integer index]
+  (^Integer [^java.util.concurrent.CopyOnWriteArrayList this ^CopyOnWriteArrayList.E e ^Integer index]
     (-> this (.indexOf e index)))
-  ([^java.util.concurrent.CopyOnWriteArrayList this ^java.lang.Object o]
+  (^Integer [^java.util.concurrent.CopyOnWriteArrayList this ^java.lang.Object o]
     (-> this (.indexOf o))))
 
 (defn to-array
@@ -384,7 +384,7 @@
   returns: the number of elements added - `int`
 
   throws: java.lang.NullPointerException - if the specified collection is null"
-  ([^java.util.concurrent.CopyOnWriteArrayList this ^CopyOnWriteArrayList.E> c]
+  (^Integer [^java.util.concurrent.CopyOnWriteArrayList this ^CopyOnWriteArrayList.E> c]
     (-> this (.addAllAbsent c))))
 
 (defn remove-all
@@ -397,7 +397,7 @@
   returns: true if this list changed as a result of the call - `boolean`
 
   throws: java.lang.ClassCastException - if the class of an element of this list is incompatible with the specified collection (optional)"
-  ([^java.util.concurrent.CopyOnWriteArrayList this ^java.util.Collection c]
+  (^Boolean [^java.util.concurrent.CopyOnWriteArrayList this ^java.util.Collection c]
     (-> this (.removeAll c))))
 
 (defn get
@@ -408,7 +408,7 @@
   returns: the element at the specified position in this list - `CopyOnWriteArrayList.E`
 
   throws: java.lang.IndexOutOfBoundsException - if the index is out of range (index < 0 || index >= size())"
-  ([^java.util.concurrent.CopyOnWriteArrayList this ^Integer index]
+  (^CopyOnWriteArrayList.E [^java.util.concurrent.CopyOnWriteArrayList this ^Integer index]
     (-> this (.get index))))
 
 (defn equals
@@ -426,7 +426,7 @@
   o - the object to be compared for equality with this list - `java.lang.Object`
 
   returns: true if the specified object is equal to this list - `boolean`"
-  ([^java.util.concurrent.CopyOnWriteArrayList this ^java.lang.Object o]
+  (^Boolean [^java.util.concurrent.CopyOnWriteArrayList this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn contains-all
@@ -439,6 +439,6 @@
            specified collection - `boolean`
 
   throws: java.lang.NullPointerException - if the specified collection is null"
-  ([^java.util.concurrent.CopyOnWriteArrayList this ^java.util.Collection c]
+  (^Boolean [^java.util.concurrent.CopyOnWriteArrayList this ^java.util.Collection c]
     (-> this (.containsAll c))))
 

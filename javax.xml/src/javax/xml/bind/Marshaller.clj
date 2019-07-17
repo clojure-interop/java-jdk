@@ -331,7 +331,7 @@
            if it hasn't been set - `javax.xml.bind.ValidationEventHandler`
 
   throws: javax.xml.bind.JAXBException - if an error was encountered while getting the current event handler"
-  ([^javax.xml.bind.Marshaller this]
+  (^javax.xml.bind.ValidationEventHandler [^javax.xml.bind.Marshaller this]
     (-> this (.getEventHandler))))
 
 (defn get-node
@@ -347,7 +347,7 @@
   returns: the DOM tree view of the contentTree - `org.w3c.dom.Node`
 
   throws: java.lang.UnsupportedOperationException - If the JAXB provider implementation does not support a DOM view of the content tree"
-  ([^javax.xml.bind.Marshaller this ^java.lang.Object content-tree]
+  (^org.w3c.dom.Node [^javax.xml.bind.Marshaller this ^java.lang.Object content-tree]
     (-> this (.getNode content-tree))))
 
 (defn set-listener
@@ -376,7 +376,7 @@
 
 (defn get-attachment-marshaller
   "returns: `javax.xml.bind.attachment.AttachmentMarshaller`"
-  ([^javax.xml.bind.Marshaller this]
+  (^javax.xml.bind.attachment.AttachmentMarshaller [^javax.xml.bind.Marshaller this]
     (-> this (.getAttachmentMarshaller))))
 
 (defn set-schema
@@ -409,14 +409,14 @@
   returns: the value of the requested property - `java.lang.Object`
 
   throws: javax.xml.bind.PropertyException - when there is an error retrieving the given property or value property name"
-  ([^javax.xml.bind.Marshaller this ^java.lang.String name]
+  (^java.lang.Object [^javax.xml.bind.Marshaller this ^java.lang.String name]
     (-> this (.getProperty name))))
 
 (defn get-listener
   "Return Marshaller.Listener registered with this Marshaller.
 
   returns: registered Marshaller.Listener or null if no Listener is registered with this Marshaller. - `javax.xml.bind.Marshaller.Listener`"
-  ([^javax.xml.bind.Marshaller this]
+  (^javax.xml.bind.Marshaller.Listener [^javax.xml.bind.Marshaller this]
     (-> this (.getListener))))
 
 (defn get-schema
@@ -429,7 +429,7 @@
         validation or null if not present. - `javax.xml.validation.Schema`
 
   throws: java.lang.UnsupportedOperationException - could be thrown if this method is invoked on an Marshaller created from a JAXBContext referencing JAXB 1.0 mapped classes"
-  ([^javax.xml.bind.Marshaller this]
+  (^javax.xml.validation.Schema [^javax.xml.bind.Marshaller this]
     (-> this (.getSchema))))
 
 (defn set-property

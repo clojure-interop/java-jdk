@@ -11,7 +11,7 @@
    returns -1 if none is available.
 
   returns: the current line number - `int`"
-  ([^javax.xml.stream.Location this]
+  (^Integer [^javax.xml.stream.Location this]
     (-> this (.getLineNumber))))
 
 (defn get-column-number
@@ -19,7 +19,7 @@
    returns -1 if none is available.
 
   returns: the current column number - `int`"
-  ([^javax.xml.stream.Location this]
+  (^Integer [^javax.xml.stream.Location this]
     (-> this (.getColumnNumber))))
 
 (defn get-character-offset
@@ -30,20 +30,20 @@
    Returns -1 if there is no offset available.
 
   returns: the current offset - `int`"
-  ([^javax.xml.stream.Location this]
+  (^Integer [^javax.xml.stream.Location this]
     (-> this (.getCharacterOffset))))
 
 (defn get-public-id
   "Returns the public ID of the XML
 
   returns: the public ID, or null if not available - `java.lang.String`"
-  ([^javax.xml.stream.Location this]
+  (^java.lang.String [^javax.xml.stream.Location this]
     (-> this (.getPublicId))))
 
 (defn get-system-id
   "Returns the system ID of the XML
 
   returns: the system ID, or null if not available - `java.lang.String`"
-  ([^javax.xml.stream.Location this]
+  (^java.lang.String [^javax.xml.stream.Location this]
     (-> this (.getSystemId))))
 

@@ -65,7 +65,7 @@
    by an invocation of the initialValue() method.
 
   returns: the current thread's value of this thread-local - `ThreadLocal.T`"
-  ([^java.lang.ThreadLocal this]
+  (^ThreadLocal.T [^java.lang.ThreadLocal this]
     (-> this (.get))))
 
 (defn set

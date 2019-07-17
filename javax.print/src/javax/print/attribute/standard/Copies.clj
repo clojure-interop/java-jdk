@@ -63,7 +63,7 @@
 
   returns: True if object is equivalent to this copies
             attribute, false otherwise. - `boolean`"
-  ([^javax.print.attribute.standard.Copies this ^java.lang.Object object]
+  (^Boolean [^javax.print.attribute.standard.Copies this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -84,6 +84,6 @@
    For class Copies, the category name is `copies`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.Copies this]
+  (^java.lang.String [^javax.print.attribute.standard.Copies this]
     (-> this (.getName))))
 

@@ -123,7 +123,7 @@
    This value is by default true.
 
   returns: true if will execute after shutdown - `boolean`"
-  ([^java.util.concurrent.ScheduledThreadPoolExecutor this]
+  (^Boolean [^java.util.concurrent.ScheduledThreadPoolExecutor this]
     (-> this (.getExecuteExistingDelayedTasksAfterShutdownPolicy))))
 
 (defn schedule
@@ -138,7 +138,7 @@
            null upon completion - `java.util.concurrent.ScheduledFuture<?>`
 
   throws: java.util.concurrent.RejectedExecutionException - if the task cannot be scheduled for execution"
-  ([^java.util.concurrent.ScheduledThreadPoolExecutor this ^java.lang.Runnable command ^Long delay ^java.util.concurrent.TimeUnit unit]
+  (^java.util.concurrent.ScheduledFuture [^java.util.concurrent.ScheduledThreadPoolExecutor this ^java.lang.Runnable command ^Long delay ^java.util.concurrent.TimeUnit unit]
     (-> this (.schedule command delay unit))))
 
 (defn shutdown
@@ -171,7 +171,7 @@
   throws: java.util.concurrent.RejectedExecutionException - if the task cannot be scheduled for execution"
   ([^java.util.concurrent.ScheduledThreadPoolExecutor this ^java.lang.Runnable task result]
     (-> this (.submit task result)))
-  ([^java.util.concurrent.ScheduledThreadPoolExecutor this ^java.lang.Runnable task]
+  (^java.util.concurrent.Future [^java.util.concurrent.ScheduledThreadPoolExecutor this ^java.lang.Runnable task]
     (-> this (.submit task))))
 
 (defn schedule-with-fixed-delay
@@ -187,7 +187,7 @@
            exception upon cancellation - `java.util.concurrent.ScheduledFuture<?>`
 
   throws: java.util.concurrent.RejectedExecutionException - if the task cannot be scheduled for execution"
-  ([^java.util.concurrent.ScheduledThreadPoolExecutor this ^java.lang.Runnable command ^Long initial-delay ^Long delay ^java.util.concurrent.TimeUnit unit]
+  (^java.util.concurrent.ScheduledFuture [^java.util.concurrent.ScheduledThreadPoolExecutor this ^java.lang.Runnable command ^Long initial-delay ^Long delay ^java.util.concurrent.TimeUnit unit]
     (-> this (.scheduleWithFixedDelay command initial-delay delay unit))))
 
 (defn schedule-at-fixed-rate
@@ -203,7 +203,7 @@
            exception upon cancellation - `java.util.concurrent.ScheduledFuture<?>`
 
   throws: java.util.concurrent.RejectedExecutionException - if the task cannot be scheduled for execution"
-  ([^java.util.concurrent.ScheduledThreadPoolExecutor this ^java.lang.Runnable command ^Long initial-delay ^Long period ^java.util.concurrent.TimeUnit unit]
+  (^java.util.concurrent.ScheduledFuture [^java.util.concurrent.ScheduledThreadPoolExecutor this ^java.lang.Runnable command ^Long initial-delay ^Long period ^java.util.concurrent.TimeUnit unit]
     (-> this (.scheduleAtFixedRate command initial-delay period unit))))
 
 (defn get-continue-existing-periodic-tasks-after-shutdown-policy?
@@ -215,7 +215,7 @@
    This value is by default false.
 
   returns: true if will continue after shutdown - `boolean`"
-  ([^java.util.concurrent.ScheduledThreadPoolExecutor this]
+  (^Boolean [^java.util.concurrent.ScheduledThreadPoolExecutor this]
     (-> this (.getContinueExistingPeriodicTasksAfterShutdownPolicy))))
 
 (defn execute
@@ -260,7 +260,7 @@
    which they will execute.
 
   returns: the task queue - `java.util.concurrent.BlockingQueue<java.lang.Runnable>`"
-  ([^java.util.concurrent.ScheduledThreadPoolExecutor this]
+  (^java.util.concurrent.BlockingQueue [^java.util.concurrent.ScheduledThreadPoolExecutor this]
     (-> this (.getQueue))))
 
 (defn shutdown-now
@@ -284,7 +284,7 @@
            zero-delay ScheduledFuture. - `java.util.List<java.lang.Runnable>`
 
   throws: java.lang.SecurityException - if a security manager exists and shutting down this ExecutorService may manipulate threads that the caller is not permitted to modify because it does not hold RuntimePermission(`modifyThread`), or the security manager's checkAccess method denies access."
-  ([^java.util.concurrent.ScheduledThreadPoolExecutor this]
+  (^java.util.List [^java.util.concurrent.ScheduledThreadPoolExecutor this]
     (-> this (.shutdownNow))))
 
 (defn get-remove-on-cancel-policy?
@@ -294,6 +294,6 @@
 
   returns: true if cancelled tasks are immediately removed
            from the queue - `boolean`"
-  ([^java.util.concurrent.ScheduledThreadPoolExecutor this]
+  (^Boolean [^java.util.concurrent.ScheduledThreadPoolExecutor this]
     (-> this (.getRemoveOnCancelPolicy))))
 

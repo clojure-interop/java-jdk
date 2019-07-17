@@ -25,6 +25,6 @@
 
   returns: the cause of this throwable or null if the
             cause is nonexistent or unknown. - `java.lang.Throwable`"
-  ([^javax.management.remote.JMXProviderException this]
+  (^java.lang.Throwable [^javax.management.remote.JMXProviderException this]
     (-> this (.getCause))))
 

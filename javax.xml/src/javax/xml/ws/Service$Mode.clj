@@ -38,6 +38,6 @@
   returns: the enum constant with the specified name - `javax.xml.ws.Service.Mode`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^javax.xml.ws.Service.Mode [^java.lang.String name]
     (Service$Mode/valueOf name)))
 

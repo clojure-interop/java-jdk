@@ -26,7 +26,7 @@
 
   returns: a WritableRaster that represents the result of
            the filtering operation. - `java.awt.image.WritableRaster`"
-  ([^java.awt.image.RasterOp this ^java.awt.image.Raster src ^java.awt.image.WritableRaster dest]
+  (^java.awt.image.WritableRaster [^java.awt.image.RasterOp this ^java.awt.image.Raster src ^java.awt.image.WritableRaster dest]
     (-> this (.filter src dest))))
 
 (defn get-bounds-2-d
@@ -40,7 +40,7 @@
   returns: a Rectangle2D that is the bounding box of
            the Raster resulting from the filtering
            operation. - `java.awt.geom.Rectangle2D`"
-  ([^java.awt.image.RasterOp this ^java.awt.image.Raster src]
+  (^java.awt.geom.Rectangle2D [^java.awt.image.RasterOp this ^java.awt.image.Raster src]
     (-> this (.getBounds2D src))))
 
 (defn create-compatible-dest-raster
@@ -54,7 +54,7 @@
 
   returns: a WritableRaster that is compatible with
            src - `java.awt.image.WritableRaster`"
-  ([^java.awt.image.RasterOp this ^java.awt.image.Raster src]
+  (^java.awt.image.WritableRaster [^java.awt.image.RasterOp this ^java.awt.image.Raster src]
     (-> this (.createCompatibleDestRaster src))))
 
 (defn get-point-2-d
@@ -66,7 +66,7 @@
   dst-pt - the destination Point2D - `java.awt.geom.Point2D`
 
   returns: the location of the destination point. - `java.awt.geom.Point2D`"
-  ([^java.awt.image.RasterOp this ^java.awt.geom.Point2D src-pt ^java.awt.geom.Point2D dst-pt]
+  (^java.awt.geom.Point2D [^java.awt.image.RasterOp this ^java.awt.geom.Point2D src-pt ^java.awt.geom.Point2D dst-pt]
     (-> this (.getPoint2D src-pt dst-pt))))
 
 (defn get-rendering-hints
@@ -75,6 +75,6 @@
 
   returns: the RenderingHints object of this
            RasterOp. - `java.awt.RenderingHints`"
-  ([^java.awt.image.RasterOp this]
+  (^java.awt.RenderingHints [^java.awt.image.RasterOp this]
     (-> this (.getRenderingHints))))
 

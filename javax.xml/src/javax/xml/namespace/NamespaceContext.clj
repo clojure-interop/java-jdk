@@ -98,7 +98,7 @@
   returns: Namespace URI bound to prefix in the current scope - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - When prefix is null"
-  ([^javax.xml.namespace.NamespaceContext this ^java.lang.String prefix]
+  (^java.lang.String [^javax.xml.namespace.NamespaceContext this ^java.lang.String prefix]
     (-> this (.getNamespaceURI prefix))))
 
 (defn get-prefix
@@ -160,7 +160,7 @@
   returns: prefix bound to Namespace URI in current context - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - When namespaceURI is null"
-  ([^javax.xml.namespace.NamespaceContext this ^java.lang.String namespace-uri]
+  (^java.lang.String [^javax.xml.namespace.NamespaceContext this ^java.lang.String namespace-uri]
     (-> this (.getPrefix namespace-uri))))
 
 (defn get-prefixes
@@ -228,6 +228,6 @@
      Namespace URI in the current scope - `java.util.Iterator`
 
   throws: java.lang.IllegalArgumentException - When namespaceURI is null"
-  ([^javax.xml.namespace.NamespaceContext this ^java.lang.String namespace-uri]
+  (^java.util.Iterator [^javax.xml.namespace.NamespaceContext this ^java.lang.String namespace-uri]
     (-> this (.getPrefixes namespace-uri))))
 

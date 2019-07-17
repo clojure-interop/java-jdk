@@ -91,9 +91,9 @@
 
   returns: a PathIterator object that provides access to the
             Shape object's geometry. - `java.awt.geom.PathIterator`"
-  ([^java.awt.Polygon this ^java.awt.geom.AffineTransform at ^Double flatness]
+  (^java.awt.geom.PathIterator [^java.awt.Polygon this ^java.awt.geom.AffineTransform at ^Double flatness]
     (-> this (.getPathIterator at flatness)))
-  ([^java.awt.Polygon this ^java.awt.geom.AffineTransform at]
+  (^java.awt.geom.PathIterator [^java.awt.Polygon this ^java.awt.geom.AffineTransform at]
     (-> this (.getPathIterator at))))
 
 (defn translate
@@ -143,11 +143,11 @@
             intersects method returns true
             and the containment calculations would be too expensive to
             perform. - `boolean`"
-  ([^java.awt.Polygon this ^Double x ^Double y ^Double w ^Double h]
+  (^Boolean [^java.awt.Polygon this ^Double x ^Double y ^Double w ^Double h]
     (-> this (.contains x y w h)))
-  ([^java.awt.Polygon this ^Integer x ^Integer y]
+  (^Boolean [^java.awt.Polygon this ^Integer x ^Integer y]
     (-> this (.contains x y)))
-  ([^java.awt.Polygon this ^java.awt.Point p]
+  (^Boolean [^java.awt.Polygon this ^java.awt.Point p]
     (-> this (.contains p))))
 
 (defn reset
@@ -232,7 +232,7 @@
 
   returns: an instance of Rectangle2D that is a
                    high-precision bounding box of the Shape. - `java.awt.geom.Rectangle2D`"
-  ([^java.awt.Polygon this]
+  (^java.awt.geom.Rectangle2D [^java.awt.Polygon this]
     (-> this (.getBounds2D))))
 
 (defn inside
@@ -256,7 +256,7 @@
 
   returns: a Rectangle that defines the bounds of this
    Polygon. - `java.awt.Rectangle`"
-  ([^java.awt.Polygon this]
+  (^java.awt.Rectangle [^java.awt.Polygon this]
     (-> this (.getBounds))))
 
 (defn get-bounding-box
@@ -301,8 +301,8 @@
             the interior of the rectangular area intersect, or are
             both highly likely to intersect and intersection calculations
             would be too expensive to perform; false otherwise. - `boolean`"
-  ([^java.awt.Polygon this ^Double x ^Double y ^Double w ^Double h]
+  (^Boolean [^java.awt.Polygon this ^Double x ^Double y ^Double w ^Double h]
     (-> this (.intersects x y w h)))
-  ([^java.awt.Polygon this ^java.awt.geom.Rectangle2D r]
+  (^Boolean [^java.awt.Polygon this ^java.awt.geom.Rectangle2D r]
     (-> this (.intersects r))))
 

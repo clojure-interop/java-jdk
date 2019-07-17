@@ -13,7 +13,7 @@
    that represent the same remote object.
 
   returns: the hash code value. - `int`"
-  ([^javax.rmi.CORBA.Stub this]
+  (^Integer [^javax.rmi.CORBA.Stub this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -24,7 +24,7 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([^javax.rmi.CORBA.Stub this ^java.lang.Object obj]
+  (^Boolean [^javax.rmi.CORBA.Stub this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn to-string
@@ -32,7 +32,7 @@
    for all stubs that represent the same remote object.
 
   returns: a string representation of this stub. - `java.lang.String`"
-  ([^javax.rmi.CORBA.Stub this]
+  (^java.lang.String [^javax.rmi.CORBA.Stub this]
     (-> this (.toString))))
 
 (defn connect

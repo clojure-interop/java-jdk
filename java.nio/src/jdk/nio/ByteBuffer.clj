@@ -208,7 +208,7 @@
   returns: The new byte buffer - `java.nio.ByteBuffer`
 
   throws: java.lang.IllegalArgumentException - If the capacity is a negative integer"
-  ([^Integer capacity]
+  (^java.nio.ByteBuffer [^Integer capacity]
     (ByteBuffer/allocateDirect capacity)))
 
 (defn *allocate
@@ -224,7 +224,7 @@
   returns: The new byte buffer - `java.nio.ByteBuffer`
 
   throws: java.lang.IllegalArgumentException - If the capacity is a negative integer"
-  ([^Integer capacity]
+  (^java.nio.ByteBuffer [^Integer capacity]
     (ByteBuffer/allocate capacity)))
 
 (defn *wrap
@@ -245,9 +245,9 @@
   returns: The new byte buffer - `java.nio.ByteBuffer`
 
   throws: java.lang.IndexOutOfBoundsException - If the preconditions on the offset and length parameters do not hold"
-  ([array ^Integer offset ^Integer length]
+  (^java.nio.ByteBuffer [array ^Integer offset ^Integer length]
     (ByteBuffer/wrap array offset length))
-  ([array]
+  (^java.nio.ByteBuffer [array]
     (ByteBuffer/wrap array)))
 
 (defn put-int
@@ -263,9 +263,9 @@
   returns: This buffer - `java.nio.ByteBuffer`
 
   throws: java.lang.IndexOutOfBoundsException - If index is negative or not smaller than the buffer's limit, minus three"
-  ([^java.nio.ByteBuffer this ^Integer index ^Integer value]
+  (^java.nio.ByteBuffer [^java.nio.ByteBuffer this ^Integer index ^Integer value]
     (-> this (.putInt index value)))
-  ([^java.nio.ByteBuffer this ^Integer value]
+  (^java.nio.ByteBuffer [^java.nio.ByteBuffer this ^Integer value]
     (-> this (.putInt value))))
 
 (defn array-offset
@@ -283,7 +283,7 @@
             of the first element of the buffer - `int`
 
   throws: java.nio.ReadOnlyBufferException - If this buffer is backed by an array but is read-only"
-  ([^java.nio.ByteBuffer this]
+  (^Integer [^java.nio.ByteBuffer this]
     (-> this (.arrayOffset))))
 
 (defn compact
@@ -322,7 +322,7 @@
   returns: This buffer - `java.nio.ByteBuffer`
 
   throws: java.nio.ReadOnlyBufferException - If this buffer is read-only"
-  ([^java.nio.ByteBuffer this]
+  (^java.nio.ByteBuffer [^java.nio.ByteBuffer this]
     (-> this (.compact))))
 
 (defn put-short
@@ -338,9 +338,9 @@
   returns: This buffer - `java.nio.ByteBuffer`
 
   throws: java.lang.IndexOutOfBoundsException - If index is negative or not smaller than the buffer's limit, minus one"
-  ([^java.nio.ByteBuffer this ^Integer index ^Short value]
+  (^java.nio.ByteBuffer [^java.nio.ByteBuffer this ^Integer index ^Short value]
     (-> this (.putShort index value)))
-  ([^java.nio.ByteBuffer this ^Short value]
+  (^java.nio.ByteBuffer [^java.nio.ByteBuffer this ^Short value]
     (-> this (.putShort value))))
 
 (defn put-char
@@ -356,9 +356,9 @@
   returns: This buffer - `java.nio.ByteBuffer`
 
   throws: java.lang.IndexOutOfBoundsException - If index is negative or not smaller than the buffer's limit, minus one"
-  ([^java.nio.ByteBuffer this ^Integer index ^Character value]
+  (^java.nio.ByteBuffer [^java.nio.ByteBuffer this ^Integer index ^Character value]
     (-> this (.putChar index value)))
-  ([^java.nio.ByteBuffer this ^Character value]
+  (^java.nio.ByteBuffer [^java.nio.ByteBuffer this ^Character value]
     (-> this (.putChar value))))
 
 (defn put
@@ -395,11 +395,11 @@
   returns: This buffer - `java.nio.ByteBuffer`
 
   throws: java.nio.BufferOverflowException - If there is insufficient space in this buffer"
-  ([^java.nio.ByteBuffer this src ^Integer offset ^Integer length]
+  (^java.nio.ByteBuffer [^java.nio.ByteBuffer this src ^Integer offset ^Integer length]
     (-> this (.put src offset length)))
-  ([^java.nio.ByteBuffer this ^Integer index ^Byte b]
+  (^java.nio.ByteBuffer [^java.nio.ByteBuffer this ^Integer index ^Byte b]
     (-> this (.put index b)))
-  ([^java.nio.ByteBuffer this ^Byte b]
+  (^java.nio.ByteBuffer [^java.nio.ByteBuffer this ^Byte b]
     (-> this (.put b))))
 
 (defn get-short
@@ -413,9 +413,9 @@
   returns: The short value at the given index - `short`
 
   throws: java.lang.IndexOutOfBoundsException - If index is negative or not smaller than the buffer's limit, minus one"
-  ([^java.nio.ByteBuffer this ^Integer index]
+  (^Short [^java.nio.ByteBuffer this ^Integer index]
     (-> this (.getShort index)))
-  ([^java.nio.ByteBuffer this]
+  (^Short [^java.nio.ByteBuffer this]
     (-> this (.getShort))))
 
 (defn as-long-buffer
@@ -433,14 +433,14 @@
    only if, this buffer is read-only.
 
   returns: A new long buffer - `java.nio.LongBuffer`"
-  ([^java.nio.ByteBuffer this]
+  (^java.nio.LongBuffer [^java.nio.ByteBuffer this]
     (-> this (.asLongBuffer))))
 
 (defn to-string
   "Returns a string summarizing the state of this buffer.
 
   returns: A summary string - `java.lang.String`"
-  ([^java.nio.ByteBuffer this]
+  (^java.lang.String [^java.nio.ByteBuffer this]
     (-> this (.toString))))
 
 (defn put-float
@@ -456,9 +456,9 @@
   returns: This buffer - `java.nio.ByteBuffer`
 
   throws: java.lang.IndexOutOfBoundsException - If index is negative or not smaller than the buffer's limit, minus three"
-  ([^java.nio.ByteBuffer this ^Integer index ^Float value]
+  (^java.nio.ByteBuffer [^java.nio.ByteBuffer this ^Integer index ^Float value]
     (-> this (.putFloat index value)))
-  ([^java.nio.ByteBuffer this ^Float value]
+  (^java.nio.ByteBuffer [^java.nio.ByteBuffer this ^Float value]
     (-> this (.putFloat value))))
 
 (defn as-short-buffer
@@ -476,7 +476,7 @@
    only if, this buffer is read-only.
 
   returns: A new short buffer - `java.nio.ShortBuffer`"
-  ([^java.nio.ByteBuffer this]
+  (^java.nio.ShortBuffer [^java.nio.ByteBuffer this]
     (-> this (.asShortBuffer))))
 
 (defn as-double-buffer
@@ -494,7 +494,7 @@
    only if, this buffer is read-only.
 
   returns: A new double buffer - `java.nio.DoubleBuffer`"
-  ([^java.nio.ByteBuffer this]
+  (^java.nio.DoubleBuffer [^java.nio.ByteBuffer this]
     (-> this (.asDoubleBuffer))))
 
 (defn duplicate
@@ -511,7 +511,7 @@
    only if, this buffer is read-only.
 
   returns: The new byte buffer - `java.nio.ByteBuffer`"
-  ([^java.nio.ByteBuffer this]
+  (^java.nio.ByteBuffer [^java.nio.ByteBuffer this]
     (-> this (.duplicate))))
 
 (defn get-long
@@ -525,9 +525,9 @@
   returns: The long value at the given index - `long`
 
   throws: java.lang.IndexOutOfBoundsException - If index is negative or not smaller than the buffer's limit, minus seven"
-  ([^java.nio.ByteBuffer this ^Integer index]
+  (^Long [^java.nio.ByteBuffer this ^Integer index]
     (-> this (.getLong index)))
-  ([^java.nio.ByteBuffer this]
+  (^Long [^java.nio.ByteBuffer this]
     (-> this (.getLong))))
 
 (defn has-array?
@@ -539,7 +539,7 @@
 
   returns: true if, and only if, this buffer
             is backed by an array and is not read-only - `boolean`"
-  ([^java.nio.ByteBuffer this]
+  (^Boolean [^java.nio.ByteBuffer this]
     (-> this (.hasArray))))
 
 (defn get-int
@@ -553,9 +553,9 @@
   returns: The int value at the given index - `int`
 
   throws: java.lang.IndexOutOfBoundsException - If index is negative or not smaller than the buffer's limit, minus three"
-  ([^java.nio.ByteBuffer this ^Integer index]
+  (^Integer [^java.nio.ByteBuffer this ^Integer index]
     (-> this (.getInt index)))
-  ([^java.nio.ByteBuffer this]
+  (^Integer [^java.nio.ByteBuffer this]
     (-> this (.getInt))))
 
 (defn put-double
@@ -571,9 +571,9 @@
   returns: This buffer - `java.nio.ByteBuffer`
 
   throws: java.lang.IndexOutOfBoundsException - If index is negative or not smaller than the buffer's limit, minus seven"
-  ([^java.nio.ByteBuffer this ^Integer index ^Double value]
+  (^java.nio.ByteBuffer [^java.nio.ByteBuffer this ^Integer index ^Double value]
     (-> this (.putDouble index value)))
-  ([^java.nio.ByteBuffer this ^Double value]
+  (^java.nio.ByteBuffer [^java.nio.ByteBuffer this ^Double value]
     (-> this (.putDouble value))))
 
 (defn get-char
@@ -587,16 +587,16 @@
   returns: The char value at the given index - `char`
 
   throws: java.lang.IndexOutOfBoundsException - If index is negative or not smaller than the buffer's limit, minus one"
-  ([^java.nio.ByteBuffer this ^Integer index]
+  (^Character [^java.nio.ByteBuffer this ^Integer index]
     (-> this (.getChar index)))
-  ([^java.nio.ByteBuffer this]
+  (^Character [^java.nio.ByteBuffer this]
     (-> this (.getChar))))
 
 (defn direct?
   "Tells whether or not this byte buffer is direct.
 
   returns: true if, and only if, this buffer is direct - `boolean`"
-  ([^java.nio.ByteBuffer this]
+  (^Boolean [^java.nio.ByteBuffer this]
     (-> this (.isDirect))))
 
 (defn order
@@ -605,9 +605,9 @@
   bo - The new byte order, either BIG_ENDIAN or LITTLE_ENDIAN - `java.nio.ByteOrder`
 
   returns: This buffer - `java.nio.ByteBuffer`"
-  ([^java.nio.ByteBuffer this ^java.nio.ByteOrder bo]
+  (^java.nio.ByteBuffer [^java.nio.ByteBuffer this ^java.nio.ByteOrder bo]
     (-> this (.order bo)))
-  ([^java.nio.ByteBuffer this]
+  (^java.nio.ByteOrder [^java.nio.ByteBuffer this]
     (-> this (.order))))
 
 (defn as-char-buffer
@@ -625,7 +625,7 @@
    only if, this buffer is read-only.
 
   returns: A new char buffer - `java.nio.CharBuffer`"
-  ([^java.nio.ByteBuffer this]
+  (^java.nio.CharBuffer [^java.nio.ByteBuffer this]
     (-> this (.asCharBuffer))))
 
 (defn slice
@@ -644,7 +644,7 @@
    is read-only.
 
   returns: The new byte buffer - `java.nio.ByteBuffer`"
-  ([^java.nio.ByteBuffer this]
+  (^java.nio.ByteBuffer [^java.nio.ByteBuffer this]
     (-> this (.slice))))
 
 (defn hash-code
@@ -659,7 +659,7 @@
    is known that their contents will not change.
 
   returns: The current hash code of this buffer - `int`"
-  ([^java.nio.ByteBuffer this]
+  (^Integer [^java.nio.ByteBuffer this]
     (-> this (.hashCode))))
 
 (defn compare-to
@@ -686,7 +686,7 @@
 
   returns: A negative integer, zero, or a positive integer as this buffer
             is less than, equal to, or greater than the given buffer - `int`"
-  ([^java.nio.ByteBuffer this ^java.nio.ByteBuffer that]
+  (^Integer [^java.nio.ByteBuffer this ^java.nio.ByteBuffer that]
     (-> this (.compareTo that))))
 
 (defn get-float
@@ -700,9 +700,9 @@
   returns: The float value at the given index - `float`
 
   throws: java.lang.IndexOutOfBoundsException - If index is negative or not smaller than the buffer's limit, minus three"
-  ([^java.nio.ByteBuffer this ^Integer index]
+  (^Float [^java.nio.ByteBuffer this ^Integer index]
     (-> this (.getFloat index)))
-  ([^java.nio.ByteBuffer this]
+  (^Float [^java.nio.ByteBuffer this]
     (-> this (.getFloat))))
 
 (defn get-double
@@ -716,9 +716,9 @@
   returns: The double value at the given index - `double`
 
   throws: java.lang.IndexOutOfBoundsException - If index is negative or not smaller than the buffer's limit, minus seven"
-  ([^java.nio.ByteBuffer this ^Integer index]
+  (^Double [^java.nio.ByteBuffer this ^Integer index]
     (-> this (.getDouble index)))
-  ([^java.nio.ByteBuffer this]
+  (^Double [^java.nio.ByteBuffer this]
     (-> this (.getDouble))))
 
 (defn put-long
@@ -734,9 +734,9 @@
   returns: This buffer - `java.nio.ByteBuffer`
 
   throws: java.lang.IndexOutOfBoundsException - If index is negative or not smaller than the buffer's limit, minus seven"
-  ([^java.nio.ByteBuffer this ^Integer index ^Long value]
+  (^java.nio.ByteBuffer [^java.nio.ByteBuffer this ^Integer index ^Long value]
     (-> this (.putLong index value)))
-  ([^java.nio.ByteBuffer this ^Long value]
+  (^java.nio.ByteBuffer [^java.nio.ByteBuffer this ^Long value]
     (-> this (.putLong value))))
 
 (defn get
@@ -773,11 +773,11 @@
   returns: This buffer - `java.nio.ByteBuffer`
 
   throws: java.nio.BufferUnderflowException - If there are fewer than length bytes remaining in this buffer"
-  ([^java.nio.ByteBuffer this dst ^Integer offset ^Integer length]
+  (^java.nio.ByteBuffer [^java.nio.ByteBuffer this dst ^Integer offset ^Integer length]
     (-> this (.get dst offset length)))
-  ([^java.nio.ByteBuffer this ^Integer index]
+  (^Byte [^java.nio.ByteBuffer this ^Integer index]
     (-> this (.get index)))
-  ([^java.nio.ByteBuffer this]
+  (^Byte [^java.nio.ByteBuffer this]
     (-> this (.get))))
 
 (defn equals
@@ -811,7 +811,7 @@
 
   returns: true if, and only if, this buffer is equal to the
              given object - `boolean`"
-  ([^java.nio.ByteBuffer this ^java.lang.Object ob]
+  (^Boolean [^java.nio.ByteBuffer this ^java.lang.Object ob]
     (-> this (.equals ob))))
 
 (defn array
@@ -846,7 +846,7 @@
    only if, this buffer is read-only.
 
   returns: A new int buffer - `java.nio.IntBuffer`"
-  ([^java.nio.ByteBuffer this]
+  (^java.nio.IntBuffer [^java.nio.ByteBuffer this]
     (-> this (.asIntBuffer))))
 
 (defn as-read-only-buffer
@@ -866,7 +866,7 @@
    exactly the same way as the duplicate method.
 
   returns: The new, read-only byte buffer - `java.nio.ByteBuffer`"
-  ([^java.nio.ByteBuffer this]
+  (^java.nio.ByteBuffer [^java.nio.ByteBuffer this]
     (-> this (.asReadOnlyBuffer))))
 
 (defn as-float-buffer
@@ -884,6 +884,6 @@
    only if, this buffer is read-only.
 
   returns: A new float buffer - `java.nio.FloatBuffer`"
-  ([^java.nio.ByteBuffer this]
+  (^java.nio.FloatBuffer [^java.nio.ByteBuffer this]
     (-> this (.asFloatBuffer))))
 

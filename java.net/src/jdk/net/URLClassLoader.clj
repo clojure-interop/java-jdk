@@ -31,11 +31,11 @@
   factory - the URLStreamHandlerFactory to use when creating URLs - `java.net.URLStreamHandlerFactory`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkCreateClassLoader method doesn't allow creation of a class loader."
-  ([^java.net.URL[] urls ^java.lang.ClassLoader parent ^java.net.URLStreamHandlerFactory factory]
+  ([urls ^java.lang.ClassLoader parent ^java.net.URLStreamHandlerFactory factory]
     (new URLClassLoader urls parent factory))
-  ([^java.net.URL[] urls ^java.lang.ClassLoader parent]
+  ([urls ^java.lang.ClassLoader parent]
     (new URLClassLoader urls parent))
-  ([^java.net.URL[] urls]
+  ([urls]
     (new URLClassLoader urls)))
 
 (defn *new-instance
@@ -52,9 +52,9 @@
   returns: the resulting class loader - `java.net.URLClassLoader`
 
   throws: java.lang.NullPointerException - if urls is null."
-  ([^java.net.URL[] urls ^java.lang.ClassLoader parent]
+  (^java.net.URLClassLoader [urls ^java.lang.ClassLoader parent]
     (URLClassLoader/newInstance urls parent))
-  ([^java.net.URL[] urls]
+  (^java.net.URLClassLoader [urls]
     (URLClassLoader/newInstance urls)))
 
 (defn get-resource-as-stream
@@ -68,7 +68,7 @@
 
   returns: An input stream for reading the resource, or null
             if the resource could not be found - `java.io.InputStream`"
-  ([^java.net.URLClassLoader this ^java.lang.String name]
+  (^java.io.InputStream [^java.net.URLClassLoader this ^java.lang.String name]
     (-> this (.getResourceAsStream name))))
 
 (defn close
@@ -108,7 +108,7 @@
 
   returns: a URL for the resource, or null
    if the resource could not be found, or if the loader is closed. - `java.net.URL`"
-  ([^java.net.URLClassLoader this ^java.lang.String name]
+  (^java.net.URL [^java.net.URLClassLoader this ^java.lang.String name]
     (-> this (.findResource name))))
 
 (defn find-resources
@@ -121,6 +121,6 @@
            If the loader is closed, the Enumeration will be empty. - `java.util.Enumeration<java.net.URL>`
 
   throws: java.io.IOException - if an I/O exception occurs"
-  ([^java.net.URLClassLoader this ^java.lang.String name]
+  (^java.util.Enumeration [^java.net.URLClassLoader this ^java.lang.String name]
     (-> this (.findResources name))))
 

@@ -39,7 +39,7 @@
 
   returns: True if object is equivalent to this number of
             documents attribute, false otherwise. - `boolean`"
-  ([^javax.print.attribute.standard.NumberOfDocuments this ^java.lang.Object object]
+  (^Boolean [^javax.print.attribute.standard.NumberOfDocuments this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -62,6 +62,6 @@
    category name is `number-of-documents`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.NumberOfDocuments this]
+  (^java.lang.String [^javax.print.attribute.standard.NumberOfDocuments this]
     (-> this (.getName))))
 

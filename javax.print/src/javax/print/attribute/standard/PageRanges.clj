@@ -98,7 +98,7 @@
 
   returns: True if object is equivalent to this page ranges
             attribute, false otherwise. - `boolean`"
-  ([^javax.print.attribute.standard.PageRanges this ^java.lang.Object object]
+  (^Boolean [^javax.print.attribute.standard.PageRanges this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -119,6 +119,6 @@
    For class PageRanges, the category name is `page-ranges`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.PageRanges this]
+  (^java.lang.String [^javax.print.attribute.standard.PageRanges this]
     (-> this (.getName))))
 

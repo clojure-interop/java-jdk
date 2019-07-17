@@ -76,13 +76,13 @@
   cycle-method - either NO_CYCLE, REFLECT, or REPEAT - `java.awt.MultipleGradientPaint.CycleMethod`
 
   throws: java.lang.NullPointerException - if fractions array is null, or colors array is null, or cycleMethod is null"
-  ([^Float start-x ^Float start-y ^Float end-x ^Float end-y fractions ^java.awt.Color[] colors ^java.awt.MultipleGradientPaint.CycleMethod cycle-method]
+  ([^Float start-x ^Float start-y ^Float end-x ^Float end-y fractions colors ^java.awt.MultipleGradientPaint.CycleMethod cycle-method]
     (new LinearGradientPaint start-x start-y end-x end-y fractions colors cycle-method))
-  ([^Float start-x ^Float start-y ^Float end-x ^Float end-y fractions ^java.awt.Color[] colors]
+  ([^Float start-x ^Float start-y ^Float end-x ^Float end-y fractions colors]
     (new LinearGradientPaint start-x start-y end-x end-y fractions colors))
-  ([^java.awt.geom.Point2D start ^java.awt.geom.Point2D end fractions ^java.awt.Color[] colors ^java.awt.MultipleGradientPaint.CycleMethod cycle-method]
+  ([^java.awt.geom.Point2D start ^java.awt.geom.Point2D end fractions colors ^java.awt.MultipleGradientPaint.CycleMethod cycle-method]
     (new LinearGradientPaint start end fractions colors cycle-method))
-  ([^java.awt.geom.Point2D start ^java.awt.geom.Point2D end fractions ^java.awt.Color[] colors]
+  ([^java.awt.geom.Point2D start ^java.awt.geom.Point2D end fractions colors]
     (new LinearGradientPaint start end fractions colors)))
 
 (defn create-context
@@ -100,7 +100,7 @@
 
   returns: the PaintContext for
            generating color patterns. - `java.awt.PaintContext`"
-  ([^java.awt.LinearGradientPaint this ^java.awt.image.ColorModel cm ^java.awt.Rectangle device-bounds ^java.awt.geom.Rectangle2D user-bounds ^java.awt.geom.AffineTransform transform ^java.awt.RenderingHints hints]
+  (^java.awt.PaintContext [^java.awt.LinearGradientPaint this ^java.awt.image.ColorModel cm ^java.awt.Rectangle device-bounds ^java.awt.geom.Rectangle2D user-bounds ^java.awt.geom.AffineTransform transform ^java.awt.RenderingHints hints]
     (-> this (.createContext cm device-bounds user-bounds transform hints))))
 
 (defn get-start-point
@@ -108,7 +108,7 @@
 
   returns: a Point2D object that is a copy of the point
    that anchors the first color of this LinearGradientPaint - `java.awt.geom.Point2D`"
-  ([^java.awt.LinearGradientPaint this]
+  (^java.awt.geom.Point2D [^java.awt.LinearGradientPaint this]
     (-> this (.getStartPoint))))
 
 (defn get-end-point
@@ -116,6 +116,6 @@
 
   returns: a Point2D object that is a copy of the point
    that anchors the last color of this LinearGradientPaint - `java.awt.geom.Point2D`"
-  ([^java.awt.LinearGradientPaint this]
+  (^java.awt.geom.Point2D [^java.awt.LinearGradientPaint this]
     (-> this (.getEndPoint))))
 

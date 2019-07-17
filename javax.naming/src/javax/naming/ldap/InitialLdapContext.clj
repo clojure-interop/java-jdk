@@ -67,7 +67,7 @@
   conn-ctls - connection request controls for the initial context. If null, no connection request controls are used. - `javax.naming.ldap.Control[]`
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  ([^java.util.Hashtable environment ^javax.naming.ldap.Control[] conn-ctls]
+  ([^java.util.Hashtable environment conn-ctls]
     (new InitialLdapContext environment conn-ctls))
   ([]
     (new InitialLdapContext )))
@@ -81,7 +81,7 @@
    the operation did not generate any response. - `javax.naming.ldap.ExtendedResponse`
 
   throws: javax.naming.NamingException - If an error occurred while performing the extended operation."
-  ([^javax.naming.ldap.InitialLdapContext this ^javax.naming.ldap.ExtendedRequest request]
+  (^javax.naming.ldap.ExtendedResponse [^javax.naming.ldap.InitialLdapContext this ^javax.naming.ldap.ExtendedRequest request]
     (-> this (.extendedOperation request))))
 
 (defn new-instance
@@ -92,7 +92,7 @@
   returns: A non-null LdapContext instance. - `javax.naming.ldap.LdapContext`
 
   throws: javax.naming.NamingException - If an error occurred while creating the new instance."
-  ([^javax.naming.ldap.InitialLdapContext this ^javax.naming.ldap.Control[] req-ctls]
+  (^javax.naming.ldap.LdapContext [^javax.naming.ldap.InitialLdapContext this req-ctls]
     (-> this (.newInstance req-ctls))))
 
 (defn reconnect
@@ -101,7 +101,7 @@
   conn-ctls - The possibly null controls to use. If null, no controls are used. - `javax.naming.ldap.Control[]`
 
   throws: javax.naming.NamingException - If an error occurred while reconnecting."
-  ([^javax.naming.ldap.InitialLdapContext this ^javax.naming.ldap.Control[] conn-ctls]
+  ([^javax.naming.ldap.InitialLdapContext this conn-ctls]
     (-> this (.reconnect conn-ctls))))
 
 (defn get-connect-controls
@@ -120,7 +120,7 @@
   request-controls - The possibly null controls to use. If null, no controls are used. - `javax.naming.ldap.Control[]`
 
   throws: javax.naming.NamingException - If an error occurred while setting the request controls."
-  ([^javax.naming.ldap.InitialLdapContext this ^javax.naming.ldap.Control[] request-controls]
+  ([^javax.naming.ldap.InitialLdapContext this request-controls]
     (-> this (.setRequestControls request-controls))))
 
 (defn get-request-controls

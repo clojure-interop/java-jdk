@@ -246,6 +246,6 @@
             authentication by this LoginContext.
             If a Subject was not specified, and authentication fails or
             has not been attempted, this method returns null. - `javax.security.auth.Subject`"
-  ([^javax.security.auth.login.LoginContext this]
+  (^javax.security.auth.Subject [^javax.security.auth.login.LoginContext this]
     (-> this (.getSubject))))
 

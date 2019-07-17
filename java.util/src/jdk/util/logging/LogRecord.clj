@@ -64,14 +64,14 @@
    May be null if no information could be obtained.
 
   returns: the source class name - `java.lang.String`"
-  ([^java.util.logging.LogRecord this]
+  (^java.lang.String [^java.util.logging.LogRecord this]
     (-> this (.getSourceClassName))))
 
 (defn set-parameters
   "Set the parameters to the log message.
 
   parameters - the log message parameters. (may be null) - `java.lang.Object[]`"
-  ([^java.util.logging.LogRecord this ^java.lang.Object[] parameters]
+  ([^java.util.logging.LogRecord this parameters]
     (-> this (.setParameters parameters))))
 
 (defn set-thrown
@@ -96,7 +96,7 @@
    The result may be null if the message is not localizable.
 
   returns: the localization resource bundle name - `java.lang.String`"
-  ([^java.util.logging.LogRecord this]
+  (^java.lang.String [^java.util.logging.LogRecord this]
     (-> this (.getResourceBundleName))))
 
 (defn set-sequence-number
@@ -126,7 +126,7 @@
    ResourceBundle is available.
 
   returns: the localization resource bundle - `java.util.ResourceBundle`"
-  ([^java.util.logging.LogRecord this]
+  (^java.util.ResourceBundle [^java.util.logging.LogRecord this]
     (-> this (.getResourceBundle))))
 
 (defn set-source-method-name
@@ -140,7 +140,7 @@
   "Get event time in milliseconds since 1970.
 
   returns: event time in millis since 1970 - `long`"
-  ([^java.util.logging.LogRecord this]
+  (^Long [^java.util.logging.LogRecord this]
     (-> this (.getMillis))))
 
 (defn set-resource-bundle
@@ -164,7 +164,7 @@
    exception object. Otherwise null.
 
   returns: a throwable - `java.lang.Throwable`"
-  ([^java.util.logging.LogRecord this]
+  (^java.lang.Throwable [^java.util.logging.LogRecord this]
     (-> this (.getThrown))))
 
 (defn get-source-method-name
@@ -180,14 +180,14 @@
    May be null if no information could be obtained.
 
   returns: the source method name - `java.lang.String`"
-  ([^java.util.logging.LogRecord this]
+  (^java.lang.String [^java.util.logging.LogRecord this]
     (-> this (.getSourceMethodName))))
 
 (defn get-level
   "Get the logging message level, for example Level.SEVERE.
 
   returns: the logging message level - `java.util.logging.Level`"
-  ([^java.util.logging.LogRecord this]
+  (^java.util.logging.Level [^java.util.logging.LogRecord this]
     (-> this (.getLevel))))
 
 (defn get-thread-id
@@ -197,14 +197,14 @@
    may not map to any operating system ID.
 
   returns: thread ID - `int`"
-  ([^java.util.logging.LogRecord this]
+  (^Integer [^java.util.logging.LogRecord this]
     (-> this (.getThreadID))))
 
 (defn get-logger-name
   "Get the source Logger's name.
 
   returns: source logger name (may be null) - `java.lang.String`"
-  ([^java.util.logging.LogRecord this]
+  (^java.lang.String [^java.util.logging.LogRecord this]
     (-> this (.getLoggerName))))
 
 (defn set-level
@@ -241,7 +241,7 @@
    with the localized value.
 
   returns: the raw message string - `java.lang.String`"
-  ([^java.util.logging.LogRecord this]
+  (^java.lang.String [^java.util.logging.LogRecord this]
     (-> this (.getMessage))))
 
 (defn set-millis
@@ -266,6 +266,6 @@
    each new LogRecord in increasing order.
 
   returns: the sequence number - `long`"
-  ([^java.util.logging.LogRecord this]
+  (^Long [^java.util.logging.LogRecord this]
     (-> this (.getSequenceNumber))))
 

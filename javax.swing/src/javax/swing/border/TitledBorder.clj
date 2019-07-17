@@ -164,7 +164,7 @@
   c - the component where this border will be drawn - `java.awt.Component`
 
   returns: the Dimension object - `java.awt.Dimension`"
-  ([^javax.swing.border.TitledBorder this ^java.awt.Component c]
+  (^java.awt.Dimension [^javax.swing.border.TitledBorder this ^java.awt.Component c]
     (-> this (.getMinimumSize c))))
 
 (defn set-title-position
@@ -198,7 +198,7 @@
   "Returns the border of the titled border.
 
   returns: the border of the titled border - `javax.swing.border.Border`"
-  ([^javax.swing.border.TitledBorder this]
+  (^javax.swing.border.Border [^javax.swing.border.TitledBorder this]
     (-> this (.getBorder))))
 
 (defn set-title-color
@@ -218,7 +218,7 @@
            resized - `java.awt.Component.BaselineResizeBehavior`
 
   throws: java.lang.NullPointerException"
-  ([^javax.swing.border.TitledBorder this ^java.awt.Component c]
+  (^java.awt.Component.BaselineResizeBehavior [^javax.swing.border.TitledBorder this ^java.awt.Component c]
     (-> this (.getBaselineResizeBehavior c))))
 
 (defn get-border-insets
@@ -228,28 +228,28 @@
   insets - the object to be reinitialized - `java.awt.Insets`
 
   returns: the insets object - `java.awt.Insets`"
-  ([^javax.swing.border.TitledBorder this ^java.awt.Component c ^java.awt.Insets insets]
+  (^java.awt.Insets [^javax.swing.border.TitledBorder this ^java.awt.Component c ^java.awt.Insets insets]
     (-> this (.getBorderInsets c insets))))
 
 (defn get-title-justification
   "Returns the title-justification of the titled border.
 
   returns: the title-justification of the titled border - `int`"
-  ([^javax.swing.border.TitledBorder this]
+  (^Integer [^javax.swing.border.TitledBorder this]
     (-> this (.getTitleJustification))))
 
 (defn get-title-color
   "Returns the title-color of the titled border.
 
   returns: the title-color of the titled border - `java.awt.Color`"
-  ([^javax.swing.border.TitledBorder this]
+  (^java.awt.Color [^javax.swing.border.TitledBorder this]
     (-> this (.getTitleColor))))
 
 (defn get-title-font
   "Returns the title-font of the titled border.
 
   returns: the title-font of the titled border - `java.awt.Font`"
-  ([^javax.swing.border.TitledBorder this]
+  (^java.awt.Font [^javax.swing.border.TitledBorder this]
     (-> this (.getTitleFont))))
 
 (defn set-title-font
@@ -263,14 +263,14 @@
   "Returns the title-position of the titled border.
 
   returns: the title-position of the titled border - `int`"
-  ([^javax.swing.border.TitledBorder this]
+  (^Integer [^javax.swing.border.TitledBorder this]
     (-> this (.getTitlePosition))))
 
 (defn border-opaque?
   "Returns whether or not the border is opaque.
 
   returns: false - `boolean`"
-  ([^javax.swing.border.TitledBorder this]
+  (^Boolean [^javax.swing.border.TitledBorder this]
     (-> this (.isBorderOpaque))))
 
 (defn set-border
@@ -291,14 +291,14 @@
            baseline - `int`
 
   throws: java.lang.NullPointerException"
-  ([^javax.swing.border.TitledBorder this ^java.awt.Component c ^Integer width ^Integer height]
+  (^Integer [^javax.swing.border.TitledBorder this ^java.awt.Component c ^Integer width ^Integer height]
     (-> this (.getBaseline c width height))))
 
 (defn get-title
   "Returns the title of the titled border.
 
   returns: the title of the titled border - `java.lang.String`"
-  ([^javax.swing.border.TitledBorder this]
+  (^java.lang.String [^javax.swing.border.TitledBorder this]
     (-> this (.getTitle))))
 
 (defn set-title

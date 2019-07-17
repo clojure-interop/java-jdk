@@ -22,14 +22,14 @@
   "Returns the date and time when the timestamp was generated.
 
   returns: The timestamp's date and time. - `java.util.Date`"
-  ([^java.security.Timestamp this]
+  (^java.util.Date [^java.security.Timestamp this]
     (-> this (.getTimestamp))))
 
 (defn get-signer-cert-path
   "Returns the certificate path for the Timestamping Authority.
 
   returns: The TSA's certificate path. - `java.security.cert.CertPath`"
-  ([^java.security.Timestamp this]
+  (^java.security.cert.CertPath [^java.security.Timestamp this]
     (-> this (.getSignerCertPath))))
 
 (defn hash-code
@@ -38,7 +38,7 @@
    and the TSA's certificate path.
 
   returns: a hash code value for this timestamp. - `int`"
-  ([^java.security.Timestamp this]
+  (^Integer [^java.security.Timestamp this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -49,7 +49,7 @@
   obj - the object to test for equality with this timestamp. - `java.lang.Object`
 
   returns: true if the timestamp are considered equal, false otherwise. - `boolean`"
-  ([^java.security.Timestamp this ^java.lang.Object obj]
+  (^Boolean [^java.security.Timestamp this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn to-string
@@ -57,6 +57,6 @@
 
   returns: A string comprising the date and time of the timestamp and
            its signer's certificate. - `java.lang.String`"
-  ([^java.security.Timestamp this]
+  (^java.lang.String [^java.security.Timestamp this]
     (-> this (.toString))))
 

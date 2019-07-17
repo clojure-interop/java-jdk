@@ -19,6 +19,6 @@
            (if anything) this value represents. - `PrivilegedExceptionAction.T`
 
   throws: java.lang.Exception - an exceptional condition has occurred. Each class that implements PrivilegedExceptionAction should document the exceptions that its run method can throw."
-  ([^java.security.PrivilegedExceptionAction this]
+  (^PrivilegedExceptionAction.T [^java.security.PrivilegedExceptionAction this]
     (-> this (.run))))
 

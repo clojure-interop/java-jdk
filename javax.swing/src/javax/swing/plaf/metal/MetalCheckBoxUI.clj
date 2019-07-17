@@ -21,12 +21,12 @@
   "b - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent b]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent b]
     (MetalCheckBoxUI/createUI b)))
 
 (defn get-property-prefix
   "returns: `java.lang.String`"
-  ([^javax.swing.plaf.metal.MetalCheckBoxUI this]
+  (^java.lang.String [^javax.swing.plaf.metal.MetalCheckBoxUI this]
     (-> this (.getPropertyPrefix))))
 
 (defn install-defaults

@@ -15,7 +15,7 @@
 
   returns: true if the input argument matches the predicate,
    otherwise false - `boolean`"
-  ([^java.util.function.IntPredicate this ^Integer value]
+  (^Boolean [^java.util.function.IntPredicate this ^Integer value]
     (-> this (.test value))))
 
 (defn and

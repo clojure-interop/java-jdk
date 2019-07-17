@@ -42,7 +42,7 @@
    is called.
 
   returns: true if the Sequencer is recording, otherwise false - `boolean`"
-  ([^javax.sound.midi.Sequencer this]
+  (^Boolean [^javax.sound.midi.Sequencer this]
     (-> this (.isRecording))))
 
 (defn get-tick-position
@@ -52,7 +52,7 @@
    Sequence.)
 
   returns: current tick - `long`"
-  ([^javax.sound.midi.Sequencer this]
+  (^Long [^javax.sound.midi.Sequencer this]
     (-> this (.getTickPosition))))
 
 (defn get-track-solo?
@@ -65,7 +65,7 @@
   track - the track number. Tracks in the current sequence are numbered from 0 to the number of tracks in the sequence minus 1. - `int`
 
   returns: true if solo'd, false if not. - `boolean`"
-  ([^javax.sound.midi.Sequencer this ^Integer track]
+  (^Boolean [^javax.sound.midi.Sequencer this ^Integer track]
     (-> this (.getTrackSolo track))))
 
 (defn set-track-mute
@@ -85,7 +85,7 @@
    microseconds.
 
   returns: the current position in microseconds - `long`"
-  ([^javax.sound.midi.Sequencer this]
+  (^Long [^javax.sound.midi.Sequencer this]
     (-> this (.getMicrosecondPosition))))
 
 (defn get-loop-count
@@ -95,7 +95,7 @@
   returns: the number of loops after which
            playback plays to the end of the
            sequence - `int`"
-  ([^javax.sound.midi.Sequencer this]
+  (^Integer [^javax.sound.midi.Sequencer this]
     (-> this (.getLoopCount))))
 
 (defn set-master-sync-mode
@@ -155,14 +155,14 @@
    Sequencer is closed.
 
   returns: the current sequence, or null if no sequence is currently set. - `javax.sound.midi.Sequence`"
-  ([^javax.sound.midi.Sequencer this]
+  (^javax.sound.midi.Sequence [^javax.sound.midi.Sequencer this]
     (-> this (.getSequence))))
 
 (defn get-master-sync-mode
   "Obtains the current master synchronization mode for this sequencer.
 
   returns: the current master synchronization mode - `javax.sound.midi.Sequencer.SyncMode`"
-  ([^javax.sound.midi.Sequencer this]
+  (^javax.sound.midi.Sequencer.SyncMode [^javax.sound.midi.Sequencer this]
     (-> this (.getMasterSyncMode))))
 
 (defn set-tempo-in-mpq
@@ -227,7 +227,7 @@
   track - the track number. Tracks in the current sequence are numbered from 0 to the number of tracks in the sequence minus 1. - `int`
 
   returns: true if muted, false if not. - `boolean`"
-  ([^javax.sound.midi.Sequencer this ^Integer track]
+  (^Boolean [^javax.sound.midi.Sequencer this ^Integer track]
     (-> this (.getTrackMute track))))
 
 (defn stop-recording
@@ -243,7 +243,7 @@
    and the tempo factor.
 
   returns: the current tempo in beats per minute - `float`"
-  ([^javax.sound.midi.Sequencer this]
+  (^Float [^javax.sound.midi.Sequencer this]
     (-> this (.getTempoInBPM))))
 
 (defn get-microsecond-length
@@ -251,7 +251,7 @@
    or 0 if no sequence is set.
 
   returns: length of the sequence in microseconds. - `long`"
-  ([^javax.sound.midi.Sequencer this]
+  (^Long [^javax.sound.midi.Sequencer this]
     (-> this (.getMicrosecondLength))))
 
 (defn record-disable
@@ -284,7 +284,7 @@
   returns: the end position of the loop, in MIDI
            ticks (zero-based), or -1 to indicate
            the end of the sequence - `long`"
-  ([^javax.sound.midi.Sequencer this]
+  (^Long [^javax.sound.midi.Sequencer this]
     (-> this (.getLoopEndPoint))))
 
 (defn get-tick-length
@@ -292,7 +292,7 @@
    or 0 if no sequence is set.
 
   returns: length of the sequence in ticks - `long`"
-  ([^javax.sound.midi.Sequencer this]
+  (^Long [^javax.sound.midi.Sequencer this]
     (-> this (.getTickLength))))
 
 (defn start
@@ -321,7 +321,7 @@
    value and the tempo factor.
 
   returns: the current tempo in microseconds per quarter note - `float`"
-  ([^javax.sound.midi.Sequencer this]
+  (^Float [^javax.sound.midi.Sequencer this]
     (-> this (.getTempoInMPQ))))
 
 (defn set-sequence
@@ -397,7 +397,7 @@
    sequence completes or stop() is called.
 
   returns: true if the Sequencer is running, otherwise false - `boolean`"
-  ([^javax.sound.midi.Sequencer this]
+  (^Boolean [^javax.sound.midi.Sequencer this]
     (-> this (.isRunning))))
 
 (defn set-loop-count
@@ -440,7 +440,7 @@
   "Obtains the current slave synchronization mode for this sequencer.
 
   returns: the current slave synchronization mode - `javax.sound.midi.Sequencer.SyncMode`"
-  ([^javax.sound.midi.Sequencer this]
+  (^javax.sound.midi.Sequencer.SyncMode [^javax.sound.midi.Sequencer this]
     (-> this (.getSlaveSyncMode))))
 
 (defn set-tempo-factor
@@ -470,7 +470,7 @@
 
   returns: true if the listener was successfully added,
    otherwise false - `boolean`"
-  ([^javax.sound.midi.Sequencer this ^javax.sound.midi.MetaEventListener listener]
+  (^Boolean [^javax.sound.midi.Sequencer this ^javax.sound.midi.MetaEventListener listener]
     (-> this (.addMetaEventListener listener))))
 
 (defn remove-controller-event-listener
@@ -509,7 +509,7 @@
    1.0.
 
   returns: tempo factor. - `float`"
-  ([^javax.sound.midi.Sequencer this]
+  (^Float [^javax.sound.midi.Sequencer this]
     (-> this (.getTempoFactor))))
 
 (defn get-loop-start-point
@@ -518,6 +518,6 @@
 
   returns: the start position of the loop,
                  in MIDI ticks (zero-based) - `long`"
-  ([^javax.sound.midi.Sequencer this]
+  (^Long [^javax.sound.midi.Sequencer this]
     (-> this (.getLoopStartPoint))))
 

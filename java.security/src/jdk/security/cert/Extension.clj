@@ -34,14 +34,14 @@
   "Gets the extensions's object identifier.
 
   returns: the object identifier as a String - `java.lang.String`"
-  ([^java.security.cert.Extension this]
+  (^java.lang.String [^java.security.cert.Extension this]
     (-> this (.getId))))
 
 (defn critical?
   "Gets the extension's criticality setting.
 
   returns: true if this is a critical extension. - `boolean`"
-  ([^java.security.cert.Extension this]
+  (^Boolean [^java.security.cert.Extension this]
     (-> this (.isCritical))))
 
 (defn get-value

@@ -19,13 +19,13 @@
   "Gets parameter passed by constructor.
 
   returns: the name of the resource class - `java.lang.String`"
-  ([^java.util.MissingResourceException this]
+  (^java.lang.String [^java.util.MissingResourceException this]
     (-> this (.getClassName))))
 
 (defn get-key
   "Gets parameter passed by constructor.
 
   returns: the key for the missing resource - `java.lang.String`"
-  ([^java.util.MissingResourceException this]
+  (^java.lang.String [^java.util.MissingResourceException this]
     (-> this (.getKey))))
 

@@ -85,7 +85,7 @@
   "Returns the realm component of this Kerberos principal.
 
   returns: the realm component of this Kerberos principal. - `java.lang.String`"
-  ([^javax.security.auth.kerberos.KerberosPrincipal this]
+  (^java.lang.String [^javax.security.auth.kerberos.KerberosPrincipal this]
     (-> this (.getRealm))))
 
 (defn hash-code
@@ -96,7 +96,7 @@
     hashCode = getName().hashCode();
 
   returns: a hashCode() for the KerberosPrincipal - `int`"
-  ([^javax.security.auth.kerberos.KerberosPrincipal this]
+  (^Integer [^javax.security.auth.kerberos.KerberosPrincipal this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -111,7 +111,7 @@
 
   returns: true if the Object passed in represents the same principal
    as this one, false otherwise. - `boolean`"
-  ([^javax.security.auth.kerberos.KerberosPrincipal this ^java.lang.Object other]
+  (^Boolean [^javax.security.auth.kerberos.KerberosPrincipal this ^java.lang.Object other]
     (-> this (.equals other))))
 
 (defn get-name
@@ -120,7 +120,7 @@
    Section 2.1 of RFC 1964.
 
   returns: the principal name. - `java.lang.String`"
-  ([^javax.security.auth.kerberos.KerberosPrincipal this]
+  (^java.lang.String [^javax.security.auth.kerberos.KerberosPrincipal this]
     (-> this (.getName))))
 
 (defn get-name-type
@@ -129,13 +129,13 @@
     RFC4120.
 
   returns: the name type. - `int`"
-  ([^javax.security.auth.kerberos.KerberosPrincipal this]
+  (^Integer [^javax.security.auth.kerberos.KerberosPrincipal this]
     (-> this (.getNameType))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^javax.security.auth.kerberos.KerberosPrincipal this]
+  (^java.lang.String [^javax.security.auth.kerberos.KerberosPrincipal this]
     (-> this (.toString))))
 

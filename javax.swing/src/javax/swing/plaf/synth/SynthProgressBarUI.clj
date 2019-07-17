@@ -15,7 +15,7 @@
   x - component to create UI object for - `javax.swing.JComponent`
 
   returns: the UI object - `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent x]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent x]
     (SynthProgressBarUI/createUI x)))
 
 (defn get-context
@@ -24,7 +24,7 @@
   c - Component requesting SynthContext. - `javax.swing.JComponent`
 
   returns: SynthContext describing component. - `javax.swing.plaf.synth.SynthContext`"
-  ([^javax.swing.plaf.synth.SynthProgressBarUI this ^javax.swing.JComponent c]
+  (^javax.swing.plaf.synth.SynthContext [^javax.swing.plaf.synth.SynthProgressBarUI this ^javax.swing.JComponent c]
     (-> this (.getContext c))))
 
 (defn get-baseline
@@ -36,7 +36,7 @@
 
   returns: baseline or a value < 0 indicating there is no reasonable
                     baseline - `int`"
-  ([^javax.swing.plaf.synth.SynthProgressBarUI this ^javax.swing.JComponent c ^Integer width ^Integer height]
+  (^Integer [^javax.swing.plaf.synth.SynthProgressBarUI this ^javax.swing.JComponent c ^Integer width ^Integer height]
     (-> this (.getBaseline c width height))))
 
 (defn update
@@ -92,6 +92,6 @@
   c - the component whose preferred size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: `java.awt.Dimension`"
-  ([^javax.swing.plaf.synth.SynthProgressBarUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^javax.swing.plaf.synth.SynthProgressBarUI this ^javax.swing.JComponent c]
     (-> this (.getPreferredSize c))))
 

@@ -88,9 +88,9 @@
                the stream has been reached. - `int`
 
   throws: java.lang.NullPointerException - If b is null."
-  ([^java.io.PipedInputStream this b ^Integer off ^Integer len]
+  (^Integer [^java.io.PipedInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  ([^java.io.PipedInputStream this]
+  (^Integer [^java.io.PipedInputStream this]
     (-> this (.read))))
 
 (defn available
@@ -104,7 +104,7 @@
              broken. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.PipedInputStream this]
+  (^Integer [^java.io.PipedInputStream this]
     (-> this (.available))))
 
 (defn close

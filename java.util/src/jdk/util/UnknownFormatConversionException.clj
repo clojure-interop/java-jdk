@@ -19,7 +19,7 @@
   "Returns the unknown conversion.
 
   returns: The unknown conversion. - `java.lang.String`"
-  ([^java.util.UnknownFormatConversionException this]
+  (^java.lang.String [^java.util.UnknownFormatConversionException this]
     (-> this (.getConversion))))
 
 (defn get-message
@@ -27,6 +27,6 @@
 
   returns: the detail message string of this Throwable instance
             (which may be null). - `java.lang.String`"
-  ([^java.util.UnknownFormatConversionException this]
+  (^java.lang.String [^java.util.UnknownFormatConversionException this]
     (-> this (.getMessage))))
 

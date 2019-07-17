@@ -31,6 +31,6 @@
   "Converts the type to a string.
 
   returns: the string - `java.lang.String`"
-  ([^javax.swing.event.DocumentEvent$EventType this]
+  (^java.lang.String [^javax.swing.event.DocumentEvent$EventType this]
     (-> this (.toString))))
 

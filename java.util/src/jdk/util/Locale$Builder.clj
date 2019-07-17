@@ -49,7 +49,7 @@
   returns: This builder. - `java.util.Locale.Builder`
 
   throws: java.lang.NullPointerException - if attribute is null"
-  ([^java.util.Locale$Builder this ^java.lang.String attribute]
+  (^java.util.Locale.Builder [^java.util.Locale$Builder this ^java.lang.String attribute]
     (-> this (.addUnicodeLocaleAttribute attribute))))
 
 (defn set-region
@@ -69,7 +69,7 @@
   returns: This builder. - `java.util.Locale.Builder`
 
   throws: java.util.IllformedLocaleException - if region is ill-formed"
-  ([^java.util.Locale$Builder this ^java.lang.String region]
+  (^java.util.Locale.Builder [^java.util.Locale$Builder this ^java.lang.String region]
     (-> this (.setRegion region))))
 
 (defn set-variant
@@ -91,7 +91,7 @@
   returns: This builder. - `java.util.Locale.Builder`
 
   throws: java.util.IllformedLocaleException - if variant is ill-formed"
-  ([^java.util.Locale$Builder this ^java.lang.String variant]
+  (^java.util.Locale.Builder [^java.util.Locale$Builder this ^java.lang.String variant]
     (-> this (.setVariant variant))))
 
 (defn set-language-tag
@@ -109,7 +109,7 @@
   returns: This builder. - `java.util.Locale.Builder`
 
   throws: java.util.IllformedLocaleException - if languageTag is ill-formed"
-  ([^java.util.Locale$Builder this ^java.lang.String language-tag]
+  (^java.util.Locale.Builder [^java.util.Locale$Builder this ^java.lang.String language-tag]
     (-> this (.setLanguageTag language-tag))))
 
 (defn remove-unicode-locale-attribute
@@ -124,7 +124,7 @@
   returns: This builder. - `java.util.Locale.Builder`
 
   throws: java.lang.NullPointerException - if attribute is null"
-  ([^java.util.Locale$Builder this ^java.lang.String attribute]
+  (^java.util.Locale.Builder [^java.util.Locale$Builder this ^java.lang.String attribute]
     (-> this (.removeUnicodeLocaleAttribute attribute))))
 
 (defn set-extension
@@ -147,7 +147,7 @@
   returns: This builder. - `java.util.Locale.Builder`
 
   throws: java.util.IllformedLocaleException - if key is illegal or value is ill-formed"
-  ([^java.util.Locale$Builder this ^Character key ^java.lang.String value]
+  (^java.util.Locale.Builder [^java.util.Locale$Builder this ^Character key ^java.lang.String value]
     (-> this (.setExtension key value))))
 
 (defn set-script
@@ -163,7 +163,7 @@
   returns: This builder. - `java.util.Locale.Builder`
 
   throws: java.util.IllformedLocaleException - if script is ill-formed"
-  ([^java.util.Locale$Builder this ^java.lang.String script]
+  (^java.util.Locale.Builder [^java.util.Locale$Builder this ^java.lang.String script]
     (-> this (.setScript script))))
 
 (defn build
@@ -175,7 +175,7 @@
    setLanguageTag(java.lang.String).)
 
   returns: A Locale. - `java.util.Locale`"
-  ([^java.util.Locale$Builder this]
+  (^java.util.Locale [^java.util.Locale$Builder this]
     (-> this (.build))))
 
 (defn set-unicode-locale-keyword
@@ -196,7 +196,7 @@
   returns: This builder. - `java.util.Locale.Builder`
 
   throws: java.util.IllformedLocaleException - if key or type is ill-formed"
-  ([^java.util.Locale$Builder this ^java.lang.String key ^java.lang.String type]
+  (^java.util.Locale.Builder [^java.util.Locale$Builder this ^java.lang.String key ^java.lang.String type]
     (-> this (.setUnicodeLocaleKeyword key type))))
 
 (defn set-language
@@ -213,7 +213,7 @@
   returns: This builder. - `java.util.Locale.Builder`
 
   throws: java.util.IllformedLocaleException - if language is ill-formed"
-  ([^java.util.Locale$Builder this ^java.lang.String language]
+  (^java.util.Locale.Builder [^java.util.Locale$Builder this ^java.lang.String language]
     (-> this (.setLanguage language))))
 
 (defn set-locale
@@ -235,14 +235,14 @@
   returns: This builder. - `java.util.Locale.Builder`
 
   throws: java.util.IllformedLocaleException - if locale has any ill-formed fields."
-  ([^java.util.Locale$Builder this ^java.util.Locale locale]
+  (^java.util.Locale.Builder [^java.util.Locale$Builder this ^java.util.Locale locale]
     (-> this (.setLocale locale))))
 
 (defn clear
   "Resets the builder to its initial, empty state.
 
   returns: This builder. - `java.util.Locale.Builder`"
-  ([^java.util.Locale$Builder this]
+  (^java.util.Locale.Builder [^java.util.Locale$Builder this]
     (-> this (.clear))))
 
 (defn clear-extensions
@@ -250,6 +250,6 @@
    Language, script, region and variant are unchanged.
 
   returns: This builder. - `java.util.Locale.Builder`"
-  ([^java.util.Locale$Builder this]
+  (^java.util.Locale.Builder [^java.util.Locale$Builder this]
     (-> this (.clearExtensions))))
 

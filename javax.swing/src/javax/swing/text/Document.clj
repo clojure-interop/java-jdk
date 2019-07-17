@@ -190,7 +190,7 @@
   throws: javax.swing.text.BadLocationException - Some portion of the given range was not a valid part of the document. The location in the exception is the first bad position encountered."
   ([^javax.swing.text.Document this ^Integer offset ^Integer length ^javax.swing.text.Segment txt]
     (-> this (.getText offset length txt)))
-  ([^javax.swing.text.Document this ^Integer offset ^Integer length]
+  (^java.lang.String [^javax.swing.text.Document this ^Integer offset ^Integer length]
     (-> this (.getText offset length))))
 
 (defn remove-document-listener
@@ -264,7 +264,7 @@
    located at the beginning of the document.
 
   returns: the position - `javax.swing.text.Position`"
-  ([^javax.swing.text.Document this]
+  (^javax.swing.text.Position [^javax.swing.text.Document this]
     (-> this (.getStartPosition))))
 
 (defn get-length
@@ -272,7 +272,7 @@
    in the document.
 
   returns: number of characters >= 0 - `int`"
-  ([^javax.swing.text.Document this]
+  (^Integer [^javax.swing.text.Document this]
     (-> this (.getLength))))
 
 (defn get-property
@@ -281,7 +281,7 @@
   key - a non-null property key - `java.lang.Object`
 
   returns: the properties - `java.lang.Object`"
-  ([^javax.swing.text.Document this ^java.lang.Object key]
+  (^java.lang.Object [^javax.swing.text.Document this ^java.lang.Object key]
     (-> this (.getProperty key))))
 
 (defn render
@@ -350,7 +350,7 @@
    located at the end of the document.
 
   returns: the position - `javax.swing.text.Position`"
-  ([^javax.swing.text.Document this]
+  (^javax.swing.text.Position [^javax.swing.text.Document this]
     (-> this (.getEndPosition))))
 
 (defn get-default-root-element
@@ -359,7 +359,7 @@
    structures is provided.
 
   returns: the root element - `javax.swing.text.Element`"
-  ([^javax.swing.text.Document this]
+  (^javax.swing.text.Element [^javax.swing.text.Document this]
     (-> this (.getDefaultRootElement))))
 
 (defn create-position
@@ -377,6 +377,6 @@
   returns: the position - `javax.swing.text.Position`
 
   throws: javax.swing.text.BadLocationException - if the given position does not represent a valid location in the associated document"
-  ([^javax.swing.text.Document this ^Integer offs]
+  (^javax.swing.text.Position [^javax.swing.text.Document this ^Integer offs]
     (-> this (.createPosition offs))))
 

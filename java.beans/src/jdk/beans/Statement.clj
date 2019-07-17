@@ -28,7 +28,7 @@
   target - the target object of this statement - `java.lang.Object`
   method-name - the name of the method to invoke on the specified target - `java.lang.String`
   arguments - the array of arguments to invoke the specified method - `java.lang.Object[]`"
-  ([^java.lang.Object target ^java.lang.String method-name ^java.lang.Object[] arguments]
+  ([^java.lang.Object target ^java.lang.String method-name arguments]
     (new Statement target method-name arguments)))
 
 (defn get-target
@@ -38,7 +38,7 @@
    throws a NullPointerException.
 
   returns: the target object of this statement - `java.lang.Object`"
-  ([^java.beans.Statement this]
+  (^java.lang.Object [^java.beans.Statement this]
     (-> this (.getTarget))))
 
 (defn get-method-name
@@ -48,7 +48,7 @@
    throws a NullPointerException.
 
   returns: the name of the method - `java.lang.String`"
-  ([^java.beans.Statement this]
+  (^java.lang.String [^java.beans.Statement this]
     (-> this (.getMethodName))))
 
 (defn get-arguments
@@ -97,6 +97,6 @@
   "Prints the value of this statement using a Java-style syntax.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^java.beans.Statement this]
+  (^java.lang.String [^java.beans.Statement this]
     (-> this (.toString))))
 

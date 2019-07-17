@@ -50,6 +50,6 @@
    category name is `printer-is-accepting-jobs`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.PrinterIsAcceptingJobs this]
+  (^java.lang.String [^javax.print.attribute.standard.PrinterIsAcceptingJobs this]
     (-> this (.getName))))
 

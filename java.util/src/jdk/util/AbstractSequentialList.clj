@@ -44,7 +44,7 @@
   returns: the element at the specified position in this list - `AbstractSequentialList.E`
 
   throws: java.lang.IndexOutOfBoundsException - if the index is out of range (index < 0 || index >= size())"
-  ([^java.util.AbstractSequentialList this ^Integer index]
+  (^AbstractSequentialList.E [^java.util.AbstractSequentialList this ^Integer index]
     (-> this (.get index))))
 
 (defn set
@@ -66,7 +66,7 @@
   returns: the element previously at the specified position - `AbstractSequentialList.E`
 
   throws: java.lang.UnsupportedOperationException - if the set operation is not supported by this list"
-  ([^java.util.AbstractSequentialList this ^Integer index ^AbstractSequentialList.E element]
+  (^AbstractSequentialList.E [^java.util.AbstractSequentialList this ^Integer index ^AbstractSequentialList.E element]
     (-> this (.set index element))))
 
 (defn add
@@ -109,7 +109,7 @@
   returns: the element previously at the specified position - `AbstractSequentialList.E`
 
   throws: java.lang.UnsupportedOperationException - if the remove operation is not supported by this list"
-  ([^java.util.AbstractSequentialList this ^Integer index]
+  (^AbstractSequentialList.E [^java.util.AbstractSequentialList this ^Integer index]
     (-> this (.remove index))))
 
 (defn add-all
@@ -141,7 +141,7 @@
   returns: true if this list changed as a result of the call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the addAll operation is not supported by this list"
-  ([^java.util.AbstractSequentialList this ^Integer index ^AbstractSequentialList.E> c]
+  (^Boolean [^java.util.AbstractSequentialList this ^Integer index ^AbstractSequentialList.E> c]
     (-> this (.addAll index c))))
 
 (defn iterator
@@ -151,7 +151,7 @@
    This implementation merely returns a list iterator over the list.
 
   returns: an iterator over the elements in this list (in proper sequence) - `java.util.Iterator<AbstractSequentialList.E>`"
-  ([^java.util.AbstractSequentialList this]
+  (^java.util.Iterator [^java.util.AbstractSequentialList this]
     (-> this (.iterator))))
 
 (defn list-iterator
@@ -164,6 +164,6 @@
            sequence) - `java.util.ListIterator<AbstractSequentialList.E>`
 
   throws: java.lang.IndexOutOfBoundsException - if the index is out of range (index < 0 || index > size())"
-  ([^java.util.AbstractSequentialList this ^Integer index]
+  (^java.util.ListIterator [^java.util.AbstractSequentialList this ^Integer index]
     (-> this (.listIterator index))))
 

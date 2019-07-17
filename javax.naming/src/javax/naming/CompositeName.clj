@@ -195,9 +195,9 @@
   returns: The updated CompositeName, not a new one. Cannot be null. - `javax.naming.Name`
 
   throws: javax.naming.InvalidNameException - If n is not a composite name."
-  ([^javax.naming.CompositeName this ^Integer posn ^javax.naming.Name n]
+  (^javax.naming.Name [^javax.naming.CompositeName this ^Integer posn ^javax.naming.Name n]
     (-> this (.addAll posn n)))
-  ([^javax.naming.CompositeName this ^javax.naming.Name suffix]
+  (^javax.naming.Name [^javax.naming.CompositeName this ^javax.naming.Name suffix]
     (-> this (.addAll suffix))))
 
 (defn ends-with
@@ -211,7 +211,7 @@
 
   returns: true if n is a CompositeName and
            is a suffix of this composite name, false otherwise. - `boolean`"
-  ([^javax.naming.CompositeName this ^javax.naming.Name n]
+  (^Boolean [^javax.naming.CompositeName this ^javax.naming.Name n]
     (-> this (.endsWith n))))
 
 (defn get-suffix
@@ -226,7 +226,7 @@
            size(), an empty composite name is returned. - `javax.naming.Name`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - If posn is outside the specified range."
-  ([^javax.naming.CompositeName this ^Integer posn]
+  (^javax.naming.Name [^javax.naming.CompositeName this ^Integer posn]
     (-> this (.getSuffix posn))))
 
 (defn get-all
@@ -238,7 +238,7 @@
   returns: A non-null enumeration of the components of
            this composite name. Each element of the enumeration is of
            class String. - `java.util.Enumeration<java.lang.String>`"
-  ([^javax.naming.CompositeName this]
+  (^java.util.Enumeration [^javax.naming.CompositeName this]
     (-> this (.getAll))))
 
 (defn to-string
@@ -255,7 +255,7 @@
    composite name.
 
   returns: A non-null string representation of this composite name. - `java.lang.String`"
-  ([^javax.naming.CompositeName this]
+  (^java.lang.String [^javax.naming.CompositeName this]
     (-> this (.toString))))
 
 (defn remove
@@ -269,7 +269,7 @@
   returns: The component removed (a String). - `java.lang.Object`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - If posn is outside the specified range (includes case where composite name is empty)."
-  ([^javax.naming.CompositeName this ^Integer posn]
+  (^java.lang.Object [^javax.naming.CompositeName this ^Integer posn]
     (-> this (.remove posn))))
 
 (defn starts-with
@@ -282,7 +282,7 @@
 
   returns: true if n is a CompositeName and
            is a prefix of this composite name, false otherwise. - `boolean`"
-  ([^javax.naming.CompositeName this ^javax.naming.Name n]
+  (^Boolean [^javax.naming.CompositeName this ^javax.naming.Name n]
     (-> this (.startsWith n))))
 
 (defn clone
@@ -291,7 +291,7 @@
    affect the new copy and vice versa.
 
   returns: A non-null copy of this composite name. - `java.lang.Object`"
-  ([^javax.naming.CompositeName this]
+  (^java.lang.Object [^javax.naming.CompositeName this]
     (-> this (.clone))))
 
 (defn hash-code
@@ -300,7 +300,7 @@
    of this composite name.
 
   returns: An int representing the hash code of this name. - `int`"
-  ([^javax.naming.CompositeName this]
+  (^Integer [^javax.naming.CompositeName this]
     (-> this (.hashCode))))
 
 (defn add
@@ -316,9 +316,9 @@
   returns: The updated CompositeName, not a new one. Cannot be null. - `javax.naming.Name`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - If posn is outside the specified range."
-  ([^javax.naming.CompositeName this ^Integer posn ^java.lang.String comp]
+  (^javax.naming.Name [^javax.naming.CompositeName this ^Integer posn ^java.lang.String comp]
     (-> this (.add posn comp)))
-  ([^javax.naming.CompositeName this ^java.lang.String comp]
+  (^javax.naming.Name [^javax.naming.CompositeName this ^java.lang.String comp]
     (-> this (.add comp))))
 
 (defn empty?
@@ -326,14 +326,14 @@
    is empty if it has zero components.
 
   returns: true if this composite name is empty, false otherwise. - `boolean`"
-  ([^javax.naming.CompositeName this]
+  (^Boolean [^javax.naming.CompositeName this]
     (-> this (.isEmpty))))
 
 (defn size
   "Retrieves the number of components in this composite name.
 
   returns: The nonnegative number of components in this composite name. - `int`"
-  ([^javax.naming.CompositeName this]
+  (^Integer [^javax.naming.CompositeName this]
     (-> this (.size))))
 
 (defn compare-to
@@ -364,7 +364,7 @@
             is less than, equal to, or greater than the given Object. - `int`
 
   throws: java.lang.ClassCastException - if obj is not a CompositeName."
-  ([^javax.naming.CompositeName this ^java.lang.Object obj]
+  (^Integer [^javax.naming.CompositeName this ^java.lang.Object obj]
     (-> this (.compareTo obj))))
 
 (defn get-prefix
@@ -378,7 +378,7 @@
            the range [0,posn). - `javax.naming.Name`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - If posn is outside the specified range."
-  ([^javax.naming.CompositeName this ^Integer posn]
+  (^javax.naming.Name [^javax.naming.CompositeName this ^Integer posn]
     (-> this (.getPrefix posn))))
 
 (defn get
@@ -389,7 +389,7 @@
   returns: The non-null component at index posn. - `java.lang.String`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if posn is outside the specified range."
-  ([^javax.naming.CompositeName this ^Integer posn]
+  (^java.lang.String [^javax.naming.CompositeName this ^Integer posn]
     (-> this (.get posn))))
 
 (defn equals
@@ -404,6 +404,6 @@
   obj - The possibly null object to compare against. - `java.lang.Object`
 
   returns: true if obj is equal to this composite name, false otherwise. - `boolean`"
-  ([^javax.naming.CompositeName this ^java.lang.Object obj]
+  (^Boolean [^javax.naming.CompositeName this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

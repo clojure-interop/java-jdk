@@ -50,6 +50,6 @@
   returns: the enum constant with the specified name - `java.security.KeyRep.Type`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^java.security.KeyRep.Type [^java.lang.String name]
     (KeyRep$Type/valueOf name)))
 

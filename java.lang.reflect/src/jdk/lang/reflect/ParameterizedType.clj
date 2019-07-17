@@ -36,7 +36,7 @@
 
   returns: the Type object representing the class or interface
        that declared this type - `java.lang.reflect.Type`"
-  ([^java.lang.reflect.ParameterizedType this]
+  (^java.lang.reflect.Type [^java.lang.reflect.ParameterizedType this]
     (-> this (.getRawType))))
 
 (defn get-owner-type
@@ -51,6 +51,6 @@
        null is returned - `java.lang.reflect.Type`
 
   throws: java.lang.TypeNotPresentException - if the owner type refers to a non-existent type declaration"
-  ([^java.lang.reflect.ParameterizedType this]
+  (^java.lang.reflect.Type [^java.lang.reflect.ParameterizedType this]
     (-> this (.getOwnerType))))
 

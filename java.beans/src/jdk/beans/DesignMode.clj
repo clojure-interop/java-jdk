@@ -35,6 +35,6 @@
    mode, a value of false denotes runtime behavior.
 
   returns: the current `value` of the `designTime` property. - `boolean`"
-  ([^java.beans.DesignMode this]
+  (^Boolean [^java.beans.DesignMode this]
     (-> this (.isDesignTime))))
 

@@ -37,14 +37,14 @@
 
   returns: the numeric value represented by this object after conversion
             to type double. - `double`"
-  ([^java.util.concurrent.atomic.LongAdder this]
+  (^Double [^java.util.concurrent.atomic.LongAdder this]
     (-> this (.doubleValue))))
 
 (defn long-value
   "Equivalent to sum().
 
   returns: the sum - `long`"
-  ([^java.util.concurrent.atomic.LongAdder this]
+  (^Long [^java.util.concurrent.atomic.LongAdder this]
     (-> this (.longValue))))
 
 (defn sum
@@ -55,7 +55,7 @@
    incorporated.
 
   returns: the sum - `long`"
-  ([^java.util.concurrent.atomic.LongAdder this]
+  (^Long [^java.util.concurrent.atomic.LongAdder this]
     (-> this (.sum))))
 
 (defn sum-then-reset
@@ -66,14 +66,14 @@
    the reset.
 
   returns: the sum - `long`"
-  ([^java.util.concurrent.atomic.LongAdder this]
+  (^Long [^java.util.concurrent.atomic.LongAdder this]
     (-> this (.sumThenReset))))
 
 (defn to-string
   "Returns the String representation of the sum().
 
   returns: the String representation of the sum() - `java.lang.String`"
-  ([^java.util.concurrent.atomic.LongAdder this]
+  (^java.lang.String [^java.util.concurrent.atomic.LongAdder this]
     (-> this (.toString))))
 
 (defn increment
@@ -96,7 +96,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type float. - `float`"
-  ([^java.util.concurrent.atomic.LongAdder this]
+  (^Float [^java.util.concurrent.atomic.LongAdder this]
     (-> this (.floatValue))))
 
 (defn decrement
@@ -110,7 +110,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type int. - `int`"
-  ([^java.util.concurrent.atomic.LongAdder this]
+  (^Integer [^java.util.concurrent.atomic.LongAdder this]
     (-> this (.intValue))))
 
 (defn add

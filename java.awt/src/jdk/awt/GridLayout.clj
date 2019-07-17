@@ -92,7 +92,7 @@
   "Gets the vertical gap between components.
 
   returns: the vertical gap between components - `int`"
-  ([^java.awt.GridLayout this]
+  (^Integer [^java.awt.GridLayout this]
     (-> this (.getVgap))))
 
 (defn set-columns
@@ -120,7 +120,7 @@
   "Gets the number of columns in this layout.
 
   returns: the number of columns in this layout - `int`"
-  ([^java.awt.GridLayout this]
+  (^Integer [^java.awt.GridLayout this]
     (-> this (.getColumns))))
 
 (defn set-vgap
@@ -148,21 +148,21 @@
 
   returns: the preferred dimensions to lay out the
                         subcomponents of the specified container - `java.awt.Dimension`"
-  ([^java.awt.GridLayout this ^java.awt.Container parent]
+  (^java.awt.Dimension [^java.awt.GridLayout this ^java.awt.Container parent]
     (-> this (.preferredLayoutSize parent))))
 
 (defn to-string
   "Returns the string representation of this grid layout's values.
 
   returns: a string representation of this grid layout - `java.lang.String`"
-  ([^java.awt.GridLayout this]
+  (^java.lang.String [^java.awt.GridLayout this]
     (-> this (.toString))))
 
 (defn get-hgap
   "Gets the horizontal gap between components.
 
   returns: the horizontal gap between components - `int`"
-  ([^java.awt.GridLayout this]
+  (^Integer [^java.awt.GridLayout this]
     (-> this (.getHgap))))
 
 (defn minimum-layout-size
@@ -183,14 +183,14 @@
 
   returns: the minimum dimensions needed to lay out the
                         subcomponents of the specified container - `java.awt.Dimension`"
-  ([^java.awt.GridLayout this ^java.awt.Container parent]
+  (^java.awt.Dimension [^java.awt.GridLayout this ^java.awt.Container parent]
     (-> this (.minimumLayoutSize parent))))
 
 (defn get-rows
   "Gets the number of rows in this layout.
 
   returns: the number of rows in this layout - `int`"
-  ([^java.awt.GridLayout this]
+  (^Integer [^java.awt.GridLayout this]
     (-> this (.getRows))))
 
 (defn add-layout-component

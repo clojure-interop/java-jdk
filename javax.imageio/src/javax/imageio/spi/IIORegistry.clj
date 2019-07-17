@@ -65,7 +65,7 @@
 
   returns: the default registry for the current
    ThreadGroup. - `javax.imageio.spi.IIORegistry`"
-  ([]
+  (^javax.imageio.spi.IIORegistry []
     (IIORegistry/getDefaultInstance )))
 
 (defn register-application-classpath-spis

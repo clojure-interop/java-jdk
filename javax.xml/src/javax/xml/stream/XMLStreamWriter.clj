@@ -287,7 +287,7 @@
   "Returns the current namespace context.
 
   returns: the current NamespaceContext - `javax.xml.namespace.NamespaceContext`"
-  ([^javax.xml.stream.XMLStreamWriter this]
+  (^javax.xml.namespace.NamespaceContext [^javax.xml.stream.XMLStreamWriter this]
     (-> this (.getNamespaceContext))))
 
 (defn write-start-element
@@ -330,7 +330,7 @@
   returns: The value of the property - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if the property is not supported"
-  ([^javax.xml.stream.XMLStreamWriter this ^java.lang.String name]
+  (^java.lang.Object [^javax.xml.stream.XMLStreamWriter this ^java.lang.String name]
     (-> this (.getProperty name))))
 
 (defn write-attribute
@@ -357,7 +357,7 @@
   returns: the prefix or null - `java.lang.String`
 
   throws: javax.xml.stream.XMLStreamException"
-  ([^javax.xml.stream.XMLStreamWriter this ^java.lang.String uri]
+  (^java.lang.String [^javax.xml.stream.XMLStreamWriter this ^java.lang.String uri]
     (-> this (.getPrefix uri))))
 
 (defn write-entity-ref

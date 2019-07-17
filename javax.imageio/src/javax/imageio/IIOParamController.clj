@@ -78,6 +78,6 @@
    modified, false otherwise. - `boolean`
 
   throws: java.lang.IllegalArgumentException - if param is null or is not an instance of the correct class."
-  ([^javax.imageio.IIOParamController this ^javax.imageio.IIOParam param]
+  (^Boolean [^javax.imageio.IIOParamController this ^javax.imageio.IIOParam param]
     (-> this (.activate param))))
 

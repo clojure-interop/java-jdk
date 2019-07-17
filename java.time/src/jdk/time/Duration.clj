@@ -52,7 +52,7 @@
   returns: a Duration, not null - `java.time.Duration`
 
   throws: java.lang.ArithmeticException - if the input days exceeds the capacity of Duration"
-  ([^Long days]
+  (^java.time.Duration [^Long days]
     (Duration/ofDays days)))
 
 (defn *of
@@ -73,7 +73,7 @@
   returns: a Duration, not null - `java.time.Duration`
 
   throws: java.time.DateTimeException - if the period unit has an estimated duration"
-  ([^Long amount ^java.time.temporal.TemporalUnit unit]
+  (^java.time.Duration [^Long amount ^java.time.temporal.TemporalUnit unit]
     (Duration/of amount unit)))
 
 (defn *of-hours
@@ -88,7 +88,7 @@
   returns: a Duration, not null - `java.time.Duration`
 
   throws: java.lang.ArithmeticException - if the input hours exceeds the capacity of Duration"
-  ([^Long hours]
+  (^java.time.Duration [^Long hours]
     (Duration/ofHours hours)))
 
 (defn *of-nanos
@@ -99,7 +99,7 @@
   nanos - the number of nanoseconds, positive or negative - `long`
 
   returns: a Duration, not null - `java.time.Duration`"
-  ([^Long nanos]
+  (^java.time.Duration [^Long nanos]
     (Duration/ofNanos nanos)))
 
 (defn *of-millis
@@ -110,7 +110,7 @@
   millis - the number of milliseconds, positive or negative - `long`
 
   returns: a Duration, not null - `java.time.Duration`"
-  ([^Long millis]
+  (^java.time.Duration [^Long millis]
     (Duration/ofMillis millis)))
 
 (defn *between
@@ -134,7 +134,7 @@
   returns: a Duration, not null - `java.time.Duration`
 
   throws: java.time.DateTimeException - if the seconds between the temporals cannot be obtained"
-  ([^java.time.temporal.Temporal start-inclusive ^java.time.temporal.Temporal end-exclusive]
+  (^java.time.Duration [^java.time.temporal.Temporal start-inclusive ^java.time.temporal.Temporal end-exclusive]
     (Duration/between start-inclusive end-exclusive)))
 
 (defn *from
@@ -157,7 +157,7 @@
   returns: the equivalent duration, not null - `java.time.Duration`
 
   throws: java.time.DateTimeException - if unable to convert to a Duration"
-  ([^java.time.temporal.TemporalAmount amount]
+  (^java.time.Duration [^java.time.temporal.TemporalAmount amount]
     (Duration/from amount)))
 
 (defn *parse
@@ -205,7 +205,7 @@
   returns: the parsed duration, not null - `java.time.Duration`
 
   throws: java.time.format.DateTimeParseException - if the text cannot be parsed to a duration"
-  ([^java.lang.CharSequence text]
+  (^java.time.Duration [^java.lang.CharSequence text]
     (Duration/parse text)))
 
 (defn *of-minutes
@@ -220,7 +220,7 @@
   returns: a Duration, not null - `java.time.Duration`
 
   throws: java.lang.ArithmeticException - if the input minutes exceeds the capacity of Duration"
-  ([^Long minutes]
+  (^java.time.Duration [^Long minutes]
     (Duration/ofMinutes minutes)))
 
 (defn *of-seconds
@@ -243,9 +243,9 @@
   returns: a Duration, not null - `java.time.Duration`
 
   throws: java.lang.ArithmeticException - if the adjustment causes the seconds to exceed the capacity of Duration"
-  ([^Long seconds ^Long nano-adjustment]
+  (^java.time.Duration [^Long seconds ^Long nano-adjustment]
     (Duration/ofSeconds seconds nano-adjustment))
-  ([^Long seconds]
+  (^java.time.Duration [^Long seconds]
     (Duration/ofSeconds seconds)))
 
 (defn minus-minutes
@@ -260,7 +260,7 @@
   returns: a Duration based on this duration with the specified minutes subtracted, not null - `java.time.Duration`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs"
-  ([^java.time.Duration this ^Long minutes-to-subtract]
+  (^java.time.Duration [^java.time.Duration this ^Long minutes-to-subtract]
     (-> this (.minusMinutes minutes-to-subtract))))
 
 (defn to-nanos
@@ -272,7 +272,7 @@
   returns: the total length of the duration in nanoseconds - `long`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs"
-  ([^java.time.Duration this]
+  (^Long [^java.time.Duration this]
     (-> this (.toNanos))))
 
 (defn minus-millis
@@ -285,7 +285,7 @@
   returns: a Duration based on this duration with the specified milliseconds subtracted, not null - `java.time.Duration`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs"
-  ([^java.time.Duration this ^Long millis-to-subtract]
+  (^java.time.Duration [^java.time.Duration this ^Long millis-to-subtract]
     (-> this (.minusMillis millis-to-subtract))))
 
 (defn minus-hours
@@ -300,7 +300,7 @@
   returns: a Duration based on this duration with the specified hours subtracted, not null - `java.time.Duration`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs"
-  ([^java.time.Duration this ^Long hours-to-subtract]
+  (^java.time.Duration [^java.time.Duration this ^Long hours-to-subtract]
     (-> this (.minusHours hours-to-subtract))))
 
 (defn negative?
@@ -311,7 +311,7 @@
    This method checks whether the length is less than zero.
 
   returns: true if this duration has a total length less than zero - `boolean`"
-  ([^java.time.Duration this]
+  (^Boolean [^java.time.Duration this]
     (-> this (.isNegative))))
 
 (defn zero?
@@ -322,7 +322,7 @@
    This method checks whether the length is zero.
 
   returns: true if this duration has a total length equal to zero - `boolean`"
-  ([^java.time.Duration this]
+  (^Boolean [^java.time.Duration this]
     (-> this (.isZero))))
 
 (defn multiplied-by
@@ -335,7 +335,7 @@
   returns: a Duration based on this duration multiplied by the specified scalar, not null - `java.time.Duration`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs"
-  ([^java.time.Duration this ^Long multiplicand]
+  (^java.time.Duration [^java.time.Duration this ^Long multiplicand]
     (-> this (.multipliedBy multiplicand))))
 
 (defn with-nanos
@@ -351,7 +351,7 @@
   returns: a Duration based on this period with the requested nano-of-second, not null - `java.time.Duration`
 
   throws: java.time.DateTimeException - if the nano-of-second is invalid"
-  ([^java.time.Duration this ^Integer nano-of-second]
+  (^java.time.Duration [^java.time.Duration this ^Integer nano-of-second]
     (-> this (.withNanos nano-of-second))))
 
 (defn get-units
@@ -365,7 +365,7 @@
    to access the entire state of the duration.
 
   returns: a list containing the seconds and nanos units, not null - `java.util.List<java.time.temporal.TemporalUnit>`"
-  ([^java.time.Duration this]
+  (^java.util.List [^java.time.Duration this]
     (-> this (.getUnits))))
 
 (defn get-nano
@@ -381,7 +381,7 @@
    A duration of -1 nanosecond is stored as -1 seconds plus 999,999,999 nanoseconds.
 
   returns: the nanoseconds within the second part of the length of the duration, from 0 to 999,999,999 - `int`"
-  ([^java.time.Duration this]
+  (^Integer [^java.time.Duration this]
     (-> this (.getNano))))
 
 (defn plus-millis
@@ -394,7 +394,7 @@
   returns: a Duration based on this duration with the specified milliseconds added, not null - `java.time.Duration`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs"
-  ([^java.time.Duration this ^Long millis-to-add]
+  (^java.time.Duration [^java.time.Duration this ^Long millis-to-add]
     (-> this (.plusMillis millis-to-add))))
 
 (defn to-minutes
@@ -406,7 +406,7 @@
    This instance is immutable and unaffected by this method call.
 
   returns: the number of minutes in the duration, may be negative - `long`"
-  ([^java.time.Duration this]
+  (^Long [^java.time.Duration this]
     (-> this (.toMinutes))))
 
 (defn minus-seconds
@@ -419,7 +419,7 @@
   returns: a Duration based on this duration with the specified seconds subtracted, not null - `java.time.Duration`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs"
-  ([^java.time.Duration this ^Long seconds-to-subtract]
+  (^java.time.Duration [^java.time.Duration this ^Long seconds-to-subtract]
     (-> this (.minusSeconds seconds-to-subtract))))
 
 (defn plus-nanos
@@ -432,7 +432,7 @@
   returns: a Duration based on this duration with the specified nanoseconds added, not null - `java.time.Duration`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs"
-  ([^java.time.Duration this ^Long nanos-to-add]
+  (^java.time.Duration [^java.time.Duration this ^Long nanos-to-add]
     (-> this (.plusNanos nanos-to-add))))
 
 (defn plus
@@ -451,9 +451,9 @@
   returns: a Duration based on this duration with the specified duration added, not null - `java.time.Duration`
 
   throws: java.time.temporal.UnsupportedTemporalTypeException - if the unit is not supported"
-  ([^java.time.Duration this ^Long amount-to-add ^java.time.temporal.TemporalUnit unit]
+  (^java.time.Duration [^java.time.Duration this ^Long amount-to-add ^java.time.temporal.TemporalUnit unit]
     (-> this (.plus amount-to-add unit)))
-  ([^java.time.Duration this ^java.time.Duration duration]
+  (^java.time.Duration [^java.time.Duration this ^java.time.Duration duration]
     (-> this (.plus duration))))
 
 (defn divided-by
@@ -466,7 +466,7 @@
   returns: a Duration based on this duration divided by the specified divisor, not null - `java.time.Duration`
 
   throws: java.lang.ArithmeticException - if the divisor is zero or if numeric overflow occurs"
-  ([^java.time.Duration this ^Long divisor]
+  (^java.time.Duration [^java.time.Duration this ^Long divisor]
     (-> this (.dividedBy divisor))))
 
 (defn plus-minutes
@@ -479,7 +479,7 @@
   returns: a Duration based on this duration with the specified minutes added, not null - `java.time.Duration`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs"
-  ([^java.time.Duration this ^Long minutes-to-add]
+  (^java.time.Duration [^java.time.Duration this ^Long minutes-to-add]
     (-> this (.plusMinutes minutes-to-add))))
 
 (defn to-string
@@ -503,7 +503,7 @@
    with Period.
 
   returns: an ISO-8601 representation of this duration, not null - `java.lang.String`"
-  ([^java.time.Duration this]
+  (^java.lang.String [^java.time.Duration this]
     (-> this (.toString))))
 
 (defn minus
@@ -522,9 +522,9 @@
   returns: a Duration based on this duration with the specified duration subtracted, not null - `java.time.Duration`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs"
-  ([^java.time.Duration this ^Long amount-to-subtract ^java.time.temporal.TemporalUnit unit]
+  (^java.time.Duration [^java.time.Duration this ^Long amount-to-subtract ^java.time.temporal.TemporalUnit unit]
     (-> this (.minus amount-to-subtract unit)))
-  ([^java.time.Duration this ^java.time.Duration duration]
+  (^java.time.Duration [^java.time.Duration this ^java.time.Duration duration]
     (-> this (.minus duration))))
 
 (defn add-to
@@ -551,7 +551,7 @@
   returns: an object of the same type with the adjustment made, not null - `java.time.temporal.Temporal`
 
   throws: java.time.DateTimeException - if unable to add"
-  ([^java.time.Duration this ^java.time.temporal.Temporal temporal]
+  (^java.time.temporal.Temporal [^java.time.Duration this ^java.time.temporal.Temporal temporal]
     (-> this (.addTo temporal))))
 
 (defn plus-hours
@@ -564,7 +564,7 @@
   returns: a Duration based on this duration with the specified hours added, not null - `java.time.Duration`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs"
-  ([^java.time.Duration this ^Long hours-to-add]
+  (^java.time.Duration [^java.time.Duration this ^Long hours-to-add]
     (-> this (.plusHours hours-to-add))))
 
 (defn plus-days
@@ -580,7 +580,7 @@
   returns: a Duration based on this duration with the specified days added, not null - `java.time.Duration`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs"
-  ([^java.time.Duration this ^Long days-to-add]
+  (^java.time.Duration [^java.time.Duration this ^Long days-to-add]
     (-> this (.plusDays days-to-add))))
 
 (defn to-millis
@@ -596,7 +596,7 @@
   returns: the total length of the duration in milliseconds - `long`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs"
-  ([^java.time.Duration this]
+  (^Long [^java.time.Duration this]
     (-> this (.toMillis))))
 
 (defn to-hours
@@ -608,7 +608,7 @@
    This instance is immutable and unaffected by this method call.
 
   returns: the number of hours in the duration, may be negative - `long`"
-  ([^java.time.Duration this]
+  (^Long [^java.time.Duration this]
     (-> this (.toHours))))
 
 (defn negated
@@ -622,7 +622,7 @@
   returns: a Duration based on this duration with the amount negated, not null - `java.time.Duration`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs"
-  ([^java.time.Duration this]
+  (^java.time.Duration [^java.time.Duration this]
     (-> this (.negated))))
 
 (defn abs
@@ -636,7 +636,7 @@
   returns: a Duration based on this duration with an absolute length, not null - `java.time.Duration`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs"
-  ([^java.time.Duration this]
+  (^java.time.Duration [^java.time.Duration this]
     (-> this (.abs))))
 
 (defn get-seconds
@@ -652,7 +652,7 @@
    A duration of -1 nanosecond is stored as -1 seconds plus 999,999,999 nanoseconds.
 
   returns: the whole seconds part of the length of the duration, positive or negative - `long`"
-  ([^java.time.Duration this]
+  (^Long [^java.time.Duration this]
     (-> this (.getSeconds))))
 
 (defn minus-nanos
@@ -665,14 +665,14 @@
   returns: a Duration based on this duration with the specified nanoseconds subtracted, not null - `java.time.Duration`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs"
-  ([^java.time.Duration this ^Long nanos-to-subtract]
+  (^java.time.Duration [^java.time.Duration this ^Long nanos-to-subtract]
     (-> this (.minusNanos nanos-to-subtract))))
 
 (defn hash-code
   "A hash code for this duration.
 
   returns: a suitable hash code - `int`"
-  ([^java.time.Duration this]
+  (^Integer [^java.time.Duration this]
     (-> this (.hashCode))))
 
 (defn with-seconds
@@ -686,7 +686,7 @@
   seconds - the seconds to represent, may be negative - `long`
 
   returns: a Duration based on this period with the requested seconds, not null - `java.time.Duration`"
-  ([^java.time.Duration this ^Long seconds]
+  (^java.time.Duration [^java.time.Duration this ^Long seconds]
     (-> this (.withSeconds seconds))))
 
 (defn subtract-from
@@ -713,7 +713,7 @@
   returns: an object of the same type with the adjustment made, not null - `java.time.temporal.Temporal`
 
   throws: java.time.DateTimeException - if unable to subtract"
-  ([^java.time.Duration this ^java.time.temporal.Temporal temporal]
+  (^java.time.temporal.Temporal [^java.time.Duration this ^java.time.temporal.Temporal temporal]
     (-> this (.subtractFrom temporal))))
 
 (defn compare-to
@@ -725,7 +725,7 @@
   other-duration - the other duration to compare to, not null - `java.time.Duration`
 
   returns: the comparator value, negative if less, positive if greater - `int`"
-  ([^java.time.Duration this ^java.time.Duration other-duration]
+  (^Integer [^java.time.Duration this ^java.time.Duration other-duration]
     (-> this (.compareTo other-duration))))
 
 (defn plus-seconds
@@ -738,7 +738,7 @@
   returns: a Duration based on this duration with the specified seconds added, not null - `java.time.Duration`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs"
-  ([^java.time.Duration this ^Long seconds-to-add]
+  (^java.time.Duration [^java.time.Duration this ^Long seconds-to-add]
     (-> this (.plusSeconds seconds-to-add))))
 
 (defn get
@@ -753,7 +753,7 @@
   returns: the long value of the unit - `long`
 
   throws: java.time.DateTimeException - if the unit is not supported"
-  ([^java.time.Duration this ^java.time.temporal.TemporalUnit unit]
+  (^Long [^java.time.Duration this ^java.time.temporal.TemporalUnit unit]
     (-> this (.get unit))))
 
 (defn equals
@@ -764,7 +764,7 @@
   other-duration - the other duration, null returns false - `java.lang.Object`
 
   returns: true if the other duration is equal to this one - `boolean`"
-  ([^java.time.Duration this ^java.lang.Object other-duration]
+  (^Boolean [^java.time.Duration this ^java.lang.Object other-duration]
     (-> this (.equals other-duration))))
 
 (defn minus-days
@@ -780,7 +780,7 @@
   returns: a Duration based on this duration with the specified days subtracted, not null - `java.time.Duration`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs"
-  ([^java.time.Duration this ^Long days-to-subtract]
+  (^java.time.Duration [^java.time.Duration this ^Long days-to-subtract]
     (-> this (.minusDays days-to-subtract))))
 
 (defn to-days
@@ -793,6 +793,6 @@
    This instance is immutable and unaffected by this method call.
 
   returns: the number of days in the duration, may be negative - `long`"
-  ([^java.time.Duration this]
+  (^Long [^java.time.Duration this]
     (-> this (.toDays))))
 

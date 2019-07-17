@@ -40,14 +40,14 @@
   "Description copied from interface: Future
 
   returns: true if this task was cancelled before it completed - `boolean`"
-  ([^java.util.concurrent.FutureTask this]
+  (^Boolean [^java.util.concurrent.FutureTask this]
     (-> this (.isCancelled))))
 
 (defn done?
   "Description copied from interface: Future
 
   returns: true if this task completed - `boolean`"
-  ([^java.util.concurrent.FutureTask this]
+  (^Boolean [^java.util.concurrent.FutureTask this]
     (-> this (.isDone))))
 
 (defn cancel
@@ -58,7 +58,7 @@
   returns: false if the task could not be cancelled,
    typically because it has already completed normally;
    true otherwise - `boolean`"
-  ([^java.util.concurrent.FutureTask this ^Boolean may-interrupt-if-running]
+  (^Boolean [^java.util.concurrent.FutureTask this ^Boolean may-interrupt-if-running]
     (-> this (.cancel may-interrupt-if-running))))
 
 (defn get
@@ -70,9 +70,9 @@
   returns: the computed result - `FutureTask.V`
 
   throws: java.util.concurrent.CancellationException - if the computation was cancelled"
-  ([^java.util.concurrent.FutureTask this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^FutureTask.V [^java.util.concurrent.FutureTask this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.get timeout unit)))
-  ([^java.util.concurrent.FutureTask this]
+  (^FutureTask.V [^java.util.concurrent.FutureTask this]
     (-> this (.get))))
 
 (defn run

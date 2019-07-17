@@ -28,21 +28,21 @@
   "Returns the hosting component containing the region.
 
   returns: Hosting Component - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.synth.SynthContext this]
+  (^javax.swing.JComponent [^javax.swing.plaf.synth.SynthContext this]
     (-> this (.getComponent))))
 
 (defn get-region
   "Returns the Region identifying this state.
 
   returns: Region of the hosting component - `javax.swing.plaf.synth.Region`"
-  ([^javax.swing.plaf.synth.SynthContext this]
+  (^javax.swing.plaf.synth.Region [^javax.swing.plaf.synth.SynthContext this]
     (-> this (.getRegion))))
 
 (defn get-style
   "Returns the style associated with this Region.
 
   returns: SynthStyle associated with the region. - `javax.swing.plaf.synth.SynthStyle`"
-  ([^javax.swing.plaf.synth.SynthContext this]
+  (^javax.swing.plaf.synth.SynthStyle [^javax.swing.plaf.synth.SynthContext this]
     (-> this (.getStyle))))
 
 (defn get-component-state
@@ -53,6 +53,6 @@
    or DISABLED.
 
   returns: State of Component - `int`"
-  ([^javax.swing.plaf.synth.SynthContext this]
+  (^Integer [^javax.swing.plaf.synth.SynthContext this]
     (-> this (.getComponentState))))
 

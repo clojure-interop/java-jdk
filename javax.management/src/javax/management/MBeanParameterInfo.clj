@@ -30,21 +30,21 @@
    interest to subclasses.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([^javax.management.MBeanParameterInfo this]
+  (^java.lang.Object [^javax.management.MBeanParameterInfo this]
     (-> this (.clone))))
 
 (defn get-type
   "Returns the type or class name of the data.
 
   returns: the type string. - `java.lang.String`"
-  ([^javax.management.MBeanParameterInfo this]
+  (^java.lang.String [^javax.management.MBeanParameterInfo this]
     (-> this (.getType))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^javax.management.MBeanParameterInfo this]
+  (^java.lang.String [^javax.management.MBeanParameterInfo this]
     (-> this (.toString))))
 
 (defn equals
@@ -56,13 +56,13 @@
    that its MBeanFeatureInfo.getName(), getType(),
    MBeanFeatureInfo.getDescriptor(), and MBeanFeatureInfo.getDescription() values are equal (not necessarily identical)
    to those of this MBeanParameterInfo. - `boolean`"
-  ([^javax.management.MBeanParameterInfo this ^java.lang.Object o]
+  (^Boolean [^javax.management.MBeanParameterInfo this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  ([^javax.management.MBeanParameterInfo this]
+  (^Integer [^javax.management.MBeanParameterInfo this]
     (-> this (.hashCode))))
 

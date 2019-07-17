@@ -78,7 +78,7 @@
   "Gets the keyboard mnemonic for the button.
 
   returns: an int specifying the accelerator key - `int`"
-  ([^javax.swing.DefaultButtonModel this]
+  (^Integer [^javax.swing.DefaultButtonModel this]
     (-> this (.getMnemonic))))
 
 (defn add-change-listener
@@ -117,7 +117,7 @@
 
   returns: true if the button is armed,
            and ready to be triggered - `boolean`"
-  ([^javax.swing.DefaultButtonModel this]
+  (^Boolean [^javax.swing.DefaultButtonModel this]
     (-> this (.isArmed))))
 
 (defn add-action-listener
@@ -172,7 +172,7 @@
   "Indicates that the mouse is over the button.
 
   returns: true if the mouse is over the button - `boolean`"
-  ([^javax.swing.DefaultButtonModel this]
+  (^Boolean [^javax.swing.DefaultButtonModel this]
     (-> this (.isRollover))))
 
 (defn set-enabled
@@ -186,7 +186,7 @@
   "Indicates if the button is pressed.
 
   returns: true if the button is pressed - `boolean`"
-  ([^javax.swing.DefaultButtonModel this]
+  (^Boolean [^javax.swing.DefaultButtonModel this]
     (-> this (.isPressed))))
 
 (defn selected?
@@ -194,7 +194,7 @@
    certain types of buttons - such as radio buttons and check boxes.
 
   returns: true if the button is selected - `boolean`"
-  ([^javax.swing.DefaultButtonModel this]
+  (^Boolean [^javax.swing.DefaultButtonModel this]
     (-> this (.isSelected))))
 
 (defn get-selected-objects
@@ -248,7 +248,7 @@
   "Returns the action command string for the button.
 
   returns: the String that identifies the generated event - `java.lang.String`"
-  ([^javax.swing.DefaultButtonModel this]
+  (^java.lang.String [^javax.swing.DefaultButtonModel this]
     (-> this (.getActionCommand))))
 
 (defn set-rollover
@@ -271,7 +271,7 @@
    an input device, such as a mouse pointer.
 
   returns: true if the button is enabled - `boolean`"
-  ([^javax.swing.DefaultButtonModel this]
+  (^Boolean [^javax.swing.DefaultButtonModel this]
     (-> this (.isEnabled))))
 
 (defn set-mnemonic
@@ -298,6 +298,6 @@
    exclusive within their group.
 
   returns: the ButtonGroup that the button belongs to - `javax.swing.ButtonGroup`"
-  ([^javax.swing.DefaultButtonModel this]
+  (^javax.swing.ButtonGroup [^javax.swing.DefaultButtonModel this]
     (-> this (.getGroup))))
 

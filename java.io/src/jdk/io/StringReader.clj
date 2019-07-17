@@ -23,9 +23,9 @@
                stream has been reached - `int`
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.io.StringReader this cbuf ^Integer off ^Integer len]
+  (^Integer [^java.io.StringReader this cbuf ^Integer off ^Integer len]
     (-> this (.read cbuf off len)))
-  ([^java.io.StringReader this]
+  (^Integer [^java.io.StringReader this]
     (-> this (.read))))
 
 (defn skip
@@ -47,7 +47,7 @@
   returns: The number of characters actually skipped - `long`
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.io.StringReader this ^Long ns]
+  (^Long [^java.io.StringReader this ^Long ns]
     (-> this (.skip ns))))
 
 (defn ready
@@ -56,14 +56,14 @@
   returns: True if the next read() is guaranteed not to block for input - `boolean`
 
   throws: java.io.IOException - If the stream is closed"
-  ([^java.io.StringReader this]
+  (^Boolean [^java.io.StringReader this]
     (-> this (.ready))))
 
 (defn mark-supported
   "Tells whether this stream supports the mark() operation, which it does.
 
   returns: true if and only if this stream supports the mark operation. - `boolean`"
-  ([^java.io.StringReader this]
+  (^Boolean [^java.io.StringReader this]
     (-> this (.markSupported))))
 
 (defn mark

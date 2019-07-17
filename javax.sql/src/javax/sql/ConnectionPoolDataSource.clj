@@ -19,8 +19,8 @@
            ConnectionPoolDataSource object represents - `javax.sql.PooledConnection`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^javax.sql.ConnectionPoolDataSource this ^java.lang.String user ^java.lang.String password]
+  (^javax.sql.PooledConnection [^javax.sql.ConnectionPoolDataSource this ^java.lang.String user ^java.lang.String password]
     (-> this (.getPooledConnection user password)))
-  ([^javax.sql.ConnectionPoolDataSource this]
+  (^javax.sql.PooledConnection [^javax.sql.ConnectionPoolDataSource this]
     (-> this (.getPooledConnection))))
 

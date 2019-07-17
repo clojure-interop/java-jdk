@@ -307,7 +307,7 @@
    that will produce one. - `javax.security.sasl.SaslClient`
 
   throws: javax.security.sasl.SaslException - If cannot create a SaslClient because of an error."
-  ([^java.lang.String[] mechanisms ^java.lang.String authorization-id ^java.lang.String protocol ^java.lang.String server-name ^java.util.Map props ^javax.security.auth.callback.CallbackHandler cbh]
+  (^javax.security.sasl.SaslClient [mechanisms ^java.lang.String authorization-id ^java.lang.String protocol ^java.lang.String server-name ^java.util.Map props ^javax.security.auth.callback.CallbackHandler cbh]
     (Sasl/createSaslClient mechanisms authorization-id protocol server-name props cbh)))
 
 (defn *create-sasl-server
@@ -356,7 +356,7 @@
    that will produce one. - `javax.security.sasl.SaslServer`
 
   throws: javax.security.sasl.SaslException - If cannot create a SaslServer because of an error."
-  ([^java.lang.String mechanism ^java.lang.String protocol ^java.lang.String server-name ^java.util.Map props ^javax.security.auth.callback.CallbackHandler cbh]
+  (^javax.security.sasl.SaslServer [^java.lang.String mechanism ^java.lang.String protocol ^java.lang.String server-name ^java.util.Map props ^javax.security.auth.callback.CallbackHandler cbh]
     (Sasl/createSaslServer mechanism protocol server-name props cbh)))
 
 (defn *get-sasl-client-factories
@@ -366,7 +366,7 @@
 
   returns: A non-null enumeration of known factories for producing
    SaslClient. - `java.util.Enumeration<javax.security.sasl.SaslClientFactory>`"
-  ([]
+  (^java.util.Enumeration []
     (Sasl/getSaslClientFactories )))
 
 (defn *get-sasl-server-factories
@@ -376,6 +376,6 @@
 
   returns: A non-null enumeration of known factories for producing
    SaslServer. - `java.util.Enumeration<javax.security.sasl.SaslServerFactory>`"
-  ([]
+  (^java.util.Enumeration []
     (Sasl/getSaslServerFactories )))
 

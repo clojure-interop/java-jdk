@@ -55,12 +55,12 @@
           if it hasn't been set - `javax.xml.bind.ValidationEventHandler`
 
   throws: javax.xml.bind.JAXBException - if an error was encountered while getting the current event handler"
-  ([^javax.xml.bind.helpers.AbstractUnmarshallerImpl this]
+  (^javax.xml.bind.ValidationEventHandler [^javax.xml.bind.helpers.AbstractUnmarshallerImpl this]
     (-> this (.getEventHandler))))
 
 (defn get-attachment-unmarshaller
   "returns: `javax.xml.bind.attachment.AttachmentUnmarshaller`"
-  ([^javax.xml.bind.helpers.AbstractUnmarshallerImpl this]
+  (^javax.xml.bind.attachment.AttachmentUnmarshaller [^javax.xml.bind.helpers.AbstractUnmarshallerImpl this]
     (-> this (.getAttachmentUnmarshaller))))
 
 (defn set-listener
@@ -104,14 +104,14 @@
   returns: the value of the requested property - `java.lang.Object`
 
   throws: javax.xml.bind.PropertyException - when there is an error retrieving the given property or value property name"
-  ([^javax.xml.bind.helpers.AbstractUnmarshallerImpl this ^java.lang.String name]
+  (^java.lang.Object [^javax.xml.bind.helpers.AbstractUnmarshallerImpl this ^java.lang.String name]
     (-> this (.getProperty name))))
 
 (defn get-listener
   "Description copied from interface: Unmarshaller
 
   returns: registered Unmarshaller.Listener or null if no Listener is registered with this Unmarshaller. - `javax.xml.bind.Unmarshaller.Listener`"
-  ([^javax.xml.bind.helpers.AbstractUnmarshallerImpl this]
+  (^javax.xml.bind.Unmarshaller.Listener [^javax.xml.bind.helpers.AbstractUnmarshallerImpl this]
     (-> this (.getListener))))
 
 (defn get-schema
@@ -119,7 +119,7 @@
 
   returns: the Schema object being used to perform unmarshal-time
         validation or null if not present - `javax.xml.validation.Schema`"
-  ([^javax.xml.bind.helpers.AbstractUnmarshallerImpl this]
+  (^javax.xml.validation.Schema [^javax.xml.bind.helpers.AbstractUnmarshallerImpl this]
     (-> this (.getSchema))))
 
 (defn set-property
@@ -146,7 +146,7 @@
   throws: javax.xml.bind.JAXBException - If any unexpected errors occur while unmarshalling"
   ([^javax.xml.bind.helpers.AbstractUnmarshallerImpl this ^org.w3c.dom.Node node ^java.lang.Class expected-type]
     (-> this (.unmarshal node expected-type)))
-  ([^javax.xml.bind.helpers.AbstractUnmarshallerImpl this ^javax.xml.transform.Source source]
+  (^java.lang.Object [^javax.xml.bind.helpers.AbstractUnmarshallerImpl this ^javax.xml.transform.Source source]
     (-> this (.unmarshal source))))
 
 (defn set-adapter
@@ -172,6 +172,6 @@
           unmarshal operations, false otherwise - `boolean`
 
   throws: javax.xml.bind.JAXBException - if an error occurs while retrieving the validating flag"
-  ([^javax.xml.bind.helpers.AbstractUnmarshallerImpl this]
+  (^Boolean [^javax.xml.bind.helpers.AbstractUnmarshallerImpl this]
     (-> this (.isValidating))))
 

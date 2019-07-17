@@ -62,7 +62,7 @@
    that renders this component.
 
   returns: `CheckBoxMenuItemUI` - `java.lang.String`"
-  ([^javax.swing.JCheckBoxMenuItem this]
+  (^java.lang.String [^javax.swing.JCheckBoxMenuItem this]
     (-> this (.getUIClassID))))
 
 (defn get-state?
@@ -71,7 +71,7 @@
    use isSelected() instead.
 
   returns: true  if the item is selected - `boolean`"
-  ([^javax.swing.JCheckBoxMenuItem this]
+  (^Boolean [^javax.swing.JCheckBoxMenuItem this]
     (-> this (.getState))))
 
 (defn set-state
@@ -100,6 +100,6 @@
 
   returns: an AccessibleJCheckBoxMenuItem that serves as the
            AccessibleContext of this AccessibleJCheckBoxMenuItem - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.JCheckBoxMenuItem this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.JCheckBoxMenuItem this]
     (-> this (.getAccessibleContext))))
 

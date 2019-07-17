@@ -65,7 +65,7 @@
   returns: the installed Policy. - `java.security.Policy`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPermission method doesn't allow getting the Policy object."
-  ([]
+  (^java.security.Policy []
     (Policy/getPolicy )))
 
 (defn *set-policy
@@ -98,9 +98,9 @@
   returns: the new Policy object. - `java.security.Policy`
 
   throws: java.lang.SecurityException - if the caller does not have permission to get a Policy instance for the specified type."
-  ([^java.lang.String type ^java.security.Policy.Parameters params ^java.lang.String provider]
+  (^java.security.Policy [^java.lang.String type ^java.security.Policy.Parameters params ^java.lang.String provider]
     (Policy/getInstance type params provider))
-  ([^java.lang.String type ^java.security.Policy.Parameters params]
+  (^java.security.Policy [^java.lang.String type ^java.security.Policy.Parameters params]
     (Policy/getInstance type params)))
 
 (defn get-provider
@@ -111,7 +111,7 @@
    Otherwise this method returns null.
 
   returns: the Provider of this Policy, or null. - `java.security.Provider`"
-  ([^java.security.Policy this]
+  (^java.security.Provider [^java.security.Policy this]
     (-> this (.getProvider))))
 
 (defn get-type
@@ -122,7 +122,7 @@
    Otherwise this method returns null.
 
   returns: the type of this Policy, or null. - `java.lang.String`"
-  ([^java.security.Policy this]
+  (^java.lang.String [^java.security.Policy this]
     (-> this (.getType))))
 
 (defn get-parameters
@@ -133,7 +133,7 @@
    Otherwise this method returns null.
 
   returns: Policy parameters, or null. - `java.security.Policy.Parameters`"
-  ([^java.security.Policy this]
+  (^java.security.Policy.Parameters [^java.security.Policy this]
     (-> this (.getParameters))))
 
 (defn get-permissions
@@ -160,7 +160,7 @@
             and it must support heterogeneous Permission types.
             If this operation is not supported,
             Policy.UNSUPPORTED_EMPTY_COLLECTION is returned. - `java.security.PermissionCollection`"
-  ([^java.security.Policy this ^java.security.CodeSource codesource]
+  (^java.security.PermissionCollection [^java.security.Policy this ^java.security.CodeSource codesource]
     (-> this (.getPermissions codesource))))
 
 (defn implies
@@ -173,7 +173,7 @@
 
   returns: true if `permission` is a proper subset of a permission
    granted to this ProtectionDomain. - `boolean`"
-  ([^java.security.Policy this ^java.security.ProtectionDomain domain ^java.security.Permission permission]
+  (^Boolean [^java.security.Policy this ^java.security.ProtectionDomain domain ^java.security.Permission permission]
     (-> this (.implies domain permission))))
 
 (defn refresh

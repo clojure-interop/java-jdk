@@ -132,7 +132,7 @@
    the correct value).
 
   returns: the index of the first pass that will be decoded. - `int`"
-  ([^javax.imageio.ImageReadParam this]
+  (^Integer [^javax.imageio.ImageReadParam this]
     (-> this (.getSourceMinProgressivePass))))
 
 (defn get-source-max-progressive-pass
@@ -144,7 +144,7 @@
 
   returns: the index of the last pass to be read, or
    Integer.MAX_VALUE. - `int`"
-  ([^javax.imageio.ImageReadParam this]
+  (^Integer [^javax.imageio.ImageReadParam this]
     (-> this (.getSourceMaxProgressivePass))))
 
 (defn set-destination-type
@@ -160,7 +160,7 @@
    if none is set.
 
   returns: the BufferedImage to be written to. - `java.awt.image.BufferedImage`"
-  ([^javax.imageio.ImageReadParam this]
+  (^java.awt.image.BufferedImage [^javax.imageio.ImageReadParam this]
     (-> this (.getDestination))))
 
 (defn can-set-source-render-size?
@@ -174,7 +174,7 @@
 
   returns: true if setting source rendering size is
    supported. - `boolean`"
-  ([^javax.imageio.ImageReadParam this]
+  (^Boolean [^javax.imageio.ImageReadParam this]
     (-> this (.canSetSourceRenderSize))))
 
 (defn get-source-num-progressive-passes
@@ -184,7 +184,7 @@
    correct value).
 
   returns: the number of the passes that will be decoded. - `int`"
-  ([^javax.imageio.ImageReadParam this]
+  (^Integer [^javax.imageio.ImageReadParam this]
     (-> this (.getSourceNumProgressivePasses))))
 
 (defn get-source-render-size
@@ -195,7 +195,7 @@
 
   returns: the rendered width and height of the source image
    as a Dimension. - `java.awt.Dimension`"
-  ([^javax.imageio.ImageReadParam this]
+  (^java.awt.Dimension [^javax.imageio.ImageReadParam this]
     (-> this (.getSourceRenderSize))))
 
 (defn set-source-render-size

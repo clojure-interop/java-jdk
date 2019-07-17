@@ -18,13 +18,13 @@
   "Retrieves the object to be bound.
 
   returns: The possibly null object to be bound. - `java.lang.Object`"
-  ([^javax.naming.spi.DirStateFactory$Result this]
+  (^java.lang.Object [^javax.naming.spi.DirStateFactory$Result this]
     (-> this (.getObject))))
 
 (defn get-attributes
   "Retrieves the attributes to be bound.
 
   returns: The possibly null attributes to be bound. - `javax.naming.directory.Attributes`"
-  ([^javax.naming.spi.DirStateFactory$Result this]
+  (^javax.naming.directory.Attributes [^javax.naming.spi.DirStateFactory$Result this]
     (-> this (.getAttributes))))
 

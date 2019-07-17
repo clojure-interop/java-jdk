@@ -55,7 +55,7 @@
   returns: the Class object representing the loaded class - `java.lang.Class<?>`
 
   throws: java.net.MalformedURLException - if codebase is non-null and contains an invalid URL, or if codebase is null and a provider-specific URL used to load classes is invalid"
-  ([^java.rmi.server.RMIClassLoaderSpi this ^java.lang.String codebase ^java.lang.String name ^java.lang.ClassLoader default-loader]
+  (^java.lang.Class [^java.rmi.server.RMIClassLoaderSpi this ^java.lang.String codebase ^java.lang.String name ^java.lang.ClassLoader default-loader]
     (-> this (.loadClass codebase name default-loader))))
 
 (defn load-proxy-class
@@ -76,7 +76,7 @@
   returns: a dynamic proxy class that implements the named interfaces - `java.lang.Class<?>`
 
   throws: java.net.MalformedURLException - if codebase is non-null and contains an invalid URL, or if codebase is null and a provider-specific URL used to load classes is invalid"
-  ([^java.rmi.server.RMIClassLoaderSpi this ^java.lang.String codebase ^java.lang.String[] interfaces ^java.lang.ClassLoader default-loader]
+  (^java.lang.Class [^java.rmi.server.RMIClassLoaderSpi this ^java.lang.String codebase interfaces ^java.lang.ClassLoader default-loader]
     (-> this (.loadProxyClass codebase interfaces default-loader))))
 
 (defn get-class-loader
@@ -100,7 +100,7 @@
    path - `java.lang.ClassLoader`
 
   throws: java.net.MalformedURLException - if codebase is non-null and contains an invalid URL, or if codebase is null and a provider-specific URL used to identify the class loader is invalid"
-  ([^java.rmi.server.RMIClassLoaderSpi this ^java.lang.String codebase]
+  (^java.lang.ClassLoader [^java.rmi.server.RMIClassLoaderSpi this ^java.lang.String codebase]
     (-> this (.getClassLoader codebase))))
 
 (defn get-class-annotation
@@ -117,6 +117,6 @@
    it gets marshalled, or null - `java.lang.String`
 
   throws: java.lang.NullPointerException - if cl is null"
-  ([^java.rmi.server.RMIClassLoaderSpi this ^java.lang.Class cl]
+  (^java.lang.String [^java.rmi.server.RMIClassLoaderSpi this ^java.lang.Class cl]
     (-> this (.getClassAnnotation cl))))
 

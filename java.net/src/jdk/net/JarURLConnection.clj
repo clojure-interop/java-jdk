@@ -90,7 +90,7 @@
   "Returns the URL for the Jar file for this connection.
 
   returns: the URL for the Jar file for this connection. - `java.net.URL`"
-  ([^java.net.JarURLConnection this]
+  (^java.net.URL [^java.net.JarURLConnection this]
     (-> this (.getJarFileURL))))
 
 (defn get-entry-name
@@ -99,7 +99,7 @@
    connection points to a JAR file and not a JAR file entry.
 
   returns: the entry name for this connection, if any. - `java.lang.String`"
-  ([^java.net.JarURLConnection this]
+  (^java.lang.String [^java.net.JarURLConnection this]
     (-> this (.getEntryName))))
 
 (defn get-jar-file
@@ -110,7 +110,7 @@
    returned - `java.util.jar.JarFile`
 
   throws: java.io.IOException - if an IOException occurs while trying to connect to the JAR file for this connection."
-  ([^java.net.JarURLConnection this]
+  (^java.util.jar.JarFile [^java.net.JarURLConnection this]
     (-> this (.getJarFile))))
 
 (defn get-manifest
@@ -120,7 +120,7 @@
    for this connection. - `java.util.jar.Manifest`
 
   throws: java.io.IOException - if getting the JAR file for this connection causes an IOException to be thrown."
-  ([^java.net.JarURLConnection this]
+  (^java.util.jar.Manifest [^java.net.JarURLConnection this]
     (-> this (.getManifest))))
 
 (defn get-jar-entry
@@ -132,7 +132,7 @@
    the JAR URL for this connection points to a JAR file. - `java.util.jar.JarEntry`
 
   throws: java.io.IOException - if getting the JAR file for this connection causes an IOException to be thrown."
-  ([^java.net.JarURLConnection this]
+  (^java.util.jar.JarEntry [^java.net.JarURLConnection this]
     (-> this (.getJarEntry))))
 
 (defn get-attributes
@@ -143,7 +143,7 @@
    for it points to a JAR file entry, null otherwise. - `java.util.jar.Attributes`
 
   throws: java.io.IOException - if getting the JAR entry causes an IOException to be thrown."
-  ([^java.net.JarURLConnection this]
+  (^java.util.jar.Attributes [^java.net.JarURLConnection this]
     (-> this (.getAttributes))))
 
 (defn get-main-attributes
@@ -154,7 +154,7 @@
    connection. - `java.util.jar.Attributes`
 
   throws: java.io.IOException - if getting the manifest causes an IOException to be thrown."
-  ([^java.net.JarURLConnection this]
+  (^java.util.jar.Attributes [^java.net.JarURLConnection this]
     (-> this (.getMainAttributes))))
 
 (defn get-certificates

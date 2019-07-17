@@ -62,14 +62,14 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([^javax.sound.sampled.AudioFileFormat$Type this ^java.lang.Object obj]
+  (^Boolean [^javax.sound.sampled.AudioFileFormat$Type this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Finalizes the hashCode method
 
   returns: a hash code value for this object. - `int`"
-  ([^javax.sound.sampled.AudioFileFormat$Type this]
+  (^Integer [^javax.sound.sampled.AudioFileFormat$Type this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -77,13 +77,13 @@
    of the file type.
 
   returns: the file type's name - `java.lang.String`"
-  ([^javax.sound.sampled.AudioFileFormat$Type this]
+  (^java.lang.String [^javax.sound.sampled.AudioFileFormat$Type this]
     (-> this (.toString))))
 
 (defn get-extension
   "Obtains the common file name extension for this file type.
 
   returns: file type extension - `java.lang.String`"
-  ([^javax.sound.sampled.AudioFileFormat$Type this]
+  (^java.lang.String [^javax.sound.sampled.AudioFileFormat$Type this]
     (-> this (.getExtension))))
 

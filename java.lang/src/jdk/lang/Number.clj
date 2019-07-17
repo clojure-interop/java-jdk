@@ -31,7 +31,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type int. - `int`"
-  ([^java.lang.Number this]
+  (^Integer [^java.lang.Number this]
     (-> this (.intValue))))
 
 (defn long-value
@@ -40,7 +40,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type long. - `long`"
-  ([^java.lang.Number this]
+  (^Long [^java.lang.Number this]
     (-> this (.longValue))))
 
 (defn float-value
@@ -49,7 +49,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type float. - `float`"
-  ([^java.lang.Number this]
+  (^Float [^java.lang.Number this]
     (-> this (.floatValue))))
 
 (defn double-value
@@ -58,7 +58,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type double. - `double`"
-  ([^java.lang.Number this]
+  (^Double [^java.lang.Number this]
     (-> this (.doubleValue))))
 
 (defn byte-value
@@ -70,7 +70,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type byte. - `byte`"
-  ([^java.lang.Number this]
+  (^Byte [^java.lang.Number this]
     (-> this (.byteValue))))
 
 (defn short-value
@@ -82,6 +82,6 @@
 
   returns: the numeric value represented by this object after conversion
             to type short. - `short`"
-  ([^java.lang.Number this]
+  (^Short [^java.lang.Number this]
     (-> this (.shortValue))))
 

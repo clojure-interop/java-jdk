@@ -90,9 +90,9 @@
   returns: the Class object representing the loaded class - `java.lang.Class<?>`
 
   throws: java.net.MalformedURLException - if codebase is non-null and contains an invalid URL, or if codebase is null and a provider-specific URL used to load classes is invalid"
-  ([^java.lang.String codebase ^java.lang.String name ^java.lang.ClassLoader default-loader]
+  (^java.lang.Class [^java.lang.String codebase ^java.lang.String name ^java.lang.ClassLoader default-loader]
     (RMIClassLoader/loadClass codebase name default-loader))
-  ([^java.net.URL codebase ^java.lang.String name]
+  (^java.lang.Class [^java.net.URL codebase ^java.lang.String name]
     (RMIClassLoader/loadClass codebase name))
   ([^java.lang.String name]
     (RMIClassLoader/loadClass name)))
@@ -119,7 +119,7 @@
   returns: a dynamic proxy class that implements the named interfaces - `java.lang.Class<?>`
 
   throws: java.net.MalformedURLException - if codebase is non-null and contains an invalid URL, or if codebase is null and a provider-specific URL used to load classes is invalid"
-  ([^java.lang.String codebase ^java.lang.String[] interfaces ^java.lang.ClassLoader default-loader]
+  (^java.lang.Class [^java.lang.String codebase interfaces ^java.lang.ClassLoader default-loader]
     (RMIClassLoader/loadProxyClass codebase interfaces default-loader)))
 
 (defn *get-class-loader
@@ -148,7 +148,7 @@
    path - `java.lang.ClassLoader`
 
   throws: java.net.MalformedURLException - if codebase is non-null and contains an invalid URL, or if codebase is null and a provider-specific URL used to identify the class loader is invalid"
-  ([^java.lang.String codebase]
+  (^java.lang.ClassLoader [^java.lang.String codebase]
     (RMIClassLoader/getClassLoader codebase)))
 
 (defn *get-class-annotation
@@ -166,7 +166,7 @@
    it gets marshalled, or null - `java.lang.String`
 
   throws: java.lang.NullPointerException - if cl is null"
-  ([^java.lang.Class cl]
+  (^java.lang.String [^java.lang.Class cl]
     (RMIClassLoader/getClassAnnotation cl)))
 
 (defn *get-default-provider-instance
@@ -371,7 +371,7 @@
   returns: the canonical instance of the default service provider - `java.rmi.server.RMIClassLoaderSpi`
 
   throws: java.lang.SecurityException - if there is a security manager and the invocation of its checkPermission method fails"
-  ([]
+  (^java.rmi.server.RMIClassLoaderSpi []
     (RMIClassLoader/getDefaultProviderInstance )))
 
 (defn *get-security-context

@@ -25,13 +25,13 @@
    serialized and then read back in.
 
   returns: the unknown type, or null if unavailable - `javax.lang.model.type.TypeMirror`"
-  ([^javax.lang.model.type.UnknownTypeException this]
+  (^javax.lang.model.type.TypeMirror [^javax.lang.model.type.UnknownTypeException this]
     (-> this (.getUnknownType))))
 
 (defn get-argument
   "Returns the additional argument.
 
   returns: the additional argument - `java.lang.Object`"
-  ([^javax.lang.model.type.UnknownTypeException this]
+  (^java.lang.Object [^javax.lang.model.type.UnknownTypeException this]
     (-> this (.getArgument))))
 

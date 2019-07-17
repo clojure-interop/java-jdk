@@ -31,7 +31,7 @@
 
   returns: true if this method dispatched the event;
            false otherwise - `boolean`"
-  ([^java.awt.DefaultKeyboardFocusManager this ^java.awt.AWTEvent e]
+  (^Boolean [^java.awt.DefaultKeyboardFocusManager this ^java.awt.AWTEvent e]
     (-> this (.dispatchEvent e))))
 
 (defn dispatch-key-event
@@ -52,7 +52,7 @@
   e - the KeyEvent to be dispatched - `java.awt.event.KeyEvent`
 
   returns: true - `boolean`"
-  ([^java.awt.DefaultKeyboardFocusManager this ^java.awt.event.KeyEvent e]
+  (^Boolean [^java.awt.DefaultKeyboardFocusManager this ^java.awt.event.KeyEvent e]
     (-> this (.dispatchKeyEvent e))))
 
 (defn post-process-key-event
@@ -64,7 +64,7 @@
   e - the KeyEvent to post-process - `java.awt.event.KeyEvent`
 
   returns: true - `boolean`"
-  ([^java.awt.DefaultKeyboardFocusManager this ^java.awt.event.KeyEvent e]
+  (^Boolean [^java.awt.DefaultKeyboardFocusManager this ^java.awt.event.KeyEvent e]
     (-> this (.postProcessKeyEvent e))))
 
 (defn process-key-event

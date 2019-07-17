@@ -47,7 +47,7 @@
            SerialStruct object represents - `java.lang.String`
 
   throws: javax.sql.rowset.serial.SerialException - if an error occurs"
-  ([^javax.sql.rowset.serial.SerialStruct this]
+  (^java.lang.String [^javax.sql.rowset.serial.SerialStruct this]
     (-> this (.getSQLTypeName))))
 
 (defn get-attributes
@@ -79,7 +79,7 @@
 
   returns: true if the given object represents a SerialStruct
             equivalent to this SerialStruct, false otherwise - `boolean`"
-  ([^javax.sql.rowset.serial.SerialStruct this ^java.lang.Object obj]
+  (^Boolean [^javax.sql.rowset.serial.SerialStruct this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -89,7 +89,7 @@
    SQLTypeName
 
   returns: a hash code value for this object. - `int`"
-  ([^javax.sql.rowset.serial.SerialStruct this]
+  (^Integer [^javax.sql.rowset.serial.SerialStruct this]
     (-> this (.hashCode))))
 
 (defn clone
@@ -98,6 +98,6 @@
    to the original underlying attribs array of this SerialStruct object.
 
   returns: a clone of this SerialStruct - `java.lang.Object`"
-  ([^javax.sql.rowset.serial.SerialStruct this]
+  (^java.lang.Object [^javax.sql.rowset.serial.SerialStruct this]
     (-> this (.clone))))
 

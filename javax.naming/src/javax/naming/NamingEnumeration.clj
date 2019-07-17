@@ -59,7 +59,7 @@
        attribute values, and an attribute value can be null). - `NamingEnumeration.T`
 
   throws: javax.naming.NamingException - If a naming exception is encountered while attempting to retrieve the next element. See NamingException and its subclasses for the possible naming exceptions."
-  ([^javax.naming.NamingEnumeration this]
+  (^NamingEnumeration.T [^javax.naming.NamingEnumeration this]
     (-> this (.next))))
 
 (defn has-more?
@@ -71,7 +71,7 @@
   returns: true if there is more in the enumeration ; false otherwise. - `boolean`
 
   throws: javax.naming.NamingException - If a naming exception is encountered while attempting to determine whether there is another element in the enumeration. See NamingException and its subclasses for the possible naming exceptions."
-  ([^javax.naming.NamingEnumeration this]
+  (^Boolean [^javax.naming.NamingEnumeration this]
     (-> this (.hasMore))))
 
 (defn close

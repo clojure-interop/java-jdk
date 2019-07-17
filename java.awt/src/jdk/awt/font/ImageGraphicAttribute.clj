@@ -29,7 +29,7 @@
    from the top of the image to the origin.
 
   returns: the ascent of this ImageGraphicAttribute. - `float`"
-  ([^java.awt.font.ImageGraphicAttribute this]
+  (^Float [^java.awt.font.ImageGraphicAttribute this]
     (-> this (.getAscent))))
 
 (defn get-descent
@@ -38,7 +38,7 @@
    distance from the origin to the bottom of the image.
 
   returns: the descent of this ImageGraphicAttribute. - `float`"
-  ([^java.awt.font.ImageGraphicAttribute this]
+  (^Float [^java.awt.font.ImageGraphicAttribute this]
     (-> this (.getDescent))))
 
 (defn get-advance
@@ -47,7 +47,7 @@
    distance from the origin to the right edge of the image.
 
   returns: the advance of this ImageGraphicAttribute. - `float`"
-  ([^java.awt.font.ImageGraphicAttribute this]
+  (^Float [^java.awt.font.ImageGraphicAttribute this]
     (-> this (.getAdvance))))
 
 (defn get-bounds
@@ -59,7 +59,7 @@
 
   returns: a Rectangle2D that encloses all of the bits
    rendered by this ImageGraphicAttribute. - `java.awt.geom.Rectangle2D`"
-  ([^java.awt.font.ImageGraphicAttribute this]
+  (^java.awt.geom.Rectangle2D [^java.awt.font.ImageGraphicAttribute this]
     (-> this (.getBounds))))
 
 (defn draw
@@ -76,7 +76,7 @@
   "Returns a hashcode for this ImageGraphicAttribute.
 
   returns: a hash code value for this object. - `int`"
-  ([^java.awt.font.ImageGraphicAttribute this]
+  (^Integer [^java.awt.font.ImageGraphicAttribute this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -88,6 +88,6 @@
   returns: true if this
    ImageGraphicAttribute equals rhs;
    false otherwise. - `boolean`"
-  ([^java.awt.font.ImageGraphicAttribute this ^java.lang.Object rhs]
+  (^Boolean [^java.awt.font.ImageGraphicAttribute this ^java.lang.Object rhs]
     (-> this (.equals rhs))))
 

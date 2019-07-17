@@ -344,7 +344,7 @@
 
   returns: true if HTTP redirects should
    be automatically followed, false if not. - `boolean`"
-  ([]
+  (^Boolean []
     (HttpURLConnection/getFollowRedirects )))
 
 (defn get-header-field
@@ -361,7 +361,7 @@
 
   returns: the value of the nth header field,
             or null if the value does not exist. - `java.lang.String`"
-  ([^java.net.HttpURLConnection this ^Integer n]
+  (^java.lang.String [^java.net.HttpURLConnection this ^Integer n]
     (-> this (.getHeaderField n))))
 
 (defn using-proxy
@@ -369,7 +369,7 @@
 
   returns: a boolean indicating if the connection is
    using a proxy. - `boolean`"
-  ([^java.net.HttpURLConnection this]
+  (^Boolean [^java.net.HttpURLConnection this]
     (-> this (.usingProxy))))
 
 (defn get-header-field-key
@@ -383,7 +383,7 @@
 
   returns: the key for the nth header field,
             or null if the key does not exist. - `java.lang.String`"
-  ([^java.net.HttpURLConnection this ^Integer n]
+  (^java.lang.String [^java.net.HttpURLConnection this ^Integer n]
     (-> this (.getHeaderFieldKey n))))
 
 (defn disconnect
@@ -408,7 +408,7 @@
   returns: the HTTP Status-Code, or -1 - `int`
 
   throws: java.io.IOException - if an error occurred connecting to the server."
-  ([^java.net.HttpURLConnection this]
+  (^Integer [^java.net.HttpURLConnection this]
     (-> this (.getResponseCode))))
 
 (defn set-fixed-length-streaming-mode
@@ -447,7 +447,7 @@
   returns: the value of the field, parsed as a date. The value of the
             Default argument is returned if the field is
             missing or malformed. - `long`"
-  ([^java.net.HttpURLConnection this ^java.lang.String name ^Long default]
+  (^Long [^java.net.HttpURLConnection this ^java.lang.String name ^Long default]
     (-> this (.getHeaderFieldDate name default))))
 
 (defn set-instance-follow-redirects
@@ -500,7 +500,7 @@
   returns: an error stream if any, null if there have been no
    errors, the connection is not connected or the server sent no
    useful data. - `java.io.InputStream`"
-  ([^java.net.HttpURLConnection this]
+  (^java.io.InputStream [^java.net.HttpURLConnection this]
     (-> this (.getErrorStream))))
 
 (defn set-request-method
@@ -526,7 +526,7 @@
   "Get the request method.
 
   returns: the HTTP request method - `java.lang.String`"
-  ([^java.net.HttpURLConnection this]
+  (^java.lang.String [^java.net.HttpURLConnection this]
     (-> this (.getRequestMethod))))
 
 (defn get-permission
@@ -538,7 +538,7 @@
            host and port. - `java.security.Permission`
 
   throws: java.io.IOException - if an error occurs while computing the permission."
-  ([^java.net.HttpURLConnection this]
+  (^java.security.Permission [^java.net.HttpURLConnection this]
     (-> this (.getPermission))))
 
 (defn get-instance-follow-redirects?
@@ -547,7 +547,7 @@
 
   returns: the value of this HttpURLConnection's
             instanceFollowRedirects field. - `boolean`"
-  ([^java.net.HttpURLConnection this]
+  (^Boolean [^java.net.HttpURLConnection this]
     (-> this (.getInstanceFollowRedirects))))
 
 (defn get-response-message
@@ -564,6 +564,6 @@
   returns: the HTTP response message, or null - `java.lang.String`
 
   throws: java.io.IOException - if an error occurred connecting to the server."
-  ([^java.net.HttpURLConnection this]
+  (^java.lang.String [^java.net.HttpURLConnection this]
     (-> this (.getResponseMessage))))
 

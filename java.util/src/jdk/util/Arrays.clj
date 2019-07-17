@@ -140,7 +140,7 @@
   a-2 - the other array to be tested for equality - `java.lang.Object[]`
 
   returns: true if the two arrays are equal - `boolean`"
-  ([^java.lang.Object[] a-1 ^java.lang.Object[] a-2]
+  (^Boolean [a-1 a-2]
     (Arrays/deepEquals a-1 a-2)))
 
 (defn *to-string
@@ -155,7 +155,7 @@
   a - the array whose string representation to return - `long[]`
 
   returns: a string representation of a - `java.lang.String`"
-  ([a]
+  (^java.lang.String [a]
     (Arrays/toString a)))
 
 (defn *deep-hash-code
@@ -185,7 +185,7 @@
   a - the array whose deep-content-based hash code to compute - `java.lang.Object[]`
 
   returns: a deep-content-based hash code for a - `int`"
-  ([^java.lang.Object[] a]
+  (^Integer [a]
     (Arrays/deepHashCode a)))
 
 (defn *sort
@@ -273,11 +273,11 @@
   throws: java.lang.ClassCastException - if the range contains elements that are not mutually comparable using the specified comparator, or the search key is not comparable to the elements in the range using this comparator."
   ([a ^Integer from-index ^Integer to-index key c]
     (Arrays/binarySearch a from-index to-index key c))
-  ([a ^Integer from-index ^Integer to-index ^Long key]
+  (^Integer [a ^Integer from-index ^Integer to-index ^Long key]
     (Arrays/binarySearch a from-index to-index key))
   ([a key c]
     (Arrays/binarySearch a key c))
-  ([a ^Long key]
+  (^Integer [a ^Long key]
     (Arrays/binarySearch a key)))
 
 (defn *parallel-prefix
@@ -330,7 +330,7 @@
   a - the array whose hash value to compute - `long[]`
 
   returns: a content-based hash code for a - `int`"
-  ([a]
+  (^Integer [a]
     (Arrays/hashCode a)))
 
 (defn *copy-of
@@ -387,7 +387,7 @@
   a - the array whose string representation to return - `java.lang.Object[]`
 
   returns: a string representation of a - `java.lang.String`"
-  ([^java.lang.Object[] a]
+  (^java.lang.String [a]
     (Arrays/deepToString a)))
 
 (defn *parallel-sort
@@ -461,6 +461,6 @@
   a-2 - the other array to be tested for equality - `long[]`
 
   returns: true if the two arrays are equal - `boolean`"
-  ([a a-2]
+  (^Boolean [a a-2]
     (Arrays/equals a a-2)))
 

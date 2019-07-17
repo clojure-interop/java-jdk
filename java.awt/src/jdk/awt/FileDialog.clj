@@ -58,7 +58,7 @@
   returns: the mode of this file dialog window, either
                  FileDialog.LOAD or
                  FileDialog.SAVE - `int`"
-  ([^java.awt.FileDialog this]
+  (^Integer [^java.awt.FileDialog this]
     (-> this (.getMode))))
 
 (defn get-files
@@ -101,7 +101,7 @@
 
   returns: true if the file dialog allows the multiple
                     file selection; false otherwise. - `boolean`"
-  ([^java.awt.FileDialog this]
+  (^Boolean [^java.awt.FileDialog this]
     (-> this (.isMultipleMode))))
 
 (defn set-file
@@ -130,7 +130,7 @@
 
   returns: the currently selected file of this file dialog window,
                   or null if none is selected - `java.lang.String`"
-  ([^java.awt.FileDialog this]
+  (^java.lang.String [^java.awt.FileDialog this]
     (-> this (.getFile))))
 
 (defn set-filename-filter
@@ -148,7 +148,7 @@
 
   returns: the (potentially null or invalid)
             directory of this FileDialog - `java.lang.String`"
-  ([^java.awt.FileDialog this]
+  (^java.lang.String [^java.awt.FileDialog this]
     (-> this (.getDirectory))))
 
 (defn set-directory
@@ -173,6 +173,6 @@
    implementation for Microsoft Windows.
 
   returns: this file dialog's filename filter - `java.io.FilenameFilter`"
-  ([^java.awt.FileDialog this]
+  (^java.io.FilenameFilter [^java.awt.FileDialog this]
     (-> this (.getFilenameFilter))))
 

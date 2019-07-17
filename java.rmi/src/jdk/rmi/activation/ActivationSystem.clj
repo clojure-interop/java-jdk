@@ -28,7 +28,7 @@
   returns: the activation id that can be used to activate the object - `java.rmi.activation.ActivationID`
 
   throws: java.rmi.activation.ActivationException - if registration fails (e.g., database update failure, etc)."
-  ([^java.rmi.activation.ActivationSystem this ^java.rmi.activation.ActivationDesc desc]
+  (^java.rmi.activation.ActivationID [^java.rmi.activation.ActivationSystem this ^java.rmi.activation.ActivationDesc desc]
     (-> this (.registerObject desc))))
 
 (defn unregister-object
@@ -72,7 +72,7 @@
   returns: the activation descriptor - `java.rmi.activation.ActivationDesc`
 
   throws: java.rmi.activation.UnknownObjectException - if id is not registered"
-  ([^java.rmi.activation.ActivationSystem this ^java.rmi.activation.ActivationID id]
+  (^java.rmi.activation.ActivationDesc [^java.rmi.activation.ActivationSystem this ^java.rmi.activation.ActivationID id]
     (-> this (.getActivationDesc id))))
 
 (defn set-activation-group-desc
@@ -86,7 +86,7 @@
   returns: the previous value of the activation group descriptor - `java.rmi.activation.ActivationGroupDesc`
 
   throws: java.rmi.activation.UnknownGroupException - the group associated with id is not a registered group"
-  ([^java.rmi.activation.ActivationSystem this ^java.rmi.activation.ActivationGroupID id ^java.rmi.activation.ActivationGroupDesc desc]
+  (^java.rmi.activation.ActivationGroupDesc [^java.rmi.activation.ActivationSystem this ^java.rmi.activation.ActivationGroupID id ^java.rmi.activation.ActivationGroupDesc desc]
     (-> this (.setActivationGroupDesc id desc))))
 
 (defn set-activation-desc
@@ -100,7 +100,7 @@
   returns: the previous value of the activation descriptor - `java.rmi.activation.ActivationDesc`
 
   throws: java.rmi.activation.UnknownGroupException - the group associated with desc is not a registered group"
-  ([^java.rmi.activation.ActivationSystem this ^java.rmi.activation.ActivationID id ^java.rmi.activation.ActivationDesc desc]
+  (^java.rmi.activation.ActivationDesc [^java.rmi.activation.ActivationSystem this ^java.rmi.activation.ActivationID id ^java.rmi.activation.ActivationDesc desc]
     (-> this (.setActivationDesc id desc))))
 
 (defn register-group
@@ -113,7 +113,7 @@
   returns: an identifier for the group - `java.rmi.activation.ActivationGroupID`
 
   throws: java.rmi.activation.ActivationException - if group registration fails"
-  ([^java.rmi.activation.ActivationSystem this ^java.rmi.activation.ActivationGroupDesc desc]
+  (^java.rmi.activation.ActivationGroupID [^java.rmi.activation.ActivationSystem this ^java.rmi.activation.ActivationGroupDesc desc]
     (-> this (.registerGroup desc))))
 
 (defn get-activation-group-desc
@@ -125,7 +125,7 @@
   returns: the activation group descriptor - `java.rmi.activation.ActivationGroupDesc`
 
   throws: java.rmi.activation.UnknownGroupException - if id is not registered"
-  ([^java.rmi.activation.ActivationSystem this ^java.rmi.activation.ActivationGroupID id]
+  (^java.rmi.activation.ActivationGroupDesc [^java.rmi.activation.ActivationSystem this ^java.rmi.activation.ActivationGroupID id]
     (-> this (.getActivationGroupDesc id))))
 
 (defn active-group
@@ -142,6 +142,6 @@
   returns: monitor for activation group - `java.rmi.activation.ActivationMonitor`
 
   throws: java.rmi.activation.UnknownGroupException - if group is not registered"
-  ([^java.rmi.activation.ActivationSystem this ^java.rmi.activation.ActivationGroupID id ^java.rmi.activation.ActivationInstantiator group ^Long incarnation]
+  (^java.rmi.activation.ActivationMonitor [^java.rmi.activation.ActivationSystem this ^java.rmi.activation.ActivationGroupID id ^java.rmi.activation.ActivationInstantiator group ^Long incarnation]
     (-> this (.activeGroup id group incarnation))))
 

@@ -7,6 +7,6 @@
   "Returns the name of the protocol family.
 
   returns: the name of the protocol family - `java.lang.String`"
-  ([^java.net.ProtocolFamily this]
+  (^java.lang.String [^java.net.ProtocolFamily this]
     (-> this (.name))))
 

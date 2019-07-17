@@ -74,9 +74,9 @@
             specified algorithm. - `java.security.cert.CertPathValidator`
 
   throws: java.security.NoSuchAlgorithmException - if a CertPathValidatorSpi implementation for the specified algorithm is not available from the specified provider."
-  ([^java.lang.String algorithm ^java.lang.String provider]
+  (^java.security.cert.CertPathValidator [^java.lang.String algorithm ^java.lang.String provider]
     (CertPathValidator/getInstance algorithm provider))
-  ([^java.lang.String algorithm]
+  (^java.security.cert.CertPathValidator [^java.lang.String algorithm]
     (CertPathValidator/getInstance algorithm)))
 
 (defn *get-default-type
@@ -96,7 +96,7 @@
   returns: the default CertPathValidator type as specified
    by the certpathvalidator.type security property, or the string
    `PKIX` if no such property exists. - `java.lang.String`"
-  ([]
+  (^java.lang.String []
     (CertPathValidator/getDefaultType )))
 
 (defn get-provider
@@ -104,14 +104,14 @@
    CertPathValidator.
 
   returns: the Provider of this CertPathValidator - `java.security.Provider`"
-  ([^java.security.cert.CertPathValidator this]
+  (^java.security.Provider [^java.security.cert.CertPathValidator this]
     (-> this (.getProvider))))
 
 (defn get-algorithm
   "Returns the algorithm name of this CertPathValidator.
 
   returns: the algorithm name of this CertPathValidator - `java.lang.String`"
-  ([^java.security.cert.CertPathValidator this]
+  (^java.lang.String [^java.security.cert.CertPathValidator this]
     (-> this (.getAlgorithm))))
 
 (defn validate
@@ -130,7 +130,7 @@
   returns: the result of the validation algorithm - `java.security.cert.CertPathValidatorResult`
 
   throws: java.security.cert.CertPathValidatorException - if the CertPath does not validate"
-  ([^java.security.cert.CertPathValidator this ^java.security.cert.CertPath cert-path ^java.security.cert.CertPathParameters params]
+  (^java.security.cert.CertPathValidatorResult [^java.security.cert.CertPathValidator this ^java.security.cert.CertPath cert-path ^java.security.cert.CertPathParameters params]
     (-> this (.validate cert-path params))))
 
 (defn get-revocation-checker
@@ -147,6 +147,6 @@
   returns: a CertPathChecker - `java.security.cert.CertPathChecker`
 
   throws: java.lang.UnsupportedOperationException - if the service provider does not support this method"
-  ([^java.security.cert.CertPathValidator this]
+  (^java.security.cert.CertPathChecker [^java.security.cert.CertPathValidator this]
     (-> this (.getRevocationChecker))))
 

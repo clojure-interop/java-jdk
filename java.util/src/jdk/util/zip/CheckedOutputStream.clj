@@ -33,6 +33,6 @@
   "Returns the Checksum for this output stream.
 
   returns: the Checksum - `java.util.zip.Checksum`"
-  ([^java.util.zip.CheckedOutputStream this]
+  (^java.util.zip.Checksum [^java.util.zip.CheckedOutputStream this]
     (-> this (.getChecksum))))
 

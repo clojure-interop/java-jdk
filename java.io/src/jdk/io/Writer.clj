@@ -38,9 +38,9 @@
   returns: This writer - `java.io.Writer`
 
   throws: java.lang.IndexOutOfBoundsException - If start or end are negative, start is greater than end, or end is greater than csq.length()"
-  ([^java.io.Writer this ^java.lang.CharSequence csq ^Integer start ^Integer end]
+  (^java.io.Writer [^java.io.Writer this ^java.lang.CharSequence csq ^Integer start ^Integer end]
     (-> this (.append csq start end)))
-  ([^java.io.Writer this ^java.lang.CharSequence csq]
+  (^java.io.Writer [^java.io.Writer this ^java.lang.CharSequence csq]
     (-> this (.append csq))))
 
 (defn flush

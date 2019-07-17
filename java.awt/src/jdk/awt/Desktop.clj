@@ -41,7 +41,7 @@
   returns: the Desktop instance of the current browser context - `java.awt.Desktop`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true"
-  ([]
+  (^java.awt.Desktop []
     (Desktop/getDesktop )))
 
 (defn *desktop-supported?
@@ -51,7 +51,7 @@
 
   returns: true if this class is supported on the
            current platform; false otherwise - `boolean`"
-  ([]
+  (^Boolean []
     (Desktop/isDesktopSupported )))
 
 (defn supported?
@@ -68,7 +68,7 @@
 
   returns: true if the specified action is supported on
            the current platform; false otherwise - `boolean`"
-  ([^java.awt.Desktop this ^java.awt.Desktop.Action action]
+  (^Boolean [^java.awt.Desktop this ^java.awt.Desktop.Action action]
     (-> this (.isSupported action))))
 
 (defn open

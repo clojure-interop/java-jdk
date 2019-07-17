@@ -35,6 +35,6 @@
   "Returns CRC-32 value.
 
   returns: the current checksum value - `long`"
-  ([^java.util.zip.CRC32 this]
+  (^Long [^java.util.zip.CRC32 this]
     (-> this (.getValue))))
 

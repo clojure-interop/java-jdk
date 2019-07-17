@@ -18,6 +18,6 @@
 
   returns: the address of this object, or null if it
    does not have one. - `javax.management.remote.JMXServiceURL`"
-  ([^javax.management.remote.JMXAddressable this]
+  (^javax.management.remote.JMXServiceURL [^javax.management.remote.JMXAddressable this]
     (-> this (.getAddress))))
 

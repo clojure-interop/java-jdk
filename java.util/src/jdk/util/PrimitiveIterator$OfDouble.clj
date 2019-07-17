@@ -9,7 +9,7 @@
   returns: the next double element in the iteration - `double`
 
   throws: java.util.NoSuchElementException - if the iteration has no more elements"
-  ([^java.util.PrimitiveIterator$OfDouble this]
+  (^Double [^java.util.PrimitiveIterator$OfDouble this]
     (-> this (.nextDouble))))
 
 (defn for-each-remaining

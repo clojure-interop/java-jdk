@@ -50,20 +50,20 @@
   returns: the enum constant with the specified name - `javax.tools.DocumentationTool.Location`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^javax.tools.DocumentationTool.Location [^java.lang.String name]
     (DocumentationTool$Location/valueOf name)))
 
 (defn get-name
   "Description copied from interface: JavaFileManager.Location
 
   returns: a name - `java.lang.String`"
-  ([^javax.tools.DocumentationTool$Location this]
+  (^java.lang.String [^javax.tools.DocumentationTool$Location this]
     (-> this (.getName))))
 
 (defn output-location?
   "Description copied from interface: JavaFileManager.Location
 
   returns: true if this is an output location, false otherwise - `boolean`"
-  ([^javax.tools.DocumentationTool$Location this]
+  (^Boolean [^javax.tools.DocumentationTool$Location this]
     (-> this (.isOutputLocation))))
 

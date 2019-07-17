@@ -182,7 +182,7 @@
   returns: the end cap style of this BasicStroke as one
    of the static int values that define possible end cap
    styles. - `int`"
-  ([^java.awt.BasicStroke this]
+  (^Integer [^java.awt.BasicStroke this]
     (-> this (.getEndCap))))
 
 (defn get-dash-phase
@@ -193,7 +193,7 @@
    the beginning of the stroke.
 
   returns: the dash phase as a float value. - `float`"
-  ([^java.awt.BasicStroke this]
+  (^Float [^java.awt.BasicStroke this]
     (-> this (.getDashPhase))))
 
 (defn get-line-join
@@ -202,7 +202,7 @@
   returns: the line join style of the BasicStroke as one
    of the static int values that define possible line
    join styles. - `int`"
-  ([^java.awt.BasicStroke this]
+  (^Integer [^java.awt.BasicStroke this]
     (-> this (.getLineJoin))))
 
 (defn create-stroked-shape
@@ -212,7 +212,7 @@
   s - the Shape boundary be stroked - `java.awt.Shape`
 
   returns: the Shape of the stroked outline. - `java.awt.Shape`"
-  ([^java.awt.BasicStroke this ^java.awt.Shape s]
+  (^java.awt.Shape [^java.awt.BasicStroke this ^java.awt.Shape s]
     (-> this (.createStrokedShape s))))
 
 (defn get-line-width
@@ -222,14 +222,14 @@
    the user space coordinate system.
 
   returns: the line width of this BasicStroke. - `float`"
-  ([^java.awt.BasicStroke this]
+  (^Float [^java.awt.BasicStroke this]
     (-> this (.getLineWidth))))
 
 (defn hash-code
   "Returns the hashcode for this stroke.
 
   returns: a hash code for this stroke. - `int`"
-  ([^java.awt.BasicStroke this]
+  (^Integer [^java.awt.BasicStroke this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -243,13 +243,13 @@
   returns: true if the width, join, cap, miter limit, dash, and
               dash phase are the same for both objects;
               false otherwise. - `boolean`"
-  ([^java.awt.BasicStroke this ^java.lang.Object obj]
+  (^Boolean [^java.awt.BasicStroke this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn get-miter-limit
   "Returns the limit of miter joins.
 
   returns: the limit of miter joins of the BasicStroke. - `float`"
-  ([^java.awt.BasicStroke this]
+  (^Float [^java.awt.BasicStroke this]
     (-> this (.getMiterLimit))))
 

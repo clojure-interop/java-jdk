@@ -12,7 +12,7 @@
   "Obtain the format identifier part of the XID.
 
   returns: Format identifier. O means the OSI CCR format. - `int`"
-  ([^javax.transaction.xa.Xid this]
+  (^Integer [^javax.transaction.xa.Xid this]
     (-> this (.getFormatId))))
 
 (defn get-global-transaction-id

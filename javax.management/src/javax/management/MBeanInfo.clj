@@ -70,9 +70,9 @@
   descriptor - The descriptor for the MBean. This may be null which is equivalent to an empty descriptor. - `javax.management.Descriptor`
 
   throws: java.lang.IllegalArgumentException"
-  ([^java.lang.String class-name ^java.lang.String description ^javax.management.MBeanAttributeInfo[] attributes ^javax.management.MBeanConstructorInfo[] constructors ^javax.management.MBeanOperationInfo[] operations ^javax.management.MBeanNotificationInfo[] notifications ^javax.management.Descriptor descriptor]
+  ([^java.lang.String class-name ^java.lang.String description attributes constructors operations notifications ^javax.management.Descriptor descriptor]
     (new MBeanInfo class-name description attributes constructors operations notifications descriptor))
-  ([^java.lang.String class-name ^java.lang.String description ^javax.management.MBeanAttributeInfo[] attributes ^javax.management.MBeanConstructorInfo[] constructors ^javax.management.MBeanOperationInfo[] operations ^javax.management.MBeanNotificationInfo[] notifications]
+  ([^java.lang.String class-name ^java.lang.String description attributes constructors operations notifications]
     (new MBeanInfo class-name description attributes constructors operations notifications)))
 
 (defn get-operations
@@ -93,7 +93,7 @@
    this MBeanInfo.
 
   returns: the class name. - `java.lang.String`"
-  ([^javax.management.MBeanInfo this]
+  (^java.lang.String [^javax.management.MBeanInfo this]
     (-> this (.getClassName))))
 
 (defn get-descriptor
@@ -101,7 +101,7 @@
    will have no affect on the original descriptor.
 
   returns: a descriptor that is either immutable or a copy of the original. - `javax.management.Descriptor`"
-  ([^javax.management.MBeanInfo this]
+  (^javax.management.Descriptor [^javax.management.MBeanInfo this]
     (-> this (.getDescriptor))))
 
 (defn get-notifications
@@ -121,14 +121,14 @@
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^javax.management.MBeanInfo this]
+  (^java.lang.String [^javax.management.MBeanInfo this]
     (-> this (.toString))))
 
 (defn get-description
   "Returns a human readable description of the MBean.
 
   returns: the description. - `java.lang.String`"
-  ([^javax.management.MBeanInfo this]
+  (^java.lang.String [^javax.management.MBeanInfo this]
     (-> this (.getDescription))))
 
 (defn clone
@@ -142,14 +142,14 @@
    interest to subclasses.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([^javax.management.MBeanInfo this]
+  (^java.lang.Object [^javax.management.MBeanInfo this]
     (-> this (.clone))))
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  ([^javax.management.MBeanInfo this]
+  (^Integer [^javax.management.MBeanInfo this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -166,7 +166,7 @@
 
   returns: true if and only if o is an MBeanInfo that is equal
    to this one according to the rules above. - `boolean`"
-  ([^javax.management.MBeanInfo this ^java.lang.Object o]
+  (^Boolean [^javax.management.MBeanInfo this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn get-constructors

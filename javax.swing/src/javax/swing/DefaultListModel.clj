@@ -28,7 +28,7 @@
    vector has no components.
 
   returns: the first component of this list - `DefaultListModel.E`"
-  ([^javax.swing.DefaultListModel this]
+  (^DefaultListModel.E [^javax.swing.DefaultListModel this]
     (-> this (.firstElement))))
 
 (defn add-element
@@ -45,7 +45,7 @@
 
   returns: true if the specified object
             is the same as a component in this list - `boolean`"
-  ([^javax.swing.DefaultListModel this ^java.lang.Object elem]
+  (^Boolean [^javax.swing.DefaultListModel this ^java.lang.Object elem]
     (-> this (.contains elem))))
 
 (defn to-string
@@ -53,7 +53,7 @@
    object's properties.
 
   returns: a String representation of this object - `java.lang.String`"
-  ([^javax.swing.DefaultListModel this]
+  (^java.lang.String [^javax.swing.DefaultListModel this]
     (-> this (.toString))))
 
 (defn insert-element-at
@@ -95,7 +95,7 @@
   returns: the component at the specified index - `DefaultListModel.E`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if the index is negative or greater than the current size of this list"
-  ([^javax.swing.DefaultListModel this ^Integer index]
+  (^DefaultListModel.E [^javax.swing.DefaultListModel this ^Integer index]
     (-> this (.getElementAt index))))
 
 (defn last-index-of
@@ -108,9 +108,9 @@
   returns: the index of the last occurrence of the elem
             in this list at position less than index;
             returns -1 if the object is not found - `int`"
-  ([^javax.swing.DefaultListModel this ^java.lang.Object elem ^Integer index]
+  (^Integer [^javax.swing.DefaultListModel this ^java.lang.Object elem ^Integer index]
     (-> this (.lastIndexOf elem index)))
-  ([^javax.swing.DefaultListModel this ^java.lang.Object elem]
+  (^Integer [^javax.swing.DefaultListModel this ^java.lang.Object elem]
     (-> this (.lastIndexOf elem))))
 
 (defn remove-element
@@ -121,7 +121,7 @@
 
   returns: true if the argument was a component of this
             list; false otherwise - `boolean`"
-  ([^javax.swing.DefaultListModel this ^java.lang.Object obj]
+  (^Boolean [^javax.swing.DefaultListModel this ^java.lang.Object obj]
     (-> this (.removeElement obj))))
 
 (defn set-element-at
@@ -152,7 +152,7 @@
   index - the index of the element to removed - `int`
 
   returns: the element previously at the specified position - `DefaultListModel.E`"
-  ([^javax.swing.DefaultListModel this ^Integer index]
+  (^DefaultListModel.E [^javax.swing.DefaultListModel this ^Integer index]
     (-> this (.remove index))))
 
 (defn copy-into
@@ -161,7 +161,7 @@
    else an IndexOutOfBoundsException is thrown.
 
   an-array - the array into which the components get copied - `java.lang.Object[]`"
-  ([^javax.swing.DefaultListModel this ^java.lang.Object[] an-array]
+  ([^javax.swing.DefaultListModel this an-array]
     (-> this (.copyInto an-array))))
 
 (defn ensure-capacity
@@ -185,7 +185,7 @@
   index - an index into this list - `int`
 
   returns: the component at the specified index - `DefaultListModel.E`"
-  ([^javax.swing.DefaultListModel this ^Integer index]
+  (^DefaultListModel.E [^javax.swing.DefaultListModel this ^Integer index]
     (-> this (.elementAt index))))
 
 (defn set-size
@@ -219,7 +219,7 @@
   element - element to be stored at the specified position - `DefaultListModel.E`
 
   returns: the element previously at the specified position - `DefaultListModel.E`"
-  ([^javax.swing.DefaultListModel this ^Integer index ^DefaultListModel.E element]
+  (^DefaultListModel.E [^javax.swing.DefaultListModel this ^Integer index ^DefaultListModel.E element]
     (-> this (.set index element))))
 
 (defn empty?
@@ -228,14 +228,14 @@
   returns: true if and only if this list has
             no components, that is, its size is zero;
             false otherwise - `boolean`"
-  ([^javax.swing.DefaultListModel this]
+  (^Boolean [^javax.swing.DefaultListModel this]
     (-> this (.isEmpty))))
 
 (defn size
   "Returns the number of components in this list.
 
   returns: the number of components in this list - `int`"
-  ([^javax.swing.DefaultListModel this]
+  (^Integer [^javax.swing.DefaultListModel this]
     (-> this (.size))))
 
 (defn clear
@@ -254,9 +254,9 @@
   returns: the index where the first occurrence of elem
             is found after index; returns -1
             if the elem is not found in the list - `int`"
-  ([^javax.swing.DefaultListModel this ^java.lang.Object elem ^Integer index]
+  (^Integer [^javax.swing.DefaultListModel this ^java.lang.Object elem ^Integer index]
     (-> this (.indexOf elem index)))
-  ([^javax.swing.DefaultListModel this ^java.lang.Object elem]
+  (^Integer [^javax.swing.DefaultListModel this ^java.lang.Object elem]
     (-> this (.indexOf elem))))
 
 (defn to-array
@@ -273,7 +273,7 @@
    has no components.
 
   returns: the last component of the list - `DefaultListModel.E`"
-  ([^javax.swing.DefaultListModel this]
+  (^DefaultListModel.E [^javax.swing.DefaultListModel this]
     (-> this (.lastElement))))
 
 (defn get-size
@@ -285,7 +285,7 @@
    size is identifiable as a JavaBean property.
 
   returns: the number of components in this list - `int`"
-  ([^javax.swing.DefaultListModel this]
+  (^Integer [^javax.swing.DefaultListModel this]
     (-> this (.getSize))))
 
 (defn get
@@ -298,14 +298,14 @@
   index - index of element to return - `int`
 
   returns: `DefaultListModel.E`"
-  ([^javax.swing.DefaultListModel this ^Integer index]
+  (^DefaultListModel.E [^javax.swing.DefaultListModel this ^Integer index]
     (-> this (.get index))))
 
 (defn capacity
   "Returns the current capacity of this list.
 
   returns: the current capacity - `int`"
-  ([^javax.swing.DefaultListModel this]
+  (^Integer [^javax.swing.DefaultListModel this]
     (-> this (.capacity))))
 
 (defn remove-element-at
@@ -326,7 +326,7 @@
   "Returns an enumeration of the components of this list.
 
   returns: an enumeration of the components of this list - `java.util.Enumeration<DefaultListModel.E>`"
-  ([^javax.swing.DefaultListModel this]
+  (^java.util.Enumeration [^javax.swing.DefaultListModel this]
     (-> this (.elements))))
 
 (defn trim-to-size

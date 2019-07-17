@@ -15,6 +15,6 @@
   right - the second operand - `double`
 
   returns: the operator result - `double`"
-  ([^java.util.function.DoubleBinaryOperator this ^Double left ^Double right]
+  (^Double [^java.util.function.DoubleBinaryOperator this ^Double left ^Double right]
     (-> this (.applyAsDouble left right))))
 

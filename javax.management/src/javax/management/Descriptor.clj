@@ -382,7 +382,7 @@
   field-values - Object array of the corresponding field values. The array cannot be null. Elements of the array can be null. - `java.lang.Object[]`
 
   throws: javax.management.RuntimeOperationsException - if the change fails for any reason. Wrapped exception is IllegalArgumentException if fieldNames or fieldValues is null, or if the arrays are of different lengths, or if there is an illegal value in one of them. Wrapped exception is UnsupportedOperationException if the descriptor is immutable, and the call would change its contents."
-  ([^javax.management.Descriptor this ^java.lang.String[] field-names ^java.lang.Object[] field-values]
+  ([^javax.management.Descriptor this field-names field-values]
     (-> this (.setFields field-names field-values))))
 
 (defn remove-field
@@ -411,7 +411,7 @@
   returns: the corresponding value, or null if the field is not present. - `java.lang.Object`
 
   throws: javax.management.RuntimeOperationsException - if the field name is illegal."
-  ([^javax.management.Descriptor this ^java.lang.String field-name]
+  (^java.lang.Object [^javax.management.Descriptor this ^java.lang.String field-name]
     (-> this (.getFieldValue field-name))))
 
 (defn get-field-values
@@ -448,7 +448,7 @@
   returns: true if the values are legal. - `boolean`
 
   throws: javax.management.RuntimeOperationsException - If the validity checking fails for any reason, this exception will be thrown. The method returns false if the descriptor is not valid, but throws this exception if the attempt to determine validity fails."
-  ([^javax.management.Descriptor this]
+  (^Boolean [^javax.management.Descriptor this]
     (-> this (.isValid))))
 
 (defn clone
@@ -460,7 +460,7 @@
   returns: A descriptor which is equal to this descriptor. - `java.lang.Object`
 
   throws: javax.management.RuntimeOperationsException - for illegal value for field names or field values. If the descriptor construction fails for any reason, this exception will be thrown."
-  ([^javax.management.Descriptor this]
+  (^java.lang.Object [^javax.management.Descriptor this]
     (-> this (.clone))))
 
 (defn hash-code
@@ -480,7 +480,7 @@
    Otherwise h is v.hashCode().
 
   returns: A hash code value for this object. - `int`"
-  ([^javax.management.Descriptor this]
+  (^Integer [^javax.management.Descriptor this]
     (-> this (.hashCode))))
 
 (defn get-fields
@@ -515,6 +515,6 @@
 
   returns: true if the objects are the same; false
    otherwise. - `boolean`"
-  ([^javax.management.Descriptor this ^java.lang.Object obj]
+  (^Boolean [^javax.management.Descriptor this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

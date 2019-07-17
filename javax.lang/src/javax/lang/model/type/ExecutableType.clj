@@ -27,7 +27,7 @@
    return a value.
 
   returns: the return type of this executable - `javax.lang.model.type.TypeMirror`"
-  ([^javax.lang.model.type.ExecutableType this]
+  (^javax.lang.model.type.TypeMirror [^javax.lang.model.type.ExecutableType this]
     (-> this (.getReturnType))))
 
 (defn get-parameter-types
@@ -52,7 +52,7 @@
    receiver type.
 
   returns: the receiver type of this executable - `javax.lang.model.type.TypeMirror`"
-  ([^javax.lang.model.type.ExecutableType this]
+  (^javax.lang.model.type.TypeMirror [^javax.lang.model.type.ExecutableType this]
     (-> this (.getReceiverType))))
 
 (defn get-thrown-types

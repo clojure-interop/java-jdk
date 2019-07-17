@@ -27,7 +27,7 @@
   "Return the command verb.
 
   returns: the command verb. - `java.lang.String`"
-  ([^javax.activation.CommandInfo this]
+  (^java.lang.String [^javax.activation.CommandInfo this]
     (-> this (.getCommandName))))
 
 (defn get-command-class
@@ -39,7 +39,7 @@
    A VALID VALUE!
 
   returns: The class name of the command, or null - `java.lang.String`"
-  ([^javax.activation.CommandInfo this]
+  (^java.lang.String [^javax.activation.CommandInfo this]
     (-> this (.getCommandClass))))
 
 (defn get-command-object
@@ -71,6 +71,6 @@
   returns: The bean - `java.lang.Object`
 
   throws: java.io.IOException"
-  ([^javax.activation.CommandInfo this ^javax.activation.DataHandler dh ^java.lang.ClassLoader loader]
+  (^java.lang.Object [^javax.activation.CommandInfo this ^javax.activation.DataHandler dh ^java.lang.ClassLoader loader]
     (-> this (.getCommandObject dh loader))))
 

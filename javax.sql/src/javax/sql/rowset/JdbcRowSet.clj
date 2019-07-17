@@ -107,7 +107,7 @@
            false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a rowset implementation is unable to to determine whether rows marked for deletion remain visible"
-  ([^javax.sql.rowset.JdbcRowSet this]
+  (^Boolean [^javax.sql.rowset.JdbcRowSet this]
     (-> this (.getShowDeleted))))
 
 (defn set-show-deleted
@@ -161,7 +161,7 @@
    or null if there are none - `javax.sql.rowset.RowSetWarning`
 
   throws: java.sql.SQLException - if this method is called on a closed JdbcRowSet object"
-  ([^javax.sql.rowset.JdbcRowSet this]
+  (^javax.sql.rowset.RowSetWarning [^javax.sql.rowset.JdbcRowSet this]
     (-> this (.getRowSetWarnings))))
 
 (defn commit
@@ -196,7 +196,7 @@
   returns: true if auto-commit is enabled; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^javax.sql.rowset.JdbcRowSet this]
+  (^Boolean [^javax.sql.rowset.JdbcRowSet this]
     (-> this (.getAutoCommit))))
 
 (defn set-auto-commit

@@ -10,7 +10,7 @@
    Design axes include things like width, weight and optical scaling.
 
   returns: the number of multiple master design controls - `int`"
-  ([^java.awt.font.MultipleMaster this]
+  (^Integer [^java.awt.font.MultipleMaster this]
     (-> this (.getNumDesignAxes))))
 
 (defn get-design-axis-ranges
@@ -54,8 +54,8 @@
   returns: a Font object that is an instance of
    MultipleMaster and is based on the specified metric
    information. - `java.awt.Font`"
-  ([^java.awt.font.MultipleMaster this glyph-widths ^Float avg-stem-width ^Float typical-cap-height ^Float typical-x-height ^Float italic-angle]
+  (^java.awt.Font [^java.awt.font.MultipleMaster this glyph-widths ^Float avg-stem-width ^Float typical-cap-height ^Float typical-x-height ^Float italic-angle]
     (-> this (.deriveMMFont glyph-widths avg-stem-width typical-cap-height typical-x-height italic-angle)))
-  ([^java.awt.font.MultipleMaster this axes]
+  (^java.awt.Font [^java.awt.font.MultipleMaster this axes]
     (-> this (.deriveMMFont axes))))
 

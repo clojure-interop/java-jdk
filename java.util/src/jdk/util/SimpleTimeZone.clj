@@ -165,7 +165,7 @@
 
   returns: true if daylight saving time is in effective at the
    given date; false otherwise. - `boolean`"
-  ([^java.util.SimpleTimeZone this ^java.util.Date date]
+  (^Boolean [^java.util.SimpleTimeZone this ^java.util.Date date]
     (-> this (.inDaylightTime date))))
 
 (defn set-dst-savings
@@ -180,14 +180,14 @@
   "Gets the GMT offset for this time zone.
 
   returns: the GMT offset value in milliseconds - `int`"
-  ([^java.util.SimpleTimeZone this]
+  (^Integer [^java.util.SimpleTimeZone this]
     (-> this (.getRawOffset))))
 
 (defn to-string
   "Returns a string representation of this time zone.
 
   returns: a string representation of this time zone. - `java.lang.String`"
-  ([^java.util.SimpleTimeZone this]
+  (^java.lang.String [^java.util.SimpleTimeZone this]
     (-> this (.toString))))
 
 (defn get-dst-savings
@@ -198,7 +198,7 @@
    respect to standard time when the daylight saving rules are in
    effect, or 0 (zero) if this time zone doesn't observe daylight
    saving time. - `int`"
-  ([^java.util.SimpleTimeZone this]
+  (^Integer [^java.util.SimpleTimeZone this]
     (-> this (.getDSTSavings))))
 
 (defn get-offset
@@ -225,9 +225,9 @@
   returns: The milliseconds to add to UTC to get local time. - `int`
 
   throws: java.lang.IllegalArgumentException - the era, month, day, dayOfWeek, or millis parameters are out of range"
-  ([^java.util.SimpleTimeZone this ^Integer era ^Integer year ^Integer month ^Integer day ^Integer day-of-week ^Integer millis]
+  (^Integer [^java.util.SimpleTimeZone this ^Integer era ^Integer year ^Integer month ^Integer day ^Integer day-of-week ^Integer millis]
     (-> this (.getOffset era year month day day-of-week millis)))
-  ([^java.util.SimpleTimeZone this ^Long date]
+  (^Integer [^java.util.SimpleTimeZone this ^Long date]
     (-> this (.getOffset date))))
 
 (defn set-end-rule
@@ -263,21 +263,21 @@
 
   returns: true if the given zone is a SimpleTimeZone and has the
    same rules and offset as this one - `boolean`"
-  ([^java.util.SimpleTimeZone this ^java.util.TimeZone other]
+  (^Boolean [^java.util.SimpleTimeZone this ^java.util.TimeZone other]
     (-> this (.hasSameRules other))))
 
 (defn clone
   "Returns a clone of this SimpleTimeZone instance.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([^java.util.SimpleTimeZone this]
+  (^java.lang.Object [^java.util.SimpleTimeZone this]
     (-> this (.clone))))
 
 (defn hash-code
   "Generates the hash code for the SimpleDateFormat object.
 
   returns: the hash code for this object - `int`"
-  ([^java.util.SimpleTimeZone this]
+  (^Integer [^java.util.SimpleTimeZone this]
     (-> this (.hashCode))))
 
 (defn observes-daylight-time
@@ -286,7 +286,7 @@
 
   returns: true if this SimpleTimeZone observes
    Daylight Saving Time; false otherwise. - `boolean`"
-  ([^java.util.SimpleTimeZone this]
+  (^Boolean [^java.util.SimpleTimeZone this]
     (-> this (.observesDaylightTime))))
 
 (defn equals
@@ -296,7 +296,7 @@
 
   returns: True if the given obj is the same as this
                SimpleTimeZone object; false otherwise. - `boolean`"
-  ([^java.util.SimpleTimeZone this ^java.lang.Object obj]
+  (^Boolean [^java.util.SimpleTimeZone this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn set-start-rule
@@ -322,6 +322,6 @@
 
   returns: true if this time zone uses daylight saving time;
    false otherwise. - `boolean`"
-  ([^java.util.SimpleTimeZone this]
+  (^Boolean [^java.util.SimpleTimeZone this]
     (-> this (.useDaylightTime))))
 

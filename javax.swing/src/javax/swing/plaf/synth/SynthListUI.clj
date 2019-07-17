@@ -15,7 +15,7 @@
   list - component to create UI object for - `javax.swing.JComponent`
 
   returns: the UI object - `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent list]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent list]
     (SynthListUI/createUI list)))
 
 (defn update
@@ -56,6 +56,6 @@
   c - Component requesting SynthContext. - `javax.swing.JComponent`
 
   returns: SynthContext describing component. - `javax.swing.plaf.synth.SynthContext`"
-  ([^javax.swing.plaf.synth.SynthListUI this ^javax.swing.JComponent c]
+  (^javax.swing.plaf.synth.SynthContext [^javax.swing.plaf.synth.SynthListUI this ^javax.swing.JComponent c]
     (-> this (.getContext c))))
 

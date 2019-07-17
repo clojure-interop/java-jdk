@@ -28,7 +28,7 @@
   returns: true if and only if this enumeration object
              contains at least one more element to provide;
             false otherwise. - `boolean`"
-  ([^java.util.Enumeration this]
+  (^Boolean [^java.util.Enumeration this]
     (-> this (.hasMoreElements))))
 
 (defn next-element
@@ -38,6 +38,6 @@
   returns: the next element of this enumeration. - `Enumeration.E`
 
   throws: java.util.NoSuchElementException - if no more elements exist."
-  ([^java.util.Enumeration this]
+  (^Enumeration.E [^java.util.Enumeration this]
     (-> this (.nextElement))))
 

@@ -21,7 +21,7 @@
   "Returns a shared ToolTipManager instance.
 
   returns: a shared ToolTipManager object - `javax.swing.ToolTipManager`"
-  ([]
+  (^javax.swing.ToolTipManager []
     (ToolTipManager/sharedInstance )))
 
 (defn set-reshow-delay
@@ -45,7 +45,7 @@
    Tooltips are being used.
 
   returns: true if lightweight ToolTips are in use - `boolean`"
-  ([^javax.swing.ToolTipManager this]
+  (^Boolean [^javax.swing.ToolTipManager this]
     (-> this (.isLightWeightPopupEnabled))))
 
 (defn set-dismiss-delay
@@ -95,14 +95,14 @@
 
   returns: an integer representing the dismissal delay value,
             in milliseconds - `int`"
-  ([^javax.swing.ToolTipManager this]
+  (^Integer [^javax.swing.ToolTipManager this]
     (-> this (.getDismissDelay))))
 
 (defn get-reshow-delay
   "Returns the reshow delay property.
 
   returns: reshown delay property - `int`"
-  ([^javax.swing.ToolTipManager this]
+  (^Integer [^javax.swing.ToolTipManager this]
     (-> this (.getReshowDelay))))
 
 (defn mouse-pressed
@@ -118,7 +118,7 @@
 
   returns: an integer representing the initial delay value,
             in milliseconds - `int`"
-  ([^javax.swing.ToolTipManager this]
+  (^Integer [^javax.swing.ToolTipManager this]
     (-> this (.getInitialDelay))))
 
 (defn mouse-exited
@@ -167,6 +167,6 @@
   "Returns true if this object is enabled.
 
   returns: true if this object is enabled, false otherwise - `boolean`"
-  ([^javax.swing.ToolTipManager this]
+  (^Boolean [^javax.swing.ToolTipManager this]
     (-> this (.isEnabled))))
 

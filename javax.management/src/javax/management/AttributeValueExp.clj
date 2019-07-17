@@ -23,7 +23,7 @@
   "Returns a string representation of the name of the attribute.
 
   returns: the attribute name. - `java.lang.String`"
-  ([^javax.management.AttributeValueExp this]
+  (^java.lang.String [^javax.management.AttributeValueExp this]
     (-> this (.getAttributeName))))
 
 (defn apply
@@ -40,14 +40,14 @@
   returns: The ValueExp. - `javax.management.ValueExp`
 
   throws: javax.management.BadAttributeValueExpException"
-  ([^javax.management.AttributeValueExp this ^javax.management.ObjectName name]
+  (^javax.management.ValueExp [^javax.management.AttributeValueExp this ^javax.management.ObjectName name]
     (-> this (.apply name))))
 
 (defn to-string
   "Returns the string representing its value.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^javax.management.AttributeValueExp this]
+  (^java.lang.String [^javax.management.AttributeValueExp this]
     (-> this (.toString))))
 
 (defn set-m-bean-server

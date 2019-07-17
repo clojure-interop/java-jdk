@@ -34,7 +34,7 @@
   returns: the next element in the list - `ListIterator.E`
 
   throws: java.util.NoSuchElementException - if the iteration has no next element"
-  ([^java.util.ListIterator this]
+  (^ListIterator.E [^java.util.ListIterator this]
     (-> this (.next))))
 
 (defn has-previous?
@@ -45,7 +45,7 @@
 
   returns: true if the list iterator has more elements when
            traversing the list in the reverse direction - `boolean`"
-  ([^java.util.ListIterator this]
+  (^Boolean [^java.util.ListIterator this]
     (-> this (.hasPrevious))))
 
 (defn previous-index
@@ -56,7 +56,7 @@
   returns: the index of the element that would be returned by a
            subsequent call to previous, or -1 if the list
            iterator is at the beginning of the list - `int`"
-  ([^java.util.ListIterator this]
+  (^Integer [^java.util.ListIterator this]
     (-> this (.previousIndex))))
 
 (defn previous
@@ -70,7 +70,7 @@
   returns: the previous element in the list - `ListIterator.E`
 
   throws: java.util.NoSuchElementException - if the iteration has no previous element"
-  ([^java.util.ListIterator this]
+  (^ListIterator.E [^java.util.ListIterator this]
     (-> this (.previous))))
 
 (defn remove
@@ -91,7 +91,7 @@
 
   returns: true if the list iterator has more elements when
            traversing the list in the forward direction - `boolean`"
-  ([^java.util.ListIterator this]
+  (^Boolean [^java.util.ListIterator this]
     (-> this (.hasNext))))
 
 (defn add
@@ -132,6 +132,6 @@
   returns: the index of the element that would be returned by a
            subsequent call to next, or list size if the list
            iterator is at the end of the list - `int`"
-  ([^java.util.ListIterator this]
+  (^Integer [^java.util.ListIterator this]
     (-> this (.nextIndex))))
 

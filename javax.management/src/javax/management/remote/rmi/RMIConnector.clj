@@ -54,7 +54,7 @@
    person to read.
 
   returns: a String representation of this object. - `java.lang.String`"
-  ([^javax.management.remote.rmi.RMIConnector this]
+  (^java.lang.String [^javax.management.remote.rmi.RMIConnector this]
     (-> this (.toString))))
 
 (defn get-address
@@ -62,7 +62,7 @@
 
   returns: the address of this connector, or null if it
    does not have one. - `javax.management.remote.JMXServiceURL`"
-  ([^javax.management.remote.rmi.RMIConnector this]
+  (^javax.management.remote.JMXServiceURL [^javax.management.remote.rmi.RMIConnector this]
     (-> this (.getAddress))))
 
 (defn connect
@@ -84,7 +84,7 @@
    conventions for connection IDs. - `java.lang.String`
 
   throws: java.io.IOException - if the connection ID cannot be obtained, for instance because the connection is closed or broken."
-  ([^javax.management.remote.rmi.RMIConnector this]
+  (^java.lang.String [^javax.management.remote.rmi.RMIConnector this]
     (-> this (.getConnectionId))))
 
 (defn get-m-bean-server-connection
@@ -97,9 +97,9 @@
    of a given delegation subject. - `javax.management.MBeanServerConnection`
 
   throws: java.io.IOException - if a valid MBeanServerConnection cannot be created, for instance because the connection to the remote MBean server has not yet been established (with the connect method), or it has been closed, or it has broken."
-  ([^javax.management.remote.rmi.RMIConnector this ^javax.security.auth.Subject delegation-subject]
+  (^javax.management.MBeanServerConnection [^javax.management.remote.rmi.RMIConnector this ^javax.security.auth.Subject delegation-subject]
     (-> this (.getMBeanServerConnection delegation-subject)))
-  ([^javax.management.remote.rmi.RMIConnector this]
+  (^javax.management.MBeanServerConnection [^javax.management.remote.rmi.RMIConnector this]
     (-> this (.getMBeanServerConnection))))
 
 (defn add-connection-notification-listener

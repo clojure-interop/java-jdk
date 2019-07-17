@@ -17,13 +17,13 @@
   "Returns the modulus.
 
   returns: the modulus - `java.math.BigInteger`"
-  ([^java.security.spec.RSAPublicKeySpec this]
+  (^java.math.BigInteger [^java.security.spec.RSAPublicKeySpec this]
     (-> this (.getModulus))))
 
 (defn get-public-exponent
   "Returns the public exponent.
 
   returns: the public exponent - `java.math.BigInteger`"
-  ([^java.security.spec.RSAPublicKeySpec this]
+  (^java.math.BigInteger [^java.security.spec.RSAPublicKeySpec this]
     (-> this (.getPublicExponent))))
 

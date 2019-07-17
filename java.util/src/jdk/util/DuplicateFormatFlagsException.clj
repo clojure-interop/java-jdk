@@ -20,7 +20,7 @@
   "Returns the set of flags which contains a duplicate flag.
 
   returns: The flags - `java.lang.String`"
-  ([^java.util.DuplicateFormatFlagsException this]
+  (^java.lang.String [^java.util.DuplicateFormatFlagsException this]
     (-> this (.getFlags))))
 
 (defn get-message
@@ -28,6 +28,6 @@
 
   returns: the detail message string of this Throwable instance
             (which may be null). - `java.lang.String`"
-  ([^java.util.DuplicateFormatFlagsException this]
+  (^java.lang.String [^java.util.DuplicateFormatFlagsException this]
     (-> this (.getMessage))))
 

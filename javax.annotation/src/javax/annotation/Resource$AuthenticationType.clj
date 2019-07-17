@@ -38,6 +38,6 @@
   returns: the enum constant with the specified name - `javax.annotation.Resource.AuthenticationType`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^javax.annotation.Resource.AuthenticationType [^java.lang.String name]
     (Resource$AuthenticationType/valueOf name)))
 

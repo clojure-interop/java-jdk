@@ -18,7 +18,7 @@
    2 for GIOP 1.3 and higher.
 
   returns: `byte`"
-  ([^javax.rmi.CORBA.ValueHandlerMultiFormat this]
+  (^Byte [^javax.rmi.CORBA.ValueHandlerMultiFormat this]
     (-> this (.getMaximumStreamFormatVersion))))
 
 (defn write-value

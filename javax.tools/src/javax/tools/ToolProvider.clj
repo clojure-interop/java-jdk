@@ -11,7 +11,7 @@
 
   returns: the compiler provided with this platform or
    null if no compiler is provided - `javax.tools.JavaCompiler`"
-  ([]
+  (^javax.tools.JavaCompiler []
     (ToolProvider/getSystemJavaCompiler )))
 
 (defn *get-system-documentation-tool
@@ -20,7 +20,7 @@
 
   returns: the documentation tool provided with this platform or
    null if no documentation tool is provided - `javax.tools.DocumentationTool`"
-  ([]
+  (^javax.tools.DocumentationTool []
     (ToolProvider/getSystemDocumentationTool )))
 
 (defn *get-system-tool-class-loader
@@ -31,6 +31,6 @@
 
   returns: the class loader for tools provided with this platform
    or null if no tools are provided - `java.lang.ClassLoader`"
-  ([]
+  (^java.lang.ClassLoader []
     (ToolProvider/getSystemToolClassLoader )))
 

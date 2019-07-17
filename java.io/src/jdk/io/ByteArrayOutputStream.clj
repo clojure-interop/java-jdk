@@ -70,7 +70,7 @@
 
   returns: the value of the count field, which is the number
             of valid bytes in this output stream. - `int`"
-  ([^java.io.ByteArrayOutputStream this]
+  (^Integer [^java.io.ByteArrayOutputStream this]
     (-> this (.size))))
 
 (defn to-string
@@ -88,9 +88,9 @@
   returns: String decoded from the buffer's contents. - `java.lang.String`
 
   throws: java.io.UnsupportedEncodingException - If the named charset is not supported"
-  ([^java.io.ByteArrayOutputStream this ^java.lang.String charset-name]
+  (^java.lang.String [^java.io.ByteArrayOutputStream this ^java.lang.String charset-name]
     (-> this (.toString charset-name)))
-  ([^java.io.ByteArrayOutputStream this]
+  (^java.lang.String [^java.io.ByteArrayOutputStream this]
     (-> this (.toString))))
 
 (defn close

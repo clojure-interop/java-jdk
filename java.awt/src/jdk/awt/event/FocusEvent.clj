@@ -94,7 +94,7 @@
 
   returns: true if the focus change is temporary;
            false otherwise - `boolean`"
-  ([^java.awt.event.FocusEvent this]
+  (^Boolean [^java.awt.event.FocusEvent this]
     (-> this (.isTemporary))))
 
 (defn get-opposite-component
@@ -106,7 +106,7 @@
    returned.
 
   returns: the other Component involved in the focus change, or null - `java.awt.Component`"
-  ([^java.awt.event.FocusEvent this]
+  (^java.awt.Component [^java.awt.event.FocusEvent this]
     (-> this (.getOppositeComponent))))
 
 (defn param-string
@@ -114,6 +114,6 @@
    This method is useful for event-logging and for debugging.
 
   returns: a string identifying the event and its attributes - `java.lang.String`"
-  ([^java.awt.event.FocusEvent this]
+  (^java.lang.String [^java.awt.event.FocusEvent this]
     (-> this (.paramString))))
 

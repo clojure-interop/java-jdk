@@ -41,7 +41,7 @@
    leadSelectionPath property maintained by the JTree.
 
   returns: `javax.swing.tree.TreePath`"
-  ([^javax.swing.tree.DefaultTreeSelectionModel this]
+  (^javax.swing.tree.TreePath [^javax.swing.tree.DefaultTreeSelectionModel this]
     (-> this (.getLeadSelectionPath))))
 
 (defn get-max-selection-row
@@ -50,14 +50,14 @@
    or there is no RowMapper, this will return -1.
 
   returns: `int`"
-  ([^javax.swing.tree.DefaultTreeSelectionModel this]
+  (^Integer [^javax.swing.tree.DefaultTreeSelectionModel this]
     (-> this (.getMaxSelectionRow))))
 
 (defn get-selection-count
   "Returns the number of paths that are selected.
 
   returns: `int`"
-  ([^javax.swing.tree.DefaultTreeSelectionModel this]
+  (^Integer [^javax.swing.tree.DefaultTreeSelectionModel this]
     (-> this (.getSelectionCount))))
 
 (defn row-selected?
@@ -66,7 +66,7 @@
   row - `int`
 
   returns: `boolean`"
-  ([^javax.swing.tree.DefaultTreeSelectionModel this ^Integer row]
+  (^Boolean [^javax.swing.tree.DefaultTreeSelectionModel this ^Integer row]
     (-> this (.isRowSelected row))))
 
 (defn clear-selection
@@ -80,7 +80,7 @@
    row.
 
   returns: `javax.swing.tree.RowMapper`"
-  ([^javax.swing.tree.DefaultTreeSelectionModel this]
+  (^javax.swing.tree.RowMapper [^javax.swing.tree.DefaultTreeSelectionModel this]
     (-> this (.getRowMapper))))
 
 (defn add-tree-selection-listener
@@ -133,7 +133,7 @@
    added.
 
   returns: `int`"
-  ([^javax.swing.tree.DefaultTreeSelectionModel this]
+  (^Integer [^javax.swing.tree.DefaultTreeSelectionModel this]
     (-> this (.getLeadSelectionRow))))
 
 (defn to-string
@@ -141,7 +141,7 @@
    object's properties.
 
   returns: a String representation of this object - `java.lang.String`"
-  ([^javax.swing.tree.DefaultTreeSelectionModel this]
+  (^java.lang.String [^javax.swing.tree.DefaultTreeSelectionModel this]
     (-> this (.toString))))
 
 (defn get-selection-path
@@ -149,7 +149,7 @@
    if only one item currently selected.
 
   returns: `javax.swing.tree.TreePath`"
-  ([^javax.swing.tree.DefaultTreeSelectionModel this]
+  (^javax.swing.tree.TreePath [^javax.swing.tree.DefaultTreeSelectionModel this]
     (-> this (.getSelectionPath))))
 
 (defn get-tree-selection-listeners
@@ -176,7 +176,7 @@
    the first TreePath in paths.
 
   paths - the new path to add to the current selection - `javax.swing.tree.TreePath[]`"
-  ([^javax.swing.tree.DefaultTreeSelectionModel this ^javax.swing.tree.TreePath[] paths]
+  ([^javax.swing.tree.DefaultTreeSelectionModel this paths]
     (-> this (.addSelectionPaths paths))))
 
 (defn remove-property-change-listener
@@ -194,14 +194,14 @@
    or there is no RowMapper, this will return -1.
 
   returns: `int`"
-  ([^javax.swing.tree.DefaultTreeSelectionModel this]
+  (^Integer [^javax.swing.tree.DefaultTreeSelectionModel this]
     (-> this (.getMinSelectionRow))))
 
 (defn selection-empty?
   "Returns true if the selection is currently empty.
 
   returns: `boolean`"
-  ([^javax.swing.tree.DefaultTreeSelectionModel this]
+  (^Boolean [^javax.swing.tree.DefaultTreeSelectionModel this]
     (-> this (.isSelectionEmpty))))
 
 (defn get-selection-rows
@@ -226,7 +226,7 @@
   path - `javax.swing.tree.TreePath`
 
   returns: `boolean`"
-  ([^javax.swing.tree.DefaultTreeSelectionModel this ^javax.swing.tree.TreePath path]
+  (^Boolean [^javax.swing.tree.DefaultTreeSelectionModel this ^javax.swing.tree.TreePath path]
     (-> this (.isPathSelected path))))
 
 (defn get-property-change-listeners
@@ -256,7 +256,7 @@
   returns: a clone of this instance. - `java.lang.Object`
 
   throws: java.lang.CloneNotSupportedException - never thrown by instances of this class"
-  ([^javax.swing.tree.DefaultTreeSelectionModel this]
+  (^java.lang.Object [^javax.swing.tree.DefaultTreeSelectionModel this]
     (-> this (.clone))))
 
 (defn get-selection-mode
@@ -265,7 +265,7 @@
    CONTIGUOUS_TREE_SELECTION.
 
   returns: `int`"
-  ([^javax.swing.tree.DefaultTreeSelectionModel this]
+  (^Integer [^javax.swing.tree.DefaultTreeSelectionModel this]
     (-> this (.getSelectionMode))))
 
 (defn remove-selection-path
@@ -328,7 +328,7 @@
    This has no effect if paths is null.
 
   paths - the paths to remove from the selection - `javax.swing.tree.TreePath[]`"
-  ([^javax.swing.tree.DefaultTreeSelectionModel this ^javax.swing.tree.TreePath[] paths]
+  ([^javax.swing.tree.DefaultTreeSelectionModel this paths]
     (-> this (.removeSelectionPaths paths))))
 
 (defn set-selection-mode
@@ -378,6 +378,6 @@
    order as those supplied to this method.
 
   p-paths - the new selection - `javax.swing.tree.TreePath[]`"
-  ([^javax.swing.tree.DefaultTreeSelectionModel this ^javax.swing.tree.TreePath[] p-paths]
+  ([^javax.swing.tree.DefaultTreeSelectionModel this p-paths]
     (-> this (.setSelectionPaths p-paths))))
 

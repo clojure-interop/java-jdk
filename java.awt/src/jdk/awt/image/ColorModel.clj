@@ -146,7 +146,7 @@
 
   returns: a DirectColorModelobject describing default
             RGB values. - `java.awt.image.ColorModel`"
-  ([]
+  (^java.awt.image.ColorModel []
     (ColorModel/getRGBdefault )))
 
 (defn get-transparency
@@ -154,7 +154,7 @@
    or TRANSLUCENT.
 
   returns: the transparency of this ColorModel. - `int`"
-  ([^java.awt.image.ColorModel this]
+  (^Integer [^java.awt.image.ColorModel this]
     (-> this (.getTransparency))))
 
 (defn get-normalized-components
@@ -218,7 +218,7 @@
    otherwise. - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if this method is not supported by this ColorModel"
-  ([^java.awt.image.ColorModel this ^java.awt.image.SampleModel sm]
+  (^Boolean [^java.awt.image.ColorModel this ^java.awt.image.SampleModel sm]
     (-> this (.isCompatibleSampleModel sm))))
 
 (defn get-alpha-raster
@@ -247,7 +247,7 @@
 
   returns: a Raster representing the alpha channel of
    an image, obtained from the specified Raster. - `java.awt.image.WritableRaster`"
-  ([^java.awt.image.ColorModel this ^java.awt.image.WritableRaster raster]
+  (^java.awt.image.WritableRaster [^java.awt.image.ColorModel this ^java.awt.image.WritableRaster raster]
     (-> this (.getAlphaRaster raster))))
 
 (defn get-data-element
@@ -274,7 +274,7 @@
    ColorModel corresponding to the specified components. - `int`
 
   throws: java.lang.IllegalArgumentException - if component values for this ColorModel are not conveniently representable in the unnormalized form"
-  ([^java.awt.image.ColorModel this components ^Integer offset]
+  (^Integer [^java.awt.image.ColorModel this components ^Integer offset]
     (-> this (.getDataElement components offset))))
 
 (defn get-rgb
@@ -292,7 +292,7 @@
 
   returns: the RGB value of the color/alpha components of the
             specified pixel. - `int`"
-  ([^java.awt.image.ColorModel this ^Integer pixel]
+  (^Integer [^java.awt.image.ColorModel this ^Integer pixel]
     (-> this (.getRGB pixel))))
 
 (defn get-transfer-type
@@ -301,7 +301,7 @@
    pixel values as arrays.
 
   returns: the transfer type. - `int`"
-  ([^java.awt.image.ColorModel this]
+  (^Integer [^java.awt.image.ColorModel this]
     (-> this (.getTransferType))))
 
 (defn get-data-elements
@@ -336,9 +336,9 @@
    alpha components. - `java.lang.Object`
 
   throws: java.lang.ClassCastException - if obj is not a primitive array of type transferType"
-  ([^java.awt.image.ColorModel this components ^Integer offset ^java.lang.Object obj]
+  (^java.lang.Object [^java.awt.image.ColorModel this components ^Integer offset ^java.lang.Object obj]
     (-> this (.getDataElements components offset obj)))
-  ([^java.awt.image.ColorModel this ^Integer rgb ^java.lang.Object pixel]
+  (^java.lang.Object [^java.awt.image.ColorModel this ^Integer rgb ^java.lang.Object pixel]
     (-> this (.getDataElements rgb pixel))))
 
 (defn get-unnormalized-components
@@ -384,7 +384,7 @@
 
   returns: a String representing the contents of this
    ColorModel object. - `java.lang.String`"
-  ([^java.awt.image.ColorModel this]
+  (^java.lang.String [^java.awt.image.ColorModel this]
     (-> this (.toString))))
 
 (defn get-alpha
@@ -397,7 +397,7 @@
   pixel - the specified pixel - `int`
 
   returns: the value of alpha component of the specified pixel. - `int`"
-  ([^java.awt.image.ColorModel this ^Integer pixel]
+  (^Integer [^java.awt.image.ColorModel this ^Integer pixel]
     (-> this (.getAlpha pixel))))
 
 (defn get-red
@@ -414,7 +414,7 @@
   pixel - a specified pixel - `int`
 
   returns: the value of the red component of the specified pixel. - `int`"
-  ([^java.awt.image.ColorModel this ^Integer pixel]
+  (^Integer [^java.awt.image.ColorModel this ^Integer pixel]
     (-> this (.getRed pixel))))
 
 (defn get-pixel-size
@@ -422,7 +422,7 @@
    ColorModel.
 
   returns: the number of bits per pixel. - `int`"
-  ([^java.awt.image.ColorModel this]
+  (^Integer [^java.awt.image.ColorModel this]
     (-> this (.getPixelSize))))
 
 (defn get-green
@@ -439,7 +439,7 @@
   pixel - the specified pixel - `int`
 
   returns: the value of the green component of the specified pixel. - `int`"
-  ([^java.awt.image.ColorModel this ^Integer pixel]
+  (^Integer [^java.awt.image.ColorModel this ^Integer pixel]
     (-> this (.getGreen pixel))))
 
 (defn has-alpha?
@@ -448,7 +448,7 @@
 
   returns: true if alpha is supported in this
    ColorModel; false otherwise. - `boolean`"
-  ([^java.awt.image.ColorModel this]
+  (^Boolean [^java.awt.image.ColorModel this]
     (-> this (.hasAlpha))))
 
 (defn get-color-space
@@ -457,7 +457,7 @@
 
   returns: the ColorSpace of this
    ColorModel. - `java.awt.color.ColorSpace`"
-  ([^java.awt.image.ColorModel this]
+  (^java.awt.color.ColorSpace [^java.awt.image.ColorModel this]
     (-> this (.getColorSpace))))
 
 (defn get-components
@@ -509,7 +509,7 @@
    with this ColorModel. - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if this method has not been implemented for this ColorModel"
-  ([^java.awt.image.ColorModel this ^java.awt.image.Raster raster]
+  (^Boolean [^java.awt.image.ColorModel this ^java.awt.image.Raster raster]
     (-> this (.isCompatibleRaster raster))))
 
 (defn coerce-data
@@ -533,7 +533,7 @@
 
   returns: a ColorModel object that represents the
    coerced data. - `java.awt.image.ColorModel`"
-  ([^java.awt.image.ColorModel this ^java.awt.image.WritableRaster raster ^Boolean is-alpha-premultiplied]
+  (^java.awt.image.ColorModel [^java.awt.image.ColorModel this ^java.awt.image.WritableRaster raster ^Boolean is-alpha-premultiplied]
     (-> this (.coerceData raster is-alpha-premultiplied))))
 
 (defn get-num-components
@@ -542,7 +542,7 @@
    components, optionally plus one, if there is an alpha component.
 
   returns: the number of components in this ColorModel - `int`"
-  ([^java.awt.image.ColorModel this]
+  (^Integer [^java.awt.image.ColorModel this]
     (-> this (.getNumComponents))))
 
 (defn create-compatible-writable-raster
@@ -561,7 +561,7 @@
    width and height. - `java.awt.image.WritableRaster`
 
   throws: java.lang.UnsupportedOperationException - if this method is not supported by this ColorModel"
-  ([^java.awt.image.ColorModel this ^Integer w ^Integer h]
+  (^java.awt.image.WritableRaster [^java.awt.image.ColorModel this ^Integer w ^Integer h]
     (-> this (.createCompatibleWritableRaster w h))))
 
 (defn get-component-size
@@ -580,7 +580,7 @@
             specified index. - `int`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if componentIdx is greater than the number of components or less than zero"
-  ([^java.awt.image.ColorModel this ^Integer component-idx]
+  (^Integer [^java.awt.image.ColorModel this ^Integer component-idx]
     (-> this (.getComponentSize component-idx)))
   ([^java.awt.image.ColorModel this]
     (-> this (.getComponentSize))))
@@ -601,14 +601,14 @@
    width and height. - `java.awt.image.SampleModel`
 
   throws: java.lang.UnsupportedOperationException - if this method is not supported by this ColorModel"
-  ([^java.awt.image.ColorModel this ^Integer w ^Integer h]
+  (^java.awt.image.SampleModel [^java.awt.image.ColorModel this ^Integer w ^Integer h]
     (-> this (.createCompatibleSampleModel w h))))
 
 (defn hash-code
   "Returns the hash code for this ColorModel.
 
   returns: a hash code for this ColorModel. - `int`"
-  ([^java.awt.image.ColorModel this]
+  (^Integer [^java.awt.image.ColorModel this]
     (-> this (.hashCode))))
 
 (defn get-blue
@@ -625,7 +625,7 @@
   pixel - the specified pixel - `int`
 
   returns: the value of the blue component of the specified pixel. - `int`"
-  ([^java.awt.image.ColorModel this ^Integer pixel]
+  (^Integer [^java.awt.image.ColorModel this ^Integer pixel]
     (-> this (.getBlue pixel))))
 
 (defn alpha-premultiplied?
@@ -640,7 +640,7 @@
   returns: true if the alpha values are premultiplied
             in the pixel values to be translated by this
             ColorModel; false otherwise. - `boolean`"
-  ([^java.awt.image.ColorModel this]
+  (^Boolean [^java.awt.image.ColorModel this]
     (-> this (.isAlphaPremultiplied))))
 
 (defn equals
@@ -653,7 +653,7 @@
   returns: true if the specified Object
    is an instance of ColorModel and equals this
    ColorModel; false otherwise. - `boolean`"
-  ([^java.awt.image.ColorModel this ^java.lang.Object obj]
+  (^Boolean [^java.awt.image.ColorModel this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn get-num-color-components
@@ -664,7 +664,7 @@
 
   returns: the number of color components in this
    ColorModel. - `int`"
-  ([^java.awt.image.ColorModel this]
+  (^Integer [^java.awt.image.ColorModel this]
     (-> this (.getNumColorComponents))))
 
 (defn finalize

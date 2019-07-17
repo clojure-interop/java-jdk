@@ -14,14 +14,14 @@
   "Returns the provider that created this channel.
 
   returns: The provider that created this channel - `java.nio.channels.spi.SelectorProvider`"
-  ([^java.nio.channels.spi.AbstractSelectableChannel this]
+  (^java.nio.channels.spi.SelectorProvider [^java.nio.channels.spi.AbstractSelectableChannel this]
     (-> this (.provider))))
 
 (defn registered?
   "Description copied from class: SelectableChannel
 
   returns: true if, and only if, this channel is registered - `boolean`"
-  ([^java.nio.channels.spi.AbstractSelectableChannel this]
+  (^Boolean [^java.nio.channels.spi.AbstractSelectableChannel this]
     (-> this (.isRegistered))))
 
 (defn key-for
@@ -32,7 +32,7 @@
   returns: The key returned when this channel was last registered with the
             given selector, or null if this channel is not
             currently registered with that selector - `java.nio.channels.SelectionKey`"
-  ([^java.nio.channels.spi.AbstractSelectableChannel this ^java.nio.channels.Selector sel]
+  (^java.nio.channels.SelectionKey [^java.nio.channels.spi.AbstractSelectableChannel this ^java.nio.channels.Selector sel]
     (-> this (.keyFor sel))))
 
 (defn register
@@ -58,21 +58,21 @@
             the given selector - `java.nio.channels.SelectionKey`
 
   throws: java.nio.channels.ClosedSelectorException - If the selector is closed"
-  ([^java.nio.channels.spi.AbstractSelectableChannel this ^java.nio.channels.Selector sel ^Integer ops ^java.lang.Object att]
+  (^java.nio.channels.SelectionKey [^java.nio.channels.spi.AbstractSelectableChannel this ^java.nio.channels.Selector sel ^Integer ops ^java.lang.Object att]
     (-> this (.register sel ops att))))
 
 (defn blocking?
   "Description copied from class: SelectableChannel
 
   returns: true if, and only if, this channel is in blocking mode - `boolean`"
-  ([^java.nio.channels.spi.AbstractSelectableChannel this]
+  (^Boolean [^java.nio.channels.spi.AbstractSelectableChannel this]
     (-> this (.isBlocking))))
 
 (defn blocking-lock
   "Description copied from class: SelectableChannel
 
   returns: The blocking-mode lock object - `java.lang.Object`"
-  ([^java.nio.channels.spi.AbstractSelectableChannel this]
+  (^java.lang.Object [^java.nio.channels.spi.AbstractSelectableChannel this]
     (-> this (.blockingLock))))
 
 (defn configure-blocking
@@ -87,6 +87,6 @@
   returns: This selectable channel - `java.nio.channels.SelectableChannel`
 
   throws: java.nio.channels.ClosedChannelException - If this channel is closed"
-  ([^java.nio.channels.spi.AbstractSelectableChannel this ^Boolean block]
+  (^java.nio.channels.SelectableChannel [^java.nio.channels.spi.AbstractSelectableChannel this ^Boolean block]
     (-> this (.configureBlocking block))))
 

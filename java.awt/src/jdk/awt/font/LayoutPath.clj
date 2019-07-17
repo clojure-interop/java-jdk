@@ -30,7 +30,7 @@
    a break or sharp bend in the path, is to return true. - `boolean`
 
   throws: java.lang.NullPointerException - if point or location is null"
-  ([^java.awt.font.LayoutPath this ^java.awt.geom.Point2D point ^java.awt.geom.Point2D location]
+  (^Boolean [^java.awt.font.LayoutPath this ^java.awt.geom.Point2D point ^java.awt.geom.Point2D location]
     (-> this (.pointToPath point location))))
 
 (defn path-to-point

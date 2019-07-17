@@ -118,7 +118,7 @@
    started or peak was reset.
 
   returns: the peak live thread count. - `int`"
-  ([^java.lang.management.ThreadMXBean this]
+  (^Integer [^java.lang.management.ThreadMXBean this]
     (-> this (.getPeakThreadCount))))
 
 (defn get-current-thread-user-time
@@ -138,7 +138,7 @@
    measurement is enabled; -1 otherwise. - `long`
 
   throws: java.lang.UnsupportedOperationException - if the Java virtual machine does not support CPU time measurement for the current thread."
-  ([^java.lang.management.ThreadMXBean this]
+  (^Long [^java.lang.management.ThreadMXBean this]
     (-> this (.getCurrentThreadUserTime))))
 
 (defn synchronizer-usage-supported?
@@ -150,7 +150,7 @@
        if the Java virtual machine supports monitoring of ownable
        synchronizer usage;
      false otherwise. - `boolean`"
-  ([^java.lang.management.ThreadMXBean this]
+  (^Boolean [^java.lang.management.ThreadMXBean this]
     (-> this (.isSynchronizerUsageSupported))))
 
 (defn reset-peak-thread-count
@@ -192,7 +192,7 @@
        if the Java virtual machine supports CPU time
        measurement for current thread;
      false otherwise. - `boolean`"
-  ([^java.lang.management.ThreadMXBean this]
+  (^Boolean [^java.lang.management.ThreadMXBean this]
     (-> this (.isCurrentThreadCpuTimeSupported))))
 
 (defn get-thread-user-time
@@ -220,7 +220,7 @@
    -1 otherwise. - `long`
 
   throws: java.lang.IllegalArgumentException - if id <= 0."
-  ([^java.lang.management.ThreadMXBean this ^Long id]
+  (^Long [^java.lang.management.ThreadMXBean this ^Long id]
     (-> this (.getThreadUserTime id))))
 
 (defn set-thread-cpu-time-enabled
@@ -244,7 +244,7 @@
        if the Java virtual machine supports CPU time
        measurement for any thread;
      false otherwise. - `boolean`"
-  ([^java.lang.management.ThreadMXBean this]
+  (^Boolean [^java.lang.management.ThreadMXBean this]
     (-> this (.isThreadCpuTimeSupported))))
 
 (defn thread-contention-monitoring-supported?
@@ -253,7 +253,7 @@
   returns: true
        if the Java virtual machine supports thread contention monitoring;
      false otherwise. - `boolean`"
-  ([^java.lang.management.ThreadMXBean this]
+  (^Boolean [^java.lang.management.ThreadMXBean this]
     (-> this (.isThreadContentionMonitoringSupported))))
 
 (defn get-total-started-thread-count
@@ -261,7 +261,7 @@
    since the Java virtual machine started.
 
   returns: the total number of threads started. - `long`"
-  ([^java.lang.management.ThreadMXBean this]
+  (^Long [^java.lang.management.ThreadMXBean this]
     (-> this (.getTotalStartedThreadCount))))
 
 (defn get-thread-info
@@ -324,9 +324,9 @@
   throws: java.lang.SecurityException - if a security manager exists and the caller does not have ManagementPermission(`monitor`)."
   ([^java.lang.management.ThreadMXBean this ids ^Boolean locked-monitors ^Boolean locked-synchronizers]
     (-> this (.getThreadInfo ids locked-monitors locked-synchronizers)))
-  ([^java.lang.management.ThreadMXBean this ^Long id ^Integer max-depth]
+  (^java.lang.management.ThreadInfo [^java.lang.management.ThreadMXBean this ^Long id ^Integer max-depth]
     (-> this (.getThreadInfo id max-depth)))
-  ([^java.lang.management.ThreadMXBean this ^Long id]
+  (^java.lang.management.ThreadInfo [^java.lang.management.ThreadMXBean this ^Long id]
     (-> this (.getThreadInfo id))))
 
 (defn get-thread-cpu-time
@@ -356,7 +356,7 @@
    -1 otherwise. - `long`
 
   throws: java.lang.IllegalArgumentException - if id <= 0."
-  ([^java.lang.management.ThreadMXBean this ^Long id]
+  (^Long [^java.lang.management.ThreadMXBean this ^Long id]
     (-> this (.getThreadCpuTime id))))
 
 (defn dump-all-threads
@@ -384,7 +384,7 @@
    daemon and non-daemon threads.
 
   returns: the current number of live threads. - `int`"
-  ([^java.lang.management.ThreadMXBean this]
+  (^Integer [^java.lang.management.ThreadMXBean this]
     (-> this (.getThreadCount))))
 
 (defn get-current-thread-cpu-time
@@ -406,7 +406,7 @@
    measurement is enabled; -1 otherwise. - `long`
 
   throws: java.lang.UnsupportedOperationException - if the Java virtual machine does not support CPU time measurement for the current thread."
-  ([^java.lang.management.ThreadMXBean this]
+  (^Long [^java.lang.management.ThreadMXBean this]
     (-> this (.getCurrentThreadCpuTime))))
 
 (defn thread-contention-monitoring-enabled?
@@ -416,7 +416,7 @@
            false otherwise. - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the Java virtual machine does not support thread contention monitoring."
-  ([^java.lang.management.ThreadMXBean this]
+  (^Boolean [^java.lang.management.ThreadMXBean this]
     (-> this (.isThreadContentionMonitoringEnabled))))
 
 (defn get-all-thread-ids
@@ -438,7 +438,7 @@
        if the Java virtual machine supports monitoring of
        object monitor usage;
      false otherwise. - `boolean`"
-  ([^java.lang.management.ThreadMXBean this]
+  (^Boolean [^java.lang.management.ThreadMXBean this]
     (-> this (.isObjectMonitorUsageSupported))))
 
 (defn set-thread-contention-monitoring-enabled
@@ -455,7 +455,7 @@
   "Returns the current number of live daemon threads.
 
   returns: the current number of live daemon threads. - `int`"
-  ([^java.lang.management.ThreadMXBean this]
+  (^Integer [^java.lang.management.ThreadMXBean this]
     (-> this (.getDaemonThreadCount))))
 
 (defn thread-cpu-time-enabled?
@@ -465,6 +465,6 @@
            false otherwise. - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the Java virtual machine does not support CPU time measurement for other threads nor for the current thread."
-  ([^java.lang.management.ThreadMXBean this]
+  (^Boolean [^java.lang.management.ThreadMXBean this]
     (-> this (.isThreadCpuTimeEnabled))))
 

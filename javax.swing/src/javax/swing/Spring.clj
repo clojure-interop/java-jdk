@@ -114,9 +114,9 @@
   returns: a spring whose minimum, preferred, and
            maximum values have the values: min, pref,
            and max respectively - `javax.swing.Spring`"
-  ([^Integer min ^Integer pref ^Integer max]
+  (^javax.swing.Spring [^Integer min ^Integer pref ^Integer max]
     (Spring/constant min pref max))
-  ([^Integer pref]
+  (^javax.swing.Spring [^Integer pref]
     (Spring/constant pref)))
 
 (defn *minus
@@ -125,7 +125,7 @@
   s - `javax.swing.Spring`
 
   returns: -s: a spring running in the opposite direction to s - `javax.swing.Spring`"
-  ([^javax.swing.Spring s]
+  (^javax.swing.Spring [^javax.swing.Spring s]
     (Spring/minus s)))
 
 (defn *sum
@@ -157,7 +157,7 @@
   s-2 - `javax.swing.Spring`
 
   returns: s1+s2: a spring representing s1 and s2 in series - `javax.swing.Spring`"
-  ([^javax.swing.Spring s-1 ^javax.swing.Spring s-2]
+  (^javax.swing.Spring [^javax.swing.Spring s-1 ^javax.swing.Spring s-2]
     (Spring/sum s-1 s-2)))
 
 (defn *max
@@ -169,7 +169,7 @@
 
   returns: max(s1, s2): a spring whose value is always greater than (or equal to)
            the values of both s1 and s2 - `javax.swing.Spring`"
-  ([^javax.swing.Spring s-1 ^javax.swing.Spring s-2]
+  (^javax.swing.Spring [^javax.swing.Spring s-1 ^javax.swing.Spring s-2]
     (Spring/max s-1 s-2)))
 
 (defn *scale
@@ -190,7 +190,7 @@
    multiplied by factor - `javax.swing.Spring`
 
   throws: java.lang.NullPointerException - if s is null"
-  ([^javax.swing.Spring s ^Float factor]
+  (^javax.swing.Spring [^javax.swing.Spring s ^Float factor]
     (Spring/scale s factor)))
 
 (defn *width
@@ -209,7 +209,7 @@
    of the component's size methods. - `javax.swing.Spring`
 
   throws: java.lang.NullPointerException - if c is null"
-  ([^java.awt.Component c]
+  (^javax.swing.Spring [^java.awt.Component c]
     (Spring/width c)))
 
 (defn *height
@@ -228,35 +228,35 @@
    of the component's size methods. - `javax.swing.Spring`
 
   throws: java.lang.NullPointerException - if c is null"
-  ([^java.awt.Component c]
+  (^javax.swing.Spring [^java.awt.Component c]
     (Spring/height c)))
 
 (defn get-minimum-value
   "Returns the minimum value of this Spring.
 
   returns: the minimumValue property of this Spring - `int`"
-  ([^javax.swing.Spring this]
+  (^Integer [^javax.swing.Spring this]
     (-> this (.getMinimumValue))))
 
 (defn get-preferred-value
   "Returns the preferred value of this Spring.
 
   returns: the preferredValue of this Spring - `int`"
-  ([^javax.swing.Spring this]
+  (^Integer [^javax.swing.Spring this]
     (-> this (.getPreferredValue))))
 
 (defn get-maximum-value
   "Returns the maximum value of this Spring.
 
   returns: the maximumValue property of this Spring - `int`"
-  ([^javax.swing.Spring this]
+  (^Integer [^javax.swing.Spring this]
     (-> this (.getMaximumValue))))
 
 (defn get-value
   "Returns the current value of this Spring.
 
   returns: the value property of this Spring - `int`"
-  ([^javax.swing.Spring this]
+  (^Integer [^javax.swing.Spring this]
     (-> this (.getValue))))
 
 (defn set-value

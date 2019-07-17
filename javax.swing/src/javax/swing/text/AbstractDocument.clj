@@ -114,7 +114,7 @@
    to annotate the document with document-wide properties.
 
   returns: a non-null Dictionary - `java.util.Dictionary<java.lang.Object,java.lang.Object>`"
-  ([^javax.swing.text.AbstractDocument this]
+  (^java.util.Dictionary [^javax.swing.text.AbstractDocument this]
     (-> this (.getDocumentProperties))))
 
 (defn add-undoable-edit-listener
@@ -185,7 +185,7 @@
   throws: javax.swing.text.BadLocationException - the range given includes a position that is not a valid position within the document"
   ([^javax.swing.text.AbstractDocument this ^Integer offset ^Integer length ^javax.swing.text.Segment txt]
     (-> this (.getText offset length txt)))
-  ([^javax.swing.text.AbstractDocument this ^Integer offset ^Integer length]
+  (^java.lang.String [^javax.swing.text.AbstractDocument this ^Integer offset ^Integer length]
     (-> this (.getText offset length))))
 
 (defn remove-document-listener
@@ -201,7 +201,7 @@
    implies no filtering is to occur.
 
   returns: the DocumentFilter - `javax.swing.text.DocumentFilter`"
-  ([^javax.swing.text.AbstractDocument this]
+  (^javax.swing.text.DocumentFilter [^javax.swing.text.AbstractDocument this]
     (-> this (.getDocumentFilter))))
 
 (defn get-root-elements
@@ -278,7 +278,7 @@
    located at the beginning of the document.
 
   returns: the position - `javax.swing.text.Position`"
-  ([^javax.swing.text.AbstractDocument this]
+  (^javax.swing.text.Position [^javax.swing.text.AbstractDocument this]
     (-> this (.getStartPosition))))
 
 (defn get-length
@@ -286,7 +286,7 @@
    characters of content that represents the users data.
 
   returns: the length >= 0 - `int`"
-  ([^javax.swing.text.AbstractDocument this]
+  (^Integer [^javax.swing.text.AbstractDocument this]
     (-> this (.getLength))))
 
 (defn get-property
@@ -299,7 +299,7 @@
   key - the non-null property key - `java.lang.Object`
 
   returns: the value of this property or null - `java.lang.Object`"
-  ([^javax.swing.text.AbstractDocument this ^java.lang.Object key]
+  (^java.lang.Object [^javax.swing.text.AbstractDocument this ^java.lang.Object key]
     (-> this (.getProperty key))))
 
 (defn render
@@ -340,7 +340,7 @@
    Unicode bidi level.
 
   returns: `javax.swing.text.Element`"
-  ([^javax.swing.text.AbstractDocument this]
+  (^javax.swing.text.Element [^javax.swing.text.AbstractDocument this]
     (-> this (.getBidiRootElement))))
 
 (defn put-property
@@ -421,7 +421,7 @@
    located at the end of the document.
 
   returns: the position - `javax.swing.text.Position`"
-  ([^javax.swing.text.AbstractDocument this]
+  (^javax.swing.text.Position [^javax.swing.text.AbstractDocument this]
     (-> this (.getEndPosition))))
 
 (defn read-lock
@@ -441,7 +441,7 @@
    structures is provided.
 
   returns: the root element - `javax.swing.text.Element`"
-  ([^javax.swing.text.AbstractDocument this]
+  (^javax.swing.text.Element [^javax.swing.text.AbstractDocument this]
     (-> this (.getDefaultRootElement))))
 
 (defn get-asynchronous-load-priority
@@ -450,7 +450,7 @@
 
   returns: the asynchronous loading priority, or -1
      if the document should not be loaded asynchronously - `int`"
-  ([^javax.swing.text.AbstractDocument this]
+  (^Integer [^javax.swing.text.AbstractDocument this]
     (-> this (.getAsynchronousLoadPriority))))
 
 (defn set-asynchronous-load-priority
@@ -469,7 +469,7 @@
   pos - the starting offset >= 0 - `int`
 
   returns: the element - `javax.swing.text.Element`"
-  ([^javax.swing.text.AbstractDocument this ^Integer pos]
+  (^javax.swing.text.Element [^javax.swing.text.AbstractDocument this ^Integer pos]
     (-> this (.getParagraphElement pos))))
 
 (defn get-document-listeners
@@ -496,6 +496,6 @@
   returns: the position - `javax.swing.text.Position`
 
   throws: javax.swing.text.BadLocationException - if the given position does not represent a valid location in the associated document"
-  ([^javax.swing.text.AbstractDocument this ^Integer offs]
+  (^javax.swing.text.Position [^javax.swing.text.AbstractDocument this ^Integer offs]
     (-> this (.createPosition offs))))
 

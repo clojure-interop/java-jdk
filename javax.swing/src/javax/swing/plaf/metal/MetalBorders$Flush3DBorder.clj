@@ -26,6 +26,6 @@
   new-insets - the object to be reinitialized - `java.awt.Insets`
 
   returns: the insets object - `java.awt.Insets`"
-  ([^javax.swing.plaf.metal.MetalBorders$Flush3DBorder this ^java.awt.Component c ^java.awt.Insets new-insets]
+  (^java.awt.Insets [^javax.swing.plaf.metal.MetalBorders$Flush3DBorder this ^java.awt.Component c ^java.awt.Insets new-insets]
     (-> this (.getBorderInsets c new-insets))))
 

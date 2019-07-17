@@ -78,7 +78,7 @@
    returned by the first invocation.
 
   returns: the default file system - `java.nio.file.FileSystem`"
-  ([]
+  (^java.nio.file.FileSystem []
     (FileSystems/getDefault )))
 
 (defn *get-file-system
@@ -105,7 +105,7 @@
   returns: the reference to the file system - `java.nio.file.FileSystem`
 
   throws: java.lang.IllegalArgumentException - if the pre-conditions for the uri parameter are not met"
-  ([^java.net.URI uri]
+  (^java.nio.file.FileSystem [^java.net.URI uri]
     (FileSystems/getFileSystem uri)))
 
 (defn *new-file-system
@@ -125,8 +125,8 @@
   returns: a new file system - `java.nio.file.FileSystem`
 
   throws: java.lang.IllegalArgumentException - if the pre-conditions for the uri parameter are not met, or the env parameter does not contain properties required by the provider, or a property value is invalid"
-  ([^java.net.URI uri ^java.util.Map env ^java.lang.ClassLoader loader]
+  (^java.nio.file.FileSystem [^java.net.URI uri ^java.util.Map env ^java.lang.ClassLoader loader]
     (FileSystems/newFileSystem uri env loader))
-  ([^java.net.URI uri ^java.util.Map env]
+  (^java.nio.file.FileSystem [^java.net.URI uri ^java.util.Map env]
     (FileSystems/newFileSystem uri env)))
 

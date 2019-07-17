@@ -10,6 +10,6 @@
   "Returns the name of the modifier.
 
   returns: the name of the modifier - `java.lang.String`"
-  ([^java.nio.file.WatchEvent$Modifier this]
+  (^java.lang.String [^java.nio.file.WatchEvent$Modifier this]
     (-> this (.name))))
 

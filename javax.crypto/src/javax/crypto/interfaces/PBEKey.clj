@@ -29,6 +29,6 @@
   "Returns the iteration count or 0 if not specified.
 
   returns: the iteration count. - `int`"
-  ([^javax.crypto.interfaces.PBEKey this]
+  (^Integer [^javax.crypto.interfaces.PBEKey this]
     (-> this (.getIterationCount))))
 

@@ -119,7 +119,7 @@
    a hint, as certain look and feels may not support this feature.
 
   returns: true if look and feel should provide Window decorations. - `boolean`"
-  ([]
+  (^Boolean []
     (JDialog/isDefaultLookAndFeelDecorated )))
 
 (defn set-layout
@@ -187,7 +187,7 @@
   "Returns the contentPane object for this dialog.
 
   returns: the contentPane property - `java.awt.Container`"
-  ([^javax.swing.JDialog this]
+  (^java.awt.Container [^javax.swing.JDialog this]
     (-> this (.getContentPane))))
 
 (defn get-graphics
@@ -197,7 +197,7 @@
 
   returns: a graphics context for this component, or null
                if it has none - `java.awt.Graphics`"
-  ([^javax.swing.JDialog this]
+  (^java.awt.Graphics [^javax.swing.JDialog this]
     (-> this (.getGraphics))))
 
 (defn update
@@ -212,7 +212,7 @@
   "Returns the menubar set on this dialog.
 
   returns: `javax.swing.JMenuBar`"
-  ([^javax.swing.JDialog this]
+  (^javax.swing.JMenuBar [^javax.swing.JDialog this]
     (-> this (.getJMenuBar))))
 
 (defn set-transfer-handler
@@ -270,7 +270,7 @@
   "Returns the glassPane object for this dialog.
 
   returns: the glassPane property - `java.awt.Component`"
-  ([^javax.swing.JDialog this]
+  (^java.awt.Component [^javax.swing.JDialog this]
     (-> this (.getGlassPane))))
 
 (defn get-accessible-context
@@ -281,7 +281,7 @@
 
   returns: an AccessibleJDialog that serves as the
            AccessibleContext of this JDialog - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.JDialog this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.JDialog this]
     (-> this (.getAccessibleContext))))
 
 (defn set-glass-pane
@@ -303,14 +303,14 @@
   "Gets the transferHandler property.
 
   returns: the value of the transferHandler property - `javax.swing.TransferHandler`"
-  ([^javax.swing.JDialog this]
+  (^javax.swing.TransferHandler [^javax.swing.JDialog this]
     (-> this (.getTransferHandler))))
 
 (defn get-root-pane
   "Returns the rootPane object for this dialog.
 
   returns: this components single JRootPane child. - `javax.swing.JRootPane`"
-  ([^javax.swing.JDialog this]
+  (^javax.swing.JRootPane [^javax.swing.JDialog this]
     (-> this (.getRootPane))))
 
 (defn set-content-pane
@@ -332,7 +332,7 @@
   "Returns the layeredPane object for this dialog.
 
   returns: the layeredPane property - `javax.swing.JLayeredPane`"
-  ([^javax.swing.JDialog this]
+  (^javax.swing.JLayeredPane [^javax.swing.JDialog this]
     (-> this (.getLayeredPane))))
 
 (defn get-default-close-operation
@@ -340,6 +340,6 @@
    initiates a `close` on this dialog.
 
   returns: an integer indicating the window-close operation - `int`"
-  ([^javax.swing.JDialog this]
+  (^Integer [^javax.swing.JDialog this]
     (-> this (.getDefaultCloseOperation))))
 

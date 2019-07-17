@@ -177,7 +177,7 @@
   returns: true if the specified node exists. - `boolean`
 
   throws: java.util.prefs.BackingStoreException - if this operation cannot be completed due to a failure in the backing store, or inability to communicate with it."
-  ([^java.util.prefs.AbstractPreferences this ^java.lang.String path]
+  (^Boolean [^java.util.prefs.AbstractPreferences this ^java.lang.String path]
     (-> this (.nodeExists path))))
 
 (defn parent
@@ -191,7 +191,7 @@
   returns: the parent of this preference node. - `java.util.prefs.Preferences`
 
   throws: java.lang.IllegalStateException - if this node (or an ancestor) has been removed with the removeNode() method."
-  ([^java.util.prefs.AbstractPreferences this]
+  (^java.util.prefs.Preferences [^java.util.prefs.AbstractPreferences this]
     (-> this (.parent))))
 
 (defn absolute-path
@@ -204,7 +204,7 @@
    that were passed to this node's ancestors' constructors).
 
   returns: this preference node's absolute path name. - `java.lang.String`"
-  ([^java.util.prefs.AbstractPreferences this]
+  (^java.lang.String [^java.util.prefs.AbstractPreferences this]
     (-> this (.absolutePath))))
 
 (defn flush
@@ -232,7 +232,7 @@
   "Returns the absolute path name of this preferences node.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^java.util.prefs.AbstractPreferences this]
+  (^java.lang.String [^java.util.prefs.AbstractPreferences this]
     (-> this (.toString))))
 
 (defn put-float
@@ -276,7 +276,7 @@
    passed to this node's constructor.
 
   returns: this preference node's name, relative to its parent. - `java.lang.String`"
-  ([^java.util.prefs.AbstractPreferences this]
+  (^java.lang.String [^java.util.prefs.AbstractPreferences this]
     (-> this (.name))))
 
 (defn get-long
@@ -298,7 +298,7 @@
            a long. - `long`
 
   throws: java.lang.IllegalStateException - if this node (or an ancestor) has been removed with the removeNode() method."
-  ([^java.util.prefs.AbstractPreferences this ^java.lang.String key ^Long def]
+  (^Long [^java.util.prefs.AbstractPreferences this ^java.lang.String key ^Long def]
     (-> this (.getLong key def))))
 
 (defn sync
@@ -337,7 +337,7 @@
            an int. - `int`
 
   throws: java.lang.IllegalStateException - if this node (or an ancestor) has been removed with the removeNode() method."
-  ([^java.util.prefs.AbstractPreferences this ^java.lang.String key ^Integer def]
+  (^Integer [^java.util.prefs.AbstractPreferences this ^java.lang.String key ^Integer def]
     (-> this (.getInt key def))))
 
 (defn remove-node
@@ -426,7 +426,7 @@
   returns: true if this preference node is in the user
            preference tree, false if it's in the system
            preference tree. - `boolean`"
-  ([^java.util.prefs.AbstractPreferences this]
+  (^Boolean [^java.util.prefs.AbstractPreferences this]
     (-> this (.isUserNode))))
 
 (defn remove-preference-change-listener
@@ -474,7 +474,7 @@
            a boolean. - `boolean`
 
   throws: java.lang.IllegalStateException - if this node (or an ancestor) has been removed with the removeNode() method."
-  ([^java.util.prefs.AbstractPreferences this ^java.lang.String key ^Boolean def]
+  (^Boolean [^java.util.prefs.AbstractPreferences this ^java.lang.String key ^Boolean def]
     (-> this (.getBoolean key def))))
 
 (defn clear
@@ -508,7 +508,7 @@
            a float. - `float`
 
   throws: java.lang.IllegalStateException - if this node (or an ancestor) has been removed with the removeNode() method."
-  ([^java.util.prefs.AbstractPreferences this ^java.lang.String key ^Float def]
+  (^Float [^java.util.prefs.AbstractPreferences this ^java.lang.String key ^Float def]
     (-> this (.getFloat key def))))
 
 (defn get-double
@@ -530,7 +530,7 @@
            a double. - `double`
 
   throws: java.lang.IllegalStateException - if this node (or an ancestor) has been removed with the removeNode() method."
-  ([^java.util.prefs.AbstractPreferences this ^java.lang.String key ^Double def]
+  (^Double [^java.util.prefs.AbstractPreferences this ^java.lang.String key ^Double def]
     (-> this (.getDouble key def))))
 
 (defn put-long
@@ -566,7 +566,7 @@
            if no value is associated with key. - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if this node (or an ancestor) has been removed with the removeNode() method."
-  ([^java.util.prefs.AbstractPreferences this ^java.lang.String key ^java.lang.String def]
+  (^java.lang.String [^java.util.prefs.AbstractPreferences this ^java.lang.String key ^java.lang.String def]
     (-> this (.get key def))))
 
 (defn remove-node-change-listener
@@ -618,6 +618,6 @@
   returns: the specified preference node. - `java.util.prefs.Preferences`
 
   throws: java.lang.IllegalArgumentException - if the path name is invalid (i.e., it contains multiple consecutive slash characters, or ends with a slash character and is more than one character long)."
-  ([^java.util.prefs.AbstractPreferences this ^java.lang.String path]
+  (^java.util.prefs.Preferences [^java.util.prefs.AbstractPreferences this ^java.lang.String path]
     (-> this (.node path))))
 

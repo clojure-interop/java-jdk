@@ -14,7 +14,7 @@
   returns: The Templates object that was created during
    the SAX event process, or null if no Templates object has
    been created. - `javax.xml.transform.Templates`"
-  ([^javax.xml.transform.sax.TemplatesHandler this]
+  (^javax.xml.transform.Templates [^javax.xml.transform.sax.TemplatesHandler this]
     (-> this (.getTemplates))))
 
 (defn set-system-id
@@ -32,6 +32,6 @@
    URLs will be resolved.
 
   returns: The systemID that was set with setSystemId(java.lang.String). - `java.lang.String`"
-  ([^javax.xml.transform.sax.TemplatesHandler this]
+  (^java.lang.String [^javax.xml.transform.sax.TemplatesHandler this]
     (-> this (.getSystemId))))
 

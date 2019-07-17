@@ -55,9 +55,9 @@
   descriptor - An instance of Descriptor containing the appropriate metadata for this instance of the MBeanNotificationInfo. If it is null a default descriptor will be created. If the descriptor does not contain the fields `displayName` or `severity`, the missing ones are added with their default values. - `javax.management.Descriptor`
 
   throws: javax.management.RuntimeOperationsException - Wraps an IllegalArgumentException. The descriptor is invalid, or descriptor field `name` is not equal to parameter name, or descriptor field `descriptorType` is not equal to `notification`."
-  ([^java.lang.String[] notif-types ^java.lang.String name ^java.lang.String description ^javax.management.Descriptor descriptor]
+  ([notif-types ^java.lang.String name ^java.lang.String description ^javax.management.Descriptor descriptor]
     (new ModelMBeanNotificationInfo notif-types name description descriptor))
-  ([^java.lang.String[] notif-types ^java.lang.String name ^java.lang.String description]
+  ([notif-types ^java.lang.String name ^java.lang.String description]
     (new ModelMBeanNotificationInfo notif-types name description))
   ([^javax.management.modelmbean.ModelMBeanNotificationInfo in-info]
     (new ModelMBeanNotificationInfo in-info)))
@@ -67,7 +67,7 @@
    duplicate of this ModelMBeanNotificationInfo.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([^javax.management.modelmbean.ModelMBeanNotificationInfo this]
+  (^java.lang.Object [^javax.management.modelmbean.ModelMBeanNotificationInfo this]
     (-> this (.clone))))
 
 (defn get-descriptor
@@ -76,7 +76,7 @@
 
   returns: Descriptor associated with the
    ModelMBeanNotificationInfo object. - `javax.management.Descriptor`"
-  ([^javax.management.modelmbean.ModelMBeanNotificationInfo this]
+  (^javax.management.Descriptor [^javax.management.modelmbean.ModelMBeanNotificationInfo this]
     (-> this (.getDescriptor))))
 
 (defn set-descriptor
@@ -99,6 +99,6 @@
    ModelMBeanNotificationInfo.
 
   returns: a string describing this object. - `java.lang.String`"
-  ([^javax.management.modelmbean.ModelMBeanNotificationInfo this]
+  (^java.lang.String [^javax.management.modelmbean.ModelMBeanNotificationInfo this]
     (-> this (.toString))))
 

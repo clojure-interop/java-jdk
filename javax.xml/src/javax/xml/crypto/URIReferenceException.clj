@@ -36,7 +36,7 @@
 
   returns: the URIReference that was being dereferenced
    when the exception was thrown, or null if not specified - `javax.xml.crypto.URIReference`"
-  ([^javax.xml.crypto.URIReferenceException this]
+  (^javax.xml.crypto.URIReference [^javax.xml.crypto.URIReferenceException this]
     (-> this (.getURIReference))))
 
 (defn get-cause
@@ -47,7 +47,7 @@
 
   returns: the cause of this URIReferenceException or
       null if the cause is nonexistent or unknown. - `java.lang.Throwable`"
-  ([^javax.xml.crypto.URIReferenceException this]
+  (^java.lang.Throwable [^javax.xml.crypto.URIReferenceException this]
     (-> this (.getCause))))
 
 (defn print-stack-trace

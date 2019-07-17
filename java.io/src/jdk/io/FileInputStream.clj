@@ -49,11 +49,11 @@
                the file has been reached. - `int`
 
   throws: java.lang.NullPointerException - If b is null."
-  ([^java.io.FileInputStream this b ^Integer off ^Integer len]
+  (^Integer [^java.io.FileInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  ([^java.io.FileInputStream this b]
+  (^Integer [^java.io.FileInputStream this b]
     (-> this (.read b)))
-  ([^java.io.FileInputStream this]
+  (^Integer [^java.io.FileInputStream this]
     (-> this (.read))))
 
 (defn skip
@@ -80,7 +80,7 @@
   returns: the actual number of bytes skipped. - `long`
 
   throws: java.io.IOException - if n is negative, if the stream does not support seek, or if an I/O error occurs."
-  ([^java.io.FileInputStream this ^Long n]
+  (^Long [^java.io.FileInputStream this ^Long n]
     (-> this (.skip n))))
 
 (defn available
@@ -99,7 +99,7 @@
                (or skipped over) from this input stream without blocking. - `int`
 
   throws: java.io.IOException - if this file input stream has been closed by calling close or an I/O error occurs."
-  ([^java.io.FileInputStream this]
+  (^Integer [^java.io.FileInputStream this]
     (-> this (.available))))
 
 (defn close
@@ -122,7 +122,7 @@
   returns: the file descriptor object associated with this stream. - `java.io.FileDescriptor`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.FileInputStream this]
+  (^java.io.FileDescriptor [^java.io.FileInputStream this]
     (-> this (.getFD))))
 
 (defn get-channel
@@ -136,6 +136,6 @@
    file position.
 
   returns: the file channel associated with this file input stream - `java.nio.channels.FileChannel`"
-  ([^java.io.FileInputStream this]
+  (^java.nio.channels.FileChannel [^java.io.FileInputStream this]
     (-> this (.getChannel))))
 

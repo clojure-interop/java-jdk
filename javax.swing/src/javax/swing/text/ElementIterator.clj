@@ -50,21 +50,21 @@
   "Clones the ElementIterator.
 
   returns: a cloned ElementIterator Object. - `java.lang.Object`"
-  ([^javax.swing.text.ElementIterator this]
+  (^java.lang.Object [^javax.swing.text.ElementIterator this]
     (-> this (.clone))))
 
 (defn first
   "Fetches the first element.
 
   returns: an Element. - `javax.swing.text.Element`"
-  ([^javax.swing.text.ElementIterator this]
+  (^javax.swing.text.Element [^javax.swing.text.ElementIterator this]
     (-> this (.first))))
 
 (defn depth
   "Fetches the current depth of element tree.
 
   returns: the depth. - `int`"
-  ([^javax.swing.text.ElementIterator this]
+  (^Integer [^javax.swing.text.ElementIterator this]
     (-> this (.depth))))
 
 (defn current
@@ -72,7 +72,7 @@
 
   returns: element on top of the stack or
             null if the root element is null - `javax.swing.text.Element`"
-  ([^javax.swing.text.ElementIterator this]
+  (^javax.swing.text.Element [^javax.swing.text.ElementIterator this]
     (-> this (.current))))
 
 (defn next
@@ -82,7 +82,7 @@
 
   returns: the next element or null
             at the end of the list. - `javax.swing.text.Element`"
-  ([^javax.swing.text.ElementIterator this]
+  (^javax.swing.text.Element [^javax.swing.text.ElementIterator this]
     (-> this (.next))))
 
 (defn previous
@@ -91,6 +91,6 @@
    is null, then null is returned.
 
   returns: previous Element if available - `javax.swing.text.Element`"
-  ([^javax.swing.text.ElementIterator this]
+  (^javax.swing.text.Element [^javax.swing.text.ElementIterator this]
     (-> this (.previous))))
 

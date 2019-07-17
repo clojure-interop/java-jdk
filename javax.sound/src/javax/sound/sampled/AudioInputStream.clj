@@ -42,7 +42,7 @@
   returns: the actual number of bytes skipped - `long`
 
   throws: java.io.IOException - if an input or output error occurs"
-  ([^javax.sound.sampled.AudioInputStream this ^Long n]
+  (^Long [^javax.sound.sampled.AudioInputStream this ^Long n]
     (-> this (.skip n))))
 
 (defn read
@@ -61,11 +61,11 @@
    is no more data because the end of the stream has been reached - `int`
 
   throws: java.io.IOException - if an input or output error occurs"
-  ([^javax.sound.sampled.AudioInputStream this b ^Integer off ^Integer len]
+  (^Integer [^javax.sound.sampled.AudioInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  ([^javax.sound.sampled.AudioInputStream this b]
+  (^Integer [^javax.sound.sampled.AudioInputStream this b]
     (-> this (.read b)))
-  ([^javax.sound.sampled.AudioInputStream this]
+  (^Integer [^javax.sound.sampled.AudioInputStream this]
     (-> this (.read))))
 
 (defn reset
@@ -80,7 +80,7 @@
   "Obtains the length of the stream, expressed in sample frames rather than bytes.
 
   returns: the length in sample frames - `long`"
-  ([^javax.sound.sampled.AudioInputStream this]
+  (^Long [^javax.sound.sampled.AudioInputStream this]
     (-> this (.getFrameLength))))
 
 (defn mark-supported
@@ -89,7 +89,7 @@
 
   returns: true if this stream supports the mark
    and reset methods; false otherwise - `boolean`"
-  ([^javax.sound.sampled.AudioInputStream this]
+  (^Boolean [^javax.sound.sampled.AudioInputStream this]
     (-> this (.markSupported))))
 
 (defn close
@@ -104,7 +104,7 @@
   "Obtains the audio format of the sound data in this audio input stream.
 
   returns: an audio format object describing this stream's format - `javax.sound.sampled.AudioFormat`"
-  ([^javax.sound.sampled.AudioInputStream this]
+  (^javax.sound.sampled.AudioFormat [^javax.sound.sampled.AudioInputStream this]
     (-> this (.getFormat))))
 
 (defn mark
@@ -125,6 +125,6 @@
   returns: the number of bytes that can be read from this audio input stream without blocking - `int`
 
   throws: java.io.IOException - if an input or output error occurs"
-  ([^javax.sound.sampled.AudioInputStream this]
+  (^Integer [^javax.sound.sampled.AudioInputStream this]
     (-> this (.available))))
 

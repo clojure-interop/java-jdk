@@ -46,9 +46,9 @@
   returns: This writer - `java.io.PrintWriter`
 
   throws: java.util.IllegalFormatException - If a format string contains an illegal syntax, a format specifier that is incompatible with the given arguments, insufficient arguments given the format string, or other illegal conditions. For specification of all possible formatting errors, see the Details section of the formatter class specification."
-  ([^java.io.PrintWriter this ^java.util.Locale l ^java.lang.String format ^java.lang.Object args]
+  (^java.io.PrintWriter [^java.io.PrintWriter this ^java.util.Locale l ^java.lang.String format ^java.lang.Object args]
     (-> this (.printf l format args)))
-  ([^java.io.PrintWriter this ^java.lang.String format ^java.lang.Object args]
+  (^java.io.PrintWriter [^java.io.PrintWriter this ^java.lang.String format ^java.lang.Object args]
     (-> this (.printf format args))))
 
 (defn flush
@@ -91,9 +91,9 @@
   returns: This writer - `java.io.PrintWriter`
 
   throws: java.lang.IndexOutOfBoundsException - If start or end are negative, start is greater than end, or end is greater than csq.length()"
-  ([^java.io.PrintWriter this ^java.lang.CharSequence csq ^Integer start ^Integer end]
+  (^java.io.PrintWriter [^java.io.PrintWriter this ^java.lang.CharSequence csq ^Integer start ^Integer end]
     (-> this (.append csq start end)))
-  ([^java.io.PrintWriter this ^java.lang.CharSequence csq]
+  (^java.io.PrintWriter [^java.io.PrintWriter this ^java.lang.CharSequence csq]
     (-> this (.append csq))))
 
 (defn print
@@ -122,7 +122,7 @@
   returns: true if the print stream has encountered an error,
             either on the underlying output stream or during a format
             conversion. - `boolean`"
-  ([^java.io.PrintWriter this]
+  (^Boolean [^java.io.PrintWriter this]
     (-> this (.checkError))))
 
 (defn format
@@ -137,8 +137,8 @@
   returns: This writer - `java.io.PrintWriter`
 
   throws: java.util.IllegalFormatException - If a format string contains an illegal syntax, a format specifier that is incompatible with the given arguments, insufficient arguments given the format string, or other illegal conditions. For specification of all possible formatting errors, see the Details section of the formatter class specification."
-  ([^java.io.PrintWriter this ^java.util.Locale l ^java.lang.String format ^java.lang.Object args]
+  (^java.io.PrintWriter [^java.io.PrintWriter this ^java.util.Locale l ^java.lang.String format ^java.lang.Object args]
     (-> this (.format l format args)))
-  ([^java.io.PrintWriter this ^java.lang.String format ^java.lang.Object args]
+  (^java.io.PrintWriter [^java.io.PrintWriter this ^java.lang.String format ^java.lang.Object args]
     (-> this (.format format args))))
 

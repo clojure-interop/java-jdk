@@ -90,7 +90,7 @@
   limit - the limit of the range of characters to test - `int`
 
   returns: true if the range of characters requires bidi analysis - `boolean`"
-  ([text ^Integer start ^Integer limit]
+  (^Boolean [text ^Integer start ^Integer limit]
     (Bidi/requiresBidi text start limit)))
 
 (defn *reorder-visually
@@ -108,7 +108,7 @@
   objects - the array of objects to be reordered into visual order - `java.lang.Object[]`
   object-start - the start position in the objects array - `int`
   count - the number of objects to reorder - `int`"
-  ([levels ^Integer level-start ^java.lang.Object[] objects ^Integer object-start ^Integer count]
+  ([levels ^Integer level-start objects ^Integer object-start ^Integer count]
     (Bidi/reorderVisually levels level-start objects object-start count)))
 
 (defn get-run-limit
@@ -119,28 +119,28 @@
   run - the index of the run, between 0 and getRunCount() - `int`
 
   returns: limit the limit of the run - `int`"
-  ([^java.text.Bidi this ^Integer run]
+  (^Integer [^java.text.Bidi this ^Integer run]
     (-> this (.getRunLimit run))))
 
 (defn left-to-right?
   "Return true if the line is all left-to-right text and the base direction is left-to-right.
 
   returns: true if the line is all left-to-right text and the base direction is left-to-right - `boolean`"
-  ([^java.text.Bidi this]
+  (^Boolean [^java.text.Bidi this]
     (-> this (.isLeftToRight))))
 
 (defn to-string
   "Display the bidi internal state, used in debugging.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^java.text.Bidi this]
+  (^java.lang.String [^java.text.Bidi this]
     (-> this (.toString))))
 
 (defn right-to-left?
   "Return true if the line is all right-to-left text, and the base direction is right-to-left.
 
   returns: true if the line is all right-to-left text, and the base direction is right-to-left - `boolean`"
-  ([^java.text.Bidi this]
+  (^Boolean [^java.text.Bidi this]
     (-> this (.isRightToLeft))))
 
 (defn get-level-at
@@ -151,7 +151,7 @@
   offset - the index of the character for which to return the level - `int`
 
   returns: the resolved level of the character at offset - `int`"
-  ([^java.text.Bidi this ^Integer offset]
+  (^Integer [^java.text.Bidi this ^Integer offset]
     (-> this (.getLevelAt offset))))
 
 (defn get-run-start
@@ -161,7 +161,7 @@
   run - the index of the run, between 0 and getRunCount() - `int`
 
   returns: the start of the run - `int`"
-  ([^java.text.Bidi this ^Integer run]
+  (^Integer [^java.text.Bidi this ^Integer run]
     (-> this (.getRunStart run))))
 
 (defn get-run-level
@@ -170,7 +170,7 @@
   run - the index of the run, between 0 and getRunCount() - `int`
 
   returns: the level of the run - `int`"
-  ([^java.text.Bidi this ^Integer run]
+  (^Integer [^java.text.Bidi this ^Integer run]
     (-> this (.getRunLevel run))))
 
 (defn mixed?
@@ -178,21 +178,21 @@
    and right-to-left text, or the base direction differs from the direction of the only run of text.
 
   returns: true if the line is not left-to-right or right-to-left. - `boolean`"
-  ([^java.text.Bidi this]
+  (^Boolean [^java.text.Bidi this]
     (-> this (.isMixed))))
 
 (defn get-run-count
   "Return the number of level runs.
 
   returns: the number of level runs - `int`"
-  ([^java.text.Bidi this]
+  (^Integer [^java.text.Bidi this]
     (-> this (.getRunCount))))
 
 (defn get-length
   "Return the length of text in the line.
 
   returns: the length of text in the line - `int`"
-  ([^java.text.Bidi this]
+  (^Integer [^java.text.Bidi this]
     (-> this (.getLength))))
 
 (defn create-line-bidi
@@ -204,20 +204,20 @@
   line-limit - the offset from the start of the paragraph to the limit of the line. - `int`
 
   returns: a Bidi object - `java.text.Bidi`"
-  ([^java.text.Bidi this ^Integer line-start ^Integer line-limit]
+  (^java.text.Bidi [^java.text.Bidi this ^Integer line-start ^Integer line-limit]
     (-> this (.createLineBidi line-start line-limit))))
 
 (defn base-is-left-to-right
   "Return true if the base direction is left-to-right.
 
   returns: true if the base direction is left-to-right - `boolean`"
-  ([^java.text.Bidi this]
+  (^Boolean [^java.text.Bidi this]
     (-> this (.baseIsLeftToRight))))
 
 (defn get-base-level
   "Return the base level (0 if left-to-right, 1 if right-to-left).
 
   returns: the base level - `int`"
-  ([^java.text.Bidi this]
+  (^Integer [^java.text.Bidi this]
     (-> this (.getBaseLevel))))
 

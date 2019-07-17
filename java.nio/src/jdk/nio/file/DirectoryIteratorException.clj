@@ -19,6 +19,6 @@
   "Returns the cause of this exception.
 
   returns: the cause - `java.io.IOException`"
-  ([^java.nio.file.DirectoryIteratorException this]
+  (^java.io.IOException [^java.nio.file.DirectoryIteratorException this]
     (-> this (.getCause))))
 

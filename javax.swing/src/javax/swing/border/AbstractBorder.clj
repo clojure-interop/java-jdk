@@ -32,7 +32,7 @@
   height - the height of the border - `int`
 
   returns: a Rectangle containing the interior coordinates - `java.awt.Rectangle`"
-  ([^java.awt.Component c ^javax.swing.border.Border b ^Integer x ^Integer y ^Integer width ^Integer height]
+  (^java.awt.Rectangle [^java.awt.Component c ^javax.swing.border.Border b ^Integer x ^Integer y ^Integer width ^Integer height]
     (AbstractBorder/getInteriorRectangle c b x y width height)))
 
 (defn paint-border
@@ -54,16 +54,16 @@
   insets - the object to be reinitialized - `java.awt.Insets`
 
   returns: the insets object - `java.awt.Insets`"
-  ([^javax.swing.border.AbstractBorder this ^java.awt.Component c ^java.awt.Insets insets]
+  (^java.awt.Insets [^javax.swing.border.AbstractBorder this ^java.awt.Component c ^java.awt.Insets insets]
     (-> this (.getBorderInsets c insets)))
-  ([^javax.swing.border.AbstractBorder this ^java.awt.Component c]
+  (^java.awt.Insets [^javax.swing.border.AbstractBorder this ^java.awt.Component c]
     (-> this (.getBorderInsets c))))
 
 (defn border-opaque?
   "This default implementation returns false.
 
   returns: false - `boolean`"
-  ([^javax.swing.border.AbstractBorder this]
+  (^Boolean [^javax.swing.border.AbstractBorder this]
     (-> this (.isBorderOpaque))))
 
 (defn get-interior-rectangle
@@ -76,7 +76,7 @@
   height - the height of the border - `int`
 
   returns: a Rectangle containing the interior coordinates - `java.awt.Rectangle`"
-  ([^javax.swing.border.AbstractBorder this ^java.awt.Component c ^Integer x ^Integer y ^Integer width ^Integer height]
+  (^java.awt.Rectangle [^javax.swing.border.AbstractBorder this ^java.awt.Component c ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.getInteriorRectangle c x y width height))))
 
 (defn get-baseline
@@ -97,7 +97,7 @@
            baseline - `int`
 
   throws: java.lang.IllegalArgumentException - if width or height is < 0"
-  ([^javax.swing.border.AbstractBorder this ^java.awt.Component c ^Integer width ^Integer height]
+  (^Integer [^javax.swing.border.AbstractBorder this ^java.awt.Component c ^Integer width ^Integer height]
     (-> this (.getBaseline c width height))))
 
 (defn get-baseline-resize-behavior
@@ -120,6 +120,6 @@
 
   returns: an enum indicating how the baseline changes as the border is
            resized - `java.awt.Component.BaselineResizeBehavior`"
-  ([^javax.swing.border.AbstractBorder this ^java.awt.Component c]
+  (^java.awt.Component.BaselineResizeBehavior [^javax.swing.border.AbstractBorder this ^java.awt.Component c]
     (-> this (.getBaselineResizeBehavior c))))
 

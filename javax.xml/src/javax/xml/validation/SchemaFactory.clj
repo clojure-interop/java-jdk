@@ -87,9 +87,9 @@
   returns: New instance of a SchemaFactory - `javax.xml.validation.SchemaFactory`
 
   throws: java.lang.IllegalArgumentException - if factoryClassName is null, or the factory class cannot be loaded, instantiated or doesn't support the schema language specified in schemLanguage parameter."
-  ([^java.lang.String schema-language ^java.lang.String factory-class-name ^java.lang.ClassLoader class-loader]
+  (^javax.xml.validation.SchemaFactory [^java.lang.String schema-language ^java.lang.String factory-class-name ^java.lang.ClassLoader class-loader]
     (SchemaFactory/newInstance schema-language factory-class-name class-loader))
-  ([^java.lang.String schema-language]
+  (^javax.xml.validation.SchemaFactory [^java.lang.String schema-language]
     (SchemaFactory/newInstance schema-language)))
 
 (defn get-feature?
@@ -107,7 +107,7 @@
   returns: The current value of the feature (true or false). - `boolean`
 
   throws: org.xml.sax.SAXNotRecognizedException - If the feature value can't be assigned or retrieved."
-  ([^javax.xml.validation.SchemaFactory this ^java.lang.String name]
+  (^Boolean [^javax.xml.validation.SchemaFactory this ^java.lang.String name]
     (-> this (.getFeature name))))
 
 (defn get-resource-resolver
@@ -117,7 +117,7 @@
         the setResourceResolver(LSResourceResolver) method, or null
         if that method has never been called since this SchemaFactory
         has created. - `org.w3c.dom.ls.LSResourceResolver`"
-  ([^javax.xml.validation.SchemaFactory this]
+  (^org.w3c.dom.ls.LSResourceResolver [^javax.xml.validation.SchemaFactory this]
     (-> this (.getResourceResolver))))
 
 (defn set-resource-resolver
@@ -173,7 +173,7 @@
         the setErrorHandler(ErrorHandler) method, or null
         if that method has never been called since this SchemaFactory
         has created. - `org.xml.sax.ErrorHandler`"
-  ([^javax.xml.validation.SchemaFactory this]
+  (^org.xml.sax.ErrorHandler [^javax.xml.validation.SchemaFactory this]
     (-> this (.getErrorHandler))))
 
 (defn schema-language-supported?
@@ -184,7 +184,7 @@
   returns: true if SchemaFactory supports schemaLanguage, else false. - `boolean`
 
   throws: java.lang.NullPointerException - If schemaLanguage is null."
-  ([^javax.xml.validation.SchemaFactory this ^java.lang.String schema-language]
+  (^Boolean [^javax.xml.validation.SchemaFactory this ^java.lang.String schema-language]
     (-> this (.isSchemaLanguageSupported schema-language))))
 
 (defn set-error-handler
@@ -263,7 +263,7 @@
   returns: The current value of the property. - `java.lang.Object`
 
   throws: org.xml.sax.SAXNotRecognizedException - If the property value can't be assigned or retrieved."
-  ([^javax.xml.validation.SchemaFactory this ^java.lang.String name]
+  (^java.lang.Object [^javax.xml.validation.SchemaFactory this ^java.lang.String name]
     (-> this (.getProperty name))))
 
 (defn new-schema
@@ -276,9 +276,9 @@
   returns: New Schema from parsing schema. - `javax.xml.validation.Schema`
 
   throws: org.xml.sax.SAXException - If a SAX error occurs during parsing."
-  ([^javax.xml.validation.SchemaFactory this ^javax.xml.transform.Source schema]
+  (^javax.xml.validation.Schema [^javax.xml.validation.SchemaFactory this ^javax.xml.transform.Source schema]
     (-> this (.newSchema schema)))
-  ([^javax.xml.validation.SchemaFactory this]
+  (^javax.xml.validation.Schema [^javax.xml.validation.SchemaFactory this]
     (-> this (.newSchema))))
 
 (defn set-feature

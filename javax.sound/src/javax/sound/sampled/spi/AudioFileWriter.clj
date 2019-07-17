@@ -32,9 +32,9 @@
 
   returns: true if the file type is supported for this audio input stream,
    otherwise false - `boolean`"
-  ([^javax.sound.sampled.spi.AudioFileWriter this ^javax.sound.sampled.AudioFileFormat.Type file-type ^javax.sound.sampled.AudioInputStream stream]
+  (^Boolean [^javax.sound.sampled.spi.AudioFileWriter this ^javax.sound.sampled.AudioFileFormat.Type file-type ^javax.sound.sampled.AudioInputStream stream]
     (-> this (.isFileTypeSupported file-type stream)))
-  ([^javax.sound.sampled.spi.AudioFileWriter this ^javax.sound.sampled.AudioFileFormat.Type file-type]
+  (^Boolean [^javax.sound.sampled.spi.AudioFileWriter this ^javax.sound.sampled.AudioFileFormat.Type file-type]
     (-> this (.isFileTypeSupported file-type))))
 
 (defn write
@@ -53,6 +53,6 @@
   returns: the number of bytes written to the output stream - `int`
 
   throws: java.io.IOException - if an I/O exception occurs"
-  ([^javax.sound.sampled.spi.AudioFileWriter this ^javax.sound.sampled.AudioInputStream stream ^javax.sound.sampled.AudioFileFormat.Type file-type ^java.io.OutputStream out]
+  (^Integer [^javax.sound.sampled.spi.AudioFileWriter this ^javax.sound.sampled.AudioInputStream stream ^javax.sound.sampled.AudioFileFormat.Type file-type ^java.io.OutputStream out]
     (-> this (.write stream file-type out))))
 

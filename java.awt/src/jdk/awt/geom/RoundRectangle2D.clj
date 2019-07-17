@@ -25,7 +25,7 @@
   returns: the PathIterator object that returns the
             geometry of the outline of this
             RoundRectangle2D, one segment at a time. - `java.awt.geom.PathIterator`"
-  ([^java.awt.geom.RoundRectangle2D this ^java.awt.geom.AffineTransform at]
+  (^java.awt.geom.PathIterator [^java.awt.geom.RoundRectangle2D this ^java.awt.geom.AffineTransform at]
     (-> this (.getPathIterator at))))
 
 (defn contains
@@ -65,9 +65,9 @@
             intersects method returns true
             and the containment calculations would be too expensive to
             perform. - `boolean`"
-  ([^java.awt.geom.RoundRectangle2D this ^Double x ^Double y ^Double w ^Double h]
+  (^Boolean [^java.awt.geom.RoundRectangle2D this ^Double x ^Double y ^Double w ^Double h]
     (-> this (.contains x y w h)))
-  ([^java.awt.geom.RoundRectangle2D this ^Double x ^Double y]
+  (^Boolean [^java.awt.geom.RoundRectangle2D this ^Double x ^Double y]
     (-> this (.contains x y))))
 
 (defn set-round-rect
@@ -91,7 +91,7 @@
 
   returns: the width of the arc that rounds off the corners
    of this RoundRectangle2D. - `double`"
-  ([^java.awt.geom.RoundRectangle2D this]
+  (^Double [^java.awt.geom.RoundRectangle2D this]
     (-> this (.getArcWidth))))
 
 (defn get-arc-height
@@ -99,14 +99,14 @@
 
   returns: the height of the arc that rounds off the corners
    of this RoundRectangle2D. - `double`"
-  ([^java.awt.geom.RoundRectangle2D this]
+  (^Double [^java.awt.geom.RoundRectangle2D this]
     (-> this (.getArcHeight))))
 
 (defn hash-code
   "Returns the hashcode for this RoundRectangle2D.
 
   returns: the hashcode for this RoundRectangle2D. - `int`"
-  ([^java.awt.geom.RoundRectangle2D this]
+  (^Integer [^java.awt.geom.RoundRectangle2D this]
     (-> this (.hashCode))))
 
 (defn set-frame
@@ -133,7 +133,7 @@
   returns: true if obj is an instance
             of RoundRectangle2D and has the same values;
             false otherwise. - `boolean`"
-  ([^java.awt.geom.RoundRectangle2D this ^java.lang.Object obj]
+  (^Boolean [^java.awt.geom.RoundRectangle2D this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn intersects
@@ -170,6 +170,6 @@
             the interior of the rectangular area intersect, or are
             both highly likely to intersect and intersection calculations
             would be too expensive to perform; false otherwise. - `boolean`"
-  ([^java.awt.geom.RoundRectangle2D this ^Double x ^Double y ^Double w ^Double h]
+  (^Boolean [^java.awt.geom.RoundRectangle2D this ^Double x ^Double y ^Double w ^Double h]
     (-> this (.intersects x y w h))))
 

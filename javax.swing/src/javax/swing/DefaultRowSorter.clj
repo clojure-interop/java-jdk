@@ -78,7 +78,7 @@
   "Returns the maximum number of sort keys.
 
   returns: the maximum number of sort keys - `int`"
-  ([^javax.swing.DefaultRowSorter this]
+  (^Integer [^javax.swing.DefaultRowSorter this]
     (-> this (.getMaxSortKeys))))
 
 (defn set-sort-keys
@@ -188,7 +188,7 @@
   returns: true if the column is sortable - `boolean`
 
   throws: java.lang.IndexOutOfBoundsException - if column is outside the range of the underlying model"
-  ([^javax.swing.DefaultRowSorter this ^Integer column]
+  (^Boolean [^javax.swing.DefaultRowSorter this ^Integer column]
     (-> this (.isSortable column))))
 
 (defn set-max-sort-keys
@@ -262,7 +262,7 @@
   returns: row index in terms of the view - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if index is outside the range of the view"
-  ([^javax.swing.DefaultRowSorter this ^Integer index]
+  (^Integer [^javax.swing.DefaultRowSorter this ^Integer index]
     (-> this (.convertRowIndexToModel index))))
 
 (defn get-sort-keys
@@ -288,7 +288,7 @@
    model is updated; otherwise, returns false.
 
   returns: whether or not to sort when the model is updated - `boolean`"
-  ([^javax.swing.DefaultRowSorter this]
+  (^Boolean [^javax.swing.DefaultRowSorter this]
     (-> this (.getSortsOnUpdates))))
 
 (defn get-view-row-count
@@ -297,7 +297,7 @@
    underlying model.
 
   returns: number of rows in the view - `int`"
-  ([^javax.swing.DefaultRowSorter this]
+  (^Integer [^javax.swing.DefaultRowSorter this]
     (-> this (.getViewRowCount))))
 
 (defn set-sortable
@@ -324,7 +324,7 @@
   returns: the Comparator for the specified column - `java.util.Comparator<?>`
 
   throws: java.lang.IndexOutOfBoundsException - if column is outside the range of the underlying model"
-  ([^javax.swing.DefaultRowSorter this ^Integer column]
+  (^java.util.Comparator [^javax.swing.DefaultRowSorter this ^Integer column]
     (-> this (.getComparator column))))
 
 (defn convert-row-index-to-view
@@ -339,14 +339,14 @@
            filtered out of the view - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if index is outside the range of the model"
-  ([^javax.swing.DefaultRowSorter this ^Integer index]
+  (^Integer [^javax.swing.DefaultRowSorter this ^Integer index]
     (-> this (.convertRowIndexToView index))))
 
 (defn get-model
   "Returns the underlying model.
 
   returns: the underlying model - `DefaultRowSorter.M`"
-  ([^javax.swing.DefaultRowSorter this]
+  (^DefaultRowSorter.M [^javax.swing.DefaultRowSorter this]
     (-> this (.getModel))))
 
 (defn get-row-filter
@@ -380,6 +380,6 @@
   "Returns the number of rows in the underlying model.
 
   returns: number of rows in the underlying model - `int`"
-  ([^javax.swing.DefaultRowSorter this]
+  (^Integer [^javax.swing.DefaultRowSorter this]
     (-> this (.getModelRowCount))))
 

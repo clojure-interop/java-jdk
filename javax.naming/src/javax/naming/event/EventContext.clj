@@ -159,6 +159,6 @@
   returns: true if the target must exist; false if the target need not exist. - `boolean`
 
   throws: javax.naming.NamingException - If the context's behavior in this regard cannot be determined."
-  ([^javax.naming.event.EventContext this]
+  (^Boolean [^javax.naming.event.EventContext this]
     (-> this (.targetMustExist))))
 

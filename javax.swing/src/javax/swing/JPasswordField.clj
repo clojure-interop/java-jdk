@@ -61,7 +61,7 @@
    and Feel. For example, Metal/Ocean's default is a bullet character.
 
   returns: the echo character, 0 if unset - `char`"
-  ([^javax.swing.JPasswordField this]
+  (^Character [^javax.swing.JPasswordField this]
     (-> this (.getEchoChar))))
 
 (defn copy
@@ -88,7 +88,7 @@
   "Returns the name of the L&F class that renders this component.
 
   returns: the string `PasswordFieldUI` - `java.lang.String`"
-  ([^javax.swing.JPasswordField this]
+  (^java.lang.String [^javax.swing.JPasswordField this]
     (-> this (.getUIClassID))))
 
 (defn set-echo-char
@@ -114,7 +114,7 @@
   returns: an AccessibleJPasswordField that serves as the
            AccessibleContext of this
            JPasswordField - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.JPasswordField this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.JPasswordField this]
     (-> this (.getAccessibleContext))))
 
 (defn echo-char-is-set
@@ -123,7 +123,7 @@
    character is not 0.
 
   returns: true if a character is set for echoing - `boolean`"
-  ([^javax.swing.JPasswordField this]
+  (^Boolean [^javax.swing.JPasswordField this]
     (-> this (.echoCharIsSet))))
 
 (defn cut

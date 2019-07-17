@@ -23,9 +23,9 @@
 
   returns: the square of the flatness of the quadratic curve
             defined by the specified coordinates. - `double`"
-  ([^Double x-1 ^Double y-1 ^Double ctrlx ^Double ctrly ^Double x-2 ^Double y-2]
+  (^Double [^Double x-1 ^Double y-1 ^Double ctrlx ^Double ctrly ^Double x-2 ^Double y-2]
     (QuadCurve2D/getFlatnessSq x-1 y-1 ctrlx ctrly x-2 y-2))
-  ([coords ^Integer offset]
+  (^Double [coords ^Integer offset]
     (QuadCurve2D/getFlatnessSq coords offset)))
 
 (defn *get-flatness
@@ -42,9 +42,9 @@
 
   returns: the flatness of the quadratic curve defined by the
             specified coordinates. - `double`"
-  ([^Double x-1 ^Double y-1 ^Double ctrlx ^Double ctrly ^Double x-2 ^Double y-2]
+  (^Double [^Double x-1 ^Double y-1 ^Double ctrlx ^Double ctrly ^Double x-2 ^Double y-2]
     (QuadCurve2D/getFlatness x-1 y-1 ctrlx ctrly x-2 y-2))
-  ([coords ^Integer offset]
+  (^Double [coords ^Integer offset]
     (QuadCurve2D/getFlatness coords offset)))
 
 (defn *subdivide
@@ -92,9 +92,9 @@
 
   returns: the number of roots, or -1 if the equation is
     a constant. - `int`"
-  ([eqn res]
+  (^Integer [eqn res]
     (QuadCurve2D/solveQuadratic eqn res))
-  ([eqn]
+  (^Integer [eqn]
     (QuadCurve2D/solveQuadratic eqn)))
 
 (defn subdivide
@@ -115,7 +115,7 @@
    double in precision.
 
   returns: the X coordinate of the start point. - `double`"
-  ([^java.awt.geom.QuadCurve2D this]
+  (^Double [^java.awt.geom.QuadCurve2D this]
     (-> this (.getX1))))
 
 (defn get-path-iterator
@@ -132,9 +132,9 @@
 
   returns: a PathIterator object that defines the
             flattened boundary of the shape. - `java.awt.geom.PathIterator`"
-  ([^java.awt.geom.QuadCurve2D this ^java.awt.geom.AffineTransform at ^Double flatness]
+  (^java.awt.geom.PathIterator [^java.awt.geom.QuadCurve2D this ^java.awt.geom.AffineTransform at ^Double flatness]
     (-> this (.getPathIterator at flatness)))
-  ([^java.awt.geom.QuadCurve2D this ^java.awt.geom.AffineTransform at]
+  (^java.awt.geom.PathIterator [^java.awt.geom.QuadCurve2D this ^java.awt.geom.AffineTransform at]
     (-> this (.getPathIterator at))))
 
 (defn get-p-1
@@ -142,7 +142,7 @@
 
   returns: a Point2D that is the start point of this
             QuadCurve2D. - `java.awt.geom.Point2D`"
-  ([^java.awt.geom.QuadCurve2D this]
+  (^java.awt.geom.Point2D [^java.awt.geom.QuadCurve2D this]
     (-> this (.getP1))))
 
 (defn contains
@@ -182,11 +182,11 @@
             intersects method returns true
             and the containment calculations would be too expensive to
             perform. - `boolean`"
-  ([^java.awt.geom.QuadCurve2D this ^Double x ^Double y ^Double w ^Double h]
+  (^Boolean [^java.awt.geom.QuadCurve2D this ^Double x ^Double y ^Double w ^Double h]
     (-> this (.contains x y w h)))
-  ([^java.awt.geom.QuadCurve2D this ^Double x ^Double y]
+  (^Boolean [^java.awt.geom.QuadCurve2D this ^Double x ^Double y]
     (-> this (.contains x y)))
-  ([^java.awt.geom.QuadCurve2D this ^java.awt.geom.Point2D p]
+  (^Boolean [^java.awt.geom.QuadCurve2D this ^java.awt.geom.Point2D p]
     (-> this (.contains p))))
 
 (defn get-ctrl-pt
@@ -194,7 +194,7 @@
 
   returns: a Point2D that is the control point of this
             Point2D. - `java.awt.geom.Point2D`"
-  ([^java.awt.geom.QuadCurve2D this]
+  (^java.awt.geom.Point2D [^java.awt.geom.QuadCurve2D this]
     (-> this (.getCtrlPt))))
 
 (defn get-flatness
@@ -203,7 +203,7 @@
    QuadCurve2D.
 
   returns: the flatness of this QuadCurve2D. - `double`"
-  ([^java.awt.geom.QuadCurve2D this]
+  (^Double [^java.awt.geom.QuadCurve2D this]
     (-> this (.getFlatness))))
 
 (defn get-flatness-sq
@@ -213,7 +213,7 @@
 
   returns: the square of the flatness of this
             QuadCurve2D. - `double`"
-  ([^java.awt.geom.QuadCurve2D this]
+  (^Double [^java.awt.geom.QuadCurve2D this]
     (-> this (.getFlatnessSq))))
 
 (defn get-ctrl-y
@@ -221,7 +221,7 @@
    double precision.
 
   returns: the Y coordinate of the control point. - `double`"
-  ([^java.awt.geom.QuadCurve2D this]
+  (^Double [^java.awt.geom.QuadCurve2D this]
     (-> this (.getCtrlY))))
 
 (defn get-ctrl-x
@@ -229,7 +229,7 @@
    double precision.
 
   returns: X coordinate the control point - `double`"
-  ([^java.awt.geom.QuadCurve2D this]
+  (^Double [^java.awt.geom.QuadCurve2D this]
     (-> this (.getCtrlX))))
 
 (defn get-y-2
@@ -237,7 +237,7 @@
    double precision.
 
   returns: the Y coordinate of the end point. - `double`"
-  ([^java.awt.geom.QuadCurve2D this]
+  (^Double [^java.awt.geom.QuadCurve2D this]
     (-> this (.getY2))))
 
 (defn get-x-2
@@ -245,7 +245,7 @@
    double precision.
 
   returns: the x coordinate of the end point. - `double`"
-  ([^java.awt.geom.QuadCurve2D this]
+  (^Double [^java.awt.geom.QuadCurve2D this]
     (-> this (.getX2))))
 
 (defn clone
@@ -255,7 +255,7 @@
   returns: a clone of this instance. - `java.lang.Object`
 
   throws: java.lang.OutOfMemoryError - if there is not enough memory."
-  ([^java.awt.geom.QuadCurve2D this]
+  (^java.lang.Object [^java.awt.geom.QuadCurve2D this]
     (-> this (.clone))))
 
 (defn get-bounds
@@ -298,7 +298,7 @@
 
   returns: an integer Rectangle that completely encloses
                    the Shape. - `java.awt.Rectangle`"
-  ([^java.awt.geom.QuadCurve2D this]
+  (^java.awt.Rectangle [^java.awt.geom.QuadCurve2D this]
     (-> this (.getBounds))))
 
 (defn get-y-1
@@ -306,7 +306,7 @@
    double precision.
 
   returns: the Y coordinate of the start point. - `double`"
-  ([^java.awt.geom.QuadCurve2D this]
+  (^Double [^java.awt.geom.QuadCurve2D this]
     (-> this (.getY1))))
 
 (defn intersects
@@ -343,9 +343,9 @@
             the interior of the rectangular area intersect, or are
             both highly likely to intersect and intersection calculations
             would be too expensive to perform; false otherwise. - `boolean`"
-  ([^java.awt.geom.QuadCurve2D this ^Double x ^Double y ^Double w ^Double h]
+  (^Boolean [^java.awt.geom.QuadCurve2D this ^Double x ^Double y ^Double w ^Double h]
     (-> this (.intersects x y w h)))
-  ([^java.awt.geom.QuadCurve2D this ^java.awt.geom.Rectangle2D r]
+  (^Boolean [^java.awt.geom.QuadCurve2D this ^java.awt.geom.Rectangle2D r]
     (-> this (.intersects r))))
 
 (defn get-p-2
@@ -353,7 +353,7 @@
 
   returns: a Point object that is the end point
             of this Point2D. - `java.awt.geom.Point2D`"
-  ([^java.awt.geom.QuadCurve2D this]
+  (^java.awt.geom.Point2D [^java.awt.geom.QuadCurve2D this]
     (-> this (.getP2))))
 
 (defn set-curve

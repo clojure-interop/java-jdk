@@ -22,7 +22,7 @@
   "Returns the input stream of this OctetStreamData.
 
   returns: the input stream of this OctetStreamData. - `java.io.InputStream`"
-  ([^javax.xml.crypto.OctetStreamData this]
+  (^java.io.InputStream [^javax.xml.crypto.OctetStreamData this]
     (-> this (.getOctetStream))))
 
 (defn get-uri
@@ -30,7 +30,7 @@
    OctetStreamData.
 
   returns: the URI String or null if not applicable - `java.lang.String`"
-  ([^javax.xml.crypto.OctetStreamData this]
+  (^java.lang.String [^javax.xml.crypto.OctetStreamData this]
     (-> this (.getURI))))
 
 (defn get-mime-type
@@ -38,6 +38,6 @@
    OctetStreamData.
 
   returns: the MIME type or null if not applicable - `java.lang.String`"
-  ([^javax.xml.crypto.OctetStreamData this]
+  (^java.lang.String [^javax.xml.crypto.OctetStreamData this]
     (-> this (.getMimeType))))
 

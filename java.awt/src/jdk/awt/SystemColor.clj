@@ -488,6 +488,6 @@
    The returned string may be empty but may not be null.
 
   returns: a string representation of this Color - `java.lang.String`"
-  ([^java.awt.SystemColor this]
+  (^java.lang.String [^java.awt.SystemColor this]
     (-> this (.toString))))
 

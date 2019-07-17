@@ -15,7 +15,7 @@
   "Returns the name type of this server name.
 
   returns: the name type of this server name - `int`"
-  ([^javax.net.ssl.SNIServerName this]
+  (^Integer [^javax.net.ssl.SNIServerName this]
     (-> this (.getType))))
 
 (defn get-encoded
@@ -33,7 +33,7 @@
   returns: true if, and only if, other is of the same class
            of this object, and has the same name type and
            encoded value as this server name. - `boolean`"
-  ([^javax.net.ssl.SNIServerName this ^java.lang.Object other]
+  (^Boolean [^javax.net.ssl.SNIServerName this ^java.lang.Object other]
     (-> this (.equals other))))
 
 (defn hash-code
@@ -43,7 +43,7 @@
    value of this server name.
 
   returns: a hash code value for this server name. - `int`"
-  ([^javax.net.ssl.SNIServerName this]
+  (^Integer [^javax.net.ssl.SNIServerName this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -77,6 +77,6 @@
    their own formats.
 
   returns: a string representation of this server name - `java.lang.String`"
-  ([^javax.net.ssl.SNIServerName this]
+  (^java.lang.String [^javax.net.ssl.SNIServerName this]
     (-> this (.toString))))
 

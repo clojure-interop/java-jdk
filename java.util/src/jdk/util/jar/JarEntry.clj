@@ -263,7 +263,7 @@
    entry, or null if none - `java.util.jar.Attributes`
 
   throws: java.io.IOException - if an I/O error has occurred"
-  ([^java.util.jar.JarEntry this]
+  (^java.util.jar.Attributes [^java.util.jar.JarEntry this]
     (-> this (.getAttributes))))
 
 (defn get-certificates

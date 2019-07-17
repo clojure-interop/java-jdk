@@ -55,7 +55,7 @@
 
   returns: an integer representing the current orientation -- either
             HORIZONTAL or VERTICAL - `int`"
-  ([^javax.swing.JToolBar this]
+  (^Integer [^javax.swing.JToolBar this]
     (-> this (.getOrientation))))
 
 (defn set-floatable
@@ -87,7 +87,7 @@
 
   returns: an integer indicating the component's position,
             where 0 is first - `int`"
-  ([^javax.swing.JToolBar this ^java.awt.Component c]
+  (^Integer [^javax.swing.JToolBar this ^java.awt.Component c]
     (-> this (.getComponentIndex c))))
 
 (defn get-component-at-index
@@ -97,7 +97,7 @@
 
   returns: the Component at that position,
             or null for an invalid index - `java.awt.Component`"
-  ([^javax.swing.JToolBar this ^Integer i]
+  (^java.awt.Component [^javax.swing.JToolBar this ^Integer i]
     (-> this (.getComponentAtIndex i))))
 
 (defn set-margin
@@ -118,7 +118,7 @@
   "Returns the name of the L&F class that renders this component.
 
   returns: the string `ToolBarUI` - `java.lang.String`"
-  ([^javax.swing.JToolBar this]
+  (^java.lang.String [^javax.swing.JToolBar this]
     (-> this (.getUIClassID))))
 
 (defn add-separator
@@ -153,21 +153,21 @@
   "Returns the tool bar's current UI.
 
   returns: `javax.swing.plaf.ToolBarUI`"
-  ([^javax.swing.JToolBar this]
+  (^javax.swing.plaf.ToolBarUI [^javax.swing.JToolBar this]
     (-> this (.getUI))))
 
 (defn rollover?
   "Returns the rollover state.
 
   returns: true if rollover toolbar buttons are to be drawn; otherwise false - `boolean`"
-  ([^javax.swing.JToolBar this]
+  (^Boolean [^javax.swing.JToolBar this]
     (-> this (.isRollover))))
 
 (defn floatable?
   "Gets the floatable property.
 
   returns: the value of the floatable property - `boolean`"
-  ([^javax.swing.JToolBar this]
+  (^Boolean [^javax.swing.JToolBar this]
     (-> this (.isFloatable))))
 
 (defn get-accessible-context
@@ -178,7 +178,7 @@
 
   returns: an AccessibleJToolBar that serves as the
            AccessibleContext of this JToolBar - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.JToolBar this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.JToolBar this]
     (-> this (.getAccessibleContext))))
 
 (defn set-orientation
@@ -199,14 +199,14 @@
   a - the Action object to add as a new menu item - `javax.swing.Action`
 
   returns: the new button which dispatches the action - `javax.swing.JButton`"
-  ([^javax.swing.JToolBar this ^javax.swing.Action a]
+  (^javax.swing.JButton [^javax.swing.JToolBar this ^javax.swing.Action a]
     (-> this (.add a))))
 
 (defn border-painted?
   "Gets the borderPainted property.
 
   returns: the value of the borderPainted property - `boolean`"
-  ([^javax.swing.JToolBar this]
+  (^Boolean [^javax.swing.JToolBar this]
     (-> this (.isBorderPainted))))
 
 (defn set-rollover
@@ -234,6 +234,6 @@
    its buttons.
 
   returns: an Insets object containing the margin values - `java.awt.Insets`"
-  ([^javax.swing.JToolBar this]
+  (^java.awt.Insets [^javax.swing.JToolBar this]
     (-> this (.getMargin))))
 

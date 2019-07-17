@@ -58,14 +58,14 @@
    events and detect if an event is inside a menu component.
 
   returns: the Component that paints this menu item - `java.awt.Component`"
-  ([^javax.swing.JMenuItem this]
+  (^java.awt.Component [^javax.swing.JMenuItem this]
     (-> this (.getComponent))))
 
 (defn armed?
   "Returns whether the menu item is `armed`.
 
   returns: true if the menu item is armed, and it can be selected - `boolean`"
-  ([^javax.swing.JMenuItem this]
+  (^Boolean [^javax.swing.JMenuItem this]
     (-> this (.isArmed))))
 
 (defn get-ui-class-id
@@ -73,7 +73,7 @@
    render this component.
 
   returns: the string `MenuItemUI` - `java.lang.String`"
-  ([^javax.swing.JMenuItem this]
+  (^java.lang.String [^javax.swing.JMenuItem this]
     (-> this (.getUIClassID))))
 
 (defn add-menu-drag-mouse-listener
@@ -134,7 +134,7 @@
 
   returns: a KeyStroke object identifying the
             accelerator key - `javax.swing.KeyStroke`"
-  ([^javax.swing.JMenuItem this]
+  (^javax.swing.KeyStroke [^javax.swing.JMenuItem this]
     (-> this (.getAccelerator))))
 
 (defn set-ui
@@ -160,7 +160,7 @@
 
   returns: an AccessibleJMenuItem that serves as the
            AccessibleContext of this JMenuItem - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.JMenuItem this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.JMenuItem this]
     (-> this (.getAccessibleContext))))
 
 (defn remove-menu-key-listener
@@ -196,7 +196,7 @@
   e - a KeyEvent - `java.awt.event.KeyEvent`
   path - the MenuElement path array - `javax.swing.MenuElement[]`
   manager - the MenuSelectionManager - `javax.swing.MenuSelectionManager`"
-  ([^javax.swing.JMenuItem this ^java.awt.event.KeyEvent e ^javax.swing.MenuElement[] path ^javax.swing.MenuSelectionManager manager]
+  ([^javax.swing.JMenuItem this ^java.awt.event.KeyEvent e path ^javax.swing.MenuSelectionManager manager]
     (-> this (.processKeyEvent e path manager))))
 
 (defn get-menu-drag-mouse-listeners
@@ -220,7 +220,7 @@
   e - a MouseEvent - `java.awt.event.MouseEvent`
   path - the MenuElement path array - `javax.swing.MenuElement[]`
   manager - the MenuSelectionManager - `javax.swing.MenuSelectionManager`"
-  ([^javax.swing.JMenuItem this ^java.awt.event.MouseEvent e ^javax.swing.MenuElement[] path ^javax.swing.MenuSelectionManager manager]
+  ([^javax.swing.JMenuItem this ^java.awt.event.MouseEvent e path ^javax.swing.MenuSelectionManager manager]
     (-> this (.processMouseEvent e path manager))))
 
 (defn remove-menu-drag-mouse-listener

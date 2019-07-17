@@ -29,6 +29,6 @@
   "Returns the truncation length.
 
   returns: the truncation length in number of bits - `int`"
-  ([^javax.xml.crypto.dsig.spec.HMACParameterSpec this]
+  (^Integer [^javax.xml.crypto.dsig.spec.HMACParameterSpec this]
     (-> this (.getOutputLength))))
 

@@ -8,7 +8,7 @@
   "Get the name of this event
 
   returns: the qualified name of this event - `javax.xml.namespace.QName`"
-  ([^javax.xml.stream.events.EndElement this]
+  (^javax.xml.namespace.QName [^javax.xml.stream.events.EndElement this]
     (-> this (.getName))))
 
 (defn get-namespaces
@@ -18,6 +18,6 @@
 
   returns: an Iterator over Namespace interfaces, or an
    empty iterator - `java.util.Iterator`"
-  ([^javax.xml.stream.events.EndElement this]
+  (^java.util.Iterator [^javax.xml.stream.events.EndElement this]
     (-> this (.getNamespaces))))
 

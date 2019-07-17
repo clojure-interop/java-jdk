@@ -20,13 +20,13 @@
   "Returns the name of this MimeHeader object.
 
   returns: the name of the header as a String - `java.lang.String`"
-  ([^javax.xml.soap.MimeHeader this]
+  (^java.lang.String [^javax.xml.soap.MimeHeader this]
     (-> this (.getName))))
 
 (defn get-value
   "Returns the value of this MimeHeader object.
 
   returns: the value of the header as a String - `java.lang.String`"
-  ([^javax.xml.soap.MimeHeader this]
+  (^java.lang.String [^javax.xml.soap.MimeHeader this]
     (-> this (.getValue))))
 

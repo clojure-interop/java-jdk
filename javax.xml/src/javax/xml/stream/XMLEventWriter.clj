@@ -155,7 +155,7 @@
   returns: `java.lang.String`
 
   throws: javax.xml.stream.XMLStreamException"
-  ([^javax.xml.stream.XMLEventWriter this ^java.lang.String uri]
+  (^java.lang.String [^javax.xml.stream.XMLEventWriter this ^java.lang.String uri]
     (-> this (.getPrefix uri))))
 
 (defn set-prefix
@@ -202,6 +202,6 @@
   "Returns the current namespace context.
 
   returns: the current namespace context - `javax.xml.namespace.NamespaceContext`"
-  ([^javax.xml.stream.XMLEventWriter this]
+  (^javax.xml.namespace.NamespaceContext [^javax.xml.stream.XMLEventWriter this]
     (-> this (.getNamespaceContext))))
 

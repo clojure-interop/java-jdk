@@ -16,9 +16,9 @@
   type - The type of the method's return value. - `java.lang.String`
   impact - The impact of the method, one of INFO, ACTION, ACTION_INFO, UNKNOWN. - `int`
   descriptor - The descriptor for the operation. This may be null which is equivalent to an empty descriptor. - `javax.management.Descriptor`"
-  ([^java.lang.String name ^java.lang.String description ^javax.management.MBeanParameterInfo[] signature ^java.lang.String type ^Integer impact ^javax.management.Descriptor descriptor]
+  ([^java.lang.String name ^java.lang.String description signature ^java.lang.String type ^Integer impact ^javax.management.Descriptor descriptor]
     (new MBeanOperationInfo name description signature type impact descriptor))
-  ([^java.lang.String name ^java.lang.String description ^javax.management.MBeanParameterInfo[] signature ^java.lang.String type ^Integer impact]
+  ([^java.lang.String name ^java.lang.String description signature ^java.lang.String type ^Integer impact]
     (new MBeanOperationInfo name description signature type impact))
   ([^java.lang.String description ^java.lang.reflect.Method method]
     (new MBeanOperationInfo description method)))
@@ -70,14 +70,14 @@
    to subclasses.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([^javax.management.MBeanOperationInfo this]
+  (^java.lang.Object [^javax.management.MBeanOperationInfo this]
     (-> this (.clone))))
 
 (defn get-return-type
   "Returns the type of the method's return value.
 
   returns: the return type. - `java.lang.String`"
-  ([^javax.management.MBeanOperationInfo this]
+  (^java.lang.String [^javax.management.MBeanOperationInfo this]
     (-> this (.getReturnType))))
 
 (defn get-signature
@@ -100,14 +100,14 @@
    INFO, ACTION, ACTION_INFO, UNKNOWN.
 
   returns: the impact code. - `int`"
-  ([^javax.management.MBeanOperationInfo this]
+  (^Integer [^javax.management.MBeanOperationInfo this]
     (-> this (.getImpact))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^javax.management.MBeanOperationInfo this]
+  (^java.lang.String [^javax.management.MBeanOperationInfo this]
     (-> this (.toString))))
 
 (defn equals
@@ -120,13 +120,13 @@
    and getSignature() values are equal (not necessarily identical)
    to those of this MBeanConstructorInfo.  Two signature arrays
    are equal if their elements are pairwise equal. - `boolean`"
-  ([^javax.management.MBeanOperationInfo this ^java.lang.Object o]
+  (^Boolean [^javax.management.MBeanOperationInfo this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  ([^javax.management.MBeanOperationInfo this]
+  (^Integer [^javax.management.MBeanOperationInfo this]
     (-> this (.hashCode))))
 

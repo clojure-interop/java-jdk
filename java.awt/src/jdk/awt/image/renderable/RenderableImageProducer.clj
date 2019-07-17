@@ -46,7 +46,7 @@
   ic - the ImageConsumer to be checked. - `java.awt.image.ImageConsumer`
 
   returns: true if the ImageConsumer is on the list; false otherwise. - `boolean`"
-  ([^java.awt.image.renderable.RenderableImageProducer this ^java.awt.image.ImageConsumer ic]
+  (^Boolean [^java.awt.image.renderable.RenderableImageProducer this ^java.awt.image.ImageConsumer ic]
     (-> this (.isConsumer ic))))
 
 (defn remove-consumer

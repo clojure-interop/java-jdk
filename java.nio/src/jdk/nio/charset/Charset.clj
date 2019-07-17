@@ -210,7 +210,7 @@
             is available in the current Java virtual machine - `boolean`
 
   throws: java.nio.charset.IllegalCharsetNameException - If the given charset name is illegal"
-  ([^java.lang.String charset-name]
+  (^Boolean [^java.lang.String charset-name]
     (Charset/isSupported charset-name)))
 
 (defn *for-name
@@ -221,7 +221,7 @@
   returns: A charset object for the named charset - `java.nio.charset.Charset`
 
   throws: java.nio.charset.IllegalCharsetNameException - If the given charset name is illegal"
-  ([^java.lang.String charset-name]
+  (^java.nio.charset.Charset [^java.lang.String charset-name]
     (Charset/forName charset-name)))
 
 (defn *available-charsets
@@ -247,7 +247,7 @@
 
   returns: An immutable, case-insensitive map from canonical charset names
            to charset objects - `java.util.SortedMap<java.lang.String,java.nio.charset.Charset>`"
-  ([]
+  (^java.util.SortedMap []
     (Charset/availableCharsets )))
 
 (defn *default-charset
@@ -258,14 +258,14 @@
    operating system.
 
   returns: A charset object for the default charset - `java.nio.charset.Charset`"
-  ([]
+  (^java.nio.charset.Charset []
     (Charset/defaultCharset )))
 
 (defn aliases
   "Returns a set containing this charset's aliases.
 
   returns: An immutable set of this charset's aliases - `java.util.Set<java.lang.String>`"
-  ([^java.nio.charset.Charset this]
+  (^java.util.Set [^java.nio.charset.Charset this]
     (-> this (.aliases))))
 
 (defn can-encode?
@@ -280,7 +280,7 @@
    false.
 
   returns: true if, and only if, this charset supports encoding - `boolean`"
-  ([^java.nio.charset.Charset this]
+  (^Boolean [^java.nio.charset.Charset this]
     (-> this (.canEncode))))
 
 (defn display-name
@@ -293,9 +293,9 @@
   locale - The locale for which the display name is to be retrieved - `java.util.Locale`
 
   returns: The display name of this charset in the given locale - `java.lang.String`"
-  ([^java.nio.charset.Charset this ^java.util.Locale locale]
+  (^java.lang.String [^java.nio.charset.Charset this ^java.util.Locale locale]
     (-> this (.displayName locale)))
-  ([^java.nio.charset.Charset this]
+  (^java.lang.String [^java.nio.charset.Charset this]
     (-> this (.displayName))))
 
 (defn decode
@@ -322,7 +322,7 @@
   bb - The byte buffer to be decoded - `java.nio.ByteBuffer`
 
   returns: A char buffer containing the decoded characters - `java.nio.CharBuffer`"
-  ([^java.nio.charset.Charset this ^java.nio.ByteBuffer bb]
+  (^java.nio.CharBuffer [^java.nio.charset.Charset this ^java.nio.ByteBuffer bb]
     (-> this (.decode bb))))
 
 (defn contains
@@ -350,21 +350,21 @@
   cs - The given charset - `java.nio.charset.Charset`
 
   returns: true if the given charset is contained in this charset - `boolean`"
-  ([^java.nio.charset.Charset this ^java.nio.charset.Charset cs]
+  (^Boolean [^java.nio.charset.Charset this ^java.nio.charset.Charset cs]
     (-> this (.contains cs))))
 
 (defn to-string
   "Returns a string describing this charset.
 
   returns: A string describing this charset - `java.lang.String`"
-  ([^java.nio.charset.Charset this]
+  (^java.lang.String [^java.nio.charset.Charset this]
     (-> this (.toString))))
 
 (defn name
   "Returns this charset's canonical name.
 
   returns: The canonical name of this charset - `java.lang.String`"
-  ([^java.nio.charset.Charset this]
+  (^java.lang.String [^java.nio.charset.Charset this]
     (-> this (.name))))
 
 (defn registered?
@@ -373,21 +373,21 @@
 
   returns: true if, and only if, this charset is known by its
             implementor to be registered with the IANA - `boolean`"
-  ([^java.nio.charset.Charset this]
+  (^Boolean [^java.nio.charset.Charset this]
     (-> this (.isRegistered))))
 
 (defn new-decoder
   "Constructs a new decoder for this charset.
 
   returns: A new decoder for this charset - `java.nio.charset.CharsetDecoder`"
-  ([^java.nio.charset.Charset this]
+  (^java.nio.charset.CharsetDecoder [^java.nio.charset.Charset this]
     (-> this (.newDecoder))))
 
 (defn hash-code
   "Computes a hashcode for this charset.
 
   returns: An integer hashcode - `int`"
-  ([^java.nio.charset.Charset this]
+  (^Integer [^java.nio.charset.Charset this]
     (-> this (.hashCode))))
 
 (defn compare-to
@@ -400,7 +400,7 @@
 
   returns: A negative integer, zero, or a positive integer as this charset
            is less than, equal to, or greater than the specified charset - `int`"
-  ([^java.nio.charset.Charset this ^java.nio.charset.Charset that]
+  (^Integer [^java.nio.charset.Charset this ^java.nio.charset.Charset that]
     (-> this (.compareTo that))))
 
 (defn new-encoder
@@ -409,7 +409,7 @@
   returns: A new encoder for this charset - `java.nio.charset.CharsetEncoder`
 
   throws: java.lang.UnsupportedOperationException - If this charset does not support encoding"
-  ([^java.nio.charset.Charset this]
+  (^java.nio.charset.CharsetEncoder [^java.nio.charset.Charset this]
     (-> this (.newEncoder))))
 
 (defn encode
@@ -436,7 +436,7 @@
   cb - The char buffer to be encoded - `java.nio.CharBuffer`
 
   returns: A byte buffer containing the encoded characters - `java.nio.ByteBuffer`"
-  ([^java.nio.charset.Charset this ^java.nio.CharBuffer cb]
+  (^java.nio.ByteBuffer [^java.nio.charset.Charset this ^java.nio.CharBuffer cb]
     (-> this (.encode cb))))
 
 (defn equals
@@ -449,6 +449,6 @@
 
   returns: true if, and only if, this charset is equal to the
             given object - `boolean`"
-  ([^java.nio.charset.Charset this ^java.lang.Object ob]
+  (^Boolean [^java.nio.charset.Charset this ^java.lang.Object ob]
     (-> this (.equals ob))))
 

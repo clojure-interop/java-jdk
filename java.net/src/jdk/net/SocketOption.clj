@@ -11,13 +11,13 @@
   "Returns the name of the socket option.
 
   returns: the name of the socket option - `java.lang.String`"
-  ([^java.net.SocketOption this]
+  (^java.lang.String [^java.net.SocketOption this]
     (-> this (.name))))
 
 (defn type
   "Returns the type of the socket option value.
 
   returns: the type of the socket option value - `java.lang.Class<SocketOption.T>`"
-  ([^java.net.SocketOption this]
+  (^java.lang.Class [^java.net.SocketOption this]
     (-> this (.type))))
 

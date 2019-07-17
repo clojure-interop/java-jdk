@@ -30,7 +30,7 @@
   returns: a BeanDescriptor object,
             or null if the information is to
             be obtained through the automatic analysis - `java.beans.BeanDescriptor`"
-  ([^java.beans.BeanInfo this]
+  (^java.beans.BeanDescriptor [^java.beans.BeanInfo this]
     (-> this (.getBeanDescriptor))))
 
 (defn get-event-set-descriptors
@@ -49,7 +49,7 @@
   returns: index of the default event in the EventSetDescriptor array
             returned by the getEventSetDescriptors method,
             or -1 if there is no default event - `int`"
-  ([^java.beans.BeanInfo this]
+  (^Integer [^java.beans.BeanInfo this]
     (-> this (.getDefaultEventIndex))))
 
 (defn get-property-descriptors
@@ -75,7 +75,7 @@
   returns: index of the default property in the PropertyDescriptor array
             returned by the getPropertyDescriptors method,
             or -1 if there is no default property - `int`"
-  ([^java.beans.BeanInfo this]
+  (^Integer [^java.beans.BeanInfo this]
     (-> this (.getDefaultPropertyIndex))))
 
 (defn get-method-descriptors
@@ -118,6 +118,6 @@
 
   returns: an image object representing the requested icon,
                      or null if no suitable icon is available - `java.awt.Image`"
-  ([^java.beans.BeanInfo this ^Integer icon-kind]
+  (^java.awt.Image [^java.beans.BeanInfo this ^Integer icon-kind]
     (-> this (.getIcon icon-kind))))
 

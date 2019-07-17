@@ -58,11 +58,11 @@
   returns: New instance of a XPathFactory - `javax.xml.xpath.XPathFactory`
 
   throws: javax.xml.xpath.XPathFactoryConfigurationException - if factoryClassName is null, or the factory class cannot be loaded, instantiated or the factory class does not support the object model specified in the uri parameter."
-  ([^java.lang.String uri ^java.lang.String factory-class-name ^java.lang.ClassLoader class-loader]
+  (^javax.xml.xpath.XPathFactory [^java.lang.String uri ^java.lang.String factory-class-name ^java.lang.ClassLoader class-loader]
     (XPathFactory/newInstance uri factory-class-name class-loader))
-  ([^java.lang.String uri]
+  (^javax.xml.xpath.XPathFactory [^java.lang.String uri]
     (XPathFactory/newInstance uri))
-  ([]
+  (^javax.xml.xpath.XPathFactory []
     (XPathFactory/newInstance )))
 
 (defn object-model-supported?
@@ -73,7 +73,7 @@
   returns: true if XPathFactory supports objectModel, else false. - `boolean`
 
   throws: java.lang.NullPointerException - If objectModel is null."
-  ([^javax.xml.xpath.XPathFactory this ^java.lang.String object-model]
+  (^Boolean [^javax.xml.xpath.XPathFactory this ^java.lang.String object-model]
     (-> this (.isObjectModelSupported object-model))))
 
 (defn set-feature
@@ -120,7 +120,7 @@
   returns: State of the named feature. - `boolean`
 
   throws: javax.xml.xpath.XPathFactoryConfigurationException - if this XPathFactory or the XPaths it creates cannot support this feature."
-  ([^javax.xml.xpath.XPathFactory this ^java.lang.String name]
+  (^Boolean [^javax.xml.xpath.XPathFactory this ^java.lang.String name]
     (-> this (.getFeature name))))
 
 (defn set-x-path-variable-resolver
@@ -158,6 +158,6 @@
    model determined when the XPathFactory was instantiated.
 
   returns: New instance of an XPath. - `javax.xml.xpath.XPath`"
-  ([^javax.xml.xpath.XPathFactory this]
+  (^javax.xml.xpath.XPath [^javax.xml.xpath.XPathFactory this]
     (-> this (.newXPath))))
 

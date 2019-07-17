@@ -22,7 +22,7 @@
   "Fetches the current position of the caret.
 
   returns: the position >=0 - `int`"
-  ([^javax.swing.text.Caret this]
+  (^Integer [^javax.swing.text.Caret this]
     (-> this (.getDot))))
 
 (defn move-dot
@@ -46,7 +46,7 @@
   "Gets the current caret visual location.
 
   returns: the visual position. - `java.awt.Point`"
-  ([^javax.swing.text.Caret this]
+  (^java.awt.Point [^javax.swing.text.Caret this]
     (-> this (.getMagicCaretPosition))))
 
 (defn set-blink-rate
@@ -95,7 +95,7 @@
 
   returns: the delay in milliseconds >=0.  If this is
     zero the caret will not blink. - `int`"
-  ([^javax.swing.text.Caret this]
+  (^Integer [^javax.swing.text.Caret this]
     (-> this (.getBlinkRate))))
 
 (defn get-mark
@@ -104,7 +104,7 @@
    the dot.
 
   returns: the position >=0 - `int`"
-  ([^javax.swing.text.Caret this]
+  (^Integer [^javax.swing.text.Caret this]
     (-> this (.getMark))))
 
 (defn paint
@@ -118,7 +118,7 @@
   "Determines if the selection is currently visible.
 
   returns: true if the caret is visible else false - `boolean`"
-  ([^javax.swing.text.Caret this]
+  (^Boolean [^javax.swing.text.Caret this]
     (-> this (.isSelectionVisible))))
 
 (defn set-visible
@@ -141,7 +141,7 @@
   "Determines if the caret is currently visible.
 
   returns: true if the caret is visible else false - `boolean`"
-  ([^javax.swing.text.Caret this]
+  (^Boolean [^javax.swing.text.Caret this]
     (-> this (.isVisible))))
 
 (defn set-selection-visible

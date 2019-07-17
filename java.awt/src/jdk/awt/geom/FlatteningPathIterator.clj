@@ -32,7 +32,7 @@
   "Returns the flatness of this iterator.
 
   returns: the flatness of this FlatteningPathIterator. - `double`"
-  ([^java.awt.geom.FlatteningPathIterator this]
+  (^Double [^java.awt.geom.FlatteningPathIterator this]
     (-> this (.getFlatness))))
 
 (defn get-recursion-limit
@@ -40,7 +40,7 @@
 
   returns: the recursion limit of this
    FlatteningPathIterator. - `int`"
-  ([^java.awt.geom.FlatteningPathIterator this]
+  (^Integer [^java.awt.geom.FlatteningPathIterator this]
     (-> this (.getRecursionLimit))))
 
 (defn get-winding-rule
@@ -49,7 +49,7 @@
 
   returns: the winding rule of the original unflattened path being
    iterated over. - `int`"
-  ([^java.awt.geom.FlatteningPathIterator this]
+  (^Integer [^java.awt.geom.FlatteningPathIterator this]
     (-> this (.getWindingRule))))
 
 (defn done?
@@ -57,7 +57,7 @@
 
   returns: true if all the segments have
    been read; false otherwise. - `boolean`"
-  ([^java.awt.geom.FlatteningPathIterator this]
+  (^Boolean [^java.awt.geom.FlatteningPathIterator this]
     (-> this (.isDone))))
 
 (defn next
@@ -83,6 +83,6 @@
   returns: the path segment type of the current path segment. - `int`
 
   throws: java.util.NoSuchElementException - if there are no more elements in the flattening path to be returned."
-  ([^java.awt.geom.FlatteningPathIterator this coords]
+  (^Integer [^java.awt.geom.FlatteningPathIterator this coords]
     (-> this (.currentSegment coords))))
 

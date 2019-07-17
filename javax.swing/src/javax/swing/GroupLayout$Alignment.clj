@@ -66,6 +66,6 @@
   returns: the enum constant with the specified name - `javax.swing.GroupLayout.Alignment`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^javax.swing.GroupLayout.Alignment [^java.lang.String name]
     (GroupLayout$Alignment/valueOf name)))
 

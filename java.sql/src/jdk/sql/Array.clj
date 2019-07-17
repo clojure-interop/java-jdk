@@ -52,7 +52,7 @@
    name for a base type that is a UDT - `java.lang.String`
 
   throws: java.sql.SQLException - if an error occurs while attempting to access the type name"
-  ([^java.sql.Array this]
+  (^java.lang.String [^java.sql.Array this]
     (-> this (.getBaseTypeName))))
 
 (defn get-base-type
@@ -64,7 +64,7 @@
    Array object - `int`
 
   throws: java.sql.SQLException - if an error occurs while attempting to access the base type"
-  ([^java.sql.Array this]
+  (^Integer [^java.sql.Array this]
     (-> this (.getBaseType))))
 
 (defn get-array
@@ -96,13 +96,13 @@
    index - `java.lang.Object`
 
   throws: java.sql.SQLException - if an error occurs while attempting to access the array"
-  ([^java.sql.Array this ^Long index ^Integer count ^java.util.Map> map]
+  (^java.lang.Object [^java.sql.Array this ^Long index ^Integer count ^java.util.Map> map]
     (-> this (.getArray index count map)))
-  ([^java.sql.Array this ^Long index ^Integer count]
+  (^java.lang.Object [^java.sql.Array this ^Long index ^Integer count]
     (-> this (.getArray index count)))
-  ([^java.sql.Array this ^java.util.Map> map]
+  (^java.lang.Object [^java.sql.Array this ^java.util.Map> map]
     (-> this (.getArray map)))
-  ([^java.sql.Array this]
+  (^java.lang.Object [^java.sql.Array this]
     (-> this (.getArray))))
 
 (defn get-result-set
@@ -135,13 +135,13 @@
    index index. - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if an error occurs while attempting to access the array"
-  ([^java.sql.Array this ^Long index ^Integer count ^java.util.Map> map]
+  (^java.sql.ResultSet [^java.sql.Array this ^Long index ^Integer count ^java.util.Map> map]
     (-> this (.getResultSet index count map)))
-  ([^java.sql.Array this ^Long index ^Integer count]
+  (^java.sql.ResultSet [^java.sql.Array this ^Long index ^Integer count]
     (-> this (.getResultSet index count)))
-  ([^java.sql.Array this ^java.util.Map> map]
+  (^java.sql.ResultSet [^java.sql.Array this ^java.util.Map> map]
     (-> this (.getResultSet map)))
-  ([^java.sql.Array this]
+  (^java.sql.ResultSet [^java.sql.Array this]
     (-> this (.getResultSet))))
 
 (defn free

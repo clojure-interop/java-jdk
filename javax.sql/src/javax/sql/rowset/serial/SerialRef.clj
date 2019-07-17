@@ -32,7 +32,7 @@
   returns: a string of the base type name of the Ref - `java.lang.String`
 
   throws: javax.sql.rowset.serial.SerialException - in no Ref object has been set"
-  ([^javax.sql.rowset.serial.SerialRef this]
+  (^java.lang.String [^javax.sql.rowset.serial.SerialRef this]
     (-> this (.getBaseTypeName))))
 
 (defn get-object
@@ -46,9 +46,9 @@
           according to the supplied type map - `java.lang.Object`
 
   throws: javax.sql.rowset.serial.SerialException - if an error is encountered in the reference resolution"
-  ([^javax.sql.rowset.serial.SerialRef this ^java.util.Map> map]
+  (^java.lang.Object [^javax.sql.rowset.serial.SerialRef this ^java.util.Map> map]
     (-> this (.getObject map)))
-  ([^javax.sql.rowset.serial.SerialRef this]
+  (^java.lang.Object [^javax.sql.rowset.serial.SerialRef this]
     (-> this (.getObject))))
 
 (defn set-object
@@ -69,14 +69,14 @@
 
   returns: true if the given object represents a SerialRef
             equivalent to this SerialRef, false otherwise - `boolean`"
-  ([^javax.sql.rowset.serial.SerialRef this ^java.lang.Object obj]
+  (^Boolean [^javax.sql.rowset.serial.SerialRef this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Returns a hash code for this SerialRef.
 
   returns: a hash code value for this object. - `int`"
-  ([^javax.sql.rowset.serial.SerialRef this]
+  (^Integer [^javax.sql.rowset.serial.SerialRef this]
     (-> this (.hashCode))))
 
 (defn clone
@@ -84,6 +84,6 @@
    The underlying Ref object will be set to null.
 
   returns: a clone of this SerialRef - `java.lang.Object`"
-  ([^javax.sql.rowset.serial.SerialRef this]
+  (^java.lang.Object [^javax.sql.rowset.serial.SerialRef this]
     (-> this (.clone))))
 

@@ -54,7 +54,7 @@
    ObjectNames explicitly deselected
    - empty means all ObjectNames are deselected, i.e. no ObjectName
    selected. - `java.util.Vector<javax.management.ObjectName>`"
-  ([^javax.management.relation.MBeanServerNotificationFilter this]
+  (^java.util.Vector [^javax.management.relation.MBeanServerNotificationFilter this]
     (-> this (.getEnabledObjectNames))))
 
 (defn get-disabled-object-names
@@ -65,7 +65,7 @@
    ObjectNames explicitly selected
    - empty means all ObjectNames are selected, i.e. no ObjectName
    deselected. - `java.util.Vector<javax.management.ObjectName>`"
-  ([^javax.management.relation.MBeanServerNotificationFilter this]
+  (^java.util.Vector [^javax.management.relation.MBeanServerNotificationFilter this]
     (-> this (.getDisabledObjectNames))))
 
 (defn notification-enabled?
@@ -84,6 +84,6 @@
    otherwise. - `boolean`
 
   throws: java.lang.IllegalArgumentException - if null parameter"
-  ([^javax.management.relation.MBeanServerNotificationFilter this ^javax.management.Notification notif]
+  (^Boolean [^javax.management.relation.MBeanServerNotificationFilter this ^javax.management.Notification notif]
     (-> this (.isNotificationEnabled notif))))
 

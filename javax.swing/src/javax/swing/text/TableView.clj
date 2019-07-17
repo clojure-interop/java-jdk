@@ -46,6 +46,6 @@
   offset - the starting index into the child views to insert the new views; this should be a value >= 0 and <= getViewCount - `int`
   length - the number of existing child views to remove; This should be a value >= 0 and <= (getViewCount() - offset) - `int`
   views - the child views to add; this value can be nullto indicate no children are being added (useful to remove) - `javax.swing.text.View[]`"
-  ([^javax.swing.text.TableView this ^Integer offset ^Integer length ^javax.swing.text.View[] views]
+  ([^javax.swing.text.TableView this ^Integer offset ^Integer length views]
     (-> this (.replace offset length views))))
 

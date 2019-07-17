@@ -42,7 +42,7 @@
   returns: true if the inside and outside borders
            are each either null or opaque;
            or false otherwise - `boolean`"
-  ([^javax.swing.border.CompoundBorder this]
+  (^Boolean [^javax.swing.border.CompoundBorder this]
     (-> this (.isBorderOpaque))))
 
 (defn paint-border
@@ -67,20 +67,20 @@
   insets - the object to be reinitialized - `java.awt.Insets`
 
   returns: the insets object - `java.awt.Insets`"
-  ([^javax.swing.border.CompoundBorder this ^java.awt.Component c ^java.awt.Insets insets]
+  (^java.awt.Insets [^javax.swing.border.CompoundBorder this ^java.awt.Component c ^java.awt.Insets insets]
     (-> this (.getBorderInsets c insets))))
 
 (defn get-outside-border
   "Returns the outside border object.
 
   returns: `javax.swing.border.Border`"
-  ([^javax.swing.border.CompoundBorder this]
+  (^javax.swing.border.Border [^javax.swing.border.CompoundBorder this]
     (-> this (.getOutsideBorder))))
 
 (defn get-inside-border
   "Returns the inside border object.
 
   returns: `javax.swing.border.Border`"
-  ([^javax.swing.border.CompoundBorder this]
+  (^javax.swing.border.Border [^javax.swing.border.CompoundBorder this]
     (-> this (.getInsideBorder))))
 

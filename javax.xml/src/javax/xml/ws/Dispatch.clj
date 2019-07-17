@@ -20,7 +20,7 @@
        operation invocation. - `Dispatch.T`
 
   throws: javax.xml.ws.WebServiceException - If there is any error in the configuration of the Dispatch instance"
-  ([^javax.xml.ws.Dispatch this ^Dispatch.T msg]
+  (^Dispatch.T [^javax.xml.ws.Dispatch this ^Dispatch.T msg]
     (-> this (.invoke msg))))
 
 (defn invoke-async
@@ -43,9 +43,9 @@
        and any use of it will result in non-portable behaviour. - `java.util.concurrent.Future<?>`
 
   throws: javax.xml.ws.WebServiceException - If there is any error in the configuration of the Dispatch instance"
-  ([^javax.xml.ws.Dispatch this ^Dispatch.T msg ^javax.xml.ws.AsyncHandler handler]
+  (^java.util.concurrent.Future [^javax.xml.ws.Dispatch this ^Dispatch.T msg ^javax.xml.ws.AsyncHandler handler]
     (-> this (.invokeAsync msg handler)))
-  ([^javax.xml.ws.Dispatch this ^Dispatch.T msg]
+  (^javax.xml.ws.Response [^javax.xml.ws.Dispatch this ^Dispatch.T msg]
     (-> this (.invokeAsync msg))))
 
 (defn invoke-one-way

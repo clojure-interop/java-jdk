@@ -10,7 +10,7 @@
   returns: output stream for arguments/results - `java.lang..io.ObjectOutput`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.rmi.server.RemoteCall this]
+  (^java.lang..io.ObjectOutput [^java.rmi.server.RemoteCall this]
     (-> this (.getOutputStream))))
 
 (defn release-output-stream
@@ -28,7 +28,7 @@
   returns: input stream for reading arguments/results - `java.lang..io.ObjectInput`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.rmi.server.RemoteCall this]
+  (^java.lang..io.ObjectInput [^java.rmi.server.RemoteCall this]
     (-> this (.getInputStream))))
 
 (defn release-input-stream
@@ -48,7 +48,7 @@
   returns: output stream for writing call result - `java.lang..io.ObjectOutput`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.rmi.server.RemoteCall this ^Boolean success]
+  (^java.lang..io.ObjectOutput [^java.rmi.server.RemoteCall this ^Boolean success]
     (-> this (.getResultStream success))))
 
 (defn execute-call

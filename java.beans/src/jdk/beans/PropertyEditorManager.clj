@@ -54,7 +54,7 @@
 
   returns: An editor object for the given target class.
    The result is null if no suitable editor can be found. - `java.beans.PropertyEditor`"
-  ([^java.lang.Class target-type]
+  (^java.beans.PropertyEditor [^java.lang.Class target-type]
     (PropertyEditorManager/findEditor target-type)))
 
 (defn *get-editor-search-path
@@ -77,6 +77,6 @@
   path - Array of package names. - `java.lang.String[]`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPropertiesAccess method doesn't allow setting of system properties."
-  ([^java.lang.String[] path]
+  ([path]
     (PropertyEditorManager/setEditorSearchPath path)))
 

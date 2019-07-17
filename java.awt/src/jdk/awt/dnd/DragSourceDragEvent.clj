@@ -71,7 +71,7 @@
   "This method returns the target drop action.
 
   returns: the target drop action. - `int`"
-  ([^java.awt.dnd.DragSourceDragEvent this]
+  (^Integer [^java.awt.dnd.DragSourceDragEvent this]
     (-> this (.getTargetActions))))
 
 (defn get-gesture-modifiers
@@ -84,7 +84,7 @@
    are invalid, this method returns them unchanged.
 
   returns: the current state of the input device modifiers - `int`"
-  ([^java.awt.dnd.DragSourceDragEvent this]
+  (^Integer [^java.awt.dnd.DragSourceDragEvent this]
     (-> this (.getGestureModifiers))))
 
 (defn get-gesture-modifiers-ex
@@ -97,14 +97,14 @@
    are invalid, this method returns them unchanged.
 
   returns: the current state of the input device extended modifiers - `int`"
-  ([^java.awt.dnd.DragSourceDragEvent this]
+  (^Integer [^java.awt.dnd.DragSourceDragEvent this]
     (-> this (.getGestureModifiersEx))))
 
 (defn get-user-action
   "This method returns the user drop action.
 
   returns: the user drop action. - `int`"
-  ([^java.awt.dnd.DragSourceDragEvent this]
+  (^Integer [^java.awt.dnd.DragSourceDragEvent this]
     (-> this (.getUserAction))))
 
 (defn get-drop-action
@@ -114,6 +114,6 @@
 
   returns: the logical intersection of the target drop action and
            the set of drop actions supported by the drag source. - `int`"
-  ([^java.awt.dnd.DragSourceDragEvent this]
+  (^Integer [^java.awt.dnd.DragSourceDragEvent this]
     (-> this (.getDropAction))))
 

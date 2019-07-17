@@ -79,14 +79,14 @@
 
   returns: true if `permission` is implied by the  permissions in
    the collection, false if not. - `boolean`"
-  ([^java.security.PermissionCollection this ^java.security.Permission permission]
+  (^Boolean [^java.security.PermissionCollection this ^java.security.Permission permission]
     (-> this (.implies permission))))
 
 (defn elements
   "Returns an enumeration of all the Permission objects in the collection.
 
   returns: an enumeration of all the Permissions. - `java.util.Enumeration<java.security.Permission>`"
-  ([^java.security.PermissionCollection this]
+  (^java.util.Enumeration [^java.security.PermissionCollection this]
     (-> this (.elements))))
 
 (defn set-read-only
@@ -107,7 +107,7 @@
 
   returns: true if this PermissionCollection object is marked as readonly,
    false otherwise. - `boolean`"
-  ([^java.security.PermissionCollection this]
+  (^Boolean [^java.security.PermissionCollection this]
     (-> this (.isReadOnly))))
 
 (defn to-string
@@ -131,6 +131,6 @@
 
   returns: information about this PermissionCollection object,
            as described above. - `java.lang.String`"
-  ([^java.security.PermissionCollection this]
+  (^java.lang.String [^java.security.PermissionCollection this]
     (-> this (.toString))))
 

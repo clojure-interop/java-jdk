@@ -32,7 +32,7 @@
 
   returns: an instance of Dimension that represents
                   the minimum size of this container. - `java.awt.Dimension`"
-  ([^javax.swing.plaf.basic.BasicSplitPaneDivider this]
+  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicSplitPaneDivider this]
     (-> this (.getMinimumSize))))
 
 (defn set-divider-size
@@ -49,7 +49,7 @@
    border's insets, else calls super.getInsets.
 
   returns: the value of the insets property. - `java.awt.Insets`"
-  ([^javax.swing.plaf.basic.BasicSplitPaneDivider this]
+  (^java.awt.Insets [^javax.swing.plaf.basic.BasicSplitPaneDivider this]
     (-> this (.getInsets))))
 
 (defn set-basic-split-pane-ui
@@ -64,7 +64,7 @@
    currently set.
 
   returns: the border object for this component - `javax.swing.border.Border`"
-  ([^javax.swing.plaf.basic.BasicSplitPaneDivider this]
+  (^javax.swing.border.Border [^javax.swing.plaf.basic.BasicSplitPaneDivider this]
     (-> this (.getBorder))))
 
 (defn property-change
@@ -80,14 +80,14 @@
    is HORIZONTAL_SPLIT, or the height of VERTICAL_SPLIT.
 
   returns: `int`"
-  ([^javax.swing.plaf.basic.BasicSplitPaneDivider this]
+  (^Integer [^javax.swing.plaf.basic.BasicSplitPaneDivider this]
     (-> this (.getDividerSize))))
 
 (defn mouse-over?
   "Returns whether or not the mouse is currently over the divider
 
   returns: whether or not the mouse is currently over the divider - `boolean`"
-  ([^javax.swing.plaf.basic.BasicSplitPaneDivider this]
+  (^Boolean [^javax.swing.plaf.basic.BasicSplitPaneDivider this]
     (-> this (.isMouseOver))))
 
 (defn paint
@@ -102,7 +102,7 @@
    in.
 
   returns: `javax.swing.plaf.basic.BasicSplitPaneUI`"
-  ([^javax.swing.plaf.basic.BasicSplitPaneDivider this]
+  (^javax.swing.plaf.basic.BasicSplitPaneUI [^javax.swing.plaf.basic.BasicSplitPaneDivider this]
     (-> this (.getBasicSplitPaneUI))))
 
 (defn set-border
@@ -117,6 +117,6 @@
 
   returns: an instance of Dimension that represents
                   the preferred size of this container. - `java.awt.Dimension`"
-  ([^javax.swing.plaf.basic.BasicSplitPaneDivider this]
+  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicSplitPaneDivider this]
     (-> this (.getPreferredSize))))
 

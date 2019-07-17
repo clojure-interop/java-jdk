@@ -53,7 +53,7 @@
   throws: java.lang.NullPointerException - if the provided context is null."
   ([^java.security.AccessControlContext acc ^java.security.DomainCombiner combiner]
     (new AccessControlContext acc combiner))
-  ([^java.security.ProtectionDomain[] context]
+  ([context]
     (new AccessControlContext context)))
 
 (defn get-domain-combiner
@@ -65,7 +65,7 @@
             if there is none. - `java.security.DomainCombiner`
 
   throws: java.lang.SecurityException - if a security manager is installed and the caller does not have the `getDomainCombiner` SecurityPermission"
-  ([^java.security.AccessControlContext this]
+  (^java.security.DomainCombiner [^java.security.AccessControlContext this]
     (-> this (.getDomainCombiner))))
 
 (defn check-permission
@@ -96,7 +96,7 @@
 
   returns: true if obj is an AccessControlContext, and has the
    same set of ProtectionDomains as this context, false otherwise. - `boolean`"
-  ([^java.security.AccessControlContext this ^java.lang.Object obj]
+  (^Boolean [^java.security.AccessControlContext this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -105,6 +105,6 @@
    domains in the context together.
 
   returns: a hash code value for this context. - `int`"
-  ([^java.security.AccessControlContext this]
+  (^Integer [^java.security.AccessControlContext this]
     (-> this (.hashCode))))
 

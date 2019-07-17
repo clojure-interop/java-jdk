@@ -600,6 +600,6 @@
   "Creates a copy of this grid bag constraint.
 
   returns: a copy of this grid bag constraint - `java.lang.Object`"
-  ([^java.awt.GridBagConstraints this]
+  (^java.lang.Object [^java.awt.GridBagConstraints this]
     (-> this (.clone))))
 

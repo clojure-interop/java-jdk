@@ -90,7 +90,7 @@
 
   returns: a collection view of the values contained in this map,
            sorted in ascending key order - `java.util.Collection<SortedMap.V>`"
-  ([^java.util.SortedMap this]
+  (^java.util.Collection [^java.util.SortedMap this]
     (-> this (.values))))
 
 (defn head-map
@@ -109,7 +109,7 @@
            less than toKey - `java.util.SortedMap<SortedMap.K,SortedMap.V>`
 
   throws: java.lang.ClassCastException - if toKey is not compatible with this map's comparator (or, if the map has no comparator, if toKey does not implement Comparable). Implementations may, but are not required to, throw this exception if toKey cannot be compared to keys currently in the map."
-  ([^java.util.SortedMap this ^SortedMap.K to-key]
+  (^java.util.SortedMap [^java.util.SortedMap this ^SortedMap.K to-key]
     (-> this (.headMap to-key))))
 
 (defn entry-set
@@ -129,7 +129,7 @@
 
   returns: a set view of the mappings contained in this map,
            sorted in ascending key order - `java.util.Set<java.util.Map.Entry<SortedMap.K,SortedMap.V>>`"
-  ([^java.util.SortedMap this]
+  (^java.util.Set> [^java.util.SortedMap this]
     (-> this (.entrySet))))
 
 (defn first-key
@@ -138,7 +138,7 @@
   returns: the first (lowest) key currently in this map - `SortedMap.K`
 
   throws: java.util.NoSuchElementException - if this map is empty"
-  ([^java.util.SortedMap this]
+  (^SortedMap.K [^java.util.SortedMap this]
     (-> this (.firstKey))))
 
 (defn last-key
@@ -147,7 +147,7 @@
   returns: the last (highest) key currently in this map - `SortedMap.K`
 
   throws: java.util.NoSuchElementException - if this map is empty"
-  ([^java.util.SortedMap this]
+  (^SortedMap.K [^java.util.SortedMap this]
     (-> this (.lastKey))))
 
 (defn key-set
@@ -166,7 +166,7 @@
 
   returns: a set view of the keys contained in this map, sorted in
            ascending order - `java.util.Set<SortedMap.K>`"
-  ([^java.util.SortedMap this]
+  (^java.util.Set [^java.util.SortedMap this]
     (-> this (.keySet))))
 
 (defn comparator
@@ -198,7 +198,7 @@
            fromKey, inclusive, to toKey, exclusive - `java.util.SortedMap<SortedMap.K,SortedMap.V>`
 
   throws: java.lang.ClassCastException - if fromKey and toKey cannot be compared to one another using this map's comparator (or, if the map has no comparator, using natural ordering). Implementations may, but are not required to, throw this exception if fromKey or toKey cannot be compared to keys currently in the map."
-  ([^java.util.SortedMap this ^SortedMap.K from-key ^SortedMap.K to-key]
+  (^java.util.SortedMap [^java.util.SortedMap this ^SortedMap.K from-key ^SortedMap.K to-key]
     (-> this (.subMap from-key to-key))))
 
 (defn tail-map
@@ -217,6 +217,6 @@
            than or equal to fromKey - `java.util.SortedMap<SortedMap.K,SortedMap.V>`
 
   throws: java.lang.ClassCastException - if fromKey is not compatible with this map's comparator (or, if the map has no comparator, if fromKey does not implement Comparable). Implementations may, but are not required to, throw this exception if fromKey cannot be compared to keys currently in the map."
-  ([^java.util.SortedMap this ^SortedMap.K from-key]
+  (^java.util.SortedMap [^java.util.SortedMap this ^SortedMap.K from-key]
     (-> this (.tailMap from-key))))
 

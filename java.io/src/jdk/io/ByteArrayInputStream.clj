@@ -58,9 +58,9 @@
             the stream has been reached. - `int`
 
   throws: java.lang.NullPointerException - If b is null."
-  ([^java.io.ByteArrayInputStream this b ^Integer off ^Integer len]
+  (^Integer [^java.io.ByteArrayInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  ([^java.io.ByteArrayInputStream this]
+  (^Integer [^java.io.ByteArrayInputStream this]
     (-> this (.read))))
 
 (defn skip
@@ -75,7 +75,7 @@
   n - the number of bytes to be skipped. - `long`
 
   returns: the actual number of bytes skipped. - `long`"
-  ([^java.io.ByteArrayInputStream this ^Long n]
+  (^Long [^java.io.ByteArrayInputStream this ^Long n]
     (-> this (.skip n))))
 
 (defn available
@@ -87,7 +87,7 @@
 
   returns: the number of remaining bytes that can be read (or skipped
             over) from this input stream without blocking. - `int`"
-  ([^java.io.ByteArrayInputStream this]
+  (^Integer [^java.io.ByteArrayInputStream this]
     (-> this (.available))))
 
 (defn mark-supported
@@ -97,7 +97,7 @@
 
   returns: true if this stream instance supports the mark
             and reset methods; false otherwise. - `boolean`"
-  ([^java.io.ByteArrayInputStream this]
+  (^Boolean [^java.io.ByteArrayInputStream this]
     (-> this (.markSupported))))
 
 (defn mark

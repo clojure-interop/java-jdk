@@ -91,11 +91,11 @@
   returns: a BeanInfo object describing the target bean - `java.beans.BeanInfo`
 
   throws: java.beans.IntrospectionException - if an exception occurs during introspection"
-  ([^java.lang.Class bean-class ^java.lang.Class stop-class ^Integer flags]
+  (^java.beans.BeanInfo [^java.lang.Class bean-class ^java.lang.Class stop-class ^Integer flags]
     (Introspector/getBeanInfo bean-class stop-class flags))
-  ([^java.lang.Class bean-class ^Integer flags]
+  (^java.beans.BeanInfo [^java.lang.Class bean-class ^Integer flags]
     (Introspector/getBeanInfo bean-class flags))
-  ([^java.lang.Class bean-class]
+  (^java.beans.BeanInfo [^java.lang.Class bean-class]
     (Introspector/getBeanInfo bean-class)))
 
 (defn *decapitalize
@@ -111,7 +111,7 @@
   name - The string to be decapitalized. - `java.lang.String`
 
   returns: The decapitalized version of the string. - `java.lang.String`"
-  ([^java.lang.String name]
+  (^java.lang.String [^java.lang.String name]
     (Introspector/decapitalize name)))
 
 (defn *get-bean-info-search-path
@@ -137,7 +137,7 @@
   path - Array of package names. - `java.lang.String[]`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPropertiesAccess method doesn't allow setting of system properties."
-  ([^java.lang.String[] path]
+  ([path]
     (Introspector/setBeanInfoSearchPath path)))
 
 (defn *flush-caches

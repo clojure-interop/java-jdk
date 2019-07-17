@@ -32,7 +32,7 @@
   returns: the current value associated with this ClassValue, for the given class or interface - `ClassValue.T`
 
   throws: java.lang.NullPointerException - if the argument is null"
-  ([^java.lang.ClassValue this ^java.lang.Class type]
+  (^ClassValue.T [^java.lang.ClassValue this ^java.lang.Class type]
     (-> this (.get type))))
 
 (defn remove

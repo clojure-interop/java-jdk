@@ -24,6 +24,6 @@
   returns: an IIOP stub. - `java.rmi.Remote`
 
   throws: java.io.IOException - if the stub cannot be created - e.g the RMIIIOPServerImpl has not been exported yet."
-  ([^javax.management.remote.rmi.RMIIIOPServerImpl this]
+  (^java.rmi.Remote [^javax.management.remote.rmi.RMIIIOPServerImpl this]
     (-> this (.toStub))))
 

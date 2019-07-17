@@ -30,7 +30,7 @@
   "Returns the enumerated type which specifies cycling behavior.
 
   returns: the enumerated type which specifies cycling behavior - `java.awt.MultipleGradientPaint.CycleMethod`"
-  ([^java.awt.MultipleGradientPaint this]
+  (^java.awt.MultipleGradientPaint.CycleMethod [^java.awt.MultipleGradientPaint this]
     (-> this (.getCycleMethod))))
 
 (defn get-color-space
@@ -39,7 +39,7 @@
 
   returns: the enumerated type which specifies color space for
    interpolation - `java.awt.MultipleGradientPaint.ColorSpaceType`"
-  ([^java.awt.MultipleGradientPaint this]
+  (^java.awt.MultipleGradientPaint.ColorSpaceType [^java.awt.MultipleGradientPaint this]
     (-> this (.getColorSpace))))
 
 (defn get-transform
@@ -50,7 +50,7 @@
    when it is created, the identity transform is used.
 
   returns: a copy of the transform applied to the gradient - `java.awt.geom.AffineTransform`"
-  ([^java.awt.MultipleGradientPaint this]
+  (^java.awt.geom.AffineTransform [^java.awt.MultipleGradientPaint this]
     (-> this (.getTransform))))
 
 (defn get-transparency
@@ -60,6 +60,6 @@
            Paint object are opaque,
            TRANSLUCENT if at least one of the
            colors used by this Paint object is not opaque. - `int`"
-  ([^java.awt.MultipleGradientPaint this]
+  (^Integer [^java.awt.MultipleGradientPaint this]
     (-> this (.getTransparency))))
 

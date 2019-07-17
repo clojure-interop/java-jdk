@@ -170,7 +170,7 @@
      DatatypeConstants.INDETERMINATE. - `int`
 
   throws: java.lang.NullPointerException - if xmlGregorianCalendar is null."
-  ([^javax.xml.datatype.XMLGregorianCalendar this ^javax.xml.datatype.XMLGregorianCalendar xml-gregorian-calendar]
+  (^Integer [^javax.xml.datatype.XMLGregorianCalendar this ^javax.xml.datatype.XMLGregorianCalendar xml-gregorian-calendar]
     (-> this (.compare xml-gregorian-calendar))))
 
 (defn set-month
@@ -203,7 +203,7 @@
    hour field of date/time field mapping table.
 
   returns: `int`"
-  ([^javax.xml.datatype.XMLGregorianCalendar this]
+  (^Integer [^javax.xml.datatype.XMLGregorianCalendar this]
     (-> this (.getHour))))
 
 (defn get-fractional-second
@@ -219,7 +219,7 @@
    does not return DatatypeConstants.FIELD_UNDEFINED.
 
   returns: fractional seconds  of this XMLGregorianCalendar. - `java.math.BigDecimal`"
-  ([^javax.xml.datatype.XMLGregorianCalendar this]
+  (^java.math.BigDecimal [^javax.xml.datatype.XMLGregorianCalendar this]
     (-> this (.getFractionalSecond))))
 
 (defn normalize
@@ -229,7 +229,7 @@
    Implements W3C XML Schema Part 2, Section 3.2.7.3 (A).
 
   returns: this XMLGregorianCalendar normalized to UTC. - `javax.xml.datatype.XMLGregorianCalendar`"
-  ([^javax.xml.datatype.XMLGregorianCalendar this]
+  (^javax.xml.datatype.XMLGregorianCalendar [^javax.xml.datatype.XMLGregorianCalendar this]
     (-> this (.normalize))))
 
 (defn set-time
@@ -288,7 +288,7 @@
    year field of date/time field mapping table.
 
   returns: year  of this XMLGregorianCalendar. - `int`"
-  ([^javax.xml.datatype.XMLGregorianCalendar this]
+  (^Integer [^javax.xml.datatype.XMLGregorianCalendar this]
     (-> this (.getYear))))
 
 (defn get-second
@@ -304,7 +304,7 @@
    second field of date/time field mapping table.
 
   returns: Second  of this XMLGregorianCalendar. - `int`"
-  ([^javax.xml.datatype.XMLGregorianCalendar this]
+  (^Integer [^javax.xml.datatype.XMLGregorianCalendar this]
     (-> this (.getSecond))))
 
 (defn to-gregorian-calendar
@@ -351,9 +351,9 @@
   defaults - provide default field values to use when corresponding field for this instance is FIELD_UNDEFINED or null. If defaultsis null or a field within the specified defaults is undefined, just use java.util.GregorianCalendar defaults. - `javax.xml.datatype.XMLGregorianCalendar`
 
   returns: a java.util.GregorianCalendar conversion of this instance. - `java.util.GregorianCalendar`"
-  ([^javax.xml.datatype.XMLGregorianCalendar this ^java.util.TimeZone timezone ^java.util.Locale a-locale ^javax.xml.datatype.XMLGregorianCalendar defaults]
+  (^java.util.GregorianCalendar [^javax.xml.datatype.XMLGregorianCalendar this ^java.util.TimeZone timezone ^java.util.Locale a-locale ^javax.xml.datatype.XMLGregorianCalendar defaults]
     (-> this (.toGregorianCalendar timezone a-locale defaults)))
-  ([^javax.xml.datatype.XMLGregorianCalendar this]
+  (^java.util.GregorianCalendar [^javax.xml.datatype.XMLGregorianCalendar this]
     (-> this (.toGregorianCalendar))))
 
 (defn set-timezone
@@ -375,7 +375,7 @@
   returns: A non-null valid String representation of this XMLGregorianCalendar. - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if the combination of set fields does not match one of the eight defined XML Schema builtin date/time datatypes."
-  ([^javax.xml.datatype.XMLGregorianCalendar this]
+  (^java.lang.String [^javax.xml.datatype.XMLGregorianCalendar this]
     (-> this (.toString))))
 
 (defn reset
@@ -444,7 +444,7 @@
   returns: XML, as String, representation of this XMLGregorianCalendar - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if the combination of set fields does not match one of the eight defined XML Schema builtin date/time datatypes."
-  ([^javax.xml.datatype.XMLGregorianCalendar this]
+  (^java.lang.String [^javax.xml.datatype.XMLGregorianCalendar this]
     (-> this (.toXMLFormat))))
 
 (defn get-time-zone
@@ -461,7 +461,7 @@
   default-zoneoffset - default zoneoffset if this zoneoffset is DatatypeConstants.FIELD_UNDEFINED. - `int`
 
   returns: TimeZone for this. - `java.util.TimeZone`"
-  ([^javax.xml.datatype.XMLGregorianCalendar this ^Integer default-zoneoffset]
+  (^java.util.TimeZone [^javax.xml.datatype.XMLGregorianCalendar this ^Integer default-zoneoffset]
     (-> this (.getTimeZone default-zoneoffset))))
 
 (defn get-eon-and-year
@@ -475,7 +475,7 @@
    when both fields are defined. When only year is defined,
    return it. When both eon and year are not
    defined, return null. - `java.math.BigInteger`"
-  ([^javax.xml.datatype.XMLGregorianCalendar this]
+  (^java.math.BigInteger [^javax.xml.datatype.XMLGregorianCalendar this]
     (-> this (.getEonAndYear))))
 
 (defn get-timezone
@@ -486,14 +486,14 @@
    timezone field of date/time field mapping table.
 
   returns: `int`"
-  ([^javax.xml.datatype.XMLGregorianCalendar this]
+  (^Integer [^javax.xml.datatype.XMLGregorianCalendar this]
     (-> this (.getTimezone))))
 
 (defn valid?
   "Validate instance by getXMLSchemaType() constraints.
 
   returns: true if data values are valid. - `boolean`"
-  ([^javax.xml.datatype.XMLGregorianCalendar this]
+  (^Boolean [^javax.xml.datatype.XMLGregorianCalendar this]
     (-> this (.isValid))))
 
 (defn get-day
@@ -503,7 +503,7 @@
    day field of date/time field mapping table.
 
   returns: `int`"
-  ([^javax.xml.datatype.XMLGregorianCalendar this]
+  (^Integer [^javax.xml.datatype.XMLGregorianCalendar this]
     (-> this (.getDay))))
 
 (defn get-millisecond
@@ -521,7 +521,7 @@
    second field of date/time field mapping table.
 
   returns: Millisecond  of this XMLGregorianCalendar. - `int`"
-  ([^javax.xml.datatype.XMLGregorianCalendar this]
+  (^Integer [^javax.xml.datatype.XMLGregorianCalendar this]
     (-> this (.getMillisecond))))
 
 (defn set-hour
@@ -545,14 +545,14 @@
 
   returns: eon of this XMLGregorianCalendar. The value
    returned is an integer multiple of 10^9. - `java.math.BigInteger`"
-  ([^javax.xml.datatype.XMLGregorianCalendar this]
+  (^java.math.BigInteger [^javax.xml.datatype.XMLGregorianCalendar this]
     (-> this (.getEon))))
 
 (defn clone
   "Creates and returns a copy of this object.
 
   returns: copy of this Object - `java.lang.Object`"
-  ([^javax.xml.datatype.XMLGregorianCalendar this]
+  (^java.lang.Object [^javax.xml.datatype.XMLGregorianCalendar this]
     (-> this (.clone))))
 
 (defn get-minute
@@ -563,14 +563,14 @@
    minute field of date/time field mapping table.
 
   returns: `int`"
-  ([^javax.xml.datatype.XMLGregorianCalendar this]
+  (^Integer [^javax.xml.datatype.XMLGregorianCalendar this]
     (-> this (.getMinute))))
 
 (defn hash-code
   "Returns a hash code consistent with the definition of the equals method.
 
   returns: hash code of this object. - `int`"
-  ([^javax.xml.datatype.XMLGregorianCalendar this]
+  (^Integer [^javax.xml.datatype.XMLGregorianCalendar this]
     (-> this (.hashCode))))
 
 (defn add
@@ -604,7 +604,7 @@
    month field of date/time field mapping table.
 
   returns: year  of this XMLGregorianCalendar. - `int`"
-  ([^javax.xml.datatype.XMLGregorianCalendar this]
+  (^Integer [^javax.xml.datatype.XMLGregorianCalendar this]
     (-> this (.getMonth))))
 
 (defn set-year
@@ -721,7 +721,7 @@
      DatatypeConstants.GDAY. - `javax.xml.namespace.QName`
 
   throws: java.lang.IllegalStateException - if the combination of set fields does not match one of the eight defined XML Schema builtin date/time datatypes."
-  ([^javax.xml.datatype.XMLGregorianCalendar this]
+  (^javax.xml.namespace.QName [^javax.xml.datatype.XMLGregorianCalendar this]
     (-> this (.getXMLSchemaType))))
 
 (defn equals
@@ -737,7 +737,7 @@
    compare(XMLGregorianCalendar obj)
    returns DatatypeConstants.EQUAL,
    otherwise false. - `boolean`"
-  ([^javax.xml.datatype.XMLGregorianCalendar this ^java.lang.Object obj]
+  (^Boolean [^javax.xml.datatype.XMLGregorianCalendar this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn set-day

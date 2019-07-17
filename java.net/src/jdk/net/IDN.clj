@@ -74,9 +74,9 @@
   returns: the translated String - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if the input string doesn't conform to RFC 3490 specification"
-  ([^java.lang.String input ^Integer flag]
+  (^java.lang.String [^java.lang.String input ^Integer flag]
     (IDN/toASCII input flag))
-  ([^java.lang.String input]
+  (^java.lang.String [^java.lang.String input]
     (IDN/toASCII input)))
 
 (defn *to-unicode
@@ -96,8 +96,8 @@
   flag - process flag; can be 0 or any logical OR of possible flags - `int`
 
   returns: the translated String - `java.lang.String`"
-  ([^java.lang.String input ^Integer flag]
+  (^java.lang.String [^java.lang.String input ^Integer flag]
     (IDN/toUnicode input flag))
-  ([^java.lang.String input]
+  (^java.lang.String [^java.lang.String input]
     (IDN/toUnicode input)))
 

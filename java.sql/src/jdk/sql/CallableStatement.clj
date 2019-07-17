@@ -55,7 +55,7 @@
    null in the Java programming language. - `java.io.Reader`
 
   throws: java.sql.SQLException - if the parameterIndex is not valid; if a database access error occurs or this method is called on a closed CallableStatement"
-  ([^java.sql.CallableStatement this ^Integer parameter-index]
+  (^java.io.Reader [^java.sql.CallableStatement this ^Integer parameter-index]
     (-> this (.getNCharacterStream parameter-index))))
 
 (defn get-sqlxml
@@ -67,7 +67,7 @@
   returns: a SQLXML object that maps an SQL XML value - `java.sql.SQLXML`
 
   throws: java.sql.SQLException - if the parameterIndex is not valid; if a database access error occurs or this method is called on a closed CallableStatement"
-  ([^java.sql.CallableStatement this ^Integer parameter-index]
+  (^java.sql.SQLXML [^java.sql.CallableStatement this ^Integer parameter-index]
     (-> this (.getSQLXML parameter-index))))
 
 (defn get-row-id
@@ -81,7 +81,7 @@
    a SQL NULL, then a null value is returned. - `java.sql.RowId`
 
   throws: java.sql.SQLException - if the parameterIndex is not valid; if a database access error occurs or this method is called on a closed CallableStatement"
-  ([^java.sql.CallableStatement this ^Integer parameter-index]
+  (^java.sql.RowId [^java.sql.CallableStatement this ^Integer parameter-index]
     (-> this (.getRowId parameter-index))))
 
 (defn set-string
@@ -109,7 +109,7 @@
    is 0. - `byte`
 
   throws: java.sql.SQLException - if the parameterIndex is not valid; if a database access error occurs or this method is called on a closed CallableStatement"
-  ([^java.sql.CallableStatement this ^Integer parameter-index]
+  (^Byte [^java.sql.CallableStatement this ^Integer parameter-index]
     (-> this (.getByte parameter-index))))
 
 (defn set-time
@@ -183,7 +183,7 @@
    null is returned. - `java.sql.Ref`
 
   throws: java.sql.SQLException - if the parameterIndex is not valid; if a database access error occurs or this method is called on a closed CallableStatement"
-  ([^java.sql.CallableStatement this ^Integer parameter-index]
+  (^java.sql.Ref [^java.sql.CallableStatement this ^Integer parameter-index]
     (-> this (.getRef parameter-index))))
 
 (defn set-boolean
@@ -260,7 +260,7 @@
    NCHAR, NVARCHAR or LONGNVARCHAR value - `java.lang.String`
 
   throws: java.sql.SQLException - if the parameterIndex is not valid; if a database access error occurs or this method is called on a closed CallableStatement"
-  ([^java.sql.CallableStatement this ^Integer parameter-index]
+  (^java.lang.String [^java.sql.CallableStatement this ^Integer parameter-index]
     (-> this (.getNString parameter-index))))
 
 (defn set-binary-stream
@@ -303,7 +303,7 @@
            is null. - `java.lang.String`
 
   throws: java.sql.SQLException - if the parameterIndex is not valid; if a database access error occurs or this method is called on a closed CallableStatement"
-  ([^java.sql.CallableStatement this ^Integer parameter-index]
+  (^java.lang.String [^java.sql.CallableStatement this ^Integer parameter-index]
     (-> this (.getString parameter-index))))
 
 (defn set-blob
@@ -336,7 +336,7 @@
    is 0. - `short`
 
   throws: java.sql.SQLException - if the parameterIndex is not valid; if a database access error occurs or this method is called on a closed CallableStatement"
-  ([^java.sql.CallableStatement this ^Integer parameter-index]
+  (^Short [^java.sql.CallableStatement this ^Integer parameter-index]
     (-> this (.getShort parameter-index))))
 
 (defn set-object
@@ -388,9 +388,9 @@
            is null. - `java.sql.Timestamp`
 
   throws: java.sql.SQLException - if the parameterIndex is not valid; if a database access error occurs or this method is called on a closed CallableStatement"
-  ([^java.sql.CallableStatement this ^Integer parameter-index ^java.util.Calendar cal]
+  (^java.sql.Timestamp [^java.sql.CallableStatement this ^Integer parameter-index ^java.util.Calendar cal]
     (-> this (.getTimestamp parameter-index cal)))
-  ([^java.sql.CallableStatement this ^Integer parameter-index]
+  (^java.sql.Timestamp [^java.sql.CallableStatement this ^Integer parameter-index]
     (-> this (.getTimestamp parameter-index))))
 
 (defn get-object
@@ -410,9 +410,9 @@
   returns: a java.lang.Object holding the OUT parameter value - `java.lang.Object`
 
   throws: java.sql.SQLException - if the parameterIndex is not valid; if a database access error occurs or this method is called on a closed CallableStatement"
-  ([^java.sql.CallableStatement this ^Integer parameter-index ^java.util.Map> map]
+  (^java.lang.Object [^java.sql.CallableStatement this ^Integer parameter-index ^java.util.Map> map]
     (-> this (.getObject parameter-index map)))
-  ([^java.sql.CallableStatement this ^Integer parameter-index]
+  (^java.lang.Object [^java.sql.CallableStatement this ^Integer parameter-index]
     (-> this (.getObject parameter-index))))
 
 (defn get-bytes
@@ -460,7 +460,7 @@
    value null is returned. - `java.sql.Clob`
 
   throws: java.sql.SQLException - if the parameterIndex is not valid; if a database access error occurs or this method is called on a closed CallableStatement"
-  ([^java.sql.CallableStatement this ^Integer parameter-index]
+  (^java.sql.Clob [^java.sql.CallableStatement this ^Integer parameter-index]
     (-> this (.getClob parameter-index))))
 
 (defn get-blob
@@ -474,7 +474,7 @@
    null is returned. - `java.sql.Blob`
 
   throws: java.sql.SQLException - if the parameterIndex is not valid; if a database access error occurs or this method is called on a closed CallableStatement"
-  ([^java.sql.CallableStatement this ^Integer parameter-index]
+  (^java.sql.Blob [^java.sql.CallableStatement this ^Integer parameter-index]
     (-> this (.getBlob parameter-index))))
 
 (defn get-date
@@ -494,9 +494,9 @@
            is null. - `java.sql.Date`
 
   throws: java.sql.SQLException - if the parameterIndex is not valid; if a database access error occurs or this method is called on a closed CallableStatement"
-  ([^java.sql.CallableStatement this ^Integer parameter-index ^java.util.Calendar cal]
+  (^java.sql.Date [^java.sql.CallableStatement this ^Integer parameter-index ^java.util.Calendar cal]
     (-> this (.getDate parameter-index cal)))
-  ([^java.sql.CallableStatement this ^Integer parameter-index]
+  (^java.sql.Date [^java.sql.CallableStatement this ^Integer parameter-index]
     (-> this (.getDate parameter-index))))
 
 (defn get-character-stream
@@ -510,7 +510,7 @@
    null in the Java programming language. - `java.io.Reader`
 
   throws: java.sql.SQLException - if the parameterIndex is not valid; if a database access error occurs or this method is called on a closed CallableStatement"
-  ([^java.sql.CallableStatement this ^Integer parameter-index]
+  (^java.io.Reader [^java.sql.CallableStatement this ^Integer parameter-index]
     (-> this (.getCharacterStream parameter-index))))
 
 (defn get-long
@@ -523,7 +523,7 @@
    is 0. - `long`
 
   throws: java.sql.SQLException - if the parameterIndex is not valid; if a database access error occurs or this method is called on a closed CallableStatement"
-  ([^java.sql.CallableStatement this ^Integer parameter-index]
+  (^Long [^java.sql.CallableStatement this ^Integer parameter-index]
     (-> this (.getLong parameter-index))))
 
 (defn set-clob
@@ -568,7 +568,7 @@
    is 0. - `int`
 
   throws: java.sql.SQLException - if the parameterIndex is not valid; if a database access error occurs or this method is called on a closed CallableStatement"
-  ([^java.sql.CallableStatement this ^Integer parameter-index]
+  (^Integer [^java.sql.CallableStatement this ^Integer parameter-index]
     (-> this (.getInt parameter-index))))
 
 (defn register-out-parameter
@@ -618,7 +618,7 @@
    value null is returned. - `java.sql.Array`
 
   throws: java.sql.SQLException - if the parameterIndex is not valid; if a database access error occurs or this method is called on a closed CallableStatement"
-  ([^java.sql.CallableStatement this ^Integer parameter-index]
+  (^java.sql.Array [^java.sql.CallableStatement this ^Integer parameter-index]
     (-> this (.getArray parameter-index))))
 
 (defn was-null
@@ -631,7 +631,7 @@
    NULL; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed CallableStatement"
-  ([^java.sql.CallableStatement this]
+  (^Boolean [^java.sql.CallableStatement this]
     (-> this (.wasNull))))
 
 (defn set-byte
@@ -729,7 +729,7 @@
            parameter - `java.net.URL`
 
   throws: java.sql.SQLException - if the parameterIndex is not valid; if a database access error occurs, this method is called on a closed CallableStatement, or if the URL being returned is not a valid URL on the Java platform"
-  ([^java.sql.CallableStatement this ^Integer parameter-index]
+  (^java.net.URL [^java.sql.CallableStatement this ^Integer parameter-index]
     (-> this (.getURL parameter-index))))
 
 (defn get-boolean?
@@ -743,7 +743,7 @@
            the result is false. - `boolean`
 
   throws: java.sql.SQLException - if the parameterIndex is not valid; if a database access error occurs or this method is called on a closed CallableStatement"
-  ([^java.sql.CallableStatement this ^Integer parameter-index]
+  (^Boolean [^java.sql.CallableStatement this ^Integer parameter-index]
     (-> this (.getBoolean parameter-index))))
 
 (defn set-character-stream
@@ -780,7 +780,7 @@
    value null is returned. - `java.sql.NClob`
 
   throws: java.sql.SQLException - if the parameterIndex is not valid; if the driver does not support national character sets; if the driver can detect that a data conversion error could occur; if a database access error occurs or this method is called on a closed CallableStatement"
-  ([^java.sql.CallableStatement this ^Integer parameter-index]
+  (^java.sql.NClob [^java.sql.CallableStatement this ^Integer parameter-index]
     (-> this (.getNClob parameter-index))))
 
 (defn set-url
@@ -805,7 +805,7 @@
            is 0. - `float`
 
   throws: java.sql.SQLException - if the parameterIndex is not valid; if a database access error occurs or this method is called on a closed CallableStatement"
-  ([^java.sql.CallableStatement this ^Integer parameter-index]
+  (^Float [^java.sql.CallableStatement this ^Integer parameter-index]
     (-> this (.getFloat parameter-index))))
 
 (defn get-time
@@ -825,9 +825,9 @@
            is null. - `java.sql.Time`
 
   throws: java.sql.SQLException - if the parameterIndex is not valid; if a database access error occurs or this method is called on a closed CallableStatement"
-  ([^java.sql.CallableStatement this ^Integer parameter-index ^java.util.Calendar cal]
+  (^java.sql.Time [^java.sql.CallableStatement this ^Integer parameter-index ^java.util.Calendar cal]
     (-> this (.getTime parameter-index cal)))
-  ([^java.sql.CallableStatement this ^Integer parameter-index]
+  (^java.sql.Time [^java.sql.CallableStatement this ^Integer parameter-index]
     (-> this (.getTime parameter-index))))
 
 (defn get-double
@@ -840,7 +840,7 @@
            is 0. - `double`
 
   throws: java.sql.SQLException - if the parameterIndex is not valid; if a database access error occurs or this method is called on a closed CallableStatement"
-  ([^java.sql.CallableStatement this ^Integer parameter-index]
+  (^Double [^java.sql.CallableStatement this ^Integer parameter-index]
     (-> this (.getDouble parameter-index))))
 
 (defn set-sqlxml
@@ -865,9 +865,9 @@
            is null. - `java.lang..math.BigDecimal`
 
   throws: java.sql.SQLException - if the parameterIndex is not valid; if a database access error occurs or this method is called on a closed CallableStatement"
-  ([^java.sql.CallableStatement this ^Integer parameter-index ^Integer scale]
+  (^java.lang..math.BigDecimal [^java.sql.CallableStatement this ^Integer parameter-index ^Integer scale]
     (-> this (.getBigDecimal parameter-index scale)))
-  ([^java.sql.CallableStatement this ^Integer parameter-index]
+  (^java.math.BigDecimal [^java.sql.CallableStatement this ^Integer parameter-index]
     (-> this (.getBigDecimal parameter-index))))
 
 (defn set-float

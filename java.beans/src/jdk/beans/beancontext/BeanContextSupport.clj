@@ -37,7 +37,7 @@
   returns: this implementation unconditionally throws UnsupportedOperationException - `boolean`
 
   throws: java.lang.UnsupportedOperationException - thrown unconditionally by this implementation"
-  ([^java.beans.beancontext.BeanContextSupport this ^java.util.Collection c]
+  (^Boolean [^java.beans.beancontext.BeanContextSupport this ^java.util.Collection c]
     (-> this (.addAll c))))
 
 (defn get-bean-context-peer
@@ -45,7 +45,7 @@
    this object is providing the implementation for.
 
   returns: the BeanContext instance - `java.beans.beancontext.BeanContext`"
-  ([^java.beans.beancontext.BeanContextSupport this]
+  (^java.beans.beancontext.BeanContext [^java.beans.beancontext.BeanContextSupport this]
     (-> this (.getBeanContextPeer))))
 
 (defn needs-gui
@@ -58,7 +58,7 @@
    Visibility and return needsGui() == true.
 
   returns: true if the implementor needs a GUI - `boolean`"
-  ([^java.beans.beancontext.BeanContextSupport this]
+  (^Boolean [^java.beans.beancontext.BeanContextSupport this]
     (-> this (.needsGui))))
 
 (defn write-children
@@ -78,7 +78,7 @@
   bcc - the child object making the request. - `java.beans.beancontext.BeanContextChild`
 
   returns: the requested resource as an InputStream - `java.net.URL`"
-  ([^java.beans.beancontext.BeanContextSupport this ^java.lang.String name ^java.beans.beancontext.BeanContextChild bcc]
+  (^java.net.URL [^java.beans.beancontext.BeanContextSupport this ^java.lang.String name ^java.beans.beancontext.BeanContextChild bcc]
     (-> this (.getResource name bcc))))
 
 (defn avoiding-gui
@@ -86,7 +86,7 @@
    child is avoiding using its GUI.
 
   returns: is this instance avoiding using its GUI? - `boolean`"
-  ([^java.beans.beancontext.BeanContextSupport this]
+  (^Boolean [^java.beans.beancontext.BeanContextSupport this]
     (-> this (.avoidingGui))))
 
 (defn get-resource-as-stream
@@ -98,7 +98,7 @@
   returns: the requested resource as an InputStream - `java.io.InputStream`
 
   throws: java.lang.NullPointerException - if the argument is null"
-  ([^java.beans.beancontext.BeanContextSupport this ^java.lang.String name ^java.beans.beancontext.BeanContextChild bcc]
+  (^java.io.InputStream [^java.beans.beancontext.BeanContextSupport this ^java.lang.String name ^java.beans.beancontext.BeanContextChild bcc]
     (-> this (.getResourceAsStream name bcc))))
 
 (defn add-bean-context-membership-listener
@@ -117,7 +117,7 @@
   o - the Object in question - `java.lang.Object`
 
   returns: if this object is a child - `boolean`"
-  ([^java.beans.beancontext.BeanContextSupport this ^java.lang.Object o]
+  (^Boolean [^java.beans.beancontext.BeanContextSupport this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn set-design-time
@@ -136,7 +136,7 @@
   "Gets the locale for this BeanContext.
 
   returns: the current Locale of the BeanContext - `java.util.Locale`"
-  ([^java.beans.beancontext.BeanContextSupport this]
+  (^java.util.Locale [^java.beans.beancontext.BeanContextSupport this]
     (-> this (.getLocale))))
 
 (defn instantiate-child
@@ -153,7 +153,7 @@
   returns: the new object - `java.lang.Object`
 
   throws: java.io.IOException - if there is an I/O error when the bean is being deserialized"
-  ([^java.beans.beancontext.BeanContextSupport this ^java.lang.String bean-name]
+  (^java.lang.Object [^java.beans.beancontext.BeanContextSupport this ^java.lang.String bean-name]
     (-> this (.instantiateChild bean-name))))
 
 (defn iterator
@@ -161,7 +161,7 @@
    currently nested in this BeanContext.
 
   returns: an Iterator of the nested children - `java.util.Iterator`"
-  ([^java.beans.beancontext.BeanContextSupport this]
+  (^java.util.Iterator [^java.beans.beancontext.BeanContextSupport this]
     (-> this (.iterator))))
 
 (defn dont-use-gui
@@ -183,7 +183,7 @@
   target-child - The child objects to remove - `java.lang.Object`
 
   returns: true if an element was removed as a result of this call - `boolean`"
-  ([^java.beans.beancontext.BeanContextSupport this ^java.lang.Object target-child]
+  (^Boolean [^java.beans.beancontext.BeanContextSupport this ^java.lang.Object target-child]
     (-> this (.remove target-child))))
 
 (defn set-locale
@@ -201,7 +201,7 @@
 
   returns: if this BeanContext is
    currently being serialized - `boolean`"
-  ([^java.beans.beancontext.BeanContextSupport this]
+  (^Boolean [^java.beans.beancontext.BeanContextSupport this]
     (-> this (.isSerializing))))
 
 (defn remove-bean-context-membership-listener
@@ -223,7 +223,7 @@
   target-child - The child objects to nest within this BeanContext - `java.lang.Object`
 
   returns: true if the child was added successfully. - `boolean`"
-  ([^java.beans.beancontext.BeanContextSupport this ^java.lang.Object target-child]
+  (^Boolean [^java.beans.beancontext.BeanContextSupport this ^java.lang.Object target-child]
     (-> this (.add target-child))))
 
 (defn empty?
@@ -234,7 +234,7 @@
    nested children.
 
   returns: if there are not children - `boolean`"
-  ([^java.beans.beancontext.BeanContextSupport this]
+  (^Boolean [^java.beans.beancontext.BeanContextSupport this]
     (-> this (.isEmpty))))
 
 (defn size
@@ -242,7 +242,7 @@
    this BeanContext.
 
   returns: number of children - `int`"
-  ([^java.beans.beancontext.BeanContextSupport this]
+  (^Integer [^java.beans.beancontext.BeanContextSupport this]
     (-> this (.size))))
 
 (defn retain-all
@@ -254,7 +254,7 @@
   returns: this implementation unconditionally throws UnsupportedOperationException - `boolean`
 
   throws: java.lang.UnsupportedOperationException - thrown unconditionally by this implementation"
-  ([^java.beans.beancontext.BeanContextSupport this ^java.util.Collection c]
+  (^Boolean [^java.beans.beancontext.BeanContextSupport this ^java.util.Collection c]
     (-> this (.retainAll c))))
 
 (defn clear
@@ -273,7 +273,7 @@
   arry - The array of object types that are of interest. - `java.lang.Object[]`
 
   returns: an array of children - `java.lang.Object[]`"
-  ([^java.beans.beancontext.BeanContextSupport this ^java.lang.Object[] arry]
+  ([^java.beans.beancontext.BeanContextSupport this arry]
     (-> this (.toArray arry)))
   ([^java.beans.beancontext.BeanContextSupport this]
     (-> this (.toArray))))
@@ -285,7 +285,7 @@
   o - the Object in question - `java.lang.Object`
 
   returns: if this object is a child - `boolean`"
-  ([^java.beans.beancontext.BeanContextSupport this ^java.lang.Object o]
+  (^Boolean [^java.beans.beancontext.BeanContextSupport this ^java.lang.Object o]
     (-> this (.containsKey o))))
 
 (defn remove-all
@@ -297,7 +297,7 @@
   returns: this implementation unconditionally throws UnsupportedOperationException - `boolean`
 
   throws: java.lang.UnsupportedOperationException - thrown unconditionally by this implementation"
-  ([^java.beans.beancontext.BeanContextSupport this ^java.util.Collection c]
+  (^Boolean [^java.beans.beancontext.BeanContextSupport this ^java.util.Collection c]
     (-> this (.removeAll c))))
 
 (defn read-children
@@ -321,7 +321,7 @@
   returns: true if all objects
    in the collection are children of
    this BeanContext, false if not. - `boolean`"
-  ([^java.beans.beancontext.BeanContextSupport this ^java.util.Collection c]
+  (^Boolean [^java.beans.beancontext.BeanContextSupport this ^java.util.Collection c]
     (-> this (.containsAll c))))
 
 (defn vetoable-change
@@ -339,6 +339,6 @@
 
   returns: true if in design time mode,
    false if not - `boolean`"
-  ([^java.beans.beancontext.BeanContextSupport this]
+  (^Boolean [^java.beans.beancontext.BeanContextSupport this]
     (-> this (.isDesignTime))))
 

@@ -1734,7 +1734,7 @@
             locale - `java.util.Locale`
 
   throws: java.util.FormatterClosedException - If this formatter has been closed by invoking its close() method"
-  ([^java.util.Formatter this]
+  (^java.util.Locale [^java.util.Formatter this]
     (-> this (.locale))))
 
 (defn out
@@ -1743,7 +1743,7 @@
   returns: The destination for the output - `java.lang.Appendable`
 
   throws: java.util.FormatterClosedException - If this formatter has been closed by invoking its close() method"
-  ([^java.util.Formatter this]
+  (^java.lang.Appendable [^java.util.Formatter this]
     (-> this (.out))))
 
 (defn to-string
@@ -1774,7 +1774,7 @@
             for the output - `java.lang.String`
 
   throws: java.util.FormatterClosedException - If this formatter has been closed by invoking its close() method"
-  ([^java.util.Formatter this]
+  (^java.lang.String [^java.util.Formatter this]
     (-> this (.toString))))
 
 (defn flush
@@ -1807,7 +1807,7 @@
 
   returns: The last exception thrown by the Appendable or null if
             no such exception exists. - `java.io.IOException`"
-  ([^java.util.Formatter this]
+  (^java.io.IOException [^java.util.Formatter this]
     (-> this (.ioException))))
 
 (defn format
@@ -1821,8 +1821,8 @@
   returns: This formatter - `java.util.Formatter`
 
   throws: java.util.IllegalFormatException - If a format string contains an illegal syntax, a format specifier that is incompatible with the given arguments, insufficient arguments given the format string, or other illegal conditions. For specification of all possible formatting errors, see the Details section of the formatter class specification."
-  ([^java.util.Formatter this ^java.util.Locale l ^java.lang.String format ^java.lang.Object args]
+  (^java.util.Formatter [^java.util.Formatter this ^java.util.Locale l ^java.lang.String format ^java.lang.Object args]
     (-> this (.format l format args)))
-  ([^java.util.Formatter this ^java.lang.String format ^java.lang.Object args]
+  (^java.util.Formatter [^java.util.Formatter this ^java.lang.String format ^java.lang.Object args]
     (-> this (.format format args))))
 

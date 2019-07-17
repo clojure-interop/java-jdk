@@ -47,7 +47,7 @@
    the same groupID in the same virtual machine.
 
   returns: the group identifier - `java.rmi.activation.ActivationGroupID`"
-  ([^java.rmi.activation.ActivationDesc this]
+  (^java.rmi.activation.ActivationGroupID [^java.rmi.activation.ActivationDesc this]
     (-> this (.getGroupID))))
 
 (defn get-class-name
@@ -55,7 +55,7 @@
    descriptor.
 
   returns: the class name - `java.lang.String`"
-  ([^java.rmi.activation.ActivationDesc this]
+  (^java.lang.String [^java.rmi.activation.ActivationDesc this]
     (-> this (.getClassName))))
 
 (defn get-location
@@ -63,7 +63,7 @@
    this descriptor.
 
   returns: the code location - `java.lang.String`"
-  ([^java.rmi.activation.ActivationDesc this]
+  (^java.lang.String [^java.rmi.activation.ActivationDesc this]
     (-> this (.getLocation))))
 
 (defn get-data
@@ -71,7 +71,7 @@
    data for the object specified by this descriptor.
 
   returns: the object specific `initialization` data - `java.rmi.MarshalledObject<?>`"
-  ([^java.rmi.activation.ActivationDesc this]
+  (^java.rmi.MarshalledObject [^java.rmi.activation.ActivationDesc this]
     (-> this (.getData))))
 
 (defn get-restart-mode?
@@ -86,7 +86,7 @@
    method call.  Note that if the restart mode is true, the
    activator does not force an initial immediate activation of
    a newly registered object;  initial activation is lazy. - `boolean`"
-  ([^java.rmi.activation.ActivationDesc this]
+  (^Boolean [^java.rmi.activation.ActivationDesc this]
     (-> this (.getRestartMode))))
 
 (defn equals
@@ -95,13 +95,13 @@
   obj - the Object to compare with - `java.lang.Object`
 
   returns: true if these Objects are equal; false otherwise. - `boolean`"
-  ([^java.rmi.activation.ActivationDesc this ^java.lang.Object obj]
+  (^Boolean [^java.rmi.activation.ActivationDesc this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Return the same hashCode for similar ActivationDescs.
 
   returns: an integer - `int`"
-  ([^java.rmi.activation.ActivationDesc this]
+  (^Integer [^java.rmi.activation.ActivationDesc this]
     (-> this (.hashCode))))
 

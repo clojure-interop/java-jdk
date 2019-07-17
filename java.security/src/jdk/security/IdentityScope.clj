@@ -26,14 +26,14 @@
 
   returns: the system's identity scope, or null if none has been
            set. - `java.security.IdentityScope`"
-  ([]
+  (^java.security.IdentityScope []
     (IdentityScope/getSystemScope )))
 
 (defn size
   "Deprecated.
 
   returns: the number of identities within this identity scope. - `int`"
-  ([^java.security.IdentityScope this]
+  (^Integer [^java.security.IdentityScope this]
     (-> this (.size))))
 
 (defn get-identity
@@ -43,7 +43,7 @@
 
   returns: the identity named name, or null if there are
    no identities named name in this scope. - `java.security.Identity`"
-  ([^java.security.IdentityScope this ^java.lang.String name]
+  (^java.security.Identity [^java.security.IdentityScope this ^java.lang.String name]
     (-> this (.getIdentity name))))
 
 (defn add-identity
@@ -68,13 +68,13 @@
   "Deprecated.
 
   returns: an enumeration of all identities in this identity scope. - `java.util.Enumeration<java.security.Identity>`"
-  ([^java.security.IdentityScope this]
+  (^java.util.Enumeration [^java.security.IdentityScope this]
     (-> this (.identities))))
 
 (defn to-string
   "Deprecated.
 
   returns: a string representation of this identity scope. - `java.lang.String`"
-  ([^java.security.IdentityScope this]
+  (^java.lang.String [^java.security.IdentityScope this]
     (-> this (.toString))))
 

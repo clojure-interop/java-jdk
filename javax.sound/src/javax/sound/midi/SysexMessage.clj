@@ -106,6 +106,6 @@
    as this object.
 
   returns: a clone of this instance - `java.lang.Object`"
-  ([^javax.sound.midi.SysexMessage this]
+  (^java.lang.Object [^javax.sound.midi.SysexMessage this]
     (-> this (.clone))))
 

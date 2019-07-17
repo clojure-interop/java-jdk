@@ -23,14 +23,14 @@
   "Returns the preference node that emitted the event.
 
   returns: The preference node that emitted the event. - `java.util.prefs.Preferences`"
-  ([^java.util.prefs.PreferenceChangeEvent this]
+  (^java.util.prefs.Preferences [^java.util.prefs.PreferenceChangeEvent this]
     (-> this (.getNode))))
 
 (defn get-key
   "Returns the key of the preference that was changed.
 
   returns: The key of the preference that was changed. - `java.lang.String`"
-  ([^java.util.prefs.PreferenceChangeEvent this]
+  (^java.lang.String [^java.util.prefs.PreferenceChangeEvent this]
     (-> this (.getKey))))
 
 (defn get-new-value
@@ -38,6 +38,6 @@
 
   returns: The new value for the preference, or null if the
             preference was removed. - `java.lang.String`"
-  ([^java.util.prefs.PreferenceChangeEvent this]
+  (^java.lang.String [^java.util.prefs.PreferenceChangeEvent this]
     (-> this (.getNewValue))))
 

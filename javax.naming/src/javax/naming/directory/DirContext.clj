@@ -151,9 +151,9 @@
   returns: the requested attributes; never null - `javax.naming.directory.Attributes`
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  ([^javax.naming.directory.DirContext this ^javax.naming.Name name ^java.lang.String[] attr-ids]
+  (^javax.naming.directory.Attributes [^javax.naming.directory.DirContext this ^javax.naming.Name name attr-ids]
     (-> this (.getAttributes name attr-ids)))
-  ([^javax.naming.directory.DirContext this ^javax.naming.Name name]
+  (^javax.naming.directory.Attributes [^javax.naming.directory.DirContext this ^javax.naming.Name name]
     (-> this (.getAttributes name))))
 
 (defn modify-attributes
@@ -168,7 +168,7 @@
   throws: javax.naming.directory.AttributeModificationException - if the modification cannot be completed successfully"
   ([^javax.naming.directory.DirContext this ^javax.naming.Name name ^Integer mod-op ^javax.naming.directory.Attributes attrs]
     (-> this (.modifyAttributes name mod-op attrs)))
-  ([^javax.naming.directory.DirContext this ^javax.naming.Name name ^javax.naming.directory.ModificationItem[] mods]
+  ([^javax.naming.directory.DirContext this ^javax.naming.Name name mods]
     (-> this (.modifyAttributes name mods))))
 
 (defn bind
@@ -226,7 +226,7 @@
   returns: the newly created context - `javax.naming.directory.DirContext`
 
   throws: javax.naming.NameAlreadyBoundException - if the name is already bound"
-  ([^javax.naming.directory.DirContext this ^javax.naming.Name name ^javax.naming.directory.Attributes attrs]
+  (^javax.naming.directory.DirContext [^javax.naming.directory.DirContext this ^javax.naming.Name name ^javax.naming.directory.Attributes attrs]
     (-> this (.createSubcontext name attrs))))
 
 (defn get-schema
@@ -251,7 +251,7 @@
   returns: the schema associated with the context; never null - `javax.naming.directory.DirContext`
 
   throws: javax.naming.OperationNotSupportedException - if schema not supported"
-  ([^javax.naming.directory.DirContext this ^javax.naming.Name name]
+  (^javax.naming.directory.DirContext [^javax.naming.directory.DirContext this ^javax.naming.Name name]
     (-> this (.getSchema name))))
 
 (defn get-schema-class-definition
@@ -284,7 +284,7 @@
             object's class definitions; never null - `javax.naming.directory.DirContext`
 
   throws: javax.naming.OperationNotSupportedException - if schema not supported"
-  ([^javax.naming.directory.DirContext this ^javax.naming.Name name]
+  (^javax.naming.directory.DirContext [^javax.naming.directory.DirContext this ^javax.naming.Name name]
     (-> this (.getSchemaClassDefinition name))))
 
 (defn search
@@ -364,10 +364,10 @@
             that satisfy the filter; never null - `javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if filterExpr contains {i} expressions where i is outside the bounds of the array filterArgs"
-  ([^javax.naming.directory.DirContext this ^javax.naming.Name name ^java.lang.String filter-expr ^java.lang.Object[] filter-args ^javax.naming.directory.SearchControls cons]
+  (^javax.naming.NamingEnumeration [^javax.naming.directory.DirContext this ^javax.naming.Name name ^java.lang.String filter-expr filter-args ^javax.naming.directory.SearchControls cons]
     (-> this (.search name filter-expr filter-args cons)))
-  ([^javax.naming.directory.DirContext this ^javax.naming.Name name ^javax.naming.directory.Attributes matching-attributes ^java.lang.String[] attributes-to-return]
+  (^javax.naming.NamingEnumeration [^javax.naming.directory.DirContext this ^javax.naming.Name name ^javax.naming.directory.Attributes matching-attributes attributes-to-return]
     (-> this (.search name matching-attributes attributes-to-return)))
-  ([^javax.naming.directory.DirContext this ^javax.naming.Name name ^javax.naming.directory.Attributes matching-attributes]
+  (^javax.naming.NamingEnumeration [^javax.naming.directory.DirContext this ^javax.naming.Name name ^javax.naming.directory.Attributes matching-attributes]
     (-> this (.search name matching-attributes))))
 

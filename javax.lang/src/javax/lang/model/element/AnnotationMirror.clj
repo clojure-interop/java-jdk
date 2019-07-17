@@ -12,7 +12,7 @@
   "Returns the type of this annotation.
 
   returns: the type of this annotation - `javax.lang.model.type.DeclaredType`"
-  ([^javax.lang.model.element.AnnotationMirror this]
+  (^javax.lang.model.type.DeclaredType [^javax.lang.model.element.AnnotationMirror this]
     (-> this (.getAnnotationType))))
 
 (defn get-element-values

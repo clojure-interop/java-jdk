@@ -36,6 +36,6 @@
    key specification.
 
   returns: the string `X.509`. - `java.lang.String`"
-  ([^java.security.spec.X509EncodedKeySpec this]
+  (^java.lang.String [^java.security.spec.X509EncodedKeySpec this]
     (-> this (.getFormat))))
 

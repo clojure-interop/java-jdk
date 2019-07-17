@@ -106,7 +106,7 @@
            by index. - `int`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if index is greater than the number of components minus 1 in this PackedColorModel or if index is less than zero"
-  ([^java.awt.image.PackedColorModel this ^Integer index]
+  (^Integer [^java.awt.image.PackedColorModel this ^Integer index]
     (-> this (.getMask index))))
 
 (defn get-masks
@@ -130,7 +130,7 @@
   returns: the newly created SampleModel. - `java.awt.image.SampleModel`
 
   throws: java.lang.IllegalArgumentException - if w or h is not greater than 0"
-  ([^java.awt.image.PackedColorModel this ^Integer w ^Integer h]
+  (^java.awt.image.SampleModel [^java.awt.image.PackedColorModel this ^Integer w ^Integer h]
     (-> this (.createCompatibleSampleModel w h))))
 
 (defn compatible-sample-model?
@@ -143,7 +143,7 @@
   returns: true if the specified SampleModel
            is compatible with this ColorModel;
            false otherwise. - `boolean`"
-  ([^java.awt.image.PackedColorModel this ^java.awt.image.SampleModel sm]
+  (^Boolean [^java.awt.image.PackedColorModel this ^java.awt.image.SampleModel sm]
     (-> this (.isCompatibleSampleModel sm))))
 
 (defn get-alpha-raster
@@ -160,7 +160,7 @@
 
   returns: a WritableRaster that represents the alpha
            channel of the image contained in raster. - `java.awt.image.WritableRaster`"
-  ([^java.awt.image.PackedColorModel this ^java.awt.image.WritableRaster raster]
+  (^java.awt.image.WritableRaster [^java.awt.image.PackedColorModel this ^java.awt.image.WritableRaster raster]
     (-> this (.getAlphaRaster raster))))
 
 (defn equals
@@ -173,6 +173,6 @@
   returns: true if the specified Object
    is an instance of PackedColorModel and equals this
    PackedColorModel; false otherwise. - `boolean`"
-  ([^java.awt.image.PackedColorModel this ^java.lang.Object obj]
+  (^Boolean [^java.awt.image.PackedColorModel this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

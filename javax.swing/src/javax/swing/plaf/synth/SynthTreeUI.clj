@@ -15,12 +15,12 @@
   x - component to create UI object for - `javax.swing.JComponent`
 
   returns: the UI object - `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent x]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent x]
     (SynthTreeUI/createUI x)))
 
 (defn get-expanded-icon
   "returns: `javax.swing.Icon`"
-  ([^javax.swing.plaf.synth.SynthTreeUI this]
+  (^javax.swing.Icon [^javax.swing.plaf.synth.SynthTreeUI this]
     (-> this (.getExpandedIcon))))
 
 (defn get-context
@@ -29,7 +29,7 @@
   c - Component requesting SynthContext. - `javax.swing.JComponent`
 
   returns: SynthContext describing component. - `javax.swing.plaf.synth.SynthContext`"
-  ([^javax.swing.plaf.synth.SynthTreeUI this ^javax.swing.JComponent c]
+  (^javax.swing.plaf.synth.SynthContext [^javax.swing.plaf.synth.SynthTreeUI this ^javax.swing.JComponent c]
     (-> this (.getContext c))))
 
 (defn update

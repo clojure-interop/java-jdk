@@ -28,6 +28,6 @@
   "Returns the fully qualified name of the unavailable type.
 
   returns: the fully qualified name of the unavailable type - `java.lang.String`"
-  ([^java.lang.TypeNotPresentException this]
+  (^java.lang.String [^java.lang.TypeNotPresentException this]
     (-> this (.typeName))))
 

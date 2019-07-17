@@ -35,7 +35,7 @@
    for this characteristic 2 finite field.
 
   returns: the field size in bits. - `int`"
-  ([^java.security.spec.ECFieldF2m this]
+  (^Integer [^java.security.spec.ECFieldF2m this]
     (-> this (.getFieldSize))))
 
 (defn get-m
@@ -44,7 +44,7 @@
 
   returns: m with 2^m being the
    number of elements. - `int`"
-  ([^java.security.spec.ECFieldF2m this]
+  (^Integer [^java.security.spec.ECFieldF2m this]
     (-> this (.getM))))
 
 (defn get-reduction-polynomial
@@ -55,7 +55,7 @@
   returns: a BigInteger whose i-th bit corresponds to the
    i-th coefficient of the reduction polynomial for polynomial
    basis or null for normal basis. - `java.math.BigInteger`"
-  ([^java.security.spec.ECFieldF2m this]
+  (^java.math.BigInteger [^java.security.spec.ECFieldF2m this]
     (-> this (.getReductionPolynomial))))
 
 (defn get-mid-terms-of-reduction-polynomial
@@ -79,7 +79,7 @@
   returns: true if obj is an instance
    of ECFieldF2m and both m and the reduction
    polynomial match, false otherwise. - `boolean`"
-  ([^java.security.spec.ECFieldF2m this ^java.lang.Object obj]
+  (^Boolean [^java.security.spec.ECFieldF2m this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -87,6 +87,6 @@
    finite field.
 
   returns: a hash code value. - `int`"
-  ([^java.security.spec.ECFieldF2m this]
+  (^Integer [^java.security.spec.ECFieldF2m this]
     (-> this (.hashCode))))
 

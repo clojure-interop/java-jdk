@@ -21,7 +21,7 @@
   new-value - the new value - `AtomicReference.V`
 
   returns: the previous value - `AtomicReference.V`"
-  ([^java.util.concurrent.atomic.AtomicReference this ^AtomicReference.V new-value]
+  (^AtomicReference.V [^java.util.concurrent.atomic.AtomicReference this ^AtomicReference.V new-value]
     (-> this (.getAndSet new-value))))
 
 (defn update-and-get
@@ -33,7 +33,7 @@
   update-function - a side-effect-free function - `java.util.function.UnaryOperator<AtomicReference.V>`
 
   returns: the updated value - `AtomicReference.V`"
-  ([^java.util.concurrent.atomic.AtomicReference this ^java.util.function.UnaryOperator update-function]
+  (^AtomicReference.V [^java.util.concurrent.atomic.AtomicReference this ^java.util.function.UnaryOperator update-function]
     (-> this (.updateAndGet update-function))))
 
 (defn get-and-update
@@ -45,14 +45,14 @@
   update-function - a side-effect-free function - `java.util.function.UnaryOperator<AtomicReference.V>`
 
   returns: the previous value - `AtomicReference.V`"
-  ([^java.util.concurrent.atomic.AtomicReference this ^java.util.function.UnaryOperator update-function]
+  (^AtomicReference.V [^java.util.concurrent.atomic.AtomicReference this ^java.util.function.UnaryOperator update-function]
     (-> this (.getAndUpdate update-function))))
 
 (defn to-string
   "Returns the String representation of the current value.
 
   returns: the String representation of the current value - `java.lang.String`"
-  ([^java.util.concurrent.atomic.AtomicReference this]
+  (^java.lang.String [^java.util.concurrent.atomic.AtomicReference this]
     (-> this (.toString))))
 
 (defn accumulate-and-get
@@ -68,7 +68,7 @@
   accumulator-function - a side-effect-free function of two arguments - `java.util.function.BinaryOperator<AtomicReference.V>`
 
   returns: the updated value - `AtomicReference.V`"
-  ([^java.util.concurrent.atomic.AtomicReference this ^AtomicReference.V x ^java.util.function.BinaryOperator accumulator-function]
+  (^AtomicReference.V [^java.util.concurrent.atomic.AtomicReference this ^AtomicReference.V x ^java.util.function.BinaryOperator accumulator-function]
     (-> this (.accumulateAndGet x accumulator-function))))
 
 (defn weak-compare-and-set
@@ -83,7 +83,7 @@
   update - the new value - `AtomicReference.V`
 
   returns: true if successful - `boolean`"
-  ([^java.util.concurrent.atomic.AtomicReference this ^AtomicReference.V expect ^AtomicReference.V update]
+  (^Boolean [^java.util.concurrent.atomic.AtomicReference this ^AtomicReference.V expect ^AtomicReference.V update]
     (-> this (.weakCompareAndSet expect update))))
 
 (defn lazy-set
@@ -113,7 +113,7 @@
   accumulator-function - a side-effect-free function of two arguments - `java.util.function.BinaryOperator<AtomicReference.V>`
 
   returns: the previous value - `AtomicReference.V`"
-  ([^java.util.concurrent.atomic.AtomicReference this ^AtomicReference.V x ^java.util.function.BinaryOperator accumulator-function]
+  (^AtomicReference.V [^java.util.concurrent.atomic.AtomicReference this ^AtomicReference.V x ^java.util.function.BinaryOperator accumulator-function]
     (-> this (.getAndAccumulate x accumulator-function))))
 
 (defn compare-and-set
@@ -125,13 +125,13 @@
 
   returns: true if successful. False return indicates that
    the actual value was not equal to the expected value. - `boolean`"
-  ([^java.util.concurrent.atomic.AtomicReference this ^AtomicReference.V expect ^AtomicReference.V update]
+  (^Boolean [^java.util.concurrent.atomic.AtomicReference this ^AtomicReference.V expect ^AtomicReference.V update]
     (-> this (.compareAndSet expect update))))
 
 (defn get
   "Gets the current value.
 
   returns: the current value - `AtomicReference.V`"
-  ([^java.util.concurrent.atomic.AtomicReference this]
+  (^AtomicReference.V [^java.util.concurrent.atomic.AtomicReference this]
     (-> this (.get))))
 

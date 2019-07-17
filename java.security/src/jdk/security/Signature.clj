@@ -82,9 +82,9 @@
   returns: the new Signature object. - `java.security.Signature`
 
   throws: java.security.NoSuchAlgorithmException - if a SignatureSpi implementation for the specified algorithm is not available from the specified provider."
-  ([^java.lang.String algorithm ^java.lang.String provider]
+  (^java.security.Signature [^java.lang.String algorithm ^java.lang.String provider]
     (Signature/getInstance algorithm provider))
-  ([^java.lang.String algorithm]
+  (^java.security.Signature [^java.lang.String algorithm]
     (Signature/getInstance algorithm)))
 
 (defn to-string
@@ -93,7 +93,7 @@
    and the name of the algorithm used.
 
   returns: a string representation of this signature object. - `java.lang.String`"
-  ([^java.security.Signature this]
+  (^java.lang.String [^java.security.Signature this]
     (-> this (.toString))))
 
 (defn get-parameters
@@ -107,14 +107,14 @@
 
   returns: the parameters used with this signature, or null if this
    signature does not use any parameters. - `java.security.AlgorithmParameters`"
-  ([^java.security.Signature this]
+  (^java.security.AlgorithmParameters [^java.security.Signature this]
     (-> this (.getParameters))))
 
 (defn get-provider
   "Returns the provider of this signature object.
 
   returns: the provider of this signature object - `java.security.Provider`"
-  ([^java.security.Signature this]
+  (^java.security.Provider [^java.security.Signature this]
     (-> this (.getProvider))))
 
 (defn update
@@ -148,16 +148,16 @@
   returns: true if the signature was verified, false if not. - `boolean`
 
   throws: java.security.SignatureException - if this signature object is not initialized properly, the passed-in signature is improperly encoded or of the wrong type, if this signature algorithm is unable to process the input data provided, etc."
-  ([^java.security.Signature this signature ^Integer offset ^Integer length]
+  (^Boolean [^java.security.Signature this signature ^Integer offset ^Integer length]
     (-> this (.verify signature offset length)))
-  ([^java.security.Signature this signature]
+  (^Boolean [^java.security.Signature this signature]
     (-> this (.verify signature))))
 
 (defn get-algorithm
   "Returns the name of the algorithm for this signature object.
 
   returns: the name of the algorithm for this signature object. - `java.lang.String`"
-  ([^java.security.Signature this]
+  (^java.lang.String [^java.security.Signature this]
     (-> this (.getAlgorithm))))
 
 (defn get-parameter
@@ -189,7 +189,7 @@
   returns: a clone if the implementation is cloneable. - `java.lang.Object`
 
   throws: java.lang.CloneNotSupportedException - if this is called on an implementation that does not support Cloneable."
-  ([^java.security.Signature this]
+  (^java.lang.Object [^java.security.Signature this]
     (-> this (.clone))))
 
 (defn init-sign
@@ -235,7 +235,7 @@
   returns: the number of bytes placed into outbuf. - `int`
 
   throws: java.security.SignatureException - if this signature object is not initialized properly, if this signature algorithm is unable to process the input data provided, or if len is less than the actual signature length."
-  ([^java.security.Signature this outbuf ^Integer offset ^Integer len]
+  (^Integer [^java.security.Signature this outbuf ^Integer offset ^Integer len]
     (-> this (.sign outbuf offset len)))
   ([^java.security.Signature this]
     (-> this (.sign))))

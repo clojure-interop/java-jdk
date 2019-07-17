@@ -12,7 +12,7 @@
   text-icon-gap - `int`
 
   returns: `java.awt.Dimension`"
-  ([^javax.swing.AbstractButton b ^Integer text-icon-gap]
+  (^java.awt.Dimension [^javax.swing.AbstractButton b ^Integer text-icon-gap]
     (BasicGraphicsUtils/getPreferredButtonSize b text-icon-gap)))
 
 (defn *draw-lowered-bezel
@@ -102,7 +102,7 @@
    drawEtchedRect()
 
   returns: the inset of an etched rect - `java.awt.Insets`"
-  ([]
+  (^java.awt.Insets []
     (BasicGraphicsUtils/getEtchedInsets )))
 
 (defn *draw-groove
@@ -121,6 +121,6 @@
    drawGroove()
 
   returns: the inset of a groove border - `java.awt.Insets`"
-  ([]
+  (^java.awt.Insets []
     (BasicGraphicsUtils/getGrooveInsets )))
 

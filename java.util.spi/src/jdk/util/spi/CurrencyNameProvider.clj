@@ -22,7 +22,7 @@
        the symbol is not available for the locale - `java.lang.String`
 
   throws: java.lang.NullPointerException - if currencyCode or locale is null"
-  ([^java.util.spi.CurrencyNameProvider this ^java.lang.String currency-code ^java.util.Locale locale]
+  (^java.lang.String [^java.util.spi.CurrencyNameProvider this ^java.lang.String currency-code ^java.util.Locale locale]
     (-> this (.getSymbol currency-code locale))))
 
 (defn get-display-name
@@ -36,6 +36,6 @@
        user, or null if the name is not available for the locale - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if currencyCode is not in the form of three upper-case letters, or locale isn't one of the locales returned from getAvailableLocales()."
-  ([^java.util.spi.CurrencyNameProvider this ^java.lang.String currency-code ^java.util.Locale locale]
+  (^java.lang.String [^java.util.spi.CurrencyNameProvider this ^java.lang.String currency-code ^java.util.Locale locale]
     (-> this (.getDisplayName currency-code locale))))
 

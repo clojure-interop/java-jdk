@@ -74,14 +74,14 @@
   returns: true if this thread group is the thread group
             argument or one of its ancestor thread groups;
             false otherwise. - `boolean`"
-  ([^java.lang.ThreadGroup this ^java.lang.ThreadGroup g]
+  (^Boolean [^java.lang.ThreadGroup this ^java.lang.ThreadGroup g]
     (-> this (.parentOf g))))
 
 (defn to-string
   "Returns a string representation of this Thread group.
 
   returns: a string representation of this thread group. - `java.lang.String`"
-  ([^java.lang.ThreadGroup this]
+  (^java.lang.String [^java.lang.ThreadGroup this]
     (-> this (.toString))))
 
 (defn uncaught-exception
@@ -134,7 +134,7 @@
   "Returns the name of this thread group.
 
   returns: the name of this thread group. - `java.lang.String`"
-  ([^java.lang.ThreadGroup this]
+  (^java.lang.String [^java.lang.ThreadGroup this]
     (-> this (.getName))))
 
 (defn enumerate
@@ -161,9 +161,9 @@
   returns: the number of threads put into the array - `int`
 
   throws: java.lang.SecurityException - if checkAccess determines that the current thread cannot access this thread group"
-  ([^java.lang.ThreadGroup this ^java.lang.Thread[] list ^Boolean recurse]
+  (^Integer [^java.lang.ThreadGroup this list ^Boolean recurse]
     (-> this (.enumerate list recurse)))
-  ([^java.lang.ThreadGroup this ^java.lang.Thread[] list]
+  (^Integer [^java.lang.ThreadGroup this list]
     (-> this (.enumerate list))))
 
 (defn destroy
@@ -189,7 +189,7 @@
             is the only thread group whose parent is null. - `java.lang.ThreadGroup`
 
   throws: java.lang.SecurityException - if the current thread cannot modify this thread group."
-  ([^java.lang.ThreadGroup this]
+  (^java.lang.ThreadGroup [^java.lang.ThreadGroup this]
     (-> this (.getParent))))
 
 (defn set-max-priority
@@ -225,7 +225,7 @@
 
   returns: the maximum priority that a thread in this thread group
             can have. - `int`"
-  ([^java.lang.ThreadGroup this]
+  (^Integer [^java.lang.ThreadGroup this]
     (-> this (.getMaxPriority))))
 
 (defn active-count
@@ -242,7 +242,7 @@
   returns: an estimate of the number of active threads in this thread
             group and in any other thread group that has this thread
             group as an ancestor - `int`"
-  ([^java.lang.ThreadGroup this]
+  (^Integer [^java.lang.ThreadGroup this]
     (-> this (.activeCount))))
 
 (defn interrupt
@@ -265,7 +265,7 @@
 
   returns: true if this thread group is a daemon thread group;
             false otherwise. - `boolean`"
-  ([^java.lang.ThreadGroup this]
+  (^Boolean [^java.lang.ThreadGroup this]
     (-> this (.isDaemon))))
 
 (defn set-daemon
@@ -295,14 +295,14 @@
 
   returns: the number of active thread groups with this thread group as
             an ancestor - `int`"
-  ([^java.lang.ThreadGroup this]
+  (^Integer [^java.lang.ThreadGroup this]
     (-> this (.activeGroupCount))))
 
 (defn destroyed?
   "Tests if this thread group has been destroyed.
 
   returns: true if this object is destroyed - `boolean`"
-  ([^java.lang.ThreadGroup this]
+  (^Boolean [^java.lang.ThreadGroup this]
     (-> this (.isDestroyed))))
 
 (defn resume

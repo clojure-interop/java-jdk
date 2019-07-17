@@ -21,7 +21,7 @@
   returns: `float`
 
   throws: java.lang.IllegalArgumentException - for an invalid direction"
-  ([^javax.swing.text.html.StyleSheet$BoxPainter this ^Integer side ^javax.swing.text.View v]
+  (^Float [^javax.swing.text.html.StyleSheet$BoxPainter this ^Integer side ^javax.swing.text.View v]
     (-> this (.getInset side v))))
 
 (defn paint

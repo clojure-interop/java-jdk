@@ -48,7 +48,7 @@
 
   returns: the built and validated CertPath (never
    null) - `java.security.cert.CertPath`"
-  ([^java.security.cert.PKIXCertPathBuilderResult this]
+  (^java.security.cert.CertPath [^java.security.cert.PKIXCertPathBuilderResult this]
     (-> this (.getCertPath))))
 
 (defn to-string
@@ -57,6 +57,6 @@
 
   returns: a String describing the contents of this
            PKIXCertPathBuilderResult - `java.lang.String`"
-  ([^java.security.cert.PKIXCertPathBuilderResult this]
+  (^java.lang.String [^java.security.cert.PKIXCertPathBuilderResult this]
     (-> this (.toString))))
 

@@ -94,7 +94,7 @@
   cmd-name - the command name - `java.lang.String`
 
   returns: the CommandInfo corresponding to the command - `javax.activation.CommandInfo`"
-  ([^javax.activation.DataHandler this ^java.lang.String cmd-name]
+  (^javax.activation.CommandInfo [^javax.activation.DataHandler this ^java.lang.String cmd-name]
     (-> this (.getCommand cmd-name))))
 
 (defn get-content-type
@@ -103,7 +103,7 @@
    type with parameters.
 
   returns: the MIME type - `java.lang.String`"
-  ([^javax.activation.DataHandler this]
+  (^java.lang.String [^javax.activation.DataHandler this]
     (-> this (.getContentType))))
 
 (defn get-name
@@ -113,7 +113,7 @@
    returns null.
 
   returns: the name of the object - `java.lang.String`"
-  ([^javax.activation.DataHandler this]
+  (^java.lang.String [^javax.activation.DataHandler this]
     (-> this (.getName))))
 
 (defn write-to
@@ -165,7 +165,7 @@
   returns: the object - `java.lang.Object`
 
   throws: java.awt.datatransfer.UnsupportedFlavorException - if the data could not be converted to the requested flavor"
-  ([^javax.activation.DataHandler this ^java.awt.datatransfer.DataFlavor flavor]
+  (^java.lang.Object [^javax.activation.DataHandler this ^java.awt.datatransfer.DataFlavor flavor]
     (-> this (.getTransferData flavor))))
 
 (defn get-output-stream
@@ -178,7 +178,7 @@
   returns: the OutputStream - `java.io.OutputStream`
 
   throws: java.io.IOException"
-  ([^javax.activation.DataHandler this]
+  (^java.io.OutputStream [^javax.activation.DataHandler this]
     (-> this (.getOutputStream))))
 
 (defn get-transfer-data-flavors
@@ -227,7 +227,7 @@
   returns: the InputStream representing this data - `java.io.InputStream`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([^javax.activation.DataHandler this]
+  (^java.io.InputStream [^javax.activation.DataHandler this]
     (-> this (.getInputStream))))
 
 (defn set-command-map
@@ -255,7 +255,7 @@
    reasons.
 
   returns: a valid DataSource object for this DataHandler - `javax.activation.DataSource`"
-  ([^javax.activation.DataHandler this]
+  (^javax.activation.DataSource [^javax.activation.DataHandler this]
     (-> this (.getDataSource))))
 
 (defn get-bean
@@ -270,7 +270,7 @@
   cmdinfo - the CommandInfo corresponding to a command - `javax.activation.CommandInfo`
 
   returns: the instantiated command object - `java.lang.Object`"
-  ([^javax.activation.DataHandler this ^javax.activation.CommandInfo cmdinfo]
+  (^java.lang.Object [^javax.activation.DataHandler this ^javax.activation.CommandInfo cmdinfo]
     (-> this (.getBean cmdinfo))))
 
 (defn get-content
@@ -289,7 +289,7 @@
   returns: the content. - `java.lang.Object`
 
   throws: java.io.IOException - if an IOException occurs during this operation."
-  ([^javax.activation.DataHandler this]
+  (^java.lang.Object [^javax.activation.DataHandler this]
     (-> this (.getContent))))
 
 (defn data-flavor-supported?
@@ -303,6 +303,6 @@
   flavor - the requested flavor for the data - `java.awt.datatransfer.DataFlavor`
 
   returns: true if the data flavor is supported - `boolean`"
-  ([^javax.activation.DataHandler this ^java.awt.datatransfer.DataFlavor flavor]
+  (^Boolean [^javax.activation.DataHandler this ^java.awt.datatransfer.DataFlavor flavor]
     (-> this (.isDataFlavorSupported flavor))))
 

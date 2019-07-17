@@ -36,23 +36,23 @@
   entry - an ACL entry - `java.nio.file.attribute.AclEntry`
 
   returns: a new builder - `java.nio.file.attribute.AclEntry.Builder`"
-  ([^java.nio.file.attribute.AclEntry entry]
+  (^java.nio.file.attribute.AclEntry.Builder [^java.nio.file.attribute.AclEntry entry]
     (AclEntry/newBuilder entry))
-  ([]
+  (^java.nio.file.attribute.AclEntry.Builder []
     (AclEntry/newBuilder )))
 
 (defn type
   "Returns the ACL entry type.
 
   returns: the ACL entry type - `java.nio.file.attribute.AclEntryType`"
-  ([^java.nio.file.attribute.AclEntry this]
+  (^java.nio.file.attribute.AclEntryType [^java.nio.file.attribute.AclEntry this]
     (-> this (.type))))
 
 (defn principal
   "Returns the principal component.
 
   returns: the principal component - `java.nio.file.attribute.UserPrincipal`"
-  ([^java.nio.file.attribute.AclEntry this]
+  (^java.nio.file.attribute.UserPrincipal [^java.nio.file.attribute.AclEntry this]
     (-> this (.principal))))
 
 (defn permissions
@@ -61,7 +61,7 @@
     The returned set is a modifiable copy of the permissions.
 
   returns: the permissions component - `java.util.Set<java.nio.file.attribute.AclEntryPermission>`"
-  ([^java.nio.file.attribute.AclEntry this]
+  (^java.util.Set [^java.nio.file.attribute.AclEntry this]
     (-> this (.permissions))))
 
 (defn flags
@@ -70,7 +70,7 @@
     The returned set is a modifiable copy of the flags.
 
   returns: the flags component - `java.util.Set<java.nio.file.attribute.AclEntryFlag>`"
-  ([^java.nio.file.attribute.AclEntry this]
+  (^java.util.Set [^java.nio.file.attribute.AclEntry this]
     (-> this (.flags))))
 
 (defn equals
@@ -89,7 +89,7 @@
 
   returns: true if, and only if, the given object is an AclEntry that
             is identical to this AclEntry - `boolean`"
-  ([^java.nio.file.attribute.AclEntry this ^java.lang.Object ob]
+  (^Boolean [^java.nio.file.attribute.AclEntry this ^java.lang.Object ob]
     (-> this (.equals ob))))
 
 (defn hash-code
@@ -98,13 +98,13 @@
     This method satisfies the general contract of the Object.hashCode() method.
 
   returns: a hash code value for this object. - `int`"
-  ([^java.nio.file.attribute.AclEntry this]
+  (^Integer [^java.nio.file.attribute.AclEntry this]
     (-> this (.hashCode))))
 
 (defn to-string
   "Returns the string representation of this ACL entry.
 
   returns: the string representation of this entry - `java.lang.String`"
-  ([^java.nio.file.attribute.AclEntry this]
+  (^java.lang.String [^java.nio.file.attribute.AclEntry this]
     (-> this (.toString))))
 

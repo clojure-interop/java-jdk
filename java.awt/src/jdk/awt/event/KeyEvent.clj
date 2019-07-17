@@ -1549,7 +1549,7 @@
 
   returns: a string containing a text description for a physical key,
            identified by its keyCode - `java.lang.String`"
-  ([^Integer key-code]
+  (^java.lang.String [^Integer key-code]
     (KeyEvent/getKeyText key-code)))
 
 (defn *get-key-modifiers-text
@@ -1568,7 +1568,7 @@
 
   returns: string a text description of the combination of modifier
                   keys that were held down during the event - `java.lang.String`"
-  ([^Integer modifiers]
+  (^java.lang.String [^Integer modifiers]
     (KeyEvent/getKeyModifiersText modifiers)))
 
 (defn *get-extended-key-code-for-char
@@ -1581,7 +1581,7 @@
      level of a known keyboard layout -- a unique integer.
      If a character does not appear on the primary level of a known keyboard,
      VK_UNDEFINED is returned. - `int`"
-  ([^Integer c]
+  (^Integer [^Integer c]
     (KeyEvent/getExtendedKeyCodeForChar c)))
 
 (defn set-key-code
@@ -1601,7 +1601,7 @@
   returns: the location of the key that was pressed or released.
            Always returns KEY_LOCATION_UNKNOWN for
            KEY_TYPED events. - `int`"
-  ([^java.awt.event.KeyEvent this]
+  (^Integer [^java.awt.event.KeyEvent this]
     (-> this (.getKeyLocation))))
 
 (defn get-key-char
@@ -1617,7 +1617,7 @@
   returns: the Unicode character defined for this key event.
            If no valid Unicode character exists for this key event,
            CHAR_UNDEFINED is returned. - `char`"
-  ([^java.awt.event.KeyEvent this]
+  (^Character [^java.awt.event.KeyEvent this]
     (-> this (.getKeyChar))))
 
 (defn get-extended-key-code
@@ -1630,7 +1630,7 @@
    letter `Cyrillic I short`.
 
   returns: `int`"
-  ([^java.awt.event.KeyEvent this]
+  (^Integer [^java.awt.event.KeyEvent this]
     (-> this (.getExtendedKeyCode))))
 
 (defn set-key-char
@@ -1646,7 +1646,7 @@
   returns: the integer code for an actual key on the keyboard.
            (For KEY_TYPED events, the keyCode is
            VK_UNDEFINED.) - `int`"
-  ([^java.awt.event.KeyEvent this]
+  (^Integer [^java.awt.event.KeyEvent this]
     (-> this (.getKeyCode))))
 
 (defn set-modifiers
@@ -1663,7 +1663,7 @@
    This method is useful for event logging and for debugging.
 
   returns: a string identifying the event and its attributes - `java.lang.String`"
-  ([^java.awt.event.KeyEvent this]
+  (^java.lang.String [^java.awt.event.KeyEvent this]
     (-> this (.paramString))))
 
 (defn action-key?
@@ -1673,6 +1673,6 @@
 
   returns: true if the key is an `action` key,
            false otherwise - `boolean`"
-  ([^java.awt.event.KeyEvent this]
+  (^Boolean [^java.awt.event.KeyEvent this]
     (-> this (.isActionKey))))
 

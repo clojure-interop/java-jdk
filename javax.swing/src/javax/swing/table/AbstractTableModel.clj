@@ -48,7 +48,7 @@
   column-index - the column being queried - `int`
 
   returns: the Object.class - `java.lang.Class<?>`"
-  ([^javax.swing.table.AbstractTableModel this ^Integer column-index]
+  (^java.lang.Class [^javax.swing.table.AbstractTableModel this ^Integer column-index]
     (-> this (.getColumnClass column-index))))
 
 (defn fire-table-data-changed
@@ -83,7 +83,7 @@
   column-index - the column being queried - `int`
 
   returns: false - `boolean`"
-  ([^javax.swing.table.AbstractTableModel this ^Integer row-index ^Integer column-index]
+  (^Boolean [^javax.swing.table.AbstractTableModel this ^Integer row-index ^Integer column-index]
     (-> this (.isCellEditable row-index column-index))))
 
 (defn fire-table-rows-updated
@@ -103,7 +103,7 @@
   column - the column being queried - `int`
 
   returns: a string containing the default name of column - `java.lang.String`"
-  ([^javax.swing.table.AbstractTableModel this ^Integer column]
+  (^java.lang.String [^javax.swing.table.AbstractTableModel this ^Integer column]
     (-> this (.getColumnName column))))
 
 (defn fire-table-rows-deleted
@@ -134,7 +134,7 @@
   column-name - string containing name of column to be located - `java.lang.String`
 
   returns: the column with columnName, or -1 if not found - `int`"
-  ([^javax.swing.table.AbstractTableModel this ^java.lang.String column-name]
+  (^Integer [^javax.swing.table.AbstractTableModel this ^java.lang.String column-name]
     (-> this (.findColumn column-name))))
 
 (defn set-value-at

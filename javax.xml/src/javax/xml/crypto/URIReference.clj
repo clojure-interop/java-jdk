@@ -13,7 +13,7 @@
 
   returns: the URI of the data object in RFC 2396 format (may be
       null if not specified) - `java.lang.String`"
-  ([^javax.xml.crypto.URIReference this]
+  (^java.lang.String [^javax.xml.crypto.URIReference this]
     (-> this (.getURI))))
 
 (defn get-type
@@ -21,6 +21,6 @@
 
   returns: the type (a URI) of the data object (may be null
       if not specified) - `java.lang.String`"
-  ([^javax.xml.crypto.URIReference this]
+  (^java.lang.String [^javax.xml.crypto.URIReference this]
     (-> this (.getType))))
 

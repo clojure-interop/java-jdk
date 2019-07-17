@@ -35,7 +35,7 @@
   "Gets the vertical gap between components.
 
   returns: the vertical gap between components. - `int`"
-  ([^java.awt.CardLayout this]
+  (^Integer [^java.awt.CardLayout this]
     (-> this (.getVgap))))
 
 (defn invalidate-layout
@@ -65,7 +65,7 @@
   parent - `java.awt.Container`
 
   returns: `float`"
-  ([^java.awt.CardLayout this ^java.awt.Container parent]
+  (^Float [^java.awt.CardLayout this ^java.awt.Container parent]
     (-> this (.getLayoutAlignmentY parent))))
 
 (defn set-hgap
@@ -90,21 +90,21 @@
 
   returns: the preferred dimensions to lay out the subcomponents
                   of the specified container - `java.awt.Dimension`"
-  ([^java.awt.CardLayout this ^java.awt.Container parent]
+  (^java.awt.Dimension [^java.awt.CardLayout this ^java.awt.Container parent]
     (-> this (.preferredLayoutSize parent))))
 
 (defn to-string
   "Returns a string representation of the state of this card layout.
 
   returns: a string representation of this card layout. - `java.lang.String`"
-  ([^java.awt.CardLayout this]
+  (^java.lang.String [^java.awt.CardLayout this]
     (-> this (.toString))))
 
 (defn get-hgap
   "Gets the horizontal gap between components.
 
   returns: the horizontal gap between components. - `int`"
-  ([^java.awt.CardLayout this]
+  (^Integer [^java.awt.CardLayout this]
     (-> this (.getHgap))))
 
 (defn show
@@ -127,7 +127,7 @@
   parent - `java.awt.Container`
 
   returns: `float`"
-  ([^java.awt.CardLayout this ^java.awt.Container parent]
+  (^Float [^java.awt.CardLayout this ^java.awt.Container parent]
     (-> this (.getLayoutAlignmentX parent))))
 
 (defn previous
@@ -146,7 +146,7 @@
 
   returns: the minimum dimensions required to lay out the
                   subcomponents of the specified container - `java.awt.Dimension`"
-  ([^java.awt.CardLayout this ^java.awt.Container parent]
+  (^java.awt.Dimension [^java.awt.CardLayout this ^java.awt.Container parent]
     (-> this (.minimumLayoutSize parent))))
 
 (defn last
@@ -163,7 +163,7 @@
   target - the component which needs to be laid out - `java.awt.Container`
 
   returns: `java.awt.Dimension`"
-  ([^java.awt.CardLayout this ^java.awt.Container target]
+  (^java.awt.Dimension [^java.awt.CardLayout this ^java.awt.Container target]
     (-> this (.maximumLayoutSize target))))
 
 (defn add-layout-component

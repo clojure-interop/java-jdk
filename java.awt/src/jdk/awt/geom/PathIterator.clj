@@ -32,7 +32,7 @@
    path.
 
   returns: the winding rule. - `int`"
-  ([^java.awt.geom.PathIterator this]
+  (^Integer [^java.awt.geom.PathIterator this]
     (-> this (.getWindingRule))))
 
 (defn done?
@@ -40,7 +40,7 @@
 
   returns: true if all the segments have
    been read; false otherwise. - `boolean`"
-  ([^java.awt.geom.PathIterator this]
+  (^Boolean [^java.awt.geom.PathIterator this]
     (-> this (.isDone))))
 
 (defn next
@@ -66,6 +66,6 @@
   coords - an array that holds the data returned from this method - `float[]`
 
   returns: the path-segment type of the current path segment. - `int`"
-  ([^java.awt.geom.PathIterator this coords]
+  (^Integer [^java.awt.geom.PathIterator this coords]
     (-> this (.currentSegment coords))))
 

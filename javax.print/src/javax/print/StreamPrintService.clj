@@ -29,7 +29,7 @@
   "Gets the output stream.
 
   returns: the stream to which this service will send formatted print data. - `java.io.OutputStream`"
-  ([^javax.print.StreamPrintService this]
+  (^java.io.OutputStream [^javax.print.StreamPrintService this]
     (-> this (.getOutputStream))))
 
 (defn get-output-format
@@ -38,7 +38,7 @@
    components of DocFlavors @see DocFlavor.
 
   returns: mime type identifying the output format. - `java.lang.String`"
-  ([^javax.print.StreamPrintService this]
+  (^java.lang.String [^javax.print.StreamPrintService this]
     (-> this (.getOutputFormat))))
 
 (defn dispose
@@ -59,6 +59,6 @@
    to which no further data should be written.
 
   returns: if this StreamPrintService has been disposed - `boolean`"
-  ([^javax.print.StreamPrintService this]
+  (^Boolean [^javax.print.StreamPrintService this]
     (-> this (.isDisposed))))
 

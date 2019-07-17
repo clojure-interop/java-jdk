@@ -52,7 +52,7 @@
 
   returns: True if object is equivalent to this pages per
             minute color attribute, false otherwise. - `boolean`"
-  ([^javax.print.attribute.standard.PagesPerMinuteColor this ^java.lang.Object object]
+  (^Boolean [^javax.print.attribute.standard.PagesPerMinuteColor this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -75,6 +75,6 @@
    category name is `pages-per-minute-color`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.PagesPerMinuteColor this]
+  (^java.lang.String [^javax.print.attribute.standard.PagesPerMinuteColor this]
     (-> this (.getName))))
 

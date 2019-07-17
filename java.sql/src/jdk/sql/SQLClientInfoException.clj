@@ -49,6 +49,6 @@
 
   returns: Map list containing the client info properties that could
    not be set - `java.util.Map<java.lang.String,java.sql.ClientInfoStatus>`"
-  ([^java.sql.SQLClientInfoException this]
+  (^java.util.Map [^java.sql.SQLClientInfoException this]
     (-> this (.getFailedProperties))))
 

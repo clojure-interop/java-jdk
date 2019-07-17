@@ -85,6 +85,6 @@
   returns: the value of the option - `java.lang.Object`
 
   throws: java.net.SocketException - if optID is unknown along the protocol stack (including the SocketImpl)"
-  ([^java.net.SocketOptions this ^Integer opt-id]
+  (^java.lang.Object [^java.net.SocketOptions this ^Integer opt-id]
     (-> this (.getOption opt-id))))
 

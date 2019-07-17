@@ -35,7 +35,7 @@
   item - the item to be pushed onto this stack. - `Stack.E`
 
   returns: the item argument. - `Stack.E`"
-  ([^java.util.Stack this ^Stack.E item]
+  (^Stack.E [^java.util.Stack this ^Stack.E item]
     (-> this (.push item))))
 
 (defn pop
@@ -46,7 +46,7 @@
             of the Vector object). - `Stack.E`
 
   throws: java.util.EmptyStackException - if this stack is empty."
-  ([^java.util.Stack this]
+  (^Stack.E [^java.util.Stack this]
     (-> this (.pop))))
 
 (defn peek
@@ -57,7 +57,7 @@
             of the Vector object). - `Stack.E`
 
   throws: java.util.EmptyStackException - if this stack is empty."
-  ([^java.util.Stack this]
+  (^Stack.E [^java.util.Stack this]
     (-> this (.peek))))
 
 (defn empty
@@ -65,7 +65,7 @@
 
   returns: true if and only if this stack contains
             no items; false otherwise. - `boolean`"
-  ([^java.util.Stack this]
+  (^Boolean [^java.util.Stack this]
     (-> this (.empty))))
 
 (defn search
@@ -82,6 +82,6 @@
   returns: the 1-based position from the top of the stack where
             the object is located; the return value -1
             indicates that the object is not on the stack. - `int`"
-  ([^java.util.Stack this ^java.lang.Object o]
+  (^Integer [^java.util.Stack this ^java.lang.Object o]
     (-> this (.search o))))
 

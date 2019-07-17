@@ -47,6 +47,6 @@
   returns: The non-null name of this link. - `java.lang.String`
 
   throws: javax.naming.MalformedLinkException - If a link name could not be extracted"
-  ([^javax.naming.LinkRef this]
+  (^java.lang.String [^javax.naming.LinkRef this]
     (-> this (.getLinkName))))
 

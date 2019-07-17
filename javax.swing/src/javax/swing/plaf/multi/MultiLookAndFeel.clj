@@ -53,7 +53,7 @@
   returns: mui if the component has any auxiliary UI objects;
            otherwise, returns the UI object for the default look and feel
            or null if the default UI object couldn't be found - `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.plaf.ComponentUI mui ^java.util.Vector uis ^javax.swing.JComponent target]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.plaf.ComponentUI mui ^java.util.Vector uis ^javax.swing.JComponent target]
     (MultiLookAndFeel/createUIs mui uis target)))
 
 (defn get-name
@@ -61,7 +61,7 @@
    that identifies this look and feel.
 
   returns: a string such as `Multiplexing Look and Feel` - `java.lang.String`"
-  ([^javax.swing.plaf.multi.MultiLookAndFeel this]
+  (^java.lang.String [^javax.swing.plaf.multi.MultiLookAndFeel this]
     (-> this (.getName))))
 
 (defn get-id
@@ -69,14 +69,14 @@
    that identifies this look and feel.
 
   returns: `Multiplex` - `java.lang.String`"
-  ([^javax.swing.plaf.multi.MultiLookAndFeel this]
+  (^java.lang.String [^javax.swing.plaf.multi.MultiLookAndFeel this]
     (-> this (.getID))))
 
 (defn get-description
   "Returns a one-line description of this look and feel.
 
   returns: a descriptive string such as `Allows multiple UI instances per component instance` - `java.lang.String`"
-  ([^javax.swing.plaf.multi.MultiLookAndFeel this]
+  (^java.lang.String [^javax.swing.plaf.multi.MultiLookAndFeel this]
     (-> this (.getDescription))))
 
 (defn native-look-and-feel?
@@ -84,7 +84,7 @@
    this look and feel is not native to any platform.
 
   returns: false - `boolean`"
-  ([^javax.swing.plaf.multi.MultiLookAndFeel this]
+  (^Boolean [^javax.swing.plaf.multi.MultiLookAndFeel this]
     (-> this (.isNativeLookAndFeel))))
 
 (defn supported-look-and-feel?
@@ -92,7 +92,7 @@
    every platform permits this look and feel.
 
   returns: true - `boolean`"
-  ([^javax.swing.plaf.multi.MultiLookAndFeel this]
+  (^Boolean [^javax.swing.plaf.multi.MultiLookAndFeel this]
     (-> this (.isSupportedLookAndFeel))))
 
 (defn get-defaults
@@ -106,6 +106,6 @@
    (such as `javax.swing.plaf.multi.MultiButtonUI`).
 
   returns: an initialized UIDefaults object - `javax.swing.UIDefaults`"
-  ([^javax.swing.plaf.multi.MultiLookAndFeel this]
+  (^javax.swing.UIDefaults [^javax.swing.plaf.multi.MultiLookAndFeel this]
     (-> this (.getDefaults))))
 

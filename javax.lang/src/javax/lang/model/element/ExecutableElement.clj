@@ -21,7 +21,7 @@
 
   returns: true if this method or constructor accepts a variable
    number of arguments and false otherwise - `boolean`"
-  ([^javax.lang.model.element.ExecutableElement this]
+  (^Boolean [^javax.lang.model.element.ExecutableElement this]
     (-> this (.isVarArgs))))
 
 (defn get-parameters
@@ -40,7 +40,7 @@
    with no default value.
 
   returns: the default value, or null if none - `javax.lang.model.element.AnnotationValue`"
-  ([^javax.lang.model.element.ExecutableElement this]
+  (^javax.lang.model.element.AnnotationValue [^javax.lang.model.element.ExecutableElement this]
     (-> this (.getDefaultValue))))
 
 (defn get-type-parameters
@@ -59,7 +59,7 @@
    return a value.
 
   returns: the return type of this executable - `javax.lang.model.type.TypeMirror`"
-  ([^javax.lang.model.element.ExecutableElement this]
+  (^javax.lang.model.type.TypeMirror [^javax.lang.model.element.ExecutableElement this]
     (-> this (.getReturnType))))
 
 (defn get-receiver-type
@@ -76,7 +76,7 @@
    receiver type.
 
   returns: the receiver type of this executable - `javax.lang.model.type.TypeMirror`"
-  ([^javax.lang.model.element.ExecutableElement this]
+  (^javax.lang.model.type.TypeMirror [^javax.lang.model.element.ExecutableElement this]
     (-> this (.getReceiverType))))
 
 (defn get-simple-name
@@ -88,7 +88,7 @@
 
   returns: the simple name of a constructor, method, or
    initializer - `javax.lang.model.element.Name`"
-  ([^javax.lang.model.element.ExecutableElement this]
+  (^javax.lang.model.element.Name [^javax.lang.model.element.ExecutableElement this]
     (-> this (.getSimpleName))))
 
 (defn default?
@@ -97,6 +97,6 @@
 
   returns: true if this method is a default method and
    false otherwise - `boolean`"
-  ([^javax.lang.model.element.ExecutableElement this]
+  (^Boolean [^javax.lang.model.element.ExecutableElement this]
     (-> this (.isDefault))))
 

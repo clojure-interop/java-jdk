@@ -24,7 +24,7 @@
 
   returns: the Id attribute (may be null if
       not specified) - `java.lang.String`"
-  ([^javax.xml.crypto.dsig.XMLSignature$SignatureValue this]
+  (^java.lang.String [^javax.xml.crypto.dsig.XMLSignature$SignatureValue this]
     (-> this (.getId))))
 
 (defn get-value
@@ -52,6 +52,6 @@
       validated successfully; false otherwise - `boolean`
 
   throws: java.lang.NullPointerException - if validateContext is null"
-  ([^javax.xml.crypto.dsig.XMLSignature$SignatureValue this ^javax.xml.crypto.dsig.XMLValidateContext validate-context]
+  (^Boolean [^javax.xml.crypto.dsig.XMLSignature$SignatureValue this ^javax.xml.crypto.dsig.XMLValidateContext validate-context]
     (-> this (.validate validate-context))))
 

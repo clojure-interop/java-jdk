@@ -42,9 +42,9 @@
    uncompressed input stream is reached - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if len > b.length - off"
-  ([^java.util.zip.DeflaterInputStream this b ^Integer off ^Integer len]
+  (^Integer [^java.util.zip.DeflaterInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  ([^java.util.zip.DeflaterInputStream this]
+  (^Integer [^java.util.zip.DeflaterInputStream this]
     (-> this (.read))))
 
 (defn skip
@@ -59,7 +59,7 @@
   returns: the actual number of bytes skipped - `long`
 
   throws: java.io.IOException - if an I/O error occurs or if this stream is already closed"
-  ([^java.util.zip.DeflaterInputStream this ^Long n]
+  (^Long [^java.util.zip.DeflaterInputStream this ^Long n]
     (-> this (.skip n))))
 
 (defn available
@@ -72,7 +72,7 @@
    reached, otherwise always returns 1 - `int`
 
   throws: java.io.IOException - if an I/O error occurs or if this stream is already closed"
-  ([^java.util.zip.DeflaterInputStream this]
+  (^Integer [^java.util.zip.DeflaterInputStream this]
     (-> this (.available))))
 
 (defn mark-supported
@@ -80,7 +80,7 @@
    the mark() and reset() methods.
 
   returns: false, always - `boolean`"
-  ([^java.util.zip.DeflaterInputStream this]
+  (^Boolean [^java.util.zip.DeflaterInputStream this]
     (-> this (.markSupported))))
 
 (defn mark

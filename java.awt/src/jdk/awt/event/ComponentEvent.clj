@@ -97,7 +97,7 @@
   returns: the Component object that originated
    the event, or null if the object is not a
    Component. - `java.awt.Component`"
-  ([^java.awt.event.ComponentEvent this]
+  (^java.awt.Component [^java.awt.event.ComponentEvent this]
     (-> this (.getComponent))))
 
 (defn param-string
@@ -105,6 +105,6 @@
    This method is useful for event-logging and for debugging.
 
   returns: a string identifying the event and its attributes - `java.lang.String`"
-  ([^java.awt.event.ComponentEvent this]
+  (^java.lang.String [^java.awt.event.ComponentEvent this]
     (-> this (.paramString))))
 

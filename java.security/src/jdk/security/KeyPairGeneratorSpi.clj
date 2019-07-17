@@ -38,6 +38,6 @@
    is called.
 
   returns: the newly generated KeyPair - `java.security.KeyPair`"
-  ([^java.security.KeyPairGeneratorSpi this]
+  (^java.security.KeyPair [^java.security.KeyPairGeneratorSpi this]
     (-> this (.generateKeyPair))))
 

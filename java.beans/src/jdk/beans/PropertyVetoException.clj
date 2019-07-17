@@ -19,6 +19,6 @@
   "Gets the vetoed PropertyChangeEvent.
 
   returns: A PropertyChangeEvent describing the vetoed change. - `java.beans.PropertyChangeEvent`"
-  ([^java.beans.PropertyVetoException this]
+  (^java.beans.PropertyChangeEvent [^java.beans.PropertyVetoException this]
     (-> this (.getPropertyChangeEvent))))
 

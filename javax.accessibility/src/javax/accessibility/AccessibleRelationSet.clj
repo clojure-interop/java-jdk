@@ -12,7 +12,7 @@
    the array of relations passed in.  Duplicate entries are ignored.
 
   relations - an array of AccessibleRelation describing the relation set. - `javax.accessibility.AccessibleRelation[]`"
-  ([^javax.accessibility.AccessibleRelation[] relations]
+  ([relations]
     (new AccessibleRelationSet relations))
   ([]
     (new AccessibleRelationSet )))
@@ -22,7 +22,7 @@
    entries are ignored.
 
   relations - AccessibleRelation array describing the relation set. - `javax.accessibility.AccessibleRelation[]`"
-  ([^javax.accessibility.AccessibleRelationSet this ^javax.accessibility.AccessibleRelation[] relations]
+  ([^javax.accessibility.AccessibleRelationSet this relations]
     (-> this (.addAll relations))))
 
 (defn contains
@@ -32,7 +32,7 @@
   key - the AccessibleRelation key - `java.lang.String`
 
   returns: true if the relation is in the relation set; otherwise false - `boolean`"
-  ([^javax.accessibility.AccessibleRelationSet this ^java.lang.String key]
+  (^Boolean [^javax.accessibility.AccessibleRelationSet this ^java.lang.String key]
     (-> this (.contains key))))
 
 (defn to-string
@@ -40,7 +40,7 @@
    using the default locale.
 
   returns: comma separated localized String - `java.lang.String`"
-  ([^javax.accessibility.AccessibleRelationSet this]
+  (^java.lang.String [^javax.accessibility.AccessibleRelationSet this]
     (-> this (.toString))))
 
 (defn remove
@@ -54,7 +54,7 @@
 
   returns: true if the relation is in the relation set; false if the
    relation set is unchanged - `boolean`"
-  ([^javax.accessibility.AccessibleRelationSet this ^javax.accessibility.AccessibleRelation relation]
+  (^Boolean [^javax.accessibility.AccessibleRelationSet this ^javax.accessibility.AccessibleRelation relation]
     (-> this (.remove relation))))
 
 (defn add
@@ -67,14 +67,14 @@
 
   returns: true if relation is added to the relation set; false if the
    relation set is unchanged - `boolean`"
-  ([^javax.accessibility.AccessibleRelationSet this ^javax.accessibility.AccessibleRelation relation]
+  (^Boolean [^javax.accessibility.AccessibleRelationSet this ^javax.accessibility.AccessibleRelation relation]
     (-> this (.add relation))))
 
 (defn size
   "Returns the number of relations in the relation set.
 
   returns: the number of relations in the relation set - `int`"
-  ([^javax.accessibility.AccessibleRelationSet this]
+  (^Integer [^javax.accessibility.AccessibleRelationSet this]
     (-> this (.size))))
 
 (defn clear
@@ -96,6 +96,6 @@
 
   returns: the relation, if one exists, that matches the specified key.
    Otherwise, null is returned. - `javax.accessibility.AccessibleRelation`"
-  ([^javax.accessibility.AccessibleRelationSet this ^java.lang.String key]
+  (^javax.accessibility.AccessibleRelation [^javax.accessibility.AccessibleRelationSet this ^java.lang.String key]
     (-> this (.get key))))
 

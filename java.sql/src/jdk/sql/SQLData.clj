@@ -45,7 +45,7 @@
               when this object was constructed and populated - `java.lang.String`
 
   throws: java.sql.SQLException - if there is a database access error"
-  ([^java.sql.SQLData this]
+  (^java.lang.String [^java.sql.SQLData this]
     (-> this (.getSQLTypeName))))
 
 (defn read-sql

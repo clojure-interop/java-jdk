@@ -14,7 +14,7 @@
    started.
 
   returns: The context that is used in processing request messages. - `java.util.Map<java.lang.String,java.lang.Object>`"
-  ([^javax.xml.ws.BindingProvider this]
+  (^java.util.Map [^javax.xml.ws.BindingProvider this]
     (-> this (.getRequestContext))))
 
 (defn get-response-context
@@ -27,14 +27,14 @@
 
   returns: The context that resulted from processing the latest
    response messages. - `java.util.Map<java.lang.String,java.lang.Object>`"
-  ([^javax.xml.ws.BindingProvider this]
+  (^java.util.Map [^javax.xml.ws.BindingProvider this]
     (-> this (.getResponseContext))))
 
 (defn get-binding
   "Get the Binding for this binding provider.
 
   returns: The Binding for this binding provider. - `javax.xml.ws.Binding`"
-  ([^javax.xml.ws.BindingProvider this]
+  (^javax.xml.ws.Binding [^javax.xml.ws.BindingProvider this]
     (-> this (.getBinding))))
 
 (defn get-endpoint-reference
@@ -51,6 +51,6 @@
   throws: javax.xml.ws.WebServiceException - If the Class clazz is not supported by this implementation."
   ([^javax.xml.ws.BindingProvider this ^java.lang.Class clazz]
     (-> this (.getEndpointReference clazz)))
-  ([^javax.xml.ws.BindingProvider this]
+  (^javax.xml.ws.EndpointReference [^javax.xml.ws.BindingProvider this]
     (-> this (.getEndpointReference))))
 

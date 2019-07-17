@@ -36,7 +36,7 @@
   delta - the value to add - `int`
 
   returns: the previous value - `int`"
-  ([^java.util.concurrent.atomic.AtomicIntegerFieldUpdater this ^AtomicIntegerFieldUpdater.T obj ^Integer delta]
+  (^Integer [^java.util.concurrent.atomic.AtomicIntegerFieldUpdater this ^AtomicIntegerFieldUpdater.T obj ^Integer delta]
     (-> this (.getAndAdd obj delta))))
 
 (defn get-and-set
@@ -47,7 +47,7 @@
   new-value - the new value - `int`
 
   returns: the previous value - `int`"
-  ([^java.util.concurrent.atomic.AtomicIntegerFieldUpdater this ^AtomicIntegerFieldUpdater.T obj ^Integer new-value]
+  (^Integer [^java.util.concurrent.atomic.AtomicIntegerFieldUpdater this ^AtomicIntegerFieldUpdater.T obj ^Integer new-value]
     (-> this (.getAndSet obj new-value))))
 
 (defn update-and-get
@@ -60,7 +60,7 @@
   update-function - a side-effect-free function - `java.util.function.IntUnaryOperator`
 
   returns: the updated value - `int`"
-  ([^java.util.concurrent.atomic.AtomicIntegerFieldUpdater this ^AtomicIntegerFieldUpdater.T obj ^java.util.function.IntUnaryOperator update-function]
+  (^Integer [^java.util.concurrent.atomic.AtomicIntegerFieldUpdater this ^AtomicIntegerFieldUpdater.T obj ^java.util.function.IntUnaryOperator update-function]
     (-> this (.updateAndGet obj update-function))))
 
 (defn add-and-get
@@ -71,7 +71,7 @@
   delta - the value to add - `int`
 
   returns: the updated value - `int`"
-  ([^java.util.concurrent.atomic.AtomicIntegerFieldUpdater this ^AtomicIntegerFieldUpdater.T obj ^Integer delta]
+  (^Integer [^java.util.concurrent.atomic.AtomicIntegerFieldUpdater this ^AtomicIntegerFieldUpdater.T obj ^Integer delta]
     (-> this (.addAndGet obj delta))))
 
 (defn get-and-update
@@ -84,7 +84,7 @@
   update-function - a side-effect-free function - `java.util.function.IntUnaryOperator`
 
   returns: the previous value - `int`"
-  ([^java.util.concurrent.atomic.AtomicIntegerFieldUpdater this ^AtomicIntegerFieldUpdater.T obj ^java.util.function.IntUnaryOperator update-function]
+  (^Integer [^java.util.concurrent.atomic.AtomicIntegerFieldUpdater this ^AtomicIntegerFieldUpdater.T obj ^java.util.function.IntUnaryOperator update-function]
     (-> this (.getAndUpdate obj update-function))))
 
 (defn accumulate-and-get
@@ -101,7 +101,7 @@
   accumulator-function - a side-effect-free function of two arguments - `java.util.function.IntBinaryOperator`
 
   returns: the updated value - `int`"
-  ([^java.util.concurrent.atomic.AtomicIntegerFieldUpdater this ^AtomicIntegerFieldUpdater.T obj ^Integer x ^java.util.function.IntBinaryOperator accumulator-function]
+  (^Integer [^java.util.concurrent.atomic.AtomicIntegerFieldUpdater this ^AtomicIntegerFieldUpdater.T obj ^Integer x ^java.util.function.IntBinaryOperator accumulator-function]
     (-> this (.accumulateAndGet obj x accumulator-function))))
 
 (defn get-and-decrement
@@ -111,7 +111,7 @@
   obj - An object whose field to get and set - `AtomicIntegerFieldUpdater.T`
 
   returns: the previous value - `int`"
-  ([^java.util.concurrent.atomic.AtomicIntegerFieldUpdater this ^AtomicIntegerFieldUpdater.T obj]
+  (^Integer [^java.util.concurrent.atomic.AtomicIntegerFieldUpdater this ^AtomicIntegerFieldUpdater.T obj]
     (-> this (.getAndDecrement obj))))
 
 (defn decrement-and-get
@@ -121,7 +121,7 @@
   obj - An object whose field to get and set - `AtomicIntegerFieldUpdater.T`
 
   returns: the updated value - `int`"
-  ([^java.util.concurrent.atomic.AtomicIntegerFieldUpdater this ^AtomicIntegerFieldUpdater.T obj]
+  (^Integer [^java.util.concurrent.atomic.AtomicIntegerFieldUpdater this ^AtomicIntegerFieldUpdater.T obj]
     (-> this (.decrementAndGet obj))))
 
 (defn weak-compare-and-set
@@ -142,7 +142,7 @@
   returns: true if successful - `boolean`
 
   throws: java.lang.ClassCastException - if obj is not an instance of the class possessing the field established in the constructor"
-  ([^java.util.concurrent.atomic.AtomicIntegerFieldUpdater this ^AtomicIntegerFieldUpdater.T obj ^Integer expect ^Integer update]
+  (^Boolean [^java.util.concurrent.atomic.AtomicIntegerFieldUpdater this ^AtomicIntegerFieldUpdater.T obj ^Integer expect ^Integer update]
     (-> this (.weakCompareAndSet obj expect update))))
 
 (defn get-and-increment
@@ -152,7 +152,7 @@
   obj - An object whose field to get and set - `AtomicIntegerFieldUpdater.T`
 
   returns: the previous value - `int`"
-  ([^java.util.concurrent.atomic.AtomicIntegerFieldUpdater this ^AtomicIntegerFieldUpdater.T obj]
+  (^Integer [^java.util.concurrent.atomic.AtomicIntegerFieldUpdater this ^AtomicIntegerFieldUpdater.T obj]
     (-> this (.getAndIncrement obj))))
 
 (defn lazy-set
@@ -188,7 +188,7 @@
   accumulator-function - a side-effect-free function of two arguments - `java.util.function.IntBinaryOperator`
 
   returns: the previous value - `int`"
-  ([^java.util.concurrent.atomic.AtomicIntegerFieldUpdater this ^AtomicIntegerFieldUpdater.T obj ^Integer x ^java.util.function.IntBinaryOperator accumulator-function]
+  (^Integer [^java.util.concurrent.atomic.AtomicIntegerFieldUpdater this ^AtomicIntegerFieldUpdater.T obj ^Integer x ^java.util.function.IntBinaryOperator accumulator-function]
     (-> this (.getAndAccumulate obj x accumulator-function))))
 
 (defn compare-and-set
@@ -205,7 +205,7 @@
   returns: true if successful - `boolean`
 
   throws: java.lang.ClassCastException - if obj is not an instance of the class possessing the field established in the constructor"
-  ([^java.util.concurrent.atomic.AtomicIntegerFieldUpdater this ^AtomicIntegerFieldUpdater.T obj ^Integer expect ^Integer update]
+  (^Boolean [^java.util.concurrent.atomic.AtomicIntegerFieldUpdater this ^AtomicIntegerFieldUpdater.T obj ^Integer expect ^Integer update]
     (-> this (.compareAndSet obj expect update))))
 
 (defn get
@@ -215,7 +215,7 @@
   obj - An object whose field to get - `AtomicIntegerFieldUpdater.T`
 
   returns: the current value - `int`"
-  ([^java.util.concurrent.atomic.AtomicIntegerFieldUpdater this ^AtomicIntegerFieldUpdater.T obj]
+  (^Integer [^java.util.concurrent.atomic.AtomicIntegerFieldUpdater this ^AtomicIntegerFieldUpdater.T obj]
     (-> this (.get obj))))
 
 (defn increment-and-get
@@ -225,6 +225,6 @@
   obj - An object whose field to get and set - `AtomicIntegerFieldUpdater.T`
 
   returns: the updated value - `int`"
-  ([^java.util.concurrent.atomic.AtomicIntegerFieldUpdater this ^AtomicIntegerFieldUpdater.T obj]
+  (^Integer [^java.util.concurrent.atomic.AtomicIntegerFieldUpdater this ^AtomicIntegerFieldUpdater.T obj]
     (-> this (.incrementAndGet obj))))
 

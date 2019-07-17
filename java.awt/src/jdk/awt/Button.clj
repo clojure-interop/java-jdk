@@ -89,7 +89,7 @@
 
   returns: the button's label, or null
                   if the button has no label. - `java.lang.String`"
-  ([^java.awt.Button this]
+  (^java.lang.String [^java.awt.Button this]
     (-> this (.getLabel))))
 
 (defn get-accessible-context
@@ -102,7 +102,7 @@
 
   returns: an AccessibleAWTButton that serves as the
            AccessibleContext of this Button - `javax.accessibility.AccessibleContext`"
-  ([^java.awt.Button this]
+  (^javax.accessibility.AccessibleContext [^java.awt.Button this]
     (-> this (.getAccessibleContext))))
 
 (defn remove-action-listener
@@ -154,7 +154,7 @@
    returns the label of the button.
 
   returns: `java.lang.String`"
-  ([^java.awt.Button this]
+  (^java.lang.String [^java.awt.Button this]
     (-> this (.getActionCommand))))
 
 (defn set-action-command

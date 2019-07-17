@@ -131,7 +131,7 @@
   returns: an array of KeyBindings - `javax.swing.text.JTextComponent.KeyBinding[]`
 
   throws: java.lang.NullPointerException - if keyBindingList is null"
-  ([^java.lang.Object[] key-binding-list]
+  ([key-binding-list]
     (LookAndFeel/makeKeyBindings key-binding-list)))
 
 (defn *make-input-map
@@ -143,7 +143,7 @@
   keys - alternating pairs of keystroke-action key pairs as described in loadKeyBindings(javax.swing.InputMap, java.lang.Object[]) - `java.lang.Object[]`
 
   returns: newly created and populated InputMapUIResource - `javax.swing.InputMap`"
-  ([^java.lang.Object[] keys]
+  (^javax.swing.InputMap [keys]
     (LookAndFeel/makeInputMap keys)))
 
 (defn *make-component-input-map
@@ -157,7 +157,7 @@
   returns: newly created and populated InputMapUIResource - `javax.swing.ComponentInputMap`
 
   throws: java.lang.IllegalArgumentException - if c is null"
-  ([^javax.swing.JComponent c ^java.lang.Object[] keys]
+  (^javax.swing.ComponentInputMap [^javax.swing.JComponent c keys]
     (LookAndFeel/makeComponentInputMap c keys)))
 
 (defn *install-colors
@@ -184,7 +184,7 @@
   fallback-value - the object to be returned as the value if the system value is null - `java.lang.Object`
 
   returns: the current value of the desktop property - `java.lang.Object`"
-  ([^java.lang.String system-property-name ^java.lang.Object fallback-value]
+  (^java.lang.Object [^java.lang.String system-property-name ^java.lang.Object fallback-value]
     (LookAndFeel/getDesktopPropertyValue system-property-name fallback-value)))
 
 (defn *uninstall-border
@@ -227,7 +227,7 @@
   keys - bindings to add to retMap - `java.lang.Object[]`
 
   throws: java.lang.NullPointerException - if keys is non-null, not empty, and retMap is null"
-  ([^javax.swing.InputMap ret-map ^java.lang.Object[] keys]
+  ([^javax.swing.InputMap ret-map keys]
     (LookAndFeel/loadKeyBindings ret-map keys)))
 
 (defn *install-border
@@ -291,7 +291,7 @@
 
   returns: a UIDefaults.LazyValue; when resolved the
            LazyValue loads the specified image - `java.lang.Object`"
-  ([^java.lang.Class base-class ^java.lang.String gif-file]
+  (^java.lang.Object [^java.lang.Class base-class ^java.lang.String gif-file]
     (LookAndFeel/makeIcon base-class gif-file)))
 
 (defn get-disabled-selected-icon
@@ -313,7 +313,7 @@
 
   returns: disabled and selected icon, or null if a suitable
            Icon can not be generated. - `javax.swing.Icon`"
-  ([^javax.swing.LookAndFeel this ^javax.swing.JComponent component ^javax.swing.Icon icon]
+  (^javax.swing.Icon [^javax.swing.LookAndFeel this ^javax.swing.JComponent component ^javax.swing.Icon icon]
     (-> this (.getDisabledSelectedIcon component icon))))
 
 (defn uninitialize
@@ -338,7 +338,7 @@
 
   returns: true if the RootPaneUI instances created by
            this look and feel support client side decorations - `boolean`"
-  ([^javax.swing.LookAndFeel this]
+  (^Boolean [^javax.swing.LookAndFeel this]
     (-> this (.getSupportsWindowDecorations))))
 
 (defn get-defaults
@@ -348,7 +348,7 @@
    initialize has been invoked.
 
   returns: the look and feel defaults - `javax.swing.UIDefaults`"
-  ([^javax.swing.LookAndFeel this]
+  (^javax.swing.UIDefaults [^javax.swing.LookAndFeel this]
     (-> this (.getDefaults))))
 
 (defn to-string
@@ -356,7 +356,7 @@
    object's properties.
 
   returns: a String representation of this object - `java.lang.String`"
-  ([^javax.swing.LookAndFeel this]
+  (^java.lang.String [^javax.swing.LookAndFeel this]
     (-> this (.toString))))
 
 (defn get-name
@@ -369,7 +369,7 @@
    of names.
 
   returns: short identifier for the look and feel - `java.lang.String`"
-  ([^javax.swing.LookAndFeel this]
+  (^java.lang.String [^javax.swing.LookAndFeel this]
     (-> this (.getName))))
 
 (defn get-layout-style
@@ -381,7 +381,7 @@
    method getInstance.
 
   returns: the LayoutStyle for this look and feel - `javax.swing.LayoutStyle`"
-  ([^javax.swing.LookAndFeel this]
+  (^javax.swing.LayoutStyle [^javax.swing.LookAndFeel this]
     (-> this (.getLayoutStyle))))
 
 (defn get-description
@@ -390,7 +390,7 @@
    the user, e.g. in the title of a window or in a ToolTip message.
 
   returns: short description for the look and feel - `java.lang.String`"
-  ([^javax.swing.LookAndFeel this]
+  (^java.lang.String [^javax.swing.LookAndFeel this]
     (-> this (.getDescription))))
 
 (defn supported-look-and-feel?
@@ -400,7 +400,7 @@
    aren't defined for the current platform.
 
   returns: true if this is a supported look and feel - `boolean`"
-  ([^javax.swing.LookAndFeel this]
+  (^Boolean [^javax.swing.LookAndFeel this]
     (-> this (.isSupportedLookAndFeel))))
 
 (defn provide-error-feedback
@@ -436,7 +436,7 @@
 
   returns: true if this look and feel represents the underlying
            platform look and feel - `boolean`"
-  ([^javax.swing.LookAndFeel this]
+  (^Boolean [^javax.swing.LookAndFeel this]
     (-> this (.isNativeLookAndFeel))))
 
 (defn get-id
@@ -449,7 +449,7 @@
    shouldn't override this method.
 
   returns: identifier for the look and feel - `java.lang.String`"
-  ([^javax.swing.LookAndFeel this]
+  (^java.lang.String [^javax.swing.LookAndFeel this]
     (-> this (.getID))))
 
 (defn get-disabled-icon
@@ -469,6 +469,6 @@
 
   returns: disabled Icon, or null if a suitable
            Icon can not be generated - `javax.swing.Icon`"
-  ([^javax.swing.LookAndFeel this ^javax.swing.JComponent component ^javax.swing.Icon icon]
+  (^javax.swing.Icon [^javax.swing.LookAndFeel this ^javax.swing.JComponent component ^javax.swing.Icon icon]
     (-> this (.getDisabledIcon component icon))))
 

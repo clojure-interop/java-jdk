@@ -46,6 +46,6 @@
    key specification.
 
   returns: the string `PKCS#8`. - `java.lang.String`"
-  ([^java.security.spec.PKCS8EncodedKeySpec this]
+  (^java.lang.String [^java.security.spec.PKCS8EncodedKeySpec this]
     (-> this (.getFormat))))
 

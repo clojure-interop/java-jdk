@@ -47,6 +47,6 @@
   p - a visitor-specified parameter - `SimpleTypeVisitor7.P`
 
   returns: the result of defaultAction - `SimpleTypeVisitor7.R`"
-  ([^javax.lang.model.util.SimpleTypeVisitor7 this ^javax.lang.model.type.UnionType t ^SimpleTypeVisitor7.P p]
+  (^SimpleTypeVisitor7.R [^javax.lang.model.util.SimpleTypeVisitor7 this ^javax.lang.model.type.UnionType t ^SimpleTypeVisitor7.P p]
     (-> this (.visitUnion t p))))
 

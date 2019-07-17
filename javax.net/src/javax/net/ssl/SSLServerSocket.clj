@@ -30,7 +30,7 @@
 
   returns: true if client authentication is required,
             or false if no client authentication is desired. - `boolean`"
-  ([^javax.net.ssl.SSLServerSocket this]
+  (^Boolean [^javax.net.ssl.SSLServerSocket this]
     (-> this (.getNeedClientAuth))))
 
 (defn get-supported-protocols
@@ -68,7 +68,7 @@
   "Returns true if accepted connections will be in SSL client mode.
 
   returns: true if the connection should use SSL client mode. - `boolean`"
-  ([^javax.net.ssl.SSLServerSocket this]
+  (^Boolean [^javax.net.ssl.SSLServerSocket this]
     (-> this (.getUseClientMode))))
 
 (defn set-want-client-auth
@@ -105,7 +105,7 @@
    are always non-null.
 
   returns: the SSLParameters in effect for newly accepted connections - `javax.net.ssl.SSLParameters`"
-  ([^javax.net.ssl.SSLServerSocket this]
+  (^javax.net.ssl.SSLParameters [^javax.net.ssl.SSLServerSocket this]
     (-> this (.getSSLParameters))))
 
 (defn get-enabled-cipher-suites
@@ -183,7 +183,7 @@
   suites - Names of all the cipher suites to enable - `java.lang.String[]`
 
   throws: java.lang.IllegalArgumentException - when one or more of ciphers named by the parameter is not supported, or when the parameter is null."
-  ([^javax.net.ssl.SSLServerSocket this ^java.lang.String[] suites]
+  ([^javax.net.ssl.SSLServerSocket this suites]
     (-> this (.setEnabledCipherSuites suites))))
 
 (defn get-enable-session-creation?
@@ -193,7 +193,7 @@
   returns: true indicates that sessions may be created; this
             is the default.  false indicates that an existing
             session must be resumed - `boolean`"
-  ([^javax.net.ssl.SSLServerSocket this]
+  (^Boolean [^javax.net.ssl.SSLServerSocket this]
     (-> this (.getEnableSessionCreation))))
 
 (defn set-enable-session-creation
@@ -222,7 +222,7 @@
   protocols - Names of all the protocols to enable. - `java.lang.String[]`
 
   throws: java.lang.IllegalArgumentException - when one or more of the protocols named by the parameter is not supported or when the protocols parameter is null."
-  ([^javax.net.ssl.SSLServerSocket this ^java.lang.String[] protocols]
+  ([^javax.net.ssl.SSLServerSocket this protocols]
     (-> this (.setEnabledProtocols protocols))))
 
 (defn set-need-client-auth
@@ -271,6 +271,6 @@
 
   returns: true if client authentication is requested,
             or false if no client authentication is desired. - `boolean`"
-  ([^javax.net.ssl.SSLServerSocket this]
+  (^Boolean [^javax.net.ssl.SSLServerSocket this]
     (-> this (.getWantClientAuth))))
 

@@ -15,7 +15,7 @@
   b - component to create UI object for - `javax.swing.JComponent`
 
   returns: the UI object - `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent b]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent b]
     (SynthRadioButtonMenuItemUI/createUI b)))
 
 (defn paint-border

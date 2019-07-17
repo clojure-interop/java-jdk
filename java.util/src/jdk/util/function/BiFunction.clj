@@ -14,7 +14,7 @@
   u - the second function argument - `BiFunction.U`
 
   returns: the function result - `BiFunction.R`"
-  ([^java.util.function.BiFunction this ^BiFunction.T t ^BiFunction.U u]
+  (^BiFunction.R [^java.util.function.BiFunction this ^BiFunction.T t ^BiFunction.U u]
     (-> this (.apply t u))))
 
 (defn and-then

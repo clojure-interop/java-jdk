@@ -36,7 +36,7 @@
    for the calling thread's context.
 
   returns: this thread's context's KeyboardFocusManager - `javax.swing.FocusManager`"
-  ([]
+  (^javax.swing.FocusManager []
     (FocusManager/getCurrentManager )))
 
 (defn *set-current-manager

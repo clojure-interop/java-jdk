@@ -74,6 +74,6 @@
   returns: the enum constant with the specified name - `java.time.format.ResolverStyle`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^java.time.format.ResolverStyle [^java.lang.String name]
     (ResolverStyle/valueOf name)))
 

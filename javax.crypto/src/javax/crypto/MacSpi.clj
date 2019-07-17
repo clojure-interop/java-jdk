@@ -20,6 +20,6 @@
   returns: a clone if the implementation is cloneable. - `java.lang.Object`
 
   throws: java.lang.CloneNotSupportedException - if this is called on an implementation that does not support Cloneable."
-  ([^javax.crypto.MacSpi this]
+  (^java.lang.Object [^javax.crypto.MacSpi this]
     (-> this (.clone))))
 

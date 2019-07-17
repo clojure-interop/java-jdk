@@ -84,14 +84,14 @@
   "Returns the relation identifier of created/removed/updated relation.
 
   returns: the relation id. - `java.lang.String`"
-  ([^javax.management.relation.RelationNotification this]
+  (^java.lang.String [^javax.management.relation.RelationNotification this]
     (-> this (.getRelationId))))
 
 (defn get-relation-type-name
   "Returns the relation type name of created/removed/updated relation.
 
   returns: the relation type name. - `java.lang.String`"
-  ([^javax.management.relation.RelationNotification this]
+  (^java.lang.String [^javax.management.relation.RelationNotification this]
     (-> this (.getRelationTypeName))))
 
 (defn get-object-name
@@ -99,7 +99,7 @@
    created/removed/updated relation.
 
   returns: the ObjectName if the relation is an MBean, otherwise null. - `javax.management.ObjectName`"
-  ([^javax.management.relation.RelationNotification this]
+  (^javax.management.ObjectName [^javax.management.relation.RelationNotification this]
     (-> this (.getObjectName))))
 
 (defn get-m-beans-to-unregister
@@ -107,27 +107,27 @@
    due to a relation removal (only for relation removal).
 
   returns: a List of ObjectName. - `java.util.List<javax.management.ObjectName>`"
-  ([^javax.management.relation.RelationNotification this]
+  (^java.util.List [^javax.management.relation.RelationNotification this]
     (-> this (.getMBeansToUnregister))))
 
 (defn get-role-name
   "Returns name of updated role of updated relation (only for role update).
 
   returns: the name of the updated role. - `java.lang.String`"
-  ([^javax.management.relation.RelationNotification this]
+  (^java.lang.String [^javax.management.relation.RelationNotification this]
     (-> this (.getRoleName))))
 
 (defn get-old-role-value
   "Returns old value of updated role (only for role update).
 
   returns: the old value of the updated role. - `java.util.List<javax.management.ObjectName>`"
-  ([^javax.management.relation.RelationNotification this]
+  (^java.util.List [^javax.management.relation.RelationNotification this]
     (-> this (.getOldRoleValue))))
 
 (defn get-new-role-value
   "Returns new value of updated role (only for role update).
 
   returns: the new value of the updated role. - `java.util.List<javax.management.ObjectName>`"
-  ([^javax.management.relation.RelationNotification this]
+  (^java.util.List [^javax.management.relation.RelationNotification this]
     (-> this (.getNewRoleValue))))
 

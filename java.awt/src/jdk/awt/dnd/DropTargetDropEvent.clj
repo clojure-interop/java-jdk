@@ -71,7 +71,7 @@
    location in the Component's coordinates.
 
   returns: the current Cursor location in Component's coords. - `java.awt.Point`"
-  ([^java.awt.dnd.DropTargetDropEvent this]
+  (^java.awt.Point [^java.awt.dnd.DropTargetDropEvent this]
     (-> this (.getLocation))))
 
 (defn drop-complete
@@ -86,7 +86,7 @@
   "This method returns the user drop action.
 
   returns: the user drop actions. - `int`"
-  ([^java.awt.dnd.DropTargetDropEvent this]
+  (^Integer [^java.awt.dnd.DropTargetDropEvent this]
     (-> this (.getDropAction))))
 
 (defn get-current-data-flavors-as-list
@@ -94,14 +94,14 @@
    DataFlavors as a java.util.List.
 
   returns: the currently available DataFlavors as a java.util.List - `java.util.List<java.awt.datatransfer.DataFlavor>`"
-  ([^java.awt.dnd.DropTargetDropEvent this]
+  (^java.util.List [^java.awt.dnd.DropTargetDropEvent this]
     (-> this (.getCurrentDataFlavorsAsList))))
 
 (defn get-source-actions
   "This method returns the source drop actions.
 
   returns: the source drop actions. - `int`"
-  ([^java.awt.dnd.DropTargetDropEvent this]
+  (^Integer [^java.awt.dnd.DropTargetDropEvent this]
     (-> this (.getSourceActions))))
 
 (defn get-transferable
@@ -109,7 +109,7 @@
    associated with the drop.
 
   returns: the Transferable associated with the drop - `java.awt.datatransfer.Transferable`"
-  ([^java.awt.dnd.DropTargetDropEvent this]
+  (^java.awt.datatransfer.Transferable [^java.awt.dnd.DropTargetDropEvent this]
     (-> this (.getTransferable))))
 
 (defn get-current-data-flavors
@@ -129,7 +129,7 @@
    the source is in the same JVM as the target.
 
   returns: if the Source is in the same JVM - `boolean`"
-  ([^java.awt.dnd.DropTargetDropEvent this]
+  (^Boolean [^java.awt.dnd.DropTargetDropEvent this]
     (-> this (.isLocalTransfer))))
 
 (defn data-flavor-supported?
@@ -140,6 +140,6 @@
   df - the DataFlavor to test - `java.awt.datatransfer.DataFlavor`
 
   returns: if the DataFlavor specified is available from the source - `boolean`"
-  ([^java.awt.dnd.DropTargetDropEvent this ^java.awt.datatransfer.DataFlavor df]
+  (^Boolean [^java.awt.dnd.DropTargetDropEvent this ^java.awt.datatransfer.DataFlavor df]
     (-> this (.isDataFlavorSupported df))))
 

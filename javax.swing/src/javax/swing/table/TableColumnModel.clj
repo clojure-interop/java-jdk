@@ -19,21 +19,21 @@
 
   returns: the TableColumn object for
                             the column at columnIndex - `javax.swing.table.TableColumn`"
-  ([^javax.swing.table.TableColumnModel this ^Integer column-index]
+  (^javax.swing.table.TableColumn [^javax.swing.table.TableColumnModel this ^Integer column-index]
     (-> this (.getColumn column-index))))
 
 (defn get-columns
   "Returns an Enumeration of all the columns in the model.
 
   returns: an Enumeration of all the columns in the model - `java.util.Enumeration<javax.swing.table.TableColumn>`"
-  ([^javax.swing.table.TableColumnModel this]
+  (^java.util.Enumeration [^javax.swing.table.TableColumnModel this]
     (-> this (.getColumns))))
 
 (defn get-column-count
   "Returns the number of columns in the model.
 
   returns: the number of columns in the model - `int`"
-  ([^javax.swing.table.TableColumnModel this]
+  (^Integer [^javax.swing.table.TableColumnModel this]
     (-> this (.getColumnCount))))
 
 (defn set-selection-model
@@ -47,7 +47,7 @@
   "Returns true if columns may be selected.
 
   returns: true if columns may be selected - `boolean`"
-  ([^javax.swing.table.TableColumnModel this]
+  (^Boolean [^javax.swing.table.TableColumnModel this]
     (-> this (.getColumnSelectionAllowed))))
 
 (defn remove-column
@@ -72,14 +72,14 @@
   "Returns the current selection model.
 
   returns: a ListSelectionModel object - `javax.swing.ListSelectionModel`"
-  ([^javax.swing.table.TableColumnModel this]
+  (^javax.swing.ListSelectionModel [^javax.swing.table.TableColumnModel this]
     (-> this (.getSelectionModel))))
 
 (defn get-selected-column-count
   "Returns the number of selected columns.
 
   returns: the number of selected columns; or 0 if no columns are selected - `int`"
-  ([^javax.swing.table.TableColumnModel this]
+  (^Integer [^javax.swing.table.TableColumnModel this]
     (-> this (.getSelectedColumnCount))))
 
 (defn move-column
@@ -121,7 +121,7 @@
   "Returns the width between the cells in each column.
 
   returns: the margin, in pixels, between the cells - `int`"
-  ([^javax.swing.table.TableColumnModel this]
+  (^Integer [^javax.swing.table.TableColumnModel this]
     (-> this (.getColumnMargin))))
 
 (defn get-selected-columns
@@ -136,7 +136,7 @@
   "Returns the total width of all the columns.
 
   returns: the total computed width of all columns - `int`"
-  ([^javax.swing.table.TableColumnModel this]
+  (^Integer [^javax.swing.table.TableColumnModel this]
     (-> this (.getTotalColumnWidth))))
 
 (defn get-column-index-at-x
@@ -161,7 +161,7 @@
   x-position - `int`
 
   returns: the index of the column; or -1 if no column is found - `int`"
-  ([^javax.swing.table.TableColumnModel this ^Integer x-position]
+  (^Integer [^javax.swing.table.TableColumnModel this ^Integer x-position]
     (-> this (.getColumnIndexAtX x-position))))
 
 (defn add-column-model-listener
@@ -182,6 +182,6 @@
                     whose identifier is equal to identifier - `int`
 
   throws: java.lang.IllegalArgumentException - if identifier is null, or no TableColumn has this identifier"
-  ([^javax.swing.table.TableColumnModel this ^java.lang.Object column-identifier]
+  (^Integer [^javax.swing.table.TableColumnModel this ^java.lang.Object column-identifier]
     (-> this (.getColumnIndex column-identifier))))
 

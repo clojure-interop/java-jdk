@@ -21,7 +21,7 @@
   "Returns the type of this certificate.
 
   returns: the type of this certificate. - `java.lang.String`"
-  ([^java.security.cert.Certificate this]
+  (^java.lang.String [^java.security.cert.Certificate this]
     (-> this (.getType))))
 
 (defn equals
@@ -35,7 +35,7 @@
 
   returns: true iff the encoded forms of the two certificates
    match, false otherwise. - `boolean`"
-  ([^java.security.cert.Certificate this ^java.lang.Object other]
+  (^Boolean [^java.security.cert.Certificate this ^java.lang.Object other]
     (-> this (.equals other))))
 
 (defn hash-code
@@ -43,7 +43,7 @@
    encoded form.
 
   returns: the hashcode value. - `int`"
-  ([^java.security.cert.Certificate this]
+  (^Integer [^java.security.cert.Certificate this]
     (-> this (.hashCode))))
 
 (defn get-encoded
@@ -77,13 +77,13 @@
   "Returns a string representation of this certificate.
 
   returns: a string representation of this certificate. - `java.lang.String`"
-  ([^java.security.cert.Certificate this]
+  (^java.lang.String [^java.security.cert.Certificate this]
     (-> this (.toString))))
 
 (defn get-public-key
   "Gets the public key from this certificate.
 
   returns: the public key. - `java.security.PublicKey`"
-  ([^java.security.cert.Certificate this]
+  (^java.security.PublicKey [^java.security.cert.Certificate this]
     (-> this (.getPublicKey))))
 

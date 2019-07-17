@@ -83,7 +83,7 @@
   object - the name of the object whose derived gauge timestamp is to be returned. - `javax.management.ObjectName`
 
   returns: The derived gauge timestamp of the specified object. - `long`"
-  ([^javax.management.monitor.GaugeMonitor this ^javax.management.ObjectName object]
+  (^Long [^javax.management.monitor.GaugeMonitor this ^javax.management.ObjectName object]
     (-> this (.getDerivedGaugeTimeStamp object)))
   ([^javax.management.monitor.GaugeMonitor this]
     (-> this (.getDerivedGaugeTimeStamp))))
@@ -110,14 +110,14 @@
 
   returns: true if the gauge monitor notifies when
    exceeding the low threshold, false otherwise. - `boolean`"
-  ([^javax.management.monitor.GaugeMonitor this]
+  (^Boolean [^javax.management.monitor.GaugeMonitor this]
     (-> this (.getNotifyLow))))
 
 (defn get-high-threshold
   "Gets the high threshold value common to all observed MBeans.
 
   returns: The high threshold value. - `java.lang.Number`"
-  ([^javax.management.monitor.GaugeMonitor this]
+  (^java.lang.Number [^javax.management.monitor.GaugeMonitor this]
     (-> this (.getHighThreshold))))
 
 (defn start
@@ -129,7 +129,7 @@
   "Gets the low threshold value common to all observed MBeans.
 
   returns: The low threshold value. - `java.lang.Number`"
-  ([^javax.management.monitor.GaugeMonitor this]
+  (^java.lang.Number [^javax.management.monitor.GaugeMonitor this]
     (-> this (.getLowThreshold))))
 
 (defn set-thresholds
@@ -149,7 +149,7 @@
 
   returns: true if the gauge monitor notifies when
    exceeding the high threshold, false otherwise. - `boolean`"
-  ([^javax.management.monitor.GaugeMonitor this]
+  (^Boolean [^javax.management.monitor.GaugeMonitor this]
     (-> this (.getNotifyHigh))))
 
 (defn get-difference-mode?
@@ -157,7 +157,7 @@
 
   returns: true if the difference mode is used,
    false otherwise. - `boolean`"
-  ([^javax.management.monitor.GaugeMonitor this]
+  (^Boolean [^javax.management.monitor.GaugeMonitor this]
     (-> this (.getDifferenceMode))))
 
 (defn get-derived-gauge
@@ -167,7 +167,7 @@
   object - the name of the MBean. - `javax.management.ObjectName`
 
   returns: The derived gauge of the specified object. - `java.lang.Number`"
-  ([^javax.management.monitor.GaugeMonitor this ^javax.management.ObjectName object]
+  (^java.lang.Number [^javax.management.monitor.GaugeMonitor this ^javax.management.ObjectName object]
     (-> this (.getDerivedGauge object)))
   ([^javax.management.monitor.GaugeMonitor this]
     (-> this (.getDerivedGauge))))

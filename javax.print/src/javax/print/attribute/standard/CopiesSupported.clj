@@ -45,7 +45,7 @@
 
   returns: True if object is equivalent to this copies
             supported attribute, false otherwise. - `boolean`"
-  ([^javax.print.attribute.standard.CopiesSupported this ^java.lang.Object object]
+  (^Boolean [^javax.print.attribute.standard.CopiesSupported this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -68,6 +68,6 @@
    name is `copies-supported`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.CopiesSupported this]
+  (^java.lang.String [^javax.print.attribute.standard.CopiesSupported this]
     (-> this (.getName))))
 

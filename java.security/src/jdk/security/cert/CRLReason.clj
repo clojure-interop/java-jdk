@@ -124,6 +124,6 @@
   returns: the enum constant with the specified name - `java.security.cert.CRLReason`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^java.security.cert.CRLReason [^java.lang.String name]
     (CRLReason/valueOf name)))
 

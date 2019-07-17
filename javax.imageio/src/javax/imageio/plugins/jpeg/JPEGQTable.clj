@@ -92,13 +92,13 @@
 
   returns: a new quantization table that is a linear multiple
    of the current table. - `javax.imageio.plugins.jpeg.JPEGQTable`"
-  ([^javax.imageio.plugins.jpeg.JPEGQTable this ^Float scale-factor ^Boolean force-baseline]
+  (^javax.imageio.plugins.jpeg.JPEGQTable [^javax.imageio.plugins.jpeg.JPEGQTable this ^Float scale-factor ^Boolean force-baseline]
     (-> this (.getScaledInstance scale-factor force-baseline))))
 
 (defn to-string
   "Returns a String representing this quantization table.
 
   returns: a String representing this quantization table. - `java.lang.String`"
-  ([^javax.imageio.plugins.jpeg.JPEGQTable this]
+  (^java.lang.String [^javax.imageio.plugins.jpeg.JPEGQTable this]
     (-> this (.toString))))
 

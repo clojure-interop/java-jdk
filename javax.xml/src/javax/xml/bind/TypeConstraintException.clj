@@ -35,14 +35,14 @@
   "Get the vendor specific error code
 
   returns: a string specifying the vendor specific error code - `java.lang.String`"
-  ([^javax.xml.bind.TypeConstraintException this]
+  (^java.lang.String [^javax.xml.bind.TypeConstraintException this]
     (-> this (.getErrorCode))))
 
 (defn get-linked-exception
   "Get the linked exception
 
   returns: the linked Exception, null if none exists - `java.lang.Throwable`"
-  ([^javax.xml.bind.TypeConstraintException this]
+  (^java.lang.Throwable [^javax.xml.bind.TypeConstraintException this]
     (-> this (.getLinkedException))))
 
 (defn set-linked-exception
@@ -56,7 +56,7 @@
   "Returns a short description of this TypeConstraintException.
 
   returns: a string representation of this throwable. - `java.lang.String`"
-  ([^javax.xml.bind.TypeConstraintException this]
+  (^java.lang.String [^javax.xml.bind.TypeConstraintException this]
     (-> this (.toString))))
 
 (defn print-stack-trace

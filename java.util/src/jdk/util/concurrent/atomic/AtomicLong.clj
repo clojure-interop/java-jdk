@@ -27,7 +27,7 @@
   delta - the value to add - `long`
 
   returns: the previous value - `long`"
-  ([^java.util.concurrent.atomic.AtomicLong this ^Long delta]
+  (^Long [^java.util.concurrent.atomic.AtomicLong this ^Long delta]
     (-> this (.getAndAdd delta))))
 
 (defn get-and-set
@@ -36,7 +36,7 @@
   new-value - the new value - `long`
 
   returns: the previous value - `long`"
-  ([^java.util.concurrent.atomic.AtomicLong this ^Long new-value]
+  (^Long [^java.util.concurrent.atomic.AtomicLong this ^Long new-value]
     (-> this (.getAndSet new-value))))
 
 (defn update-and-get
@@ -48,7 +48,7 @@
   update-function - a side-effect-free function - `java.util.function.LongUnaryOperator`
 
   returns: the updated value - `long`"
-  ([^java.util.concurrent.atomic.AtomicLong this ^java.util.function.LongUnaryOperator update-function]
+  (^Long [^java.util.concurrent.atomic.AtomicLong this ^java.util.function.LongUnaryOperator update-function]
     (-> this (.updateAndGet update-function))))
 
 (defn double-value
@@ -57,7 +57,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type double. - `double`"
-  ([^java.util.concurrent.atomic.AtomicLong this]
+  (^Double [^java.util.concurrent.atomic.AtomicLong this]
     (-> this (.doubleValue))))
 
 (defn add-and-get
@@ -66,7 +66,7 @@
   delta - the value to add - `long`
 
   returns: the updated value - `long`"
-  ([^java.util.concurrent.atomic.AtomicLong this ^Long delta]
+  (^Long [^java.util.concurrent.atomic.AtomicLong this ^Long delta]
     (-> this (.addAndGet delta))))
 
 (defn long-value
@@ -74,7 +74,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type long. - `long`"
-  ([^java.util.concurrent.atomic.AtomicLong this]
+  (^Long [^java.util.concurrent.atomic.AtomicLong this]
     (-> this (.longValue))))
 
 (defn get-and-update
@@ -86,14 +86,14 @@
   update-function - a side-effect-free function - `java.util.function.LongUnaryOperator`
 
   returns: the previous value - `long`"
-  ([^java.util.concurrent.atomic.AtomicLong this ^java.util.function.LongUnaryOperator update-function]
+  (^Long [^java.util.concurrent.atomic.AtomicLong this ^java.util.function.LongUnaryOperator update-function]
     (-> this (.getAndUpdate update-function))))
 
 (defn to-string
   "Returns the String representation of the current value.
 
   returns: the String representation of the current value - `java.lang.String`"
-  ([^java.util.concurrent.atomic.AtomicLong this]
+  (^java.lang.String [^java.util.concurrent.atomic.AtomicLong this]
     (-> this (.toString))))
 
 (defn float-value
@@ -102,7 +102,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type float. - `float`"
-  ([^java.util.concurrent.atomic.AtomicLong this]
+  (^Float [^java.util.concurrent.atomic.AtomicLong this]
     (-> this (.floatValue))))
 
 (defn accumulate-and-get
@@ -118,21 +118,21 @@
   accumulator-function - a side-effect-free function of two arguments - `java.util.function.LongBinaryOperator`
 
   returns: the updated value - `long`"
-  ([^java.util.concurrent.atomic.AtomicLong this ^Long x ^java.util.function.LongBinaryOperator accumulator-function]
+  (^Long [^java.util.concurrent.atomic.AtomicLong this ^Long x ^java.util.function.LongBinaryOperator accumulator-function]
     (-> this (.accumulateAndGet x accumulator-function))))
 
 (defn get-and-decrement
   "Atomically decrements by one the current value.
 
   returns: the previous value - `long`"
-  ([^java.util.concurrent.atomic.AtomicLong this]
+  (^Long [^java.util.concurrent.atomic.AtomicLong this]
     (-> this (.getAndDecrement))))
 
 (defn decrement-and-get
   "Atomically decrements by one the current value.
 
   returns: the updated value - `long`"
-  ([^java.util.concurrent.atomic.AtomicLong this]
+  (^Long [^java.util.concurrent.atomic.AtomicLong this]
     (-> this (.decrementAndGet))))
 
 (defn weak-compare-and-set
@@ -147,7 +147,7 @@
   update - the new value - `long`
 
   returns: true if successful - `boolean`"
-  ([^java.util.concurrent.atomic.AtomicLong this ^Long expect ^Long update]
+  (^Boolean [^java.util.concurrent.atomic.AtomicLong this ^Long expect ^Long update]
     (-> this (.weakCompareAndSet expect update))))
 
 (defn int-value
@@ -156,14 +156,14 @@
 
   returns: the numeric value represented by this object after conversion
             to type int. - `int`"
-  ([^java.util.concurrent.atomic.AtomicLong this]
+  (^Integer [^java.util.concurrent.atomic.AtomicLong this]
     (-> this (.intValue))))
 
 (defn get-and-increment
   "Atomically increments by one the current value.
 
   returns: the previous value - `long`"
-  ([^java.util.concurrent.atomic.AtomicLong this]
+  (^Long [^java.util.concurrent.atomic.AtomicLong this]
     (-> this (.getAndIncrement))))
 
 (defn lazy-set
@@ -193,7 +193,7 @@
   accumulator-function - a side-effect-free function of two arguments - `java.util.function.LongBinaryOperator`
 
   returns: the previous value - `long`"
-  ([^java.util.concurrent.atomic.AtomicLong this ^Long x ^java.util.function.LongBinaryOperator accumulator-function]
+  (^Long [^java.util.concurrent.atomic.AtomicLong this ^Long x ^java.util.function.LongBinaryOperator accumulator-function]
     (-> this (.getAndAccumulate x accumulator-function))))
 
 (defn compare-and-set
@@ -205,20 +205,20 @@
 
   returns: true if successful. False return indicates that
    the actual value was not equal to the expected value. - `boolean`"
-  ([^java.util.concurrent.atomic.AtomicLong this ^Long expect ^Long update]
+  (^Boolean [^java.util.concurrent.atomic.AtomicLong this ^Long expect ^Long update]
     (-> this (.compareAndSet expect update))))
 
 (defn get
   "Gets the current value.
 
   returns: the current value - `long`"
-  ([^java.util.concurrent.atomic.AtomicLong this]
+  (^Long [^java.util.concurrent.atomic.AtomicLong this]
     (-> this (.get))))
 
 (defn increment-and-get
   "Atomically increments by one the current value.
 
   returns: the updated value - `long`"
-  ([^java.util.concurrent.atomic.AtomicLong this]
+  (^Long [^java.util.concurrent.atomic.AtomicLong this]
     (-> this (.incrementAndGet))))
 

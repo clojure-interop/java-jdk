@@ -118,7 +118,7 @@
    of the get/setlogStream methods, which are deprecated.
 
   returns: a java.io.PrintWriter object - `java.io.PrintWriter`"
-  ([]
+  (^java.io.PrintWriter []
     (DriverManager/getLogWriter )))
 
 (defn *get-connection
@@ -139,11 +139,11 @@
   returns: a connection to the URL - `java.sql.Connection`
 
   throws: java.sql.SQLException - if a database access error occurs or the url is null"
-  ([^java.lang.String url ^java.lang.String user ^java.lang.String password]
+  (^java.sql.Connection [^java.lang.String url ^java.lang.String user ^java.lang.String password]
     (DriverManager/getConnection url user password))
-  ([^java.lang.String url ^java.util.Properties info]
+  (^java.sql.Connection [^java.lang.String url ^java.util.Properties info]
     (DriverManager/getConnection url info))
-  ([^java.lang.String url]
+  (^java.sql.Connection [^java.lang.String url]
     (DriverManager/getConnection url)))
 
 (defn *get-log-stream
@@ -161,7 +161,7 @@
    d.getClass().getName()
 
   returns: the list of JDBC Drivers loaded by the caller's class loader - `java.util.Enumeration<java.sql.Driver>`"
-  ([]
+  (^java.util.Enumeration []
     (DriverManager/getDrivers )))
 
 (defn *deregister-driver
@@ -199,7 +199,7 @@
    that can connect to the given URL - `java.sql.Driver`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^java.lang.String url]
+  (^java.sql.Driver [^java.lang.String url]
     (DriverManager/getDriver url)))
 
 (defn *get-login-timeout
@@ -207,6 +207,6 @@
    when attempting to log in to a database.
 
   returns: the driver login time limit in seconds - `int`"
-  ([]
+  (^Integer []
     (DriverManager/getLoginTimeout )))
 

@@ -107,7 +107,7 @@
   returns: the activation group for the VM - `java.rmi.activation.ActivationGroup`
 
   throws: java.rmi.activation.ActivationException - if group already exists or if error occurs during group creation"
-  ([^java.rmi.activation.ActivationGroupID id ^java.rmi.activation.ActivationGroupDesc desc ^Long incarnation]
+  (^java.rmi.activation.ActivationGroup [^java.rmi.activation.ActivationGroupID id ^java.rmi.activation.ActivationGroupDesc desc ^Long incarnation]
     (ActivationGroup/createGroup id desc incarnation)))
 
 (defn *current-group-id
@@ -117,7 +117,7 @@
   returns: the activation group's identifier - `java.rmi.activation.ActivationGroupID`
 
   throws: java.lang.UnsupportedOperationException - if and only if activation is not supported by this implementation"
-  ([]
+  (^java.rmi.activation.ActivationGroupID []
     (ActivationGroup/currentGroupID )))
 
 (defn *set-system
@@ -158,7 +158,7 @@
   returns: the activation system for the VM/group - `java.rmi.activation.ActivationSystem`
 
   throws: java.rmi.activation.ActivationException - if activation system cannot be obtained or is not bound (means that it is not running)"
-  ([]
+  (^java.rmi.activation.ActivationSystem []
     (ActivationGroup/getSystem )))
 
 (defn inactive-object
@@ -196,7 +196,7 @@
            returns false. - `boolean`
 
   throws: java.rmi.activation.UnknownObjectException - if object is unknown (may already be inactive)"
-  ([^java.rmi.activation.ActivationGroup this ^java.rmi.activation.ActivationID id]
+  (^Boolean [^java.rmi.activation.ActivationGroup this ^java.rmi.activation.ActivationID id]
     (-> this (.inactiveObject id))))
 
 (defn active-object

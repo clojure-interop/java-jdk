@@ -144,9 +144,9 @@
 
   returns: the NumberFormat instance for general-purpose number
    formatting - `java.text.NumberFormat`"
-  ([^java.util.Locale in-locale]
+  (^java.text.NumberFormat [^java.util.Locale in-locale]
     (NumberFormat/getInstance in-locale))
-  ([]
+  (^java.text.NumberFormat []
     (NumberFormat/getInstance )))
 
 (defn *get-number-instance
@@ -156,9 +156,9 @@
 
   returns: the NumberFormat instance for general-purpose number
    formatting - `java.text.NumberFormat`"
-  ([^java.util.Locale in-locale]
+  (^java.text.NumberFormat [^java.util.Locale in-locale]
     (NumberFormat/getNumberInstance in-locale))
-  ([]
+  (^java.text.NumberFormat []
     (NumberFormat/getNumberInstance )))
 
 (defn *get-integer-instance
@@ -170,9 +170,9 @@
   in-locale - the desired locale - `java.util.Locale`
 
   returns: a number format for integer values - `java.text.NumberFormat`"
-  ([^java.util.Locale in-locale]
+  (^java.text.NumberFormat [^java.util.Locale in-locale]
     (NumberFormat/getIntegerInstance in-locale))
-  ([]
+  (^java.text.NumberFormat []
     (NumberFormat/getIntegerInstance )))
 
 (defn *get-currency-instance
@@ -181,9 +181,9 @@
   in-locale - the desired locale - `java.util.Locale`
 
   returns: the NumberFormat instance for currency formatting - `java.text.NumberFormat`"
-  ([^java.util.Locale in-locale]
+  (^java.text.NumberFormat [^java.util.Locale in-locale]
     (NumberFormat/getCurrencyInstance in-locale))
-  ([]
+  (^java.text.NumberFormat []
     (NumberFormat/getCurrencyInstance )))
 
 (defn *get-percent-instance
@@ -192,9 +192,9 @@
   in-locale - the desired locale - `java.util.Locale`
 
   returns: the NumberFormat instance for percentage formatting - `java.text.NumberFormat`"
-  ([^java.util.Locale in-locale]
+  (^java.text.NumberFormat [^java.util.Locale in-locale]
     (NumberFormat/getPercentInstance in-locale))
-  ([]
+  (^java.text.NumberFormat []
     (NumberFormat/getPercentInstance )))
 
 (defn *get-available-locales
@@ -241,7 +241,7 @@
    number.
 
   returns: the minimum number of digits - `int`"
-  ([^java.text.NumberFormat this]
+  (^Integer [^java.text.NumberFormat this]
     (-> this (.getMinimumIntegerDigits))))
 
 (defn parse-object
@@ -268,7 +268,7 @@
            error, returns null. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if pos is null."
-  ([^java.text.NumberFormat this ^java.lang.String source ^java.text.ParsePosition pos]
+  (^java.lang.Object [^java.text.NumberFormat this ^java.lang.String source ^java.text.ParsePosition pos]
     (-> this (.parseObject source pos))))
 
 (defn set-currency
@@ -308,7 +308,7 @@
    number.
 
   returns: the minimum number of digits - `int`"
-  ([^java.text.NumberFormat this]
+  (^Integer [^java.text.NumberFormat this]
     (-> this (.getMinimumFractionDigits))))
 
 (defn get-maximum-fraction-digits
@@ -316,7 +316,7 @@
    number.
 
   returns: the maximum number of digits. - `int`"
-  ([^java.text.NumberFormat this]
+  (^Integer [^java.text.NumberFormat this]
     (-> this (.getMaximumFractionDigits))))
 
 (defn get-maximum-integer-digits
@@ -324,7 +324,7 @@
    number.
 
   returns: the maximum number of digits - `int`"
-  ([^java.text.NumberFormat this]
+  (^Integer [^java.text.NumberFormat this]
     (-> this (.getMaximumIntegerDigits))))
 
 (defn set-maximum-fraction-digits
@@ -342,7 +342,7 @@
   "Overrides Cloneable.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([^java.text.NumberFormat this]
+  (^java.lang.Object [^java.text.NumberFormat this]
     (-> this (.clone))))
 
 (defn parse
@@ -358,9 +358,9 @@
   parse-position - the parse position - `java.text.ParsePosition`
 
   returns: the parsed value - `java.lang.Number`"
-  ([^java.text.NumberFormat this ^java.lang.String source ^java.text.ParsePosition parse-position]
+  (^java.lang.Number [^java.text.NumberFormat this ^java.lang.String source ^java.text.ParsePosition parse-position]
     (-> this (.parse source parse-position)))
-  ([^java.text.NumberFormat this ^java.lang.String source]
+  (^java.lang.Number [^java.text.NumberFormat this ^java.lang.String source]
     (-> this (.parse source))))
 
 (defn set-minimum-fraction-digits
@@ -378,7 +378,7 @@
   "Overrides hashCode.
 
   returns: a hash code value for this object. - `int`"
-  ([^java.text.NumberFormat this]
+  (^Integer [^java.text.NumberFormat this]
     (-> this (.hashCode))))
 
 (defn parse-integer-only?
@@ -391,7 +391,7 @@
 
   returns: true if numbers should be parsed as integers only;
            false otherwise - `boolean`"
-  ([^java.text.NumberFormat this]
+  (^Boolean [^java.text.NumberFormat this]
     (-> this (.isParseIntegerOnly))))
 
 (defn get-rounding-mode
@@ -404,7 +404,7 @@
   returns: The RoundingMode used for this NumberFormat. - `java.math.RoundingMode`
 
   throws: java.lang.UnsupportedOperationException - The default implementation always throws this exception"
-  ([^java.text.NumberFormat this]
+  (^java.math.RoundingMode [^java.text.NumberFormat this]
     (-> this (.getRoundingMode))))
 
 (defn set-grouping-used
@@ -422,7 +422,7 @@
 
   returns: true if grouping is used;
            false otherwise - `boolean`"
-  ([^java.text.NumberFormat this]
+  (^Boolean [^java.text.NumberFormat this]
     (-> this (.isGroupingUsed))))
 
 (defn get-currency
@@ -438,7 +438,7 @@
   returns: the currency used by this number format, or null - `java.util.Currency`
 
   throws: java.lang.UnsupportedOperationException - if the number format class doesn't implement currency formatting"
-  ([^java.text.NumberFormat this]
+  (^java.util.Currency [^java.text.NumberFormat this]
     (-> this (.getCurrency))))
 
 (defn equals
@@ -448,7 +448,7 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([^java.text.NumberFormat this ^java.lang.Object obj]
+  (^Boolean [^java.text.NumberFormat this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn format
@@ -475,8 +475,8 @@
   returns: the value passed in as toAppendTo - `java.lang.StringBuffer`
 
   throws: java.lang.IllegalArgumentException - if number is null or not an instance of Number."
-  ([^java.text.NumberFormat this ^java.lang.Object number ^java.lang.StringBuffer to-append-to ^java.text.FieldPosition pos]
+  (^java.lang.StringBuffer [^java.text.NumberFormat this ^java.lang.Object number ^java.lang.StringBuffer to-append-to ^java.text.FieldPosition pos]
     (-> this (.format number to-append-to pos)))
-  ([^java.text.NumberFormat this ^Double number]
+  (^java.lang.String [^java.text.NumberFormat this ^Double number]
     (-> this (.format number))))
 

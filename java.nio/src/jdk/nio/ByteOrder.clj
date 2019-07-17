@@ -32,7 +32,7 @@
 
   returns: The native byte order of the hardware upon which this Java
             virtual machine is running - `java.nio.ByteOrder`"
-  ([]
+  (^java.nio.ByteOrder []
     (ByteOrder/nativeOrder )))
 
 (defn to-string
@@ -41,6 +41,6 @@
     This method returns the string `BIG_ENDIAN` for BIG_ENDIAN and `LITTLE_ENDIAN` for LITTLE_ENDIAN.
 
   returns: The specified string - `java.lang.String`"
-  ([^java.nio.ByteOrder this]
+  (^java.lang.String [^java.nio.ByteOrder this]
     (-> this (.toString))))
 

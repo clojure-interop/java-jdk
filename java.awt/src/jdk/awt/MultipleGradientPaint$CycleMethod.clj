@@ -52,6 +52,6 @@
   returns: the enum constant with the specified name - `java.awt.MultipleGradientPaint.CycleMethod`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^java.awt.MultipleGradientPaint.CycleMethod [^java.lang.String name]
     (MultipleGradientPaint$CycleMethod/valueOf name)))
 

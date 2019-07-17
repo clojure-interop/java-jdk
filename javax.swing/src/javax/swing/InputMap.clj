@@ -63,7 +63,7 @@
 
   returns: map  the InputMap that is the parent of this one,
                 or null if this InputMap has no parent - `javax.swing.InputMap`"
-  ([^javax.swing.InputMap this]
+  (^javax.swing.InputMap [^javax.swing.InputMap this]
     (-> this (.getParent))))
 
 (defn remove
@@ -78,7 +78,7 @@
   "Returns the number of KeyStroke bindings.
 
   returns: `int`"
-  ([^javax.swing.InputMap this]
+  (^Integer [^javax.swing.InputMap this]
     (-> this (.size))))
 
 (defn clear
@@ -93,6 +93,6 @@
   key-stroke - `javax.swing.KeyStroke`
 
   returns: `java.lang.Object`"
-  ([^javax.swing.InputMap this ^javax.swing.KeyStroke key-stroke]
+  (^java.lang.Object [^javax.swing.InputMap this ^javax.swing.KeyStroke key-stroke]
     (-> this (.get key-stroke))))
 

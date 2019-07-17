@@ -13,14 +13,14 @@
 
   returns: the number of rows occupied by the Accessible at a
    given specified (row, column) - `int`"
-  ([^javax.accessibility.AccessibleTable this ^Integer r ^Integer c]
+  (^Integer [^javax.accessibility.AccessibleTable this ^Integer r ^Integer c]
     (-> this (.getAccessibleRowExtentAt r c))))
 
 (defn get-accessible-caption
   "Returns the caption for the table.
 
   returns: the caption for the table - `javax.accessibility.Accessible`"
-  ([^javax.accessibility.AccessibleTable this]
+  (^javax.accessibility.Accessible [^javax.accessibility.AccessibleTable this]
     (-> this (.getAccessibleCaption))))
 
 (defn get-accessible-row-header
@@ -28,14 +28,14 @@
 
   returns: an AccessibleTable representing the row
    headers - `javax.accessibility.AccessibleTable`"
-  ([^javax.accessibility.AccessibleTable this]
+  (^javax.accessibility.AccessibleTable [^javax.accessibility.AccessibleTable this]
     (-> this (.getAccessibleRowHeader))))
 
 (defn get-accessible-row-count
   "Returns the number of rows in the table.
 
   returns: the number of rows in the table - `int`"
-  ([^javax.accessibility.AccessibleTable this]
+  (^Integer [^javax.accessibility.AccessibleTable this]
     (-> this (.getAccessibleRowCount))))
 
 (defn set-accessible-summary
@@ -50,7 +50,7 @@
 
   returns: an AccessibleTable representing the column
    headers - `javax.accessibility.AccessibleTable`"
-  ([^javax.accessibility.AccessibleTable this]
+  (^javax.accessibility.AccessibleTable [^javax.accessibility.AccessibleTable this]
     (-> this (.getAccessibleColumnHeader))))
 
 (defn set-accessible-row-header
@@ -69,7 +69,7 @@
 
   returns: the number of columns occupied by the Accessible at a
    given specified row and column - `int`"
-  ([^javax.accessibility.AccessibleTable this ^Integer r ^Integer c]
+  (^Integer [^javax.accessibility.AccessibleTable this ^Integer r ^Integer c]
     (-> this (.getAccessibleColumnExtentAt r c))))
 
 (defn accessible-selected?
@@ -82,7 +82,7 @@
   returns: the boolean value true if the accessible at the
    row and column is selected. Otherwise, the boolean value
    false - `boolean`"
-  ([^javax.accessibility.AccessibleTable this ^Integer r ^Integer c]
+  (^Boolean [^javax.accessibility.AccessibleTable this ^Integer r ^Integer c]
     (-> this (.isAccessibleSelected r c))))
 
 (defn get-selected-accessible-columns
@@ -115,14 +115,14 @@
   c - zero-based column of the table - `int`
 
   returns: the text description of the column - `javax.accessibility.Accessible`"
-  ([^javax.accessibility.AccessibleTable this ^Integer c]
+  (^javax.accessibility.Accessible [^javax.accessibility.AccessibleTable this ^Integer c]
     (-> this (.getAccessibleColumnDescription c))))
 
 (defn get-accessible-summary
   "Returns the summary description of the table.
 
   returns: the summary description of the table - `javax.accessibility.Accessible`"
-  ([^javax.accessibility.AccessibleTable this]
+  (^javax.accessibility.Accessible [^javax.accessibility.AccessibleTable this]
     (-> this (.getAccessibleSummary))))
 
 (defn accessible-row-selected?
@@ -133,7 +133,7 @@
 
   returns: the boolean value true if the specified row is selected.
    Otherwise, false. - `boolean`"
-  ([^javax.accessibility.AccessibleTable this ^Integer r]
+  (^Boolean [^javax.accessibility.AccessibleTable this ^Integer r]
     (-> this (.isAccessibleRowSelected r))))
 
 (defn accessible-column-selected?
@@ -144,7 +144,7 @@
 
   returns: the boolean value true if the specified column is selected.
    Otherwise, false. - `boolean`"
-  ([^javax.accessibility.AccessibleTable this ^Integer c]
+  (^Boolean [^javax.accessibility.AccessibleTable this ^Integer c]
     (-> this (.isAccessibleColumnSelected c))))
 
 (defn get-accessible-row-description
@@ -153,7 +153,7 @@
   r - zero-based row of the table - `int`
 
   returns: the description of the row - `javax.accessibility.Accessible`"
-  ([^javax.accessibility.AccessibleTable this ^Integer r]
+  (^javax.accessibility.Accessible [^javax.accessibility.AccessibleTable this ^Integer r]
     (-> this (.getAccessibleRowDescription r))))
 
 (defn get-selected-accessible-rows
@@ -168,7 +168,7 @@
   "Returns the number of columns in the table.
 
   returns: the number of columns in the table - `int`"
-  ([^javax.accessibility.AccessibleTable this]
+  (^Integer [^javax.accessibility.AccessibleTable this]
     (-> this (.getAccessibleColumnCount))))
 
 (defn get-accessible-at
@@ -179,7 +179,7 @@
   c - zero-based column of the table - `int`
 
   returns: the Accessible at the specified row and column - `javax.accessibility.Accessible`"
-  ([^javax.accessibility.AccessibleTable this ^Integer r ^Integer c]
+  (^javax.accessibility.Accessible [^javax.accessibility.AccessibleTable this ^Integer r ^Integer c]
     (-> this (.getAccessibleAt r c))))
 
 (defn set-accessible-column-header

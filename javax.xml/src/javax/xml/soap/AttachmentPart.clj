@@ -119,7 +119,7 @@
            AttachmentPart object - `javax.activation.DataHandler`
 
   throws: javax.xml.soap.SOAPException - if there is no data in this AttachmentPart object"
-  ([^javax.xml.soap.AttachmentPart this]
+  (^javax.activation.DataHandler [^javax.xml.soap.AttachmentPart this]
     (-> this (.getDataHandler))))
 
 (defn set-base-64-content
@@ -164,7 +164,7 @@
         the AttachmentPart can be accessed. - `java.io.InputStream`
 
   throws: javax.xml.soap.SOAPException - if there is no content set into this AttachmentPart object or if there was a data transformation error."
-  ([^javax.xml.soap.AttachmentPart this]
+  (^java.io.InputStream [^javax.xml.soap.AttachmentPart this]
     (-> this (.getRawContent))))
 
 (defn get-content-location
@@ -173,7 +173,7 @@
   returns: a String giving the value of the
             `Content-Location` header or null if there
             is none - `java.lang.String`"
-  ([^javax.xml.soap.AttachmentPart this]
+  (^java.lang.String [^javax.xml.soap.AttachmentPart this]
     (-> this (.getContentLocation))))
 
 (defn remove-all-mime-headers
@@ -191,7 +191,7 @@
             except those that match one of the names in the
              given array.  The nonmatching MIME headers are returned as an
              Iterator object. - `java.util.Iterator`"
-  ([^javax.xml.soap.AttachmentPart this ^java.lang.String[] names]
+  (^java.util.Iterator [^javax.xml.soap.AttachmentPart this names]
     (-> this (.getNonMatchingMimeHeaders names))))
 
 (defn get-content-type
@@ -200,7 +200,7 @@
   returns: a String giving the value of the
             `Content-Type` header or null if there
             is none - `java.lang.String`"
-  ([^javax.xml.soap.AttachmentPart this]
+  (^java.lang.String [^javax.xml.soap.AttachmentPart this]
     (-> this (.getContentType))))
 
 (defn set-raw-content-bytes
@@ -234,7 +234,7 @@
          AttachmentPart can be read. - `java.io.InputStream`
 
   throws: javax.xml.soap.SOAPException - if there is no content set into this AttachmentPart object or if there was a data transformation error."
-  ([^javax.xml.soap.AttachmentPart this]
+  (^java.io.InputStream [^javax.xml.soap.AttachmentPart this]
     (-> this (.getBase64Content))))
 
 (defn set-raw-content
@@ -315,7 +315,7 @@
 
   returns: all of the MIME headers that match one of the names in the
              given array as an Iterator object - `java.util.Iterator`"
-  ([^javax.xml.soap.AttachmentPart this ^java.lang.String[] names]
+  (^java.util.Iterator [^javax.xml.soap.AttachmentPart this names]
     (-> this (.getMatchingMimeHeaders names))))
 
 (defn get-all-mime-headers
@@ -324,7 +324,7 @@
 
   returns: an Iterator object with all of the Mime
             headers for this AttachmentPart object - `java.util.Iterator`"
-  ([^javax.xml.soap.AttachmentPart this]
+  (^java.util.Iterator [^javax.xml.soap.AttachmentPart this]
     (-> this (.getAllMimeHeaders))))
 
 (defn get-size
@@ -335,7 +335,7 @@
            or -1 if the size cannot be determined - `int`
 
   throws: javax.xml.soap.SOAPException - if the content of this attachment is corrupted of if there was an exception while trying to determine the size."
-  ([^javax.xml.soap.AttachmentPart this]
+  (^Integer [^javax.xml.soap.AttachmentPart this]
     (-> this (.getSize))))
 
 (defn set-content
@@ -398,7 +398,7 @@
            object - `java.lang.Object`
 
   throws: javax.xml.soap.SOAPException - if there is no content set into this AttachmentPart object or if there was a data transformation error"
-  ([^javax.xml.soap.AttachmentPart this]
+  (^java.lang.Object [^javax.xml.soap.AttachmentPart this]
     (-> this (.getContent))))
 
 (defn get-content-id
@@ -407,6 +407,6 @@
   returns: a String giving the value of the
             `Content-ID` header or null if there
             is none - `java.lang.String`"
-  ([^javax.xml.soap.AttachmentPart this]
+  (^java.lang.String [^javax.xml.soap.AttachmentPart this]
     (-> this (.getContentId))))
 

@@ -101,7 +101,7 @@
            second. - `int`
 
   throws: java.lang.NullPointerException - if an argument is null and this comparator does not permit null arguments"
-  ([^java.util.Comparator this ^Comparator.T o-1 ^Comparator.T o-2]
+  (^Integer [^java.util.Comparator this ^Comparator.T o-1 ^Comparator.T o-2]
     (-> this (.compare o-1 o-2))))
 
 (defn reversed
@@ -295,7 +295,7 @@
   returns: true only if the specified object is also
             a comparator and it imposes the same ordering as this
             comparator. - `boolean`"
-  ([^java.util.Comparator this ^java.lang.Object obj]
+  (^Boolean [^java.util.Comparator this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn *nulls-last

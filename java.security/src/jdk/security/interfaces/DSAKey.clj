@@ -9,6 +9,6 @@
    never secret.
 
   returns: the DSA-specific key parameters. - `java.security.interfaces.DSAParams`"
-  ([^java.security.interfaces.DSAKey this]
+  (^java.security.interfaces.DSAParams [^java.security.interfaces.DSAKey this]
     (-> this (.getParams))))
 

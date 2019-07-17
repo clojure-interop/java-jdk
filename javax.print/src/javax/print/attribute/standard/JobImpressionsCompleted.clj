@@ -49,7 +49,7 @@
 
   returns: True if object is equivalent to this job
             impressions completed attribute, false otherwise. - `boolean`"
-  ([^javax.print.attribute.standard.JobImpressionsCompleted this ^java.lang.Object object]
+  (^Boolean [^javax.print.attribute.standard.JobImpressionsCompleted this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -72,6 +72,6 @@
    `job-impressions-completed`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.JobImpressionsCompleted this]
+  (^java.lang.String [^javax.print.attribute.standard.JobImpressionsCompleted this]
     (-> this (.getName))))
 

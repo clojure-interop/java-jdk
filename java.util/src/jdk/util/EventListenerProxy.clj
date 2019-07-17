@@ -36,6 +36,6 @@
   "Returns the listener associated with the proxy.
 
   returns: the listener associated with the proxy - `EventListenerProxy.T`"
-  ([^java.util.EventListenerProxy this]
+  (^EventListenerProxy.T [^java.util.EventListenerProxy this]
     (-> this (.getListener))))
 

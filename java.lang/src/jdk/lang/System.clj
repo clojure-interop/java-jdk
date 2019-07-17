@@ -87,7 +87,7 @@
   returns: a platform-dependent native library name. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if libname is null"
-  ([^java.lang.String libname]
+  (^java.lang.String [^java.lang.String libname]
     (System/mapLibraryName libname)))
 
 (defn *arraycopy
@@ -194,7 +194,7 @@
   returns: The inherited channel, if any, otherwise null. - `java.nio.channels.Channel`
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([]
+  (^java.nio.channels.Channel []
     (System/inheritedChannel )))
 
 (defn *load
@@ -255,7 +255,7 @@
                or null if there was no property with that key. - `java.lang.String`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPropertyAccess method doesn't allow access to the specified system property."
-  ([^java.lang.String key]
+  (^java.lang.String [^java.lang.String key]
     (System/clearProperty key)))
 
 (defn *current-time-millis
@@ -272,7 +272,7 @@
 
   returns: the difference, measured in milliseconds, between
             the current time and midnight, January 1, 1970 UTC. - `long`"
-  ([]
+  (^Long []
     (System/currentTimeMillis )))
 
 (defn *get-security-manager
@@ -281,7 +281,7 @@
   returns: if a security manager has already been established for the
             current application, then that security manager is returned;
             otherwise, null is returned. - `java.lang.SecurityManager`"
-  ([]
+  (^java.lang.SecurityManager []
     (System/getSecurityManager )))
 
 (defn *set-in
@@ -302,7 +302,7 @@
    with the current Java virtual machine, if any.
 
   returns: The system console, if any, otherwise null. - `java.io.Console`"
-  ([]
+  (^java.io.Console []
     (System/console )))
 
 (defn *getenv
@@ -345,9 +345,9 @@
            if the variable is not defined in the system environment - `java.lang.String`
 
   throws: java.lang.NullPointerException - if name is null"
-  ([^java.lang.String name]
+  (^java.lang.String [^java.lang.String name]
     (System/getenv name))
-  ([]
+  (^java.util.Map []
     (System/getenv )))
 
 (defn *get-properties
@@ -437,7 +437,7 @@
   returns: the system properties - `java.util.Properties`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPropertiesAccess method doesn't allow access to the system properties."
-  ([]
+  (^java.util.Properties []
     (System/getProperties )))
 
 (defn *nano-time
@@ -484,7 +484,7 @@
 
   returns: the current value of the running Java Virtual Machine's
            high-resolution time source, in nanoseconds - `long`"
-  ([]
+  (^Long []
     (System/nanoTime )))
 
 (defn *load-library
@@ -553,7 +553,7 @@
   x - object for which the hashCode is to be calculated - `java.lang.Object`
 
   returns: the hashCode - `int`"
-  ([^java.lang.Object x]
+  (^Integer [^java.lang.Object x]
     (System/identityHashCode x)))
 
 (defn *get-property
@@ -574,9 +574,9 @@
                or the default value if there is no property with that key. - `java.lang.String`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPropertyAccess method doesn't allow access to the specified system property."
-  ([^java.lang.String key ^java.lang.String def]
+  (^java.lang.String [^java.lang.String key ^java.lang.String def]
     (System/getProperty key def))
-  ([^java.lang.String key]
+  (^java.lang.String [^java.lang.String key]
     (System/getProperty key)))
 
 (defn *line-separator
@@ -587,7 +587,7 @@
    Windows systems it returns `\r\n`.
 
   returns: the system-dependent line separator string - `java.lang.String`"
-  ([]
+  (^java.lang.String []
     (System/lineSeparator )))
 
 (defn *exit
@@ -627,7 +627,7 @@
                or null if it did not have one. - `java.lang.String`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPermission method doesn't allow setting of the specified property."
-  ([^java.lang.String key ^java.lang.String value]
+  (^java.lang.String [^java.lang.String key ^java.lang.String value]
     (System/setProperty key value)))
 
 (defn *run-finalization

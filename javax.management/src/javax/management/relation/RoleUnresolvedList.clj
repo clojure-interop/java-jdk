@@ -34,7 +34,7 @@
    be added. - `java.util.List<javax.management.relation.RoleUnresolved>`
 
   throws: java.lang.IllegalArgumentException - if this RoleUnresolvedList contains an element that is not a RoleUnresolved."
-  ([^javax.management.relation.RoleUnresolvedList this]
+  (^java.util.List [^javax.management.relation.RoleUnresolvedList this]
     (-> this (.asList))))
 
 (defn add
@@ -75,8 +75,8 @@
   returns: true if this list changed as a result of the call. - `boolean`
 
   throws: java.lang.IllegalArgumentException - if the role is null."
-  ([^javax.management.relation.RoleUnresolvedList this ^Integer index ^javax.management.relation.RoleUnresolvedList role-list]
+  (^Boolean [^javax.management.relation.RoleUnresolvedList this ^Integer index ^javax.management.relation.RoleUnresolvedList role-list]
     (-> this (.addAll index role-list)))
-  ([^javax.management.relation.RoleUnresolvedList this ^javax.management.relation.RoleUnresolvedList role-list]
+  (^Boolean [^javax.management.relation.RoleUnresolvedList this ^javax.management.relation.RoleUnresolvedList role-list]
     (-> this (.addAll role-list))))
 

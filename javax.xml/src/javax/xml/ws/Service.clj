@@ -39,11 +39,11 @@
   returns: `javax.xml.ws.Service`
 
   throws: javax.xml.ws.WebServiceException - If any error in creation of the specified service."
-  ([^java.net.URL wsdl-document-location ^javax.xml.namespace.QName service-name ^javax.xml.ws.WebServiceFeature features]
+  (^javax.xml.ws.Service [^java.net.URL wsdl-document-location ^javax.xml.namespace.QName service-name ^javax.xml.ws.WebServiceFeature features]
     (Service/create wsdl-document-location service-name features))
-  ([^java.net.URL wsdl-document-location ^javax.xml.namespace.QName service-name]
+  (^javax.xml.ws.Service [^java.net.URL wsdl-document-location ^javax.xml.namespace.QName service-name]
     (Service/create wsdl-document-location service-name))
-  ([^javax.xml.namespace.QName service-name]
+  (^javax.xml.ws.Service [^javax.xml.namespace.QName service-name]
     (Service/create service-name)))
 
 (defn create-dispatch
@@ -83,7 +83,7 @@
 
   returns: The java.util.concurrent.Executor to be
            used to invoke a callback. - `java.util.concurrent.Executor`"
-  ([^javax.xml.ws.Service this]
+  (^java.util.concurrent.Executor [^javax.xml.ws.Service this]
     (-> this (.getExecutor))))
 
 (defn set-executor
@@ -104,14 +104,14 @@
   returns: HandlerResolver The HandlerResolver being
            used by this Service instance, or null
            if there isn't one. - `javax.xml.ws.handler.HandlerResolver`"
-  ([^javax.xml.ws.Service this]
+  (^javax.xml.ws.handler.HandlerResolver [^javax.xml.ws.Service this]
     (-> this (.getHandlerResolver))))
 
 (defn get-service-name
   "Gets the name of this service.
 
   returns: Qualified name of this service - `javax.xml.namespace.QName`"
-  ([^javax.xml.ws.Service this]
+  (^javax.xml.namespace.QName [^javax.xml.ws.Service this]
     (-> this (.getServiceName))))
 
 (defn get-port
@@ -142,7 +142,7 @@
 
   returns: URL for the location of the WSDL document for
            this service. - `java.net.URL`"
-  ([^javax.xml.ws.Service this]
+  (^java.net.URL [^javax.xml.ws.Service this]
     (-> this (.getWSDLDocumentLocation))))
 
 (defn get-ports
@@ -154,7 +154,7 @@
            of type javax.xml.namespace.QName. - `java.util.Iterator<javax.xml.namespace.QName>`
 
   throws: javax.xml.ws.WebServiceException - If this Service class does not have access to the required WSDL metadata."
-  ([^javax.xml.ws.Service this]
+  (^java.util.Iterator [^javax.xml.ws.Service this]
     (-> this (.getPorts))))
 
 (defn add-port

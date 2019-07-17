@@ -38,6 +38,6 @@
   returns: the enum constant with the specified name - `javax.swing.text.html.FormSubmitEvent.MethodType`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^javax.swing.text.html.FormSubmitEvent.MethodType [^java.lang.String name]
     (FormSubmitEvent$MethodType/valueOf name)))
 

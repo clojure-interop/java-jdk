@@ -264,7 +264,7 @@
   returns: the next ZIP file entry, or null if there are no more entries - `java.util.zip.ZipEntry`
 
   throws: java.util.zip.ZipException - if a ZIP file error has occurred"
-  ([^java.util.zip.ZipInputStream this]
+  (^java.util.zip.ZipEntry [^java.util.zip.ZipInputStream this]
     (-> this (.getNextEntry))))
 
 (defn close-entry
@@ -285,7 +285,7 @@
   returns: 1 before EOF and 0 after EOF has reached for current entry. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.util.zip.ZipInputStream this]
+  (^Integer [^java.util.zip.ZipInputStream this]
     (-> this (.available))))
 
 (defn read
@@ -302,7 +302,7 @@
            entry is reached - `int`
 
   throws: java.lang.NullPointerException - if b is null."
-  ([^java.util.zip.ZipInputStream this b ^Integer off ^Integer len]
+  (^Integer [^java.util.zip.ZipInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len))))
 
 (defn skip
@@ -313,7 +313,7 @@
   returns: the actual number of bytes skipped - `long`
 
   throws: java.util.zip.ZipException - if a ZIP file error has occurred"
-  ([^java.util.zip.ZipInputStream this ^Long n]
+  (^Long [^java.util.zip.ZipInputStream this ^Long n]
     (-> this (.skip n))))
 
 (defn close

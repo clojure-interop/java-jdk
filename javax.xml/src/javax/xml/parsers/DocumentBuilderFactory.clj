@@ -30,9 +30,9 @@
   returns: New instance of a DocumentBuilderFactory - `javax.xml.parsers.DocumentBuilderFactory`
 
   throws: javax.xml.parsers.FactoryConfigurationError - if factoryClassName is null, or the factory class cannot be loaded, instantiated."
-  ([^java.lang.String factory-class-name ^java.lang.ClassLoader class-loader]
+  (^javax.xml.parsers.DocumentBuilderFactory [^java.lang.String factory-class-name ^java.lang.ClassLoader class-loader]
     (DocumentBuilderFactory/newInstance factory-class-name class-loader))
-  ([]
+  (^javax.xml.parsers.DocumentBuilderFactory []
     (DocumentBuilderFactory/newInstance )))
 
 (defn set-namespace-aware
@@ -52,7 +52,7 @@
   returns: true if the factory is configured to produce parsers
             which converts CDATA nodes to Text nodes and appends it to
             the adjacent (if any) Text node; false otherwise. - `boolean`"
-  ([^javax.xml.parsers.DocumentBuilderFactory this]
+  (^Boolean [^javax.xml.parsers.DocumentBuilderFactory this]
     (-> this (.isCoalescing))))
 
 (defn get-feature?
@@ -70,7 +70,7 @@
   returns: State of the named feature. - `boolean`
 
   throws: javax.xml.parsers.ParserConfigurationException - if this DocumentBuilderFactory or the DocumentBuilders it creates cannot support this feature."
-  ([^javax.xml.parsers.DocumentBuilderFactory this ^java.lang.String name]
+  (^Boolean [^javax.xml.parsers.DocumentBuilderFactory this ^java.lang.String name]
     (-> this (.getFeature name))))
 
 (defn set-validating
@@ -116,7 +116,7 @@
   returns: value The value of the attribute. - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - thrown if the underlying implementation doesn't recognize the attribute."
-  ([^javax.xml.parsers.DocumentBuilderFactory this ^java.lang.String name]
+  (^java.lang.Object [^javax.xml.parsers.DocumentBuilderFactory this ^java.lang.String name]
     (-> this (.getAttribute name))))
 
 (defn set-schema
@@ -212,7 +212,7 @@
   returns: true if the factory is configured to produce parsers
             which ignore ignorable whitespace in element content;
             false otherwise. - `boolean`"
-  ([^javax.xml.parsers.DocumentBuilderFactory this]
+  (^Boolean [^javax.xml.parsers.DocumentBuilderFactory this]
     (-> this (.isIgnoringElementContentWhitespace))))
 
 (defn set-ignoring-comments
@@ -249,7 +249,7 @@
         is created. - `javax.xml.validation.Schema`
 
   throws: java.lang.UnsupportedOperationException - When implementation does not override this method."
-  ([^javax.xml.parsers.DocumentBuilderFactory this]
+  (^javax.xml.validation.Schema [^javax.xml.parsers.DocumentBuilderFactory this]
     (-> this (.getSchema))))
 
 (defn new-document-builder
@@ -259,7 +259,7 @@
   returns: A new instance of a DocumentBuilder. - `javax.xml.parsers.DocumentBuilder`
 
   throws: javax.xml.parsers.ParserConfigurationException - if a DocumentBuilder cannot be created which satisfies the configuration requested."
-  ([^javax.xml.parsers.DocumentBuilderFactory this]
+  (^javax.xml.parsers.DocumentBuilder [^javax.xml.parsers.DocumentBuilderFactory this]
     (-> this (.newDocumentBuilder))))
 
 (defn set-expand-entity-references
@@ -324,7 +324,7 @@
 
   returns: true if the factory is configured to produce parsers which
             are namespace aware; false otherwise. - `boolean`"
-  ([^javax.xml.parsers.DocumentBuilderFactory this]
+  (^Boolean [^javax.xml.parsers.DocumentBuilderFactory this]
     (-> this (.isNamespaceAware))))
 
 (defn ignoring-comments?
@@ -333,7 +333,7 @@
 
   returns: true if the factory is configured to produce parsers
             which ignores comments; false otherwise. - `boolean`"
-  ([^javax.xml.parsers.DocumentBuilderFactory this]
+  (^Boolean [^javax.xml.parsers.DocumentBuilderFactory this]
     (-> this (.isIgnoringComments))))
 
 (defn validating?
@@ -342,7 +342,7 @@
 
   returns: true if the factory is configured to produce parsers
             which validate the XML content during parse; false otherwise. - `boolean`"
-  ([^javax.xml.parsers.DocumentBuilderFactory this]
+  (^Boolean [^javax.xml.parsers.DocumentBuilderFactory this]
     (-> this (.isValidating))))
 
 (defn x-include-aware?
@@ -351,7 +351,7 @@
   returns: current state of XInclude processing - `boolean`
 
   throws: java.lang.UnsupportedOperationException - When implementation does not override this method."
-  ([^javax.xml.parsers.DocumentBuilderFactory this]
+  (^Boolean [^javax.xml.parsers.DocumentBuilderFactory this]
     (-> this (.isXIncludeAware))))
 
 (defn expand-entity-references?
@@ -360,6 +360,6 @@
 
   returns: true if the factory is configured to produce parsers
             which expand entity reference nodes; false otherwise. - `boolean`"
-  ([^javax.xml.parsers.DocumentBuilderFactory this]
+  (^Boolean [^javax.xml.parsers.DocumentBuilderFactory this]
     (-> this (.isExpandEntityReferences))))
 

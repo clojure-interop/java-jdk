@@ -187,7 +187,7 @@
    implementation
 
   returns: true if the CROSS_JOIN is supported; false otherwise - `boolean`"
-  ([^javax.sql.rowset.JoinRowSet this]
+  (^Boolean [^javax.sql.rowset.JoinRowSet this]
     (-> this (.supportsCrossJoin))))
 
 (defn supports-left-outer-join
@@ -195,7 +195,7 @@
    implementation
 
   returns: true is the LEFT_OUTER_JOIN is supported; false otherwise - `boolean`"
-  ([^javax.sql.rowset.JoinRowSet this]
+  (^Boolean [^javax.sql.rowset.JoinRowSet this]
     (-> this (.supportsLeftOuterJoin))))
 
 (defn get-where-clause
@@ -209,7 +209,7 @@
    WHERE clause used in the JoinRowSet instance - `java.lang.String`
 
   throws: java.sql.SQLException - if an error occurs in generating a representation of the WHERE clause."
-  ([^javax.sql.rowset.JoinRowSet this]
+  (^java.lang.String [^javax.sql.rowset.JoinRowSet this]
     (-> this (.getWhereClause))))
 
 (defn supports-full-join
@@ -217,7 +217,7 @@
    implementation
 
   returns: true is the FULL_JOIN is supported; false otherwise - `boolean`"
-  ([^javax.sql.rowset.JoinRowSet this]
+  (^Boolean [^javax.sql.rowset.JoinRowSet this]
     (-> this (.supportsFullJoin))))
 
 (defn get-join-type
@@ -233,7 +233,7 @@
        explicitly set. - `int`
 
   throws: java.sql.SQLException - if an error occurs determining the SQL JOIN type supported by the JoinRowSet instance."
-  ([^javax.sql.rowset.JoinRowSet this]
+  (^Integer [^javax.sql.rowset.JoinRowSet this]
     (-> this (.getJoinType))))
 
 (defn get-row-sets
@@ -249,7 +249,7 @@
           object - `java.util.Collection<?>`
 
   throws: java.sql.SQLException - if an error occurs generating the Collection object to be returned"
-  ([^javax.sql.rowset.JoinRowSet this]
+  (^java.util.Collection [^javax.sql.rowset.JoinRowSet this]
     (-> this (.getRowSets))))
 
 (defn set-join-type
@@ -301,7 +301,7 @@
   returns: a CachedRowSet containing the contents of the JoinRowSet - `javax.sql.rowset.CachedRowSet`
 
   throws: java.sql.SQLException - if an error occurs assembling the CachedRowSet object"
-  ([^javax.sql.rowset.JoinRowSet this]
+  (^javax.sql.rowset.CachedRowSet [^javax.sql.rowset.JoinRowSet this]
     (-> this (.toCachedRowSet))))
 
 (defn add-row-set
@@ -329,7 +329,7 @@
    implementation
 
   returns: true is the INNER_JOIN is supported; false otherwise - `boolean`"
-  ([^javax.sql.rowset.JoinRowSet this]
+  (^Boolean [^javax.sql.rowset.JoinRowSet this]
     (-> this (.supportsInnerJoin))))
 
 (defn supports-right-outer-join
@@ -337,6 +337,6 @@
    implementation
 
   returns: true is the RIGHT_OUTER_JOIN is supported; false otherwise - `boolean`"
-  ([^javax.sql.rowset.JoinRowSet this]
+  (^Boolean [^javax.sql.rowset.JoinRowSet this]
     (-> this (.supportsRightOuterJoin))))
 

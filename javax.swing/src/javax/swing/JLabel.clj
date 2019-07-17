@@ -90,7 +90,7 @@
              TOP,
              CENTER, or
              BOTTOM. - `int`"
-  ([^javax.swing.JLabel this]
+  (^Integer [^javax.swing.JLabel this]
     (-> this (.getVerticalTextPosition))))
 
 (defn get-displayed-mnemonic
@@ -101,7 +101,7 @@
    labelFor property when the mnemonic is activated.
 
   returns: int value for the mnemonic key - `int`"
-  ([^javax.swing.JLabel this]
+  (^Integer [^javax.swing.JLabel this]
     (-> this (.getDisplayedMnemonic))))
 
 (defn set-icon
@@ -154,14 +154,14 @@
   "Returns the text string that the label displays.
 
   returns: a String - `java.lang.String`"
-  ([^javax.swing.JLabel this]
+  (^java.lang.String [^javax.swing.JLabel this]
     (-> this (.getText))))
 
 (defn get-icon
   "Returns the graphic image (glyph, icon) that the label displays.
 
   returns: an Icon - `javax.swing.Icon`"
-  ([^javax.swing.JLabel this]
+  (^javax.swing.Icon [^javax.swing.JLabel this]
     (-> this (.getIcon))))
 
 (defn set-vertical-text-position
@@ -187,7 +187,7 @@
              RIGHT,
              LEADING or
              TRAILING. - `int`"
-  ([^javax.swing.JLabel this]
+  (^Integer [^javax.swing.JLabel this]
     (-> this (.getHorizontalTextPosition))))
 
 (defn get-ui-class-id
@@ -195,7 +195,7 @@
    that renders this component.
 
   returns: String `LabelUI` - `java.lang.String`"
-  ([^javax.swing.JLabel this]
+  (^java.lang.String [^javax.swing.JLabel this]
     (-> this (.getUIClassID))))
 
 (defn get-label-for
@@ -206,7 +206,7 @@
    property is set and the labelFor property is also set, the label
    will call the requestFocus method of the component specified by the
    labelFor property when the mnemonic is activated. - `java.awt.Component`"
-  ([^javax.swing.JLabel this]
+  (^java.awt.Component [^javax.swing.JLabel this]
     (-> this (.getLabelFor))))
 
 (defn set-label-for
@@ -231,7 +231,7 @@
   "Returns the L&F object that renders this component.
 
   returns: LabelUI object - `javax.swing.plaf.LabelUI`"
-  ([^javax.swing.JLabel this]
+  (^javax.swing.plaf.LabelUI [^javax.swing.JLabel this]
     (-> this (.getUI))))
 
 (defn set-displayed-mnemonic-index
@@ -260,7 +260,7 @@
   "Get the AccessibleContext of this object
 
   returns: the AccessibleContext of this object - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.JLabel this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.JLabel this]
     (-> this (.getAccessibleContext))))
 
 (defn get-vertical-alignment
@@ -271,7 +271,7 @@
              TOP,
              CENTER, or
              BOTTOM. - `int`"
-  ([^javax.swing.JLabel this]
+  (^Integer [^javax.swing.JLabel this]
     (-> this (.getVerticalAlignment))))
 
 (defn image-update
@@ -287,7 +287,7 @@
 
   returns: false if the infoflags indicate that the
               image is completely loaded; true otherwise. - `boolean`"
-  ([^javax.swing.JLabel this ^java.awt.Image img ^Integer infoflags ^Integer x ^Integer y ^Integer w ^Integer h]
+  (^Boolean [^javax.swing.JLabel this ^java.awt.Image img ^Integer infoflags ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.imageUpdate img infoflags x y w h))))
 
 (defn get-horizontal-alignment
@@ -300,7 +300,7 @@
              RIGHT,
              LEADING or
              TRAILING. - `int`"
-  ([^javax.swing.JLabel this]
+  (^Integer [^javax.swing.JLabel this]
     (-> this (.getHorizontalAlignment))))
 
 (defn get-icon-text-gap
@@ -309,7 +309,7 @@
 
   returns: an int equal to the number of pixels between the text
            and the icon. - `int`"
-  ([^javax.swing.JLabel this]
+  (^Integer [^javax.swing.JLabel this]
     (-> this (.getIconTextGap))))
 
 (defn set-displayed-mnemonic
@@ -337,7 +337,7 @@
    provide decoration for as representing the mnemonic character.
 
   returns: index representing mnemonic character - `int`"
-  ([^javax.swing.JLabel this]
+  (^Integer [^javax.swing.JLabel this]
     (-> this (.getDisplayedMnemonicIndex))))
 
 (defn set-disabled-icon
@@ -359,7 +359,7 @@
    case they will ignore this.
 
   returns: the disabledIcon property - `javax.swing.Icon`"
-  ([^javax.swing.JLabel this]
+  (^javax.swing.Icon [^javax.swing.JLabel this]
     (-> this (.getDisabledIcon))))
 
 (defn update-ui

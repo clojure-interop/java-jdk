@@ -32,7 +32,7 @@
 
   returns: the cause of this KeySelectorException or
            null if the cause is nonexistent or unknown. - `java.lang.Throwable`"
-  ([^javax.xml.crypto.KeySelectorException this]
+  (^java.lang.Throwable [^javax.xml.crypto.KeySelectorException this]
     (-> this (.getCause))))
 
 (defn print-stack-trace

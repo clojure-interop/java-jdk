@@ -37,6 +37,6 @@
   "Description copied from class: ForkJoinTask
 
   returns: the result, or null if not completed - `RecursiveTask.V`"
-  ([^java.util.concurrent.RecursiveTask this]
+  (^RecursiveTask.V [^java.util.concurrent.RecursiveTask this]
     (-> this (.getRawResult))))
 

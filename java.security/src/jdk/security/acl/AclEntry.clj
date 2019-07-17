@@ -25,14 +25,14 @@
    entry yet.
 
   returns: the principal associated with this entry. - `java.security.Principal`"
-  ([^java.security.acl.AclEntry this]
+  (^java.security.Principal [^java.security.acl.AclEntry this]
     (-> this (.getPrincipal))))
 
 (defn permissions
   "Returns an enumeration of the permissions in this ACL entry.
 
   returns: an enumeration of the permissions in this ACL entry. - `java.util.Enumeration<java.security.acl.Permission>`"
-  ([^java.security.acl.AclEntry this]
+  (^java.util.Enumeration [^java.security.acl.AclEntry this]
     (-> this (.permissions))))
 
 (defn check-permission
@@ -43,7 +43,7 @@
 
   returns: true if the permission is part of the
    permission set in this entry, false otherwise. - `boolean`"
-  ([^java.security.acl.AclEntry this ^java.security.acl.Permission permission]
+  (^Boolean [^java.security.acl.AclEntry this ^java.security.acl.Permission permission]
     (-> this (.checkPermission permission))))
 
 (defn negative?
@@ -52,7 +52,7 @@
    otherwise.
 
   returns: true if this is a negative ACL entry, false if it's not. - `boolean`"
-  ([^java.security.acl.AclEntry this]
+  (^Boolean [^java.security.acl.AclEntry this]
     (-> this (.isNegative))))
 
 (defn set-negative-permissions
@@ -70,7 +70,7 @@
   "Returns a string representation of the contents of this ACL entry.
 
   returns: a string representation of the contents. - `java.lang.String`"
-  ([^java.security.acl.AclEntry this]
+  (^java.lang.String [^java.security.acl.AclEntry this]
     (-> this (.toString))))
 
 (defn remove-permission
@@ -80,14 +80,14 @@
 
   returns: true if the permission is removed, false if the
    permission was not part of this entry's permission set. - `boolean`"
-  ([^java.security.acl.AclEntry this ^java.security.acl.Permission permission]
+  (^Boolean [^java.security.acl.AclEntry this ^java.security.acl.Permission permission]
     (-> this (.removePermission permission))))
 
 (defn clone
   "Clones this ACL entry.
 
   returns: a clone of this ACL entry. - `java.lang.Object`"
-  ([^java.security.acl.AclEntry this]
+  (^java.lang.Object [^java.security.acl.AclEntry this]
     (-> this (.clone))))
 
 (defn set-principal
@@ -99,7 +99,7 @@
 
   returns: true if the principal is set, false if there was
    already a principal set for this entry. - `boolean`"
-  ([^java.security.acl.AclEntry this ^java.security.Principal user]
+  (^Boolean [^java.security.acl.AclEntry this ^java.security.Principal user]
     (-> this (.setPrincipal user))))
 
 (defn add-permission
@@ -110,6 +110,6 @@
 
   returns: true if the permission was added, false if the
    permission was already part of this entry's permission set. - `boolean`"
-  ([^java.security.acl.AclEntry this ^java.security.acl.Permission permission]
+  (^Boolean [^java.security.acl.AclEntry this ^java.security.acl.Permission permission]
     (-> this (.addPermission permission))))
 

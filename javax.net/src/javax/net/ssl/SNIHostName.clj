@@ -70,7 +70,7 @@
   returns: a SNIMatcher object for SNIHostNames - `javax.net.ssl.SNIMatcher`
 
   throws: java.lang.NullPointerException - if regex is null"
-  ([^java.lang.String regex]
+  (^javax.net.ssl.SNIMatcher [^java.lang.String regex]
     (SNIHostName/createSNIMatcher regex)))
 
 (defn get-ascii-name
@@ -86,7 +86,7 @@
 
   returns: the StandardCharsets.US_ASCII-compliant hostname
            of this SNIHostName object - `java.lang.String`"
-  ([^javax.net.ssl.SNIHostName this]
+  (^java.lang.String [^javax.net.ssl.SNIHostName this]
     (-> this (.getAsciiName))))
 
 (defn equals
@@ -101,7 +101,7 @@
 
   returns: true if, and only if, the other is considered
            equal to this instance - `boolean`"
-  ([^javax.net.ssl.SNIHostName this ^java.lang.Object other]
+  (^Boolean [^javax.net.ssl.SNIHostName this ^java.lang.Object other]
     (-> this (.equals other))))
 
 (defn hash-code
@@ -111,7 +111,7 @@
    of this SNIHostName.
 
   returns: a hash code value for this SNIHostName. - `int`"
-  ([^javax.net.ssl.SNIHostName this]
+  (^Integer [^javax.net.ssl.SNIHostName this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -138,6 +138,6 @@
    and subject to change.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^javax.net.ssl.SNIHostName this]
+  (^java.lang.String [^javax.net.ssl.SNIHostName this]
     (-> this (.toString))))
 

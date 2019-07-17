@@ -22,7 +22,7 @@
   "Return the nested exception (if any)
 
   returns: the nested exception or null - `java.lang.Exception`"
-  ([^javax.xml.stream.FactoryConfigurationError this]
+  (^java.lang.Exception [^javax.xml.stream.FactoryConfigurationError this]
     (-> this (.getException))))
 
 (defn get-cause
@@ -30,13 +30,13 @@
 
   returns: the cause of this throwable or null if the
             cause is nonexistent or unknown. - `java.lang.Throwable`"
-  ([^javax.xml.stream.FactoryConfigurationError this]
+  (^java.lang.Throwable [^javax.xml.stream.FactoryConfigurationError this]
     (-> this (.getCause))))
 
 (defn get-message
   "Report the message associated with this error
 
   returns: the string value of the message - `java.lang.String`"
-  ([^javax.xml.stream.FactoryConfigurationError this]
+  (^java.lang.String [^javax.xml.stream.FactoryConfigurationError this]
     (-> this (.getMessage))))
 

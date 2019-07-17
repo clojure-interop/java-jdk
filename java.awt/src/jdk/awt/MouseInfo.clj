@@ -25,7 +25,7 @@
   returns: location of the mouse pointer - `java.awt.PointerInfo`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true"
-  ([]
+  (^java.awt.PointerInfo []
     (MouseInfo/getPointerInfo )))
 
 (defn *get-number-of-buttons
@@ -35,6 +35,6 @@
   returns: number of buttons on the mouse - `int`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true"
-  ([]
+  (^Integer []
     (MouseInfo/getNumberOfButtons )))
 

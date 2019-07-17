@@ -87,7 +87,7 @@
 
   returns: the Class name of the Credential associated with this
             PrivateCredentialPermission. - `java.lang.String`"
-  ([^javax.security.auth.PrivateCredentialPermission this]
+  (^java.lang.String [^javax.security.auth.PrivateCredentialPermission this]
     (-> this (.getCredentialClass))))
 
 (defn get-principals
@@ -129,7 +129,7 @@
 
   returns: true if this PrivateCredentialPermission implies
    the specified Permission, false if not. - `boolean`"
-  ([^javax.security.auth.PrivateCredentialPermission this ^java.security.Permission p]
+  (^Boolean [^javax.security.auth.PrivateCredentialPermission this ^java.security.Permission p]
     (-> this (.implies p))))
 
 (defn equals
@@ -146,14 +146,14 @@
   returns: true if obj is a PrivateCredentialPermission,
             has the same credential class as this object,
             and has the same Principals as this object. - `boolean`"
-  ([^javax.security.auth.PrivateCredentialPermission this ^java.lang.Object obj]
+  (^Boolean [^javax.security.auth.PrivateCredentialPermission this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Returns the hash code value for this object.
 
   returns: a hash code value for this object. - `int`"
-  ([^javax.security.auth.PrivateCredentialPermission this]
+  (^Integer [^javax.security.auth.PrivateCredentialPermission this]
     (-> this (.hashCode))))
 
 (defn get-actions
@@ -161,7 +161,7 @@
    This method always returns the String, `read`.
 
   returns: the actions (always returns `read`). - `java.lang.String`"
-  ([^javax.security.auth.PrivateCredentialPermission this]
+  (^java.lang.String [^javax.security.auth.PrivateCredentialPermission this]
     (-> this (.getActions))))
 
 (defn new-permission-collection
@@ -171,6 +171,6 @@
    so this method always returns null.
 
   returns: null in all cases. - `java.security.PermissionCollection`"
-  ([^javax.security.auth.PrivateCredentialPermission this]
+  (^java.security.PermissionCollection [^javax.security.auth.PrivateCredentialPermission this]
     (-> this (.newPermissionCollection))))
 

@@ -81,6 +81,6 @@
    instance - `java.lang.Object`
 
   throws: java.lang.Throwable - the exception to throw from the method invocation on the proxy instance"
-  ([^java.rmi.server.RemoteObjectInvocationHandler this ^java.lang.Object proxy ^java.lang.reflect.Method method ^java.lang.Object[] args]
+  (^java.lang.Object [^java.rmi.server.RemoteObjectInvocationHandler this ^java.lang.Object proxy ^java.lang.reflect.Method method args]
     (-> this (.invoke proxy method args))))
 

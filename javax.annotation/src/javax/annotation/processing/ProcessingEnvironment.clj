@@ -38,7 +38,7 @@
    processor-specific options.
 
   returns: the processor-specific options passed to the tool - `java.util.Map<java.lang.String,java.lang.String>`"
-  ([^javax.annotation.processing.ProcessingEnvironment this]
+  (^java.util.Map [^javax.annotation.processing.ProcessingEnvironment this]
     (-> this (.getOptions))))
 
 (defn get-messager
@@ -46,7 +46,7 @@
    notices.
 
   returns: the messager - `javax.annotation.processing.Messager`"
-  ([^javax.annotation.processing.ProcessingEnvironment this]
+  (^javax.annotation.processing.Messager [^javax.annotation.processing.ProcessingEnvironment this]
     (-> this (.getMessager))))
 
 (defn get-filer
@@ -54,7 +54,7 @@
    files.
 
   returns: the filer - `javax.annotation.processing.Filer`"
-  ([^javax.annotation.processing.ProcessingEnvironment this]
+  (^javax.annotation.processing.Filer [^javax.annotation.processing.ProcessingEnvironment this]
     (-> this (.getFiler))))
 
 (defn get-element-utils
@@ -62,7 +62,7 @@
    operating on elements
 
   returns: element utilities - `javax.lang.model.util.Elements`"
-  ([^javax.annotation.processing.ProcessingEnvironment this]
+  (^javax.lang.model.util.Elements [^javax.annotation.processing.ProcessingEnvironment this]
     (-> this (.getElementUtils))))
 
 (defn get-type-utils
@@ -70,7 +70,7 @@
    operating on types.
 
   returns: type utilities - `javax.lang.model.util.Types`"
-  ([^javax.annotation.processing.ProcessingEnvironment this]
+  (^javax.lang.model.util.Types [^javax.annotation.processing.ProcessingEnvironment this]
     (-> this (.getTypeUtils))))
 
 (defn get-source-version
@@ -78,7 +78,7 @@
 
   returns: the source version to which generated source and class
            files should conform to - `javax.lang.model.SourceVersion`"
-  ([^javax.annotation.processing.ProcessingEnvironment this]
+  (^javax.lang.model.SourceVersion [^javax.annotation.processing.ProcessingEnvironment this]
     (-> this (.getSourceVersion))))
 
 (defn get-locale
@@ -88,6 +88,6 @@
 
   returns: the current locale or null if no locale is in
    effect - `java.util.Locale`"
-  ([^javax.annotation.processing.ProcessingEnvironment this]
+  (^java.util.Locale [^javax.annotation.processing.ProcessingEnvironment this]
     (-> this (.getLocale))))
 

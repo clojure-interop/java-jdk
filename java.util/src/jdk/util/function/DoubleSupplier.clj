@@ -14,6 +14,6 @@
   "Gets a result.
 
   returns: a result - `double`"
-  ([^java.util.function.DoubleSupplier this]
+  (^Double [^java.util.function.DoubleSupplier this]
     (-> this (.getAsDouble))))
 

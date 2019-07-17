@@ -188,14 +188,14 @@
   "Returns the dimension of arrays described by this ArrayType instance.
 
   returns: the dimension. - `int`"
-  ([^javax.management.openmbean.ArrayType this]
+  (^Integer [^javax.management.openmbean.ArrayType this]
     (-> this (.getDimension))))
 
 (defn get-element-open-type
   "Returns the open type of element values contained in the arrays described by this ArrayType instance.
 
   returns: the element type. - `javax.management.openmbean.OpenType<?>`"
-  ([^javax.management.openmbean.ArrayType this]
+  (^javax.management.openmbean.OpenType [^javax.management.openmbean.ArrayType this]
     (-> this (.getElementOpenType))))
 
 (defn primitive-array?
@@ -203,7 +203,7 @@
    type describes are primitive arrays, false otherwise.
 
   returns: true if this is a primitive array type. - `boolean`"
-  ([^javax.management.openmbean.ArrayType this]
+  (^Boolean [^javax.management.openmbean.ArrayType this]
     (-> this (.isPrimitiveArray))))
 
 (defn value?
@@ -232,7 +232,7 @@
 
   returns: true if obj is a value for this
    ArrayType instance. - `boolean`"
-  ([^javax.management.openmbean.ArrayType this ^java.lang.Object obj]
+  (^Boolean [^javax.management.openmbean.ArrayType this ^java.lang.Object obj]
     (-> this (.isValue obj))))
 
 (defn equals
@@ -247,7 +247,7 @@
 
   returns: true if the specified object is equal to
            this ArrayType instance. - `boolean`"
-  ([^javax.management.openmbean.ArrayType this ^java.lang.Object obj]
+  (^Boolean [^javax.management.openmbean.ArrayType this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -270,7 +270,7 @@
    for subsequent calls.
 
   returns: the hash code value for this ArrayType instance - `int`"
-  ([^javax.management.openmbean.ArrayType this]
+  (^Integer [^javax.management.openmbean.ArrayType this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -287,6 +287,6 @@
    then the same value is returned for subsequent calls.
 
   returns: a string representation of this ArrayType instance - `java.lang.String`"
-  ([^javax.management.openmbean.ArrayType this]
+  (^java.lang.String [^javax.management.openmbean.ArrayType this]
     (-> this (.toString))))
 

@@ -34,7 +34,7 @@
 
   returns: the cause of this NoSuchMechanismException or
            null if the cause is nonexistent or unknown. - `java.lang.Throwable`"
-  ([^javax.xml.crypto.NoSuchMechanismException this]
+  (^java.lang.Throwable [^javax.xml.crypto.NoSuchMechanismException this]
     (-> this (.getCause))))
 
 (defn print-stack-trace

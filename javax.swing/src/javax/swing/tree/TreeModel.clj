@@ -31,7 +31,7 @@
    only if the tree has no nodes.
 
   returns: the root of the tree - `java.lang.Object`"
-  ([^javax.swing.tree.TreeModel this]
+  (^java.lang.Object [^javax.swing.tree.TreeModel this]
     (-> this (.getRoot))))
 
 (defn get-child
@@ -47,7 +47,7 @@
   index - `int`
 
   returns: the child of parent at index index - `java.lang.Object`"
-  ([^javax.swing.tree.TreeModel this ^java.lang.Object parent ^Integer index]
+  (^java.lang.Object [^javax.swing.tree.TreeModel this ^java.lang.Object parent ^Integer index]
     (-> this (.getChild parent index))))
 
 (defn get-child-count
@@ -59,7 +59,7 @@
   parent - a node in the tree, obtained from this data source - `java.lang.Object`
 
   returns: the number of children of the node parent - `int`"
-  ([^javax.swing.tree.TreeModel this ^java.lang.Object parent]
+  (^Integer [^javax.swing.tree.TreeModel this ^java.lang.Object parent]
     (-> this (.getChildCount parent))))
 
 (defn leaf?
@@ -73,7 +73,7 @@
   node - a node in the tree, obtained from this data source - `java.lang.Object`
 
   returns: true if node is a leaf - `boolean`"
-  ([^javax.swing.tree.TreeModel this ^java.lang.Object node]
+  (^Boolean [^javax.swing.tree.TreeModel this ^java.lang.Object node]
     (-> this (.isLeaf node))))
 
 (defn value-for-path-changed
@@ -99,7 +99,7 @@
   returns: the index of the child in the parent, or -1 if either
       child or parent are null
       or don't belong to this tree model - `int`"
-  ([^javax.swing.tree.TreeModel this ^java.lang.Object parent ^java.lang.Object child]
+  (^Integer [^javax.swing.tree.TreeModel this ^java.lang.Object parent ^java.lang.Object child]
     (-> this (.getIndexOfChild parent child))))
 
 (defn add-tree-model-listener

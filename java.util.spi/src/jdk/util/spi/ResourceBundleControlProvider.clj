@@ -21,6 +21,6 @@
            applicable to this provider. - `java.util.ResourceBundle.Control`
 
   throws: java.lang.NullPointerException - if baseName is null"
-  ([^java.util.spi.ResourceBundleControlProvider this ^java.lang.String base-name]
+  (^java.util.ResourceBundle.Control [^java.util.spi.ResourceBundleControlProvider this ^java.lang.String base-name]
     (-> this (.getControl base-name))))
 

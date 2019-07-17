@@ -21,7 +21,7 @@
   "Determine the Print Job to which this print job event pertains.
 
   returns: Print Job object. - `javax.print.DocPrintJob`"
-  ([^javax.print.event.PrintJobAttributeEvent this]
+  (^javax.print.DocPrintJob [^javax.print.event.PrintJobAttributeEvent this]
     (-> this (.getPrintJob))))
 
 (defn get-attributes
@@ -29,6 +29,6 @@
 
   returns: Attributes containing the new values for the print job
    attributes that changed. The returned set may not be modifiable. - `javax.print.attribute.PrintJobAttributeSet`"
-  ([^javax.print.event.PrintJobAttributeEvent this]
+  (^javax.print.attribute.PrintJobAttributeSet [^javax.print.event.PrintJobAttributeEvent this]
     (-> this (.getAttributes))))
 

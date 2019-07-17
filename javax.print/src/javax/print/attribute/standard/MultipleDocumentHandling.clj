@@ -177,6 +177,6 @@
    the category name is `multiple-document-handling`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.MultipleDocumentHandling this]
+  (^java.lang.String [^javax.print.attribute.standard.MultipleDocumentHandling this]
     (-> this (.getName))))
 

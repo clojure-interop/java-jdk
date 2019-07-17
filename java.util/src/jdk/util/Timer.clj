@@ -165,6 +165,6 @@
    a task scheduled on this timer.
 
   returns: the number of tasks removed from the queue. - `int`"
-  ([^java.util.Timer this]
+  (^Integer [^java.util.Timer this]
     (-> this (.purge))))
 

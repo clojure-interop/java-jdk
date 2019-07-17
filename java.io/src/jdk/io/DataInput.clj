@@ -130,7 +130,7 @@
   returns: the unsigned 8-bit value read. - `int`
 
   throws: java.io.EOFException - if this stream reaches the end before reading all the bytes."
-  ([^java.io.DataInput this]
+  (^Integer [^java.io.DataInput this]
     (-> this (.readUnsignedByte))))
 
 (defn read-byte
@@ -145,7 +145,7 @@
   returns: the 8-bit value read. - `byte`
 
   throws: java.io.EOFException - if this stream reaches the end before reading all the bytes."
-  ([^java.io.DataInput this]
+  (^Byte [^java.io.DataInput this]
     (-> this (.readByte))))
 
 (defn read-fully
@@ -211,7 +211,7 @@
   returns: the char value read. - `char`
 
   throws: java.io.EOFException - if this stream reaches the end before reading all the bytes."
-  ([^java.io.DataInput this]
+  (^Character [^java.io.DataInput this]
     (-> this (.readChar))))
 
 (defn read-float
@@ -230,7 +230,7 @@
   returns: the float value read. - `float`
 
   throws: java.io.EOFException - if this stream reaches the end before reading all the bytes."
-  ([^java.io.DataInput this]
+  (^Float [^java.io.DataInput this]
     (-> this (.readFloat))))
 
 (defn read-boolean
@@ -244,7 +244,7 @@
   returns: the boolean value read. - `boolean`
 
   throws: java.io.EOFException - if this stream reaches the end before reading all the bytes."
-  ([^java.io.DataInput this]
+  (^Boolean [^java.io.DataInput this]
     (-> this (.readBoolean))))
 
 (defn read-int
@@ -262,7 +262,7 @@
   returns: the int value read. - `int`
 
   throws: java.io.EOFException - if this stream reaches the end before reading all the bytes."
-  ([^java.io.DataInput this]
+  (^Integer [^java.io.DataInput this]
     (-> this (.readInt))))
 
 (defn read-long
@@ -288,7 +288,7 @@
   returns: the long value read. - `long`
 
   throws: java.io.EOFException - if this stream reaches the end before reading all the bytes."
-  ([^java.io.DataInput this]
+  (^Long [^java.io.DataInput this]
     (-> this (.readLong))))
 
 (defn read-short
@@ -309,7 +309,7 @@
   returns: the 16-bit value read. - `short`
 
   throws: java.io.EOFException - if this stream reaches the end before reading all the bytes."
-  ([^java.io.DataInput this]
+  (^Short [^java.io.DataInput this]
     (-> this (.readShort))))
 
 (defn skip-bytes
@@ -334,7 +334,7 @@
   returns: the number of bytes actually skipped. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.DataInput this ^Integer n]
+  (^Integer [^java.io.DataInput this ^Integer n]
     (-> this (.skipBytes n))))
 
 (defn read-utf
@@ -420,7 +420,7 @@
   returns: a Unicode string. - `java.lang.String`
 
   throws: java.io.EOFException - if this stream reaches the end before reading all the bytes."
-  ([^java.io.DataInput this]
+  (^java.lang.String [^java.io.DataInput this]
     (-> this (.readUTF))))
 
 (defn read-double
@@ -439,7 +439,7 @@
   returns: the double value read. - `double`
 
   throws: java.io.EOFException - if this stream reaches the end before reading all the bytes."
-  ([^java.io.DataInput this]
+  (^Double [^java.io.DataInput this]
     (-> this (.readDouble))))
 
 (defn read-line
@@ -481,7 +481,7 @@
            encountered before a byte can be read. - `java.lang.String`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.DataInput this]
+  (^java.lang.String [^java.io.DataInput this]
     (-> this (.readLine))))
 
 (defn read-unsigned-short
@@ -504,6 +504,6 @@
   returns: the unsigned 16-bit value read. - `int`
 
   throws: java.io.EOFException - if this stream reaches the end before reading all the bytes."
-  ([^java.io.DataInput this]
+  (^Integer [^java.io.DataInput this]
     (-> this (.readUnsignedShort))))
 

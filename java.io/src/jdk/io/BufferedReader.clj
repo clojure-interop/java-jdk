@@ -49,7 +49,7 @@
   returns: The number of characters actually skipped - `long`
 
   throws: java.lang.IllegalArgumentException - If n is negative."
-  ([^java.io.BufferedReader this ^Long n]
+  (^Long [^java.io.BufferedReader this ^Long n]
     (-> this (.skip n))))
 
 (defn ready
@@ -62,7 +62,7 @@
    next read will block. - `boolean`
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.io.BufferedReader this]
+  (^Boolean [^java.io.BufferedReader this]
     (-> this (.ready))))
 
 (defn lines
@@ -89,7 +89,7 @@
 
   returns: a Stream<String> providing the lines of text
            described by this BufferedReader - `java.util.stream.Stream<java.lang.String>`"
-  ([^java.io.BufferedReader this]
+  (^java.util.stream.Stream [^java.io.BufferedReader this]
     (-> this (.lines))))
 
 (defn read
@@ -136,9 +136,9 @@
                stream has been reached - `int`
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.io.BufferedReader this cbuf ^Integer off ^Integer len]
+  (^Integer [^java.io.BufferedReader this cbuf ^Integer off ^Integer len]
     (-> this (.read cbuf off len)))
-  ([^java.io.BufferedReader this]
+  (^Integer [^java.io.BufferedReader this]
     (-> this (.read))))
 
 (defn reset
@@ -152,7 +152,7 @@
   "Tells whether this stream supports the mark() operation, which it does.
 
   returns: true if and only if this stream supports the mark operation. - `boolean`"
-  ([^java.io.BufferedReader this]
+  (^Boolean [^java.io.BufferedReader this]
     (-> this (.markSupported))))
 
 (defn close
@@ -182,6 +182,6 @@
                stream has been reached - `java.lang.String`
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.io.BufferedReader this]
+  (^java.lang.String [^java.io.BufferedReader this]
     (-> this (.readLine))))
 

@@ -92,7 +92,7 @@
   returns: the MBean descriptor. - `javax.management.Descriptor`
 
   throws: javax.management.MBeanException - Wraps a distributed communication Exception."
-  ([^javax.management.modelmbean.ModelMBeanInfo this]
+  (^javax.management.Descriptor [^javax.management.modelmbean.ModelMBeanInfo this]
     (-> this (.getMBeanDescriptor))))
 
 (defn set-m-bean-descriptor
@@ -117,7 +117,7 @@
    this MBeanInfo.
 
   returns: the Java class name. - `java.lang.String`"
-  ([^javax.management.modelmbean.ModelMBeanInfo this]
+  (^java.lang.String [^javax.management.modelmbean.ModelMBeanInfo this]
     (-> this (.getClassName))))
 
 (defn get-descriptor
@@ -131,7 +131,7 @@
    found, null is returned. - `javax.management.Descriptor`
 
   throws: javax.management.MBeanException - Wraps a distributed communication Exception."
-  ([^javax.management.modelmbean.ModelMBeanInfo this ^java.lang.String in-descriptor-name ^java.lang.String in-descriptor-type]
+  (^javax.management.Descriptor [^javax.management.modelmbean.ModelMBeanInfo this ^java.lang.String in-descriptor-name ^java.lang.String in-descriptor-type]
     (-> this (.getDescriptor in-descriptor-name in-descriptor-type))))
 
 (defn set-descriptors
@@ -140,7 +140,7 @@
   in-descriptors - The descriptors to be set in the ModelMBeanInfo. Null elements of the list will be ignored. All descriptors must have name and descriptorType fields. - `javax.management.Descriptor[]`
 
   throws: javax.management.RuntimeOperationsException - Wraps an IllegalArgumentException for a null or invalid descriptor."
-  ([^javax.management.modelmbean.ModelMBeanInfo this ^javax.management.Descriptor[] in-descriptors]
+  ([^javax.management.modelmbean.ModelMBeanInfo this in-descriptors]
     (-> this (.setDescriptors in-descriptors))))
 
 (defn get-descriptors
@@ -182,14 +182,14 @@
    if there is none. - `javax.management.modelmbean.ModelMBeanAttributeInfo`
 
   throws: javax.management.MBeanException - Wraps a distributed communication Exception."
-  ([^javax.management.modelmbean.ModelMBeanInfo this ^java.lang.String in-name]
+  (^javax.management.modelmbean.ModelMBeanAttributeInfo [^javax.management.modelmbean.ModelMBeanInfo this ^java.lang.String in-name]
     (-> this (.getAttribute in-name))))
 
 (defn get-description
   "Returns a human readable description of the MBean.
 
   returns: the description. - `java.lang.String`"
-  ([^javax.management.modelmbean.ModelMBeanInfo this]
+  (^java.lang.String [^javax.management.modelmbean.ModelMBeanInfo this]
     (-> this (.getDescription))))
 
 (defn set-descriptor
@@ -209,7 +209,7 @@
   "Creates and returns a copy of this object.
 
   returns: `java.lang.Object`"
-  ([^javax.management.modelmbean.ModelMBeanInfo this]
+  (^java.lang.Object [^javax.management.modelmbean.ModelMBeanInfo this]
     (-> this (.clone))))
 
 (defn get-notification
@@ -221,7 +221,7 @@
    is none. - `javax.management.modelmbean.ModelMBeanNotificationInfo`
 
   throws: javax.management.MBeanException - Wraps a distributed communication Exception."
-  ([^javax.management.modelmbean.ModelMBeanInfo this ^java.lang.String in-name]
+  (^javax.management.modelmbean.ModelMBeanNotificationInfo [^javax.management.modelmbean.ModelMBeanInfo this ^java.lang.String in-name]
     (-> this (.getNotification in-name))))
 
 (defn get-operation
@@ -233,7 +233,7 @@
    if there is none. - `javax.management.modelmbean.ModelMBeanOperationInfo`
 
   throws: javax.management.MBeanException - Wraps a distributed communication Exception."
-  ([^javax.management.modelmbean.ModelMBeanInfo this ^java.lang.String in-name]
+  (^javax.management.modelmbean.ModelMBeanOperationInfo [^javax.management.modelmbean.ModelMBeanInfo this ^java.lang.String in-name]
     (-> this (.getOperation in-name))))
 
 (defn get-constructors

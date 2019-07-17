@@ -151,7 +151,7 @@
 
   returns: true if obj is a value for this
    SimpleType instance. - `boolean`"
-  ([^javax.management.openmbean.SimpleType this ^java.lang.Object obj]
+  (^Boolean [^javax.management.openmbean.SimpleType this ^java.lang.Object obj]
     (-> this (.isValue obj))))
 
 (defn equals
@@ -163,7 +163,7 @@
   obj - the object to be compared for equality with this SimpleType instance; if obj is null or is not an instance of the class SimpleType, equals returns false. - `java.lang.Object`
 
   returns: true if the specified object is equal to this SimpleType instance. - `boolean`"
-  ([^javax.management.openmbean.SimpleType this ^java.lang.Object obj]
+  (^Boolean [^javax.management.openmbean.SimpleType this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -175,7 +175,7 @@
    on the first call to hashCode, and then the same value is returned for subsequent calls.
 
   returns: the hash code value for this SimpleType instance - `int`"
-  ([^javax.management.openmbean.SimpleType this]
+  (^Integer [^javax.management.openmbean.SimpleType this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -189,7 +189,7 @@
    on the first call to toString, and then the same value is returned for subsequent calls.
 
   returns: a string representation of this SimpleType instance - `java.lang.String`"
-  ([^javax.management.openmbean.SimpleType this]
+  (^java.lang.String [^javax.management.openmbean.SimpleType this]
     (-> this (.toString))))
 
 (defn read-resolve
@@ -199,6 +199,6 @@
   returns: the replacement object. - `java.lang.Object`
 
   throws: java.io.ObjectStreamException - if the read object cannot be resolved."
-  ([^javax.management.openmbean.SimpleType this]
+  (^java.lang.Object [^javax.management.openmbean.SimpleType this]
     (-> this (.readResolve))))
 

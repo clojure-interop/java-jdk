@@ -25,7 +25,7 @@
   "Returns the name representing this memory manager.
 
   returns: the name of this memory manager. - `java.lang.String`"
-  ([^java.lang.management.MemoryManagerMXBean this]
+  (^java.lang.String [^java.lang.management.MemoryManagerMXBean this]
     (-> this (.getName))))
 
 (defn valid?
@@ -36,7 +36,7 @@
   returns: true if the memory manager is valid in the
                  Java virtual machine;
            false otherwise. - `boolean`"
-  ([^java.lang.management.MemoryManagerMXBean this]
+  (^Boolean [^java.lang.management.MemoryManagerMXBean this]
     (-> this (.isValid))))
 
 (defn get-memory-pool-names

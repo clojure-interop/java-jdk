@@ -99,6 +99,6 @@
   returns: the CSS.Attribute object,
     or null if the string
     doesn't represent a valid attribute key - `javax.swing.text.html.CSS.Attribute`"
-  ([^java.lang.String name]
+  (^javax.swing.text.html.CSS.Attribute [^java.lang.String name]
     (CSS/getAttribute name)))
 

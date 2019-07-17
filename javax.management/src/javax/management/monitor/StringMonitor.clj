@@ -47,7 +47,7 @@
   object - the name of the object whose derived gauge timestamp is to be returned. - `javax.management.ObjectName`
 
   returns: The derived gauge timestamp of the specified object. - `long`"
-  ([^javax.management.monitor.StringMonitor this ^javax.management.ObjectName object]
+  (^Long [^javax.management.monitor.StringMonitor this ^javax.management.ObjectName object]
     (-> this (.getDerivedGaugeTimeStamp object)))
   ([^javax.management.monitor.StringMonitor this]
     (-> this (.getDerivedGaugeTimeStamp))))
@@ -67,7 +67,7 @@
 
   returns: true if the string monitor notifies when
    matching the string to compare, false otherwise. - `boolean`"
-  ([^javax.management.monitor.StringMonitor this]
+  (^Boolean [^javax.management.monitor.StringMonitor this]
     (-> this (.getNotifyMatch))))
 
 (defn get-notify-differ?
@@ -76,7 +76,7 @@
 
   returns: true if the string monitor notifies when
    differing from the string to compare, false otherwise. - `boolean`"
-  ([^javax.management.monitor.StringMonitor this]
+  (^Boolean [^javax.management.monitor.StringMonitor this]
     (-> this (.getNotifyDiffer))))
 
 (defn set-notify-match
@@ -107,7 +107,7 @@
    to all observed MBeans.
 
   returns: The string value. - `java.lang.String`"
-  ([^javax.management.monitor.StringMonitor this]
+  (^java.lang.String [^javax.management.monitor.StringMonitor this]
     (-> this (.getStringToCompare))))
 
 (defn get-derived-gauge
@@ -117,7 +117,7 @@
   object - the name of the MBean whose derived gauge is required. - `javax.management.ObjectName`
 
   returns: The derived gauge of the specified object. - `java.lang.String`"
-  ([^javax.management.monitor.StringMonitor this ^javax.management.ObjectName object]
+  (^java.lang.String [^javax.management.monitor.StringMonitor this ^javax.management.ObjectName object]
     (-> this (.getDerivedGauge object)))
   ([^javax.management.monitor.StringMonitor this]
     (-> this (.getDerivedGauge))))

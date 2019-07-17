@@ -21,7 +21,7 @@
   "c - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent c]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent c]
     (MetalSliderUI/createUI c)))
 
 (defn install-ui
@@ -52,6 +52,6 @@
    determine the tick area rectangle.
 
   returns: `int`"
-  ([^javax.swing.plaf.metal.MetalSliderUI this]
+  (^Integer [^javax.swing.plaf.metal.MetalSliderUI this]
     (-> this (.getTickLength))))
 

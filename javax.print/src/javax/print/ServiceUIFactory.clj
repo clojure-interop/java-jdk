@@ -121,7 +121,7 @@
    from this factory - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if the role or ui is neither one of the standard ones, nor a private one supported by the factory."
-  ([^javax.print.ServiceUIFactory this ^Integer role ^java.lang.String ui]
+  (^java.lang.Object [^javax.print.ServiceUIFactory this ^Integer role ^java.lang.String ui]
     (-> this (.getUI role ui))))
 
 (defn get-ui-class-names-for-role

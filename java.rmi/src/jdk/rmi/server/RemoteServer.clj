@@ -15,7 +15,7 @@
   returns: a string representation of the client host - `java.lang.String`
 
   throws: java.rmi.server.ServerNotActiveException - if no remote method invocation is being processed in the current thread"
-  ([]
+  (^java.lang.String []
     (RemoteServer/getClientHost )))
 
 (defn *set-log
@@ -37,6 +37,6 @@
   "Returns stream for the RMI call log.
 
   returns: the call log - `java.io.PrintStream`"
-  ([]
+  (^java.io.PrintStream []
     (RemoteServer/getLog )))
 

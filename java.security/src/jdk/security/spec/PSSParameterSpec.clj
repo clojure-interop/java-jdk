@@ -70,34 +70,34 @@
   "Returns the message digest algorithm name.
 
   returns: the message digest algorithm name. - `java.lang.String`"
-  ([^java.security.spec.PSSParameterSpec this]
+  (^java.lang.String [^java.security.spec.PSSParameterSpec this]
     (-> this (.getDigestAlgorithm))))
 
 (defn get-mgf-algorithm
   "Returns the mask generation function algorithm name.
 
   returns: the mask generation function algorithm name. - `java.lang.String`"
-  ([^java.security.spec.PSSParameterSpec this]
+  (^java.lang.String [^java.security.spec.PSSParameterSpec this]
     (-> this (.getMGFAlgorithm))))
 
 (defn get-mgf-parameters
   "Returns the parameters for the mask generation function.
 
   returns: the parameters for the mask generation function. - `java.security.spec.AlgorithmParameterSpec`"
-  ([^java.security.spec.PSSParameterSpec this]
+  (^java.security.spec.AlgorithmParameterSpec [^java.security.spec.PSSParameterSpec this]
     (-> this (.getMGFParameters))))
 
 (defn get-salt-length
   "Returns the salt length in bits.
 
   returns: the salt length. - `int`"
-  ([^java.security.spec.PSSParameterSpec this]
+  (^Integer [^java.security.spec.PSSParameterSpec this]
     (-> this (.getSaltLength))))
 
 (defn get-trailer-field
   "Returns the value for the trailer field, i.e. bc in PKCS#1 v2.1.
 
   returns: the value for the trailer field, i.e. bc in PKCS#1 v2.1. - `int`"
-  ([^java.security.spec.PSSParameterSpec this]
+  (^Integer [^java.security.spec.PSSParameterSpec this]
     (-> this (.getTrailerField))))
 

@@ -59,7 +59,7 @@
    fails.
 
   returns: true if the connector server is active. - `boolean`"
-  ([^javax.management.remote.JMXConnectorServerMBean this]
+  (^Boolean [^javax.management.remote.JMXConnectorServerMBean this]
     (-> this (.isActive))))
 
 (defn set-m-bean-server-forwarder
@@ -118,7 +118,7 @@
 
   returns: the address of this connector server, or null if it
    does not have one. - `javax.management.remote.JMXServiceURL`"
-  ([^javax.management.remote.JMXConnectorServerMBean this]
+  (^javax.management.remote.JMXServiceURL [^javax.management.remote.JMXConnectorServerMBean this]
     (-> this (.getAddress))))
 
 (defn get-attributes
@@ -128,7 +128,7 @@
    connector server.  Attributes whose values are not serializable
    are omitted from this map.  If there are no serializable
    attributes, the returned map is empty. - `java.util.Map<java.lang.String,?>`"
-  ([^javax.management.remote.JMXConnectorServerMBean this]
+  (^java.util.Map [^javax.management.remote.JMXConnectorServerMBean this]
     (-> this (.getAttributes))))
 
 (defn to-jmx-connector
@@ -146,6 +146,6 @@
    to this connector server. - `javax.management.remote.JMXConnector`
 
   throws: java.lang.UnsupportedOperationException - if this connector server does not support the generation of client stubs."
-  ([^javax.management.remote.JMXConnectorServerMBean this ^java.util.Map env]
+  (^javax.management.remote.JMXConnector [^javax.management.remote.JMXConnectorServerMBean this ^java.util.Map env]
     (-> this (.toJMXConnector env))))
 

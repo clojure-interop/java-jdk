@@ -62,11 +62,11 @@
                the stream has been reached. - `int`
 
   throws: java.io.IOException - If the first byte cannot be read for any reason other than end of file, or if the input stream has been closed, or if some other I/O error occurs."
-  ([^java.io.InputStream this b ^Integer off ^Integer len]
+  (^Integer [^java.io.InputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  ([^java.io.InputStream this b]
+  (^Integer [^java.io.InputStream this b]
     (-> this (.read b)))
-  ([^java.io.InputStream this]
+  (^Integer [^java.io.InputStream this]
     (-> this (.read))))
 
 (defn skip
@@ -91,7 +91,7 @@
   returns: the actual number of bytes skipped. - `long`
 
   throws: java.io.IOException - if the stream does not support seek, or if some other I/O error occurs."
-  ([^java.io.InputStream this ^Long n]
+  (^Long [^java.io.InputStream this ^Long n]
     (-> this (.skip n))))
 
 (defn available
@@ -120,7 +120,7 @@
                it reaches the end of the input stream. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.InputStream this]
+  (^Integer [^java.io.InputStream this]
     (-> this (.available))))
 
 (defn close
@@ -212,6 +212,6 @@
 
   returns: true if this stream instance supports the mark
             and reset methods; false otherwise. - `boolean`"
-  ([^java.io.InputStream this]
+  (^Boolean [^java.io.InputStream this]
     (-> this (.markSupported))))
 

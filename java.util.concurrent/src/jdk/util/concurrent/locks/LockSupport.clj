@@ -204,6 +204,6 @@
   returns: the blocker - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if argument is null"
-  ([^java.lang.Thread t]
+  (^java.lang.Object [^java.lang.Thread t]
     (LockSupport/getBlocker t)))
 

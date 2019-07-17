@@ -12,7 +12,7 @@
   "b - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent b]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent b]
     (BasicToggleButtonUI/createUI b)))
 
 (defn paint

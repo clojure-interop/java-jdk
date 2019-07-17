@@ -80,7 +80,7 @@
   returns: the state of this check box menu item, where
                        true indicates `on` and
                        false indicates `off` - `boolean`"
-  ([^java.awt.CheckboxMenuItem this]
+  (^Boolean [^java.awt.CheckboxMenuItem this]
     (-> this (.getState))))
 
 (defn add-notify
@@ -99,7 +99,7 @@
 
   returns: an AccessibleAWTCheckboxMenuItem that serves as the
            AccessibleContext of this CheckboxMenuItem - `javax.accessibility.AccessibleContext`"
-  ([^java.awt.CheckboxMenuItem this]
+  (^javax.accessibility.AccessibleContext [^java.awt.CheckboxMenuItem this]
     (-> this (.getAccessibleContext))))
 
 (defn param-string
@@ -111,7 +111,7 @@
    null.
 
   returns: the parameter string of this check box menu item - `java.lang.String`"
-  ([^java.awt.CheckboxMenuItem this]
+  (^java.lang.String [^java.awt.CheckboxMenuItem this]
     (-> this (.paramString))))
 
 (defn get-selected-objects

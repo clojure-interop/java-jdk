@@ -28,7 +28,7 @@
 
   returns: The method that should be used to write the property value.
    May return null if the property can't be written. - `java.lang.reflect.Method`"
-  ([^java.beans.PropertyDescriptor this]
+  (^java.lang.reflect.Method [^java.beans.PropertyDescriptor this]
     (-> this (.getWriteMethod))))
 
 (defn set-write-method
@@ -60,7 +60,7 @@
 
   returns: a property editor instance or null if a property editor has
            not been defined or cannot be created - `java.beans.PropertyEditor`"
-  ([^java.beans.PropertyDescriptor this ^java.lang.Object bean]
+  (^java.beans.PropertyEditor [^java.beans.PropertyDescriptor this ^java.lang.Object bean]
     (-> this (.createPropertyEditor bean))))
 
 (defn get-property-type
@@ -74,7 +74,7 @@
 
   returns: the Class object that represents the Java type info,
            or null if the type cannot be determined - `java.lang.Class<?>`"
-  ([^java.beans.PropertyDescriptor this]
+  (^java.lang.Class [^java.beans.PropertyDescriptor this]
     (-> this (.getPropertyType))))
 
 (defn set-read-method
@@ -91,7 +91,7 @@
 
   returns: The method that should be used to read the property value.
    May return null if the property can't be read. - `java.lang.reflect.Method`"
-  ([^java.beans.PropertyDescriptor this]
+  (^java.lang.reflect.Method [^java.beans.PropertyDescriptor this]
     (-> this (.getReadMethod))))
 
 (defn hash-code
@@ -99,7 +99,7 @@
    See Object.hashCode() for a complete description.
 
   returns: a hash code value for this object. - `int`"
-  ([^java.beans.PropertyDescriptor this]
+  (^Integer [^java.beans.PropertyDescriptor this]
     (-> this (.hashCode))))
 
 (defn constrained?
@@ -107,7 +107,7 @@
    event to get fired when the property is changed.
 
   returns: True if this is a constrained property. - `boolean`"
-  ([^java.beans.PropertyDescriptor this]
+  (^Boolean [^java.beans.PropertyDescriptor this]
     (-> this (.isConstrained))))
 
 (defn bound?
@@ -115,7 +115,7 @@
    get fired when the property is changed.
 
   returns: True if this is a bound property. - `boolean`"
-  ([^java.beans.PropertyDescriptor this]
+  (^Boolean [^java.beans.PropertyDescriptor this]
     (-> this (.isBound))))
 
 (defn get-property-editor-class
@@ -127,7 +127,7 @@
             indicating that no special editor has been registered,
             so the PropertyEditorManager should be used to locate
             a suitable PropertyEditor. - `java.lang.Class<?>`"
-  ([^java.beans.PropertyDescriptor this]
+  (^java.lang.Class [^java.beans.PropertyDescriptor this]
     (-> this (.getPropertyEditorClass))))
 
 (defn set-bound
@@ -148,7 +148,7 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([^java.beans.PropertyDescriptor this ^java.lang.Object obj]
+  (^Boolean [^java.beans.PropertyDescriptor this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn set-property-editor-class

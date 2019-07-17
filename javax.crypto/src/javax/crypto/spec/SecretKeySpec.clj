@@ -46,14 +46,14 @@
   "Returns the name of the algorithm associated with this secret key.
 
   returns: the secret key algorithm. - `java.lang.String`"
-  ([^javax.crypto.spec.SecretKeySpec this]
+  (^java.lang.String [^javax.crypto.spec.SecretKeySpec this]
     (-> this (.getAlgorithm))))
 
 (defn get-format
   "Returns the name of the encoding format for this secret key.
 
   returns: the string `RAW`. - `java.lang.String`"
-  ([^javax.crypto.spec.SecretKeySpec this]
+  (^java.lang.String [^javax.crypto.spec.SecretKeySpec this]
     (-> this (.getFormat))))
 
 (defn get-encoded
@@ -69,7 +69,7 @@
    Objects that are equal will also have the same hashcode.
 
   returns: a hash code value for this object. - `int`"
-  ([^javax.crypto.spec.SecretKeySpec this]
+  (^Integer [^javax.crypto.spec.SecretKeySpec this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -82,6 +82,6 @@
 
   returns: true if the objects are considered equal, false if
    obj is null or otherwise. - `boolean`"
-  ([^javax.crypto.spec.SecretKeySpec this ^java.lang.Object obj]
+  (^Boolean [^javax.crypto.spec.SecretKeySpec this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

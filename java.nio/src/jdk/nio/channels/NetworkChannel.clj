@@ -30,7 +30,7 @@
   returns: This channel - `java.nio.channels.NetworkChannel`
 
   throws: java.nio.channels.AlreadyBoundException - If the socket is already bound"
-  ([^java.nio.channels.NetworkChannel this ^java.net.SocketAddress local]
+  (^java.nio.channels.NetworkChannel [^java.nio.channels.NetworkChannel this ^java.net.SocketAddress local]
     (-> this (.bind local))))
 
 (defn get-local-address
@@ -43,7 +43,7 @@
             if the channel's socket is not bound - `java.net.SocketAddress`
 
   throws: java.nio.channels.ClosedChannelException - If the channel is closed"
-  ([^java.nio.channels.NetworkChannel this]
+  (^java.net.SocketAddress [^java.nio.channels.NetworkChannel this]
     (-> this (.getLocalAddress))))
 
 (defn set-option
@@ -77,6 +77,6 @@
    channel has been closed.
 
   returns: A set of the socket options supported by this channel - `java.util.Set<java.net.SocketOption<?>>`"
-  ([^java.nio.channels.NetworkChannel this]
+  (^java.util.Set> [^java.nio.channels.NetworkChannel this]
     (-> this (.supportedOptions))))
 

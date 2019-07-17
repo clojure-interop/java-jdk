@@ -8,7 +8,7 @@
    that was changed.
 
   returns: the element - `javax.swing.text.Element`"
-  ([^javax.swing.event.DocumentEvent$ElementChange this]
+  (^javax.swing.text.Element [^javax.swing.event.DocumentEvent$ElementChange this]
     (-> this (.getElement))))
 
 (defn get-index
@@ -17,7 +17,7 @@
    and/or removed.
 
   returns: the index >= 0 - `int`"
-  ([^javax.swing.event.DocumentEvent$ElementChange this]
+  (^Integer [^javax.swing.event.DocumentEvent$ElementChange this]
     (-> this (.getIndex))))
 
 (defn get-children-removed

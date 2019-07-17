@@ -66,7 +66,7 @@
 
   returns: JFormattedTextField.AbstractFormatter to use when the value is
            null - `javax.swing.JFormattedTextField.AbstractFormatter`"
-  ([^javax.swing.text.DefaultFormatterFactory this]
+  (^javax.swing.JFormattedTextField.AbstractFormatter [^javax.swing.text.DefaultFormatterFactory this]
     (-> this (.getNullFormatter))))
 
 (defn get-edit-formatter
@@ -77,7 +77,7 @@
 
   returns: JFormattedTextField.AbstractFormatter to use when the
            component has focus - `javax.swing.JFormattedTextField.AbstractFormatter`"
-  ([^javax.swing.text.DefaultFormatterFactory this]
+  (^javax.swing.JFormattedTextField.AbstractFormatter [^javax.swing.text.DefaultFormatterFactory this]
     (-> this (.getEditFormatter))))
 
 (defn set-display-formatter
@@ -117,7 +117,7 @@
 
   returns: JFormattedTextField.AbstractFormatter to handle
            formatting duties. - `javax.swing.JFormattedTextField.AbstractFormatter`"
-  ([^javax.swing.text.DefaultFormatterFactory this ^javax.swing.JFormattedTextField source]
+  (^javax.swing.JFormattedTextField.AbstractFormatter [^javax.swing.text.DefaultFormatterFactory this ^javax.swing.JFormattedTextField source]
     (-> this (.getFormatter source))))
 
 (defn set-edit-formatter
@@ -138,7 +138,7 @@
 
   returns: JFormattedTextField.AbstractFormatter used if a more specific
            one is not specified. - `javax.swing.JFormattedTextField.AbstractFormatter`"
-  ([^javax.swing.text.DefaultFormatterFactory this]
+  (^javax.swing.JFormattedTextField.AbstractFormatter [^javax.swing.text.DefaultFormatterFactory this]
     (-> this (.getDefaultFormatter))))
 
 (defn get-display-formatter
@@ -149,6 +149,6 @@
 
   returns: JFormattedTextField.AbstractFormatter to use when the
            JFormattedTextField does not have focus - `javax.swing.JFormattedTextField.AbstractFormatter`"
-  ([^javax.swing.text.DefaultFormatterFactory this]
+  (^javax.swing.JFormattedTextField.AbstractFormatter [^javax.swing.text.DefaultFormatterFactory this]
     (-> this (.getDisplayFormatter))))
 

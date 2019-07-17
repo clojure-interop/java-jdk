@@ -48,6 +48,6 @@
   p - a visitor-specified parameter - `ElementKindVisitor7.P`
 
   returns: the result of defaultAction - `ElementKindVisitor7.R`"
-  ([^javax.lang.model.util.ElementKindVisitor7 this ^javax.lang.model.element.VariableElement e ^ElementKindVisitor7.P p]
+  (^ElementKindVisitor7.R [^javax.lang.model.util.ElementKindVisitor7 this ^javax.lang.model.element.VariableElement e ^ElementKindVisitor7.P p]
     (-> this (.visitVariableAsResourceVariable e p))))
 

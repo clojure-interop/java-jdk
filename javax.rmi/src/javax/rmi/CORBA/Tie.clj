@@ -8,7 +8,7 @@
    this tie.
 
   returns: an object reference for the target object. - `org.omg.CORBA.Object`"
-  ([^javax.rmi.CORBA.Tie this]
+  (^org.omg.CORBA.Object [^javax.rmi.CORBA.Tie this]
     (-> this (.thisObject))))
 
 (defn deactivate
@@ -24,7 +24,7 @@
   orb - the ORB. - `org.omg.CORBA.ORB`"
   ([^javax.rmi.CORBA.Tie this ^org.omg.CORBA.ORB orb]
     (-> this (.orb orb)))
-  ([^javax.rmi.CORBA.Tie this]
+  (^org.omg.CORBA.ORB [^javax.rmi.CORBA.Tie this]
     (-> this (.orb))))
 
 (defn set-target
@@ -39,6 +39,6 @@
   "Returns the target for this tie.
 
   returns: the target. - `java.rmi.Remote`"
-  ([^javax.rmi.CORBA.Tie this]
+  (^java.rmi.Remote [^javax.rmi.CORBA.Tie this]
     (-> this (.getTarget))))
 

@@ -34,21 +34,21 @@
 
   returns: the TableColumn object for the column
                             at columnIndex - `javax.swing.table.TableColumn`"
-  ([^javax.swing.table.DefaultTableColumnModel this ^Integer column-index]
+  (^javax.swing.table.TableColumn [^javax.swing.table.DefaultTableColumnModel this ^Integer column-index]
     (-> this (.getColumn column-index))))
 
 (defn get-columns
   "Returns an Enumeration of all the columns in the model.
 
   returns: an Enumeration of the columns in the model - `java.util.Enumeration<javax.swing.table.TableColumn>`"
-  ([^javax.swing.table.DefaultTableColumnModel this]
+  (^java.util.Enumeration [^javax.swing.table.DefaultTableColumnModel this]
     (-> this (.getColumns))))
 
 (defn get-column-count
   "Returns the number of columns in the tableColumns array.
 
   returns: the number of columns in the tableColumns array - `int`"
-  ([^javax.swing.table.DefaultTableColumnModel this]
+  (^Integer [^javax.swing.table.DefaultTableColumnModel this]
     (-> this (.getColumnCount))))
 
 (defn set-selection-model
@@ -69,7 +69,7 @@
    The default is false.
 
   returns: the columnSelectionAllowed property - `boolean`"
-  ([^javax.swing.table.DefaultTableColumnModel this]
+  (^Boolean [^javax.swing.table.DefaultTableColumnModel this]
     (-> this (.getColumnSelectionAllowed))))
 
 (defn remove-column
@@ -106,7 +106,7 @@
 
   returns: the object that provides column selection state.  Or
             null if row selection is not allowed. - `javax.swing.ListSelectionModel`"
-  ([^javax.swing.table.DefaultTableColumnModel this]
+  (^javax.swing.ListSelectionModel [^javax.swing.table.DefaultTableColumnModel this]
     (-> this (.getSelectionModel))))
 
 (defn value-changed
@@ -122,7 +122,7 @@
   "Returns the number of columns selected.
 
   returns: the number of columns selected - `int`"
-  ([^javax.swing.table.DefaultTableColumnModel this]
+  (^Integer [^javax.swing.table.DefaultTableColumnModel this]
     (-> this (.getSelectedColumnCount))))
 
 (defn move-column
@@ -177,7 +177,7 @@
    The default columnMargin is 1.
 
   returns: the maximum width for the TableColumn - `int`"
-  ([^javax.swing.table.DefaultTableColumnModel this]
+  (^Integer [^javax.swing.table.DefaultTableColumnModel this]
     (-> this (.getColumnMargin))))
 
 (defn get-selected-columns
@@ -194,7 +194,7 @@
   "Returns the total combined width of all columns.
 
   returns: the totalColumnWidth property - `int`"
-  ([^javax.swing.table.DefaultTableColumnModel this]
+  (^Integer [^javax.swing.table.DefaultTableColumnModel this]
     (-> this (.getTotalColumnWidth))))
 
 (defn get-column-index-at-x
@@ -218,7 +218,7 @@
   x - the horizontal location of interest - `int`
 
   returns: the index of the column or -1 if no column is found - `int`"
-  ([^javax.swing.table.DefaultTableColumnModel this ^Integer x]
+  (^Integer [^javax.swing.table.DefaultTableColumnModel this ^Integer x]
     (-> this (.getColumnIndexAtX x))))
 
 (defn get-listeners
@@ -274,6 +274,6 @@
                     is equal to identifier - `int`
 
   throws: java.lang.IllegalArgumentException - if identifier is null, or if no TableColumn has this identifier"
-  ([^javax.swing.table.DefaultTableColumnModel this ^java.lang.Object identifier]
+  (^Integer [^javax.swing.table.DefaultTableColumnModel this ^java.lang.Object identifier]
     (-> this (.getColumnIndex identifier))))
 

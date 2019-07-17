@@ -58,6 +58,6 @@
   returns: the enum constant with the specified name - `javax.xml.ws.soap.AddressingFeature.Responses`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^javax.xml.ws.soap.AddressingFeature.Responses [^java.lang.String name]
     (AddressingFeature$Responses/valueOf name)))
 

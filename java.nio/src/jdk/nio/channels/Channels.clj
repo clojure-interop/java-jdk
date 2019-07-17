@@ -20,7 +20,7 @@
   ch - The channel from which bytes will be read - `java.nio.channels.ReadableByteChannel`
 
   returns: A new input stream - `java.io.InputStream`"
-  ([^java.nio.channels.ReadableByteChannel ch]
+  (^java.io.InputStream [^java.nio.channels.ReadableByteChannel ch]
     (Channels/newInputStream ch)))
 
 (defn *new-output-stream
@@ -35,7 +35,7 @@
   ch - The channel to which bytes will be written - `java.nio.channels.WritableByteChannel`
 
   returns: A new output stream - `java.io.OutputStream`"
-  ([^java.nio.channels.WritableByteChannel ch]
+  (^java.io.OutputStream [^java.nio.channels.WritableByteChannel ch]
     (Channels/newOutputStream ch)))
 
 (defn *new-channel
@@ -48,7 +48,7 @@
   in - The stream from which bytes are to be read - `java.io.InputStream`
 
   returns: A new readable byte channel - `java.nio.channels.ReadableByteChannel`"
-  ([^java.io.InputStream in]
+  (^java.nio.channels.ReadableByteChannel [^java.io.InputStream in]
     (Channels/newChannel in)))
 
 (defn *new-reader
@@ -69,9 +69,9 @@
   min-buffer-cap - The minimum capacity of the internal byte buffer, or -1 if an implementation-dependent default capacity is to be used - `int`
 
   returns: A new reader - `java.io.Reader`"
-  ([^java.nio.channels.ReadableByteChannel ch ^java.nio.charset.CharsetDecoder dec ^Integer min-buffer-cap]
+  (^java.io.Reader [^java.nio.channels.ReadableByteChannel ch ^java.nio.charset.CharsetDecoder dec ^Integer min-buffer-cap]
     (Channels/newReader ch dec min-buffer-cap))
-  ([^java.nio.channels.ReadableByteChannel ch ^java.lang.String cs-name]
+  (^java.io.Reader [^java.nio.channels.ReadableByteChannel ch ^java.lang.String cs-name]
     (Channels/newReader ch cs-name)))
 
 (defn *new-writer
@@ -91,8 +91,8 @@
   min-buffer-cap - The minimum capacity of the internal byte buffer, or -1 if an implementation-dependent default capacity is to be used - `int`
 
   returns: A new writer - `java.io.Writer`"
-  ([^java.nio.channels.WritableByteChannel ch ^java.nio.charset.CharsetEncoder enc ^Integer min-buffer-cap]
+  (^java.io.Writer [^java.nio.channels.WritableByteChannel ch ^java.nio.charset.CharsetEncoder enc ^Integer min-buffer-cap]
     (Channels/newWriter ch enc min-buffer-cap))
-  ([^java.nio.channels.WritableByteChannel ch ^java.lang.String cs-name]
+  (^java.io.Writer [^java.nio.channels.WritableByteChannel ch ^java.lang.String cs-name]
     (Channels/newWriter ch cs-name)))
 

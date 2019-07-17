@@ -19,7 +19,7 @@
   returns: the location in the model of the word start >= 0 - `int`
 
   throws: javax.swing.text.BadLocationException - if the offset is out of range"
-  ([^javax.swing.text.JTextComponent c ^Integer offs]
+  (^Integer [^javax.swing.text.JTextComponent c ^Integer offs]
     (Utilities/getPreviousWord c offs)))
 
 (defn *get-tabbed-text-offset
@@ -36,9 +36,9 @@
   start-offset - starting offset of the text in the document >= 0 - `int`
 
   returns: the offset into the text >= 0 - `int`"
-  ([^javax.swing.text.Segment s ^java.awt.FontMetrics metrics ^Integer x-0 ^Integer x ^javax.swing.text.TabExpander e ^Integer start-offset]
+  (^Integer [^javax.swing.text.Segment s ^java.awt.FontMetrics metrics ^Integer x-0 ^Integer x ^javax.swing.text.TabExpander e ^Integer start-offset]
     (Utilities/getTabbedTextOffset s metrics x-0 x e start-offset))
-  ([^javax.swing.text.Segment s ^java.awt.FontMetrics metrics ^Integer x-0 ^Integer x ^javax.swing.text.TabExpander e ^Integer start-offset ^Boolean round]
+  (^Integer [^javax.swing.text.Segment s ^java.awt.FontMetrics metrics ^Integer x-0 ^Integer x ^javax.swing.text.TabExpander e ^Integer start-offset ^Boolean round]
     (Utilities/getTabbedTextOffset s metrics x-0 x e start-offset round)))
 
 (defn *get-word-end
@@ -51,7 +51,7 @@
   returns: the location in the model of the word end >= 0 - `int`
 
   throws: javax.swing.text.BadLocationException - if the offset is out of range"
-  ([^javax.swing.text.JTextComponent c ^Integer offs]
+  (^Integer [^javax.swing.text.JTextComponent c ^Integer offs]
     (Utilities/getWordEnd c offs)))
 
 (defn *get-tabbed-text-width
@@ -66,7 +66,7 @@
   start-offset - starting offset of the text in the document >= 0 - `int`
 
   returns: the width of the text - `int`"
-  ([^javax.swing.text.Segment s ^java.awt.FontMetrics metrics ^Integer x ^javax.swing.text.TabExpander e ^Integer start-offset]
+  (^Integer [^javax.swing.text.Segment s ^java.awt.FontMetrics metrics ^Integer x ^javax.swing.text.TabExpander e ^Integer start-offset]
     (Utilities/getTabbedTextWidth s metrics x e start-offset)))
 
 (defn *get-position-below
@@ -83,7 +83,7 @@
     a value of -1 will be returned. - `int`
 
   throws: javax.swing.text.BadLocationException - if the offset is out of range"
-  ([^javax.swing.text.JTextComponent c ^Integer offs ^Integer x]
+  (^Integer [^javax.swing.text.JTextComponent c ^Integer offs ^Integer x]
     (Utilities/getPositionBelow c offs x)))
 
 (defn *get-word-start
@@ -96,7 +96,7 @@
   returns: the location in the model of the word start >= 0 - `int`
 
   throws: javax.swing.text.BadLocationException - if the offset is out of range"
-  ([^javax.swing.text.JTextComponent c ^Integer offs]
+  (^Integer [^javax.swing.text.JTextComponent c ^Integer offs]
     (Utilities/getWordStart c offs)))
 
 (defn *get-row-start
@@ -112,7 +112,7 @@
     a value of -1 will be returned. - `int`
 
   throws: javax.swing.text.BadLocationException - if the offset is out of range"
-  ([^javax.swing.text.JTextComponent c ^Integer offs]
+  (^Integer [^javax.swing.text.JTextComponent c ^Integer offs]
     (Utilities/getRowStart c offs)))
 
 (defn *get-position-above
@@ -129,7 +129,7 @@
     a value of -1 will be returned. - `int`
 
   throws: javax.swing.text.BadLocationException - if the offset is out of range"
-  ([^javax.swing.text.JTextComponent c ^Integer offs ^Integer x]
+  (^Integer [^javax.swing.text.JTextComponent c ^Integer offs ^Integer x]
     (Utilities/getPositionAbove c offs x)))
 
 (defn *draw-tabbed-text
@@ -146,7 +146,7 @@
   start-offset - starting offset of the text in the document >= 0 - `int`
 
   returns: the X location at the end of the rendered text - `int`"
-  ([^javax.swing.text.Segment s ^Integer x ^Integer y ^java.awt.Graphics g ^javax.swing.text.TabExpander e ^Integer start-offset]
+  (^Integer [^javax.swing.text.Segment s ^Integer x ^Integer y ^java.awt.Graphics g ^javax.swing.text.TabExpander e ^Integer start-offset]
     (Utilities/drawTabbedText s x y g e start-offset)))
 
 (defn *get-row-end
@@ -162,7 +162,7 @@
     a value of -1 will be returned. - `int`
 
   throws: javax.swing.text.BadLocationException - if the offset is out of range"
-  ([^javax.swing.text.JTextComponent c ^Integer offs]
+  (^Integer [^javax.swing.text.JTextComponent c ^Integer offs]
     (Utilities/getRowEnd c offs)))
 
 (defn *get-break-location
@@ -177,7 +177,7 @@
   start-offset - starting offset in the document of the text - `int`
 
   returns: the offset into the given text - `int`"
-  ([^javax.swing.text.Segment s ^java.awt.FontMetrics metrics ^Integer x-0 ^Integer x ^javax.swing.text.TabExpander e ^Integer start-offset]
+  (^Integer [^javax.swing.text.Segment s ^java.awt.FontMetrics metrics ^Integer x-0 ^Integer x ^javax.swing.text.TabExpander e ^Integer start-offset]
     (Utilities/getBreakLocation s metrics x-0 x e start-offset)))
 
 (defn *get-paragraph-element
@@ -187,7 +187,7 @@
   offs - the starting offset in the document >= 0 - `int`
 
   returns: the element - `javax.swing.text.Element`"
-  ([^javax.swing.text.JTextComponent c ^Integer offs]
+  (^javax.swing.text.Element [^javax.swing.text.JTextComponent c ^Integer offs]
     (Utilities/getParagraphElement c offs)))
 
 (defn *get-next-word
@@ -200,6 +200,6 @@
   returns: the location in the model of the word start >= 0 - `int`
 
   throws: javax.swing.text.BadLocationException - if the offset is out of range"
-  ([^javax.swing.text.JTextComponent c ^Integer offs]
+  (^Integer [^javax.swing.text.JTextComponent c ^Integer offs]
     (Utilities/getNextWord c offs)))
 

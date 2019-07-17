@@ -29,7 +29,7 @@
 
   returns: the constraining span for the given view at
     index - `int`"
-  ([^javax.swing.text.ParagraphView this ^Integer index]
+  (^Integer [^javax.swing.text.ParagraphView this ^Integer index]
     (-> this (.getFlowSpan index))))
 
 (defn get-flow-start
@@ -40,7 +40,7 @@
 
   returns: the location for the given view at
     index - `int`"
-  ([^javax.swing.text.ParagraphView this ^Integer index]
+  (^Integer [^javax.swing.text.ParagraphView this ^Integer index]
     (-> this (.getFlowStart index))))
 
 (defn next-tab-stop
@@ -64,7 +64,7 @@
   tab-offset - the position within the text stream that the tab occurred at >= 0 - `int`
 
   returns: the trailing end of the tab expansion >= 0 - `float`"
-  ([^javax.swing.text.ParagraphView this ^Float x ^Integer tab-offset]
+  (^Float [^javax.swing.text.ParagraphView this ^Float x ^Integer tab-offset]
     (-> this (.nextTabStop x tab-offset))))
 
 (defn paint
@@ -90,7 +90,7 @@
      origin and 1.0 indicates alignment to the full span
      away from the origin.  An alignment of 0.5 would be the
      center of the view. - `float`"
-  ([^javax.swing.text.ParagraphView this ^Integer axis]
+  (^Float [^javax.swing.text.ParagraphView this ^Integer axis]
     (-> this (.getAlignment axis))))
 
 (defn break-view
@@ -108,7 +108,7 @@
     given span, if the view can be broken; if the view
     doesn't support breaking behavior, the view itself is
     returned - `javax.swing.text.View`"
-  ([^javax.swing.text.ParagraphView this ^Integer axis ^Float len ^java.awt.Shape a]
+  (^javax.swing.text.View [^javax.swing.text.ParagraphView this ^Integer axis ^Float len ^java.awt.Shape a]
     (-> this (.breakView axis len a))))
 
 (defn get-break-weight
@@ -125,7 +125,7 @@
 
   returns: a value indicating the attractiveness of breaking here;
     either GoodBreakWeight or BadBreakWeight - `int`"
-  ([^javax.swing.text.ParagraphView this ^Integer axis ^Float len]
+  (^Integer [^javax.swing.text.ParagraphView this ^Integer axis ^Float len]
     (-> this (.getBreakWeight axis len))))
 
 (defn changed-update

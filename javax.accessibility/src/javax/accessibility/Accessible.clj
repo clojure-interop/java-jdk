@@ -16,6 +16,6 @@
    getAccessibleContext method to return null.
 
   returns: the AccessibleContext associated with this object - `javax.accessibility.AccessibleContext`"
-  ([^javax.accessibility.Accessible this]
+  (^javax.accessibility.AccessibleContext [^javax.accessibility.Accessible this]
     (-> this (.getAccessibleContext))))
 

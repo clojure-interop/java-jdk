@@ -33,21 +33,21 @@
 
   returns: KeyEvent.VK constant identifying the mnemonic; <= 0 for no
            mnemonic - `int`"
-  ([^javax.swing.colorchooser.AbstractColorChooserPanel this]
+  (^Integer [^javax.swing.colorchooser.AbstractColorChooserPanel this]
     (-> this (.getMnemonic))))
 
 (defn get-large-display-icon
   "Returns the large display icon for the panel.
 
   returns: the large display icon - `javax.swing.Icon`"
-  ([^javax.swing.colorchooser.AbstractColorChooserPanel this]
+  (^javax.swing.Icon [^javax.swing.colorchooser.AbstractColorChooserPanel this]
     (-> this (.getLargeDisplayIcon))))
 
 (defn get-display-name
   "Returns a string containing the display name of the panel.
 
   returns: the name of the display panel - `java.lang.String`"
-  ([^javax.swing.colorchooser.AbstractColorChooserPanel this]
+  (^java.lang.String [^javax.swing.colorchooser.AbstractColorChooserPanel this]
     (-> this (.getDisplayName))))
 
 (defn uninstall-chooser-panel
@@ -88,7 +88,7 @@
 
   returns: the ColorSelectionModel model this panel
            is editing - `javax.swing.colorchooser.ColorSelectionModel`"
-  ([^javax.swing.colorchooser.AbstractColorChooserPanel this]
+  (^javax.swing.colorchooser.ColorSelectionModel [^javax.swing.colorchooser.AbstractColorChooserPanel this]
     (-> this (.getColorSelectionModel))))
 
 (defn get-displayed-mnemonic-index
@@ -110,13 +110,13 @@
 
   returns: Character index to render mnemonic for; -1 to provide no
                      visual identifier for this panel. - `int`"
-  ([^javax.swing.colorchooser.AbstractColorChooserPanel this]
+  (^Integer [^javax.swing.colorchooser.AbstractColorChooserPanel this]
     (-> this (.getDisplayedMnemonicIndex))))
 
 (defn get-small-display-icon
   "Returns the small display icon for the panel.
 
   returns: the small display icon - `javax.swing.Icon`"
-  ([^javax.swing.colorchooser.AbstractColorChooserPanel this]
+  (^javax.swing.Icon [^javax.swing.colorchooser.AbstractColorChooserPanel this]
     (-> this (.getSmallDisplayIcon))))
 

@@ -27,21 +27,21 @@
   role-info-array - List of role definitions (RoleInfo objects) - `javax.management.relation.RoleInfo[]`
 
   throws: java.lang.IllegalArgumentException - if null parameter"
-  ([^java.lang.String relation-type-name ^javax.management.relation.RoleInfo[] role-info-array]
+  ([^java.lang.String relation-type-name role-info-array]
     (new RelationTypeSupport relation-type-name role-info-array)))
 
 (defn get-relation-type-name
   "Returns the relation type name.
 
   returns: the relation type name. - `java.lang.String`"
-  ([^javax.management.relation.RelationTypeSupport this]
+  (^java.lang.String [^javax.management.relation.RelationTypeSupport this]
     (-> this (.getRelationTypeName))))
 
 (defn get-role-infos
   "Returns the list of role definitions (ArrayList of RoleInfo objects).
 
   returns: an ArrayList of RoleInfo. - `java.util.List<javax.management.relation.RoleInfo>`"
-  ([^javax.management.relation.RelationTypeSupport this]
+  (^java.util.List [^javax.management.relation.RelationTypeSupport this]
     (-> this (.getRoleInfos))))
 
 (defn get-role-info
@@ -54,6 +54,6 @@
    does not exist - `javax.management.relation.RoleInfo`
 
   throws: java.lang.IllegalArgumentException - if null parameter"
-  ([^javax.management.relation.RelationTypeSupport this ^java.lang.String role-info-name]
+  (^javax.management.relation.RoleInfo [^javax.management.relation.RelationTypeSupport this ^java.lang.String role-info-name]
     (-> this (.getRoleInfo role-info-name))))
 

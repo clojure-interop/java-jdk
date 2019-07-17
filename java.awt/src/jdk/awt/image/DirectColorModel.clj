@@ -120,7 +120,7 @@
 
   returns: the mask, which indicates which bits of the int
            pixel representation contain the green color sample. - `int`"
-  ([^java.awt.image.DirectColorModel this]
+  (^Integer [^java.awt.image.DirectColorModel this]
     (-> this (.getGreenMask))))
 
 (defn get-data-element
@@ -138,7 +138,7 @@
    ColorModel corresponding to the specified components. - `int`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if the components array is not large enough to hold all of the color and alpha components starting at offset"
-  ([^java.awt.image.DirectColorModel this components ^Integer offset]
+  (^Integer [^java.awt.image.DirectColorModel this components ^Integer offset]
     (-> this (.getDataElement components offset))))
 
 (defn get-rgb
@@ -154,7 +154,7 @@
 
   returns: the RGB value of the color/alpha components of the specified
            pixel. - `int`"
-  ([^java.awt.image.DirectColorModel this ^Integer pixel]
+  (^Integer [^java.awt.image.DirectColorModel this ^Integer pixel]
     (-> this (.getRGB pixel))))
 
 (defn get-alpha-mask
@@ -163,7 +163,7 @@
 
   returns: the mask, which indicates which bits of the int
            pixel representation contain the alpha sample. - `int`"
-  ([^java.awt.image.DirectColorModel this]
+  (^Integer [^java.awt.image.DirectColorModel this]
     (-> this (.getAlphaMask))))
 
 (defn get-data-elements
@@ -196,9 +196,9 @@
    alpha components. - `java.lang.Object`
 
   throws: java.lang.ClassCastException - if obj is not a primitive array of type transferType"
-  ([^java.awt.image.DirectColorModel this components ^Integer offset ^java.lang.Object obj]
+  (^java.lang.Object [^java.awt.image.DirectColorModel this components ^Integer offset ^java.lang.Object obj]
     (-> this (.getDataElements components offset obj)))
-  ([^java.awt.image.DirectColorModel this ^Integer rgb ^java.lang.Object pixel]
+  (^java.lang.Object [^java.awt.image.DirectColorModel this ^Integer rgb ^java.lang.Object pixel]
     (-> this (.getDataElements rgb pixel))))
 
 (defn to-string
@@ -207,7 +207,7 @@
 
   returns: a String representing this
    DirectColorModel. - `java.lang.String`"
-  ([^java.awt.image.DirectColorModel this]
+  (^java.lang.String [^java.awt.image.DirectColorModel this]
     (-> this (.toString))))
 
 (defn get-red-mask
@@ -216,7 +216,7 @@
 
   returns: the mask, which indicates which bits of the int
            pixel representation contain the red color sample. - `int`"
-  ([^java.awt.image.DirectColorModel this]
+  (^Integer [^java.awt.image.DirectColorModel this]
     (-> this (.getRedMask))))
 
 (defn get-alpha
@@ -227,7 +227,7 @@
 
   returns: the value of the alpha component of pixel
            from 0 to 255. - `int`"
-  ([^java.awt.image.DirectColorModel this ^Integer pixel]
+  (^Integer [^java.awt.image.DirectColorModel this ^Integer pixel]
     (-> this (.getAlpha pixel))))
 
 (defn get-red
@@ -244,7 +244,7 @@
 
   returns: the red color component for the specified pixel, from
            0 to 255 in the sRGB ColorSpace. - `int`"
-  ([^java.awt.image.DirectColorModel this ^Integer pixel]
+  (^Integer [^java.awt.image.DirectColorModel this ^Integer pixel]
     (-> this (.getRed pixel))))
 
 (defn get-green
@@ -261,7 +261,7 @@
 
   returns: the green color component for the specified pixel, from
            0 to 255 in the sRGB ColorSpace. - `int`"
-  ([^java.awt.image.DirectColorModel this ^Integer pixel]
+  (^Integer [^java.awt.image.DirectColorModel this ^Integer pixel]
     (-> this (.getGreen pixel))))
 
 (defn get-components
@@ -295,7 +295,7 @@
 
   returns: true if raster is compatible
    with this ColorModel; false otherwise. - `boolean`"
-  ([^java.awt.image.DirectColorModel this ^java.awt.image.Raster raster]
+  (^Boolean [^java.awt.image.DirectColorModel this ^java.awt.image.Raster raster]
     (-> this (.isCompatibleRaster raster))))
 
 (defn coerce-data
@@ -320,7 +320,7 @@
    coerced data. - `java.awt.image.ColorModel`
 
   throws: java.lang.UnsupportedOperationException - if this transferType is not supported by this color model"
-  ([^java.awt.image.DirectColorModel this ^java.awt.image.WritableRaster raster ^Boolean is-alpha-premultiplied]
+  (^java.awt.image.ColorModel [^java.awt.image.DirectColorModel this ^java.awt.image.WritableRaster raster ^Boolean is-alpha-premultiplied]
     (-> this (.coerceData raster is-alpha-premultiplied))))
 
 (defn create-compatible-writable-raster
@@ -335,7 +335,7 @@
    width and height. - `java.awt.image.WritableRaster`
 
   throws: java.lang.IllegalArgumentException - if w or h is less than or equal to zero"
-  ([^java.awt.image.DirectColorModel this ^Integer w ^Integer h]
+  (^java.awt.image.WritableRaster [^java.awt.image.DirectColorModel this ^Integer w ^Integer h]
     (-> this (.createCompatibleWritableRaster w h))))
 
 (defn get-blue
@@ -352,7 +352,7 @@
 
   returns: the blue color component for the specified pixel, from
            0 to 255 in the sRGB ColorSpace. - `int`"
-  ([^java.awt.image.DirectColorModel this ^Integer pixel]
+  (^Integer [^java.awt.image.DirectColorModel this ^Integer pixel]
     (-> this (.getBlue pixel))))
 
 (defn get-blue-mask
@@ -361,6 +361,6 @@
 
   returns: the mask, which indicates which bits of the int
            pixel representation contain the blue color sample. - `int`"
-  ([^java.awt.image.DirectColorModel this]
+  (^Integer [^java.awt.image.DirectColorModel this]
     (-> this (.getBlueMask))))
 

@@ -88,7 +88,7 @@
   returns: the previous Date in the sequence, or
        null if the previous date
        is before start - `java.lang.Object`"
-  ([^javax.swing.SpinnerDateModel this]
+  (^java.lang.Object [^javax.swing.SpinnerDateModel this]
     (-> this (.getPreviousValue))))
 
 (defn set-calendar-field
@@ -113,7 +113,7 @@
   "Returns the current element in this sequence of Dates.
 
   returns: the value property - `java.lang.Object`"
-  ([^javax.swing.SpinnerDateModel this]
+  (^java.lang.Object [^javax.swing.SpinnerDateModel this]
     (-> this (.getValue))))
 
 (defn get-date
@@ -121,7 +121,7 @@
    This method is equivalent to (Date)getValue.
 
   returns: the value property - `java.util.Date`"
-  ([^javax.swing.SpinnerDateModel this]
+  (^java.util.Date [^javax.swing.SpinnerDateModel this]
     (-> this (.getDate))))
 
 (defn get-calendar-field
@@ -129,14 +129,14 @@
    by the nextValue and previousValue methods.
 
   returns: the value of the calendarField property - `int`"
-  ([^javax.swing.SpinnerDateModel this]
+  (^Integer [^javax.swing.SpinnerDateModel this]
     (-> this (.getCalendarField))))
 
 (defn get-end
   "Returns the last Date in the sequence.
 
   returns: the value of the end property - `java.lang.Comparable`"
-  ([^javax.swing.SpinnerDateModel this]
+  (^java.lang.Comparable [^javax.swing.SpinnerDateModel this]
     (-> this (.getEnd))))
 
 (defn set-end
@@ -184,7 +184,7 @@
   "Returns the first Date in the sequence.
 
   returns: the value of the start property - `java.lang.Comparable`"
-  ([^javax.swing.SpinnerDateModel this]
+  (^java.lang.Comparable [^javax.swing.SpinnerDateModel this]
     (-> this (.getStart))))
 
 (defn set-start
@@ -229,6 +229,6 @@
 
   returns: the next Date in the sequence, or null if
        the next date is after end. - `java.lang.Object`"
-  ([^javax.swing.SpinnerDateModel this]
+  (^java.lang.Object [^javax.swing.SpinnerDateModel this]
     (-> this (.getNextValue))))
 

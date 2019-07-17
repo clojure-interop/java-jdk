@@ -21,7 +21,7 @@
    It becomes inactive when the stop method is called.
 
   returns: true if the monitor MBean is active, false otherwise. - `boolean`"
-  ([^javax.management.monitor.MonitorMBean this]
+  (^Boolean [^javax.management.monitor.MonitorMBean this]
     (-> this (.isActive))))
 
 (defn remove-observed-object
@@ -37,7 +37,7 @@
   object - The object to check. - `javax.management.ObjectName`
 
   returns: true if the specified object is in the set, false otherwise. - `boolean`"
-  ([^javax.management.monitor.MonitorMBean this ^javax.management.ObjectName object]
+  (^Boolean [^javax.management.monitor.MonitorMBean this ^javax.management.ObjectName object]
     (-> this (.containsObservedObject object))))
 
 (defn add-observed-object
@@ -53,14 +53,14 @@
   "Deprecated. As of JMX 1.2, replaced by getObservedObjects()
 
   returns: The object being observed. - `java.lang..management.ObjectName`"
-  ([^javax.management.monitor.MonitorMBean this]
+  (^java.lang..management.ObjectName [^javax.management.monitor.MonitorMBean this]
     (-> this (.getObservedObject))))
 
 (defn get-observed-attribute
   "Gets the attribute being observed.
 
   returns: The attribute being observed. - `java.lang.String`"
-  ([^javax.management.monitor.MonitorMBean this]
+  (^java.lang.String [^javax.management.monitor.MonitorMBean this]
     (-> this (.getObservedAttribute))))
 
 (defn set-observed-object
@@ -88,7 +88,7 @@
   "Gets the granularity period (in milliseconds).
 
   returns: The granularity period. - `long`"
-  ([^javax.management.monitor.MonitorMBean this]
+  (^Long [^javax.management.monitor.MonitorMBean this]
     (-> this (.getGranularityPeriod))))
 
 (defn set-granularity-period

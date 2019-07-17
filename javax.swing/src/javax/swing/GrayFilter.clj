@@ -24,7 +24,7 @@
   i - `java.awt.Image`
 
   returns: `java.awt.Image`"
-  ([^java.awt.Image i]
+  (^java.awt.Image [^java.awt.Image i]
     (GrayFilter/createDisabledImage i)))
 
 (defn filter-rgb
@@ -35,6 +35,6 @@
   rgb - the integer pixel representation in the default RGB color model - `int`
 
   returns: a filtered pixel in the default RGB color model. - `int`"
-  ([^javax.swing.GrayFilter this ^Integer x ^Integer y ^Integer rgb]
+  (^Integer [^javax.swing.GrayFilter this ^Integer x ^Integer y ^Integer rgb]
     (-> this (.filterRGB x y rgb))))
 

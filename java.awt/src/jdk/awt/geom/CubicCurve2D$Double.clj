@@ -108,7 +108,7 @@
 
   returns: the X coordinate of the start point of the
            CubicCurve2D. - `double`"
-  ([^java.awt.geom.CubicCurve2D$Double this]
+  (^Double [^java.awt.geom.CubicCurve2D$Double this]
     (-> this (.getX1))))
 
 (defn get-p-1
@@ -116,7 +116,7 @@
 
   returns: a Point2D that is the start point of
            the CubicCurve2D. - `java.awt.geom.Point2D`"
-  ([^java.awt.geom.CubicCurve2D$Double this]
+  (^java.awt.geom.Point2D [^java.awt.geom.CubicCurve2D$Double this]
     (-> this (.getP1))))
 
 (defn get-bounds-2-d
@@ -159,7 +159,7 @@
 
   returns: an instance of Rectangle2D that is a
                    high-precision bounding box of the Shape. - `java.awt.geom.Rectangle2D`"
-  ([^java.awt.geom.CubicCurve2D$Double this]
+  (^java.awt.geom.Rectangle2D [^java.awt.geom.CubicCurve2D$Double this]
     (-> this (.getBounds2D))))
 
 (defn get-y-2
@@ -167,7 +167,7 @@
 
   returns: the Y coordinate of the end point of the
            CubicCurve2D. - `double`"
-  ([^java.awt.geom.CubicCurve2D$Double this]
+  (^Double [^java.awt.geom.CubicCurve2D$Double this]
     (-> this (.getY2))))
 
 (defn get-x-2
@@ -175,7 +175,7 @@
 
   returns: the X coordinate of the end point of the
            CubicCurve2D. - `double`"
-  ([^java.awt.geom.CubicCurve2D$Double this]
+  (^Double [^java.awt.geom.CubicCurve2D$Double this]
     (-> this (.getX2))))
 
 (defn get-ctrl-y-2
@@ -184,7 +184,7 @@
 
   returns: the Y coordinate of the second control point of the
            CubicCurve2D. - `double`"
-  ([^java.awt.geom.CubicCurve2D$Double this]
+  (^Double [^java.awt.geom.CubicCurve2D$Double this]
     (-> this (.getCtrlY2))))
 
 (defn get-ctrl-y-1
@@ -192,7 +192,7 @@
 
   returns: the Y coordinate of the first control point of the
            CubicCurve2D. - `double`"
-  ([^java.awt.geom.CubicCurve2D$Double this]
+  (^Double [^java.awt.geom.CubicCurve2D$Double this]
     (-> this (.getCtrlY1))))
 
 (defn get-y-1
@@ -200,7 +200,7 @@
 
   returns: the Y coordinate of the start point of the
            CubicCurve2D. - `double`"
-  ([^java.awt.geom.CubicCurve2D$Double this]
+  (^Double [^java.awt.geom.CubicCurve2D$Double this]
     (-> this (.getY1))))
 
 (defn get-ctrl-x-1
@@ -208,7 +208,7 @@
 
   returns: the X coordinate of the first control point of the
            CubicCurve2D. - `double`"
-  ([^java.awt.geom.CubicCurve2D$Double this]
+  (^Double [^java.awt.geom.CubicCurve2D$Double this]
     (-> this (.getCtrlX1))))
 
 (defn get-p-2
@@ -216,7 +216,7 @@
 
   returns: a Point2D that is the end point of
            the CubicCurve2D. - `java.awt.geom.Point2D`"
-  ([^java.awt.geom.CubicCurve2D$Double this]
+  (^java.awt.geom.Point2D [^java.awt.geom.CubicCurve2D$Double this]
     (-> this (.getP2))))
 
 (defn get-ctrl-x-2
@@ -225,7 +225,7 @@
 
   returns: the X coordinate of the second control point of the
            CubicCurve2D. - `double`"
-  ([^java.awt.geom.CubicCurve2D$Double this]
+  (^Double [^java.awt.geom.CubicCurve2D$Double this]
     (-> this (.getCtrlX2))))
 
 (defn set-curve
@@ -248,7 +248,7 @@
 
   returns: a Point2D that is the second control point of
            the CubicCurve2D. - `java.awt.geom.Point2D`"
-  ([^java.awt.geom.CubicCurve2D$Double this]
+  (^java.awt.geom.Point2D [^java.awt.geom.CubicCurve2D$Double this]
     (-> this (.getCtrlP2))))
 
 (defn get-ctrl-p-1
@@ -256,6 +256,6 @@
 
   returns: a Point2D that is the first control point of
            the CubicCurve2D. - `java.awt.geom.Point2D`"
-  ([^java.awt.geom.CubicCurve2D$Double this]
+  (^java.awt.geom.Point2D [^java.awt.geom.CubicCurve2D$Double this]
     (-> this (.getCtrlP1))))
 

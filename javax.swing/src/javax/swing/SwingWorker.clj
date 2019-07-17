@@ -198,7 +198,7 @@
   returns: false if the task could not be cancelled,
    typically because it has already completed normally;
    true otherwise - `boolean`"
-  ([^javax.swing.SwingWorker this ^Boolean may-interrupt-if-running]
+  (^Boolean [^javax.swing.SwingWorker this ^Boolean may-interrupt-if-running]
     (-> this (.cancel may-interrupt-if-running))))
 
 (defn fire-property-change
@@ -228,7 +228,7 @@
    normally.
 
   returns: true if this task was cancelled before it completed - `boolean`"
-  ([^javax.swing.SwingWorker this]
+  (^Boolean [^javax.swing.SwingWorker this]
     (-> this (.isCancelled))))
 
 (defn get-property-change-support
@@ -247,7 +247,7 @@
    Thread.
 
   returns: PropertyChangeSupport for this SwingWorker - `java.beans.PropertyChangeSupport`"
-  ([^javax.swing.SwingWorker this]
+  (^java.beans.PropertyChangeSupport [^javax.swing.SwingWorker this]
     (-> this (.getPropertyChangeSupport))))
 
 (defn run
@@ -260,14 +260,14 @@
   "Returns the progress bound property.
 
   returns: the progress bound property. - `int`"
-  ([^javax.swing.SwingWorker this]
+  (^Integer [^javax.swing.SwingWorker this]
     (-> this (.getProgress))))
 
 (defn get-state
   "Returns the SwingWorker state bound property.
 
   returns: the current state - `javax.swing.SwingWorker.StateValue`"
-  ([^javax.swing.SwingWorker this]
+  (^javax.swing.SwingWorker.StateValue [^javax.swing.SwingWorker this]
     (-> this (.getState))))
 
 (defn remove-property-change-listener
@@ -309,7 +309,7 @@
    true.
 
   returns: true if this task completed - `boolean`"
-  ([^javax.swing.SwingWorker this]
+  (^Boolean [^javax.swing.SwingWorker this]
     (-> this (.isDone))))
 
 (defn add-property-change-listener
@@ -338,8 +338,8 @@
   returns: the computed result - `SwingWorker.T`
 
   throws: java.lang.InterruptedException - if the current thread was interrupted while waiting"
-  ([^javax.swing.SwingWorker this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^SwingWorker.T [^javax.swing.SwingWorker this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.get timeout unit)))
-  ([^javax.swing.SwingWorker this]
+  (^SwingWorker.T [^javax.swing.SwingWorker this]
     (-> this (.get))))
 

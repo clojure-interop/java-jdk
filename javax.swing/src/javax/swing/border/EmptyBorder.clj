@@ -46,9 +46,9 @@
   insets - the object to be reinitialized - `java.awt.Insets`
 
   returns: the insets object - `java.awt.Insets`"
-  ([^javax.swing.border.EmptyBorder this ^java.awt.Component c ^java.awt.Insets insets]
+  (^java.awt.Insets [^javax.swing.border.EmptyBorder this ^java.awt.Component c ^java.awt.Insets insets]
     (-> this (.getBorderInsets c insets)))
-  ([^javax.swing.border.EmptyBorder this]
+  (^java.awt.Insets [^javax.swing.border.EmptyBorder this]
     (-> this (.getBorderInsets))))
 
 (defn border-opaque?
@@ -56,6 +56,6 @@
    Returns false by default.
 
   returns: false - `boolean`"
-  ([^javax.swing.border.EmptyBorder this]
+  (^Boolean [^javax.swing.border.EmptyBorder this]
     (-> this (.isBorderOpaque))))
 

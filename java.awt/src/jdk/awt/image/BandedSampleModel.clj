@@ -61,7 +61,7 @@
 
   returns: a float value that represents the sample in the specified
    band for the specified pixel. - `float`"
-  ([^java.awt.image.BandedSampleModel this ^Integer x ^Integer y ^Integer b ^java.awt.image.DataBuffer data]
+  (^Float [^java.awt.image.BandedSampleModel this ^Integer x ^Integer y ^Integer b ^java.awt.image.DataBuffer data]
     (-> this (.getSampleFloat x y b data))))
 
 (defn create-data-buffer
@@ -74,7 +74,7 @@
            ComponentSampleModel. - `java.awt.image.DataBuffer`
 
   throws: java.lang.IllegalArgumentException - if dataType is not one of the supported types."
-  ([^java.awt.image.BandedSampleModel this]
+  (^java.awt.image.DataBuffer [^java.awt.image.BandedSampleModel this]
     (-> this (.createDataBuffer))))
 
 (defn get-data-elements
@@ -115,7 +115,7 @@
   data - The DataBuffer containing the image data. - `java.awt.image.DataBuffer`
 
   returns: the data for the specified pixel. - `java.lang.Object`"
-  ([^java.awt.image.BandedSampleModel this ^Integer x ^Integer y ^java.lang.Object obj ^java.awt.image.DataBuffer data]
+  (^java.lang.Object [^java.awt.image.BandedSampleModel this ^Integer x ^Integer y ^java.lang.Object obj ^java.awt.image.DataBuffer data]
     (-> this (.getDataElements x y obj data))))
 
 (defn create-subset-sample-model
@@ -132,7 +132,7 @@
             of bands from this ComponentSampleModel. - `java.awt.image.SampleModel`
 
   throws: java.awt.image.RasterFormatException - if the number of bands is greater than the number of banks in this sample model."
-  ([^java.awt.image.BandedSampleModel this bands]
+  (^java.awt.image.SampleModel [^java.awt.image.BandedSampleModel this bands]
     (-> this (.createSubsetSampleModel bands))))
 
 (defn get-pixels
@@ -165,7 +165,7 @@
 
   returns: a double value that represents the sample in the specified
    band for the specified pixel. - `double`"
-  ([^java.awt.image.BandedSampleModel this ^Integer x ^Integer y ^Integer b ^java.awt.image.DataBuffer data]
+  (^Double [^java.awt.image.BandedSampleModel this ^Integer x ^Integer y ^Integer b ^java.awt.image.DataBuffer data]
     (-> this (.getSampleDouble x y b data))))
 
 (defn set-pixels
@@ -195,7 +195,7 @@
   data - The DataBuffer containing the image data - `java.awt.image.DataBuffer`
 
   returns: the sample in the specified band for the specified pixel. - `int`"
-  ([^java.awt.image.BandedSampleModel this ^Integer x ^Integer y ^Integer b ^java.awt.image.DataBuffer data]
+  (^Integer [^java.awt.image.BandedSampleModel this ^Integer x ^Integer y ^Integer b ^java.awt.image.DataBuffer data]
     (-> this (.getSample x y b data))))
 
 (defn set-sample
@@ -253,14 +253,14 @@
            width and height. - `java.awt.image.SampleModel`
 
   throws: java.lang.IllegalArgumentException - if dataType is not one of the supported data types"
-  ([^java.awt.image.BandedSampleModel this ^Integer w ^Integer h]
+  (^java.awt.image.SampleModel [^java.awt.image.BandedSampleModel this ^Integer w ^Integer h]
     (-> this (.createCompatibleSampleModel w h))))
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  ([^java.awt.image.BandedSampleModel this]
+  (^Integer [^java.awt.image.BandedSampleModel this]
     (-> this (.hashCode))))
 
 (defn set-data-elements

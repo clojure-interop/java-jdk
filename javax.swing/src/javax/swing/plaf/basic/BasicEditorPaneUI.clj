@@ -25,7 +25,7 @@
   c - the JTextPane component - `javax.swing.JComponent`
 
   returns: the UI - `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent c]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent c]
     (BasicEditorPaneUI/createUI c)))
 
 (defn install-ui
@@ -67,6 +67,6 @@
   tc - the text component for which this UI is installed - `javax.swing.text.JTextComponent`
 
   returns: the editor capabilities - `javax.swing.text.EditorKit`"
-  ([^javax.swing.plaf.basic.BasicEditorPaneUI this ^javax.swing.text.JTextComponent tc]
+  (^javax.swing.text.EditorKit [^javax.swing.plaf.basic.BasicEditorPaneUI this ^javax.swing.text.JTextComponent tc]
     (-> this (.getEditorKit tc))))
 

@@ -12,14 +12,14 @@
 
   returns: the guarantor which guaranteed the principal-key
    binding. - `java.security.Principal`"
-  ([^java.security.Certificate this]
+  (^java.security.Principal [^java.security.Certificate this]
     (-> this (.getGuarantor))))
 
 (defn get-principal
   "Deprecated.
 
   returns: the principal to which this certificate is bound. - `java.security.Principal`"
-  ([^java.security.Certificate this]
+  (^java.security.Principal [^java.security.Certificate this]
     (-> this (.getPrincipal))))
 
 (defn get-public-key
@@ -27,7 +27,7 @@
 
   returns: the public key that this certificate certifies belongs
    to a particular principal. - `java.security.PublicKey`"
-  ([^java.security.Certificate this]
+  (^java.security.PublicKey [^java.security.Certificate this]
     (-> this (.getPublicKey))))
 
 (defn encode
@@ -52,7 +52,7 @@
   "Deprecated.
 
   returns: the name of the coding format. - `java.lang.String`"
-  ([^java.security.Certificate this]
+  (^java.lang.String [^java.security.Certificate this]
     (-> this (.getFormat))))
 
 (defn to-string
@@ -61,6 +61,6 @@
   detailed - whether or not to give detailed information about the certificate - `boolean`
 
   returns: a string representing the contents of the certificate - `java.lang.String`"
-  ([^java.security.Certificate this ^Boolean detailed]
+  (^java.lang.String [^java.security.Certificate this ^Boolean detailed]
     (-> this (.toString detailed))))
 

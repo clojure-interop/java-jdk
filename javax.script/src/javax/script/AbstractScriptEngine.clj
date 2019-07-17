@@ -44,7 +44,7 @@
   "Returns the value of the protected context field.
 
   returns: The value of the protected context field. - `javax.script.ScriptContext`"
-  ([^javax.script.AbstractScriptEngine this]
+  (^javax.script.ScriptContext [^javax.script.AbstractScriptEngine this]
     (-> this (.getContext))))
 
 (defn get-bindings
@@ -56,7 +56,7 @@
   returns: The corresponding Bindings. - `javax.script.Bindings`
 
   throws: java.lang.IllegalArgumentException - if the value of scope is invalid for the type the protected context field."
-  ([^javax.script.AbstractScriptEngine this ^Integer scope]
+  (^javax.script.Bindings [^javax.script.AbstractScriptEngine this ^Integer scope]
     (-> this (.getBindings scope))))
 
 (defn set-bindings
@@ -90,7 +90,7 @@
   returns: The value for the specified key. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if key is null."
-  ([^javax.script.AbstractScriptEngine this ^java.lang.String key]
+  (^java.lang.Object [^javax.script.AbstractScriptEngine this ^java.lang.String key]
     (-> this (.get key))))
 
 (defn eval
@@ -108,8 +108,8 @@
   returns: The return value from eval(Reader, ScriptContext) - `java.lang.Object`
 
   throws: javax.script.ScriptException - if an error occurs in script."
-  ([^javax.script.AbstractScriptEngine this ^java.io.Reader reader ^javax.script.Bindings bindings]
+  (^java.lang.Object [^javax.script.AbstractScriptEngine this ^java.io.Reader reader ^javax.script.Bindings bindings]
     (-> this (.eval reader bindings)))
-  ([^javax.script.AbstractScriptEngine this ^java.io.Reader reader]
+  (^java.lang.Object [^javax.script.AbstractScriptEngine this ^java.io.Reader reader]
     (-> this (.eval reader))))
 

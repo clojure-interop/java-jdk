@@ -131,7 +131,7 @@
    SwingConstants.HORIZONTAL.
 
   returns: HORIZONTAL or VERTICAL - `int`"
-  ([^javax.swing.JProgressBar this]
+  (^Integer [^javax.swing.JProgressBar this]
     (-> this (.getOrientation))))
 
 (defn get-percent-complete
@@ -139,14 +139,14 @@
    Note that this number is between 0.0 and 1.0.
 
   returns: the percent complete for this progress bar - `double`"
-  ([^javax.swing.JProgressBar this]
+  (^Double [^javax.swing.JProgressBar this]
     (-> this (.getPercentComplete))))
 
 (defn string-painted?
   "Returns the value of the stringPainted property.
 
   returns: the value of the stringPainted property - `boolean`"
-  ([^javax.swing.JProgressBar this]
+  (^Boolean [^javax.swing.JProgressBar this]
     (-> this (.isStringPainted))))
 
 (defn get-minimum
@@ -154,7 +154,7 @@
    from the BoundedRangeModel.
 
   returns: the progress bar's minimum value - `int`"
-  ([^javax.swing.JProgressBar this]
+  (^Integer [^javax.swing.JProgressBar this]
     (-> this (.getMinimum))))
 
 (defn get-string
@@ -165,14 +165,14 @@
 
   returns: the value of the progress string, or a simple percentage string
            if the progress string is null - `java.lang.String`"
-  ([^javax.swing.JProgressBar this]
+  (^java.lang.String [^javax.swing.JProgressBar this]
     (-> this (.getString))))
 
 (defn get-ui-class-id
   "Returns the name of the look-and-feel class that renders this component.
 
   returns: the string `ProgressBarUI` - `java.lang.String`"
-  ([^javax.swing.JProgressBar this]
+  (^java.lang.String [^javax.swing.JProgressBar this]
     (-> this (.getUIClassID))))
 
 (defn get-value
@@ -182,7 +182,7 @@
    minimum and maximum values, inclusive.
 
   returns: the current value of the progress bar - `int`"
-  ([^javax.swing.JProgressBar this]
+  (^Integer [^javax.swing.JProgressBar this]
     (-> this (.getValue))))
 
 (defn set-border-painted
@@ -223,7 +223,7 @@
   "Returns the value of the indeterminate property.
 
   returns: the value of the indeterminate property - `boolean`"
-  ([^javax.swing.JProgressBar this]
+  (^Boolean [^javax.swing.JProgressBar this]
     (-> this (.isIndeterminate))))
 
 (defn set-maximum
@@ -265,7 +265,7 @@
   "Returns the look-and-feel object that renders this component.
 
   returns: the ProgressBarUI object that renders this component - `javax.swing.plaf.ProgressBarUI`"
-  ([^javax.swing.JProgressBar this]
+  (^javax.swing.plaf.ProgressBarUI [^javax.swing.JProgressBar this]
     (-> this (.getUI))))
 
 (defn set-string-painted
@@ -290,7 +290,7 @@
 
   returns: an AccessibleJProgressBar that serves as the
            AccessibleContext of this JProgressBar - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.JProgressBar this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.JProgressBar this]
     (-> this (.getAccessibleContext))))
 
 (defn set-value
@@ -325,14 +325,14 @@
   "Returns the borderPainted property.
 
   returns: the value of the borderPainted property - `boolean`"
-  ([^javax.swing.JProgressBar this]
+  (^Boolean [^javax.swing.JProgressBar this]
     (-> this (.isBorderPainted))))
 
 (defn get-model
   "Returns the data model used by this progress bar.
 
   returns: the BoundedRangeModel currently in use - `javax.swing.BoundedRangeModel`"
-  ([^javax.swing.JProgressBar this]
+  (^javax.swing.BoundedRangeModel [^javax.swing.JProgressBar this]
     (-> this (.getModel))))
 
 (defn set-minimum
@@ -356,7 +356,7 @@
    from the BoundedRangeModel.
 
   returns: the progress bar's maximum value - `int`"
-  ([^javax.swing.JProgressBar this]
+  (^Integer [^javax.swing.JProgressBar this]
     (-> this (.getMaximum))))
 
 (defn set-model

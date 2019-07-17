@@ -15,7 +15,7 @@
 
   returns: true if the input argument matches the predicate,
    otherwise false - `boolean`"
-  ([^java.util.function.DoublePredicate this ^Double value]
+  (^Boolean [^java.util.function.DoublePredicate this ^Double value]
     (-> this (.test value))))
 
 (defn and

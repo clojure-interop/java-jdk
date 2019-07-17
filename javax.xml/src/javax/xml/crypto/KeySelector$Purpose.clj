@@ -40,6 +40,6 @@
    `verify`, `encrypt`, or `decrypt`).
 
   returns: a string representation of this purpose - `java.lang.String`"
-  ([^javax.xml.crypto.KeySelector$Purpose this]
+  (^java.lang.String [^javax.xml.crypto.KeySelector$Purpose this]
     (-> this (.toString))))
 

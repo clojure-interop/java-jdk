@@ -64,7 +64,7 @@
    if not found. - `javax.script.ScriptEngine`
 
   throws: java.lang.NullPointerException - if extension is null."
-  ([^javax.script.ScriptEngineManager this ^java.lang.String extension]
+  (^javax.script.ScriptEngine [^javax.script.ScriptEngineManager this ^java.lang.String extension]
     (-> this (.getEngineByExtension extension))))
 
 (defn register-engine-name
@@ -94,7 +94,7 @@
    found by the discovery mechanism.
 
   returns: List of all discovered ScriptEngineFactorys. - `java.util.List<javax.script.ScriptEngineFactory>`"
-  ([^javax.script.ScriptEngineManager this]
+  (^java.util.List [^javax.script.ScriptEngineManager this]
     (-> this (.getEngineFactories))))
 
 (defn get-engine-by-mime-type
@@ -109,7 +109,7 @@
    if not found. - `javax.script.ScriptEngine`
 
   throws: java.lang.NullPointerException - if mimeType is null."
-  ([^javax.script.ScriptEngineManager this ^java.lang.String mime-type]
+  (^javax.script.ScriptEngine [^javax.script.ScriptEngineManager this ^java.lang.String mime-type]
     (-> this (.getEngineByMimeType mime-type))))
 
 (defn get-engine-by-name
@@ -129,7 +129,7 @@
    created ScriptEngine. - `javax.script.ScriptEngine`
 
   throws: java.lang.NullPointerException - if shortName is null."
-  ([^javax.script.ScriptEngineManager this ^java.lang.String short-name]
+  (^javax.script.ScriptEngine [^javax.script.ScriptEngineManager this ^java.lang.String short-name]
     (-> this (.getEngineByName short-name))))
 
 (defn get-bindings
@@ -138,7 +138,7 @@
    ScriptEngine objects created by it.
 
   returns: The globalScope field. - `javax.script.Bindings`"
-  ([^javax.script.ScriptEngineManager this]
+  (^javax.script.Bindings [^javax.script.ScriptEngineManager this]
     (-> this (.getBindings))))
 
 (defn get
@@ -147,7 +147,7 @@
   key - The key whose value is to be returned. - `java.lang.String`
 
   returns: The value for the specified key. - `java.lang.Object`"
-  ([^javax.script.ScriptEngineManager this ^java.lang.String key]
+  (^java.lang.Object [^javax.script.ScriptEngineManager this ^java.lang.String key]
     (-> this (.get key))))
 
 (defn set-bindings

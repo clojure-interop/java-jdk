@@ -165,7 +165,7 @@
 
   returns: the approximate number objects for which finalization
    is pending. - `int`"
-  ([^java.lang.management.MemoryMXBean this]
+  (^Integer [^java.lang.management.MemoryMXBean this]
     (-> this (.getObjectPendingFinalizationCount))))
 
 (defn get-heap-memory-usage
@@ -191,7 +191,7 @@
 
   returns: a MemoryUsage object representing
    the heap memory usage. - `java.lang.management.MemoryUsage`"
-  ([^java.lang.management.MemoryMXBean this]
+  (^java.lang.management.MemoryUsage [^java.lang.management.MemoryMXBean this]
     (-> this (.getHeapMemoryUsage))))
 
 (defn get-non-heap-memory-usage
@@ -214,7 +214,7 @@
 
   returns: a MemoryUsage object representing
    the non-heap memory usage. - `java.lang.management.MemoryUsage`"
-  ([^java.lang.management.MemoryMXBean this]
+  (^java.lang.management.MemoryUsage [^java.lang.management.MemoryMXBean this]
     (-> this (.getNonHeapMemoryUsage))))
 
 (defn verbose?
@@ -222,7 +222,7 @@
 
   returns: true if verbose output for the memory
    system is enabled; false otherwise. - `boolean`"
-  ([^java.lang.management.MemoryMXBean this]
+  (^Boolean [^java.lang.management.MemoryMXBean this]
     (-> this (.isVerbose))))
 
 (defn set-verbose

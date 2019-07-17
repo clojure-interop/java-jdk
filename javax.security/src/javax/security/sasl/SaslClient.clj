@@ -68,7 +68,7 @@
    (e.g. `CRAM-MD5`, `GSSAPI`).
 
   returns: A non-null string representing the IANA-registered mechanism name. - `java.lang.String`"
-  ([^javax.security.sasl.SaslClient this]
+  (^java.lang.String [^javax.security.sasl.SaslClient this]
     (-> this (.getMechanismName))))
 
 (defn has-initial-response?
@@ -77,7 +77,7 @@
    empty array to get the initial response.
 
   returns: true if this mechanism has an initial response. - `boolean`"
-  ([^javax.security.sasl.SaslClient this]
+  (^Boolean [^javax.security.sasl.SaslClient this]
     (-> this (.hasInitialResponse))))
 
 (defn evaluate-challenge
@@ -106,7 +106,7 @@
    (in a protocol-specific manner) that the exchange has completed.
 
   returns: true if the authentication exchange has completed; false otherwise. - `boolean`"
-  ([^javax.security.sasl.SaslClient this]
+  (^Boolean [^javax.security.sasl.SaslClient this]
     (-> this (.isComplete))))
 
 (defn unwrap
@@ -168,7 +168,7 @@
    not negotiated or is not applicable to this mechanism. - `java.lang.Object`
 
   throws: java.lang.IllegalStateException - if this authentication exchange has not completed"
-  ([^javax.security.sasl.SaslClient this ^java.lang.String prop-name]
+  (^java.lang.Object [^javax.security.sasl.SaslClient this ^java.lang.String prop-name]
     (-> this (.getNegotiatedProperty prop-name))))
 
 (defn dispose

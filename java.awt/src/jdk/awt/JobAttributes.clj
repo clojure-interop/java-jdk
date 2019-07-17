@@ -60,7 +60,7 @@
    attributes. This attribute is updated to the value chosen by the user.
 
   returns: the possibly null file name - `java.lang.String`"
-  ([^java.awt.JobAttributes this]
+  (^java.lang.String [^java.awt.JobAttributes this]
     (-> this (.getFileName))))
 
 (defn set-destination
@@ -139,7 +139,7 @@
   returns: an integer greater than zero and greater than or equal
             to toPage and greater than or equal to minPage
             and less than or equal to maxPage. - `int`"
-  ([^java.awt.JobAttributes this]
+  (^Integer [^java.awt.JobAttributes this]
     (-> this (.getToPage))))
 
 (defn get-printer
@@ -147,7 +147,7 @@
    attribute is updated to the value chosen by the user.
 
   returns: the possibly null printer name. - `java.lang.String`"
-  ([^java.awt.JobAttributes this]
+  (^java.lang.String [^java.awt.JobAttributes this]
     (-> this (.getPrinter))))
 
 (defn get-destination
@@ -156,7 +156,7 @@
    user.
 
   returns: DesintationType.FILE or DesintationType.PRINTER - `java.awt.JobAttributes.DestinationType`"
-  ([^java.awt.JobAttributes this]
+  (^java.awt.JobAttributes.DestinationType [^java.awt.JobAttributes this]
     (-> this (.getDestination))))
 
 (defn set-copies-to-default
@@ -173,14 +173,14 @@
 
   returns: DefaultSelectionType.ALL, DefaultSelectionType.RANGE, or
             DefaultSelectionType.SELECTION - `java.awt.JobAttributes.DefaultSelectionType`"
-  ([^java.awt.JobAttributes this]
+  (^java.awt.JobAttributes.DefaultSelectionType [^java.awt.JobAttributes this]
     (-> this (.getDefaultSelection))))
 
 (defn to-string
   "Returns a string representation of this JobAttributes.
 
   returns: the string representation. - `java.lang.String`"
-  ([^java.awt.JobAttributes this]
+  (^java.lang.String [^java.awt.JobAttributes this]
     (-> this (.toString))))
 
 (defn set-to-page
@@ -219,7 +219,7 @@
    by the user.
 
   returns: an integer greater than 0. - `int`"
-  ([^java.awt.JobAttributes this]
+  (^Integer [^java.awt.JobAttributes this]
     (-> this (.getCopies))))
 
 (defn set-sides
@@ -267,7 +267,7 @@
 
   returns: an integer greater than zero and greater than or equal
             to minPage. - `int`"
-  ([^java.awt.JobAttributes this]
+  (^Integer [^java.awt.JobAttributes this]
     (-> this (.getMaxPage))))
 
 (defn clone
@@ -275,14 +275,14 @@
 
   returns: the newly created copy; it is safe to cast this Object into
             a JobAttributes - `java.lang.Object`"
-  ([^java.awt.JobAttributes this]
+  (^java.lang.Object [^java.awt.JobAttributes this]
     (-> this (.clone))))
 
 (defn hash-code
   "Returns a hash code value for this JobAttributes.
 
   returns: the hash code. - `int`"
-  ([^java.awt.JobAttributes this]
+  (^Integer [^java.awt.JobAttributes this]
     (-> this (.hashCode))))
 
 (defn set
@@ -301,7 +301,7 @@
 
   returns: an integer greater than zero and less than or equal
             to maxPage. - `int`"
-  ([^java.awt.JobAttributes this]
+  (^Integer [^java.awt.JobAttributes this]
     (-> this (.getMinPage))))
 
 (defn get-sides
@@ -322,7 +322,7 @@
 
   returns: SidesType.ONE_SIDED, SidesType.TWO_SIDED_LONG_EDGE, or
             SidesType.TWO_SIDED_SHORT_EDGE. - `java.awt.JobAttributes.SidesType`"
-  ([^java.awt.JobAttributes this]
+  (^java.awt.JobAttributes.SidesType [^java.awt.JobAttributes this]
     (-> this (.getSides))))
 
 (defn set-dialog
@@ -369,7 +369,7 @@
 
   returns: MultipleDocumentHandlingType.SEPARATE_DOCUMENTS_COLLATED_COPIES or
        MultipleDocumentHandlingType.SEPARATE_DOCUMENTS_UNCOLLATED_COPIES. - `java.awt.JobAttributes.MultipleDocumentHandlingType`"
-  ([^java.awt.JobAttributes this]
+  (^java.awt.JobAttributes.MultipleDocumentHandlingType [^java.awt.JobAttributes this]
     (-> this (.getMultipleDocumentHandling))))
 
 (defn set-max-page
@@ -420,7 +420,7 @@
 
   returns: whether obj is equal to this JobAttribute according to the
             above criteria. - `boolean`"
-  ([^java.awt.JobAttributes this ^java.lang.Object obj]
+  (^Boolean [^java.awt.JobAttributes this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn get-dialog
@@ -436,7 +436,7 @@
 
   returns: DialogType.COMMON, DialogType.NATIVE, or
             DialogType.NONE - `java.awt.JobAttributes.DialogType`"
-  ([^java.awt.JobAttributes this]
+  (^java.awt.JobAttributes.DialogType [^java.awt.JobAttributes this]
     (-> this (.getDialog))))
 
 (defn get-from-page
@@ -451,6 +451,6 @@
   returns: an integer greater than zero and less than or equal to
             toPage and greater than or equal to minPage and
             less than or equal to maxPage. - `int`"
-  ([^java.awt.JobAttributes this]
+  (^Integer [^java.awt.JobAttributes this]
     (-> this (.getFromPage))))
 

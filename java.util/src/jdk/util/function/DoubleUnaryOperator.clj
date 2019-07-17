@@ -14,7 +14,7 @@
   operand - the operand - `double`
 
   returns: the operator result - `double`"
-  ([^java.util.function.DoubleUnaryOperator this ^Double operand]
+  (^Double [^java.util.function.DoubleUnaryOperator this ^Double operand]
     (-> this (.applyAsDouble operand))))
 
 (defn compose
@@ -51,6 +51,6 @@
   "Returns a unary operator that always returns its input argument.
 
   returns: a unary operator that always returns its input argument - `java.util.function.DoubleUnaryOperator`"
-  ([]
+  (^java.util.function.DoubleUnaryOperator []
     (DoubleUnaryOperator/identity )))
 

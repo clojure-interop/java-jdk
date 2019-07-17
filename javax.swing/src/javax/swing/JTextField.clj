@@ -146,7 +146,7 @@
   "Gets the scroll offset, in pixels.
 
   returns: the offset >= 0 - `int`"
-  ([^javax.swing.JTextField this]
+  (^Integer [^javax.swing.JTextField this]
     (-> this (.getScrollOffset))))
 
 (defn set-columns
@@ -188,7 +188,7 @@
   "Returns the number of columns in this TextField.
 
   returns: the number of columns >= 0 - `int`"
-  ([^javax.swing.JTextField this]
+  (^Integer [^javax.swing.JTextField this]
     (-> this (.getColumns))))
 
 (defn get-action
@@ -198,7 +198,7 @@
 
   returns: the Action for this ActionEvent source,
             or null - `javax.swing.Action`"
-  ([^javax.swing.JTextField this]
+  (^javax.swing.Action [^javax.swing.JTextField this]
     (-> this (.getAction))))
 
 (defn add-action-listener
@@ -224,7 +224,7 @@
   "Gets the class ID for a UI.
 
   returns: the string `TextFieldUI` - `java.lang.String`"
-  ([^javax.swing.JTextField this]
+  (^java.lang.String [^javax.swing.JTextField this]
     (-> this (.getUIClassID))))
 
 (defn get-horizontal-visibility
@@ -239,7 +239,7 @@
    properties on the BoundedRangeModel.
 
   returns: the visibility - `javax.swing.BoundedRangeModel`"
-  ([^javax.swing.JTextField this]
+  (^javax.swing.BoundedRangeModel [^javax.swing.JTextField this]
     (-> this (.getHorizontalVisibility))))
 
 (defn validate-root?
@@ -251,7 +251,7 @@
 
   returns: if the parent of this textfield is a JViewPort
             return false, otherwise return true - `boolean`"
-  ([^javax.swing.JTextField this]
+  (^Boolean [^javax.swing.JTextField this]
     (-> this (.isValidateRoot))))
 
 (defn set-scroll-offset
@@ -289,7 +289,7 @@
 
   returns: an AccessibleJTextField that serves as the
            AccessibleContext of this JTextField - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.JTextField this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.JTextField this]
     (-> this (.getAccessibleContext))))
 
 (defn get-horizontal-alignment
@@ -303,7 +303,7 @@
    JTextField.TRAILING
 
   returns: the horizontal alignment - `int`"
-  ([^javax.swing.JTextField this]
+  (^Integer [^javax.swing.JTextField this]
     (-> this (.getHorizontalAlignment))))
 
 (defn remove-action-listener
@@ -379,6 +379,6 @@
    the column width.
 
   returns: the dimension of this textfield - `java.awt.Dimension`"
-  ([^javax.swing.JTextField this]
+  (^java.awt.Dimension [^javax.swing.JTextField this]
     (-> this (.getPreferredSize))))
 

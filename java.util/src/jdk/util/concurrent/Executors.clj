@@ -29,7 +29,7 @@
   returns: an ExecutorService instance - `java.util.concurrent.ExecutorService`
 
   throws: java.lang.NullPointerException - if executor null"
-  ([^java.util.concurrent.ExecutorService executor]
+  (^java.util.concurrent.ExecutorService [^java.util.concurrent.ExecutorService executor]
     (Executors/unconfigurableExecutorService executor)))
 
 (defn *privileged-callable-using-current-class-loader
@@ -65,7 +65,7 @@
    of the thread created by this factory.
 
   returns: a thread factory - `java.util.concurrent.ThreadFactory`"
-  ([]
+  (^java.util.concurrent.ThreadFactory []
     (Executors/defaultThreadFactory )))
 
 (defn *new-scheduled-thread-pool
@@ -78,9 +78,9 @@
   returns: a newly created scheduled thread pool - `java.util.concurrent.ScheduledExecutorService`
 
   throws: java.lang.IllegalArgumentException - if corePoolSize < 0"
-  ([^Integer core-pool-size ^java.util.concurrent.ThreadFactory thread-factory]
+  (^java.util.concurrent.ScheduledExecutorService [^Integer core-pool-size ^java.util.concurrent.ThreadFactory thread-factory]
     (Executors/newScheduledThreadPool core-pool-size thread-factory))
-  ([^Integer core-pool-size]
+  (^java.util.concurrent.ScheduledExecutorService [^Integer core-pool-size]
     (Executors/newScheduledThreadPool core-pool-size)))
 
 (defn *new-cached-thread-pool
@@ -94,9 +94,9 @@
   returns: the newly created thread pool - `java.util.concurrent.ExecutorService`
 
   throws: java.lang.NullPointerException - if threadFactory is null"
-  ([^java.util.concurrent.ThreadFactory thread-factory]
+  (^java.util.concurrent.ExecutorService [^java.util.concurrent.ThreadFactory thread-factory]
     (Executors/newCachedThreadPool thread-factory))
-  ([]
+  (^java.util.concurrent.ExecutorService []
     (Executors/newCachedThreadPool )))
 
 (defn *unconfigurable-scheduled-executor-service
@@ -110,7 +110,7 @@
   returns: a ScheduledExecutorService instance - `java.util.concurrent.ScheduledExecutorService`
 
   throws: java.lang.NullPointerException - if executor null"
-  ([^java.util.concurrent.ScheduledExecutorService executor]
+  (^java.util.concurrent.ScheduledExecutorService [^java.util.concurrent.ScheduledExecutorService executor]
     (Executors/unconfigurableScheduledExecutorService executor)))
 
 (defn *callable
@@ -127,7 +127,7 @@
   throws: java.lang.NullPointerException - if task null"
   ([^java.lang.Runnable task result]
     (Executors/callable task result))
-  ([^java.lang.Runnable task]
+  (^java.util.concurrent.Callable [^java.lang.Runnable task]
     (Executors/callable task)))
 
 (defn *privileged-callable
@@ -175,7 +175,7 @@
   returns: a thread factory - `java.util.concurrent.ThreadFactory`
 
   throws: java.security.AccessControlException - if the current access control context does not have permission to both get and set context class loader"
-  ([]
+  (^java.util.concurrent.ThreadFactory []
     (Executors/privilegedThreadFactory )))
 
 (defn *new-fixed-thread-pool
@@ -196,9 +196,9 @@
   returns: the newly created thread pool - `java.util.concurrent.ExecutorService`
 
   throws: java.lang.NullPointerException - if threadFactory is null"
-  ([^Integer n-threads ^java.util.concurrent.ThreadFactory thread-factory]
+  (^java.util.concurrent.ExecutorService [^Integer n-threads ^java.util.concurrent.ThreadFactory thread-factory]
     (Executors/newFixedThreadPool n-threads thread-factory))
-  ([^Integer n-threads]
+  (^java.util.concurrent.ExecutorService [^Integer n-threads]
     (Executors/newFixedThreadPool n-threads)))
 
 (defn *new-single-thread-executor
@@ -214,9 +214,9 @@
   returns: the newly created single-threaded Executor - `java.util.concurrent.ExecutorService`
 
   throws: java.lang.NullPointerException - if threadFactory is null"
-  ([^java.util.concurrent.ThreadFactory thread-factory]
+  (^java.util.concurrent.ExecutorService [^java.util.concurrent.ThreadFactory thread-factory]
     (Executors/newSingleThreadExecutor thread-factory))
-  ([]
+  (^java.util.concurrent.ExecutorService []
     (Executors/newSingleThreadExecutor )))
 
 (defn *new-single-thread-scheduled-executor
@@ -236,9 +236,9 @@
   returns: a newly created scheduled executor - `java.util.concurrent.ScheduledExecutorService`
 
   throws: java.lang.NullPointerException - if threadFactory is null"
-  ([^java.util.concurrent.ThreadFactory thread-factory]
+  (^java.util.concurrent.ScheduledExecutorService [^java.util.concurrent.ThreadFactory thread-factory]
     (Executors/newSingleThreadScheduledExecutor thread-factory))
-  ([]
+  (^java.util.concurrent.ScheduledExecutorService []
     (Executors/newSingleThreadScheduledExecutor )))
 
 (defn *new-work-stealing-pool
@@ -256,8 +256,8 @@
   returns: the newly created thread pool - `java.util.concurrent.ExecutorService`
 
   throws: java.lang.IllegalArgumentException - if parallelism <= 0"
-  ([^Integer parallelism]
+  (^java.util.concurrent.ExecutorService [^Integer parallelism]
     (Executors/newWorkStealingPool parallelism))
-  ([]
+  (^java.util.concurrent.ExecutorService []
     (Executors/newWorkStealingPool )))
 

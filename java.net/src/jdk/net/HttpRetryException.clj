@@ -23,7 +23,7 @@
   "Returns the http response code
 
   returns: The http response code. - `int`"
-  ([^java.net.HttpRetryException this]
+  (^Integer [^java.net.HttpRetryException this]
     (-> this (.responseCode))))
 
 (defn get-reason
@@ -31,7 +31,7 @@
    not be retried.
 
   returns: The reason string - `java.lang.String`"
-  ([^java.net.HttpRetryException this]
+  (^java.lang.String [^java.net.HttpRetryException this]
     (-> this (.getReason))))
 
 (defn get-location
@@ -39,6 +39,6 @@
    error resulted from redirection.
 
   returns: The location string - `java.lang.String`"
-  ([^java.net.HttpRetryException this]
+  (^java.lang.String [^java.net.HttpRetryException this]
     (-> this (.getLocation))))
 

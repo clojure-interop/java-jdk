@@ -32,7 +32,7 @@
   returns: the default SSL context - `javax.net.ssl.SSLContext`
 
   throws: java.security.NoSuchAlgorithmException - if the SSLContext.getInstance() call fails"
-  ([]
+  (^javax.net.ssl.SSLContext []
     (SSLContext/getDefault )))
 
 (defn *set-default
@@ -64,9 +64,9 @@
   returns: the new SSLContext object. - `javax.net.ssl.SSLContext`
 
   throws: java.security.NoSuchAlgorithmException - if a SSLContextSpi implementation for the specified protocol is not available from the specified provider."
-  ([^java.lang.String protocol ^java.lang.String provider]
+  (^javax.net.ssl.SSLContext [^java.lang.String protocol ^java.lang.String provider]
     (SSLContext/getInstance protocol provider))
-  ([^java.lang.String protocol]
+  (^javax.net.ssl.SSLContext [^java.lang.String protocol]
     (SSLContext/getInstance protocol)))
 
 (defn get-default-ssl-parameters
@@ -79,14 +79,14 @@
   returns: a copy of the SSLParameters object with the default settings - `javax.net.ssl.SSLParameters`
 
   throws: java.lang.UnsupportedOperationException - if the default SSL parameters could not be obtained."
-  ([^javax.net.ssl.SSLContext this]
+  (^javax.net.ssl.SSLParameters [^javax.net.ssl.SSLContext this]
     (-> this (.getDefaultSSLParameters))))
 
 (defn get-provider
   "Returns the provider of this SSLContext object.
 
   returns: the provider of this SSLContext object - `java.security.Provider`"
-  ([^javax.net.ssl.SSLContext this]
+  (^java.security.Provider [^javax.net.ssl.SSLContext this]
     (-> this (.getProvider))))
 
 (defn get-client-session-context
@@ -101,7 +101,7 @@
    is returned otherwise.
 
   returns: client session context bound to this SSL context - `javax.net.ssl.SSLSessionContext`"
-  ([^javax.net.ssl.SSLContext this]
+  (^javax.net.ssl.SSLSessionContext [^javax.net.ssl.SSLContext this]
     (-> this (.getClientSessionContext))))
 
 (defn get-server-socket-factory
@@ -111,7 +111,7 @@
   returns: the ServerSocketFactory object - `javax.net.ssl.SSLServerSocketFactory`
 
   throws: java.lang.IllegalStateException - if the SSLContextImpl requires initialization and the init() has not been called"
-  ([^javax.net.ssl.SSLContext this]
+  (^javax.net.ssl.SSLServerSocketFactory [^javax.net.ssl.SSLContext this]
     (-> this (.getServerSocketFactory))))
 
 (defn get-socket-factory
@@ -121,7 +121,7 @@
   returns: the SocketFactory object - `javax.net.ssl.SSLSocketFactory`
 
   throws: java.lang.IllegalStateException - if the SSLContextImpl requires initialization and the init() has not been called"
-  ([^javax.net.ssl.SSLContext this]
+  (^javax.net.ssl.SSLSocketFactory [^javax.net.ssl.SSLContext this]
     (-> this (.getSocketFactory))))
 
 (defn init
@@ -140,7 +140,7 @@
   random - the source of randomness for this generator or null - `java.security.SecureRandom`
 
   throws: java.security.KeyManagementException - if this operation fails"
-  ([^javax.net.ssl.SSLContext this ^javax.net.ssl.KeyManager[] km ^javax.net.ssl.TrustManager[] tm ^java.security.SecureRandom random]
+  ([^javax.net.ssl.SSLContext this km tm ^java.security.SecureRandom random]
     (-> this (.init km tm random))))
 
 (defn get-supported-ssl-parameters
@@ -154,7 +154,7 @@
      settings - `javax.net.ssl.SSLParameters`
 
   throws: java.lang.UnsupportedOperationException - if the supported SSL parameters could not be obtained."
-  ([^javax.net.ssl.SSLContext this]
+  (^javax.net.ssl.SSLParameters [^javax.net.ssl.SSLContext this]
     (-> this (.getSupportedSSLParameters))))
 
 (defn get-protocol
@@ -165,7 +165,7 @@
    SSLContext object.
 
   returns: the protocol name of this SSLContext object. - `java.lang.String`"
-  ([^javax.net.ssl.SSLContext this]
+  (^java.lang.String [^javax.net.ssl.SSLContext this]
     (-> this (.getProtocol))))
 
 (defn get-server-session-context
@@ -180,7 +180,7 @@
    is returned otherwise.
 
   returns: server session context bound to this SSL context - `javax.net.ssl.SSLSessionContext`"
-  ([^javax.net.ssl.SSLContext this]
+  (^javax.net.ssl.SSLSessionContext [^javax.net.ssl.SSLContext this]
     (-> this (.getServerSessionContext))))
 
 (defn create-ssl-engine
@@ -199,8 +199,8 @@
   returns: the new SSLEngine object - `javax.net.ssl.SSLEngine`
 
   throws: java.lang.UnsupportedOperationException - if the underlying provider does not implement the operation."
-  ([^javax.net.ssl.SSLContext this ^java.lang.String peer-host ^Integer peer-port]
+  (^javax.net.ssl.SSLEngine [^javax.net.ssl.SSLContext this ^java.lang.String peer-host ^Integer peer-port]
     (-> this (.createSSLEngine peer-host peer-port)))
-  ([^javax.net.ssl.SSLContext this]
+  (^javax.net.ssl.SSLEngine [^javax.net.ssl.SSLContext this]
     (-> this (.createSSLEngine))))
 

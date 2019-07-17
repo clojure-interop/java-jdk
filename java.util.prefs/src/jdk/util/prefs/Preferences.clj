@@ -234,7 +234,7 @@
            c is a member. - `java.util.prefs.Preferences`
 
   throws: java.lang.NullPointerException - if c is null."
-  ([^java.lang.Class c]
+  (^java.util.prefs.Preferences [^java.lang.Class c]
     (Preferences/userNodeForPackage c)))
 
 (defn *system-node-for-package
@@ -275,7 +275,7 @@
            c is a member. - `java.util.prefs.Preferences`
 
   throws: java.lang.NullPointerException - if c is null."
-  ([^java.lang.Class c]
+  (^java.util.prefs.Preferences [^java.lang.Class c]
     (Preferences/systemNodeForPackage c)))
 
 (defn *user-root
@@ -284,7 +284,7 @@
   returns: the root preference node for the calling user. - `java.util.prefs.Preferences`
 
   throws: java.lang.SecurityException - If a security manager is present and it denies RuntimePermission(`preferences`)."
-  ([]
+  (^java.util.prefs.Preferences []
     (Preferences/userRoot )))
 
 (defn *system-root
@@ -293,7 +293,7 @@
   returns: the root preference node for the system. - `java.util.prefs.Preferences`
 
   throws: java.lang.SecurityException - If a security manager is present and it denies RuntimePermission(`preferences`)."
-  ([]
+  (^java.util.prefs.Preferences []
     (Preferences/systemRoot )))
 
 (defn *import-preferences
@@ -434,7 +434,7 @@
   returns: true if the specified node exists. - `boolean`
 
   throws: java.util.prefs.BackingStoreException - if this operation cannot be completed due to a failure in the backing store, or inability to communicate with it."
-  ([^java.util.prefs.Preferences this ^java.lang.String path-name]
+  (^Boolean [^java.util.prefs.Preferences this ^java.lang.String path-name]
     (-> this (.nodeExists path-name))))
 
 (defn parent
@@ -444,14 +444,14 @@
   returns: the parent of this preference node. - `java.util.prefs.Preferences`
 
   throws: java.lang.IllegalStateException - if this node (or an ancestor) has been removed with the removeNode() method."
-  ([^java.util.prefs.Preferences this]
+  (^java.util.prefs.Preferences [^java.util.prefs.Preferences this]
     (-> this (.parent))))
 
 (defn absolute-path
   "Returns this preference node's absolute path name.
 
   returns: this preference node's absolute path name. - `java.lang.String`"
-  ([^java.util.prefs.Preferences this]
+  (^java.lang.String [^java.util.prefs.Preferences this]
     (-> this (.absolutePath))))
 
 (defn flush
@@ -483,7 +483,7 @@
    `System`)  ` Preference Node: `  this.absolutePath().
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^java.util.prefs.Preferences this]
+  (^java.lang.String [^java.util.prefs.Preferences this]
     (-> this (.toString))))
 
 (defn put-float
@@ -551,7 +551,7 @@
   "Returns this preference node's name, relative to its parent.
 
   returns: this preference node's name, relative to its parent. - `java.lang.String`"
-  ([^java.util.prefs.Preferences this]
+  (^java.lang.String [^java.util.prefs.Preferences this]
     (-> this (.name))))
 
 (defn get-long
@@ -577,7 +577,7 @@
            a long. - `long`
 
   throws: java.lang.IllegalStateException - if this node (or an ancestor) has been removed with the removeNode() method."
-  ([^java.util.prefs.Preferences this ^java.lang.String key ^Long def]
+  (^Long [^java.util.prefs.Preferences this ^java.lang.String key ^Long def]
     (-> this (.getLong key def))))
 
 (defn sync
@@ -615,7 +615,7 @@
            an int. - `int`
 
   throws: java.lang.IllegalStateException - if this node (or an ancestor) has been removed with the removeNode() method."
-  ([^java.util.prefs.Preferences this ^java.lang.String key ^Integer def]
+  (^Integer [^java.util.prefs.Preferences this ^java.lang.String key ^Integer def]
     (-> this (.getInt key def))))
 
 (defn remove-node
@@ -726,7 +726,7 @@
   returns: true if this preference node is in the user
            preference tree, false if it's in the system
            preference tree. - `boolean`"
-  ([^java.util.prefs.Preferences this]
+  (^Boolean [^java.util.prefs.Preferences this]
     (-> this (.isUserNode))))
 
 (defn remove-preference-change-listener
@@ -799,7 +799,7 @@
            a boolean. - `boolean`
 
   throws: java.lang.IllegalStateException - if this node (or an ancestor) has been removed with the removeNode() method."
-  ([^java.util.prefs.Preferences this ^java.lang.String key ^Boolean def]
+  (^Boolean [^java.util.prefs.Preferences this ^java.lang.String key ^Boolean def]
     (-> this (.getBoolean key def))))
 
 (defn clear
@@ -839,7 +839,7 @@
            a float. - `float`
 
   throws: java.lang.IllegalStateException - if this node (or an ancestor) has been removed with the removeNode() method."
-  ([^java.util.prefs.Preferences this ^java.lang.String key ^Float def]
+  (^Float [^java.util.prefs.Preferences this ^java.lang.String key ^Float def]
     (-> this (.getFloat key def))))
 
 (defn get-double
@@ -865,7 +865,7 @@
            a double. - `double`
 
   throws: java.lang.IllegalStateException - if this node (or an ancestor) has been removed with the removeNode() method."
-  ([^java.util.prefs.Preferences this ^java.lang.String key ^Double def]
+  (^Double [^java.util.prefs.Preferences this ^java.lang.String key ^Double def]
     (-> this (.getDouble key def))))
 
 (defn put-long
@@ -900,7 +900,7 @@
            store is inaccessible. - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if this node (or an ancestor) has been removed with the removeNode() method."
-  ([^java.util.prefs.Preferences this ^java.lang.String key ^java.lang.String def]
+  (^java.lang.String [^java.util.prefs.Preferences this ^java.lang.String key ^java.lang.String def]
     (-> this (.get key def))))
 
 (defn remove-node-change-listener
@@ -930,6 +930,6 @@
   returns: the specified preference node. - `java.util.prefs.Preferences`
 
   throws: java.lang.IllegalArgumentException - if the path name is invalid (i.e., it contains multiple consecutive slash characters, or ends with a slash character and is more than one character long)."
-  ([^java.util.prefs.Preferences this ^java.lang.String path-name]
+  (^java.util.prefs.Preferences [^java.util.prefs.Preferences this ^java.lang.String path-name]
     (-> this (.node path-name))))
 

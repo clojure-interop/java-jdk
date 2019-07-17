@@ -483,7 +483,7 @@
   returns: the starting position of the first occurrence of the specified
            target list within the specified source list, or -1 if there
            is no such occurrence. - `int`"
-  ([^java.util.List source ^java.util.List target]
+  (^Integer [^java.util.List source ^java.util.List target]
     (Collections/indexOfSubList source target)))
 
 (defn *unmodifiable-sorted-set
@@ -1006,7 +1006,7 @@
    elements in common. - `boolean`
 
   throws: java.lang.NullPointerException - if one collection contains a null element and null is not an eligible element for the other collection. (optional)"
-  ([^java.util.Collection c-1 ^java.util.Collection c-2]
+  (^Boolean [^java.util.Collection c-1 ^java.util.Collection c-2]
     (Collections/disjoint c-1 c-2)))
 
 (defn *last-index-of-sub-list
@@ -1027,7 +1027,7 @@
   returns: the starting position of the last occurrence of the specified
            target list within the specified source list, or -1 if there
            is no such occurrence. - `int`"
-  ([^java.util.List source ^java.util.List target]
+  (^Integer [^java.util.List source ^java.util.List target]
     (Collections/lastIndexOfSubList source target)))
 
 (defn *synchronized-list
@@ -1441,6 +1441,6 @@
   returns: the number of elements in c equal to o - `int`
 
   throws: java.lang.NullPointerException - if c is null"
-  ([^java.util.Collection c ^java.lang.Object o]
+  (^Integer [^java.util.Collection c ^java.lang.Object o]
     (Collections/frequency c o)))
 

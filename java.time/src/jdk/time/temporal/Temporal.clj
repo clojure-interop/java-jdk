@@ -65,7 +65,7 @@
   unit - the unit to check, null returns false - `java.time.temporal.TemporalUnit`
 
   returns: true if the unit can be added/subtracted, false if not - `boolean`"
-  ([^java.time.temporal.Temporal this ^java.time.temporal.TemporalUnit unit]
+  (^Boolean [^java.time.temporal.Temporal this ^java.time.temporal.TemporalUnit unit]
     (-> this (.isSupported unit))))
 
 (defn with
@@ -86,7 +86,7 @@
   returns: an object of the same type with the specified field set, not null - `java.time.temporal.Temporal`
 
   throws: java.time.DateTimeException - if the field cannot be set"
-  ([^java.time.temporal.Temporal this ^java.time.temporal.TemporalField field ^Long new-value]
+  (^java.time.temporal.Temporal [^java.time.temporal.Temporal this ^java.time.temporal.TemporalField field ^Long new-value]
     (-> this (.with field new-value)))
   ([^java.time.temporal.Temporal this ^java.time.temporal.TemporalAdjuster adjuster]
     (-> this (.with adjuster))))
@@ -109,7 +109,7 @@
   returns: an object of the same type with the specified period added, not null - `java.time.temporal.Temporal`
 
   throws: java.time.DateTimeException - if the unit cannot be added"
-  ([^java.time.temporal.Temporal this ^Long amount-to-add ^java.time.temporal.TemporalUnit unit]
+  (^java.time.temporal.Temporal [^java.time.temporal.Temporal this ^Long amount-to-add ^java.time.temporal.TemporalUnit unit]
     (-> this (.plus amount-to-add unit)))
   ([^java.time.temporal.Temporal this ^java.time.temporal.TemporalAmount amount]
     (-> this (.plus amount))))
@@ -179,6 +179,6 @@
     negative if it is earlier than this one - `long`
 
   throws: java.time.DateTimeException - if the amount cannot be calculated, or the end temporal cannot be converted to the same type as this temporal"
-  ([^java.time.temporal.Temporal this ^java.time.temporal.Temporal end-exclusive ^java.time.temporal.TemporalUnit unit]
+  (^Long [^java.time.temporal.Temporal this ^java.time.temporal.Temporal end-exclusive ^java.time.temporal.TemporalUnit unit]
     (-> this (.until end-exclusive unit))))
 

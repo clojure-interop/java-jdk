@@ -25,7 +25,7 @@
   "Retrieves role name.
 
   returns: the role name. - `java.lang.String`"
-  ([^javax.management.relation.RoleUnresolved this]
+  (^java.lang.String [^javax.management.relation.RoleUnresolved this]
     (-> this (.getRoleName))))
 
 (defn get-role-value
@@ -34,7 +34,7 @@
   returns: an ArrayList of ObjectName objects, the one provided to be set
    in given role. Null if the unresolved role is returned for a read
    access. - `java.util.List<javax.management.ObjectName>`"
-  ([^javax.management.relation.RoleUnresolved this]
+  (^java.util.List [^javax.management.relation.RoleUnresolved this]
     (-> this (.getRoleValue))))
 
 (defn get-problem-type
@@ -42,7 +42,7 @@
 
   returns: an integer corresponding to a problem, those being described as
    static final members of current class. - `int`"
-  ([^javax.management.relation.RoleUnresolved this]
+  (^Integer [^javax.management.relation.RoleUnresolved this]
     (-> this (.getProblemType))))
 
 (defn set-role-name
@@ -74,13 +74,13 @@
   "Clone this object.
 
   returns: an independent clone. - `java.lang.Object`"
-  ([^javax.management.relation.RoleUnresolved this]
+  (^java.lang.Object [^javax.management.relation.RoleUnresolved this]
     (-> this (.clone))))
 
 (defn to-string
   "Return a string describing this object.
 
   returns: a description of this RoleUnresolved object. - `java.lang.String`"
-  ([^javax.management.relation.RoleUnresolved this]
+  (^java.lang.String [^javax.management.relation.RoleUnresolved this]
     (-> this (.toString))))
 

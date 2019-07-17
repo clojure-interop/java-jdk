@@ -29,7 +29,7 @@
   returns: a new PrinterJob. - `java.awt.print.PrinterJob`
 
   throws: java.lang.SecurityException - if a security manager exists and its SecurityManager.checkPrintJobAccess() method disallows this thread from creating a print job request"
-  ([]
+  (^java.awt.print.PrinterJob []
     (PrinterJob/getPrinterJob )))
 
 (defn *lookup-print-services
@@ -106,7 +106,7 @@
               dialog is acknowledged. - `java.awt.print.PageFormat`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true."
-  ([^java.awt.print.PrinterJob this ^java.awt.print.PageFormat page]
+  (^java.awt.print.PageFormat [^java.awt.print.PrinterJob this ^java.awt.print.PageFormat page]
     (-> this (.pageDialog page))))
 
 (defn cancel
@@ -127,7 +127,7 @@
 
   returns: true if the job in progress
    is going to be cancelled; false otherwise. - `boolean`"
-  ([^java.awt.print.PrinterJob this]
+  (^Boolean [^java.awt.print.PrinterJob this]
     (-> this (.isCancelled))))
 
 (defn get-print-service
@@ -137,14 +137,14 @@
    available.
 
   returns: the service for this printer job. - `javax.print.PrintService`"
-  ([^java.awt.print.PrinterJob this]
+  (^javax.print.PrintService [^java.awt.print.PrinterJob this]
     (-> this (.getPrintService))))
 
 (defn get-user-name
   "Gets the name of the printing user.
 
   returns: the name of the printing user - `java.lang.String`"
-  ([^java.awt.print.PrinterJob this]
+  (^java.lang.String [^java.awt.print.PrinterJob this]
     (-> this (.getUserName))))
 
 (defn set-job-name
@@ -195,16 +195,16 @@
    false otherwise. - `boolean`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true."
-  ([^java.awt.print.PrinterJob this ^javax.print.attribute.PrintRequestAttributeSet attributes]
+  (^Boolean [^java.awt.print.PrinterJob this ^javax.print.attribute.PrintRequestAttributeSet attributes]
     (-> this (.printDialog attributes)))
-  ([^java.awt.print.PrinterJob this]
+  (^Boolean [^java.awt.print.PrinterJob this]
     (-> this (.printDialog))))
 
 (defn get-copies
   "Gets the number of copies to be printed.
 
   returns: the number of copies to be printed. - `int`"
-  ([^java.awt.print.PrinterJob this]
+  (^Integer [^java.awt.print.PrinterJob this]
     (-> this (.getCopies))))
 
 (defn validate-page
@@ -220,7 +220,7 @@
   returns: a PageFormat that is cloned from
             page and whose settings are changed
             to conform with this PrinterJob. - `java.awt.print.PageFormat`"
-  ([^java.awt.print.PrinterJob this ^java.awt.print.PageFormat page]
+  (^java.awt.print.PageFormat [^java.awt.print.PrinterJob this ^java.awt.print.PageFormat page]
     (-> this (.validatePage page))))
 
 (defn default-page
@@ -231,9 +231,9 @@
 
   returns: clone of page, altered to describe a default
                         PageFormat. - `java.awt.print.PageFormat`"
-  ([^java.awt.print.PrinterJob this ^java.awt.print.PageFormat page]
+  (^java.awt.print.PageFormat [^java.awt.print.PrinterJob this ^java.awt.print.PageFormat page]
     (-> this (.defaultPage page)))
-  ([^java.awt.print.PrinterJob this]
+  (^java.awt.print.PageFormat [^java.awt.print.PrinterJob this]
     (-> this (.defaultPage))))
 
 (defn set-print-service
@@ -255,7 +255,7 @@
   "Gets the name of the document to be printed.
 
   returns: the name of the document to be printed. - `java.lang.String`"
-  ([^java.awt.print.PrinterJob this]
+  (^java.lang.String [^java.awt.print.PrinterJob this]
     (-> this (.getJobName))))
 
 (defn get-page-format
@@ -273,7 +273,7 @@
 
   returns: a PageFormat whose settings conform with
    those of the current service and the specified attributes. - `java.awt.print.PageFormat`"
-  ([^java.awt.print.PrinterJob this ^javax.print.attribute.PrintRequestAttributeSet attributes]
+  (^java.awt.print.PageFormat [^java.awt.print.PrinterJob this ^javax.print.attribute.PrintRequestAttributeSet attributes]
     (-> this (.getPageFormat attributes))))
 
 (defn print

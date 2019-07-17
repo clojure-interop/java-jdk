@@ -29,7 +29,7 @@
   "Obtains the audio line that is the source of this event.
 
   returns: the line responsible for this event - `javax.sound.sampled.Line`"
-  ([^javax.sound.sampled.LineEvent this]
+  (^javax.sound.sampled.Line [^javax.sound.sampled.LineEvent this]
     (-> this (.getLine))))
 
 (defn get-type
@@ -37,7 +37,7 @@
 
   returns: this event's type (LineEvent.Type.OPEN, LineEvent.Type.CLOSE,
    LineEvent.Type.START, or LineEvent.Type.STOP) - `javax.sound.sampled.LineEvent.Type`"
-  ([^javax.sound.sampled.LineEvent this]
+  (^javax.sound.sampled.LineEvent.Type [^javax.sound.sampled.LineEvent this]
     (-> this (.getType))))
 
 (defn get-frame-position
@@ -53,7 +53,7 @@
    should be AudioSystem.NOT_SPECIFIED.
 
   returns: the line's position as a sample frame number - `long`"
-  ([^javax.sound.sampled.LineEvent this]
+  (^Long [^javax.sound.sampled.LineEvent this]
     (-> this (.getFramePosition))))
 
 (defn to-string
@@ -61,6 +61,6 @@
    between implementations of Java Sound.
 
   returns: a string describing the event. - `java.lang.String`"
-  ([^javax.sound.sampled.LineEvent this]
+  (^java.lang.String [^javax.sound.sampled.LineEvent this]
     (-> this (.toString))))
 

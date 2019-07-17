@@ -89,6 +89,6 @@
 
   returns: an AccessibleCellRendererPane that serves as the
            AccessibleContext of this CellRendererPane - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.CellRendererPane this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.CellRendererPane this]
     (-> this (.getAccessibleContext))))
 

@@ -39,7 +39,7 @@
 
   returns: True if object is equivalent to this PrinterURI
             attribute, false otherwise. - `boolean`"
-  ([^javax.print.attribute.standard.PrinterURI this ^java.lang.Object object]
+  (^Boolean [^javax.print.attribute.standard.PrinterURI this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -62,6 +62,6 @@
    name is `printer-uri`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.PrinterURI this]
+  (^java.lang.String [^javax.print.attribute.standard.PrinterURI this]
     (-> this (.getName))))
 

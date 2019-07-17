@@ -82,7 +82,7 @@
   returns: value - stepSize, or
        null if the sum is less
        than minimum. - `java.lang.Object`"
-  ([^javax.swing.SpinnerNumberModel this]
+  (^java.lang.Object [^javax.swing.SpinnerNumberModel this]
     (-> this (.getPreviousValue))))
 
 (defn get-step-size
@@ -91,28 +91,28 @@
    and getPreviousValue methods.
 
   returns: the value of the stepSize property - `java.lang.Number`"
-  ([^javax.swing.SpinnerNumberModel this]
+  (^java.lang.Number [^javax.swing.SpinnerNumberModel this]
     (-> this (.getStepSize))))
 
 (defn get-minimum
   "Returns the first number in this sequence.
 
   returns: the value of the minimum property - `java.lang.Comparable`"
-  ([^javax.swing.SpinnerNumberModel this]
+  (^java.lang.Comparable [^javax.swing.SpinnerNumberModel this]
     (-> this (.getMinimum))))
 
 (defn get-number
   "Returns the value of the current element of the sequence.
 
   returns: the value property - `java.lang.Number`"
-  ([^javax.swing.SpinnerNumberModel this]
+  (^java.lang.Number [^javax.swing.SpinnerNumberModel this]
     (-> this (.getNumber))))
 
 (defn get-value
   "Returns the value of the current element of the sequence.
 
   returns: the value property - `java.lang.Object`"
-  ([^javax.swing.SpinnerNumberModel this]
+  (^java.lang.Object [^javax.swing.SpinnerNumberModel this]
     (-> this (.getValue))))
 
 (defn set-step-size
@@ -215,13 +215,13 @@
 
   returns: value  stepSize or null if the sum
        exceeds maximum. - `java.lang.Object`"
-  ([^javax.swing.SpinnerNumberModel this]
+  (^java.lang.Object [^javax.swing.SpinnerNumberModel this]
     (-> this (.getNextValue))))
 
 (defn get-maximum
   "Returns the last number in the sequence.
 
   returns: the value of the maximum property - `java.lang.Comparable`"
-  ([^javax.swing.SpinnerNumberModel this]
+  (^java.lang.Comparable [^javax.swing.SpinnerNumberModel this]
     (-> this (.getMaximum))))
 

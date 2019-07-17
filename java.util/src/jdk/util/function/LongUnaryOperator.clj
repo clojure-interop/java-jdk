@@ -14,7 +14,7 @@
   operand - the operand - `long`
 
   returns: the operator result - `long`"
-  ([^java.util.function.LongUnaryOperator this ^Long operand]
+  (^Long [^java.util.function.LongUnaryOperator this ^Long operand]
     (-> this (.applyAsLong operand))))
 
 (defn compose
@@ -51,6 +51,6 @@
   "Returns a unary operator that always returns its input argument.
 
   returns: a unary operator that always returns its input argument - `java.util.function.LongUnaryOperator`"
-  ([]
+  (^java.util.function.LongUnaryOperator []
     (LongUnaryOperator/identity )))
 

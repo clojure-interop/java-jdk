@@ -23,6 +23,6 @@
   column - the column of the cell being edited - `int`
 
   returns: the component for editing - `java.awt.Component`"
-  ([^javax.swing.table.TableCellEditor this ^javax.swing.JTable table ^java.lang.Object value ^Boolean is-selected ^Integer row ^Integer column]
+  (^java.awt.Component [^javax.swing.table.TableCellEditor this ^javax.swing.JTable table ^java.lang.Object value ^Boolean is-selected ^Integer row ^Integer column]
     (-> this (.getTableCellEditorComponent table value is-selected row column))))
 

@@ -10,7 +10,7 @@
    object is bound.
 
   returns: PrintService object. - `javax.print.PrintService`"
-  ([^javax.print.DocPrintJob this]
+  (^javax.print.PrintService [^javax.print.DocPrintJob this]
     (-> this (.getPrintService))))
 
 (defn get-attributes
@@ -27,7 +27,7 @@
    The returned value may be an empty set but should not be null.
 
   returns: the print job attributes - `javax.print.attribute.PrintJobAttributeSet`"
-  ([^javax.print.DocPrintJob this]
+  (^javax.print.attribute.PrintJobAttributeSet [^javax.print.DocPrintJob this]
     (-> this (.getAttributes))))
 
 (defn add-print-job-listener

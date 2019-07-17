@@ -337,7 +337,7 @@
   "Returns the object to which this event handler will send a message.
 
   returns: the target of this event handler - `java.lang.Object`"
-  ([^java.beans.EventHandler this]
+  (^java.lang.Object [^java.beans.EventHandler this]
     (-> this (.getTarget))))
 
 (defn get-action
@@ -347,7 +347,7 @@
    will invoke on the target.
 
   returns: the action of this event handler - `java.lang.String`"
-  ([^java.beans.EventHandler this]
+  (^java.lang.String [^java.beans.EventHandler this]
     (-> this (.getAction))))
 
 (defn get-event-property-name
@@ -355,7 +355,7 @@
    used in the action applied to the target.
 
   returns: the property of the event - `java.lang.String`"
-  ([^java.beans.EventHandler this]
+  (^java.lang.String [^java.beans.EventHandler this]
     (-> this (.getEventPropertyName))))
 
 (defn get-listener-method-name
@@ -364,7 +364,7 @@
    listener interface trigger the action.
 
   returns: the name of the method that will trigger the action - `java.lang.String`"
-  ([^java.beans.EventHandler this]
+  (^java.lang.String [^java.beans.EventHandler this]
     (-> this (.getListenerMethodName))))
 
 (defn invoke
@@ -377,6 +377,6 @@
   arguments - an array of objects containing the values of the arguments passed in the method invocation on the proxy instance, or null if interface method takes no arguments. Arguments of primitive types are wrapped in instances of the appropriate primitive wrapper class, such as java.lang.Integer or java.lang.Boolean. - `java.lang.Object[]`
 
   returns: the result of applying the action to the target - `java.lang.Object`"
-  ([^java.beans.EventHandler this ^java.lang.Object proxy ^java.lang.reflect.Method method ^java.lang.Object[] arguments]
+  (^java.lang.Object [^java.beans.EventHandler this ^java.lang.Object proxy ^java.lang.reflect.Method method arguments]
     (-> this (.invoke proxy method arguments))))
 

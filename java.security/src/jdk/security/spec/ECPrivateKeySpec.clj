@@ -21,7 +21,7 @@
   "Returns the private value S.
 
   returns: the private value S. - `java.math.BigInteger`"
-  ([^java.security.spec.ECPrivateKeySpec this]
+  (^java.math.BigInteger [^java.security.spec.ECPrivateKeySpec this]
     (-> this (.getS))))
 
 (defn get-params
@@ -29,6 +29,6 @@
    parameters.
 
   returns: the EC domain parameters. - `java.security.spec.ECParameterSpec`"
-  ([^java.security.spec.ECPrivateKeySpec this]
+  (^java.security.spec.ECParameterSpec [^java.security.spec.ECPrivateKeySpec this]
     (-> this (.getParams))))
 

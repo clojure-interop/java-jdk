@@ -271,7 +271,7 @@
   returns: a non-contextual numeric shaper - `java.awt.font.NumericShaper`
 
   throws: java.lang.IllegalArgumentException - if the range is not a single range"
-  ([^Integer single-range]
+  (^java.awt.font.NumericShaper [^Integer single-range]
     (NumericShaper/getShaper single-range)))
 
 (defn *get-contextual-shaper
@@ -289,9 +289,9 @@
   returns: a shaper for the specified Unicode ranges. - `java.awt.font.NumericShaper`
 
   throws: java.lang.IllegalArgumentException - if the specified defaultContext is not a single valid range."
-  ([^Integer ranges ^Integer default-context]
+  (^java.awt.font.NumericShaper [^Integer ranges ^Integer default-context]
     (NumericShaper/getContextualShaper ranges default-context))
-  ([^Integer ranges]
+  (^java.awt.font.NumericShaper [^Integer ranges]
     (NumericShaper/getContextualShaper ranges)))
 
 (defn shape
@@ -316,7 +316,7 @@
 
   returns: true if this shaper is contextual;
            false otherwise. - `boolean`"
-  ([^java.awt.font.NumericShaper this]
+  (^Boolean [^java.awt.font.NumericShaper this]
     (-> this (.isContextual))))
 
 (defn get-ranges
@@ -333,7 +333,7 @@
    ranges. Call getRangeSet() for the enum-based ranges.
 
   returns: the values for all the ranges to be shaped. - `int`"
-  ([^java.awt.font.NumericShaper this]
+  (^Integer [^java.awt.font.NumericShaper this]
     (-> this (.getRanges))))
 
 (defn get-range-set
@@ -341,14 +341,14 @@
    this NumericShaper that will be shaped.
 
   returns: all the Unicode ranges to be shaped. - `java.util.Set<java.awt.font.NumericShaper.Range>`"
-  ([^java.awt.font.NumericShaper this]
+  (^java.util.Set [^java.awt.font.NumericShaper this]
     (-> this (.getRangeSet))))
 
 (defn hash-code
   "Returns a hash code for this shaper.
 
   returns: this shaper's hash code. - `int`"
-  ([^java.awt.font.NumericShaper this]
+  (^Integer [^java.awt.font.NumericShaper this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -367,7 +367,7 @@
   returns: true if o is an instance
            of NumericShaper and shapes in the same way;
            false otherwise. - `boolean`"
-  ([^java.awt.font.NumericShaper this ^java.lang.Object o]
+  (^Boolean [^java.awt.font.NumericShaper this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn to-string
@@ -375,6 +375,6 @@
    is used for debugging purposes only.
 
   returns: a String describing this shaper. - `java.lang.String`"
-  ([^java.awt.font.NumericShaper this]
+  (^java.lang.String [^java.awt.font.NumericShaper this]
     (-> this (.toString))))
 

@@ -36,7 +36,7 @@
              The parent may choose to resize or break the view. - `float`
 
   throws: java.lang.IllegalArgumentException - for an invalid axis"
-  ([^javax.swing.text.PlainView this ^Integer axis]
+  (^Float [^javax.swing.text.PlainView this ^Integer axis]
     (-> this (.getPreferredSpan axis))))
 
 (defn remove-update
@@ -78,7 +78,7 @@
   tab-offset - the position within the text stream that the tab occurred at >= 0. - `int`
 
   returns: the tab stop, measured in points >= 0 - `float`"
-  ([^javax.swing.text.PlainView this ^Float x ^Integer tab-offset]
+  (^Float [^javax.swing.text.PlainView this ^Float x ^Integer tab-offset]
     (-> this (.nextTabStop x tab-offset))))
 
 (defn set-size
@@ -102,7 +102,7 @@
 
   returns: the location within the model that best represents the
     given point in the view >= 0 - `int`"
-  ([^javax.swing.text.PlainView this ^Float fx ^Float fy ^java.awt.Shape a ^javax.swing.text.Position.Bias[] bias]
+  (^Integer [^javax.swing.text.PlainView this ^Float fx ^Float fy ^java.awt.Shape a bias]
     (-> this (.viewToModel fx fy a bias))))
 
 (defn model-to-view
@@ -116,6 +116,6 @@
   returns: the bounding box of the given position - `java.awt.Shape`
 
   throws: javax.swing.text.BadLocationException - if the given position does not represent a valid location in the associated document"
-  ([^javax.swing.text.PlainView this ^Integer pos ^java.awt.Shape a ^javax.swing.text.Position.Bias b]
+  (^java.awt.Shape [^javax.swing.text.PlainView this ^Integer pos ^java.awt.Shape a ^javax.swing.text.Position.Bias b]
     (-> this (.modelToView pos a b))))
 

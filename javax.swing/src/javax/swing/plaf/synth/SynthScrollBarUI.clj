@@ -13,7 +13,7 @@
   "c - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent c]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent c]
     (SynthScrollBarUI/createUI c)))
 
 (defn get-context
@@ -22,7 +22,7 @@
   c - Component requesting SynthContext. - `javax.swing.JComponent`
 
   returns: SynthContext describing component. - `javax.swing.plaf.synth.SynthContext`"
-  ([^javax.swing.plaf.synth.SynthScrollBarUI this ^javax.swing.JComponent c]
+  (^javax.swing.plaf.synth.SynthContext [^javax.swing.plaf.synth.SynthScrollBarUI this ^javax.swing.JComponent c]
     (-> this (.getContext c))))
 
 (defn get-supports-absolute-positioning?
@@ -30,7 +30,7 @@
    a mouse gesture (usually the middle mouse button).
 
   returns: true if a mouse gesture can absolutely position the thumb - `boolean`"
-  ([^javax.swing.plaf.synth.SynthScrollBarUI this]
+  (^Boolean [^javax.swing.plaf.synth.SynthScrollBarUI this]
     (-> this (.getSupportsAbsolutePositioning))))
 
 (defn update
@@ -82,7 +82,7 @@
   c - the JScrollBar that's delegating this method to us - `javax.swing.JComponent`
 
   returns: the preferred size of a Basic JScrollBar - `java.awt.Dimension`"
-  ([^javax.swing.plaf.synth.SynthScrollBarUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^javax.swing.plaf.synth.SynthScrollBarUI this ^javax.swing.JComponent c]
     (-> this (.getPreferredSize c))))
 
 (defn property-change

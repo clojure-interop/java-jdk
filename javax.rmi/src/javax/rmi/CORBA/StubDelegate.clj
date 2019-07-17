@@ -18,7 +18,7 @@
   self - `javax.rmi.CORBA.Stub`
 
   returns: `int`"
-  ([^javax.rmi.CORBA.StubDelegate this ^javax.rmi.CORBA.Stub self]
+  (^Integer [^javax.rmi.CORBA.StubDelegate this ^javax.rmi.CORBA.Stub self]
     (-> this (.hashCode self))))
 
 (defn equals
@@ -28,7 +28,7 @@
   obj - `java.lang.Object`
 
   returns: `boolean`"
-  ([^javax.rmi.CORBA.StubDelegate this ^javax.rmi.CORBA.Stub self ^java.lang.Object obj]
+  (^Boolean [^javax.rmi.CORBA.StubDelegate this ^javax.rmi.CORBA.Stub self ^java.lang.Object obj]
     (-> this (.equals self obj))))
 
 (defn to-string
@@ -37,7 +37,7 @@
   self - `javax.rmi.CORBA.Stub`
 
   returns: `java.lang.String`"
-  ([^javax.rmi.CORBA.StubDelegate this ^javax.rmi.CORBA.Stub self]
+  (^java.lang.String [^javax.rmi.CORBA.StubDelegate this ^javax.rmi.CORBA.Stub self]
     (-> this (.toString self))))
 
 (defn connect

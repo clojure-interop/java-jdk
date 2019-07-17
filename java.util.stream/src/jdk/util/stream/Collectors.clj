@@ -140,11 +140,11 @@
 
   returns: A Collector which concatenates CharSequence elements,
    separated by the specified delimiter, in encounter order - `java.util.stream.Collector<java.lang.CharSequence,?,java.lang.String>`"
-  ([^java.lang.CharSequence delimiter ^java.lang.CharSequence prefix ^java.lang.CharSequence suffix]
+  (^java.util.stream.Collector [^java.lang.CharSequence delimiter ^java.lang.CharSequence prefix ^java.lang.CharSequence suffix]
     (Collectors/joining delimiter prefix suffix))
-  ([^java.lang.CharSequence delimiter]
+  (^java.util.stream.Collector [^java.lang.CharSequence delimiter]
     (Collectors/joining delimiter))
-  ([]
+  (^java.util.stream.Collector []
     (Collectors/joining )))
 
 (defn *reducing

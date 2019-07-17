@@ -30,7 +30,7 @@
   "Returns the message digest associated with this stream.
 
   returns: the message digest associated with this stream. - `java.security.MessageDigest`"
-  ([^java.security.DigestOutputStream this]
+  (^java.security.MessageDigest [^java.security.DigestOutputStream this]
     (-> this (.getMessageDigest))))
 
 (defn set-message-digest
@@ -75,6 +75,6 @@
    its associated message digest object.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^java.security.DigestOutputStream this]
+  (^java.lang.String [^java.security.DigestOutputStream this]
     (-> this (.toString))))
 

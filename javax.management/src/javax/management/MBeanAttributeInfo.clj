@@ -37,42 +37,42 @@
    interest to subclasses.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([^javax.management.MBeanAttributeInfo this]
+  (^java.lang.Object [^javax.management.MBeanAttributeInfo this]
     (-> this (.clone))))
 
 (defn get-type
   "Returns the class name of the attribute.
 
   returns: the class name. - `java.lang.String`"
-  ([^javax.management.MBeanAttributeInfo this]
+  (^java.lang.String [^javax.management.MBeanAttributeInfo this]
     (-> this (.getType))))
 
 (defn readable?
   "Whether the value of the attribute can be read.
 
   returns: True if the attribute can be read, false otherwise. - `boolean`"
-  ([^javax.management.MBeanAttributeInfo this]
+  (^Boolean [^javax.management.MBeanAttributeInfo this]
     (-> this (.isReadable))))
 
 (defn writable?
   "Whether new values can be written to the attribute.
 
   returns: True if the attribute can be written to, false otherwise. - `boolean`"
-  ([^javax.management.MBeanAttributeInfo this]
+  (^Boolean [^javax.management.MBeanAttributeInfo this]
     (-> this (.isWritable))))
 
 (defn is?
   "Indicates if this attribute has an `is` getter.
 
   returns: true if this attribute has an `is` getter. - `boolean`"
-  ([^javax.management.MBeanAttributeInfo this]
+  (^Boolean [^javax.management.MBeanAttributeInfo this]
     (-> this (.isIs))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^javax.management.MBeanAttributeInfo this]
+  (^java.lang.String [^javax.management.MBeanAttributeInfo this]
     (-> this (.toString))))
 
 (defn equals
@@ -83,13 +83,13 @@
   returns: true if and only if o is an MBeanAttributeInfo such
    that its MBeanFeatureInfo.getName(), getType(), MBeanFeatureInfo.getDescription(), isReadable(), isWritable(), and isIs() values are equal (not
    necessarily identical) to those of this MBeanAttributeInfo. - `boolean`"
-  ([^javax.management.MBeanAttributeInfo this ^java.lang.Object o]
+  (^Boolean [^javax.management.MBeanAttributeInfo this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  ([^javax.management.MBeanAttributeInfo this]
+  (^Integer [^javax.management.MBeanAttributeInfo this]
     (-> this (.hashCode))))
 

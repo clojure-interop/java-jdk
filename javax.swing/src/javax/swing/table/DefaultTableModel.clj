@@ -66,7 +66,7 @@
   returns: the value Object at the specified cell - `java.lang.Object`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if an invalid row or column was given"
-  ([^javax.swing.table.DefaultTableModel this ^Integer row ^Integer column]
+  (^java.lang.Object [^javax.swing.table.DefaultTableModel this ^Integer row ^Integer column]
     (-> this (.getValueAt row column))))
 
 (defn remove-row
@@ -83,14 +83,14 @@
   "Returns the number of columns in this data table.
 
   returns: the number of columns in the model - `int`"
-  ([^javax.swing.table.DefaultTableModel this]
+  (^Integer [^javax.swing.table.DefaultTableModel this]
     (-> this (.getColumnCount))))
 
 (defn get-row-count
   "Returns the number of rows in this data table.
 
   returns: the number of rows in the model - `int`"
-  ([^javax.swing.table.DefaultTableModel this]
+  (^Integer [^javax.swing.table.DefaultTableModel this]
     (-> this (.getRowCount))))
 
 (defn set-row-count
@@ -130,7 +130,7 @@
   column - the column whose value is to be queried - `int`
 
   returns: true - `boolean`"
-  ([^javax.swing.table.DefaultTableModel this ^Integer row ^Integer column]
+  (^Boolean [^javax.swing.table.DefaultTableModel this ^Integer row ^Integer column]
     (-> this (.isCellEditable row column))))
 
 (defn new-data-available
@@ -150,7 +150,7 @@
     ((Vector)getDataVector().elementAt(1)).elementAt(5);
 
   returns: the vector of vectors containing the tables data values - `java.util.Vector`"
-  ([^javax.swing.table.DefaultTableModel this]
+  (^java.util.Vector [^javax.swing.table.DefaultTableModel this]
     (-> this (.getDataVector))))
 
 (defn get-column-name
@@ -163,7 +163,7 @@
    If columnIdentifiers does not have an entry
    for this index, returns the default
    name provided by the superclass. - `java.lang.String`"
-  ([^javax.swing.table.DefaultTableModel this ^Integer column]
+  (^java.lang.String [^javax.swing.table.DefaultTableModel this ^Integer column]
     (-> this (.getColumnName column))))
 
 (defn add-column

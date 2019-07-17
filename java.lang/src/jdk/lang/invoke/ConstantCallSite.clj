@@ -25,7 +25,7 @@
   returns: the immutable linkage state of this call site, a constant method handle - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.IllegalStateException - if the ConstantCallSite constructor has not completed"
-  ([^java.lang.invoke.ConstantCallSite this]
+  (^java.lang.invoke.MethodHandle [^java.lang.invoke.ConstantCallSite this]
     (-> this (.getTarget))))
 
 (defn set-target
@@ -46,6 +46,6 @@
   returns: the immutable linkage state of this call site, a constant method handle - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.IllegalStateException - if the ConstantCallSite constructor has not completed"
-  ([^java.lang.invoke.ConstantCallSite this]
+  (^java.lang.invoke.MethodHandle [^java.lang.invoke.ConstantCallSite this]
     (-> this (.dynamicInvoker))))
 

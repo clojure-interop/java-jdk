@@ -10,9 +10,9 @@
 
   returns: The derived gauge for the specified MBean if this MBean is in the
            set of observed MBeans, or null otherwise. - `java.lang.String`"
-  ([^javax.management.monitor.StringMonitorMBean this ^javax.management.ObjectName object]
+  (^java.lang.String [^javax.management.monitor.StringMonitorMBean this ^javax.management.ObjectName object]
     (-> this (.getDerivedGauge object)))
-  ([^javax.management.monitor.StringMonitorMBean this]
+  (^java.lang..lang.String [^javax.management.monitor.StringMonitorMBean this]
     (-> this (.getDerivedGauge))))
 
 (defn get-derived-gauge-time-stamp
@@ -22,7 +22,7 @@
 
   returns: The derived gauge timestamp for the specified MBean if this MBean
            is in the set of observed MBeans, or null otherwise. - `long`"
-  ([^javax.management.monitor.StringMonitorMBean this ^javax.management.ObjectName object]
+  (^Long [^javax.management.monitor.StringMonitorMBean this ^javax.management.ObjectName object]
     (-> this (.getDerivedGaugeTimeStamp object)))
   ([^javax.management.monitor.StringMonitorMBean this]
     (-> this (.getDerivedGaugeTimeStamp))))
@@ -31,7 +31,7 @@
   "Gets the string to compare with the observed attribute.
 
   returns: The string value. - `java.lang.String`"
-  ([^javax.management.monitor.StringMonitorMBean this]
+  (^java.lang.String [^javax.management.monitor.StringMonitorMBean this]
     (-> this (.getStringToCompare))))
 
 (defn set-string-to-compare
@@ -48,7 +48,7 @@
 
   returns: true if the string monitor notifies when
    matching, false otherwise. - `boolean`"
-  ([^javax.management.monitor.StringMonitorMBean this]
+  (^Boolean [^javax.management.monitor.StringMonitorMBean this]
     (-> this (.getNotifyMatch))))
 
 (defn set-notify-match
@@ -63,7 +63,7 @@
 
   returns: true if the string monitor notifies when
    differing, false otherwise. - `boolean`"
-  ([^javax.management.monitor.StringMonitorMBean this]
+  (^Boolean [^javax.management.monitor.StringMonitorMBean this]
     (-> this (.getNotifyDiffer))))
 
 (defn set-notify-differ

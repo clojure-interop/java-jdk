@@ -26,7 +26,7 @@
    is the index of the character following the last character parsed.
 
   returns: the current parse position - `int`"
-  ([^java.text.ParsePosition this]
+  (^Integer [^java.text.ParsePosition this]
     (-> this (.getIndex))))
 
 (defn set-index
@@ -50,7 +50,7 @@
    error index has not been set.
 
   returns: the index at which an error occurred - `int`"
-  ([^java.text.ParsePosition this]
+  (^Integer [^java.text.ParsePosition this]
     (-> this (.getErrorIndex))))
 
 (defn equals
@@ -60,20 +60,20 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([^java.text.ParsePosition this ^java.lang.Object obj]
+  (^Boolean [^java.text.ParsePosition this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Returns a hash code for this ParsePosition.
 
   returns: a hash code value for this object - `int`"
-  ([^java.text.ParsePosition this]
+  (^Integer [^java.text.ParsePosition this]
     (-> this (.hashCode))))
 
 (defn to-string
   "Return a string representation of this ParsePosition.
 
   returns: a string representation of this object - `java.lang.String`"
-  ([^java.text.ParsePosition this]
+  (^java.lang.String [^java.text.ParsePosition this]
     (-> this (.toString))))
 

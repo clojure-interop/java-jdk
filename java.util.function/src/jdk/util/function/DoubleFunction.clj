@@ -14,6 +14,6 @@
   value - the function argument - `double`
 
   returns: the function result - `DoubleFunction.R`"
-  ([^java.util.function.DoubleFunction this ^Double value]
+  (^DoubleFunction.R [^java.util.function.DoubleFunction this ^Double value]
     (-> this (.apply value))))
 

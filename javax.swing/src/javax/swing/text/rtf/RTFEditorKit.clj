@@ -19,7 +19,7 @@
    the type text/rtf.
 
   returns: the type - `java.lang.String`"
-  ([^javax.swing.text.rtf.RTFEditorKit this]
+  (^java.lang.String [^javax.swing.text.rtf.RTFEditorKit this]
     (-> this (.getContentType))))
 
 (defn read

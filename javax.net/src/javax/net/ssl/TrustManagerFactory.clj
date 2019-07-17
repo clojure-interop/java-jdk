@@ -16,7 +16,7 @@
   returns: the default algorithm name as specified by the
    ssl.TrustManagerFactory.algorithm security property, or an
    implementation-specific default if no such property exists. - `java.lang.String`"
-  ([]
+  (^java.lang.String []
     (TrustManagerFactory/getDefaultAlgorithm )))
 
 (defn *get-instance
@@ -37,9 +37,9 @@
   returns: the new TrustManagerFactory object - `javax.net.ssl.TrustManagerFactory`
 
   throws: java.security.NoSuchAlgorithmException - if a TrustManagerFactorySpi implementation for the specified algorithm is not available from the specified provider."
-  ([^java.lang.String algorithm ^java.lang.String provider]
+  (^javax.net.ssl.TrustManagerFactory [^java.lang.String algorithm ^java.lang.String provider]
     (TrustManagerFactory/getInstance algorithm provider))
-  ([^java.lang.String algorithm]
+  (^javax.net.ssl.TrustManagerFactory [^java.lang.String algorithm]
     (TrustManagerFactory/getInstance algorithm)))
 
 (defn get-algorithm
@@ -52,14 +52,14 @@
 
   returns: the algorithm name of this TrustManagerFactory
             object - `java.lang.String`"
-  ([^javax.net.ssl.TrustManagerFactory this]
+  (^java.lang.String [^javax.net.ssl.TrustManagerFactory this]
     (-> this (.getAlgorithm))))
 
 (defn get-provider
   "Returns the provider of this TrustManagerFactory object.
 
   returns: the provider of this TrustManagerFactory object - `java.security.Provider`"
-  ([^javax.net.ssl.TrustManagerFactory this]
+  (^java.security.Provider [^javax.net.ssl.TrustManagerFactory this]
     (-> this (.getProvider))))
 
 (defn init

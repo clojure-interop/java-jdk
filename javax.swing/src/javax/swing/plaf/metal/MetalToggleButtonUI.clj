@@ -21,7 +21,7 @@
   "b - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent b]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent b]
     (MetalToggleButtonUI/createUI b)))
 
 (defn install-defaults

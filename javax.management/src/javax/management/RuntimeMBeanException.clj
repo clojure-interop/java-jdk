@@ -23,13 +23,13 @@
   "Returns the actual RuntimeException thrown.
 
   returns: the wrapped RuntimeException. - `java.lang.RuntimeException`"
-  ([^javax.management.RuntimeMBeanException this]
+  (^java.lang.RuntimeException [^javax.management.RuntimeMBeanException this]
     (-> this (.getTargetException))))
 
 (defn get-cause
   "Returns the actual RuntimeException thrown.
 
   returns: the wrapped RuntimeException. - `java.lang.Throwable`"
-  ([^javax.management.RuntimeMBeanException this]
+  (^java.lang.Throwable [^javax.management.RuntimeMBeanException this]
     (-> this (.getCause))))
 

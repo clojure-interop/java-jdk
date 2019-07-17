@@ -167,7 +167,7 @@
            if the waiting time elapsed before the count reached zero - `boolean`
 
   throws: java.lang.InterruptedException - if the current thread is interrupted while waiting"
-  ([^java.util.concurrent.CountDownLatch this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^Boolean [^java.util.concurrent.CountDownLatch this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.await timeout unit)))
   ([^java.util.concurrent.CountDownLatch this]
     (-> this (.await))))
@@ -190,7 +190,7 @@
    This method is typically used for debugging and testing purposes.
 
   returns: the current count - `long`"
-  ([^java.util.concurrent.CountDownLatch this]
+  (^Long [^java.util.concurrent.CountDownLatch this]
     (-> this (.getCount))))
 
 (defn to-string
@@ -199,6 +199,6 @@
    followed by the current count.
 
   returns: a string identifying this latch, as well as its state - `java.lang.String`"
-  ([^java.util.concurrent.CountDownLatch this]
+  (^java.lang.String [^java.util.concurrent.CountDownLatch this]
     (-> this (.toString))))
 

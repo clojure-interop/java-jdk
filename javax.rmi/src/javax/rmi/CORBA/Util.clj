@@ -22,7 +22,7 @@
    to return false. - `boolean`
 
   throws: java.rmi.RemoteException - The Java to IDL specification does not specify the conditions that cause a RemoteException to be thrown."
-  ([^javax.rmi.CORBA.Stub stub]
+  (^Boolean [^javax.rmi.CORBA.Stub stub]
     (Util/isLocal stub)))
 
 (defn *register-target
@@ -45,7 +45,7 @@
   returns: the copied or connected objects. - `java.lang.Object[]`
 
   throws: java.rmi.RemoteException - if any object could not be copied or connected."
-  ([^java.lang.Object[] obj ^org.omg.CORBA.ORB orb]
+  ([obj ^org.omg.CORBA.ORB orb]
     (Util/copyObjects obj orb)))
 
 (defn *copy-object
@@ -58,7 +58,7 @@
   returns: the copy or connected object. - `java.lang.Object`
 
   throws: java.rmi.RemoteException - if the object could not be copied or connected."
-  ([^java.lang.Object obj ^org.omg.CORBA.ORB orb]
+  (^java.lang.Object [^java.lang.Object obj ^org.omg.CORBA.ORB orb]
     (Util/copyObject obj orb)))
 
 (defn *write-any
@@ -99,7 +99,7 @@
   in - the stream from which to read the any. - `org.omg.CORBA.portable.InputStream`
 
   returns: the object read from the stream. - `java.lang.Object`"
-  ([^org.omg.CORBA.portable.InputStream in]
+  (^java.lang.Object [^org.omg.CORBA.portable.InputStream in]
     (Util/readAny in)))
 
 (defn *load-class
@@ -128,7 +128,7 @@
   returns: the Class object representing the loaded class. - `java.lang.Class`
 
   throws: java.lang.ClassNotFoundException - if class cannot be loaded."
-  ([^java.lang.String class-name ^java.lang.String remote-codebase ^java.lang.ClassLoader loader]
+  (^java.lang.Class [^java.lang.String class-name ^java.lang.String remote-codebase ^java.lang.ClassLoader loader]
     (Util/loadClass class-name remote-codebase loader)))
 
 (defn *create-value-handler
@@ -136,7 +136,7 @@
    ValueHandler interface.
 
   returns: a class which implements the ValueHandler interface. - `javax.rmi.CORBA.ValueHandler`"
-  ([]
+  (^javax.rmi.CORBA.ValueHandler []
     (Util/createValueHandler )))
 
 (defn *wrap-exception
@@ -146,7 +146,7 @@
   orig - the exception to wrap. - `java.lang.Throwable`
 
   returns: the wrapped exception. - `java.rmi.RemoteException`"
-  ([^java.lang.Throwable orig]
+  (^java.rmi.RemoteException [^java.lang.Throwable orig]
     (Util/wrapException orig)))
 
 (defn *get-tie
@@ -155,7 +155,7 @@
   target - `java.rmi.Remote`
 
   returns: the tie or null if no tie is registered for the given target. - `javax.rmi.CORBA.Tie`"
-  ([^java.rmi.Remote target]
+  (^javax.rmi.CORBA.Tie [^java.rmi.Remote target]
     (Util/getTie target)))
 
 (defn *write-remote-object
@@ -177,7 +177,7 @@
   clz - the class to get a codebase for. - `java.lang.Class`
 
   returns: a space-separated list of URLs, or null. - `java.lang.String`"
-  ([^java.lang.Class clz]
+  (^java.lang.String [^java.lang.Class clz]
     (Util/getCodebase clz)))
 
 (defn *map-system-exception
@@ -186,6 +186,6 @@
   ex - the SystemException to map. - `org.omg.CORBA.SystemException`
 
   returns: the mapped exception. - `java.rmi.RemoteException`"
-  ([^org.omg.CORBA.SystemException ex]
+  (^java.rmi.RemoteException [^org.omg.CORBA.SystemException ex]
     (Util/mapSystemException ex)))
 

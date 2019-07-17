@@ -201,7 +201,7 @@
   "Returns the keyboard mnemonic from the the current model.
 
   returns: the keyboard mnemonic from the model - `int`"
-  ([^javax.swing.AbstractButton this]
+  (^Integer [^javax.swing.AbstractButton this]
     (-> this (.getMnemonic))))
 
 (defn add-change-listener
@@ -224,7 +224,7 @@
   "Returns the selected icon for the button.
 
   returns: the selectedIcon property - `javax.swing.Icon`"
-  ([^javax.swing.AbstractButton this]
+  (^javax.swing.Icon [^javax.swing.AbstractButton this]
     (-> this (.getSelectedIcon))))
 
 (defn set-layout
@@ -240,7 +240,7 @@
   "Returns the rollover selection icon for the button.
 
   returns: the rolloverSelectedIcon property - `javax.swing.Icon`"
-  ([^javax.swing.AbstractButton this]
+  (^javax.swing.Icon [^javax.swing.AbstractButton this]
     (-> this (.getRolloverSelectedIcon))))
 
 (defn get-vertical-text-position
@@ -252,7 +252,7 @@
    SwingConstants.CENTER (the default)
    SwingConstants.TOP
    SwingConstants.BOTTOM - `int`"
-  ([^javax.swing.AbstractButton this]
+  (^Integer [^javax.swing.AbstractButton this]
     (-> this (.getVerticalTextPosition))))
 
 (defn get-multi-click-threshhold
@@ -262,7 +262,7 @@
 
   returns: the amount of time required between mouse press events
            to generate corresponding action events - `long`"
-  ([^javax.swing.AbstractButton this]
+  (^Long [^javax.swing.AbstractButton this]
     (-> this (.getMultiClickThreshhold))))
 
 (defn get-disabled-selected-icon
@@ -276,7 +276,7 @@
    which case they will ignore this.
 
   returns: the disabledSelectedIcon property - `javax.swing.Icon`"
-  ([^javax.swing.AbstractButton this]
+  (^javax.swing.Icon [^javax.swing.AbstractButton this]
     (-> this (.getDisabledSelectedIcon))))
 
 (defn set-focus-painted
@@ -330,7 +330,7 @@
   "Gets the contentAreaFilled property.
 
   returns: the contentAreaFilled property - `boolean`"
-  ([^javax.swing.AbstractButton this]
+  (^Boolean [^javax.swing.AbstractButton this]
     (-> this (.isContentAreaFilled))))
 
 (defn set-horizontal-text-position
@@ -360,7 +360,7 @@
   "Returns the button's text.
 
   returns: the buttons text - `java.lang.String`"
-  ([^javax.swing.AbstractButton this]
+  (^java.lang.String [^javax.swing.AbstractButton this]
     (-> this (.getText))))
 
 (defn set-selected
@@ -376,7 +376,7 @@
   "Returns the default icon.
 
   returns: the default Icon - `javax.swing.Icon`"
-  ([^javax.swing.AbstractButton this]
+  (^javax.swing.Icon [^javax.swing.AbstractButton this]
     (-> this (.getIcon))))
 
 (defn set-vertical-text-position
@@ -405,7 +405,7 @@
 
   returns: the Action for this ActionEvent
             source, or null - `javax.swing.Action`"
-  ([^javax.swing.AbstractButton this]
+  (^javax.swing.Action [^javax.swing.AbstractButton this]
     (-> this (.getAction))))
 
 (defn get-horizontal-text-position
@@ -419,7 +419,7 @@
    SwingConstants.CENTER
    SwingConstants.LEADING
    SwingConstants.TRAILING (the default) - `int`"
-  ([^javax.swing.AbstractButton this]
+  (^Integer [^javax.swing.AbstractButton this]
     (-> this (.getHorizontalTextPosition))))
 
 (defn add-action-listener
@@ -510,14 +510,14 @@
   returns: true if the button's text
            property should not reflect that of the
            Action; the default is false - `boolean`"
-  ([^javax.swing.AbstractButton this]
+  (^Boolean [^javax.swing.AbstractButton this]
     (-> this (.getHideActionText))))
 
 (defn get-ui
   "Returns the L&F object that renders this component.
 
   returns: the ButtonUI object - `javax.swing.plaf.ButtonUI`"
-  ([^javax.swing.AbstractButton this]
+  (^javax.swing.plaf.ButtonUI [^javax.swing.AbstractButton this]
     (-> this (.getUI))))
 
 (defn get-action-listeners
@@ -577,21 +577,21 @@
    SwingConstants.CENTER (the default)
    SwingConstants.TOP
    SwingConstants.BOTTOM - `int`"
-  ([^javax.swing.AbstractButton this]
+  (^Integer [^javax.swing.AbstractButton this]
     (-> this (.getVerticalAlignment))))
 
 (defn get-pressed-icon
   "Returns the pressed icon for the button.
 
   returns: the pressedIcon property - `javax.swing.Icon`"
-  ([^javax.swing.AbstractButton this]
+  (^javax.swing.Icon [^javax.swing.AbstractButton this]
     (-> this (.getPressedIcon))))
 
 (defn get-rollover-icon
   "Returns the rollover icon for the button.
 
   returns: the rolloverIcon property - `javax.swing.Icon`"
-  ([^javax.swing.AbstractButton this]
+  (^javax.swing.Icon [^javax.swing.AbstractButton this]
     (-> this (.getRolloverIcon))))
 
 (defn image-update
@@ -608,7 +608,7 @@
 
   returns: false if the infoflags indicate that the
               image is completely loaded; true otherwise. - `boolean`"
-  ([^javax.swing.AbstractButton this ^java.awt.Image img ^Integer infoflags ^Integer x ^Integer y ^Integer w ^Integer h]
+  (^Boolean [^javax.swing.AbstractButton this ^java.awt.Image img ^Integer infoflags ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.imageUpdate img infoflags x y w h))))
 
 (defn set-enabled
@@ -664,14 +664,14 @@
      SwingConstants.CENTER
      SwingConstants.LEADING
      SwingConstants.TRAILING - `int`"
-  ([^javax.swing.AbstractButton this]
+  (^Integer [^javax.swing.AbstractButton this]
     (-> this (.getHorizontalAlignment))))
 
 (defn rollover-enabled?
   "Gets the rolloverEnabled property.
 
   returns: the value of the rolloverEnabled property - `boolean`"
-  ([^javax.swing.AbstractButton this]
+  (^Boolean [^javax.swing.AbstractButton this]
     (-> this (.isRolloverEnabled))))
 
 (defn selected?
@@ -679,7 +679,7 @@
    toggle button is selected, false if it's not.
 
   returns: true if the toggle button is selected, otherwise false - `boolean`"
-  ([^javax.swing.AbstractButton this]
+  (^Boolean [^javax.swing.AbstractButton this]
     (-> this (.isSelected))))
 
 (defn get-selected-objects
@@ -697,7 +697,7 @@
 
   returns: an int equal to the number of pixels between the text
            and the icon. - `int`"
-  ([^javax.swing.AbstractButton this]
+  (^Integer [^javax.swing.AbstractButton this]
     (-> this (.getIconTextGap))))
 
 (defn set-selected-icon
@@ -721,14 +721,14 @@
   "Gets the borderPainted property.
 
   returns: the value of the borderPainted property - `boolean`"
-  ([^javax.swing.AbstractButton this]
+  (^Boolean [^javax.swing.AbstractButton this]
     (-> this (.isBorderPainted))))
 
 (defn get-action-command
   "Returns the action command for this button.
 
   returns: the action command for this button - `java.lang.String`"
-  ([^javax.swing.AbstractButton this]
+  (^java.lang.String [^javax.swing.AbstractButton this]
     (-> this (.getActionCommand))))
 
 (defn set-action
@@ -775,7 +775,7 @@
   "Returns the model that this button represents.
 
   returns: the model property - `javax.swing.ButtonModel`"
-  ([^javax.swing.AbstractButton this]
+  (^javax.swing.ButtonModel [^javax.swing.AbstractButton this]
     (-> this (.getModel))))
 
 (defn get-displayed-mnemonic-index
@@ -783,7 +783,7 @@
    provide decoration for as representing the mnemonic character.
 
   returns: index representing mnemonic character - `int`"
-  ([^javax.swing.AbstractButton this]
+  (^Integer [^javax.swing.AbstractButton this]
     (-> this (.getDisplayedMnemonicIndex))))
 
 (defn set-disabled-icon
@@ -809,7 +809,7 @@
    case they will ignore this.
 
   returns: the disabledIcon property - `javax.swing.Icon`"
-  ([^javax.swing.AbstractButton this]
+  (^javax.swing.Icon [^javax.swing.AbstractButton this]
     (-> this (.getDisabledIcon))))
 
 (defn set-content-area-filled
@@ -898,13 +898,13 @@
 
   returns: an Insets object specifying the margin
             between the botton's border and the label - `java.awt.Insets`"
-  ([^javax.swing.AbstractButton this]
+  (^java.awt.Insets [^javax.swing.AbstractButton this]
     (-> this (.getMargin))))
 
 (defn focus-painted?
   "Gets the paintFocus property.
 
   returns: the paintFocus property - `boolean`"
-  ([^javax.swing.AbstractButton this]
+  (^Boolean [^javax.swing.AbstractButton this]
     (-> this (.isFocusPainted))))
 

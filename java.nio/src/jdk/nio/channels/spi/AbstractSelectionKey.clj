@@ -9,7 +9,7 @@
   "Description copied from class: SelectionKey
 
   returns: true if, and only if, this key is valid - `boolean`"
-  ([^java.nio.channels.spi.AbstractSelectionKey this]
+  (^Boolean [^java.nio.channels.spi.AbstractSelectionKey this]
     (-> this (.isValid))))
 
 (defn cancel

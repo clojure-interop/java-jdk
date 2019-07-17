@@ -987,7 +987,7 @@
 
   returns: an ICC_Profile object corresponding to
             the data in the specified data array. - `java.awt.color.ICC_Profile`"
-  ([data]
+  (^java.awt.color.ICC_Profile [data]
     (ICC_Profile/getInstance data)))
 
 (defn set-data
@@ -1025,14 +1025,14 @@
   "Returns profile minor version.
 
   returns: The minor version of the profile. - `int`"
-  ([^java.awt.color.ICC_Profile this]
+  (^Integer [^java.awt.color.ICC_Profile this]
     (-> this (.getMinorVersion))))
 
 (defn get-profile-class
   "Returns the profile class.
 
   returns: One of the predefined profile class constants. - `int`"
-  ([^java.awt.color.ICC_Profile this]
+  (^Integer [^java.awt.color.ICC_Profile this]
     (-> this (.getProfileClass))))
 
 (defn get-pcs-type
@@ -1047,7 +1047,7 @@
 
   returns: One of the color space type constants defined in the
    ColorSpace class. - `int`"
-  ([^java.awt.color.ICC_Profile this]
+  (^Integer [^java.awt.color.ICC_Profile this]
     (-> this (.getPCSType))))
 
 (defn get-color-space-type
@@ -1062,7 +1062,7 @@
 
   returns: One of the color space type constants defined in the
    ColorSpace class. - `int`"
-  ([^java.awt.color.ICC_Profile this]
+  (^Integer [^java.awt.color.ICC_Profile this]
     (-> this (.getColorSpaceType))))
 
 (defn get-num-components
@@ -1074,14 +1074,14 @@
    color space. - `int`
 
   throws: java.awt.color.ProfileDataException - if color space is in the profile is invalid"
-  ([^java.awt.color.ICC_Profile this]
+  (^Integer [^java.awt.color.ICC_Profile this]
     (-> this (.getNumComponents))))
 
 (defn get-major-version
   "Returns profile major version.
 
   returns: The major version of the profile. - `int`"
-  ([^java.awt.color.ICC_Profile this]
+  (^Integer [^java.awt.color.ICC_Profile this]
     (-> this (.getMajorVersion))))
 
 (defn write

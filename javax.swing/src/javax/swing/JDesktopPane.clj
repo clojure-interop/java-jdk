@@ -101,7 +101,7 @@
 
   returns: either Live_DRAG_MODE or
      OUTLINE_DRAG_MODE - `int`"
-  ([^javax.swing.JDesktopPane this]
+  (^Integer [^javax.swing.JDesktopPane this]
     (-> this (.getDragMode))))
 
 (defn get-selected-frame
@@ -111,7 +111,7 @@
 
   returns: the currently active JInternalFrame or
      null - `javax.swing.JInternalFrame`"
-  ([^javax.swing.JDesktopPane this]
+  (^javax.swing.JInternalFrame [^javax.swing.JDesktopPane this]
     (-> this (.getSelectedFrame))))
 
 (defn get-all-frames-in-layer
@@ -137,7 +137,7 @@
   "Returns the name of the L&F class that renders this component.
 
   returns: the string `DesktopPaneUI` - `java.lang.String`"
-  ([^javax.swing.JDesktopPane this]
+  (^java.lang.String [^javax.swing.JDesktopPane this]
     (-> this (.getUIClassID))))
 
 (defn select-frame
@@ -147,7 +147,7 @@
 
   returns: the JInternalFrame that was selected or null
            if nothing was selected - `javax.swing.JInternalFrame`"
-  ([^javax.swing.JDesktopPane this ^Boolean forward]
+  (^javax.swing.JInternalFrame [^javax.swing.JDesktopPane this ^Boolean forward]
     (-> this (.selectFrame forward))))
 
 (defn get-desktop-manager
@@ -155,7 +155,7 @@
    desktop-specific UI actions.
 
   returns: `javax.swing.DesktopManager`"
-  ([^javax.swing.JDesktopPane this]
+  (^javax.swing.DesktopManager [^javax.swing.JDesktopPane this]
     (-> this (.getDesktopManager))))
 
 (defn set-ui
@@ -185,7 +185,7 @@
 
   returns: the DesktopPaneUI object that
      renders this component - `javax.swing.plaf.DesktopPaneUI`"
-  ([^javax.swing.JDesktopPane this]
+  (^javax.swing.plaf.DesktopPaneUI [^javax.swing.JDesktopPane this]
     (-> this (.getUI))))
 
 (defn set-desktop-manager
@@ -206,7 +206,7 @@
 
   returns: an AccessibleJDesktopPane that serves as the
            AccessibleContext of this JDesktopPane - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.JDesktopPane this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.JDesktopPane this]
     (-> this (.getAccessibleContext))))
 
 (defn set-selected-frame

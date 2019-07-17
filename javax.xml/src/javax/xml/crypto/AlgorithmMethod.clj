@@ -9,7 +9,7 @@
   "Returns the algorithm URI of this AlgorithmMethod.
 
   returns: the algorithm URI of this AlgorithmMethod - `java.lang.String`"
-  ([^javax.xml.crypto.AlgorithmMethod this]
+  (^java.lang.String [^javax.xml.crypto.AlgorithmMethod this]
     (-> this (.getAlgorithm))))
 
 (defn get-parameter-spec
@@ -18,6 +18,6 @@
   returns: the algorithm parameters of this AlgorithmMethod.
       Returns null if this AlgorithmMethod does
       not require parameters and they are not specified. - `java.security.spec.AlgorithmParameterSpec`"
-  ([^javax.xml.crypto.AlgorithmMethod this]
+  (^java.security.spec.AlgorithmParameterSpec [^javax.xml.crypto.AlgorithmMethod this]
     (-> this (.getParameterSpec))))
 

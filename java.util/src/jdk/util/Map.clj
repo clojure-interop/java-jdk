@@ -97,7 +97,7 @@
    support the add or addAll operations.
 
   returns: a collection view of the values contained in this map - `java.util.Collection<Map.V>`"
-  ([^java.util.Map this]
+  (^java.util.Collection [^java.util.Map this]
     (-> this (.values))))
 
 (defn for-each
@@ -179,7 +179,7 @@
            if the implementation supports null values.) - `Map.V`
 
   throws: java.lang.UnsupportedOperationException - if the put operation is not supported by this map"
-  ([^java.util.Map this ^Map.K key ^Map.V value]
+  (^Map.V [^java.util.Map this ^Map.K key ^Map.V value]
     (-> this (.put key value))))
 
 (defn entry-set
@@ -197,7 +197,7 @@
    add or addAll operations.
 
   returns: a set view of the mappings contained in this map - `java.util.Set<java.util.Map.Entry<Map.K,Map.V>>`"
-  ([^java.util.Map this]
+  (^java.util.Set> [^java.util.Map this]
     (-> this (.entrySet))))
 
 (defn contains-value
@@ -214,7 +214,7 @@
            specified value - `boolean`
 
   throws: java.lang.ClassCastException - if the value is of an inappropriate type for this map (optional)"
-  ([^java.util.Map this ^java.lang.Object value]
+  (^Boolean [^java.util.Map this ^java.lang.Object value]
     (-> this (.containsValue value))))
 
 (defn get-or-default
@@ -259,7 +259,7 @@
   throws: java.lang.UnsupportedOperationException - if the remove operation is not supported by this map (optional)"
   ([^java.util.Map this ^java.lang.Object key ^java.lang.Object value]
     (-> this (.remove key value)))
-  ([^java.util.Map this ^java.lang.Object key]
+  (^Map.V [^java.util.Map this ^java.lang.Object key]
     (-> this (.remove key))))
 
 (defn key-set
@@ -276,7 +276,7 @@
    operations.
 
   returns: a set view of the keys contained in this map - `java.util.Set<Map.K>`"
-  ([^java.util.Map this]
+  (^java.util.Set [^java.util.Map this]
     (-> this (.keySet))))
 
 (defn compute-if-present
@@ -305,14 +305,14 @@
    Object.hashCode().
 
   returns: the hash code value for this map - `int`"
-  ([^java.util.Map this]
+  (^Integer [^java.util.Map this]
     (-> this (.hashCode))))
 
 (defn empty?
   "Returns true if this map contains no key-value mappings.
 
   returns: true if this map contains no key-value mappings - `boolean`"
-  ([^java.util.Map this]
+  (^Boolean [^java.util.Map this]
     (-> this (.isEmpty))))
 
 (defn size
@@ -321,7 +321,7 @@
    Integer.MAX_VALUE.
 
   returns: the number of key-value mappings in this map - `int`"
-  ([^java.util.Map this]
+  (^Integer [^java.util.Map this]
     (-> this (.size))))
 
 (defn clear
@@ -345,7 +345,7 @@
            key - `boolean`
 
   throws: java.lang.ClassCastException - if the key is of an inappropriate type for this map (optional)"
-  ([^java.util.Map this ^java.lang.Object key]
+  (^Boolean [^java.util.Map this ^java.lang.Object key]
     (-> this (.containsKey key))))
 
 (defn get
@@ -368,7 +368,7 @@
            null if this map contains no mapping for the key - `Map.V`
 
   throws: java.lang.ClassCastException - if the key is of an inappropriate type for this map (optional)"
-  ([^java.util.Map this ^java.lang.Object key]
+  (^Map.V [^java.util.Map this ^java.lang.Object key]
     (-> this (.get key))))
 
 (defn merge
@@ -411,7 +411,7 @@
   o - object to be compared for equality with this map - `java.lang.Object`
 
   returns: true if the specified object is equal to this map - `boolean`"
-  ([^java.util.Map this ^java.lang.Object o]
+  (^Boolean [^java.util.Map this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn compute

@@ -57,7 +57,7 @@
    that renders this component.
 
   returns: String `ToggleButtonUI` - `java.lang.String`"
-  ([^javax.swing.JToggleButton this]
+  (^java.lang.String [^javax.swing.JToggleButton this]
     (-> this (.getUIClassID))))
 
 (defn get-accessible-context
@@ -68,6 +68,6 @@
 
   returns: an AccessibleJToggleButton that serves as the
            AccessibleContext of this JToggleButton - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.JToggleButton this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.JToggleButton this]
     (-> this (.getAccessibleContext))))
 

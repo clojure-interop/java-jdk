@@ -25,7 +25,7 @@
   "Get the prompt.
 
   returns: the prompt. - `java.lang.String`"
-  ([^javax.security.auth.callback.TextInputCallback this]
+  (^java.lang.String [^javax.security.auth.callback.TextInputCallback this]
     (-> this (.getPrompt))))
 
 (defn get-default-text
@@ -33,7 +33,7 @@
 
   returns: the default text, or null if this TextInputCallback
             was not instantiated with defaultText. - `java.lang.String`"
-  ([^javax.security.auth.callback.TextInputCallback this]
+  (^java.lang.String [^javax.security.auth.callback.TextInputCallback this]
     (-> this (.getDefaultText))))
 
 (defn set-text
@@ -47,6 +47,6 @@
   "Get the retrieved text.
 
   returns: the retrieved text, which may be null. - `java.lang.String`"
-  ([^javax.security.auth.callback.TextInputCallback this]
+  (^java.lang.String [^javax.security.auth.callback.TextInputCallback this]
     (-> this (.getText))))
 

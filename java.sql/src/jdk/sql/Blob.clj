@@ -34,7 +34,7 @@
   returns: length of the BLOB in bytes - `long`
 
   throws: java.sql.SQLException - if there is an error accessing the length of the BLOB"
-  ([^java.sql.Blob this]
+  (^Long [^java.sql.Blob this]
     (-> this (.length))))
 
 (defn get-bytes
@@ -65,9 +65,9 @@
   returns: InputStream through which the partial Blob value can be read. - `java.io.InputStream`
 
   throws: java.sql.SQLException - if pos is less than 1 or if pos is greater than the number of bytes in the Blob or if pos length is greater than the number of bytes in the Blob"
-  ([^java.sql.Blob this ^Long pos ^Long length]
+  (^java.io.InputStream [^java.sql.Blob this ^Long pos ^Long length]
     (-> this (.getBinaryStream pos length)))
-  ([^java.sql.Blob this]
+  (^java.io.InputStream [^java.sql.Blob this]
     (-> this (.getBinaryStream))))
 
 (defn position
@@ -83,7 +83,7 @@
   returns: the position at which the pattern appears, else -1 - `long`
 
   throws: java.sql.SQLException - if there is an error accessing the BLOB or if start is less than 1"
-  ([^java.sql.Blob this pattern ^Long start]
+  (^Long [^java.sql.Blob this pattern ^Long start]
     (-> this (.position pattern start))))
 
 (defn set-bytes
@@ -112,9 +112,9 @@
   returns: the number of bytes written - `int`
 
   throws: java.sql.SQLException - if there is an error accessing the BLOB value or if pos is less than 1"
-  ([^java.sql.Blob this ^Long pos bytes ^Integer offset ^Integer len]
+  (^Integer [^java.sql.Blob this ^Long pos bytes ^Integer offset ^Integer len]
     (-> this (.setBytes pos bytes offset len)))
-  ([^java.sql.Blob this ^Long pos bytes]
+  (^Integer [^java.sql.Blob this ^Long pos bytes]
     (-> this (.setBytes pos bytes))))
 
 (defn set-binary-stream
@@ -139,7 +139,7 @@
            be written - `java.io.OutputStream`
 
   throws: java.sql.SQLException - if there is an error accessing the BLOB value or if pos is less than 1"
-  ([^java.sql.Blob this ^Long pos]
+  (^java.io.OutputStream [^java.sql.Blob this ^Long pos]
     (-> this (.setBinaryStream pos))))
 
 (defn truncate

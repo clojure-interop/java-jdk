@@ -635,14 +635,14 @@
   returns: the enum constant with the specified name - `java.time.temporal.ChronoField`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^java.time.temporal.ChronoField [^java.lang.String name]
     (ChronoField/valueOf name)))
 
 (defn get-range-unit
   "Description copied from interface: TemporalField
 
   returns: the unit defining the range of the field, not null - `java.time.temporal.TemporalUnit`"
-  ([^java.time.temporal.ChronoField this]
+  (^java.time.temporal.TemporalUnit [^java.time.temporal.ChronoField this]
     (-> this (.getRangeUnit))))
 
 (defn range
@@ -661,7 +661,7 @@
    could be values within the range that are invalid for the field.
 
   returns: the range of valid values for the field, not null - `java.time.temporal.ValueRange`"
-  ([^java.time.temporal.ChronoField this]
+  (^java.time.temporal.ValueRange [^java.time.temporal.ChronoField this]
     (-> this (.range))))
 
 (defn check-valid-int-value
@@ -679,21 +679,21 @@
   value - the value to check - `long`
 
   returns: the value that was passed in - `int`"
-  ([^java.time.temporal.ChronoField this ^Long value]
+  (^Integer [^java.time.temporal.ChronoField this ^Long value]
     (-> this (.checkValidIntValue value))))
 
 (defn get-base-unit
   "Description copied from interface: TemporalField
 
   returns: the unit defining the base unit of the field, not null - `java.time.temporal.TemporalUnit`"
-  ([^java.time.temporal.ChronoField this]
+  (^java.time.temporal.TemporalUnit [^java.time.temporal.ChronoField this]
     (-> this (.getBaseUnit))))
 
 (defn to-string
   "Description copied from class: Enum
 
   returns: the name of this enum constant - `java.lang.String`"
-  ([^java.time.temporal.ChronoField this]
+  (^java.lang.String [^java.time.temporal.ChronoField this]
     (-> this (.toString))))
 
 (defn date-based?
@@ -702,7 +702,7 @@
    Fields from day-of-week to era are date-based.
 
   returns: true if it is a component of a date - `boolean`"
-  ([^java.time.temporal.ChronoField this]
+  (^Boolean [^java.time.temporal.ChronoField this]
     (-> this (.isDateBased))))
 
 (defn get-display-name
@@ -711,7 +711,7 @@
   locale - the locale to use, not null - `java.util.Locale`
 
   returns: the display name for the locale or a suitable default, not null - `java.lang.String`"
-  ([^java.time.temporal.ChronoField this ^java.util.Locale locale]
+  (^java.lang.String [^java.time.temporal.ChronoField this ^java.util.Locale locale]
     (-> this (.getDisplayName locale))))
 
 (defn supported-by?
@@ -720,7 +720,7 @@
   temporal - the temporal object to query, not null - `java.time.temporal.TemporalAccessor`
 
   returns: true if the date-time can be queried for this field, false if not - `boolean`"
-  ([^java.time.temporal.ChronoField this ^java.time.temporal.TemporalAccessor temporal]
+  (^Boolean [^java.time.temporal.ChronoField this ^java.time.temporal.TemporalAccessor temporal]
     (-> this (.isSupportedBy temporal))))
 
 (defn range-refined-by
@@ -729,7 +729,7 @@
   temporal - the temporal object used to refine the result, not null - `java.time.temporal.TemporalAccessor`
 
   returns: the range of valid values for this field, not null - `java.time.temporal.ValueRange`"
-  ([^java.time.temporal.ChronoField this ^java.time.temporal.TemporalAccessor temporal]
+  (^java.time.temporal.ValueRange [^java.time.temporal.ChronoField this ^java.time.temporal.TemporalAccessor temporal]
     (-> this (.rangeRefinedBy temporal))))
 
 (defn adjust-into
@@ -748,7 +748,7 @@
   temporal - the temporal object to query, not null - `java.time.temporal.TemporalAccessor`
 
   returns: the value of this field, not null - `long`"
-  ([^java.time.temporal.ChronoField this ^java.time.temporal.TemporalAccessor temporal]
+  (^Long [^java.time.temporal.ChronoField this ^java.time.temporal.TemporalAccessor temporal]
     (-> this (.getFrom temporal))))
 
 (defn time-based?
@@ -757,7 +757,7 @@
    Fields from nano-of-second to am-pm-of-day are time-based.
 
   returns: true if it is a component of a time - `boolean`"
-  ([^java.time.temporal.ChronoField this]
+  (^Boolean [^java.time.temporal.ChronoField this]
     (-> this (.isTimeBased))))
 
 (defn check-valid-value
@@ -774,6 +774,6 @@
   value - the value to check - `long`
 
   returns: the value that was passed in - `long`"
-  ([^java.time.temporal.ChronoField this ^Long value]
+  (^Long [^java.time.temporal.ChronoField this ^Long value]
     (-> this (.checkValidValue value))))
 

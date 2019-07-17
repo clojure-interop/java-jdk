@@ -54,7 +54,7 @@
    set.
 
   returns: the socket factory - `java.rmi.server.RMISocketFactory`"
-  ([]
+  (^java.rmi.server.RMISocketFactory []
     (RMISocketFactory/getSocketFactory )))
 
 (defn *get-default-socket-factory
@@ -64,7 +64,7 @@
    returns null.
 
   returns: the default RMI socket factory - `java.rmi.server.RMISocketFactory`"
-  ([]
+  (^java.rmi.server.RMISocketFactory []
     (RMISocketFactory/getDefaultSocketFactory )))
 
 (defn *set-failure-handler
@@ -89,7 +89,7 @@
    setFailureHandler method.
 
   returns: the failure handler - `java.rmi.server.RMIFailureHandler`"
-  ([]
+  (^java.rmi.server.RMIFailureHandler []
     (RMISocketFactory/getFailureHandler )))
 
 (defn create-socket
@@ -101,7 +101,7 @@
   returns: a socket connected to the specified host and port. - `java.net.Socket`
 
   throws: java.io.IOException - if an I/O error occurs during socket creation"
-  ([^java.rmi.server.RMISocketFactory this ^java.lang.String host ^Integer port]
+  (^java.net.Socket [^java.rmi.server.RMISocketFactory this ^java.lang.String host ^Integer port]
     (-> this (.createSocket host port))))
 
 (defn create-server-socket
@@ -113,6 +113,6 @@
   returns: the server socket on the specified port - `java.net.ServerSocket`
 
   throws: java.io.IOException - if an I/O error occurs during server socket creation"
-  ([^java.rmi.server.RMISocketFactory this ^Integer port]
+  (^java.net.ServerSocket [^java.rmi.server.RMISocketFactory this ^Integer port]
     (-> this (.createServerSocket port))))
 

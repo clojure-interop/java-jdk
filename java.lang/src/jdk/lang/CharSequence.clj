@@ -20,7 +20,7 @@
    of 16-bit chars in the sequence.
 
   returns: the number of chars in this sequence - `int`"
-  ([^java.lang.CharSequence this]
+  (^Integer [^java.lang.CharSequence this]
     (-> this (.length))))
 
 (defn char-at
@@ -38,7 +38,7 @@
   returns: the specified char value - `char`
 
   throws: java.lang.IndexOutOfBoundsException - if the index argument is negative or not less than length()"
-  ([^java.lang.CharSequence this ^Integer index]
+  (^Character [^java.lang.CharSequence this ^Integer index]
     (-> this (.charAt index))))
 
 (defn sub-sequence
@@ -55,7 +55,7 @@
   returns: the specified subsequence - `java.lang.CharSequence`
 
   throws: java.lang.IndexOutOfBoundsException - if start or end are negative, if end is greater than length(), or if start is greater than end"
-  ([^java.lang.CharSequence this ^Integer start ^Integer end]
+  (^java.lang.CharSequence [^java.lang.CharSequence this ^Integer start ^Integer end]
     (-> this (.subSequence start end))))
 
 (defn to-string
@@ -64,7 +64,7 @@
    this sequence.
 
   returns: a string consisting of exactly this sequence of characters - `java.lang.String`"
-  ([^java.lang.CharSequence this]
+  (^java.lang.String [^java.lang.CharSequence this]
     (-> this (.toString))))
 
 (defn chars

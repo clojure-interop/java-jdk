@@ -123,7 +123,7 @@
 
   limits - limits in ascending order - `double[]`
   formats - corresponding format strings - `java.lang.String[]`"
-  ([limits ^java.lang.String[] formats]
+  ([limits formats]
     (new ChoiceFormat limits formats))
   ([^java.lang.String new-pattern]
     (new ChoiceFormat new-pattern)))
@@ -144,9 +144,9 @@
   positive - true if the least double is desired; false otherwise - `boolean`
 
   returns: the least or greater double value - `double`"
-  ([^Double d ^Boolean positive]
+  (^Double [^Double d ^Boolean positive]
     (ChoiceFormat/nextDouble d positive))
-  ([^Double d]
+  (^Double [^Double d]
     (ChoiceFormat/nextDouble d)))
 
 (defn *previous-double
@@ -156,7 +156,7 @@
   d - the reference value - `double`
 
   returns: the greatest double value less than d - `double`"
-  ([^Double d]
+  (^Double [^Double d]
     (ChoiceFormat/previousDouble d)))
 
 (defn get-formats
@@ -177,7 +177,7 @@
   "Gets the pattern.
 
   returns: the pattern string - `java.lang.String`"
-  ([^java.text.ChoiceFormat this]
+  (^java.lang.String [^java.text.ChoiceFormat this]
     (-> this (.toPattern))))
 
 (defn set-choices
@@ -185,14 +185,14 @@
 
   limits - contains the top value that you want parsed with that format, and should be in ascending sorted order. When formatting X, the choice will be the i, where limit[i] ≤ X < limit[i+1]. If the limit array is not in ascending order, the results of formatting will be incorrect. - `double[]`
   formats - are the formats you want to use for each limit. They can be either Format objects or Strings. When formatting with object Y, if the object is a NumberFormat, then ((NumberFormat) Y).format(X) is called. Otherwise Y.toString() is called. - `java.lang.String[]`"
-  ([^java.text.ChoiceFormat this limits ^java.lang.String[] formats]
+  ([^java.text.ChoiceFormat this limits formats]
     (-> this (.setChoices limits formats))))
 
 (defn clone
   "Overrides Cloneable
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([^java.text.ChoiceFormat this]
+  (^java.lang.Object [^java.text.ChoiceFormat this]
     (-> this (.clone))))
 
 (defn parse
@@ -202,14 +202,14 @@
   status - an input-output parameter. On input, the status.index field indicates the first character of the source text that should be parsed. On exit, if no error occurred, status.index is set to the first unparsed character in the source text. On exit, if an error did occur, status.index is unchanged and status.errorIndex is set to the first index of the character that caused the parse to fail. - `java.text.ParsePosition`
 
   returns: A Number representing the value of the number parsed. - `java.lang.Number`"
-  ([^java.text.ChoiceFormat this ^java.lang.String text ^java.text.ParsePosition status]
+  (^java.lang.Number [^java.text.ChoiceFormat this ^java.lang.String text ^java.text.ParsePosition status]
     (-> this (.parse text status))))
 
 (defn hash-code
   "Generates a hash code for the message format object.
 
   returns: a hash code value for this object. - `int`"
-  ([^java.text.ChoiceFormat this]
+  (^Integer [^java.text.ChoiceFormat this]
     (-> this (.hashCode))))
 
 (defn apply-pattern
@@ -226,7 +226,7 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([^java.text.ChoiceFormat this ^java.lang.Object obj]
+  (^Boolean [^java.text.ChoiceFormat this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn format
@@ -241,6 +241,6 @@
   status - the field position - `java.text.FieldPosition`
 
   returns: the formatted StringBuffer - `java.lang.StringBuffer`"
-  ([^java.text.ChoiceFormat this ^Long number ^java.lang.StringBuffer to-append-to ^java.text.FieldPosition status]
+  (^java.lang.StringBuffer [^java.text.ChoiceFormat this ^Long number ^java.lang.StringBuffer to-append-to ^java.text.FieldPosition status]
     (-> this (.format number to-append-to status))))
 

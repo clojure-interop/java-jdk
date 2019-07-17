@@ -63,6 +63,6 @@
     location visual position - `int`
 
   throws: javax.swing.text.BadLocationException"
-  ([^javax.swing.text.NavigationFilter this ^javax.swing.text.JTextComponent text ^Integer pos ^javax.swing.text.Position.Bias bias ^Integer direction ^javax.swing.text.Position.Bias[] bias-ret]
+  (^Integer [^javax.swing.text.NavigationFilter this ^javax.swing.text.JTextComponent text ^Integer pos ^javax.swing.text.Position.Bias bias ^Integer direction bias-ret]
     (-> this (.getNextVisualPositionFrom text pos bias direction bias-ret))))
 

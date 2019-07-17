@@ -329,7 +329,7 @@
    and the value is the name of the MemoryType.
 
   returns: the type of this memory pool. - `java.lang.management.MemoryType`"
-  ([^java.lang.management.MemoryPoolMXBean this]
+  (^java.lang.management.MemoryType [^java.lang.management.MemoryPoolMXBean this]
     (-> this (.getType))))
 
 (defn get-usage-threshold-count
@@ -340,7 +340,7 @@
    has crossed its usage threshold value. - `long`
 
   throws: java.lang.UnsupportedOperationException - if this memory pool does not support a usage threshold."
-  ([^java.lang.management.MemoryPoolMXBean this]
+  (^Long [^java.lang.management.MemoryPoolMXBean this]
     (-> this (.getUsageThresholdCount))))
 
 (defn get-peak-usage
@@ -357,7 +357,7 @@
 
   returns: a MemoryUsage object representing the peak
    memory usage; or null if this pool is not valid. - `java.lang.management.MemoryUsage`"
-  ([^java.lang.management.MemoryPoolMXBean this]
+  (^java.lang.management.MemoryUsage [^java.lang.management.MemoryPoolMXBean this]
     (-> this (.getPeakUsage))))
 
 (defn get-collection-usage-threshold
@@ -369,14 +369,14 @@
   returns: the collection usage threshold of this memory pool in bytes. - `long`
 
   throws: java.lang.UnsupportedOperationException - if this memory pool does not support a collection usage threshold."
-  ([^java.lang.management.MemoryPoolMXBean this]
+  (^Long [^java.lang.management.MemoryPoolMXBean this]
     (-> this (.getCollectionUsageThreshold))))
 
 (defn get-name
   "Returns the name representing this memory pool.
 
   returns: the name of this memory pool. - `java.lang.String`"
-  ([^java.lang.management.MemoryPoolMXBean this]
+  (^java.lang.String [^java.lang.management.MemoryPoolMXBean this]
     (-> this (.getName))))
 
 (defn reset-peak-usage
@@ -396,7 +396,7 @@
   returns: the usage threshold value of this memory pool in bytes. - `long`
 
   throws: java.lang.UnsupportedOperationException - if this memory pool does not support a usage threshold."
-  ([^java.lang.management.MemoryPoolMXBean this]
+  (^Long [^java.lang.management.MemoryPoolMXBean this]
     (-> this (.getUsageThreshold))))
 
 (defn get-usage
@@ -423,7 +423,7 @@
 
   returns: a MemoryUsage object; or null if
    this pool not valid. - `java.lang.management.MemoryUsage`"
-  ([^java.lang.management.MemoryPoolMXBean this]
+  (^java.lang.management.MemoryUsage [^java.lang.management.MemoryPoolMXBean this]
     (-> this (.getUsage))))
 
 (defn usage-threshold-exceeded?
@@ -435,7 +435,7 @@
    false otherwise. - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if this memory pool does not support a usage threshold."
-  ([^java.lang.management.MemoryPoolMXBean this]
+  (^Boolean [^java.lang.management.MemoryPoolMXBean this]
     (-> this (.isUsageThresholdExceeded))))
 
 (defn set-usage-threshold
@@ -475,7 +475,7 @@
 
   returns: true if this memory pool supports the
    collection usage threshold; false otherwise. - `boolean`"
-  ([^java.lang.management.MemoryPoolMXBean this]
+  (^Boolean [^java.lang.management.MemoryPoolMXBean this]
     (-> this (.isCollectionUsageThresholdSupported))))
 
 (defn valid?
@@ -486,7 +486,7 @@
   returns: true if the memory pool is valid in the running
                 Java virtual machine;
            false otherwise. - `boolean`"
-  ([^java.lang.management.MemoryPoolMXBean this]
+  (^Boolean [^java.lang.management.MemoryPoolMXBean this]
     (-> this (.isValid))))
 
 (defn usage-threshold-supported?
@@ -494,7 +494,7 @@
 
   returns: true if this memory pool supports usage threshold;
    false otherwise. - `boolean`"
-  ([^java.lang.management.MemoryPoolMXBean this]
+  (^Boolean [^java.lang.management.MemoryPoolMXBean this]
     (-> this (.isUsageThresholdSupported))))
 
 (defn collection-usage-threshold-exceeded?
@@ -512,7 +512,7 @@
    false otherwise. - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if this memory pool does not support a usage threshold."
-  ([^java.lang.management.MemoryPoolMXBean this]
+  (^Boolean [^java.lang.management.MemoryPoolMXBean this]
     (-> this (.isCollectionUsageThresholdExceeded))))
 
 (defn get-collection-usage
@@ -535,7 +535,7 @@
    this memory pool after the Java virtual machine most recently
    expended effort in recycling unused objects;
    null if this method is not supported. - `java.lang.management.MemoryUsage`"
-  ([^java.lang.management.MemoryPoolMXBean this]
+  (^java.lang.management.MemoryUsage [^java.lang.management.MemoryPoolMXBean this]
     (-> this (.getCollectionUsage))))
 
 (defn get-collection-usage-threshold-count
@@ -547,7 +547,7 @@
    usage has reached or exceeded the collection usage threshold. - `long`
 
   throws: java.lang.UnsupportedOperationException - if this memory pool does not support a collection usage threshold."
-  ([^java.lang.management.MemoryPoolMXBean this]
+  (^Long [^java.lang.management.MemoryPoolMXBean this]
     (-> this (.getCollectionUsageThresholdCount))))
 
 (defn get-memory-manager-names

@@ -60,7 +60,7 @@
    graphic can be rendered above its ascent.
 
   returns: the ascent of this GraphicAttribute. - `float`"
-  ([^java.awt.font.GraphicAttribute this]
+  (^Float [^java.awt.font.GraphicAttribute this]
     (-> this (.getAscent))))
 
 (defn get-descent
@@ -68,7 +68,7 @@
    graphic can be rendered below its descent.
 
   returns: the descent of this GraphicAttribute. - `float`"
-  ([^java.awt.font.GraphicAttribute this]
+  (^Float [^java.awt.font.GraphicAttribute this]
     (-> this (.getDescent))))
 
 (defn get-advance
@@ -79,7 +79,7 @@
    rendered beyond its advance
 
   returns: the advance of this GraphicAttribute. - `float`"
-  ([^java.awt.font.GraphicAttribute this]
+  (^Float [^java.awt.font.GraphicAttribute this]
     (-> this (.getAdvance))))
 
 (defn get-bounds
@@ -93,7 +93,7 @@
 
   returns: a Rectangle2D that encloses all of the bits
    rendered by this GraphicAttribute. - `java.awt.geom.Rectangle2D`"
-  ([^java.awt.font.GraphicAttribute this]
+  (^java.awt.geom.Rectangle2D [^java.awt.font.GraphicAttribute this]
     (-> this (.getBounds))))
 
 (defn get-outline
@@ -110,7 +110,7 @@
 
   returns: a Shape representing this graphic attribute,
      suitable for stroking or filling. - `java.awt.Shape`"
-  ([^java.awt.font.GraphicAttribute this ^java.awt.geom.AffineTransform tx]
+  (^java.awt.Shape [^java.awt.font.GraphicAttribute this ^java.awt.geom.AffineTransform tx]
     (-> this (.getOutline tx))))
 
 (defn draw
@@ -129,7 +129,7 @@
    or bottom of a line.
 
   returns: the alignment of this GraphicAttribute. - `int`"
-  ([^java.awt.font.GraphicAttribute this]
+  (^Integer [^java.awt.font.GraphicAttribute this]
     (-> this (.getAlignment))))
 
 (defn get-justification-info
@@ -140,6 +140,6 @@
 
   returns: a GlyphJustificationInfo object that contains the
    justification information for this GraphicAttribute. - `java.awt.font.GlyphJustificationInfo`"
-  ([^java.awt.font.GraphicAttribute this]
+  (^java.awt.font.GlyphJustificationInfo [^java.awt.font.GraphicAttribute this]
     (-> this (.getJustificationInfo))))
 

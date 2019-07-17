@@ -204,7 +204,7 @@
 
   returns: the editor kit, or null if there is nothing
      registered for the given type - `javax.swing.text.EditorKit`"
-  ([^java.lang.String type]
+  (^javax.swing.text.EditorKit [^java.lang.String type]
     (JEditorPane/createEditorKitForContentType type)))
 
 (defn *register-editor-kit-for-content-type
@@ -230,7 +230,7 @@
   type - the non-null content type - `java.lang.String`
 
   returns: `java.lang.String`"
-  ([^java.lang.String type]
+  (^java.lang.String [^java.lang.String type]
     (JEditorPane/getEditorKitClassNameForContentType type)))
 
 (defn set-editor-kit
@@ -330,7 +330,7 @@
    a StringWriter.
 
   returns: the text - `java.lang.String`"
-  ([^javax.swing.JEditorPane this]
+  (^java.lang.String [^javax.swing.JEditorPane this]
     (-> this (.getText))))
 
 (defn set-editor-kit-for-content-type
@@ -378,14 +378,14 @@
   type - the non-null content type - `java.lang.String`
 
   returns: the editor kit - `javax.swing.text.EditorKit`"
-  ([^javax.swing.JEditorPane this ^java.lang.String type]
+  (^javax.swing.text.EditorKit [^javax.swing.JEditorPane this ^java.lang.String type]
     (-> this (.getEditorKitForContentType type))))
 
 (defn get-ui-class-id
   "Gets the class ID for the UI.
 
   returns: the string `EditorPaneUI` - `java.lang.String`"
-  ([^javax.swing.JEditorPane this]
+  (^java.lang.String [^javax.swing.JEditorPane this]
     (-> this (.getUIClassID))))
 
 (defn get-content-type
@@ -395,7 +395,7 @@
    currently installed EditorKit.
 
   returns: the content type, null if no editor kit set - `java.lang.String`"
-  ([^javax.swing.JEditorPane this]
+  (^java.lang.String [^javax.swing.JEditorPane this]
     (-> this (.getContentType))))
 
 (defn remove-hyperlink-listener
@@ -490,7 +490,7 @@
 
   returns: true if a viewport should force the Scrollables width to
    match its own, false otherwise - `boolean`"
-  ([^javax.swing.JEditorPane this]
+  (^Boolean [^javax.swing.JEditorPane this]
     (-> this (.getScrollableTracksViewportWidth))))
 
 (defn get-accessible-context
@@ -501,7 +501,7 @@
 
   returns: an AccessibleJEditorPane that serves as the
            AccessibleContext of this JEditorPane - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.JEditorPane this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.JEditorPane this]
     (-> this (.getAccessibleContext))))
 
 (defn get-hyperlink-listeners
@@ -542,7 +542,7 @@
   returns: true if a viewport should force the
             Scrollable's height to match its own,
             false otherwise - `boolean`"
-  ([^javax.swing.JEditorPane this]
+  (^Boolean [^javax.swing.JEditorPane this]
     (-> this (.getScrollableTracksViewportHeight))))
 
 (defn get-page
@@ -552,7 +552,7 @@
    resolved.
 
   returns: the URL, or null if none - `java.net.URL`"
-  ([^javax.swing.JEditorPane this]
+  (^java.net.URL [^javax.swing.JEditorPane this]
     (-> this (.getPage))))
 
 (defn fire-hyperlink-update
@@ -573,7 +573,7 @@
    if necessary.
 
   returns: the editor kit - `javax.swing.text.EditorKit`"
-  ([^javax.swing.JEditorPane this]
+  (^javax.swing.text.EditorKit [^javax.swing.JEditorPane this]
     (-> this (.getEditorKit))))
 
 (defn get-preferred-size
@@ -591,6 +591,6 @@
    their minimum size, refusing to shrink any further.
 
   returns: a Dimension containing the preferred size - `java.awt.Dimension`"
-  ([^javax.swing.JEditorPane this]
+  (^java.awt.Dimension [^javax.swing.JEditorPane this]
     (-> this (.getPreferredSize))))
 

@@ -36,14 +36,14 @@
   "Returns the DNS name of the LDAP server.
 
   returns: the name (not null) - `java.lang.String`"
-  ([^java.security.cert.LDAPCertStoreParameters this]
+  (^java.lang.String [^java.security.cert.LDAPCertStoreParameters this]
     (-> this (.getServerName))))
 
 (defn get-port
   "Returns the port number of the LDAP server.
 
   returns: the port number - `int`"
-  ([^java.security.cert.LDAPCertStoreParameters this]
+  (^Integer [^java.security.cert.LDAPCertStoreParameters this]
     (-> this (.getPort))))
 
 (defn clone
@@ -56,13 +56,13 @@
    that should not be shared.
 
   returns: the copy - `java.lang.Object`"
-  ([^java.security.cert.LDAPCertStoreParameters this]
+  (^java.lang.Object [^java.security.cert.LDAPCertStoreParameters this]
     (-> this (.clone))))
 
 (defn to-string
   "Returns a formatted string describing the parameters.
 
   returns: a formatted string describing the parameters - `java.lang.String`"
-  ([^java.security.cert.LDAPCertStoreParameters this]
+  (^java.lang.String [^java.security.cert.LDAPCertStoreParameters this]
     (-> this (.toString))))
 

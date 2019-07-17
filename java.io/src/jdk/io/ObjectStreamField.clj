@@ -32,14 +32,14 @@
 
   returns: a Class object representing the type of the
             serializable field - `java.lang.Class<?>`"
-  ([^java.io.ObjectStreamField this]
+  (^java.lang.Class [^java.io.ObjectStreamField this]
     (-> this (.getType))))
 
 (defn get-type-string
   "Return the JVM type signature.
 
   returns: null if this field has a primitive type. - `java.lang.String`"
-  ([^java.io.ObjectStreamField this]
+  (^java.lang.String [^java.io.ObjectStreamField this]
     (-> this (.getTypeString))))
 
 (defn get-type-code
@@ -58,14 +58,14 @@
    [            array
 
   returns: the typecode of the serializable field - `char`"
-  ([^java.io.ObjectStreamField this]
+  (^Character [^java.io.ObjectStreamField this]
     (-> this (.getTypeCode))))
 
 (defn to-string
   "Return a string that describes this field.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^java.io.ObjectStreamField this]
+  (^java.lang.String [^java.io.ObjectStreamField this]
     (-> this (.toString))))
 
 (defn unshared?
@@ -73,14 +73,14 @@
    represented by this ObjectStreamField instance is unshared.
 
   returns: true if this field is unshared - `boolean`"
-  ([^java.io.ObjectStreamField this]
+  (^Boolean [^java.io.ObjectStreamField this]
     (-> this (.isUnshared))))
 
 (defn primitive?
   "Return true if this field has a primitive type.
 
   returns: true if and only if this field corresponds to a primitive type - `boolean`"
-  ([^java.io.ObjectStreamField this]
+  (^Boolean [^java.io.ObjectStreamField this]
     (-> this (.isPrimitive))))
 
 (defn get-name
@@ -88,14 +88,14 @@
 
   returns: a String representing the name of the serializable
             field - `java.lang.String`"
-  ([^java.io.ObjectStreamField this]
+  (^java.lang.String [^java.io.ObjectStreamField this]
     (-> this (.getName))))
 
 (defn get-offset
   "Offset of field within instance data.
 
   returns: the offset of this field - `int`"
-  ([^java.io.ObjectStreamField this]
+  (^Integer [^java.io.ObjectStreamField this]
     (-> this (.getOffset))))
 
 (defn compare-to
@@ -108,6 +108,6 @@
 
   returns: a negative integer, zero, or a positive integer as this object
             is less than, equal to, or greater than the specified object. - `int`"
-  ([^java.io.ObjectStreamField this ^java.lang.Object obj]
+  (^Integer [^java.io.ObjectStreamField this ^java.lang.Object obj]
     (-> this (.compareTo obj))))
 

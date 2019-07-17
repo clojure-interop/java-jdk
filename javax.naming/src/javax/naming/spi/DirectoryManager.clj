@@ -27,7 +27,7 @@
   returns: A non-null DirContext object for continuing the operation. - `javax.naming.directory.DirContext`
 
   throws: javax.naming.NamingException - If a naming exception occurred."
-  ([^javax.naming.CannotProceedException cpe]
+  (^javax.naming.directory.DirContext [^javax.naming.CannotProceedException cpe]
     (DirectoryManager/getContinuationDirContext cpe)))
 
 (defn *get-object-instance
@@ -62,7 +62,7 @@
            a factory. - `java.lang.Object`
 
   throws: javax.naming.NamingException - If a naming exception was encountered while attempting to get a URL context, or if one of the factories accessed throws a NamingException."
-  ([^java.lang.Object ref-info ^javax.naming.Name name ^javax.naming.Context name-ctx ^java.util.Hashtable environment ^javax.naming.directory.Attributes attrs]
+  (^java.lang.Object [^java.lang.Object ref-info ^javax.naming.Name name ^javax.naming.Context name-ctx ^java.util.Hashtable environment ^javax.naming.directory.Attributes attrs]
     (DirectoryManager/getObjectInstance ref-info name name-ctx environment attrs)))
 
 (defn *get-state-to-bind
@@ -109,6 +109,6 @@
     the object (obj) itself with the original attributes. - `javax.naming.spi.DirStateFactory.Result`
 
   throws: javax.naming.NamingException - If a naming exception was encountered while using the factories. A factory should only throw an exception if it does not want other factories to be used in an attempt to create an object. See DirStateFactory.getStateToBind()."
-  ([^java.lang.Object obj ^javax.naming.Name name ^javax.naming.Context name-ctx ^java.util.Hashtable environment ^javax.naming.directory.Attributes attrs]
+  (^javax.naming.spi.DirStateFactory.Result [^java.lang.Object obj ^javax.naming.Name name ^javax.naming.Context name-ctx ^java.util.Hashtable environment ^javax.naming.directory.Attributes attrs]
     (DirectoryManager/getStateToBind obj name name-ctx environment attrs)))
 

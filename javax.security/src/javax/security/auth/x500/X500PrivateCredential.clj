@@ -27,21 +27,21 @@
   "Returns the X.509 certificate.
 
   returns: the X509Certificate - `java.security.cert.X509Certificate`"
-  ([^javax.security.auth.x500.X500PrivateCredential this]
+  (^java.security.cert.X509Certificate [^javax.security.auth.x500.X500PrivateCredential this]
     (-> this (.getCertificate))))
 
 (defn get-private-key
   "Returns the PrivateKey.
 
   returns: the PrivateKey - `java.security.PrivateKey`"
-  ([^javax.security.auth.x500.X500PrivateCredential this]
+  (^java.security.PrivateKey [^javax.security.auth.x500.X500PrivateCredential this]
     (-> this (.getPrivateKey))))
 
 (defn get-alias
   "Returns the KeyStore alias.
 
   returns: the KeyStore alias - `java.lang.String`"
-  ([^javax.security.auth.x500.X500PrivateCredential this]
+  (^java.lang.String [^javax.security.auth.x500.X500PrivateCredential this]
     (-> this (.getAlias))))
 
 (defn destroy
@@ -55,6 +55,6 @@
    in this object have been cleared.
 
   returns: true if X509Certificate and the PrivateKey are null - `boolean`"
-  ([^javax.security.auth.x500.X500PrivateCredential this]
+  (^Boolean [^javax.security.auth.x500.X500PrivateCredential this]
     (-> this (.isDestroyed))))
 

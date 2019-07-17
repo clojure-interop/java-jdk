@@ -66,9 +66,9 @@
   descriptor - An instance of Descriptor containing the appropriate metadata for this instance of the MBeanOperationInfo. If it is null then a default descriptor will be created. If the descriptor does not contain fields `displayName` or `role`, the missing ones are added with their default values. - `javax.management.Descriptor`
 
   throws: javax.management.RuntimeOperationsException - Wraps an IllegalArgumentException. The descriptor is invalid; or descriptor field `name` is not equal to operation name; or descriptor field `DescriptorType` is not equal to `operation`; or descriptor optional field `role` is present but not equal to `operation`, `getter`, or `setter`."
-  ([^java.lang.String name ^java.lang.String description ^javax.management.MBeanParameterInfo[] signature ^java.lang.String type ^Integer impact ^javax.management.Descriptor descriptor]
+  ([^java.lang.String name ^java.lang.String description signature ^java.lang.String type ^Integer impact ^javax.management.Descriptor descriptor]
     (new ModelMBeanOperationInfo name description signature type impact descriptor))
-  ([^java.lang.String name ^java.lang.String description ^javax.management.MBeanParameterInfo[] signature ^java.lang.String type ^Integer impact]
+  ([^java.lang.String name ^java.lang.String description signature ^java.lang.String type ^Integer impact]
     (new ModelMBeanOperationInfo name description signature type impact))
   ([^java.lang.String description ^java.lang.reflect.Method operation-method ^javax.management.Descriptor descriptor]
     (new ModelMBeanOperationInfo description operation-method descriptor))
@@ -82,7 +82,7 @@
    duplicate of this ModelMBeanOperationInfo.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([^javax.management.modelmbean.ModelMBeanOperationInfo this]
+  (^java.lang.Object [^javax.management.modelmbean.ModelMBeanOperationInfo this]
     (-> this (.clone))))
 
 (defn get-descriptor
@@ -91,7 +91,7 @@
 
   returns: Descriptor associated with the
    ModelMBeanOperationInfo object. - `javax.management.Descriptor`"
-  ([^javax.management.modelmbean.ModelMBeanOperationInfo this]
+  (^javax.management.Descriptor [^javax.management.modelmbean.ModelMBeanOperationInfo this]
     (-> this (.getDescriptor))))
 
 (defn set-descriptor
@@ -114,6 +114,6 @@
    ModelMBeanOperationInfo in human readable form.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^javax.management.modelmbean.ModelMBeanOperationInfo this]
+  (^java.lang.String [^javax.management.modelmbean.ModelMBeanOperationInfo this]
     (-> this (.toString))))
 

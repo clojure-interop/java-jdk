@@ -1,4 +1,4 @@
-(defproject clojure-interop/java.nio "1.0.2"
+(defproject clojure-interop/java.nio "1.0.3"
   :description "Clojure to Java Interop Bindings for java.nio"
   :url "https://github.com/clojure-interop/java-jdk"
   :license {:name "Eclipse Public License"

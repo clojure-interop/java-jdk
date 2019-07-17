@@ -42,6 +42,6 @@
   returns: the enum constant with the specified name - `java.net.StandardProtocolFamily`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^java.net.StandardProtocolFamily [^java.lang.String name]
     (StandardProtocolFamily/valueOf name)))
 

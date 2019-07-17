@@ -28,7 +28,7 @@
    the specified session id does not refer to a valid SSLSession. - `javax.net.ssl.SSLSession`
 
   throws: java.lang.NullPointerException - if sessionId is null."
-  ([^javax.net.ssl.SSLSessionContext this session-id]
+  (^javax.net.ssl.SSLSession [^javax.net.ssl.SSLSessionContext this session-id]
     (-> this (.getSession session-id))))
 
 (defn get-ids
@@ -72,7 +72,7 @@
 
   returns: the session timeout limit in seconds; zero means there is no
    limit. - `int`"
-  ([^javax.net.ssl.SSLSessionContext this]
+  (^Integer [^javax.net.ssl.SSLSessionContext this]
     (-> this (.getSessionTimeout))))
 
 (defn set-session-cache-size
@@ -92,6 +92,6 @@
    SSLSessionContext.
 
   returns: size of the session cache; zero means there is no size limit. - `int`"
-  ([^javax.net.ssl.SSLSessionContext this]
+  (^Integer [^javax.net.ssl.SSLSessionContext this]
     (-> this (.getSessionCacheSize))))
 

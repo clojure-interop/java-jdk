@@ -40,7 +40,7 @@
   "Get the current line number.
 
   returns: The current line number - `int`"
-  ([^java.io.LineNumberReader this]
+  (^Integer [^java.io.LineNumberReader this]
     (-> this (.getLineNumber))))
 
 (defn read
@@ -55,9 +55,9 @@
             already been reached - `int`
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.io.LineNumberReader this cbuf ^Integer off ^Integer len]
+  (^Integer [^java.io.LineNumberReader this cbuf ^Integer off ^Integer len]
     (-> this (.read cbuf off len)))
-  ([^java.io.LineNumberReader this]
+  (^Integer [^java.io.LineNumberReader this]
     (-> this (.read))))
 
 (defn read-line
@@ -69,7 +69,7 @@
             null if the end of the stream has been reached - `java.lang.String`
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.io.LineNumberReader this]
+  (^java.lang.String [^java.io.LineNumberReader this]
     (-> this (.readLine))))
 
 (defn skip
@@ -80,7 +80,7 @@
   returns: The number of characters actually skipped - `long`
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.io.LineNumberReader this ^Long n]
+  (^Long [^java.io.LineNumberReader this ^Long n]
     (-> this (.skip n))))
 
 (defn mark

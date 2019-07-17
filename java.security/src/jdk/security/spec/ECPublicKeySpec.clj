@@ -21,7 +21,7 @@
   "Returns the public point W.
 
   returns: the public point W. - `java.security.spec.ECPoint`"
-  ([^java.security.spec.ECPublicKeySpec this]
+  (^java.security.spec.ECPoint [^java.security.spec.ECPublicKeySpec this]
     (-> this (.getW))))
 
 (defn get-params
@@ -29,6 +29,6 @@
    parameters.
 
   returns: the EC domain parameters. - `java.security.spec.ECParameterSpec`"
-  ([^java.security.spec.ECPublicKeySpec this]
+  (^java.security.spec.ECParameterSpec [^java.security.spec.ECPublicKeySpec this]
     (-> this (.getParams))))
 

@@ -21,6 +21,6 @@
   returns: a clone if the implementation is cloneable. - `java.lang.Object`
 
   throws: java.lang.CloneNotSupportedException - if this is called on an implementation that does not support Cloneable."
-  ([^java.security.SignatureSpi this]
+  (^java.lang.Object [^java.security.SignatureSpi this]
     (-> this (.clone))))
 

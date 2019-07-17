@@ -12,7 +12,7 @@
   "Description copied from interface: ComboBoxEditor
 
   returns: `java.awt.Component`"
-  ([^javax.swing.plaf.basic.BasicComboBoxEditor this]
+  (^java.awt.Component [^javax.swing.plaf.basic.BasicComboBoxEditor this]
     (-> this (.getEditorComponent))))
 
 (defn set-item
@@ -26,7 +26,7 @@
   "Description copied from interface: ComboBoxEditor
 
   returns: `java.lang.Object`"
-  ([^javax.swing.plaf.basic.BasicComboBoxEditor this]
+  (^java.lang.Object [^javax.swing.plaf.basic.BasicComboBoxEditor this]
     (-> this (.getItem))))
 
 (defn select-all

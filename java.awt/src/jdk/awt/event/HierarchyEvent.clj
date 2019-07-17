@@ -162,7 +162,7 @@
   returns: the Component object that originated
    the event, or null if the object is not a
    Component. - `java.awt.Component`"
-  ([^java.awt.event.HierarchyEvent this]
+  (^java.awt.Component [^java.awt.event.HierarchyEvent this]
     (-> this (.getComponent))))
 
 (defn get-changed
@@ -170,7 +170,7 @@
    changed.
 
   returns: the changed Component - `java.awt.Component`"
-  ([^java.awt.event.HierarchyEvent this]
+  (^java.awt.Component [^java.awt.event.HierarchyEvent this]
     (-> this (.getChanged))))
 
 (defn get-changed-parent
@@ -185,7 +185,7 @@
    the parent returned is the parent during the operation.
 
   returns: the parent of the changed Component - `java.awt.Container`"
-  ([^java.awt.event.HierarchyEvent this]
+  (^java.awt.Container [^java.awt.event.HierarchyEvent this]
     (-> this (.getChangedParent))))
 
 (defn get-change-flags
@@ -195,7 +195,7 @@
 
   returns: the bitmask, or 0 if this is not an HIERARCHY_CHANGED
    event - `long`"
-  ([^java.awt.event.HierarchyEvent this]
+  (^Long [^java.awt.event.HierarchyEvent this]
     (-> this (.getChangeFlags))))
 
 (defn param-string
@@ -203,6 +203,6 @@
    This method is useful for event-logging and for debugging.
 
   returns: a string identifying the event and its attributes - `java.lang.String`"
-  ([^java.awt.event.HierarchyEvent this]
+  (^java.lang.String [^java.awt.event.HierarchyEvent this]
     (-> this (.paramString))))
 

@@ -52,7 +52,7 @@
    It is equivalent to system(ZoneOffset.UTC).
 
   returns: a clock that uses the best available system clock in the UTC zone, not null - `java.time.Clock`"
-  ([]
+  (^java.time.Clock []
     (Clock/systemUTC )))
 
 (defn *system-default-zone
@@ -72,7 +72,7 @@
    It is equivalent to system(ZoneId.systemDefault()).
 
   returns: a clock that uses the best available system clock in the default zone, not null - `java.time.Clock`"
-  ([]
+  (^java.time.Clock []
     (Clock/systemDefaultZone )))
 
 (defn *system
@@ -90,7 +90,7 @@
   zone - the time-zone to use to convert the instant to date-time, not null - `java.time.ZoneId`
 
   returns: a clock that uses the best available system clock in the specified zone, not null - `java.time.Clock`"
-  ([^java.time.ZoneId zone]
+  (^java.time.Clock [^java.time.ZoneId zone]
     (Clock/system zone)))
 
 (defn *tick-seconds
@@ -112,7 +112,7 @@
   zone - the time-zone to use to convert the instant to date-time, not null - `java.time.ZoneId`
 
   returns: a clock that ticks in whole seconds using the specified zone, not null - `java.time.Clock`"
-  ([^java.time.ZoneId zone]
+  (^java.time.Clock [^java.time.ZoneId zone]
     (Clock/tickSeconds zone)))
 
 (defn *tick-minutes
@@ -134,7 +134,7 @@
   zone - the time-zone to use to convert the instant to date-time, not null - `java.time.ZoneId`
 
   returns: a clock that ticks in whole minutes using the specified zone, not null - `java.time.Clock`"
-  ([^java.time.ZoneId zone]
+  (^java.time.Clock [^java.time.ZoneId zone]
     (Clock/tickMinutes zone)))
 
 (defn *tick
@@ -166,7 +166,7 @@
   returns: a clock that ticks in whole units of the duration, not null - `java.time.Clock`
 
   throws: java.lang.IllegalArgumentException - if the duration is negative, or has a part smaller than a whole millisecond such that the whole duration is not divisible into one second"
-  ([^java.time.Clock base-clock ^java.time.Duration tick-duration]
+  (^java.time.Clock [^java.time.Clock base-clock ^java.time.Duration tick-duration]
     (Clock/tick base-clock tick-duration)))
 
 (defn *fixed
@@ -183,7 +183,7 @@
   zone - the time-zone to use to convert the instant to date-time, not null - `java.time.ZoneId`
 
   returns: a clock that always returns the same instant, not null - `java.time.Clock`"
-  ([^java.time.Instant fixed-instant ^java.time.ZoneId zone]
+  (^java.time.Clock [^java.time.Instant fixed-instant ^java.time.ZoneId zone]
     (Clock/fixed fixed-instant zone)))
 
 (defn *offset
@@ -205,7 +205,7 @@
   offset-duration - the duration to add, not null - `java.time.Duration`
 
   returns: a clock based on the base clock with the duration added, not null - `java.time.Clock`"
-  ([^java.time.Clock base-clock ^java.time.Duration offset-duration]
+  (^java.time.Clock [^java.time.Clock base-clock ^java.time.Duration offset-duration]
     (Clock/offset base-clock offset-duration)))
 
 (defn get-zone
@@ -215,7 +215,7 @@
    to a date or time using a time-zone. This method returns the time-zone used.
 
   returns: the time-zone being used to interpret instants, not null - `java.time.ZoneId`"
-  ([^java.time.Clock this]
+  (^java.time.ZoneId [^java.time.Clock this]
     (-> this (.getZone))))
 
 (defn with-zone
@@ -228,7 +228,7 @@
   zone - the time-zone to change to, not null - `java.time.ZoneId`
 
   returns: a clock based on this clock with the specified time-zone, not null - `java.time.Clock`"
-  ([^java.time.Clock this ^java.time.ZoneId zone]
+  (^java.time.Clock [^java.time.Clock this ^java.time.ZoneId zone]
     (-> this (.withZone zone))))
 
 (defn millis
@@ -248,7 +248,7 @@
     the Java epoch of 1970-01-01T00:00Z (UTC), not null - `long`
 
   throws: java.time.DateTimeException - if the instant cannot be obtained, not thrown by most implementations"
-  ([^java.time.Clock this]
+  (^Long [^java.time.Clock this]
     (-> this (.millis))))
 
 (defn instant
@@ -259,7 +259,7 @@
   returns: the current instant from this clock, not null - `java.time.Instant`
 
   throws: java.time.DateTimeException - if the instant cannot be obtained, not thrown by most implementations"
-  ([^java.time.Clock this]
+  (^java.time.Instant [^java.time.Clock this]
     (-> this (.instant))))
 
 (defn equals
@@ -272,7 +272,7 @@
   obj - the object to check, null returns false - `java.lang.Object`
 
   returns: true if this is equal to the other clock - `boolean`"
-  ([^java.time.Clock this ^java.lang.Object obj]
+  (^Boolean [^java.time.Clock this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -283,6 +283,6 @@
    If not overridden, the behavior is defined by Object.hashCode()
 
   returns: a suitable hash code - `int`"
-  ([^java.time.Clock this]
+  (^Integer [^java.time.Clock this]
     (-> this (.hashCode))))
 

@@ -8,7 +8,7 @@
    this editor
 
   returns: `java.awt.Component`"
-  ([^javax.swing.ComboBoxEditor this]
+  (^java.awt.Component [^javax.swing.ComboBoxEditor this]
     (-> this (.getEditorComponent))))
 
 (defn set-item
@@ -22,7 +22,7 @@
   "Return the edited item
 
   returns: `java.lang.Object`"
-  ([^javax.swing.ComboBoxEditor this]
+  (^java.lang.Object [^javax.swing.ComboBoxEditor this]
     (-> this (.getItem))))
 
 (defn select-all

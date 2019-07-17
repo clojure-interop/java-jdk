@@ -288,7 +288,7 @@
             the keys in the default property list. - `java.util.Enumeration<?>`
 
   throws: java.lang.ClassCastException - if any key in this property list is not a string."
-  ([^java.util.Properties this]
+  (^java.util.Enumeration [^java.util.Properties this]
     (-> this (.propertyNames))))
 
 (defn get-property
@@ -301,9 +301,9 @@
   default-value - a default value. - `java.lang.String`
 
   returns: the value in this property list with the specified key value. - `java.lang.String`"
-  ([^java.util.Properties this ^java.lang.String key ^java.lang.String default-value]
+  (^java.lang.String [^java.util.Properties this ^java.lang.String key ^java.lang.String default-value]
     (-> this (.getProperty key default-value)))
-  ([^java.util.Properties this ^java.lang.String key]
+  (^java.lang.String [^java.util.Properties this ^java.lang.String key]
     (-> this (.getProperty key))))
 
 (defn store-to-xml
@@ -345,7 +345,7 @@
 
   returns: the previous value of the specified key in this property
                list, or null if it did not have one. - `java.lang.Object`"
-  ([^java.util.Properties this ^java.lang.String key ^java.lang.String value]
+  (^java.lang.Object [^java.util.Properties this ^java.lang.String key ^java.lang.String value]
     (-> this (.setProperty key value))))
 
 (defn string-property-names
@@ -363,7 +363,7 @@
   returns: a set of keys in this property list where
             the key and its corresponding value are strings,
             including the keys in the default property list. - `java.util.Set<java.lang.String>`"
-  ([^java.util.Properties this]
+  (^java.util.Set [^java.util.Properties this]
     (-> this (.stringPropertyNames))))
 
 (defn store

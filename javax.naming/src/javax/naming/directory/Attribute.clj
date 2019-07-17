@@ -40,7 +40,7 @@
    in any order and there are no duplicate values.
 
   returns: true if this attribute's values are ordered; false otherwise. - `boolean`"
-  ([^javax.naming.directory.Attribute this]
+  (^Boolean [^javax.naming.directory.Attribute this]
     (-> this (.isOrdered))))
 
 (defn contains
@@ -51,7 +51,7 @@
   attr-val - The possibly null value to check. If null, check whether the attribute has an attribute value whose value is null. - `java.lang.Object`
 
   returns: true if attrVal is one of this attribute's values; false otherwise. - `boolean`"
-  ([^javax.naming.directory.Attribute this ^java.lang.Object attr-val]
+  (^Boolean [^javax.naming.directory.Attribute this ^java.lang.Object attr-val]
     (-> this (.contains attr-val))))
 
 (defn get-all
@@ -70,7 +70,7 @@
    is returned. - `javax.naming.NamingEnumeration<?>`
 
   throws: javax.naming.NamingException - If a naming exception was encountered while retrieving the values."
-  ([^javax.naming.directory.Attribute this]
+  (^javax.naming.NamingEnumeration [^javax.naming.directory.Attribute this]
     (-> this (.getAll))))
 
 (defn get-attribute-definition
@@ -93,7 +93,7 @@
        any schema information. - `javax.naming.directory.DirContext`
 
   throws: javax.naming.OperationNotSupportedException - If getting the schema is not supported."
-  ([^javax.naming.directory.Attribute this]
+  (^javax.naming.directory.DirContext [^javax.naming.directory.Attribute this]
     (-> this (.getAttributeDefinition))))
 
 (defn get-attribute-syntax-definition
@@ -123,7 +123,7 @@
       any schema information. - `javax.naming.directory.DirContext`
 
   throws: javax.naming.OperationNotSupportedException - If getting the schema is not supported."
-  ([^javax.naming.directory.Attribute this]
+  (^javax.naming.directory.DirContext [^javax.naming.directory.Attribute this]
     (-> this (.getAttributeSyntaxDefinition))))
 
 (defn remove
@@ -141,7 +141,7 @@
   attrval - The possibly null value to remove from this attribute. If null, remove the attribute value that is null. - `java.lang.Object`
 
   returns: true if the value was removed; false otherwise. - `boolean`"
-  ([^javax.naming.directory.Attribute this ^java.lang.Object attrval]
+  (^Boolean [^javax.naming.directory.Attribute this ^java.lang.Object attrval]
     (-> this (.remove attrval))))
 
 (defn clone
@@ -151,14 +151,14 @@
    Changes to the copy will not affect the original and vice versa.
 
   returns: A non-null copy of the attribute. - `java.lang.Object`"
-  ([^javax.naming.directory.Attribute this]
+  (^java.lang.Object [^javax.naming.directory.Attribute this]
     (-> this (.clone))))
 
 (defn get-id
   "Retrieves the id of this attribute.
 
   returns: The id of this attribute. It cannot be null. - `java.lang.String`"
-  ([^javax.naming.directory.Attribute this]
+  (^java.lang.String [^javax.naming.directory.Attribute this]
     (-> this (.getID))))
 
 (defn add
@@ -177,7 +177,7 @@
   throws: java.lang.IndexOutOfBoundsException - If ix is outside the specified range."
   ([^javax.naming.directory.Attribute this ^Integer ix ^java.lang.Object attr-val]
     (-> this (.add ix attr-val)))
-  ([^javax.naming.directory.Attribute this ^java.lang.Object attr-val]
+  (^Boolean [^javax.naming.directory.Attribute this ^java.lang.Object attr-val]
     (-> this (.add attr-val))))
 
 (defn set
@@ -196,14 +196,14 @@
      Null if the attribute value was null. - `java.lang.Object`
 
   throws: java.lang.IndexOutOfBoundsException - If ix is outside the specified range."
-  ([^javax.naming.directory.Attribute this ^Integer ix ^java.lang.Object attr-val]
+  (^java.lang.Object [^javax.naming.directory.Attribute this ^Integer ix ^java.lang.Object attr-val]
     (-> this (.set ix attr-val))))
 
 (defn size
   "Retrieves the number of values in this attribute.
 
   returns: The nonnegative number of values in this attribute. - `int`"
-  ([^javax.naming.directory.Attribute this]
+  (^Integer [^javax.naming.directory.Attribute this]
     (-> this (.size))))
 
 (defn clear
@@ -224,8 +224,8 @@
      null if the attribute value is null. - `java.lang.Object`
 
   throws: javax.naming.NamingException - If a naming exception was encountered while retrieving the value."
-  ([^javax.naming.directory.Attribute this ^Integer ix]
+  (^java.lang.Object [^javax.naming.directory.Attribute this ^Integer ix]
     (-> this (.get ix)))
-  ([^javax.naming.directory.Attribute this]
+  (^java.lang.Object [^javax.naming.directory.Attribute this]
     (-> this (.get))))
 

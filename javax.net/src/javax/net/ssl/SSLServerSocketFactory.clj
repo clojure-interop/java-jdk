@@ -18,7 +18,7 @@
    call fails, an inoperative factory is returned.
 
   returns: the default ServerSocketFactory - `javax.net.ServerSocketFactory`"
-  ([]
+  (^javax.net.ServerSocketFactory []
     (SSLServerSocketFactory/getDefault )))
 
 (defn get-default-cipher-suites

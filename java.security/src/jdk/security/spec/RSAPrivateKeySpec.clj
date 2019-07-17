@@ -17,13 +17,13 @@
   "Returns the modulus.
 
   returns: the modulus - `java.math.BigInteger`"
-  ([^java.security.spec.RSAPrivateKeySpec this]
+  (^java.math.BigInteger [^java.security.spec.RSAPrivateKeySpec this]
     (-> this (.getModulus))))
 
 (defn get-private-exponent
   "Returns the private exponent.
 
   returns: the private exponent - `java.math.BigInteger`"
-  ([^java.security.spec.RSAPrivateKeySpec this]
+  (^java.math.BigInteger [^java.security.spec.RSAPrivateKeySpec this]
     (-> this (.getPrivateExponent))))
 

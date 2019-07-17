@@ -22,7 +22,7 @@
    the result of invoking the operation on the MBean specified. - `java.lang.Object`
 
   throws: java.io.IOException - if a general communication exception occurred."
-  ([^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^javax.management.ObjectName $param-object-name-1 ^java.lang.String $param-string-2 ^java.rmi.MarshalledObject $param-marshalled-object-3 ^java.lang.String[] $param-array-of-string-4 ^javax.security.auth.Subject $param-subject-5]
+  (^java.lang.Object [^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^javax.management.ObjectName $param-object-name-1 ^java.lang.String $param-string-2 ^java.rmi.MarshalledObject $param-marshalled-object-3 $param-array-of-string-4 ^javax.security.auth.Subject $param-subject-5]
     (-> this (.invoke $param-object-name-1 $param-string-2 $param-marshalled-object-3 $param-array-of-string-4 $param-subject-5))))
 
 (defn query-m-beans
@@ -37,7 +37,7 @@
    query an empty list is returned. - `java.util.Set`
 
   throws: java.io.IOException - if a general communication exception occurred."
-  ([^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^javax.management.ObjectName $param-object-name-1 ^java.rmi.MarshalledObject $param-marshalled-object-2 ^javax.security.auth.Subject $param-subject-3]
+  (^java.util.Set [^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^javax.management.ObjectName $param-object-name-1 ^java.rmi.MarshalledObject $param-marshalled-object-2 ^javax.security.auth.Subject $param-subject-3]
     (-> this (.queryMBeans $param-object-name-1 $param-marshalled-object-2 $param-subject-3))))
 
 (defn query-names
@@ -52,7 +52,7 @@
    returned. - `java.util.Set`
 
   throws: java.io.IOException - if a general communication exception occurred."
-  ([^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^javax.management.ObjectName $param-object-name-1 ^java.rmi.MarshalledObject $param-marshalled-object-2 ^javax.security.auth.Subject $param-subject-3]
+  (^java.util.Set [^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^javax.management.ObjectName $param-object-name-1 ^java.rmi.MarshalledObject $param-marshalled-object-2 ^javax.security.auth.Subject $param-subject-3]
     (-> this (.queryNames $param-object-name-1 $param-marshalled-object-2 $param-subject-3))))
 
 (defn remove-notification-listeners
@@ -63,7 +63,7 @@
   $param-subject-3 - The Subject containing the delegation principals or null if the authentication principal is used instead. - `javax.security.auth.Subject`
 
   throws: java.io.IOException - if a general communication exception occurred."
-  ([^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^javax.management.ObjectName $param-object-name-1 ^java.lang.Integer[] $param-array-of-integer-2 ^javax.security.auth.Subject $param-subject-3]
+  ([^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^javax.management.ObjectName $param-object-name-1 $param-array-of-integer-2 ^javax.security.auth.Subject $param-subject-3]
     (-> this (.removeNotificationListeners $param-object-name-1 $param-array-of-integer-2 $param-subject-3))))
 
 (defn remove-notification-listener
@@ -91,7 +91,7 @@
   returns: The value of the retrieved attribute. - `java.lang.Object`
 
   throws: java.io.IOException - if a general communication exception occurred."
-  ([^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^javax.management.ObjectName $param-object-name-1 ^java.lang.String $param-string-2 ^javax.security.auth.Subject $param-subject-3]
+  (^java.lang.Object [^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^javax.management.ObjectName $param-object-name-1 ^java.lang.String $param-string-2 ^javax.security.auth.Subject $param-subject-3]
     (-> this (.getAttribute $param-object-name-1 $param-string-2 $param-subject-3))))
 
 (defn get-m-bean-info
@@ -104,7 +104,7 @@
    retrieval of all attributes and operations of this MBean. - `javax.management.MBeanInfo`
 
   throws: java.io.IOException - if a general communication exception occurred."
-  ([^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^javax.management.ObjectName $param-object-name-1 ^javax.security.auth.Subject $param-subject-2]
+  (^javax.management.MBeanInfo [^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^javax.management.ObjectName $param-object-name-1 ^javax.security.auth.Subject $param-subject-2]
     (-> this (.getMBeanInfo $param-object-name-1 $param-subject-2))))
 
 (defn create-m-bean
@@ -124,13 +124,13 @@
    getMBeanInfo(n).getClassName(). - `javax.management.ObjectInstance`
 
   throws: java.io.IOException - if a general communication exception occurred."
-  ([^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^java.lang.String $param-string-1 ^javax.management.ObjectName $param-object-name-2 ^javax.management.ObjectName $param-object-name-3 ^java.rmi.MarshalledObject $param-marshalled-object-4 ^java.lang.String[] $param-array-of-string-5 ^javax.security.auth.Subject $param-subject-6]
+  (^javax.management.ObjectInstance [^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^java.lang.String $param-string-1 ^javax.management.ObjectName $param-object-name-2 ^javax.management.ObjectName $param-object-name-3 ^java.rmi.MarshalledObject $param-marshalled-object-4 $param-array-of-string-5 ^javax.security.auth.Subject $param-subject-6]
     (-> this (.createMBean $param-string-1 $param-object-name-2 $param-object-name-3 $param-marshalled-object-4 $param-array-of-string-5 $param-subject-6)))
-  ([^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^java.lang.String $param-string-1 ^javax.management.ObjectName $param-object-name-2 ^java.rmi.MarshalledObject $param-marshalled-object-3 ^java.lang.String[] $param-array-of-string-4 ^javax.security.auth.Subject $param-subject-5]
+  (^javax.management.ObjectInstance [^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^java.lang.String $param-string-1 ^javax.management.ObjectName $param-object-name-2 ^java.rmi.MarshalledObject $param-marshalled-object-3 $param-array-of-string-4 ^javax.security.auth.Subject $param-subject-5]
     (-> this (.createMBean $param-string-1 $param-object-name-2 $param-marshalled-object-3 $param-array-of-string-4 $param-subject-5)))
-  ([^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^java.lang.String $param-string-1 ^javax.management.ObjectName $param-object-name-2 ^javax.management.ObjectName $param-object-name-3 ^javax.security.auth.Subject $param-subject-4]
+  (^javax.management.ObjectInstance [^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^java.lang.String $param-string-1 ^javax.management.ObjectName $param-object-name-2 ^javax.management.ObjectName $param-object-name-3 ^javax.security.auth.Subject $param-subject-4]
     (-> this (.createMBean $param-string-1 $param-object-name-2 $param-object-name-3 $param-subject-4)))
-  ([^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^java.lang.String $param-string-1 ^javax.management.ObjectName $param-object-name-2 ^javax.security.auth.Subject $param-subject-3]
+  (^javax.management.ObjectInstance [^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^java.lang.String $param-string-1 ^javax.management.ObjectName $param-object-name-2 ^javax.security.auth.Subject $param-subject-3]
     (-> this (.createMBean $param-string-1 $param-object-name-2 $param-subject-3))))
 
 (defn get-m-bean-count
@@ -141,7 +141,7 @@
   returns: the number of MBeans registered. - `java.lang.Integer`
 
   throws: java.io.IOException - if a general communication exception occurred."
-  ([^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^javax.security.auth.Subject $param-subject-1]
+  (^java.lang.Integer [^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^javax.security.auth.Subject $param-subject-1]
     (-> this (.getMBeanCount $param-subject-1))))
 
 (defn registered?
@@ -154,7 +154,7 @@
    server, false otherwise. - `boolean`
 
   throws: java.io.IOException - if a general communication exception occurred."
-  ([^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^javax.management.ObjectName $param-object-name-1 ^javax.security.auth.Subject $param-subject-2]
+  (^Boolean [^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^javax.management.ObjectName $param-object-name-1 ^javax.security.auth.Subject $param-subject-2]
     (-> this (.isRegistered $param-object-name-1 $param-subject-2))))
 
 (defn add-notification-listeners
@@ -169,7 +169,7 @@
    the parameters. - `java.lang.Integer[]`
 
   throws: java.io.IOException - if a general communication exception occurred."
-  ([^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^javax.management.ObjectName[] $param-array-of-object-name-1 ^java.rmi.MarshalledObject[] $param-array-of-marshalled-object-2 ^javax.security.auth.Subject[] $param-array-of-subject-3]
+  ([^javax.management.remote.rmi.RMIConnectionImpl_Stub this $param-array-of-object-name-1 $param-array-of-marshalled-object-2 $param-array-of-subject-3]
     (-> this (.addNotificationListeners $param-array-of-object-name-1 $param-array-of-marshalled-object-2 $param-array-of-subject-3))))
 
 (defn unregister-m-bean
@@ -190,7 +190,7 @@
   returns: the default domain. - `java.lang.String`
 
   throws: java.io.IOException - if a general communication exception occurred."
-  ([^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^javax.security.auth.Subject $param-subject-1]
+  (^java.lang.String [^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^javax.security.auth.Subject $param-subject-1]
     (-> this (.getDefaultDomain $param-subject-1))))
 
 (defn set-attribute
@@ -216,7 +216,7 @@
    getMBeanInfo(name).getClassName(). - `javax.management.ObjectInstance`
 
   throws: java.io.IOException - if a general communication exception occurred."
-  ([^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^javax.management.ObjectName $param-object-name-1 ^javax.security.auth.Subject $param-subject-2]
+  (^javax.management.ObjectInstance [^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^javax.management.ObjectName $param-object-name-1 ^javax.security.auth.Subject $param-subject-2]
     (-> this (.getObjectInstance $param-object-name-1 $param-subject-2))))
 
 (defn get-domains
@@ -243,7 +243,7 @@
   returns: the connection ID - `java.lang.String`
 
   throws: java.io.IOException - if a general communication exception occurred."
-  ([^javax.management.remote.rmi.RMIConnectionImpl_Stub this]
+  (^java.lang.String [^javax.management.remote.rmi.RMIConnectionImpl_Stub this]
     (-> this (.getConnectionId))))
 
 (defn set-attributes
@@ -257,7 +257,7 @@
    values. - `javax.management.AttributeList`
 
   throws: java.io.IOException - if a general communication exception occurred."
-  ([^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^javax.management.ObjectName $param-object-name-1 ^java.rmi.MarshalledObject $param-marshalled-object-2 ^javax.security.auth.Subject $param-subject-3]
+  (^javax.management.AttributeList [^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^javax.management.ObjectName $param-object-name-1 ^java.rmi.MarshalledObject $param-marshalled-object-2 ^javax.security.auth.Subject $param-subject-3]
     (-> this (.setAttributes $param-object-name-1 $param-marshalled-object-2 $param-subject-3))))
 
 (defn fetch-notifications
@@ -270,7 +270,7 @@
   returns: A NotificationResult. - `javax.management.remote.NotificationResult`
 
   throws: java.io.IOException - if a general communication exception occurred."
-  ([^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^Long $param-long-1 ^Integer $param-int-2 ^Long $param-long-3]
+  (^javax.management.remote.NotificationResult [^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^Long $param-long-1 ^Integer $param-int-2 ^Long $param-long-3]
     (-> this (.fetchNotifications $param-long-1 $param-int-2 $param-long-3))))
 
 (defn add-notification-listener
@@ -296,7 +296,7 @@
   returns: The list of the retrieved attributes. - `javax.management.AttributeList`
 
   throws: java.io.IOException - if a general communication exception occurred."
-  ([^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^javax.management.ObjectName $param-object-name-1 ^java.lang.String[] $param-array-of-string-2 ^javax.security.auth.Subject $param-subject-3]
+  (^javax.management.AttributeList [^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^javax.management.ObjectName $param-object-name-1 $param-array-of-string-2 ^javax.security.auth.Subject $param-subject-3]
     (-> this (.getAttributes $param-object-name-1 $param-array-of-string-2 $param-subject-3))))
 
 (defn instance-of?
@@ -310,6 +310,6 @@
    specified class according to the rules above, false otherwise. - `boolean`
 
   throws: java.io.IOException - if a general communication exception occurred."
-  ([^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^javax.management.ObjectName $param-object-name-1 ^java.lang.String $param-string-2 ^javax.security.auth.Subject $param-subject-3]
+  (^Boolean [^javax.management.remote.rmi.RMIConnectionImpl_Stub this ^javax.management.ObjectName $param-object-name-1 ^java.lang.String $param-string-2 ^javax.security.auth.Subject $param-subject-3]
     (-> this (.isInstanceOf $param-object-name-1 $param-string-2 $param-subject-3))))
 

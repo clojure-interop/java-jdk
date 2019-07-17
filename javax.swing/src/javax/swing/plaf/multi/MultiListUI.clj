@@ -18,7 +18,7 @@
   a - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent a]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent a]
     (MultiListUI/createUI a)))
 
 (defn install-ui
@@ -35,7 +35,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.awt.Dimension`"
-  ([^javax.swing.plaf.multi.MultiListUI this ^javax.swing.JComponent a]
+  (^java.awt.Dimension [^javax.swing.plaf.multi.MultiListUI this ^javax.swing.JComponent a]
     (-> this (.getMinimumSize a))))
 
 (defn get-maximum-size
@@ -45,7 +45,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.awt.Dimension`"
-  ([^javax.swing.plaf.multi.MultiListUI this ^javax.swing.JComponent a]
+  (^java.awt.Dimension [^javax.swing.plaf.multi.MultiListUI this ^javax.swing.JComponent a]
     (-> this (.getMaximumSize a))))
 
 (defn get-accessible-child
@@ -56,7 +56,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `javax.accessibility.Accessible`"
-  ([^javax.swing.plaf.multi.MultiListUI this ^javax.swing.JComponent a ^Integer b]
+  (^javax.accessibility.Accessible [^javax.swing.plaf.multi.MultiListUI this ^javax.swing.JComponent a ^Integer b]
     (-> this (.getAccessibleChild a b))))
 
 (defn get-u-is
@@ -84,7 +84,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `boolean`"
-  ([^javax.swing.plaf.multi.MultiListUI this ^javax.swing.JComponent a ^Integer b ^Integer c]
+  (^Boolean [^javax.swing.plaf.multi.MultiListUI this ^javax.swing.JComponent a ^Integer b ^Integer c]
     (-> this (.contains a b c))))
 
 (defn update
@@ -103,7 +103,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `int`"
-  ([^javax.swing.plaf.multi.MultiListUI this ^javax.swing.JList a ^java.awt.Point b]
+  (^Integer [^javax.swing.plaf.multi.MultiListUI this ^javax.swing.JList a ^java.awt.Point b]
     (-> this (.locationToIndex a b))))
 
 (defn get-accessible-children-count
@@ -113,7 +113,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `int`"
-  ([^javax.swing.plaf.multi.MultiListUI this ^javax.swing.JComponent a]
+  (^Integer [^javax.swing.plaf.multi.MultiListUI this ^javax.swing.JComponent a]
     (-> this (.getAccessibleChildrenCount a))))
 
 (defn paint
@@ -132,7 +132,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.awt.Point`"
-  ([^javax.swing.plaf.multi.MultiListUI this ^javax.swing.JList a ^Integer b]
+  (^java.awt.Point [^javax.swing.plaf.multi.MultiListUI this ^javax.swing.JList a ^Integer b]
     (-> this (.indexToLocation a b))))
 
 (defn get-cell-bounds
@@ -144,7 +144,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.awt.Rectangle`"
-  ([^javax.swing.plaf.multi.MultiListUI this ^javax.swing.JList a ^Integer b ^Integer c]
+  (^java.awt.Rectangle [^javax.swing.plaf.multi.MultiListUI this ^javax.swing.JList a ^Integer b ^Integer c]
     (-> this (.getCellBounds a b c))))
 
 (defn get-preferred-size
@@ -154,6 +154,6 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.awt.Dimension`"
-  ([^javax.swing.plaf.multi.MultiListUI this ^javax.swing.JComponent a]
+  (^java.awt.Dimension [^javax.swing.plaf.multi.MultiListUI this ^javax.swing.JComponent a]
     (-> this (.getPreferredSize a))))
 

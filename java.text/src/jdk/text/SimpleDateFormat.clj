@@ -373,14 +373,14 @@
   "Gets a copy of the date and time format symbols of this date format.
 
   returns: the date and time format symbols of this date format - `java.text.DateFormatSymbols`"
-  ([^java.text.SimpleDateFormat this]
+  (^java.text.DateFormatSymbols [^java.text.SimpleDateFormat this]
     (-> this (.getDateFormatSymbols))))
 
 (defn to-pattern
   "Returns a pattern string describing this date format.
 
   returns: a pattern string describing this date format. - `java.lang.String`"
-  ([^java.text.SimpleDateFormat this]
+  (^java.lang.String [^java.text.SimpleDateFormat this]
     (-> this (.toPattern))))
 
 (defn set-2-digit-year-start
@@ -406,7 +406,7 @@
   returns: AttributedCharacterIterator describing the formatted value. - `java.text.AttributedCharacterIterator`
 
   throws: java.lang.NullPointerException - if obj is null."
-  ([^java.text.SimpleDateFormat this ^java.lang.Object obj]
+  (^java.text.AttributedCharacterIterator [^java.text.SimpleDateFormat this ^java.lang.Object obj]
     (-> this (.formatToCharacterIterator obj))))
 
 (defn get-2-digit-year-start
@@ -415,7 +415,7 @@
 
   returns: the start of the 100-year period into which two digit years are
    parsed - `java.util.Date`"
-  ([^java.text.SimpleDateFormat this]
+  (^java.util.Date [^java.text.SimpleDateFormat this]
     (-> this (.get2DigitYearStart))))
 
 (defn apply-localized-pattern
@@ -432,7 +432,7 @@
    clones the format's date format symbols.
 
   returns: a clone of this SimpleDateFormat - `java.lang.Object`"
-  ([^java.text.SimpleDateFormat this]
+  (^java.lang.Object [^java.text.SimpleDateFormat this]
     (-> this (.clone))))
 
 (defn parse
@@ -465,14 +465,14 @@
            error, returns null. - `java.util.Date`
 
   throws: java.lang.NullPointerException - if text or pos is null."
-  ([^java.text.SimpleDateFormat this ^java.lang.String text ^java.text.ParsePosition pos]
+  (^java.util.Date [^java.text.SimpleDateFormat this ^java.lang.String text ^java.text.ParsePosition pos]
     (-> this (.parse text pos))))
 
 (defn hash-code
   "Returns the hash code value for this SimpleDateFormat object.
 
   returns: the hash code value for this SimpleDateFormat object. - `int`"
-  ([^java.text.SimpleDateFormat this]
+  (^Integer [^java.text.SimpleDateFormat this]
     (-> this (.hashCode))))
 
 (defn apply-pattern
@@ -501,7 +501,7 @@
 
   returns: true if the given object is equal to this
    SimpleDateFormat - `boolean`"
-  ([^java.text.SimpleDateFormat this ^java.lang.Object obj]
+  (^Boolean [^java.text.SimpleDateFormat this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn format
@@ -515,13 +515,13 @@
   returns: the formatted date-time string. - `java.lang.StringBuffer`
 
   throws: java.lang.NullPointerException - if the given date is null."
-  ([^java.text.SimpleDateFormat this ^java.util.Date date ^java.lang.StringBuffer to-append-to ^java.text.FieldPosition pos]
+  (^java.lang.StringBuffer [^java.text.SimpleDateFormat this ^java.util.Date date ^java.lang.StringBuffer to-append-to ^java.text.FieldPosition pos]
     (-> this (.format date to-append-to pos))))
 
 (defn to-localized-pattern
   "Returns a localized pattern string describing this date format.
 
   returns: a localized pattern string describing this date format. - `java.lang.String`"
-  ([^java.text.SimpleDateFormat this]
+  (^java.lang.String [^java.text.SimpleDateFormat this]
     (-> this (.toLocalizedPattern))))
 

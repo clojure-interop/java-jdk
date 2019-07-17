@@ -72,7 +72,7 @@
    Instant returns null
 
   returns: a query that can obtain the zone ID of a temporal, not null - `java.time.temporal.TemporalQuery<java.time.ZoneId>`"
-  ([]
+  (^java.time.temporal.TemporalQuery []
     (TemporalQueries/zoneId )))
 
 (defn *chronology
@@ -109,7 +109,7 @@
    exception if a chronology cannot be obtained.
 
   returns: a query that can obtain the chronology of a temporal, not null - `java.time.temporal.TemporalQuery<java.time.chrono.Chronology>`"
-  ([]
+  (^java.time.temporal.TemporalQuery []
     (TemporalQueries/chronology )))
 
 (defn *precision
@@ -144,7 +144,7 @@
    Instant returns NANOS
 
   returns: a query that can obtain the precision of a temporal, not null - `java.time.temporal.TemporalQuery<java.time.temporal.TemporalUnit>`"
-  ([]
+  (^java.time.temporal.TemporalQuery []
     (TemporalQueries/precision )))
 
 (defn *zone
@@ -164,7 +164,7 @@
    exception if a zone cannot be obtained.
 
   returns: a query that can obtain the zone ID or offset of a temporal, not null - `java.time.temporal.TemporalQuery<java.time.ZoneId>`"
-  ([]
+  (^java.time.temporal.TemporalQuery []
     (TemporalQueries/zone )))
 
 (defn *offset
@@ -185,7 +185,7 @@
    query will return null.
 
   returns: a query that can obtain the offset of a temporal, not null - `java.time.temporal.TemporalQuery<java.time.ZoneOffset>`"
-  ([]
+  (^java.time.temporal.TemporalQuery []
     (TemporalQueries/offset )))
 
 (defn *local-date
@@ -206,7 +206,7 @@
    query will return null.
 
   returns: a query that can obtain the date of a temporal, not null - `java.time.temporal.TemporalQuery<java.time.LocalDate>`"
-  ([]
+  (^java.time.temporal.TemporalQuery []
     (TemporalQueries/localDate )))
 
 (defn *local-time
@@ -227,6 +227,6 @@
    query will return null.
 
   returns: a query that can obtain the time of a temporal, not null - `java.time.temporal.TemporalQuery<java.time.LocalTime>`"
-  ([]
+  (^java.time.temporal.TemporalQuery []
     (TemporalQueries/localTime )))
 

@@ -133,14 +133,14 @@
   "Returns the bounds of the viewport's border.
 
   returns: a Rectangle object specifying the viewport border - `java.awt.Rectangle`"
-  ([^javax.swing.JScrollPane this]
+  (^java.awt.Rectangle [^javax.swing.JScrollPane this]
     (-> this (.getViewportBorderBounds))))
 
 (defn get-vertical-scroll-bar-policy
   "Returns the vertical scroll bar policy value.
 
   returns: the verticalScrollBarPolicy property - `int`"
-  ([^javax.swing.JScrollPane this]
+  (^Integer [^javax.swing.JScrollPane this]
     (-> this (.getVerticalScrollBarPolicy))))
 
 (defn set-layout
@@ -191,7 +191,7 @@
   "Returns the row header.
 
   returns: the rowHeader property - `javax.swing.JViewport`"
-  ([^javax.swing.JScrollPane this]
+  (^javax.swing.JViewport [^javax.swing.JScrollPane this]
     (-> this (.getRowHeader))))
 
 (defn get-ui-class-id
@@ -199,7 +199,7 @@
    render this component.
 
   returns: the string `ScrollPaneUI` - `java.lang.String`"
-  ([^javax.swing.JScrollPane this]
+  (^java.lang.String [^javax.swing.JScrollPane this]
     (-> this (.getUIClassID))))
 
 (defn validate-root?
@@ -209,7 +209,7 @@
    validated.
 
   returns: true - `boolean`"
-  ([^javax.swing.JScrollPane this]
+  (^Boolean [^javax.swing.JScrollPane this]
     (-> this (.isValidateRoot))))
 
 (defn set-vertical-scroll-bar
@@ -230,7 +230,7 @@
    create the horizontal scrollbar.
 
   returns: a JScrollBar with a horizontal orientation - `javax.swing.JScrollBar`"
-  ([^javax.swing.JScrollPane this]
+  (^javax.swing.JScrollBar [^javax.swing.JScrollPane this]
     (-> this (.createHorizontalScrollBar))))
 
 (defn set-row-header
@@ -255,7 +255,7 @@
    vertical scrollbar.
 
   returns: a JScrollBar with a vertical orientation - `javax.swing.JScrollBar`"
-  ([^javax.swing.JScrollPane this]
+  (^javax.swing.JScrollBar [^javax.swing.JScrollPane this]
     (-> this (.createVerticalScrollBar))))
 
 (defn set-ui
@@ -284,7 +284,7 @@
 
   returns: the ScrollPaneUI object that renders this
                             component - `javax.swing.plaf.ScrollPaneUI`"
-  ([^javax.swing.JScrollPane this]
+  (^javax.swing.plaf.ScrollPaneUI [^javax.swing.JScrollPane this]
     (-> this (.getUI))))
 
 (defn set-vertical-scroll-bar-policy
@@ -376,28 +376,28 @@
 
   returns: an AccessibleJScrollPane that serves as the
            AccessibleContext of this JScrollPane - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.JScrollPane this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.JScrollPane this]
     (-> this (.getAccessibleContext))))
 
 (defn get-viewport
   "Returns the current JViewport.
 
   returns: the viewport property - `javax.swing.JViewport`"
-  ([^javax.swing.JScrollPane this]
+  (^javax.swing.JViewport [^javax.swing.JScrollPane this]
     (-> this (.getViewport))))
 
 (defn get-horizontal-scroll-bar-policy
   "Returns the horizontal scroll bar policy value.
 
   returns: the horizontalScrollBarPolicy property - `int`"
-  ([^javax.swing.JScrollPane this]
+  (^Integer [^javax.swing.JScrollPane this]
     (-> this (.getHorizontalScrollBarPolicy))))
 
 (defn get-column-header
   "Returns the column header.
 
   returns: the columnHeader property - `javax.swing.JViewport`"
-  ([^javax.swing.JScrollPane this]
+  (^javax.swing.JViewport [^javax.swing.JScrollPane this]
     (-> this (.getColumnHeader))))
 
 (defn set-column-header-view
@@ -428,7 +428,7 @@
    vertical view position.
 
   returns: the verticalScrollBar property - `javax.swing.JScrollBar`"
-  ([^javax.swing.JScrollPane this]
+  (^javax.swing.JScrollBar [^javax.swing.JScrollPane this]
     (-> this (.getVerticalScrollBar))))
 
 (defn wheel-scrolling-enabled?
@@ -436,7 +436,7 @@
    mouse wheel.  Wheel scrolling is enabled by default.
 
   returns: `boolean`"
-  ([^javax.swing.JScrollPane this]
+  (^Boolean [^javax.swing.JScrollPane this]
     (-> this (.isWheelScrollingEnabled))))
 
 (defn update-ui
@@ -450,7 +450,7 @@
   "Returns the Border object that surrounds the viewport.
 
   returns: the viewportBorder property - `javax.swing.border.Border`"
-  ([^javax.swing.JScrollPane this]
+  (^javax.swing.border.Border [^javax.swing.JScrollPane this]
     (-> this (.getViewportBorder))))
 
 (defn set-column-header
@@ -481,7 +481,7 @@
    horizontal view position.
 
   returns: the horizontalScrollBar property - `javax.swing.JScrollBar`"
-  ([^javax.swing.JScrollPane this]
+  (^javax.swing.JScrollBar [^javax.swing.JScrollPane this]
     (-> this (.getHorizontalScrollBar))))
 
 (defn get-corner
@@ -502,6 +502,6 @@
   returns: the corner component (which may be null)
            identified by the given key, or null
            if the key is invalid - `java.awt.Component`"
-  ([^javax.swing.JScrollPane this ^java.lang.String key]
+  (^java.awt.Component [^javax.swing.JScrollPane this ^java.lang.String key]
     (-> this (.getCorner key))))
 

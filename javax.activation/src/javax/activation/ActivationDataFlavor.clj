@@ -34,21 +34,21 @@
   "Return the MIME type for this DataFlavor.
 
   returns: the MIME type - `java.lang.String`"
-  ([^javax.activation.ActivationDataFlavor this]
+  (^java.lang.String [^javax.activation.ActivationDataFlavor this]
     (-> this (.getMimeType))))
 
 (defn get-representation-class
   "Return the representation class.
 
   returns: the representation class - `java.lang.Class`"
-  ([^javax.activation.ActivationDataFlavor this]
+  (^java.lang.Class [^javax.activation.ActivationDataFlavor this]
     (-> this (.getRepresentationClass))))
 
 (defn get-human-presentable-name
   "Return the Human Presentable name.
 
   returns: the human presentable name - `java.lang.String`"
-  ([^javax.activation.ActivationDataFlavor this]
+  (^java.lang.String [^javax.activation.ActivationDataFlavor this]
     (-> this (.getHumanPresentableName))))
 
 (defn set-human-presentable-name
@@ -66,7 +66,7 @@
 
   returns: true if the MIME type and representation class
                             are the same - `boolean`"
-  ([^javax.activation.ActivationDataFlavor this ^java.awt.datatransfer.DataFlavor data-flavor]
+  (^Boolean [^javax.activation.ActivationDataFlavor this ^java.awt.datatransfer.DataFlavor data-flavor]
     (-> this (.equals data-flavor))))
 
 (defn mime-type-equal?
@@ -81,6 +81,6 @@
   mime-type - the MIME type - `java.lang.String`
 
   returns: true if the same MIME type - `boolean`"
-  ([^javax.activation.ActivationDataFlavor this ^java.lang.String mime-type]
+  (^Boolean [^javax.activation.ActivationDataFlavor this ^java.lang.String mime-type]
     (-> this (.isMimeTypeEqual mime-type))))
 

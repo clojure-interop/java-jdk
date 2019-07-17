@@ -14,7 +14,7 @@
    precision.
 
   returns: the width of this Dimension. - `double`"
-  ([^java.awt.geom.Dimension2D this]
+  (^Double [^java.awt.geom.Dimension2D this]
     (-> this (.getWidth))))
 
 (defn get-height
@@ -22,7 +22,7 @@
    precision.
 
   returns: the height of this Dimension. - `double`"
-  ([^java.awt.geom.Dimension2D this]
+  (^Double [^java.awt.geom.Dimension2D this]
     (-> this (.getHeight))))
 
 (defn set-size
@@ -45,6 +45,6 @@
   returns: a clone of this instance. - `java.lang.Object`
 
   throws: java.lang.OutOfMemoryError - if there is not enough memory."
-  ([^java.awt.geom.Dimension2D this]
+  (^java.lang.Object [^java.awt.geom.Dimension2D this]
     (-> this (.clone))))
 

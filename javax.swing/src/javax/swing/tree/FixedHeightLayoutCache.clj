@@ -26,7 +26,7 @@
 
   returns: the row where the last item in path is visible or -1
            if any elements in path aren't currently visible - `int`"
-  ([^javax.swing.tree.FixedHeightLayoutCache this ^javax.swing.tree.TreePath path]
+  (^Integer [^javax.swing.tree.FixedHeightLayoutCache this ^javax.swing.tree.TreePath path]
     (-> this (.getRowForPath path))))
 
 (defn tree-nodes-inserted
@@ -60,14 +60,14 @@
   path - `javax.swing.tree.TreePath`
 
   returns: `boolean`"
-  ([^javax.swing.tree.FixedHeightLayoutCache this ^javax.swing.tree.TreePath path]
+  (^Boolean [^javax.swing.tree.FixedHeightLayoutCache this ^javax.swing.tree.TreePath path]
     (-> this (.isExpanded path))))
 
 (defn get-row-count
   "Returns the number of visible rows.
 
   returns: the number of rows being displayed - `int`"
-  ([^javax.swing.tree.FixedHeightLayoutCache this]
+  (^Integer [^javax.swing.tree.FixedHeightLayoutCache this]
     (-> this (.getRowCount))))
 
 (defn set-root-visible
@@ -84,7 +84,7 @@
   path - the path being queried - `javax.swing.tree.TreePath`
 
   returns: the number of visible children for the specified path - `int`"
-  ([^javax.swing.tree.FixedHeightLayoutCache this ^javax.swing.tree.TreePath path]
+  (^Integer [^javax.swing.tree.FixedHeightLayoutCache this ^javax.swing.tree.TreePath path]
     (-> this (.getVisibleChildCount path))))
 
 (defn tree-nodes-changed
@@ -119,7 +119,7 @@
   path - the starting location for the enumeration - `javax.swing.tree.TreePath`
 
   returns: the Enumerator starting at the desired location - `java.util.Enumeration<javax.swing.tree.TreePath>`"
-  ([^javax.swing.tree.FixedHeightLayoutCache this ^javax.swing.tree.TreePath path]
+  (^java.util.Enumeration [^javax.swing.tree.FixedHeightLayoutCache this ^javax.swing.tree.TreePath path]
     (-> this (.getVisiblePathsFrom path))))
 
 (defn tree-structure-changed
@@ -141,7 +141,7 @@
   path - the path being queried - `javax.swing.tree.TreePath`
 
   returns: true if the path is expanded and visible, false otherwise - `boolean`"
-  ([^javax.swing.tree.FixedHeightLayoutCache this ^javax.swing.tree.TreePath path]
+  (^Boolean [^javax.swing.tree.FixedHeightLayoutCache this ^javax.swing.tree.TreePath path]
     (-> this (.getExpandedState path))))
 
 (defn set-row-height
@@ -159,7 +159,7 @@
   row - the row being queried - `int`
 
   returns: the TreePath for the given row - `javax.swing.tree.TreePath`"
-  ([^javax.swing.tree.FixedHeightLayoutCache this ^Integer row]
+  (^javax.swing.tree.TreePath [^javax.swing.tree.FixedHeightLayoutCache this ^Integer row]
     (-> this (.getPathForRow row))))
 
 (defn get-bounds
@@ -169,7 +169,7 @@
   place-in - a Rectangle object giving the available space - `java.awt.Rectangle`
 
   returns: a Rectangle object specifying the space to be used - `java.awt.Rectangle`"
-  ([^javax.swing.tree.FixedHeightLayoutCache this ^javax.swing.tree.TreePath path ^java.awt.Rectangle place-in]
+  (^java.awt.Rectangle [^javax.swing.tree.FixedHeightLayoutCache this ^javax.swing.tree.TreePath path ^java.awt.Rectangle place-in]
     (-> this (.getBounds path place-in))))
 
 (defn set-expanded-state
@@ -205,6 +205,6 @@
   y - the vertical component of the desired location - `int`
 
   returns: the TreePath closest to the specified point - `javax.swing.tree.TreePath`"
-  ([^javax.swing.tree.FixedHeightLayoutCache this ^Integer x ^Integer y]
+  (^javax.swing.tree.TreePath [^javax.swing.tree.FixedHeightLayoutCache this ^Integer x ^Integer y]
     (-> this (.getPathClosestTo x y))))
 

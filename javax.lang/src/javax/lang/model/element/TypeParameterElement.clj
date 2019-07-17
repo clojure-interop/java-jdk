@@ -11,7 +11,7 @@
 
   returns: the generic class, interface, method, or constructor that is
    parameterized by this type parameter - `javax.lang.model.element.Element`"
-  ([^javax.lang.model.element.TypeParameterElement this]
+  (^javax.lang.model.element.Element [^javax.lang.model.element.TypeParameterElement this]
     (-> this (.getGenericElement))))
 
 (defn get-bounds
@@ -30,6 +30,6 @@
   "Returns the generic element of this type parameter.
 
   returns: the generic element of this type parameter - `javax.lang.model.element.Element`"
-  ([^javax.lang.model.element.TypeParameterElement this]
+  (^javax.lang.model.element.Element [^javax.lang.model.element.TypeParameterElement this]
     (-> this (.getEnclosingElement))))
 

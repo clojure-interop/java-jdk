@@ -44,14 +44,14 @@
   "Returns the height of the display, in pixels.
 
   returns: the height of the display, in pixels - `int`"
-  ([^java.awt.DisplayMode this]
+  (^Integer [^java.awt.DisplayMode this]
     (-> this (.getHeight))))
 
 (defn get-width
   "Returns the width of the display, in pixels.
 
   returns: the width of the display, in pixels - `int`"
-  ([^java.awt.DisplayMode this]
+  (^Integer [^java.awt.DisplayMode this]
     (-> this (.getWidth))))
 
 (defn get-bit-depth
@@ -60,7 +60,7 @@
    this display mode.
 
   returns: the bit depth of the display, in bits per pixel. - `int`"
-  ([^java.awt.DisplayMode this]
+  (^Integer [^java.awt.DisplayMode this]
     (-> this (.getBitDepth))))
 
 (defn get-refresh-rate
@@ -68,7 +68,7 @@
    REFRESH_RATE_UNKNOWN if the information is not available.
 
   returns: the refresh rate of the display, in hertz. - `int`"
-  ([^java.awt.DisplayMode this]
+  (^Integer [^java.awt.DisplayMode this]
     (-> this (.getRefreshRate))))
 
 (defn equals
@@ -77,7 +77,7 @@
   dm - `java.awt.DisplayMode`
 
   returns: whether the two display modes are equal - `boolean`"
-  ([^java.awt.DisplayMode this ^java.awt.DisplayMode dm]
+  (^Boolean [^java.awt.DisplayMode this ^java.awt.DisplayMode dm]
     (-> this (.equals dm))))
 
 (defn hash-code
@@ -112,6 +112,6 @@
    Java™ programming language.)
 
   returns: a hash code value for this object. - `int`"
-  ([^java.awt.DisplayMode this]
+  (^Integer [^java.awt.DisplayMode this]
     (-> this (.hashCode))))
 

@@ -24,20 +24,20 @@
   "Returns the private value x.
 
   returns: the private value x - `java.math.BigInteger`"
-  ([^javax.crypto.spec.DHPrivateKeySpec this]
+  (^java.math.BigInteger [^javax.crypto.spec.DHPrivateKeySpec this]
     (-> this (.getX))))
 
 (defn get-p
   "Returns the prime modulus p.
 
   returns: the prime modulus p - `java.math.BigInteger`"
-  ([^javax.crypto.spec.DHPrivateKeySpec this]
+  (^java.math.BigInteger [^javax.crypto.spec.DHPrivateKeySpec this]
     (-> this (.getP))))
 
 (defn get-g
   "Returns the base generator g.
 
   returns: the base generator g - `java.math.BigInteger`"
-  ([^javax.crypto.spec.DHPrivateKeySpec this]
+  (^java.math.BigInteger [^javax.crypto.spec.DHPrivateKeySpec this]
     (-> this (.getG))))
 

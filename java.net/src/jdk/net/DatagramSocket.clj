@@ -118,7 +118,7 @@
   returns: the value of the SO_SNDBUF option for this DatagramSocket - `int`
 
   throws: java.net.SocketException - if there is an error in the underlying protocol, such as an UDP error."
-  ([^java.net.DatagramSocket this]
+  (^Integer [^java.net.DatagramSocket this]
     (-> this (.getSendBufferSize))))
 
 (defn get-local-port
@@ -128,7 +128,7 @@
   returns: the port number on the local host to which this socket is bound,
                   -1 if the socket is closed, or
                   0 if it is not bound yet. - `int`"
-  ([^java.net.DatagramSocket this]
+  (^Integer [^java.net.DatagramSocket this]
     (-> this (.getLocalPort))))
 
 (defn set-so-timeout
@@ -229,7 +229,7 @@
    after the socket is closed.
 
   returns: true if the socket successfully connected to a server - `boolean`"
-  ([^java.net.DatagramSocket this]
+  (^Boolean [^java.net.DatagramSocket this]
     (-> this (.isConnected))))
 
 (defn get-so-timeout
@@ -239,7 +239,7 @@
   returns: the setting for SO_TIMEOUT - `int`
 
   throws: java.net.SocketException - if there is an error in the underlying protocol, such as an UDP error."
-  ([^java.net.DatagramSocket this]
+  (^Integer [^java.net.DatagramSocket this]
     (-> this (.getSoTimeout))))
 
 (defn get-remote-socket-address
@@ -253,7 +253,7 @@
   returns: a SocketAddress representing the remote
            endpoint of this socket, or null if it is
            not connected yet. - `java.net.SocketAddress`"
-  ([^java.net.DatagramSocket this]
+  (^java.net.SocketAddress [^java.net.DatagramSocket this]
     (-> this (.getRemoteSocketAddress))))
 
 (defn connect
@@ -300,7 +300,7 @@
   "Returns whether the socket is closed or not.
 
   returns: true if the socket has been closed - `boolean`"
-  ([^java.net.DatagramSocket this]
+  (^Boolean [^java.net.DatagramSocket this]
     (-> this (.isClosed))))
 
 (defn get-reuse-address?
@@ -309,7 +309,7 @@
   returns: a boolean indicating whether or not SO_REUSEADDR is enabled. - `boolean`
 
   throws: java.net.SocketException - if there is an error in the underlying protocol, such as an UDP error."
-  ([^java.net.DatagramSocket this]
+  (^Boolean [^java.net.DatagramSocket this]
     (-> this (.getReuseAddress))))
 
 (defn set-send-buffer-size
@@ -343,7 +343,7 @@
 
   returns: a SocketAddress representing the local endpoint of this
            socket, or null if it is closed or not bound yet. - `java.net.SocketAddress`"
-  ([^java.net.DatagramSocket this]
+  (^java.net.SocketAddress [^java.net.DatagramSocket this]
     (-> this (.getLocalSocketAddress))))
 
 (defn get-local-address
@@ -361,7 +361,7 @@
             address if either the socket is not bound, or
             the security manager checkConnect
             method does not allow the operation - `java.net.InetAddress`"
-  ([^java.net.DatagramSocket this]
+  (^java.net.InetAddress [^java.net.DatagramSocket this]
     (-> this (.getLocalAddress))))
 
 (defn close
@@ -381,7 +381,7 @@
   returns: a boolean indicating whether or not SO_BROADCAST is enabled. - `boolean`
 
   throws: java.net.SocketException - if there is an error in the underlying protocol, such as an UDP error."
-  ([^java.net.DatagramSocket this]
+  (^Boolean [^java.net.DatagramSocket this]
     (-> this (.getBroadcast))))
 
 (defn get-receive-buffer-size
@@ -391,7 +391,7 @@
   returns: the value of the SO_RCVBUF option for this DatagramSocket - `int`
 
   throws: java.net.SocketException - if there is an error in the underlying protocol, such as an UDP error."
-  ([^java.net.DatagramSocket this]
+  (^Integer [^java.net.DatagramSocket this]
     (-> this (.getReceiveBufferSize))))
 
 (defn get-traffic-class
@@ -407,7 +407,7 @@
   returns: the traffic class or type-of-service already set - `int`
 
   throws: java.net.SocketException - if there is an error obtaining the traffic class or type-of-service value."
-  ([^java.net.DatagramSocket this]
+  (^Integer [^java.net.DatagramSocket this]
     (-> this (.getTrafficClass))))
 
 (defn set-receive-buffer-size
@@ -444,7 +444,7 @@
    after the socket is closed.
 
   returns: the port number to which this socket is connected. - `int`"
-  ([^java.net.DatagramSocket this]
+  (^Integer [^java.net.DatagramSocket this]
     (-> this (.getPort))))
 
 (defn bound?
@@ -455,7 +455,7 @@
    after the socket is closed.
 
   returns: true if the socket successfully bound to an address - `boolean`"
-  ([^java.net.DatagramSocket this]
+  (^Boolean [^java.net.DatagramSocket this]
     (-> this (.isBound))))
 
 (defn set-broadcast
@@ -480,7 +480,7 @@
 
   returns: the datagram channel associated with this datagram socket,
             or null if this socket was not created for a channel - `java.nio.channels.DatagramChannel`"
-  ([^java.net.DatagramSocket this]
+  (^java.nio.channels.DatagramChannel [^java.net.DatagramSocket this]
     (-> this (.getChannel))))
 
 (defn receive
@@ -513,6 +513,6 @@
    after the socket is closed.
 
   returns: the address to which this socket is connected. - `java.net.InetAddress`"
-  ([^java.net.DatagramSocket this]
+  (^java.net.InetAddress [^java.net.DatagramSocket this]
     (-> this (.getInetAddress))))
 

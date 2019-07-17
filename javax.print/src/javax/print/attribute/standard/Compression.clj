@@ -65,6 +65,6 @@
    name is `compression`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.Compression this]
+  (^java.lang.String [^javax.print.attribute.standard.Compression this]
     (-> this (.getName))))
 

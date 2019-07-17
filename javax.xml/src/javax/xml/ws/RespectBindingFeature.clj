@@ -73,6 +73,6 @@
   "Get the unique identifier for this WebServiceFeature.
 
   returns: the unique identifier for this feature. - `java.lang.String`"
-  ([^javax.xml.ws.RespectBindingFeature this]
+  (^java.lang.String [^javax.xml.ws.RespectBindingFeature this]
     (-> this (.getID))))
 

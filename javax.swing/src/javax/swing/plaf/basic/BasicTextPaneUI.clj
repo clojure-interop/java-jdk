@@ -25,7 +25,7 @@
   c - the JTextPane object - `javax.swing.JComponent`
 
   returns: the UI - `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent c]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent c]
     (BasicTextPaneUI/createUI c)))
 
 (defn install-ui

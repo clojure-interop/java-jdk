@@ -88,9 +88,9 @@
   returns: A new asynchronous socket channel - `java.nio.channels.AsynchronousSocketChannel`
 
   throws: java.nio.channels.ShutdownChannelGroupException - If the channel group is shutdown"
-  ([^java.nio.channels.AsynchronousChannelGroup group]
+  (^java.nio.channels.AsynchronousSocketChannel [^java.nio.channels.AsynchronousChannelGroup group]
     (AsynchronousSocketChannel/open group))
-  ([]
+  (^java.nio.channels.AsynchronousSocketChannel []
     (AsynchronousSocketChannel/open )))
 
 (defn shutdown-output
@@ -105,7 +105,7 @@
   returns: The channel - `java.nio.channels.AsynchronousSocketChannel`
 
   throws: java.nio.channels.NotYetConnectedException - If this channel is not yet connected"
-  ([^java.nio.channels.AsynchronousSocketChannel this]
+  (^java.nio.channels.AsynchronousSocketChannel [^java.nio.channels.AsynchronousSocketChannel this]
     (-> this (.shutdownOutput))))
 
 (defn bind
@@ -116,7 +116,7 @@
   returns: This channel - `java.nio.channels.AsynchronousSocketChannel`
 
   throws: java.nio.channels.ConnectionPendingException - If a connection operation is already in progress on this channel"
-  ([^java.nio.channels.AsynchronousSocketChannel this ^java.net.SocketAddress local]
+  (^java.nio.channels.AsynchronousSocketChannel [^java.nio.channels.AsynchronousSocketChannel this ^java.net.SocketAddress local]
     (-> this (.bind local))))
 
 (defn get-remote-address
@@ -129,7 +129,7 @@
             connected - `java.net.SocketAddress`
 
   throws: java.nio.channels.ClosedChannelException - If the channel is closed"
-  ([^java.nio.channels.AsynchronousSocketChannel this]
+  (^java.net.SocketAddress [^java.nio.channels.AsynchronousSocketChannel this]
     (-> this (.getRemoteAddress))))
 
 (defn read
@@ -188,20 +188,20 @@
   returns: `<A> void`
 
   throws: java.lang.IndexOutOfBoundsException - If the pre-conditions for the offset and length parameter aren't met"
-  ([^java.nio.channels.AsynchronousSocketChannel this ^java.nio.ByteBuffer[] dsts ^Integer offset ^Integer length ^Long timeout ^java.util.concurrent.TimeUnit unit attachment handler]
+  ([^java.nio.channels.AsynchronousSocketChannel this dsts ^Integer offset ^Integer length ^Long timeout ^java.util.concurrent.TimeUnit unit attachment handler]
     (-> this (.read dsts offset length timeout unit attachment handler)))
   ([^java.nio.channels.AsynchronousSocketChannel this ^java.nio.ByteBuffer dst ^Long timeout ^java.util.concurrent.TimeUnit unit attachment handler]
     (-> this (.read dst timeout unit attachment handler)))
   ([^java.nio.channels.AsynchronousSocketChannel this ^java.nio.ByteBuffer dst attachment handler]
     (-> this (.read dst attachment handler)))
-  ([^java.nio.channels.AsynchronousSocketChannel this ^java.nio.ByteBuffer dst]
+  (^java.util.concurrent.Future [^java.nio.channels.AsynchronousSocketChannel this ^java.nio.ByteBuffer dst]
     (-> this (.read dst))))
 
 (defn provider
   "Returns the provider that created this channel.
 
   returns: The provider that created this channel - `java.nio.channels.spi.AsynchronousChannelProvider`"
-  ([^java.nio.channels.AsynchronousSocketChannel this]
+  (^java.nio.channels.spi.AsynchronousChannelProvider [^java.nio.channels.AsynchronousSocketChannel this]
     (-> this (.provider))))
 
 (defn connect
@@ -226,7 +226,7 @@
   throws: java.nio.channels.UnresolvedAddressException - If the given remote address is not fully resolved"
   ([^java.nio.channels.AsynchronousSocketChannel this ^java.net.SocketAddress remote attachment handler]
     (-> this (.connect remote attachment handler)))
-  ([^java.nio.channels.AsynchronousSocketChannel this ^java.net.SocketAddress remote]
+  (^java.util.concurrent.Future [^java.nio.channels.AsynchronousSocketChannel this ^java.net.SocketAddress remote]
     (-> this (.connect remote))))
 
 (defn get-local-address
@@ -248,7 +248,7 @@
             channel's socket is not bound - `java.net.SocketAddress`
 
   throws: java.nio.channels.ClosedChannelException - If the channel is closed"
-  ([^java.nio.channels.AsynchronousSocketChannel this]
+  (^java.net.SocketAddress [^java.nio.channels.AsynchronousSocketChannel this]
     (-> this (.getLocalAddress))))
 
 (defn set-option
@@ -277,7 +277,7 @@
   returns: The channel - `java.nio.channels.AsynchronousSocketChannel`
 
   throws: java.nio.channels.NotYetConnectedException - If this channel is not yet connected"
-  ([^java.nio.channels.AsynchronousSocketChannel this]
+  (^java.nio.channels.AsynchronousSocketChannel [^java.nio.channels.AsynchronousSocketChannel this]
     (-> this (.shutdownInput))))
 
 (defn write
@@ -333,12 +333,12 @@
   returns: `<A> void`
 
   throws: java.lang.IndexOutOfBoundsException - If the pre-conditions for the offset and length parameter aren't met"
-  ([^java.nio.channels.AsynchronousSocketChannel this ^java.nio.ByteBuffer[] srcs ^Integer offset ^Integer length ^Long timeout ^java.util.concurrent.TimeUnit unit attachment handler]
+  ([^java.nio.channels.AsynchronousSocketChannel this srcs ^Integer offset ^Integer length ^Long timeout ^java.util.concurrent.TimeUnit unit attachment handler]
     (-> this (.write srcs offset length timeout unit attachment handler)))
   ([^java.nio.channels.AsynchronousSocketChannel this ^java.nio.ByteBuffer src ^Long timeout ^java.util.concurrent.TimeUnit unit attachment handler]
     (-> this (.write src timeout unit attachment handler)))
   ([^java.nio.channels.AsynchronousSocketChannel this ^java.nio.ByteBuffer src attachment handler]
     (-> this (.write src attachment handler)))
-  ([^java.nio.channels.AsynchronousSocketChannel this ^java.nio.ByteBuffer src]
+  (^java.util.concurrent.Future [^java.nio.channels.AsynchronousSocketChannel this ^java.nio.ByteBuffer src]
     (-> this (.write src))))
 

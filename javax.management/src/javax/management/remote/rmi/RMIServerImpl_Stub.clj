@@ -15,7 +15,7 @@
   returns: a string with the format described here. - `java.lang.String`
 
   throws: java.rmi.RemoteException - if there is a communication exception during the remote method call."
-  ([^javax.management.remote.rmi.RMIServerImpl_Stub this]
+  (^java.lang.String [^javax.management.remote.rmi.RMIServerImpl_Stub this]
     (-> this (.getVersion))))
 
 (defn new-client
@@ -26,6 +26,6 @@
   returns: the newly-created connection object. - `javax.management.remote.rmi.RMIConnection`
 
   throws: java.io.IOException - if the new client object cannot be created or exported, or if there is a communication exception during the remote method call."
-  ([^javax.management.remote.rmi.RMIServerImpl_Stub this ^java.lang.Object $param-object-1]
+  (^javax.management.remote.rmi.RMIConnection [^javax.management.remote.rmi.RMIServerImpl_Stub this ^java.lang.Object $param-object-1]
     (-> this (.newClient $param-object-1))))
 

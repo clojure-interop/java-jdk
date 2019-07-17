@@ -87,7 +87,7 @@
   "Obtains the timing division type for this sequence.
 
   returns: the division type (PPQ or one of the SMPTE types) - `float`"
-  ([^javax.sound.midi.Sequence this]
+  (^Float [^javax.sound.midi.Sequence this]
     (-> this (.getDivisionType))))
 
 (defn get-resolution
@@ -96,7 +96,7 @@
    For SMTPE timing, the resolution is specified in ticks per frame.
 
   returns: the number of ticks per beat (PPQ) or per frame (SMPTE) - `int`"
-  ([^javax.sound.midi.Sequence this]
+  (^Integer [^javax.sound.midi.Sequence this]
     (-> this (.getResolution))))
 
 (defn create-track
@@ -107,7 +107,7 @@
    removed from the sequence using deleteTrack(javax.sound.midi.Track).
 
   returns: the newly created track - `javax.sound.midi.Track`"
-  ([^javax.sound.midi.Sequence this]
+  (^javax.sound.midi.Track [^javax.sound.midi.Sequence this]
     (-> this (.createTrack))))
 
 (defn delete-track
@@ -117,7 +117,7 @@
 
   returns: true if the track existed in the track and was removed,
    otherwise false. - `boolean`"
-  ([^javax.sound.midi.Sequence this ^javax.sound.midi.Track track]
+  (^Boolean [^javax.sound.midi.Sequence this ^javax.sound.midi.Track track]
     (-> this (.deleteTrack track))))
 
 (defn get-tracks
@@ -132,14 +132,14 @@
   "Obtains the duration of this sequence, expressed in microseconds.
 
   returns: this sequence's duration in microseconds. - `long`"
-  ([^javax.sound.midi.Sequence this]
+  (^Long [^javax.sound.midi.Sequence this]
     (-> this (.getMicrosecondLength))))
 
 (defn get-tick-length
   "Obtains the duration of this sequence, expressed in MIDI ticks.
 
   returns: this sequence's length in ticks - `long`"
-  ([^javax.sound.midi.Sequence this]
+  (^Long [^javax.sound.midi.Sequence this]
     (-> this (.getTickLength))))
 
 (defn get-patch-list

@@ -28,7 +28,7 @@
   are-new - `boolean[]`
   old-lead-selection-path - `javax.swing.tree.TreePath`
   new-lead-selection-path - `javax.swing.tree.TreePath`"
-  ([^java.lang.Object source ^javax.swing.tree.TreePath[] paths are-new ^javax.swing.tree.TreePath old-lead-selection-path ^javax.swing.tree.TreePath new-lead-selection-path]
+  ([^java.lang.Object source paths are-new ^javax.swing.tree.TreePath old-lead-selection-path ^javax.swing.tree.TreePath new-lead-selection-path]
     (new TreeSelectionEvent source paths are-new old-lead-selection-path new-lead-selection-path)))
 
 (defn get-paths
@@ -43,7 +43,7 @@
   "Returns the first path element.
 
   returns: `javax.swing.tree.TreePath`"
-  ([^javax.swing.event.TreeSelectionEvent this]
+  (^javax.swing.tree.TreePath [^javax.swing.event.TreeSelectionEvent this]
     (-> this (.getPath))))
 
 (defn added-path?
@@ -61,23 +61,23 @@
            false otherwise - `boolean`
 
   throws: java.lang.IllegalArgumentException - if path is not contained in getPaths"
-  ([^javax.swing.event.TreeSelectionEvent this ^javax.swing.tree.TreePath path]
+  (^Boolean [^javax.swing.event.TreeSelectionEvent this ^javax.swing.tree.TreePath path]
     (-> this (.isAddedPath path)))
-  ([^javax.swing.event.TreeSelectionEvent this]
+  (^Boolean [^javax.swing.event.TreeSelectionEvent this]
     (-> this (.isAddedPath))))
 
 (defn get-old-lead-selection-path
   "Returns the path that was previously the lead path.
 
   returns: `javax.swing.tree.TreePath`"
-  ([^javax.swing.event.TreeSelectionEvent this]
+  (^javax.swing.tree.TreePath [^javax.swing.event.TreeSelectionEvent this]
     (-> this (.getOldLeadSelectionPath))))
 
 (defn get-new-lead-selection-path
   "Returns the current lead path.
 
   returns: `javax.swing.tree.TreePath`"
-  ([^javax.swing.event.TreeSelectionEvent this]
+  (^javax.swing.tree.TreePath [^javax.swing.event.TreeSelectionEvent this]
     (-> this (.getNewLeadSelectionPath))))
 
 (defn clone-with-source
@@ -86,6 +86,6 @@
   new-source - `java.lang.Object`
 
   returns: `java.lang.Object`"
-  ([^javax.swing.event.TreeSelectionEvent this ^java.lang.Object new-source]
+  (^java.lang.Object [^javax.swing.event.TreeSelectionEvent this ^java.lang.Object new-source]
     (-> this (.cloneWithSource new-source))))
 

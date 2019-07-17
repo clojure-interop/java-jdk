@@ -124,7 +124,7 @@
                     LoginModule should be ignored. - `boolean`
 
   throws: javax.security.auth.login.LoginException - if the authentication fails"
-  ([^javax.security.auth.spi.LoginModule this]
+  (^Boolean [^javax.security.auth.spi.LoginModule this]
     (-> this (.login))))
 
 (defn commit
@@ -147,7 +147,7 @@
                     LoginModule should be ignored. - `boolean`
 
   throws: javax.security.auth.login.LoginException - if the commit fails"
-  ([^javax.security.auth.spi.LoginModule this]
+  (^Boolean [^javax.security.auth.spi.LoginModule this]
     (-> this (.commit))))
 
 (defn abort
@@ -167,7 +167,7 @@
                     LoginModule should be ignored. - `boolean`
 
   throws: javax.security.auth.login.LoginException - if the abort fails"
-  ([^javax.security.auth.spi.LoginModule this]
+  (^Boolean [^javax.security.auth.spi.LoginModule this]
     (-> this (.abort))))
 
 (defn logout
@@ -180,6 +180,6 @@
                     LoginModule should be ignored. - `boolean`
 
   throws: javax.security.auth.login.LoginException - if the logout fails"
-  ([^javax.security.auth.spi.LoginModule this]
+  (^Boolean [^javax.security.auth.spi.LoginModule this]
     (-> this (.logout))))
 

@@ -43,6 +43,6 @@
   returns: the enum constant with the specified name - `java.awt.MultipleGradientPaint.ColorSpaceType`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^java.awt.MultipleGradientPaint.ColorSpaceType [^java.lang.String name]
     (MultipleGradientPaint$ColorSpaceType/valueOf name)))
 

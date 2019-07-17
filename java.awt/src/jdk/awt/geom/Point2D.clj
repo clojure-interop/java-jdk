@@ -19,7 +19,7 @@
 
   returns: the square of the distance between the two
    sets of specified coordinates. - `double`"
-  ([^Double x-1 ^Double y-1 ^Double x-2 ^Double y-2]
+  (^Double [^Double x-1 ^Double y-1 ^Double x-2 ^Double y-2]
     (Point2D/distanceSq x-1 y-1 x-2 y-2)))
 
 (defn *distance
@@ -32,7 +32,7 @@
 
   returns: the distance between the two sets of specified
    coordinates. - `double`"
-  ([^Double x-1 ^Double y-1 ^Double x-2 ^Double y-2]
+  (^Double [^Double x-1 ^Double y-1 ^Double x-2 ^Double y-2]
     (Point2D/distance x-1 y-1 x-2 y-2)))
 
 (defn get-x
@@ -40,7 +40,7 @@
    double precision.
 
   returns: the X coordinate of this Point2D. - `double`"
-  ([^java.awt.geom.Point2D this]
+  (^Double [^java.awt.geom.Point2D this]
     (-> this (.getX))))
 
 (defn get-y
@@ -48,7 +48,7 @@
    double precision.
 
   returns: the Y coordinate of this Point2D. - `double`"
-  ([^java.awt.geom.Point2D this]
+  (^Double [^java.awt.geom.Point2D this]
     (-> this (.getY))))
 
 (defn set-location
@@ -71,9 +71,9 @@
 
   returns: the square of the distance between this
    Point2D and the specified point. - `double`"
-  ([^java.awt.geom.Point2D this ^Double px ^Double py]
+  (^Double [^java.awt.geom.Point2D this ^Double px ^Double py]
     (-> this (.distanceSq px py)))
-  ([^java.awt.geom.Point2D this ^java.awt.geom.Point2D pt]
+  (^Double [^java.awt.geom.Point2D this ^java.awt.geom.Point2D pt]
     (-> this (.distanceSq pt))))
 
 (defn distance
@@ -85,9 +85,9 @@
 
   returns: the distance between this Point2D
    and a specified point. - `double`"
-  ([^java.awt.geom.Point2D this ^Double px ^Double py]
+  (^Double [^java.awt.geom.Point2D this ^Double px ^Double py]
     (-> this (.distance px py)))
-  ([^java.awt.geom.Point2D this ^java.awt.geom.Point2D pt]
+  (^Double [^java.awt.geom.Point2D this ^java.awt.geom.Point2D pt]
     (-> this (.distance pt))))
 
 (defn clone
@@ -97,14 +97,14 @@
   returns: a clone of this instance. - `java.lang.Object`
 
   throws: java.lang.OutOfMemoryError - if there is not enough memory."
-  ([^java.awt.geom.Point2D this]
+  (^java.lang.Object [^java.awt.geom.Point2D this]
     (-> this (.clone))))
 
 (defn hash-code
   "Returns the hashcode for this Point2D.
 
   returns: a hash code for this Point2D. - `int`"
-  ([^java.awt.geom.Point2D this]
+  (^Integer [^java.awt.geom.Point2D this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -118,6 +118,6 @@
   returns: true if the object to be compared is
            an instance of Point2D and has
            the same values; false otherwise. - `boolean`"
-  ([^java.awt.geom.Point2D this ^java.lang.Object obj]
+  (^Boolean [^java.awt.geom.Point2D this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

@@ -25,14 +25,14 @@
   "Retrieves the attribute ID of the sort key.
 
   returns: The non-null Attribute ID of the sort key. - `java.lang.String`"
-  ([^javax.naming.ldap.SortKey this]
+  (^java.lang.String [^javax.naming.ldap.SortKey this]
     (-> this (.getAttributeID))))
 
 (defn ascending?
   "Determines the sort order.
 
   returns: true if the sort order is ascending, false if descending. - `boolean`"
-  ([^javax.naming.ldap.SortKey this]
+  (^Boolean [^javax.naming.ldap.SortKey this]
     (-> this (.isAscending))))
 
 (defn get-matching-rule-id
@@ -41,6 +41,6 @@
   returns: The possibly null matching rule ID. If null then the
               ordering matching rule defined for the sort key attribute
               is used. - `java.lang.String`"
-  ([^javax.naming.ldap.SortKey this]
+  (^java.lang.String [^javax.naming.ldap.SortKey this]
     (-> this (.getMatchingRuleID))))
 

@@ -39,6 +39,6 @@
   returns: the built stream - `java.util.stream.LongStream`
 
   throws: java.lang.IllegalStateException - if the builder has already transitioned to the built state"
-  ([^java.util.stream.LongStream$Builder this]
+  (^java.util.stream.LongStream [^java.util.stream.LongStream$Builder this]
     (-> this (.build))))
 

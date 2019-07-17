@@ -36,7 +36,7 @@
   permissions - the permissions granted to this domain - `java.security.PermissionCollection`
   classloader - the ClassLoader associated with this domain - `java.lang.ClassLoader`
   principals - the array of Principals associated with this domain. The contents of the array are copied to protect against subsequent modification. - `java.security.Principal[]`"
-  ([^java.security.CodeSource codesource ^java.security.PermissionCollection permissions ^java.lang.ClassLoader classloader ^java.security.Principal[] principals]
+  ([^java.security.CodeSource codesource ^java.security.PermissionCollection permissions ^java.lang.ClassLoader classloader principals]
     (new ProtectionDomain codesource permissions classloader principals))
   ([^java.security.CodeSource codesource ^java.security.PermissionCollection permissions]
     (new ProtectionDomain codesource permissions)))
@@ -45,14 +45,14 @@
   "Returns the CodeSource of this domain.
 
   returns: the CodeSource of this domain which may be null. - `java.security.CodeSource`"
-  ([^java.security.ProtectionDomain this]
+  (^java.security.CodeSource [^java.security.ProtectionDomain this]
     (-> this (.getCodeSource))))
 
 (defn get-class-loader
   "Returns the ClassLoader of this domain.
 
   returns: the ClassLoader of this domain which may be null. - `java.lang.ClassLoader`"
-  ([^java.security.ProtectionDomain this]
+  (^java.lang.ClassLoader [^java.security.ProtectionDomain this]
     (-> this (.getClassLoader))))
 
 (defn get-principals
@@ -67,7 +67,7 @@
   "Returns the static permissions granted to this domain.
 
   returns: the static set of permissions for this domain which may be null. - `java.security.PermissionCollection`"
-  ([^java.security.ProtectionDomain this]
+  (^java.security.PermissionCollection [^java.security.ProtectionDomain this]
     (-> this (.getPermissions))))
 
 (defn implies
@@ -93,13 +93,13 @@
   permission - the Permission object to check. - `java.security.Permission`
 
   returns: true if `permission` is implicit to this ProtectionDomain. - `boolean`"
-  ([^java.security.ProtectionDomain this ^java.security.Permission permission]
+  (^Boolean [^java.security.ProtectionDomain this ^java.security.Permission permission]
     (-> this (.implies permission))))
 
 (defn to-string
   "Convert a ProtectionDomain to a String.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^java.security.ProtectionDomain this]
+  (^java.lang.String [^java.security.ProtectionDomain this]
     (-> this (.toString))))
 

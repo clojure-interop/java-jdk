@@ -40,7 +40,7 @@
   field - the field to check, null returns false - `java.time.temporal.TemporalField`
 
   returns: true if this date-time can be queried for the field, false if not - `boolean`"
-  ([^java.time.temporal.TemporalAccessor this ^java.time.temporal.TemporalField field]
+  (^Boolean [^java.time.temporal.TemporalAccessor this ^java.time.temporal.TemporalField field]
     (-> this (.isSupported field))))
 
 (defn range
@@ -93,7 +93,7 @@
   returns: the value for the field - `long`
 
   throws: java.time.DateTimeException - if a value for the field cannot be obtained"
-  ([^java.time.temporal.TemporalAccessor this ^java.time.temporal.TemporalField field]
+  (^Long [^java.time.temporal.TemporalAccessor this ^java.time.temporal.TemporalField field]
     (-> this (.getLong field))))
 
 (defn query

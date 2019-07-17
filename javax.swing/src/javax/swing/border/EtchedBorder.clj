@@ -71,21 +71,21 @@
   insets - the object to be reinitialized - `java.awt.Insets`
 
   returns: the insets object - `java.awt.Insets`"
-  ([^javax.swing.border.EtchedBorder this ^java.awt.Component c ^java.awt.Insets insets]
+  (^java.awt.Insets [^javax.swing.border.EtchedBorder this ^java.awt.Component c ^java.awt.Insets insets]
     (-> this (.getBorderInsets c insets))))
 
 (defn border-opaque?
   "Returns whether or not the border is opaque.
 
   returns: false - `boolean`"
-  ([^javax.swing.border.EtchedBorder this]
+  (^Boolean [^javax.swing.border.EtchedBorder this]
     (-> this (.isBorderOpaque))))
 
 (defn get-etch-type
   "Returns which etch-type is set on the etched border.
 
   returns: `int`"
-  ([^javax.swing.border.EtchedBorder this]
+  (^Integer [^javax.swing.border.EtchedBorder this]
     (-> this (.getEtchType))))
 
 (defn get-highlight-color
@@ -97,9 +97,9 @@
   c - the component for which the highlight may be derived - `java.awt.Component`
 
   returns: `java.awt.Color`"
-  ([^javax.swing.border.EtchedBorder this ^java.awt.Component c]
+  (^java.awt.Color [^javax.swing.border.EtchedBorder this ^java.awt.Component c]
     (-> this (.getHighlightColor c)))
-  ([^javax.swing.border.EtchedBorder this]
+  (^java.awt.Color [^javax.swing.border.EtchedBorder this]
     (-> this (.getHighlightColor))))
 
 (defn get-shadow-color
@@ -111,8 +111,8 @@
   c - the component for which the shadow may be derived - `java.awt.Component`
 
   returns: `java.awt.Color`"
-  ([^javax.swing.border.EtchedBorder this ^java.awt.Component c]
+  (^java.awt.Color [^javax.swing.border.EtchedBorder this ^java.awt.Component c]
     (-> this (.getShadowColor c)))
-  ([^javax.swing.border.EtchedBorder this]
+  (^java.awt.Color [^javax.swing.border.EtchedBorder this]
     (-> this (.getShadowColor))))
 

@@ -109,6 +109,6 @@
    the category name is `presentation-direction`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.PresentationDirection this]
+  (^java.lang.String [^javax.print.attribute.standard.PresentationDirection this]
     (-> this (.getName))))
 

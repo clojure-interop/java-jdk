@@ -53,23 +53,23 @@
   returns: the new parameter object. - `java.security.AlgorithmParameters`
 
   throws: java.security.NoSuchAlgorithmException - if an AlgorithmParametersSpi implementation for the specified algorithm is not available from the specified provider."
-  ([^java.lang.String algorithm ^java.lang.String provider]
+  (^java.security.AlgorithmParameters [^java.lang.String algorithm ^java.lang.String provider]
     (AlgorithmParameters/getInstance algorithm provider))
-  ([^java.lang.String algorithm]
+  (^java.security.AlgorithmParameters [^java.lang.String algorithm]
     (AlgorithmParameters/getInstance algorithm)))
 
 (defn get-algorithm
   "Returns the name of the algorithm associated with this parameter object.
 
   returns: the algorithm name. - `java.lang.String`"
-  ([^java.security.AlgorithmParameters this]
+  (^java.lang.String [^java.security.AlgorithmParameters this]
     (-> this (.getAlgorithm))))
 
 (defn get-provider
   "Returns the provider of this parameter object.
 
   returns: the provider of this parameter object - `java.security.Provider`"
-  ([^java.security.AlgorithmParameters this]
+  (^java.security.Provider [^java.security.AlgorithmParameters this]
     (-> this (.getProvider))))
 
 (defn init
@@ -127,6 +127,6 @@
 
   returns: a formatted string describing the parameters, or null if this
    parameter object has not been initialized. - `java.lang.String`"
-  ([^java.security.AlgorithmParameters this]
+  (^java.lang.String [^java.security.AlgorithmParameters this]
     (-> this (.toString))))
 

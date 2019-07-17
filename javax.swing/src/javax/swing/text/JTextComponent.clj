@@ -238,7 +238,7 @@
   parent - the parent keymap; this may be null if unspecified bindings need not be resolved in some other keymap - `javax.swing.text.Keymap`
 
   returns: the keymap - `javax.swing.text.Keymap`"
-  ([^java.lang.String nm ^javax.swing.text.Keymap parent]
+  (^javax.swing.text.Keymap [^java.lang.String nm ^javax.swing.text.Keymap parent]
     (JTextComponent/addKeymap nm parent)))
 
 (defn *remove-keymap
@@ -248,7 +248,7 @@
   nm - the name of the keymap to remove - `java.lang.String`
 
   returns: the keymap that was removed - `javax.swing.text.Keymap`"
-  ([^java.lang.String nm]
+  (^javax.swing.text.Keymap [^java.lang.String nm]
     (JTextComponent/removeKeymap nm)))
 
 (defn *get-keymap
@@ -258,7 +258,7 @@
   nm - the name of the keymap - `java.lang.String`
 
   returns: the keymap - `javax.swing.text.Keymap`"
-  ([^java.lang.String nm]
+  (^javax.swing.text.Keymap [^java.lang.String nm]
     (JTextComponent/getKeymap nm)))
 
 (defn *load-keymap
@@ -292,7 +292,7 @@
   map - the keymap - `javax.swing.text.Keymap`
   bindings - the bindings - `javax.swing.text.JTextComponent.KeyBinding[]`
   actions - the set of actions - `javax.swing.Action[]`"
-  ([^javax.swing.text.Keymap map ^javax.swing.text.JTextComponent.KeyBinding[] bindings ^javax.swing.Action[] actions]
+  ([^javax.swing.text.Keymap map bindings actions]
     (JTextComponent/loadKeymap map bindings actions)))
 
 (defn get-selected-text-color
@@ -300,7 +300,7 @@
    selected text.
 
   returns: the color - `java.awt.Color`"
-  ([^javax.swing.text.JTextComponent this]
+  (^java.awt.Color [^javax.swing.text.JTextComponent this]
     (-> this (.getSelectedTextColor))))
 
 (defn get-selected-text
@@ -311,7 +311,7 @@
   returns: the text - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if the selection doesn't have a valid mapping into the document for some reason"
-  ([^javax.swing.text.JTextComponent this]
+  (^java.lang.String [^javax.swing.text.JTextComponent this]
     (-> this (.getSelectedText))))
 
 (defn set-disabled-text-color
@@ -331,7 +331,7 @@
    be something that extends Document.
 
   returns: the model - `javax.swing.text.Document`"
-  ([^javax.swing.text.JTextComponent this]
+  (^javax.swing.text.Document [^javax.swing.text.JTextComponent this]
     (-> this (.getDocument))))
 
 (defn copy
@@ -359,7 +359,7 @@
    implies the cursor movement and selection should not be restricted.
 
   returns: the NavigationFilter - `javax.swing.text.NavigationFilter`"
-  ([^javax.swing.text.JTextComponent this]
+  (^javax.swing.text.NavigationFilter [^javax.swing.text.JTextComponent this]
     (-> this (.getNavigationFilter))))
 
 (defn set-text
@@ -406,7 +406,7 @@
   "Returns the drop mode for this component.
 
   returns: the drop mode for this component - `javax.swing.DropMode`"
-  ([^javax.swing.text.JTextComponent this]
+  (^javax.swing.DropMode [^javax.swing.text.JTextComponent this]
     (-> this (.getDropMode))))
 
 (defn get-scrollable-block-increment
@@ -425,7 +425,7 @@
   returns: the `block` increment for scrolling in the specified direction - `int`
 
   throws: java.lang.IllegalArgumentException - for an invalid orientation"
-  ([^javax.swing.text.JTextComponent this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
+  (^Integer [^javax.swing.text.JTextComponent this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
     (-> this (.getScrollableBlockIncrement visible-rect orientation direction))))
 
 (defn set-drop-mode
@@ -471,9 +471,9 @@
   returns: the text - `java.lang.String`
 
   throws: javax.swing.text.BadLocationException - if the offset or length are invalid"
-  ([^javax.swing.text.JTextComponent this ^Integer offs ^Integer len]
+  (^java.lang.String [^javax.swing.text.JTextComponent this ^Integer offs ^Integer len]
     (-> this (.getText offs len)))
-  ([^javax.swing.text.JTextComponent this]
+  (^java.lang.String [^javax.swing.text.JTextComponent this]
     (-> this (.getText))))
 
 (defn get-caret-color
@@ -481,14 +481,14 @@
    caret.
 
   returns: the color - `java.awt.Color`"
-  ([^javax.swing.text.JTextComponent this]
+  (^java.awt.Color [^javax.swing.text.JTextComponent this]
     (-> this (.getCaretColor))))
 
 (defn get-highlighter
   "Fetches the object responsible for making highlights.
 
   returns: the highlighter - `javax.swing.text.Highlighter`"
-  ([^javax.swing.text.JTextComponent this]
+  (^javax.swing.text.Highlighter [^javax.swing.text.JTextComponent this]
     (-> this (.getHighlighter))))
 
 (defn select-all
@@ -502,7 +502,7 @@
    empty document, or the value of dot if no selection.
 
   returns: the start position ≥ 0 - `int`"
-  ([^javax.swing.text.JTextComponent this]
+  (^Integer [^javax.swing.text.JTextComponent this]
     (-> this (.getSelectionStart))))
 
 (defn set-focus-accelerator
@@ -592,7 +592,7 @@
   returns: the `unit` increment for scrolling in the specified direction - `int`
 
   throws: java.lang.IllegalArgumentException - for an invalid orientation"
-  ([^javax.swing.text.JTextComponent this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
+  (^Integer [^javax.swing.text.JTextComponent this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
     (-> this (.getScrollableUnitIncrement visible-rect orientation direction))))
 
 (defn get-keymap
@@ -600,7 +600,7 @@
    component.
 
   returns: the keymap - `javax.swing.text.Keymap`"
-  ([^javax.swing.text.JTextComponent this]
+  (^javax.swing.text.Keymap [^javax.swing.text.JTextComponent this]
     (-> this (.getKeymap))))
 
 (defn set-navigation-filter
@@ -638,7 +638,7 @@
    name `dropLocation` is fired by the component.
 
   returns: the drop location - `javax.swing.text.JTextComponent.DropLocation`"
-  ([^javax.swing.text.JTextComponent this]
+  (^javax.swing.text.JTextComponent.DropLocation [^javax.swing.text.JTextComponent this]
     (-> this (.getDropLocation))))
 
 (defn get-preferred-scrollable-viewport-size
@@ -648,7 +648,7 @@
 
   returns: the preferredSize of a JViewport
    whose view is this Scrollable - `java.awt.Dimension`"
-  ([^javax.swing.text.JTextComponent this]
+  (^java.awt.Dimension [^javax.swing.text.JTextComponent this]
     (-> this (.getPreferredScrollableViewportSize))))
 
 (defn set-keymap
@@ -674,7 +674,7 @@
    TextComponent is editable or not.
 
   returns: the boolean value - `boolean`"
-  ([^javax.swing.text.JTextComponent this]
+  (^Boolean [^javax.swing.text.JTextComponent this]
     (-> this (.isEditable))))
 
 (defn get-tool-tip-text
@@ -696,7 +696,7 @@
   event - the event in question - `java.awt.event.MouseEvent`
 
   returns: the string to be used as the tooltip for event - `java.lang.String`"
-  ([^javax.swing.text.JTextComponent this ^java.awt.event.MouseEvent event]
+  (^java.lang.String [^javax.swing.text.JTextComponent this ^java.awt.event.MouseEvent event]
     (-> this (.getToolTipText event))))
 
 (defn get-caret-position
@@ -705,7 +705,7 @@
 
   returns: the position of the text insertion caret for the
     text component ≥ 0 - `int`"
-  ([^javax.swing.text.JTextComponent this]
+  (^Integer [^javax.swing.text.JTextComponent this]
     (-> this (.getCaretPosition))))
 
 (defn remove-notify
@@ -756,7 +756,7 @@
    disabled text.
 
   returns: the color - `java.awt.Color`"
-  ([^javax.swing.text.JTextComponent this]
+  (^java.awt.Color [^javax.swing.text.JTextComponent this]
     (-> this (.getDisabledTextColor))))
 
 (defn set-drag-enabled
@@ -788,14 +788,14 @@
    is empty, or the value of dot if there is no selection.
 
   returns: the end position ≥ 0 - `int`"
-  ([^javax.swing.text.JTextComponent this]
+  (^Integer [^javax.swing.text.JTextComponent this]
     (-> this (.getSelectionEnd))))
 
 (defn get-ui
   "Fetches the user-interface factory for this text-oriented editor.
 
   returns: the factory - `javax.swing.plaf.TextUI`"
-  ([^javax.swing.text.JTextComponent this]
+  (^javax.swing.plaf.TextUI [^javax.swing.text.JTextComponent this]
     (-> this (.getUI))))
 
 (defn get-selection-color
@@ -803,7 +803,7 @@
    selection.
 
   returns: the color - `java.awt.Color`"
-  ([^javax.swing.text.JTextComponent this]
+  (^java.awt.Color [^javax.swing.text.JTextComponent this]
     (-> this (.getSelectionColor))))
 
 (defn get-caret
@@ -811,7 +811,7 @@
    the view.
 
   returns: the caret - `javax.swing.text.Caret`"
-  ([^javax.swing.text.JTextComponent this]
+  (^javax.swing.text.Caret [^javax.swing.text.JTextComponent this]
     (-> this (.getCaret))))
 
 (defn get-scrollable-tracks-viewport-width?
@@ -829,7 +829,7 @@
 
   returns: true if a viewport should force the Scrollables
      width to match its own - `boolean`"
-  ([^javax.swing.text.JTextComponent this]
+  (^Boolean [^javax.swing.text.JTextComponent this]
     (-> this (.getScrollableTracksViewportWidth))))
 
 (defn set-selected-text-color
@@ -853,7 +853,7 @@
   returns: an AccessibleJTextComponent that serves as the
            AccessibleContext of this
            JTextComponent - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.text.JTextComponent this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.text.JTextComponent this]
     (-> this (.getAccessibleContext))))
 
 (defn add-input-method-listener
@@ -898,7 +898,7 @@
    accelerator has been set.
 
   returns: the key - `char`"
-  ([^javax.swing.text.JTextComponent this]
+  (^Character [^javax.swing.text.JTextComponent this]
     (-> this (.getFocusAccelerator))))
 
 (defn set-editable
@@ -923,7 +923,7 @@
 
   returns: true if a viewport should force the Scrollables height
      to match its own - `boolean`"
-  ([^javax.swing.text.JTextComponent this]
+  (^Boolean [^javax.swing.text.JTextComponent this]
     (-> this (.getScrollableTracksViewportHeight))))
 
 (defn view-to-model
@@ -939,7 +939,7 @@
   returns: the offset ≥ 0 from the start of the document,
      or -1 if the component does not yet have a positive
      size. - `int`"
-  ([^javax.swing.text.JTextComponent this ^java.awt.Point pt]
+  (^Integer [^javax.swing.text.JTextComponent this ^java.awt.Point pt]
     (-> this (.viewToModel pt))))
 
 (defn print
@@ -1036,18 +1036,18 @@
   returns: true, unless printing is canceled by the user - `boolean`
 
   throws: java.awt.print.PrinterException - if an error in the print system causes the job to be aborted"
-  ([^javax.swing.text.JTextComponent this ^java.text.MessageFormat header-format ^java.text.MessageFormat footer-format ^Boolean show-print-dialog ^javax.print.PrintService service ^javax.print.attribute.PrintRequestAttributeSet attributes ^Boolean interactive]
+  (^Boolean [^javax.swing.text.JTextComponent this ^java.text.MessageFormat header-format ^java.text.MessageFormat footer-format ^Boolean show-print-dialog ^javax.print.PrintService service ^javax.print.attribute.PrintRequestAttributeSet attributes ^Boolean interactive]
     (-> this (.print header-format footer-format show-print-dialog service attributes interactive)))
-  ([^javax.swing.text.JTextComponent this ^java.text.MessageFormat header-format ^java.text.MessageFormat footer-format]
+  (^Boolean [^javax.swing.text.JTextComponent this ^java.text.MessageFormat header-format ^java.text.MessageFormat footer-format]
     (-> this (.print header-format footer-format)))
-  ([^javax.swing.text.JTextComponent this]
+  (^Boolean [^javax.swing.text.JTextComponent this]
     (-> this (.print))))
 
 (defn get-drag-enabled?
   "Returns whether or not automatic drag handling is enabled.
 
   returns: the value of the dragEnabled property - `boolean`"
-  ([^javax.swing.text.JTextComponent this]
+  (^Boolean [^javax.swing.text.JTextComponent this]
     (-> this (.getDragEnabled))))
 
 (defn set-caret-color
@@ -1115,7 +1115,7 @@
 
   returns: a Printable for use in printing content of this
            JTextComponent - `java.awt.print.Printable`"
-  ([^javax.swing.text.JTextComponent this ^java.text.MessageFormat header-format ^java.text.MessageFormat footer-format]
+  (^java.awt.print.Printable [^javax.swing.text.JTextComponent this ^java.text.MessageFormat header-format ^java.text.MessageFormat footer-format]
     (-> this (.getPrintable header-format footer-format))))
 
 (defn get-input-method-requests
@@ -1123,7 +1123,7 @@
 
   returns: the input method request handler for this component,
             null by default - `java.awt.im.InputMethodRequests`"
-  ([^javax.swing.text.JTextComponent this]
+  (^java.awt.im.InputMethodRequests [^javax.swing.text.JTextComponent this]
     (-> this (.getInputMethodRequests))))
 
 (defn set-component-orientation
@@ -1207,7 +1207,7 @@
      not yet have a positive size. - `java.awt.Rectangle`
 
   throws: javax.swing.text.BadLocationException - if the given position does not represent a valid location in the associated document"
-  ([^javax.swing.text.JTextComponent this ^Integer pos]
+  (^java.awt.Rectangle [^javax.swing.text.JTextComponent this ^Integer pos]
     (-> this (.modelToView pos))))
 
 (defn get-margin
@@ -1215,6 +1215,6 @@
    its text.
 
   returns: the margin - `java.awt.Insets`"
-  ([^javax.swing.text.JTextComponent this]
+  (^java.awt.Insets [^javax.swing.text.JTextComponent this]
     (-> this (.getMargin))))
 

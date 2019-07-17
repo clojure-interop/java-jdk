@@ -125,7 +125,7 @@
   returns: the tile as a Raster. - `java.awt.image.Raster`
 
   throws: java.lang.UnsupportedOperationException - if this plug-in does not support reading raw Rasters."
-  ([^javax.imageio.ImageReader this ^Integer image-index ^Integer tile-x ^Integer tile-y]
+  (^java.awt.image.Raster [^javax.imageio.ImageReader this ^Integer image-index ^Integer tile-x ^Integer tile-y]
     (-> this (.readTileRaster image-index tile-x tile-y))))
 
 (defn add-iio-read-warning-listener
@@ -153,7 +153,7 @@
   returns: the width of the image, as an int. - `int`
 
   throws: java.lang.IllegalStateException - if the input source has not been set."
-  ([^javax.imageio.ImageReader this ^Integer image-index]
+  (^Integer [^javax.imageio.ImageReader this ^Integer image-index]
     (-> this (.getWidth image-index))))
 
 (defn get-image-types
@@ -175,7 +175,7 @@
    types for decoding the current given image. - `java.util.Iterator<javax.imageio.ImageTypeSpecifier>`
 
   throws: java.lang.IllegalStateException - if the input source has not been set."
-  ([^javax.imageio.ImageReader this ^Integer image-index]
+  (^java.util.Iterator [^javax.imageio.ImageReader this ^Integer image-index]
     (-> this (.getImageTypes image-index))))
 
 (defn read-tile
@@ -209,7 +209,7 @@
   returns: the tile as a BufferedImage. - `java.awt.image.BufferedImage`
 
   throws: java.lang.IllegalStateException - if the input source has not been set."
-  ([^javax.imageio.ImageReader this ^Integer image-index ^Integer tile-x ^Integer tile-y]
+  (^java.awt.image.BufferedImage [^javax.imageio.ImageReader this ^Integer image-index ^Integer tile-x ^Integer tile-y]
     (-> this (.readTile image-index tile-x tile-y))))
 
 (defn read-raster
@@ -252,7 +252,7 @@
    Raster. - `java.awt.image.Raster`
 
   throws: java.lang.UnsupportedOperationException - if this plug-in does not support reading raw Rasters."
-  ([^javax.imageio.ImageReader this ^Integer image-index ^javax.imageio.ImageReadParam param]
+  (^java.awt.image.Raster [^javax.imageio.ImageReader this ^Integer image-index ^javax.imageio.ImageReadParam param]
     (-> this (.readRaster image-index param))))
 
 (defn seek-forward-only?
@@ -263,7 +263,7 @@
 
   returns: true if the input source is seek forward
    only. - `boolean`"
-  ([^javax.imageio.ImageReader this]
+  (^Boolean [^javax.imageio.ImageReader this]
     (-> this (.isSeekForwardOnly))))
 
 (defn dispose
@@ -309,7 +309,7 @@
    implement any of the thumbnail-related methods.
 
   returns: true if thumbnails are supported. - `boolean`"
-  ([^javax.imageio.ImageReader this]
+  (^Boolean [^javax.imageio.ImageReader this]
     (-> this (.readerSupportsThumbnails))))
 
 (defn get-tile-grid-x-offset
@@ -332,7 +332,7 @@
   returns: the X offset of the tile grid. - `int`
 
   throws: java.lang.IllegalStateException - if an input source is required to determine the return value, but none has been set."
-  ([^javax.imageio.ImageReader this ^Integer image-index]
+  (^Integer [^javax.imageio.ImageReader this ^Integer image-index]
     (-> this (.getTileGridXOffset image-index))))
 
 (defn get-locale
@@ -340,7 +340,7 @@
    null if none has been set.
 
   returns: the current Locale, or null. - `java.util.Locale`"
-  ([^javax.imageio.ImageReader this]
+  (^java.util.Locale [^javax.imageio.ImageReader this]
     (-> this (.getLocale))))
 
 (defn get-image-metadata
@@ -378,9 +378,9 @@
   returns: an IIOMetadata object, or null. - `javax.imageio.metadata.IIOMetadata`
 
   throws: java.lang.IllegalStateException - if the input source has not been set."
-  ([^javax.imageio.ImageReader this ^Integer image-index ^java.lang.String format-name ^java.util.Set node-names]
+  (^javax.imageio.metadata.IIOMetadata [^javax.imageio.ImageReader this ^Integer image-index ^java.lang.String format-name ^java.util.Set node-names]
     (-> this (.getImageMetadata image-index format-name node-names)))
-  ([^javax.imageio.ImageReader this ^Integer image-index]
+  (^javax.imageio.metadata.IIOMetadata [^javax.imageio.ImageReader this ^Integer image-index]
     (-> this (.getImageMetadata image-index))))
 
 (defn read
@@ -425,9 +425,9 @@
    BufferedImage. - `java.awt.image.BufferedImage`
 
   throws: java.lang.IllegalStateException - if the input source has not been set."
-  ([^javax.imageio.ImageReader this ^Integer image-index ^javax.imageio.ImageReadParam param]
+  (^java.awt.image.BufferedImage [^javax.imageio.ImageReader this ^Integer image-index ^javax.imageio.ImageReadParam param]
     (-> this (.read image-index param)))
-  ([^javax.imageio.ImageReader this ^Integer image-index]
+  (^java.awt.image.BufferedImage [^javax.imageio.ImageReader this ^Integer image-index]
     (-> this (.read image-index))))
 
 (defn reset
@@ -456,7 +456,7 @@
 
   returns: an ImageReadParam object which may be used
    to control the decoding process using a set of default settings. - `javax.imageio.ImageReadParam`"
-  ([^javax.imageio.ImageReader this]
+  (^javax.imageio.ImageReadParam [^javax.imageio.ImageReader this]
     (-> this (.getDefaultReadParam))))
 
 (defn get-thumbnail-width
@@ -481,7 +481,7 @@
   returns: the width of the desired thumbnail as an int. - `int`
 
   throws: java.lang.UnsupportedOperationException - if thumbnails are not supported."
-  ([^javax.imageio.ImageReader this ^Integer image-index ^Integer thumbnail-index]
+  (^Integer [^javax.imageio.ImageReader this ^Integer image-index ^Integer thumbnail-index]
     (-> this (.getThumbnailWidth image-index thumbnail-index))))
 
 (defn read-as-rendered-image
@@ -515,7 +515,7 @@
    the image. - `java.awt.image.RenderedImage`
 
   throws: java.lang.IllegalStateException - if the input source has not been set."
-  ([^javax.imageio.ImageReader this ^Integer image-index ^javax.imageio.ImageReadParam param]
+  (^java.awt.image.RenderedImage [^javax.imageio.ImageReader this ^Integer image-index ^javax.imageio.ImageReadParam param]
     (-> this (.readAsRenderedImage image-index param))))
 
 (defn remove-iio-read-progress-listener
@@ -534,7 +534,7 @@
    the constructor.  Note that this value may be null.
 
   returns: an ImageReaderSpi, or null. - `javax.imageio.spi.ImageReaderSpi`"
-  ([^javax.imageio.ImageReader this]
+  (^javax.imageio.spi.ImageReaderSpi [^javax.imageio.ImageReader this]
     (-> this (.getOriginatingProvider))))
 
 (defn has-thumbnails?
@@ -553,7 +553,7 @@
   returns: true if the given image has thumbnails. - `boolean`
 
   throws: java.lang.IllegalStateException - if the reader supports thumbnails but the input source has not been set."
-  ([^javax.imageio.ImageReader this ^Integer image-index]
+  (^Boolean [^javax.imageio.ImageReader this ^Integer image-index]
     (-> this (.hasThumbnails image-index))))
 
 (defn get-input
@@ -563,7 +563,7 @@
 
   returns: the Object that will be used for future
    decoding, or null. - `java.lang.Object`"
-  ([^javax.imageio.ImageReader this]
+  (^java.lang.Object [^javax.imageio.ImageReader this]
     (-> this (.getInput))))
 
 (defn image-tiled?
@@ -593,7 +593,7 @@
   returns: true if the image is tiled. - `boolean`
 
   throws: java.lang.IllegalStateException - if an input source is required to determine the return value, but none has been set."
-  ([^javax.imageio.ImageReader this ^Integer image-index]
+  (^Boolean [^javax.imageio.ImageReader this ^Integer image-index]
     (-> this (.isImageTiled image-index))))
 
 (defn get-num-thumbnails
@@ -613,7 +613,7 @@
    image. - `int`
 
   throws: java.lang.IllegalStateException - if the reader supports thumbnails but the input source has not been set."
-  ([^javax.imageio.ImageReader this ^Integer image-index]
+  (^Integer [^javax.imageio.ImageReader this ^Integer image-index]
     (-> this (.getNumThumbnails image-index))))
 
 (defn get-num-images
@@ -643,7 +643,7 @@
    false and a search would be required. - `int`
 
   throws: java.lang.IllegalStateException - if the input source has not been set, or if the input has been specified with seekForwardOnly set to true."
-  ([^javax.imageio.ImageReader this ^Boolean allow-search]
+  (^Integer [^javax.imageio.ImageReader this ^Boolean allow-search]
     (-> this (.getNumImages allow-search))))
 
 (defn get-stream-metadata
@@ -680,9 +680,9 @@
   returns: an IIOMetadata object, or null. - `javax.imageio.metadata.IIOMetadata`
 
   throws: java.lang.IllegalArgumentException - if nodeNames is null."
-  ([^javax.imageio.ImageReader this ^java.lang.String format-name ^java.util.Set node-names]
+  (^javax.imageio.metadata.IIOMetadata [^javax.imageio.ImageReader this ^java.lang.String format-name ^java.util.Set node-names]
     (-> this (.getStreamMetadata format-name node-names)))
-  ([^javax.imageio.ImageReader this]
+  (^javax.imageio.metadata.IIOMetadata [^javax.imageio.ImageReader this]
     (-> this (.getStreamMetadata))))
 
 (defn get-tile-grid-y-offset
@@ -705,7 +705,7 @@
   returns: the Y offset of the tile grid. - `int`
 
   throws: java.lang.IllegalStateException - if an input source is required to determine the return value, but none has been set."
-  ([^javax.imageio.ImageReader this ^Integer image-index]
+  (^Integer [^javax.imageio.ImageReader this ^Integer image-index]
     (-> this (.getTileGridYOffset image-index))))
 
 (defn get-height
@@ -720,7 +720,7 @@
   returns: the height of the image, as an int. - `int`
 
   throws: java.lang.IllegalStateException - if the input source has not been set."
-  ([^javax.imageio.ImageReader this ^Integer image-index]
+  (^Integer [^javax.imageio.ImageReader this ^Integer image-index]
     (-> this (.getHeight image-index))))
 
 (defn get-available-locales
@@ -756,7 +756,7 @@
   returns: an ImageTypeSpecifier. - `javax.imageio.ImageTypeSpecifier`
 
   throws: java.lang.IllegalStateException - if the input source has not been set."
-  ([^javax.imageio.ImageReader this ^Integer image-index]
+  (^javax.imageio.ImageTypeSpecifier [^javax.imageio.ImageReader this ^Integer image-index]
     (-> this (.getRawImageType image-index))))
 
 (defn set-locale
@@ -788,7 +788,7 @@
    given image. - `float`
 
   throws: java.lang.IllegalStateException - if the input source has not been set."
-  ([^javax.imageio.ImageReader this ^Integer image-index]
+  (^Float [^javax.imageio.ImageReader this ^Integer image-index]
     (-> this (.getAspectRatio image-index))))
 
 (defn remove-all-iio-read-progress-listeners
@@ -858,7 +858,7 @@
   returns: the height of a tile. - `int`
 
   throws: java.lang.IllegalStateException - if the input source has not been set."
-  ([^javax.imageio.ImageReader this ^Integer image-index]
+  (^Integer [^javax.imageio.ImageReader this ^Integer image-index]
     (-> this (.getTileHeight image-index))))
 
 (defn read-thumbnail
@@ -886,7 +886,7 @@
   returns: the desired thumbnail as a BufferedImage. - `java.awt.image.BufferedImage`
 
   throws: java.lang.UnsupportedOperationException - if thumbnails are not supported."
-  ([^javax.imageio.ImageReader this ^Integer image-index ^Integer thumbnail-index]
+  (^java.awt.image.BufferedImage [^javax.imageio.ImageReader this ^Integer image-index ^Integer thumbnail-index]
     (-> this (.readThumbnail image-index thumbnail-index))))
 
 (defn get-tile-width
@@ -902,7 +902,7 @@
   returns: the width of a tile. - `int`
 
   throws: java.lang.IllegalStateException - if the input source has not been set."
-  ([^javax.imageio.ImageReader this ^Integer image-index]
+  (^Integer [^javax.imageio.ImageReader this ^Integer image-index]
     (-> this (.getTileWidth image-index))))
 
 (defn abort
@@ -928,7 +928,7 @@
   returns: the format name, as a String. - `java.lang.String`
 
   throws: java.io.IOException - if an error occurs reading the information from the input source."
-  ([^javax.imageio.ImageReader this]
+  (^java.lang.String [^javax.imageio.ImageReader this]
     (-> this (.getFormatName))))
 
 (defn read-all
@@ -978,9 +978,9 @@
    metadata. - `javax.imageio.IIOImage`
 
   throws: java.lang.IllegalStateException - if the input source has not been set."
-  ([^javax.imageio.ImageReader this ^Integer image-index ^javax.imageio.ImageReadParam param]
+  (^javax.imageio.IIOImage [^javax.imageio.ImageReader this ^Integer image-index ^javax.imageio.ImageReadParam param]
     (-> this (.readAll image-index param)))
-  ([^javax.imageio.ImageReader this ^javax.imageio.ImageReadParam> params]
+  (^java.util.Iterator [^javax.imageio.ImageReader this ^javax.imageio.ImageReadParam> params]
     (-> this (.readAll params))))
 
 (defn get-thumbnail-height
@@ -1005,7 +1005,7 @@
   returns: the height of the desired thumbnail as an int. - `int`
 
   throws: java.lang.UnsupportedOperationException - if thumbnails are not supported."
-  ([^javax.imageio.ImageReader this ^Integer image-index ^Integer thumbnail-index]
+  (^Integer [^javax.imageio.ImageReader this ^Integer image-index ^Integer thumbnail-index]
     (-> this (.getThumbnailHeight image-index thumbnail-index))))
 
 (defn ignoring-metadata?
@@ -1015,7 +1015,7 @@
    to the setInput method.
 
   returns: true if the metadata may be ignored. - `boolean`"
-  ([^javax.imageio.ImageReader this]
+  (^Boolean [^javax.imageio.ImageReader this]
     (-> this (.isIgnoringMetadata))))
 
 (defn remove-all-iio-read-update-listeners
@@ -1060,7 +1060,7 @@
    the given image is likely to be efficient. - `boolean`
 
   throws: java.lang.IllegalStateException - if an input source is required to determine the return value, but none has been set."
-  ([^javax.imageio.ImageReader this ^Integer image-index]
+  (^Boolean [^javax.imageio.ImageReader this ^Integer image-index]
     (-> this (.isRandomAccessEasy image-index))))
 
 (defn can-read-raster?
@@ -1074,7 +1074,7 @@
 
   returns: true if this plug-in supports reading raw
    Rasters. - `boolean`"
-  ([^javax.imageio.ImageReader this]
+  (^Boolean [^javax.imageio.ImageReader this]
     (-> this (.canReadRaster))))
 
 (defn get-min-index
@@ -1086,6 +1086,6 @@
    increase in a monotonic fashion.
 
   returns: the minimum legal index for reading. - `int`"
-  ([^javax.imageio.ImageReader this]
+  (^Integer [^javax.imageio.ImageReader this]
     (-> this (.getMinIndex))))
 

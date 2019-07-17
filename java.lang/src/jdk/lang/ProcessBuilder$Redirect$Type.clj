@@ -69,6 +69,6 @@
   returns: the enum constant with the specified name - `java.lang.ProcessBuilder.Redirect.Type`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^java.lang.ProcessBuilder.Redirect.Type [^java.lang.String name]
     (ProcessBuilder$Redirect$Type/valueOf name)))
 

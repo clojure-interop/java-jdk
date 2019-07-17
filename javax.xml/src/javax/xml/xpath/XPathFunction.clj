@@ -18,6 +18,6 @@
   returns: The result of evaluating the XPath function as an Object. - `java.lang.Object`
 
   throws: javax.xml.xpath.XPathFunctionException - If args cannot be evaluated with this XPath function."
-  ([^javax.xml.xpath.XPathFunction this ^java.util.List args]
+  (^java.lang.Object [^javax.xml.xpath.XPathFunction this ^java.util.List args]
     (-> this (.evaluate args))))
 

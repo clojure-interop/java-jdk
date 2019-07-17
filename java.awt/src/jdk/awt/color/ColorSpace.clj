@@ -299,7 +299,7 @@
   colorspace - a specific color space identified by one of the predefined class constants (e.g. CS_sRGB, CS_LINEAR_RGB, CS_CIEXYZ, CS_GRAY, or CS_PYCC) - `int`
 
   returns: the requested ColorSpace object - `java.awt.color.ColorSpace`"
-  ([^Integer colorspace]
+  (^java.awt.color.ColorSpace [^Integer colorspace]
     (ColorSpace/getInstance colorspace)))
 
 (defn get-type
@@ -313,7 +313,7 @@
 
   returns: the type constant that represents the type of this
            ColorSpace - `int`"
-  ([^java.awt.color.ColorSpace this]
+  (^Integer [^java.awt.color.ColorSpace this]
     (-> this (.getType))))
 
 (defn get-min-value
@@ -327,7 +327,7 @@
   returns: the minimum normalized component value - `float`
 
   throws: java.lang.IllegalArgumentException - if component is less than 0 or greater than numComponents - 1"
-  ([^java.awt.color.ColorSpace this ^Integer component]
+  (^Float [^java.awt.color.ColorSpace this ^Integer component]
     (-> this (.getMinValue component))))
 
 (defn get-max-value
@@ -341,7 +341,7 @@
   returns: the maximum normalized component value - `float`
 
   throws: java.lang.IllegalArgumentException - if component is less than 0 or greater than numComponents - 1"
-  ([^java.awt.color.ColorSpace this ^Integer component]
+  (^Float [^java.awt.color.ColorSpace this ^Integer component]
     (-> this (.getMaxValue component))))
 
 (defn get-name
@@ -352,7 +352,7 @@
   returns: the name of the component at the specified index - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if idx is less than 0 or greater than numComponents - 1"
-  ([^java.awt.color.ColorSpace this ^Integer idx]
+  (^java.lang.String [^java.awt.color.ColorSpace this ^Integer idx]
     (-> this (.getName idx))))
 
 (defn from-rgb
@@ -384,14 +384,14 @@
 
   returns: true if this is a CS_sRGB color
            space, false if it is not - `boolean`"
-  ([^java.awt.color.ColorSpace this]
+  (^Boolean [^java.awt.color.ColorSpace this]
     (-> this (.isCS_sRGB))))
 
 (defn get-num-components
   "Returns the number of components of this ColorSpace.
 
   returns: The number of components in this ColorSpace. - `int`"
-  ([^java.awt.color.ColorSpace this]
+  (^Integer [^java.awt.color.ColorSpace this]
     (-> this (.getNumComponents))))
 
 (defn from-ciexyz

@@ -51,23 +51,23 @@
   returns: This writer - `java.io.StringWriter`
 
   throws: java.lang.IndexOutOfBoundsException - If start or end are negative, start is greater than end, or end is greater than csq.length()"
-  ([^java.io.StringWriter this ^java.lang.CharSequence csq ^Integer start ^Integer end]
+  (^java.io.StringWriter [^java.io.StringWriter this ^java.lang.CharSequence csq ^Integer start ^Integer end]
     (-> this (.append csq start end)))
-  ([^java.io.StringWriter this ^java.lang.CharSequence csq]
+  (^java.io.StringWriter [^java.io.StringWriter this ^java.lang.CharSequence csq]
     (-> this (.append csq))))
 
 (defn to-string
   "Return the buffer's current value as a string.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^java.io.StringWriter this]
+  (^java.lang.String [^java.io.StringWriter this]
     (-> this (.toString))))
 
 (defn get-buffer
   "Return the string buffer itself.
 
   returns: StringBuffer holding the current buffer value. - `java.lang.StringBuffer`"
-  ([^java.io.StringWriter this]
+  (^java.lang.StringBuffer [^java.io.StringWriter this]
     (-> this (.getBuffer))))
 
 (defn flush

@@ -29,7 +29,7 @@
   url - points to the audio clip - `java.net.URL`
 
   returns: the audio clip at the specified URL. - `java.applet.AudioClip`"
-  ([^java.net.URL url]
+  (^java.applet.AudioClip [^java.net.URL url]
     (Applet/newAudioClip url)))
 
 (defn get-image
@@ -47,9 +47,9 @@
   name - the location of the image, relative to the url argument. - `java.lang.String`
 
   returns: the image at the specified URL. - `java.awt.Image`"
-  ([^java.applet.Applet this ^java.net.URL url ^java.lang.String name]
+  (^java.awt.Image [^java.applet.Applet this ^java.net.URL url ^java.lang.String name]
     (-> this (.getImage url name)))
-  ([^java.applet.Applet this ^java.net.URL url]
+  (^java.awt.Image [^java.applet.Applet this ^java.net.URL url]
     (-> this (.getImage url))))
 
 (defn get-code-base
@@ -57,7 +57,7 @@
 
   returns: the base URL of
             the directory which contains this applet. - `java.net.URL`"
-  ([^java.applet.Applet this]
+  (^java.net.URL [^java.applet.Applet this]
     (-> this (.getCodeBase))))
 
 (defn stop
@@ -85,7 +85,7 @@
 
   returns: true if the applet is active;
             false otherwise. - `boolean`"
-  ([^java.applet.Applet this]
+  (^Boolean [^java.applet.Applet this]
     (-> this (.isActive))))
 
 (defn play
@@ -119,7 +119,7 @@
 
   returns: the locale of the applet; if no locale has
             been set, the default locale is returned. - `java.util.Locale`"
-  ([^java.applet.Applet this]
+  (^java.util.Locale [^java.applet.Applet this]
     (-> this (.getLocale))))
 
 (defn validate-root?
@@ -129,7 +129,7 @@
    override this method to return true.
 
   returns: true - `boolean`"
-  ([^java.applet.Applet this]
+  (^Boolean [^java.applet.Applet this]
     (-> this (.isValidateRoot))))
 
 (defn destroy
@@ -192,7 +192,7 @@
 
   returns: the value of the named parameter,
             or null if not set. - `java.lang.String`"
-  ([^java.applet.Applet this ^java.lang.String name]
+  (^java.lang.String [^java.applet.Applet this ^java.lang.String name]
     (-> this (.getParameter name))))
 
 (defn get-accessible-context
@@ -203,7 +203,7 @@
 
   returns: an AccessibleApplet that serves as the
            AccessibleContext of this Applet - `javax.accessibility.AccessibleContext`"
-  ([^java.applet.Applet this]
+  (^javax.accessibility.AccessibleContext [^java.applet.Applet this]
     (-> this (.getAccessibleContext))))
 
 (defn get-document-base
@@ -220,7 +220,7 @@
 
   returns: the URL of the document that contains this
             applet. - `java.net.URL`"
-  ([^java.applet.Applet this]
+  (^java.net.URL [^java.applet.Applet this]
     (-> this (.getDocumentBase))))
 
 (defn init
@@ -257,7 +257,7 @@
    contains the applet.
 
   returns: the applet's context. - `java.applet.AppletContext`"
-  ([^java.applet.Applet this]
+  (^java.applet.AppletContext [^java.applet.Applet this]
     (-> this (.getAppletContext))))
 
 (defn resize
@@ -280,7 +280,7 @@
 
   returns: a string containing information about the author, version, and
             copyright of the applet. - `java.lang.String`"
-  ([^java.applet.Applet this]
+  (^java.lang.String [^java.applet.Applet this]
     (-> this (.getAppletInfo))))
 
 (defn get-audio-clip
@@ -295,9 +295,9 @@
   name - the location of the audio clip, relative to the url argument. - `java.lang.String`
 
   returns: the audio clip at the specified URL. - `java.applet.AudioClip`"
-  ([^java.applet.Applet this ^java.net.URL url ^java.lang.String name]
+  (^java.applet.AudioClip [^java.applet.Applet this ^java.net.URL url ^java.lang.String name]
     (-> this (.getAudioClip url name)))
-  ([^java.applet.Applet this ^java.net.URL url]
+  (^java.applet.AudioClip [^java.applet.Applet this ^java.net.URL url]
     (-> this (.getAudioClip url))))
 
 (defn get-parameter-info

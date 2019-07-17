@@ -9,13 +9,13 @@
   "Returns the text of the suggested completion.
 
   returns: the text of the suggested completion. - `java.lang.String`"
-  ([^javax.annotation.processing.Completion this]
+  (^java.lang.String [^javax.annotation.processing.Completion this]
     (-> this (.getValue))))
 
 (defn get-message
   "Returns an informative message about the completion.
 
   returns: an informative message about the completion. - `java.lang.String`"
-  ([^javax.annotation.processing.Completion this]
+  (^java.lang.String [^javax.annotation.processing.Completion this]
     (-> this (.getMessage))))
 

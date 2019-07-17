@@ -9,13 +9,13 @@
 
   returns: the form method type, either
    Method.GET or Method.POST. - `javax.swing.text.html.FormSubmitEvent.MethodType`"
-  ([^javax.swing.text.html.FormSubmitEvent this]
+  (^javax.swing.text.html.FormSubmitEvent.MethodType [^javax.swing.text.html.FormSubmitEvent this]
     (-> this (.getMethod))))
 
 (defn get-data
   "Gets the form submission data.
 
   returns: the string representing the form submission data. - `java.lang.String`"
-  ([^javax.swing.text.html.FormSubmitEvent this]
+  (^java.lang.String [^javax.swing.text.html.FormSubmitEvent this]
     (-> this (.getData))))
 

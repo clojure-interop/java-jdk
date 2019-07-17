@@ -42,7 +42,7 @@
   s - the specified menu shortcut. - `java.awt.MenuShortcut`
 
   returns: `java.awt.MenuItem`"
-  ([^java.awt.MenuBar this ^java.awt.MenuShortcut s]
+  (^java.awt.MenuItem [^java.awt.MenuBar this ^java.awt.MenuShortcut s]
     (-> this (.getShortcutMenuItem s))))
 
 (defn shortcuts
@@ -51,7 +51,7 @@
 
   returns: an enumeration of menu shortcuts that this
                         menu bar is managing. - `java.util.Enumeration<java.awt.MenuShortcut>`"
-  ([^java.awt.MenuBar this]
+  (^java.util.Enumeration [^java.awt.MenuBar this]
     (-> this (.shortcuts))))
 
 (defn delete-shortcut
@@ -97,14 +97,14 @@
   i - the index position of the menu to be returned. - `int`
 
   returns: the menu at the specified index of this menu bar. - `java.awt.Menu`"
-  ([^java.awt.MenuBar this ^Integer i]
+  (^java.awt.Menu [^java.awt.MenuBar this ^Integer i]
     (-> this (.getMenu i))))
 
 (defn get-menu-count
   "Gets the number of menus on the menu bar.
 
   returns: the number of menus on the menu bar. - `int`"
-  ([^java.awt.MenuBar this]
+  (^Integer [^java.awt.MenuBar this]
     (-> this (.getMenuCount))))
 
 (defn get-accessible-context
@@ -115,7 +115,7 @@
 
   returns: an AccessibleAWTMenuBar that serves as the
            AccessibleContext of this MenuBar - `javax.accessibility.AccessibleContext`"
-  ([^java.awt.MenuBar this]
+  (^javax.accessibility.AccessibleContext [^java.awt.MenuBar this]
     (-> this (.getAccessibleContext))))
 
 (defn add
@@ -126,14 +126,14 @@
   m - the menu to be added - `java.awt.Menu`
 
   returns: the menu added - `java.awt.Menu`"
-  ([^java.awt.MenuBar this ^java.awt.Menu m]
+  (^java.awt.Menu [^java.awt.MenuBar this ^java.awt.Menu m]
     (-> this (.add m))))
 
 (defn get-help-menu
   "Gets the help menu on the menu bar.
 
   returns: the help menu on this menu bar. - `java.awt.Menu`"
-  ([^java.awt.MenuBar this]
+  (^java.awt.Menu [^java.awt.MenuBar this]
     (-> this (.getHelpMenu))))
 
 (defn set-help-menu

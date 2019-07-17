@@ -44,6 +44,6 @@
   list-2 - the second list, may be empty but not null - `javax.swing.Action[]`
 
   returns: the augmented list - `javax.swing.Action[]`"
-  ([^javax.swing.Action[] list-1 ^javax.swing.Action[] list-2]
+  ([list-1 list-2]
     (TextAction/augmentList list-1 list-2)))
 

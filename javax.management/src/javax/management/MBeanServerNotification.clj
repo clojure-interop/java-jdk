@@ -99,13 +99,13 @@
   "Returns the  object name of the MBean that caused the notification.
 
   returns: the object name of the MBean that caused the notification. - `javax.management.ObjectName`"
-  ([^javax.management.MBeanServerNotification this]
+  (^javax.management.ObjectName [^javax.management.MBeanServerNotification this]
     (-> this (.getMBeanName))))
 
 (defn to-string
   "Description copied from class: Notification
 
   returns: A String representation of this notification. - `java.lang.String`"
-  ([^javax.management.MBeanServerNotification this]
+  (^java.lang.String [^javax.management.MBeanServerNotification this]
     (-> this (.toString))))
 

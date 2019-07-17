@@ -14,7 +14,7 @@
 
   returns: Returns the SOAPMessage; returns null if no
             SOAPMessage is present in this message context - `javax.xml.soap.SOAPMessage`"
-  ([^javax.xml.ws.handler.soap.SOAPMessageContext this]
+  (^javax.xml.soap.SOAPMessage [^javax.xml.ws.handler.soap.SOAPMessageContext this]
     (-> this (.getMessage))))
 
 (defn set-message
@@ -55,6 +55,6 @@
     SOAP message through the handler chain.
 
   returns: Array of String for SOAP actor roles - `java.util.Set<java.lang.String>`"
-  ([^javax.xml.ws.handler.soap.SOAPMessageContext this]
+  (^java.util.Set [^javax.xml.ws.handler.soap.SOAPMessageContext this]
     (-> this (.getRoles))))
 

@@ -116,7 +116,7 @@
    and opacity set to false.
 
   returns: the default glassPane - `javax.swing.JPanel`"
-  ([^javax.swing.JLayer this]
+  (^javax.swing.JPanel [^javax.swing.JLayer this]
     (-> this (.createGlassPane))))
 
 (defn set-layout
@@ -138,7 +138,7 @@
 
   returns: the JLayer's view component
            or null if none exists - `JLayer.V`"
-  ([^javax.swing.JLayer this]
+  (^JLayer.V [^javax.swing.JLayer this]
     (-> this (.getView))))
 
 (defn get-scrollable-block-increment
@@ -154,7 +154,7 @@
   direction - Less than zero to scroll up/left, greater than zero for down/right. - `int`
 
   returns: the `block` increment for scrolling in the specified direction - `int`"
-  ([^javax.swing.JLayer this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
+  (^Integer [^javax.swing.JLayer this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
     (-> this (.getScrollableBlockIncrement visible-rect orientation direction))))
 
 (defn get-scrollable-unit-increment
@@ -176,7 +176,7 @@
 
   returns: The `unit` increment for scrolling in the specified direction.
            This value should always be positive. - `int`"
-  ([^javax.swing.JLayer this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
+  (^Integer [^javax.swing.JLayer this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
     (-> this (.getScrollableUnitIncrement visible-rect orientation direction))))
 
 (defn property-change
@@ -202,7 +202,7 @@
    implementation to the view component.
 
   returns: the preferred size of the viewport for a view component - `java.awt.Dimension`"
-  ([^javax.swing.JLayer this]
+  (^java.awt.Dimension [^javax.swing.JLayer this]
     (-> this (.getPreferredScrollableViewportSize))))
 
 (defn set-ui
@@ -232,7 +232,7 @@
    By default JLayer receives no events.
 
   returns: the bitmask of event types to receive for this JLayer - `long`"
-  ([^javax.swing.JLayer this]
+  (^Long [^javax.swing.JLayer this]
     (-> this (.getLayerEventMask))))
 
 (defn remove
@@ -312,7 +312,7 @@
    implementation to the view component.
 
   returns: whether the layer should track the width of the viewport - `boolean`"
-  ([^javax.swing.JLayer this]
+  (^Boolean [^javax.swing.JLayer this]
     (-> this (.getScrollableTracksViewportWidth))))
 
 (defn get-glass-pane
@@ -321,7 +321,7 @@
 
   returns: the JLayer's glassPane component
            or null if none exists - `javax.swing.JPanel`"
-  ([^javax.swing.JLayer this]
+  (^javax.swing.JPanel [^javax.swing.JLayer this]
     (-> this (.getGlassPane))))
 
 (defn paint
@@ -335,7 +335,7 @@
   "Gets the AccessibleContext associated with this JLayer.
 
   returns: the AccessibleContext associated with this JLayer. - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.JLayer this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.JLayer this]
     (-> this (.getAccessibleContext))))
 
 (defn set-glass-pane
@@ -361,7 +361,7 @@
    implementation to the view component.
 
   returns: whether the layer should track the height of the viewport - `boolean`"
-  ([^javax.swing.JLayer this]
+  (^Boolean [^javax.swing.JLayer this]
     (-> this (.getScrollableTracksViewportHeight))))
 
 (defn set-border
@@ -416,6 +416,6 @@
    children directly.
 
   returns: false - `boolean`"
-  ([^javax.swing.JLayer this]
+  (^Boolean [^javax.swing.JLayer this]
     (-> this (.isOptimizedDrawingEnabled))))
 

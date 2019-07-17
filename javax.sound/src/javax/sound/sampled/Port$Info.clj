@@ -79,7 +79,7 @@
   "Obtains the name of the port.
 
   returns: the string that names the port - `java.lang.String`"
-  ([^javax.sound.sampled.Port$Info this]
+  (^java.lang.String [^javax.sound.sampled.Port$Info this]
     (-> this (.getName))))
 
 (defn source?
@@ -88,7 +88,7 @@
   returns: true if the port is a source port (such
    as a microphone), false if the port is a target port
    (such as a speaker). - `boolean`"
-  ([^javax.sound.sampled.Port$Info this]
+  (^Boolean [^javax.sound.sampled.Port$Info this]
     (-> this (.isSource))))
 
 (defn matches
@@ -100,7 +100,7 @@
 
   returns: true if the specified object matches this one,
    false otherwise - `boolean`"
-  ([^javax.sound.sampled.Port$Info this ^javax.sound.sampled.Line.Info info]
+  (^Boolean [^javax.sound.sampled.Port$Info this ^javax.sound.sampled.Line.Info info]
     (-> this (.matches info))))
 
 (defn equals
@@ -110,14 +110,14 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([^javax.sound.sampled.Port$Info this ^java.lang.Object obj]
+  (^Boolean [^javax.sound.sampled.Port$Info this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Finalizes the hashCode method
 
   returns: a hash code value for this object. - `int`"
-  ([^javax.sound.sampled.Port$Info this]
+  (^Integer [^javax.sound.sampled.Port$Info this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -125,6 +125,6 @@
    of the port.
 
   returns: a string that describes the port - `java.lang.String`"
-  ([^javax.sound.sampled.Port$Info this]
+  (^java.lang.String [^javax.sound.sampled.Port$Info this]
     (-> this (.toString))))
 

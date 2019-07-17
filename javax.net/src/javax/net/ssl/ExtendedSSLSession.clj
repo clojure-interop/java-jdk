@@ -73,6 +73,6 @@
            empty if no server name indications were requested. - `java.util.List<javax.net.ssl.SNIServerName>`
 
   throws: java.lang.UnsupportedOperationException - if the underlying provider does not implement the operation"
-  ([^javax.net.ssl.ExtendedSSLSession this]
+  (^java.util.List [^javax.net.ssl.ExtendedSSLSession this]
     (-> this (.getRequestedServerNames))))
 

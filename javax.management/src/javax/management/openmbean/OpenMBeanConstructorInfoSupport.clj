@@ -20,9 +20,9 @@
   descriptor - The descriptor for the constructor. This may be null which is equivalent to an empty descriptor. - `javax.management.Descriptor`
 
   throws: java.lang.IllegalArgumentException - if name or description are null or empty string."
-  ([^java.lang.String name ^java.lang.String description ^javax.management.openmbean.OpenMBeanParameterInfo[] signature ^javax.management.Descriptor descriptor]
+  ([^java.lang.String name ^java.lang.String description signature ^javax.management.Descriptor descriptor]
     (new OpenMBeanConstructorInfoSupport name description signature descriptor))
-  ([^java.lang.String name ^java.lang.String description ^javax.management.openmbean.OpenMBeanParameterInfo[] signature]
+  ([^java.lang.String name ^java.lang.String description signature]
     (new OpenMBeanConstructorInfoSupport name description signature)))
 
 (defn equals
@@ -48,7 +48,7 @@
 
   returns: true if the specified object is equal to this
    OpenMBeanConstructorInfoSupport instance. - `boolean`"
-  ([^javax.management.openmbean.OpenMBeanConstructorInfoSupport this ^java.lang.Object obj]
+  (^Boolean [^javax.management.openmbean.OpenMBeanConstructorInfoSupport this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -76,7 +76,7 @@
    is returned for subsequent calls.
 
   returns: the hash code value for this OpenMBeanConstructorInfoSupport instance - `int`"
-  ([^javax.management.openmbean.OpenMBeanConstructorInfoSupport this]
+  (^Integer [^javax.management.openmbean.OpenMBeanConstructorInfoSupport this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -93,6 +93,6 @@
    then the same value is returned for subsequent calls.
 
   returns: a string representation of this OpenMBeanConstructorInfoSupport instance - `java.lang.String`"
-  ([^javax.management.openmbean.OpenMBeanConstructorInfoSupport this]
+  (^java.lang.String [^javax.management.openmbean.OpenMBeanConstructorInfoSupport this]
     (-> this (.toString))))
 

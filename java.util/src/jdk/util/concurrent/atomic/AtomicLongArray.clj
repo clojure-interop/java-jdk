@@ -22,7 +22,7 @@
   delta - the value to add - `long`
 
   returns: the previous value - `long`"
-  ([^java.util.concurrent.atomic.AtomicLongArray this ^Integer i ^Long delta]
+  (^Long [^java.util.concurrent.atomic.AtomicLongArray this ^Integer i ^Long delta]
     (-> this (.getAndAdd i delta))))
 
 (defn get-and-set
@@ -33,7 +33,7 @@
   new-value - the new value - `long`
 
   returns: the previous value - `long`"
-  ([^java.util.concurrent.atomic.AtomicLongArray this ^Integer i ^Long new-value]
+  (^Long [^java.util.concurrent.atomic.AtomicLongArray this ^Integer i ^Long new-value]
     (-> this (.getAndSet i new-value))))
 
 (defn update-and-get
@@ -46,7 +46,7 @@
   update-function - a side-effect-free function - `java.util.function.LongUnaryOperator`
 
   returns: the updated value - `long`"
-  ([^java.util.concurrent.atomic.AtomicLongArray this ^Integer i ^java.util.function.LongUnaryOperator update-function]
+  (^Long [^java.util.concurrent.atomic.AtomicLongArray this ^Integer i ^java.util.function.LongUnaryOperator update-function]
     (-> this (.updateAndGet i update-function))))
 
 (defn add-and-get
@@ -56,7 +56,7 @@
   delta - the value to add - `long`
 
   returns: the updated value - `long`"
-  ([^java.util.concurrent.atomic.AtomicLongArray this ^Integer i ^Long delta]
+  (^Long [^java.util.concurrent.atomic.AtomicLongArray this ^Integer i ^Long delta]
     (-> this (.addAndGet i delta))))
 
 (defn get-and-update
@@ -69,14 +69,14 @@
   update-function - a side-effect-free function - `java.util.function.LongUnaryOperator`
 
   returns: the previous value - `long`"
-  ([^java.util.concurrent.atomic.AtomicLongArray this ^Integer i ^java.util.function.LongUnaryOperator update-function]
+  (^Long [^java.util.concurrent.atomic.AtomicLongArray this ^Integer i ^java.util.function.LongUnaryOperator update-function]
     (-> this (.getAndUpdate i update-function))))
 
 (defn to-string
   "Returns the String representation of the current values of array.
 
   returns: the String representation of the current values of array - `java.lang.String`"
-  ([^java.util.concurrent.atomic.AtomicLongArray this]
+  (^java.lang.String [^java.util.concurrent.atomic.AtomicLongArray this]
     (-> this (.toString))))
 
 (defn accumulate-and-get
@@ -93,7 +93,7 @@
   accumulator-function - a side-effect-free function of two arguments - `java.util.function.LongBinaryOperator`
 
   returns: the updated value - `long`"
-  ([^java.util.concurrent.atomic.AtomicLongArray this ^Integer i ^Long x ^java.util.function.LongBinaryOperator accumulator-function]
+  (^Long [^java.util.concurrent.atomic.AtomicLongArray this ^Integer i ^Long x ^java.util.function.LongBinaryOperator accumulator-function]
     (-> this (.accumulateAndGet i x accumulator-function))))
 
 (defn get-and-decrement
@@ -102,14 +102,14 @@
   i - the index - `int`
 
   returns: the previous value - `long`"
-  ([^java.util.concurrent.atomic.AtomicLongArray this ^Integer i]
+  (^Long [^java.util.concurrent.atomic.AtomicLongArray this ^Integer i]
     (-> this (.getAndDecrement i))))
 
 (defn length
   "Returns the length of the array.
 
   returns: the length of the array - `int`"
-  ([^java.util.concurrent.atomic.AtomicLongArray this]
+  (^Integer [^java.util.concurrent.atomic.AtomicLongArray this]
     (-> this (.length))))
 
 (defn decrement-and-get
@@ -118,7 +118,7 @@
   i - the index - `int`
 
   returns: the updated value - `long`"
-  ([^java.util.concurrent.atomic.AtomicLongArray this ^Integer i]
+  (^Long [^java.util.concurrent.atomic.AtomicLongArray this ^Integer i]
     (-> this (.decrementAndGet i))))
 
 (defn weak-compare-and-set
@@ -134,7 +134,7 @@
   update - the new value - `long`
 
   returns: true if successful - `boolean`"
-  ([^java.util.concurrent.atomic.AtomicLongArray this ^Integer i ^Long expect ^Long update]
+  (^Boolean [^java.util.concurrent.atomic.AtomicLongArray this ^Integer i ^Long expect ^Long update]
     (-> this (.weakCompareAndSet i expect update))))
 
 (defn get-and-increment
@@ -143,7 +143,7 @@
   i - the index - `int`
 
   returns: the previous value - `long`"
-  ([^java.util.concurrent.atomic.AtomicLongArray this ^Integer i]
+  (^Long [^java.util.concurrent.atomic.AtomicLongArray this ^Integer i]
     (-> this (.getAndIncrement i))))
 
 (defn lazy-set
@@ -176,7 +176,7 @@
   accumulator-function - a side-effect-free function of two arguments - `java.util.function.LongBinaryOperator`
 
   returns: the previous value - `long`"
-  ([^java.util.concurrent.atomic.AtomicLongArray this ^Integer i ^Long x ^java.util.function.LongBinaryOperator accumulator-function]
+  (^Long [^java.util.concurrent.atomic.AtomicLongArray this ^Integer i ^Long x ^java.util.function.LongBinaryOperator accumulator-function]
     (-> this (.getAndAccumulate i x accumulator-function))))
 
 (defn compare-and-set
@@ -189,7 +189,7 @@
 
   returns: true if successful. False return indicates that
    the actual value was not equal to the expected value. - `boolean`"
-  ([^java.util.concurrent.atomic.AtomicLongArray this ^Integer i ^Long expect ^Long update]
+  (^Boolean [^java.util.concurrent.atomic.AtomicLongArray this ^Integer i ^Long expect ^Long update]
     (-> this (.compareAndSet i expect update))))
 
 (defn get
@@ -198,7 +198,7 @@
   i - the index - `int`
 
   returns: the current value - `long`"
-  ([^java.util.concurrent.atomic.AtomicLongArray this ^Integer i]
+  (^Long [^java.util.concurrent.atomic.AtomicLongArray this ^Integer i]
     (-> this (.get i))))
 
 (defn increment-and-get
@@ -207,6 +207,6 @@
   i - the index - `int`
 
   returns: the updated value - `long`"
-  ([^java.util.concurrent.atomic.AtomicLongArray this ^Integer i]
+  (^Long [^java.util.concurrent.atomic.AtomicLongArray this ^Integer i]
     (-> this (.incrementAndGet i))))
 

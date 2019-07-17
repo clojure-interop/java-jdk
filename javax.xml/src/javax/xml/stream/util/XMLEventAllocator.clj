@@ -12,7 +12,7 @@
    allows the XMLInputFactory to allocate a new instance per reader.
 
   returns: `javax.xml.stream.util.XMLEventAllocator`"
-  ([^javax.xml.stream.util.XMLEventAllocator this]
+  (^javax.xml.stream.util.XMLEventAllocator [^javax.xml.stream.util.XMLEventAllocator this]
     (-> this (.newInstance))))
 
 (defn allocate
@@ -30,6 +30,6 @@
   throws: javax.xml.stream.XMLStreamException"
   ([^javax.xml.stream.util.XMLEventAllocator this ^javax.xml.stream.XMLStreamReader reader ^javax.xml.stream.util.XMLEventConsumer consumer]
     (-> this (.allocate reader consumer)))
-  ([^javax.xml.stream.util.XMLEventAllocator this ^javax.xml.stream.XMLStreamReader reader]
+  (^javax.xml.stream.events.XMLEvent [^javax.xml.stream.util.XMLEventAllocator this ^javax.xml.stream.XMLStreamReader reader]
     (-> this (.allocate reader))))
 

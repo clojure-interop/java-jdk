@@ -41,6 +41,6 @@
    null.
 
   returns: null - `PhantomReference.T`"
-  ([^java.lang.ref.PhantomReference this]
+  (^PhantomReference.T [^java.lang.ref.PhantomReference this]
     (-> this (.get))))
 

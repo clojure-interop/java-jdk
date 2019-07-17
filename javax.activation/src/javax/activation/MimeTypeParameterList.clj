@@ -22,14 +22,14 @@
   "Return the number of name-value pairs in this list.
 
   returns: the number of parameters - `int`"
-  ([^javax.activation.MimeTypeParameterList this]
+  (^Integer [^javax.activation.MimeTypeParameterList this]
     (-> this (.size))))
 
 (defn empty?
   "Determine whether or not this list is empty.
 
   returns: true if there are no parameters - `boolean`"
-  ([^javax.activation.MimeTypeParameterList this]
+  (^Boolean [^javax.activation.MimeTypeParameterList this]
     (-> this (.isEmpty))))
 
 (defn get
@@ -39,7 +39,7 @@
   name - the parameter name - `java.lang.String`
 
   returns: the parameter's value - `java.lang.String`"
-  ([^javax.activation.MimeTypeParameterList this ^java.lang.String name]
+  (^java.lang.String [^javax.activation.MimeTypeParameterList this ^java.lang.String name]
     (-> this (.get name))))
 
 (defn set
@@ -62,13 +62,13 @@
   "Retrieve an enumeration of all the names in this list.
 
   returns: an enumeration of all parameter names - `java.util.Enumeration`"
-  ([^javax.activation.MimeTypeParameterList this]
+  (^java.util.Enumeration [^javax.activation.MimeTypeParameterList this]
     (-> this (.getNames))))
 
 (defn to-string
   "Return a string representation of this object.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^javax.activation.MimeTypeParameterList this]
+  (^java.lang.String [^javax.activation.MimeTypeParameterList this]
     (-> this (.toString))))
 

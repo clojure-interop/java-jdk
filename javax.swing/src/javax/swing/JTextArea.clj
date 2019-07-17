@@ -106,7 +106,7 @@
    null or doesn't have a tab setting, return a default of 8.
 
   returns: the number of characters - `int`"
-  ([^javax.swing.JTextArea this]
+  (^Integer [^javax.swing.JTextArea this]
     (-> this (.getTabSize))))
 
 (defn set-columns
@@ -128,21 +128,21 @@
   returns: the line number >= 0 - `int`
 
   throws: javax.swing.text.BadLocationException - thrown if the offset is less than zero or greater than the document length."
-  ([^javax.swing.JTextArea this ^Integer offset]
+  (^Integer [^javax.swing.JTextArea this ^Integer offset]
     (-> this (.getLineOfOffset offset))))
 
 (defn get-line-count
   "Determines the number of lines contained in the area.
 
   returns: the number of lines > 0 - `int`"
-  ([^javax.swing.JTextArea this]
+  (^Integer [^javax.swing.JTextArea this]
     (-> this (.getLineCount))))
 
 (defn get-columns
   "Returns the number of columns in the TextArea.
 
   returns: number of columns >= 0 - `int`"
-  ([^javax.swing.JTextArea this]
+  (^Integer [^javax.swing.JTextArea this]
     (-> this (.getColumns))))
 
 (defn set-wrap-style-word
@@ -161,7 +161,7 @@
   "Returns the class ID for the UI.
 
   returns: the ID (`TextAreaUI`) - `java.lang.String`"
-  ([^javax.swing.JTextArea this]
+  (^java.lang.String [^javax.swing.JTextArea this]
     (-> this (.getUIClassID))))
 
 (defn get-scrollable-unit-increment
@@ -181,7 +181,7 @@
   returns: The `unit` increment for scrolling in the specified direction - `int`
 
   throws: java.lang.IllegalArgumentException - for an invalid orientation"
-  ([^javax.swing.JTextArea this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
+  (^Integer [^javax.swing.JTextArea this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
     (-> this (.getScrollableUnitIncrement visible-rect orientation direction))))
 
 (defn set-line-wrap
@@ -204,7 +204,7 @@
   returns: the offset >= 0 - `int`
 
   throws: javax.swing.text.BadLocationException - Thrown if the line is less than zero or greater or equal to the number of lines contained in the document (as reported by getLineCount)."
-  ([^javax.swing.JTextArea this ^Integer line]
+  (^Integer [^javax.swing.JTextArea this ^Integer line]
     (-> this (.getLineEndOffset line))))
 
 (defn get-preferred-scrollable-viewport-size
@@ -214,7 +214,7 @@
    behavior is used.
 
   returns: The preferredSize of a JViewport whose view is this Scrollable. - `java.awt.Dimension`"
-  ([^javax.swing.JTextArea this]
+  (^java.awt.Dimension [^javax.swing.JTextArea this]
     (-> this (.getPreferredScrollableViewportSize))))
 
 (defn get-wrap-style-word?
@@ -226,7 +226,7 @@
 
   returns: if the wrap style should be word boundaries
     instead of character boundaries - `boolean`"
-  ([^javax.swing.JTextArea this]
+  (^Boolean [^javax.swing.JTextArea this]
     (-> this (.getWrapStyleWord))))
 
 (defn set-tab-size
@@ -255,14 +255,14 @@
 
   returns: true if a viewport should force the Scrollables width
    to match its own. - `boolean`"
-  ([^javax.swing.JTextArea this]
+  (^Boolean [^javax.swing.JTextArea this]
     (-> this (.getScrollableTracksViewportWidth))))
 
 (defn get-rows
   "Returns the number of rows in the TextArea.
 
   returns: the number of rows >= 0 - `int`"
-  ([^javax.swing.JTextArea this]
+  (^Integer [^javax.swing.JTextArea this]
     (-> this (.getRows))))
 
 (defn get-accessible-context
@@ -273,7 +273,7 @@
 
   returns: an AccessibleJTextArea that serves as the
            AccessibleContext of this JTextArea - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.JTextArea this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.JTextArea this]
     (-> this (.getAccessibleContext))))
 
 (defn get-line-wrap?
@@ -283,7 +283,7 @@
    the lines will always be unwrapped.
 
   returns: if lines will be wrapped - `boolean`"
-  ([^javax.swing.JTextArea this]
+  (^Boolean [^javax.swing.JTextArea this]
     (-> this (.getLineWrap))))
 
 (defn get-line-start-offset
@@ -294,7 +294,7 @@
   returns: the offset >= 0 - `int`
 
   throws: javax.swing.text.BadLocationException - thrown if the line is less than zero or greater or equal to the number of lines contained in the document (as reported by getLineCount)."
-  ([^javax.swing.JTextArea this ^Integer line]
+  (^Integer [^javax.swing.JTextArea this ^Integer line]
     (-> this (.getLineStartOffset line))))
 
 (defn append
@@ -345,6 +345,6 @@
    size requested for the viewport.
 
   returns: the size - `java.awt.Dimension`"
-  ([^javax.swing.JTextArea this]
+  (^java.awt.Dimension [^javax.swing.JTextArea this]
     (-> this (.getPreferredSize))))
 

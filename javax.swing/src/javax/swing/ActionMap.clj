@@ -66,7 +66,7 @@
 
   returns: the ActionMap that is the parent of this one,
            or null if this ActionMap has no parent - `javax.swing.ActionMap`"
-  ([^javax.swing.ActionMap this]
+  (^javax.swing.ActionMap [^javax.swing.ActionMap this]
     (-> this (.getParent))))
 
 (defn remove
@@ -80,7 +80,7 @@
   "Returns the number of bindings in this ActionMap.
 
   returns: the number of bindings in this ActionMap - `int`"
-  ([^javax.swing.ActionMap this]
+  (^Integer [^javax.swing.ActionMap this]
     (-> this (.size))))
 
 (defn clear
@@ -95,6 +95,6 @@
   key - `java.lang.Object`
 
   returns: `javax.swing.Action`"
-  ([^javax.swing.ActionMap this ^java.lang.Object key]
+  (^javax.swing.Action [^javax.swing.ActionMap this ^java.lang.Object key]
     (-> this (.get key))))
 

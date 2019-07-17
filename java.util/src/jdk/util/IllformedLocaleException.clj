@@ -27,6 +27,6 @@
    either the error index is not applicable or unknown.
 
   returns: the error index - `int`"
-  ([^java.util.IllformedLocaleException this]
+  (^Integer [^java.util.IllformedLocaleException this]
     (-> this (.getErrorIndex))))
 

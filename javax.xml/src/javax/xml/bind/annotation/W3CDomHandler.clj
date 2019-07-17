@@ -17,7 +17,7 @@
 
 (defn get-builder
   "returns: `javax.xml.parsers.DocumentBuilder`"
-  ([^javax.xml.bind.annotation.W3CDomHandler this]
+  (^javax.xml.parsers.DocumentBuilder [^javax.xml.bind.annotation.W3CDomHandler this]
     (-> this (.getBuilder))))
 
 (defn set-builder
@@ -32,7 +32,7 @@
 
   returns: null if the operation fails. The error must have been reported
         to the error handler. - `javax.xml.transform.dom.DOMResult`"
-  ([^javax.xml.bind.annotation.W3CDomHandler this ^javax.xml.bind.ValidationEventHandler error-handler]
+  (^javax.xml.transform.dom.DOMResult [^javax.xml.bind.annotation.W3CDomHandler this ^javax.xml.bind.ValidationEventHandler error-handler]
     (-> this (.createUnmarshaller error-handler))))
 
 (defn get-element
@@ -42,7 +42,7 @@
 
   returns: null if the operation fails. The error must have been reported
         to the error handler. - `org.w3c.dom.Element`"
-  ([^javax.xml.bind.annotation.W3CDomHandler this ^javax.xml.transform.dom.DOMResult r]
+  (^org.w3c.dom.Element [^javax.xml.bind.annotation.W3CDomHandler this ^javax.xml.transform.dom.DOMResult r]
     (-> this (.getElement r))))
 
 (defn marshal
@@ -53,6 +53,6 @@
 
   returns: null if there was an error. The error should have been reported
         to the handler. - `javax.xml.transform.Source`"
-  ([^javax.xml.bind.annotation.W3CDomHandler this ^org.w3c.dom.Element element ^javax.xml.bind.ValidationEventHandler error-handler]
+  (^javax.xml.transform.Source [^javax.xml.bind.annotation.W3CDomHandler this ^org.w3c.dom.Element element ^javax.xml.bind.ValidationEventHandler error-handler]
     (-> this (.marshal element error-handler))))
 

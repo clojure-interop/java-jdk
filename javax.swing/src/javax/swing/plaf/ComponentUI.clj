@@ -32,7 +32,7 @@
   c - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent c]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent c]
     (ComponentUI/createUI c)))
 
 (defn install-ui
@@ -69,7 +69,7 @@
   c - the component whose minimum size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: a Dimension object or null - `java.awt.Dimension`"
-  ([^javax.swing.plaf.ComponentUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^javax.swing.plaf.ComponentUI this ^javax.swing.JComponent c]
     (-> this (.getMinimumSize c))))
 
 (defn get-maximum-size
@@ -83,7 +83,7 @@
   c - the component whose maximum size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: a Dimension object or null - `java.awt.Dimension`"
-  ([^javax.swing.plaf.ComponentUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^javax.swing.plaf.ComponentUI this ^javax.swing.JComponent c]
     (-> this (.getMaximumSize c))))
 
 (defn get-accessible-child
@@ -102,7 +102,7 @@
   i - zero-based index of child - `int`
 
   returns: the ith Accessible child of the object - `javax.accessibility.Accessible`"
-  ([^javax.swing.plaf.ComponentUI this ^javax.swing.JComponent c ^Integer i]
+  (^javax.accessibility.Accessible [^javax.swing.plaf.ComponentUI this ^javax.swing.JComponent c ^Integer i]
     (-> this (.getAccessibleChild c i))))
 
 (defn uninstall-ui
@@ -140,7 +140,7 @@
   y - the y coordinate of the point - `int`
 
   returns: `boolean`"
-  ([^javax.swing.plaf.ComponentUI this ^javax.swing.JComponent c ^Integer x ^Integer y]
+  (^Boolean [^javax.swing.plaf.ComponentUI this ^javax.swing.JComponent c ^Integer x ^Integer y]
     (-> this (.contains c x y))))
 
 (defn get-baseline-resize-behavior
@@ -157,7 +157,7 @@
            size changes - `java.awt.Component.BaselineResizeBehavior`
 
   throws: java.lang.NullPointerException - if c is null"
-  ([^javax.swing.plaf.ComponentUI this ^javax.swing.JComponent c]
+  (^java.awt.Component.BaselineResizeBehavior [^javax.swing.plaf.ComponentUI this ^javax.swing.JComponent c]
     (-> this (.getBaselineResizeBehavior c))))
 
 (defn update
@@ -192,7 +192,7 @@
   c - `javax.swing.JComponent`
 
   returns: the number of accessible children in the object - `int`"
-  ([^javax.swing.plaf.ComponentUI this ^javax.swing.JComponent c]
+  (^Integer [^javax.swing.plaf.ComponentUI this ^javax.swing.JComponent c]
     (-> this (.getAccessibleChildrenCount c))))
 
 (defn paint
@@ -227,7 +227,7 @@
                     baseline - `int`
 
   throws: java.lang.NullPointerException - if c is null"
-  ([^javax.swing.plaf.ComponentUI this ^javax.swing.JComponent c ^Integer width ^Integer height]
+  (^Integer [^javax.swing.plaf.ComponentUI this ^javax.swing.JComponent c ^Integer width ^Integer height]
     (-> this (.getBaseline c width height))))
 
 (defn get-preferred-size
@@ -241,6 +241,6 @@
   c - the component whose preferred size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: `java.awt.Dimension`"
-  ([^javax.swing.plaf.ComponentUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^javax.swing.plaf.ComponentUI this ^javax.swing.JComponent c]
     (-> this (.getPreferredSize c))))
 

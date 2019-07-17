@@ -26,7 +26,7 @@
   "Returns true if the selection is undergoing a series of changes.
 
   returns: true if the selection is undergoing a series of changes - `boolean`"
-  ([^javax.swing.ListSelectionModel this]
+  (^Boolean [^javax.swing.ListSelectionModel this]
     (-> this (.getValueIsAdjusting))))
 
 (defn add-list-selection-listener
@@ -48,7 +48,7 @@
    setSelectionInterval(), addSelectionInterval() or removeSelectionInterval().
 
   returns: `int`"
-  ([^javax.swing.ListSelectionModel this]
+  (^Integer [^javax.swing.ListSelectionModel this]
     (-> this (.getLeadSelectionIndex))))
 
 (defn get-anchor-selection-index
@@ -60,7 +60,7 @@
    dotted yellow outline.
 
   returns: `int`"
-  ([^javax.swing.ListSelectionModel this]
+  (^Integer [^javax.swing.ListSelectionModel this]
     (-> this (.getAnchorSelectionIndex))))
 
 (defn selected-index?
@@ -69,7 +69,7 @@
   index - `int`
 
   returns: `boolean`"
-  ([^javax.swing.ListSelectionModel this ^Integer index]
+  (^Boolean [^javax.swing.ListSelectionModel this ^Integer index]
     (-> this (.isSelectedIndex index))))
 
 (defn remove-index-interval
@@ -149,21 +149,21 @@
   "Returns the last selected index or -1 if the selection is empty.
 
   returns: `int`"
-  ([^javax.swing.ListSelectionModel this]
+  (^Integer [^javax.swing.ListSelectionModel this]
     (-> this (.getMaxSelectionIndex))))
 
 (defn selection-empty?
   "Returns true if no indices are selected.
 
   returns: `boolean`"
-  ([^javax.swing.ListSelectionModel this]
+  (^Boolean [^javax.swing.ListSelectionModel this]
     (-> this (.isSelectionEmpty))))
 
 (defn get-min-selection-index
   "Returns the first selected index or -1 if the selection is empty.
 
   returns: `int`"
-  ([^javax.swing.ListSelectionModel this]
+  (^Integer [^javax.swing.ListSelectionModel this]
     (-> this (.getMinSelectionIndex))))
 
 (defn set-value-is-adjusting
@@ -203,7 +203,7 @@
   "Returns the current selection mode.
 
   returns: the current selection mode - `int`"
-  ([^javax.swing.ListSelectionModel this]
+  (^Integer [^javax.swing.ListSelectionModel this]
     (-> this (.getSelectionMode))))
 
 (defn set-lead-selection-index

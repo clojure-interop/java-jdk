@@ -51,6 +51,6 @@
    category name is `pdl-override-supported`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.PDLOverrideSupported this]
+  (^java.lang.String [^javax.print.attribute.standard.PDLOverrideSupported this]
     (-> this (.getName))))
 

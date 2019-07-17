@@ -55,7 +55,7 @@
   "Return the count of values recorded.
 
   returns: the count of values - `long`"
-  ([^java.util.DoubleSummaryStatistics this]
+  (^Long [^java.util.DoubleSummaryStatistics this]
     (-> this (.getCount))))
 
 (defn get-sum
@@ -77,7 +77,7 @@
    values.
 
   returns: the sum of values, or zero if none - `double`"
-  ([^java.util.DoubleSummaryStatistics this]
+  (^Double [^java.util.DoubleSummaryStatistics this]
     (-> this (.getSum))))
 
 (defn get-min
@@ -89,7 +89,7 @@
   returns: the minimum recorded value, Double.NaN if any recorded
    value was NaN or Double.POSITIVE_INFINITY if no values were
    recorded - `double`"
-  ([^java.util.DoubleSummaryStatistics this]
+  (^Double [^java.util.DoubleSummaryStatistics this]
     (-> this (.getMin))))
 
 (defn get-max
@@ -101,7 +101,7 @@
   returns: the maximum recorded value, Double.NaN if any recorded
    value was NaN or Double.NEGATIVE_INFINITY if no values were
    recorded - `double`"
-  ([^java.util.DoubleSummaryStatistics this]
+  (^Double [^java.util.DoubleSummaryStatistics this]
     (-> this (.getMax))))
 
 (defn get-average
@@ -118,7 +118,7 @@
    other technique to reduce the error bound in the numerical sum used to compute the average.
 
   returns: the arithmetic mean of values, or zero if none - `double`"
-  ([^java.util.DoubleSummaryStatistics this]
+  (^Double [^java.util.DoubleSummaryStatistics this]
     (-> this (.getAverage))))
 
 (defn to-string
@@ -145,6 +145,6 @@
    between implementations and versions.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^java.util.DoubleSummaryStatistics this]
+  (^java.lang.String [^java.util.DoubleSummaryStatistics this]
     (-> this (.toString))))
 

@@ -36,7 +36,7 @@
   notification - The notification to be sent. - `javax.management.Notification`
 
   returns: true if the notification should be sent to the listener, false otherwise. - `boolean`"
-  ([^javax.management.NotificationFilterSupport this ^javax.management.Notification notification]
+  (^Boolean [^javax.management.NotificationFilterSupport this ^javax.management.Notification notification]
     (-> this (.isNotificationEnabled notification))))
 
 (defn enable-type
@@ -85,6 +85,6 @@
   "Gets all the enabled notification types for this filter.
 
   returns: The list containing all the enabled notification types. - `java.util.Vector<java.lang.String>`"
-  ([^javax.management.NotificationFilterSupport this]
+  (^java.util.Vector [^javax.management.NotificationFilterSupport this]
     (-> this (.getEnabledTypes))))
 

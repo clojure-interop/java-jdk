@@ -116,7 +116,7 @@
 
   returns: True if object is equivalent to this number up
             attribute, false otherwise. - `boolean`"
-  ([^javax.print.attribute.standard.NumberUp this ^java.lang.Object object]
+  (^Boolean [^javax.print.attribute.standard.NumberUp this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -137,6 +137,6 @@
    For class NumberUp, the category name is `number-up`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.NumberUp this]
+  (^java.lang.String [^javax.print.attribute.standard.NumberUp this]
     (-> this (.getName))))
 

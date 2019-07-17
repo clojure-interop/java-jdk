@@ -21,21 +21,21 @@
    wrapping.
 
   returns: the underlying model - `DefaultRowSorter.ModelWrapper.M`"
-  ([^javax.swing.DefaultRowSorter$ModelWrapper this]
+  (^DefaultRowSorter.ModelWrapper.M [^javax.swing.DefaultRowSorter$ModelWrapper this]
     (-> this (.getModel))))
 
 (defn get-column-count
   "Returns the number of columns in the model.
 
   returns: the number of columns in the model - `int`"
-  ([^javax.swing.DefaultRowSorter$ModelWrapper this]
+  (^Integer [^javax.swing.DefaultRowSorter$ModelWrapper this]
     (-> this (.getColumnCount))))
 
 (defn get-row-count
   "Returns the number of rows in the model.
 
   returns: the number of rows in the model - `int`"
-  ([^javax.swing.DefaultRowSorter$ModelWrapper this]
+  (^Integer [^javax.swing.DefaultRowSorter$ModelWrapper this]
     (-> this (.getRowCount))))
 
 (defn get-value-at
@@ -47,7 +47,7 @@
   returns: the value at the specified index - `java.lang.Object`
 
   throws: java.lang.IndexOutOfBoundsException - if the indices are outside the range of the model"
-  ([^javax.swing.DefaultRowSorter$ModelWrapper this ^Integer row ^Integer column]
+  (^java.lang.Object [^javax.swing.DefaultRowSorter$ModelWrapper this ^Integer row ^Integer column]
     (-> this (.getValueAt row column))))
 
 (defn get-string-value-at
@@ -63,7 +63,7 @@
   returns: the value at the specified index as a String - `java.lang.String`
 
   throws: java.lang.IndexOutOfBoundsException - if the indices are outside the range of the model"
-  ([^javax.swing.DefaultRowSorter$ModelWrapper this ^Integer row ^Integer column]
+  (^java.lang.String [^javax.swing.DefaultRowSorter$ModelWrapper this ^Integer row ^Integer column]
     (-> this (.getStringValueAt row column))))
 
 (defn get-identifier
@@ -75,6 +75,6 @@
   row - the row to return the identifier for, in terms of the underlying model - `int`
 
   returns: the identifier - `DefaultRowSorter.ModelWrapper.I`"
-  ([^javax.swing.DefaultRowSorter$ModelWrapper this ^Integer row]
+  (^DefaultRowSorter.ModelWrapper.I [^javax.swing.DefaultRowSorter$ModelWrapper this ^Integer row]
     (-> this (.getIdentifier row))))
 

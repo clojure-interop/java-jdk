@@ -51,7 +51,7 @@
   source-encoding - the source format encoding for which support is queried - `javax.sound.sampled.AudioFormat.Encoding`
 
   returns: true if the encoding is supported, otherwise false - `boolean`"
-  ([^javax.sound.sampled.spi.FormatConversionProvider this ^javax.sound.sampled.AudioFormat.Encoding source-encoding]
+  (^Boolean [^javax.sound.sampled.spi.FormatConversionProvider this ^javax.sound.sampled.AudioFormat.Encoding source-encoding]
     (-> this (.isSourceEncodingSupported source-encoding))))
 
 (defn target-encoding-supported?
@@ -61,7 +61,7 @@
   target-encoding - the target format encoding for which support is queried - `javax.sound.sampled.AudioFormat.Encoding`
 
   returns: true if the encoding is supported, otherwise false - `boolean`"
-  ([^javax.sound.sampled.spi.FormatConversionProvider this ^javax.sound.sampled.AudioFormat.Encoding target-encoding]
+  (^Boolean [^javax.sound.sampled.spi.FormatConversionProvider this ^javax.sound.sampled.AudioFormat.Encoding target-encoding]
     (-> this (.isTargetEncodingSupported target-encoding))))
 
 (defn conversion-supported?
@@ -72,7 +72,7 @@
   source-format - format of the incoming data - `javax.sound.sampled.AudioFormat`
 
   returns: true if the conversion is supported, otherwise false - `boolean`"
-  ([^javax.sound.sampled.spi.FormatConversionProvider this ^javax.sound.sampled.AudioFormat.Encoding target-encoding ^javax.sound.sampled.AudioFormat source-format]
+  (^Boolean [^javax.sound.sampled.spi.FormatConversionProvider this ^javax.sound.sampled.AudioFormat.Encoding target-encoding ^javax.sound.sampled.AudioFormat source-format]
     (-> this (.isConversionSupported target-encoding source-format))))
 
 (defn get-target-formats
@@ -98,6 +98,6 @@
   returns: stream from which processed data with the specified target encoding may be read - `javax.sound.sampled.AudioInputStream`
 
   throws: java.lang.IllegalArgumentException - if the format combination supplied is not supported."
-  ([^javax.sound.sampled.spi.FormatConversionProvider this ^javax.sound.sampled.AudioFormat.Encoding target-encoding ^javax.sound.sampled.AudioInputStream source-stream]
+  (^javax.sound.sampled.AudioInputStream [^javax.sound.sampled.spi.FormatConversionProvider this ^javax.sound.sampled.AudioFormat.Encoding target-encoding ^javax.sound.sampled.AudioInputStream source-stream]
     (-> this (.getAudioInputStream target-encoding source-stream))))
 

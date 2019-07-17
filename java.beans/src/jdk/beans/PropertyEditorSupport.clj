@@ -20,7 +20,7 @@
   "Determines whether the class will honor the paintValue method.
 
   returns: True if the class will honor the paintValue method. - `boolean`"
-  ([^java.beans.PropertyEditorSupport this]
+  (^Boolean [^java.beans.PropertyEditorSupport this]
     (-> this (.isPaintable))))
 
 (defn paint-value
@@ -62,7 +62,7 @@
       Returns null if the value can't be expressed as a string.
       If a non-null value is returned, then the PropertyEditor should
          be prepared to parse that string back in setAsText(). - `java.lang.String`"
-  ([^java.beans.PropertyEditorSupport this]
+  (^java.lang.String [^java.beans.PropertyEditorSupport this]
     (-> this (.getAsText))))
 
 (defn get-java-initialization-string
@@ -75,21 +75,21 @@
 
   returns: A fragment of Java code representing an initializer for the
             current value. - `java.lang.String`"
-  ([^java.beans.PropertyEditorSupport this]
+  (^java.lang.String [^java.beans.PropertyEditorSupport this]
     (-> this (.getJavaInitializationString))))
 
 (defn supports-custom-editor
   "Determines whether the propertyEditor can provide a custom editor.
 
   returns: True if the propertyEditor can provide a custom editor. - `boolean`"
-  ([^java.beans.PropertyEditorSupport this]
+  (^Boolean [^java.beans.PropertyEditorSupport this]
     (-> this (.supportsCustomEditor))))
 
 (defn get-value
   "Gets the value of the property.
 
   returns: The value of the property. - `java.lang.Object`"
-  ([^java.beans.PropertyEditorSupport this]
+  (^java.lang.Object [^java.beans.PropertyEditorSupport this]
     (-> this (.getValue))))
 
 (defn get-custom-editor
@@ -105,7 +105,7 @@
   returns: A java.awt.Component that will allow a human to directly
         edit the current property value.  May be null if this is
         not supported. - `java.awt.Component`"
-  ([^java.beans.PropertyEditorSupport this]
+  (^java.awt.Component [^java.beans.PropertyEditorSupport this]
     (-> this (.getCustomEditor))))
 
 (defn remove-property-change-listener
@@ -127,7 +127,7 @@
    PropertyEditorSupport is returned.
 
   returns: the source object or this instance - `java.lang.Object`"
-  ([^java.beans.PropertyEditorSupport this]
+  (^java.lang.Object [^java.beans.PropertyEditorSupport this]
     (-> this (.getSource))))
 
 (defn get-tags

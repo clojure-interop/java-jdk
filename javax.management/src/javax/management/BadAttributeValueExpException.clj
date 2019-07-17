@@ -20,6 +20,6 @@
   "Returns the string representing the object.
 
   returns: a string representation of this throwable. - `java.lang.String`"
-  ([^javax.management.BadAttributeValueExpException this]
+  (^java.lang.String [^javax.management.BadAttributeValueExpException this]
     (-> this (.toString))))
 

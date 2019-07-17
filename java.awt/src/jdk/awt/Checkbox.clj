@@ -95,7 +95,7 @@
 
   returns: this check box's group, or null
                  if the check box is not part of a check box group. - `java.awt.CheckboxGroup`"
-  ([^java.awt.Checkbox this]
+  (^java.awt.CheckboxGroup [^java.awt.Checkbox this]
     (-> this (.getCheckboxGroup))))
 
 (defn get-state?
@@ -104,7 +104,7 @@
    and false indicates the `off` state.
 
   returns: the state of this check box, as a boolean value - `boolean`"
-  ([^java.awt.Checkbox this]
+  (^Boolean [^java.awt.Checkbox this]
     (-> this (.getState))))
 
 (defn add-notify
@@ -118,7 +118,7 @@
 
   returns: the label of this check box, or null
                     if this check box has no label. - `java.lang.String`"
-  ([^java.awt.Checkbox this]
+  (^java.lang.String [^java.awt.Checkbox this]
     (-> this (.getLabel))))
 
 (defn get-accessible-context
@@ -129,7 +129,7 @@
 
   returns: an AccessibleAWTCheckbox that serves as the
            AccessibleContext of this Checkbox - `javax.accessibility.AccessibleContext`"
-  ([^java.awt.Checkbox this]
+  (^javax.accessibility.AccessibleContext [^java.awt.Checkbox this]
     (-> this (.getAccessibleContext))))
 
 (defn set-checkbox-group

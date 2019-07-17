@@ -48,7 +48,7 @@
 
   returns: a Dimension object containing the
             preferred dimensions - `java.awt.Dimension`"
-  ([^javax.swing.ViewportLayout this ^java.awt.Container parent]
+  (^java.awt.Dimension [^javax.swing.ViewportLayout this ^java.awt.Container parent]
     (-> this (.preferredLayoutSize parent))))
 
 (defn minimum-layout-size
@@ -59,7 +59,7 @@
 
   returns: a Dimension object containing the minimum
             dimensions - `java.awt.Dimension`"
-  ([^javax.swing.ViewportLayout this ^java.awt.Container parent]
+  (^java.awt.Dimension [^javax.swing.ViewportLayout this ^java.awt.Container parent]
     (-> this (.minimumLayoutSize parent))))
 
 (defn layout-container

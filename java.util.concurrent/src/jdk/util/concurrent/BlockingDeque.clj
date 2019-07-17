@@ -165,7 +165,7 @@
    This method is equivalent to peekFirst.
 
   returns: the head of this deque, or null if this deque is empty - `BlockingDeque.E`"
-  ([^java.util.concurrent.BlockingDeque this]
+  (^BlockingDeque.E [^java.util.concurrent.BlockingDeque this]
     (-> this (.peek))))
 
 (defn offer-first
@@ -181,9 +181,9 @@
            the specified waiting time elapses before space is available - `boolean`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([^java.util.concurrent.BlockingDeque this ^BlockingDeque.E e ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^Boolean [^java.util.concurrent.BlockingDeque this ^BlockingDeque.E e ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.offerFirst e timeout unit)))
-  ([^java.util.concurrent.BlockingDeque this ^BlockingDeque.E e]
+  (^Boolean [^java.util.concurrent.BlockingDeque this ^BlockingDeque.E e]
     (-> this (.offerFirst e))))
 
 (defn remove-first-occurrence
@@ -199,7 +199,7 @@
   returns: true if an element was removed as a result of this call - `boolean`
 
   throws: java.lang.ClassCastException - if the class of the specified element is incompatible with this deque (optional)"
-  ([^java.util.concurrent.BlockingDeque this ^java.lang.Object o]
+  (^Boolean [^java.util.concurrent.BlockingDeque this ^java.lang.Object o]
     (-> this (.removeFirstOccurrence o))))
 
 (defn offer
@@ -218,9 +218,9 @@
            false - `boolean`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([^java.util.concurrent.BlockingDeque this ^BlockingDeque.E e ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^Boolean [^java.util.concurrent.BlockingDeque this ^BlockingDeque.E e ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.offer e timeout unit)))
-  ([^java.util.concurrent.BlockingDeque this ^BlockingDeque.E e]
+  (^Boolean [^java.util.concurrent.BlockingDeque this ^BlockingDeque.E e]
     (-> this (.offer e))))
 
 (defn put
@@ -246,7 +246,7 @@
   returns: true if this deque contains the specified element - `boolean`
 
   throws: java.lang.ClassCastException - if the class of the specified element is incompatible with this deque (optional)"
-  ([^java.util.concurrent.BlockingDeque this ^java.lang.Object o]
+  (^Boolean [^java.util.concurrent.BlockingDeque this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn take-last
@@ -256,7 +256,7 @@
   returns: the tail of this deque - `BlockingDeque.E`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([^java.util.concurrent.BlockingDeque this]
+  (^BlockingDeque.E [^java.util.concurrent.BlockingDeque this]
     (-> this (.takeLast))))
 
 (defn take-first
@@ -266,7 +266,7 @@
   returns: the head of this deque - `BlockingDeque.E`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([^java.util.concurrent.BlockingDeque this]
+  (^BlockingDeque.E [^java.util.concurrent.BlockingDeque this]
     (-> this (.takeFirst))))
 
 (defn push
@@ -293,7 +293,7 @@
   returns: the head of this deque - `BlockingDeque.E`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([^java.util.concurrent.BlockingDeque this]
+  (^BlockingDeque.E [^java.util.concurrent.BlockingDeque this]
     (-> this (.take))))
 
 (defn iterator
@@ -301,7 +301,7 @@
    The elements will be returned in order from first (head) to last (tail).
 
   returns: an iterator over the elements in this deque in proper sequence - `java.util.Iterator<BlockingDeque.E>`"
-  ([^java.util.concurrent.BlockingDeque this]
+  (^java.util.Iterator [^java.util.concurrent.BlockingDeque this]
     (-> this (.iterator))))
 
 (defn element
@@ -315,7 +315,7 @@
   returns: the head of this deque - `BlockingDeque.E`
 
   throws: java.util.NoSuchElementException - if this deque is empty"
-  ([^java.util.concurrent.BlockingDeque this]
+  (^BlockingDeque.E [^java.util.concurrent.BlockingDeque this]
     (-> this (.element))))
 
 (defn put-first
@@ -344,9 +344,9 @@
   returns: true if this deque changed as a result of the call - `boolean`
 
   throws: java.lang.ClassCastException - if the class of the specified element is incompatible with this deque (optional)"
-  ([^java.util.concurrent.BlockingDeque this ^java.lang.Object o]
+  (^Boolean [^java.util.concurrent.BlockingDeque this ^java.lang.Object o]
     (-> this (.remove o)))
-  ([^java.util.concurrent.BlockingDeque this]
+  (^BlockingDeque.E [^java.util.concurrent.BlockingDeque this]
     (-> this (.remove))))
 
 (defn poll-last
@@ -361,7 +361,7 @@
            waiting time elapses before an element is available - `BlockingDeque.E`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([^java.util.concurrent.BlockingDeque this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^BlockingDeque.E [^java.util.concurrent.BlockingDeque this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.pollLast timeout unit))))
 
 (defn poll
@@ -379,9 +379,9 @@
            specified waiting time elapses before an element is available - `BlockingDeque.E`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([^java.util.concurrent.BlockingDeque this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^BlockingDeque.E [^java.util.concurrent.BlockingDeque this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.poll timeout unit)))
-  ([^java.util.concurrent.BlockingDeque this]
+  (^BlockingDeque.E [^java.util.concurrent.BlockingDeque this]
     (-> this (.poll))))
 
 (defn offer-last
@@ -397,9 +397,9 @@
            the specified waiting time elapses before space is available - `boolean`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([^java.util.concurrent.BlockingDeque this ^BlockingDeque.E e ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^Boolean [^java.util.concurrent.BlockingDeque this ^BlockingDeque.E e ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.offerLast e timeout unit)))
-  ([^java.util.concurrent.BlockingDeque this ^BlockingDeque.E e]
+  (^Boolean [^java.util.concurrent.BlockingDeque this ^BlockingDeque.E e]
     (-> this (.offerLast e))))
 
 (defn poll-first
@@ -414,7 +414,7 @@
            waiting time elapses before an element is available - `BlockingDeque.E`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([^java.util.concurrent.BlockingDeque this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^BlockingDeque.E [^java.util.concurrent.BlockingDeque this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.pollFirst timeout unit))))
 
 (defn add-last
@@ -443,7 +443,7 @@
   returns: true if an element was removed as a result of this call - `boolean`
 
   throws: java.lang.ClassCastException - if the class of the specified element is incompatible with this deque (optional)"
-  ([^java.util.concurrent.BlockingDeque this ^java.lang.Object o]
+  (^Boolean [^java.util.concurrent.BlockingDeque this ^java.lang.Object o]
     (-> this (.removeLastOccurrence o))))
 
 (defn add
@@ -462,14 +462,14 @@
   returns: true (as specified by Collection.add(E)) - `boolean`
 
   throws: java.lang.IllegalStateException - if the element cannot be added at this time due to capacity restrictions"
-  ([^java.util.concurrent.BlockingDeque this ^BlockingDeque.E e]
+  (^Boolean [^java.util.concurrent.BlockingDeque this ^BlockingDeque.E e]
     (-> this (.add e))))
 
 (defn size
   "Returns the number of elements in this deque.
 
   returns: the number of elements in this deque - `int`"
-  ([^java.util.concurrent.BlockingDeque this]
+  (^Integer [^java.util.concurrent.BlockingDeque this]
     (-> this (.size))))
 
 (defn add-first

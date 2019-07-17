@@ -327,7 +327,7 @@
   returns: the composition of prefix and name - `javax.naming.Name`
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  ([^javax.naming.Context this ^javax.naming.Name name ^javax.naming.Name prefix]
+  (^javax.naming.Name [^javax.naming.Context this ^javax.naming.Name name ^javax.naming.Name prefix]
     (-> this (.composeName name prefix))))
 
 (defn rename
@@ -359,7 +359,7 @@
             enumeration is of type NameClassPair. - `javax.naming.NamingEnumeration<javax.naming.NameClassPair>`
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  ([^javax.naming.Context this ^javax.naming.Name name]
+  (^javax.naming.NamingEnumeration [^javax.naming.Context this ^javax.naming.Name name]
     (-> this (.list name))))
 
 (defn add-to-environment
@@ -374,7 +374,7 @@
             not in the environment before - `java.lang.Object`
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  ([^javax.naming.Context this ^java.lang.String prop-name ^java.lang.Object prop-val]
+  (^java.lang.Object [^javax.naming.Context this ^java.lang.String prop-name ^java.lang.Object prop-val]
     (-> this (.addToEnvironment prop-name prop-val))))
 
 (defn bind
@@ -404,7 +404,7 @@
             Binding. - `javax.naming.NamingEnumeration<javax.naming.Binding>`
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  ([^javax.naming.Context this ^javax.naming.Name name]
+  (^javax.naming.NamingEnumeration [^javax.naming.Context this ^javax.naming.Name name]
     (-> this (.listBindings name))))
 
 (defn lookup
@@ -419,7 +419,7 @@
   returns: the object bound to name - `java.lang.Object`
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  ([^javax.naming.Context this ^javax.naming.Name name]
+  (^java.lang.Object [^javax.naming.Context this ^javax.naming.Name name]
     (-> this (.lookup name))))
 
 (defn remove-from-environment
@@ -433,7 +433,7 @@
             not in the environment - `java.lang.Object`
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  ([^javax.naming.Context this ^java.lang.String prop-name]
+  (^java.lang.Object [^javax.naming.Context this ^java.lang.String prop-name]
     (-> this (.removeFromEnvironment prop-name))))
 
 (defn create-subcontext
@@ -448,7 +448,7 @@
   returns: the newly created context - `javax.naming.Context`
 
   throws: javax.naming.NameAlreadyBoundException - if name is already bound"
-  ([^javax.naming.Context this ^javax.naming.Name name]
+  (^javax.naming.Context [^javax.naming.Context this ^javax.naming.Name name]
     (-> this (.createSubcontext name))))
 
 (defn get-name-parser
@@ -467,7 +467,7 @@
             components - `javax.naming.NameParser`
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  ([^javax.naming.Context this ^javax.naming.Name name]
+  (^javax.naming.NameParser [^javax.naming.Context this ^javax.naming.Name name]
     (-> this (.getNameParser name))))
 
 (defn get-environment
@@ -482,7 +482,7 @@
   returns: the environment of this context; never null - `java.util.Hashtable<?,?>`
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  ([^javax.naming.Context this]
+  (^java.util.Hashtable [^javax.naming.Context this]
     (-> this (.getEnvironment))))
 
 (defn rebind
@@ -530,7 +530,7 @@
   returns: this context's name in its own namespace; never null - `java.lang.String`
 
   throws: javax.naming.OperationNotSupportedException - if the naming system does not have the notion of a full name"
-  ([^javax.naming.Context this]
+  (^java.lang.String [^javax.naming.Context this]
     (-> this (.getNameInNamespace))))
 
 (defn lookup-link
@@ -545,6 +545,6 @@
             terminal link (if any). - `java.lang.Object`
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  ([^javax.naming.Context this ^javax.naming.Name name]
+  (^java.lang.Object [^javax.naming.Context this ^javax.naming.Name name]
     (-> this (.lookupLink name))))
 

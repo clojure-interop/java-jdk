@@ -44,7 +44,7 @@
   c - the component for which this border insets value applies - `java.awt.Component`
 
   returns: `java.awt.Insets`"
-  ([^javax.swing.border.Border this ^java.awt.Component c]
+  (^java.awt.Insets [^javax.swing.border.Border this ^java.awt.Component c]
     (-> this (.getBorderInsets c))))
 
 (defn border-opaque?
@@ -53,6 +53,6 @@
    background when painting.
 
   returns: `boolean`"
-  ([^javax.swing.border.Border this]
+  (^Boolean [^javax.swing.border.Border this]
     (-> this (.isBorderOpaque))))
 

@@ -69,27 +69,27 @@
   "Returns the message digest algorithm name.
 
   returns: the message digest algorithm name. - `java.lang.String`"
-  ([^javax.crypto.spec.OAEPParameterSpec this]
+  (^java.lang.String [^javax.crypto.spec.OAEPParameterSpec this]
     (-> this (.getDigestAlgorithm))))
 
 (defn get-mgf-algorithm
   "Returns the mask generation function algorithm name.
 
   returns: the mask generation function algorithm name. - `java.lang.String`"
-  ([^javax.crypto.spec.OAEPParameterSpec this]
+  (^java.lang.String [^javax.crypto.spec.OAEPParameterSpec this]
     (-> this (.getMGFAlgorithm))))
 
 (defn get-mgf-parameters
   "Returns the parameters for the mask generation function.
 
   returns: the parameters for the mask generation function. - `java.security.spec.AlgorithmParameterSpec`"
-  ([^javax.crypto.spec.OAEPParameterSpec this]
+  (^java.security.spec.AlgorithmParameterSpec [^javax.crypto.spec.OAEPParameterSpec this]
     (-> this (.getMGFParameters))))
 
 (defn get-p-source
   "Returns the source of encoding input P.
 
   returns: the source of encoding input P. - `javax.crypto.spec.PSource`"
-  ([^javax.crypto.spec.OAEPParameterSpec this]
+  (^javax.crypto.spec.PSource [^javax.crypto.spec.OAEPParameterSpec this]
     (-> this (.getPSource))))
 

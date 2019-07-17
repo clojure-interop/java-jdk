@@ -53,6 +53,6 @@
   returns: the enum constant with the specified name - `javax.swing.SwingWorker.StateValue`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^javax.swing.SwingWorker.StateValue [^java.lang.String name]
     (SwingWorker$StateValue/valueOf name)))
 

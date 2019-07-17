@@ -48,7 +48,7 @@
   cell-has-focus - True if the specified cell has the focus. - `boolean`
 
   returns: A component whose paint() method will render the specified value. - `java.awt.Component`"
-  ([^javax.swing.DefaultListCellRenderer this ^javax.swing.JList list ^java.lang.Object value ^Integer index ^Boolean is-selected ^Boolean cell-has-focus]
+  (^java.awt.Component [^javax.swing.DefaultListCellRenderer this ^javax.swing.JList list ^java.lang.Object value ^Integer index ^Boolean is-selected ^Boolean cell-has-focus]
     (-> this (.getListCellRendererComponent list value index is-selected cell-has-focus))))
 
 (defn opaque?
@@ -59,7 +59,7 @@
   returns: true if the background is completely opaque
            and differs from the JList's background;
            false otherwise - `boolean`"
-  ([^javax.swing.DefaultListCellRenderer this]
+  (^Boolean [^javax.swing.DefaultListCellRenderer this]
     (-> this (.isOpaque))))
 
 (defn validate

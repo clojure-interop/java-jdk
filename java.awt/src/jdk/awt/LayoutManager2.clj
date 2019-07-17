@@ -29,7 +29,7 @@
   target - `java.awt.Container`
 
   returns: `java.awt.Dimension`"
-  ([^java.awt.LayoutManager2 this ^java.awt.Container target]
+  (^java.awt.Dimension [^java.awt.LayoutManager2 this ^java.awt.Container target]
     (-> this (.maximumLayoutSize target))))
 
 (defn get-layout-alignment-x
@@ -42,7 +42,7 @@
   target - `java.awt.Container`
 
   returns: `float`"
-  ([^java.awt.LayoutManager2 this ^java.awt.Container target]
+  (^Float [^java.awt.LayoutManager2 this ^java.awt.Container target]
     (-> this (.getLayoutAlignmentX target))))
 
 (defn get-layout-alignment-y
@@ -55,7 +55,7 @@
   target - `java.awt.Container`
 
   returns: `float`"
-  ([^java.awt.LayoutManager2 this ^java.awt.Container target]
+  (^Float [^java.awt.LayoutManager2 this ^java.awt.Container target]
     (-> this (.getLayoutAlignmentY target))))
 
 (defn invalidate-layout

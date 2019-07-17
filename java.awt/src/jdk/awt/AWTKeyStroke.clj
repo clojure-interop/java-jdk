@@ -59,11 +59,11 @@
   on-key-release - true if the AWTKeyStroke should represent a key release; false otherwise - `boolean`
 
   returns: an AWTKeyStroke object for that key - `java.awt.AWTKeyStroke`"
-  ([^Integer key-code ^Integer modifiers ^Boolean on-key-release]
+  (^java.awt.AWTKeyStroke [^Integer key-code ^Integer modifiers ^Boolean on-key-release]
     (AWTKeyStroke/getAWTKeyStroke key-code modifiers on-key-release))
-  ([^java.lang.Character key-char ^Integer modifiers]
+  (^java.awt.AWTKeyStroke [^java.lang.Character key-char ^Integer modifiers]
     (AWTKeyStroke/getAWTKeyStroke key-char modifiers))
-  ([^Character key-char]
+  (^java.awt.AWTKeyStroke [^Character key-char]
     (AWTKeyStroke/getAWTKeyStroke key-char)))
 
 (defn *get-awt-key-stroke-for-event
@@ -80,28 +80,28 @@
   returns: the AWTKeyStroke that precipitated the event - `java.awt.AWTKeyStroke`
 
   throws: java.lang.NullPointerException - if anEvent is null"
-  ([^java.awt.event.KeyEvent an-event]
+  (^java.awt.AWTKeyStroke [^java.awt.event.KeyEvent an-event]
     (AWTKeyStroke/getAWTKeyStrokeForEvent an-event)))
 
 (defn get-key-char
   "Returns the character for this AWTKeyStroke.
 
   returns: a char value - `char`"
-  ([^java.awt.AWTKeyStroke this]
+  (^Character [^java.awt.AWTKeyStroke this]
     (-> this (.getKeyChar))))
 
 (defn get-key-code
   "Returns the numeric key code for this AWTKeyStroke.
 
   returns: an int containing the key code value - `int`"
-  ([^java.awt.AWTKeyStroke this]
+  (^Integer [^java.awt.AWTKeyStroke this]
     (-> this (.getKeyCode))))
 
 (defn get-modifiers
   "Returns the modifier keys for this AWTKeyStroke.
 
   returns: an int containing the modifiers - `int`"
-  ([^java.awt.AWTKeyStroke this]
+  (^Integer [^java.awt.AWTKeyStroke this]
     (-> this (.getModifiers))))
 
 (defn on-key-release?
@@ -109,7 +109,7 @@
 
   returns: true if this AWTKeyStroke
             represents a key release; false otherwise - `boolean`"
-  ([^java.awt.AWTKeyStroke this]
+  (^Boolean [^java.awt.AWTKeyStroke this]
     (-> this (.isOnKeyRelease))))
 
 (defn get-key-event-type
@@ -119,7 +119,7 @@
   returns: KeyEvent.KEY_PRESSED,
            KeyEvent.KEY_TYPED,
            or KeyEvent.KEY_RELEASED - `int`"
-  ([^java.awt.AWTKeyStroke this]
+  (^Integer [^java.awt.AWTKeyStroke this]
     (-> this (.getKeyEventType))))
 
 (defn hash-code
@@ -127,7 +127,7 @@
    making it a good choice as the index value in a hash table.
 
   returns: an int that represents this object - `int`"
-  ([^java.awt.AWTKeyStroke this]
+  (^Integer [^java.awt.AWTKeyStroke this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -136,7 +136,7 @@
   an-object - the Object to compare this object to - `java.lang.Object`
 
   returns: true if the objects are identical - `boolean`"
-  ([^java.awt.AWTKeyStroke this ^java.lang.Object an-object]
+  (^Boolean [^java.awt.AWTKeyStroke this ^java.lang.Object an-object]
     (-> this (.equals an-object))))
 
 (defn to-string
@@ -146,6 +146,6 @@
    a key stroke equal to this key stroke.
 
   returns: a String representation of this object - `java.lang.String`"
-  ([^java.awt.AWTKeyStroke this]
+  (^java.lang.String [^java.awt.AWTKeyStroke this]
     (-> this (.toString))))
 

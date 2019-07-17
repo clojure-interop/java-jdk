@@ -22,7 +22,7 @@
   "Returns the image to render.
 
   returns: `java.awt.Image`"
-  ([^javax.swing.text.html.ImageView this]
+  (^java.awt.Image [^javax.swing.text.html.ImageView this]
     (-> this (.getImage))))
 
 (defn changed-update
@@ -52,14 +52,14 @@
              typically the view is told to render into the span
              that is returned, although there is no guarantee;
              the parent may choose to resize or break the view - `float`"
-  ([^javax.swing.text.html.ImageView this ^Integer axis]
+  (^Float [^javax.swing.text.html.ImageView this ^Integer axis]
     (-> this (.getPreferredSpan axis))))
 
 (defn get-loading-image-icon
   "Returns the icon to use while in the process of loading the image.
 
   returns: `javax.swing.Icon`"
-  ([^javax.swing.text.html.ImageView this]
+  (^javax.swing.Icon [^javax.swing.text.html.ImageView this]
     (-> this (.getLoadingImageIcon))))
 
 (defn get-tool-tip-text
@@ -72,14 +72,14 @@
   allocation - `java.awt.Shape`
 
   returns: `java.lang.String`"
-  ([^javax.swing.text.html.ImageView this ^Float x ^Float y ^java.awt.Shape allocation]
+  (^java.lang.String [^javax.swing.text.html.ImageView this ^Float x ^Float y ^java.awt.Shape allocation]
     (-> this (.getToolTipText x y allocation))))
 
 (defn get-no-image-icon
   "Returns the icon to use if the image couldn't be found.
 
   returns: `javax.swing.Icon`"
-  ([^javax.swing.text.html.ImageView this]
+  (^javax.swing.Icon [^javax.swing.text.html.ImageView this]
     (-> this (.getNoImageIcon))))
 
 (defn paint
@@ -103,7 +103,7 @@
      origin and 1.0 indicates alignment to the full span
      away from the origin; an alignment of 0.5 would be the
      center of the view - `float`"
-  ([^javax.swing.text.html.ImageView this ^Integer axis]
+  (^Float [^javax.swing.text.html.ImageView this ^Integer axis]
     (-> this (.getAlignment axis))))
 
 (defn set-loads-synchronously
@@ -130,7 +130,7 @@
    or null if it could not be determined.
 
   returns: `java.net.URL`"
-  ([^javax.swing.text.html.ImageView this]
+  (^java.net.URL [^javax.swing.text.html.ImageView this]
     (-> this (.getImageURL))))
 
 (defn view-to-model
@@ -144,14 +144,14 @@
 
   returns: the location within the model that best represents the
     given point of view - `int`"
-  ([^javax.swing.text.html.ImageView this ^Float x ^Float y ^java.awt.Shape a ^javax.swing.text.Position.Bias[] bias]
+  (^Integer [^javax.swing.text.html.ImageView this ^Float x ^Float y ^java.awt.Shape a bias]
     (-> this (.viewToModel x y a bias))))
 
 (defn get-loads-synchronously?
   "Returns true if the image should be loaded when first asked for.
 
   returns: `boolean`"
-  ([^javax.swing.text.html.ImageView this]
+  (^Boolean [^javax.swing.text.html.ImageView this]
     (-> this (.getLoadsSynchronously))))
 
 (defn get-attributes
@@ -160,7 +160,7 @@
    model with a StyleSheet.
 
   returns: `javax.swing.text.AttributeSet`"
-  ([^javax.swing.text.html.ImageView this]
+  (^javax.swing.text.AttributeSet [^javax.swing.text.html.ImageView this]
     (-> this (.getAttributes))))
 
 (defn get-alt-text
@@ -169,7 +169,7 @@
    HTML.Attribute.ALT.
 
   returns: `java.lang.String`"
-  ([^javax.swing.text.html.ImageView this]
+  (^java.lang.String [^javax.swing.text.html.ImageView this]
     (-> this (.getAltText))))
 
 (defn model-to-view
@@ -183,6 +183,6 @@
   returns: the bounding box of the given position - `java.awt.Shape`
 
   throws: javax.swing.text.BadLocationException - if the given position does not represent a valid location in the associated document"
-  ([^javax.swing.text.html.ImageView this ^Integer pos ^java.awt.Shape a ^javax.swing.text.Position.Bias b]
+  (^java.awt.Shape [^javax.swing.text.html.ImageView this ^Integer pos ^java.awt.Shape a ^javax.swing.text.Position.Bias b]
     (-> this (.modelToView pos a b))))
 

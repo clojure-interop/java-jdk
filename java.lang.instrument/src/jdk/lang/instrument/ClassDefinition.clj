@@ -21,7 +21,7 @@
   "Returns the class.
 
   returns: the Class object referred to. - `java.lang.Class<?>`"
-  ([^java.lang.instrument.ClassDefinition this]
+  (^java.lang.Class [^java.lang.instrument.ClassDefinition this]
     (-> this (.getDefinitionClass))))
 
 (defn get-definition-class-file

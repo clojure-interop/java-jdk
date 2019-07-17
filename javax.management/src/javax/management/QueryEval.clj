@@ -17,7 +17,7 @@
    this thread, or null if there is no parent thread.
 
   returns: the MBean server. - `javax.management.MBeanServer`"
-  ([]
+  (^javax.management.MBeanServer []
     (QueryEval/getMBeanServer )))
 
 (defn set-m-bean-server

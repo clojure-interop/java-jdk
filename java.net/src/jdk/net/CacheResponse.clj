@@ -19,7 +19,7 @@
            field name. - `java.util.Map<java.lang.String,java.util.List<java.lang.String>>`
 
   throws: java.io.IOException - if an I/O error occurs while getting the response headers"
-  ([^java.net.CacheResponse this]
+  (^java.util.Map> [^java.net.CacheResponse this]
     (-> this (.getHeaders))))
 
 (defn get-body
@@ -29,6 +29,6 @@
            be accessed - `java.io.InputStream`
 
   throws: java.io.IOException - if an I/O error occurs while getting the response body"
-  ([^java.net.CacheResponse this]
+  (^java.io.InputStream [^java.net.CacheResponse this]
     (-> this (.getBody))))
 

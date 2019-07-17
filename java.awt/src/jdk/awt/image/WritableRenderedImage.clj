@@ -56,7 +56,7 @@
   tile-y - the Y index of the tile. - `int`
 
   returns: a writable tile. - `java.awt.image.WritableRaster`"
-  ([^java.awt.image.WritableRenderedImage this ^Integer tile-x ^Integer tile-y]
+  (^java.awt.image.WritableRaster [^java.awt.image.WritableRenderedImage this ^Integer tile-x ^Integer tile-y]
     (-> this (.getWritableTile tile-x tile-y))))
 
 (defn release-writable-tile
@@ -83,7 +83,7 @@
 
   returns: true if specified tile is checked out
            for writing; false otherwise. - `boolean`"
-  ([^java.awt.image.WritableRenderedImage this ^Integer tile-x ^Integer tile-y]
+  (^Boolean [^java.awt.image.WritableRenderedImage this ^Integer tile-x ^Integer tile-y]
     (-> this (.isTileWritable tile-x tile-y))))
 
 (defn get-writable-tile-indices
@@ -102,7 +102,7 @@
 
   returns: true if any tiles are checked out for
            writing; false otherwise. - `boolean`"
-  ([^java.awt.image.WritableRenderedImage this]
+  (^Boolean [^java.awt.image.WritableRenderedImage this]
     (-> this (.hasTileWriters))))
 
 (defn set-data

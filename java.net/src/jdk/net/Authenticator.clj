@@ -62,10 +62,10 @@
   returns: The username/password, or null if one can't be gotten. - `java.net.PasswordAuthentication`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPermission method doesn't allow the password authentication request."
-  ([^java.lang.String host ^java.net.InetAddress addr ^Integer port ^java.lang.String protocol ^java.lang.String prompt ^java.lang.String scheme ^java.net.URL url ^java.net.Authenticator.RequestorType req-type]
+  (^java.net.PasswordAuthentication [^java.lang.String host ^java.net.InetAddress addr ^Integer port ^java.lang.String protocol ^java.lang.String prompt ^java.lang.String scheme ^java.net.URL url ^java.net.Authenticator.RequestorType req-type]
     (Authenticator/requestPasswordAuthentication host addr port protocol prompt scheme url req-type))
-  ([^java.lang.String host ^java.net.InetAddress addr ^Integer port ^java.lang.String protocol ^java.lang.String prompt ^java.lang.String scheme]
+  (^java.net.PasswordAuthentication [^java.lang.String host ^java.net.InetAddress addr ^Integer port ^java.lang.String protocol ^java.lang.String prompt ^java.lang.String scheme]
     (Authenticator/requestPasswordAuthentication host addr port protocol prompt scheme))
-  ([^java.net.InetAddress addr ^Integer port ^java.lang.String protocol ^java.lang.String prompt ^java.lang.String scheme]
+  (^java.net.PasswordAuthentication [^java.net.InetAddress addr ^Integer port ^java.lang.String protocol ^java.lang.String prompt ^java.lang.String scheme]
     (Authenticator/requestPasswordAuthentication addr port protocol prompt scheme)))
 

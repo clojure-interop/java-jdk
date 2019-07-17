@@ -19,7 +19,7 @@
   child-index - `int`
 
   returns: `javax.swing.tree.TreeNode`"
-  ([^javax.swing.tree.TreeNode this ^Integer child-index]
+  (^javax.swing.tree.TreeNode [^javax.swing.tree.TreeNode this ^Integer child-index]
     (-> this (.getChildAt child-index))))
 
 (defn get-child-count
@@ -27,14 +27,14 @@
    contains.
 
   returns: `int`"
-  ([^javax.swing.tree.TreeNode this]
+  (^Integer [^javax.swing.tree.TreeNode this]
     (-> this (.getChildCount))))
 
 (defn get-parent
   "Returns the parent TreeNode of the receiver.
 
   returns: `javax.swing.tree.TreeNode`"
-  ([^javax.swing.tree.TreeNode this]
+  (^javax.swing.tree.TreeNode [^javax.swing.tree.TreeNode this]
     (-> this (.getParent))))
 
 (defn get-index
@@ -45,27 +45,27 @@
   node - `javax.swing.tree.TreeNode`
 
   returns: `int`"
-  ([^javax.swing.tree.TreeNode this ^javax.swing.tree.TreeNode node]
+  (^Integer [^javax.swing.tree.TreeNode this ^javax.swing.tree.TreeNode node]
     (-> this (.getIndex node))))
 
 (defn get-allows-children?
   "Returns true if the receiver allows children.
 
   returns: `boolean`"
-  ([^javax.swing.tree.TreeNode this]
+  (^Boolean [^javax.swing.tree.TreeNode this]
     (-> this (.getAllowsChildren))))
 
 (defn leaf?
   "Returns true if the receiver is a leaf.
 
   returns: `boolean`"
-  ([^javax.swing.tree.TreeNode this]
+  (^Boolean [^javax.swing.tree.TreeNode this]
     (-> this (.isLeaf))))
 
 (defn children
   "Returns the children of the receiver as an Enumeration.
 
   returns: `java.util.Enumeration`"
-  ([^javax.swing.tree.TreeNode this]
+  (^java.util.Enumeration [^javax.swing.tree.TreeNode this]
     (-> this (.children))))
 

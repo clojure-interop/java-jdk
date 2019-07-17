@@ -25,7 +25,7 @@
             SubjectDomainCombiner. - `javax.security.auth.Subject`
 
   throws: java.lang.SecurityException - if the caller does not have permission to get the Subject associated with this SubjectDomainCombiner."
-  ([^javax.security.auth.SubjectDomainCombiner this]
+  (^javax.security.auth.Subject [^javax.security.auth.SubjectDomainCombiner this]
     (-> this (.getSubject))))
 
 (defn combine
@@ -57,6 +57,6 @@
 
   returns: a new array consisting of the updated ProtectionDomains,
             or null. - `java.security.ProtectionDomain[]`"
-  ([^javax.security.auth.SubjectDomainCombiner this ^java.security.ProtectionDomain[] current-domains ^java.security.ProtectionDomain[] assigned-domains]
+  ([^javax.security.auth.SubjectDomainCombiner this current-domains assigned-domains]
     (-> this (.combine current-domains assigned-domains))))
 

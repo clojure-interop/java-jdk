@@ -91,6 +91,6 @@
            non-existent page. - `int`
 
   throws: java.awt.print.PrinterException - thrown when the print job is terminated."
-  ([^java.awt.print.Printable this ^java.awt.Graphics graphics ^java.awt.print.PageFormat page-format ^Integer page-index]
+  (^Integer [^java.awt.print.Printable this ^java.awt.Graphics graphics ^java.awt.print.PageFormat page-format ^Integer page-index]
     (-> this (.print graphics page-format page-index))))
 

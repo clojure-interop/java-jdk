@@ -31,7 +31,7 @@
   "Converts input data to a string.
 
   returns: the string. - `java.lang.String`"
-  ([^java.io.CharArrayWriter this]
+  (^java.lang.String [^java.io.CharArrayWriter this]
     (-> this (.toString))))
 
 (defn reset
@@ -81,16 +81,16 @@
   returns: This writer - `java.io.CharArrayWriter`
 
   throws: java.lang.IndexOutOfBoundsException - If start or end are negative, start is greater than end, or end is greater than csq.length()"
-  ([^java.io.CharArrayWriter this ^java.lang.CharSequence csq ^Integer start ^Integer end]
+  (^java.io.CharArrayWriter [^java.io.CharArrayWriter this ^java.lang.CharSequence csq ^Integer start ^Integer end]
     (-> this (.append csq start end)))
-  ([^java.io.CharArrayWriter this ^java.lang.CharSequence csq]
+  (^java.io.CharArrayWriter [^java.io.CharArrayWriter this ^java.lang.CharSequence csq]
     (-> this (.append csq))))
 
 (defn size
   "Returns the current size of the buffer.
 
   returns: an int representing the current size of the buffer. - `int`"
-  ([^java.io.CharArrayWriter this]
+  (^Integer [^java.io.CharArrayWriter this]
     (-> this (.size))))
 
 (defn write

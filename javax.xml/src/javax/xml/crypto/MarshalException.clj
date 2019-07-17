@@ -33,7 +33,7 @@
 
   returns: the cause of this MarshalException or
            null if the cause is nonexistent or unknown. - `java.lang.Throwable`"
-  ([^javax.xml.crypto.MarshalException this]
+  (^java.lang.Throwable [^javax.xml.crypto.MarshalException this]
     (-> this (.getCause))))
 
 (defn print-stack-trace

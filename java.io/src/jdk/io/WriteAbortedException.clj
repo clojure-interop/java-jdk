@@ -45,7 +45,7 @@
 
   returns: the detail message string of this Throwable instance
             (which may be null). - `java.lang.String`"
-  ([^java.io.WriteAbortedException this]
+  (^java.lang.String [^java.io.WriteAbortedException this]
     (-> this (.getMessage))))
 
 (defn get-cause
@@ -53,6 +53,6 @@
 
   returns: the exception that terminated the operation (the cause),
             which may be null. - `java.lang.Throwable`"
-  ([^java.io.WriteAbortedException this]
+  (^java.lang.Throwable [^java.io.WriteAbortedException this]
     (-> this (.getCause))))
 

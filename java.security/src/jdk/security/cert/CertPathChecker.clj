@@ -29,7 +29,7 @@
 
   returns: true if forward checking is supported, false
            otherwise - `boolean`"
-  ([^java.security.cert.CertPathChecker this]
+  (^Boolean [^java.security.cert.CertPathChecker this]
     (-> this (.isForwardCheckingSupported))))
 
 (defn check

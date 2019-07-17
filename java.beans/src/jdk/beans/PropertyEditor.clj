@@ -31,7 +31,7 @@
   "Determines whether this property editor is paintable.
 
   returns: True if the class will honor the paintValue method. - `boolean`"
-  ([^java.beans.PropertyEditor this]
+  (^Boolean [^java.beans.PropertyEditor this]
     (-> this (.isPaintable))))
 
 (defn paint-value
@@ -70,7 +70,7 @@
       Returns null if the value can't be expressed as an editable string.
       If a non-null value is returned, then the PropertyEditor should
          be prepared to parse that string back in setAsText(). - `java.lang.String`"
-  ([^java.beans.PropertyEditor this]
+  (^java.lang.String [^java.beans.PropertyEditor this]
     (-> this (.getAsText))))
 
 (defn get-java-initialization-string
@@ -102,14 +102,14 @@
   returns: a fragment of Java code representing an initializer for the
            current value. It should not contain a semi-colon
            (';') to end the expression. - `java.lang.String`"
-  ([^java.beans.PropertyEditor this]
+  (^java.lang.String [^java.beans.PropertyEditor this]
     (-> this (.getJavaInitializationString))))
 
 (defn supports-custom-editor
   "Determines whether this property editor supports a custom editor.
 
   returns: True if the propertyEditor can provide a custom editor. - `boolean`"
-  ([^java.beans.PropertyEditor this]
+  (^Boolean [^java.beans.PropertyEditor this]
     (-> this (.supportsCustomEditor))))
 
 (defn get-value
@@ -117,7 +117,7 @@
 
   returns: The value of the property.  Primitive types such as `int` will
    be wrapped as the corresponding object type such as `java.lang.Integer`. - `java.lang.Object`"
-  ([^java.beans.PropertyEditor this]
+  (^java.lang.Object [^java.beans.PropertyEditor this]
     (-> this (.getValue))))
 
 (defn get-custom-editor
@@ -133,7 +133,7 @@
   returns: A java.awt.Component that will allow a human to directly
         edit the current property value.  May be null if this is
         not supported. - `java.awt.Component`"
-  ([^java.beans.PropertyEditor this]
+  (^java.awt.Component [^java.beans.PropertyEditor this]
     (-> this (.getCustomEditor))))
 
 (defn remove-property-change-listener

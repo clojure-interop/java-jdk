@@ -16,7 +16,7 @@
    In a lowered border, shadows are on top and highlights are underneath.
 
   returns: the Border object - `javax.swing.border.Border`"
-  ([]
+  (^javax.swing.border.Border []
     (BorderFactory/createLoweredSoftBevelBorder )))
 
 (defn *create-empty-border
@@ -30,9 +30,9 @@
   right - an integer specifying the width of the right side, in pixels - `int`
 
   returns: the Border object - `javax.swing.border.Border`"
-  ([^Integer top ^Integer left ^Integer bottom ^Integer right]
+  (^javax.swing.border.Border [^Integer top ^Integer left ^Integer bottom ^Integer right]
     (BorderFactory/createEmptyBorder top left bottom right))
-  ([]
+  (^javax.swing.border.Border []
     (BorderFactory/createEmptyBorder )))
 
 (defn *create-raised-bevel-border
@@ -43,7 +43,7 @@
     are underneath.)
 
   returns: the Border object - `javax.swing.border.Border`"
-  ([]
+  (^javax.swing.border.Border []
     (BorderFactory/createRaisedBevelBorder )))
 
 (defn *create-matte-border
@@ -58,7 +58,7 @@
   color - a Color to use for the border - `java.awt.Color`
 
   returns: the MatteBorder object - `javax.swing.border.MatteBorder`"
-  ([^Integer top ^Integer left ^Integer bottom ^Integer right ^java.awt.Color color]
+  (^javax.swing.border.MatteBorder [^Integer top ^Integer left ^Integer bottom ^Integer right ^java.awt.Color color]
     (BorderFactory/createMatteBorder top left bottom right color)))
 
 (defn *create-lowered-bevel-border
@@ -69,7 +69,7 @@
     are underneath.)
 
   returns: the Border object - `javax.swing.border.Border`"
-  ([]
+  (^javax.swing.border.Border []
     (BorderFactory/createLoweredBevelBorder )))
 
 (defn *create-titled-border
@@ -84,15 +84,15 @@
   title-color - a Color object specifying the title color - `java.awt.Color`
 
   returns: the TitledBorder object - `javax.swing.border.TitledBorder`"
-  ([^javax.swing.border.Border border ^java.lang.String title ^Integer title-justification ^Integer title-position ^java.awt.Font title-font ^java.awt.Color title-color]
+  (^javax.swing.border.TitledBorder [^javax.swing.border.Border border ^java.lang.String title ^Integer title-justification ^Integer title-position ^java.awt.Font title-font ^java.awt.Color title-color]
     (BorderFactory/createTitledBorder border title title-justification title-position title-font title-color))
-  ([^javax.swing.border.Border border ^java.lang.String title ^Integer title-justification ^Integer title-position ^java.awt.Font title-font]
+  (^javax.swing.border.TitledBorder [^javax.swing.border.Border border ^java.lang.String title ^Integer title-justification ^Integer title-position ^java.awt.Font title-font]
     (BorderFactory/createTitledBorder border title title-justification title-position title-font))
-  ([^javax.swing.border.Border border ^java.lang.String title ^Integer title-justification ^Integer title-position]
+  (^javax.swing.border.TitledBorder [^javax.swing.border.Border border ^java.lang.String title ^Integer title-justification ^Integer title-position]
     (BorderFactory/createTitledBorder border title title-justification title-position))
-  ([^javax.swing.border.Border border ^java.lang.String title]
+  (^javax.swing.border.TitledBorder [^javax.swing.border.Border border ^java.lang.String title]
     (BorderFactory/createTitledBorder border title))
-  ([^java.lang.String title]
+  (^javax.swing.border.TitledBorder [^java.lang.String title]
     (BorderFactory/createTitledBorder title)))
 
 (defn *create-dashed-border
@@ -110,11 +110,11 @@
   returns: the Border object - `javax.swing.border.Border`
 
   throws: java.lang.IllegalArgumentException - if the specified thickness is less than 1, or if the specified length is less than 1, or if the specified spacing is less than 0"
-  ([^java.awt.Paint paint ^Float thickness ^Float length ^Float spacing ^Boolean rounded]
+  (^javax.swing.border.Border [^java.awt.Paint paint ^Float thickness ^Float length ^Float spacing ^Boolean rounded]
     (BorderFactory/createDashedBorder paint thickness length spacing rounded))
-  ([^java.awt.Paint paint ^Float length ^Float spacing]
+  (^javax.swing.border.Border [^java.awt.Paint paint ^Float length ^Float spacing]
     (BorderFactory/createDashedBorder paint length spacing))
-  ([^java.awt.Paint paint]
+  (^javax.swing.border.Border [^java.awt.Paint paint]
     (BorderFactory/createDashedBorder paint)))
 
 (defn *create-compound-border
@@ -125,9 +125,9 @@
   inside-border - a Border object for the inner edge of the compound border - `javax.swing.border.Border`
 
   returns: the CompoundBorder object - `javax.swing.border.CompoundBorder`"
-  ([^javax.swing.border.Border outside-border ^javax.swing.border.Border inside-border]
+  (^javax.swing.border.CompoundBorder [^javax.swing.border.Border outside-border ^javax.swing.border.Border inside-border]
     (BorderFactory/createCompoundBorder outside-border inside-border))
-  ([]
+  (^javax.swing.border.CompoundBorder []
     (BorderFactory/createCompoundBorder )))
 
 (defn *create-etched-border
@@ -139,13 +139,13 @@
   shadow - a Color object for the border shadows - `java.awt.Color`
 
   returns: the Border object - `javax.swing.border.Border`"
-  ([^Integer type ^java.awt.Color highlight ^java.awt.Color shadow]
+  (^javax.swing.border.Border [^Integer type ^java.awt.Color highlight ^java.awt.Color shadow]
     (BorderFactory/createEtchedBorder type highlight shadow))
-  ([^java.awt.Color highlight ^java.awt.Color shadow]
+  (^javax.swing.border.Border [^java.awt.Color highlight ^java.awt.Color shadow]
     (BorderFactory/createEtchedBorder highlight shadow))
-  ([^Integer type]
+  (^javax.swing.border.Border [^Integer type]
     (BorderFactory/createEtchedBorder type))
-  ([]
+  (^javax.swing.border.Border []
     (BorderFactory/createEtchedBorder )))
 
 (defn *create-raised-soft-bevel-border
@@ -155,7 +155,7 @@
    In a raised border, highlights are on top and shadows are underneath.
 
   returns: the Border object - `javax.swing.border.Border`"
-  ([]
+  (^javax.swing.border.Border []
     (BorderFactory/createRaisedSoftBevelBorder )))
 
 (defn *create-soft-bevel-border
@@ -173,11 +173,11 @@
   shadow-inner - a color of the inner edge of the shadow area - `java.awt.Color`
 
   returns: the Border object - `javax.swing.border.Border`"
-  ([^Integer type ^java.awt.Color highlight-outer ^java.awt.Color highlight-inner ^java.awt.Color shadow-outer ^java.awt.Color shadow-inner]
+  (^javax.swing.border.Border [^Integer type ^java.awt.Color highlight-outer ^java.awt.Color highlight-inner ^java.awt.Color shadow-outer ^java.awt.Color shadow-inner]
     (BorderFactory/createSoftBevelBorder type highlight-outer highlight-inner shadow-outer shadow-inner))
-  ([^Integer type ^java.awt.Color highlight ^java.awt.Color shadow]
+  (^javax.swing.border.Border [^Integer type ^java.awt.Color highlight ^java.awt.Color shadow]
     (BorderFactory/createSoftBevelBorder type highlight shadow))
-  ([^Integer type]
+  (^javax.swing.border.Border [^Integer type]
     (BorderFactory/createSoftBevelBorder type)))
 
 (defn *create-bevel-border
@@ -192,11 +192,11 @@
   shadow-inner - a Color object for the inner edge of the shadow area - `java.awt.Color`
 
   returns: the Border object - `javax.swing.border.Border`"
-  ([^Integer type ^java.awt.Color highlight-outer ^java.awt.Color highlight-inner ^java.awt.Color shadow-outer ^java.awt.Color shadow-inner]
+  (^javax.swing.border.Border [^Integer type ^java.awt.Color highlight-outer ^java.awt.Color highlight-inner ^java.awt.Color shadow-outer ^java.awt.Color shadow-inner]
     (BorderFactory/createBevelBorder type highlight-outer highlight-inner shadow-outer shadow-inner))
-  ([^Integer type ^java.awt.Color highlight ^java.awt.Color shadow]
+  (^javax.swing.border.Border [^Integer type ^java.awt.Color highlight ^java.awt.Color shadow]
     (BorderFactory/createBevelBorder type highlight shadow))
-  ([^Integer type]
+  (^javax.swing.border.Border [^Integer type]
     (BorderFactory/createBevelBorder type)))
 
 (defn *create-stroke-border
@@ -210,9 +210,9 @@
   returns: the Border object - `javax.swing.border.Border`
 
   throws: java.lang.NullPointerException - if the specified stroke is null"
-  ([^java.awt.BasicStroke stroke ^java.awt.Paint paint]
+  (^javax.swing.border.Border [^java.awt.BasicStroke stroke ^java.awt.Paint paint]
     (BorderFactory/createStrokeBorder stroke paint))
-  ([^java.awt.BasicStroke stroke]
+  (^javax.swing.border.Border [^java.awt.BasicStroke stroke]
     (BorderFactory/createStrokeBorder stroke)))
 
 (defn *create-line-border
@@ -223,10 +223,10 @@
   rounded - whether or not border corners should be round - `boolean`
 
   returns: the Border object - `javax.swing.border.Border`"
-  ([^java.awt.Color color ^Integer thickness ^Boolean rounded]
+  (^javax.swing.border.Border [^java.awt.Color color ^Integer thickness ^Boolean rounded]
     (BorderFactory/createLineBorder color thickness rounded))
-  ([^java.awt.Color color ^Integer thickness]
+  (^javax.swing.border.Border [^java.awt.Color color ^Integer thickness]
     (BorderFactory/createLineBorder color thickness))
-  ([^java.awt.Color color]
+  (^javax.swing.border.Border [^java.awt.Color color]
     (BorderFactory/createLineBorder color)))
 

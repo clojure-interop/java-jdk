@@ -22,13 +22,13 @@
   "Created a stub to satisfy the interface.
 
   returns: an int specifying the fixed width of the icon. - `int`"
-  ([^javax.swing.plaf.metal.MetalComboBoxIcon this]
+  (^Integer [^javax.swing.plaf.metal.MetalComboBoxIcon this]
     (-> this (.getIconWidth))))
 
 (defn get-icon-height
   "Created a stub to satisfy the interface.
 
   returns: an int specifying the fixed height of the icon. - `int`"
-  ([^javax.swing.plaf.metal.MetalComboBoxIcon this]
+  (^Integer [^javax.swing.plaf.metal.MetalComboBoxIcon this]
     (-> this (.getIconHeight))))
 

@@ -91,9 +91,9 @@
   returns: the factory implementation - `javax.xml.stream.XMLInputFactory`
 
   throws: javax.xml.stream.FactoryConfigurationError - if an instance of this factory cannot be loaded"
-  ([^java.lang.String factory-id ^java.lang.ClassLoader class-loader]
+  (^javax.xml.stream.XMLInputFactory [^java.lang.String factory-id ^java.lang.ClassLoader class-loader]
     (XMLOutputFactory/newInstance factory-id class-loader))
-  ([]
+  (^javax.xml.stream.XMLOutputFactory []
     (XMLOutputFactory/newInstance )))
 
 (defn *new-factory
@@ -132,9 +132,9 @@
   returns: the factory implementation - `javax.xml.stream.XMLOutputFactory`
 
   throws: javax.xml.stream.FactoryConfigurationError - in case of java.util.service configuration error or if the implementation is not available or cannot be instantiated."
-  ([^java.lang.String factory-id ^java.lang.ClassLoader class-loader]
+  (^javax.xml.stream.XMLOutputFactory [^java.lang.String factory-id ^java.lang.ClassLoader class-loader]
     (XMLOutputFactory/newFactory factory-id class-loader))
-  ([]
+  (^javax.xml.stream.XMLOutputFactory []
     (XMLOutputFactory/newFactory )))
 
 (defn create-xml-stream-writer
@@ -146,9 +146,9 @@
   returns: `javax.xml.stream.XMLStreamWriter`
 
   throws: javax.xml.stream.XMLStreamException"
-  ([^javax.xml.stream.XMLOutputFactory this ^java.io.OutputStream stream ^java.lang.String encoding]
+  (^javax.xml.stream.XMLStreamWriter [^javax.xml.stream.XMLOutputFactory this ^java.io.OutputStream stream ^java.lang.String encoding]
     (-> this (.createXMLStreamWriter stream encoding)))
-  ([^javax.xml.stream.XMLOutputFactory this ^java.io.Writer stream]
+  (^javax.xml.stream.XMLStreamWriter [^javax.xml.stream.XMLOutputFactory this ^java.io.Writer stream]
     (-> this (.createXMLStreamWriter stream))))
 
 (defn create-xml-event-writer
@@ -160,9 +160,9 @@
   returns: `javax.xml.stream.XMLEventWriter`
 
   throws: javax.xml.stream.XMLStreamException"
-  ([^javax.xml.stream.XMLOutputFactory this ^java.io.OutputStream stream ^java.lang.String encoding]
+  (^javax.xml.stream.XMLEventWriter [^javax.xml.stream.XMLOutputFactory this ^java.io.OutputStream stream ^java.lang.String encoding]
     (-> this (.createXMLEventWriter stream encoding)))
-  ([^javax.xml.stream.XMLOutputFactory this ^javax.xml.transform.Result result]
+  (^javax.xml.stream.XMLEventWriter [^javax.xml.stream.XMLOutputFactory this ^javax.xml.transform.Result result]
     (-> this (.createXMLEventWriter result))))
 
 (defn set-property
@@ -183,7 +183,7 @@
   returns: The value of the property - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if the property is not supported"
-  ([^javax.xml.stream.XMLOutputFactory this ^java.lang.String name]
+  (^java.lang.Object [^javax.xml.stream.XMLOutputFactory this ^java.lang.String name]
     (-> this (.getProperty name))))
 
 (defn property-supported?
@@ -192,6 +192,6 @@
   name - The name of the property (may not be null) - `java.lang.String`
 
   returns: true if the property is supported and false otherwise - `boolean`"
-  ([^javax.xml.stream.XMLOutputFactory this ^java.lang.String name]
+  (^Boolean [^javax.xml.stream.XMLOutputFactory this ^java.lang.String name]
     (-> this (.isPropertySupported name))))
 

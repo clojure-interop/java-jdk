@@ -15,21 +15,21 @@
   index - the index into the model >= 0 - `int`
   removed - a set of elements that were removed - `javax.swing.text.Element[]`
   added - a set of elements that were added - `javax.swing.text.Element[]`"
-  ([^javax.swing.text.Element e ^Integer index ^javax.swing.text.Element[] removed ^javax.swing.text.Element[] added]
+  ([^javax.swing.text.Element e ^Integer index removed added]
     (new AbstractDocument$ElementEdit e index removed added)))
 
 (defn get-element
   "Returns the underlying element.
 
   returns: the element - `javax.swing.text.Element`"
-  ([^javax.swing.text.AbstractDocument$ElementEdit this]
+  (^javax.swing.text.Element [^javax.swing.text.AbstractDocument$ElementEdit this]
     (-> this (.getElement))))
 
 (defn get-index
   "Returns the index into the list of elements.
 
   returns: the index >= 0 - `int`"
-  ([^javax.swing.text.AbstractDocument$ElementEdit this]
+  (^Integer [^javax.swing.text.AbstractDocument$ElementEdit this]
     (-> this (.getIndex))))
 
 (defn get-children-removed

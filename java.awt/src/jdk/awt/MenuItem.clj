@@ -106,7 +106,7 @@
 
   returns: the label of this menu item, or null
                          if this menu item has no label. - `java.lang.String`"
-  ([^java.awt.MenuItem this]
+  (^java.lang.String [^java.awt.MenuItem this]
     (-> this (.getLabel))))
 
 (defn get-accessible-context
@@ -117,7 +117,7 @@
 
   returns: an AccessibleAWTMenuItem that serves as the
            AccessibleContext of this MenuItem - `javax.accessibility.AccessibleContext`"
-  ([^java.awt.MenuItem this]
+  (^javax.accessibility.AccessibleContext [^java.awt.MenuItem this]
     (-> this (.getAccessibleContext))))
 
 (defn param-string
@@ -128,7 +128,7 @@
    null.
 
   returns: the parameter string of this menu item - `java.lang.String`"
-  ([^java.awt.MenuItem this]
+  (^java.lang.String [^java.awt.MenuItem this]
     (-> this (.paramString))))
 
 (defn set-enabled
@@ -194,7 +194,7 @@
    by this menu item.
 
   returns: `java.lang.String`"
-  ([^java.awt.MenuItem this]
+  (^java.lang.String [^java.awt.MenuItem this]
     (-> this (.getActionCommand))))
 
 (defn set-action-command
@@ -212,7 +212,7 @@
   "Checks whether this menu item is enabled.
 
   returns: `boolean`"
-  ([^java.awt.MenuItem this]
+  (^Boolean [^java.awt.MenuItem this]
     (-> this (.isEnabled))))
 
 (defn set-label
@@ -228,6 +228,6 @@
 
   returns: the menu shortcut associated with this menu item,
                      or null if none has been specified. - `java.awt.MenuShortcut`"
-  ([^java.awt.MenuItem this]
+  (^java.awt.MenuShortcut [^java.awt.MenuItem this]
     (-> this (.getShortcut))))
 

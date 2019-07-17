@@ -16,7 +16,7 @@
    DropTargetContext.
 
   returns: the DropTarget associated with this DropTargetContext - `java.awt.dnd.DropTarget`"
-  ([^java.awt.dnd.DropTargetContext this]
+  (^java.awt.dnd.DropTarget [^java.awt.dnd.DropTargetContext this]
     (-> this (.getDropTarget))))
 
 (defn get-component
@@ -24,7 +24,7 @@
    this DropTargetContext.
 
   returns: the Component associated with this Context - `java.awt.Component`"
-  ([^java.awt.dnd.DropTargetContext this]
+  (^java.awt.Component [^java.awt.dnd.DropTargetContext this]
     (-> this (.getComponent))))
 
 (defn add-notify

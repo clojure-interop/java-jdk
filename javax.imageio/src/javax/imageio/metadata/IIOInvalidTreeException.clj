@@ -30,6 +30,6 @@
   "Returns the Node that caused the error in parsing.
 
   returns: the offending Node. - `org.w3c.dom.Node`"
-  ([^javax.imageio.metadata.IIOInvalidTreeException this]
+  (^org.w3c.dom.Node [^javax.imageio.metadata.IIOInvalidTreeException this]
     (-> this (.getOffendingNode))))
 

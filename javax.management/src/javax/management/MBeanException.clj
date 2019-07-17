@@ -23,13 +23,13 @@
   "Return the actual Exception thrown.
 
   returns: the wrapped exception. - `java.lang.Exception`"
-  ([^javax.management.MBeanException this]
+  (^java.lang.Exception [^javax.management.MBeanException this]
     (-> this (.getTargetException))))
 
 (defn get-cause
   "Return the actual Exception thrown.
 
   returns: the wrapped exception. - `java.lang.Throwable`"
-  ([^javax.management.MBeanException this]
+  (^java.lang.Throwable [^javax.management.MBeanException this]
     (-> this (.getCause))))
 

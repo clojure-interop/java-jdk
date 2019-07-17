@@ -13,7 +13,7 @@
   "Returns this integer attribute's integer value.
 
   returns: the integer value - `int`"
-  ([^javax.print.attribute.IntegerSyntax this]
+  (^Integer [^javax.print.attribute.IntegerSyntax this]
     (-> this (.getValue))))
 
 (defn equals
@@ -32,7 +32,7 @@
 
   returns: True if object is equivalent to this integer
             attribute, false otherwise. - `boolean`"
-  ([^javax.print.attribute.IntegerSyntax this ^java.lang.Object object]
+  (^Boolean [^javax.print.attribute.IntegerSyntax this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn hash-code
@@ -40,7 +40,7 @@
    just this integer attribute's integer value.
 
   returns: a hash code value for this object. - `int`"
-  ([^javax.print.attribute.IntegerSyntax this]
+  (^Integer [^javax.print.attribute.IntegerSyntax this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -49,6 +49,6 @@
    a string.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^javax.print.attribute.IntegerSyntax this]
+  (^java.lang.String [^javax.print.attribute.IntegerSyntax this]
     (-> this (.toString))))
 

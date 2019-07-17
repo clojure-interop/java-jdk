@@ -88,7 +88,7 @@
    packer engines, or else serialize use of one engine with a lock.
 
   returns: A newly allocated Packer engine. - `java.util.jar.Pack200.Packer`"
-  ([]
+  (^java.util.jar.Pack200.Packer []
     (Pack200/newPacker )))
 
 (defn *new-unpacker
@@ -111,6 +111,6 @@
    unpacker engines, or else serialize use of one engine with a lock.
 
   returns: A newly allocated Unpacker engine. - `java.util.jar.Pack200.Unpacker`"
-  ([]
+  (^java.util.jar.Pack200.Unpacker []
     (Pack200/newUnpacker )))
 

@@ -47,7 +47,7 @@
   returns: this StringJoiner itself so the calls may be chained - `java.util.StringJoiner`
 
   throws: java.lang.NullPointerException - when the emptyValue parameter is null"
-  ([^java.util.StringJoiner this ^java.lang.CharSequence empty-value]
+  (^java.util.StringJoiner [^java.util.StringJoiner this ^java.lang.CharSequence empty-value]
     (-> this (.setEmptyValue empty-value))))
 
 (defn to-string
@@ -57,7 +57,7 @@
    prefix  suffix or the emptyValue characters are returned
 
   returns: the string representation of this StringJoiner - `java.lang.String`"
-  ([^java.util.StringJoiner this]
+  (^java.lang.String [^java.util.StringJoiner this]
     (-> this (.toString))))
 
 (defn add
@@ -68,7 +68,7 @@
   new-element - The element to add - `java.lang.CharSequence`
 
   returns: a reference to this StringJoiner - `java.util.StringJoiner`"
-  ([^java.util.StringJoiner this ^java.lang.CharSequence new-element]
+  (^java.util.StringJoiner [^java.util.StringJoiner this ^java.lang.CharSequence new-element]
     (-> this (.add new-element))))
 
 (defn merge
@@ -89,7 +89,7 @@
   returns: This StringJoiner - `java.util.StringJoiner`
 
   throws: java.lang.NullPointerException - if the other StringJoiner is null"
-  ([^java.util.StringJoiner this ^java.util.StringJoiner other]
+  (^java.util.StringJoiner [^java.util.StringJoiner this ^java.util.StringJoiner other]
     (-> this (.merge other))))
 
 (defn length
@@ -101,6 +101,6 @@
    toString().length().
 
   returns: the length of the current value of StringJoiner - `int`"
-  ([^java.util.StringJoiner this]
+  (^Integer [^java.util.StringJoiner this]
     (-> this (.length))))
 

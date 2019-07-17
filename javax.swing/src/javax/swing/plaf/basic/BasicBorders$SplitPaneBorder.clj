@@ -30,13 +30,13 @@
   c - the component for which this border insets value applies - `java.awt.Component`
 
   returns: `java.awt.Insets`"
-  ([^javax.swing.plaf.basic.BasicBorders$SplitPaneBorder this ^java.awt.Component c]
+  (^java.awt.Insets [^javax.swing.plaf.basic.BasicBorders$SplitPaneBorder this ^java.awt.Component c]
     (-> this (.getBorderInsets c))))
 
 (defn border-opaque?
   "Description copied from interface: Border
 
   returns: `boolean`"
-  ([^javax.swing.plaf.basic.BasicBorders$SplitPaneBorder this]
+  (^Boolean [^javax.swing.plaf.basic.BasicBorders$SplitPaneBorder this]
     (-> this (.isBorderOpaque))))
 

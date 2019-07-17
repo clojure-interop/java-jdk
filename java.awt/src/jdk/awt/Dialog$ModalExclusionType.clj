@@ -60,6 +60,6 @@
   returns: the enum constant with the specified name - `java.awt.Dialog.ModalExclusionType`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^java.awt.Dialog.ModalExclusionType [^java.lang.String name]
     (Dialog$ModalExclusionType/valueOf name)))
 

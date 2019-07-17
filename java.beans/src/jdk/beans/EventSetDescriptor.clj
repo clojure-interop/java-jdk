@@ -23,11 +23,11 @@
   get-listener-method-name - The method on the event source that can be used to access the array of event listener objects. - `java.lang.String`
 
   throws: java.beans.IntrospectionException - if an exception occurs during introspection."
-  ([^java.lang.Class source-class ^java.lang.String event-set-name ^java.lang.Class listener-type ^java.lang.String[] listener-method-names ^java.lang.String add-listener-method-name ^java.lang.String remove-listener-method-name ^java.lang.String get-listener-method-name]
+  ([^java.lang.Class source-class ^java.lang.String event-set-name ^java.lang.Class listener-type listener-method-names ^java.lang.String add-listener-method-name ^java.lang.String remove-listener-method-name ^java.lang.String get-listener-method-name]
     (new EventSetDescriptor source-class event-set-name listener-type listener-method-names add-listener-method-name remove-listener-method-name get-listener-method-name))
-  ([^java.lang.Class source-class ^java.lang.String event-set-name ^java.lang.Class listener-type ^java.lang.String[] listener-method-names ^java.lang.String add-listener-method-name ^java.lang.String remove-listener-method-name]
+  ([^java.lang.Class source-class ^java.lang.String event-set-name ^java.lang.Class listener-type listener-method-names ^java.lang.String add-listener-method-name ^java.lang.String remove-listener-method-name]
     (new EventSetDescriptor source-class event-set-name listener-type listener-method-names add-listener-method-name remove-listener-method-name))
-  ([^java.lang.String event-set-name ^java.lang.Class listener-type ^java.lang.reflect.Method[] listener-methods ^java.lang.reflect.Method add-listener-method ^java.lang.reflect.Method remove-listener-method]
+  ([^java.lang.String event-set-name ^java.lang.Class listener-type listener-methods ^java.lang.reflect.Method add-listener-method ^java.lang.reflect.Method remove-listener-method]
     (new EventSetDescriptor event-set-name listener-type listener-methods add-listener-method remove-listener-method))
   ([^java.lang.Class source-class ^java.lang.String event-set-name ^java.lang.Class listener-type ^java.lang.String listener-method-name]
     (new EventSetDescriptor source-class event-set-name listener-type listener-method-name)))
@@ -53,7 +53,7 @@
   "Gets the method used to add event listeners.
 
   returns: The method used to register a listener at the event source. - `java.lang.reflect.Method`"
-  ([^java.beans.EventSetDescriptor this]
+  (^java.lang.reflect.Method [^java.beans.EventSetDescriptor this]
     (-> this (.getAddListenerMethod))))
 
 (defn set-unicast
@@ -68,7 +68,7 @@
 
   returns: The Class object for the target interface that will
    get invoked when the event is fired. - `java.lang.Class<?>`"
-  ([^java.beans.EventSetDescriptor this]
+  (^java.lang.Class [^java.beans.EventSetDescriptor this]
     (-> this (.getListenerType))))
 
 (defn in-default-event-set?
@@ -76,14 +76,14 @@
 
   returns: true if the event set is in
             the `default` set.  Defaults to true. - `boolean`"
-  ([^java.beans.EventSetDescriptor this]
+  (^Boolean [^java.beans.EventSetDescriptor this]
     (-> this (.isInDefaultEventSet))))
 
 (defn get-remove-listener-method
   "Gets the method used to remove event listeners.
 
   returns: The method used to remove a listener at the event source. - `java.lang.reflect.Method`"
-  ([^java.beans.EventSetDescriptor this]
+  (^java.lang.reflect.Method [^java.beans.EventSetDescriptor this]
     (-> this (.getRemoveListenerMethod))))
 
 (defn unicast?
@@ -92,7 +92,7 @@
 
   returns: true if the event set is unicast.
             Defaults to false. - `boolean`"
-  ([^java.beans.EventSetDescriptor this]
+  (^Boolean [^java.beans.EventSetDescriptor this]
     (-> this (.isUnicast))))
 
 (defn get-listener-method-descriptors
@@ -109,6 +109,6 @@
 
   returns: The method used to access the array of listeners at the event
            source or null if it doesn't exist. - `java.lang.reflect.Method`"
-  ([^java.beans.EventSetDescriptor this]
+  (^java.lang.reflect.Method [^java.beans.EventSetDescriptor this]
     (-> this (.getGetListenerMethod))))
 

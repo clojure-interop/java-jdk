@@ -135,7 +135,7 @@
   returns: This key's ready-operation set - `int`
 
   throws: java.nio.channels.CancelledKeyException - If this key has been cancelled"
-  ([^java.nio.channels.SelectionKey this]
+  (^Integer [^java.nio.channels.SelectionKey this]
     (-> this (.readyOps))))
 
 (defn readable?
@@ -155,7 +155,7 @@
                   readyOps() & OP_READ is nonzero - `boolean`
 
   throws: java.nio.channels.CancelledKeyException - If this key has been cancelled"
-  ([^java.nio.channels.SelectionKey this]
+  (^Boolean [^java.nio.channels.SelectionKey this]
     (-> this (.isReadable))))
 
 (defn cancel
@@ -192,7 +192,7 @@
             readyOps() & OP_ACCEPT is nonzero - `boolean`
 
   throws: java.nio.channels.CancelledKeyException - If this key has been cancelled"
-  ([^java.nio.channels.SelectionKey this]
+  (^Boolean [^java.nio.channels.SelectionKey this]
     (-> this (.isAcceptable))))
 
 (defn interest-ops
@@ -206,9 +206,9 @@
   returns: This selection key - `java.nio.channels.SelectionKey`
 
   throws: java.lang.IllegalArgumentException - If a bit in the set does not correspond to an operation that is supported by this key's channel, that is, if (ops & ~channel().validOps()) != 0"
-  ([^java.nio.channels.SelectionKey this ^Integer ops]
+  (^java.nio.channels.SelectionKey [^java.nio.channels.SelectionKey this ^Integer ops]
     (-> this (.interestOps ops)))
-  ([^java.nio.channels.SelectionKey this]
+  (^Integer [^java.nio.channels.SelectionKey this]
     (-> this (.interestOps))))
 
 (defn attachment
@@ -216,7 +216,7 @@
 
   returns: The object currently attached to this key,
             or null if there is no attachment - `java.lang.Object`"
-  ([^java.nio.channels.SelectionKey this]
+  (^java.lang.Object [^java.nio.channels.SelectionKey this]
     (-> this (.attachment))))
 
 (defn connectable?
@@ -237,7 +237,7 @@
             readyOps() & OP_CONNECT is nonzero - `boolean`
 
   throws: java.nio.channels.CancelledKeyException - If this key has been cancelled"
-  ([^java.nio.channels.SelectionKey this]
+  (^Boolean [^java.nio.channels.SelectionKey this]
     (-> this (.isConnectable))))
 
 (defn attach
@@ -251,7 +251,7 @@
 
   returns: The previously-attached object, if any,
             otherwise null - `java.lang.Object`"
-  ([^java.nio.channels.SelectionKey this ^java.lang.Object ob]
+  (^java.lang.Object [^java.nio.channels.SelectionKey this ^java.lang.Object ob]
     (-> this (.attach ob))))
 
 (defn valid?
@@ -261,7 +261,7 @@
    its channel is closed, or its selector is closed.
 
   returns: true if, and only if, this key is valid - `boolean`"
-  ([^java.nio.channels.SelectionKey this]
+  (^Boolean [^java.nio.channels.SelectionKey this]
     (-> this (.isValid))))
 
 (defn channel
@@ -269,7 +269,7 @@
    continue to return the channel even after the key is cancelled.
 
   returns: This key's channel - `java.nio.s.SelectableChannel`"
-  ([^java.nio.channels.SelectionKey this]
+  (^java.nio.s.SelectableChannel [^java.nio.channels.SelectionKey this]
     (-> this (.channel))))
 
 (defn selector
@@ -277,7 +277,7 @@
    continue to return the selector even after the key is cancelled.
 
   returns: This key's selector - `java.nio.channels.Selector`"
-  ([^java.nio.channels.SelectionKey this]
+  (^java.nio.channels.Selector [^java.nio.channels.SelectionKey this]
     (-> this (.selector))))
 
 (defn writable?
@@ -297,6 +297,6 @@
             readyOps() & OP_WRITE is nonzero - `boolean`
 
   throws: java.nio.channels.CancelledKeyException - If this key has been cancelled"
-  ([^java.nio.channels.SelectionKey this]
+  (^Boolean [^java.nio.channels.SelectionKey this]
     (-> this (.isWritable))))
 

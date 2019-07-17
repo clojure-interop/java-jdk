@@ -46,7 +46,7 @@
   returns: a thumbnail image, as a BufferedImage. - `java.awt.image.BufferedImage`
 
   throws: java.lang.IndexOutOfBoundsException - if the supplied index is negative or larger than the largest valid index."
-  ([^javax.imageio.IIOImage this ^Integer index]
+  (^java.awt.image.BufferedImage [^javax.imageio.IIOImage this ^Integer index]
     (-> this (.getThumbnail index))))
 
 (defn has-raster?
@@ -55,7 +55,7 @@
 
   returns: true if a Raster is
    available. - `boolean`"
-  ([^javax.imageio.IIOImage this]
+  (^Boolean [^javax.imageio.IIOImage this]
     (-> this (.hasRaster))))
 
 (defn get-thumbnails
@@ -73,7 +73,7 @@
    null if only a Raster is available.
 
   returns: a RenderedImage, or null. - `java.awt.image.RenderedImage`"
-  ([^javax.imageio.IIOImage this]
+  (^java.awt.image.RenderedImage [^javax.imageio.IIOImage this]
     (-> this (.getRenderedImage))))
 
 (defn get-num-thumbnails
@@ -81,7 +81,7 @@
    IIOImage.
 
   returns: the number of thumbnails, as an int. - `int`"
-  ([^javax.imageio.IIOImage this]
+  (^Integer [^javax.imageio.IIOImage this]
     (-> this (.getNumThumbnails))))
 
 (defn set-thumbnails
@@ -114,7 +114,7 @@
    available.
 
   returns: a Raster, or null. - `java.awt.image.Raster`"
-  ([^javax.imageio.IIOImage this]
+  (^java.awt.image.Raster [^javax.imageio.IIOImage this]
     (-> this (.getRaster))))
 
 (defn get-metadata
@@ -122,7 +122,7 @@
    object, or null is none is set.
 
   returns: an IIOMetadata object, or null. - `javax.imageio.metadata.IIOMetadata`"
-  ([^javax.imageio.IIOImage this]
+  (^javax.imageio.metadata.IIOMetadata [^javax.imageio.IIOImage this]
     (-> this (.getMetadata))))
 
 (defn set-raster

@@ -67,7 +67,7 @@
            none or it has already been closed - `java.awt.SplashScreen`
 
   throws: java.lang.UnsupportedOperationException - if the splash screen feature is not supported by the current toolkit"
-  ([]
+  (^java.awt.SplashScreen []
     (SplashScreen/getSplashScreen )))
 
 (defn set-image-url
@@ -90,7 +90,7 @@
   returns: URL for the current splash screen image file - `java.net.URL`
 
   throws: java.lang.IllegalStateException - if the splash screen has already been closed"
-  ([^java.awt.SplashScreen this]
+  (^java.net.URL [^java.awt.SplashScreen this]
     (-> this (.getImageURL))))
 
 (defn get-bounds
@@ -107,7 +107,7 @@
   returns: a Rectangle containing the splash screen bounds - `java.awt.Rectangle`
 
   throws: java.lang.IllegalStateException - if the splash screen has already been closed"
-  ([^java.awt.SplashScreen this]
+  (^java.awt.Rectangle [^java.awt.SplashScreen this]
     (-> this (.getBounds))))
 
 (defn get-size
@@ -124,7 +124,7 @@
   returns: a Dimension object indicating the splash screen size - `java.awt.Dimension`
 
   throws: java.lang.IllegalStateException - if the splash screen has already been closed"
-  ([^java.awt.SplashScreen this]
+  (^java.awt.Dimension [^java.awt.SplashScreen this]
     (-> this (.getSize))))
 
 (defn create-graphics
@@ -144,7 +144,7 @@
   returns: graphics context for the splash screen overlay surface - `java.awt.Graphics2D`
 
   throws: java.lang.IllegalStateException - if the splash screen has already been closed"
-  ([^java.awt.SplashScreen this]
+  (^java.awt.Graphics2D [^java.awt.SplashScreen this]
     (-> this (.createGraphics))))
 
 (defn update
@@ -174,6 +174,6 @@
 
   returns: true if the splash screen is visible (has not been closed yet),
            false otherwise - `boolean`"
-  ([^java.awt.SplashScreen this]
+  (^Boolean [^java.awt.SplashScreen this]
     (-> this (.isVisible))))
 

@@ -45,9 +45,9 @@
            in which case the element is not left enqueued - `boolean`
 
   throws: java.lang.InterruptedException - if interrupted while waiting, in which case the element is not left enqueued"
-  ([^java.util.concurrent.TransferQueue this ^TransferQueue.E e ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^Boolean [^java.util.concurrent.TransferQueue this ^TransferQueue.E e ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.tryTransfer e timeout unit)))
-  ([^java.util.concurrent.TransferQueue this ^TransferQueue.E e]
+  (^Boolean [^java.util.concurrent.TransferQueue this ^TransferQueue.E e]
     (-> this (.tryTransfer e))))
 
 (defn transfer
@@ -71,7 +71,7 @@
    The return value represents a momentary state of affairs.
 
   returns: true if there is at least one waiting consumer - `boolean`"
-  ([^java.util.concurrent.TransferQueue this]
+  (^Boolean [^java.util.concurrent.TransferQueue this]
     (-> this (.hasWaitingConsumer))))
 
 (defn get-waiting-consumer-count
@@ -86,6 +86,6 @@
    hasWaitingConsumer().
 
   returns: the number of consumers waiting to receive elements - `int`"
-  ([^java.util.concurrent.TransferQueue this]
+  (^Integer [^java.util.concurrent.TransferQueue this]
     (-> this (.getWaitingConsumerCount))))
 

@@ -58,7 +58,7 @@
     INTERVAL_REMOVED
 
   returns: an int representing the type value - `int`"
-  ([^javax.swing.event.ListDataEvent this]
+  (^Integer [^javax.swing.event.ListDataEvent this]
     (-> this (.getType))))
 
 (defn get-index-0
@@ -66,7 +66,7 @@
    element, this value is the same as that returned by getIndex1().
 
   returns: an int representing the lower index value - `int`"
-  ([^javax.swing.event.ListDataEvent this]
+  (^Integer [^javax.swing.event.ListDataEvent this]
     (-> this (.getIndex0))))
 
 (defn get-index-1
@@ -74,7 +74,7 @@
    element, this value is the same as that returned by getIndex0().
 
   returns: an int representing the upper index value - `int`"
-  ([^javax.swing.event.ListDataEvent this]
+  (^Integer [^javax.swing.event.ListDataEvent this]
     (-> this (.getIndex1))))
 
 (defn to-string
@@ -85,6 +85,6 @@
    be null.
 
   returns: a string representation of this ListDataEvent. - `java.lang.String`"
-  ([^javax.swing.event.ListDataEvent this]
+  (^java.lang.String [^javax.swing.event.ListDataEvent this]
     (-> this (.toString))))
 

@@ -32,21 +32,21 @@
   returns: the rule, not null - `java.time.zone.ZoneOffsetTransitionRule`
 
   throws: java.lang.IllegalArgumentException - if the end of day flag is true when the time is not midnight"
-  ([^java.time.Month month ^Integer day-of-month-indicator ^java.time.DayOfWeek day-of-week ^java.time.LocalTime time ^Boolean time-end-of-day ^java.time.zone.ZoneOffsetTransitionRule.TimeDefinition time-defnition ^java.time.ZoneOffset standard-offset ^java.time.ZoneOffset offset-before ^java.time.ZoneOffset offset-after]
+  (^java.time.zone.ZoneOffsetTransitionRule [^java.time.Month month ^Integer day-of-month-indicator ^java.time.DayOfWeek day-of-week ^java.time.LocalTime time ^Boolean time-end-of-day ^java.time.zone.ZoneOffsetTransitionRule.TimeDefinition time-defnition ^java.time.ZoneOffset standard-offset ^java.time.ZoneOffset offset-before ^java.time.ZoneOffset offset-after]
     (ZoneOffsetTransitionRule/of month day-of-month-indicator day-of-week time time-end-of-day time-defnition standard-offset offset-before offset-after)))
 
 (defn get-offset-before
   "Gets the offset before the transition.
 
   returns: the offset before, not null - `java.time.ZoneOffset`"
-  ([^java.time.zone.ZoneOffsetTransitionRule this]
+  (^java.time.ZoneOffset [^java.time.zone.ZoneOffsetTransitionRule this]
     (-> this (.getOffsetBefore))))
 
 (defn get-standard-offset
   "Gets the standard offset in force at the transition.
 
   returns: the standard offset, not null - `java.time.ZoneOffset`"
-  ([^java.time.zone.ZoneOffsetTransitionRule this]
+  (^java.time.ZoneOffset [^java.time.zone.ZoneOffsetTransitionRule this]
     (-> this (.getStandardOffset))))
 
 (defn get-time-definition
@@ -56,7 +56,7 @@
    the wall offset or UTC.
 
   returns: the time definition, not null - `java.time.zone.ZoneOffsetTransitionRule.TimeDefinition`"
-  ([^java.time.zone.ZoneOffsetTransitionRule this]
+  (^java.time.zone.ZoneOffsetTransitionRule.TimeDefinition [^java.time.zone.ZoneOffsetTransitionRule this]
     (-> this (.getTimeDefinition))))
 
 (defn midnight-end-of-day?
@@ -65,7 +65,7 @@
    The transition may be represented as occurring at 24:00.
 
   returns: whether a local time of midnight is at the start or end of the day - `boolean`"
-  ([^java.time.zone.ZoneOffsetTransitionRule this]
+  (^Boolean [^java.time.zone.ZoneOffsetTransitionRule this]
     (-> this (.isMidnightEndOfDay))))
 
 (defn get-day-of-week
@@ -79,7 +79,7 @@
    If the day is negative then the adjustment is earlier.
 
   returns: the day-of-week that the transition occurs, null if the rule defines an exact date - `java.time.DayOfWeek`"
-  ([^java.time.zone.ZoneOffsetTransitionRule this]
+  (^java.time.DayOfWeek [^java.time.zone.ZoneOffsetTransitionRule this]
     (-> this (.getDayOfWeek))))
 
 (defn create-transition
@@ -90,14 +90,14 @@
   year - the year to create a transition for, not null - `int`
 
   returns: the transition instance, not null - `java.time.zone.ZoneOffsetTransition`"
-  ([^java.time.zone.ZoneOffsetTransitionRule this ^Integer year]
+  (^java.time.zone.ZoneOffsetTransition [^java.time.zone.ZoneOffsetTransitionRule this ^Integer year]
     (-> this (.createTransition year))))
 
 (defn to-string
   "Returns a string describing this object.
 
   returns: a string for debugging, not null - `java.lang.String`"
-  ([^java.time.zone.ZoneOffsetTransitionRule this]
+  (^java.lang.String [^java.time.zone.ZoneOffsetTransitionRule this]
     (-> this (.toString))))
 
 (defn get-local-time
@@ -107,7 +107,7 @@
    The time is converted into an instant using the time definition.
 
   returns: the local time of day of the transition, not null - `java.time.LocalTime`"
-  ([^java.time.zone.ZoneOffsetTransitionRule this]
+  (^java.time.LocalTime [^java.time.zone.ZoneOffsetTransitionRule this]
     (-> this (.getLocalTime))))
 
 (defn get-day-of-month-indicator
@@ -127,21 +127,21 @@
    In this case, the day identified is the latest possible date that the transition can be.
 
   returns: the day-of-month indicator, from -28 to 31 excluding 0 - `int`"
-  ([^java.time.zone.ZoneOffsetTransitionRule this]
+  (^Integer [^java.time.zone.ZoneOffsetTransitionRule this]
     (-> this (.getDayOfMonthIndicator))))
 
 (defn get-offset-after
   "Gets the offset after the transition.
 
   returns: the offset after, not null - `java.time.ZoneOffset`"
-  ([^java.time.zone.ZoneOffsetTransitionRule this]
+  (^java.time.ZoneOffset [^java.time.zone.ZoneOffsetTransitionRule this]
     (-> this (.getOffsetAfter))))
 
 (defn hash-code
   "Returns a suitable hash code.
 
   returns: the hash code - `int`"
-  ([^java.time.zone.ZoneOffsetTransitionRule this]
+  (^Integer [^java.time.zone.ZoneOffsetTransitionRule this]
     (-> this (.hashCode))))
 
 (defn get-month
@@ -153,7 +153,7 @@
    if the month of either the earliest or latest possible date of the cutover.
 
   returns: the month of the transition, not null - `java.time.Month`"
-  ([^java.time.zone.ZoneOffsetTransitionRule this]
+  (^java.time.Month [^java.time.zone.ZoneOffsetTransitionRule this]
     (-> this (.getMonth))))
 
 (defn equals
@@ -164,6 +164,6 @@
   other-rule - the other object to compare to, null returns false - `java.lang.Object`
 
   returns: true if equal - `boolean`"
-  ([^java.time.zone.ZoneOffsetTransitionRule this ^java.lang.Object other-rule]
+  (^Boolean [^java.time.zone.ZoneOffsetTransitionRule this ^java.lang.Object other-rule]
     (-> this (.equals other-rule))))
 

@@ -79,7 +79,7 @@
   returns: The normalized String - `java.lang.String`
 
   throws: java.lang.NullPointerException - If src or form is null."
-  ([^java.lang.CharSequence src ^java.text.Normalizer.Form form]
+  (^java.lang.String [^java.lang.CharSequence src ^java.text.Normalizer.Form form]
     (Normalizer/normalize src form)))
 
 (defn *normalized?
@@ -92,6 +92,6 @@
    false otherwise. - `boolean`
 
   throws: java.lang.NullPointerException - If src or form is null."
-  ([^java.lang.CharSequence src ^java.text.Normalizer.Form form]
+  (^Boolean [^java.lang.CharSequence src ^java.text.Normalizer.Form form]
     (Normalizer/isNormalized src form)))
 

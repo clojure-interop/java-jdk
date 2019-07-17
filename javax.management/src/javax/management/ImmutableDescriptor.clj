@@ -12,7 +12,7 @@
   field-values - `java.lang.Object[]`
 
   throws: java.lang.IllegalArgumentException - if either array is null, or if the arrays have different sizes, or if a field name is null or empty, or if the same field name appears more than once."
-  ([^java.lang.String[] field-names ^java.lang.Object[] field-values]
+  ([field-names field-values]
     (new ImmutableDescriptor field-names field-values))
   ([^java.lang.String fields]
     (new ImmutableDescriptor fields)))
@@ -50,7 +50,7 @@
    the required fields. - `javax.management.ImmutableDescriptor`
 
   throws: java.lang.IllegalArgumentException - if two Descriptors contain the same field name with different associated values. Primitive array values are considered the same if they are of the same type with the same elements. Object array values are considered the same if Arrays.deepEquals(Object[],Object[]) returns true."
-  ([^javax.management.Descriptor descriptors]
+  (^javax.management.ImmutableDescriptor [^javax.management.Descriptor descriptors]
     (ImmutableDescriptor/union descriptors)))
 
 (defn set-fields
@@ -66,7 +66,7 @@
   field-values - Object array of the corresponding field values. The array cannot be null. Elements of the array can be null. - `java.lang.Object[]`
 
   throws: javax.management.RuntimeOperationsException - if the change fails for any reason. Wrapped exception is IllegalArgumentException if fieldNames or fieldValues is null, or if the arrays are of different lengths, or if there is an illegal value in one of them. Wrapped exception is UnsupportedOperationException if the descriptor is immutable, and the call would change its contents."
-  ([^javax.management.ImmutableDescriptor this ^java.lang.String[] field-names ^java.lang.Object[] field-values]
+  ([^javax.management.ImmutableDescriptor this field-names field-values]
     (-> this (.setFields field-names field-values))))
 
 (defn remove-field
@@ -90,7 +90,7 @@
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^javax.management.ImmutableDescriptor this]
+  (^java.lang.String [^javax.management.ImmutableDescriptor this]
     (-> this (.toString))))
 
 (defn get-field-value
@@ -99,7 +99,7 @@
   field-name - the field name. - `java.lang.String`
 
   returns: the corresponding value, or null if the field is not present. - `java.lang.Object`"
-  ([^javax.management.ImmutableDescriptor this ^java.lang.String field-name]
+  (^java.lang.Object [^javax.management.ImmutableDescriptor this ^java.lang.String field-name]
     (-> this (.getFieldValue field-name))))
 
 (defn get-field-values
@@ -136,7 +136,7 @@
   returns: true if the values are legal. - `boolean`
 
   throws: javax.management.RuntimeOperationsException - if the validity checking fails. The method returns false if the descriptor is not valid, but throws this exception if the attempt to determine validity fails."
-  ([^javax.management.ImmutableDescriptor this]
+  (^Boolean [^javax.management.ImmutableDescriptor this]
     (-> this (.isValid))))
 
 (defn clone
@@ -151,7 +151,7 @@
   returns: a clone of this instance. - `javax.management.Descriptor`
 
   throws: javax.management.RuntimeOperationsException - for illegal value for field Names or field Values. If the descriptor construction fails for any reason, this exception will be thrown."
-  ([^javax.management.ImmutableDescriptor this]
+  (^javax.management.Descriptor [^javax.management.ImmutableDescriptor this]
     (-> this (.clone))))
 
 (defn hash-code
@@ -171,7 +171,7 @@
    Otherwise h is v.hashCode().
 
   returns: A hash code value for this object. - `int`"
-  ([^javax.management.ImmutableDescriptor this]
+  (^Integer [^javax.management.ImmutableDescriptor this]
     (-> this (.hashCode))))
 
 (defn get-fields
@@ -206,6 +206,6 @@
 
   returns: true if the objects are the same; false
    otherwise. - `boolean`"
-  ([^javax.management.ImmutableDescriptor this ^java.lang.Object o]
+  (^Boolean [^javax.management.ImmutableDescriptor this ^java.lang.Object o]
     (-> this (.equals o))))
 

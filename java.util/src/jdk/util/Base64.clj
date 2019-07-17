@@ -42,7 +42,7 @@
    Basic type base64 encoding scheme.
 
   returns: A Base64 encoder. - `java.util.Base64.Encoder`"
-  ([]
+  (^java.util.Base64.Encoder []
     (Base64/getEncoder )))
 
 (defn *get-url-encoder
@@ -51,7 +51,7 @@
    encoding scheme.
 
   returns: A Base64 encoder. - `java.util.Base64.Encoder`"
-  ([]
+  (^java.util.Base64.Encoder []
     (Base64/getUrlEncoder )))
 
 (defn *get-mime-encoder
@@ -65,9 +65,9 @@
   returns: A Base64 encoder. - `java.util.Base64.Encoder`
 
   throws: java.lang.IllegalArgumentException - if lineSeparator includes any character of `The Base64 Alphabet` as specified in Table 1 of RFC 2045."
-  ([^Integer line-length line-separator]
+  (^java.util.Base64.Encoder [^Integer line-length line-separator]
     (Base64/getMimeEncoder line-length line-separator))
-  ([]
+  (^java.util.Base64.Encoder []
     (Base64/getMimeEncoder )))
 
 (defn *get-decoder
@@ -75,7 +75,7 @@
    Basic type base64 encoding scheme.
 
   returns: A Base64 decoder. - `java.util.Base64.Decoder`"
-  ([]
+  (^java.util.Base64.Decoder []
     (Base64/getDecoder )))
 
 (defn *get-url-decoder
@@ -84,7 +84,7 @@
    encoding scheme.
 
   returns: A Base64 decoder. - `java.util.Base64.Decoder`"
-  ([]
+  (^java.util.Base64.Decoder []
     (Base64/getUrlDecoder )))
 
 (defn *get-mime-decoder
@@ -92,6 +92,6 @@
    MIME type base64 decoding scheme.
 
   returns: A Base64 decoder. - `java.util.Base64.Decoder`"
-  ([]
+  (^java.util.Base64.Decoder []
     (Base64/getMimeDecoder )))
 

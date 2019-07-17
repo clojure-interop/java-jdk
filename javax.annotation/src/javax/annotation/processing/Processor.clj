@@ -167,7 +167,7 @@
 
   returns: the options recognized by this processor or an
            empty collection if none - `java.util.Set<java.lang.String>`"
-  ([^javax.annotation.processing.Processor this]
+  (^java.util.Set [^javax.annotation.processing.Processor this]
     (-> this (.getSupportedOptions))))
 
 (defn get-supported-annotation-types
@@ -200,7 +200,7 @@
    The Java™ Language Specification.
 
   returns: the names of the annotation types supported by this processor - `java.util.Set<java.lang.String>`"
-  ([^javax.annotation.processing.Processor this]
+  (^java.util.Set [^javax.annotation.processing.Processor this]
     (-> this (.getSupportedAnnotationTypes))))
 
 (defn get-supported-source-version
@@ -209,7 +209,7 @@
 
   returns: the latest source version supported by this annotation
    processor. - `javax.lang.model.SourceVersion`"
-  ([^javax.annotation.processing.Processor this]
+  (^javax.lang.model.SourceVersion [^javax.annotation.processing.Processor this]
     (-> this (.getSupportedSourceVersion))))
 
 (defn init
@@ -235,7 +235,7 @@
   round-env - environment for information about the current and prior round - `javax.annotation.processing.RoundEnvironment`
 
   returns: whether or not the set of annotation types are claimed by this processor - `boolean`"
-  ([^javax.annotation.processing.Processor this ^javax.lang.model.element.TypeElement> annotations ^javax.annotation.processing.RoundEnvironment round-env]
+  (^Boolean [^javax.annotation.processing.Processor this ^javax.lang.model.element.TypeElement> annotations ^javax.annotation.processing.RoundEnvironment round-env]
     (-> this (.process annotations round-env))))
 
 (defn get-completions

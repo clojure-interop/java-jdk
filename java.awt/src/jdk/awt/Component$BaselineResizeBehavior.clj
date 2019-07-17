@@ -106,6 +106,6 @@
   returns: the enum constant with the specified name - `java.awt.Component.BaselineResizeBehavior`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^java.awt.Component.BaselineResizeBehavior [^java.lang.String name]
     (Component$BaselineResizeBehavior/valueOf name)))
 

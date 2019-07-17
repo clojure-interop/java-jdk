@@ -46,7 +46,7 @@
   throws: java.util.concurrent.RejectedExecutionException - if the task cannot be scheduled for execution"
   ([^java.util.concurrent.AbstractExecutorService this ^java.lang.Runnable task result]
     (-> this (.submit task result)))
-  ([^java.util.concurrent.AbstractExecutorService this ^java.lang.Runnable task]
+  (^java.util.concurrent.Future [^java.util.concurrent.AbstractExecutorService this ^java.lang.Runnable task]
     (-> this (.submit task))))
 
 (defn invoke-any

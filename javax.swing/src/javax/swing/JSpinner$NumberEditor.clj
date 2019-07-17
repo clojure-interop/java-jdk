@@ -33,13 +33,13 @@
    numbers.
 
   returns: the value of getTextField().getFormatter().getFormat(). - `java.text.DecimalFormat`"
-  ([^javax.swing.JSpinner$NumberEditor this]
+  (^java.text.DecimalFormat [^javax.swing.JSpinner$NumberEditor this]
     (-> this (.getFormat))))
 
 (defn get-model
   "Return our spinner ancestor's SpinnerNumberModel.
 
   returns: getSpinner().getModel() - `javax.swing.SpinnerNumberModel`"
-  ([^javax.swing.JSpinner$NumberEditor this]
+  (^javax.swing.SpinnerNumberModel [^javax.swing.JSpinner$NumberEditor this]
     (-> this (.getModel))))
 

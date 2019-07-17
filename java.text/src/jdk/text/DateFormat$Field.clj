@@ -169,7 +169,7 @@
   returns: Field instance representing calendarField. - `java.text.DateFormat.Field`
 
   throws: java.lang.IllegalArgumentException - if calendarField is not the value of a Calendar field constant."
-  ([^Integer calendar-field]
+  (^java.text.DateFormat.Field [^Integer calendar-field]
     (DateFormat$Field/ofCalendarField calendar-field)))
 
 (defn get-calendar-field
@@ -180,6 +180,6 @@
    Calendar constant, this will return -1.
 
   returns: Calendar constant for this field - `int`"
-  ([^java.text.DateFormat$Field this]
+  (^Integer [^java.text.DateFormat$Field this]
     (-> this (.getCalendarField))))
 

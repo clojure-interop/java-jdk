@@ -13,6 +13,6 @@
   "Gets a result.
 
   returns: a result - `Supplier.T`"
-  ([^java.util.function.Supplier this]
+  (^Supplier.T [^java.util.function.Supplier this]
     (-> this (.get))))
 

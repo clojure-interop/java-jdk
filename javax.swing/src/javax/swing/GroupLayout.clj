@@ -210,7 +210,7 @@
   returns: alignment; this implementation returns .5 - `float`
 
   throws: java.lang.IllegalArgumentException - if parent is not the same Container that this was created with"
-  ([^javax.swing.GroupLayout this ^java.awt.Container parent]
+  (^Float [^javax.swing.GroupLayout this ^java.awt.Container parent]
     (-> this (.getLayoutAlignmentY parent))))
 
 (defn get-auto-create-gaps?
@@ -219,7 +219,7 @@
 
   returns: true if gaps between components are automatically
            created - `boolean`"
-  ([^javax.swing.GroupLayout this]
+  (^Boolean [^javax.swing.GroupLayout this]
     (-> this (.getAutoCreateGaps))))
 
 (defn get-auto-create-container-gaps?
@@ -228,7 +228,7 @@
 
   returns: true if gaps between the container and components that
            border the container are automatically created - `boolean`"
-  ([^javax.swing.GroupLayout this]
+  (^Boolean [^javax.swing.GroupLayout this]
     (-> this (.getAutoCreateContainerGaps))))
 
 (defn set-horizontal-group
@@ -272,7 +272,7 @@
   returns: the preferred size for parent - `java.awt.Dimension`
 
   throws: java.lang.IllegalArgumentException - if parent is not the same Container this was created with"
-  ([^javax.swing.GroupLayout this ^java.awt.Container parent]
+  (^java.awt.Dimension [^javax.swing.GroupLayout this ^java.awt.Container parent]
     (-> this (.preferredLayoutSize parent))))
 
 (defn to-string
@@ -282,7 +282,7 @@
    between implementations.
 
   returns: a string representation of this GroupLayout - `java.lang.String`"
-  ([^javax.swing.GroupLayout this]
+  (^java.lang.String [^javax.swing.GroupLayout this]
     (-> this (.toString))))
 
 (defn replace
@@ -307,7 +307,7 @@
   returns: the alignment; this implementation returns .5 - `float`
 
   throws: java.lang.IllegalArgumentException - if parent is not the same Container that this was created with"
-  ([^javax.swing.GroupLayout this ^java.awt.Container parent]
+  (^Float [^javax.swing.GroupLayout this ^java.awt.Container parent]
     (-> this (.getLayoutAlignmentX parent))))
 
 (defn get-layout-style
@@ -317,7 +317,7 @@
 
   returns: the LayoutStyle used for calculating the preferred
            gap between components - `javax.swing.LayoutStyle`"
-  ([^javax.swing.GroupLayout this]
+  (^javax.swing.LayoutStyle [^javax.swing.GroupLayout this]
     (-> this (.getLayoutStyle))))
 
 (defn set-layout-style
@@ -337,7 +337,7 @@
   returns: the minimum size for parent - `java.awt.Dimension`
 
   throws: java.lang.IllegalArgumentException - if parent is not the same Container that this was created with"
-  ([^javax.swing.GroupLayout this ^java.awt.Container parent]
+  (^java.awt.Dimension [^javax.swing.GroupLayout this ^java.awt.Container parent]
     (-> this (.minimumLayoutSize parent))))
 
 (defn get-honors-visibility?
@@ -346,7 +346,7 @@
 
   returns: whether component visibility is considered when sizing and
            positioning components - `boolean`"
-  ([^javax.swing.GroupLayout this]
+  (^Boolean [^javax.swing.GroupLayout this]
     (-> this (.getHonorsVisibility))))
 
 (defn maximum-layout-size
@@ -357,7 +357,7 @@
   returns: the maximum size for parent - `java.awt.Dimension`
 
   throws: java.lang.IllegalArgumentException - if parent is not the same Container that this was created with"
-  ([^javax.swing.GroupLayout this ^java.awt.Container parent]
+  (^java.awt.Dimension [^javax.swing.GroupLayout this ^java.awt.Container parent]
     (-> this (.maximumLayoutSize parent))))
 
 (defn create-baseline-group
@@ -368,7 +368,7 @@
   anchor-baseline-to-top - whether the baseline is anchored to the top or bottom of the group - `boolean`
 
   returns: `javax.swing.GroupLayout.ParallelGroup`"
-  ([^javax.swing.GroupLayout this ^Boolean resizable ^Boolean anchor-baseline-to-top]
+  (^javax.swing.GroupLayout.ParallelGroup [^javax.swing.GroupLayout this ^Boolean resizable ^Boolean anchor-baseline-to-top]
     (-> this (.createBaselineGroup resizable anchor-baseline-to-top))))
 
 (defn add-layout-component
@@ -386,7 +386,7 @@
   "Creates and returns a SequentialGroup.
 
   returns: a new SequentialGroup - `javax.swing.GroupLayout.SequentialGroup`"
-  ([^javax.swing.GroupLayout this]
+  (^javax.swing.GroupLayout.SequentialGroup [^javax.swing.GroupLayout this]
     (-> this (.createSequentialGroup))))
 
 (defn create-parallel-group
@@ -410,11 +410,11 @@
   returns: a new ParallelGroup - `javax.swing.GroupLayout.ParallelGroup`
 
   throws: java.lang.IllegalArgumentException - if alignment is null"
-  ([^javax.swing.GroupLayout this ^javax.swing.GroupLayout.Alignment alignment ^Boolean resizable]
+  (^javax.swing.GroupLayout.ParallelGroup [^javax.swing.GroupLayout this ^javax.swing.GroupLayout.Alignment alignment ^Boolean resizable]
     (-> this (.createParallelGroup alignment resizable)))
-  ([^javax.swing.GroupLayout this ^javax.swing.GroupLayout.Alignment alignment]
+  (^javax.swing.GroupLayout.ParallelGroup [^javax.swing.GroupLayout this ^javax.swing.GroupLayout.Alignment alignment]
     (-> this (.createParallelGroup alignment)))
-  ([^javax.swing.GroupLayout this]
+  (^javax.swing.GroupLayout.ParallelGroup [^javax.swing.GroupLayout this]
     (-> this (.createParallelGroup))))
 
 (defn remove-layout-component

@@ -253,7 +253,7 @@
   p - `java.awt.Container`
 
   returns: `float`"
-  ([^javax.swing.SpringLayout this ^java.awt.Container p]
+  (^Float [^javax.swing.SpringLayout this ^java.awt.Container p]
     (-> this (.getLayoutAlignmentY p))))
 
 (defn get-constraint
@@ -276,7 +276,7 @@
 
   returns: a proxy for the spring controlling the distance between the
            specified edge and the top or left edge of its parent - `javax.swing.Spring`"
-  ([^javax.swing.SpringLayout this ^java.lang.String edge-name ^java.awt.Component c]
+  (^javax.swing.Spring [^javax.swing.SpringLayout this ^java.lang.String edge-name ^java.awt.Component c]
     (-> this (.getConstraint edge-name c))))
 
 (defn preferred-layout-size
@@ -285,7 +285,7 @@
   parent - the container to be laid out - `java.awt.Container`
 
   returns: `java.awt.Dimension`"
-  ([^javax.swing.SpringLayout this ^java.awt.Container parent]
+  (^java.awt.Dimension [^javax.swing.SpringLayout this ^java.awt.Container parent]
     (-> this (.preferredLayoutSize parent))))
 
 (defn get-layout-alignment-x
@@ -294,7 +294,7 @@
   p - `java.awt.Container`
 
   returns: `float`"
-  ([^javax.swing.SpringLayout this ^java.awt.Container p]
+  (^Float [^javax.swing.SpringLayout this ^java.awt.Container p]
     (-> this (.getLayoutAlignmentX p))))
 
 (defn minimum-layout-size
@@ -303,7 +303,7 @@
   parent - the component to be laid out - `java.awt.Container`
 
   returns: `java.awt.Dimension`"
-  ([^javax.swing.SpringLayout this ^java.awt.Container parent]
+  (^java.awt.Dimension [^javax.swing.SpringLayout this ^java.awt.Container parent]
     (-> this (.minimumLayoutSize parent))))
 
 (defn get-constraints
@@ -327,7 +327,7 @@
   c - the component whose constraints will be returned - `java.awt.Component`
 
   returns: the constraints for the specified component - `javax.swing.SpringLayout.Constraints`"
-  ([^javax.swing.SpringLayout this ^java.awt.Component c]
+  (^javax.swing.SpringLayout.Constraints [^javax.swing.SpringLayout this ^java.awt.Component c]
     (-> this (.getConstraints c))))
 
 (defn maximum-layout-size
@@ -336,7 +336,7 @@
   parent - `java.awt.Container`
 
   returns: `java.awt.Dimension`"
-  ([^javax.swing.SpringLayout this ^java.awt.Container parent]
+  (^java.awt.Dimension [^javax.swing.SpringLayout this ^java.awt.Container parent]
     (-> this (.maximumLayoutSize parent))))
 
 (defn add-layout-component

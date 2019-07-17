@@ -19,6 +19,6 @@
    serialized and then read back in.
 
   returns: the type mirror, or null if unavailable - `javax.lang.model.type.TypeMirror`"
-  ([^javax.lang.model.type.MirroredTypeException this]
+  (^javax.lang.model.type.TypeMirror [^javax.lang.model.type.MirroredTypeException this]
     (-> this (.getTypeMirror))))
 

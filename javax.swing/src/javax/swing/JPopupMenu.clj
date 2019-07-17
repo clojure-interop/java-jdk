@@ -51,7 +51,7 @@
 
   returns: the value of the defaultLightWeightPopupEnabled
             property - `boolean`"
-  ([]
+  (^Boolean []
     (JPopupMenu/getDefaultLightWeightPopupEnabled )))
 
 (defn set-popup-size
@@ -70,14 +70,14 @@
   "Gets the lightWeightPopupEnabled property.
 
   returns: the value of the lightWeightPopupEnabled property - `boolean`"
-  ([^javax.swing.JPopupMenu this]
+  (^Boolean [^javax.swing.JPopupMenu this]
     (-> this (.isLightWeightPopupEnabled))))
 
 (defn get-component
   "Returns this JPopupMenu component.
 
   returns: this JPopupMenu object - `java.awt.Component`"
-  ([^javax.swing.JPopupMenu this]
+  (^java.awt.Component [^javax.swing.JPopupMenu this]
     (-> this (.getComponent))))
 
 (defn set-location
@@ -101,7 +101,7 @@
 
   returns: the index of the component, where 0 is the first;
            or -1 if the component is not found - `int`"
-  ([^javax.swing.JPopupMenu this ^java.awt.Component c]
+  (^Integer [^javax.swing.JPopupMenu this ^java.awt.Component c]
     (-> this (.getComponentIndex c))))
 
 (defn pack
@@ -132,7 +132,7 @@
    popup menu.
 
   returns: the Component in which the popup menu is displayed - `java.awt.Component`"
-  ([^javax.swing.JPopupMenu this]
+  (^java.awt.Component [^javax.swing.JPopupMenu this]
     (-> this (.getInvoker))))
 
 (defn add-popup-menu-listener
@@ -153,7 +153,7 @@
   "Returns the name of the L&F class that renders this component.
 
   returns: the string `PopupMenuUI` - `java.lang.String`"
-  ([^javax.swing.JPopupMenu this]
+  (^java.lang.String [^javax.swing.JPopupMenu this]
     (-> this (.getUIClassID))))
 
 (defn popup-trigger?
@@ -163,7 +163,7 @@
   e - `java.awt.event.MouseEvent`
 
   returns: true if the mouse event is a popup trigger - `boolean`"
-  ([^javax.swing.JPopupMenu this ^java.awt.event.MouseEvent e]
+  (^Boolean [^javax.swing.JPopupMenu this ^java.awt.event.MouseEvent e]
     (-> this (.isPopupTrigger e))))
 
 (defn set-selection-model
@@ -215,7 +215,7 @@
   "Returns the model object that handles single selections.
 
   returns: the selectionModel property - `javax.swing.SingleSelectionModel`"
-  ([^javax.swing.JPopupMenu this]
+  (^javax.swing.SingleSelectionModel [^javax.swing.JPopupMenu this]
     (-> this (.getSelectionModel))))
 
 (defn show
@@ -248,14 +248,14 @@
   "Returns the look and feel (L&F) object that renders this component.
 
   returns: the PopupMenuUI object that renders this component - `javax.swing.plaf.PopupMenuUI`"
-  ([^javax.swing.JPopupMenu this]
+  (^javax.swing.plaf.PopupMenuUI [^javax.swing.JPopupMenu this]
     (-> this (.getUI))))
 
 (defn get-label
   "Returns the popup menu's label
 
   returns: a string containing the popup menu's label - `java.lang.String`"
-  ([^javax.swing.JPopupMenu this]
+  (^java.lang.String [^javax.swing.JPopupMenu this]
     (-> this (.getLabel))))
 
 (defn get-accessible-context
@@ -266,7 +266,7 @@
 
   returns: an AccessibleJPopupMenu that serves as the
            AccessibleContext of this JPopupMenu - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.JPopupMenu this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.JPopupMenu this]
     (-> this (.getAccessibleContext))))
 
 (defn remove-menu-key-listener
@@ -314,7 +314,7 @@
   e - a KeyEvent - `java.awt.event.KeyEvent`
   path - the MenuElement path array - `javax.swing.MenuElement[]`
   manager - the MenuSelectionManager - `javax.swing.MenuSelectionManager`"
-  ([^javax.swing.JPopupMenu this ^java.awt.event.KeyEvent e ^javax.swing.MenuElement[] path ^javax.swing.MenuSelectionManager manager]
+  ([^javax.swing.JPopupMenu this ^java.awt.event.KeyEvent e path ^javax.swing.MenuSelectionManager manager]
     (-> this (.processKeyEvent e path manager))))
 
 (defn visible?
@@ -323,7 +323,7 @@
 
   returns: true if the component is visible,
    false otherwise - `boolean`"
-  ([^javax.swing.JPopupMenu this]
+  (^Boolean [^javax.swing.JPopupMenu this]
     (-> this (.isVisible))))
 
 (defn insert
@@ -344,7 +344,7 @@
   event - `java.awt.event.MouseEvent`
   path - `javax.swing.MenuElement[]`
   manager - `javax.swing.MenuSelectionManager`"
-  ([^javax.swing.JPopupMenu this ^java.awt.event.MouseEvent event ^javax.swing.MenuElement[] path ^javax.swing.MenuSelectionManager manager]
+  ([^javax.swing.JPopupMenu this ^java.awt.event.MouseEvent event path ^javax.swing.MenuSelectionManager manager]
     (-> this (.processMouseEvent event path manager))))
 
 (defn add
@@ -353,7 +353,7 @@
   menu-item - the JMenuItem to add - `javax.swing.JMenuItem`
 
   returns: the JMenuItem added - `javax.swing.JMenuItem`"
-  ([^javax.swing.JPopupMenu this ^javax.swing.JMenuItem menu-item]
+  (^javax.swing.JMenuItem [^javax.swing.JPopupMenu this ^javax.swing.JMenuItem menu-item]
     (-> this (.add menu-item))))
 
 (defn set-light-weight-popup-enabled
@@ -378,7 +378,7 @@
   "Checks whether the border should be painted.
 
   returns: true if the border is painted, false otherwise - `boolean`"
-  ([^javax.swing.JPopupMenu this]
+  (^Boolean [^javax.swing.JPopupMenu this]
     (-> this (.isBorderPainted))))
 
 (defn update-ui
@@ -408,6 +408,6 @@
    its containers.
 
   returns: an Insets object containing the margin values. - `java.awt.Insets`"
-  ([^javax.swing.JPopupMenu this]
+  (^java.awt.Insets [^javax.swing.JPopupMenu this]
     (-> this (.getMargin))))
 

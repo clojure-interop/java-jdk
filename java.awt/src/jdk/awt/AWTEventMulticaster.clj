@@ -67,7 +67,7 @@
   b - component-listener-b - `java.awt.event.ComponentListener`
 
   returns: `java.awt.event.ComponentListener`"
-  ([^java.awt.event.ComponentListener a ^java.awt.event.ComponentListener b]
+  (^java.awt.event.ComponentListener [^java.awt.event.ComponentListener a ^java.awt.event.ComponentListener b]
     (AWTEventMulticaster/add a b)))
 
 (defn *remove
@@ -78,7 +78,7 @@
   oldl - the component-listener being removed - `java.awt.event.ComponentListener`
 
   returns: `java.awt.event.ComponentListener`"
-  ([^java.awt.event.ComponentListener l ^java.awt.event.ComponentListener oldl]
+  (^java.awt.event.ComponentListener [^java.awt.event.ComponentListener l ^java.awt.event.ComponentListener oldl]
     (AWTEventMulticaster/remove l oldl)))
 
 (defn *get-listeners

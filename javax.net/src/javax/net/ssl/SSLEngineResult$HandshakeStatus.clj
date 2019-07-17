@@ -75,6 +75,6 @@
   returns: the enum constant with the specified name - `javax.net.ssl.SSLEngineResult.HandshakeStatus`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^javax.net.ssl.SSLEngineResult.HandshakeStatus [^java.lang.String name]
     (SSLEngineResult$HandshakeStatus/valueOf name)))
 

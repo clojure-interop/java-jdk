@@ -96,9 +96,9 @@
   returns: a Future representing pending completion of the task,
            and whose get() method will return the given
            result value upon completion - `java.util.concurrent.Future<ExecutorCompletionService.V>`"
-  ([^java.util.concurrent.ExecutorCompletionService this ^java.lang.Runnable task ^ExecutorCompletionService.V result]
+  (^java.util.concurrent.Future [^java.util.concurrent.ExecutorCompletionService this ^java.lang.Runnable task ^ExecutorCompletionService.V result]
     (-> this (.submit task result)))
-  ([^java.util.concurrent.ExecutorCompletionService this ^java.util.concurrent.Callable task]
+  (^java.util.concurrent.Future [^java.util.concurrent.ExecutorCompletionService this ^java.util.concurrent.Callable task]
     (-> this (.submit task))))
 
 (defn take
@@ -107,7 +107,7 @@
   returns: the Future representing the next completed task - `java.util.concurrent.Future<ExecutorCompletionService.V>`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([^java.util.concurrent.ExecutorCompletionService this]
+  (^java.util.concurrent.Future [^java.util.concurrent.ExecutorCompletionService this]
     (-> this (.take))))
 
 (defn poll
@@ -121,8 +121,8 @@
            before one is present - `java.util.concurrent.Future<ExecutorCompletionService.V>`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([^java.util.concurrent.ExecutorCompletionService this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^java.util.concurrent.Future [^java.util.concurrent.ExecutorCompletionService this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.poll timeout unit)))
-  ([^java.util.concurrent.ExecutorCompletionService this]
+  (^java.util.concurrent.Future [^java.util.concurrent.ExecutorCompletionService this]
     (-> this (.poll))))
 

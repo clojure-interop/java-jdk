@@ -46,7 +46,7 @@
   attr - the attribute set - `javax.swing.text.AttributeSet`
 
   returns: the color - `java.awt.Color`"
-  ([^javax.swing.text.DefaultStyledDocument this ^javax.swing.text.AttributeSet attr]
+  (^java.awt.Color [^javax.swing.text.DefaultStyledDocument this ^javax.swing.text.AttributeSet attr]
     (-> this (.getForeground attr))))
 
 (defn set-paragraph-attributes
@@ -78,7 +78,7 @@
   p - the location to translate to a paragraph and determine the logical style assigned >= 0. This is an offset from the start of the document. - `int`
 
   returns: the style, null if none - `javax.swing.text.Style`"
-  ([^javax.swing.text.DefaultStyledDocument this ^Integer p]
+  (^javax.swing.text.Style [^javax.swing.text.DefaultStyledDocument this ^Integer p]
     (-> this (.getLogicalStyle p))))
 
 (defn set-character-attributes
@@ -126,7 +126,7 @@
   parent - the parent style. This may be null if unspecified attributes need not be resolved in some other style. - `javax.swing.text.Style`
 
   returns: the style - `javax.swing.text.Style`"
-  ([^javax.swing.text.DefaultStyledDocument this ^java.lang.String nm ^javax.swing.text.Style parent]
+  (^javax.swing.text.Style [^javax.swing.text.DefaultStyledDocument this ^java.lang.String nm ^javax.swing.text.Style parent]
     (-> this (.addStyle nm parent))))
 
 (defn remove-element
@@ -165,7 +165,7 @@
   "Fetches the list of of style names.
 
   returns: all the style names - `java.util.Enumeration<?>`"
-  ([^javax.swing.text.DefaultStyledDocument this]
+  (^java.util.Enumeration [^javax.swing.text.DefaultStyledDocument this]
     (-> this (.getStyleNames))))
 
 (defn get-character-element
@@ -174,7 +174,7 @@
   pos - the position in the document >= 0 - `int`
 
   returns: the element - `javax.swing.text.Element`"
-  ([^javax.swing.text.DefaultStyledDocument this ^Integer pos]
+  (^javax.swing.text.Element [^javax.swing.text.DefaultStyledDocument this ^Integer pos]
     (-> this (.getCharacterElement pos))))
 
 (defn add-document-listener
@@ -190,7 +190,7 @@
   attr - the attribute set - `javax.swing.text.AttributeSet`
 
   returns: the font - `java.awt.Font`"
-  ([^javax.swing.text.DefaultStyledDocument this ^javax.swing.text.AttributeSet attr]
+  (^java.awt.Font [^javax.swing.text.DefaultStyledDocument this ^javax.swing.text.AttributeSet attr]
     (-> this (.getFont attr))))
 
 (defn get-background
@@ -199,14 +199,14 @@
   attr - the attribute set - `javax.swing.text.AttributeSet`
 
   returns: the color - `java.awt.Color`"
-  ([^javax.swing.text.DefaultStyledDocument this ^javax.swing.text.AttributeSet attr]
+  (^java.awt.Color [^javax.swing.text.DefaultStyledDocument this ^javax.swing.text.AttributeSet attr]
     (-> this (.getBackground attr))))
 
 (defn get-default-root-element
   "Gets the default root element.
 
   returns: the root - `javax.swing.text.Element`"
-  ([^javax.swing.text.DefaultStyledDocument this]
+  (^javax.swing.text.Element [^javax.swing.text.DefaultStyledDocument this]
     (-> this (.getDefaultRootElement))))
 
 (defn remove-style
@@ -224,7 +224,7 @@
   pos - the starting offset >= 0 - `int`
 
   returns: the element - `javax.swing.text.Element`"
-  ([^javax.swing.text.DefaultStyledDocument this ^Integer pos]
+  (^javax.swing.text.Element [^javax.swing.text.DefaultStyledDocument this ^Integer pos]
     (-> this (.getParagraphElement pos))))
 
 (defn get-style
@@ -233,6 +233,6 @@
   nm - the name of the style - `java.lang.String`
 
   returns: the style - `javax.swing.text.Style`"
-  ([^javax.swing.text.DefaultStyledDocument this ^java.lang.String nm]
+  (^javax.swing.text.Style [^javax.swing.text.DefaultStyledDocument this ^java.lang.String nm]
     (-> this (.getStyle nm))))
 

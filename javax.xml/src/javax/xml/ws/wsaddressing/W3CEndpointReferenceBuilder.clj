@@ -44,7 +44,7 @@
      wsa:ReferenceParameters element. - `javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder`
 
   throws: java.lang.IllegalArgumentException - if referenceParameter is null."
-  ([^javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder this ^org.w3c.dom.Element reference-parameter]
+  (^javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder [^javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder this ^org.w3c.dom.Element reference-parameter]
     (-> this (.referenceParameter reference-parameter))))
 
 (defn attribute
@@ -60,7 +60,7 @@
      instance. - `javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder`
 
   throws: java.lang.IllegalArgumentException - if name or value is null."
-  ([^javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder this ^javax.xml.namespace.QName name ^java.lang.String value]
+  (^javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder [^javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder this ^javax.xml.namespace.QName name ^java.lang.String value]
     (-> this (.attribute name value))))
 
 (defn interface-name
@@ -76,7 +76,7 @@
   returns: A W3CEndpointReferenceBuilder instance with
      the interfaceName as wsam:InterfaceName
      element added to the wsa:Metadata element - `javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder`"
-  ([^javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder this ^javax.xml.namespace.QName interface-name]
+  (^javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder [^javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder this ^javax.xml.namespace.QName interface-name]
     (-> this (.interfaceName interface-name))))
 
 (defn element
@@ -91,7 +91,7 @@
       W3CEndpointReference instance. - `javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder`
 
   throws: java.lang.IllegalArgumentException - if element is null."
-  ([^javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder this ^org.w3c.dom.Element element]
+  (^javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder [^javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder this ^org.w3c.dom.Element element]
     (-> this (.element element))))
 
 (defn address
@@ -108,7 +108,7 @@
 
   returns: A W3CEndpointReferenceBuilder instance with
      the address set to the wsa:Address. - `javax.xml.ws.wsing.W3CEndpointReferenceBuilder`"
-  ([^javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder this ^java.lang.String address]
+  (^javax.xml.ws.wsing.W3CEndpointReferenceBuilder [^javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder this ^java.lang.String address]
     (-> this (.address address))))
 
 (defn build
@@ -135,7 +135,7 @@
    instance. This method never returns null. - `javax.xml.ws.wsaddressing.W3CEndpointReference`
 
   throws: java.lang.IllegalStateException - If the address, serviceName and endpointName are all null. If the serviceName service is null and the endpointName is NOT null. If the address property is null and the serviceName and endpointName do not specify a valid endpoint published by the same Java EE application. If the serviceName is NOT null and is not present in the specified WSDL. If the endpointName port is not null and it is not present in serviceName service in the WSDL. If the wsdlDocumentLocation is NOT null and does not represent a valid WSDL."
-  ([^javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder this]
+  (^javax.xml.ws.wsaddressing.W3CEndpointReference [^javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder this]
     (-> this (.build))))
 
 (defn service-name
@@ -151,7 +151,7 @@
   returns: A W3CEndpointReferenceBuilder instance with
      the serviceName as wsam:ServiceName
      element added to the wsa:Metadata element - `javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder`"
-  ([^javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder this ^javax.xml.namespace.QName service-name]
+  (^javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder [^javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder this ^javax.xml.namespace.QName service-name]
     (-> this (.serviceName service-name))))
 
 (defn metadata
@@ -166,7 +166,7 @@
       wsa:Metadata element. - `javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder`
 
   throws: java.lang.IllegalArgumentException - if metadataElement is null."
-  ([^javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder this ^org.w3c.dom.Element metadata-element]
+  (^javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder [^javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder this ^org.w3c.dom.Element metadata-element]
     (-> this (.metadata metadata-element))))
 
 (defn endpoint-name
@@ -186,7 +186,7 @@
    wsa:Metadata element. - `javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder`
 
   throws: IllegalStateException, - if the serviceName has not been set."
-  ([^javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder this ^javax.xml.namespace.QName endpoint-name]
+  (^javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder [^javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder this ^javax.xml.namespace.QName endpoint-name]
     (-> this (.endpointName endpoint-name))))
 
 (defn wsdl-document-location
@@ -202,6 +202,6 @@
 
   returns: A W3CEndpointReferenceBuilder instance with
      the wsdlDocumentLocation that is to be referenced. - `javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder`"
-  ([^javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder this ^java.lang.String wsdl-document-location]
+  (^javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder [^javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder this ^java.lang.String wsdl-document-location]
     (-> this (.wsdlDocumentLocation wsdl-document-location))))
 

@@ -24,6 +24,6 @@
   "Return a clone of the CertPathParameters encapsulated by this class.
 
   returns: a clone of the CertPathParameters encapsulated by this class. - `java.security.cert.CertPathParameters`"
-  ([^javax.net.ssl.CertPathTrustManagerParameters this]
+  (^java.security.cert.CertPathParameters [^javax.net.ssl.CertPathTrustManagerParameters this]
     (-> this (.getParameters))))
 

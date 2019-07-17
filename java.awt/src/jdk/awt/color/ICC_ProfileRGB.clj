@@ -112,7 +112,7 @@
   returns: the gamma value as a float. - `float`
 
   throws: java.awt.color.ProfileDataException - if the profile does not specify the corresponding TRC as a single gamma value."
-  ([^java.awt.color.ICC_ProfileRGB this ^Integer component]
+  (^Float [^java.awt.color.ICC_ProfileRGB this ^Integer component]
     (-> this (.getGamma component))))
 
 (defn get-trc

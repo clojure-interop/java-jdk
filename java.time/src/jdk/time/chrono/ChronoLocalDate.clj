@@ -235,7 +235,7 @@
    The underlying comparison is equivalent to comparing the epoch-day.
 
   returns: a comparator that compares in time-line order ignoring the chronology - `java.util.Comparator<java.time.chrono.ChronoLocalDate>`"
-  ([]
+  (^java.util.Comparator []
     (ChronoLocalDate/timeLineOrder )))
 
 (defn is-leap-year
@@ -277,7 +277,7 @@
    The output will include the full local date.
 
   returns: the formatted date, not null - `java.lang.String`"
-  ([^java.time.chrono.ChronoLocalDate this]
+  (^java.lang.String [^java.time.chrono.ChronoLocalDate this]
     (-> this (.toString))))
 
 (defn is-before
@@ -326,7 +326,7 @@
    This returns the length of the month in days.
 
   returns: the length of the month in days - `int`"
-  ([^java.time.chrono.ChronoLocalDate this]
+  (^Integer [^java.time.chrono.ChronoLocalDate this]
     (-> this (.lengthOfMonth))))
 
 (defn until
@@ -372,9 +372,9 @@
   returns: the amount of time between this date and the end date - `long`
 
   throws: java.time.DateTimeException - if the amount cannot be calculated, or the end temporal cannot be converted to a ChronoLocalDate"
-  ([^java.time.chrono.ChronoLocalDate this ^java.time.temporal.Temporal end-exclusive ^java.time.temporal.TemporalUnit unit]
+  (^Long [^java.time.chrono.ChronoLocalDate this ^java.time.temporal.Temporal end-exclusive ^java.time.temporal.TemporalUnit unit]
     (-> this (.until end-exclusive unit)))
-  ([^java.time.chrono.ChronoLocalDate this ^java.time.chrono.ChronoLocalDate end-date-exclusive]
+  (^java.time.chrono.ChronoPeriod [^java.time.chrono.ChronoLocalDate this ^java.time.chrono.ChronoLocalDate end-date-exclusive]
     (-> this (.until end-date-exclusive))))
 
 (defn *from
@@ -398,7 +398,7 @@
   returns: the date, not null - `java.time.chrono.ChronoLocalDate`
 
   throws: java.time.DateTimeException - if unable to convert to a ChronoLocalDate"
-  ([^java.time.temporal.TemporalAccessor temporal]
+  (^java.time.chrono.ChronoLocalDate [^java.time.temporal.TemporalAccessor temporal]
     (ChronoLocalDate/from temporal)))
 
 (defn is-after
@@ -447,14 +447,14 @@
    The era and other fields in ChronoField are defined by the chronology.
 
   returns: the chronology, not null - `java.time.chrono.Chronology`"
-  ([^java.time.chrono.ChronoLocalDate this]
+  (^java.time.chrono.Chronology [^java.time.chrono.ChronoLocalDate this]
     (-> this (.getChronology))))
 
 (defn hash-code
   "A hash code for this date.
 
   returns: a suitable hash code - `int`"
-  ([^java.time.chrono.ChronoLocalDate this]
+  (^Integer [^java.time.chrono.ChronoLocalDate this]
     (-> this (.hashCode))))
 
 (defn adjust-into
@@ -549,7 +549,7 @@
   obj - the object to check, null returns false - `java.lang.Object`
 
   returns: true if this is equal to the other date - `boolean`"
-  ([^java.time.chrono.ChronoLocalDate this ^java.lang.Object obj]
+  (^Boolean [^java.time.chrono.ChronoLocalDate this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn at-time

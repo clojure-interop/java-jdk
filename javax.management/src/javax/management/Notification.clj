@@ -40,7 +40,7 @@
    similar to Java properties. It is recommended that the notification type
    should follow the reverse-domain-name convention used by Java package
    names.  An example of a notification type is com.example.alarm.router. - `java.lang.String`"
-  ([^javax.management.Notification this]
+  (^java.lang.String [^javax.management.Notification this]
     (-> this (.getType))))
 
 (defn get-user-data
@@ -48,7 +48,7 @@
 
   returns: The user data object. It is used for whatever data
    the notification source wishes to communicate to its consumers. - `java.lang.Object`"
-  ([^javax.management.Notification this]
+  (^java.lang.Object [^javax.management.Notification this]
     (-> this (.getUserData))))
 
 (defn set-sequence-number
@@ -69,21 +69,21 @@
   "Returns a String representation of this notification.
 
   returns: A String representation of this notification. - `java.lang.String`"
-  ([^javax.management.Notification this]
+  (^java.lang.String [^javax.management.Notification this]
     (-> this (.toString))))
 
 (defn get-time-stamp
   "Get the notification timestamp.
 
   returns: The notification timestamp. - `long`"
-  ([^javax.management.Notification this]
+  (^Long [^javax.management.Notification this]
     (-> this (.getTimeStamp))))
 
 (defn get-message
   "Get the notification message.
 
   returns: The message string of this notification object. - `java.lang.String`"
-  ([^javax.management.Notification this]
+  (^java.lang.String [^javax.management.Notification this]
     (-> this (.getMessage))))
 
 (defn set-user-data
@@ -107,6 +107,6 @@
    identifying a particular instance of notification in the context of the notification source.
    The notification model does not assume that notifications will be received in the same order
    that they are sent. The sequence number helps listeners to sort received notifications. - `long`"
-  ([^javax.management.Notification this]
+  (^Long [^javax.management.Notification this]
     (-> this (.getSequenceNumber))))
 

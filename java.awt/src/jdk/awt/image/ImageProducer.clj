@@ -32,7 +32,7 @@
            ImageConsumer is registered with
            this ImageProducer;
            false otherwise. - `boolean`"
-  ([^java.awt.image.ImageProducer this ^java.awt.image.ImageConsumer ic]
+  (^Boolean [^java.awt.image.ImageProducer this ^java.awt.image.ImageConsumer ic]
     (-> this (.isConsumer ic))))
 
 (defn remove-consumer

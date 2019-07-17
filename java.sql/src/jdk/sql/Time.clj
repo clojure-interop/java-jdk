@@ -26,7 +26,7 @@
   s - time in format `hh:mm:ss` - `java.lang.String`
 
   returns: a corresponding Time object - `java.sql.Time`"
-  ([^java.lang.String s]
+  (^java.sql.Time [^java.lang.String s]
     (Time/valueOf s)))
 
 (defn to-instant
@@ -38,7 +38,7 @@
     this Date object - `java.time.Instant`
 
   throws: java.lang.UnsupportedOperationException - if this method is invoked"
-  ([^java.sql.Time this]
+  (^java.time.Instant [^java.sql.Time this]
     (-> this (.toInstant))))
 
 (defn set-month
@@ -83,7 +83,7 @@
   "Formats a time in JDBC time escape format.
 
   returns: a String in hh:mm:ss format - `java.lang.String`"
-  ([^java.sql.Time this]
+  (^java.lang.String [^java.sql.Time this]
     (-> this (.toString))))
 
 (defn get-date
@@ -102,7 +102,7 @@
    hour, minute, and second time value as this Time.
 
   returns: a LocalTime object representing the same time value - `java.time.LocalTime`"
-  ([^java.sql.Time this]
+  (^java.time.LocalTime [^java.sql.Time this]
     (-> this (.toLocalTime))))
 
 (defn get-day

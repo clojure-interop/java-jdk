@@ -43,7 +43,7 @@
   "Returns the raw keycode of this MenuShortcut.
 
   returns: the raw keycode of this MenuShortcut. - `int`"
-  ([^java.awt.MenuShortcut this]
+  (^Integer [^java.awt.MenuShortcut this]
     (-> this (.getKey))))
 
 (defn uses-shift-modifier
@@ -51,7 +51,7 @@
 
   returns: true if this MenuShortcut must be invoked using the
    SHIFT key, false otherwise. - `boolean`"
-  ([^java.awt.MenuShortcut this]
+  (^Boolean [^java.awt.MenuShortcut this]
     (-> this (.usesShiftModifier))))
 
 (defn equals
@@ -63,20 +63,20 @@
 
   returns: true if this MenuShortcut is the same as another,
    false otherwise. - `boolean`"
-  ([^java.awt.MenuShortcut this ^java.awt.MenuShortcut s]
+  (^Boolean [^java.awt.MenuShortcut this ^java.awt.MenuShortcut s]
     (-> this (.equals s))))
 
 (defn hash-code
   "Returns the hashcode for this MenuShortcut.
 
   returns: the hashcode for this MenuShortcut. - `int`"
-  ([^java.awt.MenuShortcut this]
+  (^Integer [^java.awt.MenuShortcut this]
     (-> this (.hashCode))))
 
 (defn to-string
   "Returns an internationalized description of the MenuShortcut.
 
   returns: a string representation of this MenuShortcut. - `java.lang.String`"
-  ([^java.awt.MenuShortcut this]
+  (^java.lang.String [^java.awt.MenuShortcut this]
     (-> this (.toString))))
 

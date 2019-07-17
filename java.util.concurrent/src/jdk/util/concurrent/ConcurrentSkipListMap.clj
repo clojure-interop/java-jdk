@@ -80,7 +80,7 @@
    weakly consistent.
 
   returns: a collection view of the values contained in this map - `java.util.Collection<ConcurrentSkipListMap.V>`"
-  ([^java.util.concurrent.ConcurrentSkipListMap this]
+  (^java.util.Collection [^java.util.concurrent.ConcurrentSkipListMap this]
     (-> this (.values))))
 
 (defn for-each
@@ -117,7 +117,7 @@
            or null if there was no mapping for the key - `ConcurrentSkipListMap.V`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  ([^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K key ^ConcurrentSkipListMap.V value]
+  (^ConcurrentSkipListMap.V [^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K key ^ConcurrentSkipListMap.V value]
     (-> this (.putIfAbsent key value))))
 
 (defn head-map
@@ -130,9 +130,9 @@
            (or equal to, if inclusive is true) toKey - `java.util.concurrent.ConcurrentNavigableMap<ConcurrentSkipListMap.K,ConcurrentSkipListMap.V>`
 
   throws: java.lang.ClassCastException - if toKey is not compatible with this map's comparator (or, if the map has no comparator, if toKey does not implement Comparable). Implementations may, but are not required to, throw this exception if toKey cannot be compared to keys currently in the map."
-  ([^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K to-key ^Boolean inclusive]
+  (^java.util.concurrent.ConcurrentNavigableMap [^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K to-key ^Boolean inclusive]
     (-> this (.headMap to-key inclusive)))
-  ([^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K to-key]
+  (^java.util.concurrent.ConcurrentNavigableMap [^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K to-key]
     (-> this (.headMap to-key))))
 
 (defn floor-key
@@ -144,7 +144,7 @@
            or null if there is no such key - `ConcurrentSkipListMap.K`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  ([^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K key]
+  (^ConcurrentSkipListMap.K [^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K key]
     (-> this (.floorKey key))))
 
 (defn lower-entry
@@ -159,7 +159,7 @@
            or null if there is no such key - `java.util.Map.Entry<ConcurrentSkipListMap.K,ConcurrentSkipListMap.V>`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  ([^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K key]
+  (^java.util.Map.Entry [^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K key]
     (-> this (.lowerEntry key))))
 
 (defn put
@@ -174,7 +174,7 @@
            null if there was no mapping for the key - `ConcurrentSkipListMap.V`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  ([^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K key ^ConcurrentSkipListMap.V value]
+  (^ConcurrentSkipListMap.V [^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K key ^ConcurrentSkipListMap.V value]
     (-> this (.put key value))))
 
 (defn entry-set
@@ -203,7 +203,7 @@
 
   returns: a set view of the mappings contained in this map,
            sorted in ascending key order - `java.util.Set<java.util.Map.Entry<ConcurrentSkipListMap.K,ConcurrentSkipListMap.V>>`"
-  ([^java.util.concurrent.ConcurrentSkipListMap this]
+  (^java.util.Set> [^java.util.concurrent.ConcurrentSkipListMap this]
     (-> this (.entrySet))))
 
 (defn floor-entry
@@ -218,7 +218,7 @@
            key, or null if there is no such key - `java.util.Map.Entry<ConcurrentSkipListMap.K,ConcurrentSkipListMap.V>`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  ([^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K key]
+  (^java.util.Map.Entry [^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K key]
     (-> this (.floorEntry key))))
 
 (defn ceiling-entry
@@ -233,21 +233,21 @@
            key, or null if there is no such key - `java.util.Map.Entry<ConcurrentSkipListMap.K,ConcurrentSkipListMap.V>`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  ([^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K key]
+  (^java.util.Map.Entry [^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K key]
     (-> this (.ceilingEntry key))))
 
 (defn descending-key-set
   "Description copied from interface: ConcurrentNavigableMap
 
   returns: a reverse order navigable set view of the keys in this map - `java.util.NavigableSet<ConcurrentSkipListMap.K>`"
-  ([^java.util.concurrent.ConcurrentSkipListMap this]
+  (^java.util.NavigableSet [^java.util.concurrent.ConcurrentSkipListMap this]
     (-> this (.descendingKeySet))))
 
 (defn navigable-key-set
   "Description copied from interface: ConcurrentNavigableMap
 
   returns: a navigable set view of the keys in this map - `java.util.NavigableSet<ConcurrentSkipListMap.K>`"
-  ([^java.util.concurrent.ConcurrentSkipListMap this]
+  (^java.util.NavigableSet [^java.util.concurrent.ConcurrentSkipListMap this]
     (-> this (.navigableKeySet))))
 
 (defn first-key
@@ -256,7 +256,7 @@
   returns: the first (lowest) key currently in this map - `ConcurrentSkipListMap.K`
 
   throws: java.util.NoSuchElementException - if this map is empty"
-  ([^java.util.concurrent.ConcurrentSkipListMap this]
+  (^ConcurrentSkipListMap.K [^java.util.concurrent.ConcurrentSkipListMap this]
     (-> this (.firstKey))))
 
 (defn contains-value
@@ -272,7 +272,7 @@
            false otherwise - `boolean`
 
   throws: java.lang.NullPointerException - if the specified value is null"
-  ([^java.util.concurrent.ConcurrentSkipListMap this ^java.lang.Object value]
+  (^Boolean [^java.util.concurrent.ConcurrentSkipListMap this ^java.lang.Object value]
     (-> this (.containsValue value))))
 
 (defn higher-key
@@ -284,7 +284,7 @@
            or null if there is no such key - `ConcurrentSkipListMap.K`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  ([^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K key]
+  (^ConcurrentSkipListMap.K [^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K key]
     (-> this (.higherKey key))))
 
 (defn get-or-default
@@ -297,7 +297,7 @@
   returns: the mapping for the key, if present; else the defaultValue - `ConcurrentSkipListMap.V`
 
   throws: java.lang.NullPointerException - if the specified key is null"
-  ([^java.util.concurrent.ConcurrentSkipListMap this ^java.lang.Object key ^ConcurrentSkipListMap.V default-value]
+  (^ConcurrentSkipListMap.V [^java.util.concurrent.ConcurrentSkipListMap this ^java.lang.Object key ^ConcurrentSkipListMap.V default-value]
     (-> this (.getOrDefault key default-value))))
 
 (defn replace
@@ -320,9 +320,9 @@
   returns: true if the value was replaced - `boolean`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  ([^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K key ^ConcurrentSkipListMap.V old-value ^ConcurrentSkipListMap.V new-value]
+  (^Boolean [^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K key ^ConcurrentSkipListMap.V old-value ^ConcurrentSkipListMap.V new-value]
     (-> this (.replace key old-value new-value)))
-  ([^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K key ^ConcurrentSkipListMap.V value]
+  (^ConcurrentSkipListMap.V [^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K key ^ConcurrentSkipListMap.V value]
     (-> this (.replace key value))))
 
 (defn poll-last-entry
@@ -333,7 +333,7 @@
 
   returns: the removed last entry of this map,
            or null if this map is empty - `java.util.Map.Entry<ConcurrentSkipListMap.K,ConcurrentSkipListMap.V>`"
-  ([^java.util.concurrent.ConcurrentSkipListMap this]
+  (^java.util.Map.Entry [^java.util.concurrent.ConcurrentSkipListMap this]
     (-> this (.pollLastEntry))))
 
 (defn first-entry
@@ -344,7 +344,7 @@
 
   returns: an entry with the least key,
            or null if this map is empty - `java.util.Map.Entry<ConcurrentSkipListMap.K,ConcurrentSkipListMap.V>`"
-  ([^java.util.concurrent.ConcurrentSkipListMap this]
+  (^java.util.Map.Entry [^java.util.concurrent.ConcurrentSkipListMap this]
     (-> this (.firstEntry))))
 
 (defn last-key
@@ -353,7 +353,7 @@
   returns: the last (highest) key currently in this map - `ConcurrentSkipListMap.K`
 
   throws: java.util.NoSuchElementException - if this map is empty"
-  ([^java.util.concurrent.ConcurrentSkipListMap this]
+  (^ConcurrentSkipListMap.K [^java.util.concurrent.ConcurrentSkipListMap this]
     (-> this (.lastKey))))
 
 (defn poll-first-entry
@@ -364,7 +364,7 @@
 
   returns: the removed first entry of this map,
            or null if this map is empty - `java.util.Map.Entry<ConcurrentSkipListMap.K,ConcurrentSkipListMap.V>`"
-  ([^java.util.concurrent.ConcurrentSkipListMap this]
+  (^java.util.Map.Entry [^java.util.concurrent.ConcurrentSkipListMap this]
     (-> this (.pollFirstEntry))))
 
 (defn remove
@@ -386,9 +386,9 @@
   returns: true if the value was removed - `boolean`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  ([^java.util.concurrent.ConcurrentSkipListMap this ^java.lang.Object key ^java.lang.Object value]
+  (^Boolean [^java.util.concurrent.ConcurrentSkipListMap this ^java.lang.Object key ^java.lang.Object value]
     (-> this (.remove key value)))
-  ([^java.util.concurrent.ConcurrentSkipListMap this ^java.lang.Object key]
+  (^ConcurrentSkipListMap.V [^java.util.concurrent.ConcurrentSkipListMap this ^java.lang.Object key]
     (-> this (.remove key))))
 
 (defn lower-key
@@ -400,7 +400,7 @@
            or null if there is no such key - `ConcurrentSkipListMap.K`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  ([^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K key]
+  (^ConcurrentSkipListMap.K [^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K key]
     (-> this (.lowerKey key))))
 
 (defn key-set
@@ -430,7 +430,7 @@
    This method is equivalent to method navigableKeySet.
 
   returns: a navigable set view of the keys in this map - `java.util.NavigableSet<ConcurrentSkipListMap.K>`"
-  ([^java.util.concurrent.ConcurrentSkipListMap this]
+  (^java.util.NavigableSet [^java.util.concurrent.ConcurrentSkipListMap this]
     (-> this (.keySet))))
 
 (defn comparator
@@ -454,9 +454,9 @@
            fromKey to toKey - `java.util.concurrent.ConcurrentNavigableMap<ConcurrentSkipListMap.K,ConcurrentSkipListMap.V>`
 
   throws: java.lang.ClassCastException - if fromKey and toKey cannot be compared to one another using this map's comparator (or, if the map has no comparator, using natural ordering). Implementations may, but are not required to, throw this exception if fromKey or toKey cannot be compared to keys currently in the map."
-  ([^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K from-key ^Boolean from-inclusive ^ConcurrentSkipListMap.K to-key ^Boolean to-inclusive]
+  (^java.util.concurrent.ConcurrentNavigableMap [^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K from-key ^Boolean from-inclusive ^ConcurrentSkipListMap.K to-key ^Boolean to-inclusive]
     (-> this (.subMap from-key from-inclusive to-key to-inclusive)))
-  ([^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K from-key ^ConcurrentSkipListMap.K to-key]
+  (^java.util.concurrent.ConcurrentNavigableMap [^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K from-key ^ConcurrentSkipListMap.K to-key]
     (-> this (.subMap from-key to-key))))
 
 (defn tail-map
@@ -469,16 +469,16 @@
            (or equal to, if inclusive is true) fromKey - `java.util.concurrent.ConcurrentNavigableMap<ConcurrentSkipListMap.K,ConcurrentSkipListMap.V>`
 
   throws: java.lang.ClassCastException - if fromKey is not compatible with this map's comparator (or, if the map has no comparator, if fromKey does not implement Comparable). Implementations may, but are not required to, throw this exception if fromKey cannot be compared to keys currently in the map."
-  ([^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K from-key ^Boolean inclusive]
+  (^java.util.concurrent.ConcurrentNavigableMap [^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K from-key ^Boolean inclusive]
     (-> this (.tailMap from-key inclusive)))
-  ([^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K from-key]
+  (^java.util.concurrent.ConcurrentNavigableMap [^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K from-key]
     (-> this (.tailMap from-key))))
 
 (defn descending-map
   "Description copied from interface: ConcurrentNavigableMap
 
   returns: a reverse order view of this map - `java.util.concurrent.ConcurrentNavigableMap<ConcurrentSkipListMap.K,ConcurrentSkipListMap.V>`"
-  ([^java.util.concurrent.ConcurrentSkipListMap this]
+  (^java.util.concurrent.ConcurrentNavigableMap [^java.util.concurrent.ConcurrentSkipListMap this]
     (-> this (.descendingMap))))
 
 (defn clone
@@ -486,7 +486,7 @@
    instance. (The keys and values themselves are not cloned.)
 
   returns: a shallow copy of this map - `java.util.concurrent.ConcurrentSkipListMap<ConcurrentSkipListMap.K,ConcurrentSkipListMap.V>`"
-  ([^java.util.concurrent.ConcurrentSkipListMap this]
+  (^java.util.concurrent.ConcurrentSkipListMap [^java.util.concurrent.ConcurrentSkipListMap this]
     (-> this (.clone))))
 
 (defn compute-if-present
@@ -501,7 +501,7 @@
   returns: the new value associated with the specified key, or null if none - `ConcurrentSkipListMap.V`
 
   throws: java.lang.NullPointerException - if the specified key is null or the remappingFunction is null"
-  ([^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K key ^ConcurrentSkipListMap.V> remapping-function]
+  (^ConcurrentSkipListMap.V [^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K key ^ConcurrentSkipListMap.V> remapping-function]
     (-> this (.computeIfPresent key remapping-function))))
 
 (defn higher-entry
@@ -516,7 +516,7 @@
            or null if there is no such key - `java.util.Map.Entry<ConcurrentSkipListMap.K,ConcurrentSkipListMap.V>`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  ([^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K key]
+  (^java.util.Map.Entry [^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K key]
     (-> this (.higherEntry key))))
 
 (defn ceiling-key
@@ -528,14 +528,14 @@
            or null if there is no such key - `ConcurrentSkipListMap.K`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  ([^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K key]
+  (^ConcurrentSkipListMap.K [^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K key]
     (-> this (.ceilingKey key))))
 
 (defn empty?
   "Returns true if this map contains no key-value mappings.
 
   returns: true if this map contains no key-value mappings - `boolean`"
-  ([^java.util.concurrent.ConcurrentSkipListMap this]
+  (^Boolean [^java.util.concurrent.ConcurrentSkipListMap this]
     (-> this (.isEmpty))))
 
 (defn size
@@ -553,7 +553,7 @@
    useful in concurrent applications.
 
   returns: the number of elements in this map - `int`"
-  ([^java.util.concurrent.ConcurrentSkipListMap this]
+  (^Integer [^java.util.concurrent.ConcurrentSkipListMap this]
     (-> this (.size))))
 
 (defn clear
@@ -570,7 +570,7 @@
   returns: true if this map contains a mapping for the specified key - `boolean`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  ([^java.util.concurrent.ConcurrentSkipListMap this ^java.lang.Object key]
+  (^Boolean [^java.util.concurrent.ConcurrentSkipListMap this ^java.lang.Object key]
     (-> this (.containsKey key))))
 
 (defn get
@@ -589,7 +589,7 @@
            null if this map contains no mapping for the key - `ConcurrentSkipListMap.V`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  ([^java.util.concurrent.ConcurrentSkipListMap this ^java.lang.Object key]
+  (^ConcurrentSkipListMap.V [^java.util.concurrent.ConcurrentSkipListMap this ^java.lang.Object key]
     (-> this (.get key))))
 
 (defn merge
@@ -606,7 +606,7 @@
   returns: the new value associated with the specified key, or null if none - `ConcurrentSkipListMap.V`
 
   throws: java.lang.NullPointerException - if the specified key or value is null or the remappingFunction is null"
-  ([^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K key ^ConcurrentSkipListMap.V value ^ConcurrentSkipListMap.V> remapping-function]
+  (^ConcurrentSkipListMap.V [^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K key ^ConcurrentSkipListMap.V value ^ConcurrentSkipListMap.V> remapping-function]
     (-> this (.merge key value remapping-function))))
 
 (defn equals
@@ -621,7 +621,7 @@
   o - object to be compared for equality with this map - `java.lang.Object`
 
   returns: true if the specified object is equal to this map - `boolean`"
-  ([^java.util.concurrent.ConcurrentSkipListMap this ^java.lang.Object o]
+  (^Boolean [^java.util.concurrent.ConcurrentSkipListMap this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn compute
@@ -636,7 +636,7 @@
   returns: the new value associated with the specified key, or null if none - `ConcurrentSkipListMap.V`
 
   throws: java.lang.NullPointerException - if the specified key is null or the remappingFunction is null"
-  ([^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K key ^ConcurrentSkipListMap.V> remapping-function]
+  (^ConcurrentSkipListMap.V [^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K key ^ConcurrentSkipListMap.V> remapping-function]
     (-> this (.compute key remapping-function))))
 
 (defn compute-if-absent
@@ -653,7 +653,7 @@
            the specified key, or null if the computed value is null - `ConcurrentSkipListMap.V`
 
   throws: java.lang.NullPointerException - if the specified key is null or the mappingFunction is null"
-  ([^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K key ^ConcurrentSkipListMap.V> mapping-function]
+  (^ConcurrentSkipListMap.V [^java.util.concurrent.ConcurrentSkipListMap this ^ConcurrentSkipListMap.K key ^ConcurrentSkipListMap.V> mapping-function]
     (-> this (.computeIfAbsent key mapping-function))))
 
 (defn last-entry
@@ -664,6 +664,6 @@
 
   returns: an entry with the greatest key,
            or null if this map is empty - `java.util.Map.Entry<ConcurrentSkipListMap.K,ConcurrentSkipListMap.V>`"
-  ([^java.util.concurrent.ConcurrentSkipListMap this]
+  (^java.util.Map.Entry [^java.util.concurrent.ConcurrentSkipListMap this]
     (-> this (.lastEntry))))
 

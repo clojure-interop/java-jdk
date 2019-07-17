@@ -29,12 +29,12 @@
   "Description copied from class: JComponent
 
   returns: the value of the minimumSize property - `java.awt.Dimension`"
-  ([^javax.swing.plaf.metal.MetalComboBoxButton this]
+  (^java.awt.Dimension [^javax.swing.plaf.metal.MetalComboBoxButton this]
     (-> this (.getMinimumSize))))
 
 (defn icon-only?
   "returns: `boolean`"
-  ([^javax.swing.plaf.metal.MetalComboBoxButton this]
+  (^Boolean [^javax.swing.plaf.metal.MetalComboBoxButton this]
     (-> this (.isIconOnly))))
 
 (defn set-combo-box
@@ -54,12 +54,12 @@
 
   returns: true if this Component is
    focusable; false otherwise - `boolean`"
-  ([^javax.swing.plaf.metal.MetalComboBoxButton this]
+  (^Boolean [^javax.swing.plaf.metal.MetalComboBoxButton this]
     (-> this (.isFocusTraversable))))
 
 (defn get-combo-box
   "returns: `javax.swing.JComboBox`"
-  ([^javax.swing.plaf.metal.MetalComboBoxButton this]
+  (^javax.swing.JComboBox [^javax.swing.plaf.metal.MetalComboBoxButton this]
     (-> this (.getComboBox))))
 
 (defn set-icon-only
@@ -76,7 +76,7 @@
 
 (defn get-combo-icon
   "returns: `javax.swing.Icon`"
-  ([^javax.swing.plaf.metal.MetalComboBoxButton this]
+  (^javax.swing.Icon [^javax.swing.plaf.metal.MetalComboBoxButton this]
     (-> this (.getComboIcon))))
 
 (defn set-combo-icon

@@ -21,7 +21,7 @@
 
   returns: the alias name for the desired key, or null if there
             are no matches. - `java.lang.String`"
-  ([^javax.net.ssl.X509ExtendedKeyManager this ^java.lang.String[] key-type ^java.security.Principal[] issuers ^javax.net.ssl.SSLEngine engine]
+  (^java.lang.String [^javax.net.ssl.X509ExtendedKeyManager this key-type issuers ^javax.net.ssl.SSLEngine engine]
     (-> this (.chooseEngineClientAlias key-type issuers engine))))
 
 (defn choose-engine-server-alias
@@ -38,6 +38,6 @@
 
   returns: the alias name for the desired key, or null if there
             are no matches. - `java.lang.String`"
-  ([^javax.net.ssl.X509ExtendedKeyManager this ^java.lang.String key-type ^java.security.Principal[] issuers ^javax.net.ssl.SSLEngine engine]
+  (^java.lang.String [^javax.net.ssl.X509ExtendedKeyManager this ^java.lang.String key-type issuers ^javax.net.ssl.SSLEngine engine]
     (-> this (.chooseEngineServerAlias key-type issuers engine))))
 

@@ -82,28 +82,28 @@
   "Obtains the audio file type, such as WAVE or AU.
 
   returns: the audio file type - `javax.sound.sampled.AudioFileFormat.Type`"
-  ([^javax.sound.sampled.AudioFileFormat this]
+  (^javax.sound.sampled.AudioFileFormat.Type [^javax.sound.sampled.AudioFileFormat this]
     (-> this (.getType))))
 
 (defn get-byte-length
   "Obtains the size in bytes of the entire audio file (not just its audio data).
 
   returns: the audio file length in bytes - `int`"
-  ([^javax.sound.sampled.AudioFileFormat this]
+  (^Integer [^javax.sound.sampled.AudioFileFormat this]
     (-> this (.getByteLength))))
 
 (defn get-format
   "Obtains the format of the audio data contained in the audio file.
 
   returns: the audio data format - `javax.sound.sampled.AudioFormat`"
-  ([^javax.sound.sampled.AudioFileFormat this]
+  (^javax.sound.sampled.AudioFormat [^javax.sound.sampled.AudioFileFormat this]
     (-> this (.getFormat))))
 
 (defn get-frame-length
   "Obtains the length of the audio data contained in the file, expressed in sample frames.
 
   returns: the number of sample frames of audio data in the file - `int`"
-  ([^javax.sound.sampled.AudioFileFormat this]
+  (^Integer [^javax.sound.sampled.AudioFileFormat this]
     (-> this (.getFrameLength))))
 
 (defn properties
@@ -114,7 +114,7 @@
   returns: a Map<String,Object> object containing
            all properties. If no properties are recognized, an empty map is
            returned. - `java.util.Map<java.lang.String,java.lang.Object>`"
-  ([^javax.sound.sampled.AudioFileFormat this]
+  (^java.util.Map [^javax.sound.sampled.AudioFileFormat this]
     (-> this (.properties))))
 
 (defn get-property
@@ -130,13 +130,13 @@
 
   returns: the value of the property with the specified key,
            or null if the property does not exist. - `java.lang.Object`"
-  ([^javax.sound.sampled.AudioFileFormat this ^java.lang.String key]
+  (^java.lang.Object [^javax.sound.sampled.AudioFileFormat this ^java.lang.String key]
     (-> this (.getProperty key))))
 
 (defn to-string
   "Provides a string representation of the file format.
 
   returns: the file format as a string - `java.lang.String`"
-  ([^javax.sound.sampled.AudioFileFormat this]
+  (^java.lang.String [^javax.sound.sampled.AudioFileFormat this]
     (-> this (.toString))))
 

@@ -12,7 +12,7 @@
   t - the function argument - `Function.T`
 
   returns: the function result - `Function.R`"
-  ([^java.util.function.Function this ^Function.T t]
+  (^Function.R [^java.util.function.Function this ^Function.T t]
     (-> this (.apply t))))
 
 (defn compose

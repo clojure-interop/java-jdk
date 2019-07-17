@@ -139,7 +139,7 @@
    1.0f. The method returns true otherwise.
 
   returns: true if the window is opaque, false otherwise - `boolean`"
-  ([^java.awt.Window this]
+  (^Boolean [^java.awt.Window this]
     (-> this (.isOpaque))))
 
 (defn active?
@@ -150,7 +150,7 @@
    Dialog that is an owner of the focused Window.
 
   returns: whether this is the active Window. - `boolean`"
-  ([^java.awt.Window this]
+  (^Boolean [^java.awt.Window this]
     (-> this (.isActive))))
 
 (defn get-buffer-strategy
@@ -159,7 +159,7 @@
    been created or has been disposed.
 
   returns: the buffer strategy used by this component - `java.awt.image.BufferStrategy`"
-  ([^java.awt.Window this]
+  (^java.awt.image.BufferStrategy [^java.awt.Window this]
     (-> this (.getBufferStrategy))))
 
 (defn remove-window-listener
@@ -252,14 +252,14 @@
    By default, the window has autoRequestFocus value of true.
 
   returns: autoRequestFocus value - `boolean`"
-  ([^java.awt.Window this]
+  (^Boolean [^java.awt.Window this]
     (-> this (.isAutoRequestFocus))))
 
 (defn get-type
   "Returns the type of the window.
 
   returns: `java.awt.Window.Type`"
-  ([^java.awt.Window this]
+  (^java.awt.Window.Type [^java.awt.Window this]
     (-> this (.getType))))
 
 (defn set-location-relative-to
@@ -352,7 +352,7 @@
   returns: the AWTKeyStroke for the specified key - `java.util.Set<java.awt.AWTKeyStroke>`
 
   throws: java.lang.IllegalArgumentException - if id is not one of KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, KeyboardFocusManager.UP_CYCLE_TRAVERSAL_KEYS, or KeyboardFocusManager.DOWN_CYCLE_TRAVERSAL_KEYS"
-  ([^java.awt.Window this ^Integer id]
+  (^java.util.Set [^java.awt.Window this ^Integer id]
     (-> this (.getFocusTraversalKeys id))))
 
 (defn get-most-recent-focus-owner
@@ -367,7 +367,7 @@
 
   returns: the child Component that will receive focus when this Window is
            focused - `java.awt.Component`"
-  ([^java.awt.Window this]
+  (^java.awt.Component [^java.awt.Window this]
     (-> this (.getMostRecentFocusOwner))))
 
 (defn set-type
@@ -487,7 +487,7 @@
   "Returns the opacity of the window.
 
   returns: the opacity of the window - `float`"
-  ([^java.awt.Window this]
+  (^Float [^java.awt.Window this]
     (-> this (.getOpacity))))
 
 (defn set-focusable-window-state
@@ -523,7 +523,7 @@
    is returned.
 
   returns: the locale that is set for this window. - `java.util.Locale`"
-  ([^java.awt.Window this]
+  (^java.util.Locale [^java.awt.Window this]
     (-> this (.getLocale))))
 
 (defn get-focus-owner
@@ -532,7 +532,7 @@
 
   returns: the child Component with focus, or null if this Window is not
            focused - `java.awt.Component`"
-  ([^java.awt.Window this]
+  (^java.awt.Component [^java.awt.Window this]
     (-> this (.getFocusOwner))))
 
 (defn set-always-on-top
@@ -592,7 +592,7 @@
    override this method to return true.
 
   returns: true - `boolean`"
-  ([^java.awt.Window this]
+  (^Boolean [^java.awt.Window this]
     (-> this (.isValidateRoot))))
 
 (defn add-window-listener
@@ -705,7 +705,7 @@
    true.
 
   returns: whether this Window can be the focused Window - `boolean`"
-  ([^java.awt.Window this]
+  (^Boolean [^java.awt.Window this]
     (-> this (.getFocusableWindowState))))
 
 (defn add-notify
@@ -767,7 +767,7 @@
   "Returns the owner of this window.
 
   returns: `java.awt.Window`"
-  ([^java.awt.Window this]
+  (^java.awt.Window [^java.awt.Window this]
     (-> this (.getOwner))))
 
 (defn focusable-window?
@@ -784,7 +784,7 @@
 
   returns: true if this Window can be the focused Window;
            false otherwise - `boolean`"
-  ([^java.awt.Window this]
+  (^Boolean [^java.awt.Window this]
     (-> this (.isFocusableWindow))))
 
 (defn always-on-top?
@@ -792,7 +792,7 @@
 
   returns: true, if the window is in always-on-top state,
            false otherwise - `boolean`"
-  ([^java.awt.Window this]
+  (^Boolean [^java.awt.Window this]
     (-> this (.isAlwaysOnTop))))
 
 (defn get-icon-images
@@ -803,7 +803,7 @@
 
   returns: the copy of icon images' list for this window, or
               empty list if this window doesn't have icon images. - `java.util.List<java.awt.Image>`"
-  ([^java.awt.Window this]
+  (^java.util.List [^java.awt.Window this]
     (-> this (.getIconImages))))
 
 (defn set-location-by-platform
@@ -893,7 +893,7 @@
 
   returns: an AccessibleAWTWindow that serves as the
            AccessibleContext of this Window - `javax.accessibility.AccessibleContext`"
-  ([^java.awt.Window this]
+  (^javax.accessibility.AccessibleContext [^java.awt.Window this]
     (-> this (.getAccessibleContext))))
 
 (defn get-window-state-listeners
@@ -963,14 +963,14 @@
 
   returns: the shape of the window or null if no
        shape is specified for the window - `java.awt.Shape`"
-  ([^java.awt.Window this]
+  (^java.awt.Shape [^java.awt.Window this]
     (-> this (.getShape))))
 
 (defn get-modal-exclusion-type
   "Returns the modal exclusion type of this window.
 
   returns: the modal exclusion type of this window - `java.awt.Dialog.ModalExclusionType`"
-  ([^java.awt.Window this]
+  (^java.awt.Dialog.ModalExclusionType [^java.awt.Window this]
     (-> this (.getModalExclusionType))))
 
 (defn get-input-context
@@ -979,7 +979,7 @@
 
   returns: the input context used by this component;
             null if no context can be determined - `java.awt.im.InputContext`"
-  ([^java.awt.Window this]
+  (^java.awt.im.InputContext [^java.awt.Window this]
     (-> this (.getInputContext))))
 
 (defn set-size
@@ -1011,7 +1011,7 @@
    represent the top of the Component hierarchy.
 
   returns: null - `java.awt.Container`"
-  ([^java.awt.Window this]
+  (^java.awt.Container [^java.awt.Window this]
     (-> this (.getFocusCycleRootAncestor))))
 
 (defn set-icon-image
@@ -1087,7 +1087,7 @@
   "Returns the toolkit of this frame.
 
   returns: the toolkit of this window. - `java.awt.Toolkit`"
-  ([^java.awt.Window this]
+  (^java.awt.Toolkit [^java.awt.Window this]
     (-> this (.getToolkit))))
 
 (defn get-listeners
@@ -1132,7 +1132,7 @@
   returns: true, if the always-on-top mode is supported for
            this window and this window's toolkit supports always-on-top windows,
            false otherwise - `boolean`"
-  ([^java.awt.Window this]
+  (^Boolean [^java.awt.Window this]
     (-> this (.isAlwaysOnTopSupported))))
 
 (defn location-by-platform?
@@ -1142,7 +1142,7 @@
    screen.
 
   returns: whether this Window will appear at the default location - `boolean`"
-  ([^java.awt.Window this]
+  (^Boolean [^java.awt.Window this]
     (-> this (.isLocationByPlatform))))
 
 (defn set-cursor
@@ -1163,7 +1163,7 @@
    the window is in the non-opaque (per-pixel translucent) mode.
 
   returns: this component's background color - `java.awt.Color`"
-  ([^java.awt.Window this]
+  (^java.awt.Color [^java.awt.Window this]
     (-> this (.getBackground))))
 
 (defn to-front
@@ -1277,7 +1277,7 @@
 
   returns: true if the component is showing,
             false otherwise - `boolean`"
-  ([^java.awt.Window this]
+  (^Boolean [^java.awt.Window this]
     (-> this (.isShowing))))
 
 (defn get-warning-string
@@ -1295,7 +1295,7 @@
    and returns the string value of that property.
 
   returns: the warning string for this window. - `java.lang.String`"
-  ([^java.awt.Window this]
+  (^java.lang.String [^java.awt.Window this]
     (-> this (.getWarningString))))
 
 (defn focus-cycle-root?
@@ -1303,7 +1303,7 @@
    focus traversal cycle.
 
   returns: true - `boolean`"
-  ([^java.awt.Window this]
+  (^Boolean [^java.awt.Window this]
     (-> this (.isFocusCycleRoot))))
 
 (defn add-window-state-listener
@@ -1326,6 +1326,6 @@
    is an owner of the focused Window.
 
   returns: whether this is the focused Window. - `boolean`"
-  ([^java.awt.Window this]
+  (^Boolean [^java.awt.Window this]
     (-> this (.isFocused))))
 

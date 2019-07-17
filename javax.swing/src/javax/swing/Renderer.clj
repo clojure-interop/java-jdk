@@ -17,6 +17,6 @@
   "Returns the component used to render the value.
 
   returns: the Component responsible for displaying the value - `java.awt.Component`"
-  ([^javax.swing.Renderer this]
+  (^java.awt.Component [^javax.swing.Renderer this]
     (-> this (.getComponent))))
 

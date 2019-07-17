@@ -115,7 +115,7 @@
   name - the name of the provider to get. - `java.lang.String`
 
   returns: the provider of the specified name. - `java.security.Provider`"
-  ([^java.lang.String name]
+  (^java.security.Provider [^java.lang.String name]
     (Security/getProvider name)))
 
 (defn *get-property
@@ -132,7 +132,7 @@
   returns: the value of the security property corresponding to key. - `java.lang.String`
 
   throws: java.lang.SecurityException - if a security manager exists and its SecurityManager.checkPermission(java.security.Permission) method denies access to retrieve the specified security property value"
-  ([^java.lang.String key]
+  (^java.lang.String [^java.lang.String key]
     (Security/getProperty key)))
 
 (defn *add-provider
@@ -153,7 +153,7 @@
    already installed. - `int`
 
   throws: java.lang.NullPointerException - if provider is null"
-  ([^java.security.Provider provider]
+  (^Integer [^java.security.Provider provider]
     (Security/addProvider provider)))
 
 (defn *set-property
@@ -201,7 +201,7 @@
    already installed. - `int`
 
   throws: java.lang.NullPointerException - if provider is null"
-  ([^java.security.Provider provider ^Integer position]
+  (^Integer [^java.security.Provider provider ^Integer position]
     (Security/insertProviderAt provider position)))
 
 (defn *get-algorithms
@@ -220,6 +220,6 @@
   returns: a Set of Strings containing the names of all available
    algorithms or types for the specified Java cryptographic service
    or an empty set if no provider supports the specified service. - `java.util.Set<java.lang.String>`"
-  ([^java.lang.String service-name]
+  (^java.util.Set [^java.lang.String service-name]
     (Security/getAlgorithms service-name)))
 

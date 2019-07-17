@@ -34,13 +34,13 @@
   "Returns the iteration count.
 
   returns: the iteration count - `int`"
-  ([^javax.crypto.spec.PBEParameterSpec this]
+  (^Integer [^javax.crypto.spec.PBEParameterSpec this]
     (-> this (.getIterationCount))))
 
 (defn get-parameter-spec
   "Returns the cipher algorithm parameter specification.
 
   returns: the parameter specification, or null if none was set. - `java.security.spec.AlgorithmParameterSpec`"
-  ([^javax.crypto.spec.PBEParameterSpec this]
+  (^java.security.spec.AlgorithmParameterSpec [^javax.crypto.spec.PBEParameterSpec this]
     (-> this (.getParameterSpec))))
 

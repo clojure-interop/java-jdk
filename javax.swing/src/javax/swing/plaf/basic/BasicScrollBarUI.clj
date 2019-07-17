@@ -12,7 +12,7 @@
   "c - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent c]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent c]
     (BasicScrollBarUI/createUI c)))
 
 (defn install-ui
@@ -28,14 +28,14 @@
   c - The JScrollBar that's delegating this method to us. - `javax.swing.JComponent`
 
   returns: new Dimension(Integer.MAX_VALUE, Integer.MAX_VALUE); - `java.awt.Dimension`"
-  ([^javax.swing.plaf.basic.BasicScrollBarUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicScrollBarUI this ^javax.swing.JComponent c]
     (-> this (.getMaximumSize c))))
 
 (defn thumb-rollover?
   "Returns true if the mouse is currently over the thumb.
 
   returns: true if the thumb is currently active - `boolean`"
-  ([^javax.swing.plaf.basic.BasicScrollBarUI this]
+  (^Boolean [^javax.swing.plaf.basic.BasicScrollBarUI this]
     (-> this (.isThumbRollover))))
 
 (defn uninstall-ui
@@ -50,7 +50,7 @@
    a mouse gesture (usually the middle mouse button).
 
   returns: true if a mouse gesture can absolutely position the thumb - `boolean`"
-  ([^javax.swing.plaf.basic.BasicScrollBarUI this]
+  (^Boolean [^javax.swing.plaf.basic.BasicScrollBarUI this]
     (-> this (.getSupportsAbsolutePositioning))))
 
 (defn preferred-layout-size
@@ -59,7 +59,7 @@
   scrollbar-container - the container to be laid out - `java.awt.Container`
 
   returns: `java.awt.Dimension`"
-  ([^javax.swing.plaf.basic.BasicScrollBarUI this ^java.awt.Container scrollbar-container]
+  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicScrollBarUI this ^java.awt.Container scrollbar-container]
     (-> this (.preferredLayoutSize scrollbar-container))))
 
 (defn minimum-layout-size
@@ -68,7 +68,7 @@
   scrollbar-container - the component to be laid out - `java.awt.Container`
 
   returns: `java.awt.Dimension`"
-  ([^javax.swing.plaf.basic.BasicScrollBarUI this ^java.awt.Container scrollbar-container]
+  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicScrollBarUI this ^java.awt.Container scrollbar-container]
     (-> this (.minimumLayoutSize scrollbar-container))))
 
 (defn paint
@@ -115,6 +115,6 @@
   c - the JScrollBar that's delegating this method to us - `javax.swing.JComponent`
 
   returns: the preferred size of a Basic JScrollBar - `java.awt.Dimension`"
-  ([^javax.swing.plaf.basic.BasicScrollBarUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicScrollBarUI this ^javax.swing.JComponent c]
     (-> this (.getPreferredSize c))))
 

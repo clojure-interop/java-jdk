@@ -23,6 +23,6 @@
   returns: null if the callee fails to create one. - `javax.xml.validation.SchemaFactory`
 
   throws: java.lang.NullPointerException - If the schemaLanguage parameter is null."
-  ([^javax.xml.validation.SchemaFactoryLoader this ^java.lang.String schema-language]
+  (^javax.xml.validation.SchemaFactory [^javax.xml.validation.SchemaFactoryLoader this ^java.lang.String schema-language]
     (-> this (.newFactory schema-language))))
 

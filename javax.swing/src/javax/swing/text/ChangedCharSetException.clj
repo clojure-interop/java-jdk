@@ -14,11 +14,11 @@
 
 (defn get-char-set-spec
   "returns: `java.lang.String`"
-  ([^javax.swing.text.ChangedCharSetException this]
+  (^java.lang.String [^javax.swing.text.ChangedCharSetException this]
     (-> this (.getCharSetSpec))))
 
 (defn key-equals-char-set
   "returns: `boolean`"
-  ([^javax.swing.text.ChangedCharSetException this]
+  (^Boolean [^javax.swing.text.ChangedCharSetException this]
     (-> this (.keyEqualsCharSet))))
 

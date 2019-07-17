@@ -34,7 +34,7 @@
    by the FlowStrategy.
 
   returns: `int`"
-  ([^javax.swing.text.FlowView this]
+  (^Integer [^javax.swing.text.FlowView this]
     (-> this (.getFlowAxis))))
 
 (defn get-flow-span
@@ -49,7 +49,7 @@
   index - the index of the row being updated. This should be a value >= 0 and < getViewCount(). - `int`
 
   returns: `int`"
-  ([^javax.swing.text.FlowView this ^Integer index]
+  (^Integer [^javax.swing.text.FlowView this ^Integer index]
     (-> this (.getFlowSpan index))))
 
 (defn get-flow-start
@@ -62,7 +62,7 @@
   index - the index of the row being updated. This should be a value >= 0 and < getViewCount(). - `int`
 
   returns: `int`"
-  ([^javax.swing.text.FlowView this ^Integer index]
+  (^Integer [^javax.swing.text.FlowView this ^Integer index]
     (-> this (.getFlowStart index))))
 
 (defn insert-update

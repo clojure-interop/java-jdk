@@ -8,7 +8,7 @@
 
   returns: a Spliterator covering some portion of the
    elements, or null if this spliterator cannot be split - `java.util.Spliterator.OfInt`"
-  ([^java.util.Spliterator$OfInt this]
+  (^java.util.Spliterator.OfInt [^java.util.Spliterator$OfInt this]
     (-> this (.trySplit))))
 
 (defn try-advance
@@ -18,7 +18,7 @@
 
   returns: false if no remaining elements existed
    upon entry to this method, else true. - `boolean`"
-  ([^java.util.Spliterator$OfInt this ^java.util.function.IntConsumer action]
+  (^Boolean [^java.util.Spliterator$OfInt this ^java.util.function.IntConsumer action]
     (-> this (.tryAdvance action))))
 
 (defn for-each-remaining

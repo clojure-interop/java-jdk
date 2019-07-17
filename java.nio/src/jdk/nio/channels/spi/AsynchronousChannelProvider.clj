@@ -46,7 +46,7 @@
    returned by the first invocation.
 
   returns: The system-wide default AsynchronousChannel provider - `java.nio.channels.spi.AsynchronousChannelProvider`"
-  ([]
+  (^java.nio.channels.spi.AsynchronousChannelProvider []
     (AsynchronousChannelProvider/provider )))
 
 (defn open-asynchronous-channel-group
@@ -58,7 +58,7 @@
   returns: A new asynchronous channel group - `java.nio.channels.AsynchronousChannelGroup`
 
   throws: java.lang.IllegalArgumentException - If nThreads <= 0"
-  ([^java.nio.channels.spi.AsynchronousChannelProvider this ^Integer n-threads ^java.util.concurrent.ThreadFactory thread-factory]
+  (^java.nio.channels.AsynchronousChannelGroup [^java.nio.channels.spi.AsynchronousChannelProvider this ^Integer n-threads ^java.util.concurrent.ThreadFactory thread-factory]
     (-> this (.openAsynchronousChannelGroup n-threads thread-factory))))
 
 (defn open-asynchronous-server-socket-channel
@@ -69,7 +69,7 @@
   returns: The new channel - `java.nio.channels.AsynchronousServerSocketChannel`
 
   throws: java.nio.channels.IllegalChannelGroupException - If the provider that created the group differs from this provider"
-  ([^java.nio.channels.spi.AsynchronousChannelProvider this ^java.nio.channels.AsynchronousChannelGroup group]
+  (^java.nio.channels.AsynchronousServerSocketChannel [^java.nio.channels.spi.AsynchronousChannelProvider this ^java.nio.channels.AsynchronousChannelGroup group]
     (-> this (.openAsynchronousServerSocketChannel group))))
 
 (defn open-asynchronous-socket-channel
@@ -80,6 +80,6 @@
   returns: The new channel - `java.nio.channels.AsynchronousSocketChannel`
 
   throws: java.nio.channels.IllegalChannelGroupException - If the provider that created the group differs from this provider"
-  ([^java.nio.channels.spi.AsynchronousChannelProvider this ^java.nio.channels.AsynchronousChannelGroup group]
+  (^java.nio.channels.AsynchronousSocketChannel [^java.nio.channels.spi.AsynchronousChannelProvider this ^java.nio.channels.AsynchronousChannelGroup group]
     (-> this (.openAsynchronousSocketChannel group))))
 

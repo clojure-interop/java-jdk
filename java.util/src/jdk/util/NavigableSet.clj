@@ -48,7 +48,7 @@
            or null if there is no such element - `NavigableSet.E`
 
   throws: java.lang.ClassCastException - if the specified element cannot be compared with the elements currently in the set"
-  ([^java.util.NavigableSet this ^NavigableSet.E e]
+  (^NavigableSet.E [^java.util.NavigableSet this ^NavigableSet.E e]
     (-> this (.floor e))))
 
 (defn tail-set
@@ -68,16 +68,16 @@
            than or equal to fromElement - `java.util.NavigableSet<NavigableSet.E>`
 
   throws: java.lang.ClassCastException - if fromElement is not compatible with this set's comparator (or, if the set has no comparator, if fromElement does not implement Comparable). Implementations may, but are not required to, throw this exception if fromElement cannot be compared to elements currently in the set."
-  ([^java.util.NavigableSet this ^NavigableSet.E from-element ^Boolean inclusive]
+  (^java.util.NavigableSet [^java.util.NavigableSet this ^NavigableSet.E from-element ^Boolean inclusive]
     (-> this (.tailSet from-element inclusive)))
-  ([^java.util.NavigableSet this ^NavigableSet.E from-element]
+  (^java.util.SortedSet [^java.util.NavigableSet this ^NavigableSet.E from-element]
     (-> this (.tailSet from-element))))
 
 (defn iterator
   "Returns an iterator over the elements in this set, in ascending order.
 
   returns: an iterator over the elements in this set, in ascending order - `java.util.Iterator<NavigableSet.E>`"
-  ([^java.util.NavigableSet this]
+  (^java.util.Iterator [^java.util.NavigableSet this]
     (-> this (.iterator))))
 
 (defn descending-set
@@ -94,7 +94,7 @@
    view of s essentially equivalent to s.
 
   returns: a reverse order view of this set - `java.util.NavigableSet<NavigableSet.E>`"
-  ([^java.util.NavigableSet this]
+  (^java.util.NavigableSet [^java.util.NavigableSet this]
     (-> this (.descendingSet))))
 
 (defn sub-set
@@ -117,9 +117,9 @@
            fromElement, inclusive, to toElement, exclusive - `java.util.NavigableSet<NavigableSet.E>`
 
   throws: java.lang.ClassCastException - if fromElement and toElement cannot be compared to one another using this set's comparator (or, if the set has no comparator, using natural ordering). Implementations may, but are not required to, throw this exception if fromElement or toElement cannot be compared to elements currently in the set."
-  ([^java.util.NavigableSet this ^NavigableSet.E from-element ^Boolean from-inclusive ^NavigableSet.E to-element ^Boolean to-inclusive]
+  (^java.util.NavigableSet [^java.util.NavigableSet this ^NavigableSet.E from-element ^Boolean from-inclusive ^NavigableSet.E to-element ^Boolean to-inclusive]
     (-> this (.subSet from-element from-inclusive to-element to-inclusive)))
-  ([^java.util.NavigableSet this ^NavigableSet.E from-element ^NavigableSet.E to-element]
+  (^java.util.SortedSet [^java.util.NavigableSet this ^NavigableSet.E from-element ^NavigableSet.E to-element]
     (-> this (.subSet from-element to-element))))
 
 (defn poll-last
@@ -127,7 +127,7 @@
    or returns null if this set is empty.
 
   returns: the last element, or null if this set is empty - `NavigableSet.E`"
-  ([^java.util.NavigableSet this]
+  (^NavigableSet.E [^java.util.NavigableSet this]
     (-> this (.pollLast))))
 
 (defn poll-first
@@ -135,7 +135,7 @@
    or returns null if this set is empty.
 
   returns: the first element, or null if this set is empty - `NavigableSet.E`"
-  ([^java.util.NavigableSet this]
+  (^NavigableSet.E [^java.util.NavigableSet this]
     (-> this (.pollFirst))))
 
 (defn higher
@@ -148,7 +148,7 @@
            or null if there is no such element - `NavigableSet.E`
 
   throws: java.lang.ClassCastException - if the specified element cannot be compared with the elements currently in the set"
-  ([^java.util.NavigableSet this ^NavigableSet.E e]
+  (^NavigableSet.E [^java.util.NavigableSet this ^NavigableSet.E e]
     (-> this (.higher e))))
 
 (defn lower
@@ -161,7 +161,7 @@
            or null if there is no such element - `NavigableSet.E`
 
   throws: java.lang.ClassCastException - if the specified element cannot be compared with the elements currently in the set"
-  ([^java.util.NavigableSet this ^NavigableSet.E e]
+  (^NavigableSet.E [^java.util.NavigableSet this ^NavigableSet.E e]
     (-> this (.lower e))))
 
 (defn descending-iterator
@@ -169,7 +169,7 @@
    Equivalent in effect to descendingSet().iterator().
 
   returns: an iterator over the elements in this set, in descending order - `java.util.Iterator<NavigableSet.E>`"
-  ([^java.util.NavigableSet this]
+  (^java.util.Iterator [^java.util.NavigableSet this]
     (-> this (.descendingIterator))))
 
 (defn head-set
@@ -189,9 +189,9 @@
            (or equal to, if inclusive is true) toElement - `java.util.NavigableSet<NavigableSet.E>`
 
   throws: java.lang.ClassCastException - if toElement is not compatible with this set's comparator (or, if the set has no comparator, if toElement does not implement Comparable). Implementations may, but are not required to, throw this exception if toElement cannot be compared to elements currently in the set."
-  ([^java.util.NavigableSet this ^NavigableSet.E to-element ^Boolean inclusive]
+  (^java.util.NavigableSet [^java.util.NavigableSet this ^NavigableSet.E to-element ^Boolean inclusive]
     (-> this (.headSet to-element inclusive)))
-  ([^java.util.NavigableSet this ^NavigableSet.E to-element]
+  (^java.util.SortedSet [^java.util.NavigableSet this ^NavigableSet.E to-element]
     (-> this (.headSet to-element))))
 
 (defn ceiling
@@ -204,6 +204,6 @@
            or null if there is no such element - `NavigableSet.E`
 
   throws: java.lang.ClassCastException - if the specified element cannot be compared with the elements currently in the set"
-  ([^java.util.NavigableSet this ^NavigableSet.E e]
+  (^NavigableSet.E [^java.util.NavigableSet this ^NavigableSet.E e]
     (-> this (.ceiling e))))
 

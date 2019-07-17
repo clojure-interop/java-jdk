@@ -23,6 +23,6 @@
 
   returns: the cause of this throwable or null if the
             cause is nonexistent or unknown. - `java.lang.Throwable`"
-  ([^javax.management.remote.JMXServerErrorException this]
+  (^java.lang.Throwable [^javax.management.remote.JMXServerErrorException this]
     (-> this (.getCause))))
 

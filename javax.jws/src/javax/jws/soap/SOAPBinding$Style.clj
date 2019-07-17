@@ -38,6 +38,6 @@
   returns: the enum constant with the specified name - `javax.jws.soap.SOAPBinding.Style`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^javax.jws.soap.SOAPBinding.Style [^java.lang.String name]
     (SOAPBinding$Style/valueOf name)))
 

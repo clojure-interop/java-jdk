@@ -22,6 +22,6 @@
   "Returns the selected item
 
   returns: The selected item or null if there is no selection - `java.lang.Object`"
-  ([^javax.swing.ComboBoxModel this]
+  (^java.lang.Object [^javax.swing.ComboBoxModel this]
     (-> this (.getSelectedItem))))
 

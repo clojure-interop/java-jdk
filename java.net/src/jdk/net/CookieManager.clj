@@ -105,7 +105,7 @@
   "To retrieve current cookie store.
 
   returns: the cookie store currently used by cookie manager. - `java.net.CookieStore`"
-  ([^java.net.CookieManager this]
+  (^java.net.CookieStore [^java.net.CookieManager this]
     (-> this (.getCookieStore))))
 
 (defn get
@@ -119,7 +119,7 @@
               cookies containing state information - `java.util.Map<java.lang.String,java.util.List<java.lang.String>>`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([^java.net.CookieManager this ^java.net.URI uri ^java.util.Map> request-headers]
+  (^java.util.Map> [^java.net.CookieManager this ^java.net.URI uri ^java.util.Map> request-headers]
     (-> this (.get uri request-headers))))
 
 (defn put

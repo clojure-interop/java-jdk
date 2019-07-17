@@ -44,7 +44,7 @@
   returns: the enum constant with the specified name - `java.time.chrono.ThaiBuddhistEra`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^java.time.chrono.ThaiBuddhistEra [^java.lang.String name]
     (ThaiBuddhistEra/valueOf name)))
 
 (defn *of
@@ -58,7 +58,7 @@
   returns: the BuddhistEra singleton, never null - `java.time.chrono.ThaiBuddhistEra`
 
   throws: java.time.DateTimeException - if the era is invalid"
-  ([^Integer thai-buddhist-era]
+  (^java.time.chrono.ThaiBuddhistEra [^Integer thai-buddhist-era]
     (ThaiBuddhistEra/of thai-buddhist-era)))
 
 (defn get-value
@@ -67,6 +67,6 @@
    The era BEFORE_BE has the value 0, while the era BE has the value 1.
 
   returns: the era value, from 0 (BEFORE_BE) to 1 (BE) - `int`"
-  ([^java.time.chrono.ThaiBuddhistEra this]
+  (^Integer [^java.time.chrono.ThaiBuddhistEra this]
     (-> this (.getValue))))
 

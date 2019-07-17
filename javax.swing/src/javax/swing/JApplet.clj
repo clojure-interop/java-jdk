@@ -81,7 +81,7 @@
   "Returns the contentPane object for this applet.
 
   returns: the value of the contentPane property. - `java.awt.Container`"
-  ([^javax.swing.JApplet this]
+  (^java.awt.Container [^javax.swing.JApplet this]
     (-> this (.getContentPane))))
 
 (defn get-graphics
@@ -91,7 +91,7 @@
 
   returns: a graphics context for this component, or null
                if it has none - `java.awt.Graphics`"
-  ([^javax.swing.JApplet this]
+  (^java.awt.Graphics [^javax.swing.JApplet this]
     (-> this (.getGraphics))))
 
 (defn update
@@ -106,7 +106,7 @@
   "Returns the menubar set on this applet.
 
   returns: `javax.swing.JMenuBar`"
-  ([^javax.swing.JApplet this]
+  (^javax.swing.JMenuBar [^javax.swing.JApplet this]
     (-> this (.getJMenuBar))))
 
 (defn set-transfer-handler
@@ -164,7 +164,7 @@
   "Returns the glassPane object for this applet.
 
   returns: the value of the glassPane property. - `java.awt.Component`"
-  ([^javax.swing.JApplet this]
+  (^java.awt.Component [^javax.swing.JApplet this]
     (-> this (.getGlassPane))))
 
 (defn get-accessible-context
@@ -175,7 +175,7 @@
 
   returns: an AccessibleJApplet that serves as the
            AccessibleContext of this JApplet - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.JApplet this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.JApplet this]
     (-> this (.getAccessibleContext))))
 
 (defn set-glass-pane
@@ -197,14 +197,14 @@
   "Gets the transferHandler property.
 
   returns: the value of the transferHandler property - `javax.swing.TransferHandler`"
-  ([^javax.swing.JApplet this]
+  (^javax.swing.TransferHandler [^javax.swing.JApplet this]
     (-> this (.getTransferHandler))))
 
 (defn get-root-pane
   "Returns the rootPane object for this applet.
 
   returns: this components single JRootPane child. - `javax.swing.JRootPane`"
-  ([^javax.swing.JApplet this]
+  (^javax.swing.JRootPane [^javax.swing.JApplet this]
     (-> this (.getRootPane))))
 
 (defn set-content-pane
@@ -222,6 +222,6 @@
   returns: the value of the layeredPane property. - `javax.swing.JLayeredPane`
 
   throws: java.awt.IllegalComponentStateException - (a runtime exception) if the layered pane parameter is null"
-  ([^javax.swing.JApplet this]
+  (^javax.swing.JLayeredPane [^javax.swing.JApplet this]
     (-> this (.getLayeredPane))))
 

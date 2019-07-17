@@ -23,7 +23,7 @@
 
   returns: true if the specified mixer is supported,
        otherwise false - `boolean`"
-  ([^javax.sound.sampled.spi.MixerProvider this ^javax.sound.sampled.Mixer.Info info]
+  (^Boolean [^javax.sound.sampled.spi.MixerProvider this ^javax.sound.sampled.Mixer.Info info]
     (-> this (.isMixerSupported info))))
 
 (defn get-mixer-info
@@ -53,6 +53,6 @@
   returns: mixer instance - `javax.sound.sampled.Mixer`
 
   throws: java.lang.IllegalArgumentException - if the info object specified does not match the info object for a mixer supported by this MixerProvider."
-  ([^javax.sound.sampled.spi.MixerProvider this ^javax.sound.sampled.Mixer.Info info]
+  (^javax.sound.sampled.Mixer [^javax.sound.sampled.spi.MixerProvider this ^javax.sound.sampled.Mixer.Info info]
     (-> this (.getMixer info))))
 

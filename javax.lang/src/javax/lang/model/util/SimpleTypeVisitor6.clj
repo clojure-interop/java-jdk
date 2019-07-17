@@ -47,7 +47,7 @@
   p - a visitor-specified parameter - `SimpleTypeVisitor6.P`
 
   returns: the result of defaultAction - `SimpleTypeVisitor6.R`"
-  ([^javax.lang.model.util.SimpleTypeVisitor6 this ^javax.lang.model.type.DeclaredType t ^SimpleTypeVisitor6.P p]
+  (^SimpleTypeVisitor6.R [^javax.lang.model.util.SimpleTypeVisitor6 this ^javax.lang.model.type.DeclaredType t ^SimpleTypeVisitor6.P p]
     (-> this (.visitDeclared t p))))
 
 (defn visit-array
@@ -57,7 +57,7 @@
   p - a visitor-specified parameter - `SimpleTypeVisitor6.P`
 
   returns: the result of defaultAction - `SimpleTypeVisitor6.R`"
-  ([^javax.lang.model.util.SimpleTypeVisitor6 this ^javax.lang.model.type.ArrayType t ^SimpleTypeVisitor6.P p]
+  (^SimpleTypeVisitor6.R [^javax.lang.model.util.SimpleTypeVisitor6 this ^javax.lang.model.type.ArrayType t ^SimpleTypeVisitor6.P p]
     (-> this (.visitArray t p))))
 
 (defn visit-type-variable
@@ -67,7 +67,7 @@
   p - a visitor-specified parameter - `SimpleTypeVisitor6.P`
 
   returns: the result of defaultAction - `SimpleTypeVisitor6.R`"
-  ([^javax.lang.model.util.SimpleTypeVisitor6 this ^javax.lang.model.type.TypeVariable t ^SimpleTypeVisitor6.P p]
+  (^SimpleTypeVisitor6.R [^javax.lang.model.util.SimpleTypeVisitor6 this ^javax.lang.model.type.TypeVariable t ^SimpleTypeVisitor6.P p]
     (-> this (.visitTypeVariable t p))))
 
 (defn visit-null
@@ -77,7 +77,7 @@
   p - a visitor-specified parameter - `SimpleTypeVisitor6.P`
 
   returns: the result of defaultAction - `SimpleTypeVisitor6.R`"
-  ([^javax.lang.model.util.SimpleTypeVisitor6 this ^javax.lang.model.type.NullType t ^SimpleTypeVisitor6.P p]
+  (^SimpleTypeVisitor6.R [^javax.lang.model.util.SimpleTypeVisitor6 this ^javax.lang.model.type.NullType t ^SimpleTypeVisitor6.P p]
     (-> this (.visitNull t p))))
 
 (defn visit-no-type
@@ -87,7 +87,7 @@
   p - a visitor-specified parameter - `SimpleTypeVisitor6.P`
 
   returns: the result of defaultAction - `SimpleTypeVisitor6.R`"
-  ([^javax.lang.model.util.SimpleTypeVisitor6 this ^javax.lang.model.type.NoType t ^SimpleTypeVisitor6.P p]
+  (^SimpleTypeVisitor6.R [^javax.lang.model.util.SimpleTypeVisitor6 this ^javax.lang.model.type.NoType t ^SimpleTypeVisitor6.P p]
     (-> this (.visitNoType t p))))
 
 (defn visit-wildcard
@@ -97,7 +97,7 @@
   p - a visitor-specified parameter - `SimpleTypeVisitor6.P`
 
   returns: the result of defaultAction - `SimpleTypeVisitor6.R`"
-  ([^javax.lang.model.util.SimpleTypeVisitor6 this ^javax.lang.model.type.WildcardType t ^SimpleTypeVisitor6.P p]
+  (^SimpleTypeVisitor6.R [^javax.lang.model.util.SimpleTypeVisitor6 this ^javax.lang.model.type.WildcardType t ^SimpleTypeVisitor6.P p]
     (-> this (.visitWildcard t p))))
 
 (defn visit-primitive
@@ -107,7 +107,7 @@
   p - a visitor-specified parameter - `SimpleTypeVisitor6.P`
 
   returns: the result of defaultAction - `SimpleTypeVisitor6.R`"
-  ([^javax.lang.model.util.SimpleTypeVisitor6 this ^javax.lang.model.type.PrimitiveType t ^SimpleTypeVisitor6.P p]
+  (^SimpleTypeVisitor6.R [^javax.lang.model.util.SimpleTypeVisitor6 this ^javax.lang.model.type.PrimitiveType t ^SimpleTypeVisitor6.P p]
     (-> this (.visitPrimitive t p))))
 
 (defn visit-executable
@@ -117,7 +117,7 @@
   p - a visitor-specified parameter - `SimpleTypeVisitor6.P`
 
   returns: the result of defaultAction - `SimpleTypeVisitor6.R`"
-  ([^javax.lang.model.util.SimpleTypeVisitor6 this ^javax.lang.model.type.ExecutableType t ^SimpleTypeVisitor6.P p]
+  (^SimpleTypeVisitor6.R [^javax.lang.model.util.SimpleTypeVisitor6 this ^javax.lang.model.type.ExecutableType t ^SimpleTypeVisitor6.P p]
     (-> this (.visitExecutable t p))))
 
 (defn visit-error
@@ -127,6 +127,6 @@
   p - a visitor-specified parameter - `SimpleTypeVisitor6.P`
 
   returns: the result of defaultAction - `SimpleTypeVisitor6.R`"
-  ([^javax.lang.model.util.SimpleTypeVisitor6 this ^javax.lang.model.type.ErrorType t ^SimpleTypeVisitor6.P p]
+  (^SimpleTypeVisitor6.R [^javax.lang.model.util.SimpleTypeVisitor6 this ^javax.lang.model.type.ErrorType t ^SimpleTypeVisitor6.P p]
     (-> this (.visitError t p))))
 

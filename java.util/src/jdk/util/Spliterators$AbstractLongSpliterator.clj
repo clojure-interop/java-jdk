@@ -40,7 +40,7 @@
 
   returns: a Spliterator covering some portion of the
    elements, or null if this spliterator cannot be split - `java.util.Spliterator.OfLong`"
-  ([^java.util.Spliterators$AbstractLongSpliterator this]
+  (^java.util.Spliterator.OfLong [^java.util.Spliterators$AbstractLongSpliterator this]
     (-> this (.trySplit))))
 
 (defn estimate-size
@@ -56,7 +56,7 @@
 
   returns: the estimated size, or Long.MAX_VALUE if infinite,
            unknown, or too expensive to compute. - `long`"
-  ([^java.util.Spliterators$AbstractLongSpliterator this]
+  (^Long [^java.util.Spliterators$AbstractLongSpliterator this]
     (-> this (.estimateSize))))
 
 (defn characteristics
@@ -73,6 +73,6 @@
    about any computation using this Spliterator.
 
   returns: a representation of characteristics - `int`"
-  ([^java.util.Spliterators$AbstractLongSpliterator this]
+  (^Integer [^java.util.Spliterators$AbstractLongSpliterator this]
     (-> this (.characteristics))))
 

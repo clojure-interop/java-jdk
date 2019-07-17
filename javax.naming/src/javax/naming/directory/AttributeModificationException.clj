@@ -36,7 +36,7 @@
    to modifyAttributes() were executed.
 
   e - The possibly null list of unexecuted modifications. - `javax.naming.directory.ModificationItem[]`"
-  ([^javax.naming.directory.AttributeModificationException this ^javax.naming.directory.ModificationItem[] e]
+  ([^javax.naming.directory.AttributeModificationException this e]
     (-> this (.setUnexecutedModifications e))))
 
 (defn get-unexecuted-modifications
@@ -59,6 +59,6 @@
    programmatically.
 
   returns: The non-null string representation of this exception. - `java.lang.String`"
-  ([^javax.naming.directory.AttributeModificationException this]
+  (^java.lang.String [^javax.naming.directory.AttributeModificationException this]
     (-> this (.toString))))
 

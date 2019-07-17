@@ -47,13 +47,13 @@
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  ([^java.awt.BufferCapabilities$FlipContents this]
+  (^Integer [^java.awt.BufferCapabilities$FlipContents this]
     (-> this (.hashCode))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^java.awt.BufferCapabilities$FlipContents this]
+  (^java.lang.String [^java.awt.BufferCapabilities$FlipContents this]
     (-> this (.toString))))
 

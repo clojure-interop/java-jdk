@@ -36,9 +36,9 @@
   zone - the zone ID to use, not null - `java.time.ZoneId`
 
   returns: the current local date using the system clock, not null - `java.time.chrono.ThaiBuddhistDate`"
-  ([^java.time.chrono.ThaiBuddhistChronology this ^java.time.ZoneId zone]
+  (^java.time.chrono.ThaiBuddhistDate [^java.time.chrono.ThaiBuddhistChronology this ^java.time.ZoneId zone]
     (-> this (.dateNow zone)))
-  ([^java.time.chrono.ThaiBuddhistChronology this]
+  (^java.time.chrono.ThaiBuddhistDate [^java.time.chrono.ThaiBuddhistChronology this]
     (-> this (.dateNow))))
 
 (defn range
@@ -47,7 +47,7 @@
   field - the field to get the range for, not null - `java.time.temporal.ChronoField`
 
   returns: the range of valid values for the field, not null - `java.time.temporal.ValueRange`"
-  ([^java.time.chrono.ThaiBuddhistChronology this ^java.time.temporal.ChronoField field]
+  (^java.time.temporal.ValueRange [^java.time.chrono.ThaiBuddhistChronology this ^java.time.temporal.ChronoField field]
     (-> this (.range field))))
 
 (defn local-date-time
@@ -56,7 +56,7 @@
   temporal - the temporal object to convert, not null - `java.time.temporal.TemporalAccessor`
 
   returns: the local date-time in this chronology, not null - `java.time.chrono.ChronoLocalDateTime<java.time.chrono.ThaiBuddhistDate>`"
-  ([^java.time.chrono.ThaiBuddhistChronology this ^java.time.temporal.TemporalAccessor temporal]
+  (^java.time.chrono.ChronoLocalDateTime [^java.time.chrono.ThaiBuddhistChronology this ^java.time.temporal.TemporalAccessor temporal]
     (-> this (.localDateTime temporal))))
 
 (defn resolve-date
@@ -66,7 +66,7 @@
   resolver-style - the requested type of resolve, not null - `java.time.format.ResolverStyle`
 
   returns: the resolved date, null if insufficient information to create a date - `java.time.chrono.ThaiBuddhistDate`"
-  ([^java.time.chrono.ThaiBuddhistChronology this ^java.util.Map field-values ^java.time.format.ResolverStyle resolver-style]
+  (^java.time.chrono.ThaiBuddhistDate [^java.time.chrono.ThaiBuddhistChronology this ^java.util.Map field-values ^java.time.format.ResolverStyle resolver-style]
     (-> this (.resolveDate field-values resolver-style))))
 
 (defn leap-year?
@@ -79,7 +79,7 @@
   proleptic-year - the proleptic-year to check, not validated for range - `long`
 
   returns: true if the year is a leap year - `boolean`"
-  ([^java.time.chrono.ThaiBuddhistChronology this ^Long proleptic-year]
+  (^Boolean [^java.time.chrono.ThaiBuddhistChronology this ^Long proleptic-year]
     (-> this (.isLeapYear proleptic-year))))
 
 (defn date-year-day
@@ -93,9 +93,9 @@
   returns: the Thai Buddhist local date, not null - `java.time.chrono.ThaiBuddhistDate`
 
   throws: java.time.DateTimeException - if unable to create the date"
-  ([^java.time.chrono.ThaiBuddhistChronology this ^java.time.chrono.Era era ^Integer year-of-era ^Integer day-of-year]
+  (^java.time.chrono.ThaiBuddhistDate [^java.time.chrono.ThaiBuddhistChronology this ^java.time.chrono.Era era ^Integer year-of-era ^Integer day-of-year]
     (-> this (.dateYearDay era year-of-era day-of-year)))
-  ([^java.time.chrono.ThaiBuddhistChronology this ^Integer proleptic-year ^Integer day-of-year]
+  (^java.time.chrono.ThaiBuddhistDate [^java.time.chrono.ThaiBuddhistChronology this ^Integer proleptic-year ^Integer day-of-year]
     (-> this (.dateYearDay proleptic-year day-of-year))))
 
 (defn date-epoch-day
@@ -106,14 +106,14 @@
   returns: the Thai Buddhist local date, not null - `java.time.chrono.ThaiBuddhistDate`
 
   throws: java.time.DateTimeException - if unable to create the date"
-  ([^java.time.chrono.ThaiBuddhistChronology this ^Long epoch-day]
+  (^java.time.chrono.ThaiBuddhistDate [^java.time.chrono.ThaiBuddhistChronology this ^Long epoch-day]
     (-> this (.dateEpochDay epoch-day))))
 
 (defn eras
   "Description copied from interface: Chronology
 
   returns: the list of eras for the chronology, may be immutable, not null - `java.util.List<java.time.chrono.Era>`"
-  ([^java.time.chrono.ThaiBuddhistChronology this]
+  (^java.util.List [^java.time.chrono.ThaiBuddhistChronology this]
     (-> this (.eras))))
 
 (defn era-of
@@ -122,7 +122,7 @@
   era-value - the era value - `int`
 
   returns: the calendar system era, not null - `java.time.chrono.ThaiBuddhistEra`"
-  ([^java.time.chrono.ThaiBuddhistChronology this ^Integer era-value]
+  (^java.time.chrono.ThaiBuddhistEra [^java.time.chrono.ThaiBuddhistChronology this ^Integer era-value]
     (-> this (.eraOf era-value))))
 
 (defn proleptic-year
@@ -132,7 +132,7 @@
   year-of-era - the chronology year-of-era - `int`
 
   returns: the proleptic-year - `int`"
-  ([^java.time.chrono.ThaiBuddhistChronology this ^java.time.chrono.Era era ^Integer year-of-era]
+  (^Integer [^java.time.chrono.ThaiBuddhistChronology this ^java.time.chrono.Era era ^Integer year-of-era]
     (-> this (.prolepticYear era year-of-era))))
 
 (defn get-calendar-type
@@ -145,7 +145,7 @@
    Locale.getUnicodeLocaleType(String) with the key 'ca'.
 
   returns: the calendar system type - 'buddhist' - `java.lang.String`"
-  ([^java.time.chrono.ThaiBuddhistChronology this]
+  (^java.lang.String [^java.time.chrono.ThaiBuddhistChronology this]
     (-> this (.getCalendarType))))
 
 (defn get-id
@@ -155,7 +155,7 @@
    It can be used to lookup the Chronology using Chronology.of(String).
 
   returns: the chronology ID - 'ThaiBuddhist' - `java.lang.String`"
-  ([^java.time.chrono.ThaiBuddhistChronology this]
+  (^java.lang.String [^java.time.chrono.ThaiBuddhistChronology this]
     (-> this (.getId))))
 
 (defn date
@@ -170,11 +170,11 @@
   returns: the Thai Buddhist local date, not null - `java.time.chrono.ThaiBuddhistDate`
 
   throws: java.time.DateTimeException - if unable to create the date"
-  ([^java.time.chrono.ThaiBuddhistChronology this ^java.time.chrono.Era era ^Integer year-of-era ^Integer month ^Integer day-of-month]
+  (^java.time.chrono.ThaiBuddhistDate [^java.time.chrono.ThaiBuddhistChronology this ^java.time.chrono.Era era ^Integer year-of-era ^Integer month ^Integer day-of-month]
     (-> this (.date era year-of-era month day-of-month)))
-  ([^java.time.chrono.ThaiBuddhistChronology this ^Integer proleptic-year ^Integer month ^Integer day-of-month]
+  (^java.time.chrono.ThaiBuddhistDate [^java.time.chrono.ThaiBuddhistChronology this ^Integer proleptic-year ^Integer month ^Integer day-of-month]
     (-> this (.date proleptic-year month day-of-month)))
-  ([^java.time.chrono.ThaiBuddhistChronology this ^java.time.temporal.TemporalAccessor temporal]
+  (^java.time.chrono.ThaiBuddhistDate [^java.time.chrono.ThaiBuddhistChronology this ^java.time.temporal.TemporalAccessor temporal]
     (-> this (.date temporal))))
 
 (defn zoned-date-time
@@ -184,8 +184,8 @@
   zone - the time-zone, not null - `java.time.ZoneId`
 
   returns: the zoned date-time, not null - `java.time.chrono.ChronoZonedDateTime<java.time.chrono.ThaiBuddhistDate>`"
-  ([^java.time.chrono.ThaiBuddhistChronology this ^java.time.Instant instant ^java.time.ZoneId zone]
+  (^java.time.chrono.ChronoZonedDateTime [^java.time.chrono.ThaiBuddhistChronology this ^java.time.Instant instant ^java.time.ZoneId zone]
     (-> this (.zonedDateTime instant zone)))
-  ([^java.time.chrono.ThaiBuddhistChronology this ^java.time.temporal.TemporalAccessor temporal]
+  (^java.time.chrono.ChronoZonedDateTime [^java.time.chrono.ThaiBuddhistChronology this ^java.time.temporal.TemporalAccessor temporal]
     (-> this (.zonedDateTime temporal))))
 

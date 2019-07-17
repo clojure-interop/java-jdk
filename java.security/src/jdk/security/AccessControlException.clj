@@ -30,6 +30,6 @@
    null if there was no corresponding Permission object.
 
   returns: the Permission object. - `java.security.Permission`"
-  ([^java.security.AccessControlException this]
+  (^java.security.Permission [^java.security.AccessControlException this]
     (-> this (.getPermission))))
 

@@ -51,7 +51,7 @@
 
   returns: XMLEventReader used by this
      StAXSource. - `javax.xml.stream.XMLEventReader`"
-  ([^javax.xml.transform.stax.StAXSource this]
+  (^javax.xml.stream.XMLEventReader [^javax.xml.transform.stax.StAXSource this]
     (-> this (.getXMLEventReader))))
 
 (defn get-xml-stream-reader
@@ -64,7 +64,7 @@
 
   returns: XMLStreamReader used by this
      StAXSource. - `javax.xml.stream.XMLStreamReader`"
-  ([^javax.xml.transform.stax.StAXSource this]
+  (^javax.xml.stream.XMLStreamReader [^javax.xml.transform.stax.StAXSource this]
     (-> this (.getXMLStreamReader))))
 
 (defn set-system-id
@@ -95,6 +95,6 @@
    an empty `` String.
 
   returns: System identifier used by this StAXSource. - `java.lang.String`"
-  ([^javax.xml.transform.stax.StAXSource this]
+  (^java.lang.String [^javax.xml.transform.stax.StAXSource this]
     (-> this (.getSystemId))))
 

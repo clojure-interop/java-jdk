@@ -131,7 +131,7 @@
   index - the index of the entry whose position is desired - `int`
 
   returns: the starting position of the specified entry - `int`"
-  ([^javax.swing.SizeSequence this ^Integer index]
+  (^Integer [^javax.swing.SizeSequence this ^Integer index]
     (-> this (.getPosition index))))
 
 (defn get-index
@@ -143,7 +143,7 @@
   position - the position of the entry - `int`
 
   returns: the index of the entry that occupies the specified position - `int`"
-  ([^javax.swing.SizeSequence this ^Integer position]
+  (^Integer [^javax.swing.SizeSequence this ^Integer position]
     (-> this (.getIndex position))))
 
 (defn get-size
@@ -155,7 +155,7 @@
   index - the index corresponding to the entry - `int`
 
   returns: the size of the entry - `int`"
-  ([^javax.swing.SizeSequence this ^Integer index]
+  (^Integer [^javax.swing.SizeSequence this ^Integer index]
     (-> this (.getSize index))))
 
 (defn set-size

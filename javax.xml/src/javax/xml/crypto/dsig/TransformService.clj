@@ -76,16 +76,16 @@
   returns: a new TransformService - `javax.xml.crypto.dsig.TransformService`
 
   throws: java.lang.NullPointerException - if provider, algorithm, or mechanismType is null"
-  ([^java.lang.String algorithm ^java.lang.String mechanism-type ^java.security.Provider provider]
+  (^javax.xml.crypto.dsig.TransformService [^java.lang.String algorithm ^java.lang.String mechanism-type ^java.security.Provider provider]
     (TransformService/getInstance algorithm mechanism-type provider))
-  ([^java.lang.String algorithm ^java.lang.String mechanism-type]
+  (^javax.xml.crypto.dsig.TransformService [^java.lang.String algorithm ^java.lang.String mechanism-type]
     (TransformService/getInstance algorithm mechanism-type)))
 
 (defn get-mechanism-type
   "Returns the mechanism type supported by this TransformService.
 
   returns: the mechanism type - `java.lang.String`"
-  ([^javax.xml.crypto.dsig.TransformService this]
+  (^java.lang.String [^javax.xml.crypto.dsig.TransformService this]
     (-> this (.getMechanismType))))
 
 (defn get-algorithm
@@ -93,14 +93,14 @@
    TransformService.
 
   returns: the algorithm URI - `java.lang.String`"
-  ([^javax.xml.crypto.dsig.TransformService this]
+  (^java.lang.String [^javax.xml.crypto.dsig.TransformService this]
     (-> this (.getAlgorithm))))
 
 (defn get-provider
   "Returns the provider of this TransformService.
 
   returns: the provider - `java.security.Provider`"
-  ([^javax.xml.crypto.dsig.TransformService this]
+  (^java.security.Provider [^javax.xml.crypto.dsig.TransformService this]
     (-> this (.getProvider))))
 
 (defn init

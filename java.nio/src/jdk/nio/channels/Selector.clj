@@ -165,21 +165,21 @@
   returns: A new selector - `java.nio.channels.Selector`
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([]
+  (^java.nio.channels.Selector []
     (Selector/open )))
 
 (defn open?
   "Tells whether or not this selector is open.
 
   returns: true if, and only if, this selector is open - `boolean`"
-  ([^java.nio.channels.Selector this]
+  (^Boolean [^java.nio.channels.Selector this]
     (-> this (.isOpen))))
 
 (defn provider
   "Returns the provider that created this channel.
 
   returns: The provider that created this channel - `java.nio.channels.spi.SelectorProvider`"
-  ([^java.nio.channels.Selector this]
+  (^java.nio.channels.spi.SelectorProvider [^java.nio.channels.Selector this]
     (-> this (.provider))))
 
 (defn keys
@@ -194,7 +194,7 @@
   returns: This selector's key set - `java.util.Set<java.nio.channels.SelectionKey>`
 
   throws: java.nio.channels.ClosedSelectorException - If this selector is closed"
-  ([^java.nio.channels.Selector this]
+  (^java.util.Set [^java.nio.channels.Selector this]
     (-> this (.keys))))
 
 (defn selected-keys
@@ -209,7 +209,7 @@
   returns: This selector's selected-key set - `java.util.Set<java.nio.channels.SelectionKey>`
 
   throws: java.nio.channels.ClosedSelectorException - If this selector is closed"
-  ([^java.nio.channels.Selector this]
+  (^java.util.Set [^java.nio.channels.Selector this]
     (-> this (.selectedKeys))))
 
 (defn select-now
@@ -227,7 +227,7 @@
             were updated by the selection operation - `int`
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.nio.channels.Selector this]
+  (^Integer [^java.nio.channels.Selector this]
     (-> this (.selectNow))))
 
 (defn select
@@ -249,9 +249,9 @@
             whose ready-operation sets were updated - `int`
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.nio.channels.Selector this ^Long timeout]
+  (^Integer [^java.nio.channels.Selector this ^Long timeout]
     (-> this (.select timeout)))
-  ([^java.nio.channels.Selector this]
+  (^Integer [^java.nio.channels.Selector this]
     (-> this (.select))))
 
 (defn wakeup
@@ -271,7 +271,7 @@
    operations has the same effect as invoking it just once.
 
   returns: This selector - `java.nio.channels.Selector`"
-  ([^java.nio.channels.Selector this]
+  (^java.nio.channels.Selector [^java.nio.channels.Selector this]
     (-> this (.wakeup))))
 
 (defn close

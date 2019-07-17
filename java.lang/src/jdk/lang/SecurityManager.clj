@@ -317,7 +317,7 @@
    manager to return the appropriate thread group.
 
   returns: ThreadGroup that new threads are instantiated into - `java.lang.ThreadGroup`"
-  ([^java.lang.SecurityManager this]
+  (^java.lang.ThreadGroup [^java.lang.SecurityManager this]
     (-> this (.getThreadGroup))))
 
 (defn check-system-clipboard-access
@@ -436,7 +436,7 @@
   returns: an implementation-dependent object that encapsulates
             sufficient information about the current execution environment
             to perform some security checks later. - `java.lang.Object`"
-  ([^java.lang.SecurityManager this]
+  (^java.lang.Object [^java.lang.SecurityManager this]
     (-> this (.getSecurityContext))))
 
 (defn check-package-definition

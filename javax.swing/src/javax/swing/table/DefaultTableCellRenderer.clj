@@ -56,7 +56,7 @@
    for more information.
 
   returns: true if this component is completely opaque - `boolean`"
-  ([^javax.swing.table.DefaultTableCellRenderer this]
+  (^Boolean [^javax.swing.table.DefaultTableCellRenderer this]
     (-> this (.isOpaque))))
 
 (defn set-foreground
@@ -85,7 +85,7 @@
   column - the column of the cell to render - `int`
 
   returns: the default table cell renderer - `java.awt.Component`"
-  ([^javax.swing.table.DefaultTableCellRenderer this ^javax.swing.JTable table ^java.lang.Object value ^Boolean is-selected ^Boolean has-focus ^Integer row ^Integer column]
+  (^java.awt.Component [^javax.swing.table.DefaultTableCellRenderer this ^javax.swing.JTable table ^java.lang.Object value ^Boolean is-selected ^Boolean has-focus ^Integer row ^Integer column]
     (-> this (.getTableCellRendererComponent table value is-selected has-focus row column))))
 
 (defn fire-property-change

@@ -70,14 +70,14 @@
   dst-pt - the destination point or null - `java.awt.geom.Point2D`
 
   returns: the location of the destination point. - `java.awt.geom.Point2D`"
-  ([^java.awt.image.RescaleOp this ^java.awt.geom.Point2D src-pt ^java.awt.geom.Point2D dst-pt]
+  (^java.awt.geom.Point2D [^java.awt.image.RescaleOp this ^java.awt.geom.Point2D src-pt ^java.awt.geom.Point2D dst-pt]
     (-> this (.getPoint2D src-pt dst-pt))))
 
 (defn get-rendering-hints
   "Returns the rendering hints for this op.
 
   returns: the rendering hints of this RescaleOp. - `java.awt.RenderingHints`"
-  ([^java.awt.image.RescaleOp this]
+  (^java.awt.RenderingHints [^java.awt.image.RescaleOp this]
     (-> this (.getRenderingHints))))
 
 (defn create-compatible-dest-image
@@ -88,7 +88,7 @@
   dest-cm - ColorModel of the destination. If null, the ColorModel of the source will be used. - `java.awt.image.ColorModel`
 
   returns: the zeroed-destination image. - `java.awt.image.BufferedImage`"
-  ([^java.awt.image.RescaleOp this ^java.awt.image.BufferedImage src ^java.awt.image.ColorModel dest-cm]
+  (^java.awt.image.BufferedImage [^java.awt.image.RescaleOp this ^java.awt.image.BufferedImage src ^java.awt.image.ColorModel dest-cm]
     (-> this (.createCompatibleDestImage src dest-cm))))
 
 (defn get-offsets
@@ -120,7 +120,7 @@
   src - the source Raster - `java.awt.image.Raster`
 
   returns: the zeroed-destination Raster. - `java.awt.image.WritableRaster`"
-  ([^java.awt.image.RescaleOp this ^java.awt.image.Raster src]
+  (^java.awt.image.WritableRaster [^java.awt.image.RescaleOp this ^java.awt.image.Raster src]
     (-> this (.createCompatibleDestRaster src))))
 
 (defn filter
@@ -140,7 +140,7 @@
   returns: the filtered BufferedImage. - `java.awt.image.BufferedImage`
 
   throws: java.lang.IllegalArgumentException - if the ColorModel of src is an IndexColorModel, or if the number of scaling factors and offsets in this RescaleOp do not meet the requirements stated in the class comments."
-  ([^java.awt.image.RescaleOp this ^java.awt.image.BufferedImage src ^java.awt.image.BufferedImage dst]
+  (^java.awt.image.BufferedImage [^java.awt.image.RescaleOp this ^java.awt.image.BufferedImage src ^java.awt.image.BufferedImage dst]
     (-> this (.filter src dst))))
 
 (defn get-bounds-2-d
@@ -152,7 +152,7 @@
 
   returns: The Rectangle2D representing the destination
    image's bounding box. - `java.awt.geom.Rectangle2D`"
-  ([^java.awt.image.RescaleOp this ^java.awt.image.BufferedImage src]
+  (^java.awt.geom.Rectangle2D [^java.awt.image.RescaleOp this ^java.awt.image.BufferedImage src]
     (-> this (.getBounds2D src))))
 
 (defn get-num-factors
@@ -161,6 +161,6 @@
 
   returns: the number of scaling factors and offsets of this
            RescaleOp. - `int`"
-  ([^java.awt.image.RescaleOp this]
+  (^Integer [^java.awt.image.RescaleOp this]
     (-> this (.getNumFactors))))
 

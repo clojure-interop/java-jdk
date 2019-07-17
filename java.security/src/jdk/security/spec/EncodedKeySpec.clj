@@ -36,6 +36,6 @@
    of this key specification.
 
   returns: a string representation of the encoding format. - `java.lang.String`"
-  ([^java.security.spec.EncodedKeySpec this]
+  (^java.lang.String [^java.security.spec.EncodedKeySpec this]
     (-> this (.getFormat))))
 

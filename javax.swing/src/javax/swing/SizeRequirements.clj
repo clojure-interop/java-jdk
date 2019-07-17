@@ -131,7 +131,7 @@
   children - the space requirements for a set of components. The vector may be of zero length, which will result in a default SizeRequirements object instance being passed back. - `javax.swing.SizeRequirements[]`
 
   returns: the total space requirements. - `javax.swing.SizeRequirements`"
-  ([^javax.swing.SizeRequirements[] children]
+  (^javax.swing.SizeRequirements [children]
     (SizeRequirements/getTiledSizeRequirements children)))
 
 (defn *get-aligned-size-requirements
@@ -144,7 +144,7 @@
   children - the set of child requirements. If of zero length, the returns result will be a default instance of SizeRequirements. - `javax.swing.SizeRequirements[]`
 
   returns: the total space requirements. - `javax.swing.SizeRequirements`"
-  ([^javax.swing.SizeRequirements[] children]
+  (^javax.swing.SizeRequirements [children]
     (SizeRequirements/getAlignedSizeRequirements children)))
 
 (defn *calculate-tiled-positions
@@ -172,9 +172,9 @@
   offsets - the offset from 0 for each child where the spans were allocated (determines placement of the span). - `int[]`
   spans - the span allocated for each child to make the total target span. - `int[]`
   forward - tile with offsets increasing from 0 if true and with offsets decreasing from the end of the allocated space if false. - `boolean`"
-  ([^Integer allocated ^javax.swing.SizeRequirements total ^javax.swing.SizeRequirements[] children offsets spans ^Boolean forward]
+  ([^Integer allocated ^javax.swing.SizeRequirements total children offsets spans ^Boolean forward]
     (SizeRequirements/calculateTiledPositions allocated total children offsets spans forward))
-  ([^Integer allocated ^javax.swing.SizeRequirements total ^javax.swing.SizeRequirements[] children offsets spans]
+  ([^Integer allocated ^javax.swing.SizeRequirements total children offsets spans]
     (SizeRequirements/calculateTiledPositions allocated total children offsets spans)))
 
 (defn *calculate-aligned-positions
@@ -203,9 +203,9 @@
   offsets - the offset from 0 for each child where the spans were allocated (determines placement of the span). - `int[]`
   spans - the span allocated for each child to make the total target span. - `int[]`
   normal - when true, the alignment value 0.0f means left/top; when false, it means right/bottom. - `boolean`"
-  ([^Integer allocated ^javax.swing.SizeRequirements total ^javax.swing.SizeRequirements[] children offsets spans ^Boolean normal]
+  ([^Integer allocated ^javax.swing.SizeRequirements total children offsets spans ^Boolean normal]
     (SizeRequirements/calculateAlignedPositions allocated total children offsets spans normal))
-  ([^Integer allocated ^javax.swing.SizeRequirements total ^javax.swing.SizeRequirements[] children offsets spans]
+  ([^Integer allocated ^javax.swing.SizeRequirements total children offsets spans]
     (SizeRequirements/calculateAlignedPositions allocated total children offsets spans)))
 
 (defn *adjust-sizes
@@ -215,7 +215,7 @@
   children - an array of SizeRequirements objects - `javax.swing.SizeRequirements[]`
 
   returns: an array of ints containing the final size for each item - `int[]`"
-  ([^Integer delta ^javax.swing.SizeRequirements[] children]
+  ([^Integer delta children]
     (SizeRequirements/adjustSizes delta children)))
 
 (defn to-string
@@ -223,6 +223,6 @@
    size requirements, along with the alignment.
 
   returns: the string - `java.lang.String`"
-  ([^javax.swing.SizeRequirements this]
+  (^java.lang.String [^javax.swing.SizeRequirements this]
     (-> this (.toString))))
 

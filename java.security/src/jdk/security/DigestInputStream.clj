@@ -37,7 +37,7 @@
   "Returns the message digest associated with this stream.
 
   returns: the message digest associated with this stream. - `java.security.MessageDigest`"
-  ([^java.security.DigestInputStream this]
+  (^java.security.MessageDigest [^java.security.DigestInputStream this]
     (-> this (.getMessageDigest))))
 
 (defn set-message-digest
@@ -69,9 +69,9 @@
    the call was made. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.security.DigestInputStream this b ^Integer off ^Integer len]
+  (^Integer [^java.security.DigestInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  ([^java.security.DigestInputStream this]
+  (^Integer [^java.security.DigestInputStream this]
     (-> this (.read))))
 
 (defn on
@@ -89,6 +89,6 @@
    its associated message digest object.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^java.security.DigestInputStream this]
+  (^java.lang.String [^java.security.DigestInputStream this]
     (-> this (.toString))))
 

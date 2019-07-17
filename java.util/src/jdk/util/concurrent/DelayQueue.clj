@@ -45,7 +45,7 @@
 
   returns: the head of this queue, or null if this
            queue is empty - `DelayQueue.E`"
-  ([^java.util.concurrent.DelayQueue this]
+  (^DelayQueue.E [^java.util.concurrent.DelayQueue this]
     (-> this (.peek))))
 
 (defn offer
@@ -59,9 +59,9 @@
   returns: true - `boolean`
 
   throws: java.lang.NullPointerException - if the specified element is null"
-  ([^java.util.concurrent.DelayQueue this ^DelayQueue.E e ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^Boolean [^java.util.concurrent.DelayQueue this ^DelayQueue.E e ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.offer e timeout unit)))
-  ([^java.util.concurrent.DelayQueue this ^DelayQueue.E e]
+  (^Boolean [^java.util.concurrent.DelayQueue this ^DelayQueue.E e]
     (-> this (.offer e))))
 
 (defn put
@@ -81,7 +81,7 @@
   returns: the head of this queue - `DelayQueue.E`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([^java.util.concurrent.DelayQueue this]
+  (^DelayQueue.E [^java.util.concurrent.DelayQueue this]
     (-> this (.take))))
 
 (defn iterator
@@ -93,7 +93,7 @@
    weakly consistent.
 
   returns: an iterator over the elements in this queue - `java.util.Iterator<DelayQueue.E>`"
-  ([^java.util.concurrent.DelayQueue this]
+  (^java.util.Iterator [^java.util.concurrent.DelayQueue this]
     (-> this (.iterator))))
 
 (defn remove
@@ -103,7 +103,7 @@
   o - element to be removed from this collection, if present - `java.lang.Object`
 
   returns: true if an element was removed as a result of this call - `boolean`"
-  ([^java.util.concurrent.DelayQueue this ^java.lang.Object o]
+  (^Boolean [^java.util.concurrent.DelayQueue this ^java.lang.Object o]
     (-> this (.remove o))))
 
 (defn drain-to
@@ -115,9 +115,9 @@
   returns: the number of elements transferred - `int`
 
   throws: java.lang.UnsupportedOperationException - if addition of elements is not supported by the specified collection"
-  ([^java.util.concurrent.DelayQueue this ^DelayQueue.E> c ^Integer max-elements]
+  (^Integer [^java.util.concurrent.DelayQueue this ^DelayQueue.E> c ^Integer max-elements]
     (-> this (.drainTo c max-elements)))
-  ([^java.util.concurrent.DelayQueue this ^DelayQueue.E> c]
+  (^Integer [^java.util.concurrent.DelayQueue this ^DelayQueue.E> c]
     (-> this (.drainTo c))))
 
 (defn poll
@@ -133,9 +133,9 @@
            an expired delay becomes available - `DelayQueue.E`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([^java.util.concurrent.DelayQueue this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^DelayQueue.E [^java.util.concurrent.DelayQueue this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.poll timeout unit)))
-  ([^java.util.concurrent.DelayQueue this]
+  (^DelayQueue.E [^java.util.concurrent.DelayQueue this]
     (-> this (.poll))))
 
 (defn remaining-capacity
@@ -143,7 +143,7 @@
    a DelayQueue is not capacity constrained.
 
   returns: Integer.MAX_VALUE - `int`"
-  ([^java.util.concurrent.DelayQueue this]
+  (^Integer [^java.util.concurrent.DelayQueue this]
     (-> this (.remainingCapacity))))
 
 (defn add
@@ -154,14 +154,14 @@
   returns: true (as specified by Collection.add(E)) - `boolean`
 
   throws: java.lang.NullPointerException - if the specified element is null"
-  ([^java.util.concurrent.DelayQueue this ^DelayQueue.E e]
+  (^Boolean [^java.util.concurrent.DelayQueue this ^DelayQueue.E e]
     (-> this (.add e))))
 
 (defn size
   "Description copied from interface: Collection
 
   returns: the number of elements in this collection - `int`"
-  ([^java.util.concurrent.DelayQueue this]
+  (^Integer [^java.util.concurrent.DelayQueue this]
     (-> this (.size))))
 
 (defn clear

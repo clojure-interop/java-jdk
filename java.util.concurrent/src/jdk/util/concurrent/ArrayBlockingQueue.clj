@@ -54,7 +54,7 @@
   "Description copied from interface: Queue
 
   returns: the head of this queue, or null if this queue is empty - `ArrayBlockingQueue.E`"
-  ([^java.util.concurrent.ArrayBlockingQueue this]
+  (^ArrayBlockingQueue.E [^java.util.concurrent.ArrayBlockingQueue this]
     (-> this (.peek))))
 
 (defn spliterator
@@ -67,7 +67,7 @@
    Spliterator.ORDERED, and Spliterator.NONNULL.
 
   returns: a Spliterator over the elements in this queue - `java.util.Spliterator<ArrayBlockingQueue.E>`"
-  ([^java.util.concurrent.ArrayBlockingQueue this]
+  (^java.util.Spliterator [^java.util.concurrent.ArrayBlockingQueue this]
     (-> this (.spliterator))))
 
 (defn offer
@@ -83,9 +83,9 @@
            the specified waiting time elapses before space is available - `boolean`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([^java.util.concurrent.ArrayBlockingQueue this ^ArrayBlockingQueue.E e ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^Boolean [^java.util.concurrent.ArrayBlockingQueue this ^ArrayBlockingQueue.E e ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.offer e timeout unit)))
-  ([^java.util.concurrent.ArrayBlockingQueue this ^ArrayBlockingQueue.E e]
+  (^Boolean [^java.util.concurrent.ArrayBlockingQueue this ^ArrayBlockingQueue.E e]
     (-> this (.offer e))))
 
 (defn put
@@ -106,14 +106,14 @@
   o - object to be checked for containment in this queue - `java.lang.Object`
 
   returns: true if this queue contains the specified element - `boolean`"
-  ([^java.util.concurrent.ArrayBlockingQueue this ^java.lang.Object o]
+  (^Boolean [^java.util.concurrent.ArrayBlockingQueue this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn to-string
   "Description copied from class: AbstractCollection
 
   returns: a string representation of this collection - `java.lang.String`"
-  ([^java.util.concurrent.ArrayBlockingQueue this]
+  (^java.lang.String [^java.util.concurrent.ArrayBlockingQueue this]
     (-> this (.toString))))
 
 (defn take
@@ -122,7 +122,7 @@
   returns: the head of this queue - `ArrayBlockingQueue.E`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([^java.util.concurrent.ArrayBlockingQueue this]
+  (^ArrayBlockingQueue.E [^java.util.concurrent.ArrayBlockingQueue this]
     (-> this (.take))))
 
 (defn iterator
@@ -133,7 +133,7 @@
    weakly consistent.
 
   returns: an iterator over the elements in this queue in proper sequence - `java.util.Iterator<ArrayBlockingQueue.E>`"
-  ([^java.util.concurrent.ArrayBlockingQueue this]
+  (^java.util.Iterator [^java.util.concurrent.ArrayBlockingQueue this]
     (-> this (.iterator))))
 
 (defn remove
@@ -153,7 +153,7 @@
   o - element to be removed from this queue, if present - `java.lang.Object`
 
   returns: true if this queue changed as a result of the call - `boolean`"
-  ([^java.util.concurrent.ArrayBlockingQueue this ^java.lang.Object o]
+  (^Boolean [^java.util.concurrent.ArrayBlockingQueue this ^java.lang.Object o]
     (-> this (.remove o))))
 
 (defn drain-to
@@ -165,9 +165,9 @@
   returns: the number of elements transferred - `int`
 
   throws: java.lang.UnsupportedOperationException - if addition of elements is not supported by the specified collection"
-  ([^java.util.concurrent.ArrayBlockingQueue this ^ArrayBlockingQueue.E> c ^Integer max-elements]
+  (^Integer [^java.util.concurrent.ArrayBlockingQueue this ^ArrayBlockingQueue.E> c ^Integer max-elements]
     (-> this (.drainTo c max-elements)))
-  ([^java.util.concurrent.ArrayBlockingQueue this ^ArrayBlockingQueue.E> c]
+  (^Integer [^java.util.concurrent.ArrayBlockingQueue this ^ArrayBlockingQueue.E> c]
     (-> this (.drainTo c))))
 
 (defn poll
@@ -180,9 +180,9 @@
            specified waiting time elapses before an element is available - `ArrayBlockingQueue.E`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([^java.util.concurrent.ArrayBlockingQueue this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^ArrayBlockingQueue.E [^java.util.concurrent.ArrayBlockingQueue this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.poll timeout unit)))
-  ([^java.util.concurrent.ArrayBlockingQueue this]
+  (^ArrayBlockingQueue.E [^java.util.concurrent.ArrayBlockingQueue this]
     (-> this (.poll))))
 
 (defn remaining-capacity
@@ -197,7 +197,7 @@
    insert or remove an element.
 
   returns: the remaining capacity - `int`"
-  ([^java.util.concurrent.ArrayBlockingQueue this]
+  (^Integer [^java.util.concurrent.ArrayBlockingQueue this]
     (-> this (.remainingCapacity))))
 
 (defn add
@@ -211,14 +211,14 @@
   returns: true (as specified by Collection.add(E)) - `boolean`
 
   throws: java.lang.IllegalStateException - if this queue is full"
-  ([^java.util.concurrent.ArrayBlockingQueue this ^ArrayBlockingQueue.E e]
+  (^Boolean [^java.util.concurrent.ArrayBlockingQueue this ^ArrayBlockingQueue.E e]
     (-> this (.add e))))
 
 (defn size
   "Returns the number of elements in this queue.
 
   returns: the number of elements in this queue - `int`"
-  ([^java.util.concurrent.ArrayBlockingQueue this]
+  (^Integer [^java.util.concurrent.ArrayBlockingQueue this]
     (-> this (.size))))
 
 (defn clear

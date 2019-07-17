@@ -75,7 +75,7 @@
    bit depths are supported.
 
   returns: the current display mode of this graphics device. - `java.awt.DisplayMode`"
-  ([^java.awt.GraphicsDevice this]
+  (^java.awt.DisplayMode [^java.awt.GraphicsDevice this]
     (-> this (.getDisplayMode))))
 
 (defn get-full-screen-window
@@ -84,7 +84,7 @@
 
   returns: the full-screen window, or null if the device is
    not in full-screen mode. - `java.awt.Window`"
-  ([^java.awt.GraphicsDevice this]
+  (^java.awt.Window [^java.awt.GraphicsDevice this]
     (-> this (.getFullScreenWindow))))
 
 (defn get-type
@@ -92,7 +92,7 @@
 
   returns: the type of this GraphicsDevice, which can
    either be TYPE_RASTER_SCREEN, TYPE_PRINTER or TYPE_IMAGE_BUFFER. - `int`"
-  ([^java.awt.GraphicsDevice this]
+  (^Integer [^java.awt.GraphicsDevice this]
     (-> this (.getType))))
 
 (defn get-display-modes
@@ -118,7 +118,7 @@
 
   returns: whether low-level display changes are supported for this
    graphics device. - `boolean`"
-  ([^java.awt.GraphicsDevice this]
+  (^Boolean [^java.awt.GraphicsDevice this]
     (-> this (.isDisplayChangeSupported))))
 
 (defn get-i-dstring
@@ -142,7 +142,7 @@
 
   returns: a String that is the identification
    of this GraphicsDevice. - `java.lang.String`"
-  ([^java.awt.GraphicsDevice this]
+  (^java.lang.String [^java.awt.GraphicsDevice this]
     (-> this (.getIDstring))))
 
 (defn window-translucency-supported?
@@ -152,7 +152,7 @@
   translucency-kind - a kind of translucency support - `java.awt.GraphicsDevice.WindowTranslucency`
 
   returns: whether the given translucency kind is supported - `boolean`"
-  ([^java.awt.GraphicsDevice this ^java.awt.GraphicsDevice.WindowTranslucency translucency-kind]
+  (^Boolean [^java.awt.GraphicsDevice this ^java.awt.GraphicsDevice.WindowTranslucency translucency-kind]
     (-> this (.isWindowTranslucencySupported translucency-kind))))
 
 (defn set-display-mode
@@ -222,7 +222,7 @@
 
   returns: whether full-screen exclusive mode is available for
    this graphics device - `boolean`"
-  ([^java.awt.GraphicsDevice this]
+  (^Boolean [^java.awt.GraphicsDevice this]
     (-> this (.isFullScreenSupported))))
 
 (defn get-available-accelerated-memory
@@ -250,7 +250,7 @@
   returns: number of bytes available in accelerated memory.
    A negative return value indicates that the amount of accelerated memory
    on this GraphicsDevice is indeterminate. - `int`"
-  ([^java.awt.GraphicsDevice this]
+  (^Integer [^java.awt.GraphicsDevice this]
     (-> this (.getAvailableAcceleratedMemory))))
 
 (defn set-full-screen-window
@@ -305,7 +305,7 @@
 
   returns: the default GraphicsConfiguration
    of this GraphicsDevice. - `java.awt.GraphicsConfiguration`"
-  ([^java.awt.GraphicsDevice this]
+  (^java.awt.GraphicsConfiguration [^java.awt.GraphicsDevice this]
     (-> this (.getDefaultConfiguration))))
 
 (defn get-best-configuration
@@ -317,6 +317,6 @@
   returns: a GraphicsConfiguration that passes
    the criteria defined in the specified
    GraphicsConfigTemplate. - `java.awt.GraphicsConfiguration`"
-  ([^java.awt.GraphicsDevice this ^java.awt.GraphicsConfigTemplate gct]
+  (^java.awt.GraphicsConfiguration [^java.awt.GraphicsDevice this ^java.awt.GraphicsConfigTemplate gct]
     (-> this (.getBestConfiguration gct))))
 

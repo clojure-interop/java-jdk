@@ -32,20 +32,20 @@
   "Returns the prime.
 
   returns: the prime. - `java.math.BigInteger`"
-  ([^java.security.spec.RSAOtherPrimeInfo this]
+  (^java.math.BigInteger [^java.security.spec.RSAOtherPrimeInfo this]
     (-> this (.getPrime))))
 
 (defn get-exponent
   "Returns the prime's exponent.
 
   returns: the primeExponent. - `java.math.BigInteger`"
-  ([^java.security.spec.RSAOtherPrimeInfo this]
+  (^java.math.BigInteger [^java.security.spec.RSAOtherPrimeInfo this]
     (-> this (.getExponent))))
 
 (defn get-crt-coefficient
   "Returns the prime's crtCoefficient.
 
   returns: the crtCoefficient. - `java.math.BigInteger`"
-  ([^java.security.spec.RSAOtherPrimeInfo this]
+  (^java.math.BigInteger [^java.security.spec.RSAOtherPrimeInfo this]
     (-> this (.getCrtCoefficient))))
 

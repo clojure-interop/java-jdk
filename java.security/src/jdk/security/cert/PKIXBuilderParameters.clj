@@ -89,13 +89,13 @@
 
   returns: the maximum number of non-self-issued intermediate certificates
     that may exist in a certification path, or -1 if there is no limit - `int`"
-  ([^java.security.cert.PKIXBuilderParameters this]
+  (^Integer [^java.security.cert.PKIXBuilderParameters this]
     (-> this (.getMaxPathLength))))
 
 (defn to-string
   "Returns a formatted string describing the parameters.
 
   returns: a formatted string describing the parameters - `java.lang.String`"
-  ([^java.security.cert.PKIXBuilderParameters this]
+  (^java.lang.String [^java.security.cert.PKIXBuilderParameters this]
     (-> this (.toString))))
 

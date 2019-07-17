@@ -158,6 +158,6 @@
    name is `job-state`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.JobState this]
+  (^java.lang.String [^javax.print.attribute.standard.JobState this]
     (-> this (.getName))))
 

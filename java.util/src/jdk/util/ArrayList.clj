@@ -93,9 +93,9 @@
   returns: true if this list changed as a result of the call - `boolean`
 
   throws: java.lang.IndexOutOfBoundsException - if the index is out of range (index < 0 || index > size())"
-  ([^java.util.ArrayList this ^Integer index ^ArrayList.E> c]
+  (^Boolean [^java.util.ArrayList this ^Integer index ^ArrayList.E> c]
     (-> this (.addAll index c)))
-  ([^java.util.ArrayList this ^ArrayList.E> c]
+  (^Boolean [^java.util.ArrayList this ^ArrayList.E> c]
     (-> this (.addAll c))))
 
 (defn spliterator
@@ -109,7 +109,7 @@
    characteristic values.
 
   returns: a Spliterator over the elements in this list - `java.util.Spliterator<ArrayList.E>`"
-  ([^java.util.ArrayList this]
+  (^java.util.Spliterator [^java.util.ArrayList this]
     (-> this (.spliterator))))
 
 (defn for-each
@@ -132,7 +132,7 @@
   filter - a predicate which returns true for elements to be removed - `ArrayList.E>`
 
   returns: true if any elements were removed - `boolean`"
-  ([^java.util.ArrayList this ^ArrayList.E> filter]
+  (^Boolean [^java.util.ArrayList this ^ArrayList.E> filter]
     (-> this (.removeIf filter))))
 
 (defn contains
@@ -144,7 +144,7 @@
   o - element whose presence in this list is to be tested - `java.lang.Object`
 
   returns: true if this list contains the specified element - `boolean`"
-  ([^java.util.ArrayList this ^java.lang.Object o]
+  (^Boolean [^java.util.ArrayList this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn list-iterator
@@ -163,9 +163,9 @@
            sequence), starting at the specified position in the list - `java.util.ListIterator<ArrayList.E>`
 
   throws: java.lang.IndexOutOfBoundsException - if the index is out of range (index < 0 || index > size())"
-  ([^java.util.ArrayList this ^Integer index]
+  (^java.util.ListIterator [^java.util.ArrayList this ^Integer index]
     (-> this (.listIterator index)))
-  ([^java.util.ArrayList this]
+  (^java.util.ListIterator [^java.util.ArrayList this]
     (-> this (.listIterator))))
 
 (defn sort
@@ -181,7 +181,7 @@
    The returned iterator is fail-fast.
 
   returns: an iterator over the elements in this list in proper sequence - `java.util.Iterator<ArrayList.E>`"
-  ([^java.util.ArrayList this]
+  (^java.util.Iterator [^java.util.ArrayList this]
     (-> this (.iterator))))
 
 (defn sub-list
@@ -216,7 +216,7 @@
   returns: a view of the specified range within this list - `java.util.List<ArrayList.E>`
 
   throws: java.lang.IndexOutOfBoundsException - if an endpoint index value is out of range (fromIndex < 0 || toIndex > size)"
-  ([^java.util.ArrayList this ^Integer from-index ^Integer to-index]
+  (^java.util.List [^java.util.ArrayList this ^Integer from-index ^Integer to-index]
     (-> this (.subList from-index to-index))))
 
 (defn last-index-of
@@ -230,7 +230,7 @@
 
   returns: the index of the last occurrence of the specified element in
            this list, or -1 if this list does not contain the element - `int`"
-  ([^java.util.ArrayList this ^java.lang.Object o]
+  (^Integer [^java.util.ArrayList this ^java.lang.Object o]
     (-> this (.lastIndexOf o))))
 
 (defn remove
@@ -243,7 +243,7 @@
   returns: the element that was removed from the list - `ArrayList.E`
 
   throws: java.lang.IndexOutOfBoundsException - if the index is out of range (index < 0 || index >= size())"
-  ([^java.util.ArrayList this ^Integer index]
+  (^ArrayList.E [^java.util.ArrayList this ^Integer index]
     (-> this (.remove index))))
 
 (defn ensure-capacity
@@ -260,7 +260,7 @@
    elements themselves are not copied.)
 
   returns: a clone of this ArrayList instance - `java.lang.Object`"
-  ([^java.util.ArrayList this]
+  (^java.lang.Object [^java.util.ArrayList this]
     (-> this (.clone))))
 
 (defn add
@@ -274,7 +274,7 @@
   throws: java.lang.IndexOutOfBoundsException - if the index is out of range (index < 0 || index > size())"
   ([^java.util.ArrayList this ^Integer index ^ArrayList.E element]
     (-> this (.add index element)))
-  ([^java.util.ArrayList this ^ArrayList.E e]
+  (^Boolean [^java.util.ArrayList this ^ArrayList.E e]
     (-> this (.add e))))
 
 (defn set
@@ -287,21 +287,21 @@
   returns: the element previously at the specified position - `ArrayList.E`
 
   throws: java.lang.IndexOutOfBoundsException - if the index is out of range (index < 0 || index >= size())"
-  ([^java.util.ArrayList this ^Integer index ^ArrayList.E element]
+  (^ArrayList.E [^java.util.ArrayList this ^Integer index ^ArrayList.E element]
     (-> this (.set index element))))
 
 (defn empty?
   "Returns true if this list contains no elements.
 
   returns: true if this list contains no elements - `boolean`"
-  ([^java.util.ArrayList this]
+  (^Boolean [^java.util.ArrayList this]
     (-> this (.isEmpty))))
 
 (defn size
   "Returns the number of elements in this list.
 
   returns: the number of elements in this list - `int`"
-  ([^java.util.ArrayList this]
+  (^Integer [^java.util.ArrayList this]
     (-> this (.size))))
 
 (defn retain-all
@@ -314,7 +314,7 @@
   returns: true if this list changed as a result of the call - `boolean`
 
   throws: java.lang.ClassCastException - if the class of an element of this list is incompatible with the specified collection (optional)"
-  ([^java.util.ArrayList this ^java.util.Collection c]
+  (^Boolean [^java.util.ArrayList this ^java.util.Collection c]
     (-> this (.retainAll c))))
 
 (defn clear
@@ -334,7 +334,7 @@
 
   returns: the index of the first occurrence of the specified element in
            this list, or -1 if this list does not contain the element - `int`"
-  ([^java.util.ArrayList this ^java.lang.Object o]
+  (^Integer [^java.util.ArrayList this ^java.lang.Object o]
     (-> this (.indexOf o))))
 
 (defn to-array
@@ -371,7 +371,7 @@
   returns: true if this list changed as a result of the call - `boolean`
 
   throws: java.lang.ClassCastException - if the class of an element of this list is incompatible with the specified collection (optional)"
-  ([^java.util.ArrayList this ^java.util.Collection c]
+  (^Boolean [^java.util.ArrayList this ^java.util.Collection c]
     (-> this (.removeAll c))))
 
 (defn get
@@ -382,7 +382,7 @@
   returns: the element at the specified position in this list - `ArrayList.E`
 
   throws: java.lang.IndexOutOfBoundsException - if the index is out of range (index < 0 || index >= size())"
-  ([^java.util.ArrayList this ^Integer index]
+  (^ArrayList.E [^java.util.ArrayList this ^Integer index]
     (-> this (.get index))))
 
 (defn trim-to-size

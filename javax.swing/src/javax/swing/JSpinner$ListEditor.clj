@@ -24,6 +24,6 @@
   "Return our spinner ancestor's SpinnerNumberModel.
 
   returns: getSpinner().getModel() - `javax.swing.SpinnerListModel`"
-  ([^javax.swing.JSpinner$ListEditor this]
+  (^javax.swing.SpinnerListModel [^javax.swing.JSpinner$ListEditor this]
     (-> this (.getModel))))
 

@@ -378,7 +378,7 @@
    CSS specification.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^javax.swing.text.html.CSS$Attribute this]
+  (^java.lang.String [^javax.swing.text.html.CSS$Attribute this]
     (-> this (.toString))))
 
 (defn get-default-value
@@ -387,7 +387,7 @@
    composite attributes), null will be returned.
 
   returns: `java.lang.String`"
-  ([^javax.swing.text.html.CSS$Attribute this]
+  (^java.lang.String [^javax.swing.text.html.CSS$Attribute this]
     (-> this (.getDefaultValue))))
 
 (defn inherited?
@@ -395,6 +395,6 @@
    from the parent or not.
 
   returns: `boolean`"
-  ([^javax.swing.text.html.CSS$Attribute this]
+  (^Boolean [^javax.swing.text.html.CSS$Attribute this]
     (-> this (.isInherited))))
 

@@ -208,14 +208,14 @@
   "Returns the event type.
 
   returns: `int`"
-  ([^java.awt.AWTEvent this]
+  (^Integer [^java.awt.AWTEvent this]
     (-> this (.getID))))
 
 (defn to-string
   "Returns a String representation of this object.
 
   returns: A a String representation of this EventObject. - `java.lang.String`"
-  ([^java.awt.AWTEvent this]
+  (^java.lang.String [^java.awt.AWTEvent this]
     (-> this (.toString))))
 
 (defn param-string
@@ -226,6 +226,6 @@
    null.
 
   returns: a string representation of this event - `java.lang.String`"
-  ([^java.awt.AWTEvent this]
+  (^java.lang.String [^java.awt.AWTEvent this]
     (-> this (.paramString))))
 

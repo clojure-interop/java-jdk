@@ -16,7 +16,7 @@
   returns: the key corresponding to this entry - `Map.Entry.K`
 
   throws: java.lang.IllegalStateException - implementations may, but are not required to, throw this exception if the entry has been removed from the backing map."
-  ([^java.util.Map$Entry this]
+  (^Map.Entry.K [^java.util.Map$Entry this]
     (-> this (.getKey))))
 
 (defn get-value
@@ -27,7 +27,7 @@
   returns: the value corresponding to this entry - `Map.Entry.V`
 
   throws: java.lang.IllegalStateException - implementations may, but are not required to, throw this exception if the entry has been removed from the backing map."
-  ([^java.util.Map$Entry this]
+  (^Map.Entry.V [^java.util.Map$Entry this]
     (-> this (.getValue))))
 
 (defn set-value
@@ -41,7 +41,7 @@
   returns: old value corresponding to the entry - `Map.Entry.V`
 
   throws: java.lang.UnsupportedOperationException - if the put operation is not supported by the backing map"
-  ([^java.util.Map$Entry this ^Map.Entry.V value]
+  (^Map.Entry.V [^java.util.Map$Entry this ^Map.Entry.V value]
     (-> this (.setValue value))))
 
 (defn equals
@@ -62,7 +62,7 @@
 
   returns: true if the specified object is equal to this map
            entry - `boolean`"
-  ([^java.util.Map$Entry this ^java.lang.Object o]
+  (^Boolean [^java.util.Map$Entry this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn hash-code
@@ -77,7 +77,7 @@
    contract of Object.hashCode.
 
   returns: the hash code value for this map entry - `int`"
-  ([^java.util.Map$Entry this]
+  (^Integer [^java.util.Map$Entry this]
     (-> this (.hashCode))))
 
 (defn *comparing-by-key

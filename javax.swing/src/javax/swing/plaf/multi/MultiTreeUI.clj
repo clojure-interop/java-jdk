@@ -18,7 +18,7 @@
   a - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent a]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent a]
     (MultiTreeUI/createUI a)))
 
 (defn install-ui
@@ -35,7 +35,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.awt.Dimension`"
-  ([^javax.swing.plaf.multi.MultiTreeUI this ^javax.swing.JComponent a]
+  (^java.awt.Dimension [^javax.swing.plaf.multi.MultiTreeUI this ^javax.swing.JComponent a]
     (-> this (.getMinimumSize a))))
 
 (defn get-row-for-path
@@ -46,7 +46,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `int`"
-  ([^javax.swing.plaf.multi.MultiTreeUI this ^javax.swing.JTree a ^javax.swing.tree.TreePath b]
+  (^Integer [^javax.swing.plaf.multi.MultiTreeUI this ^javax.swing.JTree a ^javax.swing.tree.TreePath b]
     (-> this (.getRowForPath a b))))
 
 (defn get-maximum-size
@@ -56,7 +56,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.awt.Dimension`"
-  ([^javax.swing.plaf.multi.MultiTreeUI this ^javax.swing.JComponent a]
+  (^java.awt.Dimension [^javax.swing.plaf.multi.MultiTreeUI this ^javax.swing.JComponent a]
     (-> this (.getMaximumSize a))))
 
 (defn get-accessible-child
@@ -67,7 +67,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `javax.accessibility.Accessible`"
-  ([^javax.swing.plaf.multi.MultiTreeUI this ^javax.swing.JComponent a ^Integer b]
+  (^javax.accessibility.Accessible [^javax.swing.plaf.multi.MultiTreeUI this ^javax.swing.JComponent a ^Integer b]
     (-> this (.getAccessibleChild a b))))
 
 (defn get-u-is
@@ -87,7 +87,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.awt.Rectangle`"
-  ([^javax.swing.plaf.multi.MultiTreeUI this ^javax.swing.JTree a ^javax.swing.tree.TreePath b]
+  (^java.awt.Rectangle [^javax.swing.plaf.multi.MultiTreeUI this ^javax.swing.JTree a ^javax.swing.tree.TreePath b]
     (-> this (.getPathBounds a b))))
 
 (defn uninstall-ui
@@ -106,7 +106,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `boolean`"
-  ([^javax.swing.plaf.multi.MultiTreeUI this ^javax.swing.JComponent a ^Integer b ^Integer c]
+  (^Boolean [^javax.swing.plaf.multi.MultiTreeUI this ^javax.swing.JComponent a ^Integer b ^Integer c]
     (-> this (.contains a b c))))
 
 (defn get-row-count
@@ -116,7 +116,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `int`"
-  ([^javax.swing.plaf.multi.MultiTreeUI this ^javax.swing.JTree a]
+  (^Integer [^javax.swing.plaf.multi.MultiTreeUI this ^javax.swing.JTree a]
     (-> this (.getRowCount a))))
 
 (defn update
@@ -134,7 +134,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `int`"
-  ([^javax.swing.plaf.multi.MultiTreeUI this ^javax.swing.JComponent a]
+  (^Integer [^javax.swing.plaf.multi.MultiTreeUI this ^javax.swing.JComponent a]
     (-> this (.getAccessibleChildrenCount a))))
 
 (defn get-closest-path-for-location
@@ -146,7 +146,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `javax.swing.tree.TreePath`"
-  ([^javax.swing.plaf.multi.MultiTreeUI this ^javax.swing.JTree a ^Integer b ^Integer c]
+  (^javax.swing.tree.TreePath [^javax.swing.plaf.multi.MultiTreeUI this ^javax.swing.JTree a ^Integer b ^Integer c]
     (-> this (.getClosestPathForLocation a b c))))
 
 (defn paint
@@ -165,7 +165,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `javax.swing.tree.TreePath`"
-  ([^javax.swing.plaf.multi.MultiTreeUI this ^javax.swing.JTree a ^Integer b]
+  (^javax.swing.tree.TreePath [^javax.swing.plaf.multi.MultiTreeUI this ^javax.swing.JTree a ^Integer b]
     (-> this (.getPathForRow a b))))
 
 (defn get-editing-path
@@ -175,7 +175,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `javax.swing.tree.TreePath`"
-  ([^javax.swing.plaf.multi.MultiTreeUI this ^javax.swing.JTree a]
+  (^javax.swing.tree.TreePath [^javax.swing.plaf.multi.MultiTreeUI this ^javax.swing.JTree a]
     (-> this (.getEditingPath a))))
 
 (defn editing?
@@ -185,7 +185,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `boolean`"
-  ([^javax.swing.plaf.multi.MultiTreeUI this ^javax.swing.JTree a]
+  (^Boolean [^javax.swing.plaf.multi.MultiTreeUI this ^javax.swing.JTree a]
     (-> this (.isEditing a))))
 
 (defn start-editing-at-path
@@ -203,7 +203,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.awt.Dimension`"
-  ([^javax.swing.plaf.multi.MultiTreeUI this ^javax.swing.JComponent a]
+  (^java.awt.Dimension [^javax.swing.plaf.multi.MultiTreeUI this ^javax.swing.JComponent a]
     (-> this (.getPreferredSize a))))
 
 (defn cancel-editing
@@ -220,6 +220,6 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `boolean`"
-  ([^javax.swing.plaf.multi.MultiTreeUI this ^javax.swing.JTree a]
+  (^Boolean [^javax.swing.plaf.multi.MultiTreeUI this ^javax.swing.JTree a]
     (-> this (.stopEditing a))))
 

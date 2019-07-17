@@ -850,7 +850,7 @@
   returns: the enum constant with the specified name - `java.lang.Character.UnicodeScript`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^java.lang.Character.UnicodeScript [^java.lang.String name]
     (Character$UnicodeScript/valueOf name)))
 
 (defn *of
@@ -863,7 +863,7 @@
             Unicode script of which this character is assigned to. - `java.lang.Character.UnicodeScript`
 
   throws: java.lang.IllegalArgumentException - if the specified codePoint is an invalid Unicode code point."
-  ([^Integer code-point]
+  (^java.lang.Character.UnicodeScript [^Integer code-point]
     (Character$UnicodeScript/of code-point)))
 
 (defn *for-name
@@ -885,6 +885,6 @@
            by scriptName - `java.lang.Character.UnicodeScript`
 
   throws: java.lang.IllegalArgumentException - if scriptName is an invalid name"
-  ([^java.lang.String script-name]
+  (^java.lang.Character.UnicodeScript [^java.lang.String script-name]
     (Character$UnicodeScript/forName script-name)))
 

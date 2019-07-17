@@ -48,13 +48,13 @@
 
   returns: the message type (INFORMATION,
                     WARNING or ERROR). - `int`"
-  ([^javax.security.auth.callback.TextOutputCallback this]
+  (^Integer [^javax.security.auth.callback.TextOutputCallback this]
     (-> this (.getMessageType))))
 
 (defn get-message
   "Get the message to be displayed.
 
   returns: the message to be displayed. - `java.lang.String`"
-  ([^javax.security.auth.callback.TextOutputCallback this]
+  (^java.lang.String [^javax.security.auth.callback.TextOutputCallback this]
     (-> this (.getMessage))))
 

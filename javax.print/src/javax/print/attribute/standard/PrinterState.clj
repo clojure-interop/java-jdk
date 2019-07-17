@@ -66,6 +66,6 @@
    For class PrinterState, the category name is `printer-state`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.PrinterState this]
+  (^java.lang.String [^javax.print.attribute.standard.PrinterState this]
     (-> this (.getName))))
 

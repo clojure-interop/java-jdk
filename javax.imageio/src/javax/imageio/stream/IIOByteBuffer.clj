@@ -47,7 +47,7 @@
    getData at which the data of interest start.
 
   returns: an int offset. - `int`"
-  ([^javax.imageio.stream.IIOByteBuffer this]
+  (^Integer [^javax.imageio.stream.IIOByteBuffer this]
     (-> this (.getOffset))))
 
 (defn set-offset
@@ -63,7 +63,7 @@
    array returned by getData.
 
   returns: an int length. - `int`"
-  ([^javax.imageio.stream.IIOByteBuffer this]
+  (^Integer [^javax.imageio.stream.IIOByteBuffer this]
     (-> this (.getLength))))
 
 (defn set-length

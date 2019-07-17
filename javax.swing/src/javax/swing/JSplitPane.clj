@@ -199,21 +199,21 @@
   "Returns the component above, or to the left of the divider.
 
   returns: the Component displayed in that position - `java.awt.Component`"
-  ([^javax.swing.JSplitPane this]
+  (^java.awt.Component [^javax.swing.JSplitPane this]
     (-> this (.getTopComponent))))
 
 (defn get-right-component
   "Returns the component to the right (or below) the divider.
 
   returns: the Component displayed in that position - `java.awt.Component`"
-  ([^javax.swing.JSplitPane this]
+  (^java.awt.Component [^javax.swing.JSplitPane this]
     (-> this (.getRightComponent))))
 
 (defn get-orientation
   "Returns the orientation.
 
   returns: an integer giving the orientation - `int`"
-  ([^javax.swing.JSplitPane this]
+  (^Integer [^javax.swing.JSplitPane this]
     (-> this (.getOrientation))))
 
 (defn get-divider-location
@@ -223,7 +223,7 @@
    value bigger than the current size).
 
   returns: an integer specifying the location of the divider - `int`"
-  ([^javax.swing.JSplitPane this]
+  (^Integer [^javax.swing.JSplitPane this]
     (-> this (.getDividerLocation))))
 
 (defn set-divider-size
@@ -240,7 +240,7 @@
   returns: an integer specifying a UI-specific value for the maximum
             location (typically a pixel count); or -1 if the  UI is
             null - `int`"
-  ([^javax.swing.JSplitPane this]
+  (^Integer [^javax.swing.JSplitPane this]
     (-> this (.getMaximumDividerLocation))))
 
 (defn set-one-touch-expandable
@@ -260,7 +260,7 @@
   "Returns the component below, or to the right of the divider.
 
   returns: the Component displayed in that position - `java.awt.Component`"
-  ([^javax.swing.JSplitPane this]
+  (^java.awt.Component [^javax.swing.JSplitPane this]
     (-> this (.getBottomComponent))))
 
 (defn set-divider-location
@@ -291,14 +291,14 @@
   "Returns the component to the left (or above) the divider.
 
   returns: the Component displayed in that position - `java.awt.Component`"
-  ([^javax.swing.JSplitPane this]
+  (^java.awt.Component [^javax.swing.JSplitPane this]
     (-> this (.getLeftComponent))))
 
 (defn get-ui-class-id
   "Returns the name of the L&F class that renders this component.
 
   returns: the string `SplitPaneUI` - `java.lang.String`"
-  ([^javax.swing.JSplitPane this]
+  (^java.lang.String [^javax.swing.JSplitPane this]
     (-> this (.getUIClassID))))
 
 (defn validate-root?
@@ -308,14 +308,14 @@
    will validate the JSplitPane and all its descendants.
 
   returns: true - `boolean`"
-  ([^javax.swing.JSplitPane this]
+  (^Boolean [^javax.swing.JSplitPane this]
     (-> this (.isValidateRoot))))
 
 (defn one-touch-expandable?
   "Gets the oneTouchExpandable property.
 
   returns: the value of the oneTouchExpandable property - `boolean`"
-  ([^javax.swing.JSplitPane this]
+  (^Boolean [^javax.swing.JSplitPane this]
     (-> this (.isOneTouchExpandable))))
 
 (defn set-ui
@@ -329,7 +329,7 @@
   "Returns the size of the divider.
 
   returns: an integer giving the size of the divider in pixels - `int`"
-  ([^javax.swing.JSplitPane this]
+  (^Integer [^javax.swing.JSplitPane this]
     (-> this (.getDividerSize))))
 
 (defn reset-to-preferred-sizes
@@ -361,7 +361,7 @@
    current look and feel.
 
   returns: the SplitPaneUI object that renders this component - `javax.swing.plaf.SplitPaneUI`"
-  ([^javax.swing.JSplitPane this]
+  (^javax.swing.plaf.SplitPaneUI [^javax.swing.JSplitPane this]
     (-> this (.getUI))))
 
 (defn get-minimum-divider-location
@@ -371,7 +371,7 @@
   returns: an integer specifying a UI-specific value for the minimum
             location (typically a pixel count); or -1 if the UI is
             null - `int`"
-  ([^javax.swing.JSplitPane this]
+  (^Integer [^javax.swing.JSplitPane this]
     (-> this (.getMinimumDividerLocation))))
 
 (defn get-accessible-context
@@ -382,7 +382,7 @@
 
   returns: an AccessibleJSplitPane that serves as the
            AccessibleContext of this JSplitPane - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.JSplitPane this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.JSplitPane this]
     (-> this (.getAccessibleContext))))
 
 (defn get-resize-weight
@@ -390,7 +390,7 @@
 
   returns: how extra space is to be distributed on a resize of the
            split pane - `double`"
-  ([^javax.swing.JSplitPane this]
+  (^Double [^javax.swing.JSplitPane this]
     (-> this (.getResizeWeight))))
 
 (defn set-orientation
@@ -434,7 +434,7 @@
   returns: an integer specifying the last divider location as a count
          of pixels from the left (or upper) edge of the pane to the
          left (or upper) edge of the divider - `int`"
-  ([^javax.swing.JSplitPane this]
+  (^Integer [^javax.swing.JSplitPane this]
     (-> this (.getLastDividerLocation))))
 
 (defn set-continuous-layout
@@ -461,7 +461,7 @@
   "Gets the continuousLayout property.
 
   returns: the value of the continuousLayout property - `boolean`"
-  ([^javax.swing.JSplitPane this]
+  (^Boolean [^javax.swing.JSplitPane this]
     (-> this (.isContinuousLayout))))
 
 (defn set-left-component

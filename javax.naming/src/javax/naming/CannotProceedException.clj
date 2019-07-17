@@ -38,7 +38,7 @@
 
   returns: Possibly null environment property set.
             null means no environment was recorded for this exception. - `java.util.Hashtable<?,?>`"
-  ([^javax.naming.CannotProceedException this]
+  (^java.util.Hashtable [^javax.naming.CannotProceedException this]
     (-> this (.getEnvironment))))
 
 (defn set-environment
@@ -56,7 +56,7 @@
   returns: The possibly null part of the new name that has not been resolved.
             It is a composite name. It can be null, which means
             the remaining new name field has not been set. - `javax.naming.Name`"
-  ([^javax.naming.CannotProceedException this]
+  (^javax.naming.Name [^javax.naming.CannotProceedException this]
     (-> this (.getRemainingNewName))))
 
 (defn set-remaining-new-name
@@ -86,7 +86,7 @@
   returns: The name of the resolved object, relative to
             altNameCtx.
             It is a composite name.  If null, then no name is specified. - `javax.naming.Name`"
-  ([^javax.naming.CannotProceedException this]
+  (^javax.naming.Name [^javax.naming.CannotProceedException this]
     (-> this (.getAltName))))
 
 (defn set-alt-name
@@ -104,7 +104,7 @@
 
   returns: The context relative to which altName is named.
             If null, then the default initial context is implied. - `javax.naming.Context`"
-  ([^javax.naming.CannotProceedException this]
+  (^javax.naming.Context [^javax.naming.CannotProceedException this]
     (-> this (.getAltNameCtx))))
 
 (defn set-alt-name-ctx

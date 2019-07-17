@@ -91,6 +91,6 @@
   returns: the enum constant with the specified name - `java.security.cert.PKIXReason`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^java.security.cert.PKIXReason [^java.lang.String name]
     (PKIXReason/valueOf name)))
 

@@ -51,7 +51,7 @@
    by printers obtained from this factory.
 
   returns: the output format described as a mime type. - `java.lang.String`"
-  ([^javax.print.StreamPrintServiceFactory this]
+  (^java.lang.String [^javax.print.StreamPrintServiceFactory this]
     (-> this (.getOutputFormat))))
 
 (defn get-supported-doc-flavors
@@ -94,6 +94,6 @@
 
   returns: a PrintService which will generate the format specified by the
    DocFlavor supported by this Factory. - `javax.print.StreamPrintService`"
-  ([^javax.print.StreamPrintServiceFactory this ^java.io.OutputStream out]
+  (^javax.print.StreamPrintService [^javax.print.StreamPrintServiceFactory this ^java.io.OutputStream out]
     (-> this (.getPrintService out))))
 

@@ -38,7 +38,7 @@
   returns: the result of the build algorithm - `java.security.cert.CertPathBuilderResult`
 
   throws: java.security.cert.CertPathBuilderException - if the builder is unable to construct a certification path that satisfies the specified parameters"
-  ([^java.security.cert.CertPathBuilderSpi this ^java.security.cert.CertPathParameters params]
+  (^java.security.cert.CertPathBuilderResult [^java.security.cert.CertPathBuilderSpi this ^java.security.cert.CertPathParameters params]
     (-> this (.engineBuild params))))
 
 (defn engine-get-revocation-checker
@@ -59,6 +59,6 @@
    check the revocation status of certificates - `java.security.cert.CertPathChecker`
 
   throws: java.lang.UnsupportedOperationException - if this method is not supported"
-  ([^java.security.cert.CertPathBuilderSpi this]
+  (^java.security.cert.CertPathChecker [^java.security.cert.CertPathBuilderSpi this]
     (-> this (.engineGetRevocationChecker))))
 

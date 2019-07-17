@@ -31,7 +31,7 @@
 
   returns: A list of String each of which is a
            currently registered Logger name. - `java.util.List<java.lang.String>`"
-  ([^java.util.logging.LoggingMXBean this]
+  (^java.util.List [^java.util.logging.LoggingMXBean this]
     (-> this (.getLoggerNames))))
 
 (defn get-logger-level
@@ -55,7 +55,7 @@
            an empty string if the log level of the specified logger
            is null.  If the specified logger does not
            exist, null is returned. - `java.lang.String`"
-  ([^java.util.logging.LoggingMXBean this ^java.lang.String logger-name]
+  (^java.lang.String [^java.util.logging.LoggingMXBean this ^java.lang.String logger-name]
     (-> this (.getLoggerLevel logger-name))))
 
 (defn set-logger-level
@@ -87,6 +87,6 @@
            an empty string if the specified logger is the root logger.
            If the specified logger does not exist, null
            is returned. - `java.lang.String`"
-  ([^java.util.logging.LoggingMXBean this ^java.lang.String logger-name]
+  (^java.lang.String [^java.util.logging.LoggingMXBean this ^java.lang.String logger-name]
     (-> this (.getParentLoggerName logger-name))))
 

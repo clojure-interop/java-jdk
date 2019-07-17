@@ -21,7 +21,7 @@
    various platform-specific ways to accelerate an image, including
    pixmaps, VRAM, AGP.  This is the general acceleration method (as
    opposed to residing in system memory). - `boolean`"
-  ([^java.awt.ImageCapabilities this]
+  (^Boolean [^java.awt.ImageCapabilities this]
     (-> this (.isAccelerated))))
 
 (defn true-volatile?
@@ -31,13 +31,13 @@
 
   returns: whether or not a volatile image is subject to losing its surfaces
    at the whim of the operating system. - `boolean`"
-  ([^java.awt.ImageCapabilities this]
+  (^Boolean [^java.awt.ImageCapabilities this]
     (-> this (.isTrueVolatile))))
 
 (defn clone
   "Description copied from class: Object
 
   returns: a copy of this ImageCapabilities object. - `java.lang.Object`"
-  ([^java.awt.ImageCapabilities this]
+  (^java.lang.Object [^java.awt.ImageCapabilities this]
     (-> this (.clone))))
 

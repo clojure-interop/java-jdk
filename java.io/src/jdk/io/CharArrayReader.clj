@@ -35,9 +35,9 @@
             the end of the stream has been reached - `int`
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.io.CharArrayReader this b ^Integer off ^Integer len]
+  (^Integer [^java.io.CharArrayReader this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  ([^java.io.CharArrayReader this]
+  (^Integer [^java.io.CharArrayReader this]
     (-> this (.read))))
 
 (defn skip
@@ -53,7 +53,7 @@
   returns: The number of characters actually skipped - `long`
 
   throws: java.io.IOException - If the stream is closed, or an I/O error occurs"
-  ([^java.io.CharArrayReader this ^Long n]
+  (^Long [^java.io.CharArrayReader this ^Long n]
     (-> this (.skip n))))
 
 (defn ready
@@ -65,14 +65,14 @@
    next read will block. - `boolean`
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.io.CharArrayReader this]
+  (^Boolean [^java.io.CharArrayReader this]
     (-> this (.ready))))
 
 (defn mark-supported
   "Tells whether this stream supports the mark() operation, which it does.
 
   returns: true if and only if this stream supports the mark operation. - `boolean`"
-  ([^java.io.CharArrayReader this]
+  (^Boolean [^java.io.CharArrayReader this]
     (-> this (.markSupported))))
 
 (defn mark

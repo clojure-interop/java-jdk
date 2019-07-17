@@ -51,13 +51,13 @@
   insets - the object to be reinitialized - `java.awt.Insets`
 
   returns: the insets object - `java.awt.Insets`"
-  ([^javax.swing.border.SoftBevelBorder this ^java.awt.Component c ^java.awt.Insets insets]
+  (^java.awt.Insets [^javax.swing.border.SoftBevelBorder this ^java.awt.Component c ^java.awt.Insets insets]
     (-> this (.getBorderInsets c insets))))
 
 (defn border-opaque?
   "Returns whether or not the border is opaque.
 
   returns: false - `boolean`"
-  ([^javax.swing.border.SoftBevelBorder this]
+  (^Boolean [^javax.swing.border.SoftBevelBorder this]
     (-> this (.isBorderOpaque))))
 

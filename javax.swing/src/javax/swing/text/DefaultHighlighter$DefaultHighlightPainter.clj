@@ -18,7 +18,7 @@
   "Returns the color of the highlight.
 
   returns: the color - `java.awt.Color`"
-  ([^javax.swing.text.DefaultHighlighter$DefaultHighlightPainter this]
+  (^java.awt.Color [^javax.swing.text.DefaultHighlighter$DefaultHighlightPainter this]
     (-> this (.getColor))))
 
 (defn paint
@@ -43,6 +43,6 @@
   view - View painting for - `javax.swing.text.View`
 
   returns: region drawing occurred in - `java.awt.Shape`"
-  ([^javax.swing.text.DefaultHighlighter$DefaultHighlightPainter this ^java.awt.Graphics g ^Integer offs-0 ^Integer offs-1 ^java.awt.Shape bounds ^javax.swing.text.JTextComponent c ^javax.swing.text.View view]
+  (^java.awt.Shape [^javax.swing.text.DefaultHighlighter$DefaultHighlightPainter this ^java.awt.Graphics g ^Integer offs-0 ^Integer offs-1 ^java.awt.Shape bounds ^javax.swing.text.JTextComponent c ^javax.swing.text.View view]
     (-> this (.paintLayer g offs-0 offs-1 bounds c view))))
 

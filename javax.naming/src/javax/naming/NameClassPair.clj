@@ -40,7 +40,7 @@
 
   returns: The possibly null class name of object bound.
             It is null if the object bound is null. - `java.lang.String`"
-  ([^javax.naming.NameClassPair this]
+  (^java.lang.String [^javax.naming.NameClassPair this]
     (-> this (.getClassName))))
 
 (defn set-name
@@ -58,7 +58,7 @@
    for debugging and is not meant to be interpreted programmatically.
 
   returns: The string representation of this name/class pair. - `java.lang.String`"
-  ([^javax.naming.NameClassPair this]
+  (^java.lang.String [^javax.naming.NameClassPair this]
     (-> this (.toString))))
 
 (defn set-name-in-namespace
@@ -82,7 +82,7 @@
    If isRelative() is false, this name is a URL string.
 
   returns: The non-null name of this binding. - `java.lang.String`"
-  ([^javax.naming.NameClassPair this]
+  (^java.lang.String [^javax.naming.NameClassPair this]
     (-> this (.getName))))
 
 (defn set-class-name
@@ -109,7 +109,7 @@
   returns: true if the name of this binding is relative to the
             target context;
             false if the name of this binding is a URL string. - `boolean`"
-  ([^javax.naming.NameClassPair this]
+  (^Boolean [^javax.naming.NameClassPair this]
     (-> this (.isRelative))))
 
 (defn get-name-in-namespace
@@ -130,6 +130,6 @@
   returns: The full name of this binding. - `java.lang.String`
 
   throws: java.lang.UnsupportedOperationException - if the notion of full name does not apply to this binding in the naming system."
-  ([^javax.naming.NameClassPair this]
+  (^java.lang.String [^javax.naming.NameClassPair this]
     (-> this (.getNameInNamespace))))
 

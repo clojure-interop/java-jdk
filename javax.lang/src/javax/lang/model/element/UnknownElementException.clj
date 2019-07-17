@@ -26,13 +26,13 @@
    serialized and then read back in.
 
   returns: the unknown element, or null if unavailable - `javax.lang.model.element.Element`"
-  ([^javax.lang.model.element.UnknownElementException this]
+  (^javax.lang.model.element.Element [^javax.lang.model.element.UnknownElementException this]
     (-> this (.getUnknownElement))))
 
 (defn get-argument
   "Returns the additional argument.
 
   returns: the additional argument - `java.lang.Object`"
-  ([^javax.lang.model.element.UnknownElementException this]
+  (^java.lang.Object [^javax.lang.model.element.UnknownElementException this]
     (-> this (.getArgument))))
 

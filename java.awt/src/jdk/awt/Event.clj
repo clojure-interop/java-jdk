@@ -735,7 +735,7 @@
 
   returns: true if the key is down;
               false otherwise. - `boolean`"
-  ([^java.awt.Event this]
+  (^Boolean [^java.awt.Event this]
     (-> this (.shiftDown))))
 
 (defn control-down
@@ -747,7 +747,7 @@
 
   returns: true if the key is down;
               false otherwise. - `boolean`"
-  ([^java.awt.Event this]
+  (^Boolean [^java.awt.Event this]
     (-> this (.controlDown))))
 
 (defn meta-down
@@ -759,7 +759,7 @@
 
   returns: true if the key is down;
               false otherwise. - `boolean`"
-  ([^java.awt.Event this]
+  (^Boolean [^java.awt.Event this]
     (-> this (.metaDown))))
 
 (defn to-string
@@ -771,6 +771,6 @@
 
   returns: a string that represents the event and the values
                    of its member fields. - `java.lang.String`"
-  ([^java.awt.Event this]
+  (^java.lang.String [^java.awt.Event this]
     (-> this (.toString))))
 

@@ -23,20 +23,20 @@
   returns: A new pipe - `java.nio.channels.Pipe`
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([]
+  (^java.nio.channels.Pipe []
     (Pipe/open )))
 
 (defn source
   "Returns this pipe's source channel.
 
   returns: This pipe's source channel - `java.nio.channels.Pipe.SourceChannel`"
-  ([^java.nio.channels.Pipe this]
+  (^java.nio.channels.Pipe.SourceChannel [^java.nio.channels.Pipe this]
     (-> this (.source))))
 
 (defn sink
   "Returns this pipe's sink channel.
 
   returns: This pipe's sink channel - `java.nio.channels.Pipe.SinkChannel`"
-  ([^java.nio.channels.Pipe this]
+  (^java.nio.channels.Pipe.SinkChannel [^java.nio.channels.Pipe this]
     (-> this (.sink))))
 

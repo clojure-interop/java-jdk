@@ -33,7 +33,7 @@
 
   returns: the cause of this TransformException or
            null if the cause is nonexistent or unknown. - `java.lang.Throwable`"
-  ([^javax.xml.crypto.dsig.TransformException this]
+  (^java.lang.Throwable [^javax.xml.crypto.dsig.TransformException this]
     (-> this (.getCause))))
 
 (defn print-stack-trace

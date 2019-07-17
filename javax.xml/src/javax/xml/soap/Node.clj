@@ -20,7 +20,7 @@
             immediate child of this Node object that is a
             Text object if such a child exists;
             null otherwise. - `java.lang.String`"
-  ([^javax.xml.soap.Node this]
+  (^java.lang.String [^javax.xml.soap.Node this]
     (-> this (.getValue))))
 
 (defn set-value
@@ -57,7 +57,7 @@
            Node object is root - `javax.xml.soap.SOAPElement`
 
   throws: java.lang.UnsupportedOperationException - if the whole tree is not kept in memory"
-  ([^javax.xml.soap.Node this]
+  (^javax.xml.soap.SOAPElement [^javax.xml.soap.Node this]
     (-> this (.getParentElement))))
 
 (defn detach-node

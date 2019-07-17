@@ -105,27 +105,27 @@
   "Returns whether the text range is selected.
 
   returns: `boolean`"
-  ([^java.awt.im.InputMethodHighlight this]
+  (^Boolean [^java.awt.im.InputMethodHighlight this]
     (-> this (.isSelected))))
 
 (defn get-state
   "Returns the conversion state of the text range.
 
   returns: The conversion state for the text range - RAW_TEXT or CONVERTED_TEXT. - `int`"
-  ([^java.awt.im.InputMethodHighlight this]
+  (^Integer [^java.awt.im.InputMethodHighlight this]
     (-> this (.getState))))
 
 (defn get-variation
   "Returns the variation of the text range.
 
   returns: `int`"
-  ([^java.awt.im.InputMethodHighlight this]
+  (^Integer [^java.awt.im.InputMethodHighlight this]
     (-> this (.getVariation))))
 
 (defn get-style
   "Returns the rendering style attributes for the text range, or null.
 
   returns: `java.util.Map<java.awt.font.TextAttribute,?>`"
-  ([^java.awt.im.InputMethodHighlight this]
+  (^java.util.Map [^java.awt.im.InputMethodHighlight this]
     (-> this (.getStyle))))
 

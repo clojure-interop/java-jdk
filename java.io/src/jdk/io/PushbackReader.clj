@@ -29,9 +29,9 @@
                stream has been reached - `int`
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.io.PushbackReader this cbuf ^Integer off ^Integer len]
+  (^Integer [^java.io.PushbackReader this cbuf ^Integer off ^Integer len]
     (-> this (.read cbuf off len)))
-  ([^java.io.PushbackReader this]
+  (^Integer [^java.io.PushbackReader this]
     (-> this (.read))))
 
 (defn unread
@@ -59,7 +59,7 @@
    next read will block. - `boolean`
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.io.PushbackReader this]
+  (^Boolean [^java.io.PushbackReader this]
     (-> this (.ready))))
 
 (defn mark
@@ -85,7 +85,7 @@
    not.
 
   returns: true if and only if this stream supports the mark operation. - `boolean`"
-  ([^java.io.PushbackReader this]
+  (^Boolean [^java.io.PushbackReader this]
     (-> this (.markSupported))))
 
 (defn close
@@ -107,6 +107,6 @@
   returns: The number of characters actually skipped - `long`
 
   throws: java.lang.IllegalArgumentException - If n is negative."
-  ([^java.io.PushbackReader this ^Long n]
+  (^Long [^java.io.PushbackReader this ^Long n]
     (-> this (.skip n))))
 

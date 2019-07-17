@@ -105,7 +105,7 @@
 
   returns: true if client authentication is required,
             or false if no client authentication is desired. - `boolean`"
-  ([^javax.net.ssl.SSLSocket this]
+  (^Boolean [^javax.net.ssl.SSLSocket this]
     (-> this (.getNeedClientAuth))))
 
 (defn get-supported-protocols
@@ -147,7 +147,7 @@
            SSLSession currently being negotiated. - `javax.net.ssl.SSLSession`
 
   throws: java.lang.UnsupportedOperationException - if the underlying provider does not implement the operation."
-  ([^javax.net.ssl.SSLSocket this]
+  (^javax.net.ssl.SSLSession [^javax.net.ssl.SSLSocket this]
     (-> this (.getHandshakeSession))))
 
 (defn set-use-client-mode
@@ -182,7 +182,7 @@
 
   returns: true if the socket should do handshaking
             in `client` mode - `boolean`"
-  ([^javax.net.ssl.SSLSocket this]
+  (^Boolean [^javax.net.ssl.SSLSocket this]
     (-> this (.getUseClientMode))))
 
 (defn set-want-client-auth
@@ -213,7 +213,7 @@
    are always non-null.
 
   returns: the SSLParameters in effect for this SSLSocket. - `javax.net.ssl.SSLParameters`"
-  ([^javax.net.ssl.SSLSocket this]
+  (^javax.net.ssl.SSLParameters [^javax.net.ssl.SSLSocket this]
     (-> this (.getSSLParameters))))
 
 (defn get-session
@@ -232,7 +232,7 @@
    cipher suite of `SSL_NULL_WITH_NULL_NULL`.
 
   returns: the SSLSession - `javax.net.ssl.SSLSession`"
-  ([^javax.net.ssl.SSLSocket this]
+  (^javax.net.ssl.SSLSession [^javax.net.ssl.SSLSocket this]
     (-> this (.getSession))))
 
 (defn get-enabled-cipher-suites
@@ -319,7 +319,7 @@
   suites - Names of all the cipher suites to enable - `java.lang.String[]`
 
   throws: java.lang.IllegalArgumentException - when one or more of the ciphers named by the parameter is not supported, or when the parameter is null."
-  ([^javax.net.ssl.SSLSocket this ^java.lang.String[] suites]
+  ([^javax.net.ssl.SSLSocket this suites]
     (-> this (.setEnabledCipherSuites suites))))
 
 (defn get-enable-session-creation?
@@ -328,7 +328,7 @@
   returns: true indicates that sessions may be created; this
             is the default.  false indicates that an existing session
             must be resumed - `boolean`"
-  ([^javax.net.ssl.SSLSocket this]
+  (^Boolean [^javax.net.ssl.SSLSocket this]
     (-> this (.getEnableSessionCreation))))
 
 (defn add-handshake-completed-listener
@@ -362,7 +362,7 @@
   protocols - Names of all the protocols to enable. - `java.lang.String[]`
 
   throws: java.lang.IllegalArgumentException - when one or more of the protocols named by the parameter is not supported or when the protocols parameter is null."
-  ([^javax.net.ssl.SSLSocket this ^java.lang.String[] protocols]
+  ([^javax.net.ssl.SSLSocket this protocols]
     (-> this (.setEnabledProtocols protocols))))
 
 (defn set-need-client-auth
@@ -402,6 +402,6 @@
 
   returns: true if client authentication is requested,
             or false if no client authentication is desired. - `boolean`"
-  ([^javax.net.ssl.SSLSocket this]
+  (^Boolean [^javax.net.ssl.SSLSocket this]
     (-> this (.getWantClientAuth))))
 

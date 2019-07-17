@@ -18,13 +18,13 @@
 
 (defn get-front-buffer-capabilities
   "returns: the image capabilities of the front (displayed) buffer - `java.awt.ImageCapabilities`"
-  ([^java.awt.BufferCapabilities this]
+  (^java.awt.ImageCapabilities [^java.awt.BufferCapabilities this]
     (-> this (.getFrontBufferCapabilities))))
 
 (defn get-back-buffer-capabilities
   "returns: the image capabilities of all back buffers (intermediate buffers
    are considered back buffers) - `java.awt.ImageCapabilities`"
-  ([^java.awt.BufferCapabilities this]
+  (^java.awt.ImageCapabilities [^java.awt.BufferCapabilities this]
     (-> this (.getBackBufferCapabilities))))
 
 (defn page-flipping?
@@ -36,7 +36,7 @@
    buffers uses blitting to copy the contents from one buffer to
    another; when this is the case, getFlipContents returns
    null - `boolean`"
-  ([^java.awt.BufferCapabilities this]
+  (^Boolean [^java.awt.BufferCapabilities this]
     (-> this (.isPageFlipping))))
 
 (defn get-flip-contents
@@ -47,27 +47,27 @@
    (the assumed default), FlipContents.BACKGROUND,
    FlipContents.PRIOR, or
    FlipContents.COPIED. - `java.awt.BufferCapabilities.FlipContents`"
-  ([^java.awt.BufferCapabilities this]
+  (^java.awt.BufferCapabilities.FlipContents [^java.awt.BufferCapabilities this]
     (-> this (.getFlipContents))))
 
 (defn full-screen-required?
   "returns: whether page flipping is only available in full-screen mode.  If this
    is true, full-screen exclusive mode is required for
    page-flipping. - `boolean`"
-  ([^java.awt.BufferCapabilities this]
+  (^Boolean [^java.awt.BufferCapabilities this]
     (-> this (.isFullScreenRequired))))
 
 (defn multi-buffer-available?
   "returns: whether or not
    page flipping can be performed using more than two buffers (one or more
    intermediate buffers as well as the front and back buffer). - `boolean`"
-  ([^java.awt.BufferCapabilities this]
+  (^Boolean [^java.awt.BufferCapabilities this]
     (-> this (.isMultiBufferAvailable))))
 
 (defn clone
   "Description copied from class: Object
 
   returns: a copy of this BufferCapabilities object. - `java.lang.Object`"
-  ([^java.awt.BufferCapabilities this]
+  (^java.lang.Object [^java.awt.BufferCapabilities this]
     (-> this (.clone))))
 

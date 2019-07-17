@@ -50,27 +50,27 @@
   "Gets the name of the attribute which has changed.
 
   returns: A String containing the name of the attribute. - `java.lang.String`"
-  ([^javax.management.AttributeChangeNotification this]
+  (^java.lang.String [^javax.management.AttributeChangeNotification this]
     (-> this (.getAttributeName))))
 
 (defn get-attribute-type
   "Gets the type of the attribute which has changed.
 
   returns: A String containing the type of the attribute. - `java.lang.String`"
-  ([^javax.management.AttributeChangeNotification this]
+  (^java.lang.String [^javax.management.AttributeChangeNotification this]
     (-> this (.getAttributeType))))
 
 (defn get-old-value
   "Gets the old value of the attribute which has changed.
 
   returns: An Object containing the old value of the attribute. - `java.lang.Object`"
-  ([^javax.management.AttributeChangeNotification this]
+  (^java.lang.Object [^javax.management.AttributeChangeNotification this]
     (-> this (.getOldValue))))
 
 (defn get-new-value
   "Gets the new value of the attribute which has changed.
 
   returns: An Object containing the new value of the attribute. - `java.lang.Object`"
-  ([^javax.management.AttributeChangeNotification this]
+  (^java.lang.Object [^javax.management.AttributeChangeNotification this]
     (-> this (.getNewValue))))
 

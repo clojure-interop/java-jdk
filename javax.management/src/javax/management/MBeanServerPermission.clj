@@ -48,7 +48,7 @@
   "Description copied from class: BasicPermission
 
   returns: a hash code value for this object. - `int`"
-  ([^javax.management.MBeanServerPermission this]
+  (^Integer [^javax.management.MBeanServerPermission this]
     (-> this (.hashCode))))
 
 (defn implies
@@ -70,7 +70,7 @@
 
   returns: true if the specified permission is implied by this object,
    false if not. - `boolean`"
-  ([^javax.management.MBeanServerPermission this ^java.security.Permission p]
+  (^Boolean [^javax.management.MBeanServerPermission this ^java.security.Permission p]
     (-> this (.implies p))))
 
 (defn equals
@@ -81,7 +81,7 @@
   obj - the object we are testing for equality with this object. - `java.lang.Object`
 
   returns: true if the objects are equal. - `boolean`"
-  ([^javax.management.MBeanServerPermission this ^java.lang.Object obj]
+  (^Boolean [^javax.management.MBeanServerPermission this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn new-permission-collection
@@ -89,6 +89,6 @@
 
   returns: a new PermissionCollection object suitable for
    storing BasicPermissions. - `java.security.PermissionCollection`"
-  ([^javax.management.MBeanServerPermission this]
+  (^java.security.PermissionCollection [^javax.management.MBeanServerPermission this]
     (-> this (.newPermissionCollection))))
 

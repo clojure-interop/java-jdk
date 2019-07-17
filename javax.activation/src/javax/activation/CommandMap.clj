@@ -27,7 +27,7 @@
          set that to the default, returning its value.
 
   returns: the CommandMap - `javax.activation.CommandMap`"
-  ([]
+  (^javax.activation.CommandMap []
     (CommandMap/getDefaultCommandMap )))
 
 (defn *set-default-command-map
@@ -92,9 +92,9 @@
   ds - a DataSource for the data - `javax.activation.DataSource`
 
   returns: the CommandInfo corresponding to the command. - `javax.activation.CommandInfo`"
-  ([^javax.activation.CommandMap this ^java.lang.String mime-type ^java.lang.String cmd-name ^javax.activation.DataSource ds]
+  (^javax.activation.CommandInfo [^javax.activation.CommandMap this ^java.lang.String mime-type ^java.lang.String cmd-name ^javax.activation.DataSource ds]
     (-> this (.getCommand mime-type cmd-name ds)))
-  ([^javax.activation.CommandMap this ^java.lang.String mime-type ^java.lang.String cmd-name]
+  (^javax.activation.CommandInfo [^javax.activation.CommandMap this ^java.lang.String mime-type ^java.lang.String cmd-name]
     (-> this (.getCommand mime-type cmd-name))))
 
 (defn create-data-content-handler
@@ -112,9 +112,9 @@
   ds - a DataSource for the data - `javax.activation.DataSource`
 
   returns: the DataContentHandler for the MIME type - `javax.activation.DataContentHandler`"
-  ([^javax.activation.CommandMap this ^java.lang.String mime-type ^javax.activation.DataSource ds]
+  (^javax.activation.DataContentHandler [^javax.activation.CommandMap this ^java.lang.String mime-type ^javax.activation.DataSource ds]
     (-> this (.createDataContentHandler mime-type ds)))
-  ([^javax.activation.CommandMap this ^java.lang.String mime-type]
+  (^javax.activation.DataContentHandler [^javax.activation.CommandMap this ^java.lang.String mime-type]
     (-> this (.createDataContentHandler mime-type))))
 
 (defn get-mime-types

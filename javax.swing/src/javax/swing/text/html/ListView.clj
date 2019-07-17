@@ -18,7 +18,7 @@
   axis - may be either X_AXIS or Y_AXIS - `int`
 
   returns: the desired span - `float`"
-  ([^javax.swing.text.html.ListView this ^Integer axis]
+  (^Float [^javax.swing.text.html.ListView this ^Integer axis]
     (-> this (.getAlignment axis))))
 
 (defn paint

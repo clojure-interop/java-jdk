@@ -25,7 +25,7 @@
    operation.
 
   returns: the element iterator for this stream - `java.util.Iterator<BaseStream.T>`"
-  ([^java.util.stream.BaseStream> this]
+  (^java.util.Iterator [^java.util.stream.BaseStream> this]
     (-> this (.iterator))))
 
 (defn spliterator
@@ -35,7 +35,7 @@
    operation.
 
   returns: the element spliterator for this stream - `java.util.Spliterator<BaseStream.T>`"
-  ([^java.util.stream.BaseStream> this]
+  (^java.util.Spliterator [^java.util.stream.BaseStream> this]
     (-> this (.spliterator))))
 
 (defn parallel?
@@ -44,7 +44,7 @@
    terminal stream operation method may yield unpredictable results.
 
   returns: true if this stream would execute in parallel if executed - `boolean`"
-  ([^java.util.stream.BaseStream> this]
+  (^Boolean [^java.util.stream.BaseStream> this]
     (-> this (.isParallel))))
 
 (defn sequential
@@ -56,7 +56,7 @@
    operation.
 
   returns: a sequential stream - `BaseStream.S`"
-  ([^java.util.stream.BaseStream> this]
+  (^BaseStream.S [^java.util.stream.BaseStream> this]
     (-> this (.sequential))))
 
 (defn parallel
@@ -68,7 +68,7 @@
    operation.
 
   returns: a parallel stream - `BaseStream.S`"
-  ([^java.util.stream.BaseStream> this]
+  (^BaseStream.S [^java.util.stream.BaseStream> this]
     (-> this (.parallel))))
 
 (defn unordered
@@ -81,7 +81,7 @@
    operation.
 
   returns: an unordered stream - `BaseStream.S`"
-  ([^java.util.stream.BaseStream> this]
+  (^BaseStream.S [^java.util.stream.BaseStream> this]
     (-> this (.unordered))))
 
 (defn on-close
@@ -102,7 +102,7 @@
   close-handler - A task to execute when the stream is closed - `java.lang.Runnable`
 
   returns: a stream with a handler that is run if the stream is closed - `BaseStream.S`"
-  ([^java.util.stream.BaseStream> this ^java.lang.Runnable close-handler]
+  (^BaseStream.S [^java.util.stream.BaseStream> this ^java.lang.Runnable close-handler]
     (-> this (.onClose close-handler))))
 
 (defn close

@@ -60,6 +60,6 @@
    This method is useful for event-logging and for debugging.
 
   returns: a string identifying the event and its attributes - `java.lang.String`"
-  ([^java.awt.event.TextEvent this]
+  (^java.lang.String [^java.awt.event.TextEvent this]
     (-> this (.paramString))))
 

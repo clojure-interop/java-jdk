@@ -70,7 +70,7 @@
    have the name `basic`.
 
   returns: the name of the attribute view - `java.lang.String`"
-  ([^java.nio.file.attribute.BasicFileAttributeView this]
+  (^java.lang.String [^java.nio.file.attribute.BasicFileAttributeView this]
     (-> this (.name))))
 
 (defn read-attributes
@@ -82,7 +82,7 @@
   returns: the file attributes - `java.nio.file.attribute.BasicFileAttributes`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([^java.nio.file.attribute.BasicFileAttributeView this]
+  (^java.nio.file.attribute.BasicFileAttributes [^java.nio.file.attribute.BasicFileAttributeView this]
     (-> this (.readAttributes))))
 
 (defn set-times

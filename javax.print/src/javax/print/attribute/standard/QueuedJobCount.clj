@@ -38,7 +38,7 @@
 
   returns: True if object is equivalent to this queued job
             count attribute, false otherwise. - `boolean`"
-  ([^javax.print.attribute.standard.QueuedJobCount this ^java.lang.Object object]
+  (^Boolean [^javax.print.attribute.standard.QueuedJobCount this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -60,6 +60,6 @@
    category name is `queued-job-count`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.QueuedJobCount this]
+  (^java.lang.String [^javax.print.attribute.standard.QueuedJobCount this]
     (-> this (.getName))))
 

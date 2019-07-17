@@ -65,6 +65,6 @@
   returns: the enum constant with the specified name - `javax.swing.LayoutStyle.ComponentPlacement`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^javax.swing.LayoutStyle.ComponentPlacement [^java.lang.String name]
     (LayoutStyle$ComponentPlacement/valueOf name)))
 

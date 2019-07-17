@@ -120,7 +120,7 @@
    support the add or addAll operations.
 
   returns: a collection view of the values contained in this map - `java.util.Collection<WeakHashMap.V>`"
-  ([^java.util.WeakHashMap this]
+  (^java.util.Collection [^java.util.WeakHashMap this]
     (-> this (.values))))
 
 (defn for-each
@@ -160,7 +160,7 @@
            null if there was no mapping for key.
            (A null return can also indicate that the map
            previously associated null with key.) - `WeakHashMap.V`"
-  ([^java.util.WeakHashMap this ^WeakHashMap.K key ^WeakHashMap.V value]
+  (^WeakHashMap.V [^java.util.WeakHashMap this ^WeakHashMap.K key ^WeakHashMap.V value]
     (-> this (.put key value))))
 
 (defn entry-set
@@ -178,7 +178,7 @@
    add or addAll operations.
 
   returns: a set view of the mappings contained in this map - `java.util.Set<java.util.Map.Entry<WeakHashMap.K,WeakHashMap.V>>`"
-  ([^java.util.WeakHashMap this]
+  (^java.util.Set> [^java.util.WeakHashMap this]
     (-> this (.entrySet))))
 
 (defn contains-value
@@ -189,7 +189,7 @@
 
   returns: true if this map maps one or more keys to the
            specified value - `boolean`"
-  ([^java.util.WeakHashMap this ^java.lang.Object value]
+  (^Boolean [^java.util.WeakHashMap this ^java.lang.Object value]
     (-> this (.containsValue value))))
 
 (defn remove
@@ -212,7 +212,7 @@
 
   returns: the previous value associated with key, or
            null if there was no mapping for key - `WeakHashMap.V`"
-  ([^java.util.WeakHashMap this ^java.lang.Object key]
+  (^WeakHashMap.V [^java.util.WeakHashMap this ^java.lang.Object key]
     (-> this (.remove key))))
 
 (defn key-set
@@ -229,7 +229,7 @@
    operations.
 
   returns: a set view of the keys contained in this map - `java.util.Set<WeakHashMap.K>`"
-  ([^java.util.WeakHashMap this]
+  (^java.util.Set [^java.util.WeakHashMap this]
     (-> this (.keySet))))
 
 (defn empty?
@@ -239,7 +239,7 @@
    because they are no longer referenced.
 
   returns: true if this map contains no key-value mappings - `boolean`"
-  ([^java.util.WeakHashMap this]
+  (^Boolean [^java.util.WeakHashMap this]
     (-> this (.isEmpty))))
 
 (defn size
@@ -249,7 +249,7 @@
    because they are no longer referenced.
 
   returns: the number of key-value mappings in this map - `int`"
-  ([^java.util.WeakHashMap this]
+  (^Integer [^java.util.WeakHashMap this]
     (-> this (.size))))
 
 (defn clear
@@ -266,7 +266,7 @@
 
   returns: true if there is a mapping for key;
            false otherwise - `boolean`"
-  ([^java.util.WeakHashMap this ^java.lang.Object key]
+  (^Boolean [^java.util.WeakHashMap this ^java.lang.Object key]
     (-> this (.containsKey key))))
 
 (defn get
@@ -288,6 +288,6 @@
 
   returns: the value to which the specified key is mapped, or
            null if this map contains no mapping for the key - `WeakHashMap.V`"
-  ([^java.util.WeakHashMap this ^java.lang.Object key]
+  (^WeakHashMap.V [^java.util.WeakHashMap this ^java.lang.Object key]
     (-> this (.get key))))
 

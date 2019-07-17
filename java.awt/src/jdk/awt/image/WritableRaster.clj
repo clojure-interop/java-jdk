@@ -35,7 +35,7 @@
 
   returns: the parent of this WritableRaster, or
             null. - `java.awt.image.WritableRaster`"
-  ([^java.awt.image.WritableRaster this]
+  (^java.awt.image.WritableRaster [^java.awt.image.WritableRaster this]
     (-> this (.getWritableParent))))
 
 (defn set-pixels
@@ -142,7 +142,7 @@
            for the specified location. - `java.awt.image.WritableRaster`
 
   throws: java.awt.image.RasterFormatException - if computing either childMinX this.getWidth() or childMinY this.getHeight() results in integer overflow"
-  ([^java.awt.image.WritableRaster this ^Integer child-min-x ^Integer child-min-y]
+  (^java.awt.image.WritableRaster [^java.awt.image.WritableRaster this ^Integer child-min-x ^Integer child-min-y]
     (-> this (.createWritableTranslatedChild child-min-x child-min-y))))
 
 (defn create-writable-child
@@ -189,6 +189,6 @@
            DataBuffer of this WritableRaster. - `java.awt.image.WritableRaster`
 
   throws: java.awt.image.RasterFormatException - if w or h is less than or equal to zero, or computing any of parentX w, parentY h, childMinX w, or childMinY h results in integer overflow"
-  ([^java.awt.image.WritableRaster this ^Integer parent-x ^Integer parent-y ^Integer w ^Integer h ^Integer child-min-x ^Integer child-min-y band-list]
+  (^java.awt.image.WritableRaster [^java.awt.image.WritableRaster this ^Integer parent-x ^Integer parent-y ^Integer w ^Integer h ^Integer child-min-x ^Integer child-min-y band-list]
     (-> this (.createWritableChild parent-x parent-y w h child-min-x child-min-y band-list))))
 

@@ -68,7 +68,7 @@
   object - the name of the object whose derived gauge timestamp is to be returned. - `javax.management.ObjectName`
 
   returns: The derived gauge timestamp of the specified object. - `long`"
-  ([^javax.management.monitor.CounterMonitor this ^javax.management.ObjectName object]
+  (^Long [^javax.management.monitor.CounterMonitor this ^javax.management.ObjectName object]
     (-> this (.getDerivedGaugeTimeStamp object)))
   ([^javax.management.monitor.CounterMonitor this]
     (-> this (.getDerivedGaugeTimeStamp))))
@@ -93,7 +93,7 @@
   "Gets the offset value common to all observed MBeans.
 
   returns: The offset value. - `java.lang.Number`"
-  ([^javax.management.monitor.CounterMonitor this]
+  (^java.lang.Number [^javax.management.monitor.CounterMonitor this]
     (-> this (.getOffset))))
 
 (defn start
@@ -114,7 +114,7 @@
   "Gets the initial threshold value common to all observed objects.
 
   returns: The initial threshold. - `java.lang.Number`"
-  ([^javax.management.monitor.CounterMonitor this]
+  (^java.lang.Number [^javax.management.monitor.CounterMonitor this]
     (-> this (.getInitThreshold))))
 
 (defn get-notify?
@@ -123,14 +123,14 @@
 
   returns: true if the counter monitor notifies when
    exceeding the threshold, false otherwise. - `boolean`"
-  ([^javax.management.monitor.CounterMonitor this]
+  (^Boolean [^javax.management.monitor.CounterMonitor this]
     (-> this (.getNotify))))
 
 (defn get-modulus
   "Gets the modulus value common to all observed MBeans.
 
   returns: The modulus value. - `java.lang.Number`"
-  ([^javax.management.monitor.CounterMonitor this]
+  (^java.lang.Number [^javax.management.monitor.CounterMonitor this]
     (-> this (.getModulus))))
 
 (defn set-threshold
@@ -152,7 +152,7 @@
   object - the name of the object whose threshold is to be returned. - `javax.management.ObjectName`
 
   returns: The threshold value of the specified object. - `java.lang.Number`"
-  ([^javax.management.monitor.CounterMonitor this ^javax.management.ObjectName object]
+  (^java.lang.Number [^javax.management.monitor.CounterMonitor this ^javax.management.ObjectName object]
     (-> this (.getThreshold object)))
   ([^javax.management.monitor.CounterMonitor this]
     (-> this (.getThreshold))))
@@ -174,7 +174,7 @@
 
   returns: true if the difference mode is used,
    false otherwise. - `boolean`"
-  ([^javax.management.monitor.CounterMonitor this]
+  (^Boolean [^javax.management.monitor.CounterMonitor this]
     (-> this (.getDifferenceMode))))
 
 (defn set-offset
@@ -193,7 +193,7 @@
   object - the name of the object whose derived gauge is to be returned. - `javax.management.ObjectName`
 
   returns: The derived gauge of the specified object. - `java.lang.Number`"
-  ([^javax.management.monitor.CounterMonitor this ^javax.management.ObjectName object]
+  (^java.lang.Number [^javax.management.monitor.CounterMonitor this ^javax.management.ObjectName object]
     (-> this (.getDerivedGauge object)))
   ([^javax.management.monitor.CounterMonitor this]
     (-> this (.getDerivedGauge))))

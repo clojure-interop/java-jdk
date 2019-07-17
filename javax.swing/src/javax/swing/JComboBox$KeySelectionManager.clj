@@ -17,6 +17,6 @@
 
   returns: an int equal to the selected row, where 0 is the
            first item and -1 is none. - `int`"
-  ([^javax.swing.JComboBox$KeySelectionManager this ^Character a-key ^javax.swing.ComboBoxModel a-model]
+  (^Integer [^javax.swing.JComboBox$KeySelectionManager this ^Character a-key ^javax.swing.ComboBoxModel a-model]
     (-> this (.selectionForKey a-key a-model))))
 

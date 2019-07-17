@@ -310,7 +310,7 @@
   returns: the formatted string - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if the pattern is invalid, or if an argument in the arguments array is not of the type expected by the format element(s) that use it."
-  ([^java.lang.String pattern ^java.lang.Object arguments]
+  (^java.lang.String [^java.lang.String pattern ^java.lang.Object arguments]
     (MessageFormat/format pattern arguments)))
 
 (defn set-format-by-argument-index
@@ -374,7 +374,7 @@
            error, returns null. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if pos is null."
-  ([^java.text.MessageFormat this ^java.lang.String source ^java.text.ParsePosition pos]
+  (^java.lang.Object [^java.text.MessageFormat this ^java.lang.String source ^java.text.ParsePosition pos]
     (-> this (.parseObject source pos))))
 
 (defn set-formats-by-argument-index
@@ -399,7 +399,7 @@
   new-formats - the new formats to use - `java.text.Format[]`
 
   throws: java.lang.NullPointerException - if newFormats is null"
-  ([^java.text.MessageFormat this ^java.text.Format[] new-formats]
+  ([^java.text.MessageFormat this new-formats]
     (-> this (.setFormatsByArgumentIndex new-formats))))
 
 (defn set-format
@@ -425,7 +425,7 @@
   "Gets the locale that's used when creating or comparing subformats.
 
   returns: the locale used when creating or comparing subformats - `java.util.Locale`"
-  ([^java.text.MessageFormat this]
+  (^java.util.Locale [^java.text.MessageFormat this]
     (-> this (.getLocale))))
 
 (defn to-pattern
@@ -434,7 +434,7 @@
    does not necessarily equal the previously applied pattern.
 
   returns: a pattern representing the current state of the message format - `java.lang.String`"
-  ([^java.text.MessageFormat this]
+  (^java.lang.String [^java.text.MessageFormat this]
     (-> this (.toPattern))))
 
 (defn format-to-character-iterator
@@ -469,7 +469,7 @@
   returns: AttributedCharacterIterator describing the formatted value. - `java.text.AttributedCharacterIterator`
 
   throws: java.lang.NullPointerException - if arguments is null."
-  ([^java.text.MessageFormat this ^java.lang.Object arguments]
+  (^java.text.AttributedCharacterIterator [^java.text.MessageFormat this ^java.lang.Object arguments]
     (-> this (.formatToCharacterIterator arguments))))
 
 (defn set-locale
@@ -495,7 +495,7 @@
   "Creates and returns a copy of this object.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([^java.text.MessageFormat this]
+  (^java.lang.Object [^java.text.MessageFormat this]
     (-> this (.clone))))
 
 (defn parse
@@ -538,7 +538,7 @@
   "Generates a hash code for the message format object.
 
   returns: a hash code value for this object. - `int`"
-  ([^java.text.MessageFormat this]
+  (^Integer [^java.text.MessageFormat this]
     (-> this (.hashCode))))
 
 (defn set-formats
@@ -563,7 +563,7 @@
   new-formats - the new formats to use - `java.text.Format[]`
 
   throws: java.lang.NullPointerException - if newFormats is null"
-  ([^java.text.MessageFormat this ^java.text.Format[] new-formats]
+  ([^java.text.MessageFormat this new-formats]
     (-> this (.setFormats new-formats))))
 
 (defn apply-pattern
@@ -586,7 +586,7 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([^java.text.MessageFormat this ^java.lang.Object obj]
+  (^Boolean [^java.text.MessageFormat this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn format
@@ -654,7 +654,7 @@
    text appended - `java.lang.StringBuffer`
 
   throws: java.lang.IllegalArgumentException - if an argument in the arguments array is not of the type expected by the format element(s) that use it."
-  ([^java.text.MessageFormat this ^java.lang.Object[] arguments ^java.lang.StringBuffer result ^java.text.FieldPosition pos]
+  (^java.lang.StringBuffer [^java.text.MessageFormat this arguments ^java.lang.StringBuffer result ^java.text.FieldPosition pos]
     (-> this (.format arguments result pos))))
 
 (defn get-formats-by-argument-index

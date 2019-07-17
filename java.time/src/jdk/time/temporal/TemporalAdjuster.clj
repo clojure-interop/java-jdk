@@ -55,6 +55,6 @@
   returns: an object of the same observable type with the adjustment made, not null - `java.time.temporal.Temporal`
 
   throws: java.time.DateTimeException - if unable to make the adjustment"
-  ([^java.time.temporal.TemporalAdjuster this ^java.time.temporal.Temporal temporal]
+  (^java.time.temporal.Temporal [^java.time.temporal.TemporalAdjuster this ^java.time.temporal.Temporal temporal]
     (-> this (.adjustInto temporal))))
 

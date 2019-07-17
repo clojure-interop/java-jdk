@@ -84,7 +84,7 @@
   "Returns the iteration count or 0 if not specified.
 
   returns: the iteration count. - `int`"
-  ([^javax.crypto.spec.PBEKeySpec this]
+  (^Integer [^javax.crypto.spec.PBEKeySpec this]
     (-> this (.getIterationCount))))
 
 (defn get-key-length
@@ -95,6 +95,6 @@
    each provider's implementation.
 
   returns: the to-be-derived key length. - `int`"
-  ([^javax.crypto.spec.PBEKeySpec this]
+  (^Integer [^javax.crypto.spec.PBEKeySpec this]
     (-> this (.getKeyLength))))
 

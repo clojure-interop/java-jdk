@@ -631,9 +631,9 @@
   returns: `java.awt.AlphaComposite`
 
   throws: java.lang.IllegalArgumentException - if alpha is less than 0.0 or greater than 1.0, or if rule is not one of the following: CLEAR, SRC, DST, SRC_OVER, DST_OVER, SRC_IN, DST_IN, SRC_OUT, DST_OUT, SRC_ATOP, DST_ATOP, or XOR"
-  ([^Integer rule ^Float alpha]
+  (^java.awt.AlphaComposite [^Integer rule ^Float alpha]
     (AlphaComposite/getInstance rule alpha))
-  ([^Integer rule]
+  (^java.awt.AlphaComposite [^Integer rule]
     (AlphaComposite/getInstance rule)))
 
 (defn create-context
@@ -647,7 +647,7 @@
 
   returns: the CompositeContext object to be used to perform
    compositing operations. - `java.awt.CompositeContext`"
-  ([^java.awt.AlphaComposite this ^java.awt.image.ColorModel src-color-model ^java.awt.image.ColorModel dst-color-model ^java.awt.RenderingHints hints]
+  (^java.awt.CompositeContext [^java.awt.AlphaComposite this ^java.awt.image.ColorModel src-color-model ^java.awt.image.ColorModel dst-color-model ^java.awt.RenderingHints hints]
     (-> this (.createContext src-color-model dst-color-model hints))))
 
 (defn get-alpha
@@ -655,14 +655,14 @@
    AlphaComposite does not have an alpha value, 1.0 is returned.
 
   returns: the alpha value of this AlphaComposite. - `float`"
-  ([^java.awt.AlphaComposite this]
+  (^Float [^java.awt.AlphaComposite this]
     (-> this (.getAlpha))))
 
 (defn get-rule
   "Returns the compositing rule of this AlphaComposite.
 
   returns: the compositing rule of this AlphaComposite. - `int`"
-  ([^java.awt.AlphaComposite this]
+  (^Integer [^java.awt.AlphaComposite this]
     (-> this (.getRule))))
 
 (defn derive
@@ -677,14 +677,14 @@
    this object that uses the specified compositing rule. - `java.awt.AlphaComposite`
 
   throws: java.lang.IllegalArgumentException - if rule is not one of the following: CLEAR, SRC, DST, SRC_OVER, DST_OVER, SRC_IN, DST_IN, SRC_OUT, DST_OUT, SRC_ATOP, DST_ATOP, or XOR"
-  ([^java.awt.AlphaComposite this ^Integer rule]
+  (^java.awt.AlphaComposite [^java.awt.AlphaComposite this ^Integer rule]
     (-> this (.derive rule))))
 
 (defn hash-code
   "Returns the hashcode for this composite.
 
   returns: a hash code for this composite. - `int`"
-  ([^java.awt.AlphaComposite this]
+  (^Integer [^java.awt.AlphaComposite this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -700,6 +700,6 @@
 
   returns: true if obj equals this
    AlphaComposite; false otherwise. - `boolean`"
-  ([^java.awt.AlphaComposite this ^java.lang.Object obj]
+  (^Boolean [^java.awt.AlphaComposite this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

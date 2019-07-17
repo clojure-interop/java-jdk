@@ -39,7 +39,7 @@
             compressed input stream is reached - `int`
 
   throws: java.lang.NullPointerException - If buf is null."
-  ([^java.util.zip.GZIPInputStream this buf ^Integer off ^Integer len]
+  (^Integer [^java.util.zip.GZIPInputStream this buf ^Integer off ^Integer len]
     (-> this (.read buf off len))))
 
 (defn close

@@ -17,7 +17,7 @@
 
   returns: The derived gauge timestamp for the specified MBean if this MBean
            is in the set of observed MBeans, or null otherwise. - `long`"
-  ([^javax.management.monitor.CounterMonitorMBean this ^javax.management.ObjectName object]
+  (^Long [^javax.management.monitor.CounterMonitorMBean this ^javax.management.ObjectName object]
     (-> this (.getDerivedGaugeTimeStamp object)))
   ([^javax.management.monitor.CounterMonitorMBean this]
     (-> this (.getDerivedGaugeTimeStamp))))
@@ -33,7 +33,7 @@
   "Gets the offset value.
 
   returns: The offset value. - `java.lang.Number`"
-  ([^javax.management.monitor.CounterMonitorMBean this]
+  (^java.lang.Number [^javax.management.monitor.CounterMonitorMBean this]
     (-> this (.getOffset))))
 
 (defn set-modulus
@@ -49,7 +49,7 @@
   "Gets the initial threshold value common to all observed objects.
 
   returns: The initial threshold value. - `java.lang.Number`"
-  ([^javax.management.monitor.CounterMonitorMBean this]
+  (^java.lang.Number [^javax.management.monitor.CounterMonitorMBean this]
     (-> this (.getInitThreshold))))
 
 (defn get-notify?
@@ -57,14 +57,14 @@
 
   returns: true if the counter monitor notifies when
    exceeding the threshold, false otherwise. - `boolean`"
-  ([^javax.management.monitor.CounterMonitorMBean this]
+  (^Boolean [^javax.management.monitor.CounterMonitorMBean this]
     (-> this (.getNotify))))
 
 (defn get-modulus
   "Gets the modulus value.
 
   returns: The modulus value. - `java.lang.Number`"
-  ([^javax.management.monitor.CounterMonitorMBean this]
+  (^java.lang.Number [^javax.management.monitor.CounterMonitorMBean this]
     (-> this (.getModulus))))
 
 (defn set-threshold
@@ -85,9 +85,9 @@
 
   returns: The threshold value for the specified MBean if this MBean
            is in the set of observed MBeans, or null otherwise. - `java.lang.Number`"
-  ([^javax.management.monitor.CounterMonitorMBean this ^javax.management.ObjectName object]
+  (^java.lang.Number [^javax.management.monitor.CounterMonitorMBean this ^javax.management.ObjectName object]
     (-> this (.getThreshold object)))
-  ([^javax.management.monitor.CounterMonitorMBean this]
+  (^java.lang..lang.Number [^javax.management.monitor.CounterMonitorMBean this]
     (-> this (.getThreshold))))
 
 (defn set-init-threshold
@@ -104,7 +104,7 @@
 
   returns: true if the difference mode is used,
    false otherwise. - `boolean`"
-  ([^javax.management.monitor.CounterMonitorMBean this]
+  (^Boolean [^javax.management.monitor.CounterMonitorMBean this]
     (-> this (.getDifferenceMode))))
 
 (defn set-offset
@@ -123,8 +123,8 @@
 
   returns: The derived gauge for the specified MBean if this MBean is in the
            set of observed MBeans, or null otherwise. - `java.lang.Number`"
-  ([^javax.management.monitor.CounterMonitorMBean this ^javax.management.ObjectName object]
+  (^java.lang.Number [^javax.management.monitor.CounterMonitorMBean this ^javax.management.ObjectName object]
     (-> this (.getDerivedGauge object)))
-  ([^javax.management.monitor.CounterMonitorMBean this]
+  (^java.lang..lang.Number [^javax.management.monitor.CounterMonitorMBean this]
     (-> this (.getDerivedGauge))))
 

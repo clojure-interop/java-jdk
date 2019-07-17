@@ -69,7 +69,7 @@
             this PooledConnection object - `java.sql.Connection`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^javax.sql.PooledConnection this]
+  (^java.sql.Connection [^javax.sql.PooledConnection this]
     (-> this (.getConnection))))
 
 (defn close

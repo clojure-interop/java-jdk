@@ -65,7 +65,7 @@
   returns: true if this list changed as a result of the call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the addAll operation is not supported by this list"
-  ([^java.util.AbstractList this ^Integer index ^AbstractList.E> c]
+  (^Boolean [^java.util.AbstractList this ^Integer index ^AbstractList.E> c]
     (-> this (.addAll index c))))
 
 (defn list-iterator
@@ -99,9 +99,9 @@
            sequence), starting at the specified position in the list - `java.util.ListIterator<AbstractList.E>`
 
   throws: java.lang.IndexOutOfBoundsException - if the index is out of range (index < 0 || index > size())"
-  ([^java.util.AbstractList this ^Integer index]
+  (^java.util.ListIterator [^java.util.AbstractList this ^Integer index]
     (-> this (.listIterator index)))
-  ([^java.util.AbstractList this]
+  (^java.util.ListIterator [^java.util.AbstractList this]
     (-> this (.listIterator))))
 
 (defn iterator
@@ -121,7 +121,7 @@
    for the (protected) modCount field.
 
   returns: an iterator over the elements in this list in proper sequence - `java.util.Iterator<AbstractList.E>`"
-  ([^java.util.AbstractList this]
+  (^java.util.Iterator [^java.util.AbstractList this]
     (-> this (.iterator))))
 
 (defn sub-list
@@ -184,7 +184,7 @@
   returns: a view of the specified range within this list - `java.util.List<AbstractList.E>`
 
   throws: java.lang.IndexOutOfBoundsException - if an endpoint index value is out of range (fromIndex < 0 || toIndex > size)"
-  ([^java.util.AbstractList this ^Integer from-index ^Integer to-index]
+  (^java.util.List [^java.util.AbstractList this ^Integer from-index ^Integer to-index]
     (-> this (.subList from-index to-index))))
 
 (defn last-index-of
@@ -205,7 +205,7 @@
            this list, or -1 if this list does not contain the element - `int`
 
   throws: java.lang.ClassCastException - if the type of the specified element is incompatible with this list (optional)"
-  ([^java.util.AbstractList this ^java.lang.Object o]
+  (^Integer [^java.util.AbstractList this ^java.lang.Object o]
     (-> this (.lastIndexOf o))))
 
 (defn remove
@@ -222,7 +222,7 @@
   returns: the element previously at the specified position - `AbstractList.E`
 
   throws: java.lang.UnsupportedOperationException - if the remove operation is not supported by this list"
-  ([^java.util.AbstractList this ^Integer index]
+  (^AbstractList.E [^java.util.AbstractList this ^Integer index]
     (-> this (.remove index))))
 
 (defn hash-code
@@ -233,7 +233,7 @@
    method.
 
   returns: the hash code value for this list - `int`"
-  ([^java.util.AbstractList this]
+  (^Integer [^java.util.AbstractList this]
     (-> this (.hashCode))))
 
 (defn add
@@ -251,7 +251,7 @@
   throws: java.lang.UnsupportedOperationException - if the add operation is not supported by this list"
   ([^java.util.AbstractList this ^Integer index ^AbstractList.E element]
     (-> this (.add index element)))
-  ([^java.util.AbstractList this ^AbstractList.E e]
+  (^Boolean [^java.util.AbstractList this ^AbstractList.E e]
     (-> this (.add e))))
 
 (defn set
@@ -267,7 +267,7 @@
   returns: the element previously at the specified position - `AbstractList.E`
 
   throws: java.lang.UnsupportedOperationException - if the set operation is not supported by this list"
-  ([^java.util.AbstractList this ^Integer index ^AbstractList.E element]
+  (^AbstractList.E [^java.util.AbstractList this ^Integer index ^AbstractList.E element]
     (-> this (.set index element))))
 
 (defn clear
@@ -302,7 +302,7 @@
            this list, or -1 if this list does not contain the element - `int`
 
   throws: java.lang.ClassCastException - if the type of the specified element is incompatible with this list (optional)"
-  ([^java.util.AbstractList this ^java.lang.Object o]
+  (^Integer [^java.util.AbstractList this ^java.lang.Object o]
     (-> this (.indexOf o))))
 
 (defn get
@@ -313,7 +313,7 @@
   returns: the element at the specified position in this list - `AbstractList.E`
 
   throws: java.lang.IndexOutOfBoundsException - if the index is out of range (index < 0 || index >= size())"
-  ([^java.util.AbstractList this ^Integer index]
+  (^AbstractList.E [^java.util.AbstractList this ^Integer index]
     (-> this (.get index))))
 
 (defn equals
@@ -337,6 +337,6 @@
   o - the object to be compared for equality with this list - `java.lang.Object`
 
   returns: true if the specified object is equal to this list - `boolean`"
-  ([^java.util.AbstractList this ^java.lang.Object o]
+  (^Boolean [^java.util.AbstractList this ^java.lang.Object o]
     (-> this (.equals o))))
 

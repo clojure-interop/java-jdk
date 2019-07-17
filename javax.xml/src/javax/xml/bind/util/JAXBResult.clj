@@ -56,6 +56,6 @@
   returns: Always return a non-null object. - `java.lang.Object`
 
   throws: java.lang.IllegalStateException - if this method is called before an object is unmarshalled."
-  ([^javax.xml.bind.util.JAXBResult this]
+  (^java.lang.Object [^javax.xml.bind.util.JAXBResult this]
     (-> this (.getResult))))
 

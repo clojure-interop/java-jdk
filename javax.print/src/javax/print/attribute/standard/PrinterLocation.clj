@@ -42,7 +42,7 @@
 
   returns: True if object is equivalent to this printer
             location attribute, false otherwise. - `boolean`"
-  ([^javax.print.attribute.standard.PrinterLocation this ^java.lang.Object object]
+  (^Boolean [^javax.print.attribute.standard.PrinterLocation this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -65,6 +65,6 @@
    category name is `printer-location`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.PrinterLocation this]
+  (^java.lang.String [^javax.print.attribute.standard.PrinterLocation this]
     (-> this (.getName))))
 

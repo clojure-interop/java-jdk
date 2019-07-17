@@ -42,7 +42,7 @@
    be added. - `java.util.List<javax.management.Attribute>`
 
   throws: java.lang.IllegalArgumentException - if this AttributeList contains an element that is not an Attribute."
-  ([^javax.management.AttributeList this]
+  (^java.util.List [^javax.management.AttributeList this]
     (-> this (.asList))))
 
 (defn add
@@ -82,8 +82,8 @@
   list - Elements to be inserted into the list. - `javax.management.AttributeList`
 
   returns: true if this list changed as a result of the call. - `boolean`"
-  ([^javax.management.AttributeList this ^Integer index ^javax.management.AttributeList list]
+  (^Boolean [^javax.management.AttributeList this ^Integer index ^javax.management.AttributeList list]
     (-> this (.addAll index list)))
-  ([^javax.management.AttributeList this ^javax.management.AttributeList list]
+  (^Boolean [^javax.management.AttributeList this ^javax.management.AttributeList list]
     (-> this (.addAll list))))
 

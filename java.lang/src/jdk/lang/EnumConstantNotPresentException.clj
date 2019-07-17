@@ -28,6 +28,6 @@
   "Returns the name of the missing enum constant.
 
   returns: the name of the missing enum constant - `java.lang.String`"
-  ([^java.lang.EnumConstantNotPresentException this]
+  (^java.lang.String [^java.lang.EnumConstantNotPresentException this]
     (-> this (.constantName))))
 

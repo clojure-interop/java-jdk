@@ -50,7 +50,7 @@
   returns: the enum constant with the specified name - `java.time.zone.ZoneOffsetTransitionRule.TimeDefinition`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^java.time.zone.ZoneOffsetTransitionRule.TimeDefinition [^java.lang.String name]
     (ZoneOffsetTransitionRule$TimeDefinition/valueOf name)))
 
 (defn create-date-time
@@ -70,6 +70,6 @@
   wall-offset - the wall offset, not null - `java.time.ZoneOffset`
 
   returns: the date-time relative to the wall/before offset, not null - `java.time.LocalDateTime`"
-  ([^java.time.zone.ZoneOffsetTransitionRule$TimeDefinition this ^java.time.LocalDateTime date-time ^java.time.ZoneOffset standard-offset ^java.time.ZoneOffset wall-offset]
+  (^java.time.LocalDateTime [^java.time.zone.ZoneOffsetTransitionRule$TimeDefinition this ^java.time.LocalDateTime date-time ^java.time.ZoneOffset standard-offset ^java.time.ZoneOffset wall-offset]
     (-> this (.createDateTime date-time standard-offset wall-offset))))
 

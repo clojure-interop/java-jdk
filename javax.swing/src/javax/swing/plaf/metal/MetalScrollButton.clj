@@ -37,25 +37,25 @@
   "Description copied from class: BasicArrowButton
 
   returns: the preferred size - `java.awt.Dimension`"
-  ([^javax.swing.plaf.metal.MetalScrollButton this]
+  (^java.awt.Dimension [^javax.swing.plaf.metal.MetalScrollButton this]
     (-> this (.getPreferredSize))))
 
 (defn get-minimum-size
   "Description copied from class: BasicArrowButton
 
   returns: the minimum size - `java.awt.Dimension`"
-  ([^javax.swing.plaf.metal.MetalScrollButton this]
+  (^java.awt.Dimension [^javax.swing.plaf.metal.MetalScrollButton this]
     (-> this (.getMinimumSize))))
 
 (defn get-maximum-size
   "Description copied from class: BasicArrowButton
 
   returns: the maximum size - `java.awt.Dimension`"
-  ([^javax.swing.plaf.metal.MetalScrollButton this]
+  (^java.awt.Dimension [^javax.swing.plaf.metal.MetalScrollButton this]
     (-> this (.getMaximumSize))))
 
 (defn get-button-width
   "returns: `int`"
-  ([^javax.swing.plaf.metal.MetalScrollButton this]
+  (^Integer [^javax.swing.plaf.metal.MetalScrollButton this]
     (-> this (.getButtonWidth))))
 

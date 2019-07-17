@@ -44,6 +44,6 @@
   returns: the enum constant with the specified name - `javax.swing.plaf.nimbus.AbstractRegionPainter.PaintContext.CacheMode`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^javax.swing.plaf.nimbus.AbstractRegionPainter.PaintContext.CacheMode [^java.lang.String name]
     (AbstractRegionPainter$PaintContext$CacheMode/valueOf name)))
 

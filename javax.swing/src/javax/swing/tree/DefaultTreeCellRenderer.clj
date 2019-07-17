@@ -66,7 +66,7 @@
   "Returns the color the text is drawn with when the node is selected.
 
   returns: `java.awt.Color`"
-  ([^javax.swing.tree.DefaultTreeCellRenderer this]
+  (^java.awt.Color [^javax.swing.tree.DefaultTreeCellRenderer this]
     (-> this (.getTextSelectionColor))))
 
 (defn fire-property-change
@@ -106,7 +106,7 @@
    represent non-leaf nodes that are expanded.
 
   returns: `javax.swing.Icon`"
-  ([^javax.swing.tree.DefaultTreeCellRenderer this]
+  (^javax.swing.Icon [^javax.swing.tree.DefaultTreeCellRenderer this]
     (-> this (.getDefaultOpenIcon))))
 
 (defn set-leaf-icon
@@ -128,7 +128,7 @@
    expanded.
 
   returns: `javax.swing.Icon`"
-  ([^javax.swing.tree.DefaultTreeCellRenderer this]
+  (^javax.swing.Icon [^javax.swing.tree.DefaultTreeCellRenderer this]
     (-> this (.getClosedIcon))))
 
 (defn get-default-closed-icon
@@ -136,7 +136,7 @@
    represent non-leaf nodes that are not expanded.
 
   returns: `javax.swing.Icon`"
-  ([^javax.swing.tree.DefaultTreeCellRenderer this]
+  (^javax.swing.Icon [^javax.swing.tree.DefaultTreeCellRenderer this]
     (-> this (.getDefaultClosedIcon))))
 
 (defn set-background
@@ -162,7 +162,7 @@
   "Returns the color to use for the background if node is selected.
 
   returns: `java.awt.Color`"
-  ([^javax.swing.tree.DefaultTreeCellRenderer this]
+  (^java.awt.Color [^javax.swing.tree.DefaultTreeCellRenderer this]
     (-> this (.getBackgroundSelectionColor))))
 
 (defn repaint
@@ -218,7 +218,7 @@
   has-focus - `boolean`
 
   returns: the Component that the renderer uses to draw the value - `java.awt.Component`"
-  ([^javax.swing.tree.DefaultTreeCellRenderer this ^javax.swing.JTree tree ^java.lang.Object value ^Boolean sel ^Boolean expanded ^Boolean leaf ^Integer row ^Boolean has-focus]
+  (^java.awt.Component [^javax.swing.tree.DefaultTreeCellRenderer this ^javax.swing.JTree tree ^java.lang.Object value ^Boolean sel ^Boolean expanded ^Boolean leaf ^Integer row ^Boolean has-focus]
     (-> this (.getTreeCellRendererComponent tree value sel expanded leaf row has-focus))))
 
 (defn paint
@@ -240,14 +240,14 @@
    represent leaf nodes.
 
   returns: `javax.swing.Icon`"
-  ([^javax.swing.tree.DefaultTreeCellRenderer this]
+  (^javax.swing.Icon [^javax.swing.tree.DefaultTreeCellRenderer this]
     (-> this (.getDefaultLeafIcon))))
 
 (defn get-open-icon
   "Returns the icon used to represent non-leaf nodes that are expanded.
 
   returns: `javax.swing.Icon`"
-  ([^javax.swing.tree.DefaultTreeCellRenderer this]
+  (^javax.swing.Icon [^javax.swing.tree.DefaultTreeCellRenderer this]
     (-> this (.getOpenIcon))))
 
 (defn get-font
@@ -255,14 +255,14 @@
 
   returns: this component's font; if a font has not been set
    for this component, the font of its parent is returned - `java.awt.Font`"
-  ([^javax.swing.tree.DefaultTreeCellRenderer this]
+  (^java.awt.Font [^javax.swing.tree.DefaultTreeCellRenderer this]
     (-> this (.getFont))))
 
 (defn get-background-non-selection-color
   "Returns the background color to be used for non selected nodes.
 
   returns: `java.awt.Color`"
-  ([^javax.swing.tree.DefaultTreeCellRenderer this]
+  (^java.awt.Color [^javax.swing.tree.DefaultTreeCellRenderer this]
     (-> this (.getBackgroundNonSelectionColor))))
 
 (defn set-closed-icon
@@ -276,7 +276,7 @@
   "Returns the color the border is drawn.
 
   returns: `java.awt.Color`"
-  ([^javax.swing.tree.DefaultTreeCellRenderer this]
+  (^java.awt.Color [^javax.swing.tree.DefaultTreeCellRenderer this]
     (-> this (.getBorderSelectionColor))))
 
 (defn revalidate
@@ -303,20 +303,20 @@
    return slightly wider preferred size value.
 
   returns: the value of the preferredSize property - `java.awt.Dimension`"
-  ([^javax.swing.tree.DefaultTreeCellRenderer this]
+  (^java.awt.Dimension [^javax.swing.tree.DefaultTreeCellRenderer this]
     (-> this (.getPreferredSize))))
 
 (defn get-text-non-selection-color
   "Returns the color the text is drawn with when the node isn't selected.
 
   returns: `java.awt.Color`"
-  ([^javax.swing.tree.DefaultTreeCellRenderer this]
+  (^java.awt.Color [^javax.swing.tree.DefaultTreeCellRenderer this]
     (-> this (.getTextNonSelectionColor))))
 
 (defn get-leaf-icon
   "Returns the icon used to represent leaf nodes.
 
   returns: `javax.swing.Icon`"
-  ([^javax.swing.tree.DefaultTreeCellRenderer this]
+  (^javax.swing.Icon [^javax.swing.tree.DefaultTreeCellRenderer this]
     (-> this (.getLeafIcon))))
 

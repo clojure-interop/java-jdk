@@ -123,7 +123,7 @@
   returns: the DTD which corresponds to name - `javax.swing.text.html.parser.DTD`
 
   throws: java.io.IOException"
-  ([^java.lang.String name]
+  (^javax.swing.text.html.parser.DTD [^java.lang.String name]
     (DTD/getDTD name)))
 
 (defn define-attributes
@@ -141,7 +141,7 @@
 
   returns: the Entity corresponding to the
      name String - `javax.swing.text.html.parser.Entity`"
-  ([^javax.swing.text.html.parser.DTD this ^java.lang.String name]
+  (^javax.swing.text.html.parser.Entity [^javax.swing.text.html.parser.DTD this ^java.lang.String name]
     (-> this (.getEntity name))))
 
 (defn define-entity
@@ -156,7 +156,7 @@
 
   returns: the Entity requested or a new Entity
      if not found - `javax.swing.text.html.parser.Entity`"
-  ([^javax.swing.text.html.parser.DTD this ^java.lang.String name ^Integer type data]
+  (^javax.swing.text.html.parser.Entity [^javax.swing.text.html.parser.DTD this ^java.lang.String name ^Integer type data]
     (-> this (.defineEntity name type data))))
 
 (defn get-element
@@ -167,7 +167,7 @@
 
   returns: the Element corresponding to
      name, which may be newly created - `javax.swing.text.html.parser.Element`"
-  ([^javax.swing.text.html.parser.DTD this ^java.lang.String name]
+  (^javax.swing.text.html.parser.Element [^javax.swing.text.html.parser.DTD this ^java.lang.String name]
     (-> this (.getElement name))))
 
 (defn def-entity
@@ -178,14 +178,14 @@
   ch - `int`
 
   returns: the new character Entity - `javax.swing.text.html.parser.Entity`"
-  ([^javax.swing.text.html.parser.DTD this ^java.lang.String name ^Integer type ^Integer ch]
+  (^javax.swing.text.html.parser.Entity [^javax.swing.text.html.parser.DTD this ^java.lang.String name ^Integer type ^Integer ch]
     (-> this (.defEntity name type ch))))
 
 (defn to-string
   "Returns a string representation of this DTD.
 
   returns: the string representation of this DTD - `java.lang.String`"
-  ([^javax.swing.text.html.parser.DTD this]
+  (^java.lang.String [^javax.swing.text.html.parser.DTD this]
     (-> this (.toString))))
 
 (defn read
@@ -201,7 +201,7 @@
   "Gets the name of the DTD.
 
   returns: the name of the DTD - `java.lang.String`"
-  ([^javax.swing.text.html.parser.DTD this]
+  (^java.lang.String [^javax.swing.text.html.parser.DTD this]
     (-> this (.getName))))
 
 (defn define-element
@@ -219,6 +219,6 @@
   atts - the AttributeList specifying the Element - `javax.swing.text.html.parser.AttributeList`
 
   returns: the Element specified - `javax.swing.text.html.parser.Element`"
-  ([^javax.swing.text.html.parser.DTD this ^java.lang.String name ^Integer type ^Boolean omit-start ^Boolean omit-end ^javax.swing.text.html.parser.ContentModel content ^java.util.BitSet exclusions ^java.util.BitSet inclusions ^javax.swing.text.html.parser.AttributeList atts]
+  (^javax.swing.text.html.parser.Element [^javax.swing.text.html.parser.DTD this ^java.lang.String name ^Integer type ^Boolean omit-start ^Boolean omit-end ^javax.swing.text.html.parser.ContentModel content ^java.util.BitSet exclusions ^java.util.BitSet inclusions ^javax.swing.text.html.parser.AttributeList atts]
     (-> this (.defineElement name type omit-start omit-end content exclusions inclusions atts))))
 

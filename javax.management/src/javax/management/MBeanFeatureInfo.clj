@@ -24,14 +24,14 @@
   "Returns the name of the feature.
 
   returns: the name of the feature. - `java.lang.String`"
-  ([^javax.management.MBeanFeatureInfo this]
+  (^java.lang.String [^javax.management.MBeanFeatureInfo this]
     (-> this (.getName))))
 
 (defn get-description
   "Returns the human-readable description of the feature.
 
   returns: the human-readable description of the feature. - `java.lang.String`"
-  ([^javax.management.MBeanFeatureInfo this]
+  (^java.lang.String [^javax.management.MBeanFeatureInfo this]
     (-> this (.getDescription))))
 
 (defn get-descriptor
@@ -39,7 +39,7 @@
    will have no affect on the original descriptor.
 
   returns: a descriptor that is either immutable or a copy of the original. - `javax.management.Descriptor`"
-  ([^javax.management.MBeanFeatureInfo this]
+  (^javax.management.Descriptor [^javax.management.MBeanFeatureInfo this]
     (-> this (.getDescriptor))))
 
 (defn equals
@@ -52,13 +52,13 @@
    getDescriptor()
    values are equal (not necessarily identical) to those of this
    MBeanFeatureInfo. - `boolean`"
-  ([^javax.management.MBeanFeatureInfo this ^java.lang.Object o]
+  (^Boolean [^javax.management.MBeanFeatureInfo this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  ([^javax.management.MBeanFeatureInfo this]
+  (^Integer [^javax.management.MBeanFeatureInfo this]
     (-> this (.hashCode))))
 

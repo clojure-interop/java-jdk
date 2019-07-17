@@ -182,9 +182,9 @@
   returns: a cipher that implements the requested transformation. - `javax.crypto.Cipher`
 
   throws: java.security.NoSuchAlgorithmException - if transformation is null, empty, in an invalid format, or if a CipherSpi implementation for the specified algorithm is not available from the specified provider."
-  ([^java.lang.String transformation ^java.lang.String provider]
+  (^javax.crypto.Cipher [^java.lang.String transformation ^java.lang.String provider]
     (Cipher/getInstance transformation provider))
-  ([^java.lang.String transformation]
+  (^javax.crypto.Cipher [^java.lang.String transformation]
     (Cipher/getInstance transformation)))
 
 (defn *get-max-allowed-key-length
@@ -202,7 +202,7 @@
   returns: the maximum key length in bits or Integer.MAX_VALUE. - `int`
 
   throws: java.lang.NullPointerException - if transformation is null."
-  ([^java.lang.String transformation]
+  (^Integer [^java.lang.String transformation]
     (Cipher/getMaxAllowedKeyLength transformation)))
 
 (defn *get-max-allowed-parameter-spec
@@ -219,7 +219,7 @@
    value or null. - `java.security.spec.AlgorithmParameterSpec`
 
   throws: java.lang.NullPointerException - if transformation is null."
-  ([^java.lang.String transformation]
+  (^java.security.spec.AlgorithmParameterSpec [^java.lang.String transformation]
     (Cipher/getMaxAllowedParameterSpec transformation)))
 
 (defn get-iv
@@ -245,14 +245,14 @@
 
   returns: the parameters used with this cipher, or null if this cipher
    does not use any parameters. - `java.security.AlgorithmParameters`"
-  ([^javax.crypto.Cipher this]
+  (^java.security.AlgorithmParameters [^javax.crypto.Cipher this]
     (-> this (.getParameters))))
 
 (defn get-provider
   "Returns the provider of this Cipher object.
 
   returns: the provider of this Cipher object - `java.security.Provider`"
-  ([^javax.crypto.Cipher this]
+  (^java.security.Provider [^javax.crypto.Cipher this]
     (-> this (.getProvider))))
 
 (defn update
@@ -288,13 +288,13 @@
   returns: the number of bytes stored in output - `int`
 
   throws: java.lang.IllegalStateException - if this cipher is in a wrong state (e.g., has not been initialized)"
-  ([^javax.crypto.Cipher this input ^Integer input-offset ^Integer input-len output ^Integer output-offset]
+  (^Integer [^javax.crypto.Cipher this input ^Integer input-offset ^Integer input-len output ^Integer output-offset]
     (-> this (.update input input-offset input-len output output-offset)))
-  ([^javax.crypto.Cipher this input ^Integer input-offset ^Integer input-len output]
+  (^Integer [^javax.crypto.Cipher this input ^Integer input-offset ^Integer input-len output]
     (-> this (.update input input-offset input-len output)))
   ([^javax.crypto.Cipher this input ^Integer input-offset ^Integer input-len]
     (-> this (.update input input-offset input-len)))
-  ([^javax.crypto.Cipher this ^java.nio.ByteBuffer input ^java.nio.ByteBuffer output]
+  (^Integer [^javax.crypto.Cipher this ^java.nio.ByteBuffer input ^java.nio.ByteBuffer output]
     (-> this (.update input output)))
   ([^javax.crypto.Cipher this input]
     (-> this (.update input))))
@@ -309,7 +309,7 @@
   returns: the unwrapped key. - `java.security.Key`
 
   throws: java.lang.IllegalStateException - if this cipher is in a wrong state (e.g., has not been initialized)."
-  ([^javax.crypto.Cipher this wrapped-key ^java.lang.String wrapped-key-algorithm ^Integer wrapped-key-type]
+  (^java.security.Key [^javax.crypto.Cipher this wrapped-key ^java.lang.String wrapped-key-algorithm ^Integer wrapped-key-type]
     (-> this (.unwrap wrapped-key wrapped-key-algorithm wrapped-key-type))))
 
 (defn wrap
@@ -328,7 +328,7 @@
 
   returns: the exemption mechanism object used with this cipher, or
    null if this cipher does not use any exemption mechanism. - `javax.crypto.ExemptionMechanism`"
-  ([^javax.crypto.Cipher this]
+  (^javax.crypto.ExemptionMechanism [^javax.crypto.Cipher this]
     (-> this (.getExemptionMechanism))))
 
 (defn get-algorithm
@@ -339,7 +339,7 @@
    object..
 
   returns: the algorithm name of this Cipher object. - `java.lang.String`"
-  ([^javax.crypto.Cipher this]
+  (^java.lang.String [^javax.crypto.Cipher this]
     (-> this (.getAlgorithm))))
 
 (defn init
@@ -413,7 +413,7 @@
 
   returns: the block size (in bytes), or 0 if the underlying algorithm is
    not a block cipher - `int`"
-  ([^javax.crypto.Cipher this]
+  (^Integer [^javax.crypto.Cipher this]
     (-> this (.getBlockSize))))
 
 (defn get-output-size
@@ -434,7 +434,7 @@
   returns: the required output buffer size (in bytes) - `int`
 
   throws: java.lang.IllegalStateException - if this cipher is in a wrong state (e.g., has not yet been initialized)"
-  ([^javax.crypto.Cipher this ^Integer input-len]
+  (^Integer [^javax.crypto.Cipher this ^Integer input-len]
     (-> this (.getOutputSize input-len))))
 
 (defn do-final
@@ -482,13 +482,13 @@
   returns: the number of bytes stored in output - `int`
 
   throws: java.lang.IllegalStateException - if this cipher is in a wrong state (e.g., has not been initialized)"
-  ([^javax.crypto.Cipher this input ^Integer input-offset ^Integer input-len output ^Integer output-offset]
+  (^Integer [^javax.crypto.Cipher this input ^Integer input-offset ^Integer input-len output ^Integer output-offset]
     (-> this (.doFinal input input-offset input-len output output-offset)))
-  ([^javax.crypto.Cipher this input ^Integer input-offset ^Integer input-len output]
+  (^Integer [^javax.crypto.Cipher this input ^Integer input-offset ^Integer input-len output]
     (-> this (.doFinal input input-offset input-len output)))
   ([^javax.crypto.Cipher this input ^Integer input-offset ^Integer input-len]
     (-> this (.doFinal input input-offset input-len)))
-  ([^javax.crypto.Cipher this output ^Integer output-offset]
+  (^Integer [^javax.crypto.Cipher this output ^Integer output-offset]
     (-> this (.doFinal output output-offset)))
   ([^javax.crypto.Cipher this input]
     (-> this (.doFinal input)))

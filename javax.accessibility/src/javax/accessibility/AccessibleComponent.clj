@@ -19,7 +19,7 @@
   returns: An instance of Point representing the top-left corner of the
    object's bounds in the coordinate space of the screen; null if
    this object or its parent are not on the screen - `java.awt.Point`"
-  ([^javax.accessibility.AccessibleComponent this]
+  (^java.awt.Point [^javax.accessibility.AccessibleComponent this]
     (-> this (.getLocation))))
 
 (defn set-location
@@ -41,14 +41,14 @@
 
   returns: the foreground color, if supported, of the object;
    otherwise, null - `java.awt.Color`"
-  ([^javax.accessibility.AccessibleComponent this]
+  (^java.awt.Color [^javax.accessibility.AccessibleComponent this]
     (-> this (.getForeground))))
 
 (defn get-cursor
   "Gets the Cursor of this object.
 
   returns: the Cursor, if supported, of the object; otherwise, null - `java.awt.Cursor`"
-  ([^javax.accessibility.AccessibleComponent this]
+  (^java.awt.Cursor [^javax.accessibility.AccessibleComponent this]
     (-> this (.getCursor))))
 
 (defn contains
@@ -59,7 +59,7 @@
   p - the Point relative to the coordinate system of the object - `java.awt.Point`
 
   returns: true if object contains Point; otherwise false - `boolean`"
-  ([^javax.accessibility.AccessibleComponent this ^java.awt.Point p]
+  (^Boolean [^javax.accessibility.AccessibleComponent this ^java.awt.Point p]
     (-> this (.contains p))))
 
 (defn get-location-on-screen
@@ -67,7 +67,7 @@
 
   returns: the location of the object on screen; null if this object
    is not on the screen - `java.awt.Point`"
-  ([^javax.accessibility.AccessibleComponent this]
+  (^java.awt.Point [^javax.accessibility.AccessibleComponent this]
     (-> this (.getLocationOnScreen))))
 
 (defn set-background
@@ -83,7 +83,7 @@
    set in their AccessibleStateSets.
 
   returns: true if object can accept focus; otherwise false - `boolean`"
-  ([^javax.accessibility.AccessibleComponent this]
+  (^Boolean [^javax.accessibility.AccessibleComponent this]
     (-> this (.isFocusTraversable))))
 
 (defn get-font-metrics
@@ -92,7 +92,7 @@
   f - the Font - `java.awt.Font`
 
   returns: the FontMetrics, if supported, the object; otherwise, null - `java.awt.FontMetrics`"
-  ([^javax.accessibility.AccessibleComponent this ^java.awt.Font f]
+  (^java.awt.FontMetrics [^javax.accessibility.AccessibleComponent this ^java.awt.Font f]
     (-> this (.getFontMetrics f))))
 
 (defn add-focus-listener
@@ -134,7 +134,7 @@
    AccessibleState.VISIBLE state set in their AccessibleStateSets.
 
   returns: true if object is visible; otherwise, false - `boolean`"
-  ([^javax.accessibility.AccessibleComponent this]
+  (^Boolean [^javax.accessibility.AccessibleComponent this]
     (-> this (.isVisible))))
 
 (defn set-size
@@ -158,7 +158,7 @@
 
   returns: A rectangle indicating this component's bounds; null if
    this object is not on the screen. - `java.awt.Rectangle`"
-  ([^javax.accessibility.AccessibleComponent this]
+  (^java.awt.Rectangle [^javax.accessibility.AccessibleComponent this]
     (-> this (.getBounds))))
 
 (defn set-bounds
@@ -174,7 +174,7 @@
   "Gets the Font of this object.
 
   returns: the Font,if supported, for the object; otherwise, null - `java.awt.Font`"
-  ([^javax.accessibility.AccessibleComponent this]
+  (^java.awt.Font [^javax.accessibility.AccessibleComponent this]
     (-> this (.getFont))))
 
 (defn set-cursor
@@ -189,7 +189,7 @@
 
   returns: the background color, if supported, of the object;
    otherwise, null - `java.awt.Color`"
-  ([^javax.accessibility.AccessibleComponent this]
+  (^java.awt.Color [^javax.accessibility.AccessibleComponent this]
     (-> this (.getBackground))))
 
 (defn get-accessible-at
@@ -200,7 +200,7 @@
 
   returns: the Accessible, if it exists, at the specified location;
    otherwise null - `javax.accessibility.Accessible`"
-  ([^javax.accessibility.AccessibleComponent this ^java.awt.Point p]
+  (^javax.accessibility.Accessible [^javax.accessibility.AccessibleComponent this ^java.awt.Point p]
     (-> this (.getAccessibleAt p))))
 
 (defn showing?
@@ -211,7 +211,7 @@
    it is underneath a menu that was pulled down).
 
   returns: true if object is showing; otherwise, false - `boolean`"
-  ([^javax.accessibility.AccessibleComponent this]
+  (^Boolean [^javax.accessibility.AccessibleComponent this]
     (-> this (.isShowing))))
 
 (defn get-size
@@ -222,7 +222,7 @@
 
   returns: A Dimension object that indicates the size of this component;
    null if this object is not on the screen - `java.awt.Dimension`"
-  ([^javax.accessibility.AccessibleComponent this]
+  (^java.awt.Dimension [^javax.accessibility.AccessibleComponent this]
     (-> this (.getSize))))
 
 (defn remove-focus-listener
@@ -239,6 +239,6 @@
    AccessibleStateSets.
 
   returns: true if object is enabled; otherwise, false - `boolean`"
-  ([^javax.accessibility.AccessibleComponent this]
+  (^Boolean [^javax.accessibility.AccessibleComponent this]
     (-> this (.isEnabled))))
 

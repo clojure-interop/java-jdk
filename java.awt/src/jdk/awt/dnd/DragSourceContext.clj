@@ -100,7 +100,7 @@
    that initially triggered the drag.
 
   returns: the Event that triggered the drag - `java.awt.dnd.DragGestureEvent`"
-  ([^java.awt.dnd.DragSourceContext this]
+  (^java.awt.dnd.DragGestureEvent [^java.awt.dnd.DragSourceContext this]
     (-> this (.getTrigger))))
 
 (defn get-component
@@ -108,7 +108,7 @@
    DragSourceContext.
 
   returns: the Component that started the drag - `java.awt.Component`"
-  ([^java.awt.dnd.DragSourceContext this]
+  (^java.awt.Component [^java.awt.dnd.DragSourceContext this]
     (-> this (.getComponent))))
 
 (defn drag-mouse-moved
@@ -126,7 +126,7 @@
   "Returns the current drag Cursor.
 
   returns: the current drag Cursor - `java.awt.Cursor`"
-  ([^java.awt.dnd.DragSourceContext this]
+  (^java.awt.Cursor [^java.awt.dnd.DragSourceContext this]
     (-> this (.getCursor))))
 
 (defn drag-exit
@@ -146,7 +146,7 @@
    drag operation associated with this DragSourceContext.
 
   returns: the drop actions supported by the drag source - `int`"
-  ([^java.awt.dnd.DragSourceContext this]
+  (^Integer [^java.awt.dnd.DragSourceContext this]
     (-> this (.getSourceActions))))
 
 (defn get-drag-source
@@ -155,7 +155,7 @@
 
   returns: the DragSource that
      instantiated this DragSourceContext - `java.awt.dnd.DragSource`"
-  ([^java.awt.dnd.DragSourceContext this]
+  (^java.awt.dnd.DragSource [^java.awt.dnd.DragSourceContext this]
     (-> this (.getDragSource))))
 
 (defn remove-drag-source-listener
@@ -171,7 +171,7 @@
    this DragSourceContext.
 
   returns: the Transferable - `java.awt.datatransfer.Transferable`"
-  ([^java.awt.dnd.DragSourceContext this]
+  (^java.awt.datatransfer.Transferable [^java.awt.dnd.DragSourceContext this]
     (-> this (.getTransferable))))
 
 (defn transferables-flavors-changed

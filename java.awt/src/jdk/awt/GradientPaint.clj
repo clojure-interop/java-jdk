@@ -48,7 +48,7 @@
   returns: a Point2D object that is a copy of the point
    that anchors the first color of this
    GradientPaint. - `java.awt.geom.Point2D`"
-  ([^java.awt.GradientPaint this]
+  (^java.awt.geom.Point2D [^java.awt.GradientPaint this]
     (-> this (.getPoint1))))
 
 (defn get-color-1
@@ -56,7 +56,7 @@
 
   returns: a Color object that is the color
    anchored by P1. - `java.awt.Color`"
-  ([^java.awt.GradientPaint this]
+  (^java.awt.Color [^java.awt.GradientPaint this]
     (-> this (.getColor1))))
 
 (defn get-point-2
@@ -65,7 +65,7 @@
   returns: a Point2D object that is a copy of the point
    that anchors the second color of this
    GradientPaint. - `java.awt.geom.Point2D`"
-  ([^java.awt.GradientPaint this]
+  (^java.awt.geom.Point2D [^java.awt.GradientPaint this]
     (-> this (.getPoint2))))
 
 (defn get-color-2
@@ -73,7 +73,7 @@
 
   returns: a Color object that is the color
    anchored by P2. - `java.awt.Color`"
-  ([^java.awt.GradientPaint this]
+  (^java.awt.Color [^java.awt.GradientPaint this]
     (-> this (.getColor2))))
 
 (defn cyclic?
@@ -82,7 +82,7 @@
 
   returns: true if the gradient cycles repeatedly
    between the two colors; false otherwise. - `boolean`"
-  ([^java.awt.GradientPaint this]
+  (^Boolean [^java.awt.GradientPaint this]
     (-> this (.isCyclic))))
 
 (defn create-context
@@ -100,7 +100,7 @@
 
   returns: the PaintContext for
            generating color patterns. - `java.awt.PaintContext`"
-  ([^java.awt.GradientPaint this ^java.awt.image.ColorModel cm ^java.awt.Rectangle device-bounds ^java.awt.geom.Rectangle2D user-bounds ^java.awt.geom.AffineTransform xform ^java.awt.RenderingHints hints]
+  (^java.awt.PaintContext [^java.awt.GradientPaint this ^java.awt.image.ColorModel cm ^java.awt.Rectangle device-bounds ^java.awt.geom.Rectangle2D user-bounds ^java.awt.geom.AffineTransform xform ^java.awt.RenderingHints hints]
     (-> this (.createContext cm device-bounds user-bounds xform hints))))
 
 (defn get-transparency
@@ -108,6 +108,6 @@
 
   returns: an integer value representing this GradientPaint
    object's transparency mode. - `int`"
-  ([^java.awt.GradientPaint this]
+  (^Integer [^java.awt.GradientPaint this]
     (-> this (.getTransparency))))
 

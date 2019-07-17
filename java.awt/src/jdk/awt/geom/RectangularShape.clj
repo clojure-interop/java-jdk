@@ -17,7 +17,7 @@
 
   returns: the largest Y coordinate of the framing
             rectangle of the Shape. - `double`"
-  ([^java.awt.geom.RectangularShape this]
+  (^Double [^java.awt.geom.RectangularShape this]
     (-> this (.getMaxY))))
 
 (defn get-center-x
@@ -27,7 +27,7 @@
 
   returns: the X coordinate of the center of the framing rectangle
             of the Shape. - `double`"
-  ([^java.awt.geom.RectangularShape this]
+  (^Double [^java.awt.geom.RectangularShape this]
     (-> this (.getCenterX))))
 
 (defn set-frame-from-diagonal
@@ -50,7 +50,7 @@
    double precision.
 
   returns: the width of the framing rectangle. - `double`"
-  ([^java.awt.geom.RectangularShape this]
+  (^Double [^java.awt.geom.RectangularShape this]
     (-> this (.getWidth))))
 
 (defn get-path-iterator
@@ -75,7 +75,7 @@
 
   returns: a PathIterator object that provides access to
             the Shape object's flattened geometry. - `java.awt.geom.PathIterator`"
-  ([^java.awt.geom.RectangularShape this ^java.awt.geom.AffineTransform at ^Double flatness]
+  (^java.awt.geom.PathIterator [^java.awt.geom.RectangularShape this ^java.awt.geom.AffineTransform at ^Double flatness]
     (-> this (.getPathIterator at flatness))))
 
 (defn get-frame
@@ -84,7 +84,7 @@
 
   returns: a Rectangle2D, specified in
    double coordinates. - `java.awt.geom.Rectangle2D`"
-  ([^java.awt.geom.RectangularShape this]
+  (^java.awt.geom.Rectangle2D [^java.awt.geom.RectangularShape this]
     (-> this (.getFrame))))
 
 (defn get-max-x
@@ -94,7 +94,7 @@
 
   returns: the largest X coordinate of the framing
             rectangle of the Shape. - `double`"
-  ([^java.awt.geom.RectangularShape this]
+  (^Double [^java.awt.geom.RectangularShape this]
     (-> this (.getMaxX))))
 
 (defn contains
@@ -108,7 +108,7 @@
   returns: true if the specified Point2D is
             inside the boundary of the Shape;
             false otherwise. - `boolean`"
-  ([^java.awt.geom.RectangularShape this ^java.awt.geom.Point2D p]
+  (^Boolean [^java.awt.geom.RectangularShape this ^java.awt.geom.Point2D p]
     (-> this (.contains p))))
 
 (defn get-min-y
@@ -118,7 +118,7 @@
 
   returns: the smallest Y coordinate of the framing
             rectangle of the Shape. - `double`"
-  ([^java.awt.geom.RectangularShape this]
+  (^Double [^java.awt.geom.RectangularShape this]
     (-> this (.getMinY))))
 
 (defn get-center-y
@@ -128,7 +128,7 @@
 
   returns: the Y coordinate of the center of the framing rectangle
             of the Shape. - `double`"
-  ([^java.awt.geom.RectangularShape this]
+  (^Double [^java.awt.geom.RectangularShape this]
     (-> this (.getCenterY))))
 
 (defn get-y
@@ -137,7 +137,7 @@
 
   returns: the Y coordinate of the upper-left corner of
    the framing rectangle. - `double`"
-  ([^java.awt.geom.RectangularShape this]
+  (^Double [^java.awt.geom.RectangularShape this]
     (-> this (.getY))))
 
 (defn get-x
@@ -146,7 +146,7 @@
 
   returns: the X coordinate of the upper-left corner of
    the framing rectangle. - `double`"
-  ([^java.awt.geom.RectangularShape this]
+  (^Double [^java.awt.geom.RectangularShape this]
     (-> this (.getX))))
 
 (defn get-height
@@ -154,7 +154,7 @@
    in double precision.
 
   returns: the height of the framing rectangle. - `double`"
-  ([^java.awt.geom.RectangularShape this]
+  (^Double [^java.awt.geom.RectangularShape this]
     (-> this (.getHeight))))
 
 (defn set-frame-from-center
@@ -179,7 +179,7 @@
   returns: a clone of this instance. - `java.lang.Object`
 
   throws: java.lang.OutOfMemoryError - if there is not enough memory."
-  ([^java.awt.geom.RectangularShape this]
+  (^java.lang.Object [^java.awt.geom.RectangularShape this]
     (-> this (.clone))))
 
 (defn get-bounds
@@ -222,7 +222,7 @@
 
   returns: an integer Rectangle that completely encloses
                    the Shape. - `java.awt.Rectangle`"
-  ([^java.awt.geom.RectangularShape this]
+  (^java.awt.Rectangle [^java.awt.geom.RectangularShape this]
     (-> this (.getBounds))))
 
 (defn get-min-x
@@ -232,7 +232,7 @@
 
   returns: the smallest X coordinate of the framing
             rectangle of the Shape. - `double`"
-  ([^java.awt.geom.RectangularShape this]
+  (^Double [^java.awt.geom.RectangularShape this]
     (-> this (.getMinX))))
 
 (defn empty?
@@ -242,7 +242,7 @@
 
   returns: true if the RectangularShape is empty;
             false otherwise. - `boolean`"
-  ([^java.awt.geom.RectangularShape this]
+  (^Boolean [^java.awt.geom.RectangularShape this]
     (-> this (.isEmpty))))
 
 (defn set-frame
@@ -288,6 +288,6 @@
             intersect, or are both highly likely to intersect and intersection
             calculations would be too expensive to perform; false
             otherwise. - `boolean`"
-  ([^java.awt.geom.RectangularShape this ^java.awt.geom.Rectangle2D r]
+  (^Boolean [^java.awt.geom.RectangularShape this ^java.awt.geom.Rectangle2D r]
     (-> this (.intersects r))))
 

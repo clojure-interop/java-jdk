@@ -20,7 +20,7 @@
   "Returns the server name type of this SNIMatcher object.
 
   returns: the server name type of this SNIMatcher object. - `int`"
-  ([^javax.net.ssl.SNIMatcher this]
+  (^Integer [^javax.net.ssl.SNIMatcher this]
     (-> this (.getType))))
 
 (defn matches
@@ -32,6 +32,6 @@
            given serverName - `boolean`
 
   throws: java.lang.NullPointerException - if serverName is null"
-  ([^javax.net.ssl.SNIMatcher this ^javax.net.ssl.SNIServerName server-name]
+  (^Boolean [^javax.net.ssl.SNIMatcher this ^javax.net.ssl.SNIServerName server-name]
     (-> this (.matches server-name))))
 

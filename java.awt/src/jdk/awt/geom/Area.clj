@@ -89,9 +89,9 @@
   returns: the PathIterator object that returns the
    geometry of the outline of this Area, one segment
    at a time. - `java.awt.geom.PathIterator`"
-  ([^java.awt.geom.Area this ^java.awt.geom.AffineTransform at ^Double flatness]
+  (^java.awt.geom.PathIterator [^java.awt.geom.Area this ^java.awt.geom.AffineTransform at ^Double flatness]
     (-> this (.getPathIterator at flatness)))
-  ([^java.awt.geom.Area this ^java.awt.geom.AffineTransform at]
+  (^java.awt.geom.PathIterator [^java.awt.geom.Area this ^java.awt.geom.AffineTransform at]
     (-> this (.getPathIterator at))))
 
 (defn singular?
@@ -104,7 +104,7 @@
 
   returns: true if the Area is comprised
    of a single basic geometry; false otherwise. - `boolean`"
-  ([^java.awt.geom.Area this]
+  (^Boolean [^java.awt.geom.Area this]
     (-> this (.isSingular))))
 
 (defn intersect
@@ -174,11 +174,11 @@
             intersects method returns true
             and the containment calculations would be too expensive to
             perform. - `boolean`"
-  ([^java.awt.geom.Area this ^Double x ^Double y ^Double w ^Double h]
+  (^Boolean [^java.awt.geom.Area this ^Double x ^Double y ^Double w ^Double h]
     (-> this (.contains x y w h)))
-  ([^java.awt.geom.Area this ^Double x ^Double y]
+  (^Boolean [^java.awt.geom.Area this ^Double x ^Double y]
     (-> this (.contains x y)))
-  ([^java.awt.geom.Area this ^java.awt.geom.Point2D p]
+  (^Boolean [^java.awt.geom.Area this ^java.awt.geom.Point2D p]
     (-> this (.contains p))))
 
 (defn polygonal?
@@ -188,7 +188,7 @@
   returns: true if the geometry of this
    Area consists entirely of line segments;
    false otherwise. - `boolean`"
-  ([^java.awt.geom.Area this]
+  (^Boolean [^java.awt.geom.Area this]
     (-> this (.isPolygonal))))
 
 (defn transform
@@ -250,7 +250,7 @@
 
   returns: the bounding Rectangle2D for the
    Area. - `java.awt.geom.Rectangle2D`"
-  ([^java.awt.geom.Area this]
+  (^java.awt.geom.Rectangle2D [^java.awt.geom.Area this]
     (-> this (.getBounds2D))))
 
 (defn exclusive-or
@@ -288,7 +288,7 @@
   "Returns an exact copy of this Area object.
 
   returns: Created clone object - `java.lang.Object`"
-  ([^java.awt.geom.Area this]
+  (^java.lang.Object [^java.awt.geom.Area this]
     (-> this (.clone))))
 
 (defn get-bounds
@@ -306,7 +306,7 @@
 
   returns: the bounding Rectangle for the
    Area. - `java.awt.Rectangle`"
-  ([^java.awt.geom.Area this]
+  (^java.awt.Rectangle [^java.awt.geom.Area this]
     (-> this (.getBounds))))
 
 (defn create-transformed-area
@@ -321,7 +321,7 @@
              geometry. - `java.awt.geom.Area`
 
   throws: java.lang.NullPointerException - if t is null"
-  ([^java.awt.geom.Area this ^java.awt.geom.AffineTransform t]
+  (^java.awt.geom.Area [^java.awt.geom.Area this ^java.awt.geom.AffineTransform t]
     (-> this (.createTransformedArea t))))
 
 (defn add
@@ -359,7 +359,7 @@
 
   returns: true if this Area object
    represents an empty area; false otherwise. - `boolean`"
-  ([^java.awt.geom.Area this]
+  (^Boolean [^java.awt.geom.Area this]
     (-> this (.isEmpty))))
 
 (defn equals
@@ -371,7 +371,7 @@
 
   returns: true if the two geometries are equal;
             false otherwise. - `boolean`"
-  ([^java.awt.geom.Area this ^java.awt.geom.Area other]
+  (^Boolean [^java.awt.geom.Area this ^java.awt.geom.Area other]
     (-> this (.equals other))))
 
 (defn intersects
@@ -408,9 +408,9 @@
             the interior of the rectangular area intersect, or are
             both highly likely to intersect and intersection calculations
             would be too expensive to perform; false otherwise. - `boolean`"
-  ([^java.awt.geom.Area this ^Double x ^Double y ^Double w ^Double h]
+  (^Boolean [^java.awt.geom.Area this ^Double x ^Double y ^Double w ^Double h]
     (-> this (.intersects x y w h)))
-  ([^java.awt.geom.Area this ^java.awt.geom.Rectangle2D r]
+  (^Boolean [^java.awt.geom.Area this ^java.awt.geom.Rectangle2D r]
     (-> this (.intersects r))))
 
 (defn rectangular?
@@ -419,6 +419,6 @@
   returns: true if the geometry of this
    Area is rectangular in shape; false
    otherwise. - `boolean`"
-  ([^java.awt.geom.Area this]
+  (^Boolean [^java.awt.geom.Area this]
     (-> this (.isRectangular))))
 

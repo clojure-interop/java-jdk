@@ -39,7 +39,7 @@
 
   returns: True if object is equivalent to this number of
             intervening jobs attribute, false otherwise. - `boolean`"
-  ([^javax.print.attribute.standard.NumberOfInterveningJobs this ^java.lang.Object object]
+  (^Boolean [^javax.print.attribute.standard.NumberOfInterveningJobs this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -62,6 +62,6 @@
    category name is `number-of-intervening-jobs`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.NumberOfInterveningJobs this]
+  (^java.lang.String [^javax.print.attribute.standard.NumberOfInterveningJobs this]
     (-> this (.getName))))
 

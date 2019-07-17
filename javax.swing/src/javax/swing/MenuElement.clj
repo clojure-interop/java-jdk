@@ -21,7 +21,7 @@
   event - `java.awt.event.MouseEvent`
   path - `javax.swing.MenuElement[]`
   manager - `javax.swing.MenuSelectionManager`"
-  ([^javax.swing.MenuElement this ^java.awt.event.MouseEvent event ^javax.swing.MenuElement[] path ^javax.swing.MenuSelectionManager manager]
+  ([^javax.swing.MenuElement this ^java.awt.event.MouseEvent event path ^javax.swing.MenuSelectionManager manager]
     (-> this (.processMouseEvent event path manager))))
 
 (defn process-key-event
@@ -30,7 +30,7 @@
   event - `java.awt.event.KeyEvent`
   path - `javax.swing.MenuElement[]`
   manager - `javax.swing.MenuSelectionManager`"
-  ([^javax.swing.MenuElement this ^java.awt.event.KeyEvent event ^javax.swing.MenuElement[] path ^javax.swing.MenuSelectionManager manager]
+  ([^javax.swing.MenuElement this ^java.awt.event.KeyEvent event path ^javax.swing.MenuSelectionManager manager]
     (-> this (.processKeyEvent event path manager))))
 
 (defn menu-selection-changed
@@ -55,6 +55,6 @@
    a MenuElement's component.
 
   returns: the Component value - `java.awt.Component`"
-  ([^javax.swing.MenuElement this]
+  (^java.awt.Component [^javax.swing.MenuElement this]
     (-> this (.getComponent))))
 

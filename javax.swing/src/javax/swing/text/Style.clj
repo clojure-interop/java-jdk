@@ -16,7 +16,7 @@
    associated with the style.
 
   returns: the name - `java.lang.String`"
-  ([^javax.swing.text.Style this]
+  (^java.lang.String [^javax.swing.text.Style this]
     (-> this (.getName))))
 
 (defn add-change-listener

@@ -25,20 +25,20 @@
   "Gets the SecretKey from this entry.
 
   returns: the SecretKey from this entry - `javax.crypto.SecretKey`"
-  ([^java.security.KeyStore$SecretKeyEntry this]
+  (^javax.crypto.SecretKey [^java.security.KeyStore$SecretKeyEntry this]
     (-> this (.getSecretKey))))
 
 (defn get-attributes
   "Retrieves the attributes associated with an entry.
 
   returns: an unmodifiable Set of attributes, possibly empty - `java.util.Set<java.security.KeyStore.Entry.Attribute>`"
-  ([^java.security.KeyStore$SecretKeyEntry this]
+  (^java.util.Set [^java.security.KeyStore$SecretKeyEntry this]
     (-> this (.getAttributes))))
 
 (defn to-string
   "Returns a string representation of this SecretKeyEntry.
 
   returns: a string representation of this SecretKeyEntry. - `java.lang.String`"
-  ([^java.security.KeyStore$SecretKeyEntry this]
+  (^java.lang.String [^java.security.KeyStore$SecretKeyEntry this]
     (-> this (.toString))))
 

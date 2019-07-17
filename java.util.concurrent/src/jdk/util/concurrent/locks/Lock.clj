@@ -240,9 +240,9 @@
            if the waiting time elapsed before the lock was acquired - `boolean`
 
   throws: java.lang.InterruptedException - if the current thread is interrupted while acquiring the lock (and interruption of lock acquisition is supported)"
-  ([^java.util.concurrent.locks.Lock this ^Long time ^java.util.concurrent.TimeUnit unit]
+  (^Boolean [^java.util.concurrent.locks.Lock this ^Long time ^java.util.concurrent.TimeUnit unit]
     (-> this (.tryLock time unit)))
-  ([^java.util.concurrent.locks.Lock this]
+  (^Boolean [^java.util.concurrent.locks.Lock this]
     (-> this (.tryLock))))
 
 (defn unlock
@@ -277,6 +277,6 @@
   returns: A new Condition instance for this Lock instance - `java.util.concurrent.locks.Condition`
 
   throws: java.lang.UnsupportedOperationException - if this Lock implementation does not support conditions"
-  ([^java.util.concurrent.locks.Lock this]
+  (^java.util.concurrent.locks.Condition [^java.util.concurrent.locks.Lock this]
     (-> this (.newCondition))))
 

@@ -76,7 +76,7 @@
   returns: a new IndexColorModel representing the filtered colors - `java.awt.image.IndexColorModel`
 
   throws: java.lang.NullPointerException - if icm is null"
-  ([^java.awt.image.RGBImageFilter this ^java.awt.image.IndexColorModel icm]
+  (^java.awt.image.IndexColorModel [^java.awt.image.RGBImageFilter this ^java.awt.image.IndexColorModel icm]
     (-> this (.filterIndexColorModel icm))))
 
 (defn filter-rgb-pixels
@@ -127,6 +127,6 @@
   rgb - the integer pixel representation in the default RGB color model - `int`
 
   returns: a filtered pixel in the default RGB color model. - `int`"
-  ([^java.awt.image.RGBImageFilter this ^Integer x ^Integer y ^Integer rgb]
+  (^Integer [^java.awt.image.RGBImageFilter this ^Integer x ^Integer y ^Integer rgb]
     (-> this (.filterRGB x y rgb))))
 

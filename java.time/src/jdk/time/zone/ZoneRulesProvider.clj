@@ -39,7 +39,7 @@
    These IDs are the string form of a ZoneId.
 
   returns: a modifiable copy of the set of zone IDs, not null - `java.util.Set<java.lang.String>`"
-  ([]
+  (^java.util.Set []
     (ZoneRulesProvider/getAvailableZoneIds )))
 
 (defn *get-rules
@@ -64,7 +64,7 @@
    otherwise not null - `java.time.zone.ZoneRules`
 
   throws: java.time.zone.ZoneRulesException - if rules cannot be obtained for the zone ID"
-  ([^java.lang.String zone-id ^Boolean for-caching]
+  (^java.time.zone.ZoneRules [^java.lang.String zone-id ^Boolean for-caching]
     (ZoneRulesProvider/getRules zone-id for-caching)))
 
 (defn *get-versions
@@ -92,7 +92,7 @@
     from oldest to newest, not null - `java.util.NavigableMap<java.lang.String,java.time.zone.ZoneRules>`
 
   throws: java.time.zone.ZoneRulesException - if history cannot be obtained for the zone ID"
-  ([^java.lang.String zone-id]
+  (^java.util.NavigableMap [^java.lang.String zone-id]
     (ZoneRulesProvider/getVersions zone-id)))
 
 (defn *register-provider
@@ -136,6 +136,6 @@
   returns: true if the rules were updated - `boolean`
 
   throws: java.time.zone.ZoneRulesException - if an error occurs during the refresh"
-  ([]
+  (^Boolean []
     (ZoneRulesProvider/refresh )))
 

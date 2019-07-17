@@ -52,21 +52,21 @@
 
   returns: the numeric value represented by this object after conversion
             to type double. - `double`"
-  ([^java.util.concurrent.atomic.LongAccumulator this]
+  (^Double [^java.util.concurrent.atomic.LongAccumulator this]
     (-> this (.doubleValue))))
 
 (defn long-value
   "Equivalent to get().
 
   returns: the current value - `long`"
-  ([^java.util.concurrent.atomic.LongAccumulator this]
+  (^Long [^java.util.concurrent.atomic.LongAccumulator this]
     (-> this (.longValue))))
 
 (defn to-string
   "Returns the String representation of the current value.
 
   returns: the String representation of the current value - `java.lang.String`"
-  ([^java.util.concurrent.atomic.LongAccumulator this]
+  (^java.lang.String [^java.util.concurrent.atomic.LongAccumulator this]
     (-> this (.toString))))
 
 (defn reset
@@ -85,7 +85,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type float. - `float`"
-  ([^java.util.concurrent.atomic.LongAccumulator this]
+  (^Float [^java.util.concurrent.atomic.LongAccumulator this]
     (-> this (.floatValue))))
 
 (defn get-then-reset
@@ -96,7 +96,7 @@
    the reset.
 
   returns: the value before reset - `long`"
-  ([^java.util.concurrent.atomic.LongAccumulator this]
+  (^Long [^java.util.concurrent.atomic.LongAccumulator this]
     (-> this (.getThenReset))))
 
 (defn accumulate
@@ -112,7 +112,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type int. - `int`"
-  ([^java.util.concurrent.atomic.LongAccumulator this]
+  (^Integer [^java.util.concurrent.atomic.LongAccumulator this]
     (-> this (.intValue))))
 
 (defn get
@@ -123,6 +123,6 @@
    incorporated.
 
   returns: the current value - `long`"
-  ([^java.util.concurrent.atomic.LongAccumulator this]
+  (^Long [^java.util.concurrent.atomic.LongAccumulator this]
     (-> this (.get))))
 

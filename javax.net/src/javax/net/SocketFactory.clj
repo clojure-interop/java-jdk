@@ -35,7 +35,7 @@
   "Returns a copy of the environment's default socket factory.
 
   returns: the default SocketFactory - `javax.net.SocketFactory`"
-  ([]
+  (^javax.net.SocketFactory []
     (SocketFactory/getDefault )))
 
 (defn create-socket
@@ -57,10 +57,10 @@
   returns: the Socket - `java.net.Socket`
 
   throws: java.io.IOException - if an I/O error occurs when creating the socket"
-  ([^javax.net.SocketFactory this ^java.lang.String host ^Integer port ^java.net.InetAddress local-host ^Integer local-port]
+  (^java.net.Socket [^javax.net.SocketFactory this ^java.lang.String host ^Integer port ^java.net.InetAddress local-host ^Integer local-port]
     (-> this (.createSocket host port local-host local-port)))
-  ([^javax.net.SocketFactory this ^java.lang.String host ^Integer port]
+  (^java.net.Socket [^javax.net.SocketFactory this ^java.lang.String host ^Integer port]
     (-> this (.createSocket host port)))
-  ([^javax.net.SocketFactory this]
+  (^java.net.Socket [^javax.net.SocketFactory this]
     (-> this (.createSocket))))
 

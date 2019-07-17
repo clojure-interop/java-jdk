@@ -54,7 +54,7 @@
    random number generator.
 
   returns: A randomly generated UUID - `java.util.UUID`"
-  ([]
+  (^java.util.UUID []
     (UUID/randomUUID )))
 
 (defn *name-uuid-from-bytes
@@ -64,7 +64,7 @@
   name - A byte array to be used to construct a UUID - `byte[]`
 
   returns: A UUID generated from the specified array - `java.util.UUID`"
-  ([name]
+  (^java.util.UUID [name]
     (UUID/nameUUIDFromBytes name)))
 
 (defn *from-string
@@ -76,14 +76,14 @@
   returns: A UUID with the specified value - `java.util.UUID`
 
   throws: java.lang.IllegalArgumentException - If name does not conform to the string representation as described in toString()"
-  ([^java.lang.String name]
+  (^java.util.UUID [^java.lang.String name]
     (UUID/fromString name)))
 
 (defn get-least-significant-bits
   "Returns the least significant 64 bits of this UUID's 128 bit value.
 
   returns: The least significant 64 bits of this UUID's 128 bit value - `long`"
-  ([^java.util.UUID this]
+  (^Long [^java.util.UUID this]
     (-> this (.getLeastSignificantBits))))
 
 (defn clock-sequence
@@ -100,7 +100,7 @@
   returns: The clock sequence of this UUID - `int`
 
   throws: java.lang.UnsupportedOperationException - If this UUID is not a version 1 UUID"
-  ([^java.util.UUID this]
+  (^Integer [^java.util.UUID this]
     (-> this (.clockSequence))))
 
 (defn timestamp
@@ -118,7 +118,7 @@
   returns: The timestamp of this UUID. - `long`
 
   throws: java.lang.UnsupportedOperationException - If this UUID is not a version 1 UUID"
-  ([^java.util.UUID this]
+  (^Long [^java.util.UUID this]
     (-> this (.timestamp))))
 
 (defn to-string
@@ -143,14 +143,14 @@
          | `A` | `B` | `C` | `D` | `E` | `F`
 
   returns: A string representation of this UUID - `java.lang.String`"
-  ([^java.util.UUID this]
+  (^java.lang.String [^java.util.UUID this]
     (-> this (.toString))))
 
 (defn get-most-significant-bits
   "Returns the most significant 64 bits of this UUID's 128 bit value.
 
   returns: The most significant 64 bits of this UUID's 128 bit value - `long`"
-  ([^java.util.UUID this]
+  (^Long [^java.util.UUID this]
     (-> this (.getMostSignificantBits))))
 
 (defn version
@@ -165,14 +165,14 @@
    4    Randomly generated UUID
 
   returns: The version number of this UUID - `int`"
-  ([^java.util.UUID this]
+  (^Integer [^java.util.UUID this]
     (-> this (.version))))
 
 (defn hash-code
   "Returns a hash code for this UUID.
 
   returns: A hash code value for this UUID - `int`"
-  ([^java.util.UUID this]
+  (^Integer [^java.util.UUID this]
     (-> this (.hashCode))))
 
 (defn compare-to
@@ -186,7 +186,7 @@
 
   returns: -1, 0 or 1 as this UUID is less than, equal to, or
             greater than val - `int`"
-  ([^java.util.UUID this ^java.util.UUID val]
+  (^Integer [^java.util.UUID this ^java.util.UUID val]
     (-> this (.compareTo val))))
 
 (defn equals
@@ -198,7 +198,7 @@
 
   returns: true if the objects are the same; false
             otherwise - `boolean`"
-  ([^java.util.UUID this ^java.lang.Object obj]
+  (^Boolean [^java.util.UUID this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn variant
@@ -214,7 +214,7 @@
    7    Reserved for future definition
 
   returns: The variant number of this UUID - `int`"
-  ([^java.util.UUID this]
+  (^Integer [^java.util.UUID this]
     (-> this (.variant))))
 
 (defn node
@@ -231,6 +231,6 @@
   returns: The node value of this UUID - `long`
 
   throws: java.lang.UnsupportedOperationException - If this UUID is not a version 1 UUID"
-  ([^java.util.UUID this]
+  (^Long [^java.util.UUID this]
     (-> this (.node))))
 

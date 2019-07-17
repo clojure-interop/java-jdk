@@ -34,9 +34,9 @@
   name - The fully qualified Java class name of the described notifications. - `java.lang.String`
   description - A human readable description of the data. - `java.lang.String`
   descriptor - The descriptor for the notifications. This may be null which is equivalent to an empty descriptor. - `javax.management.Descriptor`"
-  ([^java.lang.String[] notif-types ^java.lang.String name ^java.lang.String description ^javax.management.Descriptor descriptor]
+  ([notif-types ^java.lang.String name ^java.lang.String description ^javax.management.Descriptor descriptor]
     (new MBeanNotificationInfo notif-types name description descriptor))
-  ([^java.lang.String[] notif-types ^java.lang.String name ^java.lang.String description]
+  ([notif-types ^java.lang.String name ^java.lang.String description]
     (new MBeanNotificationInfo notif-types name description)))
 
 (defn clone
@@ -47,7 +47,7 @@
    No deeper cloning of any internal field is made.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([^javax.management.MBeanNotificationInfo this]
+  (^java.lang.Object [^javax.management.MBeanNotificationInfo this]
     (-> this (.clone))))
 
 (defn get-notif-types
@@ -63,7 +63,7 @@
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^javax.management.MBeanNotificationInfo this]
+  (^java.lang.String [^javax.management.MBeanNotificationInfo this]
     (-> this (.toString))))
 
 (defn equals
@@ -79,13 +79,13 @@
    notification type arrays are equal if their corresponding
    elements are equal.  They are not equal if they have the same
    elements but in a different order. - `boolean`"
-  ([^javax.management.MBeanNotificationInfo this ^java.lang.Object o]
+  (^Boolean [^javax.management.MBeanNotificationInfo this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  ([^javax.management.MBeanNotificationInfo this]
+  (^Integer [^javax.management.MBeanNotificationInfo this]
     (-> this (.hashCode))))
 

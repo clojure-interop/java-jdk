@@ -112,21 +112,21 @@
   "Returns the position, as a float, of the tab.
 
   returns: the position of the tab - `float`"
-  ([^javax.swing.text.TabStop this]
+  (^Float [^javax.swing.text.TabStop this]
     (-> this (.getPosition))))
 
 (defn get-alignment
   "Returns the alignment, as an integer, of the tab.
 
   returns: the alignment of the tab - `int`"
-  ([^javax.swing.text.TabStop this]
+  (^Integer [^javax.swing.text.TabStop this]
     (-> this (.getAlignment))))
 
 (defn get-leader
   "Returns the leader of the tab.
 
   returns: the leader of the tab - `int`"
-  ([^javax.swing.text.TabStop this]
+  (^Integer [^javax.swing.text.TabStop this]
     (-> this (.getLeader))))
 
 (defn equals
@@ -135,7 +135,7 @@
   other - the reference object with which to compare. - `java.lang.Object`
 
   returns: true if the tabs are equal, otherwise false - `boolean`"
-  ([^javax.swing.text.TabStop this ^java.lang.Object other]
+  (^Boolean [^javax.swing.text.TabStop this ^java.lang.Object other]
     (-> this (.equals other))))
 
 (defn hash-code
@@ -143,13 +143,13 @@
    here to ensure 100% pure.
 
   returns: the hashCode for the object - `int`"
-  ([^javax.swing.text.TabStop this]
+  (^Integer [^javax.swing.text.TabStop this]
     (-> this (.hashCode))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^javax.swing.text.TabStop this]
+  (^java.lang.String [^javax.swing.text.TabStop this]
     (-> this (.toString))))
 

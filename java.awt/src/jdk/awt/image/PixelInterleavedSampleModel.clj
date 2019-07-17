@@ -59,7 +59,7 @@
            and height. - `java.awt.image.SampleModel`
 
   throws: java.lang.IllegalArgumentException - if w or h is not greater than 0"
-  ([^java.awt.image.PixelInterleavedSampleModel this ^Integer w ^Integer h]
+  (^java.awt.image.SampleModel [^java.awt.image.PixelInterleavedSampleModel this ^Integer w ^Integer h]
     (-> this (.createCompatibleSampleModel w h))))
 
 (defn create-subset-sample-model
@@ -75,13 +75,13 @@
 
   returns: a ComponentSampleModel created with a subset
             of bands from this ComponentSampleModel. - `java.awt.image.SampleModel`"
-  ([^java.awt.image.PixelInterleavedSampleModel this bands]
+  (^java.awt.image.SampleModel [^java.awt.image.PixelInterleavedSampleModel this bands]
     (-> this (.createSubsetSampleModel bands))))
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  ([^java.awt.image.PixelInterleavedSampleModel this]
+  (^Integer [^java.awt.image.PixelInterleavedSampleModel this]
     (-> this (.hashCode))))
 

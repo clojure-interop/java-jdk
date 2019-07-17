@@ -28,9 +28,9 @@
                this stream has been reached. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.LineNumberInputStream this b ^Integer off ^Integer len]
+  (^Integer [^java.io.LineNumberInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  ([^java.io.LineNumberInputStream this]
+  (^Integer [^java.io.LineNumberInputStream this]
     (-> this (.read))))
 
 (defn skip
@@ -41,7 +41,7 @@
   returns: the actual number of bytes skipped. - `long`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.LineNumberInputStream this ^Long n]
+  (^Long [^java.io.LineNumberInputStream this ^Long n]
     (-> this (.skip n))))
 
 (defn set-line-number
@@ -55,7 +55,7 @@
   "Deprecated.
 
   returns: the current line number. - `int`"
-  ([^java.io.LineNumberInputStream this]
+  (^Integer [^java.io.LineNumberInputStream this]
     (-> this (.getLineNumber))))
 
 (defn available
@@ -65,7 +65,7 @@
                without blocking. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.LineNumberInputStream this]
+  (^Integer [^java.io.LineNumberInputStream this]
     (-> this (.available))))
 
 (defn mark

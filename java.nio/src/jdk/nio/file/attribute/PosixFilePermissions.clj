@@ -15,7 +15,7 @@
   perms - the set of permissions - `java.util.Set<java.nio.file.attribute.PosixFilePermission>`
 
   returns: the string representation of the permission set - `java.lang.String`"
-  ([^java.util.Set perms]
+  (^java.lang.String [^java.util.Set perms]
     (PosixFilePermissions/toString perms)))
 
 (defn *from-string
@@ -44,7 +44,7 @@
   returns: the resulting set of permissions - `java.util.Set<java.nio.file.attribute.PosixFilePermission>`
 
   throws: java.lang.IllegalArgumentException - if the string cannot be converted to a set of permissions"
-  ([^java.lang.String perms]
+  (^java.util.Set [^java.lang.String perms]
     (PosixFilePermissions/fromString perms)))
 
 (defn *as-file-attribute
@@ -58,6 +58,6 @@
             name `posix:permissions` - `java.nio.file.attribute.FileAttribute<java.util.Set<java.nio.file.attribute.PosixFilePermission>>`
 
   throws: java.lang.ClassCastException - if the set contains elements that are not of type PosixFilePermission"
-  ([^java.util.Set perms]
+  (^java.nio.file.attribute.FileAttribute> [^java.util.Set perms]
     (PosixFilePermissions/asFileAttribute perms)))
 

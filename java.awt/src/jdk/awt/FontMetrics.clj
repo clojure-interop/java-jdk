@@ -91,7 +91,7 @@
   returns: the advance width of the specified character
               in the Font described by this
               FontMetrics object. - `int`"
-  ([^java.awt.FontMetrics this ^Integer code-point]
+  (^Integer [^java.awt.FontMetrics this ^Integer code-point]
     (-> this (.charWidth code-point))))
 
 (defn get-ascent
@@ -102,7 +102,7 @@
    might extend above the font ascent line.
 
   returns: the font ascent of the Font. - `int`"
-  ([^java.awt.FontMetrics this]
+  (^Integer [^java.awt.FontMetrics this]
     (-> this (.getAscent))))
 
 (defn get-line-metrics
@@ -116,9 +116,9 @@
 
   returns: a LineMetrics object created with the
    specified String and Graphics context. - `java.awt.font.LineMetrics`"
-  ([^java.awt.FontMetrics this ^java.lang.String str ^Integer begin-index ^Integer limit ^java.awt.Graphics context]
+  (^java.awt.font.LineMetrics [^java.awt.FontMetrics this ^java.lang.String str ^Integer begin-index ^Integer limit ^java.awt.Graphics context]
     (-> this (.getLineMetrics str begin-index limit context)))
-  ([^java.awt.FontMetrics this ^java.lang.String str ^java.awt.Graphics context]
+  (^java.awt.font.LineMetrics [^java.awt.FontMetrics this ^java.lang.String str ^java.awt.Graphics context]
     (-> this (.getLineMetrics str context))))
 
 (defn to-string
@@ -127,7 +127,7 @@
 
   returns: a String representation of this
    FontMetrics object. - `java.lang.String`"
-  ([^java.awt.FontMetrics this]
+  (^java.lang.String [^java.awt.FontMetrics this]
     (-> this (.toString))))
 
 (defn get-string-bounds
@@ -145,9 +145,9 @@
   returns: a Rectangle2D that is the bounding box of the
    specified String in the specified
    Graphics context. - `java.awt.geom.Rectangle2D`"
-  ([^java.awt.FontMetrics this ^java.lang.String str ^Integer begin-index ^Integer limit ^java.awt.Graphics context]
+  (^java.awt.geom.Rectangle2D [^java.awt.FontMetrics this ^java.lang.String str ^Integer begin-index ^Integer limit ^java.awt.Graphics context]
     (-> this (.getStringBounds str begin-index limit context)))
-  ([^java.awt.FontMetrics this ^java.lang.String str ^java.awt.Graphics context]
+  (^java.awt.geom.Rectangle2D [^java.awt.FontMetrics this ^java.lang.String str ^java.awt.Graphics context]
     (-> this (.getStringBounds str context))))
 
 (defn get-max-descent
@@ -157,7 +157,7 @@
 
   returns: the maximum descent of any character in the
    Font. - `int`"
-  ([^java.awt.FontMetrics this]
+  (^Integer [^java.awt.FontMetrics this]
     (-> this (.getMaxDescent))))
 
 (defn get-descent
@@ -170,7 +170,7 @@
    below the font descent line.
 
   returns: the font descent of the Font. - `int`"
-  ([^java.awt.FontMetrics this]
+  (^Integer [^java.awt.FontMetrics this]
     (-> this (.getDescent))))
 
 (defn bytes-width
@@ -192,7 +192,7 @@
                  this FontMetrics object. - `int`
 
   throws: java.lang.NullPointerException - if data is null."
-  ([^java.awt.FontMetrics this data ^Integer off ^Integer len]
+  (^Integer [^java.awt.FontMetrics this data ^Integer off ^Integer len]
     (-> this (.bytesWidth data off len))))
 
 (defn get-max-char-bounds
@@ -203,7 +203,7 @@
 
   returns: a Rectangle2D that is the
    bounding box for the character with the maximum bounds. - `java.awt.geom.Rectangle2D`"
-  ([^java.awt.FontMetrics this ^java.awt.Graphics context]
+  (^java.awt.geom.Rectangle2D [^java.awt.FontMetrics this ^java.awt.Graphics context]
     (-> this (.getMaxCharBounds context))))
 
 (defn get-height
@@ -216,7 +216,7 @@
    either the standard ascent or the standard descent metric.
 
   returns: the standard height of the font. - `int`"
-  ([^java.awt.FontMetrics this]
+  (^Integer [^java.awt.FontMetrics this]
     (-> this (.getHeight))))
 
 (defn get-leading
@@ -228,7 +228,7 @@
    line. The height metric is calculated to include this extra space.
 
   returns: the standard leading of the Font. - `int`"
-  ([^java.awt.FontMetrics this]
+  (^Integer [^java.awt.FontMetrics this]
     (-> this (.getLeading))))
 
 (defn get-max-advance
@@ -241,7 +241,7 @@
   returns: the maximum advance width of any character
               in the Font, or -1 if the
               maximum advance width is not known. - `int`"
-  ([^java.awt.FontMetrics this]
+  (^Integer [^java.awt.FontMetrics this]
     (-> this (.getMaxAdvance))))
 
 (defn get-font-render-context
@@ -255,7 +255,7 @@
 
   returns: the FontRenderContext used by this
    FontMetrics object. - `java.awt.font.FontRenderContext`"
-  ([^java.awt.FontMetrics this]
+  (^java.awt.font.FontRenderContext [^java.awt.FontMetrics this]
     (-> this (.getFontRenderContext))))
 
 (defn get-font
@@ -264,7 +264,7 @@
 
   returns: the Font described by this
    FontMetrics object. - `java.awt.Font`"
-  ([^java.awt.FontMetrics this]
+  (^java.awt.Font [^java.awt.FontMetrics this]
     (-> this (.getFont))))
 
 (defn chars-width
@@ -285,7 +285,7 @@
                  this FontMetrics object. - `int`
 
   throws: java.lang.NullPointerException - if data is null."
-  ([^java.awt.FontMetrics this data ^Integer off ^Integer len]
+  (^Integer [^java.awt.FontMetrics this data ^Integer off ^Integer len]
     (-> this (.charsWidth data off len))))
 
 (defn get-max-ascent
@@ -295,7 +295,7 @@
 
   returns: the maximum ascent of any character in the
    Font. - `int`"
-  ([^java.awt.FontMetrics this]
+  (^Integer [^java.awt.FontMetrics this]
     (-> this (.getMaxAscent))))
 
 (defn string-width
@@ -314,7 +314,7 @@
                     FontMetrics. - `int`
 
   throws: java.lang.NullPointerException - if str is null."
-  ([^java.awt.FontMetrics this ^java.lang.String str]
+  (^Integer [^java.awt.FontMetrics this ^java.lang.String str]
     (-> this (.stringWidth str))))
 
 (defn get-max-decent
@@ -337,6 +337,6 @@
 
   returns: true if the font has uniform line metrics;
    false otherwise. - `boolean`"
-  ([^java.awt.FontMetrics this]
+  (^Boolean [^java.awt.FontMetrics this]
     (-> this (.hasUniformLineMetrics))))
 

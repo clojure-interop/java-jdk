@@ -25,14 +25,14 @@
   "Returns the input string.
 
   returns: the input string - `java.lang.String`"
-  ([^java.nio.file.InvalidPathException this]
+  (^java.lang.String [^java.nio.file.InvalidPathException this]
     (-> this (.getInput))))
 
 (defn get-reason
   "Returns a string explaining why the input string was rejected.
 
   returns: the reason string - `java.lang.String`"
-  ([^java.nio.file.InvalidPathException this]
+  (^java.lang.String [^java.nio.file.InvalidPathException this]
     (-> this (.getReason))))
 
 (defn get-index
@@ -40,7 +40,7 @@
    error occurred, or -1 if this position is not known.
 
   returns: the error index - `int`"
-  ([^java.nio.file.InvalidPathException this]
+  (^Integer [^java.nio.file.InvalidPathException this]
     (-> this (.getIndex))))
 
 (defn get-message
@@ -52,6 +52,6 @@
    character.
 
   returns: a string describing the error - `java.lang.String`"
-  ([^java.nio.file.InvalidPathException this]
+  (^java.lang.String [^java.nio.file.InvalidPathException this]
     (-> this (.getMessage))))
 

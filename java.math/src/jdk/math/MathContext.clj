@@ -81,7 +81,7 @@
 
   returns: an int which is the value of the precision
            setting - `int`"
-  ([^java.math.MathContext this]
+  (^Integer [^java.math.MathContext this]
     (-> this (.getPrecision))))
 
 (defn get-rounding-mode
@@ -98,7 +98,7 @@
 
   returns: a RoundingMode object which is the value of the
            roundingMode setting - `java.math.RoundingMode`"
-  ([^java.math.MathContext this]
+  (^java.math.RoundingMode [^java.math.MathContext this]
     (-> this (.getRoundingMode))))
 
 (defn equals
@@ -110,14 +110,14 @@
   returns: true if and only if the specified Object is
            a MathContext object which has exactly the same
            settings as this object - `boolean`"
-  ([^java.math.MathContext this ^java.lang.Object x]
+  (^Boolean [^java.math.MathContext this ^java.lang.Object x]
     (-> this (.equals x))))
 
 (defn hash-code
   "Returns the hash code for this MathContext.
 
   returns: hash code for this MathContext - `int`"
-  ([^java.math.MathContext this]
+  (^Integer [^java.math.MathContext this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -151,6 +151,6 @@
    this class.
 
   returns: a String representing the context settings - `java.lang.String`"
-  ([^java.math.MathContext this]
+  (^java.lang.String [^java.math.MathContext this]
     (-> this (.toString))))
 

@@ -67,11 +67,11 @@
   on-key-release - true if the KeyStroke should represent a key release; false otherwise. - `boolean`
 
   returns: a KeyStroke object for that key - `javax.swing.KeyStroke`"
-  ([^Integer key-code ^Integer modifiers ^Boolean on-key-release]
+  (^javax.swing.KeyStroke [^Integer key-code ^Integer modifiers ^Boolean on-key-release]
     (KeyStroke/getKeyStroke key-code modifiers on-key-release))
-  ([^java.lang.Character key-char ^Integer modifiers]
+  (^javax.swing.KeyStroke [^java.lang.Character key-char ^Integer modifiers]
     (KeyStroke/getKeyStroke key-char modifiers))
-  ([^Character key-char]
+  (^javax.swing.KeyStroke [^Character key-char]
     (KeyStroke/getKeyStroke key-char)))
 
 (defn *get-key-stroke-for-event
@@ -87,6 +87,6 @@
   returns: the KeyStroke that precipitated the event - `javax.swing.KeyStroke`
 
   throws: java.lang.NullPointerException - if anEvent is null"
-  ([^java.awt.event.KeyEvent an-event]
+  (^javax.swing.KeyStroke [^java.awt.event.KeyEvent an-event]
     (KeyStroke/getKeyStrokeForEvent an-event)))
 

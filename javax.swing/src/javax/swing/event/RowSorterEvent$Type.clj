@@ -43,6 +43,6 @@
   returns: the enum constant with the specified name - `javax.swing.event.RowSorterEvent.Type`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^javax.swing.event.RowSorterEvent.Type [^java.lang.String name]
     (RowSorterEvent$Type/valueOf name)))
 

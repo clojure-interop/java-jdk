@@ -277,7 +277,7 @@
    This is always zero.
 
   returns: the minimum tile index in the y direction. - `int`"
-  ([^java.awt.image.BufferedImage this]
+  (^Integer [^java.awt.image.BufferedImage this]
     (-> this (.getMinTileY))))
 
 (defn get-transparency
@@ -285,7 +285,7 @@
    or TRANSLUCENT.
 
   returns: the transparency of this BufferedImage. - `int`"
-  ([^java.awt.image.BufferedImage this]
+  (^Integer [^java.awt.image.BufferedImage this]
     (-> this (.getTransparency))))
 
 (defn get-writable-tile-indices
@@ -316,9 +316,9 @@
   observer - ignored - `java.awt.image.ImageObserver`
 
   returns: the width of this BufferedImage - `int`"
-  ([^java.awt.image.BufferedImage this ^java.awt.image.ImageObserver observer]
+  (^Integer [^java.awt.image.BufferedImage this ^java.awt.image.ImageObserver observer]
     (-> this (.getWidth observer)))
-  ([^java.awt.image.BufferedImage this]
+  (^Integer [^java.awt.image.BufferedImage this]
     (-> this (.getWidth))))
 
 (defn get-data
@@ -331,9 +331,9 @@
 
   returns: a Raster that is a copy of the image data of
             the specified region of the BufferedImage - `java.awt.image.Raster`"
-  ([^java.awt.image.BufferedImage this ^java.awt.Rectangle rect]
+  (^java.awt.image.Raster [^java.awt.image.BufferedImage this ^java.awt.Rectangle rect]
     (-> this (.getData rect)))
-  ([^java.awt.image.BufferedImage this]
+  (^java.awt.image.Raster [^java.awt.image.BufferedImage this]
     (-> this (.getData))))
 
 (defn get-alpha-raster
@@ -357,7 +357,7 @@
   returns: a WritableRaster or null if this
             BufferedImage has no alpha channel associated
             with its ColorModel. - `java.awt.image.WritableRaster`"
-  ([^java.awt.image.BufferedImage this]
+  (^java.awt.image.WritableRaster [^java.awt.image.BufferedImage this]
     (-> this (.getAlphaRaster))))
 
 (defn get-type
@@ -365,7 +365,7 @@
    TYPE_CUSTOM is returned.
 
   returns: the image type of this BufferedImage. - `int`"
-  ([^java.awt.image.BufferedImage this]
+  (^Integer [^java.awt.image.BufferedImage this]
     (-> this (.getType))))
 
 (defn get-rgb
@@ -399,7 +399,7 @@
   returns: array of RGB pixels. - `int[]`"
   ([^java.awt.image.BufferedImage this ^Integer start-x ^Integer start-y ^Integer w ^Integer h rgb-array ^Integer offset ^Integer scansize]
     (-> this (.getRGB start-x start-y w h rgb-array offset scansize)))
-  ([^java.awt.image.BufferedImage this ^Integer x ^Integer y]
+  (^Integer [^java.awt.image.BufferedImage this ^Integer x ^Integer y]
     (-> this (.getRGB x y))))
 
 (defn get-tile
@@ -416,7 +416,7 @@
             arguments tileX and tileY. - `java.awt.image.Raster`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if both tileX and tileY are not equal to 0"
-  ([^java.awt.image.BufferedImage this ^Integer tile-x ^Integer tile-y]
+  (^java.awt.image.Raster [^java.awt.image.BufferedImage this ^Integer tile-x ^Integer tile-y]
     (-> this (.getTile tile-x tile-y))))
 
 (defn set-rgb
@@ -459,7 +459,7 @@
 
   returns: a Graphics2D, which can be used to draw into
             this image. - `java.awt.Graphics`"
-  ([^java.awt.image.BufferedImage this]
+  (^java.awt.Graphics [^java.awt.image.BufferedImage this]
     (-> this (.getGraphics))))
 
 (defn get-tile-grid-x-offset
@@ -468,7 +468,7 @@
    (0, 0).  This is always zero.
 
   returns: the x offset of the tile grid. - `int`"
-  ([^java.awt.image.BufferedImage this]
+  (^Integer [^java.awt.image.BufferedImage this]
     (-> this (.getTileGridXOffset))))
 
 (defn to-string
@@ -477,7 +477,7 @@
 
   returns: a String representing this
             BufferedImage. - `java.lang.String`"
-  ([^java.awt.image.BufferedImage this]
+  (^java.lang.String [^java.awt.image.BufferedImage this]
     (-> this (.toString))))
 
 (defn get-min-y
@@ -486,7 +486,7 @@
 
   returns: the minimum y coordinate of this
             BufferedImage. - `int`"
-  ([^java.awt.image.BufferedImage this]
+  (^Integer [^java.awt.image.BufferedImage this]
     (-> this (.getMinY))))
 
 (defn add-tile-observer
@@ -512,7 +512,7 @@
 
   returns: a reference to the supplied or created
             WritableRaster. - `java.awt.image.WritableRaster`"
-  ([^java.awt.image.BufferedImage this ^java.awt.image.WritableRaster out-raster]
+  (^java.awt.image.WritableRaster [^java.awt.image.BufferedImage this ^java.awt.image.WritableRaster out-raster]
     (-> this (.copyData out-raster))))
 
 (defn get-source
@@ -520,7 +520,7 @@
 
   returns: the ImageProducer that is used to produce the
    pixels for this image. - `java.awt.image.ImageProducer`"
-  ([^java.awt.image.BufferedImage this]
+  (^java.awt.image.ImageProducer [^java.awt.image.BufferedImage this]
     (-> this (.getSource))))
 
 (defn has-tile-writers?
@@ -532,7 +532,7 @@
 
   returns: true if any tile is checked out for writing;
             false otherwise. - `boolean`"
-  ([^java.awt.image.BufferedImage this]
+  (^Boolean [^java.awt.image.BufferedImage this]
     (-> this (.hasTileWriters))))
 
 (defn get-property-names
@@ -552,7 +552,7 @@
 
   returns: the SampleModel of this
             BufferedImage. - `java.awt.image.SampleModel`"
-  ([^java.awt.image.BufferedImage this]
+  (^java.awt.image.SampleModel [^java.awt.image.BufferedImage this]
     (-> this (.getSampleModel))))
 
 (defn get-tile-grid-y-offset
@@ -561,7 +561,7 @@
    (0, 0).  This is always zero.
 
   returns: the y offset of the tile grid. - `int`"
-  ([^java.awt.image.BufferedImage this]
+  (^Integer [^java.awt.image.BufferedImage this]
     (-> this (.getTileGridYOffset))))
 
 (defn tile-writable?
@@ -575,7 +575,7 @@
             otherwise. - `boolean`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if both tileX and tileY are not equal to 0"
-  ([^java.awt.image.BufferedImage this ^Integer tile-x ^Integer tile-y]
+  (^Boolean [^java.awt.image.BufferedImage this ^Integer tile-x ^Integer tile-y]
     (-> this (.isTileWritable tile-x tile-y))))
 
 (defn get-height
@@ -584,9 +584,9 @@
   observer - ignored - `java.awt.image.ImageObserver`
 
   returns: the height of this BufferedImage - `int`"
-  ([^java.awt.image.BufferedImage this ^java.awt.image.ImageObserver observer]
+  (^Integer [^java.awt.image.BufferedImage this ^java.awt.image.ImageObserver observer]
     (-> this (.getHeight observer)))
-  ([^java.awt.image.BufferedImage this]
+  (^Integer [^java.awt.image.BufferedImage this]
     (-> this (.getHeight))))
 
 (defn get-subimage
@@ -603,7 +603,7 @@
             BufferedImage. - `java.awt.image.BufferedImage`
 
   throws: java.awt.image.RasterFormatException - if the specified area is not contained within this BufferedImage."
-  ([^java.awt.image.BufferedImage this ^Integer x ^Integer y ^Integer w ^Integer h]
+  (^java.awt.image.BufferedImage [^java.awt.image.BufferedImage this ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.getSubimage x y w h))))
 
 (defn get-property
@@ -625,9 +625,9 @@
             properties of this image are not yet known. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if the property name is null."
-  ([^java.awt.image.BufferedImage this ^java.lang.String name ^java.awt.image.ImageObserver observer]
+  (^java.lang.Object [^java.awt.image.BufferedImage this ^java.lang.String name ^java.awt.image.ImageObserver observer]
     (-> this (.getProperty name observer)))
-  ([^java.awt.image.BufferedImage this ^java.lang.String name]
+  (^java.lang.Object [^java.awt.image.BufferedImage this ^java.lang.String name]
     (-> this (.getProperty name))))
 
 (defn remove-tile-observer
@@ -654,14 +654,14 @@
 
   returns: the WriteableRaster of this
     BufferedImage. - `java.awt.image.WritableRaster`"
-  ([^java.awt.image.BufferedImage this]
+  (^java.awt.image.WritableRaster [^java.awt.image.BufferedImage this]
     (-> this (.getRaster))))
 
 (defn get-tile-height
   "Returns the tile height in pixels.
 
   returns: the tile height in pixels. - `int`"
-  ([^java.awt.image.BufferedImage this]
+  (^Integer [^java.awt.image.BufferedImage this]
     (-> this (.getTileHeight))))
 
 (defn create-graphics
@@ -670,7 +670,7 @@
 
   returns: a Graphics2D, used for drawing into this
             image. - `java.awt.Graphics2D`"
-  ([^java.awt.image.BufferedImage this]
+  (^java.awt.Graphics2D [^java.awt.image.BufferedImage this]
     (-> this (.createGraphics))))
 
 (defn get-num-x-tiles
@@ -678,7 +678,7 @@
    This is always one.
 
   returns: the number of tiles in the x direction. - `int`"
-  ([^java.awt.image.BufferedImage this]
+  (^Integer [^java.awt.image.BufferedImage this]
     (-> this (.getNumXTiles))))
 
 (defn get-writable-tile
@@ -691,7 +691,7 @@
 
   returns: a WritableRaster that is the tile, indicated by
               the specified indices, to be checked out for writing. - `java.awt.image.WritableRaster`"
-  ([^java.awt.image.BufferedImage this ^Integer tile-x ^Integer tile-y]
+  (^java.awt.image.WritableRaster [^java.awt.image.BufferedImage this ^Integer tile-x ^Integer tile-y]
     (-> this (.getWritableTile tile-x tile-y))))
 
 (defn get-min-x
@@ -700,14 +700,14 @@
 
   returns: the minimum x coordinate of this
             BufferedImage. - `int`"
-  ([^java.awt.image.BufferedImage this]
+  (^Integer [^java.awt.image.BufferedImage this]
     (-> this (.getMinX))))
 
 (defn get-tile-width
   "Returns the tile width in pixels.
 
   returns: the tile width in pixels. - `int`"
-  ([^java.awt.image.BufferedImage this]
+  (^Integer [^java.awt.image.BufferedImage this]
     (-> this (.getTileWidth))))
 
 (defn release-writable-tile
@@ -739,7 +739,7 @@
             no information about its immediate sources, or an empty
             Vector if this BufferedImage
             has no immediate sources. - `java.util.Vector<java.awt.image.RenderedImage>`"
-  ([^java.awt.image.BufferedImage this]
+  (^java.util.Vector [^java.awt.image.BufferedImage this]
     (-> this (.getSources))))
 
 (defn get-num-y-tiles
@@ -747,7 +747,7 @@
    This is always one.
 
   returns: the number of tiles in the y direction. - `int`"
-  ([^java.awt.image.BufferedImage this]
+  (^Integer [^java.awt.image.BufferedImage this]
     (-> this (.getNumYTiles))))
 
 (defn get-color-model
@@ -755,7 +755,7 @@
 
   returns: the ColorModel of this
     BufferedImage. - `java.awt.image.ColorModel`"
-  ([^java.awt.image.BufferedImage this]
+  (^java.awt.image.ColorModel [^java.awt.image.BufferedImage this]
     (-> this (.getColorModel))))
 
 (defn alpha-premultiplied?
@@ -764,7 +764,7 @@
 
   returns: true if the alpha has been premultiplied;
             false otherwise. - `boolean`"
-  ([^java.awt.image.BufferedImage this]
+  (^Boolean [^java.awt.image.BufferedImage this]
     (-> this (.isAlphaPremultiplied))))
 
 (defn get-min-tile-x
@@ -772,6 +772,6 @@
    This is always zero.
 
   returns: the minimum tile index in the x direction. - `int`"
-  ([^java.awt.image.BufferedImage this]
+  (^Integer [^java.awt.image.BufferedImage this]
     (-> this (.getMinTileX))))
 

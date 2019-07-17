@@ -20,14 +20,14 @@
   "Retrieves list of roles successfully accessed.
 
   returns: a RoleList - `javax.management.relation.RoleList`"
-  ([^javax.management.relation.RoleResult this]
+  (^javax.management.relation.RoleList [^javax.management.relation.RoleResult this]
     (-> this (.getRoles))))
 
 (defn get-roles-unresolved
   "Retrieves list of roles unsuccessfully accessed.
 
   returns: a RoleUnresolvedList. - `javax.management.relation.RoleUnresolvedList`"
-  ([^javax.management.relation.RoleResult this]
+  (^javax.management.relation.RoleUnresolvedList [^javax.management.relation.RoleResult this]
     (-> this (.getRolesUnresolved))))
 
 (defn set-roles

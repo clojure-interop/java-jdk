@@ -133,7 +133,7 @@
    containsAll methods.
 
   returns: a collection view of the values contained in this map - `java.util.Collection<IdentityHashMap.V>`"
-  ([^java.util.IdentityHashMap this]
+  (^java.util.Collection [^java.util.IdentityHashMap this]
     (-> this (.values))))
 
 (defn for-each
@@ -173,7 +173,7 @@
            null if there was no mapping for key.
            (A null return can also indicate that the map
            previously associated null with key.) - `IdentityHashMap.V`"
-  ([^java.util.IdentityHashMap this ^IdentityHashMap.K key ^IdentityHashMap.V value]
+  (^IdentityHashMap.V [^java.util.IdentityHashMap this ^IdentityHashMap.K key ^IdentityHashMap.V value]
     (-> this (.put key value))))
 
 (defn entry-set
@@ -212,7 +212,7 @@
    hold among identity-based map entries, and among sets of such entries.
 
   returns: a set view of the identity-mappings contained in this map - `java.util.Set<java.util.Map.Entry<IdentityHashMap.K,IdentityHashMap.V>>`"
-  ([^java.util.IdentityHashMap this]
+  (^java.util.Set> [^java.util.IdentityHashMap this]
     (-> this (.entrySet))))
 
 (defn contains-value
@@ -223,7 +223,7 @@
 
   returns: true if this map maps one or more keys to the
            specified object reference - `boolean`"
-  ([^java.util.IdentityHashMap this ^java.lang.Object value]
+  (^Boolean [^java.util.IdentityHashMap this ^java.lang.Object value]
     (-> this (.containsValue value))))
 
 (defn remove
@@ -235,7 +235,7 @@
            null if there was no mapping for key.
            (A null return can also indicate that the map
            previously associated null with key.) - `IdentityHashMap.V`"
-  ([^java.util.IdentityHashMap this ^java.lang.Object key]
+  (^IdentityHashMap.V [^java.util.IdentityHashMap this ^java.lang.Object key]
     (-> this (.remove key))))
 
 (defn key-set
@@ -273,7 +273,7 @@
    returned by this method.
 
   returns: an identity-based set view of the keys contained in this map - `java.util.Set<IdentityHashMap.K>`"
-  ([^java.util.IdentityHashMap this]
+  (^java.util.Set [^java.util.IdentityHashMap this]
     (-> this (.keySet))))
 
 (defn clone
@@ -281,7 +281,7 @@
    themselves are not cloned.
 
   returns: a shallow copy of this map - `java.lang.Object`"
-  ([^java.util.IdentityHashMap this]
+  (^java.lang.Object [^java.util.IdentityHashMap this]
     (-> this (.clone))))
 
 (defn hash-code
@@ -300,7 +300,7 @@
    an IdentityHashMap instance and the other is a normal map.
 
   returns: the hash code value for this map - `int`"
-  ([^java.util.IdentityHashMap this]
+  (^Integer [^java.util.IdentityHashMap this]
     (-> this (.hashCode))))
 
 (defn empty?
@@ -309,14 +309,14 @@
 
   returns: true if this identity hash map contains no key-value
            mappings - `boolean`"
-  ([^java.util.IdentityHashMap this]
+  (^Boolean [^java.util.IdentityHashMap this]
     (-> this (.isEmpty))))
 
 (defn size
   "Returns the number of key-value mappings in this identity hash map.
 
   returns: the number of key-value mappings in this map - `int`"
-  ([^java.util.IdentityHashMap this]
+  (^Integer [^java.util.IdentityHashMap this]
     (-> this (.size))))
 
 (defn clear
@@ -333,7 +333,7 @@
 
   returns: true if the specified object reference is a key
             in this map - `boolean`"
-  ([^java.util.IdentityHashMap this ^java.lang.Object key]
+  (^Boolean [^java.util.IdentityHashMap this ^java.lang.Object key]
     (-> this (.containsKey key))))
 
 (defn get
@@ -355,7 +355,7 @@
 
   returns: the value to which the specified key is mapped, or
            null if this map contains no mapping for the key - `IdentityHashMap.V`"
-  ([^java.util.IdentityHashMap this ^java.lang.Object key]
+  (^IdentityHashMap.V [^java.util.IdentityHashMap this ^java.lang.Object key]
     (-> this (.get key))))
 
 (defn equals
@@ -374,6 +374,6 @@
   o - object to be compared for equality with this map - `java.lang.Object`
 
   returns: true if the specified object is equal to this map - `boolean`"
-  ([^java.util.IdentityHashMap this ^java.lang.Object o]
+  (^Boolean [^java.util.IdentityHashMap this ^java.lang.Object o]
     (-> this (.equals o))))
 

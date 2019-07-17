@@ -47,14 +47,14 @@
    allows children depends on how it was created.
 
   returns: true if this node allows children, false otherwise - `boolean`"
-  ([^javax.swing.JTree$DynamicUtilTreeNode this]
+  (^Boolean [^javax.swing.JTree$DynamicUtilTreeNode this]
     (-> this (.isLeaf))))
 
 (defn get-child-count
   "Returns the number of child nodes.
 
   returns: the number of child nodes - `int`"
-  ([^javax.swing.JTree$DynamicUtilTreeNode this]
+  (^Integer [^javax.swing.JTree$DynamicUtilTreeNode this]
     (-> this (.getChildCount))))
 
 (defn get-child-at
@@ -63,13 +63,13 @@
   index - an index into this node's child array - `int`
 
   returns: the TreeNode in this node's child array at  the specified index - `javax.swing.tree.TreeNode`"
-  ([^javax.swing.JTree$DynamicUtilTreeNode this ^Integer index]
+  (^javax.swing.tree.TreeNode [^javax.swing.JTree$DynamicUtilTreeNode this ^Integer index]
     (-> this (.getChildAt index))))
 
 (defn children
   "Subclassed to load the children, if necessary.
 
   returns: an Enumeration of this node's children - `java.util.Enumeration`"
-  ([^javax.swing.JTree$DynamicUtilTreeNode this]
+  (^java.util.Enumeration [^javax.swing.JTree$DynamicUtilTreeNode this]
     (-> this (.children))))
 

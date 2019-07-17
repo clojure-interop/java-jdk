@@ -93,14 +93,14 @@
   returns: the text.
    Always null for CARET_POSITION_CHANGED;
    may be null for INPUT_METHOD_TEXT_CHANGED if there's no composed or committed text. - `java.text.AttributedCharacterIterator`"
-  ([^java.awt.event.InputMethodEvent this]
+  (^java.text.AttributedCharacterIterator [^java.awt.event.InputMethodEvent this]
     (-> this (.getText))))
 
 (defn get-committed-character-count
   "Gets the number of committed characters in the text.
 
   returns: `int`"
-  ([^java.awt.event.InputMethodEvent this]
+  (^Integer [^java.awt.event.InputMethodEvent this]
     (-> this (.getCommittedCharacterCount))))
 
 (defn get-caret
@@ -114,7 +114,7 @@
 
   returns: the caret (a.k.a. insertion point).
    Null if there's no caret within current composed text. - `java.awt.font.TextHitInfo`"
-  ([^java.awt.event.InputMethodEvent this]
+  (^java.awt.font.TextHitInfo [^java.awt.event.InputMethodEvent this]
     (-> this (.getCaret))))
 
 (defn get-visible-position
@@ -128,7 +128,7 @@
 
   returns: the position that's most important to be visible.
    Null if there's no recommendation for a visible position within current composed text. - `java.awt.font.TextHitInfo`"
-  ([^java.awt.event.InputMethodEvent this]
+  (^java.awt.font.TextHitInfo [^java.awt.event.InputMethodEvent this]
     (-> this (.getVisiblePosition))))
 
 (defn consume
@@ -141,14 +141,14 @@
   "Returns whether or not this event has been consumed.
 
   returns: `boolean`"
-  ([^java.awt.event.InputMethodEvent this]
+  (^Boolean [^java.awt.event.InputMethodEvent this]
     (-> this (.isConsumed))))
 
 (defn get-when
   "Returns the time stamp of when this event occurred.
 
   returns: this event's timestamp - `long`"
-  ([^java.awt.event.InputMethodEvent this]
+  (^Long [^java.awt.event.InputMethodEvent this]
     (-> this (.getWhen))))
 
 (defn param-string
@@ -160,6 +160,6 @@
    the caret, and the visible position.
 
   returns: a string identifying the event and its attributes - `java.lang.String`"
-  ([^java.awt.event.InputMethodEvent this]
+  (^java.lang.String [^java.awt.event.InputMethodEvent this]
     (-> this (.paramString))))
 

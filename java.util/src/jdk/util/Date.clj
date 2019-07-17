@@ -148,7 +148,7 @@
     the provided instant - `java.util.Date`
 
   throws: java.lang.NullPointerException - if instant is null."
-  ([^java.time.Instant instant]
+  (^java.util.Date [^java.time.Instant instant]
     (Date/from instant)))
 
 (defn to-instant
@@ -159,7 +159,7 @@
 
   returns: an instant representing the same point on the time-line as
     this Date object - `java.time.Instant`"
-  ([^java.util.Date this]
+  (^java.time.Instant [^java.util.Date this]
     (-> this (.toInstant))))
 
 (defn get-timezone-offset
@@ -229,7 +229,7 @@
             false otherwise. - `boolean`
 
   throws: java.lang.NullPointerException - if when is null."
-  ([^java.util.Date this ^java.util.Date when]
+  (^Boolean [^java.util.Date this ^java.util.Date when]
     (-> this (.after when))))
 
 (defn to-gmt-string
@@ -295,7 +295,7 @@
    yyyy is the year, as four decimal digits.
 
   returns: a string representation of this date. - `java.lang.String`"
-  ([^java.util.Date this]
+  (^java.lang.String [^java.util.Date this]
     (-> this (.toString))))
 
 (defn get-date
@@ -336,7 +336,7 @@
   "Return a copy of this object.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([^java.util.Date this]
+  (^java.lang.Object [^java.util.Date this]
     (-> this (.clone))))
 
 (defn hash-code
@@ -349,7 +349,7 @@
    (int)(this.getTime()^(this.getTime() >>> 32))
 
   returns: a hash code value for this object. - `int`"
-  ([^java.util.Date this]
+  (^Integer [^java.util.Date this]
     (-> this (.hashCode))))
 
 (defn compare-to
@@ -363,7 +363,7 @@
         0 if this Date is after the Date argument. - `int`
 
   throws: java.lang.NullPointerException - if anotherDate is null."
-  ([^java.util.Date this ^java.util.Date another-date]
+  (^Integer [^java.util.Date this ^java.util.Date another-date]
     (-> this (.compareTo another-date))))
 
 (defn get-month
@@ -395,7 +395,7 @@
             false otherwise. - `boolean`
 
   throws: java.lang.NullPointerException - if when is null."
-  ([^java.util.Date this ^java.util.Date when]
+  (^Boolean [^java.util.Date this ^java.util.Date when]
     (-> this (.before when))))
 
 (defn get-time
@@ -404,7 +404,7 @@
 
   returns: the number of milliseconds since January 1, 1970, 00:00:00 GMT
             represented by this date. - `long`"
-  ([^java.util.Date this]
+  (^Long [^java.util.Date this]
     (-> this (.getTime))))
 
 (defn get-minutes
@@ -429,6 +429,6 @@
 
   returns: true if the objects are the same;
             false otherwise. - `boolean`"
-  ([^java.util.Date this ^java.lang.Object obj]
+  (^Boolean [^java.util.Date this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

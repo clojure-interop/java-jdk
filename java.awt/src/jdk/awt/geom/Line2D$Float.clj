@@ -60,7 +60,7 @@
 
   returns: the X coordinate of the start point of this
            Line2D object. - `double`"
-  ([^java.awt.geom.Line2D$Float this]
+  (^Double [^java.awt.geom.Line2D$Float this]
     (-> this (.getX1))))
 
 (defn get-y-1
@@ -68,14 +68,14 @@
 
   returns: the Y coordinate of the start point of this
            Line2D object. - `double`"
-  ([^java.awt.geom.Line2D$Float this]
+  (^Double [^java.awt.geom.Line2D$Float this]
     (-> this (.getY1))))
 
 (defn get-p-1
   "Returns the start Point2D of this Line2D.
 
   returns: the start Point2D of this Line2D. - `java.awt.geom.Point2D`"
-  ([^java.awt.geom.Line2D$Float this]
+  (^java.awt.geom.Point2D [^java.awt.geom.Line2D$Float this]
     (-> this (.getP1))))
 
 (defn get-x-2
@@ -83,7 +83,7 @@
 
   returns: the X coordinate of the end point of this
            Line2D object. - `double`"
-  ([^java.awt.geom.Line2D$Float this]
+  (^Double [^java.awt.geom.Line2D$Float this]
     (-> this (.getX2))))
 
 (defn get-y-2
@@ -91,14 +91,14 @@
 
   returns: the Y coordinate of the end point of this
            Line2D object. - `double`"
-  ([^java.awt.geom.Line2D$Float this]
+  (^Double [^java.awt.geom.Line2D$Float this]
     (-> this (.getY2))))
 
 (defn get-p-2
   "Returns the end Point2D of this Line2D.
 
   returns: the end Point2D of this Line2D. - `java.awt.geom.Point2D`"
-  ([^java.awt.geom.Line2D$Float this]
+  (^java.awt.geom.Point2D [^java.awt.geom.Line2D$Float this]
     (-> this (.getP2))))
 
 (defn set-line
@@ -152,6 +152,6 @@
 
   returns: an instance of Rectangle2D that is a
                    high-precision bounding box of the Shape. - `java.awt.geom.Rectangle2D`"
-  ([^java.awt.geom.Line2D$Float this]
+  (^java.awt.geom.Rectangle2D [^java.awt.geom.Line2D$Float this]
     (-> this (.getBounds2D))))
 

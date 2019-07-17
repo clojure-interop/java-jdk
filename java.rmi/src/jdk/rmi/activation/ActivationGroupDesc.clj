@@ -41,35 +41,35 @@
    ActivationGroup implementation.
 
   returns: the group's class name - `java.lang.String`"
-  ([^java.rmi.activation.ActivationGroupDesc this]
+  (^java.lang.String [^java.rmi.activation.ActivationGroupDesc this]
     (-> this (.getClassName))))
 
 (defn get-location
   "Returns the group's code location.
 
   returns: the group's code location - `java.lang.String`"
-  ([^java.rmi.activation.ActivationGroupDesc this]
+  (^java.lang.String [^java.rmi.activation.ActivationGroupDesc this]
     (-> this (.getLocation))))
 
 (defn get-data
   "Returns the group's initialization data.
 
   returns: the group's initialization data - `java.rmi.MarshalledObject<?>`"
-  ([^java.rmi.activation.ActivationGroupDesc this]
+  (^java.rmi.MarshalledObject [^java.rmi.activation.ActivationGroupDesc this]
     (-> this (.getData))))
 
 (defn get-property-overrides
   "Returns the group's property-override list.
 
   returns: the property-override list, or null - `java.util.Properties`"
-  ([^java.rmi.activation.ActivationGroupDesc this]
+  (^java.util.Properties [^java.rmi.activation.ActivationGroupDesc this]
     (-> this (.getPropertyOverrides))))
 
 (defn get-command-environment
   "Returns the group's command-environment control object.
 
   returns: the command-environment object, or null - `java.rmi.activation.ActivationGroupDesc.CommandEnvironment`"
-  ([^java.rmi.activation.ActivationGroupDesc this]
+  (^java.rmi.activation.ActivationGroupDesc.CommandEnvironment [^java.rmi.activation.ActivationGroupDesc this]
     (-> this (.getCommandEnvironment))))
 
 (defn equals
@@ -78,13 +78,13 @@
   obj - the Object to compare with - `java.lang.Object`
 
   returns: true if these Objects are equal; false otherwise. - `boolean`"
-  ([^java.rmi.activation.ActivationGroupDesc this ^java.lang.Object obj]
+  (^Boolean [^java.rmi.activation.ActivationGroupDesc this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Produce identical numbers for similar ActivationGroupDescs.
 
   returns: an integer - `int`"
-  ([^java.rmi.activation.ActivationGroupDesc this]
+  (^Integer [^java.rmi.activation.ActivationGroupDesc this]
     (-> this (.hashCode))))
 

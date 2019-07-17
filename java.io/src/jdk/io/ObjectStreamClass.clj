@@ -26,7 +26,7 @@
   cl - class for which to get the descriptor - `java.lang.Class<?>`
 
   returns: the class descriptor for the specified class - `java.io.ObjectStreamClass`"
-  ([^java.lang.Class cl]
+  (^java.io.ObjectStreamClass [^java.lang.Class cl]
     (ObjectStreamClass/lookup cl)))
 
 (defn *lookup-any
@@ -36,7 +36,7 @@
   cl - class for which to get the descriptor - `java.lang.Class<?>`
 
   returns: the class descriptor for the specified class - `java.io.ObjectStreamClass`"
-  ([^java.lang.Class cl]
+  (^java.io.ObjectStreamClass [^java.lang.Class cl]
     (ObjectStreamClass/lookupAny cl)))
 
 (defn get-name
@@ -45,7 +45,7 @@
    is used by the Class.getName() method.
 
   returns: a string representing the name of the class - `java.lang.String`"
-  ([^java.io.ObjectStreamClass this]
+  (^java.lang.String [^java.io.ObjectStreamClass this]
     (-> this (.getName))))
 
 (defn get-serial-version-uid
@@ -55,7 +55,7 @@
    common format.  NonSerializable classes have a serialVersionUID of 0L.
 
   returns: the SUID of the class described by this descriptor - `long`"
-  ([^java.io.ObjectStreamClass this]
+  (^Long [^java.io.ObjectStreamClass this]
     (-> this (.getSerialVersionUID))))
 
 (defn for-class
@@ -63,7 +63,7 @@
    is returned if there is no corresponding local class.
 
   returns: the Class instance that this descriptor represents - `java.lang.Class<?>`"
-  ([^java.io.ObjectStreamClass this]
+  (^java.lang.Class [^java.io.ObjectStreamClass this]
     (-> this (.forClass))))
 
 (defn get-fields
@@ -82,13 +82,13 @@
 
   returns: The ObjectStreamField object of the named field or null if
             there is no such named field. - `java.io.ObjectStreamField`"
-  ([^java.io.ObjectStreamClass this ^java.lang.String name]
+  (^java.io.ObjectStreamField [^java.io.ObjectStreamClass this ^java.lang.String name]
     (-> this (.getField name))))
 
 (defn to-string
   "Return a string describing this ObjectStreamClass.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^java.io.ObjectStreamClass this]
+  (^java.lang.String [^java.io.ObjectStreamClass this]
     (-> this (.toString))))
 

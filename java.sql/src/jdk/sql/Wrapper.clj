@@ -45,6 +45,6 @@
   returns: true if this implements the interface or directly or indirectly wraps an object that does. - `boolean`
 
   throws: java.sql.SQLException - if an error occurs while determining whether this is a wrapper for an object with the given interface."
-  ([^java.sql.Wrapper this ^java.lang.Class iface]
+  (^Boolean [^java.sql.Wrapper this ^java.lang.Class iface]
     (-> this (.isWrapperFor iface))))
 

@@ -35,7 +35,7 @@
    MimetypesFileTypeMap.
 
   returns: The default FileTypeMap - `javax.activation.FileTypeMap`"
-  ([]
+  (^javax.activation.FileTypeMap []
     (FileTypeMap/getDefaultFileTypeMap )))
 
 (defn get-content-type
@@ -45,6 +45,6 @@
   file - A file to be typed. - `java.io.File`
 
   returns: The content type. - `java.lang.String`"
-  ([^javax.activation.FileTypeMap this ^java.io.File file]
+  (^java.lang.String [^javax.activation.FileTypeMap this ^java.io.File file]
     (-> this (.getContentType file))))
 

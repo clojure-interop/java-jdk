@@ -41,7 +41,7 @@
    equivalent to getRole()
 
   returns: a String giving the URI of the actor - `java.lang.String`"
-  ([^javax.xml.soap.SOAPHeaderElement this]
+  (^java.lang.String [^javax.xml.soap.SOAPHeaderElement this]
     (-> this (.getActor))))
 
 (defn get-role
@@ -51,7 +51,7 @@
   returns: a String giving the URI of the Role - `java.lang.String`
 
   throws: java.lang.UnsupportedOperationException - if this message does not support the SOAP 1.2 concept of Fault Role."
-  ([^javax.xml.soap.SOAPHeaderElement this]
+  (^java.lang.String [^javax.xml.soap.SOAPHeaderElement this]
     (-> this (.getRole))))
 
 (defn set-must-understand
@@ -76,7 +76,7 @@
   returns: true if the mustUnderstand attribute of this
           SOAPHeaderElement object is turned on; false
            otherwise - `boolean`"
-  ([^javax.xml.soap.SOAPHeaderElement this]
+  (^Boolean [^javax.xml.soap.SOAPHeaderElement this]
     (-> this (.getMustUnderstand))))
 
 (defn set-relay
@@ -104,6 +104,6 @@
    false otherwise - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if this message does not support the SOAP 1.2 concept of Relay attribute."
-  ([^javax.xml.soap.SOAPHeaderElement this]
+  (^Boolean [^javax.xml.soap.SOAPHeaderElement this]
     (-> this (.getRelay))))
 

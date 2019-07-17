@@ -26,13 +26,13 @@
   "Returns the PreparedStatement that is being closed or is invalid
 
   returns: The PreparedStatement that is being closed or is invalid - `java.sql.PreparedStatement`"
-  ([^javax.sql.StatementEvent this]
+  (^java.sql.PreparedStatement [^javax.sql.StatementEvent this]
     (-> this (.getStatement))))
 
 (defn get-sql-exception
   "Returns the SQLException the driver is about to throw
 
   returns: The SQLException the driver is about to throw - `java.sql.SQLException`"
-  ([^javax.sql.StatementEvent this]
+  (^java.sql.SQLException [^javax.sql.StatementEvent this]
     (-> this (.getSQLException))))
 

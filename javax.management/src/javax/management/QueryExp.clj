@@ -18,7 +18,7 @@
   returns: True if the query was successfully applied to the MBean, false otherwise - `boolean`
 
   throws: javax.management.BadStringOperationException"
-  ([^javax.management.QueryExp this ^javax.management.ObjectName name]
+  (^Boolean [^javax.management.QueryExp this ^javax.management.ObjectName name]
     (-> this (.apply name))))
 
 (defn set-m-bean-server

@@ -44,6 +44,6 @@
   "Returns notifyOnEDT property.
 
   returns: notifyOnEDT property - `boolean`"
-  ([^javax.swing.event.SwingPropertyChangeSupport this]
+  (^Boolean [^javax.swing.event.SwingPropertyChangeSupport this]
     (-> this (.isNotifyOnEDT))))
 

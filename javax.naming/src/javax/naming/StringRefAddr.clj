@@ -33,6 +33,6 @@
   "Retrieves the contents of this address. The result is a string.
 
   returns: The possibly null address contents. - `java.lang.Object`"
-  ([^javax.naming.StringRefAddr this]
+  (^java.lang.Object [^javax.naming.StringRefAddr this]
     (-> this (.getContent))))
 

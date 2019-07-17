@@ -38,7 +38,7 @@
   impl-method-signature - Signature of the implementation method - `java.lang.String`
   instantiated-method-type - The signature of the primary functional interface method after type variables are substituted with their instantiation from the capture site - `java.lang.String`
   captured-args - The dynamic arguments to the lambda factory site, which represent variables captured by the lambda - `java.lang.Object[]`"
-  ([^java.lang.Class capturing-class ^java.lang.String functional-interface-class ^java.lang.String functional-interface-method-name ^java.lang.String functional-interface-method-signature ^Integer impl-method-kind ^java.lang.String impl-class ^java.lang.String impl-method-name ^java.lang.String impl-method-signature ^java.lang.String instantiated-method-type ^java.lang.Object[] captured-args]
+  ([^java.lang.Class capturing-class ^java.lang.String functional-interface-class ^java.lang.String functional-interface-method-name ^java.lang.String functional-interface-method-signature ^Integer impl-method-kind ^java.lang.String impl-class ^java.lang.String impl-method-name ^java.lang.String impl-method-signature ^java.lang.String instantiated-method-type captured-args]
     (new SerializedLambda capturing-class functional-interface-class functional-interface-method-name functional-interface-method-signature impl-method-kind impl-class impl-method-name impl-method-signature instantiated-method-type captured-args)))
 
 (defn get-functional-interface-method-signature
@@ -47,14 +47,14 @@
 
   returns: the signature of the primary method of the functional
    interface - `java.lang.String`"
-  ([^java.lang.invoke.SerializedLambda this]
+  (^java.lang.String [^java.lang.invoke.SerializedLambda this]
     (-> this (.getFunctionalInterfaceMethodSignature))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^java.lang.invoke.SerializedLambda this]
+  (^java.lang.String [^java.lang.invoke.SerializedLambda this]
     (-> this (.toString))))
 
 (defn get-impl-method-kind
@@ -62,21 +62,21 @@
    the implementation method.
 
   returns: the method handle kind of the implementation method - `int`"
-  ([^java.lang.invoke.SerializedLambda this]
+  (^Integer [^java.lang.invoke.SerializedLambda this]
     (-> this (.getImplMethodKind))))
 
 (defn get-captured-arg-count
   "Get the count of dynamic arguments to the lambda capture site.
 
   returns: the count of dynamic arguments to the lambda capture site - `int`"
-  ([^java.lang.invoke.SerializedLambda this]
+  (^Integer [^java.lang.invoke.SerializedLambda this]
     (-> this (.getCapturedArgCount))))
 
 (defn get-impl-method-name
   "Get the name of the implementation method.
 
   returns: the name of the implementation method - `java.lang.String`"
-  ([^java.lang.invoke.SerializedLambda this]
+  (^java.lang.String [^java.lang.invoke.SerializedLambda this]
     (-> this (.getImplMethodName))))
 
 (defn get-impl-class
@@ -85,7 +85,7 @@
 
   returns: the name of the class containing the implementation
    method - `java.lang.String`"
-  ([^java.lang.invoke.SerializedLambda this]
+  (^java.lang.String [^java.lang.invoke.SerializedLambda this]
     (-> this (.getImplClass))))
 
 (defn get-functional-interface-class
@@ -94,14 +94,14 @@
 
   returns: the name of the functional interface class to which
    this lambda has been converted - `java.lang.String`"
-  ([^java.lang.invoke.SerializedLambda this]
+  (^java.lang.String [^java.lang.invoke.SerializedLambda this]
     (-> this (.getFunctionalInterfaceClass))))
 
 (defn get-capturing-class
   "Get the name of the class that captured this lambda.
 
   returns: the name of the class that captured this lambda - `java.lang.String`"
-  ([^java.lang.invoke.SerializedLambda this]
+  (^java.lang.String [^java.lang.invoke.SerializedLambda this]
     (-> this (.getCapturingClass))))
 
 (defn get-instantiated-method-type
@@ -111,7 +111,7 @@
 
   returns: the signature of the primary functional interface method
    after type variable processing - `java.lang.String`"
-  ([^java.lang.invoke.SerializedLambda this]
+  (^java.lang.String [^java.lang.invoke.SerializedLambda this]
     (-> this (.getInstantiatedMethodType))))
 
 (defn get-captured-arg
@@ -120,7 +120,7 @@
   i - the argument to capture - `int`
 
   returns: a dynamic argument to the lambda capture site - `java.lang.Object`"
-  ([^java.lang.invoke.SerializedLambda this ^Integer i]
+  (^java.lang.Object [^java.lang.invoke.SerializedLambda this ^Integer i]
     (-> this (.getCapturedArg i))))
 
 (defn get-functional-interface-method-name
@@ -128,13 +128,13 @@
    to which this lambda has been converted.
 
   returns: the name of the primary methods of the functional interface - `java.lang.String`"
-  ([^java.lang.invoke.SerializedLambda this]
+  (^java.lang.String [^java.lang.invoke.SerializedLambda this]
     (-> this (.getFunctionalInterfaceMethodName))))
 
 (defn get-impl-method-signature
   "Get the signature of the implementation method.
 
   returns: the signature of the implementation method - `java.lang.String`"
-  ([^java.lang.invoke.SerializedLambda this]
+  (^java.lang.String [^java.lang.invoke.SerializedLambda this]
     (-> this (.getImplMethodSignature))))
 

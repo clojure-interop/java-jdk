@@ -48,7 +48,7 @@
   "Returns the authentication tag length.
 
   returns: the authentication tag length (in bits) - `int`"
-  ([^javax.crypto.spec.GCMParameterSpec this]
+  (^Integer [^javax.crypto.spec.GCMParameterSpec this]
     (-> this (.getTLen))))
 
 (defn get-iv

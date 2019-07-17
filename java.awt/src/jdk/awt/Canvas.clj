@@ -80,7 +80,7 @@
    been created or has been disposed.
 
   returns: the buffer strategy used by this component - `java.awt.image.BufferStrategy`"
-  ([^java.awt.Canvas this]
+  (^java.awt.image.BufferStrategy [^java.awt.Canvas this]
     (-> this (.getBufferStrategy))))
 
 (defn get-accessible-context
@@ -91,6 +91,6 @@
 
   returns: an AccessibleAWTCanvas that serves as the
            AccessibleContext of this Canvas - `javax.accessibility.AccessibleContext`"
-  ([^java.awt.Canvas this]
+  (^javax.accessibility.AccessibleContext [^java.awt.Canvas this]
     (-> this (.getAccessibleContext))))
 

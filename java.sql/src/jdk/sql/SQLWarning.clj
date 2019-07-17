@@ -41,7 +41,7 @@
    setNextWarning.
 
   returns: the next SQLException in the chain; null if none - `java.sql.SQLWarning`"
-  ([^java.sql.SQLWarning this]
+  (^java.sql.SQLWarning [^java.sql.SQLWarning this]
     (-> this (.getNextWarning))))
 
 (defn set-next-warning

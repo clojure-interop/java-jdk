@@ -171,6 +171,6 @@
   returns: the enum constant with the specified name - `java.nio.file.attribute.AclEntryPermission`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^java.nio.file.attribute.AclEntryPermission [^java.lang.String name]
     (AclEntryPermission/valueOf name)))
 

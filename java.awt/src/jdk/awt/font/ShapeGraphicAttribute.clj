@@ -39,7 +39,7 @@
    bounds of its Shape.
 
   returns: the ascent of this ShapeGraphicAttribute. - `float`"
-  ([^java.awt.font.ShapeGraphicAttribute this]
+  (^Float [^java.awt.font.ShapeGraphicAttribute this]
     (-> this (.getAscent))))
 
 (defn get-descent
@@ -49,7 +49,7 @@
    bounds of its Shape.
 
   returns: the descent of this ShapeGraphicAttribute. - `float`"
-  ([^java.awt.font.ShapeGraphicAttribute this]
+  (^Float [^java.awt.font.ShapeGraphicAttribute this]
     (-> this (.getDescent))))
 
 (defn get-advance
@@ -59,7 +59,7 @@
    bounds of its Shape.
 
   returns: the advance of this ShapeGraphicAttribute. - `float`"
-  ([^java.awt.font.ShapeGraphicAttribute this]
+  (^Float [^java.awt.font.ShapeGraphicAttribute this]
     (-> this (.getAdvance))))
 
 (defn draw
@@ -81,7 +81,7 @@
 
   returns: a Rectangle2D that encloses all of the bits
    rendered by this ShapeGraphicAttribute. - `java.awt.geom.Rectangle2D`"
-  ([^java.awt.font.ShapeGraphicAttribute this]
+  (^java.awt.geom.Rectangle2D [^java.awt.font.ShapeGraphicAttribute this]
     (-> this (.getBounds))))
 
 (defn get-outline
@@ -95,7 +95,7 @@
 
   returns: the Shape representing this graphic attribute,
      suitable for stroking or filling. - `java.awt.Shape`"
-  ([^java.awt.font.ShapeGraphicAttribute this ^java.awt.geom.AffineTransform tx]
+  (^java.awt.Shape [^java.awt.font.ShapeGraphicAttribute this ^java.awt.geom.AffineTransform tx]
     (-> this (.getOutline tx))))
 
 (defn hash-code
@@ -103,7 +103,7 @@
 
   returns: a hash code value for this
    ShapeGraphicAttribute. - `int`"
-  ([^java.awt.font.ShapeGraphicAttribute this]
+  (^Integer [^java.awt.font.ShapeGraphicAttribute this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -115,6 +115,6 @@
   returns: true if this
    ShapeGraphicAttribute equals rhs;
    false otherwise. - `boolean`"
-  ([^java.awt.font.ShapeGraphicAttribute this ^java.lang.Object rhs]
+  (^Boolean [^java.awt.font.ShapeGraphicAttribute this ^java.lang.Object rhs]
     (-> this (.equals rhs))))
 

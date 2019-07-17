@@ -38,14 +38,14 @@
   "Returns a representation of this menu component as a string.
 
   returns: a string representation of this menu component - `java.lang.String`"
-  ([^java.awt.MenuComponent this]
+  (^java.lang.String [^java.awt.MenuComponent this]
     (-> this (.toString))))
 
 (defn get-name
   "Gets the name of the menu component.
 
   returns: the name of the menu component - `java.lang.String`"
-  ([^java.awt.MenuComponent this]
+  (^java.lang.String [^java.awt.MenuComponent this]
     (-> this (.getName))))
 
 (defn remove-notify
@@ -61,7 +61,7 @@
   returns: the menu component containing this menu component,
                    or null if this menu component
                    is the outermost component, the menu bar itself - `java.awt.MenuContainer`"
-  ([^java.awt.MenuComponent this]
+  (^java.awt.MenuContainer [^java.awt.MenuComponent this]
     (-> this (.getParent))))
 
 (defn set-font
@@ -91,7 +91,7 @@
 
   returns: the AccessibleContext of this
        MenuComponent - `javax.accessibility.AccessibleContext`"
-  ([^java.awt.MenuComponent this]
+  (^javax.accessibility.AccessibleContext [^java.awt.MenuComponent this]
     (-> this (.getAccessibleContext))))
 
 (defn dispatch-event
@@ -106,7 +106,7 @@
 
   returns: the font used in this menu component, if there is one;
                     null otherwise - `java.awt.Font`"
-  ([^java.awt.MenuComponent this]
+  (^java.awt.Font [^java.awt.MenuComponent this]
     (-> this (.getFont))))
 
 (defn get-peer

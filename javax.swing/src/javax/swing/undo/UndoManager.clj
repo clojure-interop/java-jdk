@@ -154,7 +154,7 @@
 
   returns: true if anEdit can be incorporated into this
                 edit - `boolean`"
-  ([^javax.swing.undo.UndoManager this ^javax.swing.undo.UndoableEdit an-edit]
+  (^Boolean [^javax.swing.undo.UndoManager this ^javax.swing.undo.UndoableEdit an-edit]
     (-> this (.addEdit an-edit))))
 
 (defn get-undo-or-redo-presentation-name
@@ -166,7 +166,7 @@
    getRedoPresentationName is returned.
 
   returns: undo or redo name - `java.lang.String`"
-  ([^javax.swing.undo.UndoManager this]
+  (^java.lang.String [^javax.swing.undo.UndoManager this]
     (-> this (.getUndoOrRedoPresentationName))))
 
 (defn to-string
@@ -174,7 +174,7 @@
    object's properties.
 
   returns: a String representation of this object - `java.lang.String`"
-  ([^javax.swing.undo.UndoManager this]
+  (^java.lang.String [^javax.swing.undo.UndoManager this]
     (-> this (.toString))))
 
 (defn get-undo-presentation-name
@@ -187,7 +187,7 @@
    property `AbstractUndoableEdit.undoText`.
 
   returns: a description of the undoable form of this edit - `java.lang.String`"
-  ([^javax.swing.undo.UndoManager this]
+  (^java.lang.String [^javax.swing.undo.UndoManager this]
     (-> this (.getUndoPresentationName))))
 
 (defn undo
@@ -208,7 +208,7 @@
    (editToBeRedone returns non-null).
 
   returns: true if there are edits to be redone - `boolean`"
-  ([^javax.swing.undo.UndoManager this]
+  (^Boolean [^javax.swing.undo.UndoManager this]
     (-> this (.canRedo))))
 
 (defn set-limit
@@ -230,7 +230,7 @@
    limited.
 
   returns: the maximum number of edits this UndoManager holds - `int`"
-  ([^javax.swing.undo.UndoManager this]
+  (^Integer [^javax.swing.undo.UndoManager this]
     (-> this (.getLimit))))
 
 (defn can-undo-or-redo?
@@ -238,7 +238,7 @@
    redo.
 
   returns: true if invoking canUndoOrRedo is valid - `boolean`"
-  ([^javax.swing.undo.UndoManager this]
+  (^Boolean [^javax.swing.undo.UndoManager this]
     (-> this (.canUndoOrRedo))))
 
 (defn end
@@ -258,7 +258,7 @@
    property `AbstractUndoableEdit.redoText`.
 
   returns: a description of the redoable form of this edit - `java.lang.String`"
-  ([^javax.swing.undo.UndoManager this]
+  (^java.lang.String [^javax.swing.undo.UndoManager this]
     (-> this (.getRedoPresentationName))))
 
 (defn can-undo?
@@ -268,6 +268,6 @@
    (editToBeUndone returns non-null).
 
   returns: true if there are edits to be undone - `boolean`"
-  ([^javax.swing.undo.UndoManager this]
+  (^Boolean [^javax.swing.undo.UndoManager this]
     (-> this (.canUndo))))
 

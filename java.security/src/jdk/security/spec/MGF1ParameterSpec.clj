@@ -80,6 +80,6 @@
    generation function.
 
   returns: the algorithm name of the message digest. - `java.lang.String`"
-  ([^java.security.spec.MGF1ParameterSpec this]
+  (^java.lang.String [^java.security.spec.MGF1ParameterSpec this]
     (-> this (.getDigestAlgorithm))))
 

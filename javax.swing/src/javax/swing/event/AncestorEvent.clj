@@ -56,7 +56,7 @@
   "Returns the ancestor that the event actually occurred on.
 
   returns: `java.awt.Container`"
-  ([^javax.swing.event.AncestorEvent this]
+  (^java.awt.Container [^javax.swing.event.AncestorEvent this]
     (-> this (.getAncestor))))
 
 (defn get-ancestor-parent
@@ -65,13 +65,13 @@
    the ancestor may no longer be in the component hierarchy.
 
   returns: `java.awt.Container`"
-  ([^javax.swing.event.AncestorEvent this]
+  (^java.awt.Container [^javax.swing.event.AncestorEvent this]
     (-> this (.getAncestorParent))))
 
 (defn get-component
   "Returns the component that the listener was added to.
 
   returns: `javax.swing.JComponent`"
-  ([^javax.swing.event.AncestorEvent this]
+  (^javax.swing.JComponent [^javax.swing.event.AncestorEvent this]
     (-> this (.getComponent))))
 

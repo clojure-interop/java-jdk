@@ -152,14 +152,14 @@
    this method always returns present actions in alphabetical order.
 
   returns: the canonical string representation of the actions. - `java.lang.String`"
-  ([^javax.management.MBeanPermission this]
+  (^java.lang.String [^javax.management.MBeanPermission this]
     (-> this (.getActions))))
 
 (defn hash-code
   "Returns the hash code value for this object.
 
   returns: a hash code value for this object. - `int`"
-  ([^javax.management.MBeanPermission this]
+  (^Integer [^javax.management.MBeanPermission this]
     (-> this (.hashCode))))
 
 (defn implies
@@ -204,7 +204,7 @@
 
   returns: true if the specified permission is implied by this object,
    false if not. - `boolean`"
-  ([^javax.management.MBeanPermission this ^java.security.Permission p]
+  (^Boolean [^javax.management.MBeanPermission this ^java.security.Permission p]
     (-> this (.implies p))))
 
 (defn equals
@@ -216,6 +216,6 @@
 
   returns: true if obj is an MBeanPermission, and has the
    same name and actions as this MBeanPermission object. - `boolean`"
-  ([^javax.management.MBeanPermission this ^java.lang.Object obj]
+  (^Boolean [^javax.management.MBeanPermission this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

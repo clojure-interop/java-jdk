@@ -196,7 +196,7 @@
   "Return global logger object with the name Logger.GLOBAL_LOGGER_NAME.
 
   returns: global logger object - `java.util.logging.Logger`"
-  ([]
+  (^java.util.logging.Logger []
     (Logger/getGlobal )))
 
 (defn *get-logger
@@ -230,9 +230,9 @@
   returns: a suitable Logger - `java.util.logging.Logger`
 
   throws: java.util.MissingResourceException - if the resourceBundleName is non-null and no corresponding resource can be found."
-  ([^java.lang.String name ^java.lang.String resource-bundle-name]
+  (^java.util.logging.Logger [^java.lang.String name ^java.lang.String resource-bundle-name]
     (Logger/getLogger name resource-bundle-name))
-  ([^java.lang.String name]
+  (^java.util.logging.Logger [^java.lang.String name]
     (Logger/getLogger name)))
 
 (defn *get-anonymous-logger
@@ -259,9 +259,9 @@
   returns: a newly created private Logger - `java.util.logging.Logger`
 
   throws: java.util.MissingResourceException - if the resourceBundleName is non-null and no corresponding resource can be found."
-  ([^java.lang.String resource-bundle-name]
+  (^java.util.logging.Logger [^java.lang.String resource-bundle-name]
     (Logger/getAnonymousLogger resource-bundle-name))
-  ([]
+  (^java.util.logging.Logger []
     (Logger/getAnonymousLogger )))
 
 (defn entering
@@ -341,7 +341,7 @@
    to its parent logger.
 
   returns: true if output is to be sent to the logger's parent - `boolean`"
-  ([^java.util.logging.Logger this]
+  (^Boolean [^java.util.logging.Logger this]
     (-> this (.getUseParentHandlers))))
 
 (defn get-handlers
@@ -361,7 +361,7 @@
    bundle or resource bundle name inherited from its parent.
 
   returns: localization bundle name (may be null) - `java.lang.String`"
-  ([^java.util.logging.Logger this]
+  (^java.lang.String [^java.util.logging.Logger this]
     (-> this (.getResourceBundleName))))
 
 (defn add-handler
@@ -400,7 +400,7 @@
    bundle or resource bundle name inherited from its parent.
 
   returns: localization bundle (may be null) - `java.util.ResourceBundle`"
-  ([^java.util.logging.Logger this]
+  (^java.util.ResourceBundle [^java.util.logging.Logger this]
     (-> this (.getResourceBundle))))
 
 (defn set-resource-bundle
@@ -447,7 +447,7 @@
   "Get the name for this logger.
 
   returns: logger name.  Will be null for anonymous Loggers. - `java.lang.String`"
-  ([^java.util.logging.Logger this]
+  (^java.lang.String [^java.util.logging.Logger this]
     (-> this (.getName))))
 
 (defn logp
@@ -476,7 +476,7 @@
   level - a message logging level - `java.util.logging.Level`
 
   returns: true if the given message level is currently being logged. - `boolean`"
-  ([^java.util.logging.Logger this ^java.util.logging.Level level]
+  (^Boolean [^java.util.logging.Logger this ^java.util.logging.Level level]
     (-> this (.isLoggable level))))
 
 (defn throwing
@@ -514,7 +514,7 @@
    in the namespace.
 
   returns: nearest existing parent Logger - `java.util.logging.Logger`"
-  ([^java.util.logging.Logger this]
+  (^java.util.logging.Logger [^java.util.logging.Logger this]
     (-> this (.getParent))))
 
 (defn remove-handler
@@ -532,7 +532,7 @@
   "Get the current filter for this Logger.
 
   returns: a filter object (may be null) - `java.util.logging.Filter`"
-  ([^java.util.logging.Logger this]
+  (^java.util.logging.Filter [^java.util.logging.Logger this]
     (-> this (.getFilter))))
 
 (defn get-level
@@ -541,7 +541,7 @@
    effective level will be inherited from its parent.
 
   returns: this Logger's level - `java.util.logging.Level`"
-  ([^java.util.logging.Logger this]
+  (^java.util.logging.Level [^java.util.logging.Logger this]
     (-> this (.getLevel))))
 
 (defn logrb

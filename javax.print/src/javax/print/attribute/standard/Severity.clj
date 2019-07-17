@@ -82,6 +82,6 @@
    For class Severit, the category name is `severity`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.Severity this]
+  (^java.lang.String [^javax.print.attribute.standard.Severity this]
     (-> this (.getName))))
 

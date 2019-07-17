@@ -48,7 +48,7 @@
   p - a visitor-specified parameter - `SimpleElementVisitor6.P`
 
   returns: the result of defaultAction - `SimpleElementVisitor6.R`"
-  ([^javax.lang.model.util.SimpleElementVisitor6 this ^javax.lang.model.element.PackageElement e ^SimpleElementVisitor6.P p]
+  (^SimpleElementVisitor6.R [^javax.lang.model.util.SimpleElementVisitor6 this ^javax.lang.model.element.PackageElement e ^SimpleElementVisitor6.P p]
     (-> this (.visitPackage e p))))
 
 (defn visit-type
@@ -58,7 +58,7 @@
   p - a visitor-specified parameter - `SimpleElementVisitor6.P`
 
   returns: the result of defaultAction - `SimpleElementVisitor6.R`"
-  ([^javax.lang.model.util.SimpleElementVisitor6 this ^javax.lang.model.element.TypeElement e ^SimpleElementVisitor6.P p]
+  (^SimpleElementVisitor6.R [^javax.lang.model.util.SimpleElementVisitor6 this ^javax.lang.model.element.TypeElement e ^SimpleElementVisitor6.P p]
     (-> this (.visitType e p))))
 
 (defn visit-variable
@@ -71,7 +71,7 @@
   p - a visitor-specified parameter - `SimpleElementVisitor6.P`
 
   returns: the result of defaultAction or visitUnknown - `SimpleElementVisitor6.R`"
-  ([^javax.lang.model.util.SimpleElementVisitor6 this ^javax.lang.model.element.VariableElement e ^SimpleElementVisitor6.P p]
+  (^SimpleElementVisitor6.R [^javax.lang.model.util.SimpleElementVisitor6 this ^javax.lang.model.element.VariableElement e ^SimpleElementVisitor6.P p]
     (-> this (.visitVariable e p))))
 
 (defn visit-executable
@@ -81,7 +81,7 @@
   p - a visitor-specified parameter - `SimpleElementVisitor6.P`
 
   returns: the result of defaultAction - `SimpleElementVisitor6.R`"
-  ([^javax.lang.model.util.SimpleElementVisitor6 this ^javax.lang.model.element.ExecutableElement e ^SimpleElementVisitor6.P p]
+  (^SimpleElementVisitor6.R [^javax.lang.model.util.SimpleElementVisitor6 this ^javax.lang.model.element.ExecutableElement e ^SimpleElementVisitor6.P p]
     (-> this (.visitExecutable e p))))
 
 (defn visit-type-parameter
@@ -91,6 +91,6 @@
   p - a visitor-specified parameter - `SimpleElementVisitor6.P`
 
   returns: the result of defaultAction - `SimpleElementVisitor6.R`"
-  ([^javax.lang.model.util.SimpleElementVisitor6 this ^javax.lang.model.element.TypeParameterElement e ^SimpleElementVisitor6.P p]
+  (^SimpleElementVisitor6.R [^javax.lang.model.util.SimpleElementVisitor6 this ^javax.lang.model.element.TypeParameterElement e ^SimpleElementVisitor6.P p]
     (-> this (.visitTypeParameter e p))))
 

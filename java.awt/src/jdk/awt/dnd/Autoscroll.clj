@@ -31,7 +31,7 @@
    into the associated Component.
 
   returns: the Insets - `java.awt.Insets`"
-  ([^java.awt.dnd.Autoscroll this]
+  (^java.awt.Insets [^java.awt.dnd.Autoscroll this]
     (-> this (.getAutoscrollInsets))))
 
 (defn autoscroll

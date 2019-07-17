@@ -44,9 +44,9 @@
   returns: the current ISO local date using the system clock, not null - `java.time.LocalDate`
 
   throws: java.time.DateTimeException - if unable to create the date"
-  ([^java.time.chrono.IsoChronology this ^java.time.ZoneId zone]
+  (^java.time.LocalDate [^java.time.chrono.IsoChronology this ^java.time.ZoneId zone]
     (-> this (.dateNow zone)))
-  ([^java.time.chrono.IsoChronology this]
+  (^java.time.LocalDate [^java.time.chrono.IsoChronology this]
     (-> this (.dateNow))))
 
 (defn range
@@ -55,7 +55,7 @@
   field - the field to get the range for, not null - `java.time.temporal.ChronoField`
 
   returns: the range of valid values for the field, not null - `java.time.temporal.ValueRange`"
-  ([^java.time.chrono.IsoChronology this ^java.time.temporal.ChronoField field]
+  (^java.time.temporal.ValueRange [^java.time.chrono.IsoChronology this ^java.time.temporal.ChronoField field]
     (-> this (.range field))))
 
 (defn local-date-time
@@ -68,7 +68,7 @@
   returns: the ISO local date-time, not null - `java.time.LocalDateTime`
 
   throws: java.time.DateTimeException - if unable to create the date-time"
-  ([^java.time.chrono.IsoChronology this ^java.time.temporal.TemporalAccessor temporal]
+  (^java.time.LocalDateTime [^java.time.chrono.IsoChronology this ^java.time.temporal.TemporalAccessor temporal]
     (-> this (.localDateTime temporal))))
 
 (defn resolve-date
@@ -155,7 +155,7 @@
   returns: the resolved date, null if insufficient information to create a date - `java.time.LocalDate`
 
   throws: java.time.DateTimeException - if the date cannot be resolved, typically because of a conflict in the input data"
-  ([^java.time.chrono.IsoChronology this ^java.util.Map field-values ^java.time.format.ResolverStyle resolver-style]
+  (^java.time.LocalDate [^java.time.chrono.IsoChronology this ^java.util.Map field-values ^java.time.format.ResolverStyle resolver-style]
     (-> this (.resolveDate field-values resolver-style))))
 
 (defn leap-year?
@@ -177,7 +177,7 @@
   proleptic-year - the ISO proleptic year to check - `long`
 
   returns: true if the year is leap, false otherwise - `boolean`"
-  ([^java.time.chrono.IsoChronology this ^Long proleptic-year]
+  (^Boolean [^java.time.chrono.IsoChronology this ^Long proleptic-year]
     (-> this (.isLeapYear proleptic-year))))
 
 (defn date-year-day
@@ -190,9 +190,9 @@
   returns: the ISO local date, not null - `java.time.LocalDate`
 
   throws: java.time.DateTimeException - if unable to create the date"
-  ([^java.time.chrono.IsoChronology this ^java.time.chrono.Era era ^Integer year-of-era ^Integer day-of-year]
+  (^java.time.LocalDate [^java.time.chrono.IsoChronology this ^java.time.chrono.Era era ^Integer year-of-era ^Integer day-of-year]
     (-> this (.dateYearDay era year-of-era day-of-year)))
-  ([^java.time.chrono.IsoChronology this ^Integer proleptic-year ^Integer day-of-year]
+  (^java.time.LocalDate [^java.time.chrono.IsoChronology this ^Integer proleptic-year ^Integer day-of-year]
     (-> this (.dateYearDay proleptic-year day-of-year))))
 
 (defn date-epoch-day
@@ -205,14 +205,14 @@
   returns: the ISO local date, not null - `java.time.LocalDate`
 
   throws: java.time.DateTimeException - if unable to create the date"
-  ([^java.time.chrono.IsoChronology this ^Long epoch-day]
+  (^java.time.LocalDate [^java.time.chrono.IsoChronology this ^Long epoch-day]
     (-> this (.dateEpochDay epoch-day))))
 
 (defn eras
   "Description copied from interface: Chronology
 
   returns: the list of eras for the chronology, may be immutable, not null - `java.util.List<java.time.chrono.Era>`"
-  ([^java.time.chrono.IsoChronology this]
+  (^java.util.List [^java.time.chrono.IsoChronology this]
     (-> this (.eras))))
 
 (defn era-of
@@ -221,7 +221,7 @@
   era-value - the era value - `int`
 
   returns: the calendar system era, not null - `java.time.chrono.IsoEra`"
-  ([^java.time.chrono.IsoChronology this ^Integer era-value]
+  (^java.time.chrono.IsoEra [^java.time.chrono.IsoChronology this ^Integer era-value]
     (-> this (.eraOf era-value))))
 
 (defn proleptic-year
@@ -231,7 +231,7 @@
   year-of-era - the chronology year-of-era - `int`
 
   returns: the proleptic-year - `int`"
-  ([^java.time.chrono.IsoChronology this ^java.time.chrono.Era era ^Integer year-of-era]
+  (^Integer [^java.time.chrono.IsoChronology this ^java.time.chrono.Era era ^Integer year-of-era]
     (-> this (.prolepticYear era year-of-era))))
 
 (defn get-calendar-type
@@ -244,7 +244,7 @@
    Locale.getUnicodeLocaleType(String) with the key 'ca'.
 
   returns: the calendar system type - 'iso8601' - `java.lang.String`"
-  ([^java.time.chrono.IsoChronology this]
+  (^java.lang.String [^java.time.chrono.IsoChronology this]
     (-> this (.getCalendarType))))
 
 (defn get-id
@@ -254,7 +254,7 @@
    It can be used to lookup the Chronology using Chronology.of(String).
 
   returns: the chronology ID - 'ISO' - `java.lang.String`"
-  ([^java.time.chrono.IsoChronology this]
+  (^java.lang.String [^java.time.chrono.IsoChronology this]
     (-> this (.getId))))
 
 (defn date
@@ -269,11 +269,11 @@
   returns: the ISO local date, not null - `java.time.LocalDate`
 
   throws: java.time.DateTimeException - if unable to create the date"
-  ([^java.time.chrono.IsoChronology this ^java.time.chrono.Era era ^Integer year-of-era ^Integer month ^Integer day-of-month]
+  (^java.time.LocalDate [^java.time.chrono.IsoChronology this ^java.time.chrono.Era era ^Integer year-of-era ^Integer month ^Integer day-of-month]
     (-> this (.date era year-of-era month day-of-month)))
-  ([^java.time.chrono.IsoChronology this ^Integer proleptic-year ^Integer month ^Integer day-of-month]
+  (^java.time.LocalDate [^java.time.chrono.IsoChronology this ^Integer proleptic-year ^Integer month ^Integer day-of-month]
     (-> this (.date proleptic-year month day-of-month)))
-  ([^java.time.chrono.IsoChronology this ^java.time.temporal.TemporalAccessor temporal]
+  (^java.time.LocalDate [^java.time.chrono.IsoChronology this ^java.time.temporal.TemporalAccessor temporal]
     (-> this (.date temporal))))
 
 (defn period
@@ -287,7 +287,7 @@
   days - the number of years, may be negative - `int`
 
   returns: the period in terms of this chronology, not null - `java.time.Period`"
-  ([^java.time.chrono.IsoChronology this ^Integer years ^Integer months ^Integer days]
+  (^java.time.Period [^java.time.chrono.IsoChronology this ^Integer years ^Integer months ^Integer days]
     (-> this (.period years months days))))
 
 (defn zoned-date-time
@@ -301,8 +301,8 @@
   returns: the zoned date-time, not null - `java.time.ZonedDateTime`
 
   throws: java.time.DateTimeException - if the result exceeds the supported range"
-  ([^java.time.chrono.IsoChronology this ^java.time.Instant instant ^java.time.ZoneId zone]
+  (^java.time.ZonedDateTime [^java.time.chrono.IsoChronology this ^java.time.Instant instant ^java.time.ZoneId zone]
     (-> this (.zonedDateTime instant zone)))
-  ([^java.time.chrono.IsoChronology this ^java.time.temporal.TemporalAccessor temporal]
+  (^java.time.ZonedDateTime [^java.time.chrono.IsoChronology this ^java.time.temporal.TemporalAccessor temporal]
     (-> this (.zonedDateTime temporal))))
 

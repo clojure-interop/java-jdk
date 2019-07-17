@@ -36,8 +36,8 @@
             given watch service - `java.nio.file.WatchKey`
 
   throws: java.lang.UnsupportedOperationException - if unsupported events or modifiers are specified"
-  ([^java.nio.file.Watchable this ^java.nio.file.WatchService watcher ^java.nio.file.WatchEvent.Kind[] events ^java.nio.file.WatchEvent.Modifier modifiers]
+  (^java.nio.file.WatchKey [^java.nio.file.Watchable this ^java.nio.file.WatchService watcher events ^java.nio.file.WatchEvent.Modifier modifiers]
     (-> this (.register watcher events modifiers)))
-  ([^java.nio.file.Watchable this ^java.nio.file.WatchService watcher ^java.nio.file.WatchEvent.Kind events]
+  (^java.nio.file.WatchKey [^java.nio.file.Watchable this ^java.nio.file.WatchService watcher ^java.nio.file.WatchEvent.Kind events]
     (-> this (.register watcher events))))
 

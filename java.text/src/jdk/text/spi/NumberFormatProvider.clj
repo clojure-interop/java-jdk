@@ -14,7 +14,7 @@
   returns: a currency formatter - `java.text.NumberFormat`
 
   throws: java.lang.NullPointerException - if locale is null"
-  ([^java.text.spi.NumberFormatProvider this ^java.util.Locale locale]
+  (^java.text.NumberFormat [^java.text.spi.NumberFormatProvider this ^java.util.Locale locale]
     (-> this (.getCurrencyInstance locale))))
 
 (defn get-integer-instance
@@ -31,7 +31,7 @@
   returns: a number format for integer values - `java.text.NumberFormat`
 
   throws: java.lang.NullPointerException - if locale is null"
-  ([^java.text.spi.NumberFormatProvider this ^java.util.Locale locale]
+  (^java.text.NumberFormat [^java.text.spi.NumberFormatProvider this ^java.util.Locale locale]
     (-> this (.getIntegerInstance locale))))
 
 (defn get-number-instance
@@ -43,7 +43,7 @@
   returns: a general-purpose number formatter - `java.text.NumberFormat`
 
   throws: java.lang.NullPointerException - if locale is null"
-  ([^java.text.spi.NumberFormatProvider this ^java.util.Locale locale]
+  (^java.text.NumberFormat [^java.text.spi.NumberFormatProvider this ^java.util.Locale locale]
     (-> this (.getNumberInstance locale))))
 
 (defn get-percent-instance
@@ -55,6 +55,6 @@
   returns: a percent formatter - `java.text.NumberFormat`
 
   throws: java.lang.NullPointerException - if locale is null"
-  ([^java.text.spi.NumberFormatProvider this ^java.util.Locale locale]
+  (^java.text.NumberFormat [^java.text.spi.NumberFormatProvider this ^java.util.Locale locale]
     (-> this (.getPercentInstance locale))))
 

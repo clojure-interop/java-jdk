@@ -27,7 +27,7 @@
   "Returns true if the popup is visible (currently being displayed).
 
   returns: true if the component is visible; false otherwise. - `boolean`"
-  ([^javax.swing.plaf.basic.ComboPopup this]
+  (^Boolean [^javax.swing.plaf.basic.ComboPopup this]
     (-> this (.isVisible))))
 
 (defn get-list
@@ -36,7 +36,7 @@
    for general list manipulation.
 
   returns: `javax.swing.JList`"
-  ([^javax.swing.plaf.basic.ComboPopup this]
+  (^javax.swing.JList [^javax.swing.plaf.basic.ComboPopup this]
     (-> this (.getList))))
 
 (defn get-mouse-listener
@@ -44,7 +44,7 @@
    If this method returns null then it will not be added to the combo box.
 
   returns: a MouseListener or null - `java.awt.event.MouseListener`"
-  ([^javax.swing.plaf.basic.ComboPopup this]
+  (^java.awt.event.MouseListener [^javax.swing.plaf.basic.ComboPopup this]
     (-> this (.getMouseListener))))
 
 (defn get-mouse-motion-listener
@@ -52,7 +52,7 @@
    If this method returns null then it will not be added to the combo box.
 
   returns: a MouseMotionListener or null - `java.awt.event.MouseMotionListener`"
-  ([^javax.swing.plaf.basic.ComboPopup this]
+  (^java.awt.event.MouseMotionListener [^javax.swing.plaf.basic.ComboPopup this]
     (-> this (.getMouseMotionListener))))
 
 (defn get-key-listener
@@ -60,7 +60,7 @@
    If this method returns null then it will not be added to the combo box.
 
   returns: `java.awt.event.KeyListener`"
-  ([^javax.swing.plaf.basic.ComboPopup this]
+  (^java.awt.event.KeyListener [^javax.swing.plaf.basic.ComboPopup this]
     (-> this (.getKeyListener))))
 
 (defn uninstalling-ui

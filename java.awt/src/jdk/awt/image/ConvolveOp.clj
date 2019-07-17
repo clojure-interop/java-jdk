@@ -66,14 +66,14 @@
   "Returns the edge condition.
 
   returns: the edge condition of this ConvolveOp. - `int`"
-  ([^java.awt.image.ConvolveOp this]
+  (^Integer [^java.awt.image.ConvolveOp this]
     (-> this (.getEdgeCondition))))
 
 (defn get-kernel
   "Returns the Kernel.
 
   returns: the Kernel of this ConvolveOp. - `java.awt.image.Kernel`"
-  ([^java.awt.image.ConvolveOp this]
+  (^java.awt.image.Kernel [^java.awt.image.ConvolveOp this]
     (-> this (.getKernel))))
 
 (defn filter
@@ -93,7 +93,7 @@
   returns: the filtered BufferedImage - `java.awt.image.BufferedImage`
 
   throws: java.lang.NullPointerException - if src is null"
-  ([^java.awt.image.ConvolveOp this ^java.awt.image.BufferedImage src ^java.awt.image.BufferedImage dst]
+  (^java.awt.image.BufferedImage [^java.awt.image.ConvolveOp this ^java.awt.image.BufferedImage src ^java.awt.image.BufferedImage dst]
     (-> this (.filter src dst))))
 
 (defn create-compatible-dest-image
@@ -105,7 +105,7 @@
 
   returns: a destination BufferedImage with the correct
            size and number of bands. - `java.awt.image.BufferedImage`"
-  ([^java.awt.image.ConvolveOp this ^java.awt.image.BufferedImage src ^java.awt.image.ColorModel dest-cm]
+  (^java.awt.image.BufferedImage [^java.awt.image.ConvolveOp this ^java.awt.image.BufferedImage src ^java.awt.image.ColorModel dest-cm]
     (-> this (.createCompatibleDestImage src dest-cm))))
 
 (defn create-compatible-dest-raster
@@ -116,7 +116,7 @@
 
   returns: a WritableRaster that is compatible with
            src - `java.awt.image.WritableRaster`"
-  ([^java.awt.image.ConvolveOp this ^java.awt.image.Raster src]
+  (^java.awt.image.WritableRaster [^java.awt.image.ConvolveOp this ^java.awt.image.Raster src]
     (-> this (.createCompatibleDestRaster src))))
 
 (defn get-bounds-2-d
@@ -128,7 +128,7 @@
 
   returns: The Rectangle2D representing the destination
    image's bounding box. - `java.awt.geom.Rectangle2D`"
-  ([^java.awt.image.ConvolveOp this ^java.awt.image.BufferedImage src]
+  (^java.awt.geom.Rectangle2D [^java.awt.image.ConvolveOp this ^java.awt.image.BufferedImage src]
     (-> this (.getBounds2D src))))
 
 (defn get-point-2-d
@@ -142,7 +142,7 @@
 
   returns: The Point2D in the destination image that
    corresponds to the specified point in the source image. - `java.awt.geom.Point2D`"
-  ([^java.awt.image.ConvolveOp this ^java.awt.geom.Point2D src-pt ^java.awt.geom.Point2D dst-pt]
+  (^java.awt.geom.Point2D [^java.awt.image.ConvolveOp this ^java.awt.geom.Point2D src-pt ^java.awt.geom.Point2D dst-pt]
     (-> this (.getPoint2D src-pt dst-pt))))
 
 (defn get-rendering-hints
@@ -151,6 +151,6 @@
   returns: The RenderingHints object for this
    BufferedImageOp.  Returns
    null if no hints have been set. - `java.awt.RenderingHints`"
-  ([^java.awt.image.ConvolveOp this]
+  (^java.awt.RenderingHints [^java.awt.image.ConvolveOp this]
     (-> this (.getRenderingHints))))
 

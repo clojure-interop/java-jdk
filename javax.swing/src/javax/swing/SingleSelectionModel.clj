@@ -7,7 +7,7 @@
   "Returns the model's selection.
 
   returns: the model's selection, or -1 if there is no selection - `int`"
-  ([^javax.swing.SingleSelectionModel this]
+  (^Integer [^javax.swing.SingleSelectionModel this]
     (-> this (.getSelectedIndex))))
 
 (defn set-selected-index
@@ -28,7 +28,7 @@
   "Returns true if the selection model currently has a selected value.
 
   returns: true if a value is currently selected - `boolean`"
-  ([^javax.swing.SingleSelectionModel this]
+  (^Boolean [^javax.swing.SingleSelectionModel this]
     (-> this (.isSelected))))
 
 (defn add-change-listener

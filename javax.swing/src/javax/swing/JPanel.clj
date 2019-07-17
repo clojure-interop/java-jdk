@@ -43,7 +43,7 @@
   "Returns the look and feel (L&amp;F) object that renders this component.
 
   returns: the PanelUI object that renders this component - `javax.swing.plaf.PanelUI`"
-  ([^javax.swing.JPanel this]
+  (^javax.swing.plaf.PanelUI [^javax.swing.JPanel this]
     (-> this (.getUI))))
 
 (defn set-ui
@@ -58,7 +58,7 @@
    that renders this component.
 
   returns: `PanelUI` - `java.lang.String`"
-  ([^javax.swing.JPanel this]
+  (^java.lang.String [^javax.swing.JPanel this]
     (-> this (.getUIClassID))))
 
 (defn get-accessible-context
@@ -69,6 +69,6 @@
 
   returns: an AccessibleJPanel that serves as the
            AccessibleContext of this JPanel - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.JPanel this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.JPanel this]
     (-> this (.getAccessibleContext))))
 

@@ -22,6 +22,6 @@
   "Get the unrecognized Callback.
 
   returns: the unrecognized Callback. - `javax.security.auth.callback.Callback`"
-  ([^javax.security.auth.callback.UnsupportedCallbackException this]
+  (^javax.security.auth.callback.Callback [^javax.security.auth.callback.UnsupportedCallbackException this]
     (-> this (.getCallback))))
 

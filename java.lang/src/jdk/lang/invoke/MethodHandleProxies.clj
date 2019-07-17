@@ -90,7 +90,7 @@
   x - any reference - `java.lang.Object`
 
   returns: true if the reference is not null and points to an object produced by asInterfaceInstance - `boolean`"
-  ([^java.lang.Object x]
+  (^Boolean [^java.lang.Object x]
     (MethodHandleProxies/isWrapperInstance x)))
 
 (defn *wrapper-instance-target
@@ -104,7 +104,7 @@
   returns: a method handle implementing the unique method - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.IllegalArgumentException - if the reference x is not to a wrapper instance"
-  ([^java.lang.Object x]
+  (^java.lang.invoke.MethodHandle [^java.lang.Object x]
     (MethodHandleProxies/wrapperInstanceTarget x)))
 
 (defn *wrapper-instance-type
@@ -117,6 +117,6 @@
   returns: the single-method interface type for which the wrapper was created - `java.lang.Class<?>`
 
   throws: java.lang.IllegalArgumentException - if the reference x is not to a wrapper instance"
-  ([^java.lang.Object x]
+  (^java.lang.Class [^java.lang.Object x]
     (MethodHandleProxies/wrapperInstanceType x)))
 

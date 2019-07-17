@@ -23,13 +23,13 @@
   x - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent x]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent x]
     (MetalSplitPaneUI/createUI x)))
 
 (defn create-default-divider
   "Creates the default divider.
 
   returns: `javax.swing.plaf.basic.BasicSplitPaneDivider`"
-  ([^javax.swing.plaf.metal.MetalSplitPaneUI this]
+  (^javax.swing.plaf.basic.BasicSplitPaneDivider [^javax.swing.plaf.metal.MetalSplitPaneUI this]
     (-> this (.createDefaultDivider))))
 

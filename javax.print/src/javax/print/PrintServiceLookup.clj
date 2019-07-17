@@ -64,7 +64,7 @@
 
   returns: array of matching MultiDocPrintService objects.
    If no services match, the array is zero-length. - `javax.print.MultiDocPrintService[]`"
-  ([^javax.print.DocFlavor[] flavors ^javax.print.attribute.AttributeSet attributes]
+  ([flavors ^javax.print.attribute.AttributeSet attributes]
     (PrintServiceLookup/lookupMultiDocPrintServices flavors attributes)))
 
 (defn *lookup-default-print-service
@@ -86,7 +86,7 @@
    available to be returned as the default.
 
   returns: the default PrintService. - `javax.print.PrintService`"
-  ([]
+  (^javax.print.PrintService []
     (PrintServiceLookup/lookupDefaultPrintService )))
 
 (defn *register-service-provider
@@ -102,7 +102,7 @@
 
   returns: true if the new lookup service is newly
            registered; false otherwise. - `boolean`"
-  ([^javax.print.PrintServiceLookup sp]
+  (^Boolean [^javax.print.PrintServiceLookup sp]
     (PrintServiceLookup/registerServiceProvider sp)))
 
 (defn *register-service
@@ -124,7 +124,7 @@
 
   returns: true if the service is newly
            registered; false otherwise. - `boolean`"
-  ([^javax.print.PrintService service]
+  (^Boolean [^javax.print.PrintService service]
     (PrintServiceLookup/registerService service)))
 
 (defn get-print-services
@@ -165,7 +165,7 @@
 
   returns: array of matching PrintServices. If no services match, the
    array is zero-length. - `javax.print.MultiDocPrintService[]`"
-  ([^javax.print.PrintServiceLookup this ^javax.print.DocFlavor[] flavors ^javax.print.attribute.AttributeSet attributes]
+  ([^javax.print.PrintServiceLookup this flavors ^javax.print.attribute.AttributeSet attributes]
     (-> this (.getMultiDocPrintServices flavors attributes))))
 
 (defn get-default-print-service
@@ -175,6 +175,6 @@
 
   returns: the default PrintService for this lookup service.
    If there is no default, returns null. - `javax.print.PrintService`"
-  ([^javax.print.PrintServiceLookup this]
+  (^javax.print.PrintService [^javax.print.PrintServiceLookup this]
     (-> this (.getDefaultPrintService))))
 

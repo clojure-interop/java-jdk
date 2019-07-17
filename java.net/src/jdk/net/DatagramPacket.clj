@@ -72,7 +72,7 @@
 
   returns: the IP address of the machine to which this datagram is being
             sent or from which the datagram was received. - `java.net.InetAddress`"
-  ([^java.net.DatagramPacket this]
+  (^java.net.InetAddress [^java.net.DatagramPacket this]
     (-> this (.getAddress))))
 
 (defn set-length
@@ -102,7 +102,7 @@
 
   returns: the offset of the data to be sent or the offset of the
             data received. - `int`"
-  ([^java.net.DatagramPacket this]
+  (^Integer [^java.net.DatagramPacket this]
     (-> this (.getOffset))))
 
 (defn get-socket-address
@@ -110,7 +110,7 @@
    host that this packet is being sent to or is coming from.
 
   returns: the SocketAddress - `java.net.SocketAddress`"
-  ([^java.net.DatagramPacket this]
+  (^java.net.SocketAddress [^java.net.DatagramPacket this]
     (-> this (.getSocketAddress))))
 
 (defn set-port
@@ -127,7 +127,7 @@
 
   returns: the length of the data to be sent or the length of the
             data received. - `int`"
-  ([^java.net.DatagramPacket this]
+  (^Integer [^java.net.DatagramPacket this]
     (-> this (.getLength))))
 
 (defn get-port
@@ -136,6 +136,6 @@
 
   returns: the port number on the remote host to which this datagram is
             being sent or from which the datagram was received. - `int`"
-  ([^java.net.DatagramPacket this]
+  (^Integer [^java.net.DatagramPacket this]
     (-> this (.getPort))))
 

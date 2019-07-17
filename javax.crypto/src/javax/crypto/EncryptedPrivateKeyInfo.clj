@@ -46,14 +46,14 @@
    for information about standard Cipher algorithm names.
 
   returns: the encryption algorithm name. - `java.lang.String`"
-  ([^javax.crypto.EncryptedPrivateKeyInfo this]
+  (^java.lang.String [^javax.crypto.EncryptedPrivateKeyInfo this]
     (-> this (.getAlgName))))
 
 (defn get-alg-parameters
   "Returns the algorithm parameters used by the encryption algorithm.
 
   returns: the algorithm parameters. - `java.security.AlgorithmParameters`"
-  ([^javax.crypto.EncryptedPrivateKeyInfo this]
+  (^java.security.AlgorithmParameters [^javax.crypto.EncryptedPrivateKeyInfo this]
     (-> this (.getAlgParameters))))
 
 (defn get-encrypted-data
@@ -74,9 +74,9 @@
   returns: the PKCS8EncodedKeySpec object. - `java.security.spec.PKCS8EncodedKeySpec`
 
   throws: java.lang.NullPointerException - if decryptKey or providerName is null."
-  ([^javax.crypto.EncryptedPrivateKeyInfo this ^java.security.Key decrypt-key ^java.lang.String provider-name]
+  (^java.security.spec.PKCS8EncodedKeySpec [^javax.crypto.EncryptedPrivateKeyInfo this ^java.security.Key decrypt-key ^java.lang.String provider-name]
     (-> this (.getKeySpec decrypt-key provider-name)))
-  ([^javax.crypto.EncryptedPrivateKeyInfo this ^javax.crypto.Cipher cipher]
+  (^java.security.spec.PKCS8EncodedKeySpec [^javax.crypto.EncryptedPrivateKeyInfo this ^javax.crypto.Cipher cipher]
     (-> this (.getKeySpec cipher))))
 
 (defn get-encoded

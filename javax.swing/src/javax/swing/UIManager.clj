@@ -120,9 +120,9 @@
   returns: the Insets object - `java.awt.Insets`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([^java.lang.Object key ^java.util.Locale l]
+  (^java.awt.Insets [^java.lang.Object key ^java.util.Locale l]
     (UIManager/getInsets key l))
-  ([^java.lang.Object key]
+  (^java.awt.Insets [^java.lang.Object key]
     (UIManager/getInsets key)))
 
 (defn *install-look-and-feel
@@ -148,7 +148,7 @@
   returns: the Object returned by UIDefaults.put(java.lang.Object, java.lang.Object) - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([^java.lang.Object key ^java.lang.Object value]
+  (^java.lang.Object [^java.lang.Object key ^java.lang.Object value]
     (UIManager/put key value)))
 
 (defn *get-string
@@ -162,9 +162,9 @@
   returns: the String - `java.lang.String`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([^java.lang.Object key ^java.util.Locale l]
+  (^java.lang.String [^java.lang.Object key ^java.util.Locale l]
     (UIManager/getString key l))
-  ([^java.lang.Object key]
+  (^java.lang.String [^java.lang.Object key]
     (UIManager/getString key)))
 
 (defn *get-defaults
@@ -172,7 +172,7 @@
    logic specified in the class documentation.
 
   returns: a UIDefaults object containing the default values - `javax.swing.UIDefaults`"
-  ([]
+  (^javax.swing.UIDefaults []
     (UIManager/getDefaults )))
 
 (defn *get-border
@@ -186,9 +186,9 @@
   returns: the Border object - `javax.swing.border.Border`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([^java.lang.Object key ^java.util.Locale l]
+  (^javax.swing.border.Border [^java.lang.Object key ^java.util.Locale l]
     (UIManager/getBorder key l))
-  ([^java.lang.Object key]
+  (^javax.swing.border.Border [^java.lang.Object key]
     (UIManager/getBorder key)))
 
 (defn *remove-auxiliary-look-and-feel
@@ -204,7 +204,7 @@
   laf - `javax.swing.LookAndFeel`
 
   returns: true if the LookAndFeel was removed from the list - `boolean`"
-  ([^javax.swing.LookAndFeel laf]
+  (^Boolean [^javax.swing.LookAndFeel laf]
     (UIManager/removeAuxiliaryLookAndFeel laf)))
 
 (defn *get-icon
@@ -218,9 +218,9 @@
   returns: the Icon object - `javax.swing.Icon`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([^java.lang.Object key ^java.util.Locale l]
+  (^javax.swing.Icon [^java.lang.Object key ^java.util.Locale l]
     (UIManager/getIcon key l))
-  ([^java.lang.Object key]
+  (^javax.swing.Icon [^java.lang.Object key]
     (UIManager/getIcon key)))
 
 (defn *get-auxiliary-look-and-feels
@@ -246,9 +246,9 @@
   returns: the Dimension object - `java.awt.Dimension`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([^java.lang.Object key ^java.util.Locale l]
+  (^java.awt.Dimension [^java.lang.Object key ^java.util.Locale l]
     (UIManager/getDimension key l))
-  ([^java.lang.Object key]
+  (^java.awt.Dimension [^java.lang.Object key]
     (UIManager/getDimension key)))
 
 (defn *get-installed-look-and-feels
@@ -281,7 +281,7 @@
    from this method could have unexpected results.
 
   returns: UIDefaults from the current look and feel - `javax.swing.UIDefaults`"
-  ([]
+  (^javax.swing.UIDefaults []
     (UIManager/getLookAndFeelDefaults )))
 
 (defn *remove-property-change-listener
@@ -300,7 +300,7 @@
    swing.crossplatformlaf system property.
 
   returns: a string with the JLF implementation-class - `java.lang.String`"
-  ([]
+  (^java.lang.String []
     (UIManager/getCrossPlatformLookAndFeelClassName )))
 
 (defn *set-look-and-feel
@@ -336,9 +336,9 @@
   returns: the int - `int`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([^java.lang.Object key ^java.util.Locale l]
+  (^Integer [^java.lang.Object key ^java.util.Locale l]
     (UIManager/getInt key l))
-  ([^java.lang.Object key]
+  (^Integer [^java.lang.Object key]
     (UIManager/getInt key)))
 
 (defn *get-system-look-and-feel-class-name
@@ -350,7 +350,7 @@
 
   returns: the String of the LookAndFeel
             class - `java.lang.String`"
-  ([]
+  (^java.lang.String []
     (UIManager/getSystemLookAndFeelClassName )))
 
 (defn *get-ui
@@ -366,7 +366,7 @@
   returns: the ComponentUI object for target - `javax.swing.plaf.ComponentUI`
 
   throws: java.lang.NullPointerException - if target is null"
-  ([^javax.swing.JComponent target]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent target]
     (UIManager/getUI target)))
 
 (defn *get-property-change-listeners
@@ -403,16 +403,16 @@
   returns: the Font object - `java.awt.Font`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([^java.lang.Object key ^java.util.Locale l]
+  (^java.awt.Font [^java.lang.Object key ^java.util.Locale l]
     (UIManager/getFont key l))
-  ([^java.lang.Object key]
+  (^java.awt.Font [^java.lang.Object key]
     (UIManager/getFont key)))
 
 (defn *get-look-and-feel
   "Returns the current look and feel or null.
 
   returns: current look and feel, or null - `javax.swing.LookAndFeel`"
-  ([]
+  (^javax.swing.LookAndFeel []
     (UIManager/getLookAndFeel )))
 
 (defn *get-boolean?
@@ -427,9 +427,9 @@
   returns: the boolean value corresponding to the key - `boolean`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([^java.lang.Object key ^java.util.Locale l]
+  (^Boolean [^java.lang.Object key ^java.util.Locale l]
     (UIManager/getBoolean key l))
-  ([^java.lang.Object key]
+  (^Boolean [^java.lang.Object key]
     (UIManager/getBoolean key)))
 
 (defn *get-color
@@ -443,9 +443,9 @@
   returns: the Color object - `java.awt.Color`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([^java.lang.Object key ^java.util.Locale l]
+  (^java.awt.Color [^java.lang.Object key ^java.util.Locale l]
     (UIManager/getColor key l))
-  ([^java.lang.Object key]
+  (^java.awt.Color [^java.lang.Object key]
     (UIManager/getColor key)))
 
 (defn *add-property-change-listener
@@ -466,9 +466,9 @@
   returns: the Object - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([^java.lang.Object key ^java.util.Locale l]
+  (^java.lang.Object [^java.lang.Object key ^java.util.Locale l]
     (UIManager/get key l))
-  ([^java.lang.Object key]
+  (^java.lang.Object [^java.lang.Object key]
     (UIManager/get key)))
 
 (defn *set-installed-look-and-feels
@@ -480,6 +480,6 @@
   infos - set of LookAndFeelInfo objects specifying the available look and feels - `javax.swing.UIManager.LookAndFeelInfo[]`
 
   throws: java.lang.NullPointerException - if infos is null"
-  ([^javax.swing.UIManager.LookAndFeelInfo[] infos]
+  ([infos]
     (UIManager/setInstalledLookAndFeels infos)))
 

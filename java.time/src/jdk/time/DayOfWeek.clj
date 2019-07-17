@@ -89,7 +89,7 @@
   returns: the enum constant with the specified name - `java.time.DayOfWeek`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^java.time.DayOfWeek [^java.lang.String name]
     (DayOfWeek/valueOf name)))
 
 (defn *of
@@ -104,7 +104,7 @@
   returns: the day-of-week singleton, not null - `java.time.DayOfWeek`
 
   throws: java.time.DateTimeException - if the day-of-week is invalid"
-  ([^Integer day-of-week]
+  (^java.time.DayOfWeek [^Integer day-of-week]
     (DayOfWeek/of day-of-week)))
 
 (defn *from
@@ -124,7 +124,7 @@
   returns: the day-of-week, not null - `java.time.DayOfWeek`
 
   throws: java.time.DateTimeException - if unable to convert to a DayOfWeek"
-  ([^java.time.temporal.TemporalAccessor temporal]
+  (^java.time.DayOfWeek [^java.time.temporal.TemporalAccessor temporal]
     (DayOfWeek/from temporal)))
 
 (defn range
@@ -149,7 +149,7 @@
   returns: the range of valid values for the field, not null - `java.time.temporal.ValueRange`
 
   throws: java.time.DateTimeException - if the range for the field cannot be obtained"
-  ([^java.time.DayOfWeek this ^java.time.temporal.TemporalField field]
+  (^java.time.temporal.ValueRange [^java.time.DayOfWeek this ^java.time.temporal.TemporalField field]
     (-> this (.range field))))
 
 (defn plus
@@ -163,7 +163,7 @@
   days - the days to add, positive or negative - `long`
 
   returns: the resulting day-of-week, not null - `java.time.DayOfWeek`"
-  ([^java.time.DayOfWeek this ^Long days]
+  (^java.time.DayOfWeek [^java.time.DayOfWeek this ^Long days]
     (-> this (.plus days))))
 
 (defn query
@@ -197,7 +197,7 @@
   days - the days to subtract, positive or negative - `long`
 
   returns: the resulting day-of-week, not null - `java.time.DayOfWeek`"
-  ([^java.time.DayOfWeek this ^Long days]
+  (^java.time.DayOfWeek [^java.time.DayOfWeek this ^Long days]
     (-> this (.minus days))))
 
 (defn get-display-name
@@ -213,7 +213,7 @@
   locale - the locale to use, not null - `java.util.Locale`
 
   returns: the text value of the day-of-week, not null - `java.lang.String`"
-  ([^java.time.DayOfWeek this ^java.time.format.TextStyle style ^java.util.Locale locale]
+  (^java.lang.String [^java.time.DayOfWeek this ^java.time.format.TextStyle style ^java.util.Locale locale]
     (-> this (.getDisplayName style locale))))
 
 (defn get-value
@@ -223,7 +223,7 @@
    See WeekFields.dayOfWeek() for localized week-numbering.
 
   returns: the day-of-week, from 1 (Monday) to 7 (Sunday) - `int`"
-  ([^java.time.DayOfWeek this]
+  (^Integer [^java.time.DayOfWeek this]
     (-> this (.getValue))))
 
 (defn get-long
@@ -247,7 +247,7 @@
   returns: the value for the field - `long`
 
   throws: java.time.DateTimeException - if a value for the field cannot be obtained"
-  ([^java.time.DayOfWeek this ^java.time.temporal.TemporalField field]
+  (^Long [^java.time.DayOfWeek this ^java.time.temporal.TemporalField field]
     (-> this (.getLong field))))
 
 (defn supported?
@@ -269,7 +269,7 @@
   field - the field to check, null returns false - `java.time.temporal.TemporalField`
 
   returns: true if the field is supported on this day-of-week, false if not - `boolean`"
-  ([^java.time.DayOfWeek this ^java.time.temporal.TemporalField field]
+  (^Boolean [^java.time.DayOfWeek this ^java.time.temporal.TemporalField field]
     (-> this (.isSupported field))))
 
 (defn adjust-into
@@ -311,7 +311,7 @@
   returns: the adjusted object, not null - `java.time.temporal.Temporal`
 
   throws: java.time.DateTimeException - if unable to make the adjustment"
-  ([^java.time.DayOfWeek this ^java.time.temporal.Temporal temporal]
+  (^java.time.temporal.Temporal [^java.time.DayOfWeek this ^java.time.temporal.Temporal temporal]
     (-> this (.adjustInto temporal))))
 
 (defn get
@@ -336,6 +336,6 @@
   returns: the value for the field, within the valid range of values - `int`
 
   throws: java.time.DateTimeException - if a value for the field cannot be obtained or the value is outside the range of valid values for the field"
-  ([^java.time.DayOfWeek this ^java.time.temporal.TemporalField field]
+  (^Integer [^java.time.DayOfWeek this ^java.time.temporal.TemporalField field]
     (-> this (.get field))))
 

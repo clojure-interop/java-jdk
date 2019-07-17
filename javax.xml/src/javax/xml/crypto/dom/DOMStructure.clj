@@ -29,7 +29,7 @@
   "Returns the node contained in this DOMStructure.
 
   returns: the node - `org.w3c.dom.Node`"
-  ([^javax.xml.crypto.dom.DOMStructure this]
+  (^org.w3c.dom.Node [^javax.xml.crypto.dom.DOMStructure this]
     (-> this (.getNode))))
 
 (defn feature-supported?
@@ -41,6 +41,6 @@
       false otherwise - `boolean`
 
   throws: java.lang.NullPointerException - if feature is null"
-  ([^javax.xml.crypto.dom.DOMStructure this ^java.lang.String feature]
+  (^Boolean [^javax.xml.crypto.dom.DOMStructure this ^java.lang.String feature]
     (-> this (.isFeatureSupported feature))))
 

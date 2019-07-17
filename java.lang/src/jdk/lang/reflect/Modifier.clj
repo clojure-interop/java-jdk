@@ -129,7 +129,7 @@
 
   returns: true if mod includes the
    native modifier; false otherwise. - `boolean`"
-  ([^Integer mod]
+  (^Boolean [^Integer mod]
     (Modifier/isNative mod)))
 
 (defn *parameter-modifiers
@@ -138,7 +138,7 @@
 
   returns: an int value OR-ing together the source language
    modifiers that can be applied to a parameter. - `int`"
-  ([]
+  (^Integer []
     (Modifier/parameterModifiers )))
 
 (defn *private?
@@ -149,7 +149,7 @@
 
   returns: true if mod includes the
    private modifier; false otherwise. - `boolean`"
-  ([^Integer mod]
+  (^Boolean [^Integer mod]
     (Modifier/isPrivate mod)))
 
 (defn *static?
@@ -160,7 +160,7 @@
 
   returns: true if mod includes the
    static modifier; false otherwise. - `boolean`"
-  ([^Integer mod]
+  (^Boolean [^Integer mod]
     (Modifier/isStatic mod)))
 
 (defn *field-modifiers
@@ -169,7 +169,7 @@
 
   returns: an int value OR-ing together the source language
    modifiers that can be applied to a field. - `int`"
-  ([]
+  (^Integer []
     (Modifier/fieldModifiers )))
 
 (defn *abstract?
@@ -180,7 +180,7 @@
 
   returns: true if mod includes the
    abstract modifier; false otherwise. - `boolean`"
-  ([^Integer mod]
+  (^Boolean [^Integer mod]
     (Modifier/isAbstract mod)))
 
 (defn *to-string
@@ -213,7 +213,7 @@
 
   returns: a string representation of the set of modifiers
    represented by mod - `java.lang.String`"
-  ([^Integer mod]
+  (^java.lang.String [^Integer mod]
     (Modifier/toString mod)))
 
 (defn *class-modifiers
@@ -222,7 +222,7 @@
 
   returns: an int value OR-ing together the source language
    modifiers that can be applied to a class. - `int`"
-  ([]
+  (^Integer []
     (Modifier/classModifiers )))
 
 (defn *strict?
@@ -233,7 +233,7 @@
 
   returns: true if mod includes the
    strictfp modifier; false otherwise. - `boolean`"
-  ([^Integer mod]
+  (^Boolean [^Integer mod]
     (Modifier/isStrict mod)))
 
 (defn *interface?
@@ -244,7 +244,7 @@
 
   returns: true if mod includes the
    interface modifier; false otherwise. - `boolean`"
-  ([^Integer mod]
+  (^Boolean [^Integer mod]
     (Modifier/isInterface mod)))
 
 (defn *constructor-modifiers
@@ -253,7 +253,7 @@
 
   returns: an int value OR-ing together the source language
    modifiers that can be applied to a constructor. - `int`"
-  ([]
+  (^Integer []
     (Modifier/constructorModifiers )))
 
 (defn *method-modifiers
@@ -262,7 +262,7 @@
 
   returns: an int value OR-ing together the source language
    modifiers that can be applied to a method. - `int`"
-  ([]
+  (^Integer []
     (Modifier/methodModifiers )))
 
 (defn *synchronized?
@@ -273,7 +273,7 @@
 
   returns: true if mod includes the
    synchronized modifier; false otherwise. - `boolean`"
-  ([^Integer mod]
+  (^Boolean [^Integer mod]
     (Modifier/isSynchronized mod)))
 
 (defn *interface-modifiers
@@ -282,7 +282,7 @@
 
   returns: an int value OR-ing together the source language
    modifiers that can be applied to an interface. - `int`"
-  ([]
+  (^Integer []
     (Modifier/interfaceModifiers )))
 
 (defn *transient?
@@ -293,7 +293,7 @@
 
   returns: true if mod includes the
    transient modifier; false otherwise. - `boolean`"
-  ([^Integer mod]
+  (^Boolean [^Integer mod]
     (Modifier/isTransient mod)))
 
 (defn *volatile?
@@ -304,7 +304,7 @@
 
   returns: true if mod includes the
    volatile modifier; false otherwise. - `boolean`"
-  ([^Integer mod]
+  (^Boolean [^Integer mod]
     (Modifier/isVolatile mod)))
 
 (defn *final?
@@ -315,7 +315,7 @@
 
   returns: true if mod includes the
    final modifier; false otherwise. - `boolean`"
-  ([^Integer mod]
+  (^Boolean [^Integer mod]
     (Modifier/isFinal mod)))
 
 (defn *protected?
@@ -326,7 +326,7 @@
 
   returns: true if mod includes the
    protected modifier; false otherwise. - `boolean`"
-  ([^Integer mod]
+  (^Boolean [^Integer mod]
     (Modifier/isProtected mod)))
 
 (defn *public?
@@ -337,6 +337,6 @@
 
   returns: true if mod includes the
    public modifier; false otherwise. - `boolean`"
-  ([^Integer mod]
+  (^Boolean [^Integer mod]
     (Modifier/isPublic mod)))
 

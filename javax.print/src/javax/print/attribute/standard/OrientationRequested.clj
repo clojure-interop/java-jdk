@@ -102,6 +102,6 @@
    category name is `orientation-requested`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.OrientationRequested this]
+  (^java.lang.String [^javax.print.attribute.standard.OrientationRequested this]
     (-> this (.getName))))
 

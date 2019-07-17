@@ -79,7 +79,7 @@
 
   returns: the preferred dimensions to lay out the subcomponents
             of the specified container. - `java.awt.Dimension`"
-  ([^javax.swing.JSpinner$DefaultEditor this ^java.awt.Container parent]
+  (^java.awt.Dimension [^javax.swing.JSpinner$DefaultEditor this ^java.awt.Container parent]
     (-> this (.preferredLayoutSize parent))))
 
 (defn get-text-field
@@ -89,7 +89,7 @@
 
   returns: the JFormattedTextField that gives the user
        access to the SpinnerDateModel's value. - `javax.swing.JFormattedTextField`"
-  ([^javax.swing.JSpinner$DefaultEditor this]
+  (^javax.swing.JFormattedTextField [^javax.swing.JSpinner$DefaultEditor this]
     (-> this (.getTextField))))
 
 (defn get-spinner
@@ -103,7 +103,7 @@
 
   returns: JSpinner ancestor; null
            if none of the ancestors are a JSpinner - `javax.swing.JSpinner`"
-  ([^javax.swing.JSpinner$DefaultEditor this]
+  (^javax.swing.JSpinner [^javax.swing.JSpinner$DefaultEditor this]
     (-> this (.getSpinner))))
 
 (defn get-baseline-resize-behavior
@@ -114,7 +114,7 @@
            size changes - `java.awt.Component.BaselineResizeBehavior`
 
   throws: java.lang.NullPointerException"
-  ([^javax.swing.JSpinner$DefaultEditor this]
+  (^java.awt.Component.BaselineResizeBehavior [^javax.swing.JSpinner$DefaultEditor this]
     (-> this (.getBaselineResizeBehavior))))
 
 (defn property-change
@@ -140,7 +140,7 @@
 
   returns: the minimum dimensions needed to lay out the subcomponents
             of the specified container. - `java.awt.Dimension`"
-  ([^javax.swing.JSpinner$DefaultEditor this ^java.awt.Container parent]
+  (^java.awt.Dimension [^javax.swing.JSpinner$DefaultEditor this ^java.awt.Container parent]
     (-> this (.minimumLayoutSize parent))))
 
 (defn add-layout-component
@@ -163,7 +163,7 @@
            baseline - `int`
 
   throws: java.lang.IllegalArgumentException - if width or height is < 0"
-  ([^javax.swing.JSpinner$DefaultEditor this ^Integer width ^Integer height]
+  (^Integer [^javax.swing.JSpinner$DefaultEditor this ^Integer width ^Integer height]
     (-> this (.getBaseline width height))))
 
 (defn remove-layout-component

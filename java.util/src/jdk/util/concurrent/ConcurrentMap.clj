@@ -67,7 +67,7 @@
            if the implementation supports null values.) - `ConcurrentMap.V`
 
   throws: java.lang.UnsupportedOperationException - if the put operation is not supported by this map"
-  ([^java.util.concurrent.ConcurrentMap this ^ConcurrentMap.K key ^ConcurrentMap.V value]
+  (^ConcurrentMap.V [^java.util.concurrent.ConcurrentMap this ^ConcurrentMap.K key ^ConcurrentMap.V value]
     (-> this (.putIfAbsent key value))))
 
 (defn get-or-default
@@ -104,9 +104,9 @@
   returns: true if the value was replaced - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the put operation is not supported by this map"
-  ([^java.util.concurrent.ConcurrentMap this ^ConcurrentMap.K key ^ConcurrentMap.V old-value ^ConcurrentMap.V new-value]
+  (^Boolean [^java.util.concurrent.ConcurrentMap this ^ConcurrentMap.K key ^ConcurrentMap.V old-value ^ConcurrentMap.V new-value]
     (-> this (.replace key old-value new-value)))
-  ([^java.util.concurrent.ConcurrentMap this ^ConcurrentMap.K key ^ConcurrentMap.V value]
+  (^ConcurrentMap.V [^java.util.concurrent.ConcurrentMap this ^ConcurrentMap.K key ^ConcurrentMap.V value]
     (-> this (.replace key value))))
 
 (defn remove
@@ -128,7 +128,7 @@
   returns: true if the value was removed - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the remove operation is not supported by this map"
-  ([^java.util.concurrent.ConcurrentMap this ^java.lang.Object key ^java.lang.Object value]
+  (^Boolean [^java.util.concurrent.ConcurrentMap this ^java.lang.Object key ^java.lang.Object value]
     (-> this (.remove key value))))
 
 (defn compute-if-present

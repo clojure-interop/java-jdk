@@ -115,11 +115,11 @@
             using the specified format - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if the specified format is invalid, null, or an OID in the name maps to an improperly specified keyword"
-  ([^javax.security.auth.x500.X500Principal this ^java.lang.String format ^java.util.Map oid-map]
+  (^java.lang.String [^javax.security.auth.x500.X500Principal this ^java.lang.String format ^java.util.Map oid-map]
     (-> this (.getName format oid-map)))
-  ([^javax.security.auth.x500.X500Principal this ^java.lang.String format]
+  (^java.lang.String [^javax.security.auth.x500.X500Principal this ^java.lang.String format]
     (-> this (.getName format)))
-  ([^javax.security.auth.x500.X500Principal this]
+  (^java.lang.String [^javax.security.auth.x500.X500Principal this]
     (-> this (.getName))))
 
 (defn get-encoded
@@ -140,7 +140,7 @@
    X500Principal.
 
   returns: a string representation of this X500Principal - `java.lang.String`"
-  ([^javax.security.auth.x500.X500Principal this]
+  (^java.lang.String [^javax.security.auth.x500.X500Principal this]
     (-> this (.toString))))
 
 (defn equals
@@ -159,7 +159,7 @@
 
   returns: true if the specified Object is equal
             to this X500Principal, false otherwise - `boolean`"
-  ([^javax.security.auth.x500.X500Principal this ^java.lang.Object o]
+  (^Boolean [^javax.security.auth.x500.X500Principal this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn hash-code
@@ -169,6 +169,6 @@
    getName(X500Principal.CANONICAL).hashCode()
 
   returns: a hash code for this X500Principal - `int`"
-  ([^javax.security.auth.x500.X500Principal this]
+  (^Integer [^javax.security.auth.x500.X500Principal this]
     (-> this (.hashCode))))
 

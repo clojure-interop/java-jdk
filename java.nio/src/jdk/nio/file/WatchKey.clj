@@ -57,7 +57,7 @@
    or its watch service is closed.
 
   returns: true if, and only if, this watch key is valid - `boolean`"
-  ([^java.nio.file.WatchKey this]
+  (^Boolean [^java.nio.file.WatchKey this]
     (-> this (.isValid))))
 
 (defn poll-events
@@ -67,7 +67,7 @@
     Note that this method does not wait if there are no events pending.
 
   returns: the list of the events retrieved; may be empty - `java.util.List<java.nio.file.WatchEvent<?>>`"
-  ([^java.nio.file.WatchKey this]
+  (^java.util.List> [^java.nio.file.WatchKey this]
     (-> this (.pollEvents))))
 
 (defn reset
@@ -83,7 +83,7 @@
   returns: true if the watch key is valid and has been reset, and
             false if the watch key could not be reset because it is
             no longer valid - `boolean`"
-  ([^java.nio.file.WatchKey this]
+  (^Boolean [^java.nio.file.WatchKey this]
     (-> this (.reset))))
 
 (defn cancel
@@ -112,6 +112,6 @@
    method may no longer be a valid path to the directory.
 
   returns: the object for which this watch key was created - `java.nio.file.Watchable`"
-  ([^java.nio.file.WatchKey this]
+  (^java.nio.file.Watchable [^java.nio.file.WatchKey this]
     (-> this (.watchable))))
 

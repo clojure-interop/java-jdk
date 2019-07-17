@@ -30,9 +30,9 @@
   returns: New instance of a SAXParserFactory - `javax.xml.parsers.SAXParserFactory`
 
   throws: javax.xml.parsers.FactoryConfigurationError - if factoryClassName is null, or the factory class cannot be loaded, instantiated."
-  ([^java.lang.String factory-class-name ^java.lang.ClassLoader class-loader]
+  (^javax.xml.parsers.SAXParserFactory [^java.lang.String factory-class-name ^java.lang.ClassLoader class-loader]
     (SAXParserFactory/newInstance factory-class-name class-loader))
-  ([]
+  (^javax.xml.parsers.SAXParserFactory []
     (SAXParserFactory/newInstance )))
 
 (defn set-namespace-aware
@@ -53,7 +53,7 @@
   returns: Value of the requested property. - `boolean`
 
   throws: javax.xml.parsers.ParserConfigurationException - if a parser cannot be created which satisfies the requested configuration."
-  ([^javax.xml.parsers.SAXParserFactory this ^java.lang.String name]
+  (^Boolean [^javax.xml.parsers.SAXParserFactory this ^java.lang.String name]
     (-> this (.getFeature name))))
 
 (defn set-validating
@@ -150,7 +150,7 @@
         is created. - `javax.xml.validation.Schema`
 
   throws: java.lang.UnsupportedOperationException - When implementation does not override this method"
-  ([^javax.xml.parsers.SAXParserFactory this]
+  (^javax.xml.validation.Schema [^javax.xml.parsers.SAXParserFactory this]
     (-> this (.getSchema))))
 
 (defn set-feature
@@ -187,7 +187,7 @@
   returns: A new instance of a SAXParser. - `javax.xml.parsers.SAXParser`
 
   throws: javax.xml.parsers.ParserConfigurationException - if a parser cannot be created which satisfies the requested configuration."
-  ([^javax.xml.parsers.SAXParserFactory this]
+  (^javax.xml.parsers.SAXParser [^javax.xml.parsers.SAXParserFactory this]
     (-> this (.newSAXParser))))
 
 (defn namespace-aware?
@@ -196,7 +196,7 @@
 
   returns: true if the factory is configured to produce
            parsers which are namespace aware; false otherwise. - `boolean`"
-  ([^javax.xml.parsers.SAXParserFactory this]
+  (^Boolean [^javax.xml.parsers.SAXParserFactory this]
     (-> this (.isNamespaceAware))))
 
 (defn validating?
@@ -205,7 +205,7 @@
 
   returns: true if the factory is configured to produce parsers which validate
            the XML content during parse; false otherwise. - `boolean`"
-  ([^javax.xml.parsers.SAXParserFactory this]
+  (^Boolean [^javax.xml.parsers.SAXParserFactory this]
     (-> this (.isValidating))))
 
 (defn x-include-aware?
@@ -214,6 +214,6 @@
   returns: current state of XInclude processing - `boolean`
 
   throws: java.lang.UnsupportedOperationException - When implementation does not override this method"
-  ([^javax.xml.parsers.SAXParserFactory this]
+  (^Boolean [^javax.xml.parsers.SAXParserFactory this]
     (-> this (.isXIncludeAware))))
 

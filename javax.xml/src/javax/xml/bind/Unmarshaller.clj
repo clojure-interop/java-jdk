@@ -404,12 +404,12 @@
            if it hasn't been set - `javax.xml.bind.ValidationEventHandler`
 
   throws: javax.xml.bind.JAXBException - if an error was encountered while getting the current event handler"
-  ([^javax.xml.bind.Unmarshaller this]
+  (^javax.xml.bind.ValidationEventHandler [^javax.xml.bind.Unmarshaller this]
     (-> this (.getEventHandler))))
 
 (defn get-attachment-unmarshaller
   "returns: `javax.xml.bind.attachment.AttachmentUnmarshaller`"
-  ([^javax.xml.bind.Unmarshaller this]
+  (^javax.xml.bind.attachment.AttachmentUnmarshaller [^javax.xml.bind.Unmarshaller this]
     (-> this (.getAttachmentUnmarshaller))))
 
 (defn set-listener
@@ -448,7 +448,7 @@
    should create more than one Unmarshaller.
 
   returns: the unmarshaller handler object - `javax.xml.bind.UnmarshallerHandler`"
-  ([^javax.xml.bind.Unmarshaller this]
+  (^javax.xml.bind.UnmarshallerHandler [^javax.xml.bind.Unmarshaller this]
     (-> this (.getUnmarshallerHandler))))
 
 (defn set-schema
@@ -494,14 +494,14 @@
   returns: the value of the requested property - `java.lang.Object`
 
   throws: javax.xml.bind.PropertyException - when there is an error retrieving the given property or value property name"
-  ([^javax.xml.bind.Unmarshaller this ^java.lang.String name]
+  (^java.lang.Object [^javax.xml.bind.Unmarshaller this ^java.lang.String name]
     (-> this (.getProperty name))))
 
 (defn get-listener
   "Return Unmarshaller.Listener registered with this Unmarshaller.
 
   returns: registered Unmarshaller.Listener or null if no Listener is registered with this Unmarshaller. - `javax.xml.bind.Unmarshaller.Listener`"
-  ([^javax.xml.bind.Unmarshaller this]
+  (^javax.xml.bind.Unmarshaller.Listener [^javax.xml.bind.Unmarshaller this]
     (-> this (.getListener))))
 
 (defn get-schema
@@ -522,7 +522,7 @@
         validation or null if not present - `javax.xml.validation.Schema`
 
   throws: java.lang.UnsupportedOperationException - could be thrown if this method is invoked on an Unmarshaller created from a JAXBContext referencing JAXB 1.0 mapped classes"
-  ([^javax.xml.bind.Unmarshaller this]
+  (^javax.xml.validation.Schema [^javax.xml.bind.Unmarshaller this]
     (-> this (.getSchema))))
 
 (defn set-property
@@ -555,7 +555,7 @@
   throws: javax.xml.bind.JAXBException - If any unexpected errors occur while unmarshalling"
   ([^javax.xml.bind.Unmarshaller this ^org.w3c.dom.Node node ^java.lang.Class declared-type]
     (-> this (.unmarshal node declared-type)))
-  ([^javax.xml.bind.Unmarshaller this ^java.io.File f]
+  (^java.lang.Object [^javax.xml.bind.Unmarshaller this ^java.io.File f]
     (-> this (.unmarshal f))))
 
 (defn set-adapter
@@ -590,6 +590,6 @@
            unmarshal operations, false otherwise - `boolean`
 
   throws: javax.xml.bind.JAXBException - if an error occurs while retrieving the validating flag"
-  ([^javax.xml.bind.Unmarshaller this]
+  (^Boolean [^javax.xml.bind.Unmarshaller this]
     (-> this (.isValidating))))
 

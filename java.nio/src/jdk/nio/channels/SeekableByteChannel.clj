@@ -31,7 +31,7 @@
             channel has reached end-of-stream - `int`
 
   throws: java.nio.channels.ClosedChannelException - If this channel is closed"
-  ([^java.nio.channels.SeekableByteChannel this ^java.nio.ByteBuffer dst]
+  (^Integer [^java.nio.channels.SeekableByteChannel this ^java.nio.ByteBuffer dst]
     (-> this (.read dst))))
 
 (defn write
@@ -51,7 +51,7 @@
   returns: The number of bytes written, possibly zero - `int`
 
   throws: java.nio.channels.ClosedChannelException - If this channel is closed"
-  ([^java.nio.channels.SeekableByteChannel this ^java.nio.ByteBuffer src]
+  (^Integer [^java.nio.channels.SeekableByteChannel this ^java.nio.ByteBuffer src]
     (-> this (.write src))))
 
 (defn position
@@ -74,9 +74,9 @@
   returns: This channel - `java.nio.channels.SeekableByteChannel`
 
   throws: java.nio.channels.ClosedChannelException - If this channel is closed"
-  ([^java.nio.channels.SeekableByteChannel this ^Long new-position]
+  (^java.nio.channels.SeekableByteChannel [^java.nio.channels.SeekableByteChannel this ^Long new-position]
     (-> this (.position new-position)))
-  ([^java.nio.channels.SeekableByteChannel this]
+  (^Long [^java.nio.channels.SeekableByteChannel this]
     (-> this (.position))))
 
 (defn size
@@ -85,7 +85,7 @@
   returns: The current size, measured in bytes - `long`
 
   throws: java.nio.channels.ClosedChannelException - If this channel is closed"
-  ([^java.nio.channels.SeekableByteChannel this]
+  (^Long [^java.nio.channels.SeekableByteChannel this]
     (-> this (.size))))
 
 (defn truncate
@@ -106,6 +106,6 @@
   returns: This channel - `java.nio.channels.SeekableByteChannel`
 
   throws: java.nio.channels.NonWritableChannelException - If this channel was not opened for writing"
-  ([^java.nio.channels.SeekableByteChannel this ^Long size]
+  (^java.nio.channels.SeekableByteChannel [^java.nio.channels.SeekableByteChannel this ^Long size]
     (-> this (.truncate size))))
 

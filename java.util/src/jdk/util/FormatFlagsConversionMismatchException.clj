@@ -21,14 +21,14 @@
   "Returns the incompatible flag.
 
   returns: The flag - `java.lang.String`"
-  ([^java.util.FormatFlagsConversionMismatchException this]
+  (^java.lang.String [^java.util.FormatFlagsConversionMismatchException this]
     (-> this (.getFlags))))
 
 (defn get-conversion
   "Returns the incompatible conversion.
 
   returns: The conversion - `char`"
-  ([^java.util.FormatFlagsConversionMismatchException this]
+  (^Character [^java.util.FormatFlagsConversionMismatchException this]
     (-> this (.getConversion))))
 
 (defn get-message
@@ -36,6 +36,6 @@
 
   returns: the detail message string of this Throwable instance
             (which may be null). - `java.lang.String`"
-  ([^java.util.FormatFlagsConversionMismatchException this]
+  (^java.lang.String [^java.util.FormatFlagsConversionMismatchException this]
     (-> this (.getMessage))))
 

@@ -31,7 +31,7 @@
    support the add or addAll operations.
 
   returns: a collection view of the values contained in this map - `java.util.Collection<java.lang.Object>`"
-  ([^javax.script.SimpleBindings this]
+  (^java.util.Collection [^javax.script.SimpleBindings this]
     (-> this (.values))))
 
 (defn put-all
@@ -53,7 +53,7 @@
    unset. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if the name is null."
-  ([^javax.script.SimpleBindings this ^java.lang.String name ^java.lang.Object value]
+  (^java.lang.Object [^javax.script.SimpleBindings this ^java.lang.String name ^java.lang.Object value]
     (-> this (.put name value))))
 
 (defn entry-set
@@ -71,7 +71,7 @@
    add or addAll operations.
 
   returns: a set view of the mappings contained in this map - `java.util.Set<java.util.Map.Entry<java.lang.String,java.lang.Object>>`"
-  ([^javax.script.SimpleBindings this]
+  (^java.util.Set> [^javax.script.SimpleBindings this]
     (-> this (.entrySet))))
 
 (defn contains-value
@@ -86,7 +86,7 @@
 
   returns: true if this map maps one or more keys to the
            specified value - `boolean`"
-  ([^javax.script.SimpleBindings this ^java.lang.Object value]
+  (^Boolean [^javax.script.SimpleBindings this ^java.lang.Object value]
     (-> this (.containsValue value))))
 
 (defn remove
@@ -109,7 +109,7 @@
            if there was no mapping for key. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([^javax.script.SimpleBindings this ^java.lang.Object key]
+  (^java.lang.Object [^javax.script.SimpleBindings this ^java.lang.Object key]
     (-> this (.remove key))))
 
 (defn key-set
@@ -126,14 +126,14 @@
    operations.
 
   returns: a set view of the keys contained in this map - `java.util.Set<java.lang.String>`"
-  ([^javax.script.SimpleBindings this]
+  (^java.util.Set [^javax.script.SimpleBindings this]
     (-> this (.keySet))))
 
 (defn empty?
   "Returns true if this map contains no key-value mappings.
 
   returns: true if this map contains no key-value mappings - `boolean`"
-  ([^javax.script.SimpleBindings this]
+  (^Boolean [^javax.script.SimpleBindings this]
     (-> this (.isEmpty))))
 
 (defn size
@@ -142,7 +142,7 @@
    Integer.MAX_VALUE.
 
   returns: the number of key-value mappings in this map - `int`"
-  ([^javax.script.SimpleBindings this]
+  (^Integer [^javax.script.SimpleBindings this]
     (-> this (.size))))
 
 (defn clear
@@ -164,7 +164,7 @@
            key. - `boolean`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([^javax.script.SimpleBindings this ^java.lang.Object key]
+  (^Boolean [^javax.script.SimpleBindings this ^java.lang.Object key]
     (-> this (.containsKey key))))
 
 (defn get
@@ -186,6 +186,6 @@
            null if the map contains no mapping for this key. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([^javax.script.SimpleBindings this ^java.lang.Object key]
+  (^java.lang.Object [^javax.script.SimpleBindings this ^java.lang.Object key]
     (-> this (.get key))))
 

@@ -115,7 +115,7 @@
   "Returns the global LogManager object.
 
   returns: the global LogManager object - `java.util.logging.LogManager`"
-  ([]
+  (^java.util.logging.LogManager []
     (LogManager/getLogManager )))
 
 (defn *get-logging-mx-bean
@@ -128,7 +128,7 @@
        PlatformLoggingMXBean logging = ManagementFactory.getPlatformMXBean(PlatformLoggingMXBean.class);
 
   returns: a LoggingMXBean object. - `java.util.logging.LoggingMXBean`"
-  ([]
+  (^java.util.logging.LoggingMXBean []
     (LogManager/getLoggingMXBean )))
 
 (defn reset
@@ -183,7 +183,7 @@
    time since its name was returned by this method.
 
   returns: enumeration of logger name strings - `java.util.Enumeration<java.lang.String>`"
-  ([^java.util.logging.LogManager this]
+  (^java.util.Enumeration [^java.util.logging.LogManager this]
     (-> this (.getLoggerNames))))
 
 (defn get-property
@@ -193,7 +193,7 @@
   name - property name - `java.lang.String`
 
   returns: property value - `java.lang.String`"
-  ([^java.util.logging.LogManager this ^java.lang.String name]
+  (^java.lang.String [^java.util.logging.LogManager this ^java.lang.String name]
     (-> this (.getProperty name))))
 
 (defn add-logger
@@ -213,7 +213,7 @@
             false if a logger of that name already exists. - `boolean`
 
   throws: java.lang.NullPointerException - if the logger name is null."
-  ([^java.util.logging.LogManager this ^java.util.logging.Logger logger]
+  (^Boolean [^java.util.logging.LogManager this ^java.util.logging.Logger logger]
     (-> this (.addLogger logger))))
 
 (defn read-configuration
@@ -262,6 +262,6 @@
   name - name of the logger - `java.lang.String`
 
   returns: matching logger or null if none is found - `java.util.logging.Logger`"
-  ([^java.util.logging.LogManager this ^java.lang.String name]
+  (^java.util.logging.Logger [^java.util.logging.LogManager this ^java.lang.String name]
     (-> this (.getLogger name))))
 

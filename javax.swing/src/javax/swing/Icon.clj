@@ -19,13 +19,13 @@
   "Returns the icon's width.
 
   returns: an int specifying the fixed width of the icon. - `int`"
-  ([^javax.swing.Icon this]
+  (^Integer [^javax.swing.Icon this]
     (-> this (.getIconWidth))))
 
 (defn get-icon-height
   "Returns the icon's height.
 
   returns: an int specifying the fixed height of the icon. - `int`"
-  ([^javax.swing.Icon this]
+  (^Integer [^javax.swing.Icon this]
     (-> this (.getIconHeight))))
 

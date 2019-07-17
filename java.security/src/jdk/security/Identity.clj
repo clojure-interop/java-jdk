@@ -31,9 +31,9 @@
    provided by the toString method without any arguments. - `java.lang.String`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkSecurityAccess method doesn't allow returning a string describing this identity."
-  ([^java.security.Identity this ^Boolean detailed]
+  (^java.lang.String [^java.security.Identity this ^Boolean detailed]
     (-> this (.toString detailed)))
-  ([^java.security.Identity this]
+  (^java.lang.String [^java.security.Identity this]
     (-> this (.toString))))
 
 (defn certificates
@@ -47,21 +47,21 @@
   "Deprecated.
 
   returns: the name of this identity. - `java.lang.String`"
-  ([^java.security.Identity this]
+  (^java.lang.String [^java.security.Identity this]
     (-> this (.getName))))
 
 (defn get-info
   "Deprecated.
 
   returns: general information about this identity. - `java.lang.String`"
-  ([^java.security.Identity this]
+  (^java.lang.String [^java.security.Identity this]
     (-> this (.getInfo))))
 
 (defn get-public-key
   "Deprecated.
 
   returns: the public key for this identity. - `java.security.PublicKey`"
-  ([^java.security.Identity this]
+  (^java.security.PublicKey [^java.security.Identity this]
     (-> this (.getPublicKey))))
 
 (defn set-public-key
@@ -77,7 +77,7 @@
   "Deprecated.
 
   returns: a hashcode for this identity. - `int`"
-  ([^java.security.Identity this]
+  (^Integer [^java.security.Identity this]
     (-> this (.hashCode))))
 
 (defn remove-certificate
@@ -113,13 +113,13 @@
   identity - the object to test for equality with this identity. - `java.lang.Object`
 
   returns: true if the objects are considered equal, false otherwise. - `boolean`"
-  ([^java.security.Identity this ^java.lang.Object identity]
+  (^Boolean [^java.security.Identity this ^java.lang.Object identity]
     (-> this (.equals identity))))
 
 (defn get-scope
   "Deprecated.
 
   returns: the scope of this identity. - `java.security.IdentityScope`"
-  ([^java.security.Identity this]
+  (^java.security.IdentityScope [^java.security.Identity this]
     (-> this (.getScope))))
 

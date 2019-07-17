@@ -83,7 +83,7 @@
   returns: the enum constant with the specified name - `javax.tools.StandardLocation`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^javax.tools.StandardLocation [^java.lang.String name]
     (StandardLocation/valueOf name)))
 
 (defn *location-for
@@ -96,20 +96,20 @@
   name - a name - `java.lang.String`
 
   returns: a location - `javax.tools.JavaFileManager.Location`"
-  ([^java.lang.String name]
+  (^javax.tools.JavaFileManager.Location [^java.lang.String name]
     (StandardLocation/locationFor name)))
 
 (defn get-name
   "Description copied from interface: JavaFileManager.Location
 
   returns: a name - `java.lang.String`"
-  ([^javax.tools.StandardLocation this]
+  (^java.lang.String [^javax.tools.StandardLocation this]
     (-> this (.getName))))
 
 (defn output-location?
   "Description copied from interface: JavaFileManager.Location
 
   returns: true if this is an output location, false otherwise - `boolean`"
-  ([^javax.tools.StandardLocation this]
+  (^Boolean [^javax.tools.StandardLocation this]
     (-> this (.isOutputLocation))))
 

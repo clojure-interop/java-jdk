@@ -25,14 +25,14 @@
 
   returns: The remaining unresolved portion of the name.
             Cannot be null but empty OK. - `javax.naming.Name`"
-  ([^javax.naming.spi.ResolveResult this]
+  (^javax.naming.Name [^javax.naming.spi.ResolveResult this]
     (-> this (.getRemainingName))))
 
 (defn get-resolved-obj
   "Retrieves the Object to which resolution was successful.
 
   returns: The Object to which resolution was successful. Cannot be null. - `java.lang.Object`"
-  ([^javax.naming.spi.ResolveResult this]
+  (^java.lang.Object [^javax.naming.spi.ResolveResult this]
     (-> this (.getResolvedObj))))
 
 (defn set-remaining-name

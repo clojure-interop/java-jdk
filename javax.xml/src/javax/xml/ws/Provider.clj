@@ -23,6 +23,6 @@
                 there is no response. - `Provider.T`
 
   throws: javax.xml.ws.WebServiceException - If there is an error processing request. The cause of the WebServiceException may be set to a subclass of ProtocolException to control the protocol level representation of the exception."
-  ([^javax.xml.ws.Provider this ^Provider.T request]
+  (^Provider.T [^javax.xml.ws.Provider this ^Provider.T request]
     (-> this (.invoke request))))
 

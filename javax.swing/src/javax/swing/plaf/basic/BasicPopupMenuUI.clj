@@ -13,7 +13,7 @@
   "x - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent x]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent x]
     (BasicPopupMenuUI/createUI x)))
 
 (defn install-ui
@@ -39,6 +39,6 @@
   "e - `java.awt.event.MouseEvent`
 
   returns: `boolean`"
-  ([^javax.swing.plaf.basic.BasicPopupMenuUI this ^java.awt.event.MouseEvent e]
+  (^Boolean [^javax.swing.plaf.basic.BasicPopupMenuUI this ^java.awt.event.MouseEvent e]
     (-> this (.isPopupTrigger e))))
 

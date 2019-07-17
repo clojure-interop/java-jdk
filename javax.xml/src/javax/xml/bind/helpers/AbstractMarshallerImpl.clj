@@ -51,7 +51,7 @@
            if it hasn't been set - `javax.xml.bind.ValidationEventHandler`
 
   throws: javax.xml.bind.JAXBException - if an error was encountered while getting the current event handler"
-  ([^javax.xml.bind.helpers.AbstractMarshallerImpl this]
+  (^javax.xml.bind.ValidationEventHandler [^javax.xml.bind.helpers.AbstractMarshallerImpl this]
     (-> this (.getEventHandler))))
 
 (defn get-node
@@ -66,7 +66,7 @@
   returns: the DOM tree view of the contentTree - `org.w3c.dom.Node`
 
   throws: javax.xml.bind.JAXBException - If any unexpected problem occurs"
-  ([^javax.xml.bind.helpers.AbstractMarshallerImpl this ^java.lang.Object obj]
+  (^org.w3c.dom.Node [^javax.xml.bind.helpers.AbstractMarshallerImpl this ^java.lang.Object obj]
     (-> this (.getNode obj))))
 
 (defn set-listener
@@ -87,7 +87,7 @@
 
 (defn get-attachment-marshaller
   "returns: `javax.xml.bind.attachment.AttachmentMarshaller`"
-  ([^javax.xml.bind.helpers.AbstractMarshallerImpl this]
+  (^javax.xml.bind.attachment.AttachmentMarshaller [^javax.xml.bind.helpers.AbstractMarshallerImpl this]
     (-> this (.getAttachmentMarshaller))))
 
 (defn set-schema
@@ -108,14 +108,14 @@
   returns: the value of the requested property - `java.lang.Object`
 
   throws: javax.xml.bind.PropertyException - when there is an error retrieving the given property or value property name"
-  ([^javax.xml.bind.helpers.AbstractMarshallerImpl this ^java.lang.String name]
+  (^java.lang.Object [^javax.xml.bind.helpers.AbstractMarshallerImpl this ^java.lang.String name]
     (-> this (.getProperty name))))
 
 (defn get-listener
   "Description copied from interface: Marshaller
 
   returns: registered Marshaller.Listener or null if no Listener is registered with this Marshaller. - `javax.xml.bind.Marshaller.Listener`"
-  ([^javax.xml.bind.helpers.AbstractMarshallerImpl this]
+  (^javax.xml.bind.Marshaller.Listener [^javax.xml.bind.helpers.AbstractMarshallerImpl this]
     (-> this (.getListener))))
 
 (defn get-schema
@@ -123,7 +123,7 @@
 
   returns: the Schema object being used to perform marshal-time
         validation or null if not present. - `javax.xml.validation.Schema`"
-  ([^javax.xml.bind.helpers.AbstractMarshallerImpl this]
+  (^javax.xml.validation.Schema [^javax.xml.bind.helpers.AbstractMarshallerImpl this]
     (-> this (.getSchema))))
 
 (defn set-property

@@ -12,7 +12,7 @@
   "Returns the length of the list.
 
   returns: the length of the list - `int`"
-  ([^javax.swing.ListModel this]
+  (^Integer [^javax.swing.ListModel this]
     (-> this (.getSize))))
 
 (defn get-element-at
@@ -21,7 +21,7 @@
   index - the requested index - `int`
 
   returns: the value at index - `ListModel.E`"
-  ([^javax.swing.ListModel this ^Integer index]
+  (^ListModel.E [^javax.swing.ListModel this ^Integer index]
     (-> this (.getElementAt index))))
 
 (defn add-list-data-listener

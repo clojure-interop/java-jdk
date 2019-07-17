@@ -115,7 +115,7 @@
   "Get the unique identifier for this WebServiceFeature.
 
   returns: the unique identifier for this feature. - `java.lang.String`"
-  ([^javax.xml.ws.soap.AddressingFeature this]
+  (^java.lang.String [^javax.xml.ws.soap.AddressingFeature this]
     (-> this (.getID))))
 
 (defn required?
@@ -124,7 +124,7 @@
    be present on incoming and outgoing messages.
 
   returns: the current required value - `boolean`"
-  ([^javax.xml.ws.soap.AddressingFeature this]
+  (^Boolean [^javax.xml.ws.soap.AddressingFeature this]
     (-> this (.isRequired))))
 
 (defn get-responses
@@ -138,6 +138,6 @@
    only anonymous responses,
            AddressingFeature.Responses.NON_ANONYMOUS when endpoint requires the use
    of only non-anonymous responses - `javax.xml.ws.soap.AddressingFeature.Responses`"
-  ([^javax.xml.ws.soap.AddressingFeature this]
+  (^javax.xml.ws.soap.AddressingFeature.Responses [^javax.xml.ws.soap.AddressingFeature this]
     (-> this (.getResponses))))
 

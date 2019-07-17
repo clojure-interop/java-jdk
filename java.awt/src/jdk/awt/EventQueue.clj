@@ -63,7 +63,7 @@
            dispatched, or System.currentTimeMillis() if this
            method is invoked on a thread other than an event dispatching
            thread - `long`"
-  ([]
+  (^Long []
     (EventQueue/getMostRecentEventTime )))
 
 (defn *get-current-event
@@ -76,7 +76,7 @@
 
   returns: the event currently being dispatched, or null if this method is
            invoked on a thread other than an event dispatching thread - `java.awt.AWTEvent`"
-  ([]
+  (^java.awt.AWTEvent []
     (EventQueue/getCurrentEvent )))
 
 (defn *dispatch-thread?
@@ -93,7 +93,7 @@
   returns: true if running in
    the current AWT EventQueue's
    dispatch thread - `boolean`"
-  ([]
+  (^Boolean []
     (EventQueue/isDispatchThread )))
 
 (defn *invoke-later
@@ -141,7 +141,7 @@
   returns: the next AWTEvent - `java.awt.AWTEvent`
 
   throws: java.lang.InterruptedException - if any thread has interrupted this thread"
-  ([^java.awt.EventQueue this]
+  (^java.awt.AWTEvent [^java.awt.EventQueue this]
     (-> this (.getNextEvent))))
 
 (defn peek-event
@@ -151,9 +151,9 @@
 
   returns: the first event of the specified id or null
       if there is no such event - `java.awt.AWTEvent`"
-  ([^java.awt.EventQueue this ^Integer id]
+  (^java.awt.AWTEvent [^java.awt.EventQueue this ^Integer id]
     (-> this (.peekEvent id)))
-  ([^java.awt.EventQueue this]
+  (^java.awt.AWTEvent [^java.awt.EventQueue this]
     (-> this (.peekEvent))))
 
 (defn push
@@ -176,6 +176,6 @@
   returns: secondaryLoop A new secondary loop object, which can
                          be used to launch a new nested event
                          loop and dispatch events from this queue - `java.awt.SecondaryLoop`"
-  ([^java.awt.EventQueue this]
+  (^java.awt.SecondaryLoop [^java.awt.EventQueue this]
     (-> this (.createSecondaryLoop))))
 

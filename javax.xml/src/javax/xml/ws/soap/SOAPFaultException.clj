@@ -32,6 +32,6 @@
 
   returns: javax.xml.soap.SOAPFault SOAP
             fault element - `javax.xml.soap.SOAPFault`"
-  ([^javax.xml.ws.soap.SOAPFaultException this]
+  (^javax.xml.soap.SOAPFault [^javax.xml.ws.soap.SOAPFaultException this]
     (-> this (.getFault))))
 

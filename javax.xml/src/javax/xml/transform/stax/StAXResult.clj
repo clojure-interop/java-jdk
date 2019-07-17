@@ -44,7 +44,7 @@
 
   returns: XMLEventWriter used by this
      StAXResult. - `javax.xml.stream.XMLEventWriter`"
-  ([^javax.xml.transform.stax.StAXResult this]
+  (^javax.xml.stream.XMLEventWriter [^javax.xml.transform.stax.StAXResult this]
     (-> this (.getXMLEventWriter))))
 
 (defn get-xml-stream-writer
@@ -57,7 +57,7 @@
 
   returns: XMLStreamWriter used by this
      StAXResult. - `javax.xml.stream.XMLStreamWriter`"
-  ([^javax.xml.transform.stax.StAXResult this]
+  (^javax.xml.stream.XMLStreamWriter [^javax.xml.transform.stax.StAXResult this]
     (-> this (.getXMLStreamWriter))))
 
 (defn set-system-id
@@ -80,6 +80,6 @@
   "The returned system identifier is always null.
 
   returns: The returned system identifier is always null. - `java.lang.String`"
-  ([^javax.xml.transform.stax.StAXResult this]
+  (^java.lang.String [^javax.xml.transform.stax.StAXResult this]
     (-> this (.getSystemId))))
 

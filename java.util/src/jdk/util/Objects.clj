@@ -30,7 +30,7 @@
 
   returns: true if the provided reference is null otherwise
    false - `boolean`"
-  ([^java.lang.Object obj]
+  (^Boolean [^java.lang.Object obj]
     (Objects/isNull obj)))
 
 (defn *hash
@@ -54,7 +54,7 @@
   values - the values to be hashed - `java.lang.Object`
 
   returns: a hash value of the sequence of input values - `int`"
-  ([^java.lang.Object values]
+  (^Integer [^java.lang.Object values]
     (Objects/hash values)))
 
 (defn *deep-equals
@@ -70,7 +70,7 @@
 
   returns: true if the arguments are deeply equal to each other
    and false otherwise - `boolean`"
-  ([^java.lang.Object a ^java.lang.Object b]
+  (^Boolean [^java.lang.Object a ^java.lang.Object b]
     (Objects/deepEquals a b)))
 
 (defn *to-string
@@ -84,9 +84,9 @@
   returns: the result of calling toString on the first
    argument if it is not null and the second argument
    otherwise. - `java.lang.String`"
-  ([^java.lang.Object o ^java.lang.String null-default]
+  (^java.lang.String [^java.lang.Object o ^java.lang.String null-default]
     (Objects/toString o null-default))
-  ([^java.lang.Object o]
+  (^java.lang.String [^java.lang.Object o]
     (Objects/toString o)))
 
 (defn *require-non-null
@@ -120,7 +120,7 @@
 
   returns: true if the provided reference is non-null
    otherwise false - `boolean`"
-  ([^java.lang.Object obj]
+  (^Boolean [^java.lang.Object obj]
     (Objects/nonNull obj)))
 
 (defn *hash-code
@@ -131,7 +131,7 @@
 
   returns: the hash code of a non-null argument and 0 for
    a null argument - `int`"
-  ([^java.lang.Object o]
+  (^Integer [^java.lang.Object o]
     (Objects/hashCode o)))
 
 (defn *equals
@@ -147,6 +147,6 @@
 
   returns: true if the arguments are equal to each other
    and false otherwise - `boolean`"
-  ([^java.lang.Object a ^java.lang.Object b]
+  (^Boolean [^java.lang.Object a ^java.lang.Object b]
     (Objects/equals a b)))
 

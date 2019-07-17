@@ -41,7 +41,7 @@
   map - a java.util.Map object containing zero or more entries, with each entry consisting of 1) a String giving the fully qualified name of the UDT and 2) the Class object for the SQLData implementation that defines how the UDT is to be mapped - `java.util.Map<java.lang.String,java.lang.Class<?>>`
 
   throws: java.sql.SQLException - if the attributes or the map is a null value"
-  ([^java.lang.Object[] attributes ^java.util.Map> map]
+  ([attributes ^java.util.Map> map]
     (new SQLInputImpl attributes map)))
 
 (defn read-object
@@ -69,7 +69,7 @@
            the value is SQL NULL - `java.lang.Object`
 
   throws: java.sql.SQLException - if the read position is located at an invalid position; or if there are no further values in the stream."
-  ([^javax.sql.rowset.serial.SQLInputImpl this]
+  (^java.lang.Object [^javax.sql.rowset.serial.SQLInputImpl this]
     (-> this (.readObject))))
 
 (defn read-blob
@@ -88,7 +88,7 @@
            null - `java.sql.Blob`
 
   throws: java.sql.SQLException - if the read position is located at an invalid position; or if there are no further values in the stream."
-  ([^javax.sql.rowset.serial.SQLInputImpl this]
+  (^java.sql.Blob [^javax.sql.rowset.serial.SQLInputImpl this]
     (-> this (.readBlob))))
 
 (defn read-bytes
@@ -119,7 +119,7 @@
    return null - `java.io.InputStream`
 
   throws: java.sql.SQLException - if the read position is located at an invalid position; or if there are no further values in the stream."
-  ([^javax.sql.rowset.serial.SQLInputImpl this]
+  (^java.io.InputStream [^javax.sql.rowset.serial.SQLInputImpl this]
     (-> this (.readAsciiStream))))
 
 (defn read-timestamp
@@ -130,7 +130,7 @@
    null - `java.sql.Timestamp`
 
   throws: java.sql.SQLException - if the read position is located at an invalid position; or if there are no further values in the stream."
-  ([^javax.sql.rowset.serial.SQLInputImpl this]
+  (^java.sql.Timestamp [^javax.sql.rowset.serial.SQLInputImpl this]
     (-> this (.readTimestamp))))
 
 (defn read-byte
@@ -146,7 +146,7 @@
        if the value is SQL NULL, return null - `byte`
 
   throws: java.sql.SQLException - if the read position is located at an invalid position or if there are no further values in the stream"
-  ([^javax.sql.rowset.serial.SQLInputImpl this]
+  (^Byte [^javax.sql.rowset.serial.SQLInputImpl this]
     (-> this (.readByte))))
 
 (defn read-float
@@ -161,7 +161,7 @@
          if the value is SQL NULL, return null - `float`
 
   throws: java.sql.SQLException - if the read position is located at an invalid position or if there are no more values in the stream"
-  ([^javax.sql.rowset.serial.SQLInputImpl this]
+  (^Float [^javax.sql.rowset.serial.SQLInputImpl this]
     (-> this (.readFloat))))
 
 (defn read-character-stream
@@ -176,7 +176,7 @@
   returns: the attribute; if the value is SQL NULL, return null - `java.io.Reader`
 
   throws: java.sql.SQLException - if the read position is located at an invalid position; or if there are no further values in the stream."
-  ([^javax.sql.rowset.serial.SQLInputImpl this]
+  (^java.io.Reader [^javax.sql.rowset.serial.SQLInputImpl this]
     (-> this (.readCharacterStream))))
 
 (defn read-sqlxml
@@ -188,7 +188,7 @@
    SQL NULL - `java.sql.SQLXML`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^javax.sql.rowset.serial.SQLInputImpl this]
+  (^java.sql.SQLXML [^javax.sql.rowset.serial.SQLInputImpl this]
     (-> this (.readSQLXML))))
 
 (defn read-n-clob
@@ -200,7 +200,7 @@
    SQL NULL - `java.sql.NClob`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^javax.sql.rowset.serial.SQLInputImpl this]
+  (^java.sql.NClob [^javax.sql.rowset.serial.SQLInputImpl this]
     (-> this (.readNClob))))
 
 (defn read-boolean
@@ -216,7 +216,7 @@
        if the value is SQL NULL, return null - `boolean`
 
   throws: java.sql.SQLException - if the read position is located at an invalid position or if there are no further values in the stream."
-  ([^javax.sql.rowset.serial.SQLInputImpl this]
+  (^Boolean [^javax.sql.rowset.serial.SQLInputImpl this]
     (-> this (.readBoolean))))
 
 (defn read-int
@@ -231,7 +231,7 @@
          if the value is SQL NULL, return null - `int`
 
   throws: java.sql.SQLException - if the read position is located at an invalid position or if there are no more values in the stream"
-  ([^javax.sql.rowset.serial.SQLInputImpl this]
+  (^Integer [^javax.sql.rowset.serial.SQLInputImpl this]
     (-> this (.readInt))))
 
 (defn read-string
@@ -247,7 +247,7 @@
        if the value is SQL NULL, return null - `java.lang.String`
 
   throws: java.sql.SQLException - if the read position is located at an invalid position or if there are no further values in the stream."
-  ([^javax.sql.rowset.serial.SQLInputImpl this]
+  (^java.lang.String [^javax.sql.rowset.serial.SQLInputImpl this]
     (-> this (.readString))))
 
 (defn read-long
@@ -262,7 +262,7 @@
          if the value is SQL NULL, return null - `long`
 
   throws: java.sql.SQLException - if the read position is located at an invalid position or if there are no more values in the stream"
-  ([^javax.sql.rowset.serial.SQLInputImpl this]
+  (^Long [^javax.sql.rowset.serial.SQLInputImpl this]
     (-> this (.readLong))))
 
 (defn read-clob
@@ -281,7 +281,7 @@
            null - `java.sql.Clob`
 
   throws: java.sql.SQLException - if the read position is located at an invalid position; or if there are no further values in the stream."
-  ([^javax.sql.rowset.serial.SQLInputImpl this]
+  (^java.sql.Clob [^javax.sql.rowset.serial.SQLInputImpl this]
     (-> this (.readClob))))
 
 (defn read-url
@@ -300,7 +300,7 @@
            null - `java.net.URL`
 
   throws: java.sql.SQLException - if the read position is located at an invalid position; or if there are no further values in the stream."
-  ([^javax.sql.rowset.serial.SQLInputImpl this]
+  (^java.net.URL [^javax.sql.rowset.serial.SQLInputImpl this]
     (-> this (.readURL))))
 
 (defn read-binary-stream
@@ -316,7 +316,7 @@
    null - `java.io.InputStream`
 
   throws: java.sql.SQLException - if the read position is located at an invalid position; or if there are no further values in the stream."
-  ([^javax.sql.rowset.serial.SQLInputImpl this]
+  (^java.io.InputStream [^javax.sql.rowset.serial.SQLInputImpl this]
     (-> this (.readBinaryStream))))
 
 (defn was-null
@@ -328,7 +328,7 @@
            will return false - `boolean`
 
   throws: java.sql.SQLException - if an error occurs determining the last value read was a null value or not;"
-  ([^javax.sql.rowset.serial.SQLInputImpl this]
+  (^Boolean [^javax.sql.rowset.serial.SQLInputImpl this]
     (-> this (.wasNull))))
 
 (defn read-big-decimal
@@ -343,7 +343,7 @@
          if the value is SQL NULL, return null - `java.math.BigDecimal`
 
   throws: java.sql.SQLException - if the read position is located at an invalid position or if there are no more values in the stream"
-  ([^javax.sql.rowset.serial.SQLInputImpl this]
+  (^java.math.BigDecimal [^javax.sql.rowset.serial.SQLInputImpl this]
     (-> this (.readBigDecimal))))
 
 (defn read-ref
@@ -355,7 +355,7 @@
            is SQL NULL return null - `java.sql.Ref`
 
   throws: java.sql.SQLException - if the read position is located at an invalid position; or if there are no further values in the stream."
-  ([^javax.sql.rowset.serial.SQLInputImpl this]
+  (^java.sql.Ref [^javax.sql.rowset.serial.SQLInputImpl this]
     (-> this (.readRef))))
 
 (defn read-row-id
@@ -367,7 +367,7 @@
    SQL NULL - `java.sql.RowId`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^javax.sql.rowset.serial.SQLInputImpl this]
+  (^java.sql.RowId [^javax.sql.rowset.serial.SQLInputImpl this]
     (-> this (.readRowId))))
 
 (defn read-n-string
@@ -379,7 +379,7 @@
   returns: the attribute; if the value is SQL NULL, returns null - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^javax.sql.rowset.serial.SQLInputImpl this]
+  (^java.lang.String [^javax.sql.rowset.serial.SQLInputImpl this]
     (-> this (.readNString))))
 
 (defn read-short
@@ -394,7 +394,7 @@
          if the value is SQL NULL, return null - `short`
 
   throws: java.sql.SQLException - if the read position is located at an invalid position or if there are no more values in the stream"
-  ([^javax.sql.rowset.serial.SQLInputImpl this]
+  (^Short [^javax.sql.rowset.serial.SQLInputImpl this]
     (-> this (.readShort))))
 
 (defn read-array
@@ -413,7 +413,7 @@
            null - `java.sql.Array`
 
   throws: java.sql.SQLException - if the read position is located at an invalid position; or if there are no further values in the stream."
-  ([^javax.sql.rowset.serial.SQLInputImpl this]
+  (^java.sql.Array [^javax.sql.rowset.serial.SQLInputImpl this]
     (-> this (.readArray))))
 
 (defn read-time
@@ -429,7 +429,7 @@
    null - `java.sql.Time`
 
   throws: java.sql.SQLException - if the read position is located at an invalid position; or if there are no further values in the stream."
-  ([^javax.sql.rowset.serial.SQLInputImpl this]
+  (^java.sql.Time [^javax.sql.rowset.serial.SQLInputImpl this]
     (-> this (.readTime))))
 
 (defn read-double
@@ -444,7 +444,7 @@
          if the value is SQL NULL, return null - `double`
 
   throws: java.sql.SQLException - if the read position is located at an invalid position or if there are no more values in the stream"
-  ([^javax.sql.rowset.serial.SQLInputImpl this]
+  (^Double [^javax.sql.rowset.serial.SQLInputImpl this]
     (-> this (.readDouble))))
 
 (defn read-date
@@ -459,6 +459,6 @@
          if the value is SQL NULL, return null - `java.sql.Date`
 
   throws: java.sql.SQLException - if the read position is located at an invalid position or if there are no more values in the stream"
-  ([^javax.sql.rowset.serial.SQLInputImpl this]
+  (^java.sql.Date [^javax.sql.rowset.serial.SQLInputImpl this]
     (-> this (.readDate))))
 

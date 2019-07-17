@@ -24,6 +24,6 @@
    return the same name from the getName() method.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.Attribute this]
+  (^java.lang.String [^javax.print.attribute.Attribute this]
     (-> this (.getName))))
 

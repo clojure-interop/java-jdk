@@ -146,7 +146,7 @@
             f2; and a value greater than 0
             if f1 is numerically greater than
             f2. - `int`"
-  ([^Float f-1 ^Float f-2]
+  (^Integer [^Float f-1 ^Float f-2]
     (Float/compare f-1 f-2)))
 
 (defn *min
@@ -157,7 +157,7 @@
   b - the second operand - `float`
 
   returns: the smaller of a and b - `float`"
-  ([^Float a ^Float b]
+  (^Float [^Float a ^Float b]
     (Float/min a b)))
 
 (defn *value-of
@@ -273,7 +273,7 @@
             represented by the String argument. - `java.lang.Float`
 
   throws: java.lang.NumberFormatException - if the string does not contain a parsable number."
-  ([^java.lang.String s]
+  (^java.lang.Float [^java.lang.String s]
     (Float/valueOf s)))
 
 (defn *to-hex-string
@@ -348,7 +348,7 @@
   f - the float to be converted. - `float`
 
   returns: a hex string representation of the argument. - `java.lang.String`"
-  ([^Float f]
+  (^java.lang.String [^Float f]
     (Float/toHexString f)))
 
 (defn *int-bits-to-float
@@ -410,7 +410,7 @@
 
   returns: the float floating-point value with the same bit
             pattern. - `float`"
-  ([^Integer bits]
+  (^Float [^Integer bits]
     (Float/intBitsToFloat bits)))
 
 (defn *sum
@@ -420,7 +420,7 @@
   b - the second operand - `float`
 
   returns: the sum of a and b - `float`"
-  ([^Float a ^Float b]
+  (^Float [^Float a ^Float b]
     (Float/sum a b)))
 
 (defn *max
@@ -431,7 +431,7 @@
   b - the second operand - `float`
 
   returns: the greater of a and b - `float`"
-  ([^Float a ^Float b]
+  (^Float [^Float a ^Float b]
     (Float/max a b)))
 
 (defn *parse-float
@@ -445,7 +445,7 @@
            argument. - `float`
 
   throws: java.lang.NullPointerException - if the string is null"
-  ([^java.lang.String s]
+  (^Float [^java.lang.String s]
     (Float/parseFloat s)))
 
 (defn *to-string
@@ -514,7 +514,7 @@
   f - the float to be converted. - `float`
 
   returns: a string representation of the argument. - `java.lang.String`"
-  ([^Float f]
+  (^java.lang.String [^Float f]
     (Float/toString f)))
 
 (defn *infinite?
@@ -525,7 +525,7 @@
 
   returns: true if the argument is positive infinity or
             negative infinity; false otherwise. - `boolean`"
-  ([^Float v]
+  (^Boolean [^Float v]
     (Float/isInfinite v)))
 
 (defn *float-to-raw-int-bits
@@ -562,7 +562,7 @@
   value - a floating-point number. - `float`
 
   returns: the bits that represent the floating-point number. - `int`"
-  ([^Float value]
+  (^Integer [^Float value]
     (Float/floatToRawIntBits value)))
 
 (defn *na-n?
@@ -573,7 +573,7 @@
 
   returns: true if the argument is NaN;
             false otherwise. - `boolean`"
-  ([^Float v]
+  (^Boolean [^Float v]
     (Float/isNaN v)))
 
 (defn *finite?
@@ -585,7 +585,7 @@
 
   returns: true if the argument is a finite
    floating-point value, false otherwise. - `boolean`"
-  ([^Float f]
+  (^Boolean [^Float f]
     (Float/isFinite f)))
 
 (defn *hash-code
@@ -595,7 +595,7 @@
   value - the value to hash - `float`
 
   returns: a hash code value for a float value. - `int`"
-  ([^Float value]
+  (^Integer [^Float value]
     (Float/hashCode value)))
 
 (defn *float-to-int-bits
@@ -629,7 +629,7 @@
   value - a floating-point number. - `float`
 
   returns: the bits that represent the floating-point number. - `int`"
-  ([^Float value]
+  (^Integer [^Float value]
     (Float/floatToIntBits value)))
 
 (defn short-value
@@ -638,7 +638,7 @@
 
   returns: the float value represented by this object
             converted to type short - `short`"
-  ([^java.lang.Float this]
+  (^Short [^java.lang.Float this]
     (-> this (.shortValue))))
 
 (defn double-value
@@ -647,7 +647,7 @@
 
   returns: the float value represented by this
            object converted to type double - `double`"
-  ([^java.lang.Float this]
+  (^Double [^java.lang.Float this]
     (-> this (.doubleValue))))
 
 (defn long-value
@@ -656,7 +656,7 @@
 
   returns: the float value represented by this object
             converted to type long - `long`"
-  ([^java.lang.Float this]
+  (^Long [^java.lang.Float this]
     (-> this (.longValue))))
 
 (defn byte-value
@@ -665,7 +665,7 @@
 
   returns: the float value represented by this object
             converted to type byte - `byte`"
-  ([^java.lang.Float this]
+  (^Byte [^java.lang.Float this]
     (-> this (.byteValue))))
 
 (defn to-string
@@ -675,7 +675,7 @@
    toString of one argument.
 
   returns: a String representation of this object. - `java.lang.String`"
-  ([^java.lang.Float this]
+  (^java.lang.String [^java.lang.Float this]
     (-> this (.toString))))
 
 (defn infinite?
@@ -685,14 +685,14 @@
   returns: true if the value represented by this object is
             positive infinity or negative infinity;
             false otherwise. - `boolean`"
-  ([^java.lang.Float this]
+  (^Boolean [^java.lang.Float this]
     (-> this (.isInfinite))))
 
 (defn float-value
   "Returns the float value of this Float object.
 
   returns: the float value represented by this object - `float`"
-  ([^java.lang.Float this]
+  (^Float [^java.lang.Float this]
     (-> this (.floatValue))))
 
 (defn na-n?
@@ -701,7 +701,7 @@
 
   returns: true if the value represented by this object is
             NaN; false otherwise. - `boolean`"
-  ([^java.lang.Float this]
+  (^Boolean [^java.lang.Float this]
     (-> this (.isNaN))))
 
 (defn int-value
@@ -710,7 +710,7 @@
 
   returns: the float value represented by this object
             converted to type int - `int`"
-  ([^java.lang.Float this]
+  (^Integer [^java.lang.Float this]
     (-> this (.intValue))))
 
 (defn hash-code
@@ -721,7 +721,7 @@
    object.
 
   returns: a hash code value for this object. - `int`"
-  ([^java.lang.Float this]
+  (^Integer [^java.lang.Float this]
     (-> this (.hashCode))))
 
 (defn compare-to
@@ -753,7 +753,7 @@
             and a value greater than 0 if this
             Float is numerically greater than
             anotherFloat. - `int`"
-  ([^java.lang.Float this ^java.lang.Float another-float]
+  (^Integer [^java.lang.Float this ^java.lang.Float another-float]
     (-> this (.compareTo another-float))))
 
 (defn equals
@@ -794,6 +794,6 @@
 
   returns: true if the objects are the same;
             false otherwise. - `boolean`"
-  ([^java.lang.Float this ^java.lang.Object obj]
+  (^Boolean [^java.lang.Float this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

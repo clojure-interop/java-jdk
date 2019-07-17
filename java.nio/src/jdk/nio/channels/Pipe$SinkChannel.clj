@@ -11,6 +11,6 @@
    SelectionKey.OP_WRITE.
 
   returns: The valid-operation set - `int`"
-  ([^java.nio.channels.Pipe$SinkChannel this]
+  (^Integer [^java.nio.channels.Pipe$SinkChannel this]
     (-> this (.validOps))))
 

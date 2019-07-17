@@ -26,6 +26,6 @@
   bytes - The value to be convereted. Can be null. - `byte[]`
 
   returns: `java.lang.String`"
-  ([^javax.xml.bind.annotation.adapters.HexBinaryAdapter this bytes]
+  (^java.lang.String [^javax.xml.bind.annotation.adapters.HexBinaryAdapter this bytes]
     (-> this (.marshal bytes))))
 

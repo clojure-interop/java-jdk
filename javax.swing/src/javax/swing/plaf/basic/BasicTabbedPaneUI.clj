@@ -12,7 +12,7 @@
   "c - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent c]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent c]
     (BasicTabbedPaneUI/createUI c)))
 
 (defn install-ui
@@ -28,7 +28,7 @@
   c - the component whose minimum size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: a Dimension object or null - `java.awt.Dimension`"
-  ([^javax.swing.plaf.basic.BasicTabbedPaneUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicTabbedPaneUI this ^javax.swing.JComponent c]
     (-> this (.getMinimumSize c))))
 
 (defn get-maximum-size
@@ -37,14 +37,14 @@
   c - the component whose maximum size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: a Dimension object or null - `java.awt.Dimension`"
-  ([^javax.swing.plaf.basic.BasicTabbedPaneUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicTabbedPaneUI this ^javax.swing.JComponent c]
     (-> this (.getMaximumSize c))))
 
 (defn get-tab-run-count
   "pane - `javax.swing.JTabbedPane`
 
   returns: `int`"
-  ([^javax.swing.plaf.basic.BasicTabbedPaneUI this ^javax.swing.JTabbedPane pane]
+  (^Integer [^javax.swing.plaf.basic.BasicTabbedPaneUI this ^javax.swing.JTabbedPane pane]
     (-> this (.getTabRunCount pane))))
 
 (defn uninstall-ui
@@ -64,7 +64,7 @@
            size changes - `java.awt.Component.BaselineResizeBehavior`
 
   throws: java.lang.NullPointerException - if c is null"
-  ([^javax.swing.plaf.basic.BasicTabbedPaneUI this ^javax.swing.JComponent c]
+  (^java.awt.Component.BaselineResizeBehavior [^javax.swing.plaf.basic.BasicTabbedPaneUI this ^javax.swing.JComponent c]
     (-> this (.getBaselineResizeBehavior c))))
 
 (defn tab-for-coordinate
@@ -76,7 +76,7 @@
   y - `int`
 
   returns: `int`"
-  ([^javax.swing.plaf.basic.BasicTabbedPaneUI this ^javax.swing.JTabbedPane pane ^Integer x ^Integer y]
+  (^Integer [^javax.swing.plaf.basic.BasicTabbedPaneUI this ^javax.swing.JTabbedPane pane ^Integer x ^Integer y]
     (-> this (.tabForCoordinate pane x y))))
 
 (defn paint
@@ -95,7 +95,7 @@
   i - `int`
 
   returns: `java.awt.Rectangle`"
-  ([^javax.swing.plaf.basic.BasicTabbedPaneUI this ^javax.swing.JTabbedPane pane ^Integer i]
+  (^java.awt.Rectangle [^javax.swing.plaf.basic.BasicTabbedPaneUI this ^javax.swing.JTabbedPane pane ^Integer i]
     (-> this (.getTabBounds pane i))))
 
 (defn get-baseline
@@ -109,6 +109,6 @@
                     baseline - `int`
 
   throws: java.lang.NullPointerException - if c is null"
-  ([^javax.swing.plaf.basic.BasicTabbedPaneUI this ^javax.swing.JComponent c ^Integer width ^Integer height]
+  (^Integer [^javax.swing.plaf.basic.BasicTabbedPaneUI this ^javax.swing.JComponent c ^Integer width ^Integer height]
     (-> this (.getBaseline c width height))))
 

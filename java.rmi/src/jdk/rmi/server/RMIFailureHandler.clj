@@ -22,6 +22,6 @@
 
   returns: if true, the RMI runtime attempts to retry
    ServerSocket creation - `boolean`"
-  ([^java.rmi.server.RMIFailureHandler this ^java.lang.Exception ex]
+  (^Boolean [^java.rmi.server.RMIFailureHandler this ^java.lang.Exception ex]
     (-> this (.failure ex))))
 

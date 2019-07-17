@@ -41,14 +41,14 @@
   "Returns this icon's Image.
 
   returns: the Image object for this ImageIcon - `java.awt.Image`"
-  ([^javax.swing.ImageIcon this]
+  (^java.awt.Image [^javax.swing.ImageIcon this]
     (-> this (.getImage))))
 
 (defn get-icon-height
   "Gets the height of the icon.
 
   returns: the height in pixels of this icon - `int`"
-  ([^javax.swing.ImageIcon this]
+  (^Integer [^javax.swing.ImageIcon this]
     (-> this (.getIconHeight))))
 
 (defn set-description
@@ -87,7 +87,7 @@
   "Returns a string representation of this image.
 
   returns: a string representing this image - `java.lang.String`"
-  ([^javax.swing.ImageIcon this]
+  (^java.lang.String [^javax.swing.ImageIcon this]
     (-> this (.toString))))
 
 (defn get-description
@@ -98,14 +98,14 @@
    The description may be null.
 
   returns: a brief textual description of the image - `java.lang.String`"
-  ([^javax.swing.ImageIcon this]
+  (^java.lang.String [^javax.swing.ImageIcon this]
     (-> this (.getDescription))))
 
 (defn get-icon-width
   "Gets the width of the icon.
 
   returns: the width in pixels of this icon - `int`"
-  ([^javax.swing.ImageIcon this]
+  (^Integer [^javax.swing.ImageIcon this]
     (-> this (.getIconWidth))))
 
 (defn paint-icon
@@ -132,20 +132,20 @@
 
   returns: an AccessibleImageIcon that serves as the
            AccessibleContext of this ImageIcon - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.ImageIcon this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.ImageIcon this]
     (-> this (.getAccessibleContext))))
 
 (defn get-image-load-status
   "Returns the status of the image loading operation.
 
   returns: the loading status as defined by java.awt.MediaTracker - `int`"
-  ([^javax.swing.ImageIcon this]
+  (^Integer [^javax.swing.ImageIcon this]
     (-> this (.getImageLoadStatus))))
 
 (defn get-image-observer
   "Returns the image observer for the image.
 
   returns: the image observer, which may be null - `java.awt.image.ImageObserver`"
-  ([^javax.swing.ImageIcon this]
+  (^java.awt.image.ImageObserver [^javax.swing.ImageIcon this]
     (-> this (.getImageObserver))))
 

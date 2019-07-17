@@ -106,13 +106,13 @@
   parent - The parent class loader for delegation. - `java.lang.ClassLoader`
   factory - The URLStreamHandlerFactory to use when creating URLs. - `java.net.URLStreamHandlerFactory`
   delegate-to-clr - True if, when a class is not found in either the parent ClassLoader or the URLs, the MLet should delegate to its containing MBeanServer's ClassLoaderRepository. - `boolean`"
-  ([^java.net.URL[] urls ^java.lang.ClassLoader parent ^java.net.URLStreamHandlerFactory factory ^Boolean delegate-to-clr]
+  ([urls ^java.lang.ClassLoader parent ^java.net.URLStreamHandlerFactory factory ^Boolean delegate-to-clr]
     (new MLet urls parent factory delegate-to-clr))
-  ([^java.net.URL[] urls ^java.lang.ClassLoader parent ^java.net.URLStreamHandlerFactory factory]
+  ([urls ^java.lang.ClassLoader parent ^java.net.URLStreamHandlerFactory factory]
     (new MLet urls parent factory))
-  ([^java.net.URL[] urls ^java.lang.ClassLoader parent]
+  ([urls ^java.lang.ClassLoader parent]
     (new MLet urls parent))
-  ([^java.net.URL[] urls]
+  ([urls]
     (new MLet urls))
   ([]
     (new MLet )))
@@ -179,7 +179,7 @@
    (that is, an error or an exception) if the MBean could not be created. - `java.util.Set<java.lang.Object>`
 
   throws: javax.management.ServiceNotFoundException - One of the following errors has occurred: The m-let text file does not contain an MLET tag, the m-let text file is not found, a mandatory attribute of the MLET tag is not specified, the value of url is null."
-  ([^javax.management.loading.MLet this ^java.net.URL url]
+  (^java.util.Set [^javax.management.loading.MLet this ^java.net.URL url]
     (-> this (.getMBeansFromURL url))))
 
 (defn get-library-directory
@@ -189,7 +189,7 @@
   returns: The current directory used by the library loader. - `java.lang.String`
 
   throws: java.lang.UnsupportedOperationException - if this implementation does not support storing native libraries in this way."
-  ([^javax.management.loading.MLet this]
+  (^java.lang.String [^javax.management.loading.MLet this]
     (-> this (.getLibraryDirectory))))
 
 (defn load-class
@@ -204,7 +204,7 @@
   returns: The resulting Class object. - `java.lang.Class<?>`
 
   throws: java.lang.ClassNotFoundException - The specified class could not be found in this ClassLoader nor in the given ClassLoaderRepository."
-  ([^javax.management.loading.MLet this ^java.lang.String name ^javax.management.loading.ClassLoaderRepository clr]
+  (^java.lang.Class [^javax.management.loading.MLet this ^java.lang.String name ^javax.management.loading.ClassLoaderRepository clr]
     (-> this (.loadClass name clr))))
 
 (defn post-register
@@ -255,6 +255,6 @@
   returns: The name of the m-let registered. - `javax.management.ObjectName`
 
   throws: java.lang.Exception - This exception should be caught by the MBean server and re-thrownas an MBeanRegistrationException."
-  ([^javax.management.loading.MLet this ^javax.management.MBeanServer server ^javax.management.ObjectName name]
+  (^javax.management.ObjectName [^javax.management.loading.MLet this ^javax.management.MBeanServer server ^javax.management.ObjectName name]
     (-> this (.preRegister server name))))
 

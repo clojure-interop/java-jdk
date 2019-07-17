@@ -30,28 +30,28 @@
   "Returns the X origin of this Kernel.
 
   returns: the X origin. - `int`"
-  ([^java.awt.image.Kernel this]
+  (^Integer [^java.awt.image.Kernel this]
     (-> this (.getXOrigin))))
 
 (defn get-y-origin
   "Returns the Y origin of this Kernel.
 
   returns: the Y origin. - `int`"
-  ([^java.awt.image.Kernel this]
+  (^Integer [^java.awt.image.Kernel this]
     (-> this (.getYOrigin))))
 
 (defn get-width
   "Returns the width of this Kernel.
 
   returns: the width of this Kernel. - `int`"
-  ([^java.awt.image.Kernel this]
+  (^Integer [^java.awt.image.Kernel this]
     (-> this (.getWidth))))
 
 (defn get-height
   "Returns the height of this Kernel.
 
   returns: the height of this Kernel. - `int`"
-  ([^java.awt.image.Kernel this]
+  (^Integer [^java.awt.image.Kernel this]
     (-> this (.getHeight))))
 
 (defn get-kernel-data
@@ -74,6 +74,6 @@
   "Clones this object.
 
   returns: a clone of this object. - `java.lang.Object`"
-  ([^java.awt.image.Kernel this]
+  (^java.lang.Object [^java.awt.image.Kernel this]
     (-> this (.clone))))
 

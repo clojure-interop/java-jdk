@@ -23,7 +23,7 @@
            be written - `java.io.OutputStream`
 
   throws: java.io.IOException - if an I/O error occurs while writing the response body"
-  ([^java.net.CacheRequest this]
+  (^java.io.OutputStream [^java.net.CacheRequest this]
     (-> this (.getBody))))
 
 (defn abort

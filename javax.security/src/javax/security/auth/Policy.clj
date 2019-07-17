@@ -27,7 +27,7 @@
             null. - `javax.security.auth.Policy`
 
   throws: java.lang.SecurityException - if the current thread does not have permission to get the Policy object."
-  ([]
+  (^javax.security.auth.Policy []
     (Policy/getPolicy )))
 
 (defn *set-policy
@@ -49,7 +49,7 @@
                     Subject and code specified in
                     the provided subject and cs
                     parameters. - `java.security.PermissionCollection`"
-  ([^javax.security.auth.Policy this ^javax.security.auth.Subject subject ^java.security.CodeSource cs]
+  (^java.security.PermissionCollection [^javax.security.auth.Policy this ^javax.security.auth.Subject subject ^java.security.CodeSource cs]
     (-> this (.getPermissions subject cs))))
 
 (defn refresh

@@ -57,7 +57,7 @@
   "Get the current maximum zone size.
 
   returns: `int`"
-  ([^javax.swing.text.ZoneView this]
+  (^Integer [^javax.swing.text.ZoneView this]
     (-> this (.getMaximumZoneSize))))
 
 (defn set-maximum-zone-size
@@ -76,7 +76,7 @@
    allowed to be loaded at the same time.
 
   returns: `int`"
-  ([^javax.swing.text.ZoneView this]
+  (^Integer [^javax.swing.text.ZoneView this]
     (-> this (.getMaxZonesLoaded))))
 
 (defn set-max-zones-loaded

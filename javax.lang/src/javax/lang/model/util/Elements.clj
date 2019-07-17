@@ -17,7 +17,7 @@
   returns: the text of a constant expression - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if the argument is not a primitive value or string"
-  ([^javax.lang.model.util.Elements this ^java.lang.Object value]
+  (^java.lang.String [^javax.lang.model.util.Elements this ^java.lang.Object value]
     (-> this (.getConstantExpression value))))
 
 (defn get-package-of
@@ -27,7 +27,7 @@
   type - the element being examined - `javax.lang.model.element.Element`
 
   returns: the package of an element - `javax.lang.model.element.PackageElement`"
-  ([^javax.lang.model.util.Elements this ^javax.lang.model.element.Element type]
+  (^javax.lang.model.element.PackageElement [^javax.lang.model.util.Elements this ^javax.lang.model.element.Element type]
     (-> this (.getPackageOf type))))
 
 (defn overrides
@@ -77,7 +77,7 @@
 
   returns: true if and only if the first method overrides
             the second - `boolean`"
-  ([^javax.lang.model.util.Elements this ^javax.lang.model.element.ExecutableElement overrider ^javax.lang.model.element.ExecutableElement overridden ^javax.lang.model.element.TypeElement type]
+  (^Boolean [^javax.lang.model.util.Elements this ^javax.lang.model.element.ExecutableElement overrider ^javax.lang.model.element.ExecutableElement overridden ^javax.lang.model.element.TypeElement type]
     (-> this (.overrides overrider overridden type))))
 
 (defn get-all-annotation-mirrors
@@ -96,7 +96,7 @@
   type - the type element being examined - `javax.lang.model.element.TypeElement`
 
   returns: true if the element is a functional interface, false otherwise - `boolean`"
-  ([^javax.lang.model.util.Elements this ^javax.lang.model.element.TypeElement type]
+  (^Boolean [^javax.lang.model.util.Elements this ^javax.lang.model.element.TypeElement type]
     (-> this (.isFunctionalInterface type))))
 
 (defn get-element-values-with-defaults
@@ -128,7 +128,7 @@
   name - the canonical name - `java.lang.CharSequence`
 
   returns: the named type element, or null if it cannot be found - `javax.lang.model.element.TypeElement`"
-  ([^javax.lang.model.util.Elements this ^java.lang.CharSequence name]
+  (^javax.lang.model.element.TypeElement [^javax.lang.model.util.Elements this ^java.lang.CharSequence name]
     (-> this (.getTypeElement name))))
 
 (defn get-name
@@ -138,7 +138,7 @@
   cs - the character sequence to return as a name - `java.lang.CharSequence`
 
   returns: a name with the same sequence of characters as the argument - `javax.lang.model.element.Name`"
-  ([^javax.lang.model.util.Elements this ^java.lang.CharSequence cs]
+  (^javax.lang.model.element.Name [^javax.lang.model.util.Elements this ^java.lang.CharSequence cs]
     (-> this (.getName cs))))
 
 (defn hides
@@ -149,7 +149,7 @@
 
   returns: true if and only if the first element hides
             the second - `boolean`"
-  ([^javax.lang.model.util.Elements this ^javax.lang.model.element.Element hider ^javax.lang.model.element.Element hidden]
+  (^Boolean [^javax.lang.model.util.Elements this ^javax.lang.model.element.Element hider ^javax.lang.model.element.Element hidden]
     (-> this (.hides hider hidden))))
 
 (defn deprecated?
@@ -158,7 +158,7 @@
   e - the element being examined - `javax.lang.model.element.Element`
 
   returns: true if the element is deprecated, false otherwise - `boolean`"
-  ([^javax.lang.model.util.Elements this ^javax.lang.model.element.Element e]
+  (^Boolean [^javax.lang.model.util.Elements this ^javax.lang.model.element.Element e]
     (-> this (.isDeprecated e))))
 
 (defn get-binary-name
@@ -167,7 +167,7 @@
   type - the type element being examined - `javax.lang.model.element.TypeElement`
 
   returns: the binary name - `javax.lang.model.element.Name`"
-  ([^javax.lang.model.util.Elements this ^javax.lang.model.element.TypeElement type]
+  (^javax.lang.model.element.Name [^javax.lang.model.util.Elements this ^javax.lang.model.element.TypeElement type]
     (-> this (.getBinaryName type))))
 
 (defn get-package-element
@@ -176,7 +176,7 @@
   name - fully qualified package name, or `` for an unnamed package - `java.lang.CharSequence`
 
   returns: the named package, or null if it cannot be found - `javax.lang.model.element.PackageElement`"
-  ([^javax.lang.model.util.Elements this ^java.lang.CharSequence name]
+  (^javax.lang.model.element.PackageElement [^javax.lang.model.util.Elements this ^java.lang.CharSequence name]
     (-> this (.getPackageElement name))))
 
 (defn get-doc-comment
@@ -201,7 +201,7 @@
 
   returns: the documentation comment of the element, or null
             if there is none - `java.lang.String`"
-  ([^javax.lang.model.util.Elements this ^javax.lang.model.element.Element e]
+  (^java.lang.String [^javax.lang.model.util.Elements this ^javax.lang.model.element.Element e]
     (-> this (.getDocComment e))))
 
 (defn print-elements

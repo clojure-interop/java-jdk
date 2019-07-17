@@ -39,7 +39,7 @@
    by new instances of this class.
 
   returns: the default host name verifier - `javax.net.ssl.HostnameVerifier`"
-  ([]
+  (^javax.net.ssl.HostnameVerifier []
     (HttpsURLConnection/getDefaultHostnameVerifier )))
 
 (defn *set-default-ssl-socket-factory
@@ -63,7 +63,7 @@
    https URL connections.
 
   returns: the default SSLSocketFactory - `javax.net.ssl.SSLSocketFactory`"
-  ([]
+  (^javax.net.ssl.SSLSocketFactory []
     (HttpsURLConnection/getDefaultSSLSocketFactory )))
 
 (defn get-cipher-suite
@@ -72,7 +72,7 @@
   returns: the cipher suite - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if this method is called before the connection has been established."
-  ([^javax.net.ssl.HttpsURLConnection this]
+  (^java.lang.String [^javax.net.ssl.HttpsURLConnection this]
     (-> this (.getCipherSuite))))
 
 (defn get-local-principal
@@ -89,14 +89,14 @@
    sent, then null is returned. - `java.security.Principal`
 
   throws: java.lang.IllegalStateException - if this method is called before the connection has been established."
-  ([^javax.net.ssl.HttpsURLConnection this]
+  (^java.security.Principal [^javax.net.ssl.HttpsURLConnection this]
     (-> this (.getLocalPrincipal))))
 
 (defn get-hostname-verifier
   "Gets the HostnameVerifier in place on this instance.
 
   returns: the host name verifier - `javax.net.ssl.HostnameVerifier`"
-  ([^javax.net.ssl.HttpsURLConnection this]
+  (^javax.net.ssl.HostnameVerifier [^javax.net.ssl.HttpsURLConnection this]
     (-> this (.getHostnameVerifier))))
 
 (defn set-ssl-socket-factory
@@ -148,7 +148,7 @@
    for secure https URL connections.
 
   returns: the SSLSocketFactory - `javax.net.ssl.SSLSocketFactory`"
-  ([^javax.net.ssl.HttpsURLConnection this]
+  (^javax.net.ssl.SSLSocketFactory [^javax.net.ssl.HttpsURLConnection this]
     (-> this (.getSSLSocketFactory))))
 
 (defn get-local-certificates
@@ -188,6 +188,6 @@
    KerberosPrincipal for Kerberos cipher suites. - `java.security.Principal`
 
   throws: javax.net.ssl.SSLPeerUnverifiedException - if the peer was not verified"
-  ([^javax.net.ssl.HttpsURLConnection this]
+  (^java.security.Principal [^javax.net.ssl.HttpsURLConnection this]
     (-> this (.getPeerPrincipal))))
 

@@ -121,7 +121,7 @@
    this method returns null.
 
   returns: the string identifying the command for this event - `java.lang.String`"
-  ([^java.awt.event.ActionEvent this]
+  (^java.lang.String [^java.awt.event.ActionEvent this]
     (-> this (.getActionCommand))))
 
 (defn get-when
@@ -130,14 +130,14 @@
    the same as an underlying InputEvent.
 
   returns: this event's timestamp - `long`"
-  ([^java.awt.event.ActionEvent this]
+  (^Long [^java.awt.event.ActionEvent this]
     (-> this (.getWhen))))
 
 (defn get-modifiers
   "Returns the modifier keys held down during this action event.
 
   returns: the bitwise-or of the modifier constants - `int`"
-  ([^java.awt.event.ActionEvent this]
+  (^Integer [^java.awt.event.ActionEvent this]
     (-> this (.getModifiers))))
 
 (defn param-string
@@ -145,6 +145,6 @@
    This method is useful for event-logging and for debugging.
 
   returns: a string identifying the event and its associated command - `java.lang.String`"
-  ([^java.awt.event.ActionEvent this]
+  (^java.lang.String [^java.awt.event.ActionEvent this]
     (-> this (.paramString))))
 

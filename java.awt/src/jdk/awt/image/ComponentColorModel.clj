@@ -228,7 +228,7 @@
   returns: true if the SampleModel is
    compatible with this ColorModel, false
    if it is not. - `boolean`"
-  ([^java.awt.image.ComponentColorModel this ^java.awt.image.SampleModel sm]
+  (^Boolean [^java.awt.image.ComponentColorModel this ^java.awt.image.SampleModel sm]
     (-> this (.isCompatibleSampleModel sm))))
 
 (defn get-alpha-raster
@@ -244,7 +244,7 @@
   raster - The WritableRaster from which to extract the alpha channel. - `java.awt.image.WritableRaster`
 
   returns: A WritableRaster containing the image's alpha channel. - `java.awt.image.WritableRaster`"
-  ([^java.awt.image.ComponentColorModel this ^java.awt.image.WritableRaster raster]
+  (^java.awt.image.WritableRaster [^java.awt.image.ComponentColorModel this ^java.awt.image.WritableRaster raster]
     (-> this (.getAlphaRaster raster))))
 
 (defn get-data-element
@@ -257,7 +257,7 @@
   returns: A pixel value represented as an int. - `int`
 
   throws: java.lang.IllegalArgumentException - If this ComponentColorModel does not support the unnormalized form"
-  ([^java.awt.image.ComponentColorModel this components ^Integer offset]
+  (^Integer [^java.awt.image.ComponentColorModel this components ^Integer offset]
     (-> this (.getDataElement components offset))))
 
 (defn get-rgb
@@ -272,7 +272,7 @@
   returns: The color/alpha components for the specified pixel, as an int. - `int`
 
   throws: java.lang.IllegalArgumentException - If the component value for this ColorModel is signed"
-  ([^java.awt.image.ComponentColorModel this ^Integer pixel]
+  (^Integer [^java.awt.image.ComponentColorModel this ^Integer pixel]
     (-> this (.getRGB pixel))))
 
 (defn get-data-elements
@@ -289,9 +289,9 @@
    in this ColorModel. - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - If this ComponentColorModel does not support the unnormalized form"
-  ([^java.awt.image.ComponentColorModel this components ^Integer offset ^java.lang.Object obj]
+  (^java.lang.Object [^java.awt.image.ComponentColorModel this components ^Integer offset ^java.lang.Object obj]
     (-> this (.getDataElements components offset obj)))
-  ([^java.awt.image.ComponentColorModel this ^Integer rgb ^java.lang.Object pixel]
+  (^java.lang.Object [^java.awt.image.ComponentColorModel this ^Integer rgb ^java.lang.Object pixel]
     (-> this (.getDataElements rgb pixel))))
 
 (defn get-unnormalized-components
@@ -340,7 +340,7 @@
   returns: The alpha component for the specified pixel, as an int. - `int`
 
   throws: java.lang.IllegalArgumentException - If the component value for this ColorModel is signed"
-  ([^java.awt.image.ComponentColorModel this ^Integer pixel]
+  (^Integer [^java.awt.image.ComponentColorModel this ^Integer pixel]
     (-> this (.getAlpha pixel))))
 
 (defn get-red
@@ -357,7 +357,7 @@
   returns: The red color component for the specified pixel, as an int. - `int`
 
   throws: java.lang.IllegalArgumentException - If the component value for this ColorModel is signed"
-  ([^java.awt.image.ComponentColorModel this ^Integer pixel]
+  (^Integer [^java.awt.image.ComponentColorModel this ^Integer pixel]
     (-> this (.getRed pixel))))
 
 (defn get-green
@@ -374,7 +374,7 @@
   returns: The green color component for the specified pixel, as an int. - `int`
 
   throws: java.lang.IllegalArgumentException - If the component value for this ColorModel is signed"
-  ([^java.awt.image.ComponentColorModel this ^Integer pixel]
+  (^Integer [^java.awt.image.ComponentColorModel this ^Integer pixel]
     (-> this (.getGreen pixel))))
 
 (defn get-components
@@ -404,7 +404,7 @@
 
   returns: true if raster is compatible with this
    ColorModel, false if it is not. - `boolean`"
-  ([^java.awt.image.ComponentColorModel this ^java.awt.image.Raster raster]
+  (^Boolean [^java.awt.image.ComponentColorModel this ^java.awt.image.Raster raster]
     (-> this (.isCompatibleRaster raster))))
 
 (defn coerce-data
@@ -428,7 +428,7 @@
    coerced data. - `java.awt.image.ColorModel`
 
   throws: java.lang.NullPointerException - if raster is null and data coercion is required."
-  ([^java.awt.image.ComponentColorModel this ^java.awt.image.WritableRaster raster ^Boolean is-alpha-premultiplied]
+  (^java.awt.image.ColorModel [^java.awt.image.ComponentColorModel this ^java.awt.image.WritableRaster raster ^Boolean is-alpha-premultiplied]
     (-> this (.coerceData raster is-alpha-premultiplied))))
 
 (defn create-compatible-writable-raster
@@ -441,7 +441,7 @@
 
   returns: A WritableRaster that is compatible with
    this ColorModel. - `java.awt.image.WritableRaster`"
-  ([^java.awt.image.ComponentColorModel this ^Integer w ^Integer h]
+  (^java.awt.image.WritableRaster [^java.awt.image.ComponentColorModel this ^Integer w ^Integer h]
     (-> this (.createCompatibleWritableRaster w h))))
 
 (defn create-compatible-sample-model
@@ -453,7 +453,7 @@
 
   returns: A SampleModel that is compatible with this
    ColorModel. - `java.awt.image.SampleModel`"
-  ([^java.awt.image.ComponentColorModel this ^Integer w ^Integer h]
+  (^java.awt.image.SampleModel [^java.awt.image.ComponentColorModel this ^Integer w ^Integer h]
     (-> this (.createCompatibleSampleModel w h))))
 
 (defn get-blue
@@ -470,7 +470,7 @@
   returns: The blue color component for the specified pixel, as an int. - `int`
 
   throws: java.lang.IllegalArgumentException - If the component value for this ColorModel is signed"
-  ([^java.awt.image.ComponentColorModel this ^Integer pixel]
+  (^Integer [^java.awt.image.ComponentColorModel this ^Integer pixel]
     (-> this (.getBlue pixel))))
 
 (defn equals
@@ -480,6 +480,6 @@
 
   returns: true if the color model objects are equal,
    false if they are not. - `boolean`"
-  ([^java.awt.image.ComponentColorModel this ^java.lang.Object obj]
+  (^Boolean [^java.awt.image.ComponentColorModel this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

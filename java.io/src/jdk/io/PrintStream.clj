@@ -52,9 +52,9 @@
   returns: This output stream - `java.io.PrintStream`
 
   throws: java.util.IllegalFormatException - If a format string contains an illegal syntax, a format specifier that is incompatible with the given arguments, insufficient arguments given the format string, or other illegal conditions. For specification of all possible formatting errors, see the Details section of the formatter class specification."
-  ([^java.io.PrintStream this ^java.util.Locale l ^java.lang.String format ^java.lang.Object args]
+  (^java.io.PrintStream [^java.io.PrintStream this ^java.util.Locale l ^java.lang.String format ^java.lang.Object args]
     (-> this (.printf l format args)))
-  ([^java.io.PrintStream this ^java.lang.String format ^java.lang.Object args]
+  (^java.io.PrintStream [^java.io.PrintStream this ^java.lang.String format ^java.lang.Object args]
     (-> this (.printf format args))))
 
 (defn flush
@@ -99,9 +99,9 @@
   returns: This output stream - `java.io.PrintStream`
 
   throws: java.lang.IndexOutOfBoundsException - If start or end are negative, start is greater than end, or end is greater than csq.length()"
-  ([^java.io.PrintStream this ^java.lang.CharSequence csq ^Integer start ^Integer end]
+  (^java.io.PrintStream [^java.io.PrintStream this ^java.lang.CharSequence csq ^Integer start ^Integer end]
     (-> this (.append csq start end)))
-  ([^java.io.PrintStream this ^java.lang.CharSequence csq]
+  (^java.io.PrintStream [^java.io.PrintStream this ^java.lang.CharSequence csq]
     (-> this (.append csq))))
 
 (defn print
@@ -149,7 +149,7 @@
            IOException other than
            InterruptedIOException, or the
            setError method has been invoked - `boolean`"
-  ([^java.io.PrintStream this]
+  (^Boolean [^java.io.PrintStream this]
     (-> this (.checkError))))
 
 (defn format
@@ -163,8 +163,8 @@
   returns: This output stream - `java.io.PrintStream`
 
   throws: java.util.IllegalFormatException - If a format string contains an illegal syntax, a format specifier that is incompatible with the given arguments, insufficient arguments given the format string, or other illegal conditions. For specification of all possible formatting errors, see the Details section of the formatter class specification."
-  ([^java.io.PrintStream this ^java.util.Locale l ^java.lang.String format ^java.lang.Object args]
+  (^java.io.PrintStream [^java.io.PrintStream this ^java.util.Locale l ^java.lang.String format ^java.lang.Object args]
     (-> this (.format l format args)))
-  ([^java.io.PrintStream this ^java.lang.String format ^java.lang.Object args]
+  (^java.io.PrintStream [^java.io.PrintStream this ^java.lang.String format ^java.lang.Object args]
     (-> this (.format format args))))
 

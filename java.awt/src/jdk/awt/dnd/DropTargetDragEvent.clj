@@ -61,7 +61,7 @@
 
   returns: the current cursor location in
    Component's coords. - `java.awt.Point`"
-  ([^java.awt.dnd.DropTargetDragEvent this]
+  (^java.awt.Point [^java.awt.dnd.DropTargetDragEvent this]
     (-> this (.getLocation))))
 
 (defn reject-drag
@@ -89,7 +89,7 @@
   "This method returns the user drop action.
 
   returns: the user drop action - `int`"
-  ([^java.awt.dnd.DropTargetDragEvent this]
+  (^Integer [^java.awt.dnd.DropTargetDragEvent this]
     (-> this (.getDropAction))))
 
 (defn get-current-data-flavors-as-list
@@ -97,14 +97,14 @@
    as a java.util.List
 
   returns: a java.util.List of the Current DataFlavors - `java.util.List<java.awt.datatransfer.DataFlavor>`"
-  ([^java.awt.dnd.DropTargetDragEvent this]
+  (^java.util.List [^java.awt.dnd.DropTargetDragEvent this]
     (-> this (.getCurrentDataFlavorsAsList))))
 
 (defn get-source-actions
   "This method returns the source drop actions.
 
   returns: the source drop actions - `int`"
-  ([^java.awt.dnd.DropTargetDragEvent this]
+  (^Integer [^java.awt.dnd.DropTargetDragEvent this]
     (-> this (.getSourceActions))))
 
 (defn get-transferable
@@ -114,7 +114,7 @@
   returns: the Transferable associated with the drag operation - `java.awt.datatransfer.Transferable`
 
   throws: java.awt.dnd.InvalidDnDOperationException - if the data associated with the drag operation is not available"
-  ([^java.awt.dnd.DropTargetDragEvent this]
+  (^java.awt.datatransfer.Transferable [^java.awt.dnd.DropTargetDragEvent this]
     (-> this (.getTransferable))))
 
 (defn get-current-data-flavors
@@ -132,6 +132,6 @@
   df - the DataFlavor to test - `java.awt.datatransfer.DataFlavor`
 
   returns: if a particular DataFlavor is supported - `boolean`"
-  ([^java.awt.dnd.DropTargetDragEvent this ^java.awt.datatransfer.DataFlavor df]
+  (^Boolean [^java.awt.dnd.DropTargetDragEvent this ^java.awt.datatransfer.DataFlavor df]
     (-> this (.isDataFlavorSupported df))))
 

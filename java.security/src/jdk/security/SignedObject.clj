@@ -104,7 +104,7 @@
   returns: the encapsulated object. - `java.lang.Object`
 
   throws: java.io.IOException - if an error occurs during de-serialization"
-  ([^java.security.SignedObject this]
+  (^java.lang.Object [^java.security.SignedObject this]
     (-> this (.getObject))))
 
 (defn get-signature
@@ -120,7 +120,7 @@
   "Retrieves the name of the signature algorithm.
 
   returns: the signature algorithm name. - `java.lang.String`"
-  ([^java.security.SignedObject this]
+  (^java.lang.String [^java.security.SignedObject this]
     (-> this (.getAlgorithm))))
 
 (defn verify
@@ -135,6 +135,6 @@
    is valid, false otherwise - `boolean`
 
   throws: java.security.SignatureException - if signature verification failed."
-  ([^java.security.SignedObject this ^java.security.PublicKey verification-key ^java.security.Signature verification-engine]
+  (^Boolean [^java.security.SignedObject this ^java.security.PublicKey verification-key ^java.security.Signature verification-engine]
     (-> this (.verify verification-key verification-engine))))
 

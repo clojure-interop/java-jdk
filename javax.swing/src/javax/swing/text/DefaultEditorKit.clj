@@ -483,7 +483,7 @@
    is text/plain.
 
   returns: the type - `java.lang.String`"
-  ([^javax.swing.text.DefaultEditorKit this]
+  (^java.lang.String [^javax.swing.text.DefaultEditorKit this]
     (-> this (.getContentType))))
 
 (defn get-view-factory
@@ -493,7 +493,7 @@
    factory, so this method has no implementation.
 
   returns: the view factory - `javax.swing.text.ViewFactory`"
-  ([^javax.swing.text.DefaultEditorKit this]
+  (^javax.swing.text.ViewFactory [^javax.swing.text.DefaultEditorKit this]
     (-> this (.getViewFactory))))
 
 (defn get-actions
@@ -510,7 +510,7 @@
    produced by the associated ViewFactory.
 
   returns: the caret - `javax.swing.text.Caret`"
-  ([^javax.swing.text.DefaultEditorKit this]
+  (^javax.swing.text.Caret [^javax.swing.text.DefaultEditorKit this]
     (-> this (.createCaret))))
 
 (defn create-default-document
@@ -518,7 +518,7 @@
    that is appropriate for this type of editor.
 
   returns: the model - `javax.swing.text.Document`"
-  ([^javax.swing.text.DefaultEditorKit this]
+  (^javax.swing.text.Document [^javax.swing.text.DefaultEditorKit this]
     (-> this (.createDefaultDocument))))
 
 (defn read

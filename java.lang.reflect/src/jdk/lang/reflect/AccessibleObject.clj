@@ -38,7 +38,7 @@
   flag - the new value for the accessible flag in each object - `boolean`
 
   throws: java.lang.SecurityException - if the request is denied."
-  ([^java.lang.reflect.AccessibleObject[] array ^Boolean flag]
+  ([array ^Boolean flag]
     (AccessibleObject/setAccessible array flag)))
 
 (defn get-declared-annotation
@@ -132,7 +132,7 @@
   "Get the value of the accessible flag for this object.
 
   returns: the value of the object's accessible flag - `boolean`"
-  ([^java.lang.reflect.AccessibleObject this]
+  (^Boolean [^java.lang.reflect.AccessibleObject this]
     (-> this (.isAccessible))))
 
 (defn annotation-present?
@@ -152,6 +152,6 @@
        type is present on this element, else false - `boolean`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  ([^java.lang.reflect.AccessibleObject this ^java.lang.annotation.Annotation> annotation-class]
+  (^Boolean [^java.lang.reflect.AccessibleObject this ^java.lang.annotation.Annotation> annotation-class]
     (-> this (.isAnnotationPresent annotation-class))))
 

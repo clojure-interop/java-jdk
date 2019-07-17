@@ -64,6 +64,6 @@
   cell-has-focus - True if the specified cell has the focus. - `boolean`
 
   returns: A component whose paint() method will render the specified value. - `java.awt.Component`"
-  ([^javax.swing.ListCellRenderer this ^ListCellRenderer.E> list ^ListCellRenderer.E value ^Integer index ^Boolean is-selected ^Boolean cell-has-focus]
+  (^java.awt.Component [^javax.swing.ListCellRenderer this ^ListCellRenderer.E> list ^ListCellRenderer.E value ^Integer index ^Boolean is-selected ^Boolean cell-has-focus]
     (-> this (.getListCellRendererComponent list value index is-selected cell-has-focus))))
 

@@ -15,7 +15,7 @@
 
   returns: the Runtime object associated with the current
             Java application. - `java.lang.Runtime`"
-  ([]
+  (^java.lang.Runtime []
     (Runtime/getRuntime )))
 
 (defn *run-finalizers-on-exit
@@ -119,7 +119,7 @@
 
   returns: the total amount of memory currently available for current
             and future objects, measured in bytes. - `long`"
-  ([^java.lang.Runtime this]
+  (^Long [^java.lang.Runtime this]
     (-> this (.totalMemory))))
 
 (defn trace-instructions
@@ -147,7 +147,7 @@
 
   returns: the maximum amount of memory that the virtual machine will
             attempt to use, measured in bytes - `long`"
-  ([^java.lang.Runtime this]
+  (^Long [^java.lang.Runtime this]
     (-> this (.maxMemory))))
 
 (defn load
@@ -226,11 +226,11 @@
   returns: A new Process object for managing the subprocess - `java.lang.Process`
 
   throws: java.lang.SecurityException - If a security manager exists and its checkExec method doesn't allow creation of the subprocess"
-  ([^java.lang.Runtime this ^java.lang.String command ^java.lang.String[] envp ^java.io.File dir]
+  (^java.lang.Process [^java.lang.Runtime this ^java.lang.String command envp ^java.io.File dir]
     (-> this (.exec command envp dir)))
-  ([^java.lang.Runtime this ^java.lang.String command ^java.lang.String[] envp]
+  (^java.lang.Process [^java.lang.Runtime this ^java.lang.String command envp]
     (-> this (.exec command envp)))
-  ([^java.lang.Runtime this ^java.lang.String command]
+  (^java.lang.Process [^java.lang.Runtime this ^java.lang.String command]
     (-> this (.exec command))))
 
 (defn load-library
@@ -292,7 +292,7 @@
 
   returns: the maximum number of processors available to the virtual
             machine; never smaller than one - `int`"
-  ([^java.lang.Runtime this]
+  (^Integer [^java.lang.Runtime this]
     (-> this (.availableProcessors))))
 
 (defn free-memory
@@ -303,7 +303,7 @@
 
   returns: an approximation to the total amount of memory currently
             available for future allocated objects, measured in bytes. - `long`"
-  ([^java.lang.Runtime this]
+  (^Long [^java.lang.Runtime this]
     (-> this (.freeMemory))))
 
 (defn exit
@@ -374,7 +374,7 @@
    otherwise. - `boolean`
 
   throws: java.lang.IllegalStateException - If the virtual machine is already in the process of shutting down"
-  ([^java.lang.Runtime this ^java.lang.Thread hook]
+  (^Boolean [^java.lang.Runtime this ^java.lang.Thread hook]
     (-> this (.removeShutdownHook hook))))
 
 (defn run-finalization

@@ -43,7 +43,7 @@
   "Description copied from interface: Queue
 
   returns: the head of this queue, or null if this queue is empty - `LinkedBlockingQueue.E`"
-  ([^java.util.concurrent.LinkedBlockingQueue this]
+  (^LinkedBlockingQueue.E [^java.util.concurrent.LinkedBlockingQueue this]
     (-> this (.peek))))
 
 (defn spliterator
@@ -56,7 +56,7 @@
    Spliterator.ORDERED, and Spliterator.NONNULL.
 
   returns: a Spliterator over the elements in this queue - `java.util.Spliterator<LinkedBlockingQueue.E>`"
-  ([^java.util.concurrent.LinkedBlockingQueue this]
+  (^java.util.Spliterator [^java.util.concurrent.LinkedBlockingQueue this]
     (-> this (.spliterator))))
 
 (defn offer
@@ -71,9 +71,9 @@
            the specified waiting time elapses before space is available - `boolean`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([^java.util.concurrent.LinkedBlockingQueue this ^LinkedBlockingQueue.E e ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^Boolean [^java.util.concurrent.LinkedBlockingQueue this ^LinkedBlockingQueue.E e ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.offer e timeout unit)))
-  ([^java.util.concurrent.LinkedBlockingQueue this ^LinkedBlockingQueue.E e]
+  (^Boolean [^java.util.concurrent.LinkedBlockingQueue this ^LinkedBlockingQueue.E e]
     (-> this (.offer e))))
 
 (defn put
@@ -94,14 +94,14 @@
   o - object to be checked for containment in this queue - `java.lang.Object`
 
   returns: true if this queue contains the specified element - `boolean`"
-  ([^java.util.concurrent.LinkedBlockingQueue this ^java.lang.Object o]
+  (^Boolean [^java.util.concurrent.LinkedBlockingQueue this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn to-string
   "Description copied from class: AbstractCollection
 
   returns: a string representation of this collection - `java.lang.String`"
-  ([^java.util.concurrent.LinkedBlockingQueue this]
+  (^java.lang.String [^java.util.concurrent.LinkedBlockingQueue this]
     (-> this (.toString))))
 
 (defn take
@@ -110,7 +110,7 @@
   returns: the head of this queue - `LinkedBlockingQueue.E`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([^java.util.concurrent.LinkedBlockingQueue this]
+  (^LinkedBlockingQueue.E [^java.util.concurrent.LinkedBlockingQueue this]
     (-> this (.take))))
 
 (defn iterator
@@ -121,7 +121,7 @@
    weakly consistent.
 
   returns: an iterator over the elements in this queue in proper sequence - `java.util.Iterator<LinkedBlockingQueue.E>`"
-  ([^java.util.concurrent.LinkedBlockingQueue this]
+  (^java.util.Iterator [^java.util.concurrent.LinkedBlockingQueue this]
     (-> this (.iterator))))
 
 (defn remove
@@ -135,7 +135,7 @@
   o - element to be removed from this queue, if present - `java.lang.Object`
 
   returns: true if this queue changed as a result of the call - `boolean`"
-  ([^java.util.concurrent.LinkedBlockingQueue this ^java.lang.Object o]
+  (^Boolean [^java.util.concurrent.LinkedBlockingQueue this ^java.lang.Object o]
     (-> this (.remove o))))
 
 (defn drain-to
@@ -147,9 +147,9 @@
   returns: the number of elements transferred - `int`
 
   throws: java.lang.UnsupportedOperationException - if addition of elements is not supported by the specified collection"
-  ([^java.util.concurrent.LinkedBlockingQueue this ^LinkedBlockingQueue.E> c ^Integer max-elements]
+  (^Integer [^java.util.concurrent.LinkedBlockingQueue this ^LinkedBlockingQueue.E> c ^Integer max-elements]
     (-> this (.drainTo c max-elements)))
-  ([^java.util.concurrent.LinkedBlockingQueue this ^LinkedBlockingQueue.E> c]
+  (^Integer [^java.util.concurrent.LinkedBlockingQueue this ^LinkedBlockingQueue.E> c]
     (-> this (.drainTo c))))
 
 (defn poll
@@ -162,9 +162,9 @@
            specified waiting time elapses before an element is available - `LinkedBlockingQueue.E`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([^java.util.concurrent.LinkedBlockingQueue this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^LinkedBlockingQueue.E [^java.util.concurrent.LinkedBlockingQueue this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.poll timeout unit)))
-  ([^java.util.concurrent.LinkedBlockingQueue this]
+  (^LinkedBlockingQueue.E [^java.util.concurrent.LinkedBlockingQueue this]
     (-> this (.poll))))
 
 (defn remaining-capacity
@@ -179,14 +179,14 @@
    insert or remove an element.
 
   returns: the remaining capacity - `int`"
-  ([^java.util.concurrent.LinkedBlockingQueue this]
+  (^Integer [^java.util.concurrent.LinkedBlockingQueue this]
     (-> this (.remainingCapacity))))
 
 (defn size
   "Returns the number of elements in this queue.
 
   returns: the number of elements in this queue - `int`"
-  ([^java.util.concurrent.LinkedBlockingQueue this]
+  (^Integer [^java.util.concurrent.LinkedBlockingQueue this]
     (-> this (.size))))
 
 (defn clear

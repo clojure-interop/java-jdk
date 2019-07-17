@@ -81,7 +81,7 @@
   "Gets the default root element for the document model.
 
   returns: the root - `javax.swing.text.Element`"
-  ([^javax.swing.text.PlainDocument this]
+  (^javax.swing.text.Element [^javax.swing.text.PlainDocument this]
     (-> this (.getDefaultRootElement))))
 
 (defn get-paragraph-element
@@ -91,6 +91,6 @@
   pos - the starting offset >= 0 - `int`
 
   returns: the element - `javax.swing.text.Element`"
-  ([^javax.swing.text.PlainDocument this ^Integer pos]
+  (^javax.swing.text.Element [^javax.swing.text.PlainDocument this ^Integer pos]
     (-> this (.getParagraphElement pos))))
 

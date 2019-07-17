@@ -54,9 +54,9 @@
   p - additional parameter - `ElementScanner6.P`
 
   returns: the scan of the last element or DEFAULT_VALUE if no elements - `ElementScanner6.R`"
-  ([^javax.lang.model.util.ElementScanner6 this ^javax.lang.model.element.Element> iterable ^ElementScanner6.P p]
+  (^ElementScanner6.R [^javax.lang.model.util.ElementScanner6 this ^javax.lang.model.element.Element> iterable ^ElementScanner6.P p]
     (-> this (.scan iterable p)))
-  ([^javax.lang.model.util.ElementScanner6 this ^javax.lang.model.element.Element e]
+  (^ElementScanner6.R [^javax.lang.model.util.ElementScanner6 this ^javax.lang.model.element.Element e]
     (-> this (.scan e))))
 
 (defn visit-package
@@ -66,7 +66,7 @@
   p - a visitor-specified parameter - `ElementScanner6.P`
 
   returns: the result of scanning - `ElementScanner6.R`"
-  ([^javax.lang.model.util.ElementScanner6 this ^javax.lang.model.element.PackageElement e ^ElementScanner6.P p]
+  (^ElementScanner6.R [^javax.lang.model.util.ElementScanner6 this ^javax.lang.model.element.PackageElement e ^ElementScanner6.P p]
     (-> this (.visitPackage e p))))
 
 (defn visit-type
@@ -76,7 +76,7 @@
   p - a visitor-specified parameter - `ElementScanner6.P`
 
   returns: the result of scanning - `ElementScanner6.R`"
-  ([^javax.lang.model.util.ElementScanner6 this ^javax.lang.model.element.TypeElement e ^ElementScanner6.P p]
+  (^ElementScanner6.R [^javax.lang.model.util.ElementScanner6 this ^javax.lang.model.element.TypeElement e ^ElementScanner6.P p]
     (-> this (.visitType e p))))
 
 (defn visit-variable
@@ -89,7 +89,7 @@
   p - a visitor-specified parameter - `ElementScanner6.P`
 
   returns: the result of scanning - `ElementScanner6.R`"
-  ([^javax.lang.model.util.ElementScanner6 this ^javax.lang.model.element.VariableElement e ^ElementScanner6.P p]
+  (^ElementScanner6.R [^javax.lang.model.util.ElementScanner6 this ^javax.lang.model.element.VariableElement e ^ElementScanner6.P p]
     (-> this (.visitVariable e p))))
 
 (defn visit-executable
@@ -99,7 +99,7 @@
   p - a visitor-specified parameter - `ElementScanner6.P`
 
   returns: the result of scanning - `ElementScanner6.R`"
-  ([^javax.lang.model.util.ElementScanner6 this ^javax.lang.model.element.ExecutableElement e ^ElementScanner6.P p]
+  (^ElementScanner6.R [^javax.lang.model.util.ElementScanner6 this ^javax.lang.model.element.ExecutableElement e ^ElementScanner6.P p]
     (-> this (.visitExecutable e p))))
 
 (defn visit-type-parameter
@@ -109,6 +109,6 @@
   p - a visitor-specified parameter - `ElementScanner6.P`
 
   returns: the result of scanning - `ElementScanner6.R`"
-  ([^javax.lang.model.util.ElementScanner6 this ^javax.lang.model.element.TypeParameterElement e ^ElementScanner6.P p]
+  (^ElementScanner6.R [^javax.lang.model.util.ElementScanner6 this ^javax.lang.model.element.TypeParameterElement e ^ElementScanner6.P p]
     (-> this (.visitTypeParameter e p))))
 

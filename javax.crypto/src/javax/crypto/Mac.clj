@@ -48,9 +48,9 @@
   returns: the new Mac object. - `javax.crypto.Mac`
 
   throws: java.security.NoSuchAlgorithmException - if a MacSpi implementation for the specified algorithm is not available from the specified provider."
-  ([^java.lang.String algorithm ^java.lang.String provider]
+  (^javax.crypto.Mac [^java.lang.String algorithm ^java.lang.String provider]
     (Mac/getInstance algorithm provider))
-  ([^java.lang.String algorithm]
+  (^javax.crypto.Mac [^java.lang.String algorithm]
     (Mac/getInstance algorithm)))
 
 (defn get-algorithm
@@ -61,21 +61,21 @@
    Mac object.
 
   returns: the algorithm name of this Mac object. - `java.lang.String`"
-  ([^javax.crypto.Mac this]
+  (^java.lang.String [^javax.crypto.Mac this]
     (-> this (.getAlgorithm))))
 
 (defn get-provider
   "Returns the provider of this Mac object.
 
   returns: the provider of this Mac object. - `java.security.Provider`"
-  ([^javax.crypto.Mac this]
+  (^java.security.Provider [^javax.crypto.Mac this]
     (-> this (.getProvider))))
 
 (defn get-mac-length
   "Returns the length of the MAC in bytes.
 
   returns: the MAC length in bytes. - `int`"
-  ([^javax.crypto.Mac this]
+  (^Integer [^javax.crypto.Mac this]
     (-> this (.getMacLength))))
 
 (defn init
@@ -155,6 +155,6 @@
   returns: a clone if the provider implementation is cloneable. - `java.lang.Object`
 
   throws: java.lang.CloneNotSupportedException - if this is called on a delegate that does not support Cloneable."
-  ([^javax.crypto.Mac this]
+  (^java.lang.Object [^javax.crypto.Mac this]
     (-> this (.clone))))
 

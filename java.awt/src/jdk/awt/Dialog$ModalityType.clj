@@ -79,6 +79,6 @@
   returns: the enum constant with the specified name - `java.awt.Dialog.ModalityType`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^java.awt.Dialog.ModalityType [^java.lang.String name]
     (Dialog$ModalityType/valueOf name)))
 

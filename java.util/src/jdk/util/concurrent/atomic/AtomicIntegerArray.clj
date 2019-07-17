@@ -23,7 +23,7 @@
   delta - the value to add - `int`
 
   returns: the previous value - `int`"
-  ([^java.util.concurrent.atomic.AtomicIntegerArray this ^Integer i ^Integer delta]
+  (^Integer [^java.util.concurrent.atomic.AtomicIntegerArray this ^Integer i ^Integer delta]
     (-> this (.getAndAdd i delta))))
 
 (defn get-and-set
@@ -34,7 +34,7 @@
   new-value - the new value - `int`
 
   returns: the previous value - `int`"
-  ([^java.util.concurrent.atomic.AtomicIntegerArray this ^Integer i ^Integer new-value]
+  (^Integer [^java.util.concurrent.atomic.AtomicIntegerArray this ^Integer i ^Integer new-value]
     (-> this (.getAndSet i new-value))))
 
 (defn update-and-get
@@ -47,7 +47,7 @@
   update-function - a side-effect-free function - `java.util.function.IntUnaryOperator`
 
   returns: the updated value - `int`"
-  ([^java.util.concurrent.atomic.AtomicIntegerArray this ^Integer i ^java.util.function.IntUnaryOperator update-function]
+  (^Integer [^java.util.concurrent.atomic.AtomicIntegerArray this ^Integer i ^java.util.function.IntUnaryOperator update-function]
     (-> this (.updateAndGet i update-function))))
 
 (defn add-and-get
@@ -57,7 +57,7 @@
   delta - the value to add - `int`
 
   returns: the updated value - `int`"
-  ([^java.util.concurrent.atomic.AtomicIntegerArray this ^Integer i ^Integer delta]
+  (^Integer [^java.util.concurrent.atomic.AtomicIntegerArray this ^Integer i ^Integer delta]
     (-> this (.addAndGet i delta))))
 
 (defn get-and-update
@@ -70,14 +70,14 @@
   update-function - a side-effect-free function - `java.util.function.IntUnaryOperator`
 
   returns: the previous value - `int`"
-  ([^java.util.concurrent.atomic.AtomicIntegerArray this ^Integer i ^java.util.function.IntUnaryOperator update-function]
+  (^Integer [^java.util.concurrent.atomic.AtomicIntegerArray this ^Integer i ^java.util.function.IntUnaryOperator update-function]
     (-> this (.getAndUpdate i update-function))))
 
 (defn to-string
   "Returns the String representation of the current values of array.
 
   returns: the String representation of the current values of array - `java.lang.String`"
-  ([^java.util.concurrent.atomic.AtomicIntegerArray this]
+  (^java.lang.String [^java.util.concurrent.atomic.AtomicIntegerArray this]
     (-> this (.toString))))
 
 (defn accumulate-and-get
@@ -94,7 +94,7 @@
   accumulator-function - a side-effect-free function of two arguments - `java.util.function.IntBinaryOperator`
 
   returns: the updated value - `int`"
-  ([^java.util.concurrent.atomic.AtomicIntegerArray this ^Integer i ^Integer x ^java.util.function.IntBinaryOperator accumulator-function]
+  (^Integer [^java.util.concurrent.atomic.AtomicIntegerArray this ^Integer i ^Integer x ^java.util.function.IntBinaryOperator accumulator-function]
     (-> this (.accumulateAndGet i x accumulator-function))))
 
 (defn get-and-decrement
@@ -103,14 +103,14 @@
   i - the index - `int`
 
   returns: the previous value - `int`"
-  ([^java.util.concurrent.atomic.AtomicIntegerArray this ^Integer i]
+  (^Integer [^java.util.concurrent.atomic.AtomicIntegerArray this ^Integer i]
     (-> this (.getAndDecrement i))))
 
 (defn length
   "Returns the length of the array.
 
   returns: the length of the array - `int`"
-  ([^java.util.concurrent.atomic.AtomicIntegerArray this]
+  (^Integer [^java.util.concurrent.atomic.AtomicIntegerArray this]
     (-> this (.length))))
 
 (defn decrement-and-get
@@ -119,7 +119,7 @@
   i - the index - `int`
 
   returns: the updated value - `int`"
-  ([^java.util.concurrent.atomic.AtomicIntegerArray this ^Integer i]
+  (^Integer [^java.util.concurrent.atomic.AtomicIntegerArray this ^Integer i]
     (-> this (.decrementAndGet i))))
 
 (defn weak-compare-and-set
@@ -135,7 +135,7 @@
   update - the new value - `int`
 
   returns: true if successful - `boolean`"
-  ([^java.util.concurrent.atomic.AtomicIntegerArray this ^Integer i ^Integer expect ^Integer update]
+  (^Boolean [^java.util.concurrent.atomic.AtomicIntegerArray this ^Integer i ^Integer expect ^Integer update]
     (-> this (.weakCompareAndSet i expect update))))
 
 (defn get-and-increment
@@ -144,7 +144,7 @@
   i - the index - `int`
 
   returns: the previous value - `int`"
-  ([^java.util.concurrent.atomic.AtomicIntegerArray this ^Integer i]
+  (^Integer [^java.util.concurrent.atomic.AtomicIntegerArray this ^Integer i]
     (-> this (.getAndIncrement i))))
 
 (defn lazy-set
@@ -177,7 +177,7 @@
   accumulator-function - a side-effect-free function of two arguments - `java.util.function.IntBinaryOperator`
 
   returns: the previous value - `int`"
-  ([^java.util.concurrent.atomic.AtomicIntegerArray this ^Integer i ^Integer x ^java.util.function.IntBinaryOperator accumulator-function]
+  (^Integer [^java.util.concurrent.atomic.AtomicIntegerArray this ^Integer i ^Integer x ^java.util.function.IntBinaryOperator accumulator-function]
     (-> this (.getAndAccumulate i x accumulator-function))))
 
 (defn compare-and-set
@@ -190,7 +190,7 @@
 
   returns: true if successful. False return indicates that
    the actual value was not equal to the expected value. - `boolean`"
-  ([^java.util.concurrent.atomic.AtomicIntegerArray this ^Integer i ^Integer expect ^Integer update]
+  (^Boolean [^java.util.concurrent.atomic.AtomicIntegerArray this ^Integer i ^Integer expect ^Integer update]
     (-> this (.compareAndSet i expect update))))
 
 (defn get
@@ -199,7 +199,7 @@
   i - the index - `int`
 
   returns: the current value - `int`"
-  ([^java.util.concurrent.atomic.AtomicIntegerArray this ^Integer i]
+  (^Integer [^java.util.concurrent.atomic.AtomicIntegerArray this ^Integer i]
     (-> this (.get i))))
 
 (defn increment-and-get
@@ -208,6 +208,6 @@
   i - the index - `int`
 
   returns: the updated value - `int`"
-  ([^java.util.concurrent.atomic.AtomicIntegerArray this ^Integer i]
+  (^Integer [^java.util.concurrent.atomic.AtomicIntegerArray this ^Integer i]
     (-> this (.incrementAndGet i))))
 

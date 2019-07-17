@@ -14,7 +14,7 @@
   "b - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent b]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent b]
     (BasicInternalFrameUI/createUI b)))
 
 (defn install-ui
@@ -30,7 +30,7 @@
   x - the component whose minimum size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: a Dimension object or null - `java.awt.Dimension`"
-  ([^javax.swing.plaf.basic.BasicInternalFrameUI this ^javax.swing.JComponent x]
+  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicInternalFrameUI this ^javax.swing.JComponent x]
     (-> this (.getMinimumSize x))))
 
 (defn set-east-pane
@@ -49,7 +49,7 @@
   x - the component whose maximum size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: a Dimension object or null - `java.awt.Dimension`"
-  ([^javax.swing.plaf.basic.BasicInternalFrameUI this ^javax.swing.JComponent x]
+  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicInternalFrameUI this ^javax.swing.JComponent x]
     (-> this (.getMaximumSize x))))
 
 (defn set-south-pane
@@ -59,7 +59,7 @@
 
 (defn get-west-pane
   "returns: `javax.swing.JComponent`"
-  ([^javax.swing.plaf.basic.BasicInternalFrameUI this]
+  (^javax.swing.JComponent [^javax.swing.plaf.basic.BasicInternalFrameUI this]
     (-> this (.getWestPane))))
 
 (defn set-north-pane
@@ -76,22 +76,22 @@
 
 (defn key-binding-active?
   "returns: `boolean`"
-  ([^javax.swing.plaf.basic.BasicInternalFrameUI this]
+  (^Boolean [^javax.swing.plaf.basic.BasicInternalFrameUI this]
     (-> this (.isKeyBindingActive))))
 
 (defn get-north-pane
   "returns: `javax.swing.JComponent`"
-  ([^javax.swing.plaf.basic.BasicInternalFrameUI this]
+  (^javax.swing.JComponent [^javax.swing.plaf.basic.BasicInternalFrameUI this]
     (-> this (.getNorthPane))))
 
 (defn get-east-pane
   "returns: `javax.swing.JComponent`"
-  ([^javax.swing.plaf.basic.BasicInternalFrameUI this]
+  (^javax.swing.JComponent [^javax.swing.plaf.basic.BasicInternalFrameUI this]
     (-> this (.getEastPane))))
 
 (defn get-south-pane
   "returns: `javax.swing.JComponent`"
-  ([^javax.swing.plaf.basic.BasicInternalFrameUI this]
+  (^javax.swing.JComponent [^javax.swing.plaf.basic.BasicInternalFrameUI this]
     (-> this (.getSouthPane))))
 
 (defn get-preferred-size
@@ -100,6 +100,6 @@
   x - the component whose preferred size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: `java.awt.Dimension`"
-  ([^javax.swing.plaf.basic.BasicInternalFrameUI this ^javax.swing.JComponent x]
+  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicInternalFrameUI this ^javax.swing.JComponent x]
     (-> this (.getPreferredSize x))))
 

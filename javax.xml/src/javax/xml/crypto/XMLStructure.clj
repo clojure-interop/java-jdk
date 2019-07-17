@@ -14,6 +14,6 @@
       false otherwise - `boolean`
 
   throws: java.lang.NullPointerException - if feature is null"
-  ([^javax.xml.crypto.XMLStructure this ^java.lang.String feature]
+  (^Boolean [^javax.xml.crypto.XMLStructure this ^java.lang.String feature]
     (-> this (.isFeatureSupported feature))))
 

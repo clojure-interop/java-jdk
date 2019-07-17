@@ -56,7 +56,7 @@
   "Returns the current image used for this TrayIcon.
 
   returns: the image - `java.awt.Image`"
-  ([^java.awt.TrayIcon this]
+  (^java.awt.Image [^java.awt.TrayIcon this]
     (-> this (.getImage))))
 
 (defn add-mouse-listener
@@ -80,7 +80,7 @@
   "Returns the popup menu associated with this TrayIcon.
 
   returns: the popup menu or null if none exists - `java.awt.PopupMenu`"
-  ([^java.awt.TrayIcon this]
+  (^java.awt.PopupMenu [^java.awt.TrayIcon this]
     (-> this (.getPopupMenu))))
 
 (defn add-mouse-motion-listener
@@ -124,7 +124,7 @@
 
   returns: true if the image will be auto-sized,
    false otherwise - `boolean`"
-  ([^java.awt.TrayIcon this]
+  (^Boolean [^java.awt.TrayIcon this]
     (-> this (.isImageAutoSize))))
 
 (defn add-action-listener
@@ -239,7 +239,7 @@
    TrayIcon.
 
   returns: the tooltip string or null if none exists - `java.lang.String`"
-  ([^java.awt.TrayIcon this]
+  (^java.lang.String [^java.awt.TrayIcon this]
     (-> this (.getToolTip))))
 
 (defn get-mouse-listeners
@@ -256,7 +256,7 @@
   "Returns the command name of the action event fired by this tray icon.
 
   returns: the action command name, or null if none exists - `java.lang.String`"
-  ([^java.awt.TrayIcon this]
+  (^java.lang.String [^java.awt.TrayIcon this]
     (-> this (.getActionCommand))))
 
 (defn set-popup-menu
@@ -292,7 +292,7 @@
    result of the SystemTray.getTrayIconSize().
 
   returns: the size of the tray icon, in pixels - `java.awt.Dimension`"
-  ([^java.awt.TrayIcon this]
+  (^java.awt.Dimension [^java.awt.TrayIcon this]
     (-> this (.getSize))))
 
 (defn set-action-command

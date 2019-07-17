@@ -28,7 +28,7 @@
   extra-image-metadata-format-class-names - an array of Strings, or null, to be used to instantiate a metadata format object to be returned from getImageMetadataFormat. An array of length 0 is normalized to null. - `java.lang.String[]`
 
   throws: java.lang.IllegalArgumentException - if pluginClassName is null."
-  ([^java.lang.String vendor-name ^java.lang.String version ^java.lang.String[] names ^java.lang.String[] suffixes ^java.lang.String[] mime-types ^java.lang.String plugin-class-name ^Boolean supports-standard-stream-metadata-format ^java.lang.String native-stream-metadata-format-name ^java.lang.String native-stream-metadata-format-class-name ^java.lang.String[] extra-stream-metadata-format-names ^java.lang.String[] extra-stream-metadata-format-class-names ^Boolean supports-standard-image-metadata-format ^java.lang.String native-image-metadata-format-name ^java.lang.String native-image-metadata-format-class-name ^java.lang.String[] extra-image-metadata-format-names ^java.lang.String[] extra-image-metadata-format-class-names]
+  ([^java.lang.String vendor-name ^java.lang.String version names suffixes mime-types ^java.lang.String plugin-class-name ^Boolean supports-standard-stream-metadata-format ^java.lang.String native-stream-metadata-format-name ^java.lang.String native-stream-metadata-format-class-name extra-stream-metadata-format-names extra-stream-metadata-format-class-names ^Boolean supports-standard-image-metadata-format ^java.lang.String native-image-metadata-format-name ^java.lang.String native-image-metadata-format-class-name extra-image-metadata-format-names extra-image-metadata-format-class-names]
     (new ImageReaderWriterSpi vendor-name version names suffixes mime-types plugin-class-name supports-standard-stream-metadata-format native-stream-metadata-format-name native-stream-metadata-format-class-name extra-stream-metadata-format-names extra-stream-metadata-format-class-names supports-standard-image-metadata-format native-image-metadata-format-name native-image-metadata-format-class-name extra-image-metadata-format-names extra-image-metadata-format-class-names))
   ([]
     (new ImageReaderWriterSpi )))
@@ -46,7 +46,7 @@
   returns: an IIOMetadataFormat object. - `javax.imageio.metadata.IIOMetadataFormat`
 
   throws: java.lang.IllegalArgumentException - if formatName is null or is not a supported name."
-  ([^javax.imageio.spi.ImageReaderWriterSpi this ^java.lang.String format-name]
+  (^javax.imageio.metadata.IIOMetadataFormat [^javax.imageio.spi.ImageReaderWriterSpi this ^java.lang.String format-name]
     (-> this (.getStreamMetadataFormat format-name))))
 
 (defn get-native-image-metadata-format-name
@@ -62,7 +62,7 @@
 
   returns: the name of the native image metadata format, or
    null. - `java.lang.String`"
-  ([^javax.imageio.spi.ImageReaderWriterSpi this]
+  (^java.lang.String [^javax.imageio.spi.ImageReaderWriterSpi this]
     (-> this (.getNativeImageMetadataFormatName))))
 
 (defn get-file-suffixes
@@ -129,7 +129,7 @@
 
   returns: true if the standard format is supported
    for image metadata. - `boolean`"
-  ([^javax.imageio.spi.ImageReaderWriterSpi this]
+  (^Boolean [^javax.imageio.spi.ImageReaderWriterSpi this]
     (-> this (.isStandardImageMetadataFormatSupported))))
 
 (defn get-extra-stream-metadata-format-names
@@ -192,7 +192,7 @@
   returns: an IIOMetadataFormat object. - `javax.imageio.metadata.IIOMetadataFormat`
 
   throws: java.lang.IllegalArgumentException - if formatName is null or is not a supported name."
-  ([^javax.imageio.spi.ImageReaderWriterSpi this ^java.lang.String format-name]
+  (^javax.imageio.metadata.IIOMetadataFormat [^javax.imageio.spi.ImageReaderWriterSpi this ^java.lang.String format-name]
     (-> this (.getImageMetadataFormat format-name))))
 
 (defn get-native-stream-metadata-format-name
@@ -208,7 +208,7 @@
 
   returns: the name of the native stream metadata format, or
    null. - `java.lang.String`"
-  ([^javax.imageio.spi.ImageReaderWriterSpi this]
+  (^java.lang.String [^javax.imageio.spi.ImageReaderWriterSpi this]
     (-> this (.getNativeStreamMetadataFormatName))))
 
 (defn get-plugin-class-name
@@ -218,7 +218,7 @@
 
   returns: the class name, as a non-null
    String. - `java.lang.String`"
-  ([^javax.imageio.spi.ImageReaderWriterSpi this]
+  (^java.lang.String [^javax.imageio.spi.ImageReaderWriterSpi this]
     (-> this (.getPluginClassName))))
 
 (defn get-format-names
@@ -244,6 +244,6 @@
 
   returns: true if the standard format is supported
    for stream metadata. - `boolean`"
-  ([^javax.imageio.spi.ImageReaderWriterSpi this]
+  (^Boolean [^javax.imageio.spi.ImageReaderWriterSpi this]
     (-> this (.isStandardStreamMetadataFormatSupported))))
 

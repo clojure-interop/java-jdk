@@ -55,6 +55,6 @@
   "Description copied from interface: Channel
 
   returns: true if, and only if, this channel is open - `boolean`"
-  ([^java.nio.channels.spi.AbstractInterruptibleChannel this]
+  (^Boolean [^java.nio.channels.spi.AbstractInterruptibleChannel this]
     (-> this (.isOpen))))
 

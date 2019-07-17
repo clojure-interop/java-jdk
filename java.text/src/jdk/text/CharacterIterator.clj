@@ -65,14 +65,14 @@
 
   returns: the character at the new position or DONE if the new
    position is off the end of the text range. - `char`"
-  ([^java.text.CharacterIterator this]
+  (^Character [^java.text.CharacterIterator this]
     (-> this (.next))))
 
 (defn get-index
   "Returns the current index.
 
   returns: the current index. - `int`"
-  ([^java.text.CharacterIterator this]
+  (^Integer [^java.text.CharacterIterator this]
     (-> this (.getIndex))))
 
 (defn get-end-index
@@ -80,14 +80,14 @@
    character following the end of the text.
 
   returns: the index after the last character in the text - `int`"
-  ([^java.text.CharacterIterator this]
+  (^Integer [^java.text.CharacterIterator this]
     (-> this (.getEndIndex))))
 
 (defn get-begin-index
   "Returns the start index of the text.
 
   returns: the index at which the text begins. - `int`"
-  ([^java.text.CharacterIterator this]
+  (^Integer [^java.text.CharacterIterator this]
     (-> this (.getBeginIndex))))
 
 (defn previous
@@ -97,7 +97,7 @@
 
   returns: the character at the new position or DONE if the current
    position is equal to getBeginIndex(). - `char`"
-  ([^java.text.CharacterIterator this]
+  (^Character [^java.text.CharacterIterator this]
     (-> this (.previous))))
 
 (defn current
@@ -105,7 +105,7 @@
 
   returns: the character at the current position or DONE if the current
    position is off the end of the text. - `char`"
-  ([^java.text.CharacterIterator this]
+  (^Character [^java.text.CharacterIterator this]
     (-> this (.current))))
 
 (defn set-index
@@ -115,7 +115,7 @@
   position - the position within the text. Valid values range from getBeginIndex() to getEndIndex(). An IllegalArgumentException is thrown if an invalid value is supplied. - `int`
 
   returns: the character at the specified position or DONE if the specified position is equal to getEndIndex() - `char`"
-  ([^java.text.CharacterIterator this ^Integer position]
+  (^Character [^java.text.CharacterIterator this ^Integer position]
     (-> this (.setIndex position))))
 
 (defn last
@@ -123,14 +123,14 @@
    and returns the character at that position.
 
   returns: the last character in the text, or DONE if the text is empty - `char`"
-  ([^java.text.CharacterIterator this]
+  (^Character [^java.text.CharacterIterator this]
     (-> this (.last))))
 
 (defn clone
   "Create a copy of this iterator
 
   returns: A copy of this - `java.lang.Object`"
-  ([^java.text.CharacterIterator this]
+  (^java.lang.Object [^java.text.CharacterIterator this]
     (-> this (.clone))))
 
 (defn first
@@ -138,6 +138,6 @@
    position.
 
   returns: the first character in the text, or DONE if the text is empty - `char`"
-  ([^java.text.CharacterIterator this]
+  (^Character [^java.text.CharacterIterator this]
     (-> this (.first))))
 

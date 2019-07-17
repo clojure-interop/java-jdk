@@ -22,14 +22,14 @@
   "Returns the inapplicable conversion.
 
   returns: The inapplicable conversion - `char`"
-  ([^java.util.IllegalFormatConversionException this]
+  (^Character [^java.util.IllegalFormatConversionException this]
     (-> this (.getConversion))))
 
 (defn get-argument-class
   "Returns the class of the mismatched argument.
 
   returns: The class of the mismatched argument - `java.lang.Class<?>`"
-  ([^java.util.IllegalFormatConversionException this]
+  (^java.lang.Class [^java.util.IllegalFormatConversionException this]
     (-> this (.getArgumentClass))))
 
 (defn get-message
@@ -37,6 +37,6 @@
 
   returns: the detail message string of this Throwable instance
             (which may be null). - `java.lang.String`"
-  ([^java.util.IllegalFormatConversionException this]
+  (^java.lang.String [^java.util.IllegalFormatConversionException this]
     (-> this (.getMessage))))
 

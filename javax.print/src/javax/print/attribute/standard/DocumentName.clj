@@ -47,7 +47,7 @@
 
   returns: True if object is equivalent to this document
             name attribute, false otherwise. - `boolean`"
-  ([^javax.print.attribute.standard.DocumentName this ^java.lang.Object object]
+  (^Boolean [^javax.print.attribute.standard.DocumentName this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -68,6 +68,6 @@
    For class DocumentName, the category name is `document-name`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.DocumentName this]
+  (^java.lang.String [^javax.print.attribute.standard.DocumentName this]
     (-> this (.getName))))
 

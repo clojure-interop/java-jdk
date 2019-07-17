@@ -26,9 +26,9 @@
   zone - the zone ID to use, not null - `java.time.ZoneId`
 
   returns: the current date using the system clock, not null - `java.time.chrono.MinguoDate`"
-  ([^java.time.ZoneId zone]
+  (^java.time.chrono.MinguoDate [^java.time.ZoneId zone]
     (MinguoDate/now zone))
-  ([]
+  (^java.time.chrono.MinguoDate []
     (MinguoDate/now )))
 
 (defn *of
@@ -45,7 +45,7 @@
   returns: the date in Minguo calendar system, not null - `java.time.chrono.MinguoDate`
 
   throws: java.time.DateTimeException - if the value of any field is out of range, or if the day-of-month is invalid for the month-year"
-  ([^Integer proleptic-year ^Integer month ^Integer day-of-month]
+  (^java.time.chrono.MinguoDate [^Integer proleptic-year ^Integer month ^Integer day-of-month]
     (MinguoDate/of proleptic-year month day-of-month)))
 
 (defn *from
@@ -66,7 +66,7 @@
   returns: the date in Minguo calendar system, not null - `java.time.chrono.MinguoDate`
 
   throws: java.time.DateTimeException - if unable to convert to a MinguoDate"
-  ([^java.time.temporal.TemporalAccessor temporal]
+  (^java.time.chrono.MinguoDate [^java.time.temporal.TemporalAccessor temporal]
     (MinguoDate/from temporal)))
 
 (defn range
@@ -75,7 +75,7 @@
   field - the field to query the range for, not null - `java.time.temporal.TemporalField`
 
   returns: the range of valid values for the field, not null - `java.time.temporal.ValueRange`"
-  ([^java.time.chrono.MinguoDate this ^java.time.temporal.TemporalField field]
+  (^java.time.temporal.ValueRange [^java.time.chrono.MinguoDate this ^java.time.temporal.TemporalField field]
     (-> this (.range field))))
 
 (defn get-era
@@ -85,14 +85,14 @@
    defined by MinguoEra.
 
   returns: the era applicable at this date, not null - `java.time.chrono.MinguoEra`"
-  ([^java.time.chrono.MinguoDate this]
+  (^java.time.chrono.MinguoEra [^java.time.chrono.MinguoDate this]
     (-> this (.getEra))))
 
 (defn to-epoch-day
   "Description copied from interface: ChronoLocalDate
 
   returns: the Epoch Day equivalent to this date - `long`"
-  ([^java.time.chrono.MinguoDate this]
+  (^Long [^java.time.chrono.MinguoDate this]
     (-> this (.toEpochDay))))
 
 (defn plus
@@ -102,16 +102,16 @@
   unit - the unit of the amount to add, not null - `java.time.temporal.TemporalUnit`
 
   returns: an object of the same type with the specified period added, not null - `java.time.chrono.MinguoDate`"
-  ([^java.time.chrono.MinguoDate this ^Long amount-to-add ^java.time.temporal.TemporalUnit unit]
+  (^java.time.chrono.MinguoDate [^java.time.chrono.MinguoDate this ^Long amount-to-add ^java.time.temporal.TemporalUnit unit]
     (-> this (.plus amount-to-add unit)))
-  ([^java.time.chrono.MinguoDate this ^java.time.temporal.TemporalAmount amount]
+  (^java.time.chrono.MinguoDate [^java.time.chrono.MinguoDate this ^java.time.temporal.TemporalAmount amount]
     (-> this (.plus amount))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^java.time.chrono.MinguoDate this]
+  (^java.lang.String [^java.time.chrono.MinguoDate this]
     (-> this (.toString))))
 
 (defn minus
@@ -121,9 +121,9 @@
   unit - the unit of the amount to subtract, not null - `java.time.temporal.TemporalUnit`
 
   returns: an object of the same type with the specified period subtracted, not null - `java.time.chrono.MinguoDate`"
-  ([^java.time.chrono.MinguoDate this ^Long amount-to-add ^java.time.temporal.TemporalUnit unit]
+  (^java.time.chrono.MinguoDate [^java.time.chrono.MinguoDate this ^Long amount-to-add ^java.time.temporal.TemporalUnit unit]
     (-> this (.minus amount-to-add unit)))
-  ([^java.time.chrono.MinguoDate this ^java.time.temporal.TemporalAmount amount]
+  (^java.time.chrono.MinguoDate [^java.time.chrono.MinguoDate this ^java.time.temporal.TemporalAmount amount]
     (-> this (.minus amount))))
 
 (defn get-long
@@ -132,7 +132,7 @@
   field - the field to get, not null - `java.time.temporal.TemporalField`
 
   returns: the value for the field - `long`"
-  ([^java.time.chrono.MinguoDate this ^java.time.temporal.TemporalField field]
+  (^Long [^java.time.chrono.MinguoDate this ^java.time.temporal.TemporalField field]
     (-> this (.getLong field))))
 
 (defn length-of-month
@@ -142,7 +142,7 @@
    Month lengths match those of the ISO calendar system.
 
   returns: the length of the month in days - `int`"
-  ([^java.time.chrono.MinguoDate this]
+  (^Integer [^java.time.chrono.MinguoDate this]
     (-> this (.lengthOfMonth))))
 
 (defn until
@@ -152,9 +152,9 @@
   unit - the unit to measure the amount in, not null - `java.time.temporal.TemporalUnit`
 
   returns: the amount of time between this date and the end date - `long`"
-  ([^java.time.chrono.MinguoDate this ^java.time.temporal.Temporal end-exclusive ^java.time.temporal.TemporalUnit unit]
+  (^Long [^java.time.chrono.MinguoDate this ^java.time.temporal.Temporal end-exclusive ^java.time.temporal.TemporalUnit unit]
     (-> this (.until end-exclusive unit)))
-  ([^java.time.chrono.MinguoDate this ^java.time.chrono.ChronoLocalDate end-date]
+  (^java.time.chrono.ChronoPeriod [^java.time.chrono.MinguoDate this ^java.time.chrono.ChronoLocalDate end-date]
     (-> this (.until end-date))))
 
 (defn get-chronology
@@ -164,14 +164,14 @@
    The era and other fields in ChronoField are defined by the chronology.
 
   returns: the Minguo chronology, not null - `java.time.chrono.MinguoChronology`"
-  ([^java.time.chrono.MinguoDate this]
+  (^java.time.chrono.MinguoChronology [^java.time.chrono.MinguoDate this]
     (-> this (.getChronology))))
 
 (defn hash-code
   "A hash code for this date.
 
   returns: a suitable hash code based only on the Chronology and the date - `int`"
-  ([^java.time.chrono.MinguoDate this]
+  (^Integer [^java.time.chrono.MinguoDate this]
     (-> this (.hashCode))))
 
 (defn with
@@ -181,9 +181,9 @@
   new-value - the new value of the field in the result - `long`
 
   returns: an object of the same type with the specified field set, not null - `java.time.chrono.MinguoDate`"
-  ([^java.time.chrono.MinguoDate this ^java.time.temporal.TemporalField field ^Long new-value]
+  (^java.time.chrono.MinguoDate [^java.time.chrono.MinguoDate this ^java.time.temporal.TemporalField field ^Long new-value]
     (-> this (.with field new-value)))
-  ([^java.time.chrono.MinguoDate this ^java.time.temporal.TemporalAdjuster adjuster]
+  (^java.time.chrono.MinguoDate [^java.time.chrono.MinguoDate this ^java.time.temporal.TemporalAdjuster adjuster]
     (-> this (.with adjuster))))
 
 (defn equals
@@ -198,7 +198,7 @@
   obj - the object to check, null returns false - `java.lang.Object`
 
   returns: true if this is equal to the other date - `boolean`"
-  ([^java.time.chrono.MinguoDate this ^java.lang.Object obj]
+  (^Boolean [^java.time.chrono.MinguoDate this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn at-time
@@ -207,6 +207,6 @@
   local-time - the local time to use, not null - `java.time.LocalTime`
 
   returns: the local date-time formed from this date and the specified time, not null - `java.time.chrono.ChronoLocalDateTime<java.time.chrono.MinguoDate>`"
-  ([^java.time.chrono.MinguoDate this ^java.time.LocalTime local-time]
+  (^java.time.chrono.ChronoLocalDateTime [^java.time.chrono.MinguoDate this ^java.time.LocalTime local-time]
     (-> this (.atTime local-time))))
 

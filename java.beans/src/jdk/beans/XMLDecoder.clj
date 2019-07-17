@@ -55,7 +55,7 @@
   cl - the class loader used for instantiating objects, or null to use the default class loader - `java.lang.ClassLoader`
 
   returns: an instance of DefaultHandler for SAX parser - `org.xml.sax.helpers.DefaultHandler`"
-  ([^java.lang.Object owner ^java.beans.ExceptionListener el ^java.lang.ClassLoader cl]
+  (^org.xml.sax.helpers.DefaultHandler [^java.lang.Object owner ^java.beans.ExceptionListener el ^java.lang.ClassLoader cl]
     (XMLDecoder/createHandler owner el cl)))
 
 (defn close
@@ -78,7 +78,7 @@
 
   returns: The exception handler for this stream.
        Will return the default exception listener if this has not explicitly been set. - `java.beans.ExceptionListener`"
-  ([^java.beans.XMLDecoder this]
+  (^java.beans.ExceptionListener [^java.beans.XMLDecoder this]
     (-> this (.getExceptionListener))))
 
 (defn read-object
@@ -87,7 +87,7 @@
   returns: the next object read - `java.lang.Object`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if the stream contains no objects (or no more objects)"
-  ([^java.beans.XMLDecoder this]
+  (^java.lang.Object [^java.beans.XMLDecoder this]
     (-> this (.readObject))))
 
 (defn set-owner
@@ -101,6 +101,6 @@
   "Gets the owner of this decoder.
 
   returns: The owner of this decoder. - `java.lang.Object`"
-  ([^java.beans.XMLDecoder this]
+  (^java.lang.Object [^java.beans.XMLDecoder this]
     (-> this (.getOwner))))
 

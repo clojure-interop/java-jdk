@@ -65,7 +65,7 @@
 
   returns: the final width used for the pixel buffer or -1 if the width
    is not yet known - `int`"
-  ([^java.awt.image.PixelGrabber this]
+  (^Integer [^java.awt.image.PixelGrabber this]
     (-> this (.getWidth))))
 
 (defn get-status
@@ -73,7 +73,7 @@
    representing the available pixel information are returned.
 
   returns: the bitwise OR of all relevant ImageObserver flags - `int`"
-  ([^java.awt.image.PixelGrabber this]
+  (^Integer [^java.awt.image.PixelGrabber this]
     (-> this (.getStatus))))
 
 (defn start-grabbing
@@ -108,7 +108,7 @@
    image grab is complete.
 
   returns: either a byte array or an int array - `java.lang.Object`"
-  ([^java.awt.image.PixelGrabber this]
+  (^java.lang.Object [^java.awt.image.PixelGrabber this]
     (-> this (.getPixels))))
 
 (defn set-pixels
@@ -175,7 +175,7 @@
    `getXXX`.
 
   returns: the bitwise OR of all relevant ImageObserver flags - `int`"
-  ([^java.awt.image.PixelGrabber this]
+  (^Integer [^java.awt.image.PixelGrabber this]
     (-> this (.status))))
 
 (defn get-height
@@ -186,7 +186,7 @@
 
   returns: the final height used for the pixel buffer or -1 if the height
    is not yet known - `int`"
-  ([^java.awt.image.PixelGrabber this]
+  (^Integer [^java.awt.image.PixelGrabber this]
     (-> this (.getHeight))))
 
 (defn set-properties
@@ -222,9 +222,9 @@
    abort, error or timeout - `boolean`
 
   throws: java.lang.InterruptedException - Another thread has interrupted this thread."
-  ([^java.awt.image.PixelGrabber this ^Long ms]
+  (^Boolean [^java.awt.image.PixelGrabber this ^Long ms]
     (-> this (.grabPixels ms)))
-  ([^java.awt.image.PixelGrabber this]
+  (^Boolean [^java.awt.image.PixelGrabber this]
     (-> this (.grabPixels))))
 
 (defn image-complete
@@ -255,6 +255,6 @@
    objects that was used by the ImageProducer to deliver the pixels.
 
   returns: the ColorModel object used for storing the pixels - `java.awt.image.ColorModel`"
-  ([^java.awt.image.PixelGrabber this]
+  (^java.awt.image.ColorModel [^java.awt.image.PixelGrabber this]
     (-> this (.getColorModel))))
 

@@ -46,7 +46,7 @@
   "Retrieves the SQLState for this SQLException object.
 
   returns: the SQLState value - `java.lang.String`"
-  ([^java.sql.SQLException this]
+  (^java.lang.String [^java.sql.SQLException this]
     (-> this (.getSQLState))))
 
 (defn get-error-code
@@ -54,7 +54,7 @@
    for this SQLException object.
 
   returns: the vendor's error code - `int`"
-  ([^java.sql.SQLException this]
+  (^Integer [^java.sql.SQLException this]
     (-> this (.getErrorCode))))
 
 (defn get-next-exception
@@ -63,7 +63,7 @@
 
   returns: the next SQLException object in the chain;
            null if there are none - `java.sql.SQLException`"
-  ([^java.sql.SQLException this]
+  (^java.sql.SQLException [^java.sql.SQLException this]
     (-> this (.getNextException))))
 
 (defn set-next-exception
@@ -80,6 +80,6 @@
 
   returns: an iterator over the chained SQLExceptions and causes in the proper
    order - `java.util.Iterator<java.lang.Throwable>`"
-  ([^java.sql.SQLException this]
+  (^java.util.Iterator [^java.sql.SQLException this]
     (-> this (.iterator))))
 

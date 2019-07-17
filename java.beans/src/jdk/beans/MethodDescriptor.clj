@@ -13,7 +13,7 @@
 
   method - The low-level method information. - `java.lang.reflect.Method`
   parameter-descriptors - Descriptive information for each of the method's parameters. - `java.beans.ParameterDescriptor[]`"
-  ([^java.lang.reflect.Method method ^java.beans.ParameterDescriptor[] parameter-descriptors]
+  ([^java.lang.reflect.Method method parameter-descriptors]
     (new MethodDescriptor method parameter-descriptors))
   ([^java.lang.reflect.Method method]
     (new MethodDescriptor method)))
@@ -22,7 +22,7 @@
   "Gets the method that this MethodDescriptor encapsulates.
 
   returns: The low-level description of the method - `java.lang.reflect.Method`"
-  ([^java.beans.MethodDescriptor this]
+  (^java.lang.reflect.Method [^java.beans.MethodDescriptor this]
     (-> this (.getMethod))))
 
 (defn get-parameter-descriptors

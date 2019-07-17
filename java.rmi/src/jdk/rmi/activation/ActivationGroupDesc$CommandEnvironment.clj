@@ -14,7 +14,7 @@
 
   cmdpath - the name of the java executable, including the full path, or null, meaning `use rmid's default`. The named program must be able to accept multiple -Dpropname=value options (as documented for the `java` tool) - `java.lang.String`
   argv - extra options which will be used in creating the ActivationGroup. Null has the same effect as an empty list. - `java.lang.String[]`"
-  ([^java.lang.String cmdpath ^java.lang.String[] argv]
+  ([^java.lang.String cmdpath argv]
     (new ActivationGroupDesc$CommandEnvironment cmdpath argv)))
 
 (defn get-command-path
@@ -22,7 +22,7 @@
 
   returns: the configured name, or null if configured to
    accept the default - `java.lang.String`"
-  ([^java.rmi.activation.ActivationGroupDesc$CommandEnvironment this]
+  (^java.lang.String [^java.rmi.activation.ActivationGroupDesc$CommandEnvironment this]
     (-> this (.getCommandPath))))
 
 (defn get-command-options
@@ -42,7 +42,7 @@
   obj - the Object to compare with - `java.lang.Object`
 
   returns: true if these Objects are equal; false otherwise. - `boolean`"
-  ([^java.rmi.activation.ActivationGroupDesc$CommandEnvironment this ^java.lang.Object obj]
+  (^Boolean [^java.rmi.activation.ActivationGroupDesc$CommandEnvironment this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -50,6 +50,6 @@
    CommandEnvironments.
 
   returns: an integer - `int`"
-  ([^java.rmi.activation.ActivationGroupDesc$CommandEnvironment this]
+  (^Integer [^java.rmi.activation.ActivationGroupDesc$CommandEnvironment this]
     (-> this (.hashCode))))
 

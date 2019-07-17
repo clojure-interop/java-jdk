@@ -23,7 +23,7 @@
   "Get the prompt.
 
   returns: the prompt. - `java.lang.String`"
-  ([^javax.security.auth.callback.PasswordCallback this]
+  (^java.lang.String [^javax.security.auth.callback.PasswordCallback this]
     (-> this (.getPrompt))))
 
 (defn echo-on?
@@ -32,7 +32,7 @@
 
   returns: the whether the password
             should be displayed as it is being typed. - `boolean`"
-  ([^javax.security.auth.callback.PasswordCallback this]
+  (^Boolean [^javax.security.auth.callback.PasswordCallback this]
     (-> this (.isEchoOn))))
 
 (defn set-password

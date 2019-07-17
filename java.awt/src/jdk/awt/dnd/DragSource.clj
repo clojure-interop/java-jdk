@@ -141,7 +141,7 @@
   returns: the platform DragSource - `java.awt.dnd.DragSource`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true"
-  ([]
+  (^java.awt.dnd.DragSource []
     (DragSource/getDefaultDragSource )))
 
 (defn *drag-image-supported?
@@ -151,7 +151,7 @@
    is available on the underlying platform.
 
   returns: if the Drag Image support is available on this platform - `boolean`"
-  ([]
+  (^Boolean []
     (DragSource/isDragImageSupported )))
 
 (defn *get-drag-threshold
@@ -167,7 +167,7 @@
    java.awt.Toolkit.getDesktopProperty(`DnD.gestureMotionThreshold`).
 
   returns: the drag gesture motion threshold - `int`"
-  ([]
+  (^Integer []
     (DragSource/getDragThreshold )))
 
 (defn get-drag-source-motion-listeners
@@ -185,7 +185,7 @@
    FlavorMap for this DragSource.
 
   returns: the FlavorMap for this DragSource - `java.awt.datatransfer.FlavorMap`"
-  ([^java.awt.dnd.DragSource this]
+  (^java.awt.datatransfer.FlavorMap [^java.awt.dnd.DragSource this]
     (-> this (.getFlavorMap))))
 
 (defn get-drag-source-listeners
@@ -308,7 +308,7 @@
       has no implementation available for
       the requested DragGestureRecognizer
       subclass and returns null - `java.awt.dnd.DragGestureRecognizer`"
-  ([^java.awt.dnd.DragSource this ^java.awt.Component c ^Integer actions ^java.awt.dnd.DragGestureListener dgl]
+  (^java.awt.dnd.DragGestureRecognizer [^java.awt.dnd.DragSource this ^java.awt.Component c ^Integer actions ^java.awt.dnd.DragGestureListener dgl]
     (-> this (.createDefaultDragGestureRecognizer c actions dgl))))
 
 (defn get-listeners

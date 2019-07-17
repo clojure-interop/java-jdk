@@ -50,8 +50,8 @@
            or -1 if the channel has reached end-of-stream - `long`
 
   throws: java.lang.IndexOutOfBoundsException - If the preconditions on the offset and length parameters do not hold"
-  ([^java.nio.channels.ScatteringByteChannel this ^java.nio.ByteBuffer[] dsts ^Integer offset ^Integer length]
+  (^Long [^java.nio.channels.ScatteringByteChannel this dsts ^Integer offset ^Integer length]
     (-> this (.read dsts offset length)))
-  ([^java.nio.channels.ScatteringByteChannel this ^java.nio.ByteBuffer[] dsts]
+  (^Long [^java.nio.channels.ScatteringByteChannel this dsts]
     (-> this (.read dsts))))
 

@@ -53,7 +53,7 @@
 
   returns: the media length, expressed in sample frames,
    or AudioSystem.NOT_SPECIFIED if the line is not open. - `int`"
-  ([^javax.sound.sampled.Clip this]
+  (^Integer [^javax.sound.sampled.Clip this]
     (-> this (.getFrameLength))))
 
 (defn get-microsecond-length
@@ -61,7 +61,7 @@
 
   returns: the media duration, expressed in microseconds,
    or AudioSystem.NOT_SPECIFIED if the line is not open. - `long`"
-  ([^javax.sound.sampled.Clip this]
+  (^Long [^javax.sound.sampled.Clip this]
     (-> this (.getMicrosecondLength))))
 
 (defn set-frame-position

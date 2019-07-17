@@ -212,7 +212,7 @@
   "Returns the SyncFactory singleton.
 
   returns: the SyncFactory instance - `javax.sql.rowset.spi.SyncFactory`"
-  ([]
+  (^javax.sql.rowset.spi.SyncFactory []
     (SyncFactory/getSyncFactory )))
 
 (defn *unregister-provider
@@ -233,7 +233,7 @@
   returns: a SyncProvider implementation - `javax.sql.rowset.spi.SyncProvider`
 
   throws: javax.sql.rowset.spi.SyncFactoryException - If the SyncProvider cannot be found, the providerID is null, or some error was encountered when trying to invoke this provider."
-  ([^java.lang.String provider-id]
+  (^javax.sql.rowset.spi.SyncProvider [^java.lang.String provider-id]
     (SyncFactory/getInstance provider-id)))
 
 (defn *get-registered-providers
@@ -249,7 +249,7 @@
    providers that are registered with this Factory - `java.util.Enumeration<javax.sql.rowset.spi.SyncProvider>`
 
   throws: javax.sql.rowset.spi.SyncFactoryException - If an error occurs obtaining the registered providers"
-  ([]
+  (^java.util.Enumeration []
     (SyncFactory/getRegisteredProviders )))
 
 (defn *set-logger
@@ -284,7 +284,7 @@
    SyncProvider implementations - `java.util.logging.Logger`
 
   throws: javax.sql.rowset.spi.SyncFactoryException - if no logging object has been set."
-  ([]
+  (^java.util.logging.Logger []
     (SyncFactory/getLogger )))
 
 (defn *set-jndi-context

@@ -10,7 +10,7 @@
   "Returns an iterator over elements of type T.
 
   returns: an Iterator. - `java.util.Iterator<Iterable.T>`"
-  ([^java.lang.Iterable this]
+  (^java.util.Iterator [^java.lang.Iterable this]
     (-> this (.iterator))))
 
 (defn for-each

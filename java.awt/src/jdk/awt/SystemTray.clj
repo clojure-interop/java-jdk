@@ -89,7 +89,7 @@
    the desktop's tray area - `java.awt.SystemTray`
 
   throws: java.lang.UnsupportedOperationException - if the system tray isn't supported by the current platform"
-  ([]
+  (^java.awt.SystemTray []
     (SystemTray/getSystemTray )))
 
 (defn *supported?
@@ -113,7 +113,7 @@
    method returns true if the minimal system tray access is
    supported but does not guarantee that all system tray
    functionality is supported for the current platform - `boolean`"
-  ([]
+  (^Boolean []
     (SystemTray/isSupported )))
 
 (defn add
@@ -174,7 +174,7 @@
    method TrayIcon.getSize() in the TrayIcon class.
 
   returns: the default size of a tray icon, in pixels - `java.awt.Dimension`"
-  ([^java.awt.SystemTray this]
+  (^java.awt.Dimension [^java.awt.SystemTray this]
     (-> this (.getTrayIconSize))))
 
 (defn add-property-change-listener

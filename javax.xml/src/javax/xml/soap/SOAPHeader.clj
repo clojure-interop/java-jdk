@@ -46,7 +46,7 @@
             inserted into this SOAPHeader object - `javax.xml.soap.SOAPHeaderElement`
 
   throws: javax.xml.soap.SOAPException - if a SOAP error occurs"
-  ([^javax.xml.soap.SOAPHeader this ^javax.xml.soap.Name name]
+  (^javax.xml.soap.SOAPHeaderElement [^javax.xml.soap.SOAPHeader this ^javax.xml.soap.Name name]
     (-> this (.addHeaderElement name))))
 
 (defn examine-must-understand-header-elements
@@ -63,7 +63,7 @@
   returns: an Iterator object over all the
            SOAPHeaderElement objects that contain the specified
             actor / role and are marked as MustUnderstand - `java.util.Iterator`"
-  ([^javax.xml.soap.SOAPHeader this ^java.lang.String actor]
+  (^java.util.Iterator [^javax.xml.soap.SOAPHeader this ^java.lang.String actor]
     (-> this (.examineMustUnderstandHeaderElements actor))))
 
 (defn examine-header-elements
@@ -87,7 +87,7 @@
   returns: an Iterator object over all the
            SOAPHeaderElement objects that contain the specified
             actor / role - `java.util.Iterator`"
-  ([^javax.xml.soap.SOAPHeader this ^java.lang.String actor]
+  (^java.util.Iterator [^javax.xml.soap.SOAPHeader this ^java.lang.String actor]
     (-> this (.examineHeaderElements actor))))
 
 (defn extract-header-elements
@@ -108,7 +108,7 @@
   returns: an Iterator object over all the
            SOAPHeaderElement objects that contain the specified
             actor / role - `java.util.Iterator`"
-  ([^javax.xml.soap.SOAPHeader this ^java.lang.String actor]
+  (^java.util.Iterator [^javax.xml.soap.SOAPHeader this ^java.lang.String actor]
     (-> this (.extractHeaderElements actor))))
 
 (defn add-not-understood-header-element
@@ -122,7 +122,7 @@
             inserted into this SOAPHeader object - `javax.xml.soap.SOAPHeaderElement`
 
   throws: javax.xml.soap.SOAPException - if a SOAP error occurs."
-  ([^javax.xml.soap.SOAPHeader this ^javax.xml.namespace.QName name]
+  (^javax.xml.soap.SOAPHeaderElement [^javax.xml.soap.SOAPHeader this ^javax.xml.namespace.QName name]
     (-> this (.addNotUnderstoodHeaderElement name))))
 
 (defn add-upgrade-header-element
@@ -137,7 +137,7 @@
             inserted into this SOAPHeader object - `javax.xml.soap.SOAPHeaderElement`
 
   throws: javax.xml.soap.SOAPException - if a SOAP error occurs."
-  ([^javax.xml.soap.SOAPHeader this ^java.util.Iterator supported-soapur-is]
+  (^javax.xml.soap.SOAPHeaderElement [^javax.xml.soap.SOAPHeader this ^java.util.Iterator supported-soapur-is]
     (-> this (.addUpgradeHeaderElement supported-soapur-is))))
 
 (defn examine-all-header-elements
@@ -147,7 +147,7 @@
   returns: an Iterator object over all the
             SOAPHeaderElement objects contained by this
             SOAPHeader - `java.util.Iterator`"
-  ([^javax.xml.soap.SOAPHeader this]
+  (^java.util.Iterator [^javax.xml.soap.SOAPHeader this]
     (-> this (.examineAllHeaderElements))))
 
 (defn extract-all-header-elements
@@ -158,6 +158,6 @@
   returns: an Iterator object over all the
             SOAPHeaderElement objects contained by this
             SOAPHeader - `java.util.Iterator`"
-  ([^javax.xml.soap.SOAPHeader this]
+  (^java.util.Iterator [^javax.xml.soap.SOAPHeader this]
     (-> this (.extractAllHeaderElements))))
 

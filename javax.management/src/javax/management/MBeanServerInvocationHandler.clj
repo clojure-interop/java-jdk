@@ -91,7 +91,7 @@
    a proxy using this handler are forwarded.
 
   returns: the MBean server connection. - `javax.management.MBeanServerConnection`"
-  ([^javax.management.MBeanServerInvocationHandler this]
+  (^javax.management.MBeanServerConnection [^javax.management.MBeanServerInvocationHandler this]
     (-> this (.getMBeanServerConnection))))
 
 (defn get-object-name
@@ -99,7 +99,7 @@
    are forwarded.
 
   returns: the object name. - `javax.management.ObjectName`"
-  ([^javax.management.MBeanServerInvocationHandler this]
+  (^javax.management.ObjectName [^javax.management.MBeanServerInvocationHandler this]
     (-> this (.getObjectName))))
 
 (defn mx-bean?
@@ -107,7 +107,7 @@
    are applied to method parameters and return values.
 
   returns: whether the proxy is for an MXBean. - `boolean`"
-  ([^javax.management.MBeanServerInvocationHandler this]
+  (^Boolean [^javax.management.MBeanServerInvocationHandler this]
     (-> this (.isMXBean))))
 
 (defn invoke
@@ -132,6 +132,6 @@
    invocation on the proxy instance. - `java.lang.Object`
 
   throws: java.lang.Throwable - the exception to throw from the method invocation on the proxy instance. The exception's type must be assignable either to any of the exception types declared in the throws clause of the interface method or to the unchecked exception types java.lang.RuntimeException or java.lang.Error. If a checked exception is thrown by this method that is not assignable to any of the exception types declared in the throws clause of the interface method, then an UndeclaredThrowableException containing the exception that was thrown by this method will be thrown by the method invocation on the proxy instance."
-  ([^javax.management.MBeanServerInvocationHandler this ^java.lang.Object proxy ^java.lang.reflect.Method method ^java.lang.Object[] args]
+  (^java.lang.Object [^javax.management.MBeanServerInvocationHandler this ^java.lang.Object proxy ^java.lang.reflect.Method method args]
     (-> this (.invoke proxy method args))))
 

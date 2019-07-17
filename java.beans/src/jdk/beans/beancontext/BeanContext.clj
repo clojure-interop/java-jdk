@@ -17,7 +17,7 @@
    BeanContext - `java.lang.Object`
 
   throws: java.io.IOException - if an IO problem occurs"
-  ([^java.beans.beancontext.BeanContext this ^java.lang.String bean-name]
+  (^java.lang.Object [^java.beans.beancontext.BeanContext this ^java.lang.String bean-name]
     (-> this (.instantiateChild bean-name))))
 
 (defn get-resource-as-stream
@@ -34,7 +34,7 @@
    be found. - `java.io.InputStream`
 
   throws: java.lang.IllegalArgumentException - if the resource is not valid"
-  ([^java.beans.beancontext.BeanContext this ^java.lang.String name ^java.beans.beancontext.BeanContextChild bcc]
+  (^java.io.InputStream [^java.beans.beancontext.BeanContext this ^java.lang.String name ^java.beans.beancontext.BeanContextChild bcc]
     (-> this (.getResourceAsStream name bcc))))
 
 (defn get-resource
@@ -50,7 +50,7 @@
    resource for the specified child - `java.net.URL`
 
   throws: java.lang.IllegalArgumentException - if the resource is not valid"
-  ([^java.beans.beancontext.BeanContext this ^java.lang.String name ^java.beans.beancontext.BeanContextChild bcc]
+  (^java.net.URL [^java.beans.beancontext.BeanContext this ^java.lang.String name ^java.beans.beancontext.BeanContextChild bcc]
     (-> this (.getResource name bcc))))
 
 (defn add-bean-context-membership-listener

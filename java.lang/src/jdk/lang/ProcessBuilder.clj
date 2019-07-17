@@ -164,9 +164,9 @@
   returns: this process builder - `java.lang.ProcessBuilder`
 
   throws: java.lang.NullPointerException - if the argument is null"
-  ([^java.lang.ProcessBuilder this ^java.util.List command]
+  (^java.lang.ProcessBuilder [^java.lang.ProcessBuilder this ^java.util.List command]
     (-> this (.command command)))
-  ([^java.lang.ProcessBuilder this]
+  (^java.util.List [^java.lang.ProcessBuilder this]
     (-> this (.command))))
 
 (defn directory
@@ -181,9 +181,9 @@
   directory - the new working directory - `java.io.File`
 
   returns: this process builder - `java.lang.ProcessBuilder`"
-  ([^java.lang.ProcessBuilder this ^java.io.File directory]
+  (^java.lang.ProcessBuilder [^java.lang.ProcessBuilder this ^java.io.File directory]
     (-> this (.directory directory)))
-  ([^java.lang.ProcessBuilder this]
+  (^java.io.File [^java.lang.ProcessBuilder this]
     (-> this (.directory))))
 
 (defn redirect-error
@@ -208,9 +208,9 @@
   returns: this process builder - `java.lang.ProcessBuilder`
 
   throws: java.lang.IllegalArgumentException - if the redirect does not correspond to a valid destination of data, that is, has type READ"
-  ([^java.lang.ProcessBuilder this ^java.lang.ProcessBuilder.Redirect destination]
+  (^java.lang.ProcessBuilder [^java.lang.ProcessBuilder this ^java.lang.ProcessBuilder.Redirect destination]
     (-> this (.redirectError destination)))
-  ([^java.lang.ProcessBuilder this]
+  (^java.lang.ProcessBuilder.Redirect [^java.lang.ProcessBuilder this]
     (-> this (.redirectError))))
 
 (defn inherit-io
@@ -233,7 +233,7 @@
    system().
 
   returns: this process builder - `java.lang.ProcessBuilder`"
-  ([^java.lang.ProcessBuilder this]
+  (^java.lang.ProcessBuilder [^java.lang.ProcessBuilder this]
     (-> this (.inheritIO))))
 
 (defn redirect-output
@@ -254,9 +254,9 @@
   returns: this process builder - `java.lang.ProcessBuilder`
 
   throws: java.lang.IllegalArgumentException - if the redirect does not correspond to a valid destination of data, that is, has type READ"
-  ([^java.lang.ProcessBuilder this ^java.lang.ProcessBuilder.Redirect destination]
+  (^java.lang.ProcessBuilder [^java.lang.ProcessBuilder this ^java.lang.ProcessBuilder.Redirect destination]
     (-> this (.redirectOutput destination)))
-  ([^java.lang.ProcessBuilder this]
+  (^java.lang.ProcessBuilder.Redirect [^java.lang.ProcessBuilder this]
     (-> this (.redirectOutput))))
 
 (defn redirect-input
@@ -278,9 +278,9 @@
   returns: this process builder - `java.lang.ProcessBuilder`
 
   throws: java.lang.IllegalArgumentException - if the redirect does not correspond to a valid source of data, that is, has type WRITE or APPEND"
-  ([^java.lang.ProcessBuilder this ^java.lang.ProcessBuilder.Redirect source]
+  (^java.lang.ProcessBuilder [^java.lang.ProcessBuilder this ^java.lang.ProcessBuilder.Redirect source]
     (-> this (.redirectInput source)))
-  ([^java.lang.ProcessBuilder this]
+  (^java.lang.ProcessBuilder.Redirect [^java.lang.ProcessBuilder this]
     (-> this (.redirectInput))))
 
 (defn redirect-error-stream
@@ -297,9 +297,9 @@
   redirect-error-stream - the new property value - `boolean`
 
   returns: this process builder - `java.lang.ProcessBuilder`"
-  ([^java.lang.ProcessBuilder this ^Boolean redirect-error-stream]
+  (^java.lang.ProcessBuilder [^java.lang.ProcessBuilder this ^Boolean redirect-error-stream]
     (-> this (.redirectErrorStream redirect-error-stream)))
-  ([^java.lang.ProcessBuilder this]
+  (^Boolean [^java.lang.ProcessBuilder this]
     (-> this (.redirectErrorStream))))
 
 (defn start
@@ -344,7 +344,7 @@
   returns: a new Process object for managing the subprocess - `java.lang.Process`
 
   throws: java.lang.NullPointerException - if an element of the command list is null"
-  ([^java.lang.ProcessBuilder this]
+  (^java.lang.Process [^java.lang.ProcessBuilder this]
     (-> this (.start))))
 
 (defn environment
@@ -407,6 +407,6 @@
   returns: this process builder's environment - `java.util.Map<java.lang.String,java.lang.String>`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPermission method doesn't allow access to the process environment"
-  ([^java.lang.ProcessBuilder this]
+  (^java.util.Map [^java.lang.ProcessBuilder this]
     (-> this (.environment))))
 

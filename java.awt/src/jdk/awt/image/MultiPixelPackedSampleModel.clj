@@ -52,7 +52,7 @@
 
   returns: the pixelBitStride of this
    MultiPixelPackedSampleModel. - `int`"
-  ([^java.awt.image.MultiPixelPackedSampleModel this]
+  (^Integer [^java.awt.image.MultiPixelPackedSampleModel this]
     (-> this (.getPixelBitStride))))
 
 (defn get-bit-offset
@@ -63,7 +63,7 @@
   x - the specified pixel - `int`
 
   returns: the bit offset of the specified pixel. - `int`"
-  ([^java.awt.image.MultiPixelPackedSampleModel this ^Integer x]
+  (^Integer [^java.awt.image.MultiPixelPackedSampleModel this ^Integer x]
     (-> this (.getBitOffset x))))
 
 (defn get-transfer-type
@@ -75,7 +75,7 @@
     or DataBuffer.TYPE_INT.
 
   returns: the transfertype. - `int`"
-  ([^java.awt.image.MultiPixelPackedSampleModel this]
+  (^Integer [^java.awt.image.MultiPixelPackedSampleModel this]
     (-> this (.getTransferType))))
 
 (defn create-data-buffer
@@ -87,7 +87,7 @@
 
   returns: a DataBuffer with the same data type and
    size as this MultiPixelPackedSampleModel. - `java.awt.image.DataBuffer`"
-  ([^java.awt.image.MultiPixelPackedSampleModel this]
+  (^java.awt.image.DataBuffer [^java.awt.image.MultiPixelPackedSampleModel this]
     (-> this (.createDataBuffer))))
 
 (defn get-data-elements
@@ -136,7 +136,7 @@
     pixel. - `java.lang.Object`
 
   throws: java.lang.ClassCastException - if obj is not a primitive array of type TransferType or is not null"
-  ([^java.awt.image.MultiPixelPackedSampleModel this ^Integer x ^Integer y ^java.lang.Object obj ^java.awt.image.DataBuffer data]
+  (^java.lang.Object [^java.awt.image.MultiPixelPackedSampleModel this ^Integer x ^Integer y ^java.lang.Object obj ^java.awt.image.DataBuffer data]
     (-> this (.getDataElements x y obj data))))
 
 (defn create-subset-sample-model
@@ -153,7 +153,7 @@
    this MultiPixelPackedSampleModel. - `java.awt.image.SampleModel`
 
   throws: java.awt.image.RasterFormatException - if the number of bands requested is not one."
-  ([^java.awt.image.MultiPixelPackedSampleModel this bands]
+  (^java.awt.image.SampleModel [^java.awt.image.MultiPixelPackedSampleModel this bands]
     (-> this (.createSubsetSampleModel bands))))
 
 (defn get-num-data-elements
@@ -163,7 +163,7 @@
    one.
 
   returns: the number of data elements. - `int`"
-  ([^java.awt.image.MultiPixelPackedSampleModel this]
+  (^Integer [^java.awt.image.MultiPixelPackedSampleModel this]
     (-> this (.getNumDataElements))))
 
 (defn get-offset
@@ -173,7 +173,7 @@
   y - the Y coordinate of the specified pixel - `int`
 
   returns: the offset of the specified pixel. - `int`"
-  ([^java.awt.image.MultiPixelPackedSampleModel this ^Integer x ^Integer y]
+  (^Integer [^java.awt.image.MultiPixelPackedSampleModel this ^Integer x ^Integer y]
     (-> this (.getOffset x y))))
 
 (defn get-scanline-stride
@@ -181,7 +181,7 @@
 
   returns: the scanline stride of this
    MultiPixelPackedSampleModel. - `int`"
-  ([^java.awt.image.MultiPixelPackedSampleModel this]
+  (^Integer [^java.awt.image.MultiPixelPackedSampleModel this]
     (-> this (.getScanlineStride))))
 
 (defn get-sample
@@ -199,7 +199,7 @@
    pixel. - `int`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if the specified coordinates are not in bounds."
-  ([^java.awt.image.MultiPixelPackedSampleModel this ^Integer x ^Integer y ^Integer b ^java.awt.image.DataBuffer data]
+  (^Integer [^java.awt.image.MultiPixelPackedSampleModel this ^Integer x ^Integer y ^Integer b ^java.awt.image.DataBuffer data]
     (-> this (.getSample x y b data))))
 
 (defn set-sample
@@ -237,7 +237,7 @@
 
   returns: the dataBitOffset of this
    MultiPixelPackedSampleModel. - `int`"
-  ([^java.awt.image.MultiPixelPackedSampleModel this]
+  (^Integer [^java.awt.image.MultiPixelPackedSampleModel this]
     (-> this (.getDataBitOffset))))
 
 (defn get-pixel
@@ -263,7 +263,7 @@
   band - the specified band - `int`
 
   returns: the number of bits per sample for the specified band. - `int`"
-  ([^java.awt.image.MultiPixelPackedSampleModel this ^Integer band]
+  (^Integer [^java.awt.image.MultiPixelPackedSampleModel this ^Integer band]
     (-> this (.getSampleSize band)))
   ([^java.awt.image.MultiPixelPackedSampleModel this]
     (-> this (.getSampleSize))))
@@ -283,14 +283,14 @@
    as this MultiPixelPackedSampleModel. - `java.awt.image.SampleModel`
 
   throws: java.lang.IllegalArgumentException - if w or h is not greater than 0"
-  ([^java.awt.image.MultiPixelPackedSampleModel this ^Integer w ^Integer h]
+  (^java.awt.image.SampleModel [^java.awt.image.MultiPixelPackedSampleModel this ^Integer w ^Integer h]
     (-> this (.createCompatibleSampleModel w h))))
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  ([^java.awt.image.MultiPixelPackedSampleModel this]
+  (^Integer [^java.awt.image.MultiPixelPackedSampleModel this]
     (-> this (.hashCode))))
 
 (defn set-data-elements
@@ -342,6 +342,6 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([^java.awt.image.MultiPixelPackedSampleModel this ^java.lang.Object o]
+  (^Boolean [^java.awt.image.MultiPixelPackedSampleModel this ^java.lang.Object o]
     (-> this (.equals o))))
 

@@ -109,6 +109,6 @@
   "The connection ID to which this notification pertains.
 
   returns: the connection ID. - `java.lang.String`"
-  ([^javax.management.remote.JMXConnectionNotification this]
+  (^java.lang.String [^javax.management.remote.JMXConnectionNotification this]
     (-> this (.getConnectionId))))
 

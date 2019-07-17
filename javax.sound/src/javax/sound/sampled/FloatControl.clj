@@ -26,14 +26,14 @@
    for this control, over the set of supported floating-point values.
 
   returns: the control's precision - `float`"
-  ([^javax.sound.sampled.FloatControl this]
+  (^Float [^javax.sound.sampled.FloatControl this]
     (-> this (.getPrecision))))
 
 (defn get-minimum
   "Obtains the minimum value permitted.
 
   returns: the minimum allowable value - `float`"
-  ([^javax.sound.sampled.FloatControl this]
+  (^Float [^javax.sound.sampled.FloatControl this]
     (-> this (.getMinimum))))
 
 (defn get-update-period
@@ -44,7 +44,7 @@
    and return -1 from this method.
 
   returns: update period in microseconds, or -1 if shifting over time is unsupported - `int`"
-  ([^javax.sound.sampled.FloatControl this]
+  (^Integer [^javax.sound.sampled.FloatControl this]
     (-> this (.getUpdatePeriod))))
 
 (defn get-units
@@ -52,28 +52,28 @@
    such as `dB` or `frames per second.`
 
   returns: the units label, or a zero-length string if no label - `java.lang.String`"
-  ([^javax.sound.sampled.FloatControl this]
+  (^java.lang.String [^javax.sound.sampled.FloatControl this]
     (-> this (.getUnits))))
 
 (defn to-string
   "Provides a string representation of the control
 
   returns: a string description - `java.lang.String`"
-  ([^javax.sound.sampled.FloatControl this]
+  (^java.lang.String [^javax.sound.sampled.FloatControl this]
     (-> this (.toString))))
 
 (defn get-value
   "Obtains this control's current value.
 
   returns: the current value - `float`"
-  ([^javax.sound.sampled.FloatControl this]
+  (^Float [^javax.sound.sampled.FloatControl this]
     (-> this (.getValue))))
 
 (defn get-max-label
   "Obtains the label for the maximum value, such as `Right` or `Full.`
 
   returns: the maximum value label, or a zero-length string if no label      * has been set - `java.lang.String`"
-  ([^javax.sound.sampled.FloatControl this]
+  (^java.lang.String [^javax.sound.sampled.FloatControl this]
     (-> this (.getMaxLabel))))
 
 (defn shift
@@ -110,20 +110,20 @@
   "Obtains the label for the mid-point value, such as `Center` or `Default.`
 
   returns: the mid-point value label, or a zero-length string if no label    * has been set - `java.lang.String`"
-  ([^javax.sound.sampled.FloatControl this]
+  (^java.lang.String [^javax.sound.sampled.FloatControl this]
     (-> this (.getMidLabel))))
 
 (defn get-maximum
   "Obtains the maximum value permitted.
 
   returns: the maximum allowable value - `float`"
-  ([^javax.sound.sampled.FloatControl this]
+  (^Float [^javax.sound.sampled.FloatControl this]
     (-> this (.getMaximum))))
 
 (defn get-min-label
   "Obtains the label for the minimum value, such as `Left` or `Off.`
 
   returns: the minimum value label, or a zero-length string if no label      * has been set - `java.lang.String`"
-  ([^javax.sound.sampled.FloatControl this]
+  (^java.lang.String [^javax.sound.sampled.FloatControl this]
     (-> this (.getMinLabel))))
 

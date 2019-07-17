@@ -51,7 +51,7 @@
 
   returns: true if the specified permission is implied by this object,
    false if not. - `boolean`"
-  ([^javax.security.auth.kerberos.DelegationPermission this ^java.security.Permission p]
+  (^Boolean [^javax.security.auth.kerberos.DelegationPermission this ^java.security.Permission p]
     (-> this (.implies p))))
 
 (defn equals
@@ -62,14 +62,14 @@
   returns: true if obj is a DelegationPermission, and
     has the same subordinate and service principal as this.
     DelegationPermission object. - `boolean`"
-  ([^javax.security.auth.kerberos.DelegationPermission this ^java.lang.Object obj]
+  (^Boolean [^javax.security.auth.kerberos.DelegationPermission this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Returns the hash code value for this object.
 
   returns: a hash code value for this object. - `int`"
-  ([^javax.security.auth.kerberos.DelegationPermission this]
+  (^Integer [^javax.security.auth.kerberos.DelegationPermission this]
     (-> this (.hashCode))))
 
 (defn new-permission-collection
@@ -83,6 +83,6 @@
 
   returns: a new PermissionCollection object suitable for storing
    DelegationPermissions. - `java.security.PermissionCollection`"
-  ([^javax.security.auth.kerberos.DelegationPermission this]
+  (^java.security.PermissionCollection [^javax.security.auth.kerberos.DelegationPermission this]
     (-> this (.newPermissionCollection))))
 

@@ -99,7 +99,7 @@
    have the name `posix`.
 
   returns: the name of the attribute view - `java.lang.String`"
-  ([^java.nio.file.attribute.PosixFileAttributeView this]
+  (^java.lang.String [^java.nio.file.attribute.PosixFileAttributeView this]
     (-> this (.name))))
 
 (defn read-attributes
@@ -108,7 +108,7 @@
   returns: the file attributes - `java.nio.file.attribute.PosixFileAttributes`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([^java.nio.file.attribute.PosixFileAttributeView this]
+  (^java.nio.file.attribute.PosixFileAttributes [^java.nio.file.attribute.PosixFileAttributeView this]
     (-> this (.readAttributes))))
 
 (defn set-permissions

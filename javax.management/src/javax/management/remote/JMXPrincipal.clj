@@ -26,14 +26,14 @@
   "Returns the name of this principal.
 
   returns: the name of this JMXPrincipal. - `java.lang.String`"
-  ([^javax.management.remote.JMXPrincipal this]
+  (^java.lang.String [^javax.management.remote.JMXPrincipal this]
     (-> this (.getName))))
 
 (defn to-string
   "Returns a string representation of this JMXPrincipal.
 
   returns: a string representation of this JMXPrincipal. - `java.lang.String`"
-  ([^javax.management.remote.JMXPrincipal this]
+  (^java.lang.String [^javax.management.remote.JMXPrincipal this]
     (-> this (.toString))))
 
 (defn equals
@@ -46,13 +46,13 @@
 
   returns: true if the specified Object is equal to this
    JMXPrincipal. - `boolean`"
-  ([^javax.management.remote.JMXPrincipal this ^java.lang.Object o]
+  (^Boolean [^javax.management.remote.JMXPrincipal this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn hash-code
   "Returns a hash code for this JMXPrincipal.
 
   returns: a hash code for this JMXPrincipal. - `int`"
-  ([^javax.management.remote.JMXPrincipal this]
+  (^Integer [^javax.management.remote.JMXPrincipal this]
     (-> this (.hashCode))))
 

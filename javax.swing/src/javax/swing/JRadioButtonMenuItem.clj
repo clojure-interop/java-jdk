@@ -58,7 +58,7 @@
   "Returns the name of the L&F class that renders this component.
 
   returns: the string `RadioButtonMenuItemUI` - `java.lang.String`"
-  ([^javax.swing.JRadioButtonMenuItem this]
+  (^java.lang.String [^javax.swing.JRadioButtonMenuItem this]
     (-> this (.getUIClassID))))
 
 (defn get-accessible-context
@@ -69,6 +69,6 @@
 
   returns: an AccessibleJRadioButtonMenuItem that serves as the
            AccessibleContext of this JRadioButtonMenuItem - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.JRadioButtonMenuItem this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.JRadioButtonMenuItem this]
     (-> this (.getAccessibleContext))))
 

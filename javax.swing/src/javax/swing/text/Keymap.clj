@@ -14,7 +14,7 @@
    possible key.
 
   returns: the default action - `javax.swing.Action`"
-  ([^javax.swing.text.Keymap this]
+  (^javax.swing.Action [^javax.swing.text.Keymap this]
     (-> this (.getDefaultAction))))
 
 (defn remove-key-stroke-binding
@@ -57,21 +57,21 @@
 
   returns: the action associated with the key
     sequence if one is defined, otherwise null - `javax.swing.Action`"
-  ([^javax.swing.text.Keymap this ^javax.swing.KeyStroke key]
+  (^javax.swing.Action [^javax.swing.text.Keymap this ^javax.swing.KeyStroke key]
     (-> this (.getAction key))))
 
 (defn get-resolve-parent
   "Fetches the parent keymap used to resolve key-bindings.
 
   returns: the keymap - `javax.swing.text.Keymap`"
-  ([^javax.swing.text.Keymap this]
+  (^javax.swing.text.Keymap [^javax.swing.text.Keymap this]
     (-> this (.getResolveParent))))
 
 (defn get-name
   "Fetches the name of the set of key-bindings.
 
   returns: the name - `java.lang.String`"
-  ([^javax.swing.text.Keymap this]
+  (^java.lang.String [^javax.swing.text.Keymap this]
     (-> this (.getName))))
 
 (defn add-action-for-key-stroke
@@ -98,7 +98,7 @@
   key - the key sequence - `javax.swing.KeyStroke`
 
   returns: true if the key sequence is locally defined else false - `boolean`"
-  ([^javax.swing.text.Keymap this ^javax.swing.KeyStroke key]
+  (^Boolean [^javax.swing.text.Keymap this ^javax.swing.KeyStroke key]
     (-> this (.isLocallyDefined key))))
 
 (defn set-default-action

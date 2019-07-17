@@ -57,7 +57,7 @@
    CRLs from the Collection.
 
   returns: the Collection (never null) - `java.util.Collection<?>`"
-  ([^java.security.cert.CollectionCertStoreParameters this]
+  (^java.util.Collection [^java.security.cert.CollectionCertStoreParameters this]
     (-> this (.getCollection))))
 
 (defn clone
@@ -65,13 +65,13 @@
    Collection is copied, and not the contents.
 
   returns: the copy - `java.lang.Object`"
-  ([^java.security.cert.CollectionCertStoreParameters this]
+  (^java.lang.Object [^java.security.cert.CollectionCertStoreParameters this]
     (-> this (.clone))))
 
 (defn to-string
   "Returns a formatted string describing the parameters.
 
   returns: a formatted string describing the parameters - `java.lang.String`"
-  ([^java.security.cert.CollectionCertStoreParameters this]
+  (^java.lang.String [^java.security.cert.CollectionCertStoreParameters this]
     (-> this (.toString))))
 

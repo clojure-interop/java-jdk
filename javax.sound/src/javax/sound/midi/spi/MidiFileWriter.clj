@@ -32,9 +32,9 @@
 
   returns: true if the file type is supported for this sequence,
            otherwise false - `boolean`"
-  ([^javax.sound.midi.spi.MidiFileWriter this ^Integer file-type ^javax.sound.midi.Sequence sequence]
+  (^Boolean [^javax.sound.midi.spi.MidiFileWriter this ^Integer file-type ^javax.sound.midi.Sequence sequence]
     (-> this (.isFileTypeSupported file-type sequence)))
-  ([^javax.sound.midi.spi.MidiFileWriter this ^Integer file-type]
+  (^Boolean [^javax.sound.midi.spi.MidiFileWriter this ^Integer file-type]
     (-> this (.isFileTypeSupported file-type))))
 
 (defn write
@@ -48,6 +48,6 @@
   returns: the number of bytes written to the output stream - `int`
 
   throws: java.io.IOException - if an I/O exception occurs"
-  ([^javax.sound.midi.spi.MidiFileWriter this ^javax.sound.midi.Sequence in ^Integer file-type ^java.io.OutputStream out]
+  (^Integer [^javax.sound.midi.spi.MidiFileWriter this ^javax.sound.midi.Sequence in ^Integer file-type ^java.io.OutputStream out]
     (-> this (.write in file-type out))))
 

@@ -12,7 +12,7 @@
 
   returns: true if this Object is currently current,
             false otherwise. - `boolean`"
-  ([^javax.security.auth.Refreshable this]
+  (^Boolean [^javax.security.auth.Refreshable this]
     (-> this (.isCurrent))))
 
 (defn refresh

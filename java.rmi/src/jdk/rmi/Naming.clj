@@ -42,7 +42,7 @@
   returns: a reference for a remote object - `java.rmi.Remote`
 
   throws: java.rmi.NotBoundException - if name is not currently bound"
-  ([^java.lang.String name]
+  (^java.rmi.Remote [^java.lang.String name]
     (Naming/lookup name)))
 
 (defn *bind

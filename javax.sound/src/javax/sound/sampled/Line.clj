@@ -68,7 +68,7 @@
   returns: a control of the specified type - `javax.sound.sampled.Control`
 
   throws: java.lang.IllegalArgumentException - if a control of the specified type is not supported"
-  ([^javax.sound.sampled.Line this ^javax.sound.sampled.Control.Type control]
+  (^javax.sound.sampled.Control [^javax.sound.sampled.Line this ^javax.sound.sampled.Control.Type control]
     (-> this (.getControl control))))
 
 (defn control-supported?
@@ -79,7 +79,7 @@
 
   returns: true if at least one control of the specified type is
    supported, otherwise false. - `boolean`"
-  ([^javax.sound.sampled.Line this ^javax.sound.sampled.Control.Type control]
+  (^Boolean [^javax.sound.sampled.Line this ^javax.sound.sampled.Control.Type control]
     (-> this (.isControlSupported control))))
 
 (defn close
@@ -105,7 +105,7 @@
    playing or capturing sound.
 
   returns: true if the line is open, otherwise false - `boolean`"
-  ([^javax.sound.sampled.Line this]
+  (^Boolean [^javax.sound.sampled.Line this]
     (-> this (.isOpen))))
 
 (defn open
@@ -148,6 +148,6 @@
    line.
 
   returns: description of the line - `javax.sound.sampled.Line.Info`"
-  ([^javax.sound.sampled.Line this]
+  (^javax.sound.sampled.Line.Info [^javax.sound.sampled.Line this]
     (-> this (.getLineInfo))))
 

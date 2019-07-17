@@ -24,7 +24,7 @@
    return null.
 
   returns: true if a controller is installed. - `boolean`"
-  ([^javax.imageio.IIOParam this]
+  (^Boolean [^javax.imageio.IIOParam this]
     (-> this (.hasController))))
 
 (defn get-subsampling-x-offset
@@ -34,7 +34,7 @@
    is returned (which is the correct value).
 
   returns: the source subsampling grid X offset. - `int`"
-  ([^javax.imageio.IIOParam this]
+  (^Integer [^javax.imageio.IIOParam this]
     (-> this (.getSubsamplingXOffset))))
 
 (defn get-destination-type
@@ -46,7 +46,7 @@
 
   returns: an ImageTypeSpecifier describing the
    destination type, or null. - `javax.imageio.ImageTypeSpecifier`"
-  ([^javax.imageio.IIOParam this]
+  (^javax.imageio.ImageTypeSpecifier [^javax.imageio.IIOParam this]
     (-> this (.getDestinationType))))
 
 (defn activate-controller
@@ -65,7 +65,7 @@
   returns: true if the controller completed normally. - `boolean`
 
   throws: java.lang.IllegalStateException - if there is no controller currently installed."
-  ([^javax.imageio.IIOParam this]
+  (^Boolean [^javax.imageio.IIOParam this]
     (-> this (.activateController))))
 
 (defn get-destination-offset
@@ -77,7 +77,7 @@
    (which is the correct value).
 
   returns: the destination offset as a Point. - `java.awt.Point`"
-  ([^javax.imageio.IIOParam this]
+  (^java.awt.Point [^javax.imageio.IIOParam this]
     (-> this (.getDestinationOffset))))
 
 (defn get-source-y-subsampling
@@ -87,7 +87,7 @@
    is returned (which is the correct value).
 
   returns: the source subsampling Y period. - `int`"
-  ([^javax.imageio.IIOParam this]
+  (^Integer [^javax.imageio.IIOParam this]
     (-> this (.getSourceYSubsampling))))
 
 (defn set-source-region
@@ -239,7 +239,7 @@
    is returned (which is the correct value).
 
   returns: the source subsampling X period. - `int`"
-  ([^javax.imageio.IIOParam this]
+  (^Integer [^javax.imageio.IIOParam this]
     (-> this (.getSourceXSubsampling))))
 
 (defn set-controller
@@ -263,7 +263,7 @@
 
   returns: the source region of interest as a
    Rectangle, or null. - `java.awt.Rectangle`"
-  ([^javax.imageio.IIOParam this]
+  (^java.awt.Rectangle [^javax.imageio.IIOParam this]
     (-> this (.getSourceRegion))))
 
 (defn get-subsampling-y-offset
@@ -273,7 +273,7 @@
    is returned (which is the correct value).
 
   returns: the source subsampling grid Y offset. - `int`"
-  ([^javax.imageio.IIOParam this]
+  (^Integer [^javax.imageio.IIOParam this]
     (-> this (.getSubsamplingYOffset))))
 
 (defn get-default-controller
@@ -283,7 +283,7 @@
 
   returns: the default IIOParamController, or
    null. - `javax.imageio.IIOParamController`"
-  ([^javax.imageio.IIOParam this]
+  (^javax.imageio.IIOParamController [^javax.imageio.IIOParam this]
     (-> this (.getDefaultController))))
 
 (defn set-destination-offset
@@ -335,6 +335,6 @@
 
   returns: the currently installed
    IIOParamController, or null. - `javax.imageio.IIOParamController`"
-  ([^javax.imageio.IIOParam this]
+  (^javax.imageio.IIOParamController [^javax.imageio.IIOParam this]
     (-> this (.getController))))
 

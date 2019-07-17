@@ -57,7 +57,7 @@
 
   returns: The byte stream that was set with setByteStream, or null
    if setByteStream or the ByteStream constructor was not called. - `java.io.InputStream`"
-  ([^javax.xml.transform.stream.StreamSource this]
+  (^java.io.InputStream [^javax.xml.transform.stream.StreamSource this]
     (-> this (.getInputStream))))
 
 (defn set-reader
@@ -77,7 +77,7 @@
 
   returns: The character stream that was set with setReader, or null
    if setReader or the Reader constructor was not called. - `java.io.Reader`"
-  ([^javax.xml.transform.stream.StreamSource this]
+  (^java.io.Reader [^javax.xml.transform.stream.StreamSource this]
     (-> this (.getReader))))
 
 (defn set-public-id
@@ -96,7 +96,7 @@
 
   returns: The public identifier that was set with setPublicId, or null
    if setPublicId was not called. - `java.lang.String`"
-  ([^javax.xml.transform.stream.StreamSource this]
+  (^java.lang.String [^javax.xml.transform.stream.StreamSource this]
     (-> this (.getPublicId))))
 
 (defn set-system-id
@@ -118,6 +118,6 @@
 
   returns: The system identifier that was set with setSystemId, or null
    if setSystemId was not called. - `java.lang.String`"
-  ([^javax.xml.transform.stream.StreamSource this]
+  (^java.lang.String [^javax.xml.transform.stream.StreamSource this]
     (-> this (.getSystemId))))
 

@@ -80,11 +80,11 @@
 
   returns: true if the specified PathIterator contains
            the specified rectangular area; false otherwise. - `boolean`"
-  ([^java.awt.geom.PathIterator pi ^Double x ^Double y ^Double w ^Double h]
+  (^Boolean [^java.awt.geom.PathIterator pi ^Double x ^Double y ^Double w ^Double h]
     (Path2D/contains pi x y w h))
-  ([^java.awt.geom.PathIterator pi ^Double x ^Double y]
+  (^Boolean [^java.awt.geom.PathIterator pi ^Double x ^Double y]
     (Path2D/contains pi x y))
-  ([^java.awt.geom.PathIterator pi ^java.awt.geom.Point2D p]
+  (^Boolean [^java.awt.geom.PathIterator pi ^java.awt.geom.Point2D p]
     (Path2D/contains pi p)))
 
 (defn *intersects
@@ -118,9 +118,9 @@
   returns: true if the specified PathIterator and
            the interior of the specified set of rectangular
            coordinates intersect each other; false otherwise. - `boolean`"
-  ([^java.awt.geom.PathIterator pi ^Double x ^Double y ^Double w ^Double h]
+  (^Boolean [^java.awt.geom.PathIterator pi ^Double x ^Double y ^Double w ^Double h]
     (Path2D/intersects pi x y w h))
-  ([^java.awt.geom.PathIterator pi ^java.awt.geom.Rectangle2D r]
+  (^Boolean [^java.awt.geom.PathIterator pi ^java.awt.geom.Rectangle2D r]
     (Path2D/intersects pi r)))
 
 (defn get-current-point
@@ -129,14 +129,14 @@
 
   returns: a Point2D object containing the ending coordinates of
            the path or null if there are no points in the path. - `java.awt.geom.Point2D`"
-  ([^java.awt.geom.Path2D this]
+  (^java.awt.geom.Point2D [^java.awt.geom.Path2D this]
     (-> this (.getCurrentPoint))))
 
 (defn get-winding-rule
   "Returns the fill style winding rule.
 
   returns: an integer representing the current winding rule. - `int`"
-  ([^java.awt.geom.Path2D this]
+  (^Integer [^java.awt.geom.Path2D this]
     (-> this (.getWindingRule))))
 
 (defn get-path-iterator
@@ -181,7 +181,7 @@
 
   returns: a new PathIterator that independently traverses
            a flattened view of the geometry of the  Shape. - `java.awt.geom.PathIterator`"
-  ([^java.awt.geom.Path2D this ^java.awt.geom.AffineTransform at ^Double flatness]
+  (^java.awt.geom.PathIterator [^java.awt.geom.Path2D this ^java.awt.geom.AffineTransform at ^Double flatness]
     (-> this (.getPathIterator at flatness))))
 
 (defn line-to
@@ -245,11 +245,11 @@
             intersects method returns true
             and the containment calculations would be too expensive to
             perform. - `boolean`"
-  ([^java.awt.geom.Path2D this ^Double x ^Double y ^Double w ^Double h]
+  (^Boolean [^java.awt.geom.Path2D this ^Double x ^Double y ^Double w ^Double h]
     (-> this (.contains x y w h)))
-  ([^java.awt.geom.Path2D this ^Double x ^Double y]
+  (^Boolean [^java.awt.geom.Path2D this ^Double x ^Double y]
     (-> this (.contains x y)))
-  ([^java.awt.geom.Path2D this ^java.awt.geom.Point2D p]
+  (^Boolean [^java.awt.geom.Path2D this ^java.awt.geom.Point2D p]
     (-> this (.contains p))))
 
 (defn transform
@@ -314,7 +314,7 @@
 
   returns: a new Shape, transformed with the specified
            AffineTransform. - `java.awt.Shape`"
-  ([^java.awt.geom.Path2D this ^java.awt.geom.AffineTransform at]
+  (^java.awt.Shape [^java.awt.geom.Path2D this ^java.awt.geom.AffineTransform at]
     (-> this (.createTransformedShape at))))
 
 (defn append
@@ -343,7 +343,7 @@
   returns: a clone of this instance. - `java.lang.Object`
 
   throws: java.lang.OutOfMemoryError - if there is not enough memory."
-  ([^java.awt.geom.Path2D this]
+  (^java.lang.Object [^java.awt.geom.Path2D this]
     (-> this (.clone))))
 
 (defn get-bounds
@@ -386,7 +386,7 @@
 
   returns: an integer Rectangle that completely encloses
                    the Shape. - `java.awt.Rectangle`"
-  ([^java.awt.geom.Path2D this]
+  (^java.awt.Rectangle [^java.awt.geom.Path2D this]
     (-> this (.getBounds))))
 
 (defn set-winding-rule
@@ -452,9 +452,9 @@
             the interior of the rectangular area intersect, or are
             both highly likely to intersect and intersection calculations
             would be too expensive to perform; false otherwise. - `boolean`"
-  ([^java.awt.geom.Path2D this ^Double x ^Double y ^Double w ^Double h]
+  (^Boolean [^java.awt.geom.Path2D this ^Double x ^Double y ^Double w ^Double h]
     (-> this (.intersects x y w h)))
-  ([^java.awt.geom.Path2D this ^java.awt.geom.Rectangle2D r]
+  (^Boolean [^java.awt.geom.Path2D this ^java.awt.geom.Rectangle2D r]
     (-> this (.intersects r))))
 
 (defn quad-to

@@ -45,7 +45,7 @@
      is not one of the above flavors - `boolean`
 
   throws: java.lang.NullPointerException - if flavor is null"
-  ([^java.awt.datatransfer.StringSelection this ^java.awt.datatransfer.DataFlavor flavor]
+  (^Boolean [^java.awt.datatransfer.StringSelection this ^java.awt.datatransfer.DataFlavor flavor]
     (-> this (.isDataFlavorSupported flavor))))
 
 (defn get-transfer-data
@@ -66,7 +66,7 @@
   returns: the data in the requested flavor, as outlined above - `java.lang.Object`
 
   throws: java.awt.datatransfer.UnsupportedFlavorException - if the requested data flavor is not equivalent to either DataFlavor.stringFlavor or DataFlavor.plainTextFlavor"
-  ([^java.awt.datatransfer.StringSelection this ^java.awt.datatransfer.DataFlavor flavor]
+  (^java.lang.Object [^java.awt.datatransfer.StringSelection this ^java.awt.datatransfer.DataFlavor flavor]
     (-> this (.getTransferData flavor))))
 
 (defn lost-ownership

@@ -43,7 +43,7 @@
 
   returns: The byte stream that was set with setOutputStream, or null
    if setOutputStream or the ByteStream constructor was not called. - `java.io.OutputStream`"
-  ([^javax.xml.transform.stream.StreamResult this]
+  (^java.io.OutputStream [^javax.xml.transform.stream.StreamResult this]
     (-> this (.getOutputStream))))
 
 (defn set-writer
@@ -63,7 +63,7 @@
 
   returns: The character stream that was set with setWriter, or null
    if setWriter or the Writer constructor was not called. - `java.io.Writer`"
-  ([^javax.xml.transform.stream.StreamResult this]
+  (^java.io.Writer [^javax.xml.transform.stream.StreamResult this]
     (-> this (.getWriter))))
 
 (defn set-system-id
@@ -80,6 +80,6 @@
 
   returns: The system identifier that was set with setSystemId, or null
    if setSystemId was not called. - `java.lang.String`"
-  ([^javax.xml.transform.stream.StreamResult this]
+  (^java.lang.String [^javax.xml.transform.stream.StreamResult this]
     (-> this (.getSystemId))))
 

@@ -29,7 +29,7 @@
   returns: the menu component containing this menu component,
                    or null if this menu component
                    is the outermost component, the menu bar itself - `java.awt.MenuContainer`"
-  ([^java.awt.PopupMenu this]
+  (^java.awt.MenuContainer [^java.awt.PopupMenu this]
     (-> this (.getParent))))
 
 (defn add-notify
@@ -64,6 +64,6 @@
 
   returns: the AccessibleContext of this
                   PopupMenu - `javax.accessibility.AccessibleContext`"
-  ([^java.awt.PopupMenu this]
+  (^javax.accessibility.AccessibleContext [^java.awt.PopupMenu this]
     (-> this (.getAccessibleContext))))
 

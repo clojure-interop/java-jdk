@@ -73,7 +73,7 @@
    to this connector server. - `javax.management.remote.JMXConnector`
 
   throws: java.lang.UnsupportedOperationException - if this connector server does not support the generation of client stubs."
-  ([^javax.management.remote.rmi.RMIConnectorServer this ^java.util.Map env]
+  (^javax.management.remote.JMXConnector [^javax.management.remote.rmi.RMIConnectorServer this ^java.util.Map env]
     (-> this (.toJMXConnector env))))
 
 (defn start
@@ -174,7 +174,7 @@
   "Description copied from interface: JMXConnectorServerMBean
 
   returns: true if the connector server is active. - `boolean`"
-  ([^javax.management.remote.rmi.RMIConnectorServer this]
+  (^Boolean [^javax.management.remote.rmi.RMIConnectorServer this]
     (-> this (.isActive))))
 
 (defn get-address
@@ -182,7 +182,7 @@
 
   returns: the address of this connector server, or null if it
    does not have one. - `javax.management.remote.JMXServiceURL`"
-  ([^javax.management.remote.rmi.RMIConnectorServer this]
+  (^javax.management.remote.JMXServiceURL [^javax.management.remote.rmi.RMIConnectorServer this]
     (-> this (.getAddress))))
 
 (defn get-attributes
@@ -192,7 +192,7 @@
    connector server.  Attributes whose values are not serializable
    are omitted from this map.  If there are no serializable
    attributes, the returned map is empty. - `java.util.Map<java.lang.String,?>`"
-  ([^javax.management.remote.rmi.RMIConnectorServer this]
+  (^java.util.Map [^javax.management.remote.rmi.RMIConnectorServer this]
     (-> this (.getAttributes))))
 
 (defn set-m-bean-server-forwarder

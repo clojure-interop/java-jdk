@@ -44,7 +44,7 @@
   "Get the type of this service. For example, MessageDigest.
 
   returns: the type of this service - `java.lang.String`"
-  ([^java.security.Provider$Service this]
+  (^java.lang.String [^java.security.Provider$Service this]
     (-> this (.getType))))
 
 (defn get-algorithm
@@ -52,21 +52,21 @@
    SHA-1.
 
   returns: the algorithm of this service - `java.lang.String`"
-  ([^java.security.Provider$Service this]
+  (^java.lang.String [^java.security.Provider$Service this]
     (-> this (.getAlgorithm))))
 
 (defn get-provider
   "Return the Provider of this service.
 
   returns: the Provider of this service - `java.security.Provider`"
-  ([^java.security.Provider$Service this]
+  (^java.security.Provider [^java.security.Provider$Service this]
     (-> this (.getProvider))))
 
 (defn get-class-name
   "Return the name of the class implementing this service.
 
   returns: the name of the class implementing this service - `java.lang.String`"
-  ([^java.security.Provider$Service this]
+  (^java.lang.String [^java.security.Provider$Service this]
     (-> this (.getClassName))))
 
 (defn get-attribute
@@ -79,7 +79,7 @@
            attribute is not present - `java.lang.String`
 
   throws: java.lang.NullPointerException - if name is null"
-  ([^java.security.Provider$Service this ^java.lang.String name]
+  (^java.lang.String [^java.security.Provider$Service this ^java.lang.String name]
     (-> this (.getAttribute name))))
 
 (defn new-instance
@@ -103,7 +103,7 @@
   returns: a new implementation of this service - `java.lang.Object`
 
   throws: java.security.InvalidParameterException - if the value of constructorParameter is invalid for this type of service."
-  ([^java.security.Provider$Service this ^java.lang.Object constructor-parameter]
+  (^java.lang.Object [^java.security.Provider$Service this ^java.lang.Object constructor-parameter]
     (-> this (.newInstance constructor-parameter))))
 
 (defn supports-parameter
@@ -130,13 +130,13 @@
    parameter; true if it can possibly use the parameter - `boolean`
 
   throws: java.security.InvalidParameterException - if the value of parameter is invalid for this type of service or if this method cannot be used with this type of service"
-  ([^java.security.Provider$Service this ^java.lang.Object parameter]
+  (^Boolean [^java.security.Provider$Service this ^java.lang.Object parameter]
     (-> this (.supportsParameter parameter))))
 
 (defn to-string
   "Return a String representation of this service.
 
   returns: a String representation of this service. - `java.lang.String`"
-  ([^java.security.Provider$Service this]
+  (^java.lang.String [^java.security.Provider$Service this]
     (-> this (.toString))))
 

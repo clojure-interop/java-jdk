@@ -133,7 +133,7 @@
    registered. - `boolean`
 
   throws: java.lang.IllegalArgumentException - if provider is null."
-  ([^javax.imageio.spi.ServiceRegistry this ^java.lang.Object provider]
+  (^Boolean [^javax.imageio.spi.ServiceRegistry this ^java.lang.Object provider]
     (-> this (.contains provider))))
 
 (defn deregister-all
@@ -245,7 +245,7 @@
 
   returns: an Iterator containing
    Classobjects. - `java.util.Iterator<java.lang.Class<?>>`"
-  ([^javax.imageio.spi.ServiceRegistry this]
+  (^java.util.Iterator> [^javax.imageio.spi.ServiceRegistry this]
     (-> this (.getCategories))))
 
 (defn register-service-provider

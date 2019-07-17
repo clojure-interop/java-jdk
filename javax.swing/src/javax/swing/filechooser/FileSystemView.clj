@@ -20,7 +20,7 @@
 
 (defn *get-file-system-view
   "returns: `javax.swing.filechooser.FileSystemView`"
-  ([]
+  (^javax.swing.filechooser.FileSystemView []
     (FileSystemView/getFileSystemView )))
 
 (defn computer-node?
@@ -32,7 +32,7 @@
   dir - a directory - `java.io.File`
 
   returns: false always - `boolean`"
-  ([^javax.swing.filechooser.FileSystemView this ^java.io.File dir]
+  (^Boolean [^javax.swing.filechooser.FileSystemView this ^java.io.File dir]
     (-> this (.isComputerNode dir))))
 
 (defn get-files
@@ -52,9 +52,9 @@
   filename - `java.lang.String`
 
   returns: `java.io.File`"
-  ([^javax.swing.filechooser.FileSystemView this ^java.io.File dir ^java.lang.String filename]
+  (^java.io.File [^javax.swing.filechooser.FileSystemView this ^java.io.File dir ^java.lang.String filename]
     (-> this (.createFileObject dir filename)))
-  ([^javax.swing.filechooser.FileSystemView this ^java.lang.String path]
+  (^java.io.File [^javax.swing.filechooser.FileSystemView this ^java.lang.String path]
     (-> this (.createFileObject path))))
 
 (defn get-default-directory
@@ -62,7 +62,7 @@
 
   returns: a File object representing the default
            starting folder - `java.io.File`"
-  ([^javax.swing.filechooser.FileSystemView this]
+  (^java.io.File [^javax.swing.filechooser.FileSystemView this]
     (-> this (.getDefaultDirectory))))
 
 (defn get-parent-directory
@@ -72,7 +72,7 @@
 
   returns: the parent directory of dir, or
      null if dir is null - `java.io.File`"
-  ([^javax.swing.filechooser.FileSystemView this ^java.io.File dir]
+  (^java.io.File [^javax.swing.filechooser.FileSystemView this ^java.io.File dir]
     (-> this (.getParentDirectory dir))))
 
 (defn get-system-display-name
@@ -85,12 +85,12 @@
   f - a File object - `java.io.File`
 
   returns: the file name as it would be displayed by a native file chooser - `java.lang.String`"
-  ([^javax.swing.filechooser.FileSystemView this ^java.io.File f]
+  (^java.lang.String [^javax.swing.filechooser.FileSystemView this ^java.io.File f]
     (-> this (.getSystemDisplayName f))))
 
 (defn get-home-directory
   "returns: `java.io.File`"
-  ([^javax.swing.filechooser.FileSystemView this]
+  (^java.io.File [^javax.swing.filechooser.FileSystemView this]
     (-> this (.getHomeDirectory))))
 
 (defn file-system-root?
@@ -100,7 +100,7 @@
   dir - a File object representing a directory - `java.io.File`
 
   returns: true if f is a root of a filesystem - `boolean`"
-  ([^javax.swing.filechooser.FileSystemView this ^java.io.File dir]
+  (^Boolean [^javax.swing.filechooser.FileSystemView this ^java.io.File dir]
     (-> this (.isFileSystemRoot dir))))
 
 (defn get-system-icon
@@ -113,7 +113,7 @@
   f - a File object - `java.io.File`
 
   returns: an icon as it would be displayed by a native file chooser - `javax.swing.Icon`"
-  ([^javax.swing.filechooser.FileSystemView this ^java.io.File f]
+  (^javax.swing.Icon [^javax.swing.filechooser.FileSystemView this ^java.io.File f]
     (-> this (.getSystemIcon f))))
 
 (defn parent?
@@ -125,7 +125,7 @@
   file - a File object - `java.io.File`
 
   returns: true if folder is a directory or special folder and contains file. - `boolean`"
-  ([^javax.swing.filechooser.FileSystemView this ^java.io.File folder ^java.io.File file]
+  (^Boolean [^javax.swing.filechooser.FileSystemView this ^java.io.File folder ^java.io.File file]
     (-> this (.isParent folder file))))
 
 (defn floppy-drive?
@@ -137,7 +137,7 @@
   dir - a directory - `java.io.File`
 
   returns: false always - `boolean`"
-  ([^javax.swing.filechooser.FileSystemView this ^java.io.File dir]
+  (^Boolean [^javax.swing.filechooser.FileSystemView this ^java.io.File dir]
     (-> this (.isFloppyDrive dir))))
 
 (defn traversable?
@@ -147,7 +147,7 @@
   f - the File - `java.io.File`
 
   returns: true if the file/directory can be traversed, otherwise false - `java.lang.Boolean`"
-  ([^javax.swing.filechooser.FileSystemView this ^java.io.File f]
+  (^java.lang.Boolean [^javax.swing.filechooser.FileSystemView this ^java.io.File f]
     (-> this (.isTraversable f))))
 
 (defn get-system-type-description
@@ -161,7 +161,7 @@
 
   returns: the file type description as it would be displayed by a native file chooser
    or null if no native information is available. - `java.lang.String`"
-  ([^javax.swing.filechooser.FileSystemView this ^java.io.File f]
+  (^java.lang.String [^javax.swing.filechooser.FileSystemView this ^java.io.File f]
     (-> this (.getSystemTypeDescription f))))
 
 (defn get-child
@@ -172,7 +172,7 @@
    File(parent, fileName) except when parent and child are both
    special folders, in which case the File is a wrapper containing
    a ShellFolder object. - `java.io.File`"
-  ([^javax.swing.filechooser.FileSystemView this ^java.io.File parent ^java.lang.String file-name]
+  (^java.io.File [^javax.swing.filechooser.FileSystemView this ^java.io.File parent ^java.lang.String file-name]
     (-> this (.getChild parent file-name))))
 
 (defn file-system?
@@ -183,7 +183,7 @@
   f - a File object - `java.io.File`
 
   returns: true if f is a real file or directory. - `boolean`"
-  ([^javax.swing.filechooser.FileSystemView this ^java.io.File f]
+  (^Boolean [^javax.swing.filechooser.FileSystemView this ^java.io.File f]
     (-> this (.isFileSystem f))))
 
 (defn get-roots
@@ -201,7 +201,7 @@
   f - `java.io.File`
 
   returns: `boolean`"
-  ([^javax.swing.filechooser.FileSystemView this ^java.io.File f]
+  (^Boolean [^javax.swing.filechooser.FileSystemView this ^java.io.File f]
     (-> this (.isHiddenFile f))))
 
 (defn root?
@@ -215,7 +215,7 @@
   f - a File object representing a directory - `java.io.File`
 
   returns: true if f is a root in the navigable tree. - `boolean`"
-  ([^javax.swing.filechooser.FileSystemView this ^java.io.File f]
+  (^Boolean [^javax.swing.filechooser.FileSystemView this ^java.io.File f]
     (-> this (.isRoot f))))
 
 (defn drive?
@@ -227,7 +227,7 @@
   dir - a directory - `java.io.File`
 
   returns: false always - `boolean`"
-  ([^javax.swing.filechooser.FileSystemView this ^java.io.File dir]
+  (^Boolean [^javax.swing.filechooser.FileSystemView this ^java.io.File dir]
     (-> this (.isDrive dir))))
 
 (defn create-new-folder
@@ -238,6 +238,6 @@
   returns: `java.io.File`
 
   throws: java.io.IOException"
-  ([^javax.swing.filechooser.FileSystemView this ^java.io.File containing-dir]
+  (^java.io.File [^javax.swing.filechooser.FileSystemView this ^java.io.File containing-dir]
     (-> this (.createNewFolder containing-dir))))
 

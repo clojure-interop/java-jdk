@@ -138,6 +138,6 @@
    compliant MXBean interface - `boolean`
 
   throws: java.lang.NullPointerException - if interfaceClass is null."
-  ([^java.lang.Class interface-class]
+  (^Boolean [^java.lang.Class interface-class]
     (JMX/isMXBeanInterface interface-class)))
 

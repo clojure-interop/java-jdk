@@ -77,7 +77,7 @@
   returns: the value 0 if x == y;
            a value less than 0 if x < y; and
            a value greater than 0 if x > y - `int`"
-  ([^Short x ^Short y]
+  (^Integer [^Short x ^Short y]
     (Short/compare x y)))
 
 (defn *value-of
@@ -104,9 +104,9 @@
                     specified radix. - `java.lang.Short`
 
   throws: java.lang.NumberFormatException - If the String does not contain a parsable short."
-  ([^java.lang.String s ^Integer radix]
+  (^java.lang.Short [^java.lang.String s ^Integer radix]
     (Short/valueOf s radix))
-  ([^java.lang.String s]
+  (^java.lang.Short [^java.lang.String s]
     (Short/valueOf s)))
 
 (defn *parse-short
@@ -145,9 +145,9 @@
                     argument in the specified radix. - `short`
 
   throws: java.lang.NumberFormatException - If the String does not contain a parsable short."
-  ([^java.lang.String s ^Integer radix]
+  (^Short [^java.lang.String s ^Integer radix]
     (Short/parseShort s radix))
-  ([^java.lang.String s]
+  (^Short [^java.lang.String s]
     (Short/parseShort s)))
 
 (defn *decode
@@ -189,7 +189,7 @@
               value represented by nm - `java.lang.Short`
 
   throws: java.lang.NumberFormatException - if the String does not contain a parsable short."
-  ([^java.lang.String nm]
+  (^java.lang.Short [^java.lang.String nm]
     (Short/decode nm)))
 
 (defn *to-string
@@ -199,7 +199,7 @@
   s - the short to be converted - `short`
 
   returns: the string representation of the specified short - `java.lang.String`"
-  ([^Short s]
+  (^java.lang.String [^Short s]
     (Short/toString s)))
 
 (defn *reverse-bytes
@@ -210,7 +210,7 @@
 
   returns: the value obtained by reversing (or, equivalently, swapping)
        the bytes in the specified short value. - `short`"
-  ([^Short i]
+  (^Short [^Short i]
     (Short/reverseBytes i)))
 
 (defn *to-unsigned-int
@@ -227,7 +227,7 @@
 
   returns: the argument converted to int by an unsigned
            conversion - `int`"
-  ([^Short x]
+  (^Integer [^Short x]
     (Short/toUnsignedInt x)))
 
 (defn *hash-code
@@ -237,7 +237,7 @@
   value - the value to hash - `short`
 
   returns: a hash code value for a short value. - `int`"
-  ([^Short value]
+  (^Integer [^Short value]
     (Short/hashCode value)))
 
 (defn *to-unsigned-long
@@ -254,7 +254,7 @@
 
   returns: the argument converted to long by an unsigned
            conversion - `long`"
-  ([^Short x]
+  (^Long [^Short x]
     (Short/toUnsignedLong x)))
 
 (defn short-value
@@ -263,7 +263,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type short. - `short`"
-  ([^java.lang.Short this]
+  (^Short [^java.lang.Short this]
     (-> this (.shortValue))))
 
 (defn double-value
@@ -272,7 +272,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type double. - `double`"
-  ([^java.lang.Short this]
+  (^Double [^java.lang.Short this]
     (-> this (.doubleValue))))
 
 (defn long-value
@@ -281,7 +281,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type long. - `long`"
-  ([^java.lang.Short this]
+  (^Long [^java.lang.Short this]
     (-> this (.longValue))))
 
 (defn byte-value
@@ -290,7 +290,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type byte. - `byte`"
-  ([^java.lang.Short this]
+  (^Byte [^java.lang.Short this]
     (-> this (.byteValue))))
 
 (defn to-string
@@ -302,7 +302,7 @@
 
   returns: a string representation of the value of this object in
             base 10. - `java.lang.String`"
-  ([^java.lang.Short this]
+  (^java.lang.String [^java.lang.Short this]
     (-> this (.toString))))
 
 (defn float-value
@@ -311,7 +311,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type float. - `float`"
-  ([^java.lang.Short this]
+  (^Float [^java.lang.Short this]
     (-> this (.floatValue))))
 
 (defn int-value
@@ -320,7 +320,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type int. - `int`"
-  ([^java.lang.Short this]
+  (^Integer [^java.lang.Short this]
     (-> this (.intValue))))
 
 (defn hash-code
@@ -328,7 +328,7 @@
    of invoking intValue().
 
   returns: a hash code value for this Short - `int`"
-  ([^java.lang.Short this]
+  (^Integer [^java.lang.Short this]
     (-> this (.hashCode))))
 
 (defn compare-to
@@ -343,7 +343,7 @@
              0 if this Short is numerically
              greater than the argument Short (signed
              comparison). - `int`"
-  ([^java.lang.Short this ^java.lang.Short another-short]
+  (^Integer [^java.lang.Short this ^java.lang.Short another-short]
     (-> this (.compareTo another-short))))
 
 (defn equals
@@ -356,6 +356,6 @@
 
   returns: true if the objects are the same;
                     false otherwise. - `boolean`"
-  ([^java.lang.Short this ^java.lang.Object obj]
+  (^Boolean [^java.lang.Short this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

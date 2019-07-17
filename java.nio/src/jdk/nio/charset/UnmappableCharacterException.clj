@@ -19,13 +19,13 @@
   "Returns the length of the input.
 
   returns: the length of the input - `int`"
-  ([^java.nio.charset.UnmappableCharacterException this]
+  (^Integer [^java.nio.charset.UnmappableCharacterException this]
     (-> this (.getInputLength))))
 
 (defn get-message
   "Returns the message.
 
   returns: the message - `java.lang.String`"
-  ([^java.nio.charset.UnmappableCharacterException this]
+  (^java.lang.String [^java.nio.charset.UnmappableCharacterException this]
     (-> this (.getMessage))))
 

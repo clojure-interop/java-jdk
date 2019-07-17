@@ -28,7 +28,7 @@
   "Returns the group's activation system.
 
   returns: the group's activation system - `java.rmi.activation.ActivationSystem`"
-  ([^java.rmi.activation.ActivationGroupID this]
+  (^java.rmi.activation.ActivationSystem [^java.rmi.activation.ActivationGroupID this]
     (-> this (.getSystem))))
 
 (defn hash-code
@@ -37,7 +37,7 @@
    same hash code.
 
   returns: a hash code value for this object. - `int`"
-  ([^java.rmi.activation.ActivationGroupID this]
+  (^Integer [^java.rmi.activation.ActivationGroupID this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -50,6 +50,6 @@
   obj - the Object to compare with - `java.lang.Object`
 
   returns: true if these Objects are equal; false otherwise. - `boolean`"
-  ([^java.rmi.activation.ActivationGroupID this ^java.lang.Object obj]
+  (^Boolean [^java.rmi.activation.ActivationGroupID this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

@@ -54,7 +54,7 @@
              the parent may choose to resize or break the view - `float`
 
   throws: java.lang.IllegalArgumentException - for an invalid axis type"
-  ([^javax.swing.text.html.BlockView this ^Integer axis]
+  (^Float [^javax.swing.text.html.BlockView this ^Integer axis]
     (-> this (.getPreferredSpan axis))))
 
 (defn get-minimum-span
@@ -69,7 +69,7 @@
              the parent may choose to resize or break the view - `float`
 
   throws: java.lang.IllegalArgumentException - for an invalid axis type"
-  ([^javax.swing.text.html.BlockView this ^Integer axis]
+  (^Float [^javax.swing.text.html.BlockView this ^Integer axis]
     (-> this (.getMinimumSpan axis))))
 
 (defn get-maximum-span
@@ -84,7 +84,7 @@
              the parent may choose to resize or break the view - `float`
 
   throws: java.lang.IllegalArgumentException - for an invalid axis type"
-  ([^javax.swing.text.html.BlockView this ^Integer axis]
+  (^Float [^javax.swing.text.html.BlockView this ^Integer axis]
     (-> this (.getMaximumSpan axis))))
 
 (defn paint
@@ -104,7 +104,7 @@
   axis - may be either X_AXIS or Y_AXIS - `int`
 
   returns: the alignment - `float`"
-  ([^javax.swing.text.html.BlockView this ^Integer axis]
+  (^Float [^javax.swing.text.html.BlockView this ^Integer axis]
     (-> this (.getAlignment axis))))
 
 (defn get-resize-weight
@@ -115,7 +115,7 @@
   returns: the weight - `int`
 
   throws: java.lang.IllegalArgumentException - for an invalid axis"
-  ([^javax.swing.text.html.BlockView this ^Integer axis]
+  (^Integer [^javax.swing.text.html.BlockView this ^Integer axis]
     (-> this (.getResizeWeight axis))))
 
 (defn get-attributes
@@ -124,6 +124,6 @@
    model with a StyleSheet.
 
   returns: `javax.swing.text.AttributeSet`"
-  ([^javax.swing.text.html.BlockView this]
+  (^javax.swing.text.AttributeSet [^javax.swing.text.html.BlockView this]
     (-> this (.getAttributes))))
 

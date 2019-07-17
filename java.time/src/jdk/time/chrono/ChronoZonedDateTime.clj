@@ -60,7 +60,7 @@
   returns: a ChronoZonedDateTime based on this date-time with the earlier offset, not null - `java.time.chrono.ChronoZonedDateTime<ChronoZonedDateTime.D>`
 
   throws: java.time.DateTimeException - if no rules are valid for this date-time"
-  ([^java.time.chrono.ChronoZonedDateTime this]
+  (^java.time.chrono.ChronoZonedDateTime [^java.time.chrono.ChronoZonedDateTime this]
     (-> this (.withEarlierOffsetAtOverlap))))
 
 (defn is-equal
@@ -97,7 +97,7 @@
   returns: an object of the same type with the specified period added, not null - `java.time.chrono.ChronoZonedDateTime<ChronoZonedDateTime.D>`
 
   throws: java.time.DateTimeException - if the unit cannot be added"
-  ([^java.time.chrono.ChronoZonedDateTime this ^Long amount-to-add ^java.time.temporal.TemporalUnit unit]
+  (^java.time.chrono.ChronoZonedDateTime [^java.time.chrono.ChronoZonedDateTime this ^Long amount-to-add ^java.time.temporal.TemporalUnit unit]
     (-> this (.plus amount-to-add unit)))
   ([^java.time.chrono.ChronoZonedDateTime this ^java.time.temporal.TemporalAmount amount]
     (-> this (.plus amount))))
@@ -113,7 +113,7 @@
    The underlying comparison is equivalent to comparing the epoch-second and nano-of-second.
 
   returns: a comparator that compares in time-line order ignoring the chronology - `java.util.Comparator<java.time.chrono.ChronoZonedDateTime<?>>`"
-  ([]
+  (^java.util.Comparator> []
     (ChronoZonedDateTime/timeLineOrder )))
 
 (defn query
@@ -142,7 +142,7 @@
    The output will include the full zoned date-time.
 
   returns: a string representation of this date-time, not null - `java.lang.String`"
-  ([^java.time.chrono.ChronoZonedDateTime this]
+  (^java.lang.String [^java.time.chrono.ChronoZonedDateTime this]
     (-> this (.toString))))
 
 (defn is-before
@@ -199,7 +199,7 @@
   zone - the time-zone to change to, not null - `java.time.ZoneId`
 
   returns: a ChronoZonedDateTime based on this date-time with the requested zone, not null - `java.time.chrono.ChronoZonedDateTime<ChronoZonedDateTime.D>`"
-  ([^java.time.chrono.ChronoZonedDateTime this ^java.time.ZoneId zone]
+  (^java.time.chrono.ChronoZonedDateTime [^java.time.chrono.ChronoZonedDateTime this ^java.time.ZoneId zone]
     (-> this (.withZoneSameLocal zone))))
 
 (defn with-zone-same-instant
@@ -220,7 +220,7 @@
   returns: a ChronoZonedDateTime based on this date-time with the requested zone, not null - `java.time.chrono.ChronoZonedDateTime<ChronoZonedDateTime.D>`
 
   throws: java.time.DateTimeException - if the result exceeds the supported date range"
-  ([^java.time.chrono.ChronoZonedDateTime this ^java.time.ZoneId zone]
+  (^java.time.chrono.ChronoZonedDateTime [^java.time.chrono.ChronoZonedDateTime this ^java.time.ZoneId zone]
     (-> this (.withZoneSameInstant zone))))
 
 (defn to-local-time
@@ -248,7 +248,7 @@
    This is the offset of the local date-time from UTC/Greenwich.
 
   returns: the zone offset, not null - `java.time.ZoneOffset`"
-  ([^java.time.chrono.ChronoZonedDateTime this]
+  (^java.time.ZoneOffset [^java.time.chrono.ChronoZonedDateTime this]
     (-> this (.getOffset))))
 
 (defn to-epoch-second
@@ -281,7 +281,7 @@
   returns: a ChronoZonedDateTime based on this date-time with the later offset, not null - `java.time.chrono.ChronoZonedDateTime<ChronoZonedDateTime.D>`
 
   throws: java.time.DateTimeException - if no rules are valid for this date-time"
-  ([^java.time.chrono.ChronoZonedDateTime this]
+  (^java.time.chrono.ChronoZonedDateTime [^java.time.chrono.ChronoZonedDateTime this]
     (-> this (.withLaterOffsetAtOverlap))))
 
 (defn get-zone
@@ -290,7 +290,7 @@
    This returns the stored time-zone id used to determine the time-zone rules.
 
   returns: the zone ID, not null - `java.time.ZoneId`"
-  ([^java.time.chrono.ChronoZonedDateTime this]
+  (^java.time.ZoneId [^java.time.chrono.ChronoZonedDateTime this]
     (-> this (.getZone))))
 
 (defn *from
@@ -314,7 +314,7 @@
   returns: the date-time, not null - `java.time.chrono.ChronoZonedDateTime<?>`
 
   throws: java.time.DateTimeException - if unable to convert to a ChronoZonedDateTime"
-  ([^java.time.temporal.TemporalAccessor temporal]
+  (^java.time.chrono.ChronoZonedDateTime [^java.time.temporal.TemporalAccessor temporal]
     (ChronoZonedDateTime/from temporal)))
 
 (defn is-after
@@ -352,7 +352,7 @@
   field - the field to check, null returns false - `java.time.temporal.TemporalField`
 
   returns: true if the field can be queried, false if not - `boolean`"
-  ([^java.time.chrono.ChronoZonedDateTime this ^java.time.temporal.TemporalField field]
+  (^Boolean [^java.time.chrono.ChronoZonedDateTime this ^java.time.temporal.TemporalField field]
     (-> this (.isSupported field))))
 
 (defn get-chronology
@@ -379,7 +379,7 @@
   "A hash code for this date-time.
 
   returns: a suitable hash code - `int`"
-  ([^java.time.chrono.ChronoZonedDateTime this]
+  (^Integer [^java.time.chrono.ChronoZonedDateTime this]
     (-> this (.hashCode))))
 
 (defn with
@@ -400,7 +400,7 @@
   returns: an object of the same type with the specified field set, not null - `java.time.chrono.ChronoZonedDateTime<ChronoZonedDateTime.D>`
 
   throws: java.time.DateTimeException - if the field cannot be set"
-  ([^java.time.chrono.ChronoZonedDateTime this ^java.time.temporal.TemporalField field ^Long new-value]
+  (^java.time.chrono.ChronoZonedDateTime [^java.time.chrono.ChronoZonedDateTime this ^java.time.temporal.TemporalField field ^Long new-value]
     (-> this (.with field new-value)))
   ([^java.time.chrono.ChronoZonedDateTime this ^java.time.temporal.TemporalAdjuster adjuster]
     (-> this (.with adjuster))))
@@ -412,7 +412,7 @@
    as this date-time.
 
   returns: the local date-time part of this date-time, not null - `java.time.chrono.ChronoLocalDateTime<ChronoZonedDateTime.D>`"
-  ([^java.time.chrono.ChronoZonedDateTime this]
+  (^java.time.chrono.ChronoLocalDateTime [^java.time.chrono.ChronoZonedDateTime this]
     (-> this (.toLocalDateTime))))
 
 (defn compare-to
@@ -452,7 +452,7 @@
   obj - the object to check, null returns false - `java.lang.Object`
 
   returns: true if this is equal to the other date-time - `boolean`"
-  ([^java.time.chrono.ChronoZonedDateTime this ^java.lang.Object obj]
+  (^Boolean [^java.time.chrono.ChronoZonedDateTime this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn format

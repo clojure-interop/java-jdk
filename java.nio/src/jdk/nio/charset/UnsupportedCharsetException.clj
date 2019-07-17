@@ -17,6 +17,6 @@
   "Retrieves the name of the unsupported charset.
 
   returns: The name of the unsupported charset - `java.lang.String`"
-  ([^java.nio.charset.UnsupportedCharsetException this]
+  (^java.lang.String [^java.nio.charset.UnsupportedCharsetException this]
     (-> this (.getCharsetName))))
 

@@ -248,7 +248,7 @@
 
   returns: an AffineTransform object that represents a
     translation transformation, created with the specified vector. - `java.awt.geom.AffineTransform`"
-  ([^Double tx ^Double ty]
+  (^java.awt.geom.AffineTransform [^Double tx ^Double ty]
     (AffineTransform/getTranslateInstance tx ty)))
 
 (defn *get-rotate-instance
@@ -275,13 +275,13 @@
   returns: an AffineTransform object that rotates
     coordinates around the specified point according to the
     specified rotation vector. - `java.awt.geom.AffineTransform`"
-  ([^Double vecx ^Double vecy ^Double anchorx ^Double anchory]
+  (^java.awt.geom.AffineTransform [^Double vecx ^Double vecy ^Double anchorx ^Double anchory]
     (AffineTransform/getRotateInstance vecx vecy anchorx anchory))
-  ([^Double theta ^Double anchorx ^Double anchory]
+  (^java.awt.geom.AffineTransform [^Double theta ^Double anchorx ^Double anchory]
     (AffineTransform/getRotateInstance theta anchorx anchory))
-  ([^Double vecx ^Double vecy]
+  (^java.awt.geom.AffineTransform [^Double vecx ^Double vecy]
     (AffineTransform/getRotateInstance vecx vecy))
-  ([^Double theta]
+  (^java.awt.geom.AffineTransform [^Double theta]
     (AffineTransform/getRotateInstance theta)))
 
 (defn *get-quadrant-rotate-instance
@@ -302,9 +302,9 @@
   returns: an AffineTransform object that rotates
     coordinates by the specified number of quadrants around the
     specified anchor point. - `java.awt.geom.AffineTransform`"
-  ([^Integer numquadrants ^Double anchorx ^Double anchory]
+  (^java.awt.geom.AffineTransform [^Integer numquadrants ^Double anchorx ^Double anchory]
     (AffineTransform/getQuadrantRotateInstance numquadrants anchorx anchory))
-  ([^Integer numquadrants]
+  (^java.awt.geom.AffineTransform [^Integer numquadrants]
     (AffineTransform/getQuadrantRotateInstance numquadrants)))
 
 (defn *get-scale-instance
@@ -321,7 +321,7 @@
 
   returns: an AffineTransform object that scales
     coordinates by the specified factors. - `java.awt.geom.AffineTransform`"
-  ([^Double sx ^Double sy]
+  (^java.awt.geom.AffineTransform [^Double sx ^Double sy]
     (AffineTransform/getScaleInstance sx sy)))
 
 (defn *get-shear-instance
@@ -338,7 +338,7 @@
 
   returns: an AffineTransform object that shears
     coordinates by the specified multipliers. - `java.awt.geom.AffineTransform`"
-  ([^Double shx ^Double shy]
+  (^java.awt.geom.AffineTransform [^Double shx ^Double shy]
     (AffineTransform/getShearInstance shx shy)))
 
 (defn invert
@@ -376,7 +376,7 @@
 
   returns: the OR combination of any of the indicated flags that
    apply to this transform - `int`"
-  ([^java.awt.geom.AffineTransform this]
+  (^Integer [^java.awt.geom.AffineTransform this]
     (-> this (.getType))))
 
 (defn identity?
@@ -385,7 +385,7 @@
 
   returns: true if this AffineTransform is
    an identity transform; false otherwise. - `boolean`"
-  ([^java.awt.geom.AffineTransform this]
+  (^Boolean [^java.awt.geom.AffineTransform this]
     (-> this (.isIdentity))))
 
 (defn translate
@@ -424,7 +424,7 @@
 
   returns: a double value that is the Y coordinate of the translation
     element of the affine transformation matrix. - `double`"
-  ([^java.awt.geom.AffineTransform this]
+  (^Double [^java.awt.geom.AffineTransform this]
     (-> this (.getTranslateY))))
 
 (defn delta-transform
@@ -453,7 +453,7 @@
   num-pts - the number of vector coordinate pairs to be transformed - `int`"
   ([^java.awt.geom.AffineTransform this src-pts ^Integer src-off dst-pts ^Integer dst-off ^Integer num-pts]
     (-> this (.deltaTransform src-pts src-off dst-pts dst-off num-pts)))
-  ([^java.awt.geom.AffineTransform this ^java.awt.geom.Point2D pt-src ^java.awt.geom.Point2D pt-dst]
+  (^java.awt.geom.Point2D [^java.awt.geom.AffineTransform this ^java.awt.geom.Point2D pt-src ^java.awt.geom.Point2D pt-dst]
     (-> this (.deltaTransform pt-src pt-dst))))
 
 (defn transform
@@ -483,9 +483,9 @@
   pt-dst - the array into which the transform point objects are returned - `java.awt.geom.Point2D[]`
   dst-off - the offset to the location of the first transformed point object that is stored in the destination array - `int`
   num-pts - the number of point objects to be transformed - `int`"
-  ([^java.awt.geom.AffineTransform this ^java.awt.geom.Point2D[] pt-src ^Integer src-off ^java.awt.geom.Point2D[] pt-dst ^Integer dst-off ^Integer num-pts]
+  ([^java.awt.geom.AffineTransform this pt-src ^Integer src-off pt-dst ^Integer dst-off ^Integer num-pts]
     (-> this (.transform pt-src src-off pt-dst dst-off num-pts)))
-  ([^java.awt.geom.AffineTransform this ^java.awt.geom.Point2D pt-src ^java.awt.geom.Point2D pt-dst]
+  (^java.awt.geom.Point2D [^java.awt.geom.AffineTransform this ^java.awt.geom.Point2D pt-src ^java.awt.geom.Point2D pt-dst]
     (-> this (.transform pt-src pt-dst))))
 
 (defn to-string
@@ -494,7 +494,7 @@
 
   returns: a String representing the value of this
    Object. - `java.lang.String`"
-  ([^java.awt.geom.AffineTransform this]
+  (^java.lang.String [^java.awt.geom.AffineTransform this]
     (-> this (.toString))))
 
 (defn get-shear-y
@@ -503,7 +503,7 @@
 
   returns: a double value that is the Y coordinate of the shearing
     element of the affine transformation matrix. - `double`"
-  ([^java.awt.geom.AffineTransform this]
+  (^Double [^java.awt.geom.AffineTransform this]
     (-> this (.getShearY))))
 
 (defn set-to-shear
@@ -540,7 +540,7 @@
    inverse transformation. - `java.awt.geom.AffineTransform`
 
   throws: java.awt.geom.NoninvertibleTransformException - if the matrix cannot be inverted."
-  ([^java.awt.geom.AffineTransform this]
+  (^java.awt.geom.AffineTransform [^java.awt.geom.AffineTransform this]
     (-> this (.createInverse))))
 
 (defn set-to-identity
@@ -568,7 +568,7 @@
 
   returns: a double value that is the X coordinate of the translation
     element of the affine transformation matrix. - `double`"
-  ([^java.awt.geom.AffineTransform this]
+  (^Double [^java.awt.geom.AffineTransform this]
     (-> this (.getTranslateX))))
 
 (defn set-to-rotation
@@ -649,7 +649,7 @@
 
   returns: a double value that is the X coordinate of the scaling
     element of the affine transformation matrix. - `double`"
-  ([^java.awt.geom.AffineTransform this]
+  (^Double [^java.awt.geom.AffineTransform this]
     (-> this (.getScaleX))))
 
 (defn get-shear-x
@@ -658,7 +658,7 @@
 
   returns: a double value that is the X coordinate of the shearing
     element of the affine transformation matrix. - `double`"
-  ([^java.awt.geom.AffineTransform this]
+  (^Double [^java.awt.geom.AffineTransform this]
     (-> this (.getShearX))))
 
 (defn create-transformed-shape
@@ -670,7 +670,7 @@
 
   returns: a new Shape object that defines the geometry
    of the transformed Shape, or null if pSrc is null. - `java.awt.Shape`"
-  ([^java.awt.geom.AffineTransform this ^java.awt.Shape p-src]
+  (^java.awt.Shape [^java.awt.geom.AffineTransform this ^java.awt.Shape p-src]
     (-> this (.createTransformedShape p-src))))
 
 (defn clone
@@ -678,14 +678,14 @@
 
   returns: an Object that is a copy of this
    AffineTransform object. - `java.lang.Object`"
-  ([^java.awt.geom.AffineTransform this]
+  (^java.lang.Object [^java.awt.geom.AffineTransform this]
     (-> this (.clone))))
 
 (defn hash-code
   "Returns the hashcode for this transform.
 
   returns: a hash code for this transform. - `int`"
-  ([^java.awt.geom.AffineTransform this]
+  (^Integer [^java.awt.geom.AffineTransform this]
     (-> this (.hashCode))))
 
 (defn set-to-quadrant-rotation
@@ -727,7 +727,7 @@
   throws: java.awt.geom.NoninvertibleTransformException - if the matrix cannot be inverted."
   ([^java.awt.geom.AffineTransform this src-pts ^Integer src-off dst-pts ^Integer dst-off ^Integer num-pts]
     (-> this (.inverseTransform src-pts src-off dst-pts dst-off num-pts)))
-  ([^java.awt.geom.AffineTransform this ^java.awt.geom.Point2D pt-src ^java.awt.geom.Point2D pt-dst]
+  (^java.awt.geom.Point2D [^java.awt.geom.AffineTransform this ^java.awt.geom.Point2D pt-src ^java.awt.geom.Point2D pt-dst]
     (-> this (.inverseTransform pt-src pt-dst))))
 
 (defn shear
@@ -826,7 +826,7 @@
 
   returns: true if obj equals this
    AffineTransform object; false otherwise. - `boolean`"
-  ([^java.awt.geom.AffineTransform this ^java.lang.Object obj]
+  (^Boolean [^java.awt.geom.AffineTransform this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn get-scale-y
@@ -835,7 +835,7 @@
 
   returns: a double value that is the Y coordinate of the scaling
     element of the affine transformation matrix. - `double`"
-  ([^java.awt.geom.AffineTransform this]
+  (^Double [^java.awt.geom.AffineTransform this]
     (-> this (.getScaleY))))
 
 (defn get-determinant
@@ -873,7 +873,7 @@
 
   returns: the determinant of the matrix used to transform the
    coordinates. - `double`"
-  ([^java.awt.geom.AffineTransform this]
+  (^Double [^java.awt.geom.AffineTransform this]
     (-> this (.getDeterminant))))
 
 (defn concatenate

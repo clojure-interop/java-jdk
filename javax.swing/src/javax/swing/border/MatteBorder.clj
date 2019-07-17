@@ -49,9 +49,9 @@
   insets - the object to be reinitialized - `java.awt.Insets`
 
   returns: the insets object - `java.awt.Insets`"
-  ([^javax.swing.border.MatteBorder this ^java.awt.Component c ^java.awt.Insets insets]
+  (^java.awt.Insets [^javax.swing.border.MatteBorder this ^java.awt.Component c ^java.awt.Insets insets]
     (-> this (.getBorderInsets c insets)))
-  ([^javax.swing.border.MatteBorder this]
+  (^java.awt.Insets [^javax.swing.border.MatteBorder this]
     (-> this (.getBorderInsets))))
 
 (defn get-matte-color
@@ -59,7 +59,7 @@
    if a tile icon is being used.
 
   returns: `java.awt.Color`"
-  ([^javax.swing.border.MatteBorder this]
+  (^java.awt.Color [^javax.swing.border.MatteBorder this]
     (-> this (.getMatteColor))))
 
 (defn get-tile-icon
@@ -67,13 +67,13 @@
    if a solid color is being used.
 
   returns: `javax.swing.Icon`"
-  ([^javax.swing.border.MatteBorder this]
+  (^javax.swing.Icon [^javax.swing.border.MatteBorder this]
     (-> this (.getTileIcon))))
 
 (defn border-opaque?
   "Returns whether or not the border is opaque.
 
   returns: false - `boolean`"
-  ([^javax.swing.border.MatteBorder this]
+  (^Boolean [^javax.swing.border.MatteBorder this]
     (-> this (.isBorderOpaque))))
 

@@ -14,7 +14,7 @@
    retrieved the network resource.
 
   returns: a string representing the cipher suite - `java.lang.String`"
-  ([^java.net.SecureCacheResponse this]
+  (^java.lang.String [^java.net.SecureCacheResponse this]
     (-> this (.getCipherSuite))))
 
 (defn get-local-certificate-chain
@@ -26,7 +26,7 @@
   returns: an immutable List of Certificate representing the
              certificate chain that was sent to the server. If no
              certificate chain was sent, null will be returned. - `java.util.List<java.security.cert.Certificate>`"
-  ([^java.net.SecureCacheResponse this]
+  (^java.util.List [^java.net.SecureCacheResponse this]
     (-> this (.getLocalCertificateChain))))
 
 (defn get-server-certificate-chain
@@ -41,7 +41,7 @@
            certificate chain. - `java.util.List<java.security.cert.Certificate>`
 
   throws: javax.net.ssl.SSLPeerUnverifiedException - if the peer is not verified."
-  ([^java.net.SecureCacheResponse this]
+  (^java.util.List [^java.net.SecureCacheResponse this]
     (-> this (.getServerCertificateChain))))
 
 (defn get-peer-principal
@@ -54,7 +54,7 @@
    KerberosPrincipal for Kerberos cipher suites. - `java.security.Principal`
 
   throws: javax.net.ssl.SSLPeerUnverifiedException - if the peer was not verified."
-  ([^java.net.SecureCacheResponse this]
+  (^java.security.Principal [^java.net.SecureCacheResponse this]
     (-> this (.getPeerPrincipal))))
 
 (defn get-local-principal
@@ -66,6 +66,6 @@
    of the end-entity certificate for X509-based cipher suites, and
    KerberosPrincipal for Kerberos cipher suites. If no principal was
    sent, then null is returned. - `java.security.Principal`"
-  ([^java.net.SecureCacheResponse this]
+  (^java.security.Principal [^java.net.SecureCacheResponse this]
     (-> this (.getLocalPrincipal))))
 

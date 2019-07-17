@@ -58,9 +58,9 @@
   zone - the zone ID to use, not null - `java.time.ZoneId`
 
   returns: the current date using the system clock, not null - `java.time.LocalDate`"
-  ([^java.time.ZoneId zone]
+  (^java.time.LocalDate [^java.time.ZoneId zone]
     (LocalDate/now zone))
-  ([]
+  (^java.time.LocalDate []
     (LocalDate/now )))
 
 (defn *of
@@ -76,7 +76,7 @@
   returns: the local date, not null - `java.time.LocalDate`
 
   throws: java.time.DateTimeException - if the value of any field is out of range, or if the day-of-month is invalid for the month-year"
-  ([^Integer year ^java.time.Month month ^Integer day-of-month]
+  (^java.time.LocalDate [^Integer year ^java.time.Month month ^Integer day-of-month]
     (LocalDate/of year month day-of-month)))
 
 (defn *of-year-day
@@ -91,7 +91,7 @@
   returns: the local date, not null - `java.time.LocalDate`
 
   throws: java.time.DateTimeException - if the value of any field is out of range, or if the day-of-year is invalid for the year"
-  ([^Integer year ^Integer day-of-year]
+  (^java.time.LocalDate [^Integer year ^Integer day-of-year]
     (LocalDate/ofYearDay year day-of-year)))
 
 (defn *of-epoch-day
@@ -106,7 +106,7 @@
   returns: the local date, not null - `java.time.LocalDate`
 
   throws: java.time.DateTimeException - if the epoch day exceeds the supported date range"
-  ([^Long epoch-day]
+  (^java.time.LocalDate [^Long epoch-day]
     (LocalDate/ofEpochDay epoch-day)))
 
 (defn *from
@@ -127,7 +127,7 @@
   returns: the local date, not null - `java.time.LocalDate`
 
   throws: java.time.DateTimeException - if unable to convert to a LocalDate"
-  ([^java.time.temporal.TemporalAccessor temporal]
+  (^java.time.LocalDate [^java.time.temporal.TemporalAccessor temporal]
     (LocalDate/from temporal)))
 
 (defn *parse
@@ -141,9 +141,9 @@
   returns: the parsed local date, not null - `java.time.LocalDate`
 
   throws: java.time.format.DateTimeParseException - if the text cannot be parsed"
-  ([^java.lang.CharSequence text ^java.time.format.DateTimeFormatter formatter]
+  (^java.time.LocalDate [^java.lang.CharSequence text ^java.time.format.DateTimeFormatter formatter]
     (LocalDate/parse text formatter))
-  ([^java.lang.CharSequence text]
+  (^java.time.LocalDate [^java.lang.CharSequence text]
     (LocalDate/parse text)))
 
 (defn minus-weeks
@@ -162,7 +162,7 @@
   returns: a LocalDate based on this date with the weeks subtracted, not null - `java.time.LocalDate`
 
   throws: java.time.DateTimeException - if the result exceeds the supported date range"
-  ([^java.time.LocalDate this ^Long weeks-to-subtract]
+  (^java.time.LocalDate [^java.time.LocalDate this ^Long weeks-to-subtract]
     (-> this (.minusWeeks weeks-to-subtract))))
 
 (defn plus-weeks
@@ -181,7 +181,7 @@
   returns: a LocalDate based on this date with the weeks added, not null - `java.time.LocalDate`
 
   throws: java.time.DateTimeException - if the result exceeds the supported date range"
-  ([^java.time.LocalDate this ^Long weeks-to-add]
+  (^java.time.LocalDate [^java.time.LocalDate this ^Long weeks-to-add]
     (-> this (.plusWeeks weeks-to-add))))
 
 (defn length-of-year
@@ -190,7 +190,7 @@
    This returns the length of the year in days, either 365 or 366.
 
   returns: 366 if the year is leap, 365 otherwise - `int`"
-  ([^java.time.LocalDate this]
+  (^Integer [^java.time.LocalDate this]
     (-> this (.lengthOfYear))))
 
 (defn range
@@ -216,7 +216,7 @@
   returns: the range of valid values for the field, not null - `java.time.temporal.ValueRange`
 
   throws: java.time.DateTimeException - if the range for the field cannot be obtained"
-  ([^java.time.LocalDate this ^java.time.temporal.TemporalField field]
+  (^java.time.temporal.ValueRange [^java.time.LocalDate this ^java.time.temporal.TemporalField field]
     (-> this (.range field))))
 
 (defn get-era
@@ -236,7 +236,7 @@
    in IsoChronology using the == operator.
 
   returns: the IsoChronology era constant applicable at this date, not null - `java.time.chrono.Era`"
-  ([^java.time.LocalDate this]
+  (^java.time.chrono.Era [^java.time.LocalDate this]
     (-> this (.getEra))))
 
 (defn with-month
@@ -251,7 +251,7 @@
   returns: a LocalDate based on this date with the requested month, not null - `java.time.LocalDate`
 
   throws: java.time.DateTimeException - if the month-of-year value is invalid"
-  ([^java.time.LocalDate this ^Integer month]
+  (^java.time.LocalDate [^java.time.LocalDate this ^Integer month]
     (-> this (.withMonth month))))
 
 (defn equal?
@@ -275,7 +275,7 @@
   other - the other date to compare to, not null - `java.time.chrono.ChronoLocalDate`
 
   returns: true if this date is equal to the specified date - `boolean`"
-  ([^java.time.LocalDate this ^java.time.chrono.ChronoLocalDate other]
+  (^Boolean [^java.time.LocalDate this ^java.time.chrono.ChronoLocalDate other]
     (-> this (.isEqual other))))
 
 (defn get-year
@@ -287,14 +287,14 @@
    To obtain the year-of-era, use get(YEAR_OF_ERA).
 
   returns: the year, from MIN_YEAR to MAX_YEAR - `int`"
-  ([^java.time.LocalDate this]
+  (^Integer [^java.time.LocalDate this]
     (-> this (.getYear))))
 
 (defn to-epoch-day
   "Description copied from interface: ChronoLocalDate
 
   returns: the Epoch Day equivalent to this date - `long`"
-  ([^java.time.LocalDate this]
+  (^Long [^java.time.LocalDate this]
     (-> this (.toEpochDay))))
 
 (defn get-day-of-year
@@ -303,7 +303,7 @@
    This method returns the primitive int value for the day-of-year.
 
   returns: the day-of-year, from 1 to 365, or 366 in a leap year - `int`"
-  ([^java.time.LocalDate this]
+  (^Integer [^java.time.LocalDate this]
     (-> this (.getDayOfYear))))
 
 (defn plus
@@ -386,9 +386,9 @@
   returns: a LocalDate based on this date with the specified amount added, not null - `java.time.LocalDate`
 
   throws: java.time.DateTimeException - if the addition cannot be made"
-  ([^java.time.LocalDate this ^Long amount-to-add ^java.time.temporal.TemporalUnit unit]
+  (^java.time.LocalDate [^java.time.LocalDate this ^Long amount-to-add ^java.time.temporal.TemporalUnit unit]
     (-> this (.plus amount-to-add unit)))
-  ([^java.time.LocalDate this ^java.time.temporal.TemporalAmount amount-to-add]
+  (^java.time.LocalDate [^java.time.LocalDate this ^java.time.temporal.TemporalAmount amount-to-add]
     (-> this (.plus amount-to-add))))
 
 (defn leap-year?
@@ -408,7 +408,7 @@
    This is historically inaccurate, but is correct for the ISO-8601 standard.
 
   returns: true if the year is leap, false otherwise - `boolean`"
-  ([^java.time.LocalDate this]
+  (^Boolean [^java.time.LocalDate this]
     (-> this (.isLeapYear))))
 
 (defn query
@@ -443,7 +443,7 @@
    This includes textual names of the values.
 
   returns: the day-of-week, not null - `java.time.DayOfWeek`"
-  ([^java.time.LocalDate this]
+  (^java.time.DayOfWeek [^java.time.LocalDate this]
     (-> this (.getDayOfWeek))))
 
 (defn to-string
@@ -452,7 +452,7 @@
    The output will be in the ISO-8601 format uuuu-MM-dd.
 
   returns: a string representation of this date, not null - `java.lang.String`"
-  ([^java.time.LocalDate this]
+  (^java.lang.String [^java.time.LocalDate this]
     (-> this (.toString))))
 
 (defn plus-months
@@ -476,7 +476,7 @@
   returns: a LocalDate based on this date with the months added, not null - `java.time.LocalDate`
 
   throws: java.time.DateTimeException - if the result exceeds the supported date range"
-  ([^java.time.LocalDate this ^Long months-to-add]
+  (^java.time.LocalDate [^java.time.LocalDate this ^Long months-to-add]
     (-> this (.plusMonths months-to-add))))
 
 (defn before?
@@ -500,7 +500,7 @@
   other - the other date to compare to, not null - `java.time.chrono.ChronoLocalDate`
 
   returns: true if this date is before the specified date - `boolean`"
-  ([^java.time.LocalDate this ^java.time.chrono.ChronoLocalDate other]
+  (^Boolean [^java.time.LocalDate this ^java.time.chrono.ChronoLocalDate other]
     (-> this (.isBefore other))))
 
 (defn minus-months
@@ -524,7 +524,7 @@
   returns: a LocalDate based on this date with the months subtracted, not null - `java.time.LocalDate`
 
   throws: java.time.DateTimeException - if the result exceeds the supported date range"
-  ([^java.time.LocalDate this ^Long months-to-subtract]
+  (^java.time.LocalDate [^java.time.LocalDate this ^Long months-to-subtract]
     (-> this (.minusMonths months-to-subtract))))
 
 (defn minus
@@ -545,9 +545,9 @@
   returns: a LocalDate based on this date with the specified amount subtracted, not null - `java.time.LocalDate`
 
   throws: java.time.DateTimeException - if the subtraction cannot be made"
-  ([^java.time.LocalDate this ^Long amount-to-subtract ^java.time.temporal.TemporalUnit unit]
+  (^java.time.LocalDate [^java.time.LocalDate this ^Long amount-to-subtract ^java.time.temporal.TemporalUnit unit]
     (-> this (.minus amount-to-subtract unit)))
-  ([^java.time.LocalDate this ^java.time.temporal.TemporalAmount amount-to-subtract]
+  (^java.time.LocalDate [^java.time.LocalDate this ^java.time.temporal.TemporalAmount amount-to-subtract]
     (-> this (.minus amount-to-subtract))))
 
 (defn plus-days
@@ -566,7 +566,7 @@
   returns: a LocalDate based on this date with the days added, not null - `java.time.LocalDate`
 
   throws: java.time.DateTimeException - if the result exceeds the supported date range"
-  ([^java.time.LocalDate this ^Long days-to-add]
+  (^java.time.LocalDate [^java.time.LocalDate this ^Long days-to-add]
     (-> this (.plusDays days-to-add))))
 
 (defn get-long
@@ -591,7 +591,7 @@
   returns: the value for the field - `long`
 
   throws: java.time.DateTimeException - if a value for the field cannot be obtained"
-  ([^java.time.LocalDate this ^java.time.temporal.TemporalField field]
+  (^Long [^java.time.LocalDate this ^java.time.temporal.TemporalField field]
     (-> this (.getLong field))))
 
 (defn with-year
@@ -606,7 +606,7 @@
   returns: a LocalDate based on this date with the requested year, not null - `java.time.LocalDate`
 
   throws: java.time.DateTimeException - if the year value is invalid"
-  ([^java.time.LocalDate this ^Integer year]
+  (^java.time.LocalDate [^java.time.LocalDate this ^Integer year]
     (-> this (.withYear year))))
 
 (defn length-of-month
@@ -616,7 +616,7 @@
    For example, a date in January would return 31.
 
   returns: the length of the month in days - `int`"
-  ([^java.time.LocalDate this]
+  (^Integer [^java.time.LocalDate this]
     (-> this (.lengthOfMonth))))
 
 (defn until
@@ -664,9 +664,9 @@
   returns: the amount of time between this date and the end date - `long`
 
   throws: java.time.DateTimeException - if the amount cannot be calculated, or the end temporal cannot be converted to a LocalDate"
-  ([^java.time.LocalDate this ^java.time.temporal.Temporal end-exclusive ^java.time.temporal.TemporalUnit unit]
+  (^Long [^java.time.LocalDate this ^java.time.temporal.Temporal end-exclusive ^java.time.temporal.TemporalUnit unit]
     (-> this (.until end-exclusive unit)))
-  ([^java.time.LocalDate this ^java.time.chrono.ChronoLocalDate end-date-exclusive]
+  (^java.time.Period [^java.time.LocalDate this ^java.time.chrono.ChronoLocalDate end-date-exclusive]
     (-> this (.until end-date-exclusive))))
 
 (defn with-day-of-month
@@ -681,7 +681,7 @@
   returns: a LocalDate based on this date with the requested day, not null - `java.time.LocalDate`
 
   throws: java.time.DateTimeException - if the day-of-month value is invalid, or if the day-of-month is invalid for the month-year"
-  ([^java.time.LocalDate this ^Integer day-of-month]
+  (^java.time.LocalDate [^java.time.LocalDate this ^Integer day-of-month]
     (-> this (.withDayOfMonth day-of-month))))
 
 (defn get-day-of-month
@@ -690,7 +690,7 @@
    This method returns the primitive int value for the day-of-month.
 
   returns: the day-of-month, from 1 to 31 - `int`"
-  ([^java.time.LocalDate this]
+  (^Integer [^java.time.LocalDate this]
     (-> this (.getDayOfMonth))))
 
 (defn after?
@@ -714,7 +714,7 @@
   other - the other date to compare to, not null - `java.time.chrono.ChronoLocalDate`
 
   returns: true if this date is after the specified date - `boolean`"
-  ([^java.time.LocalDate this ^java.time.chrono.ChronoLocalDate other]
+  (^Boolean [^java.time.LocalDate this ^java.time.chrono.ChronoLocalDate other]
     (-> this (.isAfter other))))
 
 (defn supported?
@@ -752,7 +752,7 @@
   field - the field to check, null returns false - `java.time.temporal.TemporalField`
 
   returns: true if the field is supported on this date, false if not - `boolean`"
-  ([^java.time.LocalDate this ^java.time.temporal.TemporalField field]
+  (^Boolean [^java.time.LocalDate this ^java.time.temporal.TemporalField field]
     (-> this (.isSupported field))))
 
 (defn minus-years
@@ -776,7 +776,7 @@
   returns: a LocalDate based on this date with the years subtracted, not null - `java.time.LocalDate`
 
   throws: java.time.DateTimeException - if the result exceeds the supported date range"
-  ([^java.time.LocalDate this ^Long years-to-subtract]
+  (^java.time.LocalDate [^java.time.LocalDate this ^Long years-to-subtract]
     (-> this (.minusYears years-to-subtract))))
 
 (defn get-chronology
@@ -788,14 +788,14 @@
    system, in which today's rules for leap years are applied for all time.
 
   returns: the ISO chronology, not null - `java.time.chrono.IsoChronology`"
-  ([^java.time.LocalDate this]
+  (^java.time.chrono.IsoChronology [^java.time.LocalDate this]
     (-> this (.getChronology))))
 
 (defn hash-code
   "A hash code for this date.
 
   returns: a suitable hash code - `int`"
-  ([^java.time.LocalDate this]
+  (^Integer [^java.time.LocalDate this]
     (-> this (.hashCode))))
 
 (defn adjust-into
@@ -822,7 +822,7 @@
   returns: the adjusted object, not null - `java.time.temporal.Temporal`
 
   throws: java.time.DateTimeException - if unable to make the adjustment"
-  ([^java.time.LocalDate this ^java.time.temporal.Temporal temporal]
+  (^java.time.temporal.Temporal [^java.time.LocalDate this ^java.time.temporal.Temporal temporal]
     (-> this (.adjustInto temporal))))
 
 (defn with
@@ -928,9 +928,9 @@
   returns: a LocalDate based on this with the specified field set, not null - `java.time.LocalDate`
 
   throws: java.time.DateTimeException - if the field cannot be set"
-  ([^java.time.LocalDate this ^java.time.temporal.TemporalField field ^Long new-value]
+  (^java.time.LocalDate [^java.time.LocalDate this ^java.time.temporal.TemporalField field ^Long new-value]
     (-> this (.with field new-value)))
-  ([^java.time.LocalDate this ^java.time.temporal.TemporalAdjuster adjuster]
+  (^java.time.LocalDate [^java.time.LocalDate this ^java.time.temporal.TemporalAdjuster adjuster]
     (-> this (.with adjuster))))
 
 (defn at-start-of-day
@@ -953,9 +953,9 @@
   zone - the zone ID to use, not null - `java.time.ZoneId`
 
   returns: the zoned date-time formed from this date and the earliest valid time for the zone, not null - `java.time.ZonedDateTime`"
-  ([^java.time.LocalDate this ^java.time.ZoneId zone]
+  (^java.time.ZonedDateTime [^java.time.LocalDate this ^java.time.ZoneId zone]
     (-> this (.atStartOfDay zone)))
-  ([^java.time.LocalDate this]
+  (^java.time.LocalDateTime [^java.time.LocalDate this]
     (-> this (.atStartOfDay))))
 
 (defn get-month-value
@@ -966,7 +966,7 @@
    is used by calling getMonth().
 
   returns: the month-of-year, from 1 to 12 - `int`"
-  ([^java.time.LocalDate this]
+  (^Integer [^java.time.LocalDate this]
     (-> this (.getMonthValue))))
 
 (defn with-day-of-year
@@ -981,7 +981,7 @@
   returns: a LocalDate based on this date with the requested day, not null - `java.time.LocalDate`
 
   throws: java.time.DateTimeException - if the day-of-year value is invalid, or if the day-of-year is invalid for the year"
-  ([^java.time.LocalDate this ^Integer day-of-year]
+  (^java.time.LocalDate [^java.time.LocalDate this ^Integer day-of-year]
     (-> this (.withDayOfYear day-of-year))))
 
 (defn compare-to
@@ -998,7 +998,7 @@
   other - the other date to compare to, not null - `java.time.chrono.ChronoLocalDate`
 
   returns: the comparator value, negative if less, positive if greater - `int`"
-  ([^java.time.LocalDate this ^java.time.chrono.ChronoLocalDate other]
+  (^Integer [^java.time.LocalDate this ^java.time.chrono.ChronoLocalDate other]
     (-> this (.compareTo other))))
 
 (defn get-month
@@ -1010,7 +1010,7 @@
    provides the int value.
 
   returns: the month-of-year, not null - `java.time.Month`"
-  ([^java.time.LocalDate this]
+  (^java.time.Month [^java.time.LocalDate this]
     (-> this (.getMonth))))
 
 (defn get
@@ -1037,7 +1037,7 @@
   returns: the value for the field - `int`
 
   throws: java.time.DateTimeException - if a value for the field cannot be obtained or the value is outside the range of valid values for the field"
-  ([^java.time.LocalDate this ^java.time.temporal.TemporalField field]
+  (^Integer [^java.time.LocalDate this ^java.time.temporal.TemporalField field]
     (-> this (.get field))))
 
 (defn equals
@@ -1052,7 +1052,7 @@
   obj - the object to check, null returns false - `java.lang.Object`
 
   returns: true if this is equal to the other date - `boolean`"
-  ([^java.time.LocalDate this ^java.lang.Object obj]
+  (^Boolean [^java.time.LocalDate this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn at-time
@@ -1071,13 +1071,13 @@
   returns: the local date-time formed from this date and the specified time, not null - `java.time.LocalDateTime`
 
   throws: java.time.DateTimeException - if the value of any field is out of range"
-  ([^java.time.LocalDate this ^Integer hour ^Integer minute ^Integer second ^Integer nano-of-second]
+  (^java.time.LocalDateTime [^java.time.LocalDate this ^Integer hour ^Integer minute ^Integer second ^Integer nano-of-second]
     (-> this (.atTime hour minute second nano-of-second)))
-  ([^java.time.LocalDate this ^Integer hour ^Integer minute ^Integer second]
+  (^java.time.LocalDateTime [^java.time.LocalDate this ^Integer hour ^Integer minute ^Integer second]
     (-> this (.atTime hour minute second)))
-  ([^java.time.LocalDate this ^Integer hour ^Integer minute]
+  (^java.time.LocalDateTime [^java.time.LocalDate this ^Integer hour ^Integer minute]
     (-> this (.atTime hour minute)))
-  ([^java.time.LocalDate this ^java.time.LocalTime time]
+  (^java.time.LocalDateTime [^java.time.LocalDate this ^java.time.LocalTime time]
     (-> this (.atTime time))))
 
 (defn format
@@ -1090,7 +1090,7 @@
   returns: the formatted date string, not null - `java.lang.String`
 
   throws: java.time.DateTimeException - if an error occurs during printing"
-  ([^java.time.LocalDate this ^java.time.format.DateTimeFormatter formatter]
+  (^java.lang.String [^java.time.LocalDate this ^java.time.format.DateTimeFormatter formatter]
     (-> this (.format formatter))))
 
 (defn plus-years
@@ -1114,7 +1114,7 @@
   returns: a LocalDate based on this date with the years added, not null - `java.time.LocalDate`
 
   throws: java.time.DateTimeException - if the result exceeds the supported date range"
-  ([^java.time.LocalDate this ^Long years-to-add]
+  (^java.time.LocalDate [^java.time.LocalDate this ^Long years-to-add]
     (-> this (.plusYears years-to-add))))
 
 (defn minus-days
@@ -1133,6 +1133,6 @@
   returns: a LocalDate based on this date with the days subtracted, not null - `java.time.LocalDate`
 
   throws: java.time.DateTimeException - if the result exceeds the supported date range"
-  ([^java.time.LocalDate this ^Long days-to-subtract]
+  (^java.time.LocalDate [^java.time.LocalDate this ^Long days-to-subtract]
     (-> this (.minusDays days-to-subtract))))
 

@@ -20,7 +20,7 @@
            if it hasn't been set - `javax.xml.bind.ValidationEventHandler`
 
   throws: javax.xml.bind.JAXBException - if an error was encountered while getting the current event handler"
-  ([^javax.xml.bind.Validator this]
+  (^javax.xml.bind.ValidationEventHandler [^javax.xml.bind.Validator this]
     (-> this (.getEventHandler))))
 
 (defn validate
@@ -32,7 +32,7 @@
            otherwise - `boolean`
 
   throws: javax.xml.bind.JAXBException - if any unexpected problem occurs during validation"
-  ([^javax.xml.bind.Validator this ^java.lang.Object subroot-obj]
+  (^Boolean [^javax.xml.bind.Validator this ^java.lang.Object subroot-obj]
     (-> this (.validate subroot-obj))))
 
 (defn validate-root
@@ -44,7 +44,7 @@
            otherwise - `boolean`
 
   throws: javax.xml.bind.JAXBException - if any unexpected problem occurs during validation"
-  ([^javax.xml.bind.Validator this ^java.lang.Object root-obj]
+  (^Boolean [^javax.xml.bind.Validator this ^java.lang.Object root-obj]
     (-> this (.validateRoot root-obj))))
 
 (defn set-property
@@ -65,6 +65,6 @@
   returns: the value of the requested property - `java.lang.Object`
 
   throws: javax.xml.bind.PropertyException - when there is an error retrieving the given property or value property name"
-  ([^javax.xml.bind.Validator this ^java.lang.String name]
+  (^java.lang.Object [^javax.xml.bind.Validator this ^java.lang.String name]
     (-> this (.getProperty name))))
 

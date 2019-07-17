@@ -63,7 +63,7 @@
    setting the value of this flag.
 
   returns: the current value of the RevocationEnabled flag - `boolean`"
-  ([^java.security.cert.PKIXParameters this]
+  (^Boolean [^java.security.cert.PKIXParameters this]
     (-> this (.isRevocationEnabled))))
 
 (defn get-policy-qualifiers-rejected?
@@ -78,7 +78,7 @@
    a more sophisticated policy must set this flag to false.
 
   returns: the current value of the PolicyQualifiersRejected flag - `boolean`"
-  ([^java.security.cert.PKIXParameters this]
+  (^Boolean [^java.security.cert.PKIXParameters this]
     (-> this (.getPolicyQualifiersRejected))))
 
 (defn set-policy-mapping-inhibited
@@ -124,7 +124,7 @@
 
   returns: an immutable List of CertStores
    (may be empty, but never null) - `java.util.List<java.security.cert.CertStore>`"
-  ([^java.security.cert.PKIXParameters this]
+  (^java.util.List [^java.security.cert.PKIXParameters this]
     (-> this (.getCertStores))))
 
 (defn set-date
@@ -213,14 +213,14 @@
 
   returns: true if explicit policy is required,
    false otherwise - `boolean`"
-  ([^java.security.cert.PKIXParameters this]
+  (^Boolean [^java.security.cert.PKIXParameters this]
     (-> this (.isExplicitPolicyRequired))))
 
 (defn to-string
   "Returns a formatted string describing the parameters.
 
   returns: a formatted string describing the parameters. - `java.lang.String`"
-  ([^java.security.cert.PKIXParameters this]
+  (^java.lang.String [^java.security.cert.PKIXParameters this]
     (-> this (.toString))))
 
 (defn any-policy-inhibited?
@@ -229,7 +229,7 @@
 
   returns: true if the any policy OID is inhibited,
    false otherwise - `boolean`"
-  ([^java.security.cert.PKIXParameters this]
+  (^Boolean [^java.security.cert.PKIXParameters this]
     (-> this (.isAnyPolicyInhibited))))
 
 (defn get-date
@@ -240,7 +240,7 @@
    subsequent modifications.
 
   returns: the Date, or null if not set - `java.util.Date`"
-  ([^java.security.cert.PKIXParameters this]
+  (^java.util.Date [^java.security.cert.PKIXParameters this]
     (-> this (.getDate))))
 
 (defn set-cert-path-checkers
@@ -283,7 +283,7 @@
    flag is false).
 
   returns: true if policy mapping is inhibited, false otherwise - `boolean`"
-  ([^java.security.cert.PKIXParameters this]
+  (^Boolean [^java.security.cert.PKIXParameters this]
     (-> this (.isPolicyMappingInhibited))))
 
 (defn get-trust-anchors
@@ -292,7 +292,7 @@
 
   returns: an immutable Set of TrustAnchors
    (never null) - `java.util.Set<java.security.cert.TrustAnchor>`"
-  ([^java.security.cert.PKIXParameters this]
+  (^java.util.Set [^java.security.cert.PKIXParameters this]
     (-> this (.getTrustAnchors))))
 
 (defn set-trust-anchors
@@ -312,7 +312,7 @@
    to the copy will not affect the original and vice versa.
 
   returns: a copy of this PKIXParameters object - `java.lang.Object`"
-  ([^java.security.cert.PKIXParameters this]
+  (^java.lang.Object [^java.security.cert.PKIXParameters this]
     (-> this (.clone))))
 
 (defn get-initial-policies
@@ -326,7 +326,7 @@
   returns: an immutable Set of initial policy OIDs in
    String format, or an empty Set (implying any
    policy is acceptable). Never returns null. - `java.util.Set<java.lang.String>`"
-  ([^java.security.cert.PKIXParameters this]
+  (^java.util.Set [^java.security.cert.PKIXParameters this]
     (-> this (.getInitialPolicies))))
 
 (defn get-cert-path-checkers
@@ -338,7 +338,7 @@
   returns: an immutable List of
    PKIXCertPathCheckers (may be empty, but not
    null) - `java.util.List<java.security.cert.PKIXCertPathChecker>`"
-  ([^java.security.cert.PKIXParameters this]
+  (^java.util.List [^java.security.cert.PKIXParameters this]
     (-> this (.getCertPathCheckers))))
 
 (defn set-initial-policies
@@ -369,7 +369,7 @@
 
   returns: a CertSelector specifying the constraints
    on the target certificate (or null) - `java.security.cert.CertSelector`"
-  ([^java.security.cert.PKIXParameters this]
+  (^java.security.cert.CertSelector [^java.security.cert.PKIXParameters this]
     (-> this (.getTargetCertConstraints))))
 
 (defn get-sig-provider
@@ -377,7 +377,7 @@
    if not set.
 
   returns: the signature provider's name (or null) - `java.lang.String`"
-  ([^java.security.cert.PKIXParameters this]
+  (^java.lang.String [^java.security.cert.PKIXParameters this]
     (-> this (.getSigProvider))))
 
 (defn set-target-cert-constraints

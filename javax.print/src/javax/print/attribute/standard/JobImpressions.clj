@@ -65,7 +65,7 @@
 
   returns: True if object is equivalent to this job
             impressions attribute, false otherwise. - `boolean`"
-  ([^javax.print.attribute.standard.JobImpressions this ^java.lang.Object object]
+  (^Boolean [^javax.print.attribute.standard.JobImpressions this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -87,6 +87,6 @@
    `job-impressions`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.JobImpressions this]
+  (^java.lang.String [^javax.print.attribute.standard.JobImpressions this]
     (-> this (.getName))))
 

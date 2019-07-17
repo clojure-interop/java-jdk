@@ -8,7 +8,7 @@
 
   returns: a Spliterator covering some portion of the
    elements, or null if this spliterator cannot be split - `Spliterator.OfPrimitive.T_SPLITR`"
-  ([^java.util.Spliterator$OfPrimitive> this]
+  (^Spliterator.OfPrimitive.T_SPLITR [^java.util.Spliterator$OfPrimitive> this]
     (-> this (.trySplit))))
 
 (defn try-advance
@@ -24,7 +24,7 @@
    upon entry to this method, else true. - `boolean`
 
   throws: java.lang.NullPointerException - if the specified action is null"
-  ([^java.util.Spliterator$OfPrimitive> this ^Spliterator.OfPrimitive.T_CONS action]
+  (^Boolean [^java.util.Spliterator$OfPrimitive> this ^Spliterator.OfPrimitive.T_CONS action]
     (-> this (.tryAdvance action))))
 
 (defn for-each-remaining

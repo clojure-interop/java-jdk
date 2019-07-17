@@ -104,7 +104,7 @@
    invoking the action on the MBean specified. - `java.lang.Object`
 
   throws: javax.management.MBeanException - Wraps a java.lang.Exception thrown by the MBean's invoked method."
-  ([^javax.management.StandardMBean this ^java.lang.String action-name ^java.lang.Object[] params ^java.lang.String[] signature]
+  (^java.lang.Object [^javax.management.StandardMBean this ^java.lang.String action-name params signature]
     (-> this (.invoke action-name params signature))))
 
 (defn set-implementation
@@ -152,14 +152,14 @@
   returns: The value of the attribute retrieved. - `java.lang.Object`
 
   throws: javax.management.AttributeNotFoundException"
-  ([^javax.management.StandardMBean this ^java.lang.String attribute]
+  (^java.lang.Object [^javax.management.StandardMBean this ^java.lang.String attribute]
     (-> this (.getAttribute attribute))))
 
 (defn get-implementation
   "Get the implementation of this Standard MBean (or MXBean).
 
   returns: The implementation of this Standard MBean (or MXBean). - `java.lang.Object`"
-  ([^javax.management.StandardMBean this]
+  (^java.lang.Object [^javax.management.StandardMBean this]
     (-> this (.getImplementation))))
 
 (defn get-m-bean-info
@@ -182,7 +182,7 @@
 
   returns: The cached MBeanInfo for that MBean, if not null, or a
            newly built MBeanInfo if none was cached. - `javax.management.MBeanInfo`"
-  ([^javax.management.StandardMBean this]
+  (^javax.management.MBeanInfo [^javax.management.StandardMBean this]
     (-> this (.getMBeanInfo))))
 
 (defn post-register
@@ -215,14 +215,14 @@
   "Get the class of the implementation of this Standard MBean (or MXBean).
 
   returns: The class of the implementation of this Standard MBean (or MXBean). - `java.lang.Class<?>`"
-  ([^javax.management.StandardMBean this]
+  (^java.lang.Class [^javax.management.StandardMBean this]
     (-> this (.getImplementationClass))))
 
 (defn get-m-bean-interface
   "Get the Management Interface of this Standard MBean (or MXBean).
 
   returns: The management interface of this Standard MBean (or MXBean). - `java.lang.Class<?>`"
-  ([^javax.management.StandardMBean this]
+  (^java.lang.Class [^javax.management.StandardMBean this]
     (-> this (.getMBeanInterface))))
 
 (defn set-attributes
@@ -231,7 +231,7 @@
   attributes - A list of attributes: The identification of the attributes to be set and the values they are to be set to. - `javax.management.AttributeList`
 
   returns: The list of attributes that were set, with their new values. - `javax.management.AttributeList`"
-  ([^javax.management.StandardMBean this ^javax.management.AttributeList attributes]
+  (^javax.management.AttributeList [^javax.management.StandardMBean this ^javax.management.AttributeList attributes]
     (-> this (.setAttributes attributes))))
 
 (defn pre-register
@@ -261,7 +261,7 @@
    the returned value. - `javax.management.ObjectName`
 
   throws: java.lang.IllegalArgumentException - if this is an MXBean and name is null."
-  ([^javax.management.StandardMBean this ^javax.management.MBeanServer server ^javax.management.ObjectName name]
+  (^javax.management.ObjectName [^javax.management.StandardMBean this ^javax.management.MBeanServer server ^javax.management.ObjectName name]
     (-> this (.preRegister server name))))
 
 (defn get-attributes
@@ -270,6 +270,6 @@
   attributes - A list of the attributes to be retrieved. - `java.lang.String[]`
 
   returns: The list of attributes retrieved. - `javax.management.AttributeList`"
-  ([^javax.management.StandardMBean this ^java.lang.String[] attributes]
+  (^javax.management.AttributeList [^javax.management.StandardMBean this attributes]
     (-> this (.getAttributes attributes))))
 

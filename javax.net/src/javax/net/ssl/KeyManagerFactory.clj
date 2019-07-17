@@ -16,7 +16,7 @@
   returns: the default algorithm name as specified by the
             ssl.KeyManagerFactory.algorithm security property, or an
             implementation-specific default if no such property exists. - `java.lang.String`"
-  ([]
+  (^java.lang.String []
     (KeyManagerFactory/getDefaultAlgorithm )))
 
 (defn *get-instance
@@ -37,9 +37,9 @@
   returns: the new KeyManagerFactory object. - `javax.net.ssl.KeyManagerFactory`
 
   throws: java.security.NoSuchAlgorithmException - if a KeyManagerFactorySpi implementation for the specified algorithm is not available from the specified provider."
-  ([^java.lang.String algorithm ^java.lang.String provider]
+  (^javax.net.ssl.KeyManagerFactory [^java.lang.String algorithm ^java.lang.String provider]
     (KeyManagerFactory/getInstance algorithm provider))
-  ([^java.lang.String algorithm]
+  (^javax.net.ssl.KeyManagerFactory [^java.lang.String algorithm]
     (KeyManagerFactory/getInstance algorithm)))
 
 (defn get-algorithm
@@ -50,14 +50,14 @@
    KeyManagerFactory object.
 
   returns: the algorithm name of this KeyManagerFactory object. - `java.lang.String`"
-  ([^javax.net.ssl.KeyManagerFactory this]
+  (^java.lang.String [^javax.net.ssl.KeyManagerFactory this]
     (-> this (.getAlgorithm))))
 
 (defn get-provider
   "Returns the provider of this KeyManagerFactory object.
 
   returns: the provider of this KeyManagerFactory object - `java.security.Provider`"
-  ([^javax.net.ssl.KeyManagerFactory this]
+  (^java.security.Provider [^javax.net.ssl.KeyManagerFactory this]
     (-> this (.getProvider))))
 
 (defn init

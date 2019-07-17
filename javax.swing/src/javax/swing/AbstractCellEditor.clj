@@ -28,7 +28,7 @@
   e - an event object - `java.util.EventObject`
 
   returns: true - `boolean`"
-  ([^javax.swing.AbstractCellEditor this ^java.util.EventObject e]
+  (^Boolean [^javax.swing.AbstractCellEditor this ^java.util.EventObject e]
     (-> this (.isCellEditable e))))
 
 (defn should-select-cell?
@@ -37,14 +37,14 @@
   an-event - an event object - `java.util.EventObject`
 
   returns: true - `boolean`"
-  ([^javax.swing.AbstractCellEditor this ^java.util.EventObject an-event]
+  (^Boolean [^javax.swing.AbstractCellEditor this ^java.util.EventObject an-event]
     (-> this (.shouldSelectCell an-event))))
 
 (defn stop-cell-editing
   "Calls fireEditingStopped and returns true.
 
   returns: true - `boolean`"
-  ([^javax.swing.AbstractCellEditor this]
+  (^Boolean [^javax.swing.AbstractCellEditor this]
     (-> this (.stopCellEditing))))
 
 (defn cancel-cell-editing

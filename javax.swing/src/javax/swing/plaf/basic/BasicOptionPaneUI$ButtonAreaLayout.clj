@@ -24,7 +24,7 @@
 
 (defn get-sync-all-widths?
   "returns: `boolean`"
-  ([^javax.swing.plaf.basic.BasicOptionPaneUI$ButtonAreaLayout this]
+  (^Boolean [^javax.swing.plaf.basic.BasicOptionPaneUI$ButtonAreaLayout this]
     (-> this (.getSyncAllWidths))))
 
 (defn preferred-layout-size
@@ -33,12 +33,12 @@
   c - the container to be laid out - `java.awt.Container`
 
   returns: `java.awt.Dimension`"
-  ([^javax.swing.plaf.basic.BasicOptionPaneUI$ButtonAreaLayout this ^java.awt.Container c]
+  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicOptionPaneUI$ButtonAreaLayout this ^java.awt.Container c]
     (-> this (.preferredLayoutSize c))))
 
 (defn get-centers-children?
   "returns: `boolean`"
-  ([^javax.swing.plaf.basic.BasicOptionPaneUI$ButtonAreaLayout this]
+  (^Boolean [^javax.swing.plaf.basic.BasicOptionPaneUI$ButtonAreaLayout this]
     (-> this (.getCentersChildren))))
 
 (defn minimum-layout-size
@@ -47,7 +47,7 @@
   c - the component to be laid out - `java.awt.Container`
 
   returns: `java.awt.Dimension`"
-  ([^javax.swing.plaf.basic.BasicOptionPaneUI$ButtonAreaLayout this ^java.awt.Container c]
+  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicOptionPaneUI$ButtonAreaLayout this ^java.awt.Container c]
     (-> this (.minimumLayoutSize c))))
 
 (defn set-padding
@@ -57,7 +57,7 @@
 
 (defn get-padding
   "returns: `int`"
-  ([^javax.swing.plaf.basic.BasicOptionPaneUI$ButtonAreaLayout this]
+  (^Integer [^javax.swing.plaf.basic.BasicOptionPaneUI$ButtonAreaLayout this]
     (-> this (.getPadding))))
 
 (defn set-centers-children

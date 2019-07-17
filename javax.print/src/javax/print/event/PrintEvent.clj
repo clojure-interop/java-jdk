@@ -18,6 +18,6 @@
   "Description copied from class: EventObject
 
   returns: a message describing the event - `java.lang.String`"
-  ([^javax.print.event.PrintEvent this]
+  (^java.lang.String [^javax.print.event.PrintEvent this]
     (-> this (.toString))))
 

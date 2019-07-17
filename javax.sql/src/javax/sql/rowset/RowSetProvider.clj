@@ -34,8 +34,8 @@
   returns: New instance of a RowSetFactory - `javax.sql.rowset.RowSetFactory`
 
   throws: java.sql.SQLException - if factoryClassName is null, or the factory class cannot be loaded, instantiated."
-  ([^java.lang.String factory-class-name ^java.lang.ClassLoader cl]
+  (^javax.sql.rowset.RowSetFactory [^java.lang.String factory-class-name ^java.lang.ClassLoader cl]
     (RowSetProvider/newFactory factory-class-name cl))
-  ([]
+  (^javax.sql.rowset.RowSetFactory []
     (RowSetProvider/newFactory )))
 

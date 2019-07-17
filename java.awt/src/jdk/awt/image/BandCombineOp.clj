@@ -67,7 +67,7 @@
   returns: The filtered Raster. - `java.awt.image.WritableRaster`
 
   throws: java.lang.IllegalArgumentException - If the number of bands in the source or destination is incompatible with the matrix."
-  ([^java.awt.image.BandCombineOp this ^java.awt.image.Raster src ^java.awt.image.WritableRaster dst]
+  (^java.awt.image.WritableRaster [^java.awt.image.BandCombineOp this ^java.awt.image.Raster src ^java.awt.image.WritableRaster dst]
     (-> this (.filter src dst))))
 
 (defn get-bounds-2-d
@@ -84,7 +84,7 @@
    image's bounding box. - `java.awt.geom.Rectangle2D`
 
   throws: java.lang.IllegalArgumentException - If the number of bands in the source is incompatible with the matrix."
-  ([^java.awt.image.BandCombineOp this ^java.awt.image.Raster src]
+  (^java.awt.geom.Rectangle2D [^java.awt.image.BandCombineOp this ^java.awt.image.Raster src]
     (-> this (.getBounds2D src))))
 
 (defn create-compatible-dest-raster
@@ -97,7 +97,7 @@
   src - The Raster to be filtered. - `java.awt.image.Raster`
 
   returns: The zeroed destination Raster. - `java.awt.image.WritableRaster`"
-  ([^java.awt.image.BandCombineOp this ^java.awt.image.Raster src]
+  (^java.awt.image.WritableRaster [^java.awt.image.BandCombineOp this ^java.awt.image.Raster src]
     (-> this (.createCompatibleDestRaster src))))
 
 (defn get-point-2-d
@@ -112,7 +112,7 @@
 
   returns: The Point2D in the destination image that
    corresponds to the specified point in the source image. - `java.awt.geom.Point2D`"
-  ([^java.awt.image.BandCombineOp this ^java.awt.geom.Point2D src-pt ^java.awt.geom.Point2D dst-pt]
+  (^java.awt.geom.Point2D [^java.awt.image.BandCombineOp this ^java.awt.geom.Point2D src-pt ^java.awt.geom.Point2D dst-pt]
     (-> this (.getPoint2D src-pt dst-pt))))
 
 (defn get-rendering-hints
@@ -120,6 +120,6 @@
 
   returns: The RenderingHints object associated with this
    operation.  Returns null if no hints have been set. - `java.awt.RenderingHints`"
-  ([^java.awt.image.BandCombineOp this]
+  (^java.awt.RenderingHints [^java.awt.image.BandCombineOp this]
     (-> this (.getRenderingHints))))
 

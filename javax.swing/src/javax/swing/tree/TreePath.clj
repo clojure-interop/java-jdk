@@ -56,14 +56,14 @@
   path - an array of objects representing the path to a node - `java.lang.Object[]`
 
   throws: java.lang.IllegalArgumentException - if path is null, empty, or contains a null value"
-  ([^java.lang.Object[] path]
+  ([path]
     (new TreePath path)))
 
 (defn get-path-count
   "Returns the number of elements in the path.
 
   returns: the number of elements in the path - `int`"
-  ([^javax.swing.tree.TreePath this]
+  (^Integer [^javax.swing.tree.TreePath this]
     (-> this (.getPathCount))))
 
 (defn get-parent-path
@@ -71,7 +71,7 @@
    null indicates this is the root node.
 
   returns: the parent path - `javax.swing.tree.TreePath`"
-  ([^javax.swing.tree.TreePath this]
+  (^javax.swing.tree.TreePath [^javax.swing.tree.TreePath this]
     (-> this (.getParentPath))))
 
 (defn path-by-adding-child
@@ -84,7 +84,7 @@
   returns: `javax.swing.tree.TreePath`
 
   throws: java.lang.NullPointerException - if child is null"
-  ([^javax.swing.tree.TreePath this ^java.lang.Object child]
+  (^javax.swing.tree.TreePath [^javax.swing.tree.TreePath this ^java.lang.Object child]
     (-> this (.pathByAddingChild child))))
 
 (defn to-string
@@ -92,7 +92,7 @@
    object's properties.
 
   returns: a String representation of this object - `java.lang.String`"
-  ([^javax.swing.tree.TreePath this]
+  (^java.lang.String [^javax.swing.tree.TreePath this]
     (-> this (.toString))))
 
 (defn get-path
@@ -111,7 +111,7 @@
   returns: the element at the specified index - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if the index is outside the range of this path"
-  ([^javax.swing.tree.TreePath this ^Integer index]
+  (^java.lang.Object [^javax.swing.tree.TreePath this ^Integer index]
     (-> this (.getPathComponent index))))
 
 (defn hash-code
@@ -119,7 +119,7 @@
    TreePath is the hash code of the last element in the path.
 
   returns: the hashCode for the object - `int`"
-  ([^javax.swing.tree.TreePath this]
+  (^Integer [^javax.swing.tree.TreePath this]
     (-> this (.hashCode))))
 
 (defn descendant?
@@ -141,14 +141,14 @@
   a-tree-path - the TreePath to check - `javax.swing.tree.TreePath`
 
   returns: true if aTreePath is a descendant of this path - `boolean`"
-  ([^javax.swing.tree.TreePath this ^javax.swing.tree.TreePath a-tree-path]
+  (^Boolean [^javax.swing.tree.TreePath this ^javax.swing.tree.TreePath a-tree-path]
     (-> this (.isDescendant a-tree-path))))
 
 (defn get-last-path-component
   "Returns the last element of this path.
 
   returns: the last element in the path - `java.lang.Object`"
-  ([^javax.swing.tree.TreePath this]
+  (^java.lang.Object [^javax.swing.tree.TreePath this]
     (-> this (.getLastPathComponent))))
 
 (defn equals
@@ -161,6 +161,6 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([^javax.swing.tree.TreePath this ^java.lang.Object o]
+  (^Boolean [^javax.swing.tree.TreePath this ^java.lang.Object o]
     (-> this (.equals o))))
 

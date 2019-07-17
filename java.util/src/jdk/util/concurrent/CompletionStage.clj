@@ -89,9 +89,9 @@
   executor - the executor to use for asynchronous execution - `java.util.concurrent.Executor`
 
   returns: the new CompletionStage - `java.util.concurrent.CompletionStage<java.lang.Void>`"
-  ([^java.util.concurrent.CompletionStage this ^java.util.concurrent.CompletionStage other ^java.lang.Runnable action ^java.util.concurrent.Executor executor]
+  (^java.util.concurrent.CompletionStage [^java.util.concurrent.CompletionStage this ^java.util.concurrent.CompletionStage other ^java.lang.Runnable action ^java.util.concurrent.Executor executor]
     (-> this (.runAfterEitherAsync other action executor)))
-  ([^java.util.concurrent.CompletionStage this ^java.util.concurrent.CompletionStage other ^java.lang.Runnable action]
+  (^java.util.concurrent.CompletionStage [^java.util.concurrent.CompletionStage this ^java.util.concurrent.CompletionStage other ^java.lang.Runnable action]
     (-> this (.runAfterEitherAsync other action))))
 
 (defn handle
@@ -122,7 +122,7 @@
   action - the action to perform before completing the returned CompletionStage - `CompletionStage.T>`
 
   returns: the new CompletionStage - `java.util.concurrent.CompletionStage<java.lang.Void>`"
-  ([^java.util.concurrent.CompletionStage this ^CompletionStage.T> other ^CompletionStage.T> action]
+  (^java.util.concurrent.CompletionStage [^java.util.concurrent.CompletionStage this ^CompletionStage.T> other ^CompletionStage.T> action]
     (-> this (.acceptEither other action))))
 
 (defn run-after-both
@@ -136,7 +136,7 @@
   action - the action to perform before completing the returned CompletionStage - `java.lang.Runnable`
 
   returns: the new CompletionStage - `java.util.concurrent.CompletionStage<java.lang.Void>`"
-  ([^java.util.concurrent.CompletionStage this ^java.util.concurrent.CompletionStage other ^java.lang.Runnable action]
+  (^java.util.concurrent.CompletionStage [^java.util.concurrent.CompletionStage this ^java.util.concurrent.CompletionStage other ^java.lang.Runnable action]
     (-> this (.runAfterBoth other action))))
 
 (defn when-complete-async
@@ -155,9 +155,9 @@
   executor - the executor to use for asynchronous execution - `java.util.concurrent.Executor`
 
   returns: the new CompletionStage - `java.util.concurrent.CompletionStage<CompletionStage.T>`"
-  ([^java.util.concurrent.CompletionStage this ^java.lang.Throwable> action ^java.util.concurrent.Executor executor]
+  (^java.util.concurrent.CompletionStage [^java.util.concurrent.CompletionStage this ^java.lang.Throwable> action ^java.util.concurrent.Executor executor]
     (-> this (.whenCompleteAsync action executor)))
-  ([^java.util.concurrent.CompletionStage this ^java.lang.Throwable> action]
+  (^java.util.concurrent.CompletionStage [^java.util.concurrent.CompletionStage this ^java.lang.Throwable> action]
     (-> this (.whenCompleteAsync action))))
 
 (defn then-accept-async
@@ -172,9 +172,9 @@
   executor - the executor to use for asynchronous execution - `java.util.concurrent.Executor`
 
   returns: the new CompletionStage - `java.util.concurrent.CompletionStage<java.lang.Void>`"
-  ([^java.util.concurrent.CompletionStage this ^CompletionStage.T> action ^java.util.concurrent.Executor executor]
+  (^java.util.concurrent.CompletionStage [^java.util.concurrent.CompletionStage this ^CompletionStage.T> action ^java.util.concurrent.Executor executor]
     (-> this (.thenAcceptAsync action executor)))
-  ([^java.util.concurrent.CompletionStage this ^CompletionStage.T> action]
+  (^java.util.concurrent.CompletionStage [^java.util.concurrent.CompletionStage this ^CompletionStage.T> action]
     (-> this (.thenAcceptAsync action))))
 
 (defn to-completable-future
@@ -190,7 +190,7 @@
   returns: the CompletableFuture - `java.util.concurrent.CompletableFuture<CompletionStage.T>`
 
   throws: java.lang.UnsupportedOperationException - if this implementation does not interoperate with CompletableFuture"
-  ([^java.util.concurrent.CompletionStage this]
+  (^java.util.concurrent.CompletableFuture [^java.util.concurrent.CompletionStage this]
     (-> this (.toCompletableFuture))))
 
 (defn then-accept-both
@@ -219,9 +219,9 @@
   executor - the executor to use for asynchronous execution - `java.util.concurrent.Executor`
 
   returns: the new CompletionStage - `java.util.concurrent.CompletionStage<java.lang.Void>`"
-  ([^java.util.concurrent.CompletionStage this ^java.lang.Runnable action ^java.util.concurrent.Executor executor]
+  (^java.util.concurrent.CompletionStage [^java.util.concurrent.CompletionStage this ^java.lang.Runnable action ^java.util.concurrent.Executor executor]
     (-> this (.thenRunAsync action executor)))
-  ([^java.util.concurrent.CompletionStage this ^java.lang.Runnable action]
+  (^java.util.concurrent.CompletionStage [^java.util.concurrent.CompletionStage this ^java.lang.Runnable action]
     (-> this (.thenRunAsync action))))
 
 (defn apply-to-either
@@ -266,9 +266,9 @@
   executor - the executor to use for asynchronous execution - `java.util.concurrent.Executor`
 
   returns: the new CompletionStage - `java.util.concurrent.CompletionStage<java.lang.Void>`"
-  ([^java.util.concurrent.CompletionStage this ^java.util.concurrent.CompletionStage other ^java.lang.Runnable action ^java.util.concurrent.Executor executor]
+  (^java.util.concurrent.CompletionStage [^java.util.concurrent.CompletionStage this ^java.util.concurrent.CompletionStage other ^java.lang.Runnable action ^java.util.concurrent.Executor executor]
     (-> this (.runAfterBothAsync other action executor)))
-  ([^java.util.concurrent.CompletionStage this ^java.util.concurrent.CompletionStage other ^java.lang.Runnable action]
+  (^java.util.concurrent.CompletionStage [^java.util.concurrent.CompletionStage this ^java.util.concurrent.CompletionStage other ^java.lang.Runnable action]
     (-> this (.runAfterBothAsync other action))))
 
 (defn accept-either-async
@@ -285,9 +285,9 @@
   executor - the executor to use for asynchronous execution - `java.util.concurrent.Executor`
 
   returns: the new CompletionStage - `java.util.concurrent.CompletionStage<java.lang.Void>`"
-  ([^java.util.concurrent.CompletionStage this ^CompletionStage.T> other ^CompletionStage.T> action ^java.util.concurrent.Executor executor]
+  (^java.util.concurrent.CompletionStage [^java.util.concurrent.CompletionStage this ^CompletionStage.T> other ^CompletionStage.T> action ^java.util.concurrent.Executor executor]
     (-> this (.acceptEitherAsync other action executor)))
-  ([^java.util.concurrent.CompletionStage this ^CompletionStage.T> other ^CompletionStage.T> action]
+  (^java.util.concurrent.CompletionStage [^java.util.concurrent.CompletionStage this ^CompletionStage.T> other ^CompletionStage.T> action]
     (-> this (.acceptEitherAsync other action))))
 
 (defn exceptionally
@@ -300,7 +300,7 @@
   fn - the function to use to compute the value of the returned CompletionStage if this CompletionStage completed exceptionally - `CompletionStage.T>`
 
   returns: the new CompletionStage - `java.util.concurrent.CompletionStage<CompletionStage.T>`"
-  ([^java.util.concurrent.CompletionStage this ^CompletionStage.T> fn]
+  (^java.util.concurrent.CompletionStage [^java.util.concurrent.CompletionStage this ^CompletionStage.T> fn]
     (-> this (.exceptionally fn))))
 
 (defn apply-to-either-async
@@ -336,7 +336,7 @@
   action - the action to perform - `java.lang.Throwable>`
 
   returns: the new CompletionStage - `java.util.concurrent.CompletionStage<CompletionStage.T>`"
-  ([^java.util.concurrent.CompletionStage this ^java.lang.Throwable> action]
+  (^java.util.concurrent.CompletionStage [^java.util.concurrent.CompletionStage this ^java.lang.Throwable> action]
     (-> this (.whenComplete action))))
 
 (defn run-after-either
@@ -350,7 +350,7 @@
   action - the action to perform before completing the returned CompletionStage - `java.lang.Runnable`
 
   returns: the new CompletionStage - `java.util.concurrent.CompletionStage<java.lang.Void>`"
-  ([^java.util.concurrent.CompletionStage this ^java.util.concurrent.CompletionStage other ^java.lang.Runnable action]
+  (^java.util.concurrent.CompletionStage [^java.util.concurrent.CompletionStage this ^java.util.concurrent.CompletionStage other ^java.lang.Runnable action]
     (-> this (.runAfterEither other action))))
 
 (defn then-accept
@@ -364,7 +364,7 @@
   action - the action to perform before completing the returned CompletionStage - `CompletionStage.T>`
 
   returns: the new CompletionStage - `java.util.concurrent.CompletionStage<java.lang.Void>`"
-  ([^java.util.concurrent.CompletionStage this ^CompletionStage.T> action]
+  (^java.util.concurrent.CompletionStage [^java.util.concurrent.CompletionStage this ^CompletionStage.T> action]
     (-> this (.thenAccept action))))
 
 (defn then-compose-async
@@ -429,7 +429,7 @@
   action - the action to perform before completing the returned CompletionStage - `java.lang.Runnable`
 
   returns: the new CompletionStage - `java.util.concurrent.CompletionStage<java.lang.Void>`"
-  ([^java.util.concurrent.CompletionStage this ^java.lang.Runnable action]
+  (^java.util.concurrent.CompletionStage [^java.util.concurrent.CompletionStage this ^java.lang.Runnable action]
     (-> this (.thenRun action))))
 
 (defn handle-async

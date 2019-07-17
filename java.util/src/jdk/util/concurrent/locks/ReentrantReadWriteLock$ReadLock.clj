@@ -125,9 +125,9 @@
   returns: true if the read lock was acquired - `boolean`
 
   throws: java.lang.InterruptedException - if the current thread is interrupted"
-  ([^java.util.concurrent.locks.ReentrantReadWriteLock$ReadLock this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^Boolean [^java.util.concurrent.locks.ReentrantReadWriteLock$ReadLock this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.tryLock timeout unit)))
-  ([^java.util.concurrent.locks.ReentrantReadWriteLock$ReadLock this]
+  (^Boolean [^java.util.concurrent.locks.ReentrantReadWriteLock$ReadLock this]
     (-> this (.tryLock))))
 
 (defn unlock
@@ -145,7 +145,7 @@
   returns: A new Condition instance for this Lock instance - `java.util.concurrent.locks.Condition`
 
   throws: java.lang.UnsupportedOperationException - always"
-  ([^java.util.concurrent.locks.ReentrantReadWriteLock$ReadLock this]
+  (^java.util.concurrent.locks.Condition [^java.util.concurrent.locks.ReentrantReadWriteLock$ReadLock this]
     (-> this (.newCondition))))
 
 (defn to-string
@@ -154,6 +154,6 @@
    followed by the number of held read locks.
 
   returns: a string identifying this lock, as well as its lock state - `java.lang.String`"
-  ([^java.util.concurrent.locks.ReentrantReadWriteLock$ReadLock this]
+  (^java.lang.String [^java.util.concurrent.locks.ReentrantReadWriteLock$ReadLock this]
     (-> this (.toString))))
 

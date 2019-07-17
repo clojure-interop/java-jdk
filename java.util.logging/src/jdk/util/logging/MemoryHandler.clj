@@ -130,7 +130,7 @@
   "Get the pushLevel.
 
   returns: the value of the pushLevel - `java.util.logging.Level`"
-  ([^java.util.logging.MemoryHandler this]
+  (^java.util.logging.Level [^java.util.logging.MemoryHandler this]
     (-> this (.getPushLevel))))
 
 (defn loggable?
@@ -145,6 +145,6 @@
   record - a LogRecord - `java.util.logging.LogRecord`
 
   returns: true if the LogRecord would be logged. - `boolean`"
-  ([^java.util.logging.MemoryHandler this ^java.util.logging.LogRecord record]
+  (^Boolean [^java.util.logging.MemoryHandler this ^java.util.logging.LogRecord record]
     (-> this (.isLoggable record))))
 

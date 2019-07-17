@@ -86,7 +86,7 @@
 
   returns: the type of Certificates in this certification
    path (never null) - `java.lang.String`"
-  ([^java.security.cert.CertPath this]
+  (^java.lang.String [^java.security.cert.CertPath this]
     (-> this (.getType))))
 
 (defn get-encodings
@@ -97,7 +97,7 @@
 
   returns: an Iterator over the names of the supported
            encodings (as Strings) - `java.util.Iterator<java.lang.String>`"
-  ([^java.security.cert.CertPath this]
+  (^java.util.Iterator [^java.security.cert.CertPath this]
     (-> this (.getEncodings))))
 
 (defn equals
@@ -115,7 +115,7 @@
 
   returns: true if the specified object is equal to this certification path,
    false otherwise - `boolean`"
-  ([^java.security.cert.CertPath this ^java.lang.Object other]
+  (^Boolean [^java.security.cert.CertPath this ^java.lang.Object other]
     (-> this (.equals other))))
 
 (defn hash-code
@@ -132,7 +132,7 @@
    general contract of Object.hashCode.
 
   returns: the hashcode value for this certification path - `int`"
-  ([^java.security.cert.CertPath this]
+  (^Integer [^java.security.cert.CertPath this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -141,7 +141,7 @@
    Certificates in the path.
 
   returns: a string representation of this certification path - `java.lang.String`"
-  ([^java.security.cert.CertPath this]
+  (^java.lang.String [^java.security.cert.CertPath this]
     (-> this (.toString))))
 
 (defn get-encoded

@@ -162,7 +162,7 @@
   returns: `int`
 
   throws: java.lang.IllegalArgumentException - if button is less than zero or greater than the number of button masks reserved for buttons"
-  ([^Integer button]
+  (^Integer [^Integer button]
     (InputEvent/getMaskForButton button)))
 
 (defn *get-modifiers-ex-text
@@ -181,7 +181,7 @@
   returns: a text description of the combination of extended
            modifier keys and mouse buttons that were held down
            during the event. - `java.lang.String`"
-  ([^Integer modifiers]
+  (^java.lang.String [^Integer modifiers]
     (InputEvent/getModifiersExText modifiers)))
 
 (defn get-when
@@ -189,7 +189,7 @@
    midnight, January 1, 1970 UTC.
 
   returns: `long`"
-  ([^java.awt.event.InputEvent this]
+  (^Long [^java.awt.event.InputEvent this]
     (-> this (.getWhen))))
 
 (defn consume
@@ -202,21 +202,21 @@
   "Returns whether or not the AltGraph modifier is down on this event.
 
   returns: `boolean`"
-  ([^java.awt.event.InputEvent this]
+  (^Boolean [^java.awt.event.InputEvent this]
     (-> this (.isAltGraphDown))))
 
 (defn get-modifiers
   "Returns the modifier mask for this event.
 
   returns: `int`"
-  ([^java.awt.event.InputEvent this]
+  (^Integer [^java.awt.event.InputEvent this]
     (-> this (.getModifiers))))
 
 (defn control-down?
   "Returns whether or not the Control modifier is down on this event.
 
   returns: `boolean`"
-  ([^java.awt.event.InputEvent this]
+  (^Boolean [^java.awt.event.InputEvent this]
     (-> this (.isControlDown))))
 
 (defn get-modifiers-ex
@@ -255,34 +255,34 @@
    The above code will work even if new modifiers are added.
 
   returns: `int`"
-  ([^java.awt.event.InputEvent this]
+  (^Integer [^java.awt.event.InputEvent this]
     (-> this (.getModifiersEx))))
 
 (defn meta-down?
   "Returns whether or not the Meta modifier is down on this event.
 
   returns: `boolean`"
-  ([^java.awt.event.InputEvent this]
+  (^Boolean [^java.awt.event.InputEvent this]
     (-> this (.isMetaDown))))
 
 (defn consumed?
   "Returns whether or not this event has been consumed.
 
   returns: `boolean`"
-  ([^java.awt.event.InputEvent this]
+  (^Boolean [^java.awt.event.InputEvent this]
     (-> this (.isConsumed))))
 
 (defn alt-down?
   "Returns whether or not the Alt modifier is down on this event.
 
   returns: `boolean`"
-  ([^java.awt.event.InputEvent this]
+  (^Boolean [^java.awt.event.InputEvent this]
     (-> this (.isAltDown))))
 
 (defn shift-down?
   "Returns whether or not the Shift modifier is down on this event.
 
   returns: `boolean`"
-  ([^java.awt.event.InputEvent this]
+  (^Boolean [^java.awt.event.InputEvent this]
     (-> this (.isShiftDown))))
 

@@ -35,7 +35,7 @@
   "Returns the component the InputMap was created for.
 
   returns: `javax.swing.JComponent`"
-  ([^javax.swing.ComponentInputMap this]
+  (^javax.swing.JComponent [^javax.swing.ComponentInputMap this]
     (-> this (.getComponent))))
 
 (defn put

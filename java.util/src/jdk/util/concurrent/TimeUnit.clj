@@ -82,7 +82,7 @@
   returns: the enum constant with the specified name - `java.util.concurrent.TimeUnit`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^java.util.concurrent.TimeUnit [^java.lang.String name]
     (TimeUnit/valueOf name)))
 
 (defn to-micros
@@ -94,7 +94,7 @@
   returns: the converted duration,
    or Long.MIN_VALUE if conversion would negatively
    overflow, or Long.MAX_VALUE if it would positively overflow. - `long`"
-  ([^java.util.concurrent.TimeUnit this ^Long duration]
+  (^Long [^java.util.concurrent.TimeUnit this ^Long duration]
     (-> this (.toMicros duration))))
 
 (defn to-nanos
@@ -106,7 +106,7 @@
   returns: the converted duration,
    or Long.MIN_VALUE if conversion would negatively
    overflow, or Long.MAX_VALUE if it would positively overflow. - `long`"
-  ([^java.util.concurrent.TimeUnit this ^Long duration]
+  (^Long [^java.util.concurrent.TimeUnit this ^Long duration]
     (-> this (.toNanos duration))))
 
 (defn to-minutes
@@ -118,7 +118,7 @@
   returns: the converted duration,
    or Long.MIN_VALUE if conversion would negatively
    overflow, or Long.MAX_VALUE if it would positively overflow. - `long`"
-  ([^java.util.concurrent.TimeUnit this ^Long duration]
+  (^Long [^java.util.concurrent.TimeUnit this ^Long duration]
     (-> this (.toMinutes duration))))
 
 (defn convert
@@ -139,7 +139,7 @@
   returns: the converted duration in this unit,
    or Long.MIN_VALUE if conversion would negatively
    overflow, or Long.MAX_VALUE if it would positively overflow. - `long`"
-  ([^java.util.concurrent.TimeUnit this ^Long source-duration ^java.util.concurrent.TimeUnit source-unit]
+  (^Long [^java.util.concurrent.TimeUnit this ^Long source-duration ^java.util.concurrent.TimeUnit source-unit]
     (-> this (.convert source-duration source-unit))))
 
 (defn timed-join
@@ -176,7 +176,7 @@
   returns: the converted duration,
    or Long.MIN_VALUE if conversion would negatively
    overflow, or Long.MAX_VALUE if it would positively overflow. - `long`"
-  ([^java.util.concurrent.TimeUnit this ^Long duration]
+  (^Long [^java.util.concurrent.TimeUnit this ^Long duration]
     (-> this (.toMillis duration))))
 
 (defn to-hours
@@ -188,7 +188,7 @@
   returns: the converted duration,
    or Long.MIN_VALUE if conversion would negatively
    overflow, or Long.MAX_VALUE if it would positively overflow. - `long`"
-  ([^java.util.concurrent.TimeUnit this ^Long duration]
+  (^Long [^java.util.concurrent.TimeUnit this ^Long duration]
     (-> this (.toHours duration))))
 
 (defn timed-wait
@@ -227,7 +227,7 @@
   returns: the converted duration,
    or Long.MIN_VALUE if conversion would negatively
    overflow, or Long.MAX_VALUE if it would positively overflow. - `long`"
-  ([^java.util.concurrent.TimeUnit this ^Long duration]
+  (^Long [^java.util.concurrent.TimeUnit this ^Long duration]
     (-> this (.toSeconds duration))))
 
 (defn to-days
@@ -237,6 +237,6 @@
   duration - the duration - `long`
 
   returns: the converted duration - `long`"
-  ([^java.util.concurrent.TimeUnit this ^Long duration]
+  (^Long [^java.util.concurrent.TimeUnit this ^Long duration]
     (-> this (.toDays duration))))
 

@@ -66,14 +66,14 @@
    If an error occurred during sorting a NamingException is thrown.
 
   returns: true if the search results have been sorted. - `boolean`"
-  ([^javax.naming.ldap.SortResponseControl this]
+  (^Boolean [^javax.naming.ldap.SortResponseControl this]
     (-> this (.isSorted))))
 
 (defn get-result-code
   "Retrieves the LDAP result code of the sort operation.
 
   returns: The result code. A zero value indicates success. - `int`"
-  ([^javax.naming.ldap.SortResponseControl this]
+  (^Integer [^javax.naming.ldap.SortResponseControl this]
     (-> this (.getResultCode))))
 
 (defn get-attribute-id
@@ -81,7 +81,7 @@
    Returns null if no ID was returned by the server.
 
   returns: The possibly null ID of the bad attribute. - `java.lang.String`"
-  ([^javax.naming.ldap.SortResponseControl this]
+  (^java.lang.String [^javax.naming.ldap.SortResponseControl this]
     (-> this (.getAttributeID))))
 
 (defn get-exception
@@ -89,6 +89,6 @@
 
   returns: A NamingException or null if the result code indicates
            success. - `javax.naming.NamingException`"
-  ([^javax.naming.ldap.SortResponseControl this]
+  (^javax.naming.NamingException [^javax.naming.ldap.SortResponseControl this]
     (-> this (.getException))))
 

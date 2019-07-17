@@ -34,6 +34,6 @@
   "Returns the name of the missing element.
 
   returns: the name of the missing element - `java.lang.String`"
-  ([^java.lang.annotation.IncompleteAnnotationException this]
+  (^java.lang.String [^java.lang.annotation.IncompleteAnnotationException this]
     (-> this (.elementName))))
 

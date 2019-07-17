@@ -88,7 +88,7 @@
   "Gets the identifier for the domain configuration data.
 
   returns: the identifier for the configuration data - `java.net.URI`"
-  ([^java.security.DomainLoadStoreParameter this]
+  (^java.net.URI [^java.security.DomainLoadStoreParameter this]
     (-> this (.getConfiguration))))
 
 (defn get-protection-params
@@ -97,7 +97,7 @@
 
   returns: an unmodifiable map of keystore names to protection
        parameters - `java.util.Map<java.lang.String,java.security.KeyStore.ProtectionParameter>`"
-  ([^java.security.DomainLoadStoreParameter this]
+  (^java.util.Map [^java.security.DomainLoadStoreParameter this]
     (-> this (.getProtectionParams))))
 
 (defn get-protection-parameter
@@ -105,6 +105,6 @@
    Keystore domains do not support a protection parameter.
 
   returns: always returns null - `java.security.KeyStore.ProtectionParameter`"
-  ([^java.security.DomainLoadStoreParameter this]
+  (^java.security.KeyStore.ProtectionParameter [^java.security.DomainLoadStoreParameter this]
     (-> this (.getProtectionParameter))))
 

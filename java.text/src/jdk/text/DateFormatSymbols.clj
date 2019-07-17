@@ -87,16 +87,16 @@
   returns: a DateFormatSymbols instance. - `java.text.DateFormatSymbols`
 
   throws: java.lang.NullPointerException - if locale is null"
-  ([^java.util.Locale locale]
+  (^java.text.DateFormatSymbols [^java.util.Locale locale]
     (DateFormatSymbols/getInstance locale))
-  ([]
+  (^java.text.DateFormatSymbols []
     (DateFormatSymbols/getInstance )))
 
 (defn set-short-weekdays
   "Sets short weekday strings. For example: `Sun`, `Mon`, etc.
 
   new-short-weekdays - the new short weekday strings. The array should be indexed by Calendar.SUNDAY, Calendar.MONDAY, etc. - `java.lang.String[]`"
-  ([^java.text.DateFormatSymbols this ^java.lang.String[] new-short-weekdays]
+  ([^java.text.DateFormatSymbols this new-short-weekdays]
     (-> this (.setShortWeekdays new-short-weekdays))))
 
 (defn get-months
@@ -120,21 +120,21 @@
   "Sets short month strings. For example: `Jan`, `Feb`, etc.
 
   new-short-months - the new short month strings. - `java.lang.String[]`"
-  ([^java.text.DateFormatSymbols this ^java.lang.String[] new-short-months]
+  ([^java.text.DateFormatSymbols this new-short-months]
     (-> this (.setShortMonths new-short-months))))
 
 (defn set-months
   "Sets month strings. For example: `January`, `February`, etc.
 
   new-months - the new month strings. - `java.lang.String[]`"
-  ([^java.text.DateFormatSymbols this ^java.lang.String[] new-months]
+  ([^java.text.DateFormatSymbols this new-months]
     (-> this (.setMonths new-months))))
 
 (defn set-am-pm-strings
   "Sets ampm strings. For example: `AM` and `PM`.
 
   new-ampms - the new ampm strings. - `java.lang.String[]`"
-  ([^java.text.DateFormatSymbols this ^java.lang.String[] new-ampms]
+  ([^java.text.DateFormatSymbols this new-ampms]
     (-> this (.setAmPmStrings new-ampms))))
 
 (defn get-weekdays
@@ -149,7 +149,7 @@
   "Sets era strings. For example: `AD` and `BC`.
 
   new-eras - the new era strings. - `java.lang.String[]`"
-  ([^java.text.DateFormatSymbols this ^java.lang.String[] new-eras]
+  ([^java.text.DateFormatSymbols this new-eras]
     (-> this (.setEras new-eras))))
 
 (defn get-am-pm-strings
@@ -163,7 +163,7 @@
   "Sets weekday strings. For example: `Sunday`, `Monday`, etc.
 
   new-weekdays - the new weekday strings. The array should be indexed by Calendar.SUNDAY, Calendar.MONDAY, etc. - `java.lang.String[]`"
-  ([^java.text.DateFormatSymbols this ^java.lang.String[] new-weekdays]
+  ([^java.text.DateFormatSymbols this new-weekdays]
     (-> this (.setWeekdays new-weekdays))))
 
 (defn get-short-months
@@ -209,14 +209,14 @@
   new-zone-strings - the new time zone strings. - `java.lang.String[][]`
 
   throws: java.lang.IllegalArgumentException - if the length of any row in newZoneStrings is less than 5"
-  ([^java.text.DateFormatSymbols this ^java.lang.String[][] new-zone-strings]
+  ([^java.text.DateFormatSymbols this new-zone-strings]
     (-> this (.setZoneStrings new-zone-strings))))
 
 (defn get-local-pattern-chars
   "Gets localized date-time pattern characters. For example: 'u', 't', etc.
 
   returns: the localized date-time pattern characters. - `java.lang.String`"
-  ([^java.text.DateFormatSymbols this]
+  (^java.lang.String [^java.text.DateFormatSymbols this]
     (-> this (.getLocalPatternChars))))
 
 (defn get-short-weekdays
@@ -238,7 +238,7 @@
   "Overrides Cloneable
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([^java.text.DateFormatSymbols this]
+  (^java.lang.Object [^java.text.DateFormatSymbols this]
     (-> this (.clone))))
 
 (defn hash-code
@@ -246,7 +246,7 @@
    Generates a hash code for the DateFormatSymbols object.
 
   returns: a hash code value for this object. - `int`"
-  ([^java.text.DateFormatSymbols this]
+  (^Integer [^java.text.DateFormatSymbols this]
     (-> this (.hashCode))))
 
 (defn set-local-pattern-chars
@@ -302,6 +302,6 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([^java.text.DateFormatSymbols this ^java.lang.Object obj]
+  (^Boolean [^java.text.DateFormatSymbols this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

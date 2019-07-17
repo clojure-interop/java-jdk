@@ -17,7 +17,7 @@
   "Returns a copy of the environment's default socket factory.
 
   returns: the ServerSocketFactory - `javax.net.ServerSocketFactory`"
-  ([]
+  (^javax.net.ServerSocketFactory []
     (ServerSocketFactory/getDefault )))
 
 (defn create-server-socket
@@ -47,12 +47,12 @@
   returns: the ServerSocket - `java.net.ServerSocket`
 
   throws: java.io.IOException - for networking errors"
-  ([^javax.net.ServerSocketFactory this ^Integer port ^Integer backlog ^java.net.InetAddress if-address]
+  (^java.net.ServerSocket [^javax.net.ServerSocketFactory this ^Integer port ^Integer backlog ^java.net.InetAddress if-address]
     (-> this (.createServerSocket port backlog if-address)))
-  ([^javax.net.ServerSocketFactory this ^Integer port ^Integer backlog]
+  (^java.net.ServerSocket [^javax.net.ServerSocketFactory this ^Integer port ^Integer backlog]
     (-> this (.createServerSocket port backlog)))
-  ([^javax.net.ServerSocketFactory this ^Integer port]
+  (^java.net.ServerSocket [^javax.net.ServerSocketFactory this ^Integer port]
     (-> this (.createServerSocket port)))
-  ([^javax.net.ServerSocketFactory this]
+  (^java.net.ServerSocket [^javax.net.ServerSocketFactory this]
     (-> this (.createServerSocket))))
 

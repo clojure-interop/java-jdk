@@ -54,11 +54,11 @@
   returns: a JavaBean - `java.lang.Object`
 
   throws: java.lang.ClassNotFoundException - if the class of a serialized object could not be found."
-  ([^java.lang.ClassLoader cls ^java.lang.String bean-name ^java.beans.beancontext.BeanContext bean-context ^java.beans.AppletInitializer initializer]
+  (^java.lang.Object [^java.lang.ClassLoader cls ^java.lang.String bean-name ^java.beans.beancontext.BeanContext bean-context ^java.beans.AppletInitializer initializer]
     (Beans/instantiate cls bean-name bean-context initializer))
-  ([^java.lang.ClassLoader cls ^java.lang.String bean-name ^java.beans.beancontext.BeanContext bean-context]
+  (^java.lang.Object [^java.lang.ClassLoader cls ^java.lang.String bean-name ^java.beans.beancontext.BeanContext bean-context]
     (Beans/instantiate cls bean-name bean-context))
-  ([^java.lang.ClassLoader cls ^java.lang.String bean-name]
+  (^java.lang.Object [^java.lang.ClassLoader cls ^java.lang.String bean-name]
     (Beans/instantiate cls bean-name)))
 
 (defn *get-instance-of
@@ -77,7 +77,7 @@
 
   returns: an object representing a specified type view of the
    source object - `java.lang.Object`"
-  ([^java.lang.Object bean ^java.lang.Class target-type]
+  (^java.lang.Object [^java.lang.Object bean ^java.lang.Class target-type]
     (Beans/getInstanceOf bean target-type)))
 
 (defn *instance-of?
@@ -90,7 +90,7 @@
   target-type - The type of view we'd like to get. - `java.lang.Class<?>`
 
   returns: `true` if the given bean supports the given targetType. - `boolean`"
-  ([^java.lang.Object bean ^java.lang.Class target-type]
+  (^Boolean [^java.lang.Object bean ^java.lang.Class target-type]
     (Beans/isInstanceOf bean target-type)))
 
 (defn *design-time?
@@ -98,7 +98,7 @@
 
   returns: True if we are running in an application construction
             environment. - `boolean`"
-  ([]
+  (^Boolean []
     (Beans/isDesignTime )))
 
 (defn *gui-available?
@@ -110,7 +110,7 @@
        true in a windowing environment, and will normally return
        false in a server environment or if an application is
        running as part of a batch job. - `boolean`"
-  ([]
+  (^Boolean []
     (Beans/isGuiAvailable )))
 
 (defn *set-design-time

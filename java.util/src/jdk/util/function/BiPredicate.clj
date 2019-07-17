@@ -15,7 +15,7 @@
 
   returns: true if the input arguments match the predicate,
    otherwise false - `boolean`"
-  ([^java.util.function.BiPredicate this ^BiPredicate.T t ^BiPredicate.U u]
+  (^Boolean [^java.util.function.BiPredicate this ^BiPredicate.T t ^BiPredicate.U u]
     (-> this (.test t u))))
 
 (defn and

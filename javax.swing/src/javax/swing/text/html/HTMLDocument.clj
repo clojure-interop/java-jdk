@@ -315,7 +315,7 @@
    rules (CSS) that were specified in the HTML document itself.
 
   returns: the StyleSheet - `javax.swing.text.html.StyleSheet`"
-  ([^javax.swing.text.html.HTMLDocument this]
+  (^javax.swing.text.html.StyleSheet [^javax.swing.text.html.HTMLDocument this]
     (-> this (.getStyleSheet))))
 
 (defn set-outer-html
@@ -388,9 +388,9 @@
   returns: the element with the specified Attribute
             and the specified value, or null
             if it can't be found - `javax.swing.text.Element`"
-  ([^javax.swing.text.html.HTMLDocument this ^javax.swing.text.Element e ^java.lang.Object attribute ^java.lang.Object value]
+  (^javax.swing.text.Element [^javax.swing.text.html.HTMLDocument this ^javax.swing.text.Element e ^java.lang.Object attribute ^java.lang.Object value]
     (-> this (.getElement e attribute value)))
-  ([^javax.swing.text.html.HTMLDocument this ^java.lang.String id]
+  (^javax.swing.text.Element [^javax.swing.text.html.HTMLDocument this ^java.lang.String id]
     (-> this (.getElement id))))
 
 (defn set-paragraph-attributes
@@ -413,7 +413,7 @@
    document.
 
   returns: the parser used for text insertion - `javax.swing.text.html.HTMLEditorKit.Parser`"
-  ([^javax.swing.text.html.HTMLDocument this]
+  (^javax.swing.text.html.HTMLEditorKit.Parser [^javax.swing.text.html.HTMLDocument this]
     (-> this (.getParser))))
 
 (defn get-iterator
@@ -425,7 +425,7 @@
   t - the requested HTML.Tag - `javax.swing.text.html.HTML.Tag`
 
   returns: the Iterator for the given HTML tag - `javax.swing.text.html.HTMLDocument.Iterator`"
-  ([^javax.swing.text.html.HTMLDocument this ^javax.swing.text.html.HTML.Tag t]
+  (^javax.swing.text.html.HTMLDocument.Iterator [^javax.swing.text.html.HTMLDocument this ^javax.swing.text.html.HTML.Tag t]
     (-> this (.getIterator t))))
 
 (defn get-reader
@@ -445,9 +445,9 @@
   insert-tag - the first tag to start inserting into document - `javax.swing.text.html.HTML.Tag`
 
   returns: the reader used by the parser to load the document - `javax.swing.text.html.HTMLEditorKit.ParserCallback`"
-  ([^javax.swing.text.html.HTMLDocument this ^Integer pos ^Integer pop-depth ^Integer push-depth ^javax.swing.text.html.HTML.Tag insert-tag]
+  (^javax.swing.text.html.HTMLEditorKit.ParserCallback [^javax.swing.text.html.HTMLDocument this ^Integer pos ^Integer pop-depth ^Integer push-depth ^javax.swing.text.html.HTML.Tag insert-tag]
     (-> this (.getReader pos pop-depth push-depth insert-tag)))
-  ([^javax.swing.text.html.HTMLDocument this ^Integer pos]
+  (^javax.swing.text.html.HTMLEditorKit.ParserCallback [^javax.swing.text.html.HTMLDocument this ^Integer pos]
     (-> this (.getReader pos))))
 
 (defn get-token-threshold
@@ -456,7 +456,7 @@
    Integer.MAX_VALUE.
 
   returns: the number of tokens to buffer - `int`"
-  ([^javax.swing.text.html.HTMLDocument this]
+  (^Integer [^javax.swing.text.html.HTMLDocument this]
     (-> this (.getTokenThreshold))))
 
 (defn set-token-threshold
@@ -516,7 +516,7 @@
    can be parsed, it will be used as the base location.
 
   returns: the base location - `java.net.URL`"
-  ([^javax.swing.text.html.HTMLDocument this]
+  (^java.net.URL [^javax.swing.text.html.HTMLDocument this]
     (-> this (.getBase))))
 
 (defn insert-after-end
@@ -642,7 +642,7 @@
    unknown tags.
 
   returns: true if unknown tags are to be preserved when parsing - `boolean`"
-  ([^javax.swing.text.html.HTMLDocument this]
+  (^Boolean [^javax.swing.text.html.HTMLDocument this]
     (-> this (.getPreservesUnknownTags))))
 
 (defn insert-before-end

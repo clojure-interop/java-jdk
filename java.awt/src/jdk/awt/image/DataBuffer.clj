@@ -86,7 +86,7 @@
   returns: the size of the data type - `int`
 
   throws: java.lang.IllegalArgumentException - if type is less than zero or greater than TYPE_DOUBLE"
-  ([^Integer type]
+  (^Integer [^Integer type]
     (DataBuffer/getDataTypeSize type)))
 
 (defn get-elem-double
@@ -100,9 +100,9 @@
 
   returns: a double value representing the element from the specified
    bank at the specified index in the data array. - `double`"
-  ([^java.awt.image.DataBuffer this ^Integer bank ^Integer i]
+  (^Double [^java.awt.image.DataBuffer this ^Integer bank ^Integer i]
     (-> this (.getElemDouble bank i)))
-  ([^java.awt.image.DataBuffer this ^Integer i]
+  (^Double [^java.awt.image.DataBuffer this ^Integer i]
     (-> this (.getElemDouble i))))
 
 (defn get-elem
@@ -114,23 +114,23 @@
 
   returns: the data array element at the specified index from the
            specified bank at the specified index. - `int`"
-  ([^java.awt.image.DataBuffer this ^Integer bank ^Integer i]
+  (^Integer [^java.awt.image.DataBuffer this ^Integer bank ^Integer i]
     (-> this (.getElem bank i)))
-  ([^java.awt.image.DataBuffer this ^Integer i]
+  (^Integer [^java.awt.image.DataBuffer this ^Integer i]
     (-> this (.getElem i))))
 
 (defn get-data-type
   "Returns the data type of this DataBuffer.
 
   returns: the data type of this DataBuffer. - `int`"
-  ([^java.awt.image.DataBuffer this]
+  (^Integer [^java.awt.image.DataBuffer this]
     (-> this (.getDataType))))
 
 (defn get-num-banks
   "Returns the number of banks in this DataBuffer.
 
   returns: the number of banks. - `int`"
-  ([^java.awt.image.DataBuffer this]
+  (^Integer [^java.awt.image.DataBuffer this]
     (-> this (.getNumBanks))))
 
 (defn set-elem-float
@@ -159,16 +159,16 @@
 
   returns: a float value representing the data array element from the
    specified bank at the specified index. - `float`"
-  ([^java.awt.image.DataBuffer this ^Integer bank ^Integer i]
+  (^Float [^java.awt.image.DataBuffer this ^Integer bank ^Integer i]
     (-> this (.getElemFloat bank i)))
-  ([^java.awt.image.DataBuffer this ^Integer i]
+  (^Float [^java.awt.image.DataBuffer this ^Integer i]
     (-> this (.getElemFloat i))))
 
 (defn get-offset
   "Returns the offset of the default bank in array elements.
 
   returns: the offset of the default bank. - `int`"
-  ([^java.awt.image.DataBuffer this]
+  (^Integer [^java.awt.image.DataBuffer this]
     (-> this (.getOffset))))
 
 (defn get-offsets
@@ -196,7 +196,7 @@
   "Returns the size (in array elements) of all banks.
 
   returns: the size of all banks. - `int`"
-  ([^java.awt.image.DataBuffer this]
+  (^Integer [^java.awt.image.DataBuffer this]
     (-> this (.getSize))))
 
 (defn set-elem

@@ -13,7 +13,7 @@
   returns: The ValueExp. - `javax.management.ValueExp`
 
   throws: javax.management.BadStringOperationException"
-  ([^javax.management.ValueExp this ^javax.management.ObjectName name]
+  (^javax.management.ValueExp [^javax.management.ValueExp this ^javax.management.ObjectName name]
     (-> this (.apply name))))
 
 (defn set-m-bean-server

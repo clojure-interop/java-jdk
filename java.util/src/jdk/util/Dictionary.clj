@@ -26,7 +26,7 @@
   "Returns the number of entries (distinct keys) in this dictionary.
 
   returns: the number of keys in this dictionary. - `int`"
-  ([^java.util.Dictionary this]
+  (^Integer [^java.util.Dictionary this]
     (-> this (.size))))
 
 (defn empty?
@@ -36,7 +36,7 @@
 
   returns: true if this dictionary maps no keys to values;
             false otherwise. - `boolean`"
-  ([^java.util.Dictionary this]
+  (^Boolean [^java.util.Dictionary this]
     (-> this (.isEmpty))))
 
 (defn keys
@@ -46,7 +46,7 @@
    contains entries.
 
   returns: an enumeration of the keys in this dictionary. - `java.util.Enumeration<Dictionary.K>`"
-  ([^java.util.Dictionary this]
+  (^java.util.Enumeration [^java.util.Dictionary this]
     (-> this (.keys))))
 
 (defn elements
@@ -56,7 +56,7 @@
    contained in entries in this dictionary.
 
   returns: an enumeration of the values in this dictionary. - `java.util.Enumeration<Dictionary.V>`"
-  ([^java.util.Dictionary this]
+  (^java.util.Enumeration [^java.util.Dictionary this]
     (-> this (.elements))))
 
 (defn get
@@ -70,7 +70,7 @@
   returns: the value to which the key is mapped in this dictionary; - `Dictionary.V`
 
   throws: java.lang.NullPointerException - if the key is null."
-  ([^java.util.Dictionary this ^java.lang.Object key]
+  (^Dictionary.V [^java.util.Dictionary this ^java.lang.Object key]
     (-> this (.get key))))
 
 (defn put
@@ -98,7 +98,7 @@
                have a previous mapping. - `Dictionary.V`
 
   throws: java.lang.NullPointerException - if the key or value is null."
-  ([^java.util.Dictionary this ^Dictionary.K key ^Dictionary.V value]
+  (^Dictionary.V [^java.util.Dictionary this ^Dictionary.K key ^Dictionary.V value]
     (-> this (.put key value))))
 
 (defn remove
@@ -113,6 +113,6 @@
             mapping. - `Dictionary.V`
 
   throws: java.lang.NullPointerException - if key is null."
-  ([^java.util.Dictionary this ^java.lang.Object key]
+  (^Dictionary.V [^java.util.Dictionary this ^java.lang.Object key]
     (-> this (.remove key))))
 

@@ -49,14 +49,14 @@
   "Returns true if the user hits the Cancel button in the progress dialog.
 
   returns: `boolean`"
-  ([^javax.swing.ProgressMonitor this]
+  (^Boolean [^javax.swing.ProgressMonitor this]
     (-> this (.isCanceled))))
 
 (defn get-minimum
   "Returns the minimum value -- the lower end of the progress value.
 
   returns: an int representing the minimum value - `int`"
-  ([^javax.swing.ProgressMonitor this]
+  (^Integer [^javax.swing.ProgressMonitor this]
     (-> this (.getMinimum))))
 
 (defn get-note
@@ -64,14 +64,14 @@
    progress message.
 
   returns: a String specifying the note to display - `java.lang.String`"
-  ([^javax.swing.ProgressMonitor this]
+  (^java.lang.String [^javax.swing.ProgressMonitor this]
     (-> this (.getNote))))
 
 (defn get-millis-to-popup
   "Returns the amount of time it will take for the popup to appear.
 
   returns: `int`"
-  ([^javax.swing.ProgressMonitor this]
+  (^Integer [^javax.swing.ProgressMonitor this]
     (-> this (.getMillisToPopup))))
 
 (defn get-millis-to-decide-to-popup
@@ -79,7 +79,7 @@
    or not to popup a progress monitor.
 
   returns: `int`"
-  ([^javax.swing.ProgressMonitor this]
+  (^Integer [^javax.swing.ProgressMonitor this]
     (-> this (.getMillisToDecideToPopup))))
 
 (defn set-maximum
@@ -104,7 +104,7 @@
 
   returns: the AccessibleContext for the
    ProgressMonitor - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.ProgressMonitor this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.ProgressMonitor this]
     (-> this (.getAccessibleContext))))
 
 (defn close
@@ -134,7 +134,7 @@
   "Returns the maximum value -- the higher end of the progress value.
 
   returns: an int representing the maximum value - `int`"
-  ([^javax.swing.ProgressMonitor this]
+  (^Integer [^javax.swing.ProgressMonitor this]
     (-> this (.getMaximum))))
 
 (defn set-millis-to-decide-to-popup

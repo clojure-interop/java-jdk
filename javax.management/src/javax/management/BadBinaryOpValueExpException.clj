@@ -19,13 +19,13 @@
   "Returns the ValueExp that originated the exception.
 
   returns: the problematic ValueExp. - `javax.management.ValueExp`"
-  ([^javax.management.BadBinaryOpValueExpException this]
+  (^javax.management.ValueExp [^javax.management.BadBinaryOpValueExpException this]
     (-> this (.getExp))))
 
 (defn to-string
   "Returns the string representing the object.
 
   returns: a string representation of this throwable. - `java.lang.String`"
-  ([^javax.management.BadBinaryOpValueExpException this]
+  (^java.lang.String [^javax.management.BadBinaryOpValueExpException this]
     (-> this (.toString))))
 

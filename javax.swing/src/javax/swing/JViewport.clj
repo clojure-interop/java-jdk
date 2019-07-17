@@ -108,14 +108,14 @@
   "Returns the JViewport's one child or null.
 
   returns: the viewports child, or null if none exists - `java.awt.Component`"
-  ([^javax.swing.JViewport this]
+  (^java.awt.Component [^javax.swing.JViewport this]
     (-> this (.getView))))
 
 (defn get-scroll-mode
   "Returns the current scrolling mode.
 
   returns: the scrollMode property - `int`"
-  ([^javax.swing.JViewport this]
+  (^Integer [^javax.swing.JViewport this]
     (-> this (.getScrollMode))))
 
 (defn get-view-position
@@ -123,7 +123,7 @@
    hand corner of the viewport, or 0,0 if there's no view.
 
   returns: a Point object giving the upper left coordinates - `java.awt.Point`"
-  ([^javax.swing.JViewport this]
+  (^java.awt.Point [^javax.swing.JViewport this]
     (-> this (.getViewPosition))))
 
 (defn get-insets
@@ -135,9 +135,9 @@
   insets - the Insets object which can be reused - `java.awt.Insets`
 
   returns: this viewports inset values - `java.awt.Insets`"
-  ([^javax.swing.JViewport this ^java.awt.Insets insets]
+  (^java.awt.Insets [^javax.swing.JViewport this ^java.awt.Insets insets]
     (-> this (.getInsets insets)))
-  ([^javax.swing.JViewport this]
+  (^java.awt.Insets [^javax.swing.JViewport this]
     (-> this (.getInsets))))
 
 (defn scroll-rect-to-visible
@@ -164,7 +164,7 @@
   "Returns the size of the visible part of the view in view coordinates.
 
   returns: a Dimension object giving the size of the view - `java.awt.Dimension`"
-  ([^javax.swing.JViewport this]
+  (^java.awt.Dimension [^javax.swing.JViewport this]
     (-> this (.getExtentSize))))
 
 (defn set-scroll-mode
@@ -181,7 +181,7 @@
    that renders this component.
 
   returns: the string `ViewportUI` - `java.lang.String`"
-  ([^javax.swing.JViewport this]
+  (^java.lang.String [^javax.swing.JViewport this]
     (-> this (.getUIClassID))))
 
 (defn set-extent-size
@@ -216,7 +216,7 @@
 
   returns: a Rectangle giving the visible part of
             the view using view coordinates. - `java.awt.Rectangle`"
-  ([^javax.swing.JViewport this]
+  (^java.awt.Rectangle [^javax.swing.JViewport this]
     (-> this (.getViewRect))))
 
 (defn set-view-position
@@ -272,7 +272,7 @@
   "Returns the L&F object that renders this component.
 
   returns: a ViewportUI object - `javax.swing.plaf.ViewportUI`"
-  ([^javax.swing.JViewport this]
+  (^javax.swing.plaf.ViewportUI [^javax.swing.JViewport this]
     (-> this (.getUI))))
 
 (defn repaint
@@ -293,7 +293,7 @@
    If there is no view, return 0,0.
 
   returns: a Dimension object specifying the size of the view - `java.awt.Dimension`"
-  ([^javax.swing.JViewport this]
+  (^java.awt.Dimension [^javax.swing.JViewport this]
     (-> this (.getViewSize))))
 
 (defn paint
@@ -318,7 +318,7 @@
 
   returns: an AccessibleJViewport that serves as the
            AccessibleContext of this JViewport - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.JViewport this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.JViewport this]
     (-> this (.getAccessibleContext))))
 
 (defn set-backing-store-enabled
@@ -339,7 +339,7 @@
   size - a Dimension object using pixel coordinates - `java.awt.Dimension`
 
   returns: a Dimension object converted to view coordinates - `java.awt.Dimension`"
-  ([^javax.swing.JViewport this ^java.awt.Dimension size]
+  (^java.awt.Dimension [^javax.swing.JViewport this ^java.awt.Dimension size]
     (-> this (.toViewCoordinates size))))
 
 (defn set-border
@@ -383,6 +383,6 @@
    children directly.
 
   returns: false - `boolean`"
-  ([^javax.swing.JViewport this]
+  (^Boolean [^javax.swing.JViewport this]
     (-> this (.isOptimizedDrawingEnabled))))
 

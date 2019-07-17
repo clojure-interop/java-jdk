@@ -29,6 +29,6 @@
   "returns the target for the link.
 
   returns: `java.lang.String`"
-  ([^javax.swing.text.html.HTMLFrameHyperlinkEvent this]
+  (^java.lang.String [^javax.swing.text.html.HTMLFrameHyperlinkEvent this]
     (-> this (.getTarget))))
 

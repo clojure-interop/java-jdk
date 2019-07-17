@@ -24,7 +24,7 @@
   "Get the cause of this XPathException.
 
   returns: Cause of this XPathException. - `java.lang.Throwable`"
-  ([^javax.xml.xpath.XPathException this]
+  (^java.lang.Throwable [^javax.xml.xpath.XPathException this]
     (-> this (.getCause))))
 
 (defn print-stack-trace

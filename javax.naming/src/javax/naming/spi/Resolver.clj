@@ -26,6 +26,6 @@
             suffix of name.  Cannot be null. - `javax.naming.spi.ResolveResult`
 
   throws: javax.naming.NotContextException - if no context of the appropriate type is found"
-  ([^javax.naming.spi.Resolver this ^javax.naming.Name name ^javax.naming.Context> context-type]
+  (^javax.naming.spi.ResolveResult [^javax.naming.spi.Resolver this ^javax.naming.Name name ^javax.naming.Context> context-type]
     (-> this (.resolveToClass name context-type))))
 

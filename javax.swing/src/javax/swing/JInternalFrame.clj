@@ -168,7 +168,7 @@
    in the top-left corner).
 
   returns: the Icon displayed in the title bar - `javax.swing.Icon`"
-  ([^javax.swing.JInternalFrame this]
+  (^javax.swing.Icon [^javax.swing.JInternalFrame this]
     (-> this (.getFrameIcon))))
 
 (defn set-layout
@@ -219,21 +219,21 @@
    JInternalFrame is iconified.
 
   returns: the JDesktopIcon displayed on the desktop - `javax.swing.JInternalFrame.JDesktopIcon`"
-  ([^javax.swing.JInternalFrame this]
+  (^javax.swing.JInternalFrame.JDesktopIcon [^javax.swing.JInternalFrame this]
     (-> this (.getDesktopIcon))))
 
 (defn maximizable?
   "Gets the value of the maximizable property.
 
   returns: the value of the maximizable property - `boolean`"
-  ([^javax.swing.JInternalFrame this]
+  (^Boolean [^javax.swing.JInternalFrame this]
     (-> this (.isMaximizable))))
 
 (defn icon?
   "Returns whether the JInternalFrame is currently iconified.
 
   returns: true if this internal frame is iconified - `boolean`"
-  ([^javax.swing.JInternalFrame this]
+  (^Boolean [^javax.swing.JInternalFrame this]
     (-> this (.isIcon))))
 
 (defn pack
@@ -264,7 +264,7 @@
    which by default is false.
 
   returns: the value of the iconable property. - `boolean`"
-  ([^javax.swing.JInternalFrame this]
+  (^Boolean [^javax.swing.JInternalFrame this]
     (-> this (.isIconifiable))))
 
 (defn get-most-recent-focus-owner
@@ -284,7 +284,7 @@
 
   returns: the child component that will receive focus when this
            JInternalFrame is selected - `java.awt.Component`"
-  ([^javax.swing.JInternalFrame this]
+  (^java.awt.Component [^javax.swing.JInternalFrame this]
     (-> this (.getMostRecentFocusOwner))))
 
 (defn set-layer
@@ -299,7 +299,7 @@
    some user action.
 
   returns: true if this internal frame can be closed - `boolean`"
-  ([^javax.swing.JInternalFrame this]
+  (^Boolean [^javax.swing.JInternalFrame this]
     (-> this (.isClosable))))
 
 (defn do-default-close-action
@@ -393,7 +393,7 @@
   "Returns the content pane for this internal frame.
 
   returns: the content pane - `java.awt.Container`"
-  ([^javax.swing.JInternalFrame this]
+  (^java.awt.Container [^javax.swing.JInternalFrame this]
     (-> this (.getContentPane))))
 
 (defn set-selected
@@ -442,7 +442,7 @@
    Otherwise, returns null.
 
   returns: the component with focus, or null if no children have focus - `java.awt.Component`"
-  ([^javax.swing.JInternalFrame this]
+  (^java.awt.Component [^javax.swing.JInternalFrame this]
     (-> this (.getFocusOwner))))
 
 (defn set-frame-icon
@@ -467,7 +467,7 @@
    class that renders this component.
 
   returns: the string `InternalFrameUI` - `java.lang.String`"
-  ([^javax.swing.JInternalFrame this]
+  (^java.lang.String [^javax.swing.JInternalFrame this]
     (-> this (.getUIClassID))))
 
 (defn get-j-menu-bar
@@ -476,7 +476,7 @@
    if no menu bar has been set.
 
   returns: the JMenuBar used by this internal frame - `javax.swing.JMenuBar`"
-  ([^javax.swing.JInternalFrame this]
+  (^javax.swing.JMenuBar [^javax.swing.JInternalFrame this]
     (-> this (.getJMenuBar))))
 
 (defn get-layer
@@ -484,7 +484,7 @@
 
   returns: an Integer object specifying this
             frame's desktop layer - `int`"
-  ([^javax.swing.JInternalFrame this]
+  (^Integer [^javax.swing.JInternalFrame this]
     (-> this (.getLayer))))
 
 (defn get-internal-frame-listeners
@@ -537,7 +537,7 @@
   "Returns whether this JInternalFrame is currently closed.
 
   returns: true if this internal frame is closed, false otherwise - `boolean`"
-  ([^javax.swing.JInternalFrame this]
+  (^Boolean [^javax.swing.JInternalFrame this]
     (-> this (.isClosed))))
 
 (defn set-ui
@@ -565,7 +565,7 @@
    by some user action.
 
   returns: true if this internal frame can be resized, false otherwise - `boolean`"
-  ([^javax.swing.JInternalFrame this]
+  (^Boolean [^javax.swing.JInternalFrame this]
     (-> this (.isResizable))))
 
 (defn add-internal-frame-listener
@@ -604,7 +604,7 @@
 
   returns: the InternalFrameUI object that renders
             this component - `javax.swing.plaf.InternalFrameUI`"
-  ([^javax.swing.JInternalFrame this]
+  (^javax.swing.plaf.InternalFrameUI [^javax.swing.JInternalFrame this]
     (-> this (.getUI))))
 
 (defn to-back
@@ -619,7 +619,7 @@
   "Returns the glass pane for this internal frame.
 
   returns: the glass pane - `java.awt.Component`"
-  ([^javax.swing.JInternalFrame this]
+  (^java.awt.Component [^javax.swing.JInternalFrame this]
     (-> this (.getGlassPane))))
 
 (defn get-accessible-context
@@ -633,7 +633,7 @@
   returns: an AccessibleJInternalFrame that serves as the
            AccessibleContext of this
            JInternalFrame - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.JInternalFrame this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.JInternalFrame this]
     (-> this (.getAccessibleContext))))
 
 (defn get-last-cursor
@@ -642,7 +642,7 @@
    Cursor.
 
   returns: the last non-resizable Cursor - `java.awt.Cursor`"
-  ([^javax.swing.JInternalFrame this]
+  (^java.awt.Cursor [^javax.swing.JInternalFrame this]
     (-> this (.getLastCursor))))
 
 (defn set-glass-pane
@@ -660,7 +660,7 @@
 
   returns: a Rectangle containing the bounds of this
             frame when in the normal state - `java.awt.Rectangle`"
-  ([^javax.swing.JInternalFrame this]
+  (^java.awt.Rectangle [^javax.swing.JInternalFrame this]
     (-> this (.getNormalBounds))))
 
 (defn set-closable
@@ -677,7 +677,7 @@
    traversal cycle.
 
   returns: null - `java.awt.Container`"
-  ([^javax.swing.JInternalFrame this]
+  (^java.awt.Container [^javax.swing.JInternalFrame this]
     (-> this (.getFocusCycleRootAncestor))))
 
 (defn selected?
@@ -685,7 +685,7 @@
    currently `selected` or active frame.
 
   returns: true if this internal frame is currently selected (active) - `boolean`"
-  ([^javax.swing.JInternalFrame this]
+  (^Boolean [^javax.swing.JInternalFrame this]
     (-> this (.isSelected))))
 
 (defn set-j-menu-bar
@@ -707,7 +707,7 @@
   "Returns whether the JInternalFrame is currently maximized.
 
   returns: true if this internal frame is maximized, false otherwise - `boolean`"
-  ([^javax.swing.JInternalFrame this]
+  (^Boolean [^javax.swing.JInternalFrame this]
     (-> this (.isMaximum))))
 
 (defn set-cursor
@@ -745,7 +745,7 @@
   "Returns the rootPane object for this internal frame.
 
   returns: the rootPane property - `javax.swing.JRootPane`"
-  ([^javax.swing.JInternalFrame this]
+  (^javax.swing.JRootPane [^javax.swing.JInternalFrame this]
     (-> this (.getRootPane))))
 
 (defn set-iconifiable
@@ -774,7 +774,7 @@
   "Returns the layered pane for this internal frame.
 
   returns: a JLayeredPane object - `javax.swing.JLayeredPane`"
-  ([^javax.swing.JInternalFrame this]
+  (^javax.swing.JLayeredPane [^javax.swing.JInternalFrame this]
     (-> this (.getLayeredPane))))
 
 (defn set-resizable
@@ -792,7 +792,7 @@
    this method always returns null.
 
   returns: null - `java.lang.String`"
-  ([^javax.swing.JInternalFrame this]
+  (^java.lang.String [^javax.swing.JInternalFrame this]
     (-> this (.getWarningString))))
 
 (defn focus-cycle-root?
@@ -800,7 +800,7 @@
    roots of a focus traversal cycle.
 
   returns: true - `boolean`"
-  ([^javax.swing.JInternalFrame this]
+  (^Boolean [^javax.swing.JInternalFrame this]
     (-> this (.isFocusCycleRoot))))
 
 (defn update-ui
@@ -826,14 +826,14 @@
 
   returns: the JDesktopPane this internal frame belongs to,
            or null if none is found - `javax.swing.JDesktopPane`"
-  ([^javax.swing.JInternalFrame this]
+  (^javax.swing.JDesktopPane [^javax.swing.JInternalFrame this]
     (-> this (.getDesktopPane))))
 
 (defn get-title
   "Returns the title of the JInternalFrame.
 
   returns: a String containing this internal frame's title - `java.lang.String`"
-  ([^javax.swing.JInternalFrame this]
+  (^java.lang.String [^javax.swing.JInternalFrame this]
     (-> this (.getTitle))))
 
 (defn set-title
@@ -850,6 +850,6 @@
 
   returns: the operation that will occur when the user closes the internal
            frame - `int`"
-  ([^javax.swing.JInternalFrame this]
+  (^Integer [^javax.swing.JInternalFrame this]
     (-> this (.getDefaultCloseOperation))))
 

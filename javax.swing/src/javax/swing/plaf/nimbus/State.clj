@@ -45,6 +45,6 @@
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^javax.swing.plaf.nimbus.State this]
+  (^java.lang.String [^javax.swing.plaf.nimbus.State this]
     (-> this (.toString))))
 

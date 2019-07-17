@@ -33,7 +33,7 @@
 
   returns: the cause of this XMLSignatureException or
            null if the cause is nonexistent or unknown. - `java.lang.Throwable`"
-  ([^javax.xml.crypto.dsig.XMLSignatureException this]
+  (^java.lang.Throwable [^javax.xml.crypto.dsig.XMLSignatureException this]
     (-> this (.getCause))))
 
 (defn print-stack-trace

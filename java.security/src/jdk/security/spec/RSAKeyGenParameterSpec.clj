@@ -35,13 +35,13 @@
   "Returns the keysize.
 
   returns: the keysize. - `int`"
-  ([^java.security.spec.RSAKeyGenParameterSpec this]
+  (^Integer [^java.security.spec.RSAKeyGenParameterSpec this]
     (-> this (.getKeysize))))
 
 (defn get-public-exponent
   "Returns the public-exponent value.
 
   returns: the public-exponent value. - `java.math.BigInteger`"
-  ([^java.security.spec.RSAKeyGenParameterSpec this]
+  (^java.math.BigInteger [^java.security.spec.RSAKeyGenParameterSpec this]
     (-> this (.getPublicExponent))))
 

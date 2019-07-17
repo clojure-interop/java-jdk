@@ -39,13 +39,13 @@
   "Description copied from interface: Icon
 
   returns: an int specifying the fixed width of the icon. - `int`"
-  ([^javax.swing.plaf.metal.MetalIconFactory$TreeControlIcon this]
+  (^Integer [^javax.swing.plaf.metal.MetalIconFactory$TreeControlIcon this]
     (-> this (.getIconWidth))))
 
 (defn get-icon-height
   "Description copied from interface: Icon
 
   returns: an int specifying the fixed height of the icon. - `int`"
-  ([^javax.swing.plaf.metal.MetalIconFactory$TreeControlIcon this]
+  (^Integer [^javax.swing.plaf.metal.MetalIconFactory$TreeControlIcon this]
     (-> this (.getIconHeight))))
 

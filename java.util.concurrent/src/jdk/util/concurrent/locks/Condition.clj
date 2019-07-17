@@ -151,7 +151,7 @@
            before return from the method, else true - `boolean`
 
   throws: java.lang.InterruptedException - if the current thread is interrupted (and interruption of thread suspension is supported)"
-  ([^java.util.concurrent.locks.Condition this ^Long time ^java.util.concurrent.TimeUnit unit]
+  (^Boolean [^java.util.concurrent.locks.Condition this ^Long time ^java.util.concurrent.TimeUnit unit]
     (-> this (.await time unit)))
   ([^java.util.concurrent.locks.Condition this]
     (-> this (.await))))
@@ -282,7 +282,7 @@
            indicates that no time remains. - `long`
 
   throws: java.lang.InterruptedException - if the current thread is interrupted (and interruption of thread suspension is supported)"
-  ([^java.util.concurrent.locks.Condition this ^Long nanos-timeout]
+  (^Long [^java.util.concurrent.locks.Condition this ^Long nanos-timeout]
     (-> this (.awaitNanos nanos-timeout))))
 
 (defn await-until
@@ -361,7 +361,7 @@
            true - `boolean`
 
   throws: java.lang.InterruptedException - if the current thread is interrupted (and interruption of thread suspension is supported)"
-  ([^java.util.concurrent.locks.Condition this ^java.util.Date deadline]
+  (^Boolean [^java.util.concurrent.locks.Condition this ^java.util.Date deadline]
     (-> this (.awaitUntil deadline))))
 
 (defn signal

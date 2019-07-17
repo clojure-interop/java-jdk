@@ -32,7 +32,7 @@
   attributes - Specifies attributes to be extracted from the text. If null is specified, all available attributes will be used. - `java.text.AttributedCharacterIterator.Attribute[]`
 
   throws: java.lang.NullPointerException - if text is null."
-  ([^java.text.AttributedCharacterIterator text ^Integer begin-index ^Integer end-index ^java.text.AttributedCharacterIterator.Attribute[] attributes]
+  ([^java.text.AttributedCharacterIterator text ^Integer begin-index ^Integer end-index attributes]
     (new AttributedString text begin-index end-index attributes))
   ([^java.text.AttributedCharacterIterator text ^Integer begin-index ^Integer end-index]
     (new AttributedString text begin-index end-index))
@@ -81,10 +81,10 @@
   returns: an iterator providing access to the text and its attributes - `java.text.AttributedCharacterIterator`
 
   throws: java.lang.IllegalArgumentException - if beginIndex is less then 0, endIndex is greater than the length of the string, or beginIndex is greater than endIndex."
-  ([^java.text.AttributedString this ^java.text.AttributedCharacterIterator.Attribute[] attributes ^Integer begin-index ^Integer end-index]
+  (^java.text.AttributedCharacterIterator [^java.text.AttributedString this attributes ^Integer begin-index ^Integer end-index]
     (-> this (.getIterator attributes begin-index end-index)))
-  ([^java.text.AttributedString this ^java.text.AttributedCharacterIterator.Attribute[] attributes]
+  (^java.text.AttributedCharacterIterator [^java.text.AttributedString this attributes]
     (-> this (.getIterator attributes)))
-  ([^java.text.AttributedString this]
+  (^java.text.AttributedCharacterIterator [^java.text.AttributedString this]
     (-> this (.getIterator))))
 

@@ -122,7 +122,7 @@
   "Returns the type of this event.
 
   returns: The type of this event. - `int`"
-  ([^javax.naming.event.NamingEvent this]
+  (^Integer [^javax.naming.event.NamingEvent this]
     (-> this (.getType))))
 
 (defn get-event-context
@@ -139,7 +139,7 @@
    for more information on threading issues.
 
   returns: The non-null context that fired this event. - `javax.naming.event.EventContext`"
-  ([^javax.naming.event.NamingEvent this]
+  (^javax.naming.event.EventContext [^javax.naming.event.NamingEvent this]
     (-> this (.getEventContext))))
 
 (defn get-old-binding
@@ -159,7 +159,7 @@
    such information is unavailable.
 
   returns: The possibly null binding of the object before the change. - `javax.naming.Binding`"
-  ([^javax.naming.event.NamingEvent this]
+  (^javax.naming.Binding [^javax.naming.event.NamingEvent this]
     (-> this (.getOldBinding))))
 
 (defn get-new-binding
@@ -179,7 +179,7 @@
    such information is unavailable.
 
   returns: The possibly null binding of the object after the change. - `javax.naming.Binding`"
-  ([^javax.naming.event.NamingEvent this]
+  (^javax.naming.Binding [^javax.naming.event.NamingEvent this]
     (-> this (.getNewBinding))))
 
 (defn get-change-info
@@ -188,7 +188,7 @@
    it could be an ID that identifies the change in a change log on the server.
 
   returns: The possibly null change information of this event. - `java.lang.Object`"
-  ([^javax.naming.event.NamingEvent this]
+  (^java.lang.Object [^javax.naming.event.NamingEvent this]
     (-> this (.getChangeInfo))))
 
 (defn dispatch

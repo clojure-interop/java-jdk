@@ -99,6 +99,6 @@
             is less than, equal to, or greater than the specified object. - `int`
 
   throws: java.lang.NullPointerException - if the specified object is null"
-  ([^java.lang.Comparable this ^Comparable.T o]
+  (^Integer [^java.lang.Comparable this ^Comparable.T o]
     (-> this (.compareTo o))))
 

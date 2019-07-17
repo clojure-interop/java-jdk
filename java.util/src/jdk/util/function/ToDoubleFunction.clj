@@ -13,6 +13,6 @@
   value - the function argument - `ToDoubleFunction.T`
 
   returns: the function result - `double`"
-  ([^java.util.function.ToDoubleFunction this ^ToDoubleFunction.T value]
+  (^Double [^java.util.function.ToDoubleFunction this ^ToDoubleFunction.T value]
     (-> this (.applyAsDouble value))))
 

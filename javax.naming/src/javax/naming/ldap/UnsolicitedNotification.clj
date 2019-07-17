@@ -22,6 +22,6 @@
   returns: A possibly null exception as constructed using information
    sent by the server. If null, a `success` status was indicated by
    the server. - `javax.naming.NamingException`"
-  ([^javax.naming.ldap.UnsolicitedNotification this]
+  (^javax.naming.NamingException [^javax.naming.ldap.UnsolicitedNotification this]
     (-> this (.getException))))
 

@@ -75,7 +75,7 @@
 
   returns: True if object is equivalent to this job hold
             until attribute, false otherwise. - `boolean`"
-  ([^javax.print.attribute.standard.JobHoldUntil this ^java.lang.Object object]
+  (^Boolean [^javax.print.attribute.standard.JobHoldUntil this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -96,6 +96,6 @@
    For class JobHoldUntil, the category name is `job-hold-until`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.JobHoldUntil this]
+  (^java.lang.String [^javax.print.attribute.standard.JobHoldUntil this]
     (-> this (.getName))))
 

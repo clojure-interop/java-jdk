@@ -166,7 +166,7 @@
    initialized to that value. - `java.util.logging.Level`
 
   throws: java.lang.NullPointerException - if the name is null"
-  ([^java.lang.String name]
+  (^java.util.logging.Level [^java.lang.String name]
     (Level/parse name)))
 
 (defn get-resource-bundle-name
@@ -174,14 +174,14 @@
    null if no localization bundle is defined.
 
   returns: localization resource bundle name - `java.lang.String`"
-  ([^java.util.logging.Level this]
+  (^java.lang.String [^java.util.logging.Level this]
     (-> this (.getResourceBundleName))))
 
 (defn get-name
   "Return the non-localized string name of the Level.
 
   returns: non-localized name - `java.lang.String`"
-  ([^java.util.logging.Level this]
+  (^java.lang.String [^java.util.logging.Level this]
     (-> this (.getName))))
 
 (defn get-localized-name
@@ -192,14 +192,14 @@
    non-localized name is returned.
 
   returns: localized name - `java.lang.String`"
-  ([^java.util.logging.Level this]
+  (^java.lang.String [^java.util.logging.Level this]
     (-> this (.getLocalizedName))))
 
 (defn to-string
   "Returns a string representation of this Level.
 
   returns: the non-localized name of the Level, for example `INFO`. - `java.lang.String`"
-  ([^java.util.logging.Level this]
+  (^java.lang.String [^java.util.logging.Level this]
     (-> this (.toString))))
 
 (defn int-value
@@ -208,7 +208,7 @@
    Level objects.
 
   returns: the integer value for this level. - `int`"
-  ([^java.util.logging.Level this]
+  (^Integer [^java.util.logging.Level this]
     (-> this (.intValue))))
 
 (defn equals
@@ -217,13 +217,13 @@
   ox - the reference object with which to compare. - `java.lang.Object`
 
   returns: true if and only if the two objects have the same level value. - `boolean`"
-  ([^java.util.logging.Level this ^java.lang.Object ox]
+  (^Boolean [^java.util.logging.Level this ^java.lang.Object ox]
     (-> this (.equals ox))))
 
 (defn hash-code
   "Generate a hashcode.
 
   returns: a hashcode based on the level value - `int`"
-  ([^java.util.logging.Level this]
+  (^Integer [^java.util.logging.Level this]
     (-> this (.hashCode))))
 

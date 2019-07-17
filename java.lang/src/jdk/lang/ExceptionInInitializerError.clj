@@ -39,7 +39,7 @@
            ExceptionInInitializerError, or null
            if this ExceptionInInitializerError has no saved
            throwable object. - `java.lang.Throwable`"
-  ([^java.lang.ExceptionInInitializerError this]
+  (^java.lang.Throwable [^java.lang.ExceptionInInitializerError this]
     (-> this (.getException))))
 
 (defn get-cause
@@ -48,6 +48,6 @@
 
   returns: the cause of this error or null if the
             cause is nonexistent or unknown. - `java.lang.Throwable`"
-  ([^java.lang.ExceptionInInitializerError this]
+  (^java.lang.Throwable [^java.lang.ExceptionInInitializerError this]
     (-> this (.getCause))))
 

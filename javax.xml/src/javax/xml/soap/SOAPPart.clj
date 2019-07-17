@@ -49,7 +49,7 @@
              SOAPPart object - `javax.xml.soap.SOAPEnvelope`
 
   throws: javax.xml.soap.SOAPException - if there is a SOAP error"
-  ([^javax.xml.soap.SOAPPart this]
+  (^javax.xml.soap.SOAPEnvelope [^javax.xml.soap.SOAPPart this]
     (-> this (.getEnvelope))))
 
 (defn add-mime-header
@@ -83,7 +83,7 @@
 
   returns: a String giving the value of the MIME header whose
             name is `Content-Location` - `java.lang.String`"
-  ([^javax.xml.soap.SOAPPart this]
+  (^java.lang.String [^javax.xml.soap.SOAPPart this]
     (-> this (.getContentLocation))))
 
 (defn remove-all-mime-headers
@@ -102,7 +102,7 @@
             except those that match one of the names in the
              given array.  The nonmatching MIME headers are returned as an
              Iterator object. - `java.util.Iterator`"
-  ([^javax.xml.soap.SOAPPart this ^java.lang.String[] names]
+  (^java.util.Iterator [^javax.xml.soap.SOAPPart this names]
     (-> this (.getNonMatchingMimeHeaders names))))
 
 (defn remove-mime-header
@@ -142,7 +142,7 @@
 
   returns: all of the MIME headers that match one of the names in the
              given array, returned as an Iterator object - `java.util.Iterator`"
-  ([^javax.xml.soap.SOAPPart this ^java.lang.String[] names]
+  (^java.util.Iterator [^javax.xml.soap.SOAPPart this names]
     (-> this (.getMatchingMimeHeaders names))))
 
 (defn get-all-mime-headers
@@ -151,7 +151,7 @@
 
   returns: an Iterator object with all of the Mime
             headers for this SOAPPart object - `java.util.Iterator`"
-  ([^javax.xml.soap.SOAPPart this]
+  (^java.util.Iterator [^javax.xml.soap.SOAPPart this]
     (-> this (.getAllMimeHeaders))))
 
 (defn set-content
@@ -191,7 +191,7 @@
   returns: the content as a javax.xml.transform.Source object - `javax.xml.transform.Source`
 
   throws: javax.xml.soap.SOAPException - if the implementation cannot convert the specified Source object"
-  ([^javax.xml.soap.SOAPPart this]
+  (^javax.xml.transform.Source [^javax.xml.soap.SOAPPart this]
     (-> this (.getContent))))
 
 (defn get-content-id
@@ -199,6 +199,6 @@
 
   returns: a String giving the value of the MIME header
            named `Content-Id` - `java.lang.String`"
-  ([^javax.xml.soap.SOAPPart this]
+  (^java.lang.String [^javax.xml.soap.SOAPPart this]
     (-> this (.getContentId))))
 

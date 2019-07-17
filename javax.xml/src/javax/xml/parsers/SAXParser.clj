@@ -41,7 +41,7 @@
            implementation of this class. - `org.xml.sax.Parser`
 
   throws: org.xml.sax.SAXException - If any SAX errors occur during processing."
-  ([^javax.xml.parsers.SAXParser this]
+  (^org.xml.sax.Parser [^javax.xml.parsers.SAXParser this]
     (-> this (.getParser))))
 
 (defn reset
@@ -69,7 +69,7 @@
   returns: Value of the requested property. - `java.lang.Object`
 
   throws: org.xml.sax.SAXNotRecognizedException - When the underlying XMLReader does not recognize the property name."
-  ([^javax.xml.parsers.SAXParser this ^java.lang.String name]
+  (^java.lang.Object [^javax.xml.parsers.SAXParser this ^java.lang.String name]
     (-> this (.getProperty name))))
 
 (defn get-xml-reader
@@ -80,7 +80,7 @@
            implementation of this class. - `org.xml.sax.XMLReader`
 
   throws: org.xml.sax.SAXException - If any SAX errors occur during processing."
-  ([^javax.xml.parsers.SAXParser this]
+  (^org.xml.sax.XMLReader [^javax.xml.parsers.SAXParser this]
     (-> this (.getXMLReader))))
 
 (defn get-schema
@@ -93,7 +93,7 @@
     if none in use - `javax.xml.validation.Schema`
 
   throws: java.lang.UnsupportedOperationException - When implementation does not override this method"
-  ([^javax.xml.parsers.SAXParser this]
+  (^javax.xml.validation.Schema [^javax.xml.parsers.SAXParser this]
     (-> this (.getSchema))))
 
 (defn parse
@@ -152,7 +152,7 @@
 
   returns: true if this parser is configured to
            understand namespaces; false otherwise. - `boolean`"
-  ([^javax.xml.parsers.SAXParser this]
+  (^Boolean [^javax.xml.parsers.SAXParser this]
     (-> this (.isNamespaceAware))))
 
 (defn validating?
@@ -161,7 +161,7 @@
 
   returns: true if this parser is configured to
            validate XML documents; false otherwise. - `boolean`"
-  ([^javax.xml.parsers.SAXParser this]
+  (^Boolean [^javax.xml.parsers.SAXParser this]
     (-> this (.isValidating))))
 
 (defn x-include-aware?
@@ -172,6 +172,6 @@
         when this parser was created from factory. - `boolean`
 
   throws: java.lang.UnsupportedOperationException - When implementation does not override this method"
-  ([^javax.xml.parsers.SAXParser this]
+  (^Boolean [^javax.xml.parsers.SAXParser this]
     (-> this (.isXIncludeAware))))
 

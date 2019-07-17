@@ -53,7 +53,7 @@
   longs - a long array containing a little-endian representation of a sequence of bits to be used as the initial bits of the new bit set - `long[]`
 
   returns: a BitSet containing all the bits in the long array - `java.util.BitSet`"
-  ([longs]
+  (^java.util.BitSet [longs]
     (BitSet/valueOf longs)))
 
 (defn to-long-array
@@ -91,7 +91,7 @@
            is no such bit - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if the specified index is less than -1"
-  ([^java.util.BitSet this ^Integer from-index]
+  (^Integer [^java.util.BitSet this ^Integer from-index]
     (-> this (.previousSetBit from-index))))
 
 (defn stream
@@ -106,7 +106,7 @@
    stream operation is undefined.
 
   returns: a stream of integers representing set indices - `java.util..IntStream`"
-  ([^java.util.BitSet this]
+  (^java.util..IntStream [^java.util.BitSet this]
     (-> this (.stream))))
 
 (defn and-not
@@ -142,7 +142,7 @@
    Now drPepper.toString() returns `{2, 4, 10}`.
 
   returns: a string representation of this bit set - `java.lang.String`"
-  ([^java.util.BitSet this]
+  (^java.lang.String [^java.util.BitSet this]
     (-> this (.toString))))
 
 (defn flip
@@ -176,7 +176,7 @@
    if the BitSet contains no set bits.
 
   returns: the logical size of this BitSet - `int`"
-  ([^java.util.BitSet this]
+  (^Integer [^java.util.BitSet this]
     (-> this (.length))))
 
 (defn and
@@ -202,7 +202,7 @@
            is no such bit - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if the specified index is less than -1"
-  ([^java.util.BitSet this ^Integer from-index]
+  (^Integer [^java.util.BitSet this ^Integer from-index]
     (-> this (.previousClearBit from-index))))
 
 (defn next-clear-bit
@@ -214,7 +214,7 @@
   returns: the index of the next clear bit - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if the specified index is negative"
-  ([^java.util.BitSet this ^Integer from-index]
+  (^Integer [^java.util.BitSet this ^Integer from-index]
     (-> this (.nextClearBit from-index))))
 
 (defn clone
@@ -224,7 +224,7 @@
    same bits set to true as this bit set.
 
   returns: a clone of this bit set - `java.lang.Object`"
-  ([^java.util.BitSet this]
+  (^java.lang.Object [^java.util.BitSet this]
     (-> this (.clone))))
 
 (defn hash-code
@@ -245,7 +245,7 @@
    Note that the hash code changes if the set of bits is altered.
 
   returns: the hash code value for this bit set - `int`"
-  ([^java.util.BitSet this]
+  (^Integer [^java.util.BitSet this]
     (-> this (.hashCode))))
 
 (defn set
@@ -269,7 +269,7 @@
    to true.
 
   returns: boolean indicating whether this BitSet is empty - `boolean`"
-  ([^java.util.BitSet this]
+  (^Boolean [^java.util.BitSet this]
     (-> this (.isEmpty))))
 
 (defn size
@@ -278,7 +278,7 @@
    The maximum element in the set is the size - 1st element.
 
   returns: the number of bits currently in this bit set - `int`"
-  ([^java.util.BitSet this]
+  (^Integer [^java.util.BitSet this]
     (-> this (.size))))
 
 (defn clear
@@ -300,7 +300,7 @@
   "Returns the number of bits set to true in this BitSet.
 
   returns: the number of bits set to true in this BitSet - `int`"
-  ([^java.util.BitSet this]
+  (^Integer [^java.util.BitSet this]
     (-> this (.cardinality))))
 
 (defn get
@@ -313,9 +313,9 @@
   returns: a new BitSet from a range of this BitSet - `java.util.BitSet`
 
   throws: java.lang.IndexOutOfBoundsException - if fromIndex is negative, or toIndex is negative, or fromIndex is larger than toIndex"
-  ([^java.util.BitSet this ^Integer from-index ^Integer to-index]
+  (^java.util.BitSet [^java.util.BitSet this ^Integer from-index ^Integer to-index]
     (-> this (.get from-index to-index)))
-  ([^java.util.BitSet this ^Integer bit-index]
+  (^Boolean [^java.util.BitSet this ^Integer bit-index]
     (-> this (.get bit-index))))
 
 (defn to-byte-array
@@ -347,7 +347,7 @@
 
   returns: true if the objects are the same;
            false otherwise - `boolean`"
-  ([^java.util.BitSet this ^java.lang.Object obj]
+  (^Boolean [^java.util.BitSet this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn intersects
@@ -358,7 +358,7 @@
 
   returns: boolean indicating whether this BitSet intersects
            the specified BitSet - `boolean`"
-  ([^java.util.BitSet this ^java.util.BitSet set]
+  (^Boolean [^java.util.BitSet this ^java.util.BitSet set]
     (-> this (.intersects set))))
 
 (defn xor
@@ -399,6 +399,6 @@
            is no such bit - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if the specified index is negative"
-  ([^java.util.BitSet this ^Integer from-index]
+  (^Integer [^java.util.BitSet this ^Integer from-index]
     (-> this (.nextSetBit from-index))))
 

@@ -41,7 +41,7 @@
   returns: an object that refers to the highlight - `java.lang.Object`
 
   throws: javax.swing.text.BadLocationException - for an invalid range specification"
-  ([^javax.swing.text.Highlighter this ^Integer p-0 ^Integer p-1 ^javax.swing.text.Highlighter.HighlightPainter p]
+  (^java.lang.Object [^javax.swing.text.Highlighter this ^Integer p-0 ^Integer p-1 ^javax.swing.text.Highlighter.HighlightPainter p]
     (-> this (.addHighlight p-0 p-1 p))))
 
 (defn remove-highlight

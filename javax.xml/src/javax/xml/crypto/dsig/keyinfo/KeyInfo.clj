@@ -53,7 +53,7 @@
   returns: an unmodifiable list of one or more XMLStructures
       in this KeyInfo. Never returns null or an
       empty list. - `java.util.List`"
-  ([^javax.xml.crypto.dsig.keyinfo.KeyInfo this]
+  (^java.util.List [^javax.xml.crypto.dsig.keyinfo.KeyInfo this]
     (-> this (.getContent))))
 
 (defn get-id
@@ -63,7 +63,7 @@
 
   returns: the Id attribute of this KeyInfo (may be
       null if not specified) - `java.lang.String`"
-  ([^javax.xml.crypto.dsig.keyinfo.KeyInfo this]
+  (^java.lang.String [^javax.xml.crypto.dsig.keyinfo.KeyInfo this]
     (-> this (.getId))))
 
 (defn marshal

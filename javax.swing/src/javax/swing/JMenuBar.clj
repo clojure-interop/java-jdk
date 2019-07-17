@@ -42,7 +42,7 @@
   "Implemented to be a MenuElement. Returns this object.
 
   returns: the current Component (this) - `java.awt.Component`"
-  ([^javax.swing.JMenuBar this]
+  (^java.awt.Component [^javax.swing.JMenuBar this]
     (-> this (.getComponent))))
 
 (defn get-component-index
@@ -52,7 +52,7 @@
 
   returns: an integer giving the component's position, where 0 is first;
             or -1 if it can't be found - `int`"
-  ([^javax.swing.JMenuBar this ^java.awt.Component c]
+  (^Integer [^javax.swing.JMenuBar this ^java.awt.Component c]
     (-> this (.getComponentIndex c))))
 
 (defn get-component-at-index
@@ -86,7 +86,7 @@
   "Returns the name of the L&F class that renders this component.
 
   returns: the string `MenuBarUI` - `java.lang.String`"
-  ([^javax.swing.JMenuBar this]
+  (^java.lang.String [^javax.swing.JMenuBar this]
     (-> this (.getUIClassID))))
 
 (defn set-selection-model
@@ -120,7 +120,7 @@
   "Returns the model object that handles single selections.
 
   returns: the SingleSelectionModel property - `javax.swing.SingleSelectionModel`"
-  ([^javax.swing.JMenuBar this]
+  (^javax.swing.SingleSelectionModel [^javax.swing.JMenuBar this]
     (-> this (.getSelectionModel))))
 
 (defn set-ui
@@ -144,21 +144,21 @@
   returns: the JMenu at that position, or null if
             if there is no JMenu at that position (ie. if
             it is a JMenuItem) - `javax.swing.JMenu`"
-  ([^javax.swing.JMenuBar this ^Integer index]
+  (^javax.swing.JMenu [^javax.swing.JMenuBar this ^Integer index]
     (-> this (.getMenu index))))
 
 (defn get-ui
   "Returns the menubar's current UI.
 
   returns: `javax.swing.plaf.MenuBarUI`"
-  ([^javax.swing.JMenuBar this]
+  (^javax.swing.plaf.MenuBarUI [^javax.swing.JMenuBar this]
     (-> this (.getUI))))
 
 (defn get-menu-count
   "Returns the number of items in the menu bar.
 
   returns: the number of items in the menu bar - `int`"
-  ([^javax.swing.JMenuBar this]
+  (^Integer [^javax.swing.JMenuBar this]
     (-> this (.getMenuCount))))
 
 (defn get-accessible-context
@@ -169,7 +169,7 @@
 
   returns: an AccessibleJMenuBar that serves as the
            AccessibleContext of this JMenuBar - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.JMenuBar this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.JMenuBar this]
     (-> this (.getAccessibleContext))))
 
 (defn get-sub-elements
@@ -189,14 +189,14 @@
   e - `java.awt.event.KeyEvent`
   path - `javax.swing.MenuElement[]`
   manager - `javax.swing.MenuSelectionManager`"
-  ([^javax.swing.JMenuBar this ^java.awt.event.KeyEvent e ^javax.swing.MenuElement[] path ^javax.swing.MenuSelectionManager manager]
+  ([^javax.swing.JMenuBar this ^java.awt.event.KeyEvent e path ^javax.swing.MenuSelectionManager manager]
     (-> this (.processKeyEvent e path manager))))
 
 (defn selected?
   "Returns true if the menu bar currently has a component selected.
 
   returns: true if a selection has been made, else false - `boolean`"
-  ([^javax.swing.JMenuBar this]
+  (^Boolean [^javax.swing.JMenuBar this]
     (-> this (.isSelected))))
 
 (defn process-mouse-event
@@ -205,7 +205,7 @@
   event - `java.awt.event.MouseEvent`
   path - `javax.swing.MenuElement[]`
   manager - `javax.swing.MenuSelectionManager`"
-  ([^javax.swing.JMenuBar this ^java.awt.event.MouseEvent event ^javax.swing.MenuElement[] path ^javax.swing.MenuSelectionManager manager]
+  ([^javax.swing.JMenuBar this ^java.awt.event.MouseEvent event path ^javax.swing.MenuSelectionManager manager]
     (-> this (.processMouseEvent event path manager))))
 
 (defn add
@@ -214,14 +214,14 @@
   c - the JMenu component to add - `javax.swing.JMenu`
 
   returns: the menu component - `javax.swing.JMenu`"
-  ([^javax.swing.JMenuBar this ^javax.swing.JMenu c]
+  (^javax.swing.JMenu [^javax.swing.JMenuBar this ^javax.swing.JMenu c]
     (-> this (.add c))))
 
 (defn border-painted?
   "Returns true if the menu bars border should be painted.
 
   returns: true if the border should be painted, else false - `boolean`"
-  ([^javax.swing.JMenuBar this]
+  (^Boolean [^javax.swing.JMenuBar this]
     (-> this (.isBorderPainted))))
 
 (defn get-help-menu
@@ -229,7 +229,7 @@
    implemented and will throw an exception.
 
   returns: the JMenu that delivers help to the user - `javax.swing.JMenu`"
-  ([^javax.swing.JMenuBar this]
+  (^javax.swing.JMenu [^javax.swing.JMenuBar this]
     (-> this (.getHelpMenu))))
 
 (defn set-help-menu
@@ -252,6 +252,6 @@
    a default margin with zero size.
 
   returns: an Insets object containing the margin values - `java.awt.Insets`"
-  ([^javax.swing.JMenuBar this]
+  (^java.awt.Insets [^javax.swing.JMenuBar this]
     (-> this (.getMargin))))
 

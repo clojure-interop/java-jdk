@@ -27,14 +27,14 @@
            DirContext.ADD_ATTRIBUTE
            DirContext.REPLACE_ATTRIBUTE
            DirContext.REMOVE_ATTRIBUTE - `int`"
-  ([^javax.naming.directory.ModificationItem this]
+  (^Integer [^javax.naming.directory.ModificationItem this]
     (-> this (.getModificationOp))))
 
 (defn get-attribute
   "Retrieves the attribute associated with this modification item.
 
   returns: The non-null attribute to use for the modification. - `javax.naming.directory.Attribute`"
-  ([^javax.naming.directory.ModificationItem this]
+  (^javax.naming.directory.Attribute [^javax.naming.directory.ModificationItem this]
     (-> this (.getAttribute))))
 
 (defn to-string
@@ -44,6 +44,6 @@
    interpreted programmatically.
 
   returns: The non-null string representation of this modification item. - `java.lang.String`"
-  ([^javax.naming.directory.ModificationItem this]
+  (^java.lang.String [^javax.naming.directory.ModificationItem this]
     (-> this (.toString))))
 

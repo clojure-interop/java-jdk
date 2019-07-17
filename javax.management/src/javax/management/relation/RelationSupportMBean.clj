@@ -24,7 +24,7 @@
 
   returns: a Boolean equal to Boolean.TRUE if the object
    is still handled by the Relation Service and Boolean.FALSE otherwise. - `java.lang.Boolean`"
-  ([^javax.management.relation.RelationSupportMBean this]
+  (^java.lang.Boolean [^javax.management.relation.RelationSupportMBean this]
     (-> this (.isInRelationService))))
 
 (defn set-relation-service-management-flag

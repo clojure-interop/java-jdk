@@ -18,7 +18,7 @@
   returns: the value of the indexed component in the specified array - `byte`
 
   throws: java.lang.NullPointerException - If the specified object is null"
-  ([^java.lang.Object array ^Integer index]
+  (^Byte [^java.lang.Object array ^Integer index]
     (Array/getByte array index)))
 
 (defn *new-instance
@@ -42,7 +42,7 @@
   returns: the new array - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if the specified componentType parameter is null"
-  ([^java.lang.Class component-type ^Integer length]
+  (^java.lang.Object [^java.lang.Class component-type ^Integer length]
     (Array/newInstance component-type length)))
 
 (defn *set-boolean
@@ -67,7 +67,7 @@
   returns: the value of the indexed component in the specified array - `short`
 
   throws: java.lang.NullPointerException - If the specified object is null"
-  ([^java.lang.Object array ^Integer index]
+  (^Short [^java.lang.Object array ^Integer index]
     (Array/getShort array index)))
 
 (defn *get-long
@@ -80,7 +80,7 @@
   returns: the value of the indexed component in the specified array - `long`
 
   throws: java.lang.NullPointerException - If the specified object is null"
-  ([^java.lang.Object array ^Integer index]
+  (^Long [^java.lang.Object array ^Integer index]
     (Array/getLong array index)))
 
 (defn *set-double
@@ -105,7 +105,7 @@
   returns: the value of the indexed component in the specified array - `int`
 
   throws: java.lang.NullPointerException - If the specified object is null"
-  ([^java.lang.Object array ^Integer index]
+  (^Integer [^java.lang.Object array ^Integer index]
     (Array/getInt array index)))
 
 (defn *set-long
@@ -130,7 +130,7 @@
   returns: the value of the indexed component in the specified array - `char`
 
   throws: java.lang.NullPointerException - If the specified object is null"
-  ([^java.lang.Object array ^Integer index]
+  (^Character [^java.lang.Object array ^Integer index]
     (Array/getChar array index)))
 
 (defn *get-length
@@ -141,7 +141,7 @@
   returns: the length of the array - `int`
 
   throws: java.lang.IllegalArgumentException - if the object argument is not an array"
-  ([^java.lang.Object array]
+  (^Integer [^java.lang.Object array]
     (Array/getLength array)))
 
 (defn *set-byte
@@ -204,7 +204,7 @@
   returns: the value of the indexed component in the specified array - `boolean`
 
   throws: java.lang.NullPointerException - If the specified object is null"
-  ([^java.lang.Object array ^Integer index]
+  (^Boolean [^java.lang.Object array ^Integer index]
     (Array/getBoolean array index)))
 
 (defn *get-float
@@ -217,7 +217,7 @@
   returns: the value of the indexed component in the specified array - `float`
 
   throws: java.lang.NullPointerException - If the specified object is null"
-  ([^java.lang.Object array ^Integer index]
+  (^Float [^java.lang.Object array ^Integer index]
     (Array/getFloat array index)))
 
 (defn *get-double
@@ -230,7 +230,7 @@
   returns: the value of the indexed component in the specified array - `double`
 
   throws: java.lang.NullPointerException - If the specified object is null"
-  ([^java.lang.Object array ^Integer index]
+  (^Double [^java.lang.Object array ^Integer index]
     (Array/getDouble array index)))
 
 (defn *get
@@ -245,7 +245,7 @@
    the specified array - `java.lang.Object`
 
   throws: java.lang.NullPointerException - If the specified object is null"
-  ([^java.lang.Object array ^Integer index]
+  (^java.lang.Object [^java.lang.Object array ^Integer index]
     (Array/get array index)))
 
 (defn *set-float

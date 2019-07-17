@@ -27,7 +27,7 @@
   "c - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent c]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent c]
     (MetalToolTipUI/createUI c)))
 
 (defn install-ui
@@ -58,11 +58,11 @@
   c - the component whose preferred size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: `java.awt.Dimension`"
-  ([^javax.swing.plaf.metal.MetalToolTipUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^javax.swing.plaf.metal.MetalToolTipUI this ^javax.swing.JComponent c]
     (-> this (.getPreferredSize c))))
 
 (defn get-accelerator-string
   "returns: `java.lang.String`"
-  ([^javax.swing.plaf.metal.MetalToolTipUI this]
+  (^java.lang.String [^javax.swing.plaf.metal.MetalToolTipUI this]
     (-> this (.getAcceleratorString))))
 

@@ -14,6 +14,6 @@
 
   returns: true if and only if pathname
             should be included - `boolean`"
-  ([^java.io.FileFilter this ^java.io.File pathname]
+  (^Boolean [^java.io.FileFilter this ^java.io.File pathname]
     (-> this (.accept pathname))))
 

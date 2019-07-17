@@ -56,6 +56,6 @@
    The default is false.
 
   returns: whether the data are written in top-down order. - `boolean`"
-  ([^javax.imageio.plugins.bmp.BMPImageWriteParam this]
+  (^Boolean [^javax.imageio.plugins.bmp.BMPImageWriteParam this]
     (-> this (.isTopDown))))
 

@@ -17,7 +17,7 @@
    for this tag.
 
   returns: a hash code value for this object. - `int`"
-  ([^javax.swing.text.html.HTML$UnknownTag this]
+  (^Integer [^javax.swing.text.html.HTML$UnknownTag this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -30,6 +30,6 @@
 
   returns: true if the objects are equal;
               false otherwise - `boolean`"
-  ([^javax.swing.text.html.HTML$UnknownTag this ^java.lang.Object obj]
+  (^Boolean [^javax.swing.text.html.HTML$UnknownTag this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

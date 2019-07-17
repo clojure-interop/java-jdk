@@ -36,6 +36,6 @@
   "Returns the name of the named property associated with the listener.
 
   returns: the name of the named property associated with the listener - `java.lang.String`"
-  ([^java.beans.VetoableChangeListenerProxy this]
+  (^java.lang.String [^java.beans.VetoableChangeListenerProxy this]
     (-> this (.getPropertyName))))
 

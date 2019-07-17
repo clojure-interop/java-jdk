@@ -44,7 +44,7 @@
 
   returns: A possibly null object identifier string representing the LDAP
            ExtendedResponse.responseName component. - `java.lang.String`"
-  ([^javax.naming.ldap.ExtendedResponse this]
+  (^java.lang.String [^javax.naming.ldap.ExtendedResponse this]
     (-> this (.getID))))
 
 (defn get-encoded-value

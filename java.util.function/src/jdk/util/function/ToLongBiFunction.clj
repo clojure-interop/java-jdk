@@ -15,6 +15,6 @@
   u - the second function argument - `ToLongBiFunction.U`
 
   returns: the function result - `long`"
-  ([^java.util.function.ToLongBiFunction this ^ToLongBiFunction.T t ^ToLongBiFunction.U u]
+  (^Long [^java.util.function.ToLongBiFunction this ^ToLongBiFunction.T t ^ToLongBiFunction.U u]
     (-> this (.applyAsLong t u))))
 

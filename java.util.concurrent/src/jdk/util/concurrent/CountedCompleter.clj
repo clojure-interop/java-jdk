@@ -383,7 +383,7 @@
 
   returns: true if this exception should be propagated to this
    task's completer, if one exists - `boolean`"
-  ([^java.util.concurrent.CountedCompleter this ^java.lang.Throwable ex ^java.util.concurrent.CountedCompleter caller]
+  (^Boolean [^java.util.concurrent.CountedCompleter this ^java.lang.Throwable ex ^java.util.concurrent.CountedCompleter caller]
     (-> this (.onExceptionalCompletion ex caller))))
 
 (defn propagate-completion
@@ -427,7 +427,7 @@
   "Returns the current pending count.
 
   returns: the current pending count - `int`"
-  ([^java.util.concurrent.CountedCompleter this]
+  (^Integer [^java.util.concurrent.CountedCompleter this]
     (-> this (.getPendingCount))))
 
 (defn add-to-pending-count
@@ -445,7 +445,7 @@
   count - the new value - `int`
 
   returns: true if successful - `boolean`"
-  ([^java.util.concurrent.CountedCompleter this ^Integer expected ^Integer count]
+  (^Boolean [^java.util.concurrent.CountedCompleter this ^Integer expected ^Integer count]
     (-> this (.compareAndSetPendingCount expected count))))
 
 (defn first-complete
@@ -453,7 +453,7 @@
    otherwise decrements its pending count and returns null. This method is designed to be used with nextComplete() in completion traversal loops.
 
   returns: this task, if pending count was zero, else null - `java.util.concurrent.CountedCompleter<?>`"
-  ([^java.util.concurrent.CountedCompleter this]
+  (^java.util.concurrent.CountedCompleter [^java.util.concurrent.CountedCompleter this]
     (-> this (.firstComplete))))
 
 (defn get-root
@@ -461,7 +461,7 @@
    task if it has no completer, else its completer's root.
 
   returns: the root of the current computation - `java.util.concurrent.CountedCompleter<?>`"
-  ([^java.util.concurrent.CountedCompleter this]
+  (^java.util.concurrent.CountedCompleter [^java.util.concurrent.CountedCompleter this]
     (-> this (.getRoot))))
 
 (defn try-complete
@@ -477,7 +477,7 @@
    or null if none.
 
   returns: the completer - `java.util.concurrent.CountedCompleter<?>`"
-  ([^java.util.concurrent.CountedCompleter this]
+  (^java.util.concurrent.CountedCompleter [^java.util.concurrent.CountedCompleter this]
     (-> this (.getCompleter))))
 
 (defn get-raw-result
@@ -488,7 +488,7 @@
    holds the result upon completion.
 
   returns: the result of the computation - `CountedCompleter.T`"
-  ([^java.util.concurrent.CountedCompleter this]
+  (^CountedCompleter.T [^java.util.concurrent.CountedCompleter this]
     (-> this (.getRawResult))))
 
 (defn help-complete
@@ -521,7 +521,7 @@
    }
 
   returns: the completer, or null if none - `java.util.concurrent.CountedCompleter<?>`"
-  ([^java.util.concurrent.CountedCompleter this]
+  (^java.util.concurrent.CountedCompleter [^java.util.concurrent.CountedCompleter this]
     (-> this (.nextComplete))))
 
 (defn compute
@@ -546,6 +546,6 @@
 
   returns: the initial (undecremented) pending count holding on entry
    to this method - `int`"
-  ([^java.util.concurrent.CountedCompleter this]
+  (^Integer [^java.util.concurrent.CountedCompleter this]
     (-> this (.decrementPendingCountUnlessZero))))
 

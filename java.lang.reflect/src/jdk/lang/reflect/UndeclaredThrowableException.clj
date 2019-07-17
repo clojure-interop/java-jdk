@@ -47,7 +47,7 @@
    obtaining this information.
 
   returns: the undeclared checked exception that was thrown - `java.lang.Throwable`"
-  ([^java.lang.reflect.UndeclaredThrowableException this]
+  (^java.lang.Throwable [^java.lang.reflect.UndeclaredThrowableException this]
     (-> this (.getUndeclaredThrowable))))
 
 (defn get-cause
@@ -56,6 +56,6 @@
    which may be null).
 
   returns: the cause of this exception. - `java.lang.Throwable`"
-  ([^java.lang.reflect.UndeclaredThrowableException this]
+  (^java.lang.Throwable [^java.lang.reflect.UndeclaredThrowableException this]
     (-> this (.getCause))))
 

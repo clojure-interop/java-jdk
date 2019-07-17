@@ -67,7 +67,7 @@
    repainted in response to this event.
 
   returns: `java.awt.Rectangle`"
-  ([^java.awt.event.PaintEvent this]
+  (^java.awt.Rectangle [^java.awt.event.PaintEvent this]
     (-> this (.getUpdateRect))))
 
 (defn set-update-rect
@@ -82,6 +82,6 @@
   "Description copied from class: ComponentEvent
 
   returns: a string identifying the event and its attributes - `java.lang.String`"
-  ([^java.awt.event.PaintEvent this]
+  (^java.lang.String [^java.awt.event.PaintEvent this]
     (-> this (.paramString))))
 

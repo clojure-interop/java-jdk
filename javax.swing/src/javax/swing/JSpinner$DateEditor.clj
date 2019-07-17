@@ -33,13 +33,13 @@
    numbers.
 
   returns: the value of getTextField().getFormatter().getFormat(). - `java.text.SimpleDateFormat`"
-  ([^javax.swing.JSpinner$DateEditor this]
+  (^java.text.SimpleDateFormat [^javax.swing.JSpinner$DateEditor this]
     (-> this (.getFormat))))
 
 (defn get-model
   "Return our spinner ancestor's SpinnerDateModel.
 
   returns: getSpinner().getModel() - `javax.swing.SpinnerDateModel`"
-  ([^javax.swing.JSpinner$DateEditor this]
+  (^javax.swing.SpinnerDateModel [^javax.swing.JSpinner$DateEditor this]
     (-> this (.getModel))))
 

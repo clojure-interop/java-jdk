@@ -44,21 +44,21 @@
    as a result of actions being taken by the user.
 
   returns: the value of the valueIsAdjusting property - `boolean`"
-  ([^javax.swing.DefaultBoundedRangeModel this]
+  (^Boolean [^javax.swing.DefaultBoundedRangeModel this]
     (-> this (.getValueIsAdjusting))))
 
 (defn get-minimum
   "Returns the model's minimum.
 
   returns: the model's minimum - `int`"
-  ([^javax.swing.DefaultBoundedRangeModel this]
+  (^Integer [^javax.swing.DefaultBoundedRangeModel this]
     (-> this (.getMinimum))))
 
 (defn get-extent
   "Returns the model's extent.
 
   returns: the model's extent - `int`"
-  ([^javax.swing.DefaultBoundedRangeModel this]
+  (^Integer [^javax.swing.DefaultBoundedRangeModel this]
     (-> this (.getExtent))))
 
 (defn set-extent
@@ -78,14 +78,14 @@
    BoundedRangeModel properties.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^javax.swing.DefaultBoundedRangeModel this]
+  (^java.lang.String [^javax.swing.DefaultBoundedRangeModel this]
     (-> this (.toString))))
 
 (defn get-value
   "Returns the model's current value.
 
   returns: the model's current value - `int`"
-  ([^javax.swing.DefaultBoundedRangeModel this]
+  (^Integer [^javax.swing.DefaultBoundedRangeModel this]
     (-> this (.getValue))))
 
 (defn remove-change-listener
@@ -200,6 +200,6 @@
   "Returns the model's maximum.
 
   returns: the model's maximum - `int`"
-  ([^javax.swing.DefaultBoundedRangeModel this]
+  (^Integer [^javax.swing.DefaultBoundedRangeModel this]
     (-> this (.getMaximum))))
 

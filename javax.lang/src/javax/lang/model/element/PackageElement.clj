@@ -10,7 +10,7 @@
 
   returns: the fully qualified name of this package, or an
    empty name if this is an unnamed package - `javax.lang.model.element.Name`"
-  ([^javax.lang.model.element.PackageElement this]
+  (^javax.lang.model.element.Name [^javax.lang.model.element.PackageElement this]
     (-> this (.getQualifiedName))))
 
 (defn get-simple-name
@@ -19,7 +19,7 @@
 
   returns: the simple name of this package or an empty name if
    this is an unnamed package - `javax.lang.model.element.Name`"
-  ([^javax.lang.model.element.PackageElement this]
+  (^javax.lang.model.element.Name [^javax.lang.model.element.PackageElement this]
     (-> this (.getSimpleName))))
 
 (defn get-enclosed-elements
@@ -37,7 +37,7 @@
   "Returns true is this is an unnamed package and false otherwise.
 
   returns: true is this is an unnamed package and false otherwise - `boolean`"
-  ([^javax.lang.model.element.PackageElement this]
+  (^Boolean [^javax.lang.model.element.PackageElement this]
     (-> this (.isUnnamed))))
 
 (defn get-enclosing-element
@@ -45,6 +45,6 @@
    element.
 
   returns: null - `javax.lang.model.element.Element`"
-  ([^javax.lang.model.element.PackageElement this]
+  (^javax.lang.model.element.Element [^javax.lang.model.element.PackageElement this]
     (-> this (.getEnclosingElement))))
 

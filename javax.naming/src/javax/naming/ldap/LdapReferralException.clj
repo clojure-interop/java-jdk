@@ -45,10 +45,10 @@
   returns: The non-null context at which to continue the method. - `javax.naming.Context`
 
   throws: javax.naming.NamingException - If a naming exception was encountered. Call either retryReferral() or skipReferral() to continue processing referrals."
-  ([^javax.naming.ldap.LdapReferralException this ^java.util.Hashtable env ^javax.naming.ldap.Control[] req-ctls]
+  (^javax.naming.Context [^javax.naming.ldap.LdapReferralException this ^java.util.Hashtable env req-ctls]
     (-> this (.getReferralContext env req-ctls)))
-  ([^javax.naming.ldap.LdapReferralException this ^java.util.Hashtable env]
+  (^javax.naming.Context [^javax.naming.ldap.LdapReferralException this ^java.util.Hashtable env]
     (-> this (.getReferralContext env)))
-  ([^javax.naming.ldap.LdapReferralException this]
+  (^javax.naming.Context [^javax.naming.ldap.LdapReferralException this]
     (-> this (.getReferralContext))))
 

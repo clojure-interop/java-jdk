@@ -26,6 +26,6 @@
   "Returns the edit value.
 
   returns: the UndoableEdit object encapsulating the edit - `javax.swing.undo.UndoableEdit`"
-  ([^javax.swing.event.UndoableEditEvent this]
+  (^javax.swing.undo.UndoableEdit [^javax.swing.event.UndoableEditEvent this]
     (-> this (.getEdit))))
 

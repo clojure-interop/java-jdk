@@ -70,9 +70,9 @@
   returns: a DecimalFormatSymbols instance. - `java.text.DecimalFormatSymbols`
 
   throws: java.lang.NullPointerException - if locale is null"
-  ([^java.util.Locale locale]
+  (^java.text.DecimalFormatSymbols [^java.util.Locale locale]
     (DecimalFormatSymbols/getInstance locale))
-  ([]
+  (^java.text.DecimalFormatSymbols []
     (DecimalFormatSymbols/getInstance )))
 
 (defn get-currency-symbol
@@ -80,7 +80,7 @@
    DecimalFormatSymbols in their locale.
 
   returns: the currency symbol - `java.lang.String`"
-  ([^java.text.DecimalFormatSymbols this]
+  (^java.lang.String [^java.text.DecimalFormatSymbols this]
     (-> this (.getCurrencySymbol))))
 
 (defn set-zero-digit
@@ -102,7 +102,7 @@
    Examples: `x10^` for 1.23x10^4, `E` for 1.23E4.
 
   returns: the exponent separator string - `java.lang.String`"
-  ([^java.text.DecimalFormatSymbols this]
+  (^java.lang.String [^java.text.DecimalFormatSymbols this]
     (-> this (.getExponentSeparator))))
 
 (defn get-na-n
@@ -110,21 +110,21 @@
    unchanged.
 
   returns: the string representing `not a number` - `java.lang.String`"
-  ([^java.text.DecimalFormatSymbols this]
+  (^java.lang.String [^java.text.DecimalFormatSymbols this]
     (-> this (.getNaN))))
 
 (defn get-per-mill
   "Gets the character used for per mille sign. Different for Arabic, etc.
 
   returns: the character used for per mille sign - `char`"
-  ([^java.text.DecimalFormatSymbols this]
+  (^Character [^java.text.DecimalFormatSymbols this]
     (-> this (.getPerMill))))
 
 (defn get-decimal-separator
   "Gets the character used for decimal sign. Different for French, etc.
 
   returns: the character used for decimal sign - `char`"
-  ([^java.text.DecimalFormatSymbols this]
+  (^Character [^java.text.DecimalFormatSymbols this]
     (-> this (.getDecimalSeparator))))
 
 (defn set-currency
@@ -158,7 +158,7 @@
   "Gets the character used for zero. Different for Arabic, etc.
 
   returns: the character used for zero - `char`"
-  ([^java.text.DecimalFormatSymbols this]
+  (^Character [^java.text.DecimalFormatSymbols this]
     (-> this (.getZeroDigit))))
 
 (defn get-international-currency-symbol
@@ -166,14 +166,14 @@
    DecimalFormatSymbols.
 
   returns: the currency code - `java.lang.String`"
-  ([^java.text.DecimalFormatSymbols this]
+  (^java.lang.String [^java.text.DecimalFormatSymbols this]
     (-> this (.getInternationalCurrencySymbol))))
 
 (defn get-digit
   "Gets the character used for a digit in a pattern.
 
   returns: the character used for a digit in a pattern - `char`"
-  ([^java.text.DecimalFormatSymbols this]
+  (^Character [^java.text.DecimalFormatSymbols this]
     (-> this (.getDigit))))
 
 (defn set-pattern-separator
@@ -188,7 +188,7 @@
   "Returns the monetary decimal separator.
 
   returns: the monetary decimal separator - `char`"
-  ([^java.text.DecimalFormatSymbols this]
+  (^Character [^java.text.DecimalFormatSymbols this]
     (-> this (.getMonetaryDecimalSeparator))))
 
 (defn set-minus-sign
@@ -211,7 +211,7 @@
   "Gets the character used for percent sign. Different for Arabic, etc.
 
   returns: the character used for percent sign - `char`"
-  ([^java.text.DecimalFormatSymbols this]
+  (^Character [^java.text.DecimalFormatSymbols this]
     (-> this (.getPercent))))
 
 (defn set-currency-symbol
@@ -234,21 +234,21 @@
    unchanged.
 
   returns: the string representing infinity - `java.lang.String`"
-  ([^java.text.DecimalFormatSymbols this]
+  (^java.lang.String [^java.text.DecimalFormatSymbols this]
     (-> this (.getInfinity))))
 
 (defn get-grouping-separator
   "Gets the character used for thousands separator. Different for French, etc.
 
   returns: the grouping separator - `char`"
-  ([^java.text.DecimalFormatSymbols this]
+  (^Character [^java.text.DecimalFormatSymbols this]
     (-> this (.getGroupingSeparator))))
 
 (defn clone
   "Standard override.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([^java.text.DecimalFormatSymbols this]
+  (^java.lang.Object [^java.text.DecimalFormatSymbols this]
     (-> this (.clone))))
 
 (defn set-exponent-separator
@@ -265,7 +265,7 @@
   "Override hashCode.
 
   returns: a hash code value for this object. - `int`"
-  ([^java.text.DecimalFormatSymbols this]
+  (^Integer [^java.text.DecimalFormatSymbols this]
     (-> this (.hashCode))))
 
 (defn set-per-mill
@@ -281,7 +281,7 @@
    minusSign to the positive format.
 
   returns: the character representing minus sign - `char`"
-  ([^java.text.DecimalFormatSymbols this]
+  (^Character [^java.text.DecimalFormatSymbols this]
     (-> this (.getMinusSign))))
 
 (defn set-monetary-decimal-separator
@@ -312,7 +312,7 @@
    a valid ISO 4217 currency code.
 
   returns: the currency used, or null - `java.util.Currency`"
-  ([^java.text.DecimalFormatSymbols this]
+  (^java.util.Currency [^java.text.DecimalFormatSymbols this]
     (-> this (.getCurrency))))
 
 (defn set-infinity
@@ -330,7 +330,7 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([^java.text.DecimalFormatSymbols this ^java.lang.Object obj]
+  (^Boolean [^java.text.DecimalFormatSymbols this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn get-pattern-separator
@@ -338,6 +338,6 @@
    in a pattern.
 
   returns: the pattern separator - `char`"
-  ([^java.text.DecimalFormatSymbols this]
+  (^Character [^java.text.DecimalFormatSymbols this]
     (-> this (.getPatternSeparator))))
 

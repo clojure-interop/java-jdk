@@ -149,6 +149,6 @@
    For class Sides, the category name is `sides`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.Sides this]
+  (^java.lang.String [^javax.print.attribute.standard.Sides this]
     (-> this (.getName))))
 

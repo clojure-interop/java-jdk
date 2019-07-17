@@ -54,7 +54,7 @@
 
   returns: a trusted X509Certificate or null
    if the trust anchor was not specified as a trusted certificate - `java.security.cert.X509Certificate`"
-  ([^java.security.cert.TrustAnchor this]
+  (^java.security.cert.X509Certificate [^java.security.cert.TrustAnchor this]
     (-> this (.getTrustedCert))))
 
 (defn get-ca
@@ -63,7 +63,7 @@
   returns: the X.500 distinguished name of the most-trusted CA, or
    null if the trust anchor was not specified as a trusted
    public key and name or X500Principal pair - `javax.security.auth.x500.X500Principal`"
-  ([^java.security.cert.TrustAnchor this]
+  (^javax.security.auth.x500.X500Principal [^java.security.cert.TrustAnchor this]
     (-> this (.getCA))))
 
 (defn get-ca-name
@@ -73,7 +73,7 @@
   returns: the X.500 distinguished name of the most-trusted CA, or
    null if the trust anchor was not specified as a trusted
    public key and name or X500Principal pair - `java.lang.String`"
-  ([^java.security.cert.TrustAnchor this]
+  (^java.lang.String [^java.security.cert.TrustAnchor this]
     (-> this (.getCAName))))
 
 (defn get-ca-public-key
@@ -82,7 +82,7 @@
   returns: the public key of the most-trusted CA, or null
    if the trust anchor was not specified as a trusted public key and name
    or X500Principal pair - `java.security.PublicKey`"
-  ([^java.security.cert.TrustAnchor this]
+  (^java.security.PublicKey [^java.security.cert.TrustAnchor this]
     (-> this (.getCAPublicKey))))
 
 (defn get-name-constraints
@@ -110,6 +110,6 @@
   "Returns a formatted string describing the TrustAnchor.
 
   returns: a formatted string describing the TrustAnchor - `java.lang.String`"
-  ([^java.security.cert.TrustAnchor this]
+  (^java.lang.String [^java.security.cert.TrustAnchor this]
     (-> this (.toString))))
 

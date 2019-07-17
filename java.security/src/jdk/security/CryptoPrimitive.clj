@@ -106,6 +106,6 @@
   returns: the enum constant with the specified name - `java.security.CryptoPrimitive`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^java.security.CryptoPrimitive [^java.lang.String name]
     (CryptoPrimitive/valueOf name)))
 

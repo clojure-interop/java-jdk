@@ -24,6 +24,6 @@
   returns: the unmodifiable List of the
    java.security.KeyStore.Builders
    encapsulated by this object. - `java.util.List<java.security.KeyStore.Builder>`"
-  ([^javax.net.ssl.KeyStoreBuilderParameters this]
+  (^java.util.List [^javax.net.ssl.KeyStoreBuilderParameters this]
     (-> this (.getParameters))))
 

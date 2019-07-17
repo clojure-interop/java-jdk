@@ -40,7 +40,7 @@
    descriptive text partway through reading the file.
 
   returns: the ProgressMonitor object used by this object - `javax.swing.ProgressMonitor`"
-  ([^javax.swing.ProgressMonitorInputStream this]
+  (^javax.swing.ProgressMonitor [^javax.swing.ProgressMonitorInputStream this]
     (-> this (.getProgressMonitor))))
 
 (defn read
@@ -56,11 +56,11 @@
                the stream has been reached. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^javax.swing.ProgressMonitorInputStream this b ^Integer off ^Integer len]
+  (^Integer [^javax.swing.ProgressMonitorInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  ([^javax.swing.ProgressMonitorInputStream this b]
+  (^Integer [^javax.swing.ProgressMonitorInputStream this b]
     (-> this (.read b)))
-  ([^javax.swing.ProgressMonitorInputStream this]
+  (^Integer [^javax.swing.ProgressMonitorInputStream this]
     (-> this (.read))))
 
 (defn skip
@@ -72,7 +72,7 @@
   returns: the actual number of bytes skipped. - `long`
 
   throws: java.io.IOException - if the stream does not support seek, or if some other I/O error occurs."
-  ([^javax.swing.ProgressMonitorInputStream this ^Long n]
+  (^Long [^javax.swing.ProgressMonitorInputStream this ^Long n]
     (-> this (.skip n))))
 
 (defn close

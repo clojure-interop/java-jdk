@@ -46,14 +46,14 @@
   returns: a copy of the contained object - `MarshalledObject.T`
 
   throws: java.io.IOException - if an IOException occurs while deserializing the object from its internal representation."
-  ([^java.rmi.MarshalledObject this]
+  (^MarshalledObject.T [^java.rmi.MarshalledObject this]
     (-> this (.get))))
 
 (defn hash-code
   "Return a hash code for this MarshalledObject.
 
   returns: a hash code - `int`"
-  ([^java.rmi.MarshalledObject this]
+  (^Integer [^java.rmi.MarshalledObject this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -70,6 +70,6 @@
 
   returns: true if the argument contains an equivalent
    serialized object; false otherwise - `boolean`"
-  ([^java.rmi.MarshalledObject this ^java.lang.Object obj]
+  (^Boolean [^java.rmi.MarshalledObject this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

@@ -43,21 +43,21 @@
   "Returns the principal that this key belongs to.
 
   returns: the principal this key belongs to. - `javax.security.auth.kerberos.KerberosPrincipal`"
-  ([^javax.security.auth.kerberos.KerberosKey this]
+  (^javax.security.auth.kerberos.KerberosPrincipal [^javax.security.auth.kerberos.KerberosKey this]
     (-> this (.getPrincipal))))
 
 (defn get-key-type
   "Returns the key type for this long-term key.
 
   returns: the key type. - `int`"
-  ([^javax.security.auth.kerberos.KerberosKey this]
+  (^Integer [^javax.security.auth.kerberos.KerberosKey this]
     (-> this (.getKeyType))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^javax.security.auth.kerberos.KerberosKey this]
+  (^java.lang.String [^javax.security.auth.kerberos.KerberosKey this]
     (-> this (.toString))))
 
 (defn destroy
@@ -77,21 +77,21 @@
    for information about standard algorithm names.
 
   returns: the name of the algorithm associated with this key. - `java.lang.String`"
-  ([^javax.security.auth.kerberos.KerberosKey this]
+  (^java.lang.String [^javax.security.auth.kerberos.KerberosKey this]
     (-> this (.getAlgorithm))))
 
 (defn get-version-number
   "Returns the key version number.
 
   returns: the key version number. - `int`"
-  ([^javax.security.auth.kerberos.KerberosKey this]
+  (^Integer [^javax.security.auth.kerberos.KerberosKey this]
     (-> this (.getVersionNumber))))
 
 (defn get-format
   "Returns the name of the encoding format for this secret key.
 
   returns: the String `RAW` - `java.lang.String`"
-  ([^javax.security.auth.kerberos.KerberosKey this]
+  (^java.lang.String [^javax.security.auth.kerberos.KerberosKey this]
     (-> this (.getFormat))))
 
 (defn get-encoded
@@ -105,7 +105,7 @@
   "Returns a hashcode for this KerberosKey.
 
   returns: a hashCode() for the KerberosKey - `int`"
-  ([^javax.security.auth.kerberos.KerberosKey this]
+  (^Integer [^javax.security.auth.kerberos.KerberosKey this]
     (-> this (.hashCode))))
 
 (defn destroyed?
@@ -113,7 +113,7 @@
 
   returns: true if this Object has been destroyed,
             false otherwise. - `boolean`"
-  ([^javax.security.auth.kerberos.KerberosKey this]
+  (^Boolean [^javax.security.auth.kerberos.KerberosKey this]
     (-> this (.isDestroyed))))
 
 (defn equals
@@ -127,6 +127,6 @@
   returns: true if the specified object is equal to this KerberosKey,
    false otherwise. NOTE: Returns false if either of the KerberosKey
    objects has been destroyed. - `boolean`"
-  ([^javax.security.auth.kerberos.KerberosKey this ^java.lang.Object other]
+  (^Boolean [^javax.security.auth.kerberos.KerberosKey this ^java.lang.Object other]
     (-> this (.equals other))))
 

@@ -13,7 +13,7 @@
   "c - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent c]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent c]
     (BasicToolBarUI/createUI c)))
 
 (defn set-floating-color
@@ -34,12 +34,12 @@
   "Gets the color displayed when over a floating area
 
   returns: `java.awt.Color`"
-  ([^javax.swing.plaf.basic.BasicToolBarUI this]
+  (^java.awt.Color [^javax.swing.plaf.basic.BasicToolBarUI this]
     (-> this (.getFloatingColor))))
 
 (defn floating?
   "returns: `boolean`"
-  ([^javax.swing.plaf.basic.BasicToolBarUI this]
+  (^Boolean [^javax.swing.plaf.basic.BasicToolBarUI this]
     (-> this (.isFloating))))
 
 (defn set-docking-color
@@ -69,7 +69,7 @@
    are enabled.
 
   returns: true if rollover borders are enabled; false otherwise - `boolean`"
-  ([^javax.swing.plaf.basic.BasicToolBarUI this]
+  (^Boolean [^javax.swing.plaf.basic.BasicToolBarUI this]
     (-> this (.isRolloverBorders))))
 
 (defn set-floating-location
@@ -83,7 +83,7 @@
   p - `java.awt.Point`
 
   returns: `boolean`"
-  ([^javax.swing.plaf.basic.BasicToolBarUI this ^java.awt.Component c ^java.awt.Point p]
+  (^Boolean [^javax.swing.plaf.basic.BasicToolBarUI this ^java.awt.Component c ^java.awt.Point p]
     (-> this (.canDock c p))))
 
 (defn set-orientation
@@ -101,6 +101,6 @@
   "Gets the color displayed when over a docking area
 
   returns: `java.awt.Color`"
-  ([^javax.swing.plaf.basic.BasicToolBarUI this]
+  (^java.awt.Color [^javax.swing.plaf.basic.BasicToolBarUI this]
     (-> this (.getDockingColor))))
 

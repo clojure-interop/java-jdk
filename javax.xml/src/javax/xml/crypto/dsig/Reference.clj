@@ -42,14 +42,14 @@
 
   returns: an unmodifiable list of Transforms
       (may be empty but never null) - `java.util.List`"
-  ([^javax.xml.crypto.dsig.Reference this]
+  (^java.util.List [^javax.xml.crypto.dsig.Reference this]
     (-> this (.getTransforms))))
 
 (defn get-digest-method
   "Returns the digest method of this Reference.
 
   returns: the digest method - `javax.xml.crypto.dsig.DigestMethod`"
-  ([^javax.xml.crypto.dsig.Reference this]
+  (^javax.xml.crypto.dsig.DigestMethod [^javax.xml.crypto.dsig.Reference this]
     (-> this (.getDigestMethod))))
 
 (defn get-id
@@ -59,7 +59,7 @@
 
   returns: the Id attribute (may be null if not
       specified) - `java.lang.String`"
-  ([^javax.xml.crypto.dsig.Reference this]
+  (^java.lang.String [^javax.xml.crypto.dsig.Reference this]
     (-> this (.getId))))
 
 (defn get-digest-value
@@ -95,7 +95,7 @@
       false otherwise - `boolean`
 
   throws: java.lang.NullPointerException - if validateContext is null"
-  ([^javax.xml.crypto.dsig.Reference this ^javax.xml.crypto.dsig.XMLValidateContext validate-context]
+  (^Boolean [^javax.xml.crypto.dsig.Reference this ^javax.xml.crypto.dsig.XMLValidateContext validate-context]
     (-> this (.validate validate-context))))
 
 (defn get-dereferenced-data
@@ -107,7 +107,7 @@
   returns: the dereferenced data, or null if reference
       caching is not enabled or this reference has not been generated or
       validated - `javax.xml.crypto.Data`"
-  ([^javax.xml.crypto.dsig.Reference this]
+  (^javax.xml.crypto.Data [^javax.xml.crypto.dsig.Reference this]
     (-> this (.getDereferencedData))))
 
 (defn get-digest-input-stream
@@ -119,6 +119,6 @@
   returns: an input stream containing the pre-digested input, or
       null if reference caching is not enabled or this
       reference has not been generated or validated - `java.io.InputStream`"
-  ([^javax.xml.crypto.dsig.Reference this]
+  (^java.io.InputStream [^javax.xml.crypto.dsig.Reference this]
     (-> this (.getDigestInputStream))))
 

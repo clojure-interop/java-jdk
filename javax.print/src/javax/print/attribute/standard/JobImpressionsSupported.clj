@@ -44,7 +44,7 @@
 
   returns: True if object is equivalent to this job
             impressions supported attribute, false otherwise. - `boolean`"
-  ([^javax.print.attribute.standard.JobImpressionsSupported this ^java.lang.Object object]
+  (^Boolean [^javax.print.attribute.standard.JobImpressionsSupported this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -67,6 +67,6 @@
    `job-impressions-supported`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.JobImpressionsSupported this]
+  (^java.lang.String [^javax.print.attribute.standard.JobImpressionsSupported this]
     (-> this (.getName))))
 

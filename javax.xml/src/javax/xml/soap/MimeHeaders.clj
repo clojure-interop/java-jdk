@@ -74,7 +74,7 @@
 
   returns: an Iterator object over this MimeHeaders
             object's list of MimeHeader objects - `java.util.Iterator`"
-  ([^javax.xml.soap.MimeHeaders this]
+  (^java.util.Iterator [^javax.xml.soap.MimeHeaders this]
     (-> this (.getAllHeaders))))
 
 (defn get-matching-headers
@@ -85,7 +85,7 @@
 
   returns: an Iterator object over the MimeHeader
             objects whose name matches one of the names in the given list - `java.util.Iterator`"
-  ([^javax.xml.soap.MimeHeaders this ^java.lang.String[] names]
+  (^java.util.Iterator [^javax.xml.soap.MimeHeaders this names]
     (-> this (.getMatchingHeaders names))))
 
 (defn get-non-matching-headers
@@ -96,6 +96,6 @@
 
   returns: an Iterator object over the MimeHeader
             objects whose name does not match one of the names in the given list - `java.util.Iterator`"
-  ([^javax.xml.soap.MimeHeaders this ^java.lang.String[] names]
+  (^java.util.Iterator [^javax.xml.soap.MimeHeaders this names]
     (-> this (.getNonMatchingHeaders names))))
 

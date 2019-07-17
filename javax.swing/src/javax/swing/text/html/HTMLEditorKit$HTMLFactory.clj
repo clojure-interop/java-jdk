@@ -90,6 +90,6 @@
   elem - the element - `javax.swing.text.Element`
 
   returns: the view - `javax.swing.text.View`"
-  ([^javax.swing.text.html.HTMLEditorKit$HTMLFactory this ^javax.swing.text.Element elem]
+  (^javax.swing.text.View [^javax.swing.text.html.HTMLEditorKit$HTMLFactory this ^javax.swing.text.Element elem]
     (-> this (.create elem))))
 

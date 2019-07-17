@@ -186,7 +186,7 @@
   key - `java.lang.String`
 
   returns: `java.lang.Object`"
-  ([^javax.swing.Action this ^java.lang.String key]
+  (^java.lang.Object [^javax.swing.Action this ^java.lang.String key]
     (-> this (.getValue key))))
 
 (defn put-value
@@ -217,7 +217,7 @@
    able to fire this object's actionPerformed method.
 
   returns: true if this Action is enabled - `boolean`"
-  ([^javax.swing.Action this]
+  (^Boolean [^javax.swing.Action this]
     (-> this (.isEnabled))))
 
 (defn add-property-change-listener

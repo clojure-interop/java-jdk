@@ -371,6 +371,6 @@
    category name is `finishings`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.Finishings this]
+  (^java.lang.String [^javax.print.attribute.standard.Finishings this]
     (-> this (.getName))))
 

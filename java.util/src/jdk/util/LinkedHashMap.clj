@@ -150,7 +150,7 @@
    HashMap.
 
   returns: a view of the values contained in this map - `java.util.Collection<LinkedHashMap.V>`"
-  ([^java.util.LinkedHashMap this]
+  (^java.util.Collection [^java.util.LinkedHashMap this]
     (-> this (.values))))
 
 (defn for-each
@@ -185,7 +185,7 @@
    HashMap.
 
   returns: a set view of the mappings contained in this map - `java.util.Set<java.util.Map.Entry<LinkedHashMap.K,LinkedHashMap.V>>`"
-  ([^java.util.LinkedHashMap this]
+  (^java.util.Set> [^java.util.LinkedHashMap this]
     (-> this (.entrySet))))
 
 (defn contains-value
@@ -196,7 +196,7 @@
 
   returns: true if this map maps one or more keys to the
            specified value - `boolean`"
-  ([^java.util.LinkedHashMap this ^java.lang.Object value]
+  (^Boolean [^java.util.LinkedHashMap this ^java.lang.Object value]
     (-> this (.containsValue value))))
 
 (defn get-or-default
@@ -208,7 +208,7 @@
 
   returns: the value to which the specified key is mapped, or
    defaultValue if this map contains no mapping for the key - `LinkedHashMap.V`"
-  ([^java.util.LinkedHashMap this ^java.lang.Object key ^LinkedHashMap.V default-value]
+  (^LinkedHashMap.V [^java.util.LinkedHashMap this ^java.lang.Object key ^LinkedHashMap.V default-value]
     (-> this (.getOrDefault key default-value))))
 
 (defn key-set
@@ -228,7 +228,7 @@
    HashMap.
 
   returns: a set view of the keys contained in this map - `java.util.Set<LinkedHashMap.K>`"
-  ([^java.util.LinkedHashMap this]
+  (^java.util.Set [^java.util.LinkedHashMap this]
     (-> this (.keySet))))
 
 (defn clear
@@ -256,6 +256,6 @@
 
   returns: the value to which the specified key is mapped, or
            null if this map contains no mapping for the key - `LinkedHashMap.V`"
-  ([^java.util.LinkedHashMap this ^java.lang.Object key]
+  (^LinkedHashMap.V [^java.util.LinkedHashMap this ^java.lang.Object key]
     (-> this (.get key))))
 

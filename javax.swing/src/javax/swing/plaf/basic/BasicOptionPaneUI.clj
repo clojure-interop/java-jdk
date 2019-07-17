@@ -52,7 +52,7 @@
   x - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent x]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent x]
     (BasicOptionPaneUI/createUI x)))
 
 (defn install-ui
@@ -76,7 +76,7 @@
    provided for subclassers wishing to offer a different minimum size.
 
   returns: `java.awt.Dimension`"
-  ([^javax.swing.plaf.basic.BasicOptionPaneUI this]
+  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicOptionPaneUI this]
     (-> this (.getMinimumOptionPaneSize))))
 
 (defn get-preferred-size
@@ -89,7 +89,7 @@
   c - the component whose preferred size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: `java.awt.Dimension`"
-  ([^javax.swing.plaf.basic.BasicOptionPaneUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicOptionPaneUI this ^javax.swing.JComponent c]
     (-> this (.getPreferredSize c))))
 
 (defn select-initial-value
@@ -107,6 +107,6 @@
   op - `javax.swing.JOptionPane`
 
   returns: `boolean`"
-  ([^javax.swing.plaf.basic.BasicOptionPaneUI this ^javax.swing.JOptionPane op]
+  (^Boolean [^javax.swing.plaf.basic.BasicOptionPaneUI this ^javax.swing.JOptionPane op]
     (-> this (.containsCustomComponents op))))
 

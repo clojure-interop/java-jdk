@@ -20,6 +20,6 @@
 
   returns: The system identifier that was set with setSystemId,
    or null if setSystemId was not called. - `java.lang.String`"
-  ([^javax.xml.transform.Result this]
+  (^java.lang.String [^javax.xml.transform.Result this]
     (-> this (.getSystemId))))
 

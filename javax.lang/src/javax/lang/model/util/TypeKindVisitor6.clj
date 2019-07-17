@@ -47,7 +47,7 @@
   p - a visitor-specified parameter - `TypeKindVisitor6.P`
 
   returns: the result of defaultAction - `TypeKindVisitor6.R`"
-  ([^javax.lang.model.util.TypeKindVisitor6 this ^javax.lang.model.type.PrimitiveType t ^TypeKindVisitor6.P p]
+  (^TypeKindVisitor6.R [^javax.lang.model.util.TypeKindVisitor6 this ^javax.lang.model.type.PrimitiveType t ^TypeKindVisitor6.P p]
     (-> this (.visitPrimitiveAsLong t p))))
 
 (defn visit-no-type-as-package
@@ -58,7 +58,7 @@
   p - a visitor-specified parameter - `TypeKindVisitor6.P`
 
   returns: the result of defaultAction - `TypeKindVisitor6.R`"
-  ([^javax.lang.model.util.TypeKindVisitor6 this ^javax.lang.model.type.NoType t ^TypeKindVisitor6.P p]
+  (^TypeKindVisitor6.R [^javax.lang.model.util.TypeKindVisitor6 this ^javax.lang.model.type.NoType t ^TypeKindVisitor6.P p]
     (-> this (.visitNoTypeAsPackage t p))))
 
 (defn visit-primitive-as-float
@@ -69,7 +69,7 @@
   p - a visitor-specified parameter - `TypeKindVisitor6.P`
 
   returns: the result of defaultAction - `TypeKindVisitor6.R`"
-  ([^javax.lang.model.util.TypeKindVisitor6 this ^javax.lang.model.type.PrimitiveType t ^TypeKindVisitor6.P p]
+  (^TypeKindVisitor6.R [^javax.lang.model.util.TypeKindVisitor6 this ^javax.lang.model.type.PrimitiveType t ^TypeKindVisitor6.P p]
     (-> this (.visitPrimitiveAsFloat t p))))
 
 (defn visit-no-type-as-none
@@ -80,7 +80,7 @@
   p - a visitor-specified parameter - `TypeKindVisitor6.P`
 
   returns: the result of defaultAction - `TypeKindVisitor6.R`"
-  ([^javax.lang.model.util.TypeKindVisitor6 this ^javax.lang.model.type.NoType t ^TypeKindVisitor6.P p]
+  (^TypeKindVisitor6.R [^javax.lang.model.util.TypeKindVisitor6 this ^javax.lang.model.type.NoType t ^TypeKindVisitor6.P p]
     (-> this (.visitNoTypeAsNone t p))))
 
 (defn visit-primitive-as-int
@@ -91,7 +91,7 @@
   p - a visitor-specified parameter - `TypeKindVisitor6.P`
 
   returns: the result of defaultAction - `TypeKindVisitor6.R`"
-  ([^javax.lang.model.util.TypeKindVisitor6 this ^javax.lang.model.type.PrimitiveType t ^TypeKindVisitor6.P p]
+  (^TypeKindVisitor6.R [^javax.lang.model.util.TypeKindVisitor6 this ^javax.lang.model.type.PrimitiveType t ^TypeKindVisitor6.P p]
     (-> this (.visitPrimitiveAsInt t p))))
 
 (defn visit-primitive-as-boolean
@@ -102,7 +102,7 @@
   p - a visitor-specified parameter - `TypeKindVisitor6.P`
 
   returns: the result of defaultAction - `TypeKindVisitor6.R`"
-  ([^javax.lang.model.util.TypeKindVisitor6 this ^javax.lang.model.type.PrimitiveType t ^TypeKindVisitor6.P p]
+  (^TypeKindVisitor6.R [^javax.lang.model.util.TypeKindVisitor6 this ^javax.lang.model.type.PrimitiveType t ^TypeKindVisitor6.P p]
     (-> this (.visitPrimitiveAsBoolean t p))))
 
 (defn visit-primitive-as-byte
@@ -113,7 +113,7 @@
   p - a visitor-specified parameter - `TypeKindVisitor6.P`
 
   returns: the result of defaultAction - `TypeKindVisitor6.R`"
-  ([^javax.lang.model.util.TypeKindVisitor6 this ^javax.lang.model.type.PrimitiveType t ^TypeKindVisitor6.P p]
+  (^TypeKindVisitor6.R [^javax.lang.model.util.TypeKindVisitor6 this ^javax.lang.model.type.PrimitiveType t ^TypeKindVisitor6.P p]
     (-> this (.visitPrimitiveAsByte t p))))
 
 (defn visit-no-type
@@ -125,7 +125,7 @@
   p - a visitor-specified parameter - `TypeKindVisitor6.P`
 
   returns: the result of the kind-specific visit method - `TypeKindVisitor6.R`"
-  ([^javax.lang.model.util.TypeKindVisitor6 this ^javax.lang.model.type.NoType t ^TypeKindVisitor6.P p]
+  (^TypeKindVisitor6.R [^javax.lang.model.util.TypeKindVisitor6 this ^javax.lang.model.type.NoType t ^TypeKindVisitor6.P p]
     (-> this (.visitNoType t p))))
 
 (defn visit-primitive
@@ -137,7 +137,7 @@
   p - a visitor-specified parameter - `TypeKindVisitor6.P`
 
   returns: the result of the kind-specific visit method - `TypeKindVisitor6.R`"
-  ([^javax.lang.model.util.TypeKindVisitor6 this ^javax.lang.model.type.PrimitiveType t ^TypeKindVisitor6.P p]
+  (^TypeKindVisitor6.R [^javax.lang.model.util.TypeKindVisitor6 this ^javax.lang.model.type.PrimitiveType t ^TypeKindVisitor6.P p]
     (-> this (.visitPrimitive t p))))
 
 (defn visit-no-type-as-void
@@ -148,7 +148,7 @@
   p - a visitor-specified parameter - `TypeKindVisitor6.P`
 
   returns: the result of defaultAction - `TypeKindVisitor6.R`"
-  ([^javax.lang.model.util.TypeKindVisitor6 this ^javax.lang.model.type.NoType t ^TypeKindVisitor6.P p]
+  (^TypeKindVisitor6.R [^javax.lang.model.util.TypeKindVisitor6 this ^javax.lang.model.type.NoType t ^TypeKindVisitor6.P p]
     (-> this (.visitNoTypeAsVoid t p))))
 
 (defn visit-primitive-as-char
@@ -159,7 +159,7 @@
   p - a visitor-specified parameter - `TypeKindVisitor6.P`
 
   returns: the result of defaultAction - `TypeKindVisitor6.R`"
-  ([^javax.lang.model.util.TypeKindVisitor6 this ^javax.lang.model.type.PrimitiveType t ^TypeKindVisitor6.P p]
+  (^TypeKindVisitor6.R [^javax.lang.model.util.TypeKindVisitor6 this ^javax.lang.model.type.PrimitiveType t ^TypeKindVisitor6.P p]
     (-> this (.visitPrimitiveAsChar t p))))
 
 (defn visit-primitive-as-short
@@ -170,7 +170,7 @@
   p - a visitor-specified parameter - `TypeKindVisitor6.P`
 
   returns: the result of defaultAction - `TypeKindVisitor6.R`"
-  ([^javax.lang.model.util.TypeKindVisitor6 this ^javax.lang.model.type.PrimitiveType t ^TypeKindVisitor6.P p]
+  (^TypeKindVisitor6.R [^javax.lang.model.util.TypeKindVisitor6 this ^javax.lang.model.type.PrimitiveType t ^TypeKindVisitor6.P p]
     (-> this (.visitPrimitiveAsShort t p))))
 
 (defn visit-primitive-as-double
@@ -181,6 +181,6 @@
   p - a visitor-specified parameter - `TypeKindVisitor6.P`
 
   returns: the result of defaultAction - `TypeKindVisitor6.R`"
-  ([^javax.lang.model.util.TypeKindVisitor6 this ^javax.lang.model.type.PrimitiveType t ^TypeKindVisitor6.P p]
+  (^TypeKindVisitor6.R [^javax.lang.model.util.TypeKindVisitor6 this ^javax.lang.model.type.PrimitiveType t ^TypeKindVisitor6.P p]
     (-> this (.visitPrimitiveAsDouble t p))))
 

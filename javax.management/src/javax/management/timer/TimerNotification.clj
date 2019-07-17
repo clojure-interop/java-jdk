@@ -25,6 +25,6 @@
   "Gets the identifier of this timer notification.
 
   returns: The identifier. - `java.lang.Integer`"
-  ([^javax.management.timer.TimerNotification this]
+  (^java.lang.Integer [^javax.management.timer.TimerNotification this]
     (-> this (.getNotificationID))))
 

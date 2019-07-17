@@ -205,7 +205,7 @@
   c - the JComponent to check - `javax.swing.JComponent`
 
   returns: an int specifying the component's layer - `int`"
-  ([^javax.swing.JComponent c]
+  (^Integer [^javax.swing.JComponent c]
     (JLayeredPane/getLayer c)))
 
 (defn *get-layered-pane-above
@@ -219,7 +219,7 @@
   returns: the JLayeredPane that contains the component, or
            null if no JLayeredPane is found in the component
            hierarchy - `javax.swing.JLayeredPane`"
-  ([^java.awt.Component c]
+  (^javax.swing.JLayeredPane [^java.awt.Component c]
     (JLayeredPane/getLayeredPaneAbove c)))
 
 (defn get-index-of
@@ -231,7 +231,7 @@
   c - the Component to check - `java.awt.Component`
 
   returns: an int specifying the component's index - `int`"
-  ([^javax.swing.JLayeredPane this ^java.awt.Component c]
+  (^Integer [^javax.swing.JLayeredPane this ^java.awt.Component c]
     (-> this (.getIndexOf c))))
 
 (defn set-position
@@ -269,7 +269,7 @@
   returns: an int giving the component's position, where 0 is the
            topmost position and the highest index value = the count
            count of components at that layer, minus 1 - `int`"
-  ([^javax.swing.JLayeredPane this ^java.awt.Component c]
+  (^Integer [^javax.swing.JLayeredPane this ^java.awt.Component c]
     (-> this (.getPosition c))))
 
 (defn move-to-front
@@ -286,7 +286,7 @@
   c - the Component to check - `java.awt.Component`
 
   returns: an int specifying the component's current layer - `int`"
-  ([^javax.swing.JLayeredPane this ^java.awt.Component c]
+  (^Integer [^javax.swing.JLayeredPane this ^java.awt.Component c]
     (-> this (.getLayer c))))
 
 (defn get-components-in-layer
@@ -312,7 +312,7 @@
 
   returns: an int indicating the layer of the bottommost component in the
            pane, or zero if there are no children - `int`"
-  ([^javax.swing.JLayeredPane this]
+  (^Integer [^javax.swing.JLayeredPane this]
     (-> this (.lowestLayer))))
 
 (defn paint
@@ -330,7 +330,7 @@
 
   returns: an AccessibleJLayeredPane that serves as the
            AccessibleContext of this JLayeredPane - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.JLayeredPane this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.JLayeredPane this]
     (-> this (.getAccessibleContext))))
 
 (defn highest-layer
@@ -339,7 +339,7 @@
 
   returns: an int indicating the layer of the topmost component in the
            pane, or zero if there are no children - `int`"
-  ([^javax.swing.JLayeredPane this]
+  (^Integer [^javax.swing.JLayeredPane this]
     (-> this (.highestLayer))))
 
 (defn move-to-back
@@ -356,7 +356,7 @@
   layer - an int specifying the layer to check - `int`
 
   returns: an int specifying the number of components in that layer - `int`"
-  ([^javax.swing.JLayeredPane this ^Integer layer]
+  (^Integer [^javax.swing.JLayeredPane this ^Integer layer]
     (-> this (.getComponentCountInLayer layer))))
 
 (defn remove-all
@@ -369,6 +369,6 @@
    optimized drawing impossible. Otherwise, returns true.
 
   returns: false if components can overlap, else true - `boolean`"
-  ([^javax.swing.JLayeredPane this]
+  (^Boolean [^javax.swing.JLayeredPane this]
     (-> this (.isOptimizedDrawingEnabled))))
 

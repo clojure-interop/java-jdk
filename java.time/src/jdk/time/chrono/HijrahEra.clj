@@ -35,7 +35,7 @@
   returns: the enum constant with the specified name - `java.time.chrono.HijrahEra`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^java.time.chrono.HijrahEra [^java.lang.String name]
     (HijrahEra/valueOf name)))
 
 (defn *of
@@ -48,7 +48,7 @@
   returns: the HijrahEra.AH singleton, not null - `java.time.chrono.HijrahEra`
 
   throws: java.time.DateTimeException - if the value is invalid"
-  ([^Integer hijrah-era]
+  (^java.time.chrono.HijrahEra [^Integer hijrah-era]
     (HijrahEra/of hijrah-era)))
 
 (defn get-value
@@ -57,7 +57,7 @@
    The era AH has the value 1.
 
   returns: the era value, 1 (AH) - `int`"
-  ([^java.time.chrono.HijrahEra this]
+  (^Integer [^java.time.chrono.HijrahEra this]
     (-> this (.getValue))))
 
 (defn range
@@ -84,6 +84,6 @@
   returns: the range of valid values for the field, not null - `java.time.temporal.ValueRange`
 
   throws: java.time.DateTimeException - if the range for the field cannot be obtained"
-  ([^java.time.chrono.HijrahEra this ^java.time.temporal.TemporalField field]
+  (^java.time.temporal.ValueRange [^java.time.chrono.HijrahEra this ^java.time.temporal.TemporalField field]
     (-> this (.range field))))
 

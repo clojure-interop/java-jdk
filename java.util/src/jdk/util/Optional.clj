@@ -77,7 +77,7 @@
   "Return true if there is a value present, otherwise false.
 
   returns: true if there is a value present, otherwise false - `boolean`"
-  ([^java.util.Optional this]
+  (^Boolean [^java.util.Optional this]
     (-> this (.isPresent))))
 
 (defn to-string
@@ -86,7 +86,7 @@
    between implementations and versions.
 
   returns: the string representation of this instance - `java.lang.String`"
-  ([^java.util.Optional this]
+  (^java.lang.String [^java.util.Optional this]
     (-> this (.toString))))
 
 (defn flat-map
@@ -116,7 +116,7 @@
   returns: the value if present otherwise the result of other.get() - `Optional.T`
 
   throws: java.lang.NullPointerException - if value is not present and other is null"
-  ([^java.util.Optional this ^Optional.T> other]
+  (^Optional.T [^java.util.Optional this ^Optional.T> other]
     (-> this (.orElseGet other))))
 
 (defn filter
@@ -131,7 +131,7 @@
    otherwise an empty Optional - `java.util.Optional<Optional.T>`
 
   throws: java.lang.NullPointerException - if the predicate is null"
-  ([^java.util.Optional this ^Optional.T> predicate]
+  (^java.util.Optional [^java.util.Optional this ^Optional.T> predicate]
     (-> this (.filter predicate))))
 
 (defn if-present
@@ -149,7 +149,7 @@
    no value is present.
 
   returns: hash code value of the present value or 0 if no value is present - `int`"
-  ([^java.util.Optional this]
+  (^Integer [^java.util.Optional this]
     (-> this (.hashCode))))
 
 (defn or-else
@@ -158,7 +158,7 @@
   other - the value to be returned if there is no value present, may be null - `Optional.T`
 
   returns: the value, if present, otherwise other - `Optional.T`"
-  ([^java.util.Optional this ^Optional.T other]
+  (^Optional.T [^java.util.Optional this ^Optional.T other]
     (-> this (.orElse other))))
 
 (defn get
@@ -168,7 +168,7 @@
   returns: the non-null value held by this Optional - `Optional.T`
 
   throws: java.util.NoSuchElementException - if there is no value present"
-  ([^java.util.Optional this]
+  (^Optional.T [^java.util.Optional this]
     (-> this (.get))))
 
 (defn equals
@@ -183,6 +183,6 @@
 
   returns: {code true} if the other object is `equal to` this object
    otherwise false - `boolean`"
-  ([^java.util.Optional this ^java.lang.Object obj]
+  (^Boolean [^java.util.Optional this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

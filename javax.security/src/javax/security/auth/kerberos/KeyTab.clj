@@ -47,11 +47,11 @@
   returns: the keytab instance - `javax.security.auth.kerberos.KeyTab`
 
   throws: java.lang.NullPointerException - if either of the arguments is null"
-  ([^javax.security.auth.kerberos.KerberosPrincipal princ ^java.io.File file]
+  (^javax.security.auth.kerberos.KeyTab [^javax.security.auth.kerberos.KerberosPrincipal princ ^java.io.File file]
     (KeyTab/getInstance princ file))
-  ([^java.io.File file]
+  (^javax.security.auth.kerberos.KeyTab [^java.io.File file]
     (KeyTab/getInstance file))
-  ([]
+  (^javax.security.auth.kerberos.KeyTab []
     (KeyTab/getInstance )))
 
 (defn *get-unbound-instance
@@ -66,9 +66,9 @@
   returns: the keytab instance - `javax.security.auth.kerberos.KeyTab`
 
   throws: java.lang.NullPointerException - if the file argument is null"
-  ([^java.io.File file]
+  (^javax.security.auth.kerberos.KeyTab [^java.io.File file]
     (KeyTab/getUnboundInstance file))
-  ([]
+  (^javax.security.auth.kerberos.KeyTab []
     (KeyTab/getUnboundInstance )))
 
 (defn get-keys
@@ -124,21 +124,21 @@
   returns: true if the keytab file exists; false otherwise. - `boolean`
 
   throws: java.lang.SecurityException - if a security manager exists and the read access to the keytab file is not permitted"
-  ([^javax.security.auth.kerberos.KeyTab this]
+  (^Boolean [^javax.security.auth.kerberos.KeyTab this]
     (-> this (.exists))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^javax.security.auth.kerberos.KeyTab this]
+  (^java.lang.String [^javax.security.auth.kerberos.KeyTab this]
     (-> this (.toString))))
 
 (defn hash-code
   "Returns a hashcode for this KeyTab.
 
   returns: a hashCode() for the KeyTab - `int`"
-  ([^javax.security.auth.kerberos.KeyTab this]
+  (^Integer [^javax.security.auth.kerberos.KeyTab this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -150,7 +150,7 @@
   other - the Object to compare to - `java.lang.Object`
 
   returns: true if the specified object is equal to this KeyTab - `boolean`"
-  ([^javax.security.auth.kerberos.KeyTab this ^java.lang.Object other]
+  (^Boolean [^javax.security.auth.kerberos.KeyTab this ^java.lang.Object other]
     (-> this (.equals other))))
 
 (defn get-principal
@@ -162,13 +162,13 @@
    User can call isBound() to verify this case.
 
   returns: the service principal - `javax.security.auth.kerberos.KerberosPrincipal`"
-  ([^javax.security.auth.kerberos.KeyTab this]
+  (^javax.security.auth.kerberos.KerberosPrincipal [^javax.security.auth.kerberos.KeyTab this]
     (-> this (.getPrincipal))))
 
 (defn bound?
   "Returns if the keytab is bound to a principal
 
   returns: if the keytab is bound to a principal - `boolean`"
-  ([^javax.security.auth.kerberos.KeyTab this]
+  (^Boolean [^javax.security.auth.kerberos.KeyTab this]
     (-> this (.isBound))))
 

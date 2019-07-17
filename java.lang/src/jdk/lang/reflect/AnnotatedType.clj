@@ -10,6 +10,6 @@
   "Returns the underlying type that this annotated type represents.
 
   returns: the type this annotated type represents - `java.lang.reflect.Type`"
-  ([^java.lang.reflect.AnnotatedType this]
+  (^java.lang.reflect.Type [^java.lang.reflect.AnnotatedType this]
     (-> this (.getType))))
 

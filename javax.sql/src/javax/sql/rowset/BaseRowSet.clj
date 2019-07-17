@@ -645,7 +645,7 @@
            object; may be null (default value) if not set - `java.lang.String`
 
   throws: java.sql.SQLException - if an error occurs retrieving the URL value"
-  ([^javax.sql.rowset.BaseRowSet this]
+  (^java.lang.String [^javax.sql.rowset.BaseRowSet this]
     (-> this (.getUrl))))
 
 (defn get-type
@@ -662,7 +662,7 @@
            ResultSet.TYPE_SCROLL_SENSITIVE - `int`
 
   throws: java.sql.SQLException - if an error occurs getting the type of of this RowSet object"
-  ([^javax.sql.rowset.BaseRowSet this]
+  (^Integer [^javax.sql.rowset.BaseRowSet this]
     (-> this (.getType))))
 
 (defn set-command
@@ -788,7 +788,7 @@
            Connection.TRANSACTION_READ_COMMITTED,
            Connection.TRANSACTION_REPEATABLE_READ, or
            Connection.TRANSACTION_SERIALIZABLE - `int`"
-  ([^javax.sql.rowset.BaseRowSet this]
+  (^Integer [^javax.sql.rowset.BaseRowSet this]
     (-> this (.getTransactionIsolation))))
 
 (defn set-password
@@ -910,7 +910,7 @@
   returns: the String that is the value for this
            RowSet object's command property;
            may be null - `java.lang.String`"
-  ([^javax.sql.rowset.BaseRowSet this]
+  (^java.lang.String [^javax.sql.rowset.BaseRowSet this]
     (-> this (.getCommand))))
 
 (defn set-blob
@@ -1064,7 +1064,7 @@
   returns: the String object containing the user name that
            is supplied to the data source to create a connection; may be
            null (default value) if not set - `java.lang.String`"
-  ([^javax.sql.rowset.BaseRowSet this]
+  (^java.lang.String [^javax.sql.rowset.BaseRowSet this]
     (-> this (.getUsername))))
 
 (defn clear-parameters
@@ -1096,7 +1096,7 @@
                     ResultSet.FETCH_UNKNOWN - `int`
 
   throws: java.sql.SQLException - if an error occurs in determining the current fetch direction for fetching rows"
-  ([^javax.sql.rowset.BaseRowSet this]
+  (^Integer [^javax.sql.rowset.BaseRowSet this]
     (-> this (.getFetchDirection))))
 
 (defn set-n-clob
@@ -1133,7 +1133,7 @@
        limit; zero means that there is no limit - `int`
 
   throws: java.sql.SQLException - if an error occurs internally determining the maximum limit of the column size"
-  ([^javax.sql.rowset.BaseRowSet this]
+  (^Integer [^javax.sql.rowset.BaseRowSet this]
     (-> this (.getMaxFieldSize))))
 
 (defn set-clob
@@ -1282,7 +1282,7 @@
            false otherwise - `boolean`
 
   throws: java.sql.SQLException - if an error occurs determining if deleted rows are visible or not"
-  ([^javax.sql.rowset.BaseRowSet this]
+  (^Boolean [^javax.sql.rowset.BaseRowSet this]
     (-> this (.getShowDeleted))))
 
 (defn set-username
@@ -1455,7 +1455,7 @@
        rows; zero means that there is no limit - `int`
 
   throws: java.sql.SQLException - if an error occurs internally determining the maximum limit of rows that a Rowset object can contain"
-  ([^javax.sql.rowset.BaseRowSet this]
+  (^Integer [^javax.sql.rowset.BaseRowSet this]
     (-> this (.getMaxRows))))
 
 (defn set-int
@@ -1489,7 +1489,7 @@
        there is no limit - `int`
 
   throws: java.sql.SQLException - if an error occurs in determining the query time-out value"
-  ([^javax.sql.rowset.BaseRowSet this]
+  (^Integer [^javax.sql.rowset.BaseRowSet this]
     (-> this (.getQueryTimeout))))
 
 (defn get-fetch-size
@@ -1500,7 +1500,7 @@
        needs more rows from the database - `int`
 
   throws: java.sql.SQLException - if an error occurs determining the number of rows in the current fetch size"
-  ([^javax.sql.rowset.BaseRowSet this]
+  (^Integer [^javax.sql.rowset.BaseRowSet this]
     (-> this (.getFetchSize))))
 
 (defn get-concurrency
@@ -1517,7 +1517,7 @@
        ResultSet.CONCUR_UPDATABLE - `int`
 
   throws: java.sql.SQLException - if an error occurs getting the concurrency of this RowSet object"
-  ([^javax.sql.rowset.BaseRowSet this]
+  (^Integer [^javax.sql.rowset.BaseRowSet this]
     (-> this (.getConcurrency))))
 
 (defn set-character-stream
@@ -1597,7 +1597,7 @@
 
   returns: the java.util.Map object that is the type map
            for this RowSet object's connection - `java.util.Map<java.lang.String,java.lang.Class<?>>`"
-  ([^javax.sql.rowset.BaseRowSet this]
+  (^java.util.Map> [^javax.sql.rowset.BaseRowSet this]
     (-> this (.getTypeMap))))
 
 (defn get-data-source-name
@@ -1615,7 +1615,7 @@
            DataSource object to be used for making a
            connection; if no logical name has been set, null
            is returned. - `java.lang.String`"
-  ([^javax.sql.rowset.BaseRowSet this]
+  (^java.lang.String [^javax.sql.rowset.BaseRowSet this]
     (-> this (.getDataSourceName))))
 
 (defn set-data-source-name
@@ -1646,7 +1646,7 @@
 
   returns: true if this RowSet object
            cannot be updated; false otherwise - `boolean`"
-  ([^javax.sql.rowset.BaseRowSet this]
+  (^Boolean [^javax.sql.rowset.BaseRowSet this]
     (-> this (.isReadOnly))))
 
 (defn set-url
@@ -1669,7 +1669,7 @@
            false otherwise - `boolean`
 
   throws: java.sql.SQLException - if an error occurs determining if escape processing is enabled or not or if the internal escape processing trigger has not been enabled"
-  ([^javax.sql.rowset.BaseRowSet this]
+  (^Boolean [^javax.sql.rowset.BaseRowSet this]
     (-> this (.getEscapeProcessing))))
 
 (defn set-unicode-stream
@@ -1771,7 +1771,7 @@
 
   returns: the String object that represents the password
            that must be supplied to the database to create a connection - `java.lang.String`"
-  ([^javax.sql.rowset.BaseRowSet this]
+  (^java.lang.String [^javax.sql.rowset.BaseRowSet this]
     (-> this (.getPassword))))
 
 (defn get-params

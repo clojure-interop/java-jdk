@@ -66,7 +66,7 @@
    integers separated by periods.
 
   returns: the OID (never null) - `java.lang.String`"
-  ([^java.security.cert.PolicyQualifierInfo this]
+  (^java.lang.String [^java.security.cert.PolicyQualifierInfo this]
     (-> this (.getPolicyQualifierId))))
 
 (defn get-encoded
@@ -95,6 +95,6 @@
 
   returns: a String describing the contents of this
            PolicyQualifierInfo - `java.lang.String`"
-  ([^java.security.cert.PolicyQualifierInfo this]
+  (^java.lang.String [^java.security.cert.PolicyQualifierInfo this]
     (-> this (.toString))))
 

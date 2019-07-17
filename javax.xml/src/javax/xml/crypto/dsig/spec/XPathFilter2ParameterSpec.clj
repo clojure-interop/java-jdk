@@ -24,6 +24,6 @@
 
   returns: a List of XPathType objects
       (never null or empty) - `java.util.List`"
-  ([^javax.xml.crypto.dsig.spec.XPathFilter2ParameterSpec this]
+  (^java.util.List [^javax.xml.crypto.dsig.spec.XPathFilter2ParameterSpec this]
     (-> this (.getXPathList))))
 

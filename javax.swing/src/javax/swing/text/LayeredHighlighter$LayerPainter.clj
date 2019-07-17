@@ -17,6 +17,6 @@
   view - `javax.swing.text.View`
 
   returns: `java.awt.Shape`"
-  ([^javax.swing.text.LayeredHighlighter$LayerPainter this ^java.awt.Graphics g ^Integer p-0 ^Integer p-1 ^java.awt.Shape view-bounds ^javax.swing.text.JTextComponent editor ^javax.swing.text.View view]
+  (^java.awt.Shape [^javax.swing.text.LayeredHighlighter$LayerPainter this ^java.awt.Graphics g ^Integer p-0 ^Integer p-1 ^java.awt.Shape view-bounds ^javax.swing.text.JTextComponent editor ^javax.swing.text.View view]
     (-> this (.paintLayer g p-0 p-1 view-bounds editor view))))
 

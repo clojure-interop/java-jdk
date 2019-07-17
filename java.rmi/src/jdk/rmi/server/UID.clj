@@ -71,14 +71,14 @@
   returns: unmarshalled UID instance - `java.rmi.server.UID`
 
   throws: java.io.IOException - if an I/O error occurs while performing this operation"
-  ([^java.io.DataInput in]
+  (^java.rmi.server.UID [^java.io.DataInput in]
     (UID/read in)))
 
 (defn hash-code
   "Returns the hash code value for this UID.
 
   returns: the hash code value for this UID - `int`"
-  ([^java.rmi.server.UID this]
+  (^Integer [^java.rmi.server.UID this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -94,14 +94,14 @@
 
   returns: true if the given object is equivalent to
    this one, and false otherwise - `boolean`"
-  ([^java.rmi.server.UID this ^java.lang.Object obj]
+  (^Boolean [^java.rmi.server.UID this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn to-string
   "Returns a string representation of this UID.
 
   returns: a string representation of this UID - `java.lang.String`"
-  ([^java.rmi.server.UID this]
+  (^java.lang.String [^java.rmi.server.UID this]
     (-> this (.toString))))
 
 (defn write

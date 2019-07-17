@@ -23,27 +23,27 @@
   "Returns the elliptic curve that this parameter defines.
 
   returns: the elliptic curve that this parameter defines. - `java.security.spec.EllipticCurve`"
-  ([^java.security.spec.ECParameterSpec this]
+  (^java.security.spec.EllipticCurve [^java.security.spec.ECParameterSpec this]
     (-> this (.getCurve))))
 
 (defn get-generator
   "Returns the generator which is also known as the base point.
 
   returns: the generator which is also known as the base point. - `java.security.spec.ECPoint`"
-  ([^java.security.spec.ECParameterSpec this]
+  (^java.security.spec.ECPoint [^java.security.spec.ECParameterSpec this]
     (-> this (.getGenerator))))
 
 (defn get-order
   "Returns the order of the generator.
 
   returns: the order of the generator. - `java.math.BigInteger`"
-  ([^java.security.spec.ECParameterSpec this]
+  (^java.math.BigInteger [^java.security.spec.ECParameterSpec this]
     (-> this (.getOrder))))
 
 (defn get-cofactor
   "Returns the cofactor.
 
   returns: the cofactor. - `int`"
-  ([^java.security.spec.ECParameterSpec this]
+  (^Integer [^java.security.spec.ECParameterSpec this]
     (-> this (.getCofactor))))
 

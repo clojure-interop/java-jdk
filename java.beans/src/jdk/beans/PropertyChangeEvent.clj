@@ -36,7 +36,7 @@
 
   returns: The programmatic name of the property that was changed.
             May be null if multiple properties have changed. - `java.lang.String`"
-  ([^java.beans.PropertyChangeEvent this]
+  (^java.lang.String [^java.beans.PropertyChangeEvent this]
     (-> this (.getPropertyName))))
 
 (defn get-new-value
@@ -44,7 +44,7 @@
 
   returns: The new value for the property, expressed as an Object.
             May be null if multiple properties have changed. - `java.lang.Object`"
-  ([^java.beans.PropertyChangeEvent this]
+  (^java.lang.Object [^java.beans.PropertyChangeEvent this]
     (-> this (.getNewValue))))
 
 (defn get-old-value
@@ -52,7 +52,7 @@
 
   returns: The old value for the property, expressed as an Object.
             May be null if multiple properties have changed. - `java.lang.Object`"
-  ([^java.beans.PropertyChangeEvent this]
+  (^java.lang.Object [^java.beans.PropertyChangeEvent this]
     (-> this (.getOldValue))))
 
 (defn set-propagation-id
@@ -71,13 +71,13 @@
 
   returns: the propagationId object associated with a bound/constrained
             property update. - `java.lang.Object`"
-  ([^java.beans.PropertyChangeEvent this]
+  (^java.lang.Object [^java.beans.PropertyChangeEvent this]
     (-> this (.getPropagationId))))
 
 (defn to-string
   "Returns a string representation of the object.
 
   returns: a string representation of the object - `java.lang.String`"
-  ([^java.beans.PropertyChangeEvent this]
+  (^java.lang.String [^java.beans.PropertyChangeEvent this]
     (-> this (.toString))))
 

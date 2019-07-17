@@ -24,28 +24,28 @@
   object - The object instance that the current object instance is to be compared with. - `java.lang.Object`
 
   returns: True if the two object instances are equal, otherwise false. - `boolean`"
-  ([^javax.management.ObjectInstance this ^java.lang.Object object]
+  (^Boolean [^javax.management.ObjectInstance this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  ([^javax.management.ObjectInstance this]
+  (^Integer [^javax.management.ObjectInstance this]
     (-> this (.hashCode))))
 
 (defn get-object-name
   "Returns the object name part.
 
   returns: the object name. - `javax.management.ObjectName`"
-  ([^javax.management.ObjectInstance this]
+  (^javax.management.ObjectName [^javax.management.ObjectInstance this]
     (-> this (.getObjectName))))
 
 (defn get-class-name
   "Returns the class part.
 
   returns: the class name. - `java.lang.String`"
-  ([^javax.management.ObjectInstance this]
+  (^java.lang.String [^javax.management.ObjectInstance this]
     (-> this (.getClassName))))
 
 (defn to-string
@@ -54,6 +54,6 @@
    string if and only if they are equal.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^javax.management.ObjectInstance this]
+  (^java.lang.String [^javax.management.ObjectInstance this]
     (-> this (.toString))))
 

@@ -42,6 +42,6 @@
   returns: return value of the method - `java.lang.Object`
 
   throws: java.lang.IllegalAccessException - if the invocation done by reflection API throws this exception"
-  ([^javax.xml.ws.spi.Invoker this ^java.lang.reflect.Method m ^java.lang.Object args]
+  (^java.lang.Object [^javax.xml.ws.spi.Invoker this ^java.lang.reflect.Method m ^java.lang.Object args]
     (-> this (.invoke m args))))
 

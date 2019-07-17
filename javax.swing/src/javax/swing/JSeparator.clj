@@ -47,7 +47,7 @@
   "Returns the L&F object that renders this component.
 
   returns: the SeparatorUI object that renders this component - `javax.swing.plaf.SeparatorUI`"
-  ([^javax.swing.JSeparator this]
+  (^javax.swing.plaf.SeparatorUI [^javax.swing.JSeparator this]
     (-> this (.getUI))))
 
 (defn set-ui
@@ -66,7 +66,7 @@
   "Returns the name of the L&F class that renders this component.
 
   returns: the string `SeparatorUI` - `java.lang.String`"
-  ([^javax.swing.JSeparator this]
+  (^java.lang.String [^javax.swing.JSeparator this]
     (-> this (.getUIClassID))))
 
 (defn get-orientation
@@ -76,7 +76,7 @@
              following constants defined in SwingConstants:
              VERTICAL, or
              HORIZONTAL. - `int`"
-  ([^javax.swing.JSeparator this]
+  (^Integer [^javax.swing.JSeparator this]
     (-> this (.getOrientation))))
 
 (defn set-orientation
@@ -97,6 +97,6 @@
 
   returns: an AccessibleJSeparator that serves as the
            AccessibleContext of this JSeparator - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.JSeparator this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.JSeparator this]
     (-> this (.getAccessibleContext))))
 

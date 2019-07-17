@@ -104,7 +104,7 @@
    BufferStrategy.
 
   returns: the buffering capabilities of this strategy - `java.awt.BufferCapabilities`"
-  ([^java.awt.image.BufferStrategy this]
+  (^java.awt.BufferCapabilities [^java.awt.image.BufferStrategy this]
     (-> this (.getCapabilities))))
 
 (defn get-draw-graphics
@@ -114,7 +114,7 @@
    graphics object obtained must be handled by the application.
 
   returns: a graphics context for the drawing buffer - `java.awt.Graphics`"
-  ([^java.awt.image.BufferStrategy this]
+  (^java.awt.Graphics [^java.awt.image.BufferStrategy this]
     (-> this (.getDrawGraphics))))
 
 (defn contents-lost
@@ -125,7 +125,7 @@
 
   returns: Whether or not the drawing buffer was lost since the last call
    to getDrawGraphics. - `boolean`"
-  ([^java.awt.image.BufferStrategy this]
+  (^Boolean [^java.awt.image.BufferStrategy this]
     (-> this (.contentsLost))))
 
 (defn contents-restored
@@ -139,7 +139,7 @@
 
   returns: Whether or not the drawing buffer was restored since the last
            call to getDrawGraphics. - `boolean`"
-  ([^java.awt.image.BufferStrategy this]
+  (^Boolean [^java.awt.image.BufferStrategy this]
     (-> this (.contentsRestored))))
 
 (defn show

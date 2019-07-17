@@ -66,7 +66,7 @@
   "Description copied from interface: Queue
 
   returns: the head of this queue, or null if this queue is empty - `PriorityQueue.E`"
-  ([^java.util.PriorityQueue this]
+  (^PriorityQueue.E [^java.util.PriorityQueue this]
     (-> this (.peek))))
 
 (defn spliterator
@@ -80,7 +80,7 @@
    characteristic values.
 
   returns: a Spliterator over the elements in this queue - `java.util.Spliterator<PriorityQueue.E>`"
-  ([^java.util.PriorityQueue this]
+  (^java.util.Spliterator [^java.util.PriorityQueue this]
     (-> this (.spliterator))))
 
 (defn offer
@@ -91,7 +91,7 @@
   returns: true (as specified by Queue.offer(E)) - `boolean`
 
   throws: java.lang.ClassCastException - if the specified element cannot be compared with elements currently in this priority queue according to the priority queue's ordering"
-  ([^java.util.PriorityQueue this ^PriorityQueue.E e]
+  (^Boolean [^java.util.PriorityQueue this ^PriorityQueue.E e]
     (-> this (.offer e))))
 
 (defn contains
@@ -102,7 +102,7 @@
   o - object to be checked for containment in this queue - `java.lang.Object`
 
   returns: true if this queue contains the specified element - `boolean`"
-  ([^java.util.PriorityQueue this ^java.lang.Object o]
+  (^Boolean [^java.util.PriorityQueue this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn iterator
@@ -110,7 +110,7 @@
    does not return the elements in any particular order.
 
   returns: an iterator over the elements in this queue - `java.util.Iterator<PriorityQueue.E>`"
-  ([^java.util.PriorityQueue this]
+  (^java.util.Iterator [^java.util.PriorityQueue this]
     (-> this (.iterator))))
 
 (defn remove
@@ -124,7 +124,7 @@
   o - element to be removed from this queue, if present - `java.lang.Object`
 
   returns: true if this queue changed as a result of the call - `boolean`"
-  ([^java.util.PriorityQueue this ^java.lang.Object o]
+  (^Boolean [^java.util.PriorityQueue this ^java.lang.Object o]
     (-> this (.remove o))))
 
 (defn comparator
@@ -142,7 +142,7 @@
   "Description copied from interface: Queue
 
   returns: the head of this queue, or null if this queue is empty - `PriorityQueue.E`"
-  ([^java.util.PriorityQueue this]
+  (^PriorityQueue.E [^java.util.PriorityQueue this]
     (-> this (.poll))))
 
 (defn add
@@ -153,14 +153,14 @@
   returns: true (as specified by Collection.add(E)) - `boolean`
 
   throws: java.lang.ClassCastException - if the specified element cannot be compared with elements currently in this priority queue according to the priority queue's ordering"
-  ([^java.util.PriorityQueue this ^PriorityQueue.E e]
+  (^Boolean [^java.util.PriorityQueue this ^PriorityQueue.E e]
     (-> this (.add e))))
 
 (defn size
   "Description copied from interface: Collection
 
   returns: the number of elements in this collection - `int`"
-  ([^java.util.PriorityQueue this]
+  (^Integer [^java.util.PriorityQueue this]
     (-> this (.size))))
 
 (defn clear

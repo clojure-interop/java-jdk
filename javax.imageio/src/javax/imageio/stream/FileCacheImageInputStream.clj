@@ -36,9 +36,9 @@
    to indicate EOF. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^javax.imageio.stream.FileCacheImageInputStream this b ^Integer off ^Integer len]
+  (^Integer [^javax.imageio.stream.FileCacheImageInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  ([^javax.imageio.stream.FileCacheImageInputStream this]
+  (^Integer [^javax.imageio.stream.FileCacheImageInputStream this]
     (-> this (.read))))
 
 (defn cached?
@@ -47,7 +47,7 @@
    seeking backwards.
 
   returns: true. - `boolean`"
-  ([^javax.imageio.stream.FileCacheImageInputStream this]
+  (^Boolean [^javax.imageio.stream.FileCacheImageInputStream this]
     (-> this (.isCached))))
 
 (defn cached-file?
@@ -55,7 +55,7 @@
    ImageInputStream maintains a file cache.
 
   returns: true. - `boolean`"
-  ([^javax.imageio.stream.FileCacheImageInputStream this]
+  (^Boolean [^javax.imageio.stream.FileCacheImageInputStream this]
     (-> this (.isCachedFile))))
 
 (defn cached-memory?
@@ -64,7 +64,7 @@
    cache.
 
   returns: false. - `boolean`"
-  ([^javax.imageio.stream.FileCacheImageInputStream this]
+  (^Boolean [^javax.imageio.stream.FileCacheImageInputStream this]
     (-> this (.isCachedMemory))))
 
 (defn close

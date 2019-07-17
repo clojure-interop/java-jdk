@@ -59,7 +59,7 @@
        implementation is also returned if the SyncResolver() or
        SyncResolver(String) constructors are used to instantiate
        the SyncResolver instance. - `javax.sql.rowset.spi.SyncResolver`"
-  ([^javax.sql.rowset.spi.SyncProviderException this]
+  (^javax.sql.rowset.spi.SyncResolver [^javax.sql.rowset.spi.SyncProviderException this]
     (-> this (.getSyncResolver))))
 
 (defn set-sync-resolver

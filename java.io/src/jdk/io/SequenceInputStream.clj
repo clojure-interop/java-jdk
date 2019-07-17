@@ -44,7 +44,7 @@
            has been closed by invoking its close() method - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.SequenceInputStream this]
+  (^Integer [^java.io.SequenceInputStream this]
     (-> this (.available))))
 
 (defn read
@@ -66,9 +66,9 @@
   returns: int   the number of bytes read. - `int`
 
   throws: java.lang.NullPointerException - If b is null."
-  ([^java.io.SequenceInputStream this b ^Integer off ^Integer len]
+  (^Integer [^java.io.SequenceInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  ([^java.io.SequenceInputStream this]
+  (^Integer [^java.io.SequenceInputStream this]
     (-> this (.read))))
 
 (defn close

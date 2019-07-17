@@ -26,6 +26,6 @@
   returns: a serializable stub. - `java.rmi.Remote`
 
   throws: java.io.IOException - if the stub cannot be obtained - e.g the RMIJRMPServerImpl has not been exported yet."
-  ([^javax.management.remote.rmi.RMIJRMPServerImpl this]
+  (^java.rmi.Remote [^javax.management.remote.rmi.RMIJRMPServerImpl this]
     (-> this (.toStub))))
 

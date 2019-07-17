@@ -32,6 +32,6 @@
   "Returns the path to the value that has been expanded/collapsed.
 
   returns: `javax.swing.tree.TreePath`"
-  ([^javax.swing.event.TreeExpansionEvent this]
+  (^javax.swing.tree.TreePath [^javax.swing.event.TreeExpansionEvent this]
     (-> this (.getPath))))
 

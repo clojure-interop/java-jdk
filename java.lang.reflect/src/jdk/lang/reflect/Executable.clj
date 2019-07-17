@@ -25,7 +25,7 @@
 
   returns: true if an only if this executable was declared
    to take a variable number of arguments. - `boolean`"
-  ([^java.lang.reflect.Executable this]
+  (^Boolean [^java.lang.reflect.Executable this]
     (-> this (.isVarArgs))))
 
 (defn to-generic-string
@@ -34,7 +34,7 @@
 
   returns: a string describing this Executable, including
    any type parameters - `java.lang.String`"
-  ([^java.lang.reflect.Executable this]
+  (^java.lang.String [^java.lang.reflect.Executable this]
     (-> this (.toGenericString))))
 
 (defn get-modifiers
@@ -42,7 +42,7 @@
    the executable represented by this object.
 
   returns: the Java language modifiers for the underlying member - `int`"
-  ([^java.lang.reflect.Executable this]
+  (^Integer [^java.lang.reflect.Executable this]
     (-> this (.getModifiers))))
 
 (defn get-parameter-count
@@ -52,7 +52,7 @@
 
   returns: The number of formal parameters for the executable this
    object represents - `int`"
-  ([^java.lang.reflect.Executable this]
+  (^Integer [^java.lang.reflect.Executable this]
     (-> this (.getParameterCount))))
 
 (defn get-exception-types
@@ -73,7 +73,7 @@
   returns: true if and only if this executable is a synthetic
    construct as defined by
    The Java™ Language Specification. - `boolean`"
-  ([^java.lang.reflect.Executable this]
+  (^Boolean [^java.lang.reflect.Executable this]
     (-> this (.isSynthetic))))
 
 (defn get-generic-parameter-types
@@ -144,7 +144,7 @@
   "Returns the name of the executable represented by this object.
 
   returns: the simple name of the underlying member - `java.lang.String`"
-  ([^java.lang.reflect.Executable this]
+  (^java.lang.String [^java.lang.reflect.Executable this]
     (-> this (.getName))))
 
 (defn get-generic-exception-types
@@ -222,7 +222,7 @@
 
   returns: an object representing the receiver type of the method or
    constructor represented by this Executable - `java.lang.reflect.AnnotatedType`"
-  ([^java.lang.reflect.Executable this]
+  (^java.lang.reflect.AnnotatedType [^java.lang.reflect.Executable this]
     (-> this (.getAnnotatedReceiverType))))
 
 (defn get-annotated-return-type
@@ -237,7 +237,7 @@
 
   returns: an object representing the return type of the method
    or constructor represented by this Executable - `java.lang.reflect.AnnotatedType`"
-  ([^java.lang.reflect.Executable this]
+  (^java.lang.reflect.AnnotatedType [^java.lang.reflect.Executable this]
     (-> this (.getAnnotatedReturnType))))
 
 (defn get-annotations-by-type
@@ -270,7 +270,7 @@
 
   returns: an object representing the declaring class of the
    underlying member - `java.lang.Class<?>`"
-  ([^java.lang.reflect.Executable this]
+  (^java.lang.Class [^java.lang.reflect.Executable this]
     (-> this (.getDeclaringClass))))
 
 (defn get-parameter-annotations

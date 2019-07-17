@@ -37,7 +37,7 @@
   o - object to be compared for equality with this set - `java.lang.Object`
 
   returns: true if the specified object is equal to this set - `boolean`"
-  ([^java.util.AbstractSet this ^java.lang.Object o]
+  (^Boolean [^java.util.AbstractSet this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn hash-code
@@ -54,7 +54,7 @@
    the results.
 
   returns: the hash code value for this set - `int`"
-  ([^java.util.AbstractSet this]
+  (^Integer [^java.util.AbstractSet this]
     (-> this (.hashCode))))
 
 (defn remove-all
@@ -85,6 +85,6 @@
   returns: true if this set changed as a result of the call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the removeAll operation is not supported by this set"
-  ([^java.util.AbstractSet this ^java.util.Collection c]
+  (^Boolean [^java.util.AbstractSet this ^java.util.Collection c]
     (-> this (.removeAll c))))
 

@@ -47,7 +47,7 @@
    children: the glassPane and the layeredPane.
 
   returns: this components single JRootPane child. - `javax.swing.JRootPane`"
-  ([^javax.swing.RootPaneContainer this]
+  (^javax.swing.JRootPane [^javax.swing.RootPaneContainer this]
     (-> this (.getRootPane))))
 
 (defn set-content-pane
@@ -70,7 +70,7 @@
   "Returns the contentPane.
 
   returns: the value of the contentPane property. - `java.awt.Container`"
-  ([^javax.swing.RootPaneContainer this]
+  (^java.awt.Container [^javax.swing.RootPaneContainer this]
     (-> this (.getContentPane))))
 
 (defn set-layered-pane
@@ -95,7 +95,7 @@
   "Returns the layeredPane.
 
   returns: the value of the layeredPane property. - `javax.swing.JLayeredPane`"
-  ([^javax.swing.RootPaneContainer this]
+  (^javax.swing.JLayeredPane [^javax.swing.RootPaneContainer this]
     (-> this (.getLayeredPane))))
 
 (defn set-glass-pane
@@ -119,6 +119,6 @@
   "Returns the glassPane.
 
   returns: the value of the glassPane property. - `java.awt.Component`"
-  ([^javax.swing.RootPaneContainer this]
+  (^java.awt.Component [^javax.swing.RootPaneContainer this]
     (-> this (.getGlassPane))))
 

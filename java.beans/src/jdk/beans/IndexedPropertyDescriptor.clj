@@ -38,7 +38,7 @@
   returns: The method that should be used to read an indexed
    property value.
    May return null if the property isn't indexed or is write-only. - `java.lang.reflect.Method`"
-  ([^java.beans.IndexedPropertyDescriptor this]
+  (^java.lang.reflect.Method [^java.beans.IndexedPropertyDescriptor this]
     (-> this (.getIndexedReadMethod))))
 
 (defn set-indexed-read-method
@@ -56,7 +56,7 @@
   returns: The method that should be used to write an indexed
    property value.
    May return null if the property isn't indexed or is read-only. - `java.lang.reflect.Method`"
-  ([^java.beans.IndexedPropertyDescriptor this]
+  (^java.lang.reflect.Method [^java.beans.IndexedPropertyDescriptor this]
     (-> this (.getIndexedWriteMethod))))
 
 (defn set-indexed-write-method
@@ -77,7 +77,7 @@
 
   returns: the Class object that represents the Java type info,
            or null if the type cannot be determined - `java.lang.Class<?>`"
-  ([^java.beans.IndexedPropertyDescriptor this]
+  (^java.lang.Class [^java.beans.IndexedPropertyDescriptor this]
     (-> this (.getIndexedPropertyType))))
 
 (defn equals
@@ -90,7 +90,7 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([^java.beans.IndexedPropertyDescriptor this ^java.lang.Object obj]
+  (^Boolean [^java.beans.IndexedPropertyDescriptor this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -98,6 +98,6 @@
    See Object.hashCode() for a complete description.
 
   returns: a hash code value for this object. - `int`"
-  ([^java.beans.IndexedPropertyDescriptor this]
+  (^Integer [^java.beans.IndexedPropertyDescriptor this]
     (-> this (.hashCode))))
 

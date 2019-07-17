@@ -95,7 +95,7 @@
    for this window.
 
   returns: the contentPane property - `java.awt.Container`"
-  ([^javax.swing.JWindow this]
+  (^java.awt.Container [^javax.swing.JWindow this]
     (-> this (.getContentPane))))
 
 (defn get-graphics
@@ -105,7 +105,7 @@
 
   returns: a graphics context for this component, or null
                if it has none - `java.awt.Graphics`"
-  ([^javax.swing.JWindow this]
+  (^java.awt.Graphics [^javax.swing.JWindow this]
     (-> this (.getGraphics))))
 
 (defn update
@@ -171,7 +171,7 @@
   "Returns the glassPane Component for this window.
 
   returns: the glassPane property - `java.awt.Component`"
-  ([^javax.swing.JWindow this]
+  (^java.awt.Component [^javax.swing.JWindow this]
     (-> this (.getGlassPane))))
 
 (defn get-accessible-context
@@ -182,7 +182,7 @@
 
   returns: an AccessibleJWindow that serves as the
            AccessibleContext of this JWindow - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.JWindow this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.JWindow this]
     (-> this (.getAccessibleContext))))
 
 (defn set-glass-pane
@@ -197,14 +197,14 @@
   "Gets the transferHandler property.
 
   returns: the value of the transferHandler property - `javax.swing.TransferHandler`"
-  ([^javax.swing.JWindow this]
+  (^javax.swing.TransferHandler [^javax.swing.JWindow this]
     (-> this (.getTransferHandler))))
 
 (defn get-root-pane
   "Returns the rootPane object for this window.
 
   returns: the rootPane property for this window - `javax.swing.JRootPane`"
-  ([^javax.swing.JWindow this]
+  (^javax.swing.JRootPane [^javax.swing.JWindow this]
     (-> this (.getRootPane))))
 
 (defn set-content-pane
@@ -221,6 +221,6 @@
   "Returns the layeredPane object for this window.
 
   returns: the layeredPane property - `javax.swing.JLayeredPane`"
-  ([^javax.swing.JWindow this]
+  (^javax.swing.JLayeredPane [^javax.swing.JWindow this]
     (-> this (.getLayeredPane))))
 

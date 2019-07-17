@@ -17,7 +17,7 @@
 
   returns: true if val is valid;
            false otherwise. - `boolean`"
-  ([^java.awt.RenderingHints$Key this ^java.lang.Object val]
+  (^Boolean [^java.awt.RenderingHints$Key this ^java.lang.Object val]
     (-> this (.isCompatibleValue val))))
 
 (defn hash-code
@@ -26,7 +26,7 @@
    System.identityHashCode() method.
 
   returns: a hash code value for this object. - `int`"
-  ([^java.awt.RenderingHints$Key this]
+  (^Integer [^java.awt.RenderingHints$Key this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -37,6 +37,6 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([^java.awt.RenderingHints$Key this ^java.lang.Object o]
+  (^Boolean [^java.awt.RenderingHints$Key this ^java.lang.Object o]
     (-> this (.equals o))))
 

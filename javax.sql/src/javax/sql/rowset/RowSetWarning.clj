@@ -53,7 +53,7 @@
   returns: the RowSetWarning object chained to this one; if no
            RowSetWarning object is chained to this one,
            null is returned (default value) - `javax.sql.rowset.RowSetWarning`"
-  ([^javax.sql.rowset.RowSetWarning this]
+  (^javax.sql.rowset.RowSetWarning [^javax.sql.rowset.RowSetWarning this]
     (-> this (.getNextWarning))))
 
 (defn set-next-warning

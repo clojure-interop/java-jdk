@@ -15,7 +15,7 @@
   c - the formatted text field - `javax.swing.JComponent`
 
   returns: the UI - `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent c]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent c]
     (SynthFormattedTextFieldUI/createUI c)))
 
 (defn paint-border

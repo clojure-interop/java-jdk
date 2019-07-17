@@ -44,7 +44,7 @@
    double precision.
 
   returns: the X coordinate of this Point2D. - `double`"
-  ([^java.awt.Point this]
+  (^Double [^java.awt.Point this]
     (-> this (.getX))))
 
 (defn get-y
@@ -52,7 +52,7 @@
    double precision.
 
   returns: the Y coordinate of this Point2D. - `double`"
-  ([^java.awt.Point this]
+  (^Double [^java.awt.Point this]
     (-> this (.getY))))
 
 (defn get-location
@@ -61,7 +61,7 @@
    getLocation method of Component.
 
   returns: a copy of this point, at the same location - `java.awt.Point`"
-  ([^java.awt.Point this]
+  (^java.awt.Point [^java.awt.Point this]
     (-> this (.getLocation))))
 
 (defn set-location
@@ -110,7 +110,7 @@
   returns: true if the object to be compared is
            an instance of Point2D and has
            the same values; false otherwise. - `boolean`"
-  ([^java.awt.Point this ^java.lang.Object obj]
+  (^Boolean [^java.awt.Point this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn to-string
@@ -121,6 +121,6 @@
    The returned string may be empty but may not be null.
 
   returns: a string representation of this point - `java.lang.String`"
-  ([^java.awt.Point this]
+  (^java.lang.String [^java.awt.Point this]
     (-> this (.toString))))
 

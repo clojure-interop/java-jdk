@@ -29,7 +29,7 @@
    returned.
 
   returns: The error message. - `java.lang.String`"
-  ([^javax.xml.parsers.FactoryConfigurationError this]
+  (^java.lang.String [^javax.xml.parsers.FactoryConfigurationError this]
     (-> this (.getMessage))))
 
 (defn get-exception
@@ -37,7 +37,7 @@
    be raised.
 
   returns: The encapsulated exception, or null if there is none. - `java.lang.Exception`"
-  ([^javax.xml.parsers.FactoryConfigurationError this]
+  (^java.lang.Exception [^javax.xml.parsers.FactoryConfigurationError this]
     (-> this (.getException))))
 
 (defn get-cause
@@ -45,6 +45,6 @@
 
   returns: the cause of this throwable or null if the
             cause is nonexistent or unknown. - `java.lang.Throwable`"
-  ([^javax.xml.parsers.FactoryConfigurationError this]
+  (^java.lang.Throwable [^javax.xml.parsers.FactoryConfigurationError this]
     (-> this (.getCause))))
 

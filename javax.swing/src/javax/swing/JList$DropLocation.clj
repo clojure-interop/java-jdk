@@ -20,7 +20,7 @@
    and no index could be calculated.
 
   returns: the drop index - `int`"
-  ([^javax.swing.JList$DropLocation this]
+  (^Integer [^javax.swing.JList$DropLocation this]
     (-> this (.getIndex))))
 
 (defn insert?
@@ -28,7 +28,7 @@
    location.
 
   returns: whether or not this is an insert location - `boolean`"
-  ([^javax.swing.JList$DropLocation this]
+  (^Boolean [^javax.swing.JList$DropLocation this]
     (-> this (.isInsert))))
 
 (defn to-string
@@ -38,6 +38,6 @@
    between implementations.
 
   returns: a string representation of this drop location - `java.lang.String`"
-  ([^javax.swing.JList$DropLocation this]
+  (^java.lang.String [^javax.swing.JList$DropLocation this]
     (-> this (.toString))))
 

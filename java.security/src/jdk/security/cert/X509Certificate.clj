@@ -85,7 +85,7 @@
    CertificateSerialNumber  ::=  INTEGER
 
   returns: the serial number. - `java.math.BigInteger`"
-  ([^java.security.cert.X509Certificate this]
+  (^java.math.BigInteger [^java.security.cert.X509Certificate this]
     (-> this (.getSerialNumber))))
 
 (defn get-subject-alternative-names
@@ -149,7 +149,7 @@
    names (or null) - `java.util.Collection<java.util.List<?>>`
 
   throws: java.security.cert.CertificateParsingException - if the extension cannot be decoded"
-  ([^java.security.cert.X509Certificate this]
+  (^java.util.Collection> [^java.security.cert.X509Certificate this]
     (-> this (.getSubjectAlternativeNames))))
 
 (defn get-issuer-unique-id
@@ -190,7 +190,7 @@
        generalTime    GeneralizedTime }
 
   returns: the start date of the validity period. - `java.util.Date`"
-  ([^java.security.cert.X509Certificate this]
+  (^java.util.Date [^java.security.cert.X509Certificate this]
     (-> this (.getNotBefore))))
 
 (defn get-not-after
@@ -199,7 +199,7 @@
    for relevant ASN.1 definitions.
 
   returns: the end date of the validity period. - `java.util.Date`"
-  ([^java.security.cert.X509Certificate this]
+  (^java.util.Date [^java.security.cert.X509Certificate this]
     (-> this (.getNotAfter))))
 
 (defn get-key-usage
@@ -261,7 +261,7 @@
    pathLenConstraint does not appear,
    Integer.MAX_VALUE is returned to indicate that there is no
    limit to the allowed length of the certification path. - `int`"
-  ([^java.security.cert.X509Certificate this]
+  (^Integer [^java.security.cert.X509Certificate this]
     (-> this (.getBasicConstraints))))
 
 (defn get-subject-unique-id
@@ -315,7 +315,7 @@
    names (or null) - `java.util.Collection<java.util.List<?>>`
 
   throws: java.security.cert.CertificateParsingException - if the extension cannot be decoded"
-  ([^java.security.cert.X509Certificate this]
+  (^java.util.Collection> [^java.security.cert.X509Certificate this]
     (-> this (.getIssuerAlternativeNames))))
 
 (defn check-validity
@@ -339,7 +339,7 @@
 
   returns: an X500Principal representing the issuer
             distinguished name - `javax.security.auth.x500.X500Principal`"
-  ([^java.security.cert.X509Certificate this]
+  (^javax.security.auth.x500.X500Principal [^java.security.cert.X509Certificate this]
     (-> this (.getIssuerX500Principal))))
 
 (defn verify
@@ -372,7 +372,7 @@
    Version ::=  INTEGER  {  v1(0), v2(1), v3(2)  }
 
   returns: the version number, i.e. 1, 2 or 3. - `int`"
-  ([^java.security.cert.X509Certificate this]
+  (^Integer [^java.security.cert.X509Certificate this]
     (-> this (.getVersion))))
 
 (defn get-subject-dn
@@ -395,7 +395,7 @@
    and other relevant definitions.
 
   returns: a Principal whose name is the subject name. - `java.security.Principal`"
-  ([^java.security.cert.X509Certificate this]
+  (^java.security.Principal [^java.security.cert.X509Certificate this]
     (-> this (.getSubjectDN))))
 
 (defn get-issuer-dn
@@ -435,7 +435,7 @@
    TeletexString or UniversalString.
 
   returns: a Principal whose name is the issuer distinguished name. - `java.security.Principal`"
-  ([^java.security.cert.X509Certificate this]
+  (^java.security.Principal [^java.security.cert.X509Certificate this]
     (-> this (.getIssuerDN))))
 
 (defn get-sig-alg-params
@@ -487,7 +487,7 @@
            contain an ExtendedKeyUsage extension. - `java.util.List<java.lang.String>`
 
   throws: java.security.cert.CertificateParsingException - if the extension cannot be decoded"
-  ([^java.security.cert.X509Certificate this]
+  (^java.util.List [^java.security.cert.X509Certificate this]
     (-> this (.getExtendedKeyUsage))))
 
 (defn get-sig-alg-name
@@ -509,7 +509,7 @@
    OID string.
 
   returns: the signature algorithm name. - `java.lang.String`"
-  ([^java.security.cert.X509Certificate this]
+  (^java.lang.String [^java.security.cert.X509Certificate this]
     (-> this (.getSigAlgName))))
 
 (defn get-subject-x-500-principal
@@ -522,7 +522,7 @@
 
   returns: an X500Principal representing the subject
             distinguished name - `javax.security.auth.x500.X500Principal`"
-  ([^java.security.cert.X509Certificate this]
+  (^javax.security.auth.x500.X500Principal [^java.security.cert.X509Certificate this]
     (-> this (.getSubjectX500Principal))))
 
 (defn get-sig-alg-oid
@@ -539,7 +539,7 @@
    relevant ASN.1 definitions.
 
   returns: the signature algorithm OID string. - `java.lang.String`"
-  ([^java.security.cert.X509Certificate this]
+  (^java.lang.String [^java.security.cert.X509Certificate this]
     (-> this (.getSigAlgOID))))
 
 (defn get-tbs-certificate

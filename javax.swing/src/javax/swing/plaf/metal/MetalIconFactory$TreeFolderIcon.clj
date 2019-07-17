@@ -17,11 +17,11 @@
 
 (defn get-shift
   "returns: `int`"
-  ([^javax.swing.plaf.metal.MetalIconFactory$TreeFolderIcon this]
+  (^Integer [^javax.swing.plaf.metal.MetalIconFactory$TreeFolderIcon this]
     (-> this (.getShift))))
 
 (defn get-additional-height
   "returns: `int`"
-  ([^javax.swing.plaf.metal.MetalIconFactory$TreeFolderIcon this]
+  (^Integer [^javax.swing.plaf.metal.MetalIconFactory$TreeFolderIcon this]
     (-> this (.getAdditionalHeight))))
 

@@ -52,7 +52,7 @@
   "Get the unique identifier for this WebServiceFeature.
 
   returns: the unique identifier for this feature. - `java.lang.String`"
-  ([^javax.xml.ws.soap.MTOMFeature this]
+  (^java.lang.String [^javax.xml.ws.soap.MTOMFeature this]
     (-> this (.getID))))
 
 (defn get-threshold
@@ -60,6 +60,6 @@
    should be sent as an attachment.
 
   returns: the current threshold size in bytes - `int`"
-  ([^javax.xml.ws.soap.MTOMFeature this]
+  (^Integer [^javax.xml.ws.soap.MTOMFeature this]
     (-> this (.getThreshold))))
 

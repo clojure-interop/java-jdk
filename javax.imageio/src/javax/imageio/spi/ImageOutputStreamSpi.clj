@@ -46,7 +46,7 @@
    any class may be used.
 
   returns: a Class variable. - `java.lang.Class<?>`"
-  ([^javax.imageio.spi.ImageOutputStreamSpi this]
+  (^java.lang.Class [^javax.imageio.spi.ImageOutputStreamSpi this]
     (-> this (.getOutputClass))))
 
 (defn can-use-cache-file?
@@ -61,7 +61,7 @@
 
   returns: true if a cache file can be used by the
    output streams created by this service provider. - `boolean`"
-  ([^javax.imageio.spi.ImageOutputStreamSpi this]
+  (^Boolean [^javax.imageio.spi.ImageOutputStreamSpi this]
     (-> this (.canUseCacheFile))))
 
 (defn needs-cache-file
@@ -73,7 +73,7 @@
 
   returns: true if a cache file is needed by the
    output streams created by this service provider. - `boolean`"
-  ([^javax.imageio.spi.ImageOutputStreamSpi this]
+  (^Boolean [^javax.imageio.spi.ImageOutputStreamSpi this]
     (-> this (.needsCacheFile))))
 
 (defn create-output-stream-instance
@@ -90,8 +90,8 @@
   returns: an ImageOutputStream instance. - `javax.imageio.stream.ImageOutputStream`
 
   throws: java.lang.IllegalArgumentException - if a cache file is needed, but cacheDir is non-null and is not a directory."
-  ([^javax.imageio.spi.ImageOutputStreamSpi this ^java.lang.Object output ^Boolean use-cache ^java.io.File cache-dir]
+  (^javax.imageio.stream.ImageOutputStream [^javax.imageio.spi.ImageOutputStreamSpi this ^java.lang.Object output ^Boolean use-cache ^java.io.File cache-dir]
     (-> this (.createOutputStreamInstance output use-cache cache-dir)))
-  ([^javax.imageio.spi.ImageOutputStreamSpi this ^java.lang.Object output]
+  (^javax.imageio.stream.ImageOutputStream [^javax.imageio.spi.ImageOutputStreamSpi this ^java.lang.Object output]
     (-> this (.createOutputStreamInstance output))))
 

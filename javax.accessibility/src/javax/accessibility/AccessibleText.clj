@@ -15,7 +15,7 @@
   "Returns the portion of the text that is selected.
 
   returns: the String portion of the text that is selected - `java.lang.String`"
-  ([^javax.accessibility.AccessibleText this]
+  (^java.lang.String [^javax.accessibility.AccessibleText this]
     (-> this (.getSelectedText))))
 
 (defn get-after-index
@@ -25,7 +25,7 @@
   index - an index within the text - `int`
 
   returns: the letter, word, or sentence - `java.lang.String`"
-  ([^javax.accessibility.AccessibleText this ^Integer part ^Integer index]
+  (^java.lang.String [^javax.accessibility.AccessibleText this ^Integer part ^Integer index]
     (-> this (.getAfterIndex part index))))
 
 (defn get-character-attribute
@@ -34,7 +34,7 @@
   i - the zero-based index into the text - `int`
 
   returns: the AttributeSet of the character - `javax.swing.text.AttributeSet`"
-  ([^javax.accessibility.AccessibleText this ^Integer i]
+  (^javax.swing.text.AttributeSet [^javax.accessibility.AccessibleText this ^Integer i]
     (-> this (.getCharacterAttribute i))))
 
 (defn get-before-index
@@ -44,7 +44,7 @@
   index - an index within the text - `int`
 
   returns: the letter, word, or sentence - `java.lang.String`"
-  ([^javax.accessibility.AccessibleText this ^Integer part ^Integer index]
+  (^java.lang.String [^javax.accessibility.AccessibleText this ^Integer part ^Integer index]
     (-> this (.getBeforeIndex part index))))
 
 (defn get-character-bounds
@@ -56,7 +56,7 @@
 
   returns: the screen coordinates of the character's bounding box,
    if index is invalid return an empty rectangle. - `java.awt.Rectangle`"
-  ([^javax.accessibility.AccessibleText this ^Integer i]
+  (^java.awt.Rectangle [^javax.accessibility.AccessibleText this ^Integer i]
     (-> this (.getCharacterBounds i))))
 
 (defn get-index-at-point
@@ -68,7 +68,7 @@
 
   returns: the zero-based index of the character under Point p; if
    Point is invalid return -1. - `int`"
-  ([^javax.accessibility.AccessibleText this ^java.awt.Point p]
+  (^Integer [^javax.accessibility.AccessibleText this ^java.awt.Point p]
     (-> this (.getIndexAtPoint p))))
 
 (defn get-selection-start
@@ -77,7 +77,7 @@
    a caret, the start and end offsets will be the same.
 
   returns: the index into the text of the start of the selection - `int`"
-  ([^javax.accessibility.AccessibleText this]
+  (^Integer [^javax.accessibility.AccessibleText this]
     (-> this (.getSelectionStart))))
 
 (defn get-caret-position
@@ -87,7 +87,7 @@
    value as the offset (the caret is between two characters).
 
   returns: the zero-based offset of the caret. - `int`"
-  ([^javax.accessibility.AccessibleText this]
+  (^Integer [^javax.accessibility.AccessibleText this]
     (-> this (.getCaretPosition))))
 
 (defn get-selection-end
@@ -96,7 +96,7 @@
    a caret, the start and end offsets will be the same.
 
   returns: the index into the text of the end of the selection - `int`"
-  ([^javax.accessibility.AccessibleText this]
+  (^Integer [^javax.accessibility.AccessibleText this]
     (-> this (.getSelectionEnd))))
 
 (defn get-at-index
@@ -106,13 +106,13 @@
   index - an index within the text - `int`
 
   returns: the letter, word, or sentence - `java.lang.String`"
-  ([^javax.accessibility.AccessibleText this ^Integer part ^Integer index]
+  (^java.lang.String [^javax.accessibility.AccessibleText this ^Integer part ^Integer index]
     (-> this (.getAtIndex part index))))
 
 (defn get-char-count
   "Returns the number of characters (valid indicies)
 
   returns: the number of characters - `int`"
-  ([^javax.accessibility.AccessibleText this]
+  (^Integer [^javax.accessibility.AccessibleText this]
     (-> this (.getCharCount))))
 

@@ -46,7 +46,7 @@
 
   returns: the BeanContext associated
    with this BeanContextChild. - `java.beans.beancontext.BeanContext`"
-  ([^java.beans.beancontext.BeanContextChild this]
+  (^java.beans.beancontext.BeanContext [^java.beans.beancontext.BeanContextChild this]
     (-> this (.getBeanContext))))
 
 (defn add-property-change-listener

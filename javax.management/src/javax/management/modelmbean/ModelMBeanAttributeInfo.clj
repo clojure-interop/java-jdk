@@ -92,7 +92,7 @@
 
   returns: Descriptor associated with the
    ModelMBeanAttributeInfo object. - `javax.management.Descriptor`"
-  ([^javax.management.modelmbean.ModelMBeanAttributeInfo this]
+  (^javax.management.Descriptor [^javax.management.modelmbean.ModelMBeanAttributeInfo this]
     (-> this (.getDescriptor))))
 
 (defn set-descriptor
@@ -116,7 +116,7 @@
   returns: a clone of this instance. - `java.lang.Object`
 
   throws: javax.management.RuntimeOperationsException - for illegal value for field Names or field Values. If the descriptor construction fails for any reason, this exception will be thrown."
-  ([^javax.management.modelmbean.ModelMBeanAttributeInfo this]
+  (^java.lang.Object [^javax.management.modelmbean.ModelMBeanAttributeInfo this]
     (-> this (.clone))))
 
 (defn to-string
@@ -124,6 +124,6 @@
    ModelMBeanAttributeInfo instance.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^javax.management.modelmbean.ModelMBeanAttributeInfo this]
+  (^java.lang.String [^javax.management.modelmbean.ModelMBeanAttributeInfo this]
     (-> this (.toString))))
 

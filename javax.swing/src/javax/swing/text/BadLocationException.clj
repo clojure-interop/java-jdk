@@ -27,6 +27,6 @@
   "Returns the offset into the document that was not legal.
 
   returns: the offset >= 0 - `int`"
-  ([^javax.swing.text.BadLocationException this]
+  (^Integer [^javax.swing.text.BadLocationException this]
     (-> this (.offsetRequested))))
 

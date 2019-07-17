@@ -17,7 +17,7 @@
    the PrintGraphics interface.
 
   returns: `java.awt.Graphics`"
-  ([^java.awt.PrintJob this]
+  (^java.awt.Graphics [^java.awt.PrintJob this]
     (-> this (.getGraphics))))
 
 (defn get-page-dimension
@@ -26,7 +26,7 @@
    is similar to the screen resolution.
 
   returns: `java.awt.Dimension`"
-  ([^java.awt.PrintJob this]
+  (^java.awt.Dimension [^java.awt.PrintJob this]
     (-> this (.getPageDimension))))
 
 (defn get-page-resolution
@@ -35,14 +35,14 @@
    resolution of the printer.
 
   returns: `int`"
-  ([^java.awt.PrintJob this]
+  (^Integer [^java.awt.PrintJob this]
     (-> this (.getPageResolution))))
 
 (defn last-page-first
   "Returns true if the last page will be printed first.
 
   returns: `boolean`"
-  ([^java.awt.PrintJob this]
+  (^Boolean [^java.awt.PrintJob this]
     (-> this (.lastPageFirst))))
 
 (defn end

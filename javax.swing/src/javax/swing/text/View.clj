@@ -226,7 +226,7 @@
    method serves to provide it at other times.
 
   returns: the factory, null if none - `javax.swing.text.ViewFactory`"
-  ([^javax.swing.text.View this]
+  (^javax.swing.text.ViewFactory [^javax.swing.text.View this]
     (-> this (.getViewFactory))))
 
 (defn get-break-weight
@@ -258,7 +258,7 @@
 
   returns: the weight, which should be a value between
      ForcedBreakWeight and BadBreakWeight - `int`"
-  ([^javax.swing.text.View this ^Integer axis ^Float pos ^Float len]
+  (^Integer [^javax.swing.text.View this ^Integer axis ^Float pos ^Float len]
     (-> this (.getBreakWeight axis pos len))))
 
 (defn changed-update
@@ -313,7 +313,7 @@
              Typically the view is told to render into the span
              that is returned, although there is no guarantee.
              The parent may choose to resize or break the view - `float`"
-  ([^javax.swing.text.View this ^Integer axis]
+  (^Float [^javax.swing.text.View this ^Integer axis]
     (-> this (.getPreferredSpan axis))))
 
 (defn get-view
@@ -323,14 +323,14 @@
   n - the number of the view to get, >= 0 && < getViewCount() - `int`
 
   returns: the view - `javax.swing.text.View`"
-  ([^javax.swing.text.View this ^Integer n]
+  (^javax.swing.text.View [^javax.swing.text.View this ^Integer n]
     (-> this (.getView n))))
 
 (defn get-document
   "Fetches the model associated with the view.
 
   returns: the view model, null if none - `javax.swing.text.Document`"
-  ([^javax.swing.text.View this]
+  (^javax.swing.text.Document [^javax.swing.text.View this]
     (-> this (.getDocument))))
 
 (defn get-child-allocation
@@ -344,7 +344,7 @@
   a - the allocation to this view - `java.awt.Shape`
 
   returns: the allocation to the child - `java.awt.Shape`"
-  ([^javax.swing.text.View this ^Integer index ^java.awt.Shape a]
+  (^java.awt.Shape [^javax.swing.text.View this ^Integer index ^java.awt.Shape a]
     (-> this (.getChildAllocation index a))))
 
 (defn remove-update
@@ -384,7 +384,7 @@
 
   returns: the view fragment, or itself if the view doesn't
      support breaking into fragments - `javax.swing.text.View`"
-  ([^javax.swing.text.View this ^Integer p-0 ^Integer p-1]
+  (^javax.swing.text.View [^javax.swing.text.View this ^Integer p-0 ^Integer p-1]
     (-> this (.createFragment p-0 p-1))))
 
 (defn get-end-offset
@@ -392,7 +392,7 @@
    responsible.
 
   returns: the ending offset into the model >= 0 - `int`"
-  ([^javax.swing.text.View this]
+  (^Integer [^javax.swing.text.View this]
     (-> this (.getEndOffset))))
 
 (defn get-element
@@ -401,7 +401,7 @@
    entire portion of the element.
 
   returns: the subject - `javax.swing.text.Element`"
-  ([^javax.swing.text.View this]
+  (^javax.swing.text.Element [^javax.swing.text.View this]
     (-> this (.getElement))))
 
 (defn get-graphics
@@ -411,7 +411,7 @@
    than a component view.
 
   returns: a Graphics object for rendering - `java.awt.Graphics`"
-  ([^javax.swing.text.View this]
+  (^java.awt.Graphics [^javax.swing.text.View this]
     (-> this (.getGraphics))))
 
 (defn replace
@@ -426,7 +426,7 @@
   offset - the starting index into the child views to insert the new views. This should be a value >= 0 and <= getViewCount - `int`
   length - the number of existing child views to remove This should be a value >= 0 and <= (getViewCount() - offset). - `int`
   views - the child views to add. This value can be null to indicate no children are being added (useful to remove). - `javax.swing.text.View[]`"
-  ([^javax.swing.text.View this ^Integer offset ^Integer length ^javax.swing.text.View[] views]
+  ([^javax.swing.text.View this ^Integer offset ^Integer length views]
     (-> this (.replace offset length views))))
 
 (defn get-tool-tip-text
@@ -439,14 +439,14 @@
   allocation - `java.awt.Shape`
 
   returns: `java.lang.String`"
-  ([^javax.swing.text.View this ^Float x ^Float y ^java.awt.Shape allocation]
+  (^java.lang.String [^javax.swing.text.View this ^Float x ^Float y ^java.awt.Shape allocation]
     (-> this (.getToolTipText x y allocation))))
 
 (defn get-parent
   "Returns the parent of the view.
 
   returns: the parent, or null if none exists - `javax.swing.text.View`"
-  ([^javax.swing.text.View this]
+  (^javax.swing.text.View [^javax.swing.text.View this]
     (-> this (.getParent))))
 
 (defn get-container
@@ -456,7 +456,7 @@
    of this is to forward the query to the parent view.
 
   returns: the container, null if none - `java.awt.Container`"
-  ([^javax.swing.text.View this]
+  (^java.awt.Container [^javax.swing.text.View this]
     (-> this (.getContainer))))
 
 (defn remove
@@ -474,7 +474,7 @@
   axis - may be either View.X_AXIS or View.Y_AXIS - `int`
 
   returns: the minimum span the view can be rendered into - `float`"
-  ([^javax.swing.text.View this ^Integer axis]
+  (^Float [^javax.swing.text.View this ^Integer axis]
     (-> this (.getMinimumSpan axis))))
 
 (defn get-maximum-span
@@ -484,7 +484,7 @@
   axis - may be either View.X_AXIS or View.Y_AXIS - `int`
 
   returns: the maximum span the view can be rendered into - `float`"
-  ([^javax.swing.text.View this ^Integer axis]
+  (^Float [^javax.swing.text.View this ^Integer axis]
     (-> this (.getMaximumSpan axis))))
 
 (defn insert-update
@@ -533,7 +533,7 @@
   axis - may be either View.X_AXIS or View.Y_AXIS - `int`
 
   returns: the value 0.5 - `float`"
-  ([^javax.swing.text.View this ^Integer axis]
+  (^Float [^javax.swing.text.View this ^Integer axis]
     (-> this (.getAlignment axis))))
 
 (defn get-resize-weight
@@ -543,7 +543,7 @@
   axis - may be either View.X_AXIS or View.Y_AXIS - `int`
 
   returns: the weight - `int`"
-  ([^javax.swing.text.View this ^Integer axis]
+  (^Integer [^javax.swing.text.View this ^Integer axis]
     (-> this (.getResizeWeight axis))))
 
 (defn get-start-offset
@@ -551,7 +551,7 @@
    responsible.
 
   returns: the starting offset into the model >= 0 - `int`"
-  ([^javax.swing.text.View this]
+  (^Integer [^javax.swing.text.View this]
     (-> this (.getStartOffset))))
 
 (defn visible?
@@ -560,7 +560,7 @@
     all views are visible.
 
   returns: always returns true - `boolean`"
-  ([^javax.swing.text.View this]
+  (^Boolean [^javax.swing.text.View this]
     (-> this (.isVisible))))
 
 (defn set-size
@@ -620,7 +620,7 @@
     argument will be
    filled in to indicate that the point given is closer to the next
    character in the model or the previous character in the model. - `int`"
-  ([^javax.swing.text.View this ^Float x ^Float y ^java.awt.Shape a ^javax.swing.text.Position.Bias[] bias-return]
+  (^Integer [^javax.swing.text.View this ^Float x ^Float y ^java.awt.Shape a bias-return]
     (-> this (.viewToModel x y a bias-return)))
   ([^javax.swing.text.View this ^Float x ^Float y ^java.awt.Shape a]
     (-> this (.viewToModel x y a))))
@@ -649,7 +649,7 @@
     given span, if the view can be broken.  If the view
     doesn't support breaking behavior, the view itself is
     returned. - `javax.swing.text.View`"
-  ([^javax.swing.text.View this ^Integer axis ^Integer offset ^Float pos ^Float len]
+  (^javax.swing.text.View [^javax.swing.text.View this ^Integer axis ^Integer offset ^Float pos ^Float len]
     (-> this (.breakView axis offset pos len))))
 
 (defn get-view-index
@@ -663,9 +663,9 @@
 
   returns: index of the view representing the given location, or
      -1 if no view represents that position - `int`"
-  ([^javax.swing.text.View this ^Float x ^Float y ^java.awt.Shape allocation]
+  (^Integer [^javax.swing.text.View this ^Float x ^Float y ^java.awt.Shape allocation]
     (-> this (.getViewIndex x y allocation)))
-  ([^javax.swing.text.View this ^Integer pos ^javax.swing.text.Position.Bias b]
+  (^Integer [^javax.swing.text.View this ^Integer pos ^javax.swing.text.Position.Bias b]
     (-> this (.getViewIndex pos b))))
 
 (defn remove-all
@@ -680,7 +680,7 @@
    returns 0.
 
   returns: the number of views >= 0 - `int`"
-  ([^javax.swing.text.View this]
+  (^Integer [^javax.swing.text.View this]
     (-> this (.getViewCount))))
 
 (defn get-attributes
@@ -697,7 +697,7 @@
    by this method.
 
   returns: `javax.swing.text.AttributeSet`"
-  ([^javax.swing.text.View this]
+  (^javax.swing.text.AttributeSet [^javax.swing.text.View this]
     (-> this (.getAttributes))))
 
 (defn model-to-view
@@ -716,9 +716,9 @@
             by the first and last character positions - `java.awt.Shape`
 
   throws: javax.swing.text.BadLocationException - if the given position does not represent a valid location in the associated document"
-  ([^javax.swing.text.View this ^Integer p-0 ^javax.swing.text.Position.Bias b-0 ^Integer p-1 ^javax.swing.text.Position.Bias b-1 ^java.awt.Shape a]
+  (^java.awt.Shape [^javax.swing.text.View this ^Integer p-0 ^javax.swing.text.Position.Bias b-0 ^Integer p-1 ^javax.swing.text.Position.Bias b-1 ^java.awt.Shape a]
     (-> this (.modelToView p-0 b-0 p-1 b-1 a)))
-  ([^javax.swing.text.View this ^Integer pos ^java.awt.Shape a ^javax.swing.text.Position.Bias b]
+  (^java.awt.Shape [^javax.swing.text.View this ^Integer pos ^java.awt.Shape a ^javax.swing.text.Position.Bias b]
     (-> this (.modelToView pos a b)))
   ([^javax.swing.text.View this ^Integer pos ^java.awt.Shape a]
     (-> this (.modelToView pos a))))
@@ -744,6 +744,6 @@
     location visual position - `int`
 
   throws: javax.swing.text.BadLocationException - the given position is not a valid position within the document"
-  ([^javax.swing.text.View this ^Integer pos ^javax.swing.text.Position.Bias b ^java.awt.Shape a ^Integer direction ^javax.swing.text.Position.Bias[] bias-ret]
+  (^Integer [^javax.swing.text.View this ^Integer pos ^javax.swing.text.Position.Bias b ^java.awt.Shape a ^Integer direction bias-ret]
     (-> this (.getNextVisualPositionFrom pos b a direction bias-ret))))
 

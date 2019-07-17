@@ -66,14 +66,14 @@
    this group.
 
   returns: an Enumeration of the buttons in this group - `java.util.Enumeration<javax.swing.AbstractButton>`"
-  ([^javax.swing.ButtonGroup this]
+  (^java.util.Enumeration [^javax.swing.ButtonGroup this]
     (-> this (.getElements))))
 
 (defn get-selection
   "Returns the model of the selected button.
 
   returns: the selected button model - `javax.swing.ButtonModel`"
-  ([^javax.swing.ButtonGroup this]
+  (^javax.swing.ButtonModel [^javax.swing.ButtonGroup this]
     (-> this (.getSelection))))
 
 (defn set-selected
@@ -92,13 +92,13 @@
 
   returns: true if the button is selected,
      otherwise returns false - `boolean`"
-  ([^javax.swing.ButtonGroup this ^javax.swing.ButtonModel m]
+  (^Boolean [^javax.swing.ButtonGroup this ^javax.swing.ButtonModel m]
     (-> this (.isSelected m))))
 
 (defn get-button-count
   "Returns the number of buttons in the group.
 
   returns: the button count - `int`"
-  ([^javax.swing.ButtonGroup this]
+  (^Integer [^javax.swing.ButtonGroup this]
     (-> this (.getButtonCount))))
 

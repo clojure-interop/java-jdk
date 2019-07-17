@@ -92,7 +92,7 @@
 
   returns: A sorted association of property key strings to property
    values. - `java.util.SortedMap<java.lang.String,java.lang.String>`"
-  ([^java.util.jar.Pack200$Packer this]
+  (^java.util.SortedMap [^java.util.jar.Pack200$Packer this]
     (-> this (.properties))))
 
 (defn pack

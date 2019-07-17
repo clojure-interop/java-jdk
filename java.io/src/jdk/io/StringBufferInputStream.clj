@@ -25,9 +25,9 @@
   returns: the total number of bytes read into the buffer, or
                -1 if there is no more data because the end of
                the stream has been reached. - `int`"
-  ([^java.io.StringBufferInputStream this b ^Integer off ^Integer len]
+  (^Integer [^java.io.StringBufferInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  ([^java.io.StringBufferInputStream this]
+  (^Integer [^java.io.StringBufferInputStream this]
     (-> this (.read))))
 
 (defn skip
@@ -36,7 +36,7 @@
   n - the number of bytes to be skipped. - `long`
 
   returns: the actual number of bytes skipped. - `long`"
-  ([^java.io.StringBufferInputStream this ^Long n]
+  (^Long [^java.io.StringBufferInputStream this ^Long n]
     (-> this (.skip n))))
 
 (defn available
@@ -44,7 +44,7 @@
 
   returns: the value of count - pos, which is the
                number of bytes remaining to be read from the input buffer. - `int`"
-  ([^java.io.StringBufferInputStream this]
+  (^Integer [^java.io.StringBufferInputStream this]
     (-> this (.available))))
 
 (defn reset

@@ -38,7 +38,7 @@
 
   returns: the check box that is currently in the
                    `on` state, or null. - `java.awt.Checkbox`"
-  ([^java.awt.CheckboxGroup this]
+  (^java.awt.Checkbox [^java.awt.CheckboxGroup this]
     (-> this (.getSelectedCheckbox))))
 
 (defn get-current
@@ -79,6 +79,6 @@
    including the value of its current selection.
 
   returns: a string representation of this check box group. - `java.lang.String`"
-  ([^java.awt.CheckboxGroup this]
+  (^java.lang.String [^java.awt.CheckboxGroup this]
     (-> this (.toString))))
 

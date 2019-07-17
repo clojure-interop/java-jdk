@@ -73,9 +73,9 @@
             specified type. - `java.security.cert.CertStore`
 
   throws: java.security.NoSuchAlgorithmException - if a CertStoreSpi implementation for the specified type is not available from the specified provider."
-  ([^java.lang.String type ^java.security.cert.CertStoreParameters params ^java.lang.String provider]
+  (^java.security.cert.CertStore [^java.lang.String type ^java.security.cert.CertStoreParameters params ^java.lang.String provider]
     (CertStore/getInstance type params provider))
-  ([^java.lang.String type ^java.security.cert.CertStoreParameters params]
+  (^java.security.cert.CertStore [^java.lang.String type ^java.security.cert.CertStoreParameters params]
     (CertStore/getInstance type params)))
 
 (defn *get-default-type
@@ -95,7 +95,7 @@
   returns: the default CertStore type as specified by the
    certstore.type security property, or the string
    `LDAP` if no such property exists. - `java.lang.String`"
-  ([]
+  (^java.lang.String []
     (CertStore/getDefaultType )))
 
 (defn get-certificates
@@ -159,20 +159,20 @@
 
   returns: the parameters used to initialize this CertStore
    (may be null) - `java.security.cert.CertStoreParameters`"
-  ([^java.security.cert.CertStore this]
+  (^java.security.cert.CertStoreParameters [^java.security.cert.CertStore this]
     (-> this (.getCertStoreParameters))))
 
 (defn get-type
   "Returns the type of this CertStore.
 
   returns: the type of this CertStore - `java.lang.String`"
-  ([^java.security.cert.CertStore this]
+  (^java.lang.String [^java.security.cert.CertStore this]
     (-> this (.getType))))
 
 (defn get-provider
   "Returns the provider of this CertStore.
 
   returns: the provider of this CertStore - `java.security.Provider`"
-  ([^java.security.cert.CertStore this]
+  (^java.security.Provider [^java.security.cert.CertStore this]
     (-> this (.getProvider))))
 

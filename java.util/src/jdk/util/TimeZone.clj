@@ -109,7 +109,7 @@
 
   returns: the specified TimeZone, or the GMT zone if the given ID
    cannot be understood. - `java.util.TimeZone`"
-  ([^java.lang.String id]
+  (^java.util.TimeZone [^java.lang.String id]
     (TimeZone/getTimeZone id)))
 
 (defn *get-available-i-ds
@@ -145,7 +145,7 @@
    value is set to the ID upon return.
 
   returns: the default TimeZone - `java.util.TimeZone`"
-  ([]
+  (^java.util.TimeZone []
     (TimeZone/getDefault )))
 
 (defn *set-default
@@ -168,7 +168,7 @@
 
   returns: true if the given date is in Daylight Saving Time,
            false, otherwise. - `boolean`"
-  ([^java.util.TimeZone this ^java.util.Date date]
+  (^Boolean [^java.util.TimeZone this ^java.util.Date date]
     (-> this (.inDaylightTime date))))
 
 (defn get-raw-offset
@@ -185,7 +185,7 @@
    hours).
 
   returns: the amount of raw offset time in milliseconds to add to UTC. - `int`"
-  ([^java.util.TimeZone this]
+  (^Integer [^java.util.TimeZone this]
     (-> this (.getRawOffset))))
 
 (defn get-display-name
@@ -210,13 +210,13 @@
   returns: the human-readable name of this time zone in the given locale. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if style is invalid."
-  ([^java.util.TimeZone this ^Boolean daylight ^Integer style ^java.util.Locale locale]
+  (^java.lang.String [^java.util.TimeZone this ^Boolean daylight ^Integer style ^java.util.Locale locale]
     (-> this (.getDisplayName daylight style locale)))
-  ([^java.util.TimeZone this ^Boolean daylight ^Integer style]
+  (^java.lang.String [^java.util.TimeZone this ^Boolean daylight ^Integer style]
     (-> this (.getDisplayName daylight style)))
-  ([^java.util.TimeZone this ^java.util.Locale locale]
+  (^java.lang.String [^java.util.TimeZone this ^java.util.Locale locale]
     (-> this (.getDisplayName locale)))
-  ([^java.util.TimeZone this]
+  (^java.lang.String [^java.util.TimeZone this]
     (-> this (.getDisplayName))))
 
 (defn get-dst-savings
@@ -237,7 +237,7 @@
    required, construct a Calendar with this TimeZone and the time stamp, and call Calendar.get(Calendar.DST_OFFSET).
 
   returns: the amount of saving time in milliseconds - `int`"
-  ([^java.util.TimeZone this]
+  (^Integer [^java.util.TimeZone this]
     (-> this (.getDSTSavings))))
 
 (defn get-offset
@@ -257,9 +257,9 @@
   milliseconds - the milliseconds in day in standard local time. - `int`
 
   returns: the offset in milliseconds to add to GMT to get local time. - `int`"
-  ([^java.util.TimeZone this ^Integer era ^Integer year ^Integer month ^Integer day ^Integer day-of-week ^Integer milliseconds]
+  (^Integer [^java.util.TimeZone this ^Integer era ^Integer year ^Integer month ^Integer day ^Integer day-of-week ^Integer milliseconds]
     (-> this (.getOffset era year month day day-of-week milliseconds)))
-  ([^java.util.TimeZone this ^Long date]
+  (^Integer [^java.util.TimeZone this ^Long date]
     (-> this (.getOffset date))))
 
 (defn set-raw-offset
@@ -285,21 +285,21 @@
 
   returns: true if the other zone is not null and is the same as this one,
    with the possible exception of the ID - `boolean`"
-  ([^java.util.TimeZone this ^java.util.TimeZone other]
+  (^Boolean [^java.util.TimeZone this ^java.util.TimeZone other]
     (-> this (.hasSameRules other))))
 
 (defn clone
   "Creates a copy of this TimeZone.
 
   returns: a clone of this TimeZone - `java.lang.Object`"
-  ([^java.util.TimeZone this]
+  (^java.lang.Object [^java.util.TimeZone this]
     (-> this (.clone))))
 
 (defn get-id
   "Gets the ID of this time zone.
 
   returns: the ID of this time zone. - `java.lang.String`"
-  ([^java.util.TimeZone this]
+  (^java.lang.String [^java.util.TimeZone this]
     (-> this (.getID))))
 
 (defn to-zone-id
@@ -307,7 +307,7 @@
 
   returns: a ZoneId representing the same time zone as this
            TimeZone - `java.time.ZoneId`"
-  ([^java.util.TimeZone this]
+  (^java.time.ZoneId [^java.util.TimeZone this]
     (-> this (.toZoneId))))
 
 (defn observes-daylight-time
@@ -323,7 +323,7 @@
    Daylight Saving Time, or if a transition from Standard Time to
    Daylight Saving Time occurs at any future time; false
    otherwise. - `boolean`"
-  ([^java.util.TimeZone this]
+  (^Boolean [^java.util.TimeZone this]
     (-> this (.observesDaylightTime))))
 
 (defn set-id
@@ -346,6 +346,6 @@
 
   returns: true if this TimeZone uses Daylight Saving Time,
            false, otherwise. - `boolean`"
-  ([^java.util.TimeZone this]
+  (^Boolean [^java.util.TimeZone this]
     (-> this (.useDaylightTime))))
 

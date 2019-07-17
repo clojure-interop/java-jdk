@@ -30,7 +30,7 @@
    using the parameters supplied. - `javax.security.sasl.SaslServer`
 
   throws: javax.security.sasl.SaslException - If cannot create a SaslServer because of an error."
-  ([^javax.security.sasl.SaslServerFactory this ^java.lang.String mechanism ^java.lang.String protocol ^java.lang.String server-name ^java.util.Map props ^javax.security.auth.callback.CallbackHandler cbh]
+  (^javax.security.sasl.SaslServer [^javax.security.sasl.SaslServerFactory this ^java.lang.String mechanism ^java.lang.String protocol ^java.lang.String server-name ^java.util.Map props ^javax.security.auth.callback.CallbackHandler cbh]
     (-> this (.createSaslServer mechanism protocol server-name props cbh))))
 
 (defn get-mechanism-names

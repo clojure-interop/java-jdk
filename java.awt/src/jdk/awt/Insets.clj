@@ -83,14 +83,14 @@
 
   returns: true if the two insets are equal;
                             otherwise false. - `boolean`"
-  ([^java.awt.Insets this ^java.lang.Object obj]
+  (^Boolean [^java.awt.Insets this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Returns the hash code for this Insets.
 
   returns: a hash code for this Insets. - `int`"
-  ([^java.awt.Insets this]
+  (^Integer [^java.awt.Insets this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -101,13 +101,13 @@
    null.
 
   returns: a string representation of this Insets object. - `java.lang.String`"
-  ([^java.awt.Insets this]
+  (^java.lang.String [^java.awt.Insets this]
     (-> this (.toString))))
 
 (defn clone
   "Create a copy of this object.
 
   returns: a copy of this Insets object. - `java.lang.Object`"
-  ([^java.awt.Insets this]
+  (^java.lang.Object [^java.awt.Insets this]
     (-> this (.clone))))
 

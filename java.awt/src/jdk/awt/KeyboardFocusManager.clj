@@ -77,7 +77,7 @@
    thread's context.
 
   returns: this thread's context's KeyboardFocusManager - `java.awt.KeyboardFocusManager`"
-  ([]
+  (^java.awt.KeyboardFocusManager []
     (KeyboardFocusManager/getCurrentKeyboardFocusManager )))
 
 (defn *set-current-keyboard-focus-manager
@@ -108,7 +108,7 @@
 
   returns: the permanent focus owner, or null if the permanent focus owner
            is not a member of the calling thread's context - `java.awt.Component`"
-  ([^java.awt.KeyboardFocusManager this]
+  (^java.awt.Component [^java.awt.KeyboardFocusManager this]
     (-> this (.getPermanentFocusOwner))))
 
 (defn clear-focus-owner
@@ -161,7 +161,7 @@
            will never be returned - `java.util.Set<java.awt.AWTKeyStroke>`
 
   throws: java.lang.IllegalArgumentException - if id is not one of KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, KeyboardFocusManager.UP_CYCLE_TRAVERSAL_KEYS, or KeyboardFocusManager.DOWN_CYCLE_TRAVERSAL_KEYS"
-  ([^java.awt.KeyboardFocusManager this ^Integer id]
+  (^java.util.Set [^java.awt.KeyboardFocusManager this ^Integer id]
     (-> this (.getDefaultFocusTraversalKeys id))))
 
 (defn get-current-focus-cycle-root
@@ -177,7 +177,7 @@
 
   returns: the current focus cycle root, or null if the current focus cycle
            root is not a member of the calling thread's context - `java.awt.Container`"
-  ([^java.awt.KeyboardFocusManager this]
+  (^java.awt.Container [^java.awt.KeyboardFocusManager this]
     (-> this (.getCurrentFocusCycleRoot))))
 
 (defn focus-next-component
@@ -200,7 +200,7 @@
 
   returns: the active Window, or null if the active Window is not a member
            of the calling thread's context - `java.awt.Window`"
-  ([^java.awt.KeyboardFocusManager this]
+  (^java.awt.Window [^java.awt.KeyboardFocusManager this]
     (-> this (.getActiveWindow))))
 
 (defn get-focus-owner
@@ -214,7 +214,7 @@
 
   returns: the focus owner, or null if the focus owner is not a member of
            the calling thread's context - `java.awt.Component`"
-  ([^java.awt.KeyboardFocusManager this]
+  (^java.awt.Component [^java.awt.KeyboardFocusManager this]
     (-> this (.getFocusOwner))))
 
 (defn get-focused-window
@@ -224,7 +224,7 @@
 
   returns: the focused Window, or null if the focused Window is not a
            member of the calling thread's context - `java.awt.Window`"
-  ([^java.awt.KeyboardFocusManager this]
+  (^java.awt.Window [^java.awt.KeyboardFocusManager this]
     (-> this (.getFocusedWindow))))
 
 (defn down-focus-cycle
@@ -302,7 +302,7 @@
    policy by explicit call to Container.setFocusTraversalPolicy.
 
   returns: the default FocusTraversalPolicy. null will never be returned. - `java.awt.FocusTraversalPolicy`"
-  ([^java.awt.KeyboardFocusManager this]
+  (^java.awt.FocusTraversalPolicy [^java.awt.KeyboardFocusManager this]
     (-> this (.getDefaultFocusTraversalPolicy))))
 
 (defn dispatch-key-event
@@ -318,7 +318,7 @@
 
   returns: true if the KeyEvent was dispatched;
            false otherwise - `boolean`"
-  ([^java.awt.KeyboardFocusManager this ^java.awt.event.KeyEvent e]
+  (^Boolean [^java.awt.KeyboardFocusManager this ^java.awt.event.KeyEvent e]
     (-> this (.dispatchKeyEvent e))))
 
 (defn clear-global-focus-owner
@@ -406,7 +406,7 @@
 
   returns: true to indicate that no other
            KeyEventPostProcessor will be notified of the KeyEvent. - `boolean`"
-  ([^java.awt.KeyboardFocusManager this ^java.awt.event.KeyEvent e]
+  (^Boolean [^java.awt.KeyboardFocusManager this ^java.awt.event.KeyEvent e]
     (-> this (.postProcessKeyEvent e))))
 
 (defn process-key-event
@@ -453,7 +453,7 @@
 
   returns: true if this method dispatched the event;
            false otherwise - `boolean`"
-  ([^java.awt.KeyboardFocusManager this ^java.awt.AWTEvent e]
+  (^Boolean [^java.awt.KeyboardFocusManager this ^java.awt.AWTEvent e]
     (-> this (.dispatchEvent e))))
 
 (defn set-default-focus-traversal-keys

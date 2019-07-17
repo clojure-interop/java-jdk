@@ -11,7 +11,7 @@
   "Returns the default FlavorMap for this thread's ClassLoader.
 
   returns: `java.awt.datatransfer.FlavorMap`"
-  ([]
+  (^java.awt.datatransfer.FlavorMap []
     (SystemFlavorMap/getDefaultFlavorMap )))
 
 (defn *encode-java-mime-type
@@ -33,7 +33,7 @@
 
   returns: the encoded String, or null if
            mimeType is null - `java.lang.String`"
-  ([^java.lang.String mime-type]
+  (^java.lang.String [^java.lang.String mime-type]
     (SystemFlavorMap/encodeJavaMIMEType mime-type)))
 
 (defn *encode-data-flavor
@@ -59,7 +59,7 @@
 
   returns: the encoded String, or null if
            flav is null or has a null MIME type - `java.lang.String`"
-  ([^java.awt.datatransfer.DataFlavor flav]
+  (^java.lang.String [^java.awt.datatransfer.DataFlavor flav]
     (SystemFlavorMap/encodeDataFlavor flav)))
 
 (defn *java-mime-type?
@@ -70,7 +70,7 @@
 
   returns: true if the String is encoded;
            false otherwise - `boolean`"
-  ([^java.lang.String str]
+  (^Boolean [^java.lang.String str]
     (SystemFlavorMap/isJavaMIMEType str)))
 
 (defn *decode-java-mime-type
@@ -80,7 +80,7 @@
 
   returns: the decoded Java MIME type, or null if nat is not
            an encoded String native - `java.lang.String`"
-  ([^java.lang.String nat]
+  (^java.lang.String [^java.lang.String nat]
     (SystemFlavorMap/decodeJavaMIMEType nat)))
 
 (defn *decode-data-flavor
@@ -93,7 +93,7 @@
            nat is not an encoded String native - `java.awt.datatransfer.DataFlavor`
 
   throws: java.lang.ClassNotFoundException"
-  ([^java.lang.String nat]
+  (^java.awt.datatransfer.DataFlavor [^java.lang.String nat]
     (SystemFlavorMap/decodeDataFlavor nat)))
 
 (defn get-natives-for-flavor
@@ -115,7 +115,7 @@
   returns: a java.util.List of java.lang.String
            objects which are platform-specific representations of platform-
            specific data formats - `java.util.List<java.lang.String>`"
-  ([^java.awt.datatransfer.SystemFlavorMap this ^java.awt.datatransfer.DataFlavor flav]
+  (^java.util.List [^java.awt.datatransfer.SystemFlavorMap this ^java.awt.datatransfer.DataFlavor flav]
     (-> this (.getNativesForFlavor flav))))
 
 (defn get-flavors-for-native
@@ -143,7 +143,7 @@
   returns: a java.util.List of DataFlavor
            objects into which platform-specific data in the specified,
            platform-specific native can be translated - `java.util.List<java.awt.datatransfer.DataFlavor>`"
-  ([^java.awt.datatransfer.SystemFlavorMap this ^java.lang.String nat]
+  (^java.util.List [^java.awt.datatransfer.SystemFlavorMap this ^java.lang.String nat]
     (-> this (.getFlavorsForNative nat))))
 
 (defn get-natives-for-flavors
@@ -161,7 +161,7 @@
 
   returns: a java.util.Map of DataFlavors to
            String natives - `java.util.Map<java.awt.datatransfer.DataFlavor,java.lang.String>`"
-  ([^java.awt.datatransfer.SystemFlavorMap this ^java.awt.datatransfer.DataFlavor[] flavors]
+  (^java.util.Map [^java.awt.datatransfer.SystemFlavorMap this flavors]
     (-> this (.getNativesForFlavors flavors))))
 
 (defn get-flavors-for-natives
@@ -181,7 +181,7 @@
 
   returns: a java.util.Map of String natives to
            DataFlavors - `java.util.Map<java.lang.String,java.awt.datatransfer.DataFlavor>`"
-  ([^java.awt.datatransfer.SystemFlavorMap this ^java.lang.String[] natives]
+  (^java.util.Map [^java.awt.datatransfer.SystemFlavorMap this natives]
     (-> this (.getFlavorsForNatives natives))))
 
 (defn add-unencoded-native-for-flavor
@@ -228,7 +228,7 @@
   natives - the String native values for the mappings - `java.lang.String[]`
 
   throws: java.lang.NullPointerException - if flav or natives is null or if natives contains null elements"
-  ([^java.awt.datatransfer.SystemFlavorMap this ^java.awt.datatransfer.DataFlavor flav ^java.lang.String[] natives]
+  ([^java.awt.datatransfer.SystemFlavorMap this ^java.awt.datatransfer.DataFlavor flav natives]
     (-> this (.setNativesForFlavor flav natives))))
 
 (defn add-flavor-for-unencoded-native
@@ -272,6 +272,6 @@
   flavors - the DataFlavor values for the mappings - `java.awt.datatransfer.DataFlavor[]`
 
   throws: java.lang.NullPointerException - if nat or flavors is null or if flavors contains null elements"
-  ([^java.awt.datatransfer.SystemFlavorMap this ^java.lang.String nat ^java.awt.datatransfer.DataFlavor[] flavors]
+  ([^java.awt.datatransfer.SystemFlavorMap this ^java.lang.String nat flavors]
     (-> this (.setFlavorsForNative nat flavors))))
 

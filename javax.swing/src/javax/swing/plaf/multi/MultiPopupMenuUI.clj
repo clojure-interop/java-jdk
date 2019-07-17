@@ -18,7 +18,7 @@
   a - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent a]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent a]
     (MultiPopupMenuUI/createUI a)))
 
 (defn install-ui
@@ -35,7 +35,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.awt.Dimension`"
-  ([^javax.swing.plaf.multi.MultiPopupMenuUI this ^javax.swing.JComponent a]
+  (^java.awt.Dimension [^javax.swing.plaf.multi.MultiPopupMenuUI this ^javax.swing.JComponent a]
     (-> this (.getMinimumSize a))))
 
 (defn get-maximum-size
@@ -45,7 +45,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.awt.Dimension`"
-  ([^javax.swing.plaf.multi.MultiPopupMenuUI this ^javax.swing.JComponent a]
+  (^java.awt.Dimension [^javax.swing.plaf.multi.MultiPopupMenuUI this ^javax.swing.JComponent a]
     (-> this (.getMaximumSize a))))
 
 (defn get-accessible-child
@@ -56,7 +56,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `javax.accessibility.Accessible`"
-  ([^javax.swing.plaf.multi.MultiPopupMenuUI this ^javax.swing.JComponent a ^Integer b]
+  (^javax.accessibility.Accessible [^javax.swing.plaf.multi.MultiPopupMenuUI this ^javax.swing.JComponent a ^Integer b]
     (-> this (.getAccessibleChild a b))))
 
 (defn get-u-is
@@ -84,7 +84,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `boolean`"
-  ([^javax.swing.plaf.multi.MultiPopupMenuUI this ^javax.swing.JComponent a ^Integer b ^Integer c]
+  (^Boolean [^javax.swing.plaf.multi.MultiPopupMenuUI this ^javax.swing.JComponent a ^Integer b ^Integer c]
     (-> this (.contains a b c))))
 
 (defn popup-trigger?
@@ -94,7 +94,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `boolean`"
-  ([^javax.swing.plaf.multi.MultiPopupMenuUI this ^java.awt.event.MouseEvent a]
+  (^Boolean [^javax.swing.plaf.multi.MultiPopupMenuUI this ^java.awt.event.MouseEvent a]
     (-> this (.isPopupTrigger a))))
 
 (defn update
@@ -112,7 +112,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `int`"
-  ([^javax.swing.plaf.multi.MultiPopupMenuUI this ^javax.swing.JComponent a]
+  (^Integer [^javax.swing.plaf.multi.MultiPopupMenuUI this ^javax.swing.JComponent a]
     (-> this (.getAccessibleChildrenCount a))))
 
 (defn paint
@@ -132,7 +132,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `javax.swing.Popup`"
-  ([^javax.swing.plaf.multi.MultiPopupMenuUI this ^javax.swing.JPopupMenu a ^Integer b ^Integer c]
+  (^javax.swing.Popup [^javax.swing.plaf.multi.MultiPopupMenuUI this ^javax.swing.JPopupMenu a ^Integer b ^Integer c]
     (-> this (.getPopup a b c))))
 
 (defn get-preferred-size
@@ -142,6 +142,6 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.awt.Dimension`"
-  ([^javax.swing.plaf.multi.MultiPopupMenuUI this ^javax.swing.JComponent a]
+  (^java.awt.Dimension [^javax.swing.plaf.multi.MultiPopupMenuUI this ^javax.swing.JComponent a]
     (-> this (.getPreferredSize a))))
 

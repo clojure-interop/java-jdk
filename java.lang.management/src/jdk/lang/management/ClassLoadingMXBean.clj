@@ -25,7 +25,7 @@
    the Java virtual machine has started execution.
 
   returns: the total number of classes loaded. - `long`"
-  ([^java.lang.management.ClassLoadingMXBean this]
+  (^Long [^java.lang.management.ClassLoadingMXBean this]
     (-> this (.getTotalLoadedClassCount))))
 
 (defn get-loaded-class-count
@@ -33,7 +33,7 @@
    Java virtual machine.
 
   returns: the number of currently loaded classes. - `int`"
-  ([^java.lang.management.ClassLoadingMXBean this]
+  (^Integer [^java.lang.management.ClassLoadingMXBean this]
     (-> this (.getLoadedClassCount))))
 
 (defn get-unloaded-class-count
@@ -41,7 +41,7 @@
    has started execution.
 
   returns: the total number of unloaded classes. - `long`"
-  ([^java.lang.management.ClassLoadingMXBean this]
+  (^Long [^java.lang.management.ClassLoadingMXBean this]
     (-> this (.getUnloadedClassCount))))
 
 (defn verbose?
@@ -49,7 +49,7 @@
 
   returns: true if the verbose output for the class loading
    system is enabled; false otherwise. - `boolean`"
-  ([^java.lang.management.ClassLoadingMXBean this]
+  (^Boolean [^java.lang.management.ClassLoadingMXBean this]
     (-> this (.isVerbose))))
 
 (defn set-verbose

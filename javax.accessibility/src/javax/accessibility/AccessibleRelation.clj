@@ -258,7 +258,7 @@
   "Returns the key for this relation
 
   returns: the key for this relation - `java.lang.String`"
-  ([^javax.accessibility.AccessibleRelation this]
+  (^java.lang.String [^javax.accessibility.AccessibleRelation this]
     (-> this (.getKey))))
 
 (defn get-target

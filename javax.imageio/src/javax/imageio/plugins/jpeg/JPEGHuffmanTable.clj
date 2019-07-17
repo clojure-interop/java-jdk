@@ -79,6 +79,6 @@
   "Returns a String representing this Huffman table.
 
   returns: a String representing this Huffman table. - `java.lang.String`"
-  ([^javax.imageio.plugins.jpeg.JPEGHuffmanTable this]
+  (^java.lang.String [^javax.imageio.plugins.jpeg.JPEGHuffmanTable this]
     (-> this (.toString))))
 

@@ -82,14 +82,14 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([^javax.sound.sampled.AudioFormat$Encoding this ^java.lang.Object obj]
+  (^Boolean [^javax.sound.sampled.AudioFormat$Encoding this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Finalizes the hashCode method
 
   returns: a hash code value for this object. - `int`"
-  ([^javax.sound.sampled.AudioFormat$Encoding this]
+  (^Integer [^javax.sound.sampled.AudioFormat$Encoding this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -99,6 +99,6 @@
    the name `pcm_signed`.
 
   returns: the encoding name - `java.lang.String`"
-  ([^javax.sound.sampled.AudioFormat$Encoding this]
+  (^java.lang.String [^javax.sound.sampled.AudioFormat$Encoding this]
     (-> this (.toString))))
 

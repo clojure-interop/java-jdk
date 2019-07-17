@@ -20,6 +20,6 @@
   "Returns the position where the error was found.
 
   returns: the position where the error was found - `int`"
-  ([^java.text.ParseException this]
+  (^Integer [^java.text.ParseException this]
     (-> this (.getErrorOffset))))
 

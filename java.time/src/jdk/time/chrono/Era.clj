@@ -30,7 +30,7 @@
    Earlier eras have sequentially lower values, which may be negative.
 
   returns: the numeric era value - `int`"
-  ([^java.time.chrono.Era this]
+  (^Integer [^java.time.chrono.Era this]
     (-> this (.getValue))))
 
 (defn is-supported

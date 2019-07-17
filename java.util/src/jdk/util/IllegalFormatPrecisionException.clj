@@ -18,7 +18,7 @@
   "Returns the precision
 
   returns: The precision - `int`"
-  ([^java.util.IllegalFormatPrecisionException this]
+  (^Integer [^java.util.IllegalFormatPrecisionException this]
     (-> this (.getPrecision))))
 
 (defn get-message
@@ -26,6 +26,6 @@
 
   returns: the detail message string of this Throwable instance
             (which may be null). - `java.lang.String`"
-  ([^java.util.IllegalFormatPrecisionException this]
+  (^java.lang.String [^java.util.IllegalFormatPrecisionException this]
     (-> this (.getMessage))))
 

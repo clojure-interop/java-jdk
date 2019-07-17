@@ -117,7 +117,7 @@
   "Returns the number of parties required to trip this barrier.
 
   returns: the number of parties required to trip this barrier - `int`"
-  ([^java.util.concurrent.CyclicBarrier this]
+  (^Integer [^java.util.concurrent.CyclicBarrier this]
     (-> this (.getParties))))
 
 (defn await
@@ -175,9 +175,9 @@
            to arrive and zero indicates the last to arrive - `int`
 
   throws: java.lang.InterruptedException - if the current thread was interrupted while waiting"
-  ([^java.util.concurrent.CyclicBarrier this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^Integer [^java.util.concurrent.CyclicBarrier this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.await timeout unit)))
-  ([^java.util.concurrent.CyclicBarrier this]
+  (^Integer [^java.util.concurrent.CyclicBarrier this]
     (-> this (.await))))
 
 (defn broken?
@@ -187,7 +187,7 @@
            barrier due to interruption or timeout since
            construction or the last reset, or a barrier action
            failed due to an exception; false otherwise. - `boolean`"
-  ([^java.util.concurrent.CyclicBarrier this]
+  (^Boolean [^java.util.concurrent.CyclicBarrier this]
     (-> this (.isBroken))))
 
 (defn reset
@@ -206,6 +206,6 @@
    This method is primarily useful for debugging and assertions.
 
   returns: the number of parties currently blocked in await() - `int`"
-  ([^java.util.concurrent.CyclicBarrier this]
+  (^Integer [^java.util.concurrent.CyclicBarrier this]
     (-> this (.getNumberWaiting))))
 

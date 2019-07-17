@@ -56,7 +56,7 @@
    match an empty input stream.
 
   returns: `boolean`"
-  ([^javax.swing.text.html.parser.ContentModel this]
+  (^Boolean [^javax.swing.text.html.parser.ContentModel this]
     (-> this (.empty))))
 
 (defn get-elements
@@ -74,15 +74,15 @@
   token - `java.lang.Object`
 
   returns: `boolean`"
-  ([^javax.swing.text.html.parser.ContentModel this ^java.lang.Object token]
+  (^Boolean [^javax.swing.text.html.parser.ContentModel this ^java.lang.Object token]
     (-> this (.first token)))
-  ([^javax.swing.text.html.parser.ContentModel this]
+  (^javax.swing.text.html.parser.Element [^javax.swing.text.html.parser.ContentModel this]
     (-> this (.first))))
 
 (defn to-string
   "Convert to a string.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^javax.swing.text.html.parser.ContentModel this]
+  (^java.lang.String [^javax.swing.text.html.parser.ContentModel this]
     (-> this (.toString))))
 

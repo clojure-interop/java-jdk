@@ -21,7 +21,7 @@
   "c - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent c]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent c]
     (MetalComboBoxUI/createUI c)))
 
 (defn get-minimum-size
@@ -30,7 +30,7 @@
   c - the component whose minimum size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: a Dimension object or null - `java.awt.Dimension`"
-  ([^javax.swing.plaf.metal.MetalComboBoxUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^javax.swing.plaf.metal.MetalComboBoxUI this ^javax.swing.JComponent c]
     (-> this (.getMinimumSize c))))
 
 (defn paint-current-value
@@ -48,7 +48,7 @@
   "Description copied from class: BasicComboBoxUI
 
   returns: an instance of a PropertyChangeListener or null - `java.beans.PropertyChangeListener`"
-  ([^javax.swing.plaf.metal.MetalComboBoxUI this]
+  (^java.beans.PropertyChangeListener [^javax.swing.plaf.metal.MetalComboBoxUI this]
     (-> this (.createPropertyChangeListener))))
 
 (defn configure-editor
@@ -81,7 +81,7 @@
                     baseline - `int`
 
   throws: java.lang.NullPointerException - if c is null"
-  ([^javax.swing.plaf.metal.MetalComboBoxUI this ^javax.swing.JComponent c ^Integer width ^Integer height]
+  (^Integer [^javax.swing.plaf.metal.MetalComboBoxUI this ^javax.swing.JComponent c ^Integer width ^Integer height]
     (-> this (.getBaseline c width height))))
 
 (defn paint-current-value-background

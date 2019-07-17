@@ -31,7 +31,7 @@
   "Gets the return value of this SSLEngine operation.
 
   returns: the return value - `javax.net.ssl.SSLEngineResult.Status`"
-  ([^javax.net.ssl.SSLEngineResult this]
+  (^javax.net.ssl.SSLEngineResult.Status [^javax.net.ssl.SSLEngineResult this]
     (-> this (.getStatus))))
 
 (defn get-handshake-status
@@ -39,27 +39,27 @@
    operation.
 
   returns: the handshake status - `javax.net.ssl.SSLEngineResult.HandshakeStatus`"
-  ([^javax.net.ssl.SSLEngineResult this]
+  (^javax.net.ssl.SSLEngineResult.HandshakeStatus [^javax.net.ssl.SSLEngineResult this]
     (-> this (.getHandshakeStatus))))
 
 (defn bytes-consumed
   "Returns the number of bytes consumed from the input buffer.
 
   returns: the number of bytes consumed. - `int`"
-  ([^javax.net.ssl.SSLEngineResult this]
+  (^Integer [^javax.net.ssl.SSLEngineResult this]
     (-> this (.bytesConsumed))))
 
 (defn bytes-produced
   "Returns the number of bytes written to the output buffer.
 
   returns: the number of bytes produced - `int`"
-  ([^javax.net.ssl.SSLEngineResult this]
+  (^Integer [^javax.net.ssl.SSLEngineResult this]
     (-> this (.bytesProduced))))
 
 (defn to-string
   "Returns a String representation of this object.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^javax.net.ssl.SSLEngineResult this]
+  (^java.lang.String [^javax.net.ssl.SSLEngineResult this]
     (-> this (.toString))))
 

@@ -201,7 +201,7 @@
    there is no public setter for it.
 
   returns: true if the current value being edited is valid. - `boolean`"
-  ([^javax.swing.JFormattedTextField this]
+  (^Boolean [^javax.swing.JFormattedTextField this]
     (-> this (.isEditValid))))
 
 (defn get-focus-lost-behavior
@@ -214,7 +214,7 @@
    they occur, so that the value of this will have no effect.
 
   returns: returns behavior when focus is lost - `int`"
-  ([^javax.swing.JFormattedTextField this]
+  (^Integer [^javax.swing.JFormattedTextField this]
     (-> this (.getFocusLostBehavior))))
 
 (defn set-focus-lost-behavior
@@ -273,7 +273,7 @@
   "Gets the class ID for a UI.
 
   returns: the string `FormattedTextFieldUI` - `java.lang.String`"
-  ([^javax.swing.JFormattedTextField this]
+  (^java.lang.String [^javax.swing.JFormattedTextField this]
     (-> this (.getUIClassID))))
 
 (defn get-value
@@ -283,7 +283,7 @@
    commitEdit followed by getValue.
 
   returns: Last valid value - `java.lang.Object`"
-  ([^javax.swing.JFormattedTextField this]
+  (^java.lang.Object [^javax.swing.JFormattedTextField this]
     (-> this (.getValue))))
 
 (defn get-formatter
@@ -291,7 +291,7 @@
    parse the current value.
 
   returns: AbstractFormatter used for formatting - `javax.swing.JFormattedTextField.AbstractFormatter`"
-  ([^javax.swing.JFormattedTextField this]
+  (^javax.swing.JFormattedTextField.AbstractFormatter [^javax.swing.JFormattedTextField this]
     (-> this (.getFormatter))))
 
 (defn get-formatter-factory
@@ -299,7 +299,7 @@
 
   returns: AbstractFormatterFactory used to determine
            AbstractFormatters - `javax.swing.JFormattedTextField.AbstractFormatterFactory`"
-  ([^javax.swing.JFormattedTextField this]
+  (^javax.swing.JFormattedTextField.AbstractFormatterFactory [^javax.swing.JFormattedTextField this]
     (-> this (.getFormatterFactory))))
 
 (defn set-formatter-factory

@@ -53,7 +53,7 @@
   returns: a List of cookie parsed from header line string - `java.util.List<java.net.HttpCookie>`
 
   throws: java.lang.IllegalArgumentException - if header string violates the cookie specification's syntax or the cookie name contains illegal characters."
-  ([^java.lang.String header]
+  (^java.util.List [^java.lang.String header]
     (HttpCookie/parse header)))
 
 (defn *domain-matches
@@ -101,7 +101,7 @@
   host - the host name in question - `java.lang.String`
 
   returns: true if they domain-matches; false if not - `boolean`"
-  ([^java.lang.String domain ^java.lang.String host]
+  (^Boolean [^java.lang.String domain ^java.lang.String host]
     (HttpCookie/domainMatches domain host)))
 
 (defn set-http-only
@@ -140,7 +140,7 @@
    scripting engines, like javascript.
 
   returns: true if this cookie should be considered HTTPOnly - `boolean`"
-  ([^java.net.HttpCookie this]
+  (^Boolean [^java.net.HttpCookie this]
     (-> this (.isHttpOnly))))
 
 (defn set-comment
@@ -191,7 +191,7 @@
 
   returns: true to indicate this HTTP cookie has expired;
             otherwise, false - `boolean`"
-  ([^java.net.HttpCookie this]
+  (^Boolean [^java.net.HttpCookie this]
     (-> this (.hasExpired))))
 
 (defn to-string
@@ -200,7 +200,7 @@
    but without the leading `Cookie:` token.
 
   returns: a string form of the cookie. The string has the defined format - `java.lang.String`"
-  ([^java.net.HttpCookie this]
+  (^java.lang.String [^java.net.HttpCookie this]
     (-> this (.toString))))
 
 (defn get-path
@@ -209,14 +209,14 @@
 
   returns: a String specifying a path that contains a servlet name,
             for example, /catalog - `java.lang.String`"
-  ([^java.net.HttpCookie this]
+  (^java.lang.String [^java.net.HttpCookie this]
     (-> this (.getPath))))
 
 (defn get-value
   "Returns the value of the cookie.
 
   returns: a String containing the cookie's present value - `java.lang.String`"
-  ([^java.net.HttpCookie this]
+  (^java.lang.String [^java.net.HttpCookie this]
     (-> this (.getValue))))
 
 (defn get-name
@@ -224,7 +224,7 @@
    creation.
 
   returns: a String specifying the cookie's name - `java.lang.String`"
-  ([^java.net.HttpCookie this]
+  (^java.lang.String [^java.net.HttpCookie this]
     (-> this (.getName))))
 
 (defn get-comment-url
@@ -233,7 +233,7 @@
 
   returns: a String containing the comment URL, or null
             if none - `java.lang.String`"
-  ([^java.net.HttpCookie this]
+  (^java.lang.String [^java.net.HttpCookie this]
     (-> this (.getCommentURL))))
 
 (defn get-version
@@ -244,7 +244,7 @@
 
   returns: 0 if the cookie complies with the original Netscape
             specification; 1 if the cookie complies with RFC 2965/2109 - `int`"
-  ([^java.net.HttpCookie this]
+  (^Integer [^java.net.HttpCookie this]
     (-> this (.getVersion))))
 
 (defn get-comment
@@ -252,7 +252,7 @@
    null if the cookie has no comment.
 
   returns: a String containing the comment, or null if none - `java.lang.String`"
-  ([^java.net.HttpCookie this]
+  (^java.lang.String [^java.net.HttpCookie this]
     (-> this (.getComment))))
 
 (defn set-value
@@ -273,14 +273,14 @@
    is set by RFC 2965.
 
   returns: a String containing the domain name - `java.lang.String`"
-  ([^java.net.HttpCookie this]
+  (^java.lang.String [^java.net.HttpCookie this]
     (-> this (.getDomain))))
 
 (defn clone
   "Create and return a copy of this object.
 
   returns: a clone of this HTTP cookie - `java.lang.Object`"
-  ([^java.net.HttpCookie this]
+  (^java.lang.Object [^java.net.HttpCookie this]
     (-> this (.clone))))
 
 (defn hash-code
@@ -293,7 +293,7 @@
     getPath().hashCode()
 
   returns: this HTTP cookie's hash code - `int`"
-  ([^java.net.HttpCookie this]
+  (^Integer [^java.net.HttpCookie this]
     (-> this (.hashCode))))
 
 (defn set-discard
@@ -322,7 +322,7 @@
   "Returns the discard attribute of the cookie
 
   returns: a boolean to represent this cookie's discard attribute - `boolean`"
-  ([^java.net.HttpCookie this]
+  (^Boolean [^java.net.HttpCookie this]
     (-> this (.getDiscard))))
 
 (defn set-max-age
@@ -352,14 +352,14 @@
 
   returns: true if two HTTP cookies equal to each other;
             otherwise, false - `boolean`"
-  ([^java.net.HttpCookie this ^java.lang.Object obj]
+  (^Boolean [^java.net.HttpCookie this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn get-portlist
   "Returns the port list attribute of the cookie
 
   returns: a String contains the port list or null if none - `java.lang.String`"
-  ([^java.net.HttpCookie this]
+  (^java.lang.String [^java.net.HttpCookie this]
     (-> this (.getPortlist))))
 
 (defn get-secure?
@@ -369,7 +369,7 @@
 
   returns: false if the cookie can be sent over any standard
             protocol; otherwise, true - `boolean`"
-  ([^java.net.HttpCookie this]
+  (^Boolean [^java.net.HttpCookie this]
     (-> this (.getSecure))))
 
 (defn get-max-age
@@ -377,6 +377,6 @@
    -1 indicating the cookie will persist until browser shutdown.
 
   returns: an integer specifying the maximum age of the cookie in seconds - `long`"
-  ([^java.net.HttpCookie this]
+  (^Long [^java.net.HttpCookie this]
     (-> this (.getMaxAge))))
 

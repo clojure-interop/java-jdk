@@ -45,21 +45,21 @@
   "Returns the version.
 
   returns: the version. - `int`"
-  ([^javax.crypto.spec.RC5ParameterSpec this]
+  (^Integer [^javax.crypto.spec.RC5ParameterSpec this]
     (-> this (.getVersion))))
 
 (defn get-rounds
   "Returns the number of rounds.
 
   returns: the number of rounds. - `int`"
-  ([^javax.crypto.spec.RC5ParameterSpec this]
+  (^Integer [^javax.crypto.spec.RC5ParameterSpec this]
     (-> this (.getRounds))))
 
 (defn get-word-size
   "Returns the word size in bits.
 
   returns: the word size in bits. - `int`"
-  ([^javax.crypto.spec.RC5ParameterSpec this]
+  (^Integer [^javax.crypto.spec.RC5ParameterSpec this]
     (-> this (.getWordSize))))
 
 (defn get-iv
@@ -80,7 +80,7 @@
 
   returns: true if the objects are considered equal, false if
    obj is null or otherwise. - `boolean`"
-  ([^javax.crypto.spec.RC5ParameterSpec this ^java.lang.Object obj]
+  (^Boolean [^javax.crypto.spec.RC5ParameterSpec this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -88,6 +88,6 @@
    Objects that are equal will also have the same hashcode.
 
   returns: a hash code value for this object. - `int`"
-  ([^javax.crypto.spec.RC5ParameterSpec this]
+  (^Integer [^javax.crypto.spec.RC5ParameterSpec this]
     (-> this (.hashCode))))
 

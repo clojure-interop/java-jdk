@@ -54,7 +54,7 @@
    non-null value.
 
   returns: true if a controller is installed. - `boolean`"
-  ([^javax.imageio.metadata.IIOMetadata this]
+  (^Boolean [^javax.imageio.metadata.IIOMetadata this]
     (-> this (.hasController))))
 
 (defn activate-controller
@@ -77,7 +77,7 @@
   returns: true if the controller completed normally. - `boolean`
 
   throws: java.lang.IllegalStateException - if there is no controller currently installed."
-  ([^javax.imageio.metadata.IIOMetadata this]
+  (^Boolean [^javax.imageio.metadata.IIOMetadata this]
     (-> this (.activateController))))
 
 (defn get-metadata-format
@@ -104,7 +104,7 @@
   returns: an IIOMetadataFormat object. - `javax.imageio.metadata.IIOMetadataFormat`
 
   throws: java.lang.IllegalArgumentException - if formatName is null or is not one of the names recognized by the plug-in."
-  ([^javax.imageio.metadata.IIOMetadata this ^java.lang.String format-name]
+  (^javax.imageio.metadata.IIOMetadataFormat [^javax.imageio.metadata.IIOMetadata this ^java.lang.String format-name]
     (-> this (.getMetadataFormat format-name))))
 
 (defn reset
@@ -166,7 +166,7 @@
    root of a tree. - `org.w3c.dom.Node`
 
   throws: java.lang.IllegalArgumentException - if formatName is null or is not one of the names returned by getMetadataFormatNames."
-  ([^javax.imageio.metadata.IIOMetadata this ^java.lang.String format-name]
+  (^org.w3c.dom.Node [^javax.imageio.metadata.IIOMetadata this ^java.lang.String format-name]
     (-> this (.getAsTree format-name))))
 
 (defn set-from-tree
@@ -196,7 +196,7 @@
 
   returns: the default IIOMetadataController, or
    null. - `javax.imageio.metadata.IIOMetadataController`"
-  ([^javax.imageio.metadata.IIOMetadata this]
+  (^javax.imageio.metadata.IIOMetadataController [^javax.imageio.metadata.IIOMetadata this]
     (-> this (.getDefaultController))))
 
 (defn read-only?
@@ -206,7 +206,7 @@
 
   returns: true if this IIOMetadata object cannot be
    modified. - `boolean`"
-  ([^javax.imageio.metadata.IIOMetadata this]
+  (^Boolean [^javax.imageio.metadata.IIOMetadata this]
     (-> this (.isReadOnly))))
 
 (defn get-controller
@@ -220,7 +220,7 @@
 
   returns: the currently installed
    IIOMetadataController, or null. - `javax.imageio.metadata.IIOMetadataController`"
-  ([^javax.imageio.metadata.IIOMetadata this]
+  (^javax.imageio.metadata.IIOMetadataController [^javax.imageio.metadata.IIOMetadata this]
     (-> this (.getController))))
 
 (defn get-extra-metadata-format-names
@@ -258,7 +258,7 @@
    nativeMetadataFormatName instance variable.
 
   returns: the name of the native format, or null. - `java.lang.String`"
-  ([^javax.imageio.metadata.IIOMetadata this]
+  (^java.lang.String [^javax.imageio.metadata.IIOMetadata this]
     (-> this (.getNativeMetadataFormatName))))
 
 (defn standard-metadata-format-supported?
@@ -272,6 +272,6 @@
 
   returns: true if the standard metadata format
    is supported. - `boolean`"
-  ([^javax.imageio.metadata.IIOMetadata this]
+  (^Boolean [^javax.imageio.metadata.IIOMetadata this]
     (-> this (.isStandardMetadataFormatSupported))))
 

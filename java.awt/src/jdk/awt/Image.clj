@@ -77,7 +77,7 @@
 
   returns: the width of this image, or -1
                      if the width is not yet known. - `int`"
-  ([^java.awt.Image this ^java.awt.image.ImageObserver observer]
+  (^Integer [^java.awt.Image this ^java.awt.image.ImageObserver observer]
     (-> this (.getWidth observer))))
 
 (defn get-scaled-instance
@@ -103,7 +103,7 @@
   returns: a scaled version of the image. - `java.awt.Image`
 
   throws: java.lang.IllegalArgumentException - if width or height is zero."
-  ([^java.awt.Image this ^Integer width ^Integer height ^Integer hints]
+  (^java.awt.Image [^java.awt.Image this ^Integer width ^Integer height ^Integer hints]
     (-> this (.getScaledInstance width height hints))))
 
 (defn get-graphics
@@ -113,7 +113,7 @@
   returns: a graphics context to draw to the off-screen image. - `java.awt.Graphics`
 
   throws: java.lang.UnsupportedOperationException - if called for a non-off-screen image."
-  ([^java.awt.Image this]
+  (^java.awt.Graphics [^java.awt.Image this]
     (-> this (.getGraphics))))
 
 (defn flush
@@ -159,7 +159,7 @@
 
   returns: value between 0 and 1, inclusive, which represents the current
    priority value - `float`"
-  ([^java.awt.Image this]
+  (^Float [^java.awt.Image this]
     (-> this (.getAccelerationPriority))))
 
 (defn get-source
@@ -169,7 +169,7 @@
 
   returns: the image producer that produces the pixels
                                     for this image. - `java.awt.image.ImageProducer`"
-  ([^java.awt.Image this]
+  (^java.awt.image.ImageProducer [^java.awt.Image this]
     (-> this (.getSource))))
 
 (defn get-height
@@ -181,7 +181,7 @@
 
   returns: the height of this image, or -1
                      if the height is not yet known. - `int`"
-  ([^java.awt.Image this ^java.awt.image.ImageObserver observer]
+  (^Integer [^java.awt.Image this ^java.awt.image.ImageObserver observer]
     (-> this (.getHeight observer))))
 
 (defn get-property
@@ -205,7 +205,7 @@
   returns: the value of the named property. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if the property name is null."
-  ([^java.awt.Image this ^java.lang.String name ^java.awt.image.ImageObserver observer]
+  (^java.lang.Object [^java.awt.Image this ^java.lang.String name ^java.awt.image.ImageObserver observer]
     (-> this (.getProperty name observer))))
 
 (defn get-capabilities
@@ -226,7 +226,7 @@
   returns: an ImageCapabilities object that contains
    the capabilities of this Image on the specified
    GraphicsConfiguration. - `java.awt.ImageCapabilities`"
-  ([^java.awt.Image this ^java.awt.GraphicsConfiguration gc]
+  (^java.awt.ImageCapabilities [^java.awt.Image this ^java.awt.GraphicsConfiguration gc]
     (-> this (.getCapabilities gc))))
 
 (defn set-acceleration-priority

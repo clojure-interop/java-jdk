@@ -23,7 +23,7 @@
   column-index - the index of the column - `int`
 
   returns: the common ancestor class of the object values in the model. - `java.lang.Class<?>`"
-  ([^javax.swing.table.TableModel this ^Integer column-index]
+  (^java.lang.Class [^javax.swing.table.TableModel this ^Integer column-index]
     (-> this (.getColumnClass column-index))))
 
 (defn add-table-model-listener
@@ -42,7 +42,7 @@
   column-index - the column whose value is to be queried - `int`
 
   returns: the value Object at the specified cell - `java.lang.Object`"
-  ([^javax.swing.table.TableModel this ^Integer row-index ^Integer column-index]
+  (^java.lang.Object [^javax.swing.table.TableModel this ^Integer row-index ^Integer column-index]
     (-> this (.getValueAt row-index column-index))))
 
 (defn get-column-count
@@ -51,7 +51,7 @@
    should create and display by default.
 
   returns: the number of columns in the model - `int`"
-  ([^javax.swing.table.TableModel this]
+  (^Integer [^javax.swing.table.TableModel this]
     (-> this (.getColumnCount))))
 
 (defn remove-table-model-listener
@@ -69,7 +69,7 @@
    is called frequently during rendering.
 
   returns: the number of rows in the model - `int`"
-  ([^javax.swing.table.TableModel this]
+  (^Integer [^javax.swing.table.TableModel this]
     (-> this (.getRowCount))))
 
 (defn cell-editable?
@@ -82,7 +82,7 @@
   column-index - the column whose value to be queried - `int`
 
   returns: true if the cell is editable - `boolean`"
-  ([^javax.swing.table.TableModel this ^Integer row-index ^Integer column-index]
+  (^Boolean [^javax.swing.table.TableModel this ^Integer row-index ^Integer column-index]
     (-> this (.isCellEditable row-index column-index))))
 
 (defn get-column-name
@@ -93,7 +93,7 @@
   column-index - the index of the column - `int`
 
   returns: the name of the column - `java.lang.String`"
-  ([^javax.swing.table.TableModel this ^Integer column-index]
+  (^java.lang.String [^javax.swing.table.TableModel this ^Integer column-index]
     (-> this (.getColumnName column-index))))
 
 (defn set-value-at

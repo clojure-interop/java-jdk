@@ -47,7 +47,7 @@
   "Fetch the component associated with the view.
 
   returns: `java.awt.Component`"
-  ([^javax.swing.text.ComponentView this]
+  (^java.awt.Component [^javax.swing.text.ComponentView this]
     (-> this (.getComponent))))
 
 (defn set-parent
@@ -88,7 +88,7 @@
              The parent may choose to resize or break the view. - `float`
 
   throws: java.lang.IllegalArgumentException - for an invalid axis"
-  ([^javax.swing.text.ComponentView this ^Integer axis]
+  (^Float [^javax.swing.text.ComponentView this ^Integer axis]
     (-> this (.getPreferredSpan axis))))
 
 (defn get-minimum-span
@@ -105,7 +105,7 @@
              The parent may choose to resize or break the view. - `float`
 
   throws: java.lang.IllegalArgumentException - for an invalid axis"
-  ([^javax.swing.text.ComponentView this ^Integer axis]
+  (^Float [^javax.swing.text.ComponentView this ^Integer axis]
     (-> this (.getMinimumSpan axis))))
 
 (defn get-maximum-span
@@ -122,7 +122,7 @@
              The parent may choose to resize or break the view. - `float`
 
   throws: java.lang.IllegalArgumentException - for an invalid axis"
-  ([^javax.swing.text.ComponentView this ^Integer axis]
+  (^Float [^javax.swing.text.ComponentView this ^Integer axis]
     (-> this (.getMaximumSpan axis))))
 
 (defn paint
@@ -147,7 +147,7 @@
      origin and 1.0 indicates alignment to the full span
      away from the origin.  An alignment of 0.5 would be the
      center of the view. - `float`"
-  ([^javax.swing.text.ComponentView this ^Integer axis]
+  (^Float [^javax.swing.text.ComponentView this ^Integer axis]
     (-> this (.getAlignment axis))))
 
 (defn view-to-model
@@ -161,7 +161,7 @@
 
   returns: the location within the model that best represents
       the given point in the view - `int`"
-  ([^javax.swing.text.ComponentView this ^Float x ^Float y ^java.awt.Shape a ^javax.swing.text.Position.Bias[] bias]
+  (^Integer [^javax.swing.text.ComponentView this ^Float x ^Float y ^java.awt.Shape a bias]
     (-> this (.viewToModel x y a bias))))
 
 (defn model-to-view
@@ -175,6 +175,6 @@
   returns: the bounding box of the given position is returned - `java.awt.Shape`
 
   throws: javax.swing.text.BadLocationException - if the given position does not represent a valid location in the associated document"
-  ([^javax.swing.text.ComponentView this ^Integer pos ^java.awt.Shape a ^javax.swing.text.Position.Bias b]
+  (^java.awt.Shape [^javax.swing.text.ComponentView this ^Integer pos ^java.awt.Shape a ^javax.swing.text.Position.Bias b]
     (-> this (.modelToView pos a b))))
 

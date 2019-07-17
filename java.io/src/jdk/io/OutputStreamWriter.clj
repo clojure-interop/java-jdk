@@ -62,7 +62,7 @@
 
   returns: The historical name of this encoding, or possibly
            null if the stream has been closed - `java.lang.String`"
-  ([^java.io.OutputStreamWriter this]
+  (^java.lang.String [^java.io.OutputStreamWriter this]
     (-> this (.getEncoding))))
 
 (defn write

@@ -21,14 +21,14 @@
    StringValueExp instance.
 
   returns: the string. - `java.lang.String`"
-  ([^javax.management.StringValueExp this]
+  (^java.lang.String [^javax.management.StringValueExp this]
     (-> this (.getValue))))
 
 (defn to-string
   "Returns the string representing the object.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^javax.management.StringValueExp this]
+  (^java.lang.String [^javax.management.StringValueExp this]
     (-> this (.toString))))
 
 (defn set-m-bean-server
@@ -48,6 +48,6 @@
   returns: The ValueExp. - `javax.management.ValueExp`
 
   throws: javax.management.BadStringOperationException"
-  ([^javax.management.StringValueExp this ^javax.management.ObjectName name]
+  (^javax.management.ValueExp [^javax.management.StringValueExp this ^javax.management.ObjectName name]
     (-> this (.apply name))))
 

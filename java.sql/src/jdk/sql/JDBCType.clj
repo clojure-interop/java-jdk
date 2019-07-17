@@ -342,14 +342,14 @@
   returns: the enum constant with the specified name - `java.sql.JDBCType`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^java.sql.JDBCType [^java.lang.String name]
     (JDBCType/valueOf name)))
 
 (defn get-name
   "Returns the SQLType name that represents a SQL data type.
 
   returns: The name of this SQLType. - `java.lang.String`"
-  ([^java.sql.JDBCType this]
+  (^java.lang.String [^java.sql.JDBCType this]
     (-> this (.getName))))
 
 (defn get-vendor
@@ -357,7 +357,7 @@
 
   returns: The name of the vendor for this data type which is
    java.sql for JDBCType. - `java.lang.String`"
-  ([^java.sql.JDBCType this]
+  (^java.lang.String [^java.sql.JDBCType this]
     (-> this (.getVendor))))
 
 (defn get-vendor-type-number
@@ -365,6 +365,6 @@
 
   returns: An Integer representing the data type. For JDBCType,
    the value will be the same value as in Types for the data type. - `java.lang.Integer`"
-  ([^java.sql.JDBCType this]
+  (^java.lang.Integer [^java.sql.JDBCType this]
     (-> this (.getVendorTypeNumber))))
 

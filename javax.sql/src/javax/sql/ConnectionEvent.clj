@@ -32,6 +32,6 @@
    ConnectionEvent object. May be null.
 
   returns: the SQLException about to be thrown or null - `java.sql.SQLException`"
-  ([^javax.sql.ConnectionEvent this]
+  (^java.sql.SQLException [^javax.sql.ConnectionEvent this]
     (-> this (.getSQLException))))
 

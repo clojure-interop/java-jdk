@@ -65,7 +65,7 @@
   new-value - the new value that has been requested for the BeanContext property - `java.beans.beancontext.BeanContext`
 
   returns: true if the change operation is to be vetoed - `boolean`"
-  ([^java.beans.beancontext.BeanContextChildSupport this ^java.beans.beancontext.BeanContext new-value]
+  (^Boolean [^java.beans.beancontext.BeanContextChildSupport this ^java.beans.beancontext.BeanContext new-value]
     (-> this (.validatePendingSetBeanContext new-value))))
 
 (defn remove-property-change-listener
@@ -87,7 +87,7 @@
   "Reports whether or not this class is a delegate of another.
 
   returns: true if this class is a delegate of another - `boolean`"
-  ([^java.beans.beancontext.BeanContextChildSupport this]
+  (^Boolean [^java.beans.beancontext.BeanContextChildSupport this]
     (-> this (.isDelegated))))
 
 (defn set-bean-context
@@ -106,7 +106,7 @@
 
   returns: the nesting BeanContext for
    this BeanContextChildSupport. - `java.beans.beancontext.BeanContext`"
-  ([^java.beans.beancontext.BeanContextChildSupport this]
+  (^java.beans.beancontext.BeanContext [^java.beans.beancontext.BeanContextChildSupport this]
     (-> this (.getBeanContext))))
 
 (defn remove-vetoable-change-listener
@@ -142,7 +142,7 @@
    BeanContextChildSupport.
 
   returns: the BeanContextChild peer of this class - `java.beans.beancontext.BeanContextChild`"
-  ([^java.beans.beancontext.BeanContextChildSupport this]
+  (^java.beans.beancontext.BeanContextChild [^java.beans.beancontext.BeanContextChildSupport this]
     (-> this (.getBeanContextChildPeer))))
 
 (defn service-available

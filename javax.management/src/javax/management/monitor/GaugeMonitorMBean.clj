@@ -24,7 +24,7 @@
 
   returns: The derived gauge timestamp for the specified MBean if this MBean
            is in the set of observed MBeans, or null otherwise. - `long`"
-  ([^javax.management.monitor.GaugeMonitorMBean this ^javax.management.ObjectName object]
+  (^Long [^javax.management.monitor.GaugeMonitorMBean this ^javax.management.ObjectName object]
     (-> this (.getDerivedGaugeTimeStamp object)))
   ([^javax.management.monitor.GaugeMonitorMBean this]
     (-> this (.getDerivedGaugeTimeStamp))))
@@ -41,21 +41,21 @@
 
   returns: true if the gauge monitor notifies when
    exceeding the low threshold, false otherwise. - `boolean`"
-  ([^javax.management.monitor.GaugeMonitorMBean this]
+  (^Boolean [^javax.management.monitor.GaugeMonitorMBean this]
     (-> this (.getNotifyLow))))
 
 (defn get-high-threshold
   "Gets the high threshold value.
 
   returns: The high threshold value. - `java.lang.Number`"
-  ([^javax.management.monitor.GaugeMonitorMBean this]
+  (^java.lang.Number [^javax.management.monitor.GaugeMonitorMBean this]
     (-> this (.getHighThreshold))))
 
 (defn get-low-threshold
   "Gets the low threshold value.
 
   returns: The low threshold value. - `java.lang.Number`"
-  ([^javax.management.monitor.GaugeMonitorMBean this]
+  (^java.lang.Number [^javax.management.monitor.GaugeMonitorMBean this]
     (-> this (.getLowThreshold))))
 
 (defn set-thresholds
@@ -73,7 +73,7 @@
 
   returns: true if the gauge monitor notifies when
    exceeding the high threshold, false otherwise. - `boolean`"
-  ([^javax.management.monitor.GaugeMonitorMBean this]
+  (^Boolean [^javax.management.monitor.GaugeMonitorMBean this]
     (-> this (.getNotifyHigh))))
 
 (defn get-difference-mode?
@@ -81,7 +81,7 @@
 
   returns: true if the difference mode is used,
    false otherwise. - `boolean`"
-  ([^javax.management.monitor.GaugeMonitorMBean this]
+  (^Boolean [^javax.management.monitor.GaugeMonitorMBean this]
     (-> this (.getDifferenceMode))))
 
 (defn get-derived-gauge
@@ -91,8 +91,8 @@
 
   returns: The derived gauge for the specified MBean if this MBean is in the
            set of observed MBeans, or null otherwise. - `java.lang.Number`"
-  ([^javax.management.monitor.GaugeMonitorMBean this ^javax.management.ObjectName object]
+  (^java.lang.Number [^javax.management.monitor.GaugeMonitorMBean this ^javax.management.ObjectName object]
     (-> this (.getDerivedGauge object)))
-  ([^javax.management.monitor.GaugeMonitorMBean this]
+  (^java.lang..lang.Number [^javax.management.monitor.GaugeMonitorMBean this]
     (-> this (.getDerivedGauge))))
 

@@ -108,7 +108,7 @@
              The parent may choose to resize or break the view. - `float`
 
   throws: java.lang.IllegalArgumentException - for an invalid axis"
-  ([^javax.swing.text.html.FormView this ^Integer axis]
+  (^Float [^javax.swing.text.html.FormView this ^Integer axis]
     (-> this (.getMaximumSpan axis))))
 
 (defn action-performed

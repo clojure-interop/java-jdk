@@ -49,7 +49,7 @@
 
   returns: true if the specified object represents an annotation
        that is logically equivalent to this one, otherwise false - `boolean`"
-  ([^java.lang.annotation.Annotation this ^java.lang.Object obj]
+  (^Boolean [^java.lang.annotation.Annotation this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -84,7 +84,7 @@
        type, and one for object reference types.)
 
   returns: the hash code of this annotation - `int`"
-  ([^java.lang.annotation.Annotation this]
+  (^Integer [^java.lang.annotation.Annotation this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -96,7 +96,7 @@
      @com.acme.util.Name(first=Alfred, middle=E., last=Neuman)
 
   returns: a string representation of this annotation - `java.lang.String`"
-  ([^java.lang.annotation.Annotation this]
+  (^java.lang.String [^java.lang.annotation.Annotation this]
     (-> this (.toString))))
 
 (defn annotation-type

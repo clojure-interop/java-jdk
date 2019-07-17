@@ -19,7 +19,7 @@
   r - a non-null reference to the region of the component c - `javax.swing.plaf.synth.Region`
 
   returns: a non-null reference to a NimbusStyle. - `javax.swing.plaf.nimbus.NimbusStyle`"
-  ([^javax.swing.JComponent c ^javax.swing.plaf.synth.Region r]
+  (^javax.swing.plaf.nimbus.NimbusStyle [^javax.swing.JComponent c ^javax.swing.plaf.synth.Region r]
     (NimbusLookAndFeel/getStyle c r)))
 
 (defn uninitialize
@@ -31,7 +31,7 @@
   "Returns the defaults for this SynthLookAndFeel.
 
   returns: Defaults table. - `javax.swing.UIDefaults`"
-  ([^javax.swing.plaf.nimbus.NimbusLookAndFeel this]
+  (^javax.swing.UIDefaults [^javax.swing.plaf.nimbus.NimbusLookAndFeel this]
     (-> this (.getDefaults))))
 
 (defn get-derived-color
@@ -46,7 +46,7 @@
   ui-resource - True if the derived color should be a UIResource, false if it should not be - `boolean`
 
   returns: The stored derived color - `java.awt.Color`"
-  ([^javax.swing.plaf.nimbus.NimbusLookAndFeel this ^java.lang.String ui-default-parent-name ^Float h-offset ^Float s-offset ^Float b-offset ^Integer a-offset ^Boolean ui-resource]
+  (^java.awt.Color [^javax.swing.plaf.nimbus.NimbusLookAndFeel this ^java.lang.String ui-default-parent-name ^Float h-offset ^Float s-offset ^Float b-offset ^Integer a-offset ^Boolean ui-resource]
     (-> this (.getDerivedColor ui-default-parent-name h-offset s-offset b-offset a-offset ui-resource))))
 
 (defn get-name
@@ -54,14 +54,14 @@
    String will be the unquoted String `Nimbus`.
 
   returns: a short string identifying this look and feel. - `java.lang.String`"
-  ([^javax.swing.plaf.nimbus.NimbusLookAndFeel this]
+  (^java.lang.String [^javax.swing.plaf.nimbus.NimbusLookAndFeel this]
     (-> this (.getName))))
 
 (defn get-description
   "Returns a textual description of this look and feel.
 
   returns: textual description of this look and feel. - `java.lang.String`"
-  ([^javax.swing.plaf.nimbus.NimbusLookAndFeel this]
+  (^java.lang.String [^javax.swing.plaf.nimbus.NimbusLookAndFeel this]
     (-> this (.getDescription))))
 
 (defn register
@@ -116,7 +116,7 @@
    would override this method to return true.
 
   returns: true - `boolean`"
-  ([^javax.swing.plaf.nimbus.NimbusLookAndFeel this]
+  (^Boolean [^javax.swing.plaf.nimbus.NimbusLookAndFeel this]
     (-> this (.shouldUpdateStyleOnAncestorChanged))))
 
 (defn initialize
@@ -129,7 +129,7 @@
    be the unquoted String `Nimbus`.
 
   returns: a short string identifying this look and feel. - `java.lang.String`"
-  ([^javax.swing.plaf.nimbus.NimbusLookAndFeel this]
+  (^java.lang.String [^javax.swing.plaf.nimbus.NimbusLookAndFeel this]
     (-> this (.getID))))
 
 (defn get-disabled-icon
@@ -140,6 +140,6 @@
 
   returns: disabled Icon, or null if a suitable
            Icon can not be generated - `javax.swing.Icon`"
-  ([^javax.swing.plaf.nimbus.NimbusLookAndFeel this ^javax.swing.JComponent component ^javax.swing.Icon icon]
+  (^javax.swing.Icon [^javax.swing.plaf.nimbus.NimbusLookAndFeel this ^javax.swing.JComponent component ^javax.swing.Icon icon]
     (-> this (.getDisabledIcon component icon))))
 

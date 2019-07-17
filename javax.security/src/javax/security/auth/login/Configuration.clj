@@ -151,7 +151,7 @@
             Configuration object is returned. - `javax.security.auth.login.Configuration`
 
   throws: java.lang.SecurityException - if the caller does not have permission to retrieve the Configuration."
-  ([]
+  (^javax.security.auth.login.Configuration []
     (Configuration/getConfiguration )))
 
 (defn *set-configuration
@@ -181,9 +181,9 @@
   returns: the new Configuration object. - `javax.security.auth.login.Configuration`
 
   throws: java.lang.SecurityException - if the caller does not have permission to get a Configuration instance for the specified type."
-  ([^java.lang.String type ^javax.security.auth.login.Configuration.Parameters params ^java.lang.String provider]
+  (^javax.security.auth.login.Configuration [^java.lang.String type ^javax.security.auth.login.Configuration.Parameters params ^java.lang.String provider]
     (Configuration/getInstance type params provider))
-  ([^java.lang.String type ^javax.security.auth.login.Configuration.Parameters params]
+  (^javax.security.auth.login.Configuration [^java.lang.String type ^javax.security.auth.login.Configuration.Parameters params]
     (Configuration/getInstance type params)))
 
 (defn get-provider
@@ -194,7 +194,7 @@
    Otherwise this method returns null.
 
   returns: the Provider of this Configuration, or null. - `java.security.Provider`"
-  ([^javax.security.auth.login.Configuration this]
+  (^java.security.Provider [^javax.security.auth.login.Configuration this]
     (-> this (.getProvider))))
 
 (defn get-type
@@ -205,7 +205,7 @@
    Otherwise this method returns null.
 
   returns: the type of this Configuration, or null. - `java.lang.String`"
-  ([^javax.security.auth.login.Configuration this]
+  (^java.lang.String [^javax.security.auth.login.Configuration this]
     (-> this (.getType))))
 
 (defn get-parameters
@@ -216,7 +216,7 @@
    Otherwise this method returns null.
 
   returns: Configuration parameters, or null. - `javax.security.auth.login.Configuration.Parameters`"
-  ([^javax.security.auth.login.Configuration this]
+  (^javax.security.auth.login.Configuration.Parameters [^javax.security.auth.login.Configuration this]
     (-> this (.getParameters))))
 
 (defn get-app-configuration-entry

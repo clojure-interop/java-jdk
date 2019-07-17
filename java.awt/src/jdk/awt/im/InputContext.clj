@@ -39,7 +39,7 @@
   "Returns a new InputContext instance.
 
   returns: `java.awt.im.InputContext`"
-  ([]
+  (^java.awt.im.InputContext []
     (InputContext/getInstance )))
 
 (defn end-composition
@@ -98,7 +98,7 @@
    is the system's default locale.
 
   returns: the current locale of the current input method or keyboard layout - `java.util.Locale`"
-  ([^java.awt.im.InputContext this]
+  (^java.util.Locale [^java.awt.im.InputContext this]
     (-> this (.getLocale))))
 
 (defn select-input-method
@@ -151,7 +151,7 @@
            this call supports the desired locale. - `boolean`
 
   throws: java.lang.NullPointerException - if locale is null"
-  ([^java.awt.im.InputContext this ^java.util.Locale locale]
+  (^Boolean [^java.awt.im.InputContext this ^java.util.Locale locale]
     (-> this (.selectInputMethod locale))))
 
 (defn get-input-method-control-object
@@ -167,7 +167,7 @@
    not provide an input method control object, then null is returned.
 
   returns: A control object from the current input method, or null. - `java.lang.Object`"
-  ([^java.awt.im.InputContext this]
+  (^java.lang.Object [^java.awt.im.InputContext this]
     (-> this (.getInputMethodControlObject))))
 
 (defn remove-notify
@@ -196,7 +196,7 @@
    composition; false otherwise - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if there is no current input method available or the current input method does not support checking whether it is enabled for composition"
-  ([^java.awt.im.InputContext this]
+  (^Boolean [^java.awt.im.InputContext this]
     (-> this (.isCompositionEnabled))))
 
 (defn dispatch-event
@@ -221,7 +221,7 @@
    If no input methods are available, then this method has no effect.
 
   subsets - The subsets of the Unicode character set from which characters may be input - `java.lang.Character.Subset[]`"
-  ([^java.awt.im.InputContext this ^java.lang.Character.Subset[] subsets]
+  ([^java.awt.im.InputContext this subsets]
     (-> this (.setCharacterSubsets subsets))))
 
 (defn set-composition-enabled

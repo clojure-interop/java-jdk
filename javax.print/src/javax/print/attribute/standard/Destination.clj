@@ -48,7 +48,7 @@
 
   returns: True if object is equivalent to this destination
            attribute, false otherwise. - `boolean`"
-  ([^javax.print.attribute.standard.Destination this ^java.lang.Object object]
+  (^Boolean [^javax.print.attribute.standard.Destination this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -69,6 +69,6 @@
    For class Destination, the category name is `spool-data-destination`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.Destination this]
+  (^java.lang.String [^javax.print.attribute.standard.Destination this]
     (-> this (.getName))))
 

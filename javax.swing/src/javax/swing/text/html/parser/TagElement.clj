@@ -16,26 +16,26 @@
 
 (defn breaks-flow
   "returns: `boolean`"
-  ([^javax.swing.text.html.parser.TagElement this]
+  (^Boolean [^javax.swing.text.html.parser.TagElement this]
     (-> this (.breaksFlow))))
 
 (defn preformatted?
   "returns: `boolean`"
-  ([^javax.swing.text.html.parser.TagElement this]
+  (^Boolean [^javax.swing.text.html.parser.TagElement this]
     (-> this (.isPreformatted))))
 
 (defn get-element
   "returns: `javax.swing.text.html.parser.Element`"
-  ([^javax.swing.text.html.parser.TagElement this]
+  (^javax.swing.text.html.parser.Element [^javax.swing.text.html.parser.TagElement this]
     (-> this (.getElement))))
 
 (defn get-html-tag
   "returns: `javax.swing.text.html.HTML.Tag`"
-  ([^javax.swing.text.html.parser.TagElement this]
+  (^javax.swing.text.html.HTML.Tag [^javax.swing.text.html.parser.TagElement this]
     (-> this (.getHTMLTag))))
 
 (defn fictional
   "returns: `boolean`"
-  ([^javax.swing.text.html.parser.TagElement this]
+  (^Boolean [^javax.swing.text.html.parser.TagElement this]
     (-> this (.fictional))))
 

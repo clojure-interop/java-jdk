@@ -30,6 +30,6 @@
   "Returns the stylesheet.
 
   returns: the stylesheet - `javax.xml.crypto.XMLStructure`"
-  ([^javax.xml.crypto.dsig.spec.XSLTTransformParameterSpec this]
+  (^javax.xml.crypto.XMLStructure [^javax.xml.crypto.dsig.spec.XSLTTransformParameterSpec this]
     (-> this (.getStylesheet))))
 

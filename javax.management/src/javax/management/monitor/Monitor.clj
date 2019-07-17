@@ -35,7 +35,7 @@
 
   returns: true if the monitor MBean is active,
    false otherwise. - `boolean`"
-  ([^javax.management.monitor.Monitor this]
+  (^Boolean [^javax.management.monitor.Monitor this]
     (-> this (.isActive))))
 
 (defn remove-observed-object
@@ -52,7 +52,7 @@
 
   returns: true if the specified object is present,
    false otherwise. - `boolean`"
-  ([^javax.management.monitor.Monitor this ^javax.management.ObjectName object]
+  (^Boolean [^javax.management.monitor.Monitor this ^javax.management.ObjectName object]
     (-> this (.containsObservedObject object))))
 
 (defn add-observed-object
@@ -95,7 +95,7 @@
    The observed attribute is not initialized by default (set to null).
 
   returns: The attribute being observed. - `java.lang.String`"
-  ([^javax.management.monitor.Monitor this]
+  (^java.lang.String [^javax.management.monitor.Monitor this]
     (-> this (.getObservedAttribute))))
 
 (defn set-observed-object
@@ -137,7 +137,7 @@
    The default value of the granularity period is 10 seconds.
 
   returns: The granularity period value. - `long`"
-  ([^javax.management.monitor.Monitor this]
+  (^Long [^javax.management.monitor.Monitor this]
     (-> this (.getGranularityPeriod))))
 
 (defn pre-register
@@ -152,7 +152,7 @@
   returns: The name of the monitor MBean registered. - `javax.management.ObjectName`
 
   throws: java.lang.Exception"
-  ([^javax.management.monitor.Monitor this ^javax.management.MBeanServer server ^javax.management.ObjectName name]
+  (^javax.management.ObjectName [^javax.management.monitor.Monitor this ^javax.management.MBeanServer server ^javax.management.ObjectName name]
     (-> this (.preRegister server name))))
 
 (defn set-granularity-period

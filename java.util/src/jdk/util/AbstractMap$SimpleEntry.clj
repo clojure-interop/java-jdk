@@ -25,14 +25,14 @@
   "Returns the key corresponding to this entry.
 
   returns: the key corresponding to this entry - `AbstractMap.SimpleEntry.K`"
-  ([^java.util.AbstractMap$SimpleEntry this]
+  (^AbstractMap.SimpleEntry.K [^java.util.AbstractMap$SimpleEntry this]
     (-> this (.getKey))))
 
 (defn get-value
   "Returns the value corresponding to this entry.
 
   returns: the value corresponding to this entry - `AbstractMap.SimpleEntry.V`"
-  ([^java.util.AbstractMap$SimpleEntry this]
+  (^AbstractMap.SimpleEntry.V [^java.util.AbstractMap$SimpleEntry this]
     (-> this (.getValue))))
 
 (defn set-value
@@ -42,7 +42,7 @@
   value - new value to be stored in this entry - `AbstractMap.SimpleEntry.V`
 
   returns: the old value corresponding to the entry - `AbstractMap.SimpleEntry.V`"
-  ([^java.util.AbstractMap$SimpleEntry this ^AbstractMap.SimpleEntry.V value]
+  (^AbstractMap.SimpleEntry.V [^java.util.AbstractMap$SimpleEntry this ^AbstractMap.SimpleEntry.V value]
     (-> this (.setValue value))))
 
 (defn equals
@@ -66,7 +66,7 @@
 
   returns: true if the specified object is equal to this map
            entry - `boolean`"
-  ([^java.util.AbstractMap$SimpleEntry this ^java.lang.Object o]
+  (^Boolean [^java.util.AbstractMap$SimpleEntry this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn hash-code
@@ -81,7 +81,7 @@
    contract of Object.hashCode().
 
   returns: the hash code value for this map entry - `int`"
-  ([^java.util.AbstractMap$SimpleEntry this]
+  (^Integer [^java.util.AbstractMap$SimpleEntry this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -91,6 +91,6 @@
    followed by the string representation of this entry's value.
 
   returns: a String representation of this map entry - `java.lang.String`"
-  ([^java.util.AbstractMap$SimpleEntry this]
+  (^java.lang.String [^java.util.AbstractMap$SimpleEntry this]
     (-> this (.toString))))
 

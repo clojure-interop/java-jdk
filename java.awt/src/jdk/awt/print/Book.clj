@@ -17,7 +17,7 @@
   "Returns the number of pages in this Book.
 
   returns: the number of pages this Book contains. - `int`"
-  ([^java.awt.print.Book this]
+  (^Integer [^java.awt.print.Book this]
     (-> this (.getNumberOfPages))))
 
 (defn get-page-format
@@ -30,7 +30,7 @@
             orientation of the page. - `java.awt.print.PageFormat`
 
   throws: java.lang.IndexOutOfBoundsException - if the Pageable does not contain the requested page"
-  ([^java.awt.print.Book this ^Integer page-index]
+  (^java.awt.print.PageFormat [^java.awt.print.Book this ^Integer page-index]
     (-> this (.getPageFormat page-index))))
 
 (defn get-printable
@@ -42,7 +42,7 @@
   returns: the Printable that renders the page. - `java.awt.print.Printable`
 
   throws: java.lang.IndexOutOfBoundsException - if the Pageable does not contain the requested page"
-  ([^java.awt.print.Book this ^Integer page-index]
+  (^java.awt.print.Printable [^java.awt.print.Book this ^Integer page-index]
     (-> this (.getPrintable page-index))))
 
 (defn set-page

@@ -121,7 +121,7 @@
    a hint, as certain look and feels may not support this feature.
 
   returns: true if look and feel should provide Window decorations. - `boolean`"
-  ([]
+  (^Boolean []
     (JFrame/isDefaultLookAndFeelDecorated )))
 
 (defn set-layout
@@ -194,7 +194,7 @@
   "Returns the contentPane object for this frame.
 
   returns: the contentPane property - `java.awt.Container`"
-  ([^javax.swing.JFrame this]
+  (^java.awt.Container [^javax.swing.JFrame this]
     (-> this (.getContentPane))))
 
 (defn get-graphics
@@ -204,7 +204,7 @@
 
   returns: a graphics context for this component, or null
                if it has none - `java.awt.Graphics`"
-  ([^javax.swing.JFrame this]
+  (^java.awt.Graphics [^javax.swing.JFrame this]
     (-> this (.getGraphics))))
 
 (defn update
@@ -219,7 +219,7 @@
   "Returns the menubar set on this frame.
 
   returns: the menubar for this frame - `javax.swing.JMenuBar`"
-  ([^javax.swing.JFrame this]
+  (^javax.swing.JMenuBar [^javax.swing.JFrame this]
     (-> this (.getJMenuBar))))
 
 (defn set-transfer-handler
@@ -277,7 +277,7 @@
   "Returns the glassPane object for this frame.
 
   returns: the glassPane property - `java.awt.Component`"
-  ([^javax.swing.JFrame this]
+  (^java.awt.Component [^javax.swing.JFrame this]
     (-> this (.getGlassPane))))
 
 (defn get-accessible-context
@@ -288,7 +288,7 @@
 
   returns: an AccessibleJFrame that serves as the
            AccessibleContext of this JFrame - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.JFrame this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.JFrame this]
     (-> this (.getAccessibleContext))))
 
 (defn set-glass-pane
@@ -336,14 +336,14 @@
   "Gets the transferHandler property.
 
   returns: the value of the transferHandler property - `javax.swing.TransferHandler`"
-  ([^javax.swing.JFrame this]
+  (^javax.swing.TransferHandler [^javax.swing.JFrame this]
     (-> this (.getTransferHandler))))
 
 (defn get-root-pane
   "Returns the rootPane object for this frame.
 
   returns: the rootPane property - `javax.swing.JRootPane`"
-  ([^javax.swing.JFrame this]
+  (^javax.swing.JRootPane [^javax.swing.JFrame this]
     (-> this (.getRootPane))))
 
 (defn set-content-pane
@@ -365,7 +365,7 @@
   "Returns the layeredPane object for this frame.
 
   returns: the layeredPane property - `javax.swing.JLayeredPane`"
-  ([^javax.swing.JFrame this]
+  (^javax.swing.JLayeredPane [^javax.swing.JFrame this]
     (-> this (.getLayeredPane))))
 
 (defn get-default-close-operation
@@ -373,6 +373,6 @@
    initiates a `close` on this frame.
 
   returns: an integer indicating the window-close operation - `int`"
-  ([^javax.swing.JFrame this]
+  (^Integer [^javax.swing.JFrame this]
     (-> this (.getDefaultCloseOperation))))
 

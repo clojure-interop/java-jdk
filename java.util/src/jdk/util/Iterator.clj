@@ -22,7 +22,7 @@
    return an element rather than throwing an exception.)
 
   returns: true if the iteration has more elements - `boolean`"
-  ([^java.util.Iterator this]
+  (^Boolean [^java.util.Iterator this]
     (-> this (.hasNext))))
 
 (defn next
@@ -31,7 +31,7 @@
   returns: the next element in the iteration - `Iterator.E`
 
   throws: java.util.NoSuchElementException - if the iteration has no more elements"
-  ([^java.util.Iterator this]
+  (^Iterator.E [^java.util.Iterator this]
     (-> this (.next))))
 
 (defn remove

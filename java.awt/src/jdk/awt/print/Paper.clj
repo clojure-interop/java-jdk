@@ -36,7 +36,7 @@
 
   returns: the width of the page described by this
    Paper. - `double`"
-  ([^java.awt.print.Paper this]
+  (^Double [^java.awt.print.Paper this]
     (-> this (.getWidth))))
 
 (defn get-imageable-width
@@ -44,7 +44,7 @@
    area.
 
   returns: the width of the imageable area. - `double`"
-  ([^java.awt.print.Paper this]
+  (^Double [^java.awt.print.Paper this]
     (-> this (.getImageableWidth))))
 
 (defn get-imageable-height
@@ -52,7 +52,7 @@
    area.
 
   returns: the height of the imageable area. - `double`"
-  ([^java.awt.print.Paper this]
+  (^Double [^java.awt.print.Paper this]
     (-> this (.getImageableHeight))))
 
 (defn get-height
@@ -60,7 +60,7 @@
 
   returns: the height of the page described by this
             Paper. - `double`"
-  ([^java.awt.print.Paper this]
+  (^Double [^java.awt.print.Paper this]
     (-> this (.getHeight))))
 
 (defn set-size
@@ -80,7 +80,7 @@
    Paper object's imageable area.
 
   returns: the x coordinate of the imageable area. - `double`"
-  ([^java.awt.print.Paper this]
+  (^Double [^java.awt.print.Paper this]
     (-> this (.getImageableX))))
 
 (defn clone
@@ -88,7 +88,7 @@
    as this Paper.
 
   returns: a copy of this Paper. - `java.lang.Object`"
-  ([^java.awt.print.Paper this]
+  (^java.lang.Object [^java.awt.print.Paper this]
     (-> this (.clone))))
 
 (defn get-imageable-y
@@ -96,6 +96,6 @@
    Paper object's imageable area.
 
   returns: the y coordinate of the imageable area. - `double`"
-  ([^java.awt.print.Paper this]
+  (^Double [^java.awt.print.Paper this]
     (-> this (.getImageableY))))
 

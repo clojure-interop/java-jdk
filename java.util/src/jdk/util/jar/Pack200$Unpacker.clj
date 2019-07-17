@@ -38,7 +38,7 @@
    unspecified error to be thrown.
 
   returns: A sorted association of option key strings to option values. - `java.util.SortedMap<java.lang.String,java.lang.String>`"
-  ([^java.util.jar.Pack200$Unpacker this]
+  (^java.util.SortedMap [^java.util.jar.Pack200$Unpacker this]
     (-> this (.properties))))
 
 (defn unpack

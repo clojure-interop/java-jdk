@@ -69,9 +69,9 @@
   returns: the newly created MBeanServer. - `javax.management.MBeanServer`
 
   throws: java.lang.SecurityException - if there is a SecurityManager and the caller's permissions do not include or imply MBeanServerPermission(`createMBeanServer`)."
-  ([^java.lang.String domain]
+  (^javax.management.MBeanServer [^java.lang.String domain]
     (MBeanServerFactory/createMBeanServer domain))
-  ([]
+  (^javax.management.MBeanServer []
     (MBeanServerFactory/createMBeanServer )))
 
 (defn *new-m-bean-server
@@ -91,9 +91,9 @@
   returns: the newly created MBeanServer. - `javax.management.MBeanServer`
 
   throws: java.lang.SecurityException - if there is a SecurityManager and the caller's permissions do not include or imply MBeanServerPermission(`newMBeanServer`)."
-  ([^java.lang.String domain]
+  (^javax.management.MBeanServer [^java.lang.String domain]
     (MBeanServerFactory/newMBeanServer domain))
-  ([]
+  (^javax.management.MBeanServer []
     (MBeanServerFactory/newMBeanServer )))
 
 (defn *find-m-bean-server
@@ -107,7 +107,7 @@
   returns: A list of MBeanServer objects. - `java.util.ArrayList<javax.management.MBeanServer>`
 
   throws: java.lang.SecurityException - if there is a SecurityManager and the caller's permissions do not include or imply MBeanServerPermission(`findMBeanServer`)."
-  ([^java.lang.String agent-id]
+  (^java.util.ArrayList [^java.lang.String agent-id]
     (MBeanServerFactory/findMBeanServer agent-id)))
 
 (defn *get-class-loader-repository
@@ -119,6 +119,6 @@
   returns: The Class Loader Repository used by the given MBeanServer. - `javax.management.loading.ClassLoaderRepository`
 
   throws: java.lang.SecurityException - if there is a SecurityManager and the caller's permissions do not include or imply MBeanPermission(`getClassLoaderRepository`)."
-  ([^javax.management.MBeanServer server]
+  (^javax.management.loading.ClassLoaderRepository [^javax.management.MBeanServer server]
     (MBeanServerFactory/getClassLoaderRepository server)))
 

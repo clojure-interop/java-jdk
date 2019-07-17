@@ -25,7 +25,7 @@
   "Returns the BufferedImageOp.
 
   returns: the operator of this BufferedImageFilter. - `java.awt.image.BufferedImageOp`"
-  ([^java.awt.image.BufferedImageFilter this]
+  (^java.awt.image.BufferedImageOp [^java.awt.image.BufferedImageFilter this]
     (-> this (.getBufferedImageOp))))
 
 (defn set-dimensions

@@ -14,7 +14,7 @@
   "c - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent c]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent c]
     (MetalFileChooserUI/createUI c)))
 
 (defn install-ui
@@ -36,12 +36,12 @@
 
   returns: a Dimension specifying the minimum
              width and height of the file chooser - `java.awt.Dimension`"
-  ([^javax.swing.plaf.metal.MetalFileChooserUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^javax.swing.plaf.metal.MetalFileChooserUI this ^javax.swing.JComponent c]
     (-> this (.getMinimumSize c))))
 
 (defn get-file-name
   "returns: `java.lang.String`"
-  ([^javax.swing.plaf.metal.MetalFileChooserUI this]
+  (^java.lang.String [^javax.swing.plaf.metal.MetalFileChooserUI this]
     (-> this (.getFileName))))
 
 (defn get-maximum-size
@@ -51,7 +51,7 @@
 
   returns: a Dimension specifying the maximum
              width and height of the file chooser - `java.awt.Dimension`"
-  ([^javax.swing.plaf.metal.MetalFileChooserUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^javax.swing.plaf.metal.MetalFileChooserUI this ^javax.swing.JComponent c]
     (-> this (.getMaximumSize c))))
 
 (defn set-file-name
@@ -63,7 +63,7 @@
   "fc - `javax.swing.JFileChooser`
 
   returns: `java.beans.PropertyChangeListener`"
-  ([^javax.swing.plaf.metal.MetalFileChooserUI this ^javax.swing.JFileChooser fc]
+  (^java.beans.PropertyChangeListener [^javax.swing.plaf.metal.MetalFileChooserUI this ^javax.swing.JFileChooser fc]
     (-> this (.createPropertyChangeListener fc))))
 
 (defn uninstall-ui
@@ -80,7 +80,7 @@
 
 (defn get-directory-name
   "returns: `java.lang.String`"
-  ([^javax.swing.plaf.metal.MetalFileChooserUI this]
+  (^java.lang.String [^javax.swing.plaf.metal.MetalFileChooserUI this]
     (-> this (.getDirectoryName))))
 
 (defn ensure-file-is-visible
@@ -105,7 +105,7 @@
   fc - a JFileChooser - `javax.swing.JFileChooser`
 
   returns: a ListSelectionListener - `javax.swing.event.ListSelectionListener`"
-  ([^javax.swing.plaf.metal.MetalFileChooserUI this ^javax.swing.JFileChooser fc]
+  (^javax.swing.event.ListSelectionListener [^javax.swing.plaf.metal.MetalFileChooserUI this ^javax.swing.JFileChooser fc]
     (-> this (.createListSelectionListener fc))))
 
 (defn get-preferred-size
@@ -120,7 +120,7 @@
 
   returns: a Dimension specifying the preferred
              width and height of the file chooser - `java.awt.Dimension`"
-  ([^javax.swing.plaf.metal.MetalFileChooserUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^javax.swing.plaf.metal.MetalFileChooserUI this ^javax.swing.JComponent c]
     (-> this (.getPreferredSize c))))
 
 (defn uninstall-components

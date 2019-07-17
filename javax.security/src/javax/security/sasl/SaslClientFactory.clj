@@ -27,7 +27,7 @@
    using the parameters supplied. - `javax.security.sasl.SaslClient`
 
   throws: javax.security.sasl.SaslException - If cannot create a SaslClient because of an error."
-  ([^javax.security.sasl.SaslClientFactory this ^java.lang.String[] mechanisms ^java.lang.String authorization-id ^java.lang.String protocol ^java.lang.String server-name ^java.util.Map props ^javax.security.auth.callback.CallbackHandler cbh]
+  (^javax.security.sasl.SaslClient [^javax.security.sasl.SaslClientFactory this mechanisms ^java.lang.String authorization-id ^java.lang.String protocol ^java.lang.String server-name ^java.util.Map props ^javax.security.auth.callback.CallbackHandler cbh]
     (-> this (.createSaslClient mechanisms authorization-id protocol server-name props cbh))))
 
 (defn get-mechanism-names

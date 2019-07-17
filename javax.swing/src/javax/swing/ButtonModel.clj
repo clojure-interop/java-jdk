@@ -53,7 +53,7 @@
   "Gets the keyboard mnemonic for the button.
 
   returns: an int specifying the accelerator key - `int`"
-  ([^javax.swing.ButtonModel this]
+  (^Integer [^javax.swing.ButtonModel this]
     (-> this (.getMnemonic))))
 
 (defn add-change-listener
@@ -92,7 +92,7 @@
 
   returns: true if the button is armed,
            and ready to be triggered - `boolean`"
-  ([^javax.swing.ButtonModel this]
+  (^Boolean [^javax.swing.ButtonModel this]
     (-> this (.isArmed))))
 
 (defn add-action-listener
@@ -127,7 +127,7 @@
   "Indicates that the mouse is over the button.
 
   returns: true if the mouse is over the button - `boolean`"
-  ([^javax.swing.ButtonModel this]
+  (^Boolean [^javax.swing.ButtonModel this]
     (-> this (.isRollover))))
 
 (defn set-enabled
@@ -141,7 +141,7 @@
   "Indicates if the button is pressed.
 
   returns: true if the button is pressed - `boolean`"
-  ([^javax.swing.ButtonModel this]
+  (^Boolean [^javax.swing.ButtonModel this]
     (-> this (.isPressed))))
 
 (defn selected?
@@ -149,7 +149,7 @@
    certain types of buttons - such as radio buttons and check boxes.
 
   returns: true if the button is selected - `boolean`"
-  ([^javax.swing.ButtonModel this]
+  (^Boolean [^javax.swing.ButtonModel this]
     (-> this (.isSelected))))
 
 (defn remove-action-listener
@@ -163,7 +163,7 @@
   "Returns the action command string for the button.
 
   returns: the String that identifies the generated event - `java.lang.String`"
-  ([^javax.swing.ButtonModel this]
+  (^java.lang.String [^javax.swing.ButtonModel this]
     (-> this (.getActionCommand))))
 
 (defn set-rollover
@@ -186,7 +186,7 @@
    an input device, such as a mouse pointer.
 
   returns: true if the button is enabled - `boolean`"
-  ([^javax.swing.ButtonModel this]
+  (^Boolean [^javax.swing.ButtonModel this]
     (-> this (.isEnabled))))
 
 (defn set-mnemonic

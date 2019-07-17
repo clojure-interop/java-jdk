@@ -32,9 +32,9 @@
   target - the target object of this expression - `java.lang.Object`
   method-name - the name of the method to invoke on the specified target - `java.lang.String`
   arguments - the array of arguments to invoke the specified method - `java.lang.Object[]`"
-  ([^java.lang.Object value ^java.lang.Object target ^java.lang.String method-name ^java.lang.Object[] arguments]
+  ([^java.lang.Object value ^java.lang.Object target ^java.lang.String method-name arguments]
     (new Expression value target method-name arguments))
-  ([^java.lang.Object target ^java.lang.String method-name ^java.lang.Object[] arguments]
+  ([^java.lang.Object target ^java.lang.String method-name arguments]
     (new Expression target method-name arguments)))
 
 (defn execute
@@ -100,7 +100,7 @@
   returns: The result of applying this method to these arguments. - `java.lang.Object`
 
   throws: java.lang.Exception - if the method with the specified methodName throws an exception"
-  ([^java.beans.Expression this]
+  (^java.lang.Object [^java.beans.Expression this]
     (-> this (.getValue))))
 
 (defn set-value
@@ -117,6 +117,6 @@
   "Prints the value of this expression using a Java-style syntax.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^java.beans.Expression this]
+  (^java.lang.String [^java.beans.Expression this]
     (-> this (.toString))))
 

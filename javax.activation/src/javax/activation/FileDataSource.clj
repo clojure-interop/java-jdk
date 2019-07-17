@@ -34,7 +34,7 @@
   returns: an InputStream - `java.io.InputStream`
 
   throws: java.io.IOException"
-  ([^javax.activation.FileDataSource this]
+  (^java.io.InputStream [^javax.activation.FileDataSource this]
     (-> this (.getInputStream))))
 
 (defn get-output-stream
@@ -46,7 +46,7 @@
   returns: an OutputStream - `java.io.OutputStream`
 
   throws: java.io.IOException"
-  ([^javax.activation.FileDataSource this]
+  (^java.io.OutputStream [^javax.activation.FileDataSource this]
     (-> this (.getOutputStream))))
 
 (defn get-content-type
@@ -58,7 +58,7 @@
    default, the FileTypeMap used will be a MimetypesFileTypeMap.
 
   returns: the MIME Type - `java.lang.String`"
-  ([^javax.activation.FileDataSource this]
+  (^java.lang.String [^javax.activation.FileDataSource this]
     (-> this (.getContentType))))
 
 (defn get-name
@@ -66,14 +66,14 @@
    will return the file name of the object.
 
   returns: the name of the object. - `java.lang.String`"
-  ([^javax.activation.FileDataSource this]
+  (^java.lang.String [^javax.activation.FileDataSource this]
     (-> this (.getName))))
 
 (defn get-file
   "Return the File object that corresponds to this FileDataSource.
 
   returns: the File object for the file represented by this object. - `java.io.File`"
-  ([^javax.activation.FileDataSource this]
+  (^java.io.File [^javax.activation.FileDataSource this]
     (-> this (.getFile))))
 
 (defn set-file-type-map

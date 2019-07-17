@@ -18,6 +18,6 @@
    of this parser. - `javax.naming.Name`
 
   throws: javax.naming.InvalidNameException - If name does not conform to syntax defined for the namespace."
-  ([^javax.naming.NameParser this ^java.lang.String name]
+  (^javax.naming.Name [^javax.naming.NameParser this ^java.lang.String name]
     (-> this (.parse name))))
 

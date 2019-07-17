@@ -58,6 +58,6 @@
    For class ColorSupported, the category name is `color-supported`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.ColorSupported this]
+  (^java.lang.String [^javax.print.attribute.standard.ColorSupported this]
     (-> this (.getName))))
 

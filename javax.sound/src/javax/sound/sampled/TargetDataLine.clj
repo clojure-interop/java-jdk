@@ -88,6 +88,6 @@
   returns: the number of bytes actually read - `int`
 
   throws: java.lang.IllegalArgumentException - if the requested number of bytes does not represent an integral number of sample frames. or if len is negative."
-  ([^javax.sound.sampled.TargetDataLine this b ^Integer off ^Integer len]
+  (^Integer [^javax.sound.sampled.TargetDataLine this b ^Integer off ^Integer len]
     (-> this (.read b off len))))
 

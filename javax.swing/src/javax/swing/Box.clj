@@ -61,7 +61,7 @@
      Box lineBox = new Box(BoxLayout.LINE_AXIS);
 
   returns: the box - `javax.swing.Box`"
-  ([]
+  (^javax.swing.Box []
     (Box/createHorizontalBox )))
 
 (defn *create-vertical-box
@@ -75,7 +75,7 @@
      Box lineBox = new Box(BoxLayout.PAGE_AXIS);
 
   returns: the box - `javax.swing.Box`"
-  ([]
+  (^javax.swing.Box []
     (Box/createVerticalBox )))
 
 (defn *create-rigid-area
@@ -85,7 +85,7 @@
   d - the dimensions of the invisible component - `java.awt.Dimension`
 
   returns: the component - `java.awt.Component`"
-  ([^java.awt.Dimension d]
+  (^java.awt.Component [^java.awt.Dimension d]
     (Box/createRigidArea d)))
 
 (defn *create-horizontal-strut
@@ -104,7 +104,7 @@
   width - the width of the invisible component, in pixels >= 0 - `int`
 
   returns: the component - `java.awt.Component`"
-  ([^Integer width]
+  (^java.awt.Component [^Integer width]
     (Box/createHorizontalStrut width)))
 
 (defn *create-vertical-strut
@@ -123,7 +123,7 @@
   height - the height of the invisible component, in pixels >= 0 - `int`
 
   returns: the component - `java.awt.Component`"
-  ([^Integer height]
+  (^java.awt.Component [^Integer height]
     (Box/createVerticalStrut height)))
 
 (defn *create-glue
@@ -169,21 +169,21 @@
    just like any other component that has no maximum width or height.
 
   returns: the component - `java.awt.Component`"
-  ([]
+  (^java.awt.Component []
     (Box/createGlue )))
 
 (defn *create-horizontal-glue
   "Creates a horizontal glue component.
 
   returns: the component - `java.awt.Component`"
-  ([]
+  (^java.awt.Component []
     (Box/createHorizontalGlue )))
 
 (defn *create-vertical-glue
   "Creates a vertical glue component.
 
   returns: the component - `java.awt.Component`"
-  ([]
+  (^java.awt.Component []
     (Box/createVerticalGlue )))
 
 (defn set-layout
@@ -201,6 +201,6 @@
 
   returns: an AccessibleBox that serves as the
            AccessibleContext of this Box - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.Box this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.Box this]
     (-> this (.getAccessibleContext))))
 

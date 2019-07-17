@@ -24,7 +24,7 @@
    actions.
 
   returns: the attribute set - `javax.swing.text.MutableAttributeSet`"
-  ([^javax.swing.text.StyledEditorKit this]
+  (^javax.swing.text.MutableAttributeSet [^javax.swing.text.StyledEditorKit this]
     (-> this (.getInputAttributes))))
 
 (defn get-character-attribute-run
@@ -32,7 +32,7 @@
    run of character attributes for the caret.
 
   returns: the element - `javax.swing.text.Element`"
-  ([^javax.swing.text.StyledEditorKit this]
+  (^javax.swing.text.Element [^javax.swing.text.StyledEditorKit this]
     (-> this (.getCharacterAttributeRun))))
 
 (defn get-actions
@@ -50,7 +50,7 @@
    that is appropriate for this type of editor.
 
   returns: the model - `javax.swing.text.Document`"
-  ([^javax.swing.text.StyledEditorKit this]
+  (^javax.swing.text.Document [^javax.swing.text.StyledEditorKit this]
     (-> this (.createDefaultDocument))))
 
 (defn install
@@ -83,13 +83,13 @@
    StyleConstants.IconElementName
 
   returns: the factory - `javax.swing.text.ViewFactory`"
-  ([^javax.swing.text.StyledEditorKit this]
+  (^javax.swing.text.ViewFactory [^javax.swing.text.StyledEditorKit this]
     (-> this (.getViewFactory))))
 
 (defn clone
   "Creates a copy of the editor kit.
 
   returns: the copy - `java.lang.Object`"
-  ([^javax.swing.text.StyledEditorKit this]
+  (^java.lang.Object [^javax.swing.text.StyledEditorKit this]
     (-> this (.clone))))
 

@@ -47,35 +47,35 @@
 
   returns: the corresponding entity type, or the type corresponding
      to `CDATA`, if none exists - `int`"
-  ([^java.lang.String nm]
+  (^Integer [^java.lang.String nm]
     (Entity/name2type nm)))
 
 (defn get-name
   "Gets the name of the entity.
 
   returns: the name of the entity, as a String - `java.lang.String`"
-  ([^javax.swing.text.html.parser.Entity this]
+  (^java.lang.String [^javax.swing.text.html.parser.Entity this]
     (-> this (.getName))))
 
 (defn get-type
   "Gets the type of the entity.
 
   returns: the type of the entity - `int`"
-  ([^javax.swing.text.html.parser.Entity this]
+  (^Integer [^javax.swing.text.html.parser.Entity this]
     (-> this (.getType))))
 
 (defn parameter?
   "Returns true if it is a parameter entity.
 
   returns: true if it is a parameter entity - `boolean`"
-  ([^javax.swing.text.html.parser.Entity this]
+  (^Boolean [^javax.swing.text.html.parser.Entity this]
     (-> this (.isParameter))))
 
 (defn general?
   "Returns true if it is a general entity.
 
   returns: true if it is a general entity - `boolean`"
-  ([^javax.swing.text.html.parser.Entity this]
+  (^Boolean [^javax.swing.text.html.parser.Entity this]
     (-> this (.isGeneral))))
 
 (defn get-data
@@ -89,6 +89,6 @@
   "Returns the data as a String.
 
   returns: the data as a String - `java.lang.String`"
-  ([^javax.swing.text.html.parser.Entity this]
+  (^java.lang.String [^javax.swing.text.html.parser.Entity this]
     (-> this (.getString))))
 

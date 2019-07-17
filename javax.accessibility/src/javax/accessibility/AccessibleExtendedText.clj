@@ -18,7 +18,7 @@
 
   returns: the text string if the indices are valid.
    Otherwise, null is returned. - `java.lang.String`"
-  ([^javax.accessibility.AccessibleExtendedText this ^Integer start-index ^Integer end-index]
+  (^java.lang.String [^javax.accessibility.AccessibleExtendedText this ^Integer start-index ^Integer end-index]
     (-> this (.getTextRange start-index end-index))))
 
 (defn get-text-sequence-at
@@ -29,7 +29,7 @@
 
   returns: an AccessibleTextSequence specifying the text
    if part and index are valid.  Otherwise, null is returned. - `javax.accessibility.AccessibleTextSequence`"
-  ([^javax.accessibility.AccessibleExtendedText this ^Integer part ^Integer index]
+  (^javax.accessibility.AccessibleTextSequence [^javax.accessibility.AccessibleExtendedText this ^Integer part ^Integer index]
     (-> this (.getTextSequenceAt part index))))
 
 (defn get-text-sequence-after
@@ -40,7 +40,7 @@
 
   returns: an AccessibleTextSequence specifying the text
    if part and index are valid.  Otherwise, null is returned. - `javax.accessibility.AccessibleTextSequence`"
-  ([^javax.accessibility.AccessibleExtendedText this ^Integer part ^Integer index]
+  (^javax.accessibility.AccessibleTextSequence [^javax.accessibility.AccessibleExtendedText this ^Integer part ^Integer index]
     (-> this (.getTextSequenceAfter part index))))
 
 (defn get-text-sequence-before
@@ -51,7 +51,7 @@
 
   returns: an AccessibleTextSequence specifying the text
    if part and index are valid.  Otherwise, null is returned. - `javax.accessibility.AccessibleTextSequence`"
-  ([^javax.accessibility.AccessibleExtendedText this ^Integer part ^Integer index]
+  (^javax.accessibility.AccessibleTextSequence [^javax.accessibility.AccessibleExtendedText this ^Integer part ^Integer index]
     (-> this (.getTextSequenceBefore part index))))
 
 (defn get-text-bounds
@@ -62,6 +62,6 @@
 
   returns: the bounding rectangle of the text if the indices are valid.
    Otherwise, null is returned. - `java.awt.Rectangle`"
-  ([^javax.accessibility.AccessibleExtendedText this ^Integer start-index ^Integer end-index]
+  (^java.awt.Rectangle [^javax.accessibility.AccessibleExtendedText this ^Integer start-index ^Integer end-index]
     (-> this (.getTextBounds start-index end-index))))
 

@@ -35,7 +35,7 @@
   "Returns true if the selection is undergoing a series of changes.
 
   returns: true if the selection is undergoing a series of changes - `boolean`"
-  ([^javax.swing.DefaultListSelectionModel this]
+  (^Boolean [^javax.swing.DefaultListSelectionModel this]
     (-> this (.getValueIsAdjusting))))
 
 (defn add-list-selection-listener
@@ -57,7 +57,7 @@
    setSelectionInterval(), addSelectionInterval() or removeSelectionInterval().
 
   returns: `int`"
-  ([^javax.swing.DefaultListSelectionModel this]
+  (^Integer [^javax.swing.DefaultListSelectionModel this]
     (-> this (.getLeadSelectionIndex))))
 
 (defn get-anchor-selection-index
@@ -69,7 +69,7 @@
    dotted yellow outline.
 
   returns: `int`"
-  ([^javax.swing.DefaultListSelectionModel this]
+  (^Integer [^javax.swing.DefaultListSelectionModel this]
     (-> this (.getAnchorSelectionIndex))))
 
 (defn selected-index?
@@ -78,7 +78,7 @@
   index - `int`
 
   returns: `boolean`"
-  ([^javax.swing.DefaultListSelectionModel this ^Integer index]
+  (^Boolean [^javax.swing.DefaultListSelectionModel this ^Integer index]
     (-> this (.isSelectedIndex index))))
 
 (defn remove-index-interval
@@ -97,7 +97,7 @@
    object's properties.
 
   returns: a String representation of this object - `java.lang.String`"
-  ([^javax.swing.DefaultListSelectionModel this]
+  (^java.lang.String [^javax.swing.DefaultListSelectionModel this]
     (-> this (.toString))))
 
 (defn set-selection-interval
@@ -192,7 +192,7 @@
   "Returns the last selected index or -1 if the selection is empty.
 
   returns: `int`"
-  ([^javax.swing.DefaultListSelectionModel this]
+  (^Integer [^javax.swing.DefaultListSelectionModel this]
     (-> this (.getMaxSelectionIndex))))
 
 (defn lead-anchor-notification-enabled?
@@ -211,21 +211,21 @@
    the view. Therefore, caution is urged when changing the default value.
 
   returns: the value of the leadAnchorNotificationEnabled flag - `boolean`"
-  ([^javax.swing.DefaultListSelectionModel this]
+  (^Boolean [^javax.swing.DefaultListSelectionModel this]
     (-> this (.isLeadAnchorNotificationEnabled))))
 
 (defn selection-empty?
   "Returns true if no indices are selected.
 
   returns: `boolean`"
-  ([^javax.swing.DefaultListSelectionModel this]
+  (^Boolean [^javax.swing.DefaultListSelectionModel this]
     (-> this (.isSelectionEmpty))))
 
 (defn get-min-selection-index
   "Returns the first selected index or -1 if the selection is empty.
 
   returns: `int`"
-  ([^javax.swing.DefaultListSelectionModel this]
+  (^Integer [^javax.swing.DefaultListSelectionModel this]
     (-> this (.getMinSelectionIndex))))
 
 (defn set-value-is-adjusting
@@ -289,14 +289,14 @@
   returns: a clone of this instance. - `java.lang.Object`
 
   throws: java.lang.CloneNotSupportedException - if the selection model does not both (a) implement the Cloneable interface and (b) define a clone method."
-  ([^javax.swing.DefaultListSelectionModel this]
+  (^java.lang.Object [^javax.swing.DefaultListSelectionModel this]
     (-> this (.clone))))
 
 (defn get-selection-mode
   "Returns the current selection mode.
 
   returns: the current selection mode - `int`"
-  ([^javax.swing.DefaultListSelectionModel this]
+  (^Integer [^javax.swing.DefaultListSelectionModel this]
     (-> this (.getSelectionMode))))
 
 (defn get-listeners

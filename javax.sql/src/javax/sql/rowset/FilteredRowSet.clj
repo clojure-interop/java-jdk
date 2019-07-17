@@ -114,6 +114,6 @@
 
   returns: p the Predicate for this FilteredRowSet
    object; null if no filter has been set. - `javax.sql.rowset.Predicate`"
-  ([^javax.sql.rowset.FilteredRowSet this]
+  (^javax.sql.rowset.Predicate [^javax.sql.rowset.FilteredRowSet this]
     (-> this (.getFilter))))
 

@@ -39,7 +39,7 @@
    a recent update to the target by another thread.
 
   returns: the linkage state of this call site, a method handle which can change over time - `java.lang.invoke.MethodHandle`"
-  ([^java.lang.invoke.VolatileCallSite this]
+  (^java.lang.invoke.MethodHandle [^java.lang.invoke.VolatileCallSite this]
     (-> this (.getTarget))))
 
 (defn set-target
@@ -69,6 +69,6 @@
    result = MethodHandles.foldArguments(invoker, getTarget)
 
   returns: a method handle which always invokes this call site's current target - `java.lang.invoke.MethodHandle`"
-  ([^java.lang.invoke.VolatileCallSite this]
+  (^java.lang.invoke.MethodHandle [^java.lang.invoke.VolatileCallSite this]
     (-> this (.dynamicInvoker))))
 

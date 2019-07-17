@@ -44,7 +44,7 @@
   returns: A new socket channel - `java.nio.channels.ServerSocketChannel`
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([]
+  (^java.nio.channels.ServerSocketChannel []
     (ServerSocketChannel/open )))
 
 (defn valid-ops
@@ -55,7 +55,7 @@
    connections, so this method returns SelectionKey.OP_ACCEPT.
 
   returns: The valid-operation set - `int`"
-  ([^java.nio.channels.ServerSocketChannel this]
+  (^Integer [^java.nio.channels.ServerSocketChannel this]
     (-> this (.validOps))))
 
 (defn bind
@@ -79,9 +79,9 @@
   returns: This channel - `java.nio.channels.ServerSocketChannel`
 
   throws: java.nio.channels.AlreadyBoundException - If the socket is already bound"
-  ([^java.nio.channels.ServerSocketChannel this ^java.net.SocketAddress local ^Integer backlog]
+  (^java.nio.channels.ServerSocketChannel [^java.nio.channels.ServerSocketChannel this ^java.net.SocketAddress local ^Integer backlog]
     (-> this (.bind local backlog)))
-  ([^java.nio.channels.ServerSocketChannel this ^java.net.SocketAddress local]
+  (^java.nio.channels.ServerSocketChannel [^java.nio.channels.ServerSocketChannel this ^java.net.SocketAddress local]
     (-> this (.bind local))))
 
 (defn set-option
@@ -103,7 +103,7 @@
    declared in the ServerSocket class.
 
   returns: A server socket associated with this channel - `java.net.ServerSocket`"
-  ([^java.nio.channels.ServerSocketChannel this]
+  (^java.net.ServerSocket [^java.nio.channels.ServerSocketChannel this]
     (-> this (.socket))))
 
 (defn accept
@@ -127,7 +127,7 @@
             and no connection is available to be accepted - `java.nio.channels.SocketChannel`
 
   throws: java.nio.channels.ClosedChannelException - If this channel is closed"
-  ([^java.nio.channels.ServerSocketChannel this]
+  (^java.nio.channels.SocketChannel [^java.nio.channels.ServerSocketChannel this]
     (-> this (.accept))))
 
 (defn get-local-address
@@ -149,6 +149,6 @@
             channel's socket is not bound - `java.net.SocketAddress`
 
   throws: java.nio.channels.ClosedChannelException - If the channel is closed"
-  ([^java.nio.channels.ServerSocketChannel this]
+  (^java.net.SocketAddress [^java.nio.channels.ServerSocketChannel this]
     (-> this (.getLocalAddress))))
 

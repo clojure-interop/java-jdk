@@ -23,6 +23,6 @@
   op - `javax.swing.JOptionPane`
 
   returns: `boolean`"
-  ([^javax.swing.plaf.OptionPaneUI this ^javax.swing.JOptionPane op]
+  (^Boolean [^javax.swing.plaf.OptionPaneUI this ^javax.swing.JOptionPane op]
     (-> this (.containsCustomComponents op))))
 

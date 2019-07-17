@@ -44,7 +44,7 @@
 
   returns: True if object is equivalent to this date-time
             at creation attribute, false otherwise. - `boolean`"
-  ([^javax.print.attribute.standard.DateTimeAtCreation this ^java.lang.Object object]
+  (^Boolean [^javax.print.attribute.standard.DateTimeAtCreation this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -67,6 +67,6 @@
    `date-time-at-creation`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.DateTimeAtCreation this]
+  (^java.lang.String [^javax.print.attribute.standard.DateTimeAtCreation this]
     (-> this (.getName))))
 

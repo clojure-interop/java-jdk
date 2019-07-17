@@ -86,7 +86,7 @@
    Calling this method before the transformation will return null.
 
   returns: The node to which the transformation will be appended. - `org.w3c.dom.Node`"
-  ([^javax.xml.transform.dom.DOMResult this]
+  (^org.w3c.dom.Node [^javax.xml.transform.dom.DOMResult this]
     (-> this (.getNode))))
 
 (defn set-next-sibling
@@ -118,7 +118,7 @@
    then null will be returned.
 
   returns: The child node before which the result nodes will be inserted. - `org.w3c.dom.Node`"
-  ([^javax.xml.transform.dom.DOMResult this]
+  (^org.w3c.dom.Node [^javax.xml.transform.dom.DOMResult this]
     (-> this (.getNextSibling))))
 
 (defn set-system-id
@@ -138,6 +138,6 @@
    then null will be returned.
 
   returns: The system identifier. - `java.lang.String`"
-  ([^javax.xml.transform.dom.DOMResult this]
+  (^java.lang.String [^javax.xml.transform.dom.DOMResult this]
     (-> this (.getSystemId))))
 

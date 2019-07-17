@@ -33,6 +33,6 @@
   "Returns the event mask associated with the listener.
 
   returns: the event mask associated with the listener - `long`"
-  ([^java.awt.event.AWTEventListenerProxy this]
+  (^Long [^java.awt.event.AWTEventListenerProxy this]
     (-> this (.getEventMask))))
 

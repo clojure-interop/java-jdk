@@ -28,14 +28,14 @@
 
   returns: true if the specified object represents the same
             name as this - `boolean`"
-  ([^javax.lang.model.element.Name this ^java.lang.Object obj]
+  (^Boolean [^javax.lang.model.element.Name this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Obeys the general contract of Object.hashCode.
 
   returns: a hash code value for this object. - `int`"
-  ([^javax.lang.model.element.Name this]
+  (^Integer [^javax.lang.model.element.Name this]
     (-> this (.hashCode))))
 
 (defn content-equals
@@ -48,6 +48,6 @@
   returns: true if this name represents the same sequence
    of char values as the specified sequence, false
    otherwise - `boolean`"
-  ([^javax.lang.model.element.Name this ^java.lang.CharSequence cs]
+  (^Boolean [^javax.lang.model.element.Name this ^java.lang.CharSequence cs]
     (-> this (.contentEquals cs))))
 

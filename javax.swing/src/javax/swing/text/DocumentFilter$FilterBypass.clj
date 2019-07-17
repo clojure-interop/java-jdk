@@ -16,7 +16,7 @@
   "Returns the Document the mutation is occurring on.
 
   returns: Document that remove/insertString will operate on - `javax.swing.text.Document`"
-  ([^javax.swing.text.DocumentFilter$FilterBypass this]
+  (^javax.swing.text.Document [^javax.swing.text.DocumentFilter$FilterBypass this]
     (-> this (.getDocument))))
 
 (defn remove

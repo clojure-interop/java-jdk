@@ -58,7 +58,7 @@
             already contain the specified element. - `boolean`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if the specified element is null."
-  ([^javax.print.attribute.standard.JobStateReasons this ^javax.print.attribute.standard.JobStateReason o]
+  (^Boolean [^javax.print.attribute.standard.JobStateReasons this ^javax.print.attribute.standard.JobStateReason o]
     (-> this (.add o))))
 
 (defn get-category
@@ -80,6 +80,6 @@
    name is `job-state-reasons`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.JobStateReasons this]
+  (^java.lang.String [^javax.print.attribute.standard.JobStateReasons this]
     (-> this (.getName))))
 

@@ -39,14 +39,14 @@
    that object's class name is used. Otherwise, null is returned.
 
   returns: A possibly null string containing class name of object bound. - `java.lang.String`"
-  ([^javax.naming.Binding this]
+  (^java.lang.String [^javax.naming.Binding this]
     (-> this (.getClassName))))
 
 (defn get-object
   "Retrieves the object bound to the name of this binding.
 
   returns: The object bound; null if this binding does not contain an object. - `java.lang.Object`"
-  ([^javax.naming.Binding this]
+  (^java.lang.Object [^javax.naming.Binding this]
     (-> this (.getObject))))
 
 (defn set-object
@@ -65,6 +65,6 @@
    for debugging and is not meant to be interpreted programmatically.
 
   returns: The non-null string representation of this binding. - `java.lang.String`"
-  ([^javax.naming.Binding this]
+  (^java.lang.String [^javax.naming.Binding this]
     (-> this (.toString))))
 

@@ -35,7 +35,7 @@
 
 (defn get-draws-layered-highlights?
   "returns: `boolean`"
-  ([^javax.swing.text.DefaultHighlighter this]
+  (^Boolean [^javax.swing.text.DefaultHighlighter this]
     (-> this (.getDrawsLayeredHighlights))))
 
 (defn add-highlight
@@ -50,7 +50,7 @@
      to refer to the highlight - `java.lang.Object`
 
   throws: javax.swing.text.BadLocationException - if the specified location is invalid"
-  ([^javax.swing.text.DefaultHighlighter this ^Integer p-0 ^Integer p-1 ^javax.swing.text.Highlighter.HighlightPainter p]
+  (^java.lang.Object [^javax.swing.text.DefaultHighlighter this ^Integer p-0 ^Integer p-1 ^javax.swing.text.Highlighter.HighlightPainter p]
     (-> this (.addHighlight p-0 p-1 p))))
 
 (defn remove-highlight

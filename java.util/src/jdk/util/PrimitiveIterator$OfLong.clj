@@ -9,7 +9,7 @@
   returns: the next long element in the iteration - `long`
 
   throws: java.util.NoSuchElementException - if the iteration has no more elements"
-  ([^java.util.PrimitiveIterator$OfLong this]
+  (^Long [^java.util.PrimitiveIterator$OfLong this]
     (-> this (.nextLong))))
 
 (defn for-each-remaining

@@ -32,7 +32,7 @@
    obtaining this information.
 
   returns: the thrown target exception (cause of this exception). - `java.lang.Throwable`"
-  ([^java.lang.reflect.InvocationTargetException this]
+  (^java.lang.Throwable [^java.lang.reflect.InvocationTargetException this]
     (-> this (.getTargetException))))
 
 (defn get-cause
@@ -40,6 +40,6 @@
    which may be null).
 
   returns: the cause of this exception. - `java.lang.Throwable`"
-  ([^java.lang.reflect.InvocationTargetException this]
+  (^java.lang.Throwable [^java.lang.reflect.InvocationTargetException this]
     (-> this (.getCause))))
 

@@ -369,7 +369,7 @@
             fields - `java.io.ObjectOutputStream.PutField`
 
   throws: java.io.IOException - if I/O errors occur"
-  ([^java.io.ObjectOutputStream this]
+  (^java.io.ObjectOutputStream.PutField [^java.io.ObjectOutputStream this]
     (-> this (.putFields))))
 
 (defn default-write-object

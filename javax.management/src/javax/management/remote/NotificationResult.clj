@@ -34,7 +34,7 @@
   targeted-notifications - the notifications resulting from the query, and the listeners they correspond to. This array can be empty. - `javax.management.remote.TargetedNotification[]`
 
   throws: java.lang.IllegalArgumentException - if targetedNotifications is null or if earliestSequenceNumber or nextSequenceNumber is negative."
-  ([^Long earliest-sequence-number ^Long next-sequence-number ^javax.management.remote.TargetedNotification[] targeted-notifications]
+  ([^Long earliest-sequence-number ^Long next-sequence-number targeted-notifications]
     (new NotificationResult earliest-sequence-number next-sequence-number targeted-notifications)))
 
 (defn get-earliest-sequence-number
@@ -43,7 +43,7 @@
 
   returns: the sequence number of the earliest notification still
    in the buffer. - `long`"
-  ([^javax.management.remote.NotificationResult this]
+  (^Long [^javax.management.remote.NotificationResult this]
     (-> this (.getEarliestSequenceNumber))))
 
 (defn get-next-sequence-number
@@ -52,7 +52,7 @@
 
   returns: the sequence number of the next notification available
    for querying. - `long`"
-  ([^javax.management.remote.NotificationResult this]
+  (^Long [^javax.management.remote.NotificationResult this]
     (-> this (.getNextSequenceNumber))))
 
 (defn get-targeted-notifications
@@ -70,6 +70,6 @@
    for a person to read.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^javax.management.remote.NotificationResult this]
+  (^java.lang.String [^javax.management.remote.NotificationResult this]
     (-> this (.toString))))
 

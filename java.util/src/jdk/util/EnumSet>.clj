@@ -142,6 +142,6 @@
   "Returns a copy of this set.
 
   returns: a copy of this set - `java.util.EnumSet<EnumSet.E>`"
-  ([^java.util.EnumSet> this]
+  (^java.util.EnumSet [^java.util.EnumSet> this]
     (-> this (.clone))))
 

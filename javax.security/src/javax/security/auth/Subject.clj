@@ -101,7 +101,7 @@
             with the provided AccessControlContext. - `javax.security.auth.Subject`
 
   throws: java.lang.SecurityException - if the caller does not have permission to get the Subject."
-  ([^java.security.AccessControlContext acc]
+  (^javax.security.auth.Subject [^java.security.AccessControlContext acc]
     (Subject/getSubject acc)))
 
 (defn *do-as
@@ -173,7 +173,7 @@
   "Query whether this Subject is read-only.
 
   returns: true if this Subject is read-only, false otherwise. - `boolean`"
-  ([^javax.security.auth.Subject this]
+  (^Boolean [^javax.security.auth.Subject this]
     (-> this (.isReadOnly))))
 
 (defn get-principals
@@ -195,7 +195,7 @@
   throws: java.lang.NullPointerException - if the specified Class is null."
   ([^javax.security.auth.Subject this ^java.lang.Class c]
     (-> this (.getPrincipals c)))
-  ([^javax.security.auth.Subject this]
+  (^java.util.Set [^javax.security.auth.Subject this]
     (-> this (.getPrincipals))))
 
 (defn get-public-credentials
@@ -217,7 +217,7 @@
   throws: java.lang.NullPointerException - if the specified Class is null."
   ([^javax.security.auth.Subject this ^java.lang.Class c]
     (-> this (.getPublicCredentials c)))
-  ([^javax.security.auth.Subject this]
+  (^java.util.Set [^javax.security.auth.Subject this]
     (-> this (.getPublicCredentials))))
 
 (defn get-private-credentials
@@ -243,7 +243,7 @@
   throws: java.lang.NullPointerException - if the specified Class is null."
   ([^javax.security.auth.Subject this ^java.lang.Class c]
     (-> this (.getPrivateCredentials c)))
-  ([^javax.security.auth.Subject this]
+  (^java.util.Set [^javax.security.auth.Subject this]
     (-> this (.getPrivateCredentials))))
 
 (defn equals
@@ -260,14 +260,14 @@
             Subject. - `boolean`
 
   throws: java.lang.SecurityException - if the caller does not have permission to access the private credentials for this Subject, or if the caller does not have permission to access the private credentials for the provided Subject."
-  ([^javax.security.auth.Subject this ^java.lang.Object o]
+  (^Boolean [^javax.security.auth.Subject this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn to-string
   "Return the String representation of this Subject.
 
   returns: the String representation of this Subject. - `java.lang.String`"
-  ([^javax.security.auth.Subject this]
+  (^java.lang.String [^javax.security.auth.Subject this]
     (-> this (.toString))))
 
 (defn hash-code
@@ -276,6 +276,6 @@
   returns: a hashcode for this Subject. - `int`
 
   throws: java.lang.SecurityException - if the caller does not have permission to access this Subject's private credentials."
-  ([^javax.security.auth.Subject this]
+  (^Integer [^javax.security.auth.Subject this]
     (-> this (.hashCode))))
 

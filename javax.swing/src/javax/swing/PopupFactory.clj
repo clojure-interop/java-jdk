@@ -38,7 +38,7 @@
    to obtain Popups.
 
   returns: Shared PopupFactory - `javax.swing.PopupFactory`"
-  ([]
+  (^javax.swing.PopupFactory []
     (PopupFactory/getSharedInstance )))
 
 (defn get-popup
@@ -61,6 +61,6 @@
   returns: Popup containing Contents - `javax.swing.Popup`
 
   throws: java.lang.IllegalArgumentException - if contents is null"
-  ([^javax.swing.PopupFactory this ^java.awt.Component owner ^java.awt.Component contents ^Integer x ^Integer y]
+  (^javax.swing.Popup [^javax.swing.PopupFactory this ^java.awt.Component owner ^java.awt.Component contents ^Integer x ^Integer y]
     (-> this (.getPopup owner contents x y))))
 

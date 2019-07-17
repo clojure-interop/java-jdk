@@ -142,7 +142,7 @@
   returns: the zone ID, not null - `java.time.ZoneId`
 
   throws: java.time.DateTimeException - if the converted zone ID has an invalid format"
-  ([]
+  (^java.time.ZoneId []
     (ZoneId/systemDefault )))
 
 (defn *get-available-zone-ids
@@ -156,7 +156,7 @@
    the set of IDs is fixed. Each call to this method is thread-safe.
 
   returns: a modifiable copy of the set of zone IDs, not null - `java.util.Set<java.lang.String>`"
-  ([]
+  (^java.util.Set []
     (ZoneId/getAvailableZoneIds )))
 
 (defn *of
@@ -175,9 +175,9 @@
   returns: the zone ID, not null - `java.time.ZoneId`
 
   throws: java.time.DateTimeException - if the zone ID has an invalid format"
-  ([^java.lang.String zone-id ^java.util.Map alias-map]
+  (^java.time.ZoneId [^java.lang.String zone-id ^java.util.Map alias-map]
     (ZoneId/of zone-id alias-map))
-  ([^java.lang.String zone-id]
+  (^java.time.ZoneId [^java.lang.String zone-id]
     (ZoneId/of zone-id)))
 
 (defn *of-offset
@@ -193,7 +193,7 @@
   returns: the zone ID, not null - `java.time.ZoneId`
 
   throws: java.lang.IllegalArgumentException - if the prefix is not one of `GMT`, `UTC`, or `UT`, or ``"
-  ([^java.lang.String prefix ^java.time.ZoneOffset offset]
+  (^java.time.ZoneId [^java.lang.String prefix ^java.time.ZoneOffset offset]
     (ZoneId/ofOffset prefix offset)))
 
 (defn *from
@@ -217,7 +217,7 @@
   returns: the zone ID, not null - `java.time.ZoneId`
 
   throws: java.time.DateTimeException - if unable to convert to a ZoneId"
-  ([^java.time.temporal.TemporalAccessor temporal]
+  (^java.time.ZoneId [^java.time.temporal.TemporalAccessor temporal]
     (ZoneId/from temporal)))
 
 (defn get-id
@@ -227,7 +227,7 @@
    The format of an offset based ID is defined by ZoneOffset.getId().
 
   returns: the time-zone unique ID, not null - `java.lang.String`"
-  ([^java.time.ZoneId this]
+  (^java.lang.String [^java.time.ZoneId this]
     (-> this (.getId))))
 
 (defn get-display-name
@@ -244,7 +244,7 @@
   locale - the locale to use, not null - `java.util.Locale`
 
   returns: the text value of the zone, not null - `java.lang.String`"
-  ([^java.time.ZoneId this ^java.time.format.TextStyle style ^java.util.Locale locale]
+  (^java.lang.String [^java.time.ZoneId this ^java.time.format.TextStyle style ^java.util.Locale locale]
     (-> this (.getDisplayName style locale))))
 
 (defn get-rules
@@ -267,7 +267,7 @@
   returns: the rules, not null - `java.time.zone.ZoneRules`
 
   throws: java.time.zone.ZoneRulesException - if no rules are available for this ID"
-  ([^java.time.ZoneId this]
+  (^java.time.zone.ZoneRules [^java.time.ZoneId this]
     (-> this (.getRules))))
 
 (defn normalized
@@ -282,7 +282,7 @@
    Otherwise this is returned.
 
   returns: the time-zone unique ID, not null - `java.time.ZoneId`"
-  ([^java.time.ZoneId this]
+  (^java.time.ZoneId [^java.time.ZoneId this]
     (-> this (.normalized))))
 
 (defn equals
@@ -293,20 +293,20 @@
   obj - the object to check, null returns false - `java.lang.Object`
 
   returns: true if this is equal to the other time-zone ID - `boolean`"
-  ([^java.time.ZoneId this ^java.lang.Object obj]
+  (^Boolean [^java.time.ZoneId this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "A hash code for this time-zone ID.
 
   returns: a suitable hash code - `int`"
-  ([^java.time.ZoneId this]
+  (^Integer [^java.time.ZoneId this]
     (-> this (.hashCode))))
 
 (defn to-string
   "Outputs this zone as a String, using the ID.
 
   returns: a string representation of this time-zone ID, not null - `java.lang.String`"
-  ([^java.time.ZoneId this]
+  (^java.lang.String [^java.time.ZoneId this]
     (-> this (.toString))))
 

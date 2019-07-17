@@ -78,14 +78,14 @@
   returns: false. - `boolean`
 
   throws: java.lang.IllegalStateException - if the compression mode is not MODE_EXPLICIT."
-  ([^javax.imageio.plugins.jpeg.JPEGImageWriteParam this]
+  (^Boolean [^javax.imageio.plugins.jpeg.JPEGImageWriteParam this]
     (-> this (.isCompressionLossless))))
 
 (defn are-tables-set
   "Returns true if tables are currently set.
 
   returns: true if tables are present. - `boolean`"
-  ([^javax.imageio.plugins.jpeg.JPEGImageWriteParam this]
+  (^Boolean [^javax.imageio.plugins.jpeg.JPEGImageWriteParam this]
     (-> this (.areTablesSet))))
 
 (defn set-optimize-huffman-tables
@@ -125,7 +125,7 @@
 
   returns: true if the writer will generate optimized
    Huffman tables. - `boolean`"
-  ([^javax.imageio.plugins.jpeg.JPEGImageWriteParam this]
+  (^Boolean [^javax.imageio.plugins.jpeg.JPEGImageWriteParam this]
     (-> this (.getOptimizeHuffmanTables))))
 
 (defn get-compression-quality-descriptions
@@ -171,7 +171,7 @@
   ac-huffman-tables - An array of Huffman table objects. - `javax.imageio.plugins.jpeg.JPEGHuffmanTable[]`
 
   throws: java.lang.IllegalArgumentException - if any of the arguments is null or has more than 4 elements, or if the numbers of DC and AC tables differ."
-  ([^javax.imageio.plugins.jpeg.JPEGImageWriteParam this ^javax.imageio.plugins.jpeg.JPEGQTable[] q-tables ^javax.imageio.plugins.jpeg.JPEGHuffmanTable[] dc-huffman-tables ^javax.imageio.plugins.jpeg.JPEGHuffmanTable[] ac-huffman-tables]
+  ([^javax.imageio.plugins.jpeg.JPEGImageWriteParam this q-tables dc-huffman-tables ac-huffman-tables]
     (-> this (.setEncodeTables q-tables dc-huffman-tables ac-huffman-tables))))
 
 (defn get-compression-quality-values

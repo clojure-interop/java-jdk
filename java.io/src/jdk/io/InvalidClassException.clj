@@ -35,6 +35,6 @@
 
   returns: the detail message string of this Throwable instance
             (which may be null). - `java.lang.String`"
-  ([^java.io.InvalidClassException this]
+  (^java.lang.String [^java.io.InvalidClassException this]
     (-> this (.getMessage))))
 

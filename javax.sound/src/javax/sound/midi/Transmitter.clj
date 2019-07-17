@@ -18,7 +18,7 @@
 
   returns: the current receiver.  If no receiver is currently set,
    returns null - `javax.sound.midi.Receiver`"
-  ([^javax.sound.midi.Transmitter this]
+  (^javax.sound.midi.Receiver [^javax.sound.midi.Transmitter this]
     (-> this (.getReceiver))))
 
 (defn close

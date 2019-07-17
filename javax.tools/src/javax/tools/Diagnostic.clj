@@ -17,7 +17,7 @@
    warning.
 
   returns: the kind of this diagnostic - `javax.tools.Diagnostic.Kind`"
-  ([^javax.tools.Diagnostic this]
+  (^javax.tools.Diagnostic.Kind [^javax.tools.Diagnostic this]
     (-> this (.getKind))))
 
 (defn get-code
@@ -25,7 +25,7 @@
    code is implementation-dependent and might be null.
 
   returns: a diagnostic code - `java.lang.String`"
-  ([^javax.tools.Diagnostic this]
+  (^java.lang.String [^javax.tools.Diagnostic this]
     (-> this (.getCode))))
 
 (defn get-position
@@ -38,7 +38,7 @@
 
   returns: character offset from beginning of source; NOPOS if getSource() would return null or if
    no location is suitable - `long`"
-  ([^javax.tools.Diagnostic this]
+  (^Long [^javax.tools.Diagnostic this]
     (-> this (.getPosition))))
 
 (defn get-column-number
@@ -46,7 +46,7 @@
    getPosition().
 
   returns: a column number or NOPOS if and only if getPosition() returns NOPOS - `long`"
-  ([^javax.tools.Diagnostic this]
+  (^Long [^javax.tools.Diagnostic this]
     (-> this (.getColumnNumber))))
 
 (defn get-source
@@ -55,7 +55,7 @@
   returns: the source object associated with this diagnostic.
    null if no source object is associated with the
    diagnostic. - `Diagnostic.S`"
-  ([^javax.tools.Diagnostic this]
+  (^Diagnostic.S [^javax.tools.Diagnostic this]
     (-> this (.getSource))))
 
 (defn get-start-position
@@ -65,7 +65,7 @@
 
   returns: offset from beginning of file; NOPOS if and
    only if getPosition() returns NOPOS - `long`"
-  ([^javax.tools.Diagnostic this]
+  (^Long [^javax.tools.Diagnostic this]
     (-> this (.getStartPosition))))
 
 (defn get-message
@@ -75,7 +75,7 @@
   locale - a locale; might be null - `java.util.Locale`
 
   returns: a localized message - `java.lang.String`"
-  ([^javax.tools.Diagnostic this ^java.util.Locale locale]
+  (^java.lang.String [^javax.tools.Diagnostic this ^java.util.Locale locale]
     (-> this (.getMessage locale))))
 
 (defn get-end-position
@@ -85,7 +85,7 @@
 
   returns: offset from beginning of file; NOPOS if and
    only if getPosition() returns NOPOS - `long`"
-  ([^javax.tools.Diagnostic this]
+  (^Long [^javax.tools.Diagnostic this]
     (-> this (.getEndPosition))))
 
 (defn get-line-number
@@ -93,6 +93,6 @@
    getPosition().
 
   returns: a line number or NOPOS if and only if getPosition() returns NOPOS - `long`"
-  ([^javax.tools.Diagnostic this]
+  (^Long [^javax.tools.Diagnostic this]
     (-> this (.getLineNumber))))
 

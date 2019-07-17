@@ -42,6 +42,6 @@
   "Returns the node.
 
   returns: the node (never null) - `org.w3c.dom.Node`"
-  ([^javax.xml.crypto.dsig.dom.DOMValidateContext this]
+  (^org.w3c.dom.Node [^javax.xml.crypto.dsig.dom.DOMValidateContext this]
     (-> this (.getNode))))
 

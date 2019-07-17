@@ -43,7 +43,7 @@
    obtaining this information.
 
   returns: the Exception that was raised while loading a class - `java.lang.Throwable`"
-  ([^java.lang.ClassNotFoundException this]
+  (^java.lang.Throwable [^java.lang.ClassNotFoundException this]
     (-> this (.getException))))
 
 (defn get-cause
@@ -52,6 +52,6 @@
    null).
 
   returns: the cause of this exception. - `java.lang.Throwable`"
-  ([^java.lang.ClassNotFoundException this]
+  (^java.lang.Throwable [^java.lang.ClassNotFoundException this]
     (-> this (.getCause))))
 

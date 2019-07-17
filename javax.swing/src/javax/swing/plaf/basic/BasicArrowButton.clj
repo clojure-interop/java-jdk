@@ -33,7 +33,7 @@
   "Returns the direction of the arrow.
 
   returns: `int`"
-  ([^javax.swing.plaf.basic.BasicArrowButton this]
+  (^Integer [^javax.swing.plaf.basic.BasicArrowButton this]
     (-> this (.getDirection))))
 
 (defn set-direction
@@ -54,21 +54,21 @@
   "Returns the preferred size of the BasicArrowButton.
 
   returns: the preferred size - `java.awt.Dimension`"
-  ([^javax.swing.plaf.basic.BasicArrowButton this]
+  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicArrowButton this]
     (-> this (.getPreferredSize))))
 
 (defn get-minimum-size
   "Returns the minimum size of the BasicArrowButton.
 
   returns: the minimum size - `java.awt.Dimension`"
-  ([^javax.swing.plaf.basic.BasicArrowButton this]
+  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicArrowButton this]
     (-> this (.getMinimumSize))))
 
 (defn get-maximum-size
   "Returns the maximum size of the BasicArrowButton.
 
   returns: the maximum size - `java.awt.Dimension`"
-  ([^javax.swing.plaf.basic.BasicArrowButton this]
+  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicArrowButton this]
     (-> this (.getMaximumSize))))
 
 (defn focus-traversable?
@@ -79,7 +79,7 @@
    focus, this method is overriden to return false.
 
   returns: false - `boolean`"
-  ([^javax.swing.plaf.basic.BasicArrowButton this]
+  (^Boolean [^javax.swing.plaf.basic.BasicArrowButton this]
     (-> this (.isFocusTraversable))))
 
 (defn paint-triangle

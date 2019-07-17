@@ -296,7 +296,7 @@
   returns: the comment string for the zip file, or null if none - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if the zip file has been closed Since 1.7"
-  ([^java.util.zip.ZipFile this]
+  (^java.lang.String [^java.util.zip.ZipFile this]
     (-> this (.getComment))))
 
 (defn get-entry
@@ -308,7 +308,7 @@
   returns: the zip file entry, or null if not found - `java.util.zip.ZipEntry`
 
   throws: java.lang.IllegalStateException - if the zip file has been closed"
-  ([^java.util.zip.ZipFile this ^java.lang.String name]
+  (^java.util.zip.ZipEntry [^java.util.zip.ZipFile this ^java.lang.String name]
     (-> this (.getEntry name))))
 
 (defn get-input-stream
@@ -324,14 +324,14 @@
    zip file entry. - `java.io.InputStream`
 
   throws: java.util.zip.ZipException - if a ZIP format error has occurred"
-  ([^java.util.zip.ZipFile this ^java.util.zip.ZipEntry entry]
+  (^java.io.InputStream [^java.util.zip.ZipFile this ^java.util.zip.ZipEntry entry]
     (-> this (.getInputStream entry))))
 
 (defn get-name
   "Returns the path name of the ZIP file.
 
   returns: the path name of the ZIP file - `java.lang.String`"
-  ([^java.util.zip.ZipFile this]
+  (^java.lang.String [^java.util.zip.ZipFile this]
     (-> this (.getName))))
 
 (defn entries
@@ -360,7 +360,7 @@
   returns: the number of entries in the ZIP file - `int`
 
   throws: java.lang.IllegalStateException - if the zip file has been closed"
-  ([^java.util.zip.ZipFile this]
+  (^Integer [^java.util.zip.ZipFile this]
     (-> this (.size))))
 
 (defn close

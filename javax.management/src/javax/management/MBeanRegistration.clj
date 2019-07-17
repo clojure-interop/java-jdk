@@ -23,7 +23,7 @@
    the returned value. - `javax.management.ObjectName`
 
   throws: java.lang.Exception - This exception will be caught by the MBean Server and re-thrown as an MBeanRegistrationException."
-  ([^javax.management.MBeanRegistration this ^javax.management.MBeanServer server ^javax.management.ObjectName name]
+  (^javax.management.ObjectName [^javax.management.MBeanRegistration this ^javax.management.MBeanServer server ^javax.management.ObjectName name]
     (-> this (.preRegister server name))))
 
 (defn post-register

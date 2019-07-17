@@ -15,7 +15,7 @@
   "Returns the pool hosting this thread.
 
   returns: the pool - `java.util.concurrent.ForkJoinPool`"
-  ([^java.util.concurrent.ForkJoinWorkerThread this]
+  (^java.util.concurrent.ForkJoinPool [^java.util.concurrent.ForkJoinWorkerThread this]
     (-> this (.getPool))))
 
 (defn get-pool-index
@@ -27,7 +27,7 @@
    per-worker-thread rather than per-task.
 
   returns: the index number - `int`"
-  ([^java.util.concurrent.ForkJoinWorkerThread this]
+  (^Integer [^java.util.concurrent.ForkJoinWorkerThread this]
     (-> this (.getPoolIndex))))
 
 (defn run

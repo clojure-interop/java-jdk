@@ -248,7 +248,7 @@
   arg - the release argument. This value is conveyed to tryRelease(int) but is otherwise uninterpreted and can represent anything you like. - `int`
 
   returns: the value returned from tryRelease(int) - `boolean`"
-  ([^java.util.concurrent.locks.AbstractQueuedSynchronizer this ^Integer arg]
+  (^Boolean [^java.util.concurrent.locks.AbstractQueuedSynchronizer this ^Integer arg]
     (-> this (.release arg))))
 
 (defn queued?
@@ -262,7 +262,7 @@
   returns: true if the given thread is on the queue - `boolean`
 
   throws: java.lang.NullPointerException - if the thread is null"
-  ([^java.util.concurrent.locks.AbstractQueuedSynchronizer this ^java.lang.Thread thread]
+  (^Boolean [^java.util.concurrent.locks.AbstractQueuedSynchronizer this ^java.lang.Thread thread]
     (-> this (.isQueued thread))))
 
 (defn get-queue-length
@@ -274,7 +274,7 @@
    control.
 
   returns: the estimated number of threads waiting to acquire - `int`"
-  ([^java.util.concurrent.locks.AbstractQueuedSynchronizer this]
+  (^Integer [^java.util.concurrent.locks.AbstractQueuedSynchronizer this]
     (-> this (.getQueueLength))))
 
 (defn acquire-shared
@@ -297,7 +297,7 @@
 
   returns: the first (longest-waiting) thread in the queue, or
            null if no threads are currently queued - `java.lang.Thread`"
-  ([^java.util.concurrent.locks.AbstractQueuedSynchronizer this]
+  (^java.lang.Thread [^java.util.concurrent.locks.AbstractQueuedSynchronizer this]
     (-> this (.getFirstQueuedThread))))
 
 (defn has-waiters?
@@ -313,7 +313,7 @@
   returns: true if there are any waiting threads - `boolean`
 
   throws: java.lang.IllegalMonitorStateException - if exclusive synchronization is not held"
-  ([^java.util.concurrent.locks.AbstractQueuedSynchronizer this ^java.util.concurrent.locks.AbstractQueuedSynchronizer.ConditionObject condition]
+  (^Boolean [^java.util.concurrent.locks.AbstractQueuedSynchronizer this ^java.util.concurrent.locks.AbstractQueuedSynchronizer.ConditionObject condition]
     (-> this (.hasWaiters condition))))
 
 (defn to-string
@@ -324,7 +324,7 @@
    queue is empty.
 
   returns: a string identifying this synchronizer, as well as its state - `java.lang.String`"
-  ([^java.util.concurrent.locks.AbstractQueuedSynchronizer this]
+  (^java.lang.String [^java.util.concurrent.locks.AbstractQueuedSynchronizer this]
     (-> this (.toString))))
 
 (defn acquire-interruptibly
@@ -357,7 +357,7 @@
   returns: true if acquired; false if timed out - `boolean`
 
   throws: java.lang.InterruptedException - if the current thread is interrupted"
-  ([^java.util.concurrent.locks.AbstractQueuedSynchronizer this ^Integer arg ^Long nanos-timeout]
+  (^Boolean [^java.util.concurrent.locks.AbstractQueuedSynchronizer this ^Integer arg ^Long nanos-timeout]
     (-> this (.tryAcquireNanos arg nanos-timeout))))
 
 (defn get-shared-queued-threads
@@ -367,7 +367,7 @@
    those threads waiting due to a shared acquire.
 
   returns: the collection of threads - `java.util.Collection<java.lang.Thread>`"
-  ([^java.util.concurrent.locks.AbstractQueuedSynchronizer this]
+  (^java.util.Collection [^java.util.concurrent.locks.AbstractQueuedSynchronizer this]
     (-> this (.getSharedQueuedThreads))))
 
 (defn release-shared
@@ -377,7 +377,7 @@
   arg - the release argument. This value is conveyed to tryReleaseShared(int) but is otherwise uninterpreted and can represent anything you like. - `int`
 
   returns: the value returned from tryReleaseShared(int) - `boolean`"
-  ([^java.util.concurrent.locks.AbstractQueuedSynchronizer this ^Integer arg]
+  (^Boolean [^java.util.concurrent.locks.AbstractQueuedSynchronizer this ^Integer arg]
     (-> this (.releaseShared arg))))
 
 (defn get-queued-threads
@@ -390,7 +390,7 @@
    more extensive monitoring facilities.
 
   returns: the collection of threads - `java.util.Collection<java.lang.Thread>`"
-  ([^java.util.concurrent.locks.AbstractQueuedSynchronizer this]
+  (^java.util.Collection [^java.util.concurrent.locks.AbstractQueuedSynchronizer this]
     (-> this (.getQueuedThreads))))
 
 (defn acquire-shared-interruptibly
@@ -414,7 +414,7 @@
    those threads waiting due to an exclusive acquire.
 
   returns: the collection of threads - `java.util.Collection<java.lang.Thread>`"
-  ([^java.util.concurrent.locks.AbstractQueuedSynchronizer this]
+  (^java.util.Collection [^java.util.concurrent.locks.AbstractQueuedSynchronizer this]
     (-> this (.getExclusiveQueuedThreads))))
 
 (defn has-queued-threads?
@@ -427,7 +427,7 @@
    constant time.
 
   returns: true if there may be other threads waiting to acquire - `boolean`"
-  ([^java.util.concurrent.locks.AbstractQueuedSynchronizer this]
+  (^Boolean [^java.util.concurrent.locks.AbstractQueuedSynchronizer this]
     (-> this (.hasQueuedThreads))))
 
 (defn get-waiting-threads
@@ -443,7 +443,7 @@
   returns: the collection of threads - `java.util.Collection<java.lang.Thread>`
 
   throws: java.lang.IllegalMonitorStateException - if exclusive synchronization is not held"
-  ([^java.util.concurrent.locks.AbstractQueuedSynchronizer this ^java.util.concurrent.locks.AbstractQueuedSynchronizer.ConditionObject condition]
+  (^java.util.Collection [^java.util.concurrent.locks.AbstractQueuedSynchronizer this ^java.util.concurrent.locks.AbstractQueuedSynchronizer.ConditionObject condition]
     (-> this (.getWaitingThreads condition))))
 
 (defn try-acquire-shared-nanos
@@ -460,7 +460,7 @@
   returns: true if acquired; false if timed out - `boolean`
 
   throws: java.lang.InterruptedException - if the current thread is interrupted"
-  ([^java.util.concurrent.locks.AbstractQueuedSynchronizer this ^Integer arg ^Long nanos-timeout]
+  (^Boolean [^java.util.concurrent.locks.AbstractQueuedSynchronizer this ^Integer arg ^Long nanos-timeout]
     (-> this (.tryAcquireSharedNanos arg nanos-timeout))))
 
 (defn get-wait-queue-length
@@ -476,7 +476,7 @@
   returns: the estimated number of waiting threads - `int`
 
   throws: java.lang.IllegalMonitorStateException - if exclusive synchronization is not held"
-  ([^java.util.concurrent.locks.AbstractQueuedSynchronizer this ^java.util.concurrent.locks.AbstractQueuedSynchronizer.ConditionObject condition]
+  (^Integer [^java.util.concurrent.locks.AbstractQueuedSynchronizer this ^java.util.concurrent.locks.AbstractQueuedSynchronizer.ConditionObject condition]
     (-> this (.getWaitQueueLength condition))))
 
 (defn has-queued-predecessors?
@@ -521,7 +521,7 @@
   returns: true if there is a queued thread preceding the
            current thread, and false if the current thread
            is at the head of the queue or the queue is empty - `boolean`"
-  ([^java.util.concurrent.locks.AbstractQueuedSynchronizer this]
+  (^Boolean [^java.util.concurrent.locks.AbstractQueuedSynchronizer this]
     (-> this (.hasQueuedPredecessors))))
 
 (defn owns
@@ -533,7 +533,7 @@
   returns: true if owned - `boolean`
 
   throws: java.lang.NullPointerException - if the condition is null"
-  ([^java.util.concurrent.locks.AbstractQueuedSynchronizer this ^java.util.concurrent.locks.AbstractQueuedSynchronizer.ConditionObject condition]
+  (^Boolean [^java.util.concurrent.locks.AbstractQueuedSynchronizer this ^java.util.concurrent.locks.AbstractQueuedSynchronizer.ConditionObject condition]
     (-> this (.owns condition))))
 
 (defn acquire
@@ -555,6 +555,6 @@
    constant time.
 
   returns: true if there has ever been contention - `boolean`"
-  ([^java.util.concurrent.locks.AbstractQueuedSynchronizer this]
+  (^Boolean [^java.util.concurrent.locks.AbstractQueuedSynchronizer this]
     (-> this (.hasContended))))
 

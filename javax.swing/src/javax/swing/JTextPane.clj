@@ -75,7 +75,7 @@
    current location of the caret, or null.
 
   returns: the attributes, or null - `javax.swing.text.AttributeSet`"
-  ([^javax.swing.JTextPane this]
+  (^javax.swing.text.AttributeSet [^javax.swing.JTextPane this]
     (-> this (.getCharacterAttributes))))
 
 (defn insert-component
@@ -120,7 +120,7 @@
   "Returns the class ID for the UI.
 
   returns: the string `TextPaneUI` - `java.lang.String`"
-  ([^javax.swing.JTextPane this]
+  (^java.lang.String [^javax.swing.JTextPane this]
     (-> this (.getUIClassID))))
 
 (defn get-logical-style
@@ -128,7 +128,7 @@
    by the current position of the caret, or null.
 
   returns: the Style - `javax.swing.text.Style`"
-  ([^javax.swing.JTextPane this]
+  (^javax.swing.text.Style [^javax.swing.JTextPane this]
     (-> this (.getLogicalStyle))))
 
 (defn get-paragraph-attributes
@@ -136,7 +136,7 @@
    at the location of the caret, or null if none.
 
   returns: the attributes - `javax.swing.text.AttributeSet`"
-  ([^javax.swing.JTextPane this]
+  (^javax.swing.text.AttributeSet [^javax.swing.JTextPane this]
     (-> this (.getParagraphAttributes))))
 
 (defn set-styled-document
@@ -182,14 +182,14 @@
   parent - the parent style. This may be null if unspecified attributes need not be resolved in some other style. - `javax.swing.text.Style`
 
   returns: the new Style - `javax.swing.text.Style`"
-  ([^javax.swing.JTextPane this ^java.lang.String nm ^javax.swing.text.Style parent]
+  (^javax.swing.text.Style [^javax.swing.JTextPane this ^java.lang.String nm ^javax.swing.text.Style parent]
     (-> this (.addStyle nm parent))))
 
 (defn get-input-attributes
   "Gets the input attributes for the pane.
 
   returns: the attributes - `javax.swing.text.MutableAttributeSet`"
-  ([^javax.swing.JTextPane this]
+  (^javax.swing.text.MutableAttributeSet [^javax.swing.JTextPane this]
     (-> this (.getInputAttributes))))
 
 (defn insert-icon
@@ -208,7 +208,7 @@
   "Fetches the model associated with the editor.
 
   returns: the model - `javax.swing.text.StyledDocument`"
-  ([^javax.swing.JTextPane this]
+  (^javax.swing.text.StyledDocument [^javax.swing.JTextPane this]
     (-> this (.getStyledDocument))))
 
 (defn replace-selection
@@ -238,6 +238,6 @@
   nm - the name of the style - `java.lang.String`
 
   returns: the Style - `javax.swing.text.Style`"
-  ([^javax.swing.JTextPane this ^java.lang.String nm]
+  (^javax.swing.text.Style [^javax.swing.JTextPane this ^java.lang.String nm]
     (-> this (.getStyle nm))))
 

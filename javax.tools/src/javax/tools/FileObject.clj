@@ -18,7 +18,7 @@
   returns: a Writer - `java.io.Writer`
 
   throws: java.lang.IllegalStateException - if this file object was opened for reading and does not support writing"
-  ([^javax.tools.FileObject this]
+  (^java.io.Writer [^javax.tools.FileObject this]
     (-> this (.openWriter))))
 
 (defn delete
@@ -26,7 +26,7 @@
 
   returns: true if and only if this file object is successfully
    deleted; false otherwise - `boolean`"
-  ([^javax.tools.FileObject this]
+  (^Boolean [^javax.tools.FileObject this]
     (-> this (.delete))))
 
 (defn open-input-stream
@@ -35,7 +35,7 @@
   returns: an InputStream - `java.io.InputStream`
 
   throws: java.lang.IllegalStateException - if this file object was opened for writing and does not support reading"
-  ([^javax.tools.FileObject this]
+  (^java.io.InputStream [^javax.tools.FileObject this]
     (-> this (.openInputStream))))
 
 (defn open-output-stream
@@ -44,7 +44,7 @@
   returns: an OutputStream - `java.io.OutputStream`
 
   throws: java.lang.IllegalStateException - if this file object was opened for reading and does not support writing"
-  ([^javax.tools.FileObject this]
+  (^java.io.OutputStream [^javax.tools.FileObject this]
     (-> this (.openOutputStream))))
 
 (defn get-last-modified
@@ -55,14 +55,14 @@
   returns: the time this file object was last modified; or 0 if
    the file object does not exist, if an I/O error occurred, or if
    the operation is not supported - `long`"
-  ([^javax.tools.FileObject this]
+  (^Long [^javax.tools.FileObject this]
     (-> this (.getLastModified))))
 
 (defn to-uri
   "Returns a URI identifying this file object.
 
   returns: a URI - `java.net.URI`"
-  ([^javax.tools.FileObject this]
+  (^java.net.URI [^javax.tools.FileObject this]
     (-> this (.toUri))))
 
 (defn get-name
@@ -74,7 +74,7 @@
    method might return file:///C:/Documents%20and%20Settings/UncleBob/BobsApp/Test.java.
 
   returns: a user-friendly name - `java.lang.String`"
-  ([^javax.tools.FileObject this]
+  (^java.lang.String [^javax.tools.FileObject this]
     (-> this (.getName))))
 
 (defn open-reader
@@ -88,7 +88,7 @@
   returns: a Reader - `java.io.Reader`
 
   throws: java.lang.IllegalStateException - if this file object was opened for writing and does not support reading"
-  ([^javax.tools.FileObject this ^Boolean ignore-encoding-errors]
+  (^java.io.Reader [^javax.tools.FileObject this ^Boolean ignore-encoding-errors]
     (-> this (.openReader ignore-encoding-errors))))
 
 (defn get-char-content
@@ -102,6 +102,6 @@
   returns: a CharSequence if available; null otherwise - `java.lang.CharSequence`
 
   throws: java.lang.IllegalStateException - if this file object was opened for writing and does not support reading"
-  ([^javax.tools.FileObject this ^Boolean ignore-encoding-errors]
+  (^java.lang.CharSequence [^javax.tools.FileObject this ^Boolean ignore-encoding-errors]
     (-> this (.getCharContent ignore-encoding-errors))))
 

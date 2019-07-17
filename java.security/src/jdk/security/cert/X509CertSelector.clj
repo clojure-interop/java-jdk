@@ -100,7 +100,7 @@
 
   returns: the certificate serial number to match
                   (or null) - `java.math.BigInteger`"
-  ([^java.security.cert.X509CertSelector this]
+  (^java.math.BigInteger [^java.security.cert.X509CertSelector this]
     (-> this (.getSerialNumber))))
 
 (defn get-subject-alternative-names
@@ -131,7 +131,7 @@
    protect against subsequent modifications.
 
   returns: a Collection of names (or null) - `java.util.Collection<java.util.List<?>>`"
-  ([^java.security.cert.X509CertSelector this]
+  (^java.util.Collection> [^java.security.cert.X509CertSelector this]
     (-> this (.getSubjectAlternativeNames))))
 
 (defn get-issuer
@@ -142,7 +142,7 @@
 
   returns: the required issuer distinguished name as X500Principal
            (or null) - `javax.security.auth.x500.X500Principal`"
-  ([^java.security.cert.X509CertSelector this]
+  (^javax.security.auth.x500.X500Principal [^java.security.cert.X509CertSelector this]
     (-> this (.getIssuer))))
 
 (defn get-subject
@@ -153,7 +153,7 @@
 
   returns: the required subject distinguished name as X500Principal
            (or null) - `javax.security.auth.x500.X500Principal`"
-  ([^java.security.cert.X509CertSelector this]
+  (^javax.security.auth.x500.X500Principal [^java.security.cert.X509CertSelector this]
     (-> this (.getSubject))))
 
 (defn set-private-key-valid
@@ -186,7 +186,7 @@
 
   returns: the required issuer distinguished name in RFC 2253 format
            (or null) - `java.lang.String`"
-  ([^java.security.cert.X509CertSelector this]
+  (^java.lang.String [^java.security.cert.X509CertSelector this]
     (-> this (.getIssuerAsString))))
 
 (defn get-match-all-subject-alt-names?
@@ -201,7 +201,7 @@
   returns: true if the flag is enabled;
    false if the flag is disabled. The flag is
    true by default. - `boolean`"
-  ([^java.security.cert.X509CertSelector this]
+  (^Boolean [^java.security.cert.X509CertSelector this]
     (-> this (.getMatchAllSubjectAltNames))))
 
 (defn set-policy
@@ -298,7 +298,7 @@
    subsequent modifications.
 
   returns: the Date to check (or null) - `java.util.Date`"
-  ([^java.security.cert.X509CertSelector this]
+  (^java.util.Date [^java.security.cert.X509CertSelector this]
     (-> this (.getCertificateValid))))
 
 (defn set-certificate-valid
@@ -354,7 +354,7 @@
    the value is -1, no basicConstraints check is done.
 
   returns: the value for the basic constraints constraint - `int`"
-  ([^java.security.cert.X509CertSelector this]
+  (^Integer [^java.security.cert.X509CertSelector this]
     (-> this (.getBasicConstraints))))
 
 (defn to-string
@@ -362,7 +362,7 @@
 
   returns: a String describing the contents of the
            CertSelector - `java.lang.String`"
-  ([^java.security.cert.X509CertSelector this]
+  (^java.lang.String [^java.security.cert.X509CertSelector this]
     (-> this (.toString))))
 
 (defn set-serial-number
@@ -431,7 +431,7 @@
    public key. If null, no subjectPublicKey check will be done.
 
   returns: the subject public key to check for (or null) - `java.security.PublicKey`"
-  ([^java.security.cert.X509CertSelector this]
+  (^java.security.PublicKey [^java.security.cert.X509CertSelector this]
     (-> this (.getSubjectPublicKey))))
 
 (defn get-subject-key-identifier
@@ -474,7 +474,7 @@
    protect against subsequent modifications.
 
   returns: a Collection of names (or null) - `java.util.Collection<java.util.List<?>>`"
-  ([^java.security.cert.X509CertSelector this]
+  (^java.util.Collection> [^java.security.cert.X509CertSelector this]
     (-> this (.getPathToNames))))
 
 (defn get-authority-key-identifier
@@ -507,7 +507,7 @@
 
   returns: the required subject distinguished name in RFC 2253 format
            (or null) - `java.lang.String`"
-  ([^java.security.cert.X509CertSelector this]
+  (^java.lang.String [^java.security.cert.X509CertSelector this]
     (-> this (.getSubjectAsString))))
 
 (defn get-private-key-valid
@@ -520,7 +520,7 @@
    subsequent modifications.
 
   returns: the Date to check (or null) - `java.util.Date`"
-  ([^java.security.cert.X509CertSelector this]
+  (^java.util.Date [^java.security.cert.X509CertSelector this]
     (-> this (.getPrivateKeyValid))))
 
 (defn get-subject-as-bytes
@@ -603,7 +603,7 @@
 
   returns: an immutable Set of certificate policy OIDs in
            string format (or null) - `java.util.Set<java.lang.String>`"
-  ([^java.security.cert.X509CertSelector this]
+  (^java.util.Set [^java.security.cert.X509CertSelector this]
     (-> this (.getPolicy))))
 
 (defn set-subject-public-key
@@ -675,7 +675,7 @@
 
   returns: true if the Certificate should be
            selected, false otherwise - `boolean`"
-  ([^java.security.cert.X509CertSelector this ^java.security.cert.Certificate cert]
+  (^Boolean [^java.security.cert.X509CertSelector this ^java.security.cert.Certificate cert]
     (-> this (.match cert))))
 
 (defn set-subject
@@ -726,7 +726,7 @@
   "Returns a copy of this object.
 
   returns: the copy - `java.lang.Object`"
-  ([^java.security.cert.X509CertSelector this]
+  (^java.lang.Object [^java.security.cert.X509CertSelector this]
     (-> this (.clone))))
 
 (defn set-basic-constraints
@@ -757,7 +757,7 @@
 
   returns: an immutable Set of key purpose OIDs in string
    format (or null) - `java.util.Set<java.lang.String>`"
-  ([^java.security.cert.X509CertSelector this]
+  (^java.util.Set [^java.security.cert.X509CertSelector this]
     (-> this (.getExtendedKeyUsage))))
 
 (defn set-subject-alternative-names
@@ -813,7 +813,7 @@
    If null, this check is not applied.
 
   returns: the X509Certificate to match (or null) - `java.security.cert.X509Certificate`"
-  ([^java.security.cert.X509CertSelector this]
+  (^java.security.cert.X509Certificate [^java.security.cert.X509CertSelector this]
     (-> this (.getCertificate))))
 
 (defn get-subject-public-key-alg-id
@@ -825,7 +825,7 @@
   returns: the object identifier (OID) of the signature algorithm to check
            for (or null). An OID is represented by a set of
            nonnegative integers separated by periods. - `java.lang.String`"
-  ([^java.security.cert.X509CertSelector this]
+  (^java.lang.String [^java.security.cert.X509CertSelector this]
     (-> this (.getSubjectPublicKeyAlgID))))
 
 (defn get-name-constraints

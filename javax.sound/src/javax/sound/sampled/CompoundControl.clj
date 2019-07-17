@@ -16,6 +16,6 @@
   "Provides a string representation of the control
 
   returns: a string description - `java.lang.String`"
-  ([^javax.sound.sampled.CompoundControl this]
+  (^java.lang.String [^javax.sound.sampled.CompoundControl this]
     (-> this (.toString))))
 

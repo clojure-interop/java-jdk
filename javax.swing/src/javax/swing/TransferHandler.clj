@@ -92,7 +92,7 @@
    with a MOVE action, on the component's TransferHandler.
 
   returns: an Action for performing cuts to the clipboard - `javax.swing.Action`"
-  ([]
+  (^javax.swing.Action []
     (TransferHandler/getCutAction )))
 
 (defn *get-copy-action
@@ -102,7 +102,7 @@
    with a COPY action, on the component's TransferHandler.
 
   returns: an Action for performing copies to the clipboard - `javax.swing.Action`"
-  ([]
+  (^javax.swing.Action []
     (TransferHandler/getCopyAction )))
 
 (defn *get-paste-action
@@ -112,7 +112,7 @@
    with the clipboard contents, on the component's TransferHandler.
 
   returns: an Action for performing pastes from the clipboard - `javax.swing.Action`"
-  ([]
+  (^javax.swing.Action []
     (TransferHandler/getPasteAction )))
 
 (defn can-import?
@@ -131,9 +131,9 @@
   transfer-flavors - the data formats available - `java.awt.datatransfer.DataFlavor[]`
 
   returns: true if the data can be inserted into the component, false otherwise - `boolean`"
-  ([^javax.swing.TransferHandler this ^javax.swing.JComponent comp ^java.awt.datatransfer.DataFlavor[] transfer-flavors]
+  (^Boolean [^javax.swing.TransferHandler this ^javax.swing.JComponent comp transfer-flavors]
     (-> this (.canImport comp transfer-flavors)))
-  ([^javax.swing.TransferHandler this ^javax.swing.TransferHandler.TransferSupport support]
+  (^Boolean [^javax.swing.TransferHandler this ^javax.swing.TransferHandler.TransferSupport support]
     (-> this (.canImport support))))
 
 (defn set-drag-image-offset
@@ -183,9 +183,9 @@
   t - the data to import - `java.awt.datatransfer.Transferable`
 
   returns: true if the data was inserted into the component, false otherwise - `boolean`"
-  ([^javax.swing.TransferHandler this ^javax.swing.JComponent comp ^java.awt.datatransfer.Transferable t]
+  (^Boolean [^javax.swing.TransferHandler this ^javax.swing.JComponent comp ^java.awt.datatransfer.Transferable t]
     (-> this (.importData comp t)))
-  ([^javax.swing.TransferHandler this ^javax.swing.TransferHandler.TransferSupport support]
+  (^Boolean [^javax.swing.TransferHandler this ^javax.swing.TransferHandler.TransferSupport support]
     (-> this (.importData support))))
 
 (defn get-source-actions
@@ -201,7 +201,7 @@
 
   returns: COPY if the transfer property can be found,
             otherwise returns NONE - `int`"
-  ([^javax.swing.TransferHandler this ^javax.swing.JComponent c]
+  (^Integer [^javax.swing.TransferHandler this ^javax.swing.JComponent c]
     (-> this (.getSourceActions c))))
 
 (defn get-visual-representation
@@ -224,7 +224,7 @@
 
   returns: null, indicating
       there is no default visual representation - `javax.swing.Icon`"
-  ([^javax.swing.TransferHandler this ^java.awt.datatransfer.Transferable t]
+  (^javax.swing.Icon [^javax.swing.TransferHandler this ^java.awt.datatransfer.Transferable t]
     (-> this (.getVisualRepresentation t))))
 
 (defn get-drag-image
@@ -232,7 +232,7 @@
    the returned value is null.
 
   returns: the reference to the drag image - `java.awt.Image`"
-  ([^javax.swing.TransferHandler this]
+  (^java.awt.Image [^javax.swing.TransferHandler this]
     (-> this (.getDragImage))))
 
 (defn export-to-clipboard
@@ -275,6 +275,6 @@
    to coordinates of an anchor offset of the image
    relative to the upper left corner of the image.
    The point (0,0) returns by default. - `java.awt.Point`"
-  ([^javax.swing.TransferHandler this]
+  (^java.awt.Point [^javax.swing.TransferHandler this]
     (-> this (.getDragImageOffset))))
 

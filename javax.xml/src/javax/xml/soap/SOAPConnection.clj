@@ -36,7 +36,7 @@
            message that was sent - `javax.xml.soap.SOAPMessage`
 
   throws: javax.xml.soap.SOAPException - if there is a SOAP error"
-  ([^javax.xml.soap.SOAPConnection this ^javax.xml.soap.SOAPMessage request ^java.lang.Object to]
+  (^javax.xml.soap.SOAPMessage [^javax.xml.soap.SOAPConnection this ^javax.xml.soap.SOAPMessage request ^java.lang.Object to]
     (-> this (.call request to))))
 
 (defn get
@@ -48,7 +48,7 @@
                     get message request - `javax.xml.soap.SOAPMessage`
 
   throws: javax.xml.soap.SOAPException - if there is a SOAP error"
-  ([^javax.xml.soap.SOAPConnection this ^java.lang.Object to]
+  (^javax.xml.soap.SOAPMessage [^javax.xml.soap.SOAPConnection this ^java.lang.Object to]
     (-> this (.get to))))
 
 (defn close

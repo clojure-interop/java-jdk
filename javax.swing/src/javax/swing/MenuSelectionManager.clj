@@ -12,7 +12,7 @@
   "Returns the default menu selection manager.
 
   returns: a MenuSelectionManager object - `javax.swing.MenuSelectionManager`"
-  ([]
+  (^javax.swing.MenuSelectionManager []
     (MenuSelectionManager/defaultManager )))
 
 (defn add-change-listener
@@ -33,7 +33,7 @@
            contains sourcePoint (relative to the source component's
            coordinate space.  If sourcePoint is not inside a component
            on the currently selected path, null is returned. - `java.awt.Component`"
-  ([^javax.swing.MenuSelectionManager this ^java.awt.Component source ^java.awt.Point source-point]
+  (^java.awt.Component [^javax.swing.MenuSelectionManager this ^java.awt.Component source ^java.awt.Point source-point]
     (-> this (.componentForPoint source source-point))))
 
 (defn set-selected-path
@@ -45,7 +45,7 @@
    feel engine and should not be called by client applications.
 
   path - an array of MenuElement objects specifying the selected path - `javax.swing.MenuElement[]`"
-  ([^javax.swing.MenuSelectionManager this ^javax.swing.MenuElement[] path]
+  ([^javax.swing.MenuSelectionManager this path]
     (-> this (.setSelectedPath path))))
 
 (defn remove-change-listener
@@ -92,7 +92,7 @@
   c - `java.awt.Component`
 
   returns: `boolean`"
-  ([^javax.swing.MenuSelectionManager this ^java.awt.Component c]
+  (^Boolean [^javax.swing.MenuSelectionManager this ^java.awt.Component c]
     (-> this (.isComponentPartOfCurrentMenu c))))
 
 (defn get-selected-path

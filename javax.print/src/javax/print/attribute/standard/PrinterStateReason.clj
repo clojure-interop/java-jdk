@@ -366,6 +366,6 @@
    category name is `printer-state-reason`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.PrinterStateReason this]
+  (^java.lang.String [^javax.print.attribute.standard.PrinterStateReason this]
     (-> this (.getName))))
 

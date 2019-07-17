@@ -47,7 +47,7 @@
    originated the event.
 
   returns: the DragSourceContext that originated the event - `java.awt.dnd.DragSourceContext`"
-  ([^java.awt.dnd.DragSourceEvent this]
+  (^java.awt.dnd.DragSourceContext [^java.awt.dnd.DragSourceEvent this]
     (-> this (.getDragSourceContext))))
 
 (defn get-location
@@ -58,7 +58,7 @@
 
   returns: the Point indicating the cursor location
            or null if the cursor location is not specified - `java.awt.Point`"
-  ([^java.awt.dnd.DragSourceEvent this]
+  (^java.awt.Point [^java.awt.dnd.DragSourceEvent this]
     (-> this (.getLocation))))
 
 (defn get-x
@@ -68,7 +68,7 @@
 
   returns: an integer indicating the horizontal coordinate of the cursor
            location or zero if the cursor location is not specified - `int`"
-  ([^java.awt.dnd.DragSourceEvent this]
+  (^Integer [^java.awt.dnd.DragSourceEvent this]
     (-> this (.getX))))
 
 (defn get-y
@@ -78,6 +78,6 @@
 
   returns: an integer indicating the vertical coordinate of the cursor
            location or zero if the cursor location is not specified - `int`"
-  ([^java.awt.dnd.DragSourceEvent this]
+  (^Integer [^java.awt.dnd.DragSourceEvent this]
     (-> this (.getY))))
 

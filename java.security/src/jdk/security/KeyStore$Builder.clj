@@ -51,11 +51,11 @@
   returns: a new Builder object - `java.security.KeyStore.Builder`
 
   throws: java.lang.NullPointerException - if type, file or protection is null"
-  ([^java.lang.String type ^java.security.Provider provider ^java.io.File file ^java.security.KeyStore.ProtectionParameter protection]
+  (^java.security.KeyStore.Builder [^java.lang.String type ^java.security.Provider provider ^java.io.File file ^java.security.KeyStore.ProtectionParameter protection]
     (KeyStore$Builder/newInstance type provider file protection))
-  ([^java.lang.String type ^java.security.Provider provider ^java.security.KeyStore.ProtectionParameter protection]
+  (^java.security.KeyStore.Builder [^java.lang.String type ^java.security.Provider provider ^java.security.KeyStore.ProtectionParameter protection]
     (KeyStore$Builder/newInstance type provider protection))
-  ([^java.security.KeyStore key-store ^java.security.KeyStore.ProtectionParameter protection-parameter]
+  (^java.security.KeyStore.Builder [^java.security.KeyStore key-store ^java.security.KeyStore.ProtectionParameter protection-parameter]
     (KeyStore$Builder/newInstance key-store protection-parameter)))
 
 (defn get-key-store
@@ -64,7 +64,7 @@
   returns: the KeyStore described by this object - `java.security.KeyStore`
 
   throws: java.security.KeyStoreException - if an error occurred during the operation, for example if the KeyStore could not be instantiated or loaded"
-  ([^java.security.KeyStore$Builder this]
+  (^java.security.KeyStore [^java.security.KeyStore$Builder this]
     (-> this (.getKeyStore))))
 
 (defn get-protection-parameter
@@ -79,6 +79,6 @@
      the Entry with the given alias. - `java.security.KeyStore.ProtectionParameter`
 
   throws: java.lang.NullPointerException - if alias is null"
-  ([^java.security.KeyStore$Builder this ^java.lang.String alias]
+  (^java.security.KeyStore.ProtectionParameter [^java.security.KeyStore$Builder this ^java.lang.String alias]
     (-> this (.getProtectionParameter alias))))
 

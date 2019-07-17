@@ -15,7 +15,7 @@
 
   returns: true if and only if this field represents an element of
    an enumerated type. - `boolean`"
-  ([^java.lang.reflect.Field this]
+  (^Boolean [^java.lang.reflect.Field this]
     (-> this (.isEnumConstant))))
 
 (defn get-byte
@@ -26,7 +26,7 @@
   returns: the value of the byte field - `byte`
 
   throws: java.lang.IllegalAccessException - if this Field object is enforcing Java language access control and the underlying field is inaccessible."
-  ([^java.lang.reflect.Field this ^java.lang.Object obj]
+  (^Byte [^java.lang.reflect.Field this ^java.lang.Object obj]
     (-> this (.getByte obj))))
 
 (defn set-boolean
@@ -50,7 +50,7 @@
 
   returns: a Class object identifying the declared
    type of the field represented by this object - `java.lang.Class<?>`"
-  ([^java.lang.reflect.Field this]
+  (^java.lang.Class [^java.lang.reflect.Field this]
     (-> this (.getType))))
 
 (defn to-generic-string
@@ -69,7 +69,7 @@
 
   returns: a string describing this Field, including
    its generic type - `java.lang.String`"
-  ([^java.lang.reflect.Field this]
+  (^java.lang.String [^java.lang.reflect.Field this]
     (-> this (.toGenericString))))
 
 (defn get-modifiers
@@ -78,7 +78,7 @@
    be used to decode the modifiers.
 
   returns: the Java language modifiers for the underlying member - `int`"
-  ([^java.lang.reflect.Field this]
+  (^Integer [^java.lang.reflect.Field this]
     (-> this (.getModifiers))))
 
 (defn get-short
@@ -91,7 +91,7 @@
   returns: the value of the field converted to type short - `short`
 
   throws: java.lang.IllegalAccessException - if this Field object is enforcing Java language access control and the underlying field is inaccessible."
-  ([^java.lang.reflect.Field this ^java.lang.Object obj]
+  (^Short [^java.lang.reflect.Field this ^java.lang.Object obj]
     (-> this (.getShort obj))))
 
 (defn synthetic?
@@ -100,7 +100,7 @@
 
   returns: true if and only if this field is a synthetic
    field as defined by the Java Language Specification. - `boolean`"
-  ([^java.lang.reflect.Field this]
+  (^Boolean [^java.lang.reflect.Field this]
     (-> this (.isSynthetic))))
 
 (defn to-string
@@ -122,7 +122,7 @@
    transient, volatile.
 
   returns: a string describing this Field - `java.lang.String`"
-  ([^java.lang.reflect.Field this]
+  (^java.lang.String [^java.lang.reflect.Field this]
     (-> this (.toString))))
 
 (defn get-annotation
@@ -155,7 +155,7 @@
   "Returns the name of the field represented by this Field object.
 
   returns: the simple name of the underlying member - `java.lang.String`"
-  ([^java.lang.reflect.Field this]
+  (^java.lang.String [^java.lang.reflect.Field this]
     (-> this (.getName))))
 
 (defn get-long
@@ -168,7 +168,7 @@
   returns: the value of the field converted to type long - `long`
 
   throws: java.lang.IllegalAccessException - if this Field object is enforcing Java language access control and the underlying field is inaccessible."
-  ([^java.lang.reflect.Field this ^java.lang.Object obj]
+  (^Long [^java.lang.reflect.Field this ^java.lang.Object obj]
     (-> this (.getLong obj))))
 
 (defn set-double
@@ -195,7 +195,7 @@
   returns: the value of the field converted to type int - `int`
 
   throws: java.lang.IllegalAccessException - if this Field object is enforcing Java language access control and the underlying field is inaccessible."
-  ([^java.lang.reflect.Field this ^java.lang.Object obj]
+  (^Integer [^java.lang.reflect.Field this ^java.lang.Object obj]
     (-> this (.getInt obj))))
 
 (defn get-annotated-type
@@ -204,7 +204,7 @@
 
   returns: an object representing the declared type of the field
    represented by this Field - `java.lang.reflect.AnnotatedType`"
-  ([^java.lang.reflect.Field this]
+  (^java.lang.reflect.AnnotatedType [^java.lang.reflect.Field this]
     (-> this (.getAnnotatedType))))
 
 (defn set-long
@@ -231,7 +231,7 @@
   returns: the value of the field converted to type char - `char`
 
   throws: java.lang.IllegalAccessException - if this Field object is enforcing Java language access control and the underlying field is inaccessible."
-  ([^java.lang.reflect.Field this ^java.lang.Object obj]
+  (^Character [^java.lang.reflect.Field this ^java.lang.Object obj]
     (-> this (.getChar obj))))
 
 (defn get-annotations-by-type
@@ -278,7 +278,7 @@
 
   returns: an object representing the declaring class of the
    underlying member - `java.lang.Class<?>`"
-  ([^java.lang.reflect.Field this]
+  (^java.lang.Class [^java.lang.reflect.Field this]
     (-> this (.getDeclaringClass))))
 
 (defn set-short
@@ -324,7 +324,7 @@
        the field represented by this Field object - `java.lang.reflect.Type`
 
   throws: java.lang.reflect.GenericSignatureFormatError - if the generic field signature does not conform to the format specified in The Java™ Virtual Machine Specification"
-  ([^java.lang.reflect.Field this]
+  (^java.lang.reflect.Type [^java.lang.reflect.Field this]
     (-> this (.getGenericType))))
 
 (defn hash-code
@@ -333,7 +333,7 @@
    declaring class name and its name.
 
   returns: a hash code value for this object. - `int`"
-  ([^java.lang.reflect.Field this]
+  (^Integer [^java.lang.reflect.Field this]
     (-> this (.hashCode))))
 
 (defn set
@@ -401,7 +401,7 @@
   returns: the value of the boolean field - `boolean`
 
   throws: java.lang.IllegalAccessException - if this Field object is enforcing Java language access control and the underlying field is inaccessible."
-  ([^java.lang.reflect.Field this ^java.lang.Object obj]
+  (^Boolean [^java.lang.reflect.Field this ^java.lang.Object obj]
     (-> this (.getBoolean obj))))
 
 (defn get-float
@@ -414,7 +414,7 @@
   returns: the value of the field converted to type float - `float`
 
   throws: java.lang.IllegalAccessException - if this Field object is enforcing Java language access control and the underlying field is inaccessible."
-  ([^java.lang.reflect.Field this ^java.lang.Object obj]
+  (^Float [^java.lang.reflect.Field this ^java.lang.Object obj]
     (-> this (.getFloat obj))))
 
 (defn get-double
@@ -427,7 +427,7 @@
   returns: the value of the field converted to type double - `double`
 
   throws: java.lang.IllegalAccessException - if this Field object is enforcing Java language access control and the underlying field is inaccessible."
-  ([^java.lang.reflect.Field this ^java.lang.Object obj]
+  (^Double [^java.lang.reflect.Field this ^java.lang.Object obj]
     (-> this (.getDouble obj))))
 
 (defn get
@@ -467,7 +467,7 @@
    object before being returned - `java.lang.Object`
 
   throws: java.lang.IllegalAccessException - if this Field object is enforcing Java language access control and the underlying field is inaccessible."
-  ([^java.lang.reflect.Field this ^java.lang.Object obj]
+  (^java.lang.Object [^java.lang.reflect.Field this ^java.lang.Object obj]
     (-> this (.get obj))))
 
 (defn equals
@@ -480,7 +480,7 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([^java.lang.reflect.Field this ^java.lang.Object obj]
+  (^Boolean [^java.lang.reflect.Field this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn set-float

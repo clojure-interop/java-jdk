@@ -145,9 +145,9 @@
   returns: a keystore object of the specified type. - `java.security.KeyStore`
 
   throws: java.security.KeyStoreException - if a KeyStoreSpi implementation for the specified type is not available from the specified provider."
-  ([^java.lang.String type ^java.lang.String provider]
+  (^java.security.KeyStore [^java.lang.String type ^java.lang.String provider]
     (KeyStore/getInstance type provider))
-  ([^java.lang.String type]
+  (^java.security.KeyStore [^java.lang.String type]
     (KeyStore/getInstance type)))
 
 (defn *get-default-type
@@ -167,7 +167,7 @@
   returns: the default keystore type as specified by the
    keystore.type security property, or the string `jks`
    if no such property exists. - `java.lang.String`"
-  ([]
+  (^java.lang.String []
     (KeyStore/getDefaultType )))
 
 (defn delete-entry
@@ -203,7 +203,7 @@
    or null if no such entry exists in this keystore. - `java.lang.String`
 
   throws: java.security.KeyStoreException - if the keystore has not been initialized (loaded)."
-  ([^java.security.KeyStore this ^java.security.cert.Certificate cert]
+  (^java.lang.String [^java.security.KeyStore this ^java.security.cert.Certificate cert]
     (-> this (.getCertificateAlias cert))))
 
 (defn aliases
@@ -212,14 +212,14 @@
   returns: enumeration of the alias names - `java.util.Enumeration<java.lang.String>`
 
   throws: java.security.KeyStoreException - if the keystore has not been initialized (loaded)."
-  ([^java.security.KeyStore this]
+  (^java.util.Enumeration [^java.security.KeyStore this]
     (-> this (.aliases))))
 
 (defn get-type
   "Returns the type of this keystore.
 
   returns: the type of this keystore. - `java.lang.String`"
-  ([^java.security.KeyStore this]
+  (^java.lang.String [^java.security.KeyStore this]
     (-> this (.getType))))
 
 (defn get-entry
@@ -233,7 +233,7 @@
             or null if there is no such entry - `java.security.KeyStore.Entry`
 
   throws: java.lang.NullPointerException - if alias is null"
-  ([^java.security.KeyStore this ^java.lang.String alias ^java.security.KeyStore.ProtectionParameter prot-param]
+  (^java.security.KeyStore.Entry [^java.security.KeyStore this ^java.lang.String alias ^java.security.KeyStore.ProtectionParameter prot-param]
     (-> this (.getEntry alias prot-param))))
 
 (defn load
@@ -274,7 +274,7 @@
             specified entryClass, false otherwise - `boolean`
 
   throws: java.lang.NullPointerException - if alias or entryClass is null"
-  ([^java.security.KeyStore this ^java.lang.String alias ^java.security.KeyStore.Entry> entry-class]
+  (^Boolean [^java.security.KeyStore this ^java.lang.String alias ^java.security.KeyStore.Entry> entry-class]
     (-> this (.entryInstanceOf alias entry-class))))
 
 (defn get-creation-date
@@ -286,7 +286,7 @@
    not exist - `java.util.Date`
 
   throws: java.security.KeyStoreException - if the keystore has not been initialized (loaded)."
-  ([^java.security.KeyStore this ^java.lang.String alias]
+  (^java.util.Date [^java.security.KeyStore this ^java.lang.String alias]
     (-> this (.getCreationDate alias))))
 
 (defn get-key
@@ -303,14 +303,14 @@
    or does not identify a key-related entry. - `java.security.Key`
 
   throws: java.security.KeyStoreException - if the keystore has not been initialized (loaded)."
-  ([^java.security.KeyStore this ^java.lang.String alias password]
+  (^java.security.Key [^java.security.KeyStore this ^java.lang.String alias password]
     (-> this (.getKey alias password))))
 
 (defn get-provider
   "Returns the provider of this keystore.
 
   returns: the provider of this keystore. - `java.security.Provider`"
-  ([^java.security.KeyStore this]
+  (^java.security.Provider [^java.security.KeyStore this]
     (-> this (.getProvider))))
 
 (defn contains-alias
@@ -321,7 +321,7 @@
   returns: true if the alias exists, false otherwise - `boolean`
 
   throws: java.security.KeyStoreException - if the keystore has not been initialized (loaded)."
-  ([^java.security.KeyStore this ^java.lang.String alias]
+  (^Boolean [^java.security.KeyStore this ^java.lang.String alias]
     (-> this (.containsAlias alias))))
 
 (defn set-key-entry
@@ -342,9 +342,9 @@
   chain - the certificate chain for the corresponding public key (only required if the given key is of type java.security.PrivateKey). - `java.security.cert.Certificate[]`
 
   throws: java.security.KeyStoreException - if the keystore has not been initialized (loaded), the given key cannot be protected, or this operation fails for some other reason"
-  ([^java.security.KeyStore this ^java.lang.String alias ^java.security.Key key password ^java.security.cert.Certificate[] chain]
+  ([^java.security.KeyStore this ^java.lang.String alias ^java.security.Key key password chain]
     (-> this (.setKeyEntry alias key password chain)))
-  ([^java.security.KeyStore this ^java.lang.String alias key ^java.security.cert.Certificate[] chain]
+  ([^java.security.KeyStore this ^java.lang.String alias key chain]
     (-> this (.setKeyEntry alias key chain))))
 
 (defn set-certificate-entry
@@ -376,7 +376,7 @@
    key-related entry, false otherwise. - `boolean`
 
   throws: java.security.KeyStoreException - if the keystore has not been initialized (loaded)."
-  ([^java.security.KeyStore this ^java.lang.String alias]
+  (^Boolean [^java.security.KeyStore this ^java.lang.String alias]
     (-> this (.isKeyEntry alias))))
 
 (defn set-entry
@@ -401,7 +401,7 @@
   returns: the number of entries in this keystore - `int`
 
   throws: java.security.KeyStoreException - if the keystore has not been initialized (loaded)."
-  ([^java.security.KeyStore this]
+  (^Integer [^java.security.KeyStore this]
     (-> this (.size))))
 
 (defn get-certificate-chain
@@ -443,7 +443,7 @@
    does not contain a certificate. - `java.security.cert.Certificate`
 
   throws: java.security.KeyStoreException - if the keystore has not been initialized (loaded)."
-  ([^java.security.KeyStore this ^java.lang.String alias]
+  (^java.security.cert.Certificate [^java.security.KeyStore this ^java.lang.String alias]
     (-> this (.getCertificate alias))))
 
 (defn certificate-entry?
@@ -458,7 +458,7 @@
    trusted certificate, false otherwise. - `boolean`
 
   throws: java.security.KeyStoreException - if the keystore has not been initialized (loaded)."
-  ([^java.security.KeyStore this ^java.lang.String alias]
+  (^Boolean [^java.security.KeyStore this ^java.lang.String alias]
     (-> this (.isCertificateEntry alias))))
 
 (defn store

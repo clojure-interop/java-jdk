@@ -63,7 +63,7 @@
   returns: this Calendar.Builder - `java.util.Calendar.Builder`
 
   throws: java.lang.NullPointerException - if zone is null"
-  ([^java.util.Calendar$Builder this ^java.util.TimeZone zone]
+  (^java.util.Calendar.Builder [^java.util.Calendar$Builder this ^java.util.TimeZone zone]
     (-> this (.setTimeZone zone))))
 
 (defn set-fields
@@ -88,7 +88,7 @@
   returns: this Calendar.Builder - `java.util.Calendar.Builder`
 
   throws: java.lang.NullPointerException - if fieldValuePairs is null"
-  ([^java.util.Calendar$Builder this ^Integer field-value-pairs]
+  (^java.util.Calendar.Builder [^java.util.Calendar$Builder this ^Integer field-value-pairs]
     (-> this (.setFields field-value-pairs))))
 
 (defn set-date
@@ -106,7 +106,7 @@
   day-of-month - the DAY_OF_MONTH value - `int`
 
   returns: this Calendar.Builder - `java.util.Calendar.Builder`"
-  ([^java.util.Calendar$Builder this ^Integer year ^Integer month ^Integer day-of-month]
+  (^java.util.Calendar.Builder [^java.util.Calendar$Builder this ^Integer year ^Integer month ^Integer day-of-month]
     (-> this (.setDate year month day-of-month))))
 
 (defn set-lenient
@@ -117,7 +117,7 @@
   lenient - true for lenient mode; false for non-lenient mode - `boolean`
 
   returns: this Calendar.Builder - `java.util.Calendar.Builder`"
-  ([^java.util.Calendar$Builder this ^Boolean lenient]
+  (^java.util.Calendar.Builder [^java.util.Calendar$Builder this ^Boolean lenient]
     (-> this (.setLenient lenient))))
 
 (defn set-week-date
@@ -132,7 +132,7 @@
   day-of-week - the day of week value: one of the constants for the DAY_OF_WEEK field: SUNDAY, ..., SATURDAY. - `int`
 
   returns: this Calendar.Builder - `java.util.Calendar.Builder`"
-  ([^java.util.Calendar$Builder this ^Integer week-year ^Integer week-of-year ^Integer day-of-week]
+  (^java.util.Calendar.Builder [^java.util.Calendar$Builder this ^Integer week-year ^Integer week-of-year ^Integer day-of-week]
     (-> this (.setWeekDate week-year week-of-year day-of-week))))
 
 (defn set-calendar-type
@@ -151,7 +151,7 @@
   returns: this Calendar.Builder - `java.util.Calendar.Builder`
 
   throws: java.lang.NullPointerException - if type is null"
-  ([^java.util.Calendar$Builder this ^java.lang.String type]
+  (^java.util.Calendar.Builder [^java.util.Calendar$Builder this ^java.lang.String type]
     (-> this (.setCalendarType type))))
 
 (defn set-instant
@@ -164,7 +164,7 @@
   returns: this Calendar.Builder - `java.util.Calendar.Builder`
 
   throws: java.lang.IllegalStateException - if any of the field parameters have already been set"
-  ([^java.util.Calendar$Builder this ^Long instant]
+  (^java.util.Calendar.Builder [^java.util.Calendar$Builder this ^Long instant]
     (-> this (.setInstant instant))))
 
 (defn set-week-definition
@@ -181,7 +181,7 @@
   returns: this Calendar.Builder - `java.util.Calendar.Builder`
 
   throws: java.lang.IllegalArgumentException - if firstDayOfWeek or minimalDaysInFirstWeek is invalid"
-  ([^java.util.Calendar$Builder this ^Integer first-day-of-week ^Integer minimal-days-in-first-week]
+  (^java.util.Calendar.Builder [^java.util.Calendar$Builder this ^Integer first-day-of-week ^Integer minimal-days-in-first-week]
     (-> this (.setWeekDefinition first-day-of-week minimal-days-in-first-week))))
 
 (defn set-time-of-day
@@ -201,9 +201,9 @@
   millis - the MILLISECOND value - `int`
 
   returns: this Calendar.Builder - `java.util.Calendar.Builder`"
-  ([^java.util.Calendar$Builder this ^Integer hour-of-day ^Integer minute ^Integer second ^Integer millis]
+  (^java.util.Calendar.Builder [^java.util.Calendar$Builder this ^Integer hour-of-day ^Integer minute ^Integer second ^Integer millis]
     (-> this (.setTimeOfDay hour-of-day minute second millis)))
-  ([^java.util.Calendar$Builder this ^Integer hour-of-day ^Integer minute ^Integer second]
+  (^java.util.Calendar.Builder [^java.util.Calendar$Builder this ^Integer hour-of-day ^Integer minute ^Integer second]
     (-> this (.setTimeOfDay hour-of-day minute second))))
 
 (defn build
@@ -231,7 +231,7 @@
   returns: a Calendar built with parameters of this Calendar.Builder - `java.util.Calendar`
 
   throws: java.lang.IllegalArgumentException - if the calendar type is unknown, or if any invalid field values are given in non-lenient mode, or if a week date is given for the calendar type that doesn't support week dates."
-  ([^java.util.Calendar$Builder this]
+  (^java.util.Calendar [^java.util.Calendar$Builder this]
     (-> this (.build))))
 
 (defn set-locale
@@ -253,7 +253,7 @@
   returns: this Calendar.Builder - `java.util.Calendar.Builder`
 
   throws: java.lang.NullPointerException - if locale is null"
-  ([^java.util.Calendar$Builder this ^java.util.Locale locale]
+  (^java.util.Calendar.Builder [^java.util.Calendar$Builder this ^java.util.Locale locale]
     (-> this (.setLocale locale))))
 
 (defn set
@@ -270,6 +270,6 @@
   returns: this Calendar.Builder - `java.util.Calendar.Builder`
 
   throws: java.lang.IllegalArgumentException - if field is invalid"
-  ([^java.util.Calendar$Builder this ^Integer field ^Integer value]
+  (^java.util.Calendar.Builder [^java.util.Calendar$Builder this ^Integer field ^Integer value]
     (-> this (.set field value))))
 

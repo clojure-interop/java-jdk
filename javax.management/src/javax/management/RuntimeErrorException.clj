@@ -20,13 +20,13 @@
   "Returns the actual Error thrown.
 
   returns: the wrapped Error. - `java.lang.Error`"
-  ([^javax.management.RuntimeErrorException this]
+  (^java.lang.Error [^javax.management.RuntimeErrorException this]
     (-> this (.getTargetError))))
 
 (defn get-cause
   "Returns the actual Error thrown.
 
   returns: the wrapped Error. - `java.lang.Throwable`"
-  ([^javax.management.RuntimeErrorException this]
+  (^java.lang.Throwable [^javax.management.RuntimeErrorException this]
     (-> this (.getCause))))
 

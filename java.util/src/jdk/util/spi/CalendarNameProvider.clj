@@ -167,7 +167,7 @@
            the given calendar type is unknown - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if field or style is invalid"
-  ([^java.util.spi.CalendarNameProvider this ^java.lang.String calendar-type ^Integer field ^Integer value ^Integer style ^java.util.Locale locale]
+  (^java.lang.String [^java.util.spi.CalendarNameProvider this ^java.lang.String calendar-type ^Integer field ^Integer value ^Integer style ^java.util.Locale locale]
     (-> this (.getDisplayName calendar-type field value style locale))))
 
 (defn get-display-names
@@ -202,6 +202,6 @@
            or null if no display names are defined for field - `java.util.Map<java.lang.String,java.lang.Integer>`
 
   throws: java.lang.NullPointerException - if locale is null"
-  ([^java.util.spi.CalendarNameProvider this ^java.lang.String calendar-type ^Integer field ^Integer style ^java.util.Locale locale]
+  (^java.util.Map [^java.util.spi.CalendarNameProvider this ^java.lang.String calendar-type ^Integer field ^Integer style ^java.util.Locale locale]
     (-> this (.getDisplayNames calendar-type field style locale))))
 

@@ -31,6 +31,6 @@
 
   returns: The index specifying the property element that was
            changed. - `int`"
-  ([^java.beans.IndexedPropertyChangeEvent this]
+  (^Integer [^java.beans.IndexedPropertyChangeEvent this]
     (-> this (.getIndex))))
 

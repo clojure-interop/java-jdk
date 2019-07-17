@@ -35,7 +35,7 @@
   returns: the system-wide ResponseCache - `java.net.ResponseCache`
 
   throws: java.lang.SecurityException - If a security manager has been installed and it denies NetPermission(`getResponseCache`)"
-  ([]
+  (^java.net.ResponseCache []
     (ResponseCache/getDefault )))
 
 (defn *set-default
@@ -64,7 +64,7 @@
             from cache, or null otherwise - `java.net.CacheResponse`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([^java.net.ResponseCache this ^java.net.URI uri ^java.lang.String rqst-method ^java.util.Map> rqst-headers]
+  (^java.net.CacheResponse [^java.net.ResponseCache this ^java.net.URI uri ^java.lang.String rqst-method ^java.util.Map> rqst-headers]
     (-> this (.get uri rqst-method rqst-headers))))
 
 (defn put
@@ -84,6 +84,6 @@
               the caller does not intend to cache the response. - `java.net.CacheRequest`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([^java.net.ResponseCache this ^java.net.URI uri ^java.net.URLConnection conn]
+  (^java.net.CacheRequest [^java.net.ResponseCache this ^java.net.URI uri ^java.net.URLConnection conn]
     (-> this (.put uri conn))))
 

@@ -101,7 +101,7 @@
    have the name `acl`.
 
   returns: the name of the attribute view - `java.lang.String`"
-  ([^java.nio.file.attribute.AclFileAttributeView this]
+  (^java.lang.String [^java.nio.file.attribute.AclFileAttributeView this]
     (-> this (.name))))
 
 (defn get-acl
@@ -119,7 +119,7 @@
             ACL - `java.util.List<java.nio.file.attribute.AclEntry>`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([^java.nio.file.attribute.AclFileAttributeView this]
+  (^java.util.List [^java.nio.file.attribute.AclFileAttributeView this]
     (-> this (.getAcl))))
 
 (defn set-acl

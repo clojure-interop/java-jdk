@@ -13,7 +13,7 @@
 
   returns: the MBeanServer object to which requests will be forwarded,
    or null if there is none. - `javax.management.MBeanServer`"
-  ([^javax.management.remote.MBeanServerForwarder this]
+  (^javax.management.MBeanServer [^javax.management.remote.MBeanServerForwarder this]
     (-> this (.getMBeanServer))))
 
 (defn set-m-bean-server

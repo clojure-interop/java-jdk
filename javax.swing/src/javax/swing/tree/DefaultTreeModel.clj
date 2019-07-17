@@ -46,7 +46,7 @@
   node - `javax.swing.tree.TreeNode`
   child-indices - `int[]`
   removed-children - `java.lang.Object[]`"
-  ([^javax.swing.tree.DefaultTreeModel this ^javax.swing.tree.TreeNode node child-indices ^java.lang.Object[] removed-children]
+  ([^javax.swing.tree.DefaultTreeModel this ^javax.swing.tree.TreeNode node child-indices removed-children]
     (-> this (.nodesWereRemoved node child-indices removed-children))))
 
 (defn get-child-count
@@ -57,7 +57,7 @@
   parent - a node in the tree, obtained from this data source - `java.lang.Object`
 
   returns: the number of children of the node parent - `int`"
-  ([^javax.swing.tree.DefaultTreeModel this ^java.lang.Object parent]
+  (^Integer [^javax.swing.tree.DefaultTreeModel this ^java.lang.Object parent]
     (-> this (.getChildCount parent))))
 
 (defn remove-tree-model-listener
@@ -95,7 +95,7 @@
   node - the node to check - `java.lang.Object`
 
   returns: true if the node is a leaf node - `boolean`"
-  ([^javax.swing.tree.DefaultTreeModel this ^java.lang.Object node]
+  (^Boolean [^javax.swing.tree.DefaultTreeModel this ^java.lang.Object node]
     (-> this (.isLeaf node))))
 
 (defn get-index-of-child
@@ -107,7 +107,7 @@
 
   returns: the index of the child in the parent, or -1
       if either the parent or the child is null - `int`"
-  ([^javax.swing.tree.DefaultTreeModel this ^java.lang.Object parent ^java.lang.Object child]
+  (^Integer [^javax.swing.tree.DefaultTreeModel this ^java.lang.Object parent ^java.lang.Object child]
     (-> this (.getIndexOfChild parent child))))
 
 (defn node-structure-changed
@@ -124,7 +124,7 @@
    no nodes.
 
   returns: the root of the tree - `java.lang.Object`"
-  ([^javax.swing.tree.DefaultTreeModel this]
+  (^java.lang.Object [^javax.swing.tree.DefaultTreeModel this]
     (-> this (.getRoot))))
 
 (defn get-path-to-root
@@ -150,7 +150,7 @@
   index - `int`
 
   returns: the child of parent at index index - `java.lang.Object`"
-  ([^javax.swing.tree.DefaultTreeModel this ^java.lang.Object parent ^Integer index]
+  (^java.lang.Object [^javax.swing.tree.DefaultTreeModel this ^java.lang.Object parent ^Integer index]
     (-> this (.getChild parent index))))
 
 (defn reload
@@ -238,7 +238,7 @@
   returns: true if only nodes which do not allow children are
            leaf nodes, false if nodes which have no children
            (even if allowed) are leaf nodes - `boolean`"
-  ([^javax.swing.tree.DefaultTreeModel this]
+  (^Boolean [^javax.swing.tree.DefaultTreeModel this]
     (-> this (.asksAllowsChildren))))
 
 (defn set-root

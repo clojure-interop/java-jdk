@@ -20,14 +20,14 @@
   "Returns the authentication id to check.
 
   returns: The authentication id to check. - `java.lang.String`"
-  ([^javax.security.sasl.AuthorizeCallback this]
+  (^java.lang.String [^javax.security.sasl.AuthorizeCallback this]
     (-> this (.getAuthenticationID))))
 
 (defn get-authorization-id
   "Returns the authorization id to check.
 
   returns: The authentication id to check. - `java.lang.String`"
-  ([^javax.security.sasl.AuthorizeCallback this]
+  (^java.lang.String [^javax.security.sasl.AuthorizeCallback this]
     (-> this (.getAuthorizationID))))
 
 (defn authorized?
@@ -35,7 +35,7 @@
    act on behalf of the authorization id.
 
   returns: true if authorization is allowed; false otherwise - `boolean`"
-  ([^javax.security.sasl.AuthorizeCallback this]
+  (^Boolean [^javax.security.sasl.AuthorizeCallback this]
     (-> this (.isAuthorized))))
 
 (defn set-authorized
@@ -50,7 +50,7 @@
 
   returns: The id of the authorized user. null means the
    authorization failed. - `java.lang.String`"
-  ([^javax.security.sasl.AuthorizeCallback this]
+  (^java.lang.String [^javax.security.sasl.AuthorizeCallback this]
     (-> this (.getAuthorizedID))))
 
 (defn set-authorized-id

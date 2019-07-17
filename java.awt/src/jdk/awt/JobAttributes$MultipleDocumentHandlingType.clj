@@ -27,13 +27,13 @@
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  ([^java.awt.JobAttributes$MultipleDocumentHandlingType this]
+  (^Integer [^java.awt.JobAttributes$MultipleDocumentHandlingType this]
     (-> this (.hashCode))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^java.awt.JobAttributes$MultipleDocumentHandlingType this]
+  (^java.lang.String [^java.awt.JobAttributes$MultipleDocumentHandlingType this]
     (-> this (.toString))))
 

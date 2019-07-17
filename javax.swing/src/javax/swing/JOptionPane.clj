@@ -257,9 +257,9 @@
   icon - the Icon image to display - `javax.swing.Icon`
   options - the choices the user can select - `java.lang.Object[]`
   initial-value - the choice that is initially selected; if null, then nothing will be initially selected; only meaningful if options is used - `java.lang.Object`"
-  ([^java.lang.Object message ^Integer message-type ^Integer option-type ^javax.swing.Icon icon ^java.lang.Object[] options ^java.lang.Object initial-value]
+  ([^java.lang.Object message ^Integer message-type ^Integer option-type ^javax.swing.Icon icon options ^java.lang.Object initial-value]
     (new JOptionPane message message-type option-type icon options initial-value))
-  ([^java.lang.Object message ^Integer message-type ^Integer option-type ^javax.swing.Icon icon ^java.lang.Object[] options]
+  ([^java.lang.Object message ^Integer message-type ^Integer option-type ^javax.swing.Icon icon options]
     (new JOptionPane message message-type option-type icon options))
   ([^java.lang.Object message ^Integer message-type ^Integer option-type ^javax.swing.Icon icon]
     (new JOptionPane message message-type option-type icon))
@@ -508,7 +508,7 @@
 
   returns: an integer indicating the option chosen by the user,
             or CLOSED_OPTION if the user closed the Dialog - `int`"
-  ([^java.awt.Component parent-component ^java.lang.Object message ^java.lang.String title ^Integer option-type ^Integer message-type ^javax.swing.Icon icon ^java.lang.Object[] options ^java.lang.Object initial-value]
+  (^Integer [^java.awt.Component parent-component ^java.lang.Object message ^java.lang.String title ^Integer option-type ^Integer message-type ^javax.swing.Icon icon options ^java.lang.Object initial-value]
     (JOptionPane/showInternalOptionDialog parent-component message title option-type message-type icon options initial-value)))
 
 (defn *get-desktop-pane-for-component
@@ -520,7 +520,7 @@
             or null if the component is null
             or does not have an ancestor that is a
             JInternalFrame - `javax.swing.JDesktopPane`"
-  ([^java.awt.Component parent-component]
+  (^javax.swing.JDesktopPane [^java.awt.Component parent-component]
     (JOptionPane/getDesktopPaneForComponent parent-component)))
 
 (defn *get-root-frame
@@ -530,7 +530,7 @@
   returns: the default Frame to use - `java.awt.Frame`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless returns true"
-  ([]
+  (^java.awt.Frame []
     (JOptionPane/getRootFrame )))
 
 (defn *show-input-dialog
@@ -558,15 +558,15 @@
                     canceled the input - `java.lang.Object`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless returns true"
-  ([^java.awt.Component parent-component ^java.lang.Object message ^java.lang.String title ^Integer message-type ^javax.swing.Icon icon ^java.lang.Object[] selection-values ^java.lang.Object initial-selection-value]
+  (^java.lang.Object [^java.awt.Component parent-component ^java.lang.Object message ^java.lang.String title ^Integer message-type ^javax.swing.Icon icon selection-values ^java.lang.Object initial-selection-value]
     (JOptionPane/showInputDialog parent-component message title message-type icon selection-values initial-selection-value))
-  ([^java.awt.Component parent-component ^java.lang.Object message ^java.lang.String title ^Integer message-type]
+  (^java.lang.String [^java.awt.Component parent-component ^java.lang.Object message ^java.lang.String title ^Integer message-type]
     (JOptionPane/showInputDialog parent-component message title message-type))
-  ([^java.awt.Component parent-component ^java.lang.Object message ^java.lang.Object initial-selection-value]
+  (^java.lang.String [^java.awt.Component parent-component ^java.lang.Object message ^java.lang.Object initial-selection-value]
     (JOptionPane/showInputDialog parent-component message initial-selection-value))
-  ([^java.lang.Object message ^java.lang.Object initial-selection-value]
+  (^java.lang.String [^java.lang.Object message ^java.lang.Object initial-selection-value]
     (JOptionPane/showInputDialog message initial-selection-value))
-  ([^java.lang.Object message]
+  (^java.lang.String [^java.lang.Object message]
     (JOptionPane/showInputDialog message)))
 
 (defn *show-option-dialog
@@ -598,7 +598,7 @@
                     the dialog - `int`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless returns true"
-  ([^java.awt.Component parent-component ^java.lang.Object message ^java.lang.String title ^Integer option-type ^Integer message-type ^javax.swing.Icon icon ^java.lang.Object[] options ^java.lang.Object initial-value]
+  (^Integer [^java.awt.Component parent-component ^java.lang.Object message ^java.lang.String title ^Integer option-type ^Integer message-type ^javax.swing.Icon icon options ^java.lang.Object initial-value]
     (JOptionPane/showOptionDialog parent-component message title option-type message-type icon options initial-value)))
 
 (defn *show-confirm-dialog
@@ -617,13 +617,13 @@
   returns: an int indicating the option selected by the user - `int`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless returns true"
-  ([^java.awt.Component parent-component ^java.lang.Object message ^java.lang.String title ^Integer option-type ^Integer message-type ^javax.swing.Icon icon]
+  (^Integer [^java.awt.Component parent-component ^java.lang.Object message ^java.lang.String title ^Integer option-type ^Integer message-type ^javax.swing.Icon icon]
     (JOptionPane/showConfirmDialog parent-component message title option-type message-type icon))
-  ([^java.awt.Component parent-component ^java.lang.Object message ^java.lang.String title ^Integer option-type ^Integer message-type]
+  (^Integer [^java.awt.Component parent-component ^java.lang.Object message ^java.lang.String title ^Integer option-type ^Integer message-type]
     (JOptionPane/showConfirmDialog parent-component message title option-type message-type))
-  ([^java.awt.Component parent-component ^java.lang.Object message ^java.lang.String title ^Integer option-type]
+  (^Integer [^java.awt.Component parent-component ^java.lang.Object message ^java.lang.String title ^Integer option-type]
     (JOptionPane/showConfirmDialog parent-component message title option-type))
-  ([^java.awt.Component parent-component ^java.lang.Object message]
+  (^Integer [^java.awt.Component parent-component ^java.lang.Object message]
     (JOptionPane/showConfirmDialog parent-component message)))
 
 (defn *show-internal-input-dialog
@@ -649,11 +649,11 @@
 
   returns: user's input, or null meaning the user
             canceled the input - `java.lang.Object`"
-  ([^java.awt.Component parent-component ^java.lang.Object message ^java.lang.String title ^Integer message-type ^javax.swing.Icon icon ^java.lang.Object[] selection-values ^java.lang.Object initial-selection-value]
+  (^java.lang.Object [^java.awt.Component parent-component ^java.lang.Object message ^java.lang.String title ^Integer message-type ^javax.swing.Icon icon selection-values ^java.lang.Object initial-selection-value]
     (JOptionPane/showInternalInputDialog parent-component message title message-type icon selection-values initial-selection-value))
-  ([^java.awt.Component parent-component ^java.lang.Object message ^java.lang.String title ^Integer message-type]
+  (^java.lang.String [^java.awt.Component parent-component ^java.lang.Object message ^java.lang.String title ^Integer message-type]
     (JOptionPane/showInternalInputDialog parent-component message title message-type))
-  ([^java.awt.Component parent-component ^java.lang.Object message]
+  (^java.lang.String [^java.awt.Component parent-component ^java.lang.Object message]
     (JOptionPane/showInternalInputDialog parent-component message)))
 
 (defn *show-message-dialog
@@ -699,13 +699,13 @@
   icon - the icon to display in the dialog - `javax.swing.Icon`
 
   returns: an integer indicating the option selected by the user - `int`"
-  ([^java.awt.Component parent-component ^java.lang.Object message ^java.lang.String title ^Integer option-type ^Integer message-type ^javax.swing.Icon icon]
+  (^Integer [^java.awt.Component parent-component ^java.lang.Object message ^java.lang.String title ^Integer option-type ^Integer message-type ^javax.swing.Icon icon]
     (JOptionPane/showInternalConfirmDialog parent-component message title option-type message-type icon))
-  ([^java.awt.Component parent-component ^java.lang.Object message ^java.lang.String title ^Integer option-type ^Integer message-type]
+  (^Integer [^java.awt.Component parent-component ^java.lang.Object message ^java.lang.String title ^Integer option-type ^Integer message-type]
     (JOptionPane/showInternalConfirmDialog parent-component message title option-type message-type))
-  ([^java.awt.Component parent-component ^java.lang.Object message ^java.lang.String title ^Integer option-type]
+  (^Integer [^java.awt.Component parent-component ^java.lang.Object message ^java.lang.String title ^Integer option-type]
     (JOptionPane/showInternalConfirmDialog parent-component message title option-type))
-  ([^java.awt.Component parent-component ^java.lang.Object message]
+  (^Integer [^java.awt.Component parent-component ^java.lang.Object message]
     (JOptionPane/showInternalConfirmDialog parent-component message)))
 
 (defn *get-frame-for-component
@@ -719,7 +719,7 @@
             or does not have a valid Frame parent - `java.awt.Frame`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless returns true"
-  ([^java.awt.Component parent-component]
+  (^java.awt.Frame [^java.awt.Component parent-component]
     (JOptionPane/getFrameForComponent parent-component)))
 
 (defn *show-internal-message-dialog
@@ -742,7 +742,7 @@
   "Returns the input value that is displayed as initially selected to the user.
 
   returns: the initially selected value - `java.lang.Object`"
-  ([^javax.swing.JOptionPane this]
+  (^java.lang.Object [^javax.swing.JOptionPane this]
     (-> this (.getInitialSelectionValue))))
 
 (defn set-options
@@ -752,7 +752,7 @@
    otherwise a button is created for the element.
 
   new-options - an array of Objects that create the buttons the user can click on, or arbitrary Components to add to the pane - `java.lang.Object[]`"
-  ([^javax.swing.JOptionPane this ^java.lang.Object[] new-options]
+  ([^javax.swing.JOptionPane this new-options]
     (-> this (.setOptions new-options))))
 
 (defn create-dialog
@@ -777,9 +777,9 @@
   returns: a new JDialog containing this instance - `javax.swing.JDialog`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless returns true"
-  ([^javax.swing.JOptionPane this ^java.awt.Component parent-component ^java.lang.String title]
+  (^javax.swing.JDialog [^javax.swing.JOptionPane this ^java.awt.Component parent-component ^java.lang.String title]
     (-> this (.createDialog parent-component title)))
-  ([^javax.swing.JOptionPane this ^java.lang.String title]
+  (^javax.swing.JDialog [^javax.swing.JOptionPane this ^java.lang.String title]
     (-> this (.createDialog title))))
 
 (defn get-input-value
@@ -790,7 +790,7 @@
             if it was one of the objects, or a
             String if it was a value typed into a
             field - `java.lang.Object`"
-  ([^javax.swing.JOptionPane this]
+  (^java.lang.Object [^javax.swing.JOptionPane this]
     (-> this (.getInputValue))))
 
 (defn set-icon
@@ -824,7 +824,7 @@
   "Returns the icon this pane displays.
 
   returns: the Icon that is displayed - `javax.swing.Icon`"
-  ([^javax.swing.JOptionPane this]
+  (^javax.swing.Icon [^javax.swing.JOptionPane this]
     (-> this (.getIcon))))
 
 (defn get-ui-class-id
@@ -832,14 +832,14 @@
    L&F for this component.
 
   returns: the string `OptionPaneUI` - `java.lang.String`"
-  ([^javax.swing.JOptionPane this]
+  (^java.lang.String [^javax.swing.JOptionPane this]
     (-> this (.getUIClassID))))
 
 (defn get-message-type
   "Returns the message type.
 
   returns: an integer specifying the message type - `int`"
-  ([^javax.swing.JOptionPane this]
+  (^Integer [^javax.swing.JOptionPane this]
     (-> this (.getMessageType))))
 
 (defn get-value
@@ -853,21 +853,21 @@
            UNINITIALIZED_VALUE
            if the user has not yet made a choice, or null if
            the user closed the window without making a choice - `java.lang.Object`"
-  ([^javax.swing.JOptionPane this]
+  (^java.lang.Object [^javax.swing.JOptionPane this]
     (-> this (.getValue))))
 
 (defn get-wants-input?
   "Returns the value of the wantsInput property.
 
   returns: true if an input component will be provided - `boolean`"
-  ([^javax.swing.JOptionPane this]
+  (^Boolean [^javax.swing.JOptionPane this]
     (-> this (.getWantsInput))))
 
 (defn get-option-type
   "Returns the type of options that are displayed.
 
   returns: an integer specifying the user-selectable options - `int`"
-  ([^javax.swing.JOptionPane this]
+  (^Integer [^javax.swing.JOptionPane this]
     (-> this (.getOptionType))))
 
 (defn set-ui
@@ -897,7 +897,7 @@
   "Returns the UI object which implements the L&F for this component.
 
   returns: the OptionPaneUI object - `javax.swing.plaf.OptionPaneUI`"
-  ([^javax.swing.JOptionPane this]
+  (^javax.swing.plaf.OptionPaneUI [^javax.swing.JOptionPane this]
     (-> this (.getUI))))
 
 (defn get-options
@@ -915,7 +915,7 @@
 
   returns: an AccessibleJOptionPane that serves as the
            AccessibleContext of this AccessibleJOptionPane - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.JOptionPane this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.JOptionPane this]
     (-> this (.getAccessibleContext))))
 
 (defn set-message-type
@@ -944,14 +944,14 @@
    changed by overriding this method in a subclass.
 
   returns: an integer giving the maximum number of characters on a line - `int`"
-  ([^javax.swing.JOptionPane this]
+  (^Integer [^javax.swing.JOptionPane this]
     (-> this (.getMaxCharactersPerLineCount))))
 
 (defn get-initial-value
   "Returns the initial value.
 
   returns: the Object that gets the initial keyboard focus - `java.lang.Object`"
-  ([^javax.swing.JOptionPane this]
+  (^java.lang.Object [^javax.swing.JOptionPane this]
     (-> this (.getInitialValue))))
 
 (defn set-initial-selection-value
@@ -966,7 +966,7 @@
   "Returns the message-object this pane displays.
 
   returns: the Object that is displayed - `java.lang.Object`"
-  ([^javax.swing.JOptionPane this]
+  (^java.lang.Object [^javax.swing.JOptionPane this]
     (-> this (.getMessage))))
 
 (defn set-wants-input
@@ -1003,7 +1003,7 @@
             JOptionPane - `javax.swing.JInternalFrame`
 
   throws: java.lang.RuntimeException - if parentComponent does not have a valid parent"
-  ([^javax.swing.JOptionPane this ^java.awt.Component parent-component ^java.lang.String title]
+  (^javax.swing.JInternalFrame [^javax.swing.JOptionPane this ^java.awt.Component parent-component ^java.lang.String title]
     (-> this (.createInternalFrame parent-component title))))
 
 (defn set-selection-values
@@ -1019,7 +1019,7 @@
    set to the value the user has selected.
 
   new-values - an array of Objects the user to be displayed (usually in a list or combo-box) from which the user can make a selection - `java.lang.Object[]`"
-  ([^javax.swing.JOptionPane this ^java.lang.Object[] new-values]
+  ([^javax.swing.JOptionPane this new-values]
     (-> this (.setSelectionValues new-values))))
 
 (defn update-ui

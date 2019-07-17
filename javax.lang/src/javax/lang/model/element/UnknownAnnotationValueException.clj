@@ -29,13 +29,13 @@
    serialized and then read back in.
 
   returns: the unknown element, or null if unavailable - `javax.lang.model.element.AnnotationValue`"
-  ([^javax.lang.model.element.UnknownAnnotationValueException this]
+  (^javax.lang.model.element.AnnotationValue [^javax.lang.model.element.UnknownAnnotationValueException this]
     (-> this (.getUnknownAnnotationValue))))
 
 (defn get-argument
   "Returns the additional argument.
 
   returns: the additional argument - `java.lang.Object`"
-  ([^javax.lang.model.element.UnknownAnnotationValueException this]
+  (^java.lang.Object [^javax.lang.model.element.UnknownAnnotationValueException this]
     (-> this (.getArgument))))
 

@@ -71,6 +71,6 @@
   returns: the enum constant with the specified name - `java.sql.RowIdLifetime`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^java.sql.RowIdLifetime [^java.lang.String name]
     (RowIdLifetime/valueOf name)))
 

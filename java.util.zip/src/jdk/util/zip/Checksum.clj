@@ -18,7 +18,7 @@
   "Returns the current checksum value.
 
   returns: the current checksum value - `long`"
-  ([^java.util.zip.Checksum this]
+  (^Long [^java.util.zip.Checksum this]
     (-> this (.getValue))))
 
 (defn reset

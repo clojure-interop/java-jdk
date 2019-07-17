@@ -62,6 +62,6 @@
 
   returns: an unmodifiable list of XMLStructures (may be
       empty, but never null) - `java.util.List`"
-  ([^javax.xml.crypto.dsig.keyinfo.PGPData this]
+  (^java.util.List [^javax.xml.crypto.dsig.keyinfo.PGPData this]
     (-> this (.getExternalElements))))
 

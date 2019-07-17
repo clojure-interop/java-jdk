@@ -74,14 +74,14 @@
   index - the index at which to begin - `int`
 
   returns: `java.lang.String`"
-  ([^java.awt.Choice this ^Integer index]
+  (^java.lang.String [^java.awt.Choice this ^Integer index]
     (-> this (.getItem index))))
 
 (defn get-item-count
   "Returns the number of items in this Choice menu.
 
   returns: the number of items in this Choice menu - `int`"
-  ([^java.awt.Choice this]
+  (^Integer [^java.awt.Choice this]
     (-> this (.getItemCount))))
 
 (defn remove-item-listener
@@ -101,7 +101,7 @@
 
   returns: the index of the currently selected item, or -1 if nothing
     is currently selected - `int`"
-  ([^java.awt.Choice this]
+  (^Integer [^java.awt.Choice this]
     (-> this (.getSelectedIndex))))
 
 (defn add-notify
@@ -151,7 +151,7 @@
 
   returns: an AccessibleAWTChoice that serves as the
            AccessibleContext of this Choice - `javax.accessibility.AccessibleContext`"
-  ([^java.awt.Choice this]
+  (^javax.accessibility.AccessibleContext [^java.awt.Choice this]
     (-> this (.getAccessibleContext))))
 
 (defn get-selected-item
@@ -159,7 +159,7 @@
 
   returns: a string representation of the currently
                        selected item in this choice menu - `java.lang.String`"
-  ([^java.awt.Choice this]
+  (^java.lang.String [^java.awt.Choice this]
     (-> this (.getSelectedItem))))
 
 (defn insert

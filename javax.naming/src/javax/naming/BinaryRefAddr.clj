@@ -45,7 +45,7 @@
    and to lock the buffer if they need to change it.
 
   returns: The non-null buffer containing this address's contents. - `java.lang.Object`"
-  ([^javax.naming.BinaryRefAddr this]
+  (^java.lang.Object [^javax.naming.BinaryRefAddr this]
     (-> this (.getContent))))
 
 (defn equals
@@ -56,7 +56,7 @@
   obj - The possibly null object to check. - `java.lang.Object`
 
   returns: true if the object is equal; false otherwise. - `boolean`"
-  ([^javax.naming.BinaryRefAddr this ^java.lang.Object obj]
+  (^Boolean [^javax.naming.BinaryRefAddr this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -67,7 +67,7 @@
    the same hash code.
 
   returns: The hash code of this address as an int. - `int`"
-  ([^javax.naming.BinaryRefAddr this]
+  (^Integer [^javax.naming.BinaryRefAddr this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -79,6 +79,6 @@
    meant to be interpreted programmatically.
 
   returns: The non-null string representation of this address. - `java.lang.String`"
-  ([^javax.naming.BinaryRefAddr this]
+  (^java.lang.String [^javax.naming.BinaryRefAddr this]
     (-> this (.toString))))
 

@@ -37,9 +37,9 @@
   returns: new TransformerFactory instance, never null. - `javax.xml.transform.TransformerFactory`
 
   throws: javax.xml.transform.TransformerFactoryConfigurationError - if factoryClassName is null, or the factory class cannot be loaded, instantiated."
-  ([^java.lang.String factory-class-name ^java.lang.ClassLoader class-loader]
+  (^javax.xml.transform.TransformerFactory [^java.lang.String factory-class-name ^java.lang.ClassLoader class-loader]
     (TransformerFactory/newInstance factory-class-name class-loader))
-  ([]
+  (^javax.xml.transform.TransformerFactory []
     (TransformerFactory/newInstance )))
 
 (defn get-feature?
@@ -57,7 +57,7 @@
   returns: The current state of the feature, true or false. - `boolean`
 
   throws: java.lang.NullPointerException - If the name parameter is null."
-  ([^javax.xml.transform.TransformerFactory this ^java.lang.String name]
+  (^Boolean [^javax.xml.transform.TransformerFactory this ^java.lang.String name]
     (-> this (.getFeature name))))
 
 (defn set-error-listener
@@ -77,7 +77,7 @@
   "Get the error event handler for the TransformerFactory.
 
   returns: The current error handler, which should never be null. - `javax.xml.transform.ErrorListener`"
-  ([^javax.xml.transform.TransformerFactory this]
+  (^javax.xml.transform.ErrorListener [^javax.xml.transform.TransformerFactory this]
     (-> this (.getErrorListener))))
 
 (defn new-templates
@@ -94,7 +94,7 @@
      purposes, never null. - `javax.xml.transform.Templates`
 
   throws: javax.xml.transform.TransformerConfigurationException - When parsing to construct the Templates object fails."
-  ([^javax.xml.transform.TransformerFactory this ^javax.xml.transform.Source source]
+  (^javax.xml.transform.Templates [^javax.xml.transform.TransformerFactory this ^javax.xml.transform.Source source]
     (-> this (.newTemplates source))))
 
 (defn get-attribute
@@ -108,7 +108,7 @@
   returns: value The value of the attribute. - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - When implementation does not recognize the attribute."
-  ([^javax.xml.transform.TransformerFactory this ^java.lang.String name]
+  (^java.lang.Object [^javax.xml.transform.TransformerFactory this ^java.lang.String name]
     (-> this (.getAttribute name))))
 
 (defn new-transformer
@@ -128,9 +128,9 @@
      null. - `javax.xml.transform.Transformer`
 
   throws: javax.xml.transform.TransformerConfigurationException - Thrown if there are errors when parsing the Source or it is not possible to create a Transformer instance."
-  ([^javax.xml.transform.TransformerFactory this ^javax.xml.transform.Source source]
+  (^javax.xml.transform.Transformer [^javax.xml.transform.TransformerFactory this ^javax.xml.transform.Source source]
     (-> this (.newTransformer source)))
-  ([^javax.xml.transform.TransformerFactory this]
+  (^javax.xml.transform.Transformer [^javax.xml.transform.TransformerFactory this]
     (-> this (.newTransformer))))
 
 (defn get-uri-resolver
@@ -138,7 +138,7 @@
    to resolve URIs used in document(), xsl:import, or xsl:include.
 
   returns: The URIResolver that was set with setURIResolver. - `javax.xml.transform.URIResolver`"
-  ([^javax.xml.transform.TransformerFactory this]
+  (^javax.xml.transform.URIResolver [^javax.xml.transform.TransformerFactory this]
     (-> this (.getURIResolver))))
 
 (defn set-attribute
@@ -210,7 +210,7 @@
      to the TransformerFactory. - `javax.xml.transform.Source`
 
   throws: javax.xml.transform.TransformerConfigurationException - An Exception is thrown if an error occurings during parsing of the source."
-  ([^javax.xml.transform.TransformerFactory this ^javax.xml.transform.Source source ^java.lang.String media ^java.lang.String title ^java.lang.String charset]
+  (^javax.xml.transform.Source [^javax.xml.transform.TransformerFactory this ^javax.xml.transform.Source source ^java.lang.String media ^java.lang.String title ^java.lang.String charset]
     (-> this (.getAssociatedStylesheet source media title charset))))
 
 (defn set-uri-resolver

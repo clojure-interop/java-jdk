@@ -25,6 +25,6 @@
 
   returns: an ImputStream if an ImputStream for this DataFlavor exists.
    Otherwise, null is returned. - `java.io.InputStream`"
-  ([^javax.accessibility.AccessibleStreamable this ^java.awt.datatransfer.DataFlavor flavor]
+  (^java.io.InputStream [^javax.accessibility.AccessibleStreamable this ^java.awt.datatransfer.DataFlavor flavor]
     (-> this (.getStream flavor))))
 

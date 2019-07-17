@@ -66,6 +66,6 @@
   returns: the enum constant with the specified name - `java.awt.Desktop.Action`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^java.awt.Desktop.Action [^java.lang.String name]
     (Desktop$Action/valueOf name)))
 

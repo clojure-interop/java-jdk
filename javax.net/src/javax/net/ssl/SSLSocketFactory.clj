@@ -24,7 +24,7 @@
    call fails, an inoperative factory is returned.
 
   returns: the default SocketFactory - `javax.net.SocketFactory`"
-  ([]
+  (^javax.net.SocketFactory []
     (SSLSocketFactory/getDefault )))
 
 (defn get-default-cipher-suites
@@ -65,8 +65,8 @@
   returns: a socket connected to the specified host and port - `java.net.Socket`
 
   throws: java.io.IOException - if an I/O error occurs when creating the socket"
-  ([^javax.net.ssl.SSLSocketFactory this ^java.net.Socket s ^java.lang.String host ^Integer port ^Boolean auto-close]
+  (^java.net.Socket [^javax.net.ssl.SSLSocketFactory this ^java.net.Socket s ^java.lang.String host ^Integer port ^Boolean auto-close]
     (-> this (.createSocket s host port auto-close)))
-  ([^javax.net.ssl.SSLSocketFactory this ^java.net.Socket s ^java.io.InputStream consumed ^Boolean auto-close]
+  (^java.net.Socket [^javax.net.ssl.SSLSocketFactory this ^java.net.Socket s ^java.io.InputStream consumed ^Boolean auto-close]
     (-> this (.createSocket s consumed auto-close))))
 

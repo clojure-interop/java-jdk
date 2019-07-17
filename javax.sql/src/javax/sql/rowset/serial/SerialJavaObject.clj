@@ -38,7 +38,7 @@
            Object in the Java programming language - `java.lang.Object`
 
   throws: javax.sql.rowset.serial.SerialException - if the instance is corrupt"
-  ([^javax.sql.rowset.serial.SerialJavaObject this]
+  (^java.lang.Object [^javax.sql.rowset.serial.SerialJavaObject this]
     (-> this (.getObject))))
 
 (defn get-fields
@@ -61,7 +61,7 @@
 
   returns: true if the given object represents a SerialJavaObject
             equivalent to this SerialJavaObject, false otherwise - `boolean`"
-  ([^javax.sql.rowset.serial.SerialJavaObject this ^java.lang.Object o]
+  (^Boolean [^javax.sql.rowset.serial.SerialJavaObject this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn hash-code
@@ -70,13 +70,13 @@
    the Object it stores
 
   returns: a hash code value for this object. - `int`"
-  ([^javax.sql.rowset.serial.SerialJavaObject this]
+  (^Integer [^javax.sql.rowset.serial.SerialJavaObject this]
     (-> this (.hashCode))))
 
 (defn clone
   "Returns a clone of this SerialJavaObject.
 
   returns: a clone of this SerialJavaObject - `java.lang.Object`"
-  ([^javax.sql.rowset.serial.SerialJavaObject this]
+  (^java.lang.Object [^javax.sql.rowset.serial.SerialJavaObject this]
     (-> this (.clone))))
 

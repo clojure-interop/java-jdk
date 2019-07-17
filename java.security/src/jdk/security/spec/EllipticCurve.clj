@@ -28,7 +28,7 @@
 
   returns: the field field that this curve
    is over. - `java.security.spec.ECField`"
-  ([^java.security.spec.EllipticCurve this]
+  (^java.security.spec.ECField [^java.security.spec.EllipticCurve this]
     (-> this (.getField))))
 
 (defn get-a
@@ -36,7 +36,7 @@
    elliptic curve.
 
   returns: the first coefficient a. - `java.math.BigInteger`"
-  ([^java.security.spec.EllipticCurve this]
+  (^java.math.BigInteger [^java.security.spec.EllipticCurve this]
     (-> this (.getA))))
 
 (defn get-b
@@ -44,7 +44,7 @@
    elliptic curve.
 
   returns: the second coefficient b. - `java.math.BigInteger`"
-  ([^java.security.spec.EllipticCurve this]
+  (^java.math.BigInteger [^java.security.spec.EllipticCurve this]
     (-> this (.getB))))
 
 (defn get-seed
@@ -64,7 +64,7 @@
 
   returns: true if obj is an instance of
    EllipticCurve and the field, A, and B match, false otherwise. - `boolean`"
-  ([^java.security.spec.EllipticCurve this ^java.lang.Object obj]
+  (^Boolean [^java.security.spec.EllipticCurve this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -75,6 +75,6 @@
 
 
        (field.hashCode() << 6)  (a.hashCode() << 4)  (b.hashCode() << 2) - `int`"
-  ([^java.security.spec.EllipticCurve this]
+  (^Integer [^java.security.spec.EllipticCurve this]
     (-> this (.hashCode))))
 

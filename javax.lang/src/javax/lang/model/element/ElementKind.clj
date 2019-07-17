@@ -165,7 +165,7 @@
   returns: the enum constant with the specified name - `javax.lang.model.element.ElementKind`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^javax.lang.model.element.ElementKind [^java.lang.String name]
     (ElementKind/valueOf name)))
 
 (defn class?
@@ -173,7 +173,7 @@
    either CLASS or ENUM.
 
   returns: true if this is a kind of class - `boolean`"
-  ([^javax.lang.model.element.ElementKind this]
+  (^Boolean [^javax.lang.model.element.ElementKind this]
     (-> this (.isClass))))
 
 (defn interface?
@@ -181,7 +181,7 @@
    either INTERFACE or ANNOTATION_TYPE.
 
   returns: true if this is a kind of interface - `boolean`"
-  ([^javax.lang.model.element.ElementKind this]
+  (^Boolean [^javax.lang.model.element.ElementKind this]
     (-> this (.isInterface))))
 
 (defn field?
@@ -189,6 +189,6 @@
    either FIELD or ENUM_CONSTANT.
 
   returns: true if this is a kind of field - `boolean`"
-  ([^javax.lang.model.element.ElementKind this]
+  (^Boolean [^javax.lang.model.element.ElementKind this]
     (-> this (.isField))))
 

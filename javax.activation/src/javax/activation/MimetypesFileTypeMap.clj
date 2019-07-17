@@ -58,6 +58,6 @@
   f - the file - `java.io.File`
 
   returns: the file's MIME type - `java.lang.String`"
-  ([^javax.activation.MimetypesFileTypeMap this ^java.io.File f]
+  (^java.lang.String [^javax.activation.MimetypesFileTypeMap this ^java.io.File f]
     (-> this (.getContentType f))))
 

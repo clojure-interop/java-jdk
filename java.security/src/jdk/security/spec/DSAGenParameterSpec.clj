@@ -27,7 +27,7 @@
    to-be-generated DSA domain parameters in bits.
 
   returns: the length of the prime P. - `int`"
-  ([^java.security.spec.DSAGenParameterSpec this]
+  (^Integer [^java.security.spec.DSAGenParameterSpec this]
     (-> this (.getPrimePLength))))
 
 (defn get-subprime-q-length
@@ -35,13 +35,13 @@
    to-be-generated DSA domain parameters in bits.
 
   returns: the length of the sub-prime Q. - `int`"
-  ([^java.security.spec.DSAGenParameterSpec this]
+  (^Integer [^java.security.spec.DSAGenParameterSpec this]
     (-> this (.getSubprimeQLength))))
 
 (defn get-seed-length
   "Returns the desired length of the domain parameter seed in bits.
 
   returns: the length of the domain parameter seed. - `int`"
-  ([^java.security.spec.DSAGenParameterSpec this]
+  (^Integer [^java.security.spec.DSAGenParameterSpec this]
     (-> this (.getSeedLength))))
 

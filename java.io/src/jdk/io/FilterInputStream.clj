@@ -32,11 +32,11 @@
                the stream has been reached. - `int`
 
   throws: java.lang.NullPointerException - If b is null."
-  ([^java.io.FilterInputStream this b ^Integer off ^Integer len]
+  (^Integer [^java.io.FilterInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  ([^java.io.FilterInputStream this b]
+  (^Integer [^java.io.FilterInputStream this b]
     (-> this (.read b)))
-  ([^java.io.FilterInputStream this]
+  (^Integer [^java.io.FilterInputStream this]
     (-> this (.read))))
 
 (defn skip
@@ -53,7 +53,7 @@
   returns: the actual number of bytes skipped. - `long`
 
   throws: java.io.IOException - if the stream does not support seek, or if some other I/O error occurs."
-  ([^java.io.FilterInputStream this ^Long n]
+  (^Long [^java.io.FilterInputStream this ^Long n]
     (-> this (.skip n))))
 
 (defn available
@@ -69,7 +69,7 @@
                over) from this input stream without blocking. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.FilterInputStream this]
+  (^Integer [^java.io.FilterInputStream this]
     (-> this (.available))))
 
 (defn close
@@ -126,6 +126,6 @@
   returns: true if this stream type supports the
             mark and reset method;
             false otherwise. - `boolean`"
-  ([^java.io.FilterInputStream this]
+  (^Boolean [^java.io.FilterInputStream this]
     (-> this (.markSupported))))
 

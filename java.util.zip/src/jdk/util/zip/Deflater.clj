@@ -173,14 +173,14 @@
    the preferred means of obtaining this information.
 
   returns: the total number of compressed bytes output so far - `int`"
-  ([^java.util.zip.Deflater this]
+  (^Integer [^java.util.zip.Deflater this]
     (-> this (.getTotalOut))))
 
 (defn get-bytes-written
   "Returns the total number of compressed bytes output so far.
 
   returns: the total (non-negative) number of compressed bytes output so far - `long`"
-  ([^java.util.zip.Deflater this]
+  (^Long [^java.util.zip.Deflater this]
     (-> this (.getBytesWritten))))
 
 (defn needs-input
@@ -189,7 +189,7 @@
 
   returns: true if the input data buffer is empty and setInput()
    should be called in order to provide more input - `boolean`"
-  ([^java.util.zip.Deflater this]
+  (^Boolean [^java.util.zip.Deflater this]
     (-> this (.needsInput))))
 
 (defn reset
@@ -222,14 +222,14 @@
   "Returns the total number of uncompressed bytes input so far.
 
   returns: the total (non-negative) number of uncompressed bytes input so far - `long`"
-  ([^java.util.zip.Deflater this]
+  (^Long [^java.util.zip.Deflater this]
     (-> this (.getBytesRead))))
 
 (defn get-adler
   "Returns the ADLER-32 value of the uncompressed data.
 
   returns: the ADLER-32 value of the uncompressed data - `int`"
-  ([^java.util.zip.Deflater this]
+  (^Integer [^java.util.zip.Deflater this]
     (-> this (.getAdler))))
 
 (defn set-level
@@ -289,11 +289,11 @@
            the output buffer - `int`
 
   throws: java.lang.IllegalArgumentException - if the flush mode is invalid"
-  ([^java.util.zip.Deflater this b ^Integer off ^Integer len ^Integer flush]
+  (^Integer [^java.util.zip.Deflater this b ^Integer off ^Integer len ^Integer flush]
     (-> this (.deflate b off len flush)))
-  ([^java.util.zip.Deflater this b ^Integer off ^Integer len]
+  (^Integer [^java.util.zip.Deflater this b ^Integer off ^Integer len]
     (-> this (.deflate b off len)))
-  ([^java.util.zip.Deflater this b]
+  (^Integer [^java.util.zip.Deflater this b]
     (-> this (.deflate b))))
 
 (defn get-total-in
@@ -304,7 +304,7 @@
    the preferred means of obtaining this information.
 
   returns: the total number of uncompressed bytes input so far - `int`"
-  ([^java.util.zip.Deflater this]
+  (^Integer [^java.util.zip.Deflater this]
     (-> this (.getTotalIn))))
 
 (defn set-dictionary
@@ -337,6 +337,6 @@
 
   returns: true if the end of the compressed data output stream has
    been reached - `boolean`"
-  ([^java.util.zip.Deflater this]
+  (^Boolean [^java.util.zip.Deflater this]
     (-> this (.finished))))
 

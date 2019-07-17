@@ -26,7 +26,7 @@
   "The emitted notification.
 
   returns: The notification. - `javax.management.Notification`"
-  ([^javax.management.remote.TargetedNotification this]
+  (^javax.management.Notification [^javax.management.remote.TargetedNotification this]
     (-> this (.getNotification))))
 
 (defn get-listener-id
@@ -34,13 +34,13 @@
       targeted.
 
   returns: The listener ID. - `java.lang.Integer`"
-  ([^javax.management.remote.TargetedNotification this]
+  (^java.lang.Integer [^javax.management.remote.TargetedNotification this]
     (-> this (.getListenerID))))
 
 (defn to-string
   "Returns a textual representation of this Targeted Notification.
 
   returns: a String representation of this Targeted Notification. - `java.lang.String`"
-  ([^javax.management.remote.TargetedNotification this]
+  (^java.lang.String [^javax.management.remote.TargetedNotification this]
     (-> this (.toString))))
 

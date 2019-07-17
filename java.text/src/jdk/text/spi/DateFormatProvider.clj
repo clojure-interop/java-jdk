@@ -15,7 +15,7 @@
   returns: a time formatter. - `java.text.DateFormat`
 
   throws: java.lang.IllegalArgumentException - if style is invalid, or if locale isn't one of the locales returned from getAvailableLocales()."
-  ([^java.text.spi.DateFormatProvider this ^Integer style ^java.util.Locale locale]
+  (^java.text.DateFormat [^java.text.spi.DateFormatProvider this ^Integer style ^java.util.Locale locale]
     (-> this (.getTimeInstance style locale))))
 
 (defn get-date-instance
@@ -28,7 +28,7 @@
   returns: a date formatter. - `java.text.DateFormat`
 
   throws: java.lang.IllegalArgumentException - if style is invalid, or if locale isn't one of the locales returned from getAvailableLocales()."
-  ([^java.text.spi.DateFormatProvider this ^Integer style ^java.util.Locale locale]
+  (^java.text.DateFormat [^java.text.spi.DateFormatProvider this ^Integer style ^java.util.Locale locale]
     (-> this (.getDateInstance style locale))))
 
 (defn get-date-time-instance
@@ -42,6 +42,6 @@
   returns: a date/time formatter. - `java.text.DateFormat`
 
   throws: java.lang.IllegalArgumentException - if dateStyle or timeStyle is invalid, or if locale isn't one of the locales returned from getAvailableLocales()."
-  ([^java.text.spi.DateFormatProvider this ^Integer date-style ^Integer time-style ^java.util.Locale locale]
+  (^java.text.DateFormat [^java.text.spi.DateFormatProvider this ^Integer date-style ^Integer time-style ^java.util.Locale locale]
     (-> this (.getDateTimeInstance date-style time-style locale))))
 

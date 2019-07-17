@@ -161,7 +161,7 @@
   returns: a stream containing the XML data. - `java.io.InputStream`
 
   throws: java.sql.SQLException - if there is an error processing the XML value. An exception is thrown if the state is not readable."
-  ([^java.sql.SQLXML this]
+  (^java.io.InputStream [^java.sql.SQLXML this]
     (-> this (.getBinaryStream))))
 
 (defn set-string
@@ -210,7 +210,7 @@
   returns: a stream to which data can be written. - `java.io.OutputStream`
 
   throws: java.sql.SQLException - if there is an error processing the XML value. An exception is thrown if the state is not writable."
-  ([^java.sql.SQLXML this]
+  (^java.io.OutputStream [^java.sql.SQLXML this]
     (-> this (.setBinaryStream))))
 
 (defn get-string
@@ -229,7 +229,7 @@
   returns: a string representation of the XML value designated by this SQLXML instance. - `java.lang.String`
 
   throws: java.sql.SQLException - if there is an error processing the XML value. The getCause() method of the exception may provide a more detailed exception, for example, if the stream does not contain valid characters. An exception is thrown if the state is not readable."
-  ([^java.sql.SQLXML this]
+  (^java.lang.String [^java.sql.SQLXML this]
     (-> this (.getString))))
 
 (defn get-character-stream
@@ -248,7 +248,7 @@
   returns: a stream containing the XML data. - `java.io.Reader`
 
   throws: java.sql.SQLException - if there is an error processing the XML value. The getCause() method of the exception may provide a more detailed exception, for example, if the stream does not contain valid characters. An exception is thrown if the state is not readable."
-  ([^java.sql.SQLXML this]
+  (^java.io.Reader [^java.sql.SQLXML this]
     (-> this (.getCharacterStream))))
 
 (defn get-source
@@ -324,6 +324,6 @@
   returns: a stream to which data can be written. - `java.io.Writer`
 
   throws: java.sql.SQLException - if there is an error processing the XML value. The getCause() method of the exception may provide a more detailed exception, for example, if the stream does not contain valid characters. An exception is thrown if the state is not writable."
-  ([^java.sql.SQLXML this]
+  (^java.io.Writer [^java.sql.SQLXML this]
     (-> this (.setCharacterStream))))
 

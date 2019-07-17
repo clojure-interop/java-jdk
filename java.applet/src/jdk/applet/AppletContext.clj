@@ -21,7 +21,7 @@
   url - an absolute URL giving the location of the image. - `java.net.URL`
 
   returns: the image at the specified URL. - `java.awt.Image`"
-  ([^java.applet.AppletContext this ^java.net.URL url]
+  (^java.awt.Image [^java.applet.AppletContext this ^java.net.URL url]
     (-> this (.getImage url))))
 
 (defn get-applets
@@ -30,7 +30,7 @@
 
   returns: an enumeration of all applets in the document represented by
             this applet context. - `java.util.Enumeration<java.applet.Applet>`"
-  ([^java.applet.AppletContext this]
+  (^java.util.Enumeration [^java.applet.AppletContext this]
     (-> this (.getApplets))))
 
 (defn get-applet
@@ -42,7 +42,7 @@
 
   returns: the applet with the given name, or null if
             not found. - `java.applet.Applet`"
-  ([^java.applet.AppletContext this ^java.lang.String name]
+  (^java.applet.Applet [^java.applet.AppletContext this ^java.lang.String name]
     (-> this (.getApplet name))))
 
 (defn get-stream-keys
@@ -54,7 +54,7 @@
 
   returns: an Iterator of all the names of the streams in this applet
             context. - `java.util.Iterator<java.lang.String>`"
-  ([^java.applet.AppletContext this]
+  (^java.util.Iterator [^java.applet.AppletContext this]
     (-> this (.getStreamKeys))))
 
 (defn get-stream
@@ -69,7 +69,7 @@
   key - key whose associated stream is to be returned. - `java.lang.String`
 
   returns: the stream to which this applet context maps the key - `java.io.InputStream`"
-  ([^java.applet.AppletContext this ^java.lang.String key]
+  (^java.io.InputStream [^java.applet.AppletContext this ^java.lang.String key]
     (-> this (.getStream key))))
 
 (defn set-stream
@@ -138,6 +138,6 @@
   url - an absolute URL giving the location of the audio clip. - `java.net.URL`
 
   returns: the audio clip at the specified URL. - `java.applet.AudioClip`"
-  ([^java.applet.AppletContext this ^java.net.URL url]
+  (^java.applet.AudioClip [^java.applet.AppletContext this ^java.net.URL url]
     (-> this (.getAudioClip url))))
 

@@ -80,27 +80,27 @@
   returns: the enum constant with the specified name - `java.time.format.TextStyle`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^java.time.format.TextStyle [^java.lang.String name]
     (TextStyle/valueOf name)))
 
 (defn standalone?
   "Returns true if the Style is a stand-alone style.
 
   returns: true if the style is a stand-alone style. - `boolean`"
-  ([^java.time.format.TextStyle this]
+  (^Boolean [^java.time.format.TextStyle this]
     (-> this (.isStandalone))))
 
 (defn as-standalone
   "Returns the stand-alone style with the same size.
 
   returns: the stand-alone style with the same size - `java.time.format.TextStyle`"
-  ([^java.time.format.TextStyle this]
+  (^java.time.format.TextStyle [^java.time.format.TextStyle this]
     (-> this (.asStandalone))))
 
 (defn as-normal
   "Returns the normal style with the same size.
 
   returns: the normal style with the same size - `java.time.format.TextStyle`"
-  ([^java.time.format.TextStyle this]
+  (^java.time.format.TextStyle [^java.time.format.TextStyle this]
     (-> this (.asNormal))))
 

@@ -72,7 +72,7 @@
    Label.CENTER.
 
   returns: `int`"
-  ([^java.awt.Label this]
+  (^Integer [^java.awt.Label this]
     (-> this (.getAlignment))))
 
 (defn set-alignment
@@ -91,7 +91,7 @@
 
   returns: the text of this label, or null if
                the text has been set to null. - `java.lang.String`"
-  ([^java.awt.Label this]
+  (^java.lang.String [^java.awt.Label this]
     (-> this (.getText))))
 
 (defn set-text
@@ -109,6 +109,6 @@
 
   returns: an AccessibleAWTLabel that serves as the
            AccessibleContext of this Label - `javax.accessibility.AccessibleContext`"
-  ([^java.awt.Label this]
+  (^javax.accessibility.AccessibleContext [^java.awt.Label this]
     (-> this (.getAccessibleContext))))
 

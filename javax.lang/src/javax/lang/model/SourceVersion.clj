@@ -132,14 +132,14 @@
   returns: the enum constant with the specified name - `javax.lang.model.SourceVersion`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^javax.lang.model.SourceVersion [^java.lang.String name]
     (SourceVersion/valueOf name)))
 
 (defn *latest
   "Returns the latest source version that can be modeled.
 
   returns: the latest source version that can be modeled - `javax.lang.model.SourceVersion`"
-  ([]
+  (^javax.lang.model.SourceVersion []
     (SourceVersion/latest )))
 
 (defn *latest-supported
@@ -148,7 +148,7 @@
    be returned.
 
   returns: the latest source version that is fully supported - `javax.lang.model.SourceVersion`"
-  ([]
+  (^javax.lang.model.SourceVersion []
     (SourceVersion/latestSupported )))
 
 (defn *identifier?
@@ -166,7 +166,7 @@
   returns: true if this string is a
    syntactically valid identifier or keyword, false
    otherwise. - `boolean`"
-  ([^java.lang.CharSequence name]
+  (^Boolean [^java.lang.CharSequence name]
     (SourceVersion/isIdentifier name)))
 
 (defn *name?
@@ -178,7 +178,7 @@
 
   returns: true if this string is a
    syntactically valid name, false otherwise. - `boolean`"
-  ([^java.lang.CharSequence name]
+  (^Boolean [^java.lang.CharSequence name]
     (SourceVersion/isName name)))
 
 (defn *keyword?
@@ -188,6 +188,6 @@
   s - the string to check - `java.lang.CharSequence`
 
   returns: true if s is a keyword or literal, false otherwise. - `boolean`"
-  ([^java.lang.CharSequence s]
+  (^Boolean [^java.lang.CharSequence s]
     (SourceVersion/isKeyword s)))
 

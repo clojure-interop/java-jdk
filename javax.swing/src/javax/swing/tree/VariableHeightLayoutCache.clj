@@ -25,7 +25,7 @@
   path - the TreePath of interest - `javax.swing.tree.TreePath`
 
   returns: the row where the last item in path is visible - `int`"
-  ([^javax.swing.tree.VariableHeightLayoutCache this ^javax.swing.tree.TreePath path]
+  (^Integer [^javax.swing.tree.VariableHeightLayoutCache this ^javax.swing.tree.TreePath path]
     (-> this (.getRowForPath path))))
 
 (defn tree-nodes-inserted
@@ -62,14 +62,14 @@
 
   returns: true if the value identified by path is
       currently expanded - `boolean`"
-  ([^javax.swing.tree.VariableHeightLayoutCache this ^javax.swing.tree.TreePath path]
+  (^Boolean [^javax.swing.tree.VariableHeightLayoutCache this ^javax.swing.tree.TreePath path]
     (-> this (.isExpanded path))))
 
 (defn get-row-count
   "Returns the number of visible rows.
 
   returns: the number of visible rows - `int`"
-  ([^javax.swing.tree.VariableHeightLayoutCache this]
+  (^Integer [^javax.swing.tree.VariableHeightLayoutCache this]
     (-> this (.getRowCount))))
 
 (defn set-root-visible
@@ -93,7 +93,7 @@
   path - the path being queried - `javax.swing.tree.TreePath`
 
   returns: the number of visible children for path - `int`"
-  ([^javax.swing.tree.VariableHeightLayoutCache this ^javax.swing.tree.TreePath path]
+  (^Integer [^javax.swing.tree.VariableHeightLayoutCache this ^javax.swing.tree.TreePath path]
     (-> this (.getVisibleChildCount path))))
 
 (defn tree-nodes-changed
@@ -131,7 +131,7 @@
 
   returns: an Enumerator that increments over the visible
        paths - `java.util.Enumeration<javax.swing.tree.TreePath>`"
-  ([^javax.swing.tree.VariableHeightLayoutCache this ^javax.swing.tree.TreePath path]
+  (^java.util.Enumeration [^javax.swing.tree.VariableHeightLayoutCache this ^javax.swing.tree.TreePath path]
     (-> this (.getVisiblePathsFrom path))))
 
 (defn tree-structure-changed
@@ -154,7 +154,7 @@
   path - the path being queried - `javax.swing.tree.TreePath`
 
   returns: true if the path is expanded and visible, otherwise false - `boolean`"
-  ([^javax.swing.tree.VariableHeightLayoutCache this ^javax.swing.tree.TreePath path]
+  (^Boolean [^javax.swing.tree.VariableHeightLayoutCache this ^javax.swing.tree.TreePath path]
     (-> this (.getExpandedState path))))
 
 (defn set-row-height
@@ -174,7 +174,7 @@
 
   returns: the path for row, or null
    if row is not visible - `javax.swing.tree.TreePath`"
-  ([^javax.swing.tree.VariableHeightLayoutCache this ^Integer row]
+  (^javax.swing.tree.TreePath [^javax.swing.tree.VariableHeightLayoutCache this ^Integer row]
     (-> this (.getPathForRow row))))
 
 (defn get-bounds
@@ -186,7 +186,7 @@
 
   returns: the bounds of the enclosing rectangle or null
       if the node could not be ascertained - `java.awt.Rectangle`"
-  ([^javax.swing.tree.VariableHeightLayoutCache this ^javax.swing.tree.TreePath path ^java.awt.Rectangle place-in]
+  (^java.awt.Rectangle [^javax.swing.tree.VariableHeightLayoutCache this ^javax.swing.tree.TreePath path ^java.awt.Rectangle place-in]
     (-> this (.getBounds path place-in))))
 
 (defn set-expanded-state
@@ -202,7 +202,7 @@
   "Returns the preferred height.
 
   returns: the preferred height - `int`"
-  ([^javax.swing.tree.VariableHeightLayoutCache this]
+  (^Integer [^javax.swing.tree.VariableHeightLayoutCache this]
     (-> this (.getPreferredHeight))))
 
 (defn set-model
@@ -230,7 +230,7 @@
   y - the y-coordinate - `int`
 
   returns: the path to the node that is closest to x, y - `javax.swing.tree.TreePath`"
-  ([^javax.swing.tree.VariableHeightLayoutCache this ^Integer x ^Integer y]
+  (^javax.swing.tree.TreePath [^javax.swing.tree.VariableHeightLayoutCache this ^Integer x ^Integer y]
     (-> this (.getPathClosestTo x y))))
 
 (defn get-preferred-width
@@ -240,6 +240,6 @@
   bounds - the region being queried - `java.awt.Rectangle`
 
   returns: the preferred width for the passed in region - `int`"
-  ([^javax.swing.tree.VariableHeightLayoutCache this ^java.awt.Rectangle bounds]
+  (^Integer [^javax.swing.tree.VariableHeightLayoutCache this ^java.awt.Rectangle bounds]
     (-> this (.getPreferredWidth bounds))))
 

@@ -37,8 +37,8 @@
   returns: the resulting Path - `java.nio.file.Path`
 
   throws: java.nio.file.InvalidPathException - if the path string cannot be converted to a Path"
-  ([^java.lang.String first ^java.lang.String more]
+  (^java.nio.file.Path [^java.lang.String first ^java.lang.String more]
     (Paths/get first more))
-  ([^java.net.URI uri]
+  (^java.nio.file.Path [^java.net.URI uri]
     (Paths/get uri)))
 

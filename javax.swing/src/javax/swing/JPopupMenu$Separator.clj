@@ -12,6 +12,6 @@
   "Returns the name of the L&F class that renders this component.
 
   returns: the string `PopupMenuSeparatorUI` - `java.lang.String`"
-  ([^javax.swing.JPopupMenu$Separator this]
+  (^java.lang.String [^javax.swing.JPopupMenu$Separator this]
     (-> this (.getUIClassID))))
 

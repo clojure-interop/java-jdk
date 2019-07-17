@@ -68,9 +68,9 @@
                the stream has been reached. - `int`
 
   throws: java.io.IOException - if the pipe is broken, unconnected, closed, or an I/O error occurs."
-  ([^java.io.PipedReader this cbuf ^Integer off ^Integer len]
+  (^Integer [^java.io.PipedReader this cbuf ^Integer off ^Integer len]
     (-> this (.read cbuf off len)))
-  ([^java.io.PipedReader this]
+  (^Integer [^java.io.PipedReader this]
     (-> this (.read))))
 
 (defn ready
@@ -82,7 +82,7 @@
    next read will block. - `boolean`
 
   throws: java.io.IOException - if the pipe is broken, unconnected, or closed."
-  ([^java.io.PipedReader this]
+  (^Boolean [^java.io.PipedReader this]
     (-> this (.ready))))
 
 (defn close

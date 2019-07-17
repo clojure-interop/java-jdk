@@ -35,7 +35,7 @@
   end-index - the ending index in the text - `int`
 
   returns: the text string between the indices - `java.lang.String`"
-  ([^javax.accessibility.AccessibleEditableText this ^Integer start-index ^Integer end-index]
+  (^java.lang.String [^javax.accessibility.AccessibleEditableText this ^Integer start-index ^Integer end-index]
     (-> this (.getTextRange start-index end-index))))
 
 (defn select-text

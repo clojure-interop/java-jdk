@@ -28,7 +28,7 @@
    not yet been set. - `java.security.PrivateKey`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkSecurityAccess method doesn't allow returning the private key."
-  ([^java.security.Signer this]
+  (^java.security.PrivateKey [^java.security.Signer this]
     (-> this (.getPrivateKey))))
 
 (defn set-key-pair
@@ -44,6 +44,6 @@
   "Deprecated.
 
   returns: a string of information about the signer. - `java.lang.String`"
-  ([^java.security.Signer this]
+  (^java.lang.String [^java.security.Signer this]
     (-> this (.toString))))
 

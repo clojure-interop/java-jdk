@@ -31,21 +31,21 @@
    newlines (\n). - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if null parameter"
-  ([^java.util.List role-value]
+  (^java.lang.String [^java.util.List role-value]
     (Role/roleValueToString role-value)))
 
 (defn get-role-name
   "Retrieves role name.
 
   returns: the role name. - `java.lang.String`"
-  ([^javax.management.relation.Role this]
+  (^java.lang.String [^javax.management.relation.Role this]
     (-> this (.getRoleName))))
 
 (defn get-role-value
   "Retrieves role value.
 
   returns: ArrayList of ObjectName objects for referenced MBeans. - `java.util.List<javax.management.ObjectName>`"
-  ([^javax.management.relation.Role this]
+  (^java.util.List [^javax.management.relation.Role this]
     (-> this (.getRoleValue))))
 
 (defn set-role-name
@@ -70,13 +70,13 @@
   "Returns a string describing the role.
 
   returns: the description of the role. - `java.lang.String`"
-  ([^javax.management.relation.Role this]
+  (^java.lang.String [^javax.management.relation.Role this]
     (-> this (.toString))))
 
 (defn clone
   "Clone the role object.
 
   returns: a Role that is an independent copy of the current Role object. - `java.lang.Object`"
-  ([^javax.management.relation.Role this]
+  (^java.lang.Object [^javax.management.relation.Role this]
     (-> this (.clone))))
 

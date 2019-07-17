@@ -53,6 +53,6 @@
    name is `print-quality`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.PrintQuality this]
+  (^java.lang.String [^javax.print.attribute.standard.PrintQuality this]
     (-> this (.getName))))
 

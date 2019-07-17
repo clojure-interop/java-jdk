@@ -76,14 +76,14 @@
   returns: the Container object that originated
    the event, or null if the object is not a
    Container. - `java.awt.Container`"
-  ([^java.awt.event.ContainerEvent this]
+  (^java.awt.Container [^java.awt.event.ContainerEvent this]
     (-> this (.getContainer))))
 
 (defn get-child
   "Returns the component that was affected by the event.
 
   returns: the Component object that was added or removed - `java.awt.Component`"
-  ([^java.awt.event.ContainerEvent this]
+  (^java.awt.Component [^java.awt.event.ContainerEvent this]
     (-> this (.getChild))))
 
 (defn param-string
@@ -91,6 +91,6 @@
    This method is useful for event-logging and for debugging.
 
   returns: a string identifying the event and its attributes - `java.lang.String`"
-  ([^java.awt.event.ContainerEvent this]
+  (^java.lang.String [^java.awt.event.ContainerEvent this]
     (-> this (.paramString))))
 

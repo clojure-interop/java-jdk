@@ -27,25 +27,25 @@
 
 (defn get-shift
   "returns: `int`"
-  ([^javax.swing.plaf.metal.MetalIconFactory$FileIcon16 this]
+  (^Integer [^javax.swing.plaf.metal.MetalIconFactory$FileIcon16 this]
     (-> this (.getShift))))
 
 (defn get-additional-height
   "returns: `int`"
-  ([^javax.swing.plaf.metal.MetalIconFactory$FileIcon16 this]
+  (^Integer [^javax.swing.plaf.metal.MetalIconFactory$FileIcon16 this]
     (-> this (.getAdditionalHeight))))
 
 (defn get-icon-width
   "Description copied from interface: Icon
 
   returns: an int specifying the fixed width of the icon. - `int`"
-  ([^javax.swing.plaf.metal.MetalIconFactory$FileIcon16 this]
+  (^Integer [^javax.swing.plaf.metal.MetalIconFactory$FileIcon16 this]
     (-> this (.getIconWidth))))
 
 (defn get-icon-height
   "Description copied from interface: Icon
 
   returns: an int specifying the fixed height of the icon. - `int`"
-  ([^javax.swing.plaf.metal.MetalIconFactory$FileIcon16 this]
+  (^Integer [^javax.swing.plaf.metal.MetalIconFactory$FileIcon16 this]
     (-> this (.getIconHeight))))
 

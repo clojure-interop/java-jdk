@@ -91,7 +91,7 @@
   c - the editor component - `javax.swing.JComponent`
 
   returns: the size - `java.awt.Dimension`"
-  ([^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.JComponent c]
     (-> this (.getMinimumSize c))))
 
 (defn get-maximum-size
@@ -100,7 +100,7 @@
   c - the editor component - `javax.swing.JComponent`
 
   returns: the size - `java.awt.Dimension`"
-  ([^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.JComponent c]
     (-> this (.getMaximumSize c))))
 
 (defn uninstall-ui
@@ -134,7 +134,7 @@
   pt - `java.awt.Point`
 
   returns: `java.lang.String`"
-  ([^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.text.JTextComponent t ^java.awt.Point pt]
+  (^java.lang.String [^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.text.JTextComponent t ^java.awt.Point pt]
     (-> this (.getToolTipText t pt))))
 
 (defn paint
@@ -176,9 +176,9 @@
 
   returns: the offset from the start of the document >= 0,
      -1 if the component doesn't yet have a positive size. - `int`"
-  ([^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.text.JTextComponent tc ^java.awt.Point pt ^javax.swing.text.Position.Bias[] bias-return]
+  (^Integer [^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.text.JTextComponent tc ^java.awt.Point pt bias-return]
     (-> this (.viewToModel tc pt bias-return)))
-  ([^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.text.JTextComponent tc ^java.awt.Point pt]
+  (^Integer [^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.text.JTextComponent tc ^java.awt.Point pt]
     (-> this (.viewToModel tc pt))))
 
 (defn create
@@ -193,9 +193,9 @@
   p-1 - the ending offset >= p0 - `int`
 
   returns: the view - `javax.swing.text.View`"
-  ([^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.text.Element elem ^Integer p-0 ^Integer p-1]
+  (^javax.swing.text.View [^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.text.Element elem ^Integer p-0 ^Integer p-1]
     (-> this (.create elem p-0 p-1)))
-  ([^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.text.Element elem]
+  (^javax.swing.text.View [^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.text.Element elem]
     (-> this (.create elem))))
 
 (defn get-editor-kit
@@ -204,7 +204,7 @@
   tc - the text component for which this UI is installed - `javax.swing.text.JTextComponent`
 
   returns: the editor capabilities - `javax.swing.text.EditorKit`"
-  ([^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.text.JTextComponent tc]
+  (^javax.swing.text.EditorKit [^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.text.JTextComponent tc]
     (-> this (.getEditorKit tc))))
 
 (defn model-to-view
@@ -220,9 +220,9 @@
   returns: the coordinates as a rectangle, null if the model is not painted - `java.awt.Rectangle`
 
   throws: javax.swing.text.BadLocationException - if the given position does not represent a valid location in the associated document"
-  ([^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.text.JTextComponent tc ^Integer pos ^javax.swing.text.Position.Bias bias]
+  (^java.awt.Rectangle [^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.text.JTextComponent tc ^Integer pos ^javax.swing.text.Position.Bias bias]
     (-> this (.modelToView tc pos bias)))
-  ([^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.text.JTextComponent tc ^Integer pos]
+  (^java.awt.Rectangle [^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.text.JTextComponent tc ^Integer pos]
     (-> this (.modelToView tc pos))))
 
 (defn get-preferred-size
@@ -237,7 +237,7 @@
   c - the editor component - `javax.swing.JComponent`
 
   returns: the size - `java.awt.Dimension`"
-  ([^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.JComponent c]
     (-> this (.getPreferredSize c))))
 
 (defn get-root-view
@@ -256,7 +256,7 @@
   tc - the text component for which this UI is installed - `javax.swing.text.JTextComponent`
 
   returns: the view - `javax.swing.text.View`"
-  ([^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.text.JTextComponent tc]
+  (^javax.swing.text.View [^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.text.JTextComponent tc]
     (-> this (.getRootView tc))))
 
 (defn get-next-visual-position-from
@@ -275,6 +275,6 @@
     location visual position - `int`
 
   throws: javax.swing.text.BadLocationException"
-  ([^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.text.JTextComponent t ^Integer pos ^javax.swing.text.Position.Bias b ^Integer direction ^javax.swing.text.Position.Bias[] bias-ret]
+  (^Integer [^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.text.JTextComponent t ^Integer pos ^javax.swing.text.Position.Bias b ^Integer direction bias-ret]
     (-> this (.getNextVisualPositionFrom t pos b direction bias-ret))))
 

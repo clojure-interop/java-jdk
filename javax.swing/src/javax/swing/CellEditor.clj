@@ -30,7 +30,7 @@
   "Returns the value contained in the editor.
 
   returns: the value contained in the editor - `java.lang.Object`"
-  ([^javax.swing.CellEditor this]
+  (^java.lang.Object [^javax.swing.CellEditor this]
     (-> this (.getCellEditorValue))))
 
 (defn cell-editable?
@@ -45,7 +45,7 @@
   an-event - the event the editor should use to consider whether to begin editing or not - `java.util.EventObject`
 
   returns: true if editing can be started - `boolean`"
-  ([^javax.swing.CellEditor this ^java.util.EventObject an-event]
+  (^Boolean [^javax.swing.CellEditor this ^java.util.EventObject an-event]
     (-> this (.isCellEditable an-event))))
 
 (defn should-select-cell?
@@ -63,7 +63,7 @@
 
   returns: true if the editor would like the editing cell to be selected;
       otherwise returns false - `boolean`"
-  ([^javax.swing.CellEditor this ^java.util.EventObject an-event]
+  (^Boolean [^javax.swing.CellEditor this ^java.util.EventObject an-event]
     (-> this (.shouldSelectCell an-event))))
 
 (defn stop-cell-editing
@@ -73,7 +73,7 @@
    and can not accept invalid entries.
 
   returns: true if editing was stopped; false otherwise - `boolean`"
-  ([^javax.swing.CellEditor this]
+  (^Boolean [^javax.swing.CellEditor this]
     (-> this (.stopCellEditing))))
 
 (defn cancel-cell-editing

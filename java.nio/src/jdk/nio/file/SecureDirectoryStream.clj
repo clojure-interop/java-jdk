@@ -41,7 +41,7 @@
   returns: a new and open SecureDirectoryStream object - `java.nio.file.SecureDirectoryStream<SecureDirectoryStream.T>`
 
   throws: java.nio.file.ClosedDirectoryStreamException - if the directory stream is closed"
-  ([^java.nio.file.SecureDirectoryStream this ^SecureDirectoryStream.T path ^java.nio.file.LinkOption options]
+  (^java.nio.file.SecureDirectoryStream [^java.nio.file.SecureDirectoryStream this ^SecureDirectoryStream.T path ^java.nio.file.LinkOption options]
     (-> this (.newDirectoryStream path options))))
 
 (defn new-byte-channel
@@ -66,7 +66,7 @@
   returns: the seekable byte channel - `java.nio.channels.SeekableByteChannel`
 
   throws: java.nio.file.ClosedDirectoryStreamException - if the directory stream is closed"
-  ([^java.nio.file.SecureDirectoryStream this ^SecureDirectoryStream.T path ^java.nio.file.OpenOption> options ^java.nio.file.attribute.FileAttribute attrs]
+  (^java.nio.channels.SeekableByteChannel [^java.nio.file.SecureDirectoryStream this ^SecureDirectoryStream.T path ^java.nio.file.OpenOption> options ^java.nio.file.attribute.FileAttribute attrs]
     (-> this (.newByteChannel path options attrs))))
 
 (defn delete-file

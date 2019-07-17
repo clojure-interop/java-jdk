@@ -19,27 +19,27 @@
   "Returns the public key y.
 
   returns: the public key y. - `java.math.BigInteger`"
-  ([^java.security.spec.DSAPublicKeySpec this]
+  (^java.math.BigInteger [^java.security.spec.DSAPublicKeySpec this]
     (-> this (.getY))))
 
 (defn get-p
   "Returns the prime p.
 
   returns: the prime p. - `java.math.BigInteger`"
-  ([^java.security.spec.DSAPublicKeySpec this]
+  (^java.math.BigInteger [^java.security.spec.DSAPublicKeySpec this]
     (-> this (.getP))))
 
 (defn get-q
   "Returns the sub-prime q.
 
   returns: the sub-prime q. - `java.math.BigInteger`"
-  ([^java.security.spec.DSAPublicKeySpec this]
+  (^java.math.BigInteger [^java.security.spec.DSAPublicKeySpec this]
     (-> this (.getQ))))
 
 (defn get-g
   "Returns the base g.
 
   returns: the base g. - `java.math.BigInteger`"
-  ([^java.security.spec.DSAPublicKeySpec this]
+  (^java.math.BigInteger [^java.security.spec.DSAPublicKeySpec this]
     (-> this (.getG))))
 

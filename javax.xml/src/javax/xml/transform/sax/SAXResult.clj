@@ -35,7 +35,7 @@
   "Get the ContentHandler that is the Result.
 
   returns: The ContentHandler that is to be transformation output. - `org.xml.sax.ContentHandler`"
-  ([^javax.xml.transform.sax.SAXResult this]
+  (^org.xml.sax.ContentHandler [^javax.xml.transform.sax.SAXResult this]
     (-> this (.getHandler))))
 
 (defn set-lexical-handler
@@ -54,7 +54,7 @@
   "Get a SAX2 LexicalHandler for the output.
 
   returns: A LexicalHandler, or null. - `org.xml.sax.ext.LexicalHandler`"
-  ([^javax.xml.transform.sax.SAXResult this]
+  (^org.xml.sax.ext.LexicalHandler [^javax.xml.transform.sax.SAXResult this]
     (-> this (.getLexicalHandler))))
 
 (defn set-system-id
@@ -70,6 +70,6 @@
 
   returns: The system identifier that was set with setSystemId, or null
    if setSystemId was not called. - `java.lang.String`"
-  ([^javax.xml.transform.sax.SAXResult this]
+  (^java.lang.String [^javax.xml.transform.sax.SAXResult this]
     (-> this (.getSystemId))))
 

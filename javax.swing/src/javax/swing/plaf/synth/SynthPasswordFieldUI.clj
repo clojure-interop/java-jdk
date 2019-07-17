@@ -15,7 +15,7 @@
   c - the JPasswordField - `javax.swing.JComponent`
 
   returns: the UI - `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent c]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent c]
     (SynthPasswordFieldUI/createUI c)))
 
 (defn create
@@ -24,7 +24,7 @@
   elem - the element - `javax.swing.text.Element`
 
   returns: the view - `javax.swing.text.View`"
-  ([^javax.swing.plaf.synth.SynthPasswordFieldUI this ^javax.swing.text.Element elem]
+  (^javax.swing.text.View [^javax.swing.plaf.synth.SynthPasswordFieldUI this ^javax.swing.text.Element elem]
     (-> this (.create elem))))
 
 (defn paint-border

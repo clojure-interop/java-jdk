@@ -29,7 +29,7 @@
 
   returns: The exception handler for this stream;
       Will return the default exception listener if this has not explicitly been set. - `java.beans.ExceptionListener`"
-  ([^java.beans.Encoder this]
+  (^java.beans.ExceptionListener [^java.beans.Encoder this]
     (-> this (.getExceptionListener))))
 
 (defn get-persistence-delegate
@@ -112,7 +112,7 @@
   type - the class of the objects - `java.lang.Class<?>`
 
   returns: the persistence delegate for the given type - `java.beans.PersistenceDelegate`"
-  ([^java.beans.Encoder this ^java.lang.Class type]
+  (^java.beans.PersistenceDelegate [^java.beans.Encoder this ^java.lang.Class type]
     (-> this (.getPersistenceDelegate type))))
 
 (defn set-persistence-delegate
@@ -129,7 +129,7 @@
   old-instance - The entry that should be removed. - `java.lang.Object`
 
   returns: The entry that was removed. - `java.lang.Object`"
-  ([^java.beans.Encoder this ^java.lang.Object old-instance]
+  (^java.lang.Object [^java.beans.Encoder this ^java.lang.Object old-instance]
     (-> this (.remove old-instance))))
 
 (defn get
@@ -144,7 +144,7 @@
   old-instance - The instance to be looked up. - `java.lang.Object`
 
   returns: The object, null if the object has not been seen before. - `java.lang.Object`"
-  ([^java.beans.Encoder this ^java.lang.Object old-instance]
+  (^java.lang.Object [^java.beans.Encoder this ^java.lang.Object old-instance]
     (-> this (.get old-instance))))
 
 (defn write-statement

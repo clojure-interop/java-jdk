@@ -34,7 +34,7 @@
   returns: the system-wide ProxySelector - `java.net.ProxySelector`
 
   throws: java.lang.SecurityException - If a security manager has been installed and it denies NetPermission(`getProxySelector`)"
-  ([]
+  (^java.net.ProxySelector []
     (ProxySelector/getDefault )))
 
 (defn *set-default
@@ -70,7 +70,7 @@
             that represents a direct connection. - `java.util.List<java.net.Proxy>`
 
   throws: java.lang.IllegalArgumentException - if the argument is null"
-  ([^java.net.ProxySelector this ^java.net.URI uri]
+  (^java.util.List [^java.net.ProxySelector this ^java.net.URI uri]
     (-> this (.select uri))))
 
 (defn connect-failed

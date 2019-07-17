@@ -39,6 +39,6 @@
   returns: the built stream - `java.util.stream.IntStream`
 
   throws: java.lang.IllegalStateException - if the builder has already transitioned to the built state"
-  ([^java.util.stream.IntStream$Builder this]
+  (^java.util.stream.IntStream [^java.util.stream.IntStream$Builder this]
     (-> this (.build))))
 

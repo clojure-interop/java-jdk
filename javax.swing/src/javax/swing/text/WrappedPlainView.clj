@@ -57,7 +57,7 @@
              Typically the view is told to render into the span
              that is returned, although there is no guarantee.
              The parent may choose to resize or break the view. - `float`"
-  ([^javax.swing.text.WrappedPlainView this ^Integer axis]
+  (^Float [^javax.swing.text.WrappedPlainView this ^Integer axis]
     (-> this (.getPreferredSpan axis))))
 
 (defn remove-update
@@ -85,7 +85,7 @@
              Typically the view is told to render into the span
              that is returned, although there is no guarantee.
              The parent may choose to resize or break the view. - `float`"
-  ([^javax.swing.text.WrappedPlainView this ^Integer axis]
+  (^Float [^javax.swing.text.WrappedPlainView this ^Integer axis]
     (-> this (.getMinimumSpan axis))))
 
 (defn get-maximum-span
@@ -102,7 +102,7 @@
              Typically the view is told to render into the span
              that is returned, although there is no guarantee.
              The parent may choose to resize or break the view. - `float`"
-  ([^javax.swing.text.WrappedPlainView this ^Integer axis]
+  (^Float [^javax.swing.text.WrappedPlainView this ^Integer axis]
     (-> this (.getMaximumSpan axis))))
 
 (defn insert-update
@@ -136,7 +136,7 @@
   tab-offset - the position within the text stream that the tab occurred at >= 0. - `int`
 
   returns: the tab stop, measured in points >= 0 - `float`"
-  ([^javax.swing.text.WrappedPlainView this ^Float x ^Integer tab-offset]
+  (^Float [^javax.swing.text.WrappedPlainView this ^Float x ^Integer tab-offset]
     (-> this (.nextTabStop x tab-offset))))
 
 (defn set-size

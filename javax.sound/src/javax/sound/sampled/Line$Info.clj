@@ -30,7 +30,7 @@
   "Obtains the class of the line that this Line.Info object describes.
 
   returns: the described line's class - `java.lang.Class<?>`"
-  ([^javax.sound.sampled.Line$Info this]
+  (^java.lang.Class [^javax.sound.sampled.Line$Info this]
     (-> this (.getLineClass))))
 
 (defn matches
@@ -50,13 +50,13 @@
 
   returns: true if the specified object matches this one,
    false otherwise - `boolean`"
-  ([^javax.sound.sampled.Line$Info this ^javax.sound.sampled.Line.Info info]
+  (^Boolean [^javax.sound.sampled.Line$Info this ^javax.sound.sampled.Line.Info info]
     (-> this (.matches info))))
 
 (defn to-string
   "Obtains a textual description of the line info.
 
   returns: a string description - `java.lang.String`"
-  ([^javax.sound.sampled.Line$Info this]
+  (^java.lang.String [^javax.sound.sampled.Line$Info this]
     (-> this (.toString))))
 

@@ -23,7 +23,7 @@
   "Returns the current value.
 
   returns: the current value - `boolean`"
-  ([^java.util.concurrent.atomic.AtomicBoolean this]
+  (^Boolean [^java.util.concurrent.atomic.AtomicBoolean this]
     (-> this (.get))))
 
 (defn compare-and-set
@@ -35,7 +35,7 @@
 
   returns: true if successful. False return indicates that
    the actual value was not equal to the expected value. - `boolean`"
-  ([^java.util.concurrent.atomic.AtomicBoolean this ^Boolean expect ^Boolean update]
+  (^Boolean [^java.util.concurrent.atomic.AtomicBoolean this ^Boolean expect ^Boolean update]
     (-> this (.compareAndSet expect update))))
 
 (defn weak-compare-and-set
@@ -50,7 +50,7 @@
   update - the new value - `boolean`
 
   returns: true if successful - `boolean`"
-  ([^java.util.concurrent.atomic.AtomicBoolean this ^Boolean expect ^Boolean update]
+  (^Boolean [^java.util.concurrent.atomic.AtomicBoolean this ^Boolean expect ^Boolean update]
     (-> this (.weakCompareAndSet expect update))))
 
 (defn set
@@ -73,13 +73,13 @@
   new-value - the new value - `boolean`
 
   returns: the previous value - `boolean`"
-  ([^java.util.concurrent.atomic.AtomicBoolean this ^Boolean new-value]
+  (^Boolean [^java.util.concurrent.atomic.AtomicBoolean this ^Boolean new-value]
     (-> this (.getAndSet new-value))))
 
 (defn to-string
   "Returns the String representation of the current value.
 
   returns: the String representation of the current value - `java.lang.String`"
-  ([^java.util.concurrent.atomic.AtomicBoolean this]
+  (^java.lang.String [^java.util.concurrent.atomic.AtomicBoolean this]
     (-> this (.toString))))
 

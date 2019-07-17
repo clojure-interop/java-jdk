@@ -37,6 +37,6 @@
   returns: the result of the invocation - `java.rmi.MarshalledObject`
 
   throws: java.rmi.RemoteException - if invocation results in a RemoteException"
-  ([^java.rmi.activation.ActivationGroup_Stub this ^java.rmi.activation.ActivationID id ^java.rmi.activation.ActivationDesc desc]
+  (^java.rmi.MarshalledObject [^java.rmi.activation.ActivationGroup_Stub this ^java.rmi.activation.ActivationID id ^java.rmi.activation.ActivationDesc desc]
     (-> this (.newInstance id desc))))
 

@@ -155,7 +155,7 @@
 
   returns: the prompt, or null if this ConfirmationCallback
             was instantiated without a prompt. - `java.lang.String`"
-  ([^javax.security.auth.callback.ConfirmationCallback this]
+  (^java.lang.String [^javax.security.auth.callback.ConfirmationCallback this]
     (-> this (.getPrompt))))
 
 (defn get-message-type
@@ -163,7 +163,7 @@
 
   returns: the message type (INFORMATION,
             WARNING or ERROR). - `int`"
-  ([^javax.security.auth.callback.ConfirmationCallback this]
+  (^Integer [^javax.security.auth.callback.ConfirmationCallback this]
     (-> this (.getMessageType))))
 
 (defn get-option-type
@@ -181,7 +181,7 @@
             UNSPECIFIED_OPTION if this
             ConfirmationCallback was instantiated with
             options instead of an optionType. - `int`"
-  ([^javax.security.auth.callback.ConfirmationCallback this]
+  (^Integer [^javax.security.auth.callback.ConfirmationCallback this]
     (-> this (.getOptionType))))
 
 (defn get-options
@@ -205,7 +205,7 @@
             an index into the
             options array specified to the constructor
             of this ConfirmationCallback. - `int`"
-  ([^javax.security.auth.callback.ConfirmationCallback this]
+  (^Integer [^javax.security.auth.callback.ConfirmationCallback this]
     (-> this (.getDefaultOption))))
 
 (defn set-selected-index
@@ -227,6 +227,6 @@
             option as an index into the
             options array specified to the constructor
             of this ConfirmationCallback. - `int`"
-  ([^javax.security.auth.callback.ConfirmationCallback this]
+  (^Integer [^javax.security.auth.callback.ConfirmationCallback this]
     (-> this (.getSelectedIndex))))
 

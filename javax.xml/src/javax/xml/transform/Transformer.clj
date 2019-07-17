@@ -59,7 +59,7 @@
    Implementations must provide a default error listener.
 
   returns: The current error handler, which should never be null. - `javax.xml.transform.ErrorListener`"
-  ([^javax.xml.transform.Transformer this]
+  (^javax.xml.transform.ErrorListener [^javax.xml.transform.Transformer this]
     (-> this (.getErrorListener))))
 
 (defn set-output-property
@@ -104,7 +104,7 @@
    if no property was found. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - If the property is not supported."
-  ([^javax.xml.transform.Transformer this ^java.lang.String name]
+  (^java.lang.String [^javax.xml.transform.Transformer this ^java.lang.String name]
     (-> this (.getOutputProperty name))))
 
 (defn transform
@@ -157,7 +157,7 @@
 
   returns: An object that implements the URIResolver interface,
    or null. - `javax.xml.transform.URIResolver`"
-  ([^javax.xml.transform.Transformer this]
+  (^javax.xml.transform.URIResolver [^javax.xml.transform.Transformer this]
     (-> this (.getURIResolver))))
 
 (defn get-parameter
@@ -170,7 +170,7 @@
   name - of Object to get - `java.lang.String`
 
   returns: A parameter that has been set with setParameter. - `java.lang.Object`"
-  ([^javax.xml.transform.Transformer this ^java.lang.String name]
+  (^java.lang.Object [^javax.xml.transform.Transformer this ^java.lang.String name]
     (-> this (.getParameter name))))
 
 (defn set-uri-resolver
@@ -234,6 +234,6 @@
 
   returns: A copy of the set of output properties in effect for
      the next transformation. - `java.util.Properties`"
-  ([^javax.xml.transform.Transformer this]
+  (^java.util.Properties [^javax.xml.transform.Transformer this]
     (-> this (.getOutputProperties))))
 

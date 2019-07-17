@@ -15,7 +15,7 @@
   "Returns the Caret that is changing.
 
   returns: Caret that is changing - `javax.swing.text.Caret`"
-  ([^javax.swing.text.NavigationFilter$FilterBypass this]
+  (^javax.swing.text.Caret [^javax.swing.text.NavigationFilter$FilterBypass this]
     (-> this (.getCaret))))
 
 (defn set-dot

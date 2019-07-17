@@ -104,13 +104,13 @@
            object as an Object in the Java programming language - `java.lang.Object`
 
   throws: javax.sql.rowset.serial.SerialException - if an error occurs; if free had previously been called on this object"
-  ([^javax.sql.rowset.serial.SerialArray this ^Long index ^Integer count ^java.util.Map> map]
+  (^java.lang.Object [^javax.sql.rowset.serial.SerialArray this ^Long index ^Integer count ^java.util.Map> map]
     (-> this (.getArray index count map)))
-  ([^javax.sql.rowset.serial.SerialArray this ^Long index ^Integer count]
+  (^java.lang.Object [^javax.sql.rowset.serial.SerialArray this ^Long index ^Integer count]
     (-> this (.getArray index count)))
-  ([^javax.sql.rowset.serial.SerialArray this ^java.util.Map> map]
+  (^java.lang.Object [^javax.sql.rowset.serial.SerialArray this ^java.util.Map> map]
     (-> this (.getArray map)))
-  ([^javax.sql.rowset.serial.SerialArray this]
+  (^java.lang.Object [^javax.sql.rowset.serial.SerialArray this]
     (-> this (.getArray))))
 
 (defn get-base-type
@@ -122,7 +122,7 @@
            the SQL type of the elements in this SerialArray object - `int`
 
   throws: javax.sql.rowset.serial.SerialException - if an error occurs; if free had previously been called on this object"
-  ([^javax.sql.rowset.serial.SerialArray this]
+  (^Integer [^javax.sql.rowset.serial.SerialArray this]
     (-> this (.getBaseType))))
 
 (defn get-base-type-name
@@ -133,7 +133,7 @@
            SerialArray object - `java.lang.String`
 
   throws: javax.sql.rowset.serial.SerialException - if an error occurs; if free had previously been called on this object"
-  ([^javax.sql.rowset.serial.SerialArray this]
+  (^java.lang.String [^javax.sql.rowset.serial.SerialArray this]
     (-> this (.getBaseTypeName))))
 
 (defn get-result-set
@@ -158,13 +158,13 @@
            separate row for each element - `java.sql.ResultSet`
 
   throws: javax.sql.rowset.serial.SerialException - if called with the cause set to UnsupportedOperationException"
-  ([^javax.sql.rowset.serial.SerialArray this ^Long index ^Integer count ^java.util.Map> map]
+  (^java.sql.ResultSet [^javax.sql.rowset.serial.SerialArray this ^Long index ^Integer count ^java.util.Map> map]
     (-> this (.getResultSet index count map)))
-  ([^javax.sql.rowset.serial.SerialArray this ^Long index ^Integer count]
+  (^java.sql.ResultSet [^javax.sql.rowset.serial.SerialArray this ^Long index ^Integer count]
     (-> this (.getResultSet index count)))
-  ([^javax.sql.rowset.serial.SerialArray this ^java.util.Map> map]
+  (^java.sql.ResultSet [^javax.sql.rowset.serial.SerialArray this ^java.util.Map> map]
     (-> this (.getResultSet map)))
-  ([^javax.sql.rowset.serial.SerialArray this]
+  (^java.sql.ResultSet [^javax.sql.rowset.serial.SerialArray this]
     (-> this (.getResultSet))))
 
 (defn equals
@@ -174,7 +174,7 @@
 
   returns: true if the given object represents a SerialArray
             equivalent to this SerialArray, false otherwise - `boolean`"
-  ([^javax.sql.rowset.serial.SerialArray this ^java.lang.Object obj]
+  (^Boolean [^javax.sql.rowset.serial.SerialArray this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -183,7 +183,7 @@
    of the elements of the  SerialArray object
 
   returns: a hash code value for this object. - `int`"
-  ([^javax.sql.rowset.serial.SerialArray this]
+  (^Integer [^javax.sql.rowset.serial.SerialArray this]
     (-> this (.hashCode))))
 
 (defn clone
@@ -192,6 +192,6 @@
    to the original underlying object array of this SerialArray object.
 
   returns: a clone of this SerialArray - `java.lang.Object`"
-  ([^javax.sql.rowset.serial.SerialArray this]
+  (^java.lang.Object [^javax.sql.rowset.serial.SerialArray this]
     (-> this (.clone))))
 

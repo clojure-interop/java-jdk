@@ -40,7 +40,7 @@
    double precision.
 
   returns: the X coordinate of this Point2D. - `double`"
-  ([^java.awt.geom.Point2D$Double this]
+  (^Double [^java.awt.geom.Point2D$Double this]
     (-> this (.getX))))
 
 (defn get-y
@@ -48,7 +48,7 @@
    double precision.
 
   returns: the Y coordinate of this Point2D. - `double`"
-  ([^java.awt.geom.Point2D$Double this]
+  (^Double [^java.awt.geom.Point2D$Double this]
     (-> this (.getY))))
 
 (defn set-location
@@ -65,6 +65,6 @@
    of this Point2D.
 
   returns: a string representation of this Point2D. - `java.lang.String`"
-  ([^java.awt.geom.Point2D$Double this]
+  (^java.lang.String [^java.awt.geom.Point2D$Double this]
     (-> this (.toString))))
 

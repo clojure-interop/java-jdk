@@ -38,7 +38,7 @@
   "Returns the effective key size in bits.
 
   returns: the effective key size in bits. - `int`"
-  ([^javax.crypto.spec.RC2ParameterSpec this]
+  (^Integer [^javax.crypto.spec.RC2ParameterSpec this]
     (-> this (.getEffectiveKeyBits))))
 
 (defn get-iv
@@ -59,7 +59,7 @@
 
   returns: true if the objects are considered equal, false if
    obj is null or otherwise. - `boolean`"
-  ([^javax.crypto.spec.RC2ParameterSpec this ^java.lang.Object obj]
+  (^Boolean [^javax.crypto.spec.RC2ParameterSpec this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -67,6 +67,6 @@
    Objects that are equal will also have the same hashcode.
 
   returns: a hash code value for this object. - `int`"
-  ([^javax.crypto.spec.RC2ParameterSpec this]
+  (^Integer [^javax.crypto.spec.RC2ParameterSpec this]
     (-> this (.hashCode))))
 

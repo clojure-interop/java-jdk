@@ -49,7 +49,7 @@
    args - `java.lang.Object`
 
   throws: java.lang.IllegalAccessException - if this Method object is enforcing Java language access control and the underlying method is inaccessible."
-  ([^java.lang.reflect.Method this ^java.lang.Object obj ^java.lang.Object args]
+  (^java.lang.Object [^java.lang.reflect.Method this ^java.lang.Object obj ^java.lang.Object args]
     (-> this (.invoke obj args))))
 
 (defn get-generic-return-type
@@ -67,7 +67,7 @@
        type of the underlying  method - `java.lang.reflect.Type`
 
   throws: java.lang.reflect.GenericSignatureFormatError - if the generic method signature does not conform to the format specified in The Java™ Virtual Machine Specification"
-  ([^java.lang.reflect.Method this]
+  (^java.lang.reflect.Type [^java.lang.reflect.Method this]
     (-> this (.getGenericReturnType))))
 
 (defn var-args?
@@ -76,7 +76,7 @@
 
   returns: true if an only if this executable was declared
    to take a variable number of arguments. - `boolean`"
-  ([^java.lang.reflect.Method this]
+  (^Boolean [^java.lang.reflect.Method this]
     (-> this (.isVarArgs))))
 
 (defn to-generic-string
@@ -113,7 +113,7 @@
 
   returns: a string describing this Method,
    include type parameters - `java.lang.String`"
-  ([^java.lang.reflect.Method this]
+  (^java.lang.String [^java.lang.reflect.Method this]
     (-> this (.toGenericString))))
 
 (defn get-modifiers
@@ -121,7 +121,7 @@
    the executable represented by this object.
 
   returns: the Java language modifiers for the underlying member - `int`"
-  ([^java.lang.reflect.Method this]
+  (^Integer [^java.lang.reflect.Method this]
     (-> this (.getModifiers))))
 
 (defn get-parameter-count
@@ -131,7 +131,7 @@
 
   returns: The number of formal parameters for the executable this
    object represents - `int`"
-  ([^java.lang.reflect.Method this]
+  (^Integer [^java.lang.reflect.Method this]
     (-> this (.getParameterCount))))
 
 (defn get-exception-types
@@ -152,7 +152,7 @@
   returns: true if and only if this executable is a synthetic
    construct as defined by
    The Java™ Language Specification. - `boolean`"
-  ([^java.lang.reflect.Method this]
+  (^Boolean [^java.lang.reflect.Method this]
     (-> this (.isSynthetic))))
 
 (defn get-generic-parameter-types
@@ -198,7 +198,7 @@
    synchronized, native, strictfp.
 
   returns: a string describing this Method - `java.lang.String`"
-  ([^java.lang.reflect.Method this]
+  (^java.lang.String [^java.lang.reflect.Method this]
     (-> this (.toString))))
 
 (defn get-annotation
@@ -225,7 +225,7 @@
        by this Method instance. - `java.lang.Object`
 
   throws: java.lang.TypeNotPresentException - if the annotation is of type Class and no definition can be found for the default class value."
-  ([^java.lang.reflect.Method this]
+  (^java.lang.Object [^java.lang.reflect.Method this]
     (-> this (.getDefaultValue))))
 
 (defn bridge?
@@ -234,7 +234,7 @@
 
   returns: true if and only if this method is a bridge
    method as defined by the Java Language Specification. - `boolean`"
-  ([^java.lang.reflect.Method this]
+  (^Boolean [^java.lang.reflect.Method this]
     (-> this (.isBridge))))
 
 (defn get-declared-annotations
@@ -256,7 +256,7 @@
    object, as a String.
 
   returns: the simple name of the underlying member - `java.lang.String`"
-  ([^java.lang.reflect.Method this]
+  (^java.lang.String [^java.lang.reflect.Method this]
     (-> this (.getName))))
 
 (defn get-generic-exception-types
@@ -305,7 +305,7 @@
    of the method represented by this Method object.
 
   returns: the return type for the method this object represents - `java.lang.Class<?>`"
-  ([^java.lang.reflect.Method this]
+  (^java.lang.Class [^java.lang.reflect.Method this]
     (-> this (.getReturnType))))
 
 (defn get-annotated-return-type
@@ -320,7 +320,7 @@
 
   returns: an object representing the return type of the method
    or constructor represented by this Executable - `java.lang.reflect.AnnotatedType`"
-  ([^java.lang.reflect.Method this]
+  (^java.lang.reflect.AnnotatedType [^java.lang.reflect.Method this]
     (-> this (.getAnnotatedReturnType))))
 
 (defn get-declaring-class
@@ -329,7 +329,7 @@
 
   returns: an object representing the declaring class of the
    underlying member - `java.lang.Class<?>`"
-  ([^java.lang.reflect.Method this]
+  (^java.lang.Class [^java.lang.reflect.Method this]
     (-> this (.getDeclaringClass))))
 
 (defn hash-code
@@ -338,7 +338,7 @@
    method's declaring class name and the method's name.
 
   returns: a hash code value for this object. - `int`"
-  ([^java.lang.reflect.Method this]
+  (^Integer [^java.lang.reflect.Method this]
     (-> this (.hashCode))))
 
 (defn get-parameter-annotations
@@ -378,7 +378,7 @@
 
   returns: true if and only if this method is a default
    method as defined by the Java Language Specification. - `boolean`"
-  ([^java.lang.reflect.Method this]
+  (^Boolean [^java.lang.reflect.Method this]
     (-> this (.isDefault))))
 
 (defn equals
@@ -391,6 +391,6 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([^java.lang.reflect.Method this ^java.lang.Object obj]
+  (^Boolean [^java.lang.reflect.Method this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

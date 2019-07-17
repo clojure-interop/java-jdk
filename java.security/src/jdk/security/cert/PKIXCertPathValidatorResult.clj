@@ -41,7 +41,7 @@
    as a trust anchor for the certification path.
 
   returns: the TrustAnchor (never null) - `java.security.cert.TrustAnchor`"
-  ([^java.security.cert.PKIXCertPathValidatorResult this]
+  (^java.security.cert.TrustAnchor [^java.security.cert.PKIXCertPathValidatorResult this]
     (-> this (.getTrustAnchor))))
 
 (defn get-policy-tree
@@ -60,7 +60,7 @@
 
   returns: the root node of the valid policy tree, or null
    if there are no valid policies - `java.security.cert.PolicyNode`"
-  ([^java.security.cert.PKIXCertPathValidatorResult this]
+  (^java.security.cert.PolicyNode [^java.security.cert.PKIXCertPathValidatorResult this]
     (-> this (.getPolicyTree))))
 
 (defn get-public-key
@@ -68,14 +68,14 @@
    path, including any inherited public key parameters if applicable.
 
   returns: the public key of the subject (never null) - `java.security.PublicKey`"
-  ([^java.security.cert.PKIXCertPathValidatorResult this]
+  (^java.security.PublicKey [^java.security.cert.PKIXCertPathValidatorResult this]
     (-> this (.getPublicKey))))
 
 (defn clone
   "Returns a copy of this object.
 
   returns: the copy - `java.lang.Object`"
-  ([^java.security.cert.PKIXCertPathValidatorResult this]
+  (^java.lang.Object [^java.security.cert.PKIXCertPathValidatorResult this]
     (-> this (.clone))))
 
 (defn to-string
@@ -84,6 +84,6 @@
 
   returns: a String describing the contents of this
            PKIXCertPathValidatorResult - `java.lang.String`"
-  ([^java.security.cert.PKIXCertPathValidatorResult this]
+  (^java.lang.String [^java.security.cert.PKIXCertPathValidatorResult this]
     (-> this (.toString))))
 

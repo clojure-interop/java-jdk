@@ -21,6 +21,6 @@
   "Returns the cause of this exception.
 
   returns: the IOException which is the cause of this exception. - `java.io.IOException`"
-  ([^java.io.UncheckedIOException this]
+  (^java.io.IOException [^java.io.UncheckedIOException this]
     (-> this (.getCause))))
 

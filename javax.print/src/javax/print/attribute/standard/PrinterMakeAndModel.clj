@@ -41,7 +41,7 @@
 
   returns: True if object is equivalent to this printer
             make and model attribute, false otherwise. - `boolean`"
-  ([^javax.print.attribute.standard.PrinterMakeAndModel this ^java.lang.Object object]
+  (^Boolean [^javax.print.attribute.standard.PrinterMakeAndModel this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -64,6 +64,6 @@
    category name is `printer-make-and-model`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.PrinterMakeAndModel this]
+  (^java.lang.String [^javax.print.attribute.standard.PrinterMakeAndModel this]
     (-> this (.getName))))
 

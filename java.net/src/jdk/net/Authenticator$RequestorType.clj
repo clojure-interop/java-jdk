@@ -42,6 +42,6 @@
   returns: the enum constant with the specified name - `java.net.Authenticator.RequestorType`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^java.net.Authenticator.RequestorType [^java.lang.String name]
     (Authenticator$RequestorType/valueOf name)))
 

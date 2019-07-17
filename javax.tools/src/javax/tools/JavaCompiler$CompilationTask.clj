@@ -38,6 +38,6 @@
    false otherwise - `java.lang.Boolean`
 
   throws: java.lang.RuntimeException - if an unrecoverable error occurred in a user-supplied component. The cause will be the error in user code."
-  ([^javax.tools.JavaCompiler$CompilationTask this]
+  (^java.lang.Boolean [^javax.tools.JavaCompiler$CompilationTask this]
     (-> this (.call))))
 

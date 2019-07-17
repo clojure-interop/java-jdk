@@ -52,7 +52,7 @@
   "Returns the ICC_Profile for this ICC_ColorSpace.
 
   returns: the ICC_Profile for this ICC_ColorSpace. - `java.awt.color.ICC_Profile`"
-  ([^java.awt.color.ICC_ColorSpace this]
+  (^java.awt.color.ICC_Profile [^java.awt.color.ICC_ColorSpace this]
     (-> this (.getProfile))))
 
 (defn to-rgb
@@ -322,7 +322,7 @@
   returns: The minimum normalized component value. - `float`
 
   throws: java.lang.IllegalArgumentException - if component is less than 0 or greater than numComponents - 1."
-  ([^java.awt.color.ICC_ColorSpace this ^Integer component]
+  (^Float [^java.awt.color.ICC_ColorSpace this ^Integer component]
     (-> this (.getMinValue component))))
 
 (defn get-max-value
@@ -342,6 +342,6 @@
   returns: The maximum normalized component value. - `float`
 
   throws: java.lang.IllegalArgumentException - if component is less than 0 or greater than numComponents - 1."
-  ([^java.awt.color.ICC_ColorSpace this ^Integer component]
+  (^Float [^java.awt.color.ICC_ColorSpace this ^Integer component]
     (-> this (.getMaxValue component))))
 

@@ -181,7 +181,7 @@
   sites - an array of call sites to be synchronized - `java.lang.invoke.MutableCallSite[]`
 
   throws: java.lang.NullPointerException - if the sites array reference is null or the array contains a null"
-  ([^java.lang.invoke.MutableCallSite[] sites]
+  ([sites]
     (MutableCallSite/syncAll sites)))
 
 (defn get-target
@@ -197,7 +197,7 @@
    a recent update to the target by another thread.
 
   returns: the linkage state of this call site, a method handle which can change over time - `java.lang.invoke.MethodHandle`"
-  ([^java.lang.invoke.MutableCallSite this]
+  (^java.lang.invoke.MethodHandle [^java.lang.invoke.MutableCallSite this]
     (-> this (.getTarget))))
 
 (defn set-target
@@ -233,6 +233,6 @@
    result = MethodHandles.foldArguments(invoker, getTarget)
 
   returns: a method handle which always invokes this call site's current target - `java.lang.invoke.MethodHandle`"
-  ([^java.lang.invoke.MutableCallSite this]
+  (^java.lang.invoke.MethodHandle [^java.lang.invoke.MutableCallSite this]
     (-> this (.dynamicInvoker))))
 

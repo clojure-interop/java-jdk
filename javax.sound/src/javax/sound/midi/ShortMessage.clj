@@ -214,7 +214,7 @@
    value will not be meaningful.
 
   returns: MIDI channel associated with the message. - `int`"
-  ([^javax.sound.midi.ShortMessage this]
+  (^Integer [^javax.sound.midi.ShortMessage this]
     (-> this (.getChannel))))
 
 (defn get-command
@@ -223,21 +223,21 @@
    value will not be meaningful.
 
   returns: the MIDI command associated with this event - `int`"
-  ([^javax.sound.midi.ShortMessage this]
+  (^Integer [^javax.sound.midi.ShortMessage this]
     (-> this (.getCommand))))
 
 (defn get-data-1
   "Obtains the first data byte in the message.
 
   returns: the value of the data1 field - `int`"
-  ([^javax.sound.midi.ShortMessage this]
+  (^Integer [^javax.sound.midi.ShortMessage this]
     (-> this (.getData1))))
 
 (defn get-data-2
   "Obtains the second data byte in the message.
 
   returns: the value of the data2 field - `int`"
-  ([^javax.sound.midi.ShortMessage this]
+  (^Integer [^javax.sound.midi.ShortMessage this]
     (-> this (.getData2))))
 
 (defn clone
@@ -245,6 +245,6 @@
    as this object.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([^javax.sound.midi.ShortMessage this]
+  (^java.lang.Object [^javax.sound.midi.ShortMessage this]
     (-> this (.clone))))
 

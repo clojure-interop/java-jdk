@@ -156,7 +156,7 @@
    contents should override this method and return true.
 
   returns: true if this component is completely opaque - `boolean`"
-  ([^java.awt.Component this]
+  (^Boolean [^java.awt.Component this]
     (-> this (.isOpaque))))
 
 (defn get-graphics-configuration
@@ -172,7 +172,7 @@
 
   returns: the GraphicsConfiguration used by this
             Component or null - `java.awt.GraphicsConfiguration`"
-  ([^java.awt.Component this]
+  (^java.awt.GraphicsConfiguration [^java.awt.Component this]
     (-> this (.getGraphicsConfiguration))))
 
 (defn remove-input-method-listener
@@ -195,7 +195,7 @@
    method to return true if double buffering is enabled.
 
   returns: false by default - `boolean`"
-  ([^java.awt.Component this]
+  (^Boolean [^java.awt.Component this]
     (-> this (.isDoubleBuffered))))
 
 (defn lightweight?
@@ -211,14 +211,14 @@
 
   returns: true if this component has a lightweight peer; false if
            it has a native peer or no peer - `boolean`"
-  ([^java.awt.Component this]
+  (^Boolean [^java.awt.Component this]
     (-> this (.isLightweight))))
 
 (defn get-minimum-size
   "Gets the minimum size of this component.
 
   returns: a dimension object indicating this component's minimum size - `java.awt.Dimension`"
-  ([^java.awt.Component this]
+  (^java.awt.Dimension [^java.awt.Component this]
     (-> this (.getMinimumSize))))
 
 (defn set-focus-traversal-keys-enabled
@@ -253,9 +253,9 @@
   rv - the return value, modified to the components location - `java.awt.Point`
 
   returns: rv - `java.awt.Point`"
-  ([^java.awt.Component this ^java.awt.Point rv]
+  (^java.awt.Point [^java.awt.Component this ^java.awt.Point rv]
     (-> this (.getLocation rv)))
-  ([^java.awt.Component this]
+  (^java.awt.Point [^java.awt.Component this]
     (-> this (.getLocation))))
 
 (defn print-all
@@ -274,7 +274,7 @@
   "Gets the maximum size of this component.
 
   returns: a dimension object indicating this component's maximum size - `java.awt.Dimension`"
-  ([^java.awt.Component this]
+  (^java.awt.Dimension [^java.awt.Component this]
     (-> this (.getMaximumSize))))
 
 (defn add-mouse-listener
@@ -311,7 +311,7 @@
    doesn't cause any heap allocations.
 
   returns: the current width of this component - `int`"
-  ([^java.awt.Component this]
+  (^Integer [^java.awt.Component this]
     (-> this (.getWidth))))
 
 (defn set-location
@@ -402,7 +402,7 @@
 
   returns: true if the foreground color has been explicitly
            set for this Component; false otherwise. - `boolean`"
-  ([^java.awt.Component this]
+  (^Boolean [^java.awt.Component this]
     (-> this (.isForegroundSet))))
 
 (defn cursor-set?
@@ -412,7 +412,7 @@
 
   returns: true if the cursor has been explicitly set for this
            Component; false otherwise. - `boolean`"
-  ([^java.awt.Component this]
+  (^Boolean [^java.awt.Component this]
     (-> this (.isCursorSet))))
 
 (defn get-focus-traversal-keys
@@ -432,7 +432,7 @@
            returned. - `java.util.Set<java.awt.AWTKeyStroke>`
 
   throws: java.lang.IllegalArgumentException - if id is not one of KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, or KeyboardFocusManager.UP_CYCLE_TRAVERSAL_KEYS"
-  ([^java.awt.Component this ^Integer id]
+  (^java.util.Set [^java.awt.Component this ^Integer id]
     (-> this (.getFocusTraversalKeys id))))
 
 (defn add-mouse-motion-listener
@@ -452,7 +452,7 @@
   returns: this component's foreground color; if this component does
    not have a foreground color, the foreground color of its parent
    is returned - `java.awt.Color`"
-  ([^java.awt.Component this]
+  (^java.awt.Color [^java.awt.Component this]
     (-> this (.getForeground))))
 
 (defn get-mouse-position
@@ -479,7 +479,7 @@
   returns: mouse coordinates relative to this Component, or null - `java.awt.Point`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true"
-  ([^java.awt.Component this]
+  (^java.awt.Point [^java.awt.Component this]
     (-> this (.getMousePosition))))
 
 (defn get-cursor
@@ -489,7 +489,7 @@
    Cursor.DEFAULT_CURSOR is returned.
 
   returns: `java.awt.Cursor`"
-  ([^java.awt.Component this]
+  (^java.awt.Cursor [^java.awt.Component this]
     (-> this (.getCursor))))
 
 (defn validate
@@ -509,9 +509,9 @@
   y - the y coordinate of the point - `int`
 
   returns: `boolean`"
-  ([^java.awt.Component this ^Integer x ^Integer y]
+  (^Boolean [^java.awt.Component this ^Integer x ^Integer y]
     (-> this (.contains x y)))
-  ([^java.awt.Component this ^java.awt.Point p]
+  (^Boolean [^java.awt.Component this ^java.awt.Point p]
     (-> this (.contains p))))
 
 (defn has-focus?
@@ -521,7 +521,7 @@
 
   returns: true if this Component is the
            focus owner; false otherwise - `boolean`"
-  ([^java.awt.Component this]
+  (^Boolean [^java.awt.Component this]
     (-> this (.hasFocus))))
 
 (defn add-hierarchy-bounds-listener
@@ -553,7 +553,7 @@
 
   returns: true if the font has been explicitly set for this
            Component; false otherwise. - `boolean`"
-  ([^java.awt.Component this]
+  (^Boolean [^java.awt.Component this]
     (-> this (.isFontSet))))
 
 (defn set-drop-target
@@ -599,7 +599,7 @@
 
   returns: a graphics context for this component, or null
                if it has none - `java.awt.Graphics`"
-  ([^java.awt.Component this]
+  (^java.awt.Graphics [^java.awt.Component this]
     (-> this (.getGraphics))))
 
 (defn get-locale
@@ -609,7 +609,7 @@
             have a locale, the locale of its parent is returned - `java.util.Locale`
 
   throws: java.awt.IllegalComponentStateException - if the Component does not have its own locale and has not yet been added to a containment hierarchy such that the locale can be determined from the containing parent"
-  ([^java.awt.Component this]
+  (^java.util.Locale [^java.awt.Component this]
     (-> this (.getLocale))))
 
 (defn get-component-orientation
@@ -620,14 +620,14 @@
    get the component's orientation before performing layout or drawing.
 
   returns: `java.awt.ComponentOrientation`"
-  ([^java.awt.Component this]
+  (^java.awt.ComponentOrientation [^java.awt.Component this]
     (-> this (.getComponentOrientation))))
 
 (defn to-string
   "Returns a string representation of this component and its values.
 
   returns: a string representation of this component - `java.lang.String`"
-  ([^java.awt.Component this]
+  (^java.lang.String [^java.awt.Component this]
     (-> this (.toString))))
 
 (defn get-baseline-resize-behavior
@@ -648,7 +648,7 @@
 
   returns: an enum indicating how the baseline changes as the component
            size changes - `java.awt.Component.BaselineResizeBehavior`"
-  ([^java.awt.Component this]
+  (^java.awt.Component.BaselineResizeBehavior [^java.awt.Component this]
     (-> this (.getBaselineResizeBehavior))))
 
 (defn get-location-on-screen
@@ -661,7 +661,7 @@
             coordinate space of the screen - `java.awt.Point`
 
   throws: java.awt.IllegalComponentStateException - if the component is not showing on the screen"
-  ([^java.awt.Component this]
+  (^java.awt.Point [^java.awt.Component this]
     (-> this (.getLocationOnScreen))))
 
 (defn lost-focus
@@ -688,7 +688,7 @@
            this Component; false otherwise. - `boolean`
 
   throws: java.lang.IllegalArgumentException - if id is not one of KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, or KeyboardFocusManager.UP_CYCLE_TRAVERSAL_KEYS"
-  ([^java.awt.Component this ^Integer id]
+  (^Boolean [^java.awt.Component this ^Integer id]
     (-> this (.areFocusTraversalKeysSet id))))
 
 (defn enable-input-methods
@@ -787,9 +787,9 @@
   returns: the bitwise inclusive OR of
               ImageObserver flags indicating what
               information about the image is currently available - `int`"
-  ([^java.awt.Component this ^java.awt.Image image ^Integer width ^Integer height ^java.awt.image.ImageObserver observer]
+  (^Integer [^java.awt.Component this ^java.awt.Image image ^Integer width ^Integer height ^java.awt.image.ImageObserver observer]
     (-> this (.checkImage image width height observer)))
-  ([^java.awt.Component this ^java.awt.Image image ^java.awt.image.ImageObserver observer]
+  (^Integer [^java.awt.Component this ^java.awt.Image image ^java.awt.image.ImageObserver observer]
     (-> this (.checkImage image observer))))
 
 (defn mouse-move
@@ -831,7 +831,7 @@
   "Gets the name of the component.
 
   returns: this component's name - `java.lang.String`"
-  ([^java.awt.Component this]
+  (^java.lang.String [^java.awt.Component this]
     (-> this (.getName))))
 
 (defn reshape
@@ -904,7 +904,7 @@
    the furthest away from the origin, 0.5 is centered, etc.
 
   returns: `float`"
-  ([^java.awt.Component this]
+  (^Float [^java.awt.Component this]
     (-> this (.getAlignmentX))))
 
 (defn add-notify
@@ -938,7 +938,7 @@
   font - the font for which font metrics is to be obtained - `java.awt.Font`
 
   returns: the font metrics for font - `java.awt.FontMetrics`"
-  ([^java.awt.Component this ^java.awt.Font font]
+  (^java.awt.FontMetrics [^java.awt.Component this ^java.awt.Font font]
     (-> this (.getFontMetrics font))))
 
 (defn set-preferred-size
@@ -959,7 +959,7 @@
    doesn't cause any heap allocations.
 
   returns: the current y coordinate of the components origin - `int`"
-  ([^java.awt.Component this]
+  (^Integer [^java.awt.Component this]
     (-> this (.getY))))
 
 (defn show
@@ -1035,14 +1035,14 @@
 
   returns: true if setPreferredSize has been invoked
            with a non-null value. - `boolean`"
-  ([^java.awt.Component this]
+  (^Boolean [^java.awt.Component this]
     (-> this (.isPreferredSizeSet))))
 
 (defn get-parent
   "Gets the parent of this component.
 
   returns: the parent container of this component - `java.awt.Container`"
-  ([^java.awt.Component this]
+  (^java.awt.Container [^java.awt.Component this]
     (-> this (.getParent))))
 
 (defn disable
@@ -1170,7 +1170,7 @@
    cause any heap allocations.
 
   returns: the current x coordinate of the components origin - `int`"
-  ([^java.awt.Component this]
+  (^Integer [^java.awt.Component this]
     (-> this (.getX))))
 
 (defn set-font
@@ -1189,7 +1189,7 @@
 
   returns: true if setMinimumSize has been invoked with a
                 non-null value. - `boolean`"
-  ([^java.awt.Component this]
+  (^Boolean [^java.awt.Component this]
     (-> this (.isMinimumSizeSet))))
 
 (defn invalidate
@@ -1214,7 +1214,7 @@
 
   returns: true if this Component is focusable;
            false otherwise. - `boolean`"
-  ([^java.awt.Component this]
+  (^Boolean [^java.awt.Component this]
     (-> this (.isFocusable))))
 
 (defn maximum-size-set?
@@ -1223,7 +1223,7 @@
 
   returns: true if maximumSize is non-null,
             false otherwise - `boolean`"
-  ([^java.awt.Component this]
+  (^Boolean [^java.awt.Component this]
     (-> this (.isMaximumSizeSet))))
 
 (defn get-height
@@ -1234,7 +1234,7 @@
    doesn't cause any heap allocations.
 
   returns: the current height of this component - `int`"
-  ([^java.awt.Component this]
+  (^Integer [^java.awt.Component this]
     (-> this (.getHeight))))
 
 (defn get-hierarchy-listeners
@@ -1267,9 +1267,9 @@
                   (x, y) location;
                   null if the location
                   is outside this component - `java.awt.Component`"
-  ([^java.awt.Component this ^Integer x ^Integer y]
+  (^java.awt.Component [^java.awt.Component this ^Integer x ^Integer y]
     (-> this (.getComponentAt x y)))
-  ([^java.awt.Component this ^java.awt.Point p]
+  (^java.awt.Component [^java.awt.Component this ^java.awt.Point p]
     (-> this (.getComponentAt p))))
 
 (defn get-drop-target
@@ -1277,7 +1277,7 @@
    Component.
 
   returns: `java.awt.dnd.DropTarget`"
-  ([^java.awt.Component this]
+  (^java.awt.dnd.DropTarget [^java.awt.Component this]
     (-> this (.getDropTarget))))
 
 (defn get-alignment-y
@@ -1288,7 +1288,7 @@
    the furthest away from the origin, 0.5 is centered, etc.
 
   returns: `float`"
-  ([^java.awt.Component this]
+  (^Float [^java.awt.Component this]
     (-> this (.getAlignmentY))))
 
 (defn set-locale
@@ -1335,7 +1335,7 @@
 
   returns: the AccessibleContext of this
       Component - `javax.accessibility.AccessibleContext`"
-  ([^java.awt.Component this]
+  (^javax.accessibility.AccessibleContext [^java.awt.Component this]
     (-> this (.getAccessibleContext))))
 
 (defn valid?
@@ -1348,7 +1348,7 @@
 
   returns: true if the component is valid, false
    otherwise - `boolean`"
-  ([^java.awt.Component this]
+  (^Boolean [^java.awt.Component this]
     (-> this (.isValid))))
 
 (defn get-tree-lock
@@ -1357,7 +1357,7 @@
    operations.
 
   returns: this component's locking object - `java.lang.Object`"
-  ([^java.awt.Component this]
+  (^java.lang.Object [^java.awt.Component this]
     (-> this (.getTreeLock))))
 
 (defn get-property-change-listeners
@@ -1381,7 +1381,7 @@
 
   returns: true if this Component is the
        focus owner; false otherwise - `boolean`"
-  ([^java.awt.Component this]
+  (^Boolean [^java.awt.Component this]
     (-> this (.isFocusOwner))))
 
 (defn remove-mouse-wheel-listener
@@ -1456,9 +1456,9 @@
    to manage surface contents loss and capabilities. - `java.awt.image.VolatileImage`
 
   throws: java.awt.AWTException - if an image with the specified capabilities cannot be created"
-  ([^java.awt.Component this ^Integer width ^Integer height ^java.awt.ImageCapabilities caps]
+  (^java.awt.image.VolatileImage [^java.awt.Component this ^Integer width ^Integer height ^java.awt.ImageCapabilities caps]
     (-> this (.createVolatileImage width height caps)))
-  ([^java.awt.Component this ^Integer width ^Integer height]
+  (^java.awt.image.VolatileImage [^java.awt.Component this ^Integer width ^Integer height]
     (-> this (.createVolatileImage width height))))
 
 (defn image-update
@@ -1499,7 +1499,7 @@
 
   returns: false if the infoflags indicate that the
               image is completely loaded; true otherwise. - `boolean`"
-  ([^java.awt.Component this ^java.awt.Image img ^Integer infoflags ^Integer x ^Integer y ^Integer w ^Integer h]
+  (^Boolean [^java.awt.Component this ^java.awt.Image img ^Integer infoflags ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.imageUpdate img infoflags x y w h))))
 
 (defn background-set?
@@ -1509,7 +1509,7 @@
 
   returns: true if the background color has been explicitly
            set for this Component; false otherwise. - `boolean`"
-  ([^java.awt.Component this]
+  (^Boolean [^java.awt.Component this]
     (-> this (.isBackgroundSet))))
 
 (defn apply-component-orientation
@@ -1555,7 +1555,7 @@
    automatically converted to traversal operations.
 
   returns: whether focus traversal keys are enabled for this Component - `boolean`"
-  ([^java.awt.Component this]
+  (^Boolean [^java.awt.Component this]
     (-> this (.getFocusTraversalKeysEnabled))))
 
 (defn get-input-context
@@ -1567,7 +1567,7 @@
 
   returns: the input context used by this component;
             null if no context can be determined - `java.awt.im.InputContext`"
-  ([^java.awt.Component this]
+  (^java.awt.im.InputContext [^java.awt.Component this]
     (-> this (.getInputContext))))
 
 (defn visible?
@@ -1578,7 +1578,7 @@
 
   returns: true if the component is visible,
    false otherwise - `boolean`"
-  ([^java.awt.Component this]
+  (^Boolean [^java.awt.Component this]
     (-> this (.isVisible))))
 
 (defn set-size
@@ -1606,7 +1606,7 @@
    root ancestor.
 
   returns: this Component's nearest focus-cycle-root ancestor - `java.awt.Container`"
-  ([^java.awt.Component this]
+  (^java.awt.Container [^java.awt.Component this]
     (-> this (.getFocusCycleRootAncestor))))
 
 (defn inside
@@ -1643,9 +1643,9 @@
       component is not displayable.  This will always happen if
       GraphicsEnvironment.isHeadless() returns
       true. - `java.awt.Image`"
-  ([^java.awt.Component this ^Integer width ^Integer height]
+  (^java.awt.Image [^java.awt.Component this ^Integer width ^Integer height]
     (-> this (.createImage width height)))
-  ([^java.awt.Component this ^java.awt.image.ImageProducer producer]
+  (^java.awt.Image [^java.awt.Component this ^java.awt.image.ImageProducer producer]
     (-> this (.createImage producer))))
 
 (defn dispatch-event
@@ -1713,9 +1713,9 @@
   rv - the return value, modified to the components bounds - `java.awt.Rectangle`
 
   returns: rv - `java.awt.Rectangle`"
-  ([^java.awt.Component this ^java.awt.Rectangle rv]
+  (^java.awt.Rectangle [^java.awt.Component this ^java.awt.Rectangle rv]
     (-> this (.getBounds rv)))
-  ([^java.awt.Component this]
+  (^java.awt.Rectangle [^java.awt.Component this]
     (-> this (.getBounds))))
 
 (defn set-bounds
@@ -1742,7 +1742,7 @@
    is moved from one frame to another, the toolkit it uses may change.
 
   returns: the toolkit of this component - `java.awt.Toolkit`"
-  ([^java.awt.Component this]
+  (^java.awt.Toolkit [^java.awt.Component this]
     (-> this (.getToolkit))))
 
 (defn add
@@ -1827,7 +1827,7 @@
 
   returns: this component's font; if a font has not been set
    for this component, the font of its parent is returned - `java.awt.Font`"
-  ([^java.awt.Component this]
+  (^java.awt.Font [^java.awt.Component this]
     (-> this (.getFont))))
 
 (defn mouse-down
@@ -1845,7 +1845,7 @@
 (defn get-ignore-repaint?
   "returns: whether or not paint messages received from the operating system
    should be ignored. - `boolean`"
-  ([^java.awt.Component this]
+  (^Boolean [^java.awt.Component this]
     (-> this (.getIgnoreRepaint))))
 
 (defn deliver-event
@@ -1875,7 +1875,7 @@
 
   returns: true if the component is displayable,
    false otherwise - `boolean`"
-  ([^java.awt.Component this]
+  (^Boolean [^java.awt.Component this]
     (-> this (.isDisplayable))))
 
 (defn prepare-image
@@ -1893,9 +1893,9 @@
 
   returns: true if the image has already been fully
             prepared; false otherwise - `boolean`"
-  ([^java.awt.Component this ^java.awt.Image image ^Integer width ^Integer height ^java.awt.image.ImageObserver observer]
+  (^Boolean [^java.awt.Component this ^java.awt.Image image ^Integer width ^Integer height ^java.awt.image.ImageObserver observer]
     (-> this (.prepareImage image width height observer)))
-  ([^java.awt.Component this ^java.awt.Image image ^java.awt.image.ImageObserver observer]
+  (^Boolean [^java.awt.Component this ^java.awt.Image image ^java.awt.image.ImageObserver observer]
     (-> this (.prepareImage image observer))))
 
 (defn get-mouse-listeners
@@ -1989,7 +1989,7 @@
   returns: this component's background color; if this component does
             not have a background color,
             the background color of its parent is returned - `java.awt.Color`"
-  ([^java.awt.Component this]
+  (^java.awt.Color [^java.awt.Component this]
     (-> this (.getBackground))))
 
 (defn get-input-method-requests
@@ -2001,7 +2001,7 @@
 
   returns: the input method request handler for this component,
             null by default - `java.awt.im.InputMethodRequests`"
-  ([^java.awt.Component this]
+  (^java.awt.im.InputMethodRequests [^java.awt.Component this]
     (-> this (.getInputMethodRequests))))
 
 (defn set-component-orientation
@@ -2051,7 +2051,7 @@
            baseline - `int`
 
   throws: java.lang.IllegalArgumentException - if width or height is < 0"
-  ([^java.awt.Component this ^Integer width ^Integer height]
+  (^Integer [^java.awt.Component this ^Integer width ^Integer height]
     (-> this (.getBaseline width height))))
 
 (defn set-maximum-size
@@ -2171,7 +2171,7 @@
 
   returns: true if the component is showing,
             false otherwise - `boolean`"
-  ([^java.awt.Component this]
+  (^Boolean [^java.awt.Component this]
     (-> this (.isShowing))))
 
 (defn get-size
@@ -2184,9 +2184,9 @@
   rv - the return value, modified to the components size - `java.awt.Dimension`
 
   returns: rv - `java.awt.Dimension`"
-  ([^java.awt.Component this ^java.awt.Dimension rv]
+  (^java.awt.Dimension [^java.awt.Component this ^java.awt.Dimension rv]
     (-> this (.getSize rv)))
-  ([^java.awt.Component this]
+  (^java.awt.Dimension [^java.awt.Component this]
     (-> this (.getSize))))
 
 (defn minimum-size
@@ -2212,7 +2212,7 @@
    the component on the output device.
 
   returns: the color model used by this component - `java.awt.image.ColorModel`"
-  ([^java.awt.Component this]
+  (^java.awt.image.ColorModel [^java.awt.Component this]
     (-> this (.getColorModel))))
 
 (defn got-focus
@@ -2249,7 +2249,7 @@
 
   returns: true if the specified Container is a focus-cycle-
            root of this Component; false otherwise - `boolean`"
-  ([^java.awt.Component this ^java.awt.Container container]
+  (^Boolean [^java.awt.Component this ^java.awt.Container container]
     (-> this (.isFocusCycleRoot container))))
 
 (defn remove-key-listener
@@ -2308,7 +2308,7 @@
   "Gets the preferred size of this component.
 
   returns: a dimension object indicating this component's preferred size - `java.awt.Dimension`"
-  ([^java.awt.Component this]
+  (^java.awt.Dimension [^java.awt.Component this]
     (-> this (.getPreferredSize))))
 
 (defn enabled?
@@ -2319,7 +2319,7 @@
 
   returns: true if the component is enabled,
             false otherwise - `boolean`"
-  ([^java.awt.Component this]
+  (^Boolean [^java.awt.Component this]
     (-> this (.isEnabled))))
 
 (defn get-peer
@@ -2378,7 +2378,7 @@
 
   returns: false if the focus change request is guaranteed to
            fail; true if it is likely to succeed - `boolean`"
-  ([^java.awt.Component this]
+  (^Boolean [^java.awt.Component this]
     (-> this (.requestFocusInWindow))))
 
 (defn add-component-listener

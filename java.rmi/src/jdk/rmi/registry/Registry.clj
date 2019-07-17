@@ -48,7 +48,7 @@
   returns: a reference to a remote object - `java.rmi.Remote`
 
   throws: java.rmi.NotBoundException - if name is not currently bound"
-  ([^java.rmi.registry.Registry this ^java.lang.String name]
+  (^java.rmi.Remote [^java.rmi.registry.Registry this ^java.lang.String name]
     (-> this (.lookup name))))
 
 (defn bind

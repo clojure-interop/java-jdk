@@ -17,7 +17,7 @@
   "Returns the width
 
   returns: The width - `int`"
-  ([^java.util.IllegalFormatWidthException this]
+  (^Integer [^java.util.IllegalFormatWidthException this]
     (-> this (.getWidth))))
 
 (defn get-message
@@ -25,6 +25,6 @@
 
   returns: the detail message string of this Throwable instance
             (which may be null). - `java.lang.String`"
-  ([^java.util.IllegalFormatWidthException this]
+  (^java.lang.String [^java.util.IllegalFormatWidthException this]
     (-> this (.getMessage))))
 

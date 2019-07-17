@@ -42,7 +42,7 @@
    the result of invoking the operation on the MBean specified. - `java.lang.Object`
 
   throws: javax.management.InstanceNotFoundException - The MBean specified is not registered in the MBean server."
-  ([^javax.management.remote.rmi.RMIConnection this ^javax.management.ObjectName name ^java.lang.String operation-name ^java.rmi.MarshalledObject params ^java.lang.String[] signature ^javax.security.auth.Subject delegation-subject]
+  (^java.lang.Object [^javax.management.remote.rmi.RMIConnection this ^javax.management.ObjectName name ^java.lang.String operation-name ^java.rmi.MarshalledObject params signature ^javax.security.auth.Subject delegation-subject]
     (-> this (.invoke name operation-name params signature delegation-subject))))
 
 (defn query-m-beans
@@ -59,7 +59,7 @@
    query an empty list is returned. - `java.util.Set<javax.management.ObjectInstance>`
 
   throws: java.lang.SecurityException - if the client, or the delegated Subject if any, does not have permission to perform this operation."
-  ([^javax.management.remote.rmi.RMIConnection this ^javax.management.ObjectName name ^java.rmi.MarshalledObject query ^javax.security.auth.Subject delegation-subject]
+  (^java.util.Set [^javax.management.remote.rmi.RMIConnection this ^javax.management.ObjectName name ^java.rmi.MarshalledObject query ^javax.security.auth.Subject delegation-subject]
     (-> this (.queryMBeans name query delegation-subject))))
 
 (defn query-names
@@ -76,7 +76,7 @@
    returned. - `java.util.Set<javax.management.ObjectName>`
 
   throws: java.lang.SecurityException - if the client, or the delegated Subject if any, does not have permission to perform this operation."
-  ([^javax.management.remote.rmi.RMIConnection this ^javax.management.ObjectName name ^java.rmi.MarshalledObject query ^javax.security.auth.Subject delegation-subject]
+  (^java.util.Set [^javax.management.remote.rmi.RMIConnection this ^javax.management.ObjectName name ^java.rmi.MarshalledObject query ^javax.security.auth.Subject delegation-subject]
     (-> this (.queryNames name query delegation-subject))))
 
 (defn remove-notification-listeners
@@ -97,7 +97,7 @@
   delegation-subject - The Subject containing the delegation principals or null if the authentication principal is used instead. - `javax.security.auth.Subject`
 
   throws: javax.management.InstanceNotFoundException - if the given name does not correspond to any registered MBean."
-  ([^javax.management.remote.rmi.RMIConnection this ^javax.management.ObjectName name ^java.lang.Integer[] listener-i-ds ^javax.security.auth.Subject delegation-subject]
+  ([^javax.management.remote.rmi.RMIConnection this ^javax.management.ObjectName name listener-i-ds ^javax.security.auth.Subject delegation-subject]
     (-> this (.removeNotificationListeners name listener-i-ds delegation-subject))))
 
 (defn remove-notification-listener
@@ -130,7 +130,7 @@
   returns: The value of the retrieved attribute. - `java.lang.Object`
 
   throws: javax.management.AttributeNotFoundException - The attribute specified is not accessible in the MBean."
-  ([^javax.management.remote.rmi.RMIConnection this ^javax.management.ObjectName name ^java.lang.String attribute ^javax.security.auth.Subject delegation-subject]
+  (^java.lang.Object [^javax.management.remote.rmi.RMIConnection this ^javax.management.ObjectName name ^java.lang.String attribute ^javax.security.auth.Subject delegation-subject]
     (-> this (.getAttribute name attribute delegation-subject))))
 
 (defn get-m-bean-info
@@ -144,7 +144,7 @@
    retrieval of all attributes and operations of this MBean. - `javax.management.MBeanInfo`
 
   throws: javax.management.IntrospectionException - An exception occurred during introspection."
-  ([^javax.management.remote.rmi.RMIConnection this ^javax.management.ObjectName name ^javax.security.auth.Subject delegation-subject]
+  (^javax.management.MBeanInfo [^javax.management.remote.rmi.RMIConnection this ^javax.management.ObjectName name ^javax.security.auth.Subject delegation-subject]
     (-> this (.getMBeanInfo name delegation-subject))))
 
 (defn create-m-bean
@@ -167,13 +167,13 @@
    getMBeanInfo(n).getClassName(). - `javax.management.ObjectInstance`
 
   throws: javax.management.MBeanException - The constructor of the MBean has thrown an exception."
-  ([^javax.management.remote.rmi.RMIConnection this ^java.lang.String class-name ^javax.management.ObjectName name ^javax.management.ObjectName loader-name ^java.rmi.MarshalledObject params ^java.lang.String[] signature ^javax.security.auth.Subject delegation-subject]
+  (^javax.management.ObjectInstance [^javax.management.remote.rmi.RMIConnection this ^java.lang.String class-name ^javax.management.ObjectName name ^javax.management.ObjectName loader-name ^java.rmi.MarshalledObject params signature ^javax.security.auth.Subject delegation-subject]
     (-> this (.createMBean class-name name loader-name params signature delegation-subject)))
-  ([^javax.management.remote.rmi.RMIConnection this ^java.lang.String class-name ^javax.management.ObjectName name ^java.rmi.MarshalledObject params ^java.lang.String[] signature ^javax.security.auth.Subject delegation-subject]
+  (^javax.management.ObjectInstance [^javax.management.remote.rmi.RMIConnection this ^java.lang.String class-name ^javax.management.ObjectName name ^java.rmi.MarshalledObject params signature ^javax.security.auth.Subject delegation-subject]
     (-> this (.createMBean class-name name params signature delegation-subject)))
-  ([^javax.management.remote.rmi.RMIConnection this ^java.lang.String class-name ^javax.management.ObjectName name ^javax.management.ObjectName loader-name ^javax.security.auth.Subject delegation-subject]
+  (^javax.management.ObjectInstance [^javax.management.remote.rmi.RMIConnection this ^java.lang.String class-name ^javax.management.ObjectName name ^javax.management.ObjectName loader-name ^javax.security.auth.Subject delegation-subject]
     (-> this (.createMBean class-name name loader-name delegation-subject)))
-  ([^javax.management.remote.rmi.RMIConnection this ^java.lang.String class-name ^javax.management.ObjectName name ^javax.security.auth.Subject delegation-subject]
+  (^javax.management.ObjectInstance [^javax.management.remote.rmi.RMIConnection this ^java.lang.String class-name ^javax.management.ObjectName name ^javax.security.auth.Subject delegation-subject]
     (-> this (.createMBean class-name name delegation-subject))))
 
 (defn get-m-bean-count
@@ -185,7 +185,7 @@
   returns: the number of MBeans registered. - `java.lang.Integer`
 
   throws: java.lang.SecurityException - if the client, or the delegated Subject if any, does not have permission to perform this operation."
-  ([^javax.management.remote.rmi.RMIConnection this ^javax.security.auth.Subject delegation-subject]
+  (^java.lang.Integer [^javax.management.remote.rmi.RMIConnection this ^javax.security.auth.Subject delegation-subject]
     (-> this (.getMBeanCount delegation-subject))))
 
 (defn registered?
@@ -199,7 +199,7 @@
    server, false otherwise. - `boolean`
 
   throws: javax.management.RuntimeOperationsException - Wraps a java.lang.IllegalArgumentException: The object name in parameter is null."
-  ([^javax.management.remote.rmi.RMIConnection this ^javax.management.ObjectName name ^javax.security.auth.Subject delegation-subject]
+  (^Boolean [^javax.management.remote.rmi.RMIConnection this ^javax.management.ObjectName name ^javax.security.auth.Subject delegation-subject]
     (-> this (.isRegistered name delegation-subject))))
 
 (defn add-notification-listeners
@@ -231,7 +231,7 @@
    the parameters. - `java.lang.Integer[]`
 
   throws: java.lang.IllegalArgumentException - if names or filters is null, or if names contains a null element, or if the three arrays do not all have the same size."
-  ([^javax.management.remote.rmi.RMIConnection this ^javax.management.ObjectName[] names ^java.rmi.MarshalledObject[] filters ^javax.security.auth.Subject[] delegation-subjects]
+  ([^javax.management.remote.rmi.RMIConnection this names filters delegation-subjects]
     (-> this (.addNotificationListeners names filters delegation-subjects))))
 
 (defn unregister-m-bean
@@ -254,7 +254,7 @@
   returns: the default domain. - `java.lang.String`
 
   throws: java.lang.SecurityException - if the client, or the delegated Subject if any, does not have permission to perform this operation."
-  ([^javax.management.remote.rmi.RMIConnection this ^javax.security.auth.Subject delegation-subject]
+  (^java.lang.String [^javax.management.remote.rmi.RMIConnection this ^javax.security.auth.Subject delegation-subject]
     (-> this (.getDefaultDomain delegation-subject))))
 
 (defn set-attribute
@@ -283,7 +283,7 @@
    getMBeanInfo(name).getClassName(). - `javax.management.ObjectInstance`
 
   throws: javax.management.InstanceNotFoundException - The MBean specified is not registered in the MBean server."
-  ([^javax.management.remote.rmi.RMIConnection this ^javax.management.ObjectName name ^javax.security.auth.Subject delegation-subject]
+  (^javax.management.ObjectInstance [^javax.management.remote.rmi.RMIConnection this ^javax.management.ObjectName name ^javax.security.auth.Subject delegation-subject]
     (-> this (.getObjectInstance name delegation-subject))))
 
 (defn get-domains
@@ -314,7 +314,7 @@
   returns: the connection ID - `java.lang.String`
 
   throws: java.io.IOException - if a general communication exception occurred."
-  ([^javax.management.remote.rmi.RMIConnection this]
+  (^java.lang.String [^javax.management.remote.rmi.RMIConnection this]
     (-> this (.getConnectionId))))
 
 (defn set-attributes
@@ -330,7 +330,7 @@
    values. - `javax.management.AttributeList`
 
   throws: javax.management.InstanceNotFoundException - The MBean specified is not registered in the MBean server."
-  ([^javax.management.remote.rmi.RMIConnection this ^javax.management.ObjectName name ^java.rmi.MarshalledObject attributes ^javax.security.auth.Subject delegation-subject]
+  (^javax.management.AttributeList [^javax.management.remote.rmi.RMIConnection this ^javax.management.ObjectName name ^java.rmi.MarshalledObject attributes ^javax.security.auth.Subject delegation-subject]
     (-> this (.setAttributes name attributes delegation-subject))))
 
 (defn fetch-notifications
@@ -355,7 +355,7 @@
   returns: A NotificationResult. - `javax.management.remote.NotificationResult`
 
   throws: java.io.IOException - if a general communication exception occurred."
-  ([^javax.management.remote.rmi.RMIConnection this ^Long client-sequence-number ^Integer max-notifications ^Long timeout]
+  (^javax.management.remote.NotificationResult [^javax.management.remote.rmi.RMIConnection this ^Long client-sequence-number ^Integer max-notifications ^Long timeout]
     (-> this (.fetchNotifications client-sequence-number max-notifications timeout))))
 
 (defn add-notification-listener
@@ -387,7 +387,7 @@
   returns: The list of the retrieved attributes. - `javax.management.AttributeList`
 
   throws: javax.management.InstanceNotFoundException - The MBean specified is not registered in the MBean server."
-  ([^javax.management.remote.rmi.RMIConnection this ^javax.management.ObjectName name ^java.lang.String[] attributes ^javax.security.auth.Subject delegation-subject]
+  (^javax.management.AttributeList [^javax.management.remote.rmi.RMIConnection this ^javax.management.ObjectName name attributes ^javax.security.auth.Subject delegation-subject]
     (-> this (.getAttributes name attributes delegation-subject))))
 
 (defn instance-of?
@@ -402,6 +402,6 @@
    specified class according to the rules above, false otherwise. - `boolean`
 
   throws: javax.management.InstanceNotFoundException - The MBean specified is not registered in the MBean server."
-  ([^javax.management.remote.rmi.RMIConnection this ^javax.management.ObjectName name ^java.lang.String class-name ^javax.security.auth.Subject delegation-subject]
+  (^Boolean [^javax.management.remote.rmi.RMIConnection this ^javax.management.ObjectName name ^java.lang.String class-name ^javax.security.auth.Subject delegation-subject]
     (-> this (.isInstanceOf name class-name delegation-subject))))
 

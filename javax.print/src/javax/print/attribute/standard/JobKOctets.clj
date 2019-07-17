@@ -117,7 +117,7 @@
 
   returns: True if object is equivalent to this job K
             octets attribute, false otherwise. - `boolean`"
-  ([^javax.print.attribute.standard.JobKOctets this ^java.lang.Object object]
+  (^Boolean [^javax.print.attribute.standard.JobKOctets this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -138,6 +138,6 @@
    For class JobKOctets, the category name is `job-k-octets`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.JobKOctets this]
+  (^java.lang.String [^javax.print.attribute.standard.JobKOctets this]
     (-> this (.getName))))
 

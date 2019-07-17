@@ -33,7 +33,7 @@
 
   returns: the DesktopIconUI object that renders
                 this component - `javax.swing.plaf.DesktopIconUI`"
-  ([^javax.swing.JInternalFrame$JDesktopIcon this]
+  (^javax.swing.plaf.DesktopIconUI [^javax.swing.JInternalFrame$JDesktopIcon this]
     (-> this (.getUI))))
 
 (defn set-ui
@@ -49,7 +49,7 @@
 
   returns: the JInternalFrame with which this icon
                 is associated - `javax.swing.JInternalFrame`"
-  ([^javax.swing.JInternalFrame$JDesktopIcon this]
+  (^javax.swing.JInternalFrame [^javax.swing.JInternalFrame$JDesktopIcon this]
     (-> this (.getInternalFrame))))
 
 (defn set-internal-frame
@@ -66,7 +66,7 @@
 
   returns: the JDesktopPane that contains this
              icon's internal frame, or null if none found - `javax.swing.JDesktopPane`"
-  ([^javax.swing.JInternalFrame$JDesktopIcon this]
+  (^javax.swing.JDesktopPane [^javax.swing.JInternalFrame$JDesktopIcon this]
     (-> this (.getDesktopPane))))
 
 (defn update-ui
@@ -82,7 +82,7 @@
    class that renders this component.
 
   returns: the string `DesktopIconUI` - `java.lang.String`"
-  ([^javax.swing.JInternalFrame$JDesktopIcon this]
+  (^java.lang.String [^javax.swing.JInternalFrame$JDesktopIcon this]
     (-> this (.getUIClassID))))
 
 (defn get-accessible-context
@@ -93,6 +93,6 @@
 
   returns: an AccessibleJDesktopIcon that serves as the
            AccessibleContext of this JDesktopIcon - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.JInternalFrame$JDesktopIcon this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.JInternalFrame$JDesktopIcon this]
     (-> this (.getAccessibleContext))))
 

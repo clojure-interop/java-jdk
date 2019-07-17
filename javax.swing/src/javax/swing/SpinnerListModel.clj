@@ -40,7 +40,7 @@
   "Returns the List that defines the sequence for this model.
 
   returns: the value of the list property - `java.util.List<?>`"
-  ([^javax.swing.SpinnerListModel this]
+  (^java.util.List [^javax.swing.SpinnerListModel this]
     (-> this (.getList))))
 
 (defn set-list
@@ -61,7 +61,7 @@
   "Returns the current element of the sequence.
 
   returns: the value property - `java.lang.Object`"
-  ([^javax.swing.SpinnerListModel this]
+  (^java.lang.Object [^javax.swing.SpinnerListModel this]
     (-> this (.getValue))))
 
 (defn set-value
@@ -89,7 +89,7 @@
 
   returns: the next legal value of the underlying sequence or
        null if value is already the last element - `java.lang.Object`"
-  ([^javax.swing.SpinnerListModel this]
+  (^java.lang.Object [^javax.swing.SpinnerListModel this]
     (-> this (.getNextValue))))
 
 (defn get-previous-value
@@ -98,6 +98,6 @@
 
   returns: the previous element of the underlying sequence or
        null if value is already the first element - `java.lang.Object`"
-  ([^javax.swing.SpinnerListModel this]
+  (^java.lang.Object [^javax.swing.SpinnerListModel this]
     (-> this (.getPreviousValue))))
 

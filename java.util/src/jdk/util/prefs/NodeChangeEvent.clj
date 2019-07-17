@@ -22,13 +22,13 @@
   "Returns the parent of the node that was added or removed.
 
   returns: The parent Preferences node whose child was added or removed - `java.util.prefs.Preferences`"
-  ([^java.util.prefs.NodeChangeEvent this]
+  (^java.util.prefs.Preferences [^java.util.prefs.NodeChangeEvent this]
     (-> this (.getParent))))
 
 (defn get-child
   "Returns the node that was added or removed.
 
   returns: The node that was added or removed. - `java.util.prefs.Preferences`"
-  ([^java.util.prefs.NodeChangeEvent this]
+  (^java.util.prefs.Preferences [^java.util.prefs.NodeChangeEvent this]
     (-> this (.getChild))))
 

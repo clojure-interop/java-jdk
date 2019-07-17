@@ -19,7 +19,7 @@
 
   returns: The encoding name.  May be null, which indicates the
             default encoding should be used. - `java.lang.String`"
-  ([^java.util.logging.Handler this]
+  (^java.lang.String [^java.util.logging.Handler this]
     (-> this (.getEncoding))))
 
 (defn set-encoding
@@ -63,21 +63,21 @@
   record - a LogRecord - `java.util.logging.LogRecord`
 
   returns: true if the LogRecord would be logged. - `boolean`"
-  ([^java.util.logging.Handler this ^java.util.logging.LogRecord record]
+  (^Boolean [^java.util.logging.Handler this ^java.util.logging.LogRecord record]
     (-> this (.isLoggable record))))
 
 (defn get-formatter
   "Return the Formatter for this Handler.
 
   returns: the Formatter (may be null). - `java.util.logging.Formatter`"
-  ([^java.util.logging.Handler this]
+  (^java.util.logging.Formatter [^java.util.logging.Handler this]
     (-> this (.getFormatter))))
 
 (defn get-filter
   "Get the current Filter for this Handler.
 
   returns: a Filter object (may be null) - `java.util.logging.Filter`"
-  ([^java.util.logging.Handler this]
+  (^java.util.logging.Filter [^java.util.logging.Handler this]
     (-> this (.getFilter))))
 
 (defn publish
@@ -112,7 +112,7 @@
    than this level will be discarded.
 
   returns: the level of messages being logged. - `java.util.logging.Level`"
-  ([^java.util.logging.Handler this]
+  (^java.util.logging.Level [^java.util.logging.Handler this]
     (-> this (.getLevel))))
 
 (defn close
@@ -161,6 +161,6 @@
   returns: the ErrorManager for this Handler - `java.util.logging.ErrorManager`
 
   throws: java.lang.SecurityException - if a security manager exists and if the caller does not have LoggingPermission(`control`)."
-  ([^java.util.logging.Handler this]
+  (^java.util.logging.ErrorManager [^java.util.logging.Handler this]
     (-> this (.getErrorManager))))
 

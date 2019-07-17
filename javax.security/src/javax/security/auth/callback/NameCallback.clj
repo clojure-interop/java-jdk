@@ -24,7 +24,7 @@
   "Get the prompt.
 
   returns: the prompt. - `java.lang.String`"
-  ([^javax.security.auth.callback.NameCallback this]
+  (^java.lang.String [^javax.security.auth.callback.NameCallback this]
     (-> this (.getPrompt))))
 
 (defn get-default-name
@@ -32,7 +32,7 @@
 
   returns: the default name, or null if this NameCallback
             was not instantiated with a defaultName. - `java.lang.String`"
-  ([^javax.security.auth.callback.NameCallback this]
+  (^java.lang.String [^javax.security.auth.callback.NameCallback this]
     (-> this (.getDefaultName))))
 
 (defn set-name
@@ -46,6 +46,6 @@
   "Get the retrieved name.
 
   returns: the retrieved name (which may be null) - `java.lang.String`"
-  ([^javax.security.auth.callback.NameCallback this]
+  (^java.lang.String [^javax.security.auth.callback.NameCallback this]
     (-> this (.getName))))
 

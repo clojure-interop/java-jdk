@@ -14,7 +14,7 @@
    Returns null if no value was previously associated with the name. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if the name is null."
-  ([^javax.script.Bindings this ^java.lang.String name ^java.lang.Object value]
+  (^java.lang.Object [^javax.script.Bindings this ^java.lang.String name ^java.lang.Object value]
     (-> this (.put name value))))
 
 (defn put-all
@@ -39,7 +39,7 @@
            key. - `boolean`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([^javax.script.Bindings this ^java.lang.Object key]
+  (^Boolean [^javax.script.Bindings this ^java.lang.Object key]
     (-> this (.containsKey key))))
 
 (defn get
@@ -61,7 +61,7 @@
            null if the map contains no mapping for this key. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([^javax.script.Bindings this ^java.lang.Object key]
+  (^java.lang.Object [^javax.script.Bindings this ^java.lang.Object key]
     (-> this (.get key))))
 
 (defn remove
@@ -84,6 +84,6 @@
            if there was no mapping for key. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([^javax.script.Bindings this ^java.lang.Object key]
+  (^java.lang.Object [^javax.script.Bindings this ^java.lang.Object key]
     (-> this (.remove key))))
 

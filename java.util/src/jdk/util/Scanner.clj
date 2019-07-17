@@ -277,7 +277,7 @@
   returns: this scanner - `java.util.Scanner`
 
   throws: java.util.NoSuchElementException - if the specified pattern is not found"
-  ([^java.util.Scanner this ^java.util.regex.Pattern pattern]
+  (^java.util.Scanner [^java.util.Scanner this ^java.util.regex.Pattern pattern]
     (-> this (.skip pattern))))
 
 (defn has-next-boolean?
@@ -290,7 +290,7 @@
            boolean value - `boolean`
 
   throws: java.lang.IllegalStateException - if this scanner is closed"
-  ([^java.util.Scanner this]
+  (^Boolean [^java.util.Scanner this]
     (-> this (.hasNextBoolean))))
 
 (defn next-big-integer
@@ -307,9 +307,9 @@
   returns: the BigInteger scanned from the input - `java.math.BigInteger`
 
   throws: java.util.InputMismatchException - if the next token does not match the Integer regular expression, or is out of range"
-  ([^java.util.Scanner this ^Integer radix]
+  (^java.math.BigInteger [^java.util.Scanner this ^Integer radix]
     (-> this (.nextBigInteger radix)))
-  ([^java.util.Scanner this]
+  (^java.math.BigInteger [^java.util.Scanner this]
     (-> this (.nextBigInteger))))
 
 (defn next
@@ -326,9 +326,9 @@
   returns: the next token - `java.lang.String`
 
   throws: java.util.NoSuchElementException - if no such tokens are available"
-  ([^java.util.Scanner this ^java.lang.String pattern]
+  (^java.lang.String [^java.util.Scanner this ^java.lang.String pattern]
     (-> this (.next pattern)))
-  ([^java.util.Scanner this]
+  (^java.lang.String [^java.util.Scanner this]
     (-> this (.next))))
 
 (defn has-next-float?
@@ -340,7 +340,7 @@
            float value - `boolean`
 
   throws: java.lang.IllegalStateException - if this scanner is closed"
-  ([^java.util.Scanner this]
+  (^Boolean [^java.util.Scanner this]
     (-> this (.hasNextFloat))))
 
 (defn use-delimiter
@@ -349,7 +349,7 @@
   pattern - A delimiting pattern - `java.util.regex.Pattern`
 
   returns: this scanner - `java.util.Scanner`"
-  ([^java.util.Scanner this ^java.util.regex.Pattern pattern]
+  (^java.util.Scanner [^java.util.Scanner this ^java.util.regex.Pattern pattern]
     (-> this (.useDelimiter pattern))))
 
 (defn find-within-horizon
@@ -367,7 +367,7 @@
   returns: the text that matched the specified pattern - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if this scanner is closed"
-  ([^java.util.Scanner this ^java.lang.String pattern ^Integer horizon]
+  (^java.lang.String [^java.util.Scanner this ^java.lang.String pattern ^Integer horizon]
     (-> this (.findWithinHorizon pattern horizon))))
 
 (defn find-in-line
@@ -383,7 +383,7 @@
   returns: the text that matched the specified pattern - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if this scanner is closed"
-  ([^java.util.Scanner this ^java.lang.String pattern]
+  (^java.lang.String [^java.util.Scanner this ^java.lang.String pattern]
     (-> this (.findInLine pattern))))
 
 (defn next-float
@@ -408,7 +408,7 @@
   returns: the float scanned from the input - `float`
 
   throws: java.util.InputMismatchException - if the next token does not match the Float regular expression, or is out of range"
-  ([^java.util.Scanner this]
+  (^Float [^java.util.Scanner this]
     (-> this (.nextFloat))))
 
 (defn next-int
@@ -433,9 +433,9 @@
   returns: the int scanned from the input - `int`
 
   throws: java.util.InputMismatchException - if the next token does not match the Integer regular expression, or is out of range"
-  ([^java.util.Scanner this ^Integer radix]
+  (^Integer [^java.util.Scanner this ^Integer radix]
     (-> this (.nextInt radix)))
-  ([^java.util.Scanner this]
+  (^Integer [^java.util.Scanner this]
     (-> this (.nextInt))))
 
 (defn to-string
@@ -444,7 +444,7 @@
    that may be useful for debugging. The exact format is unspecified.
 
   returns: The string representation of this scanner - `java.lang.String`"
-  ([^java.util.Scanner this]
+  (^java.lang.String [^java.util.Scanner this]
     (-> this (.toString))))
 
 (defn has-next-short?
@@ -458,9 +458,9 @@
            short value in the specified radix - `boolean`
 
   throws: java.lang.IllegalStateException - if this scanner is closed"
-  ([^java.util.Scanner this ^Integer radix]
+  (^Boolean [^java.util.Scanner this ^Integer radix]
     (-> this (.hasNextShort radix)))
-  ([^java.util.Scanner this]
+  (^Boolean [^java.util.Scanner this]
     (-> this (.hasNextShort))))
 
 (defn reset
@@ -480,7 +480,7 @@
             .useRadix(10);
 
   returns: this scanner - `java.util.Scanner`"
-  ([^java.util.Scanner this]
+  (^java.util.Scanner [^java.util.Scanner this]
     (-> this (.reset))))
 
 (defn has-next-big-integer?
@@ -495,9 +495,9 @@
            BigInteger - `boolean`
 
   throws: java.lang.IllegalStateException - if this scanner is closed"
-  ([^java.util.Scanner this ^Integer radix]
+  (^Boolean [^java.util.Scanner this ^Integer radix]
     (-> this (.hasNextBigInteger radix)))
-  ([^java.util.Scanner this]
+  (^Boolean [^java.util.Scanner this]
     (-> this (.hasNextBigInteger))))
 
 (defn has-next-byte?
@@ -511,9 +511,9 @@
            byte value - `boolean`
 
   throws: java.lang.IllegalStateException - if this scanner is closed"
-  ([^java.util.Scanner this ^Integer radix]
+  (^Boolean [^java.util.Scanner this ^Integer radix]
     (-> this (.hasNextByte radix)))
-  ([^java.util.Scanner this]
+  (^Boolean [^java.util.Scanner this]
     (-> this (.hasNextByte))))
 
 (defn next-short
@@ -538,9 +538,9 @@
   returns: the short scanned from the input - `short`
 
   throws: java.util.InputMismatchException - if the next token does not match the Integer regular expression, or is out of range"
-  ([^java.util.Scanner this ^Integer radix]
+  (^Short [^java.util.Scanner this ^Integer radix]
     (-> this (.nextShort radix)))
-  ([^java.util.Scanner this]
+  (^Short [^java.util.Scanner this]
     (-> this (.nextShort))))
 
 (defn next-long
@@ -565,9 +565,9 @@
   returns: the long scanned from the input - `long`
 
   throws: java.util.InputMismatchException - if the next token does not match the Integer regular expression, or is out of range"
-  ([^java.util.Scanner this ^Integer radix]
+  (^Long [^java.util.Scanner this ^Integer radix]
     (-> this (.nextLong radix)))
-  ([^java.util.Scanner this]
+  (^Long [^java.util.Scanner this]
     (-> this (.nextLong))))
 
 (defn locale
@@ -578,7 +578,7 @@
    localized numbers above.
 
   returns: this scanner's locale - `java.util.Locale`"
-  ([^java.util.Scanner this]
+  (^java.util.Locale [^java.util.Scanner this]
     (-> this (.locale))))
 
 (defn has-next-int?
@@ -592,9 +592,9 @@
            int value - `boolean`
 
   throws: java.lang.IllegalStateException - if this scanner is closed"
-  ([^java.util.Scanner this ^Integer radix]
+  (^Boolean [^java.util.Scanner this ^Integer radix]
     (-> this (.hasNextInt radix)))
-  ([^java.util.Scanner this]
+  (^Boolean [^java.util.Scanner this]
     (-> this (.hasNextInt))))
 
 (defn io-exception
@@ -603,7 +603,7 @@
    returns null if no such exception exists.
 
   returns: the last exception thrown by this scanner's readable - `java.io.IOException`"
-  ([^java.util.Scanner this]
+  (^java.io.IOException [^java.util.Scanner this]
     (-> this (.ioException))))
 
 (defn delimiter
@@ -611,7 +611,7 @@
    using to match delimiters.
 
   returns: this scanner's delimiting pattern. - `java.util.regex.Pattern`"
-  ([^java.util.Scanner this]
+  (^java.util.regex.Pattern [^java.util.Scanner this]
     (-> this (.delimiter))))
 
 (defn remove
@@ -636,9 +636,9 @@
            the specified pattern - `boolean`
 
   throws: java.lang.IllegalStateException - if this scanner is closed"
-  ([^java.util.Scanner this ^java.lang.String pattern]
+  (^Boolean [^java.util.Scanner this ^java.lang.String pattern]
     (-> this (.hasNext pattern)))
-  ([^java.util.Scanner this]
+  (^Boolean [^java.util.Scanner this]
     (-> this (.hasNext))))
 
 (defn next-byte
@@ -663,9 +663,9 @@
   returns: the byte scanned from the input - `byte`
 
   throws: java.util.InputMismatchException - if the next token does not match the Integer regular expression, or is out of range"
-  ([^java.util.Scanner this ^Integer radix]
+  (^Byte [^java.util.Scanner this ^Integer radix]
     (-> this (.nextByte radix)))
-  ([^java.util.Scanner this]
+  (^Byte [^java.util.Scanner this]
     (-> this (.nextByte))))
 
 (defn has-next-double?
@@ -677,7 +677,7 @@
            double value - `boolean`
 
   throws: java.lang.IllegalStateException - if this scanner is closed"
-  ([^java.util.Scanner this]
+  (^Boolean [^java.util.Scanner this]
     (-> this (.hasNextDouble))))
 
 (defn next-line
@@ -695,7 +695,7 @@
   returns: the line that was skipped - `java.lang.String`
 
   throws: java.util.NoSuchElementException - if no line was found"
-  ([^java.util.Scanner this]
+  (^java.lang.String [^java.util.Scanner this]
     (-> this (.nextLine))))
 
 (defn close
@@ -724,7 +724,7 @@
   returns: the BigDecimal scanned from the input - `java.math.BigDecimal`
 
   throws: java.util.InputMismatchException - if the next token does not match the Decimal regular expression, or is out of range"
-  ([^java.util.Scanner this]
+  (^java.math.BigDecimal [^java.util.Scanner this]
     (-> this (.nextBigDecimal))))
 
 (defn use-locale
@@ -740,7 +740,7 @@
   locale - A string specifying the locale to use - `java.util.Locale`
 
   returns: this scanner - `java.util.Scanner`"
-  ([^java.util.Scanner this ^java.util.Locale locale]
+  (^java.util.Scanner [^java.util.Scanner this ^java.util.Locale locale]
     (-> this (.useLocale locale))))
 
 (defn match
@@ -762,7 +762,7 @@
   returns: a match result for the last match operation - `java.util.regex.MatchResult`
 
   throws: java.lang.IllegalStateException - If no match result is available"
-  ([^java.util.Scanner this]
+  (^java.util.regex.MatchResult [^java.util.Scanner this]
     (-> this (.match))))
 
 (defn has-next-big-decimal?
@@ -775,7 +775,7 @@
            BigDecimal - `boolean`
 
   throws: java.lang.IllegalStateException - if this scanner is closed"
-  ([^java.util.Scanner this]
+  (^Boolean [^java.util.Scanner this]
     (-> this (.hasNextBigDecimal))))
 
 (defn has-next-line?
@@ -786,7 +786,7 @@
   returns: true if and only if this scanner has another line of input - `boolean`
 
   throws: java.lang.IllegalStateException - if this scanner is closed"
-  ([^java.util.Scanner this]
+  (^Boolean [^java.util.Scanner this]
     (-> this (.hasNextLine))))
 
 (defn use-radix
@@ -808,7 +808,7 @@
   returns: this scanner - `java.util.Scanner`
 
   throws: java.lang.IllegalArgumentException - if radix is out of range"
-  ([^java.util.Scanner this ^Integer radix]
+  (^java.util.Scanner [^java.util.Scanner this ^Integer radix]
     (-> this (.useRadix radix))))
 
 (defn next-double
@@ -833,7 +833,7 @@
   returns: the double scanned from the input - `double`
 
   throws: java.util.InputMismatchException - if the next token does not match the Float regular expression, or is out of range"
-  ([^java.util.Scanner this]
+  (^Double [^java.util.Scanner this]
     (-> this (.nextDouble))))
 
 (defn next-boolean
@@ -846,7 +846,7 @@
   returns: the boolean scanned from the input - `boolean`
 
   throws: java.util.InputMismatchException - if the next token is not a valid boolean"
-  ([^java.util.Scanner this]
+  (^Boolean [^java.util.Scanner this]
     (-> this (.nextBoolean))))
 
 (defn has-next-long?
@@ -860,9 +860,9 @@
            long value - `boolean`
 
   throws: java.lang.IllegalStateException - if this scanner is closed"
-  ([^java.util.Scanner this ^Integer radix]
+  (^Boolean [^java.util.Scanner this ^Integer radix]
     (-> this (.hasNextLong radix)))
-  ([^java.util.Scanner this]
+  (^Boolean [^java.util.Scanner this]
     (-> this (.hasNextLong))))
 
 (defn radix
@@ -873,6 +873,6 @@
    localized numbers above.
 
   returns: the default radix of this scanner - `int`"
-  ([^java.util.Scanner this]
+  (^Integer [^java.util.Scanner this]
     (-> this (.radix))))
 

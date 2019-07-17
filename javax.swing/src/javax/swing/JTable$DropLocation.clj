@@ -17,7 +17,7 @@
    and no row could be calculated.
 
   returns: the drop row - `int`"
-  ([^javax.swing.JTable$DropLocation this]
+  (^Integer [^javax.swing.JTable$DropLocation this]
     (-> this (.getRow))))
 
 (defn get-column
@@ -33,7 +33,7 @@
    and no column could be calculated.
 
   returns: the drop row - `int`"
-  ([^javax.swing.JTable$DropLocation this]
+  (^Integer [^javax.swing.JTable$DropLocation this]
     (-> this (.getColumn))))
 
 (defn insert-row?
@@ -41,7 +41,7 @@
    of a row.
 
   returns: whether or not this is an insert row - `boolean`"
-  ([^javax.swing.JTable$DropLocation this]
+  (^Boolean [^javax.swing.JTable$DropLocation this]
     (-> this (.isInsertRow))))
 
 (defn insert-column?
@@ -49,7 +49,7 @@
    of a column.
 
   returns: whether or not this is an insert column - `boolean`"
-  ([^javax.swing.JTable$DropLocation this]
+  (^Boolean [^javax.swing.JTable$DropLocation this]
     (-> this (.isInsertColumn))))
 
 (defn to-string
@@ -59,6 +59,6 @@
    between implementations.
 
   returns: a string representation of this drop location - `java.lang.String`"
-  ([^javax.swing.JTable$DropLocation this]
+  (^java.lang.String [^javax.swing.JTable$DropLocation this]
     (-> this (.toString))))
 

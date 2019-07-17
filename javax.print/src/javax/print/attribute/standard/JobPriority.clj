@@ -54,7 +54,7 @@
 
   returns: True if object is equivalent to this job
             priority attribute, false otherwise. - `boolean`"
-  ([^javax.print.attribute.standard.JobPriority this ^java.lang.Object object]
+  (^Boolean [^javax.print.attribute.standard.JobPriority this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -75,6 +75,6 @@
    For class JobPriority, the category name is `job-priority`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.JobPriority this]
+  (^java.lang.String [^javax.print.attribute.standard.JobPriority this]
     (-> this (.getName))))
 

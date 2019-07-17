@@ -27,7 +27,7 @@
   returns: the bounding box of the given position - `java.awt.Shape`
 
   throws: javax.swing.text.BadLocationException - if the given position does not represent a valid location in the associated document"
-  ([^javax.swing.text.PasswordView this ^Integer pos ^java.awt.Shape a ^javax.swing.text.Position.Bias b]
+  (^java.awt.Shape [^javax.swing.text.PasswordView this ^Integer pos ^java.awt.Shape a ^javax.swing.text.Position.Bias b]
     (-> this (.modelToView pos a b))))
 
 (defn view-to-model
@@ -41,7 +41,7 @@
 
   returns: the location within the model that best represents the
     given point in the view - `int`"
-  ([^javax.swing.text.PasswordView this ^Float fx ^Float fy ^java.awt.Shape a ^javax.swing.text.Position.Bias[] bias]
+  (^Integer [^javax.swing.text.PasswordView this ^Float fx ^Float fy ^java.awt.Shape a bias]
     (-> this (.viewToModel fx fy a bias))))
 
 (defn get-preferred-span
@@ -54,6 +54,6 @@
              Typically the view is told to render into the span
              that is returned, although there is no guarantee.
              The parent may choose to resize or break the view. - `float`"
-  ([^javax.swing.text.PasswordView this ^Integer axis]
+  (^Float [^javax.swing.text.PasswordView this ^Integer axis]
     (-> this (.getPreferredSpan axis))))
 

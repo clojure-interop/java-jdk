@@ -96,9 +96,9 @@
   returns: the minimum dimensions required to display
                          the text area with the specified
                          number of rows and columns - `java.awt.Dimension`"
-  ([^java.awt.TextArea this ^Integer rows ^Integer columns]
+  (^java.awt.Dimension [^java.awt.TextArea this ^Integer rows ^Integer columns]
     (-> this (.getMinimumSize rows columns)))
-  ([^java.awt.TextArea this]
+  (^java.awt.Dimension [^java.awt.TextArea this]
     (-> this (.getMinimumSize))))
 
 (defn set-columns
@@ -114,7 +114,7 @@
   "Returns the number of columns in this text area.
 
   returns: the number of columns in the text area - `int`"
-  ([^java.awt.TextArea this]
+  (^Integer [^java.awt.TextArea this]
     (-> this (.getColumns))))
 
 (defn add-notify
@@ -134,7 +134,7 @@
    application discretion over scroll bars.
 
   returns: an integer that indicates which scroll bars are used - `int`"
-  ([^java.awt.TextArea this]
+  (^Integer [^java.awt.TextArea this]
     (-> this (.getScrollbarVisibility))))
 
 (defn preferred-size
@@ -154,7 +154,7 @@
   "Returns the number of rows in the text area.
 
   returns: the number of rows in the text area - `int`"
-  ([^java.awt.TextArea this]
+  (^Integer [^java.awt.TextArea this]
     (-> this (.getRows))))
 
 (defn get-accessible-context
@@ -166,7 +166,7 @@
 
   returns: an AccessibleAWTTextArea that serves as the
            AccessibleContext of this TextArea - `javax.accessibility.AccessibleContext`"
-  ([^java.awt.TextArea this]
+  (^javax.accessibility.AccessibleContext [^java.awt.TextArea this]
     (-> this (.getAccessibleContext))))
 
 (defn replace-text
@@ -274,8 +274,8 @@
   returns: the preferred dimensions required to display
                          the text area with the specified
                          number of rows and columns - `java.awt.Dimension`"
-  ([^java.awt.TextArea this ^Integer rows ^Integer columns]
+  (^java.awt.Dimension [^java.awt.TextArea this ^Integer rows ^Integer columns]
     (-> this (.getPreferredSize rows columns)))
-  ([^java.awt.TextArea this]
+  (^java.awt.Dimension [^java.awt.TextArea this]
     (-> this (.getPreferredSize))))
 

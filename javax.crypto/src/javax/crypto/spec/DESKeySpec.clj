@@ -41,7 +41,7 @@
    otherwise. - `boolean`
 
   throws: java.security.InvalidKeyException - if the given key material is null, or starting at offset inclusive, is shorter than 8 bytes."
-  ([key ^Integer offset]
+  (^Boolean [key ^Integer offset]
     (DESKeySpec/isParityAdjusted key offset)))
 
 (defn *weak?
@@ -54,7 +54,7 @@
    otherwise. - `boolean`
 
   throws: java.security.InvalidKeyException - if the given key material is null, or starting at offset inclusive, is shorter than 8 bytes."
-  ([key ^Integer offset]
+  (^Boolean [key ^Integer offset]
     (DESKeySpec/isWeak key offset)))
 
 (defn get-key

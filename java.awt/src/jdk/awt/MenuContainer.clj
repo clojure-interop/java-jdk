@@ -5,7 +5,7 @@
 
 (defn get-font
   "returns: `java.awt.Font`"
-  ([^java.awt.MenuContainer this]
+  (^java.awt.Font [^java.awt.MenuContainer this]
     (-> this (.getFont))))
 
 (defn remove

@@ -56,9 +56,9 @@
                the stream has been reached. - `int`
 
   throws: java.lang.NullPointerException - If b is null."
-  ([^java.io.PushbackInputStream this b ^Integer off ^Integer len]
+  (^Integer [^java.io.PushbackInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  ([^java.io.PushbackInputStream this]
+  (^Integer [^java.io.PushbackInputStream this]
     (-> this (.read))))
 
 (defn unread
@@ -91,7 +91,7 @@
                the input stream without blocking. - `int`
 
   throws: java.io.IOException - if this input stream has been closed by invoking its close() method, or an I/O error occurs."
-  ([^java.io.PushbackInputStream this]
+  (^Integer [^java.io.PushbackInputStream this]
     (-> this (.available))))
 
 (defn skip
@@ -111,7 +111,7 @@
   returns: the actual number of bytes skipped. - `long`
 
   throws: java.io.IOException - if the stream does not support seek, or the stream has been closed by invoking its close() method, or an I/O error occurs."
-  ([^java.io.PushbackInputStream this ^Long n]
+  (^Long [^java.io.PushbackInputStream this ^Long n]
     (-> this (.skip n))))
 
 (defn mark-supported
@@ -120,7 +120,7 @@
 
   returns: false, since this class does not support the
              mark and reset methods. - `boolean`"
-  ([^java.io.PushbackInputStream this]
+  (^Boolean [^java.io.PushbackInputStream this]
     (-> this (.markSupported))))
 
 (defn mark

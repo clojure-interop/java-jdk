@@ -28,6 +28,6 @@
   returns: Scope of the property - `javax.xml.ws.handler.MessageContext.Scope`
 
   throws: java.lang.IllegalArgumentException - if a non-existant property name is specified"
-  ([^javax.xml.ws.handler.MessageContext this ^java.lang.String name]
+  (^javax.xml.ws.handler.MessageContext.Scope [^javax.xml.ws.handler.MessageContext this ^java.lang.String name]
     (-> this (.getScope name))))
 

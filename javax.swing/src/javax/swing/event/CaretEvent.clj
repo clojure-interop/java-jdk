@@ -26,7 +26,7 @@
   "Fetches the location of the caret.
 
   returns: the dot >= 0 - `int`"
-  ([^javax.swing.event.CaretEvent this]
+  (^Integer [^javax.swing.event.CaretEvent this]
     (-> this (.getDot))))
 
 (defn get-mark
@@ -35,6 +35,6 @@
    will be the same as dot.
 
   returns: the mark >= 0 - `int`"
-  ([^javax.swing.event.CaretEvent this]
+  (^Integer [^javax.swing.event.CaretEvent this]
     (-> this (.getMark))))
 

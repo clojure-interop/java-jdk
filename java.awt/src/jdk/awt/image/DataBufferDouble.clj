@@ -78,9 +78,9 @@
   i - The desired data array element. - `int`
 
   returns: The data entry as an int. - `int`"
-  ([^java.awt.image.DataBufferDouble this ^Integer bank ^Integer i]
+  (^Integer [^java.awt.image.DataBufferDouble this ^Integer bank ^Integer i]
     (-> this (.getElem bank i)))
-  ([^java.awt.image.DataBufferDouble this ^Integer i]
+  (^Integer [^java.awt.image.DataBufferDouble this ^Integer i]
     (-> this (.getElem i))))
 
 (defn set-elem
@@ -103,9 +103,9 @@
   i - The desired data array element. - `int`
 
   returns: The data entry as a float. - `float`"
-  ([^java.awt.image.DataBufferDouble this ^Integer bank ^Integer i]
+  (^Float [^java.awt.image.DataBufferDouble this ^Integer bank ^Integer i]
     (-> this (.getElemFloat bank i)))
-  ([^java.awt.image.DataBufferDouble this ^Integer i]
+  (^Float [^java.awt.image.DataBufferDouble this ^Integer i]
     (-> this (.getElemFloat i))))
 
 (defn set-elem-float
@@ -128,9 +128,9 @@
   i - The desired data array element. - `int`
 
   returns: The data entry as a double. - `double`"
-  ([^java.awt.image.DataBufferDouble this ^Integer bank ^Integer i]
+  (^Double [^java.awt.image.DataBufferDouble this ^Integer bank ^Integer i]
     (-> this (.getElemDouble bank i)))
-  ([^java.awt.image.DataBufferDouble this ^Integer i]
+  (^Double [^java.awt.image.DataBufferDouble this ^Integer i]
     (-> this (.getElemDouble i))))
 
 (defn set-elem-double

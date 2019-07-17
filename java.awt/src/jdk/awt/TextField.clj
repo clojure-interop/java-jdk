@@ -75,9 +75,9 @@
   columns - the number of columns in this text field. - `int`
 
   returns: `java.awt.Dimension`"
-  ([^java.awt.TextField this ^Integer columns]
+  (^java.awt.Dimension [^java.awt.TextField this ^Integer columns]
     (-> this (.getMinimumSize columns)))
-  ([^java.awt.TextField this]
+  (^java.awt.Dimension [^java.awt.TextField this]
     (-> this (.getMinimumSize))))
 
 (defn get-echo-char
@@ -96,7 +96,7 @@
    different.
 
   returns: the echo character for this text field. - `char`"
-  ([^java.awt.TextField this]
+  (^Character [^java.awt.TextField this]
     (-> this (.getEchoChar))))
 
 (defn set-columns
@@ -132,7 +132,7 @@
    approximate average character width that is platform-dependent.
 
   returns: the number of columns. - `int`"
-  ([^java.awt.TextField this]
+  (^Integer [^java.awt.TextField this]
     (-> this (.getColumns))))
 
 (defn add-action-listener
@@ -202,7 +202,7 @@
 
   returns: an AccessibleAWTTextField that serves as the
            AccessibleContext of this TextField - `javax.accessibility.AccessibleContext`"
-  ([^java.awt.TextField this]
+  (^javax.accessibility.AccessibleContext [^java.awt.TextField this]
     (-> this (.getAccessibleContext))))
 
 (defn echo-char-is-set
@@ -216,7 +216,7 @@
   returns: true if this text field has
                    a character set for echoing;
                    false otherwise. - `boolean`"
-  ([^java.awt.TextField this]
+  (^Boolean [^java.awt.TextField this]
     (-> this (.echoCharIsSet))))
 
 (defn remove-action-listener
@@ -281,8 +281,8 @@
 
   returns: the preferred dimensions for
                    displaying this text field. - `java.awt.Dimension`"
-  ([^java.awt.TextField this ^Integer columns]
+  (^java.awt.Dimension [^java.awt.TextField this ^Integer columns]
     (-> this (.getPreferredSize columns)))
-  ([^java.awt.TextField this]
+  (^java.awt.Dimension [^java.awt.TextField this]
     (-> this (.getPreferredSize))))
 

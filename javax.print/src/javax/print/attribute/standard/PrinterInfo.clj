@@ -46,7 +46,7 @@
 
   returns: True if object is equivalent to this printer
             info attribute, false otherwise. - `boolean`"
-  ([^javax.print.attribute.standard.PrinterInfo this ^java.lang.Object object]
+  (^Boolean [^javax.print.attribute.standard.PrinterInfo this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -67,6 +67,6 @@
    For class PrinterInfo, the category name is `printer-info`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.PrinterInfo this]
+  (^java.lang.String [^javax.print.attribute.standard.PrinterInfo this]
     (-> this (.getName))))
 

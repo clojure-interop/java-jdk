@@ -19,6 +19,6 @@
   returns: computed result - `Callable.V`
 
   throws: java.lang.Exception - if unable to compute a result"
-  ([^java.util.concurrent.Callable this]
+  (^Callable.V [^java.util.concurrent.Callable this]
     (-> this (.call))))
 

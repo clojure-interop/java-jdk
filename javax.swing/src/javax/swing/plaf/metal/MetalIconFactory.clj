@@ -41,73 +41,73 @@
 
 (defn *get-radio-button-menu-item-icon
   "returns: `javax.swing.Icon`"
-  ([]
+  (^javax.swing.Icon []
     (MetalIconFactory/getRadioButtonMenuItemIcon )))
 
 (defn *get-vertical-slider-thumb-icon
   "returns: `javax.swing.Icon`"
-  ([]
+  (^javax.swing.Icon []
     (MetalIconFactory/getVerticalSliderThumbIcon )))
 
 (defn *get-internal-frame-alt-maximize-icon
   "size - `int`
 
   returns: `javax.swing.Icon`"
-  ([^Integer size]
+  (^javax.swing.Icon [^Integer size]
     (MetalIconFactory/getInternalFrameAltMaximizeIcon size)))
 
 (defn *get-internal-frame-close-icon
   "size - `int`
 
   returns: `javax.swing.Icon`"
-  ([^Integer size]
+  (^javax.swing.Icon [^Integer size]
     (MetalIconFactory/getInternalFrameCloseIcon size)))
 
 (defn *get-horizontal-slider-thumb-icon
   "returns: `javax.swing.Icon`"
-  ([]
+  (^javax.swing.Icon []
     (MetalIconFactory/getHorizontalSliderThumbIcon )))
 
 (defn *get-file-chooser-list-view-icon
   "returns: `javax.swing.Icon`"
-  ([]
+  (^javax.swing.Icon []
     (MetalIconFactory/getFileChooserListViewIcon )))
 
 (defn *get-internal-frame-default-menu-icon
   "returns: `javax.swing.Icon`"
-  ([]
+  (^javax.swing.Icon []
     (MetalIconFactory/getInternalFrameDefaultMenuIcon )))
 
 (defn *get-file-chooser-home-folder-icon
   "returns: `javax.swing.Icon`"
-  ([]
+  (^javax.swing.Icon []
     (MetalIconFactory/getFileChooserHomeFolderIcon )))
 
 (defn *get-radio-button-icon
   "returns: `javax.swing.Icon`"
-  ([]
+  (^javax.swing.Icon []
     (MetalIconFactory/getRadioButtonIcon )))
 
 (defn *get-check-box-menu-item-icon
   "returns: `javax.swing.Icon`"
-  ([]
+  (^javax.swing.Icon []
     (MetalIconFactory/getCheckBoxMenuItemIcon )))
 
 (defn *get-tree-control-icon
   "is-collapsed - `boolean`
 
   returns: `javax.swing.Icon`"
-  ([^Boolean is-collapsed]
+  (^javax.swing.Icon [^Boolean is-collapsed]
     (MetalIconFactory/getTreeControlIcon is-collapsed)))
 
 (defn *get-menu-arrow-icon
   "returns: `javax.swing.Icon`"
-  ([]
+  (^javax.swing.Icon []
     (MetalIconFactory/getMenuArrowIcon )))
 
 (defn *get-tree-folder-icon
   "returns: `javax.swing.Icon`"
-  ([]
+  (^javax.swing.Icon []
     (MetalIconFactory/getTreeFolderIcon )))
 
 (defn *get-menu-item-check-icon
@@ -115,67 +115,67 @@
 
   returns: the default icon for check box menu items,
            or null if no default exists - `javax.swing.Icon`"
-  ([]
+  (^javax.swing.Icon []
     (MetalIconFactory/getMenuItemCheckIcon )))
 
 (defn *get-internal-frame-minimize-icon
   "size - `int`
 
   returns: `javax.swing.Icon`"
-  ([^Integer size]
+  (^javax.swing.Icon [^Integer size]
     (MetalIconFactory/getInternalFrameMinimizeIcon size)))
 
 (defn *get-menu-item-arrow-icon
   "returns: `javax.swing.Icon`"
-  ([]
+  (^javax.swing.Icon []
     (MetalIconFactory/getMenuItemArrowIcon )))
 
 (defn *get-internal-frame-maximize-icon
   "size - `int`
 
   returns: `javax.swing.Icon`"
-  ([^Integer size]
+  (^javax.swing.Icon [^Integer size]
     (MetalIconFactory/getInternalFrameMaximizeIcon size)))
 
 (defn *get-file-chooser-up-folder-icon
   "returns: `javax.swing.Icon`"
-  ([]
+  (^javax.swing.Icon []
     (MetalIconFactory/getFileChooserUpFolderIcon )))
 
 (defn *get-tree-floppy-drive-icon
   "returns: `javax.swing.Icon`"
-  ([]
+  (^javax.swing.Icon []
     (MetalIconFactory/getTreeFloppyDriveIcon )))
 
 (defn *get-check-box-icon
   "Returns a checkbox icon.
 
   returns: `javax.swing.Icon`"
-  ([]
+  (^javax.swing.Icon []
     (MetalIconFactory/getCheckBoxIcon )))
 
 (defn *get-file-chooser-new-folder-icon
   "returns: `javax.swing.Icon`"
-  ([]
+  (^javax.swing.Icon []
     (MetalIconFactory/getFileChooserNewFolderIcon )))
 
 (defn *get-file-chooser-detail-view-icon
   "returns: `javax.swing.Icon`"
-  ([]
+  (^javax.swing.Icon []
     (MetalIconFactory/getFileChooserDetailViewIcon )))
 
 (defn *get-tree-leaf-icon
   "returns: `javax.swing.Icon`"
-  ([]
+  (^javax.swing.Icon []
     (MetalIconFactory/getTreeLeafIcon )))
 
 (defn *get-tree-computer-icon
   "returns: `javax.swing.Icon`"
-  ([]
+  (^javax.swing.Icon []
     (MetalIconFactory/getTreeComputerIcon )))
 
 (defn *get-tree-hard-drive-icon
   "returns: `javax.swing.Icon`"
-  ([]
+  (^javax.swing.Icon []
     (MetalIconFactory/getTreeHardDriveIcon )))
 

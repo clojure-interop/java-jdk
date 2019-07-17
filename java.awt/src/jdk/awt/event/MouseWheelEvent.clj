@@ -126,7 +126,7 @@
   returns: either MouseWheelEvent.WHEEL_UNIT_SCROLL or
     MouseWheelEvent.WHEEL_BLOCK_SCROLL, depending on the configuration of
     the native platform. - `int`"
-  ([^java.awt.event.MouseWheelEvent this]
+  (^Integer [^java.awt.event.MouseWheelEvent this]
     (-> this (.getScrollType))))
 
 (defn get-scroll-amount
@@ -138,7 +138,7 @@
   returns: number of units to scroll, or an undefined value if
     getScrollType returns
     MouseWheelEvent.WHEEL_BLOCK_SCROLL - `int`"
-  ([^java.awt.event.MouseWheelEvent this]
+  (^Integer [^java.awt.event.MouseWheelEvent this]
     (-> this (.getScrollAmount))))
 
 (defn get-wheel-rotation
@@ -149,7 +149,7 @@
   returns: negative values if the mouse wheel was rotated up/away from
    the user, and positive values if the mouse wheel was rotated down/
    towards the user - `int`"
-  ([^java.awt.event.MouseWheelEvent this]
+  (^Integer [^java.awt.event.MouseWheelEvent this]
     (-> this (.getWheelRotation))))
 
 (defn get-precise-wheel-rotation
@@ -160,7 +160,7 @@
   returns: negative values if the mouse wheel was rotated up or away from
    the user, and positive values if the mouse wheel was rotated down or
    towards the user - `double`"
-  ([^java.awt.event.MouseWheelEvent this]
+  (^Double [^java.awt.event.MouseWheelEvent this]
     (-> this (.getPreciseWheelRotation))))
 
 (defn get-units-to-scroll
@@ -198,7 +198,7 @@
   returns: the number of units to scroll based on the direction and amount
     of mouse wheel rotation, and on the wheel scrolling settings of the
     native platform - `int`"
-  ([^java.awt.event.MouseWheelEvent this]
+  (^Integer [^java.awt.event.MouseWheelEvent this]
     (-> this (.getUnitsToScroll))))
 
 (defn param-string
@@ -206,6 +206,6 @@
    This method is useful for event-logging and for debugging.
 
   returns: a string identifying the event and its attributes - `java.lang.String`"
-  ([^java.awt.event.MouseWheelEvent this]
+  (^java.lang.String [^java.awt.event.MouseWheelEvent this]
     (-> this (.paramString))))
 

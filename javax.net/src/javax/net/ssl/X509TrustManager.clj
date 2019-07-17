@@ -21,7 +21,7 @@
   auth-type - the authentication type based on the client certificate - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if null or zero-length chain is passed in for the chain parameter or if null or zero-length string is passed in for the authType parameter"
-  ([^javax.net.ssl.X509TrustManager this ^java.security.cert.X509Certificate[] chain ^java.lang.String auth-type]
+  ([^javax.net.ssl.X509TrustManager this chain ^java.lang.String auth-type]
     (-> this (.checkClientTrusted chain auth-type))))
 
 (defn check-server-trusted
@@ -43,7 +43,7 @@
   auth-type - the key exchange algorithm used - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if null or zero-length chain is passed in for the chain parameter or if null or zero-length string is passed in for the authType parameter"
-  ([^javax.net.ssl.X509TrustManager this ^java.security.cert.X509Certificate[] chain ^java.lang.String auth-type]
+  ([^javax.net.ssl.X509TrustManager this chain ^java.lang.String auth-type]
     (-> this (.checkServerTrusted chain auth-type))))
 
 (defn get-accepted-issuers

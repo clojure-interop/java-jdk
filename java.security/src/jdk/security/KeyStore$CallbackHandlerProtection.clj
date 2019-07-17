@@ -19,6 +19,6 @@
   "Returns the CallbackHandler.
 
   returns: the CallbackHandler. - `javax.security.auth.callback.CallbackHandler`"
-  ([^java.security.KeyStore$CallbackHandlerProtection this]
+  (^javax.security.auth.callback.CallbackHandler [^java.security.KeyStore$CallbackHandlerProtection this]
     (-> this (.getCallbackHandler))))
 

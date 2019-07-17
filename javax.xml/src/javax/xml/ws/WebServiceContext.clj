@@ -18,7 +18,7 @@
   returns: MessageContext The message context. - `javax.xml.ws.handler.MessageContext`
 
   throws: java.lang.IllegalStateException - This exception is thrown if the method is called while no request is being serviced."
-  ([^javax.xml.ws.WebServiceContext this]
+  (^javax.xml.ws.handler.MessageContext [^javax.xml.ws.WebServiceContext this]
     (-> this (.getMessageContext))))
 
 (defn get-user-principal
@@ -30,7 +30,7 @@
   returns: Principal The principal object. - `java.security.Principal`
 
   throws: java.lang.IllegalStateException - This exception is thrown if the method is called while no request is being serviced."
-  ([^javax.xml.ws.WebServiceContext this]
+  (^java.security.Principal [^javax.xml.ws.WebServiceContext this]
     (-> this (.getUserPrincipal))))
 
 (defn user-in-role?
@@ -45,7 +45,7 @@
    the sender of the request belongs to a given role - `boolean`
 
   throws: java.lang.IllegalStateException - This exception is thrown if the method is called while no request is being serviced."
-  ([^javax.xml.ws.WebServiceContext this ^java.lang.String role]
+  (^Boolean [^javax.xml.ws.WebServiceContext this ^java.lang.String role]
     (-> this (.isUserInRole role))))
 
 (defn get-endpoint-reference
@@ -64,6 +64,6 @@
   throws: java.lang.IllegalStateException - This exception is thrown if the method is called while no request is being serviced."
   ([^javax.xml.ws.WebServiceContext this ^java.lang.Class clazz ^org.w3c.dom.Element reference-parameters]
     (-> this (.getEndpointReference clazz reference-parameters)))
-  ([^javax.xml.ws.WebServiceContext this ^org.w3c.dom.Element reference-parameters]
+  (^javax.xml.ws.EndpointReference [^javax.xml.ws.WebServiceContext this ^org.w3c.dom.Element reference-parameters]
     (-> this (.getEndpointReference reference-parameters))))
 

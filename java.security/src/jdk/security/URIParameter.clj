@@ -20,6 +20,6 @@
   "Returns the URI.
 
   returns: uri the URI. - `java.net.URI`"
-  ([^java.security.URIParameter this]
+  (^java.net.URI [^java.security.URIParameter this]
     (-> this (.getURI))))
 

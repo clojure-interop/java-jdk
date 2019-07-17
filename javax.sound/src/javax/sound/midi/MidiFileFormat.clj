@@ -77,14 +77,14 @@
   "Obtains the MIDI file type.
 
   returns: the file's type (0, 1, or 2) - `int`"
-  ([^javax.sound.midi.MidiFileFormat this]
+  (^Integer [^javax.sound.midi.MidiFileFormat this]
     (-> this (.getType))))
 
 (defn get-division-type
   "Obtains the timing division type for the MIDI file.
 
   returns: the division type (PPQ or one of the SMPTE types) - `float`"
-  ([^javax.sound.midi.MidiFileFormat this]
+  (^Float [^javax.sound.midi.MidiFileFormat this]
     (-> this (.getDivisionType))))
 
 (defn get-resolution
@@ -93,21 +93,21 @@
    For SMTPE timing, the resolution is specified in ticks per frame.
 
   returns: the number of ticks per beat (PPQ) or per frame (SMPTE) - `int`"
-  ([^javax.sound.midi.MidiFileFormat this]
+  (^Integer [^javax.sound.midi.MidiFileFormat this]
     (-> this (.getResolution))))
 
 (defn get-byte-length
   "Obtains the length of the MIDI file, expressed in 8-bit bytes.
 
   returns: the number of bytes in the file, or UNKNOWN_LENGTH if not known - `int`"
-  ([^javax.sound.midi.MidiFileFormat this]
+  (^Integer [^javax.sound.midi.MidiFileFormat this]
     (-> this (.getByteLength))))
 
 (defn get-microsecond-length
   "Obtains the length of the MIDI file, expressed in microseconds.
 
   returns: the file's duration in microseconds, or UNKNOWN_LENGTH if not known - `long`"
-  ([^javax.sound.midi.MidiFileFormat this]
+  (^Long [^javax.sound.midi.MidiFileFormat this]
     (-> this (.getMicrosecondLength))))
 
 (defn properties
@@ -118,7 +118,7 @@
   returns: a Map<String,Object> object containing
            all properties. If no properties are recognized, an empty map is
            returned. - `java.util.Map<java.lang.String,java.lang.Object>`"
-  ([^javax.sound.midi.MidiFileFormat this]
+  (^java.util.Map [^javax.sound.midi.MidiFileFormat this]
     (-> this (.properties))))
 
 (defn get-property
@@ -134,6 +134,6 @@
 
   returns: the value of the property with the specified key,
            or null if the property does not exist. - `java.lang.Object`"
-  ([^javax.sound.midi.MidiFileFormat this ^java.lang.String key]
+  (^java.lang.Object [^javax.sound.midi.MidiFileFormat this ^java.lang.String key]
     (-> this (.getProperty key))))
 

@@ -35,7 +35,7 @@
   "Returns the length of the content.
 
   returns: the length >= 1 - `int`"
-  ([^javax.swing.text.StringContent this]
+  (^Integer [^javax.swing.text.StringContent this]
     (-> this (.length))))
 
 (defn insert-string
@@ -47,7 +47,7 @@
   returns: an UndoableEdit object for undoing - `javax.swing.undo.UndoableEdit`
 
   throws: javax.swing.text.BadLocationException - if the specified position is invalid"
-  ([^javax.swing.text.StringContent this ^Integer where ^java.lang.String str]
+  (^javax.swing.undo.UndoableEdit [^javax.swing.text.StringContent this ^Integer where ^java.lang.String str]
     (-> this (.insertString where str))))
 
 (defn remove
@@ -59,7 +59,7 @@
   returns: an UndoableEdit object for undoing - `javax.swing.undo.UndoableEdit`
 
   throws: javax.swing.text.BadLocationException - if the specified position is invalid"
-  ([^javax.swing.text.StringContent this ^Integer where ^Integer nitems]
+  (^javax.swing.undo.UndoableEdit [^javax.swing.text.StringContent this ^Integer where ^Integer nitems]
     (-> this (.remove where nitems))))
 
 (defn get-string
@@ -71,7 +71,7 @@
   returns: a string representing the content; may be empty - `java.lang.String`
 
   throws: javax.swing.text.BadLocationException - if the specified position is invalid"
-  ([^javax.swing.text.StringContent this ^Integer where ^Integer len]
+  (^java.lang.String [^javax.swing.text.StringContent this ^Integer where ^Integer len]
     (-> this (.getString where len))))
 
 (defn get-chars
@@ -94,6 +94,6 @@
   returns: the position - `javax.swing.text.Position`
 
   throws: javax.swing.text.BadLocationException - if the specified position is invalid"
-  ([^javax.swing.text.StringContent this ^Integer offset]
+  (^javax.swing.text.Position [^javax.swing.text.StringContent this ^Integer offset]
     (-> this (.createPosition offset))))
 

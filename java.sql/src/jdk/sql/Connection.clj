@@ -57,7 +57,7 @@
   returns: An object that implements the Clob interface - `java.sql.Clob`
 
   throws: java.sql.SQLException - if an object that implements the Clob interface can not be constructed, this method is called on a closed connection or a database access error occurs."
-  ([^java.sql.Connection this]
+  (^java.sql.Clob [^java.sql.Connection this]
     (-> this (.createClob))))
 
 (defn get-auto-commit?
@@ -68,7 +68,7 @@
            auto-commit mode - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed connection"
-  ([^java.sql.Connection this]
+  (^Boolean [^java.sql.Connection this]
     (-> this (.getAutoCommit))))
 
 (defn set-type-map
@@ -117,7 +117,7 @@
           Connection.TRANSACTION_NONE. - `int`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed connection"
-  ([^java.sql.Connection this]
+  (^Integer [^java.sql.Connection this]
     (-> this (.getTransactionIsolation))))
 
 (defn set-savepoint
@@ -132,9 +132,9 @@
   returns: the new Savepoint object - `java.sql.Savepoint`
 
   throws: java.sql.SQLException - if a database access error occurs, this method is called while participating in a distributed transaction, this method is called on a closed connection or this Connection object is currently in auto-commit mode"
-  ([^java.sql.Connection this ^java.lang.String name]
+  (^java.sql.Savepoint [^java.sql.Connection this ^java.lang.String name]
     (-> this (.setSavepoint name)))
-  ([^java.sql.Connection this]
+  (^java.sql.Savepoint [^java.sql.Connection this]
     (-> this (.setSavepoint))))
 
 (defn native-sql
@@ -148,7 +148,7 @@
   returns: the native form of this statement - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed connection"
-  ([^java.sql.Connection this ^java.lang.String sql]
+  (^java.lang.String [^java.sql.Connection this ^java.lang.String sql]
     (-> this (.nativeSQL sql))))
 
 (defn clear-warnings
@@ -181,13 +181,13 @@
            concurrency, and holdability - `java.sql.PreparedStatement`
 
   throws: java.sql.SQLException - if a database access error occurs, this method is called on a closed connection or the given parameters are not ResultSet constants indicating type, concurrency, and holdability"
-  ([^java.sql.Connection this ^java.lang.String sql ^Integer result-set-type ^Integer result-set-concurrency ^Integer result-set-holdability]
+  (^java.sql.PreparedStatement [^java.sql.Connection this ^java.lang.String sql ^Integer result-set-type ^Integer result-set-concurrency ^Integer result-set-holdability]
     (-> this (.prepareStatement sql result-set-type result-set-concurrency result-set-holdability)))
-  ([^java.sql.Connection this ^java.lang.String sql ^Integer result-set-type ^Integer result-set-concurrency]
+  (^java.sql.PreparedStatement [^java.sql.Connection this ^java.lang.String sql ^Integer result-set-type ^Integer result-set-concurrency]
     (-> this (.prepareStatement sql result-set-type result-set-concurrency)))
-  ([^java.sql.Connection this ^java.lang.String sql ^Integer auto-generated-keys]
+  (^java.sql.PreparedStatement [^java.sql.Connection this ^java.lang.String sql ^Integer auto-generated-keys]
     (-> this (.prepareStatement sql auto-generated-keys)))
-  ([^java.sql.Connection this ^java.lang.String sql]
+  (^java.sql.PreparedStatement [^java.sql.Connection this ^java.lang.String sql]
     (-> this (.prepareStatement sql))))
 
 (defn get-warnings
@@ -209,7 +209,7 @@
            if there are none - `java.sql.SQLWarning`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed connection"
-  ([^java.sql.Connection this]
+  (^java.sql.SQLWarning [^java.sql.Connection this]
     (-> this (.getWarnings))))
 
 (defn set-client-info
@@ -277,9 +277,9 @@
   returns: The value of the client info property specified - `java.lang.String`
 
   throws: java.sql.SQLException - if the database server returns an error when fetching the client info value from the databaseor this method is called on a closed connection"
-  ([^java.sql.Connection this ^java.lang.String name]
+  (^java.lang.String [^java.sql.Connection this ^java.lang.String name]
     (-> this (.getClientInfo name)))
-  ([^java.sql.Connection this]
+  (^java.util.Properties [^java.sql.Connection this]
     (-> this (.getClientInfo))))
 
 (defn create-n-clob
@@ -291,7 +291,7 @@
   returns: An object that implements the NClob interface - `java.sql.NClob`
 
   throws: java.sql.SQLException - if an object that implements the NClob interface can not be constructed, this method is called on a closed connection or a database access error occurs."
-  ([^java.sql.Connection this]
+  (^java.sql.NClob [^java.sql.Connection this]
     (-> this (.createNClob))))
 
 (defn release-savepoint
@@ -314,7 +314,7 @@
   returns: An object that implements the SQLXML interface - `java.sql.SQLXML`
 
   throws: java.sql.SQLException - if an object that implements the SQLXML interface can not be constructed, this method is called on a closed connection or a database access error occurs."
-  ([^java.sql.Connection this]
+  (^java.sql.SQLXML [^java.sql.Connection this]
     (-> this (.createSQLXML))))
 
 (defn prepare-call
@@ -335,11 +335,11 @@
            concurrency, and holdability - `java.sql.CallableStatement`
 
   throws: java.sql.SQLException - if a database access error occurs, this method is called on a closed connection or the given parameters are not ResultSet constants indicating type, concurrency, and holdability"
-  ([^java.sql.Connection this ^java.lang.String sql ^Integer result-set-type ^Integer result-set-concurrency ^Integer result-set-holdability]
+  (^java.sql.CallableStatement [^java.sql.Connection this ^java.lang.String sql ^Integer result-set-type ^Integer result-set-concurrency ^Integer result-set-holdability]
     (-> this (.prepareCall sql result-set-type result-set-concurrency result-set-holdability)))
-  ([^java.sql.Connection this ^java.lang.String sql ^Integer result-set-type ^Integer result-set-concurrency]
+  (^java.sql.CallableStatement [^java.sql.Connection this ^java.lang.String sql ^Integer result-set-type ^Integer result-set-concurrency]
     (-> this (.prepareCall sql result-set-type result-set-concurrency)))
-  ([^java.sql.Connection this ^java.lang.String sql]
+  (^java.sql.CallableStatement [^java.sql.Connection this ^java.lang.String sql]
     (-> this (.prepareCall sql))))
 
 (defn set-transaction-isolation
@@ -385,11 +385,11 @@
            concurrency, and holdability - `java.sql.Statement`
 
   throws: java.sql.SQLException - if a database access error occurs, this method is called on a closed connection or the given parameters are not ResultSet constants indicating type, concurrency, and holdability"
-  ([^java.sql.Connection this ^Integer result-set-type ^Integer result-set-concurrency ^Integer result-set-holdability]
+  (^java.sql.Statement [^java.sql.Connection this ^Integer result-set-type ^Integer result-set-concurrency ^Integer result-set-holdability]
     (-> this (.createStatement result-set-type result-set-concurrency result-set-holdability)))
-  ([^java.sql.Connection this ^Integer result-set-type ^Integer result-set-concurrency]
+  (^java.sql.Statement [^java.sql.Connection this ^Integer result-set-type ^Integer result-set-concurrency]
     (-> this (.createStatement result-set-type result-set-concurrency)))
-  ([^java.sql.Connection this]
+  (^java.sql.Statement [^java.sql.Connection this]
     (-> this (.createStatement))))
 
 (defn closed?
@@ -409,7 +409,7 @@
            is closed; false if it is still open - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^java.sql.Connection this]
+  (^Boolean [^java.sql.Connection this]
     (-> this (.isClosed))))
 
 (defn create-blob
@@ -421,7 +421,7 @@
   returns: An object that implements the Blob interface - `java.sql.Blob`
 
   throws: java.sql.SQLException - if an object that implements the Blob interface can not be constructed, this method is called on a closed connection or a database access error occurs."
-  ([^java.sql.Connection this]
+  (^java.sql.Blob [^java.sql.Connection this]
     (-> this (.createBlob))))
 
 (defn get-catalog
@@ -430,7 +430,7 @@
   returns: the current catalog name or null if there is none - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed connection"
-  ([^java.sql.Connection this]
+  (^java.lang.String [^java.sql.Connection this]
     (-> this (.getCatalog))))
 
 (defn set-schema
@@ -464,7 +464,7 @@
            Connection object - `java.sql.DatabaseMetaData`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed connection"
-  ([^java.sql.Connection this]
+  (^java.sql.DatabaseMetaData [^java.sql.Connection this]
     (-> this (.getMetaData))))
 
 (defn close
@@ -497,7 +497,7 @@
   returns: true if the connection is valid, false otherwise - `boolean`
 
   throws: java.sql.SQLException - if the value supplied for timeout is less then 0"
-  ([^java.sql.Connection this ^Integer timeout]
+  (^Boolean [^java.sql.Connection this ^Integer timeout]
     (-> this (.isValid timeout))))
 
 (defn get-schema
@@ -506,7 +506,7 @@
   returns: the current schema name or null if there is none - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed connection"
-  ([^java.sql.Connection this]
+  (^java.lang.String [^java.sql.Connection this]
     (-> this (.getSchema))))
 
 (defn set-catalog
@@ -578,7 +578,7 @@
            with this Connection object - `java.util.Map<java.lang.String,java.lang.Class<?>>`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed connection"
-  ([^java.sql.Connection this]
+  (^java.util.Map> [^java.sql.Connection this]
     (-> this (.getTypeMap))))
 
 (defn abort
@@ -623,7 +623,7 @@
           ResultSet.CLOSE_CURSORS_AT_COMMIT - `int`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed connection"
-  ([^java.sql.Connection this]
+  (^Integer [^java.sql.Connection this]
     (-> this (.getHoldability))))
 
 (defn create-struct
@@ -635,7 +635,7 @@
   returns: a Struct object that maps to the given SQL type and is populated with the given attributes - `java.sql.Struct`
 
   throws: java.sql.SQLException - if a database error occurs, the typeName is null or this method is called on a closed connection"
-  ([^java.sql.Connection this ^java.lang.String type-name ^java.lang.Object[] attributes]
+  (^java.sql.Struct [^java.sql.Connection this ^java.lang.String type-name attributes]
     (-> this (.createStruct type-name attributes))))
 
 (defn read-only?
@@ -646,7 +646,7 @@
            is read-only; false otherwise - `boolean`
 
   throws: java.sql.SQLException - SQLException if a database access error occurs or this method is called on a closed connection"
-  ([^java.sql.Connection this]
+  (^Boolean [^java.sql.Connection this]
     (-> this (.isReadOnly))))
 
 (defn set-auto-commit
@@ -693,7 +693,7 @@
            no limit - `int`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed Connection"
-  ([^java.sql.Connection this]
+  (^Integer [^java.sql.Connection this]
     (-> this (.getNetworkTimeout))))
 
 (defn set-network-timeout
@@ -789,6 +789,6 @@
   returns: an Array object whose elements map to the specified SQL type - `java.sql.Array`
 
   throws: java.sql.SQLException - if a database error occurs, the JDBC type is not appropriate for the typeName and the conversion is not supported, the typeName is null or this method is called on a closed connection"
-  ([^java.sql.Connection this ^java.lang.String type-name ^java.lang.Object[] elements]
+  (^java.sql.Array [^java.sql.Connection this ^java.lang.String type-name elements]
     (-> this (.createArrayOf type-name elements))))
 

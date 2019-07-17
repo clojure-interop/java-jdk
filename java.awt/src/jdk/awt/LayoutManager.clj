@@ -35,7 +35,7 @@
   parent - the container to be laid out - `java.awt.Container`
 
   returns: `java.awt.Dimension`"
-  ([^java.awt.LayoutManager this ^java.awt.Container parent]
+  (^java.awt.Dimension [^java.awt.LayoutManager this ^java.awt.Container parent]
     (-> this (.preferredLayoutSize parent))))
 
 (defn minimum-layout-size
@@ -45,7 +45,7 @@
   parent - the component to be laid out - `java.awt.Container`
 
   returns: `java.awt.Dimension`"
-  ([^java.awt.LayoutManager this ^java.awt.Container parent]
+  (^java.awt.Dimension [^java.awt.LayoutManager this ^java.awt.Container parent]
     (-> this (.minimumLayoutSize parent))))
 
 (defn layout-container

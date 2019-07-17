@@ -51,6 +51,6 @@
 
   returns: The object to which this reference refers, or
              null if this reference object has been cleared - `SoftReference.T`"
-  ([^java.lang.ref.SoftReference this]
+  (^SoftReference.T [^java.lang.ref.SoftReference this]
     (-> this (.get))))
 

@@ -36,7 +36,7 @@
   "Returns the main Attributes for the Manifest.
 
   returns: the main Attributes for the Manifest - `java.util.jar.Attributes`"
-  ([^java.util.jar.Manifest this]
+  (^java.util.jar.Attributes [^java.util.jar.Manifest this]
     (-> this (.getMainAttributes))))
 
 (defn get-entries
@@ -46,7 +46,7 @@
    created by read(java.io.InputStream), nor is such an entry written by using write(java.io.OutputStream).
 
   returns: a Map of the entries contained in this Manifest - `java.util.Map<java.lang.String,java.util.jar.Attributes>`"
-  ([^java.util.jar.Manifest this]
+  (^java.util.Map [^java.util.jar.Manifest this]
     (-> this (.getEntries))))
 
 (defn clone
@@ -57,14 +57,14 @@
        public Object clone() { return new Manifest(this); }
 
   returns: a shallow copy of this Manifest - `java.lang.Object`"
-  ([^java.util.jar.Manifest this]
+  (^java.lang.Object [^java.util.jar.Manifest this]
     (-> this (.clone))))
 
 (defn hash-code
   "Returns the hash code for this Manifest.
 
   returns: a hash code value for this object. - `int`"
-  ([^java.util.jar.Manifest this]
+  (^Integer [^java.util.jar.Manifest this]
     (-> this (.hashCode))))
 
 (defn clear
@@ -91,7 +91,7 @@
 
   returns: true if the specified Object is also a Manifest and has
    the same main Attributes and entries - `boolean`"
-  ([^java.util.jar.Manifest this ^java.lang.Object o]
+  (^Boolean [^java.util.jar.Manifest this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn get-attributes
@@ -116,6 +116,6 @@
   name - entry name - `java.lang.String`
 
   returns: the Attributes for the specified entry name - `java.util.jar.Attributes`"
-  ([^java.util.jar.Manifest this ^java.lang.String name]
+  (^java.util.jar.Attributes [^java.util.jar.Manifest this ^java.lang.String name]
     (-> this (.getAttributes name))))
 

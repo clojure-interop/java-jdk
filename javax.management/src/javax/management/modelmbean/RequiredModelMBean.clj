@@ -100,7 +100,7 @@
        result of invoking the method on the specified managed resource. - `java.lang.Object`
 
   throws: javax.management.MBeanException - Wraps one of the following Exceptions: An Exception thrown by the managed object's invoked method. ServiceNotFoundException: No ModelMBeanOperationInfo or no descriptor defined for the specified operation or the managed resource is null. InvalidTargetObjectTypeException: The 'targetType' field value is not 'objectReference'."
-  ([^javax.management.modelmbean.RequiredModelMBean this ^java.lang.String op-name ^java.lang.Object[] op-args ^java.lang.String[] sig]
+  (^java.lang.Object [^javax.management.modelmbean.RequiredModelMBean this ^java.lang.String op-name op-args sig]
     (-> this (.invoke op-name op-args sig))))
 
 (defn load
@@ -258,7 +258,7 @@
    operation in the 'getMethod' field of the descriptor. - `java.lang.Object`
 
   throws: javax.management.AttributeNotFoundException - The specified attribute is not accessible in the MBean. The following cases may result in an AttributeNotFoundException: No ModelMBeanInfo was found for the Model MBean. No ModelMBeanAttributeInfo was found for the specified attribute name. The ModelMBeanAttributeInfo isReadable method returns 'false'."
-  ([^javax.management.modelmbean.RequiredModelMBean this ^java.lang.String attr-name]
+  (^java.lang.Object [^javax.management.modelmbean.RequiredModelMBean this ^java.lang.String attr-name]
     (-> this (.getAttribute attr-name))))
 
 (defn get-m-bean-info
@@ -267,7 +267,7 @@
 
   returns: An instance of ModelMBeanInfo allowing retrieval all
             attributes, operations, and Notifications of this MBean. - `javax.management.MBeanInfo`"
-  ([^javax.management.modelmbean.RequiredModelMBean this]
+  (^javax.management.MBeanInfo [^javax.management.modelmbean.RequiredModelMBean this]
     (-> this (.getMBeanInfo))))
 
 (defn add-attribute-change-notification-listener
@@ -360,7 +360,7 @@
       values in Attribute instances. - `javax.management.AttributeList`
 
   throws: javax.management.RuntimeOperationsException - Wraps an IllegalArgumentException: The object name in parameter is null or attributes in parameter is null."
-  ([^javax.management.modelmbean.RequiredModelMBean this ^javax.management.AttributeList attributes]
+  (^javax.management.AttributeList [^javax.management.modelmbean.RequiredModelMBean this ^javax.management.AttributeList attributes]
     (-> this (.setAttributes attributes))))
 
 (defn set-model-m-bean-info
@@ -435,7 +435,7 @@
    the returned value. - `javax.management.ObjectName`
 
   throws: java.lang.Exception - This exception will be caught by the MBean server and re-thrown as an MBeanRegistrationException."
-  ([^javax.management.modelmbean.RequiredModelMBean this ^javax.management.MBeanServer server ^javax.management.ObjectName name]
+  (^javax.management.ObjectName [^javax.management.modelmbean.RequiredModelMBean this ^javax.management.MBeanServer server ^javax.management.ObjectName name]
     (-> this (.preRegister server name))))
 
 (defn send-attribute-change-notification
@@ -491,6 +491,6 @@
   returns: The array of the retrieved attributes. - `javax.management.AttributeList`
 
   throws: javax.management.RuntimeOperationsException - Wraps an IllegalArgumentException: The object name in parameter is null or attributes in parameter is null."
-  ([^javax.management.modelmbean.RequiredModelMBean this ^java.lang.String[] attr-names]
+  (^javax.management.AttributeList [^javax.management.modelmbean.RequiredModelMBean this attr-names]
     (-> this (.getAttributes attr-names))))
 

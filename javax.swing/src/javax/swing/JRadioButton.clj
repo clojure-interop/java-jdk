@@ -68,7 +68,7 @@
    that renders this component.
 
   returns: String `RadioButtonUI` - `java.lang.String`"
-  ([^javax.swing.JRadioButton this]
+  (^java.lang.String [^javax.swing.JRadioButton this]
     (-> this (.getUIClassID))))
 
 (defn get-accessible-context
@@ -79,6 +79,6 @@
 
   returns: an AccessibleJRadioButton that serves as the
            AccessibleContext of this JRadioButton - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.JRadioButton this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.JRadioButton this]
     (-> this (.getAccessibleContext))))
 

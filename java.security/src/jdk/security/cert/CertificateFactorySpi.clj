@@ -55,7 +55,7 @@
    from the input stream. - `java.security.cert.Certificate`
 
   throws: java.security.cert.CertificateException - on parsing errors."
-  ([^java.security.cert.CertificateFactorySpi this ^java.io.InputStream in-stream]
+  (^java.security.cert.Certificate [^java.security.cert.CertificateFactorySpi this ^java.io.InputStream in-stream]
     (-> this (.engineGenerateCertificate in-stream))))
 
 (defn engine-generate-cert-path
@@ -75,9 +75,9 @@
      InputStream - `java.security.cert.CertPath`
 
   throws: java.security.cert.CertificateException - if an exception occurs while decoding or the encoding requested is not supported"
-  ([^java.security.cert.CertificateFactorySpi this ^java.io.InputStream in-stream ^java.lang.String encoding]
+  (^java.security.cert.CertPath [^java.security.cert.CertificateFactorySpi this ^java.io.InputStream in-stream ^java.lang.String encoding]
     (-> this (.engineGenerateCertPath in-stream encoding)))
-  ([^java.security.cert.CertificateFactorySpi this ^java.io.InputStream in-stream]
+  (^java.security.cert.CertPath [^java.security.cert.CertificateFactorySpi this ^java.io.InputStream in-stream]
     (-> this (.engineGenerateCertPath in-stream))))
 
 (defn engine-get-cert-path-encodings
@@ -100,7 +100,7 @@
            CertPath encodings (as Strings) - `java.util.Iterator<java.lang.String>`
 
   throws: java.lang.UnsupportedOperationException - if the method is not supported"
-  ([^java.security.cert.CertificateFactorySpi this]
+  (^java.util.Iterator [^java.security.cert.CertificateFactorySpi this]
     (-> this (.engineGetCertPathEncodings))))
 
 (defn engine-generate-certificates
@@ -168,7 +168,7 @@
    from the input stream. - `java.security.cert.CRL`
 
   throws: java.security.cert.CRLException - on parsing errors."
-  ([^java.security.cert.CertificateFactorySpi this ^java.io.InputStream in-stream]
+  (^java.security.cert.CRL [^java.security.cert.CertificateFactorySpi this ^java.io.InputStream in-stream]
     (-> this (.engineGenerateCRL in-stream))))
 
 (defn engine-generate-cr-ls

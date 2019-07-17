@@ -29,7 +29,7 @@
    `application/octet-stream` as the content type.
 
   returns: the content type. - `java.lang.String`"
-  ([^javax.activation.URLDataSource this]
+  (^java.lang.String [^javax.activation.URLDataSource this]
     (-> this (.getContentType))))
 
 (defn get-name
@@ -37,7 +37,7 @@
    instantiate the object.
 
   returns: the result of calling the URL's getFile method. - `java.lang.String`"
-  ([^javax.activation.URLDataSource this]
+  (^java.lang.String [^javax.activation.URLDataSource this]
     (-> this (.getName))))
 
 (defn get-input-stream
@@ -47,7 +47,7 @@
   returns: the InputStream. - `java.io.InputStream`
 
   throws: java.io.IOException"
-  ([^javax.activation.URLDataSource this]
+  (^java.io.InputStream [^javax.activation.URLDataSource this]
     (-> this (.getInputStream))))
 
 (defn get-output-stream
@@ -59,13 +59,13 @@
   returns: the OutputStream. - `java.io.OutputStream`
 
   throws: java.io.IOException"
-  ([^javax.activation.URLDataSource this]
+  (^java.io.OutputStream [^javax.activation.URLDataSource this]
     (-> this (.getOutputStream))))
 
 (defn get-url
   "Return the URL used to create this DataSource.
 
   returns: The URL. - `java.net.URL`"
-  ([^javax.activation.URLDataSource this]
+  (^java.net.URL [^javax.activation.URLDataSource this]
     (-> this (.getURL))))
 

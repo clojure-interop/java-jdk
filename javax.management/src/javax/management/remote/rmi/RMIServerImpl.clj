@@ -29,7 +29,7 @@
   returns: a remotable stub. - `java.rmi.Remote`
 
   throws: java.io.IOException - if the stub cannot be obtained - e.g the RMIServerImpl has not been exported yet."
-  ([^javax.management.remote.rmi.RMIServerImpl this]
+  (^java.rmi.Remote [^javax.management.remote.rmi.RMIServerImpl this]
     (-> this (.toStub))))
 
 (defn set-default-class-loader
@@ -47,7 +47,7 @@
 
   returns: the default ClassLoader used by this
    connector server. - `java.lang.ClassLoader`"
-  ([^javax.management.remote.rmi.RMIServerImpl this]
+  (^java.lang.ClassLoader [^javax.management.remote.rmi.RMIServerImpl this]
     (-> this (.getDefaultClassLoader))))
 
 (defn set-m-bean-server
@@ -67,14 +67,14 @@
 
   returns: the MBeanServer to which this connector
    is attached. - `javax.management.MBeanServer`"
-  ([^javax.management.remote.rmi.RMIServerImpl this]
+  (^javax.management.MBeanServer [^javax.management.remote.rmi.RMIServerImpl this]
     (-> this (.getMBeanServer))))
 
 (defn get-version
   "Description copied from interface: RMIServer
 
   returns: a string with the format described here. - `java.lang.String`"
-  ([^javax.management.remote.rmi.RMIServerImpl this]
+  (^java.lang.String [^javax.management.remote.rmi.RMIServerImpl this]
     (-> this (.getVersion))))
 
 (defn new-client
@@ -94,7 +94,7 @@
    object implementing RMIConnection. - `javax.management.remote.rmi.RMIConnection`
 
   throws: java.io.IOException - if the new client object cannot be created or exported."
-  ([^javax.management.remote.rmi.RMIServerImpl this ^java.lang.Object credentials]
+  (^javax.management.remote.rmi.RMIConnection [^javax.management.remote.rmi.RMIServerImpl this ^java.lang.Object credentials]
     (-> this (.newClient credentials))))
 
 (defn close

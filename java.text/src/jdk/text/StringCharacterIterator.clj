@@ -28,7 +28,7 @@
 
   returns: the character at the new position or DONE if the new
    position is off the end of the text range. - `char`"
-  ([^java.text.StringCharacterIterator this]
+  (^Character [^java.text.StringCharacterIterator this]
     (-> this (.next))))
 
 (defn set-text
@@ -45,21 +45,21 @@
   "Implements CharacterIterator.getIndex() for String.
 
   returns: the current index. - `int`"
-  ([^java.text.StringCharacterIterator this]
+  (^Integer [^java.text.StringCharacterIterator this]
     (-> this (.getIndex))))
 
 (defn get-end-index
   "Implements CharacterIterator.getEndIndex() for String.
 
   returns: the index after the last character in the text - `int`"
-  ([^java.text.StringCharacterIterator this]
+  (^Integer [^java.text.StringCharacterIterator this]
     (-> this (.getEndIndex))))
 
 (defn get-begin-index
   "Implements CharacterIterator.getBeginIndex() for String.
 
   returns: the index at which the text begins. - `int`"
-  ([^java.text.StringCharacterIterator this]
+  (^Integer [^java.text.StringCharacterIterator this]
     (-> this (.getBeginIndex))))
 
 (defn previous
@@ -67,7 +67,7 @@
 
   returns: the character at the new position or DONE if the current
    position is equal to getBeginIndex(). - `char`"
-  ([^java.text.StringCharacterIterator this]
+  (^Character [^java.text.StringCharacterIterator this]
     (-> this (.previous))))
 
 (defn current
@@ -75,7 +75,7 @@
 
   returns: the character at the current position or DONE if the current
    position is off the end of the text. - `char`"
-  ([^java.text.StringCharacterIterator this]
+  (^Character [^java.text.StringCharacterIterator this]
     (-> this (.current))))
 
 (defn set-index
@@ -84,28 +84,28 @@
   p - the position within the text. Valid values range from getBeginIndex() to getEndIndex(). An IllegalArgumentException is thrown if an invalid value is supplied. - `int`
 
   returns: the character at the specified position or DONE if the specified position is equal to getEndIndex() - `char`"
-  ([^java.text.StringCharacterIterator this ^Integer p]
+  (^Character [^java.text.StringCharacterIterator this ^Integer p]
     (-> this (.setIndex p))))
 
 (defn last
   "Implements CharacterIterator.last() for String.
 
   returns: the last character in the text, or DONE if the text is empty - `char`"
-  ([^java.text.StringCharacterIterator this]
+  (^Character [^java.text.StringCharacterIterator this]
     (-> this (.last))))
 
 (defn clone
   "Creates a copy of this iterator.
 
   returns: A copy of this - `java.lang.Object`"
-  ([^java.text.StringCharacterIterator this]
+  (^java.lang.Object [^java.text.StringCharacterIterator this]
     (-> this (.clone))))
 
 (defn hash-code
   "Computes a hashcode for this iterator.
 
   returns: A hash code - `int`"
-  ([^java.text.StringCharacterIterator this]
+  (^Integer [^java.text.StringCharacterIterator this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -115,13 +115,13 @@
 
   returns: true if the given obj is the same as this
    StringCharacterIterator object; false otherwise. - `boolean`"
-  ([^java.text.StringCharacterIterator this ^java.lang.Object obj]
+  (^Boolean [^java.text.StringCharacterIterator this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn first
   "Implements CharacterIterator.first() for String.
 
   returns: the first character in the text, or DONE if the text is empty - `char`"
-  ([^java.text.StringCharacterIterator this]
+  (^Character [^java.text.StringCharacterIterator this]
     (-> this (.first))))
 

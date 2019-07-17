@@ -8,7 +8,7 @@
   "Returns the SQLType name that represents a SQL data type.
 
   returns: The name of this SQLType. - `java.lang.String`"
-  ([^java.sql.SQLType this]
+  (^java.lang.String [^java.sql.SQLType this]
     (-> this (.getName))))
 
 (defn get-vendor
@@ -16,13 +16,13 @@
    returned typically is the package name for this vendor.
 
   returns: The name of the vendor for this data type - `java.lang.String`"
-  ([^java.sql.SQLType this]
+  (^java.lang.String [^java.sql.SQLType this]
     (-> this (.getVendor))))
 
 (defn get-vendor-type-number
   "Returns the vendor specific type number for the data type.
 
   returns: An Integer representing the vendor specific data type - `java.lang.Integer`"
-  ([^java.sql.SQLType this]
+  (^java.lang.Integer [^java.sql.SQLType this]
     (-> this (.getVendorTypeNumber))))
 

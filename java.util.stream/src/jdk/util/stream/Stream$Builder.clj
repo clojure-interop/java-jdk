@@ -41,6 +41,6 @@
   returns: the built stream - `java.util.stream.Stream<Stream.Builder.T>`
 
   throws: java.lang.IllegalStateException - if the builder has already transitioned to the built state"
-  ([^java.util.stream.Stream$Builder this]
+  (^java.util.stream.Stream [^java.util.stream.Stream$Builder this]
     (-> this (.build))))
 

@@ -89,7 +89,7 @@
   returns: width of the printable area in the specified units. - `float`
 
   throws: java.lang.IllegalArgumentException - (unchecked exception) Thrown if units < 1."
-  ([^javax.print.attribute.standard.MediaPrintableArea this ^Integer units]
+  (^Float [^javax.print.attribute.standard.MediaPrintableArea this ^Integer units]
     (-> this (.getWidth units))))
 
 (defn get-category
@@ -114,9 +114,9 @@
   returns: String version of this two-dimensional size attribute. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - (unchecked exception) Thrown if units < 1."
-  ([^javax.print.attribute.standard.MediaPrintableArea this ^Integer units ^java.lang.String units-name]
+  (^java.lang.String [^javax.print.attribute.standard.MediaPrintableArea this ^Integer units ^java.lang.String units-name]
     (-> this (.toString units units-name)))
-  ([^javax.print.attribute.standard.MediaPrintableArea this]
+  (^java.lang.String [^javax.print.attribute.standard.MediaPrintableArea this]
     (-> this (.toString))))
 
 (defn get-name
@@ -128,7 +128,7 @@
    This is not an IPP V1.1 attribute.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.MediaPrintableArea this]
+  (^java.lang.String [^javax.print.attribute.standard.MediaPrintableArea this]
     (-> this (.getName))))
 
 (defn get-y
@@ -141,7 +141,7 @@
    specified units. - `float`
 
   throws: java.lang.IllegalArgumentException - (unchecked exception) Thrown if units < 1."
-  ([^javax.print.attribute.standard.MediaPrintableArea this ^Integer units]
+  (^Float [^javax.print.attribute.standard.MediaPrintableArea this ^Integer units]
     (-> this (.getY units))))
 
 (defn get-printable-area
@@ -166,7 +166,7 @@
    specified units. - `float`
 
   throws: java.lang.IllegalArgumentException - (unchecked exception) Thrown if units < 1."
-  ([^javax.print.attribute.standard.MediaPrintableArea this ^Integer units]
+  (^Float [^javax.print.attribute.standard.MediaPrintableArea this ^Integer units]
     (-> this (.getX units))))
 
 (defn get-height
@@ -177,14 +177,14 @@
   returns: height of the printable area in the specified units. - `float`
 
   throws: java.lang.IllegalArgumentException - (unchecked exception) Thrown if units < 1."
-  ([^javax.print.attribute.standard.MediaPrintableArea this ^Integer units]
+  (^Float [^javax.print.attribute.standard.MediaPrintableArea this ^Integer units]
     (-> this (.getHeight units))))
 
 (defn hash-code
   "Returns a hash code value for this attribute.
 
   returns: a hash code value for this object. - `int`"
-  ([^javax.print.attribute.standard.MediaPrintableArea this]
+  (^Integer [^javax.print.attribute.standard.MediaPrintableArea this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -203,6 +203,6 @@
 
   returns: True if object is equivalent to this media margins
             attribute, false otherwise. - `boolean`"
-  ([^javax.print.attribute.standard.MediaPrintableArea this ^java.lang.Object object]
+  (^Boolean [^javax.print.attribute.standard.MediaPrintableArea this ^java.lang.Object object]
     (-> this (.equals object))))
 

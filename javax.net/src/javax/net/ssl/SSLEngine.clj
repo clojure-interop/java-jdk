@@ -319,7 +319,7 @@
 
   returns: true if client authentication is required,
             or false if no client authentication is desired. - `boolean`"
-  ([^javax.net.ssl.SSLEngine this]
+  (^Boolean [^javax.net.ssl.SSLEngine this]
     (-> this (.getNeedClientAuth))))
 
 (defn get-supported-protocols
@@ -337,14 +337,14 @@
   returns: true if the SSLEngine will not
             consume anymore network data (and by implication,
             will not produce any more application data.) - `boolean`"
-  ([^javax.net.ssl.SSLEngine this]
+  (^Boolean [^javax.net.ssl.SSLEngine this]
     (-> this (.isInboundDone))))
 
 (defn get-handshake-status
   "Returns the current handshake status for this SSLEngine.
 
   returns: the current SSLEngineResult.HandshakeStatus. - `javax.net.ssl.SSLEngineResult.HandshakeStatus`"
-  ([^javax.net.ssl.SSLEngine this]
+  (^javax.net.ssl.SSLEngineResult.HandshakeStatus [^javax.net.ssl.SSLEngine this]
     (-> this (.getHandshakeStatus))))
 
 (defn get-handshake-session
@@ -374,7 +374,7 @@
            SSLSession currently being negotiated. - `javax.net.ssl.SSLSession`
 
   throws: java.lang.UnsupportedOperationException - if the underlying provider does not implement the operation."
-  ([^javax.net.ssl.SSLEngine this]
+  (^javax.net.ssl.SSLSession [^javax.net.ssl.SSLEngine this]
     (-> this (.getHandshakeSession))))
 
 (defn close-inbound
@@ -428,7 +428,7 @@
 
   returns: true if the engine should do handshaking
             in `client` mode - `boolean`"
-  ([^javax.net.ssl.SSLEngine this]
+  (^Boolean [^javax.net.ssl.SSLEngine this]
     (-> this (.getUseClientMode))))
 
 (defn set-want-client-auth
@@ -459,7 +459,7 @@
    are always non-null.
 
   returns: the SSLParameters in effect for this SSLEngine. - `javax.net.ssl.SSLParameters`"
-  ([^javax.net.ssl.SSLEngine this]
+  (^javax.net.ssl.SSLParameters [^javax.net.ssl.SSLEngine this]
     (-> this (.getSSLParameters))))
 
 (defn get-session
@@ -480,7 +480,7 @@
    `SSL_NULL_WITH_NULL_NULL`.
 
   returns: the SSLSession for this SSLEngine - `javax.net.ssl.SSLSession`"
-  ([^javax.net.ssl.SSLEngine this]
+  (^javax.net.ssl.SSLSession [^javax.net.ssl.SSLEngine this]
     (-> this (.getSession))))
 
 (defn unwrap
@@ -536,9 +536,9 @@
             of this operation. - `javax.net.ssl.SSLEngineResult`
 
   throws: javax.net.ssl.SSLException - A problem was encountered while processing the data that caused the SSLEngine to abort. See the class description for more information on engine closure."
-  ([^javax.net.ssl.SSLEngine this ^java.nio.ByteBuffer src ^java.nio.ByteBuffer[] dsts ^Integer offset ^Integer length]
+  (^javax.net.ssl.SSLEngineResult [^javax.net.ssl.SSLEngine this ^java.nio.ByteBuffer src dsts ^Integer offset ^Integer length]
     (-> this (.unwrap src dsts offset length)))
-  ([^javax.net.ssl.SSLEngine this ^java.nio.ByteBuffer src ^java.nio.ByteBuffer dst]
+  (^javax.net.ssl.SSLEngineResult [^javax.net.ssl.SSLEngine this ^java.nio.ByteBuffer src ^java.nio.ByteBuffer dst]
     (-> this (.unwrap src dst))))
 
 (defn wrap
@@ -589,9 +589,9 @@
             of this operation. - `javax.net.ssl.SSLEngineResult`
 
   throws: javax.net.ssl.SSLException - A problem was encountered while processing the data that caused the SSLEngine to abort. See the class description for more information on engine closure."
-  ([^javax.net.ssl.SSLEngine this ^java.nio.ByteBuffer[] srcs ^Integer offset ^Integer length ^java.nio.ByteBuffer dst]
+  (^javax.net.ssl.SSLEngineResult [^javax.net.ssl.SSLEngine this srcs ^Integer offset ^Integer length ^java.nio.ByteBuffer dst]
     (-> this (.wrap srcs offset length dst)))
-  ([^javax.net.ssl.SSLEngine this ^java.nio.ByteBuffer src ^java.nio.ByteBuffer dst]
+  (^javax.net.ssl.SSLEngineResult [^javax.net.ssl.SSLEngine this ^java.nio.ByteBuffer src ^java.nio.ByteBuffer dst]
     (-> this (.wrap src dst))))
 
 (defn get-enabled-cipher-suites
@@ -652,7 +652,7 @@
 
   returns: the host name of the peer, or null if nothing is
             available. - `java.lang.String`"
-  ([^javax.net.ssl.SSLEngine this]
+  (^java.lang.String [^javax.net.ssl.SSLEngine this]
     (-> this (.getPeerHost))))
 
 (defn set-ssl-parameters
@@ -706,7 +706,7 @@
   suites - Names of all the cipher suites to enable - `java.lang.String[]`
 
   throws: java.lang.IllegalArgumentException - when one or more of the ciphers named by the parameter is not supported, or when the parameter is null."
-  ([^javax.net.ssl.SSLEngine this ^java.lang.String[] suites]
+  ([^javax.net.ssl.SSLEngine this suites]
     (-> this (.setEnabledCipherSuites suites))))
 
 (defn get-enable-session-creation?
@@ -715,7 +715,7 @@
   returns: true indicates that sessions may be created; this
             is the default.  false indicates that an existing session
             must be resumed - `boolean`"
-  ([^javax.net.ssl.SSLEngine this]
+  (^Boolean [^javax.net.ssl.SSLEngine this]
     (-> this (.getEnableSessionCreation))))
 
 (defn get-delegated-task
@@ -739,7 +739,7 @@
 
   returns: a delegated Runnable task, or null
             if none are available. - `java.lang.Runnable`"
-  ([^javax.net.ssl.SSLEngine this]
+  (^java.lang.Runnable [^javax.net.ssl.SSLEngine this]
     (-> this (.getDelegatedTask))))
 
 (defn set-enable-session-creation
@@ -760,7 +760,7 @@
 
   returns: the port number of the peer, or -1 if nothing is
             available. - `int`"
-  ([^javax.net.ssl.SSLEngine this]
+  (^Integer [^javax.net.ssl.SSLEngine this]
     (-> this (.getPeerPort))))
 
 (defn set-enabled-protocols
@@ -774,7 +774,7 @@
   protocols - Names of all the protocols to enable. - `java.lang.String[]`
 
   throws: java.lang.IllegalArgumentException - when one or more of the protocols named by the parameter is not supported or when the protocols parameter is null."
-  ([^javax.net.ssl.SSLEngine this ^java.lang.String[] protocols]
+  ([^javax.net.ssl.SSLEngine this protocols]
     (-> this (.setEnabledProtocols protocols))))
 
 (defn set-need-client-auth
@@ -819,7 +819,7 @@
 
   returns: true if the SSLEngine will not produce
             any more network data - `boolean`"
-  ([^javax.net.ssl.SSLEngine this]
+  (^Boolean [^javax.net.ssl.SSLEngine this]
     (-> this (.isOutboundDone))))
 
 (defn get-want-client-auth?
@@ -828,6 +828,6 @@
 
   returns: true if client authentication is requested,
             or false if no client authentication is desired. - `boolean`"
-  ([^javax.net.ssl.SSLEngine this]
+  (^Boolean [^javax.net.ssl.SSLEngine this]
     (-> this (.getWantClientAuth))))
 

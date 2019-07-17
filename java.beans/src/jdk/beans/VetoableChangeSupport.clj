@@ -136,6 +136,6 @@
   property-name - the property name. - `java.lang.String`
 
   returns: true if there are one or more listeners for the given property - `boolean`"
-  ([^java.beans.VetoableChangeSupport this ^java.lang.String property-name]
+  (^Boolean [^java.beans.VetoableChangeSupport this ^java.lang.String property-name]
     (-> this (.hasListeners property-name))))
 

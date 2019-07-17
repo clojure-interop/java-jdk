@@ -35,7 +35,7 @@
   returns: the new stream - `java.util.stream.DoubleStream`
 
   throws: java.lang.IllegalArgumentException - if n is negative"
-  ([^java.util.stream.DoubleStream this ^Long n]
+  (^java.util.stream.DoubleStream [^java.util.stream.DoubleStream this ^Long n]
     (-> this (.skip n))))
 
 (defn map
@@ -48,7 +48,7 @@
   mapper - a non-interfering, stateless function to apply to each element - `java.util.function.DoubleUnaryOperator`
 
   returns: the new stream - `java.util.stream.DoubleStream`"
-  ([^java.util.stream.DoubleStream this ^java.util.function.DoubleUnaryOperator mapper]
+  (^java.util.stream.DoubleStream [^java.util.stream.DoubleStream this ^java.util.function.DoubleUnaryOperator mapper]
     (-> this (.map mapper))))
 
 (defn peek
@@ -67,7 +67,7 @@
   action - a non-interfering action to perform on the elements as they are consumed from the stream - `java.util.function.DoubleConsumer`
 
   returns: the new stream - `java.util.stream.DoubleStream`"
-  ([^java.util.stream.DoubleStream this ^java.util.function.DoubleConsumer action]
+  (^java.util.stream.DoubleStream [^java.util.stream.DoubleStream this ^java.util.function.DoubleConsumer action]
     (-> this (.peek action))))
 
 (defn min
@@ -87,14 +87,14 @@
 
   returns: an OptionalDouble containing the minimum element of this
    stream, or an empty optional if the stream is empty - `java.util.OptionalDouble`"
-  ([^java.util.stream.DoubleStream this]
+  (^java.util.OptionalDouble [^java.util.stream.DoubleStream this]
     (-> this (.min))))
 
 (defn spliterator
   "Description copied from interface: BaseStream
 
   returns: the element spliterator for this stream - `java.util.Spliterator.OfDouble`"
-  ([^java.util.stream.DoubleStream this]
+  (^java.util.Spliterator.OfDouble [^java.util.stream.DoubleStream this]
     (-> this (.spliterator))))
 
 (defn for-each
@@ -132,14 +132,14 @@
   t - the single element - `double`
 
   returns: a singleton sequential stream - `java.util.stream.DoubleStream`"
-  ([^Double t]
+  (^java.util.stream.DoubleStream [^Double t]
     (DoubleStream/of t)))
 
 (defn sequential
   "Description copied from interface: BaseStream
 
   returns: a sequential stream - `java.util.stream.DoubleStream`"
-  ([^java.util.stream.DoubleStream this]
+  (^java.util.stream.DoubleStream [^java.util.stream.DoubleStream this]
     (-> this (.sequential))))
 
 (defn find-first
@@ -152,7 +152,7 @@
 
   returns: an OptionalDouble describing the first element of this
    stream, or an empty OptionalDouble if the stream is empty - `java.util.OptionalDouble`"
-  ([^java.util.stream.DoubleStream this]
+  (^java.util.OptionalDouble [^java.util.stream.DoubleStream this]
     (-> this (.findFirst))))
 
 (defn average
@@ -176,7 +176,7 @@
 
   returns: an OptionalDouble containing the average element of this
    stream, or an empty optional if the stream is empty - `java.util.OptionalDouble`"
-  ([^java.util.stream.DoubleStream this]
+  (^java.util.OptionalDouble [^java.util.stream.DoubleStream this]
     (-> this (.average))))
 
 (defn all-match
@@ -192,14 +192,14 @@
 
   returns: true if either all elements of the stream match the
    provided predicate or the stream is empty, otherwise false - `boolean`"
-  ([^java.util.stream.DoubleStream this ^java.util.function.DoublePredicate predicate]
+  (^Boolean [^java.util.stream.DoubleStream this ^java.util.function.DoublePredicate predicate]
     (-> this (.allMatch predicate))))
 
 (defn parallel
   "Description copied from interface: BaseStream
 
   returns: a parallel stream - `java.util.stream.DoubleStream`"
-  ([^java.util.stream.DoubleStream this]
+  (^java.util.stream.DoubleStream [^java.util.stream.DoubleStream this]
     (-> this (.parallel))))
 
 (defn sum
@@ -236,7 +236,7 @@
    operation.
 
   returns: the sum of elements in this stream - `double`"
-  ([^java.util.stream.DoubleStream this]
+  (^Double [^java.util.stream.DoubleStream this]
     (-> this (.sum))))
 
 (defn sorted
@@ -248,7 +248,7 @@
    intermediate operation.
 
   returns: the result stream - `java.util.stream.DoubleStream`"
-  ([^java.util.stream.DoubleStream this]
+  (^java.util.stream.DoubleStream [^java.util.stream.DoubleStream this]
     (-> this (.sorted))))
 
 (defn map-to-long
@@ -261,7 +261,7 @@
   mapper - a non-interfering, stateless function to apply to each element - `java.util.function.DoubleToLongFunction`
 
   returns: the new stream - `java.util.stream.LongStream`"
-  ([^java.util.stream.DoubleStream this ^java.util.function.DoubleToLongFunction mapper]
+  (^java.util.stream.LongStream [^java.util.stream.DoubleStream this ^java.util.function.DoubleToLongFunction mapper]
     (-> this (.mapToLong mapper))))
 
 (defn *iterate
@@ -279,7 +279,7 @@
   f - a function to be applied to to the previous element to produce a new element - `java.util.function.DoubleUnaryOperator`
 
   returns: a new sequential DoubleStream - `java.util.stream.DoubleStream`"
-  ([^Double seed ^java.util.function.DoubleUnaryOperator f]
+  (^java.util.stream.DoubleStream [^Double seed ^java.util.function.DoubleUnaryOperator f]
     (DoubleStream/iterate seed f)))
 
 (defn max
@@ -300,7 +300,7 @@
 
   returns: an OptionalDouble containing the maximum element of this
    stream, or an empty optional if the stream is empty - `java.util.OptionalDouble`"
-  ([^java.util.stream.DoubleStream this]
+  (^java.util.OptionalDouble [^java.util.stream.DoubleStream this]
     (-> this (.max))))
 
 (defn *generate
@@ -311,14 +311,14 @@
   s - the DoubleSupplier for generated elements - `java.util.function.DoubleSupplier`
 
   returns: a new infinite sequential unordered DoubleStream - `java.util.stream.DoubleStream`"
-  ([^java.util.function.DoubleSupplier s]
+  (^java.util.stream.DoubleStream [^java.util.function.DoubleSupplier s]
     (DoubleStream/generate s)))
 
 (defn *builder
   "Returns a builder for a DoubleStream.
 
   returns: a stream builder - `java.util.stream.DoubleStream.Builder`"
-  ([]
+  (^java.util.stream.DoubleStream.Builder []
     (DoubleStream/builder )))
 
 (defn count
@@ -332,14 +332,14 @@
    This is a terminal operation.
 
   returns: the count of elements in this stream - `long`"
-  ([^java.util.stream.DoubleStream this]
+  (^Long [^java.util.stream.DoubleStream this]
     (-> this (.count))))
 
 (defn iterator
   "Description copied from interface: BaseStream
 
   returns: the element iterator for this stream - `java.util.PrimitiveIterator.OfDouble`"
-  ([^java.util.stream.DoubleStream this]
+  (^java.util.PrimitiveIterator.OfDouble [^java.util.stream.DoubleStream this]
     (-> this (.iterator))))
 
 (defn map-to-int
@@ -352,7 +352,7 @@
   mapper - a non-interfering, stateless function to apply to each element - `java.util.function.DoubleToIntFunction`
 
   returns: the new stream - `java.util.stream.IntStream`"
-  ([^java.util.stream.DoubleStream this ^java.util.function.DoubleToIntFunction mapper]
+  (^java.util.stream.IntStream [^java.util.stream.DoubleStream this ^java.util.function.DoubleToIntFunction mapper]
     (-> this (.mapToInt mapper))))
 
 (defn distinct
@@ -364,7 +364,7 @@
    intermediate operation.
 
   returns: the result stream - `java.util.stream.DoubleStream`"
-  ([^java.util.stream.DoubleStream this]
+  (^java.util.stream.DoubleStream [^java.util.stream.DoubleStream this]
     (-> this (.distinct))))
 
 (defn boxed
@@ -376,7 +376,7 @@
 
   returns: a Stream consistent of the elements of this stream,
    each boxed to a Double - `java.util.stream.Stream<java.lang.Double>`"
-  ([^java.util.stream.DoubleStream this]
+  (^java.util.stream.Stream [^java.util.stream.DoubleStream this]
     (-> this (.boxed))))
 
 (defn limit
@@ -391,7 +391,7 @@
   returns: the new stream - `java.util.stream.DoubleStream`
 
   throws: java.lang.IllegalArgumentException - if maxSize is negative"
-  ([^java.util.stream.DoubleStream this ^Long max-size]
+  (^java.util.stream.DoubleStream [^java.util.stream.DoubleStream this ^Long max-size]
     (-> this (.limit max-size))))
 
 (defn flat-map
@@ -408,7 +408,7 @@
   mapper - a non-interfering, stateless function to apply to each element which produces a DoubleStream of new values - `java.util.stream.DoubleStream>`
 
   returns: the new stream - `java.util.stream.DoubleStream`"
-  ([^java.util.stream.DoubleStream this ^java.util.stream.DoubleStream> mapper]
+  (^java.util.stream.DoubleStream [^java.util.stream.DoubleStream this ^java.util.stream.DoubleStream> mapper]
     (-> this (.flatMap mapper))))
 
 (defn *concat
@@ -423,7 +423,7 @@
   b - the second stream - `java.util.stream.DoubleStream`
 
   returns: the concatenation of the two input streams - `java.util.stream.DoubleStream`"
-  ([^java.util.stream.DoubleStream a ^java.util.stream.DoubleStream b]
+  (^java.util.stream.DoubleStream [^java.util.stream.DoubleStream a ^java.util.stream.DoubleStream b]
     (DoubleStream/concat a b)))
 
 (defn filter
@@ -436,14 +436,14 @@
   predicate - a non-interfering, stateless predicate to apply to each element to determine if it should be included - `java.util.function.DoublePredicate`
 
   returns: the new stream - `java.util.stream.DoubleStream`"
-  ([^java.util.stream.DoubleStream this ^java.util.function.DoublePredicate predicate]
+  (^java.util.stream.DoubleStream [^java.util.stream.DoubleStream this ^java.util.function.DoublePredicate predicate]
     (-> this (.filter predicate))))
 
 (defn *empty
   "Returns an empty sequential DoubleStream.
 
   returns: an empty sequential stream - `java.util.stream.DoubleStream`"
-  ([]
+  (^java.util.stream.DoubleStream []
     (DoubleStream/empty )))
 
 (defn map-to-obj
@@ -474,7 +474,7 @@
 
   returns: an OptionalDouble describing some element of this stream,
    or an empty OptionalDouble if the stream is empty - `java.util.OptionalDouble`"
-  ([^java.util.stream.DoubleStream this]
+  (^java.util.OptionalDouble [^java.util.stream.DoubleStream this]
     (-> this (.findAny))))
 
 (defn summary-statistics
@@ -487,7 +487,7 @@
 
   returns: a DoubleSummaryStatistics describing various summary data
    about the elements of this stream - `java.util.DoubleSummaryStatistics`"
-  ([^java.util.stream.DoubleStream this]
+  (^java.util.DoubleSummaryStatistics [^java.util.stream.DoubleStream this]
     (-> this (.summaryStatistics))))
 
 (defn collect
@@ -532,7 +532,7 @@
 
   returns: true if any elements of the stream match the provided
    predicate, otherwise false - `boolean`"
-  ([^java.util.stream.DoubleStream this ^java.util.function.DoublePredicate predicate]
+  (^Boolean [^java.util.stream.DoubleStream this ^java.util.function.DoublePredicate predicate]
     (-> this (.anyMatch predicate))))
 
 (defn none-match
@@ -548,7 +548,7 @@
 
   returns: true if either no elements of the stream match the
    provided predicate or the stream is empty, otherwise false - `boolean`"
-  ([^java.util.stream.DoubleStream this ^java.util.function.DoublePredicate predicate]
+  (^Boolean [^java.util.stream.DoubleStream this ^java.util.function.DoublePredicate predicate]
     (-> this (.noneMatch predicate))))
 
 (defn reduce
@@ -579,9 +579,9 @@
   op - an associative, non-interfering, stateless function for combining two values - `java.util.function.DoubleBinaryOperator`
 
   returns: the result of the reduction - `double`"
-  ([^java.util.stream.DoubleStream this ^Double identity ^java.util.function.DoubleBinaryOperator op]
+  (^Double [^java.util.stream.DoubleStream this ^Double identity ^java.util.function.DoubleBinaryOperator op]
     (-> this (.reduce identity op)))
-  ([^java.util.stream.DoubleStream this ^java.util.function.DoubleBinaryOperator op]
+  (^java.util.OptionalDouble [^java.util.stream.DoubleStream this ^java.util.function.DoubleBinaryOperator op]
     (-> this (.reduce op))))
 
 (defn to-array

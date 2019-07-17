@@ -77,14 +77,14 @@
   returns: Object representation of text - `java.lang.Object`
 
   throws: java.text.ParseException - if there is an error in the conversion"
-  ([^javax.swing.text.InternationalFormatter this ^java.lang.String text]
+  (^java.lang.Object [^javax.swing.text.InternationalFormatter this ^java.lang.String text]
     (-> this (.stringToValue text))))
 
 (defn get-minimum
   "Returns the minimum permissible value.
 
   returns: Minimum legal value that can be input - `java.lang.Comparable`"
-  ([^javax.swing.text.InternationalFormatter this]
+  (^java.lang.Comparable [^javax.swing.text.InternationalFormatter this]
     (-> this (.getMinimum))))
 
 (defn set-format
@@ -141,7 +141,7 @@
    and displayed.
 
   returns: Format instance used for converting from/to Strings - `java.text.Format`"
-  ([^javax.swing.text.InternationalFormatter this]
+  (^java.text.Format [^javax.swing.text.InternationalFormatter this]
     (-> this (.getFormat))))
 
 (defn clone
@@ -150,7 +150,7 @@
   returns: copy of the DefaultFormatter - `java.lang.Object`
 
   throws: java.lang.CloneNotSupportedException - if the object's class does not support the Cloneable interface. Subclasses that override the clone method can also throw this exception to indicate that an instance cannot be cloned."
-  ([^javax.swing.text.InternationalFormatter this]
+  (^java.lang.Object [^javax.swing.text.InternationalFormatter this]
     (-> this (.clone))))
 
 (defn value-to-string
@@ -162,7 +162,7 @@
   returns: String representation of value - `java.lang.String`
 
   throws: java.text.ParseException - if there is an error in the conversion"
-  ([^javax.swing.text.InternationalFormatter this ^java.lang.Object value]
+  (^java.lang.String [^javax.swing.text.InternationalFormatter this ^java.lang.Object value]
     (-> this (.valueToString value))))
 
 (defn get-fields
@@ -192,6 +192,6 @@
   "Returns the maximum permissible value.
 
   returns: Maximum legal value that can be input - `java.lang.Comparable`"
-  ([^javax.swing.text.InternationalFormatter this]
+  (^java.lang.Comparable [^javax.swing.text.InternationalFormatter this]
     (-> this (.getMaximum))))
 

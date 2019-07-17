@@ -34,7 +34,7 @@
    look and feel and after initialize has been invoked.
 
   returns: the look and feel defaults - `javax.swing.UIDefaults`"
-  ([^javax.swing.plaf.basic.BasicLookAndFeel this]
+  (^javax.swing.UIDefaults [^javax.swing.plaf.basic.BasicLookAndFeel this]
     (-> this (.getDefaults))))
 
 (defn initialize

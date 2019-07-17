@@ -81,13 +81,13 @@
             method has been called more recently than the
             clearChanged method on this object;
             false otherwise. - `boolean`"
-  ([^java.util.Observable this]
+  (^Boolean [^java.util.Observable this]
     (-> this (.hasChanged))))
 
 (defn count-observers
   "Returns the number of observers of this Observable object.
 
   returns: the number of observers of this object. - `int`"
-  ([^java.util.Observable this]
+  (^Integer [^java.util.Observable this]
     (-> this (.countObservers))))
 

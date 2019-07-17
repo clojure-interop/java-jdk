@@ -55,7 +55,7 @@
 
   returns: a DataBuffer corresponding to this
            SampleModel. - `java.awt.image.DataBuffer`"
-  ([^java.awt.image.SinglePixelPackedSampleModel this]
+  (^java.awt.image.DataBuffer [^java.awt.image.SinglePixelPackedSampleModel this]
     (-> this (.createDataBuffer))))
 
 (defn get-data-elements
@@ -96,7 +96,7 @@
   data - The DataBuffer containing the image data. - `java.awt.image.DataBuffer`
 
   returns: the data for the specified pixel. - `java.lang.Object`"
-  ([^java.awt.image.SinglePixelPackedSampleModel this ^Integer x ^Integer y ^java.lang.Object obj ^java.awt.image.DataBuffer data]
+  (^java.lang.Object [^java.awt.image.SinglePixelPackedSampleModel this ^Integer x ^Integer y ^java.lang.Object obj ^java.awt.image.DataBuffer data]
     (-> this (.getDataElements x y obj data))))
 
 (defn create-subset-sample-model
@@ -114,7 +114,7 @@
            SampleModel. - `java.awt.image.SampleModel`
 
   throws: java.awt.image.RasterFormatException - if the length of the bands argument is greater than the number of bands in the sample model."
-  ([^java.awt.image.SinglePixelPackedSampleModel this bands]
+  (^java.awt.image.SampleModel [^java.awt.image.SinglePixelPackedSampleModel this bands]
     (-> this (.createSubsetSampleModel bands))))
 
 (defn get-pixels
@@ -155,7 +155,7 @@
    For a SinglePixelPackedSampleModel, this is one.
 
   returns: the number of data elements. - `int`"
-  ([^java.awt.image.SinglePixelPackedSampleModel this]
+  (^Integer [^java.awt.image.SinglePixelPackedSampleModel this]
     (-> this (.getNumDataElements))))
 
 (defn get-offset
@@ -171,7 +171,7 @@
   y - the Y coordinate of the specified pixel - `int`
 
   returns: the offset of the specified pixel. - `int`"
-  ([^java.awt.image.SinglePixelPackedSampleModel this ^Integer x ^Integer y]
+  (^Integer [^java.awt.image.SinglePixelPackedSampleModel this ^Integer x ^Integer y]
     (-> this (.getOffset x y))))
 
 (defn get-scanline-stride
@@ -179,7 +179,7 @@
 
   returns: the scanline stride of this
             SinglePixelPackedSampleModel. - `int`"
-  ([^java.awt.image.SinglePixelPackedSampleModel this]
+  (^Integer [^java.awt.image.SinglePixelPackedSampleModel this]
     (-> this (.getScanlineStride))))
 
 (defn get-sample
@@ -195,7 +195,7 @@
 
   returns: the sample in a specified band for the specified
            pixel. - `int`"
-  ([^java.awt.image.SinglePixelPackedSampleModel this ^Integer x ^Integer y ^Integer b ^java.awt.image.DataBuffer data]
+  (^Integer [^java.awt.image.SinglePixelPackedSampleModel this ^Integer x ^Integer y ^Integer b ^java.awt.image.DataBuffer data]
     (-> this (.getSample x y b data))))
 
 (defn set-sample
@@ -244,7 +244,7 @@
   band - the specified band - `int`
 
   returns: the size of the samples of the specified band. - `int`"
-  ([^java.awt.image.SinglePixelPackedSampleModel this ^Integer band]
+  (^Integer [^java.awt.image.SinglePixelPackedSampleModel this ^Integer band]
     (-> this (.getSampleSize band)))
   ([^java.awt.image.SinglePixelPackedSampleModel this]
     (-> this (.getSampleSize))))
@@ -269,14 +269,14 @@
            specified width and height. - `java.awt.image.SampleModel`
 
   throws: java.lang.IllegalArgumentException - if w or h is not greater than 0"
-  ([^java.awt.image.SinglePixelPackedSampleModel this ^Integer w ^Integer h]
+  (^java.awt.image.SampleModel [^java.awt.image.SinglePixelPackedSampleModel this ^Integer w ^Integer h]
     (-> this (.createCompatibleSampleModel w h))))
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  ([^java.awt.image.SinglePixelPackedSampleModel this]
+  (^Integer [^java.awt.image.SinglePixelPackedSampleModel this]
     (-> this (.hashCode))))
 
 (defn set-data-elements
@@ -347,7 +347,7 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([^java.awt.image.SinglePixelPackedSampleModel this ^java.lang.Object o]
+  (^Boolean [^java.awt.image.SinglePixelPackedSampleModel this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn get-samples

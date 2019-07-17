@@ -55,7 +55,7 @@
   returns: true if this set changed as a result of the call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the addAll operation is not supported by this set"
-  ([^java.util.Set this ^Set.E> c]
+  (^Boolean [^java.util.Set this ^Set.E> c]
     (-> this (.addAll c))))
 
 (defn spliterator
@@ -80,7 +80,7 @@
   returns: true if this set contains the specified element - `boolean`
 
   throws: java.lang.ClassCastException - if the type of the specified element is incompatible with this set (optional)"
-  ([^java.util.Set this ^java.lang.Object o]
+  (^Boolean [^java.util.Set this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn iterator
@@ -89,7 +89,7 @@
    class that provides a guarantee).
 
   returns: an iterator over the elements in this set - `java.util.Iterator<Set.E>`"
-  ([^java.util.Set this]
+  (^java.util.Iterator [^java.util.Set this]
     (-> this (.iterator))))
 
 (defn remove
@@ -107,7 +107,7 @@
   returns: true if this set contained the specified element - `boolean`
 
   throws: java.lang.ClassCastException - if the type of the specified element is incompatible with this set (optional)"
-  ([^java.util.Set this ^java.lang.Object o]
+  (^Boolean [^java.util.Set this ^java.lang.Object o]
     (-> this (.remove o))))
 
 (defn hash-code
@@ -120,7 +120,7 @@
    Object.hashCode().
 
   returns: the hash code value for this set - `int`"
-  ([^java.util.Set this]
+  (^Integer [^java.util.Set this]
     (-> this (.hashCode))))
 
 (defn add
@@ -147,14 +147,14 @@
            element - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the add operation is not supported by this set"
-  ([^java.util.Set this ^Set.E e]
+  (^Boolean [^java.util.Set this ^Set.E e]
     (-> this (.add e))))
 
 (defn empty?
   "Returns true if this set contains no elements.
 
   returns: true if this set contains no elements - `boolean`"
-  ([^java.util.Set this]
+  (^Boolean [^java.util.Set this]
     (-> this (.isEmpty))))
 
 (defn size
@@ -163,7 +163,7 @@
    Integer.MAX_VALUE.
 
   returns: the number of elements in this set (its cardinality) - `int`"
-  ([^java.util.Set this]
+  (^Integer [^java.util.Set this]
     (-> this (.size))))
 
 (defn retain-all
@@ -179,7 +179,7 @@
   returns: true if this set changed as a result of the call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the retainAll operation is not supported by this set"
-  ([^java.util.Set this ^java.util.Collection c]
+  (^Boolean [^java.util.Set this ^java.util.Collection c]
     (-> this (.retainAll c))))
 
 (defn clear
@@ -246,7 +246,7 @@
   returns: true if this set changed as a result of the call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the removeAll operation is not supported by this set"
-  ([^java.util.Set this ^java.util.Collection c]
+  (^Boolean [^java.util.Set this ^java.util.Collection c]
     (-> this (.removeAll c))))
 
 (defn equals
@@ -261,7 +261,7 @@
   o - object to be compared for equality with this set - `java.lang.Object`
 
   returns: true if the specified object is equal to this set - `boolean`"
-  ([^java.util.Set this ^java.lang.Object o]
+  (^Boolean [^java.util.Set this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn contains-all
@@ -275,6 +275,6 @@
            specified collection - `boolean`
 
   throws: java.lang.ClassCastException - if the types of one or more elements in the specified collection are incompatible with this set (optional)"
-  ([^java.util.Set this ^java.util.Collection c]
+  (^Boolean [^java.util.Set this ^java.util.Collection c]
     (-> this (.containsAll c))))
 

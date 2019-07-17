@@ -18,7 +18,7 @@
   a - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([^javax.swing.JComponent a]
+  (^javax.swing.plaf.ComponentUI [^javax.swing.JComponent a]
     (MultiSplitPaneUI/createUI a)))
 
 (defn install-ui
@@ -35,7 +35,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.awt.Dimension`"
-  ([^javax.swing.plaf.multi.MultiSplitPaneUI this ^javax.swing.JComponent a]
+  (^java.awt.Dimension [^javax.swing.plaf.multi.MultiSplitPaneUI this ^javax.swing.JComponent a]
     (-> this (.getMinimumSize a))))
 
 (defn get-divider-location
@@ -45,7 +45,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `int`"
-  ([^javax.swing.plaf.multi.MultiSplitPaneUI this ^javax.swing.JSplitPane a]
+  (^Integer [^javax.swing.plaf.multi.MultiSplitPaneUI this ^javax.swing.JSplitPane a]
     (-> this (.getDividerLocation a))))
 
 (defn get-maximum-size
@@ -55,7 +55,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.awt.Dimension`"
-  ([^javax.swing.plaf.multi.MultiSplitPaneUI this ^javax.swing.JComponent a]
+  (^java.awt.Dimension [^javax.swing.plaf.multi.MultiSplitPaneUI this ^javax.swing.JComponent a]
     (-> this (.getMaximumSize a))))
 
 (defn get-accessible-child
@@ -66,7 +66,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `javax.accessibility.Accessible`"
-  ([^javax.swing.plaf.multi.MultiSplitPaneUI this ^javax.swing.JComponent a ^Integer b]
+  (^javax.accessibility.Accessible [^javax.swing.plaf.multi.MultiSplitPaneUI this ^javax.swing.JComponent a ^Integer b]
     (-> this (.getAccessibleChild a b))))
 
 (defn get-u-is
@@ -85,7 +85,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `int`"
-  ([^javax.swing.plaf.multi.MultiSplitPaneUI this ^javax.swing.JSplitPane a]
+  (^Integer [^javax.swing.plaf.multi.MultiSplitPaneUI this ^javax.swing.JSplitPane a]
     (-> this (.getMaximumDividerLocation a))))
 
 (defn set-divider-location
@@ -112,7 +112,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `boolean`"
-  ([^javax.swing.plaf.multi.MultiSplitPaneUI this ^javax.swing.JComponent a ^Integer b ^Integer c]
+  (^Boolean [^javax.swing.plaf.multi.MultiSplitPaneUI this ^javax.swing.JComponent a ^Integer b ^Integer c]
     (-> this (.contains a b c))))
 
 (defn update
@@ -145,7 +145,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `int`"
-  ([^javax.swing.plaf.multi.MultiSplitPaneUI this ^javax.swing.JComponent a]
+  (^Integer [^javax.swing.plaf.multi.MultiSplitPaneUI this ^javax.swing.JComponent a]
     (-> this (.getAccessibleChildrenCount a))))
 
 (defn get-minimum-divider-location
@@ -155,7 +155,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `int`"
-  ([^javax.swing.plaf.multi.MultiSplitPaneUI this ^javax.swing.JSplitPane a]
+  (^Integer [^javax.swing.plaf.multi.MultiSplitPaneUI this ^javax.swing.JSplitPane a]
     (-> this (.getMinimumDividerLocation a))))
 
 (defn paint
@@ -173,6 +173,6 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.awt.Dimension`"
-  ([^javax.swing.plaf.multi.MultiSplitPaneUI this ^javax.swing.JComponent a]
+  (^java.awt.Dimension [^javax.swing.plaf.multi.MultiSplitPaneUI this ^javax.swing.JComponent a]
     (-> this (.getPreferredSize a))))
 

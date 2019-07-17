@@ -35,7 +35,7 @@
    implementation-specific algorithm will be used.
 
   returns: the algorithm name, or null if none was set - `java.lang.String`"
-  ([^java.security.KeyStore$PasswordProtection this]
+  (^java.lang.String [^java.security.KeyStore$PasswordProtection this]
     (-> this (.getProtectionAlgorithm))))
 
 (defn get-protection-parameters
@@ -43,7 +43,7 @@
 
   returns: the algorithm parameter specification, or null,
        if none was set - `java.security.spec.AlgorithmParameterSpec`"
-  ([^java.security.KeyStore$PasswordProtection this]
+  (^java.security.spec.AlgorithmParameterSpec [^java.security.KeyStore$PasswordProtection this]
     (-> this (.getProtectionParameters))))
 
 (defn get-password
@@ -71,6 +71,6 @@
   "Determines if password has been cleared.
 
   returns: true if the password has been cleared, false otherwise - `boolean`"
-  ([^java.security.KeyStore$PasswordProtection this]
+  (^Boolean [^java.security.KeyStore$PasswordProtection this]
     (-> this (.isDestroyed))))
 

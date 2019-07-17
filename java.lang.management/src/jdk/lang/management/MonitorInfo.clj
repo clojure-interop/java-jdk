@@ -54,7 +54,7 @@
            null otherwise. - `java.lang.management.MonitorInfo`
 
   throws: java.lang.IllegalArgumentException - if cd does not represent a MonitorInfo with the attributes described above."
-  ([^javax.management.openmbean.CompositeData cd]
+  (^java.lang.management.MonitorInfo [^javax.management.openmbean.CompositeData cd]
     (MonitorInfo/from cd)))
 
 (defn get-locked-stack-depth
@@ -64,7 +64,7 @@
 
   returns: the depth in the stack trace where the object monitor
            was locked, or a negative number if not available. - `int`"
-  ([^java.lang.management.MonitorInfo this]
+  (^Integer [^java.lang.management.MonitorInfo this]
     (-> this (.getLockedStackDepth))))
 
 (defn get-locked-stack-frame
@@ -72,6 +72,6 @@
 
   returns: StackTraceElement that locked the object monitor,
            or null if not available. - `java.lang.StackTraceElement`"
-  ([^java.lang.management.MonitorInfo this]
+  (^java.lang.StackTraceElement [^java.lang.management.MonitorInfo this]
     (-> this (.getLockedStackFrame))))
 

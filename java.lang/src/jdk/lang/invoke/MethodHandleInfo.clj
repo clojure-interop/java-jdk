@@ -98,7 +98,7 @@
   returns: a mixed-case string such as `getField` - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if the argument is not a valid reference kind number"
-  ([^Integer reference-kind]
+  (^java.lang.String [^Integer reference-kind]
     (MethodHandleInfo/referenceKindToString reference-kind)))
 
 (defn reflect-as
@@ -131,7 +131,7 @@
 
   returns: the Java language modifiers for underlying member,
            or -1 if the member cannot be accessed - `int`"
-  ([^java.lang.invoke.MethodHandleInfo this]
+  (^Integer [^java.lang.invoke.MethodHandleInfo this]
     (-> this (.getModifiers))))
 
 (defn *to-string
@@ -157,7 +157,7 @@
   returns: a string of the form `RK C.N:MT` - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if the first argument is not a valid reference kind number"
-  ([^Integer kind ^java.lang.Class defc ^java.lang.String name ^java.lang.invoke.MethodType type]
+  (^java.lang.String [^Integer kind ^java.lang.Class defc ^java.lang.String name ^java.lang.invoke.MethodType type]
     (MethodHandleInfo/toString kind defc name type)))
 
 (defn get-name
@@ -166,7 +166,7 @@
    else it is a simple method name or field name.
 
   returns: the simple name of the underlying member - `java.lang.String`"
-  ([^java.lang.invoke.MethodHandleInfo this]
+  (^java.lang.String [^java.lang.invoke.MethodHandleInfo this]
     (-> this (.getName))))
 
 (defn get-method-type
@@ -185,7 +185,7 @@
    and (in the case of a constructor) will return void.
 
   returns: the type of the underlying member, expressed as a method type - `java.lang.invoke.MethodType`"
-  ([^java.lang.invoke.MethodHandleInfo this]
+  (^java.lang.invoke.MethodType [^java.lang.invoke.MethodHandleInfo this]
     (-> this (.getMethodType))))
 
 (defn get-reference-kind
@@ -194,13 +194,13 @@
    See the table above for definitions.
 
   returns: the integer code for the kind of reference used to access the underlying member - `int`"
-  ([^java.lang.invoke.MethodHandleInfo this]
+  (^Integer [^java.lang.invoke.MethodHandleInfo this]
     (-> this (.getReferenceKind))))
 
 (defn get-declaring-class
   "Returns the class in which the cracked method handle's underlying member was defined.
 
   returns: the declaring class of the underlying member - `java.lang.Class<?>`"
-  ([^java.lang.invoke.MethodHandleInfo this]
+  (^java.lang.Class [^java.lang.invoke.MethodHandleInfo this]
     (-> this (.getDeclaringClass))))
 

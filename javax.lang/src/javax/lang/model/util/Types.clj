@@ -16,7 +16,7 @@
             to the second - `boolean`
 
   throws: java.lang.IllegalArgumentException - if given an executable or package type"
-  ([^javax.lang.model.util.Types this ^javax.lang.model.type.TypeMirror t-1 ^javax.lang.model.type.TypeMirror t-2]
+  (^Boolean [^javax.lang.model.util.Types this ^javax.lang.model.type.TypeMirror t-1 ^javax.lang.model.type.TypeMirror t-2]
     (-> this (.isAssignable t-1 t-2))))
 
 (defn erasure
@@ -27,7 +27,7 @@
   returns: the erasure of the given type - `javax.lang.model.type.TypeMirror`
 
   throws: java.lang.IllegalArgumentException - if given a package type"
-  ([^javax.lang.model.util.Types this ^javax.lang.model.type.TypeMirror t]
+  (^javax.lang.model.type.TypeMirror [^javax.lang.model.util.Types this ^javax.lang.model.type.TypeMirror t]
     (-> this (.erasure t))))
 
 (defn get-declared-type
@@ -55,9 +55,9 @@
             actual type arguments, contained within the given type - `javax.lang.model.type.DeclaredType`
 
   throws: java.lang.IllegalArgumentException - if too many or too few type arguments are given, or if an inappropriate type argument, type element, or containing type is provided"
-  ([^javax.lang.model.util.Types this ^javax.lang.model.type.DeclaredType containing ^javax.lang.model.element.TypeElement type-elem ^javax.lang.model.type.TypeMirror type-args]
+  (^javax.lang.model.type.DeclaredType [^javax.lang.model.util.Types this ^javax.lang.model.type.DeclaredType containing ^javax.lang.model.element.TypeElement type-elem ^javax.lang.model.type.TypeMirror type-args]
     (-> this (.getDeclaredType containing type-elem type-args)))
-  ([^javax.lang.model.util.Types this ^javax.lang.model.element.TypeElement type-elem ^javax.lang.model.type.TypeMirror type-args]
+  (^javax.lang.model.type.DeclaredType [^javax.lang.model.util.Types this ^javax.lang.model.element.TypeElement type-elem ^javax.lang.model.type.TypeMirror type-args]
     (-> this (.getDeclaredType type-elem type-args))))
 
 (defn get-array-type
@@ -68,7 +68,7 @@
   returns: an array type with the specified component type. - `javax.lang.model.type.ArrayType`
 
   throws: java.lang.IllegalArgumentException - if the component type is not valid for an array"
-  ([^javax.lang.model.util.Types this ^javax.lang.model.type.TypeMirror component-type]
+  (^javax.lang.model.type.ArrayType [^javax.lang.model.util.Types this ^javax.lang.model.type.TypeMirror component-type]
     (-> this (.getArrayType component-type))))
 
 (defn contains
@@ -80,7 +80,7 @@
   returns: true if and only if the first type contains the second - `boolean`
 
   throws: java.lang.IllegalArgumentException - if given an executable or package type"
-  ([^javax.lang.model.util.Types this ^javax.lang.model.type.TypeMirror t-1 ^javax.lang.model.type.TypeMirror t-2]
+  (^Boolean [^javax.lang.model.util.Types this ^javax.lang.model.type.TypeMirror t-1 ^javax.lang.model.type.TypeMirror t-2]
     (-> this (.contains t-1 t-2))))
 
 (defn subtype?
@@ -94,7 +94,7 @@
             of the second - `boolean`
 
   throws: java.lang.IllegalArgumentException - if given an executable or package type"
-  ([^javax.lang.model.util.Types this ^javax.lang.model.type.TypeMirror t-1 ^javax.lang.model.type.TypeMirror t-2]
+  (^Boolean [^javax.lang.model.util.Types this ^javax.lang.model.type.TypeMirror t-1 ^javax.lang.model.type.TypeMirror t-2]
     (-> this (.isSubtype t-1 t-2))))
 
 (defn get-wildcard-type
@@ -107,7 +107,7 @@
   returns: a new wildcard - `javax.lang.model.type.WildcardType`
 
   throws: java.lang.IllegalArgumentException - if bounds are not valid"
-  ([^javax.lang.model.util.Types this ^javax.lang.model.type.TypeMirror extends-bound ^javax.lang.model.type.TypeMirror super-bound]
+  (^javax.lang.model.type.WildcardType [^javax.lang.model.util.Types this ^javax.lang.model.type.TypeMirror extends-bound ^javax.lang.model.type.TypeMirror super-bound]
     (-> this (.getWildcardType extends-bound super-bound))))
 
 (defn boxed-class
@@ -117,7 +117,7 @@
   p - the primitive type to be converted - `javax.lang.model.type.PrimitiveType`
 
   returns: the class of a boxed value of type p - `javax.lang.model.element.TypeElement`"
-  ([^javax.lang.model.util.Types this ^javax.lang.model.type.PrimitiveType p]
+  (^javax.lang.model.element.TypeElement [^javax.lang.model.util.Types this ^javax.lang.model.type.PrimitiveType p]
     (-> this (.boxedClass p))))
 
 (defn same-type?
@@ -143,7 +143,7 @@
   t-2 - the second type - `javax.lang.model.type.TypeMirror`
 
   returns: true if and only if the two types are the same - `boolean`"
-  ([^javax.lang.model.util.Types this ^javax.lang.model.type.TypeMirror t-1 ^javax.lang.model.type.TypeMirror t-2]
+  (^Boolean [^javax.lang.model.util.Types this ^javax.lang.model.type.TypeMirror t-1 ^javax.lang.model.type.TypeMirror t-2]
     (-> this (.isSameType t-1 t-2))))
 
 (defn unboxed-type
@@ -155,7 +155,7 @@
   returns: the type of an unboxed value of type t - `javax.lang.model.type.PrimitiveType`
 
   throws: java.lang.IllegalArgumentException - if the given type has no unboxing conversion"
-  ([^javax.lang.model.util.Types this ^javax.lang.model.type.TypeMirror t]
+  (^javax.lang.model.type.PrimitiveType [^javax.lang.model.util.Types this ^javax.lang.model.type.TypeMirror t]
     (-> this (.unboxedType t))))
 
 (defn as-member-of
@@ -172,14 +172,14 @@
   returns: the type of the element as viewed from the containing type - `javax.lang.model.type.TypeMirror`
 
   throws: java.lang.IllegalArgumentException - if the element is not a valid one for the given type"
-  ([^javax.lang.model.util.Types this ^javax.lang.model.type.DeclaredType containing ^javax.lang.model.element.Element element]
+  (^javax.lang.model.type.TypeMirror [^javax.lang.model.util.Types this ^javax.lang.model.type.DeclaredType containing ^javax.lang.model.element.Element element]
     (-> this (.asMemberOf containing element))))
 
 (defn get-null-type
   "Returns the null type.  This is the type of null.
 
   returns: the null type - `javax.lang.model.type.NullType`"
-  ([^javax.lang.model.util.Types this]
+  (^javax.lang.model.type.NullType [^javax.lang.model.util.Types this]
     (-> this (.getNullType))))
 
 (defn get-primitive-type
@@ -190,7 +190,7 @@
   returns: a primitive type - `javax.lang.model.type.PrimitiveType`
 
   throws: java.lang.IllegalArgumentException - if kind is not a primitive kind"
-  ([^javax.lang.model.util.Types this ^javax.lang.model.type.TypeKind kind]
+  (^javax.lang.model.type.PrimitiveType [^javax.lang.model.util.Types this ^javax.lang.model.type.TypeKind kind]
     (-> this (.getPrimitiveType kind))))
 
 (defn capture
@@ -201,7 +201,7 @@
   returns: the result of applying capture conversion - `javax.lang.model.type.TypeMirror`
 
   throws: java.lang.IllegalArgumentException - if given an executable or package type"
-  ([^javax.lang.model.util.Types this ^javax.lang.model.type.TypeMirror t]
+  (^javax.lang.model.type.TypeMirror [^javax.lang.model.util.Types this ^javax.lang.model.type.TypeMirror t]
     (-> this (.capture t))))
 
 (defn subsignature?
@@ -213,7 +213,7 @@
 
   returns: true if and only if the first signature is a
             subsignature of the second - `boolean`"
-  ([^javax.lang.model.util.Types this ^javax.lang.model.type.ExecutableType m-1 ^javax.lang.model.type.ExecutableType m-2]
+  (^Boolean [^javax.lang.model.util.Types this ^javax.lang.model.type.ExecutableType m-1 ^javax.lang.model.type.ExecutableType m-2]
     (-> this (.isSubsignature m-1 m-2))))
 
 (defn as-element
@@ -225,7 +225,7 @@
   t - the type to map to an element - `javax.lang.model.type.TypeMirror`
 
   returns: the element corresponding to the given type - `javax.lang.model.element.Element`"
-  ([^javax.lang.model.util.Types this ^javax.lang.model.type.TypeMirror t]
+  (^javax.lang.model.element.Element [^javax.lang.model.util.Types this ^javax.lang.model.type.TypeMirror t]
     (-> this (.asElement t))))
 
 (defn direct-supertypes
@@ -253,6 +253,6 @@
   returns: a pseudo-type of kind VOID or NONE - `javax.lang.model.type.NoType`
 
   throws: java.lang.IllegalArgumentException - if kind is not valid"
-  ([^javax.lang.model.util.Types this ^javax.lang.model.type.TypeKind kind]
+  (^javax.lang.model.type.NoType [^javax.lang.model.util.Types this ^javax.lang.model.type.TypeKind kind]
     (-> this (.getNoType kind))))
 

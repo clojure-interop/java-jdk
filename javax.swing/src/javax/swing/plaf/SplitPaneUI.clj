@@ -30,7 +30,7 @@
   jc - `javax.swing.JSplitPane`
 
   returns: `int`"
-  ([^javax.swing.plaf.SplitPaneUI this ^javax.swing.JSplitPane jc]
+  (^Integer [^javax.swing.plaf.SplitPaneUI this ^javax.swing.JSplitPane jc]
     (-> this (.getDividerLocation jc))))
 
 (defn get-minimum-divider-location
@@ -39,7 +39,7 @@
   jc - `javax.swing.JSplitPane`
 
   returns: `int`"
-  ([^javax.swing.plaf.SplitPaneUI this ^javax.swing.JSplitPane jc]
+  (^Integer [^javax.swing.plaf.SplitPaneUI this ^javax.swing.JSplitPane jc]
     (-> this (.getMinimumDividerLocation jc))))
 
 (defn get-maximum-divider-location
@@ -48,7 +48,7 @@
   jc - `javax.swing.JSplitPane`
 
   returns: `int`"
-  ([^javax.swing.plaf.SplitPaneUI this ^javax.swing.JSplitPane jc]
+  (^Integer [^javax.swing.plaf.SplitPaneUI this ^javax.swing.JSplitPane jc]
     (-> this (.getMaximumDividerLocation jc))))
 
 (defn finished-painting-children

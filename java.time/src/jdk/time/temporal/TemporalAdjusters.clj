@@ -46,7 +46,7 @@
   day-of-week - the day-of-week to move the date to, not null - `java.time.DayOfWeek`
 
   returns: the next day-of-week adjuster, not null - `java.time.temporal.TemporalAdjuster`"
-  ([^java.time.DayOfWeek day-of-week]
+  (^java.time.temporal.TemporalAdjuster [^java.time.DayOfWeek day-of-week]
     (TemporalAdjusters/next day-of-week)))
 
 (defn *next-or-same
@@ -66,7 +66,7 @@
   day-of-week - the day-of-week to check for or move the date to, not null - `java.time.DayOfWeek`
 
   returns: the next-or-same day-of-week adjuster, not null - `java.time.temporal.TemporalAdjuster`"
-  ([^java.time.DayOfWeek day-of-week]
+  (^java.time.temporal.TemporalAdjuster [^java.time.DayOfWeek day-of-week]
     (TemporalAdjusters/nextOrSame day-of-week)))
 
 (defn *first-day-of-next-month
@@ -84,7 +84,7 @@
     temporal.with(DAY_OF_MONTH, 1).plus(1, MONTHS);
 
   returns: the first day of next month adjuster, not null - `java.time.temporal.TemporalAdjuster`"
-  ([]
+  (^java.time.temporal.TemporalAdjuster []
     (TemporalAdjusters/firstDayOfNextMonth )))
 
 (defn *first-day-of-month
@@ -102,7 +102,7 @@
     temporal.with(DAY_OF_MONTH, 1);
 
   returns: the first day-of-month adjuster, not null - `java.time.temporal.TemporalAdjuster`"
-  ([]
+  (^java.time.temporal.TemporalAdjuster []
     (TemporalAdjusters/firstDayOfMonth )))
 
 (defn *first-day-of-year
@@ -120,7 +120,7 @@
     temporal.with(DAY_OF_YEAR, 1);
 
   returns: the first day-of-year adjuster, not null - `java.time.temporal.TemporalAdjuster`"
-  ([]
+  (^java.time.temporal.TemporalAdjuster []
     (TemporalAdjusters/firstDayOfYear )))
 
 (defn *of-date-adjuster
@@ -140,7 +140,7 @@
   date-based-adjuster - the date-based adjuster, not null - `java.util.function.UnaryOperator<java.time.LocalDate>`
 
   returns: the temporal adjuster wrapping on the date adjuster, not null - `java.time.temporal.TemporalAdjuster`"
-  ([^java.util.function.UnaryOperator date-based-adjuster]
+  (^java.time.temporal.TemporalAdjuster [^java.util.function.UnaryOperator date-based-adjuster]
     (TemporalAdjusters/ofDateAdjuster date-based-adjuster)))
 
 (defn *last-day-of-year
@@ -159,7 +159,7 @@
     temporal.with(DAY_OF_YEAR, lastDay);
 
   returns: the last day-of-year adjuster, not null - `java.time.temporal.TemporalAdjuster`"
-  ([]
+  (^java.time.temporal.TemporalAdjuster []
     (TemporalAdjusters/lastDayOfYear )))
 
 (defn *first-in-month
@@ -178,7 +178,7 @@
   day-of-week - the day-of-week, not null - `java.time.DayOfWeek`
 
   returns: the first in month adjuster, not null - `java.time.temporal.TemporalAdjuster`"
-  ([^java.time.DayOfWeek day-of-week]
+  (^java.time.temporal.TemporalAdjuster [^java.time.DayOfWeek day-of-week]
     (TemporalAdjusters/firstInMonth day-of-week)))
 
 (defn *previous-or-same
@@ -198,7 +198,7 @@
   day-of-week - the day-of-week to check for or move the date to, not null - `java.time.DayOfWeek`
 
   returns: the previous-or-same day-of-week adjuster, not null - `java.time.temporal.TemporalAdjuster`"
-  ([^java.time.DayOfWeek day-of-week]
+  (^java.time.temporal.TemporalAdjuster [^java.time.DayOfWeek day-of-week]
     (TemporalAdjusters/previousOrSame day-of-week)))
 
 (defn *previous
@@ -217,7 +217,7 @@
   day-of-week - the day-of-week to move the date to, not null - `java.time.DayOfWeek`
 
   returns: the previous day-of-week adjuster, not null - `java.time.temporal.TemporalAdjuster`"
-  ([^java.time.DayOfWeek day-of-week]
+  (^java.time.temporal.TemporalAdjuster [^java.time.DayOfWeek day-of-week]
     (TemporalAdjusters/previous day-of-week)))
 
 (defn *last-day-of-month
@@ -238,7 +238,7 @@
     temporal.with(DAY_OF_MONTH, lastDay);
 
   returns: the last day-of-month adjuster, not null - `java.time.temporal.TemporalAdjuster`"
-  ([]
+  (^java.time.temporal.TemporalAdjuster []
     (TemporalAdjusters/lastDayOfMonth )))
 
 (defn *last-in-month
@@ -257,7 +257,7 @@
   day-of-week - the day-of-week, not null - `java.time.DayOfWeek`
 
   returns: the first in month adjuster, not null - `java.time.temporal.TemporalAdjuster`"
-  ([^java.time.DayOfWeek day-of-week]
+  (^java.time.temporal.TemporalAdjuster [^java.time.DayOfWeek day-of-week]
     (TemporalAdjusters/lastInMonth day-of-week)))
 
 (defn *first-day-of-next-year
@@ -274,7 +274,7 @@
     temporal.with(DAY_OF_YEAR, 1).plus(1, YEARS);
 
   returns: the first day of next month adjuster, not null - `java.time.temporal.TemporalAdjuster`"
-  ([]
+  (^java.time.temporal.TemporalAdjuster []
     (TemporalAdjusters/firstDayOfNextYear )))
 
 (defn *day-of-week-in-month
@@ -309,6 +309,6 @@
   day-of-week - the day-of-week, not null - `java.time.DayOfWeek`
 
   returns: the day-of-week in month adjuster, not null - `java.time.temporal.TemporalAdjuster`"
-  ([^Integer ordinal ^java.time.DayOfWeek day-of-week]
+  (^java.time.temporal.TemporalAdjuster [^Integer ordinal ^java.time.DayOfWeek day-of-week]
     (TemporalAdjusters/dayOfWeekInMonth ordinal day-of-week)))
 

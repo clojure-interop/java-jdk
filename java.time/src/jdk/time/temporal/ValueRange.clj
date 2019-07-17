@@ -28,11 +28,11 @@
   returns: the ValueRange for smallest min, largest min, smallest max, largest max, not null - `java.time.temporal.ValueRange`
 
   throws: java.lang.IllegalArgumentException - if the smallest minimum is greater than the smallest maximum, or the smallest maximum is greater than the largest maximum or the largest minimum is greater than the largest maximum"
-  ([^Long min-smallest ^Long min-largest ^Long max-smallest ^Long max-largest]
+  (^java.time.temporal.ValueRange [^Long min-smallest ^Long min-largest ^Long max-smallest ^Long max-largest]
     (ValueRange/of min-smallest min-largest max-smallest max-largest))
-  ([^Long min ^Long max-smallest ^Long max-largest]
+  (^java.time.temporal.ValueRange [^Long min ^Long max-smallest ^Long max-largest]
     (ValueRange/of min max-smallest max-largest))
-  ([^Long min ^Long max]
+  (^java.time.temporal.ValueRange [^Long min ^Long max]
     (ValueRange/of min max)))
 
 (defn get-minimum
@@ -42,7 +42,7 @@
    The minimum is therefore 1.
 
   returns: the minimum value for this field - `long`"
-  ([^java.time.temporal.ValueRange this]
+  (^Long [^java.time.temporal.ValueRange this]
     (-> this (.getMinimum))))
 
 (defn valid-value?
@@ -53,7 +53,7 @@
   value - the value to check - `long`
 
   returns: true if the value is valid - `boolean`"
-  ([^java.time.temporal.ValueRange this ^Long value]
+  (^Boolean [^java.time.temporal.ValueRange this ^Long value]
     (-> this (.isValidValue value))))
 
 (defn check-valid-int-value
@@ -67,7 +67,7 @@
   field - the field being checked, may be null - `java.time.temporal.TemporalField`
 
   returns: the value that was passed in - `int`"
-  ([^java.time.temporal.ValueRange this ^Long value ^java.time.temporal.TemporalField field]
+  (^Integer [^java.time.temporal.ValueRange this ^Long value ^java.time.temporal.TemporalField field]
     (-> this (.checkValidIntValue value field))))
 
 (defn to-string
@@ -78,7 +78,7 @@
    with associated slash, if they are the same as the min or max.
 
   returns: a string representation of this range, not null - `java.lang.String`"
-  ([^java.time.temporal.ValueRange this]
+  (^java.lang.String [^java.time.temporal.ValueRange this]
     (-> this (.toString))))
 
 (defn int-value?
@@ -92,7 +92,7 @@
    This implementation uses getMinimum() and getMaximum().
 
   returns: true if a valid value always fits in an int - `boolean`"
-  ([^java.time.temporal.ValueRange this]
+  (^Boolean [^java.time.temporal.ValueRange this]
     (-> this (.isIntValue))))
 
 (defn get-smallest-maximum
@@ -102,7 +102,7 @@
    The smallest maximum is therefore 28.
 
   returns: the smallest possible maximum value for this field - `long`"
-  ([^java.time.temporal.ValueRange this]
+  (^Long [^java.time.temporal.ValueRange this]
     (-> this (.getSmallestMaximum))))
 
 (defn valid-int-value?
@@ -114,14 +114,14 @@
   value - the value to check - `long`
 
   returns: true if the value is valid and fits in an int - `boolean`"
-  ([^java.time.temporal.ValueRange this ^Long value]
+  (^Boolean [^java.time.temporal.ValueRange this ^Long value]
     (-> this (.isValidIntValue value))))
 
 (defn hash-code
   "A hash code for this range.
 
   returns: a suitable hash code - `int`"
-  ([^java.time.temporal.ValueRange this]
+  (^Integer [^java.time.temporal.ValueRange this]
     (-> this (.hashCode))))
 
 (defn fixed?
@@ -132,7 +132,7 @@
    However, for the month of January, the range is always 1 to 31, thus it is fixed.
 
   returns: true if the set of values is fixed - `boolean`"
-  ([^java.time.temporal.ValueRange this]
+  (^Boolean [^java.time.temporal.ValueRange this]
     (-> this (.isFixed))))
 
 (defn get-maximum
@@ -142,7 +142,7 @@
    The maximum is therefore 31.
 
   returns: the maximum value for this field - `long`"
-  ([^java.time.temporal.ValueRange this]
+  (^Long [^java.time.temporal.ValueRange this]
     (-> this (.getMaximum))))
 
 (defn equals
@@ -155,7 +155,7 @@
   obj - the object to check, null returns false - `java.lang.Object`
 
   returns: true if this is equal to the other range - `boolean`"
-  ([^java.time.temporal.ValueRange this ^java.lang.Object obj]
+  (^Boolean [^java.time.temporal.ValueRange this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn get-largest-minimum
@@ -165,7 +165,7 @@
    The largest minimum is therefore 1.
 
   returns: the largest possible minimum value for this field - `long`"
-  ([^java.time.temporal.ValueRange this]
+  (^Long [^java.time.temporal.ValueRange this]
     (-> this (.getLargestMinimum))))
 
 (defn check-valid-value
@@ -178,6 +178,6 @@
   field - the field being checked, may be null - `java.time.temporal.TemporalField`
 
   returns: the value that was passed in - `long`"
-  ([^java.time.temporal.ValueRange this ^Long value ^java.time.temporal.TemporalField field]
+  (^Long [^java.time.temporal.ValueRange this ^Long value ^java.time.temporal.TemporalField field]
     (-> this (.checkValidValue value field))))
 

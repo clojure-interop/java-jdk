@@ -37,14 +37,14 @@
   f - the File to test - `java.io.File`
 
   returns: true if the file is to be accepted, false otherwise - `boolean`"
-  ([^javax.swing.filechooser.FileNameExtensionFilter this ^java.io.File f]
+  (^Boolean [^javax.swing.filechooser.FileNameExtensionFilter this ^java.io.File f]
     (-> this (.accept f))))
 
 (defn get-description
   "The description of this filter. For example: `JPG and GIF Images.`
 
   returns: the description of this filter - `java.lang.String`"
-  ([^javax.swing.filechooser.FileNameExtensionFilter this]
+  (^java.lang.String [^javax.swing.filechooser.FileNameExtensionFilter this]
     (-> this (.getDescription))))
 
 (defn get-extensions
@@ -61,6 +61,6 @@
    between implementations.
 
   returns: a string representation of this FileNameExtensionFilter - `java.lang.String`"
-  ([^javax.swing.filechooser.FileNameExtensionFilter this]
+  (^java.lang.String [^javax.swing.filechooser.FileNameExtensionFilter this]
     (-> this (.toString))))
 

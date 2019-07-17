@@ -72,7 +72,7 @@
   order - the collation element - `int`
 
   returns: the element's primary component - `int`"
-  ([^Integer order]
+  (^Integer [^Integer order]
     (CollationElementIterator/primaryOrder order)))
 
 (defn *secondary-order
@@ -81,7 +81,7 @@
   order - the collation element - `int`
 
   returns: the element's secondary component - `short`"
-  ([^Integer order]
+  (^Short [^Integer order]
     (CollationElementIterator/secondaryOrder order)))
 
 (defn *tertiary-order
@@ -90,7 +90,7 @@
   order - the collation element - `int`
 
   returns: the element's tertiary component - `short`"
-  ([^Integer order]
+  (^Short [^Integer order]
     (CollationElementIterator/tertiaryOrder order)))
 
 (defn reset
@@ -114,7 +114,7 @@
    back the same element twice.
 
   returns: the next collation element - `int`"
-  ([^java.text.CollationElementIterator this]
+  (^Integer [^java.text.CollationElementIterator this]
     (-> this (.next))))
 
 (defn previous
@@ -132,7 +132,7 @@
    and then call next()), you'll get back the same element twice.
 
   returns: the previous collation element - `int`"
-  ([^java.text.CollationElementIterator this]
+  (^Integer [^java.text.CollationElementIterator this]
     (-> this (.previous))))
 
 (defn set-offset
@@ -163,7 +163,7 @@
 
   returns: The character offset in the original text corresponding to the collation
    element that will be returned by the next call to next(). - `int`"
-  ([^java.text.CollationElementIterator this]
+  (^Integer [^java.text.CollationElementIterator this]
     (-> this (.getOffset))))
 
 (defn get-max-expansion
@@ -174,7 +174,7 @@
 
   returns: the maximum length of any expansion sequences ending
            with the specified order. - `int`"
-  ([^java.text.CollationElementIterator this ^Integer order]
+  (^Integer [^java.text.CollationElementIterator this ^Integer order]
     (-> this (.getMaxExpansion order))))
 
 (defn set-text

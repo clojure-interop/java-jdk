@@ -45,7 +45,7 @@
 
   returns: True if object is equivalent to this date-time
             at processing attribute, false otherwise. - `boolean`"
-  ([^javax.print.attribute.standard.DateTimeAtProcessing this ^java.lang.Object object]
+  (^Boolean [^javax.print.attribute.standard.DateTimeAtProcessing this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -68,6 +68,6 @@
    `date-time-at-processing`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.DateTimeAtProcessing this]
+  (^java.lang.String [^javax.print.attribute.standard.DateTimeAtProcessing this]
     (-> this (.getName))))
 

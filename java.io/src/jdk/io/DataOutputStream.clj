@@ -156,7 +156,7 @@
    If the counter overflows, it will be wrapped to Integer.MAX_VALUE.
 
   returns: the value of the written field. - `int`"
-  ([^java.io.DataOutputStream this]
+  (^Integer [^java.io.DataOutputStream this]
     (-> this (.size))))
 
 (defn write-char

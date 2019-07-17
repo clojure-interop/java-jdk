@@ -7,6 +7,6 @@
   "Returns the private exponent.
 
   returns: the private exponent - `java.math.BigInteger`"
-  ([^java.security.interfaces.RSAPrivateKey this]
+  (^java.math.BigInteger [^java.security.interfaces.RSAPrivateKey this]
     (-> this (.getPrivateExponent))))
 

@@ -54,6 +54,6 @@
   "Gets the presentation name for this edit
 
   returns: the empty string `` - `java.lang.String`"
-  ([^javax.swing.undo.StateEdit this]
+  (^java.lang.String [^javax.swing.undo.StateEdit this]
     (-> this (.getPresentationName))))
 

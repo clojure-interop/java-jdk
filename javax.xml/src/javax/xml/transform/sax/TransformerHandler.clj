@@ -28,7 +28,7 @@
    URLs will be resolved.
 
   returns: The systemID that was set with setSystemId(java.lang.String). - `java.lang.String`"
-  ([^javax.xml.transform.sax.TransformerHandler this]
+  (^java.lang.String [^javax.xml.transform.sax.TransformerHandler this]
     (-> this (.getSystemId))))
 
 (defn get-transformer
@@ -37,6 +37,6 @@
 
   returns: Transformer associated with this
      TransformerHandler. - `javax.xml.transform.Transformer`"
-  ([^javax.xml.transform.sax.TransformerHandler this]
+  (^javax.xml.transform.Transformer [^javax.xml.transform.sax.TransformerHandler this]
     (-> this (.getTransformer))))
 

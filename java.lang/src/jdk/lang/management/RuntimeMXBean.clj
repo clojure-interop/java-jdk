@@ -40,7 +40,7 @@
   returns: the boot class path. - `java.lang.String`
 
   throws: java.lang.UnsupportedOperationException - if the Java virtual machine does not support this operation."
-  ([^java.lang.management.RuntimeMXBean this]
+  (^java.lang.String [^java.lang.management.RuntimeMXBean this]
     (-> this (.getBootClassPath))))
 
 (defn get-input-arguments
@@ -67,7 +67,7 @@
    is an argument passed to the Java virtual machine. - `java.util.List<java.lang.String>`
 
   throws: java.lang.SecurityException - if a security manager exists and the caller does not have ManagementPermission(`monitor`)."
-  ([^java.lang.management.RuntimeMXBean this]
+  (^java.util.List [^java.lang.management.RuntimeMXBean this]
     (-> this (.getInputArguments))))
 
 (defn get-vm-name
@@ -77,7 +77,7 @@
   returns: the Java virtual machine implementation name. - `java.lang.String`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPropertiesAccess method doesn't allow access to this system property."
-  ([^java.lang.management.RuntimeMXBean this]
+  (^java.lang.String [^java.lang.management.RuntimeMXBean this]
     (-> this (.getVmName))))
 
 (defn get-vm-version
@@ -87,7 +87,7 @@
   returns: the Java virtual machine implementation version. - `java.lang.String`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPropertiesAccess method doesn't allow access to this system property."
-  ([^java.lang.management.RuntimeMXBean this]
+  (^java.lang.String [^java.lang.management.RuntimeMXBean this]
     (-> this (.getVmVersion))))
 
 (defn get-management-spec-version
@@ -96,7 +96,7 @@
 
   returns: the version of the specification for the management interface
    implemented by the running Java virtual machine. - `java.lang.String`"
-  ([^java.lang.management.RuntimeMXBean this]
+  (^java.lang.String [^java.lang.management.RuntimeMXBean this]
     (-> this (.getManagementSpecVersion))))
 
 (defn get-start-time
@@ -105,14 +105,14 @@
    machine started.
 
   returns: start time of the Java virtual machine in milliseconds. - `long`"
-  ([^java.lang.management.RuntimeMXBean this]
+  (^Long [^java.lang.management.RuntimeMXBean this]
     (-> this (.getStartTime))))
 
 (defn get-uptime
   "Returns the uptime of the Java virtual machine in milliseconds.
 
   returns: uptime of the Java virtual machine in milliseconds. - `long`"
-  ([^java.lang.management.RuntimeMXBean this]
+  (^Long [^java.lang.management.RuntimeMXBean this]
     (-> this (.getUptime))))
 
 (defn get-name
@@ -124,7 +124,7 @@
    a different name.
 
   returns: the name representing the running Java virtual machine. - `java.lang.String`"
-  ([^java.lang.management.RuntimeMXBean this]
+  (^java.lang.String [^java.lang.management.RuntimeMXBean this]
     (-> this (.getName))))
 
 (defn get-library-path
@@ -138,7 +138,7 @@
   returns: the Java library path. - `java.lang.String`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPropertiesAccess method doesn't allow access to this system property."
-  ([^java.lang.management.RuntimeMXBean this]
+  (^java.lang.String [^java.lang.management.RuntimeMXBean this]
     (-> this (.getLibraryPath))))
 
 (defn get-class-path
@@ -153,7 +153,7 @@
   returns: the Java class path. - `java.lang.String`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPropertiesAccess method doesn't allow access to this system property."
-  ([^java.lang.management.RuntimeMXBean this]
+  (^java.lang.String [^java.lang.management.RuntimeMXBean this]
     (-> this (.getClassPath))))
 
 (defn get-spec-name
@@ -163,7 +163,7 @@
   returns: the Java virtual machine specification name. - `java.lang.String`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPropertiesAccess method doesn't allow access to this system property."
-  ([^java.lang.management.RuntimeMXBean this]
+  (^java.lang.String [^java.lang.management.RuntimeMXBean this]
     (-> this (.getSpecName))))
 
 (defn get-spec-version
@@ -173,7 +173,7 @@
   returns: the Java virtual machine specification version. - `java.lang.String`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPropertiesAccess method doesn't allow access to this system property."
-  ([^java.lang.management.RuntimeMXBean this]
+  (^java.lang.String [^java.lang.management.RuntimeMXBean this]
     (-> this (.getSpecVersion))))
 
 (defn get-spec-vendor
@@ -183,7 +183,7 @@
   returns: the Java virtual machine specification vendor. - `java.lang.String`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPropertiesAccess method doesn't allow access to this system property."
-  ([^java.lang.management.RuntimeMXBean this]
+  (^java.lang.String [^java.lang.management.RuntimeMXBean this]
     (-> this (.getSpecVendor))))
 
 (defn boot-class-path-supported?
@@ -193,7 +193,7 @@
 
   returns: true if the Java virtual machine supports the
    class path mechanism; false otherwise. - `boolean`"
-  ([^java.lang.management.RuntimeMXBean this]
+  (^Boolean [^java.lang.management.RuntimeMXBean this]
     (-> this (.isBootClassPathSupported))))
 
 (defn get-vm-vendor
@@ -203,7 +203,7 @@
   returns: the Java virtual machine implementation vendor. - `java.lang.String`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPropertiesAccess method doesn't allow access to this system property."
-  ([^java.lang.management.RuntimeMXBean this]
+  (^java.lang.String [^java.lang.management.RuntimeMXBean this]
     (-> this (.getVmVendor))))
 
 (defn get-system-properties
@@ -234,6 +234,6 @@
   returns: a map of names and values of all system properties. - `java.util.Map<java.lang.String,java.lang.String>`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPropertiesAccess method doesn't allow access to the system properties."
-  ([^java.lang.management.RuntimeMXBean this]
+  (^java.util.Map [^java.lang.management.RuntimeMXBean this]
     (-> this (.getSystemProperties))))
 

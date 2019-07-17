@@ -36,7 +36,7 @@
 
   returns: the parent of this node, or null if this is the
    root node - `java.security.cert.PolicyNode`"
-  ([^java.security.cert.PolicyNode this]
+  (^java.security.cert.PolicyNode [^java.security.cert.PolicyNode this]
     (-> this (.getParent))))
 
 (defn get-children
@@ -54,7 +54,7 @@
 
   returns: the depth of this node (0 for the root node, 1 for its
    children, and so on) - `int`"
-  ([^java.security.cert.PolicyNode this]
+  (^Integer [^java.security.cert.PolicyNode this]
     (-> this (.getDepth))))
 
 (defn get-valid-policy
@@ -63,7 +63,7 @@
   returns: the String OID of the valid policy
    represented by this node. For the root node, this method always returns
    the special anyPolicy OID: `2.5.29.32.0`. - `java.lang.String`"
-  ([^java.security.cert.PolicyNode this]
+  (^java.lang.String [^java.security.cert.PolicyNode this]
     (-> this (.getValidPolicy))))
 
 (defn get-policy-qualifiers
@@ -84,7 +84,7 @@
    String OIDs. For the root node, this method
    always returns a Set with one element, the
    special anyPolicy OID: `2.5.29.32.0`. - `java.util.Set<java.lang.String>`"
-  ([^java.security.cert.PolicyNode this]
+  (^java.util.Set [^java.security.cert.PolicyNode this]
     (-> this (.getExpectedPolicies))))
 
 (defn critical?
@@ -94,6 +94,6 @@
   returns: true if extension marked critical,
    false otherwise. For the root node, false
    is always returned. - `boolean`"
-  ([^java.security.cert.PolicyNode this]
+  (^Boolean [^java.security.cert.PolicyNode this]
     (-> this (.isCritical))))
 

@@ -854,7 +854,7 @@
 
   returns: a Collection view of the values
             contained in this RenderingHints. - `java.util.Collection<java.lang.Object>`"
-  ([^java.awt.RenderingHints this]
+  (^java.util.Collection [^java.awt.RenderingHints this]
     (-> this (.values))))
 
 (defn put-all
@@ -883,7 +883,7 @@
                or null if it did not have one. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if the key is null."
-  ([^java.awt.RenderingHints this ^java.lang.Object key ^java.lang.Object value]
+  (^java.lang.Object [^java.awt.RenderingHints this ^java.lang.Object key ^java.lang.Object value]
     (-> this (.put key value))))
 
 (defn entry-set
@@ -902,7 +902,7 @@
 
   returns: a Set view of the mappings contained in
    this RenderingHints. - `java.util.Set<java.util.Map.Entry<java.lang.Object,java.lang.Object>>`"
-  ([^java.awt.RenderingHints this]
+  (^java.util.Set> [^java.awt.RenderingHints this]
     (-> this (.entrySet))))
 
 (defn to-string
@@ -911,7 +911,7 @@
    RenderingHints object.
 
   returns: a string representation of this object. - `java.lang.String`"
-  ([^java.awt.RenderingHints this]
+  (^java.lang.String [^java.awt.RenderingHints this]
     (-> this (.toString))))
 
 (defn contains-value
@@ -931,7 +931,7 @@
 
   returns: true if this RenderingHints
              maps one or more keys to the specified value. - `boolean`"
-  ([^java.awt.RenderingHints this ^java.lang.Object value]
+  (^Boolean [^java.awt.RenderingHints this ^java.lang.Object value]
     (-> this (.containsValue value))))
 
 (defn remove
@@ -946,7 +946,7 @@
             if the key did not have a mapping. - `java.lang.Object`
 
   throws: java.lang.ClassCastException - if the key can not be cast to RenderingHints.Key"
-  ([^java.awt.RenderingHints this ^java.lang.Object key]
+  (^java.lang.Object [^java.awt.RenderingHints this ^java.lang.Object key]
     (-> this (.remove key))))
 
 (defn key-set
@@ -966,7 +966,7 @@
 
   returns: a Set view of the keys contained
    in this RenderingHints. - `java.util.Set<java.lang.Object>`"
-  ([^java.awt.RenderingHints this]
+  (^java.util.Set [^java.awt.RenderingHints this]
     (-> this (.keySet))))
 
 (defn clone
@@ -975,7 +975,7 @@
    object.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([^java.awt.RenderingHints this]
+  (^java.lang.Object [^java.awt.RenderingHints this]
     (-> this (.clone))))
 
 (defn hash-code
@@ -989,7 +989,7 @@
    contract of Object.hashCode.
 
   returns: the hash code value for this RenderingHints. - `int`"
-  ([^java.awt.RenderingHints this]
+  (^Integer [^java.awt.RenderingHints this]
     (-> this (.hashCode))))
 
 (defn add
@@ -1009,7 +1009,7 @@
 
   returns: true if this
    RenderingHints contains no key-value mappings. - `boolean`"
-  ([^java.awt.RenderingHints this]
+  (^Boolean [^java.awt.RenderingHints this]
     (-> this (.isEmpty))))
 
 (defn size
@@ -1018,7 +1018,7 @@
 
   returns: the number of key-value mappings in this
    RenderingHints. - `int`"
-  ([^java.awt.RenderingHints this]
+  (^Integer [^java.awt.RenderingHints this]
     (-> this (.size))))
 
 (defn clear
@@ -1037,7 +1037,7 @@
             contains a mapping for the specified key. - `boolean`
 
   throws: java.lang.ClassCastException - if the key can not be cast to RenderingHints.Key"
-  ([^java.awt.RenderingHints this ^java.lang.Object key]
+  (^Boolean [^java.awt.RenderingHints this ^java.lang.Object key]
     (-> this (.containsKey key))))
 
 (defn get
@@ -1050,7 +1050,7 @@
             this object. - `java.lang.Object`
 
   throws: java.lang.ClassCastException - if the key can not be cast to RenderingHints.Key"
-  ([^java.awt.RenderingHints this ^java.lang.Object key]
+  (^java.lang.Object [^java.awt.RenderingHints this ^java.lang.Object key]
     (-> this (.get key))))
 
 (defn equals
@@ -1072,6 +1072,6 @@
 
   returns: true if the specified Object
    is equal to this RenderingHints. - `boolean`"
-  ([^java.awt.RenderingHints this ^java.lang.Object o]
+  (^Boolean [^java.awt.RenderingHints this ^java.lang.Object o]
     (-> this (.equals o))))
 

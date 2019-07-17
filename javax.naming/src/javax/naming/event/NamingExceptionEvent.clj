@@ -23,7 +23,7 @@
   "Retrieves the exception that was thrown.
 
   returns: The exception that was thrown. - `javax.naming.NamingException`"
-  ([^javax.naming.event.NamingExceptionEvent this]
+  (^javax.naming.NamingException [^javax.naming.event.NamingExceptionEvent this]
     (-> this (.getException))))
 
 (defn get-event-context
@@ -31,7 +31,7 @@
    This returns the same object as EventObject.getSource().
 
   returns: The non-null EventContext that fired this event. - `javax.naming.event.EventContext`"
-  ([^javax.naming.event.NamingExceptionEvent this]
+  (^javax.naming.event.EventContext [^javax.naming.event.NamingExceptionEvent this]
     (-> this (.getEventContext))))
 
 (defn dispatch

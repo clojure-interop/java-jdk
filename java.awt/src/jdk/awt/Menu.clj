@@ -44,14 +44,14 @@
   index - the position of the item to be returned. - `int`
 
   returns: the item located at the specified index. - `java.awt.MenuItem`"
-  ([^java.awt.Menu this ^Integer index]
+  (^java.awt.MenuItem [^java.awt.Menu this ^Integer index]
     (-> this (.getItem index))))
 
 (defn get-item-count
   "Get the number of items in this menu.
 
   returns: the number of items in this menu. - `int`"
-  ([^java.awt.Menu this]
+  (^Integer [^java.awt.Menu this]
     (-> this (.getItemCount))))
 
 (defn add-separator
@@ -95,7 +95,7 @@
 
   returns: an AccessibleAWTMenu that serves as the
            AccessibleContext of this Menu - `javax.accessibility.AccessibleContext`"
-  ([^java.awt.Menu this]
+  (^javax.accessibility.AccessibleContext [^java.awt.Menu this]
     (-> this (.getAccessibleContext))))
 
 (defn param-string
@@ -106,7 +106,7 @@
    null.
 
   returns: the parameter string of this menu - `java.lang.String`"
-  ([^java.awt.Menu this]
+  (^java.lang.String [^java.awt.Menu this]
     (-> this (.paramString))))
 
 (defn tear-off?
@@ -118,7 +118,7 @@
 
   returns: true if this is a tear-off menu;
                            false otherwise. - `boolean`"
-  ([^java.awt.Menu this]
+  (^Boolean [^java.awt.Menu this]
     (-> this (.isTearOff))))
 
 (defn insert
@@ -140,7 +140,7 @@
   mi - the menu item to be added - `java.awt.MenuItem`
 
   returns: the menu item added - `java.awt.MenuItem`"
-  ([^java.awt.Menu this ^java.awt.MenuItem mi]
+  (^java.awt.MenuItem [^java.awt.Menu this ^java.awt.MenuItem mi]
     (-> this (.add mi))))
 
 (defn remove-all

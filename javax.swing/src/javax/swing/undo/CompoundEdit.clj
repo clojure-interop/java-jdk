@@ -30,7 +30,7 @@
    Returns false if they all return false.
 
   returns: true - `boolean`"
-  ([^javax.swing.undo.CompoundEdit this]
+  (^Boolean [^javax.swing.undo.CompoundEdit this]
     (-> this (.isSignificant))))
 
 (defn add-edit
@@ -48,7 +48,7 @@
 
   returns: true if the edit is inProgress;
     otherwise returns false - `boolean`"
-  ([^javax.swing.undo.CompoundEdit this ^javax.swing.undo.UndoableEdit an-edit]
+  (^Boolean [^javax.swing.undo.CompoundEdit this ^javax.swing.undo.UndoableEdit an-edit]
     (-> this (.addEdit an-edit))))
 
 (defn to-string
@@ -56,7 +56,7 @@
    object's properties.
 
   returns: a String representation of this object - `java.lang.String`"
-  ([^javax.swing.undo.CompoundEdit this]
+  (^java.lang.String [^javax.swing.undo.CompoundEdit this]
     (-> this (.toString))))
 
 (defn get-undo-presentation-name
@@ -70,7 +70,7 @@
       by a space, followed by getPresentationName
       unless getPresentationName is `` in which
       case, the defaults value is returned alone. - `java.lang.String`"
-  ([^javax.swing.undo.CompoundEdit this]
+  (^java.lang.String [^javax.swing.undo.CompoundEdit this]
     (-> this (.getUndoPresentationName))))
 
 (defn undo
@@ -88,7 +88,7 @@
    added to it.
 
   returns: `boolean`"
-  ([^javax.swing.undo.CompoundEdit this]
+  (^Boolean [^javax.swing.undo.CompoundEdit this]
     (-> this (.isInProgress))))
 
 (defn can-redo?
@@ -97,7 +97,7 @@
 
   returns: true if this edit is alive
      and hasBeenDone is false - `boolean`"
-  ([^javax.swing.undo.CompoundEdit this]
+  (^Boolean [^javax.swing.undo.CompoundEdit this]
     (-> this (.canRedo))))
 
 (defn get-presentation-name
@@ -107,7 +107,7 @@
    calls super.
 
   returns: the empty string `` - `java.lang.String`"
-  ([^javax.swing.undo.CompoundEdit this]
+  (^java.lang.String [^javax.swing.undo.CompoundEdit this]
     (-> this (.getPresentationName))))
 
 (defn end
@@ -126,7 +126,7 @@
       by a space, followed by getPresentationName
       unless getPresentationName is `` in which
       case, the defaults value is returned alone. - `java.lang.String`"
-  ([^javax.swing.undo.CompoundEdit this]
+  (^java.lang.String [^javax.swing.undo.CompoundEdit this]
     (-> this (.getRedoPresentationName))))
 
 (defn can-undo?
@@ -135,6 +135,6 @@
 
   returns: true if this edit is alive
       and hasBeenDone is true - `boolean`"
-  ([^javax.swing.undo.CompoundEdit this]
+  (^Boolean [^javax.swing.undo.CompoundEdit this]
     (-> this (.canUndo))))
 

@@ -235,7 +235,7 @@
   "Returns the cursor to use over hyper links.
 
   returns: `java.awt.Cursor`"
-  ([^javax.swing.text.html.HTMLEditorKit this]
+  (^java.awt.Cursor [^javax.swing.text.html.HTMLEditorKit this]
     (-> this (.getLinkCursor))))
 
 (defn get-view-factory
@@ -244,7 +244,7 @@
    kit.
 
   returns: the factory - `javax.swing.text.ViewFactory`"
-  ([^javax.swing.text.html.HTMLEditorKit this]
+  (^javax.swing.text.ViewFactory [^javax.swing.text.html.HTMLEditorKit this]
     (-> this (.getViewFactory))))
 
 (defn auto-form-submission?
@@ -253,7 +253,7 @@
 
   returns: true  if html form submission is processed automatically,
            false otherwise. - `boolean`"
-  ([^javax.swing.text.html.HTMLEditorKit this]
+  (^Boolean [^javax.swing.text.html.HTMLEditorKit this]
     (-> this (.isAutoFormSubmission))))
 
 (defn create-default-document
@@ -261,7 +261,7 @@
    that is appropriate for this type of editor.
 
   returns: the model - `javax.swing.text.Document`"
-  ([^javax.swing.text.html.HTMLEditorKit this]
+  (^javax.swing.text.Document [^javax.swing.text.html.HTMLEditorKit this]
     (-> this (.createDefaultDocument))))
 
 (defn set-link-cursor
@@ -278,7 +278,7 @@
    instances.
 
   returns: `javax.swing.text.html.StyleSheet`"
-  ([^javax.swing.text.html.HTMLEditorKit this]
+  (^javax.swing.text.html.StyleSheet [^javax.swing.text.html.HTMLEditorKit this]
     (-> this (.getStyleSheet))))
 
 (defn set-default-cursor
@@ -320,14 +320,14 @@
    the type text/html.
 
   returns: the type - `java.lang.String`"
-  ([^javax.swing.text.html.HTMLEditorKit this]
+  (^java.lang.String [^javax.swing.text.html.HTMLEditorKit this]
     (-> this (.getContentType))))
 
 (defn get-default-cursor
   "Returns the default cursor.
 
   returns: `java.awt.Cursor`"
-  ([^javax.swing.text.html.HTMLEditorKit this]
+  (^java.awt.Cursor [^javax.swing.text.html.HTMLEditorKit this]
     (-> this (.getDefaultCursor))))
 
 (defn install
@@ -343,7 +343,7 @@
    editing actions.
 
   returns: the attribute set - `javax.swing.text.MutableAttributeSet`"
-  ([^javax.swing.text.html.HTMLEditorKit this]
+  (^javax.swing.text.MutableAttributeSet [^javax.swing.text.html.HTMLEditorKit this]
     (-> this (.getInputAttributes))))
 
 (defn insert-html
@@ -364,7 +364,7 @@
   "returns the AccessibleContext associated with this editor kit
 
   returns: the AccessibleContext associated with this editor kit - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.text.html.HTMLEditorKit this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.text.html.HTMLEditorKit this]
     (-> this (.getAccessibleContext))))
 
 (defn deinstall
@@ -380,7 +380,7 @@
   "Creates a copy of the editor kit.
 
   returns: the copy - `java.lang.Object`"
-  ([^javax.swing.text.html.HTMLEditorKit this]
+  (^java.lang.Object [^javax.swing.text.html.HTMLEditorKit this]
     (-> this (.clone))))
 
 (defn write

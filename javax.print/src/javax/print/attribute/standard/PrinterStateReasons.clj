@@ -69,7 +69,7 @@
             not present. - `javax.print.attribute.standard.Severity`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if reason is null or severity is null."
-  ([^javax.print.attribute.standard.PrinterStateReasons this ^javax.print.attribute.standard.PrinterStateReason reason ^javax.print.attribute.standard.Severity severity]
+  (^javax.print.attribute.standard.Severity [^javax.print.attribute.standard.PrinterStateReasons this ^javax.print.attribute.standard.PrinterStateReason reason ^javax.print.attribute.standard.Severity severity]
     (-> this (.put reason severity))))
 
 (defn get-category
@@ -92,7 +92,7 @@
    category name is `printer-state-reasons`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.PrinterStateReasons this]
+  (^java.lang.String [^javax.print.attribute.standard.PrinterStateReasons this]
     (-> this (.getName))))
 
 (defn printer-state-reason-set
@@ -111,6 +111,6 @@
   returns: Set view of the individual PrinterStateReason attributes at the given Severity level. - `java.util.Set<javax.print.attribute.standard.PrinterStateReason>`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if severity is null."
-  ([^javax.print.attribute.standard.PrinterStateReasons this ^javax.print.attribute.standard.Severity severity]
+  (^java.util.Set [^javax.print.attribute.standard.PrinterStateReasons this ^javax.print.attribute.standard.Severity severity]
     (-> this (.printerStateReasonSet severity))))
 

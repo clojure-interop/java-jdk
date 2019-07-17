@@ -71,7 +71,7 @@
   b - the byte to be converted - `byte`
 
   returns: the string representation of the specified byte - `java.lang.String`"
-  ([^Byte b]
+  (^java.lang.String [^Byte b]
     (Byte/toString b)))
 
 (defn *value-of
@@ -98,9 +98,9 @@
                     specified radix. - `java.lang.Byte`
 
   throws: java.lang.NumberFormatException - If the String does not contain a parsable byte."
-  ([^java.lang.String s ^Integer radix]
+  (^java.lang.Byte [^java.lang.String s ^Integer radix]
     (Byte/valueOf s radix))
-  ([^Byte b]
+  (^java.lang.Byte [^Byte b]
     (Byte/valueOf b)))
 
 (defn *parse-byte
@@ -139,9 +139,9 @@
                      argument in the specified radix - `byte`
 
   throws: java.lang.NumberFormatException - If the string does not contain a parsable byte."
-  ([^java.lang.String s ^Integer radix]
+  (^Byte [^java.lang.String s ^Integer radix]
     (Byte/parseByte s radix))
-  ([^java.lang.String s]
+  (^Byte [^java.lang.String s]
     (Byte/parseByte s)))
 
 (defn *decode
@@ -184,7 +184,7 @@
             value represented by nm - `java.lang.Byte`
 
   throws: java.lang.NumberFormatException - if the String does not contain a parsable byte."
-  ([^java.lang.String nm]
+  (^java.lang.Byte [^java.lang.String nm]
     (Byte/decode nm)))
 
 (defn *hash-code
@@ -194,7 +194,7 @@
   value - the value to hash - `byte`
 
   returns: a hash code value for a byte value. - `int`"
-  ([^Byte value]
+  (^Integer [^Byte value]
     (Byte/hashCode value)))
 
 (defn *compare
@@ -210,7 +210,7 @@
   returns: the value 0 if x == y;
            a value less than 0 if x < y; and
            a value greater than 0 if x > y - `int`"
-  ([^Byte x ^Byte y]
+  (^Integer [^Byte x ^Byte y]
     (Byte/compare x y)))
 
 (defn *to-unsigned-int
@@ -227,7 +227,7 @@
 
   returns: the argument converted to int by an unsigned
            conversion - `int`"
-  ([^Byte x]
+  (^Integer [^Byte x]
     (Byte/toUnsignedInt x)))
 
 (defn *to-unsigned-long
@@ -244,7 +244,7 @@
 
   returns: the argument converted to long by an unsigned
            conversion - `long`"
-  ([^Byte x]
+  (^Long [^Byte x]
     (Byte/toUnsignedLong x)))
 
 (defn short-value
@@ -253,7 +253,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type short. - `short`"
-  ([^java.lang.Byte this]
+  (^Short [^java.lang.Byte this]
     (-> this (.shortValue))))
 
 (defn double-value
@@ -262,7 +262,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type double. - `double`"
-  ([^java.lang.Byte this]
+  (^Double [^java.lang.Byte this]
     (-> this (.doubleValue))))
 
 (defn long-value
@@ -271,7 +271,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type long. - `long`"
-  ([^java.lang.Byte this]
+  (^Long [^java.lang.Byte this]
     (-> this (.longValue))))
 
 (defn byte-value
@@ -280,7 +280,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type byte. - `byte`"
-  ([^java.lang.Byte this]
+  (^Byte [^java.lang.Byte this]
     (-> this (.byteValue))))
 
 (defn to-string
@@ -292,7 +292,7 @@
 
   returns: a string representation of the value of this object in
             base 10. - `java.lang.String`"
-  ([^java.lang.Byte this]
+  (^java.lang.String [^java.lang.Byte this]
     (-> this (.toString))))
 
 (defn float-value
@@ -301,7 +301,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type float. - `float`"
-  ([^java.lang.Byte this]
+  (^Float [^java.lang.Byte this]
     (-> this (.floatValue))))
 
 (defn int-value
@@ -310,7 +310,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type int. - `int`"
-  ([^java.lang.Byte this]
+  (^Integer [^java.lang.Byte this]
     (-> this (.intValue))))
 
 (defn hash-code
@@ -318,7 +318,7 @@
    of invoking intValue().
 
   returns: a hash code value for this Byte - `int`"
-  ([^java.lang.Byte this]
+  (^Integer [^java.lang.Byte this]
     (-> this (.hashCode))))
 
 (defn compare-to
@@ -333,7 +333,7 @@
              0 if this Byte is numerically
              greater than the argument Byte (signed
              comparison). - `int`"
-  ([^java.lang.Byte this ^java.lang.Byte another-byte]
+  (^Integer [^java.lang.Byte this ^java.lang.Byte another-byte]
     (-> this (.compareTo another-byte))))
 
 (defn equals
@@ -346,6 +346,6 @@
 
   returns: true if the objects are the same;
                     false otherwise. - `boolean`"
-  ([^java.lang.Byte this ^java.lang.Object obj]
+  (^Boolean [^java.lang.Byte this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

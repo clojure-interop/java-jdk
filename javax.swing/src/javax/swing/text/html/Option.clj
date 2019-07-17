@@ -35,28 +35,28 @@
   "Fetch the label associated with the option.
 
   returns: `java.lang.String`"
-  ([^javax.swing.text.html.Option this]
+  (^java.lang.String [^javax.swing.text.html.Option this]
     (-> this (.getLabel))))
 
 (defn get-attributes
   "Fetch the attributes associated with this option.
 
   returns: `javax.swing.text.AttributeSet`"
-  ([^javax.swing.text.html.Option this]
+  (^javax.swing.text.AttributeSet [^javax.swing.text.html.Option this]
     (-> this (.getAttributes))))
 
 (defn to-string
   "String representation is the label.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^javax.swing.text.html.Option this]
+  (^java.lang.String [^javax.swing.text.html.Option this]
     (-> this (.toString))))
 
 (defn selected?
   "Fetches the selection state associated with this option.
 
   returns: `boolean`"
-  ([^javax.swing.text.html.Option this]
+  (^Boolean [^javax.swing.text.html.Option this]
     (-> this (.isSelected))))
 
 (defn get-value
@@ -66,6 +66,6 @@
    returned.
 
   returns: `java.lang.String`"
-  ([^javax.swing.text.html.Option this]
+  (^java.lang.String [^javax.swing.text.html.Option this]
     (-> this (.getValue))))
 

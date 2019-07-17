@@ -23,13 +23,13 @@
   "Returns the string that was being parsed.
 
   returns: the string that was being parsed, should not be null. - `java.lang.String`"
-  ([^java.time.format.DateTimeParseException this]
+  (^java.lang.String [^java.time.format.DateTimeParseException this]
     (-> this (.getParsedString))))
 
 (defn get-error-index
   "Returns the index where the error was found.
 
   returns: the index in the parsed string that was invalid, should be a valid index - `int`"
-  ([^java.time.format.DateTimeParseException this]
+  (^Integer [^java.time.format.DateTimeParseException this]
     (-> this (.getErrorIndex))))
 

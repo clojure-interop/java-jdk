@@ -167,7 +167,7 @@
    BoxLayout.PAGE_AXIS
 
   returns: the axis that was used to lay out components - `int`"
-  ([^javax.swing.BoxLayout this]
+  (^Integer [^javax.swing.BoxLayout this]
     (-> this (.getAxis))))
 
 (defn get-layout-alignment-y
@@ -181,7 +181,7 @@
   returns: the alignment >= 0.0f && <= 1.0f - `float`
 
   throws: java.awt.AWTError - if the target isn't the container specified to the BoxLayout constructor"
-  ([^javax.swing.BoxLayout this ^java.awt.Container target]
+  (^Float [^javax.swing.BoxLayout this ^java.awt.Container target]
     (-> this (.getLayoutAlignmentY target))))
 
 (defn preferred-layout-size
@@ -193,7 +193,7 @@
   returns: the dimensions >= 0 && <= Integer.MAX_VALUE - `java.awt.Dimension`
 
   throws: java.awt.AWTError - if the target isn't the container specified to the BoxLayout constructor"
-  ([^javax.swing.BoxLayout this ^java.awt.Container target]
+  (^java.awt.Dimension [^javax.swing.BoxLayout this ^java.awt.Container target]
     (-> this (.preferredLayoutSize target))))
 
 (defn get-layout-alignment-x
@@ -207,7 +207,7 @@
   returns: the alignment >= 0.0f && <= 1.0f - `float`
 
   throws: java.awt.AWTError - if the target isn't the container specified to the BoxLayout constructor"
-  ([^javax.swing.BoxLayout this ^java.awt.Container target]
+  (^Float [^javax.swing.BoxLayout this ^java.awt.Container target]
     (-> this (.getLayoutAlignmentX target))))
 
 (defn minimum-layout-size
@@ -219,14 +219,14 @@
   returns: the dimensions >= 0 && <= Integer.MAX_VALUE - `java.awt.Dimension`
 
   throws: java.awt.AWTError - if the target isn't the container specified to the BoxLayout constructor"
-  ([^javax.swing.BoxLayout this ^java.awt.Container target]
+  (^java.awt.Dimension [^javax.swing.BoxLayout this ^java.awt.Container target]
     (-> this (.minimumLayoutSize target))))
 
 (defn get-target
   "Returns the container that uses this layout manager.
 
   returns: the container that uses this layout manager - `java.awt.Container`"
-  ([^javax.swing.BoxLayout this]
+  (^java.awt.Container [^javax.swing.BoxLayout this]
     (-> this (.getTarget))))
 
 (defn maximum-layout-size
@@ -238,7 +238,7 @@
   returns: the dimensions >= 0 && <= Integer.MAX_VALUE - `java.awt.Dimension`
 
   throws: java.awt.AWTError - if the target isn't the container specified to the BoxLayout constructor"
-  ([^javax.swing.BoxLayout this ^java.awt.Container target]
+  (^java.awt.Dimension [^javax.swing.BoxLayout this ^java.awt.Container target]
     (-> this (.maximumLayoutSize target))))
 
 (defn add-layout-component

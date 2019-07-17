@@ -16,7 +16,7 @@
   "Returns the local GraphicsEnvironment.
 
   returns: the local GraphicsEnvironment - `java.awt.GraphicsEnvironment`"
-  ([]
+  (^java.awt.GraphicsEnvironment []
     (GraphicsEnvironment/getLocalGraphicsEnvironment )))
 
 (defn *headless?
@@ -29,7 +29,7 @@
   returns: true if this environment cannot support
    a display, keyboard, and mouse; false
    otherwise - `boolean`"
-  ([]
+  (^Boolean []
     (GraphicsEnvironment/isHeadless )))
 
 (defn get-maximum-window-bounds
@@ -47,7 +47,7 @@
   returns: the maximum bounds for centered Windows - `java.awt.Rectangle`
 
   throws: java.awt.HeadlessException - if isHeadless() returns true"
-  ([^java.awt.GraphicsEnvironment this]
+  (^java.awt.Rectangle [^java.awt.GraphicsEnvironment this]
     (-> this (.getMaximumWindowBounds))))
 
 (defn get-default-screen-device
@@ -57,7 +57,7 @@
    default screen device - `java.awt.GraphicsDevice`
 
   throws: java.awt.HeadlessException - if isHeadless() returns true"
-  ([^java.awt.GraphicsEnvironment this]
+  (^java.awt.GraphicsDevice [^java.awt.GraphicsEnvironment this]
     (-> this (.getDefaultScreenDevice))))
 
 (defn prefer-proportional-fonts
@@ -87,7 +87,7 @@
   returns: true if a display, keyboard, and mouse
    can be supported in this environment; false
    otherwise - `boolean`"
-  ([^java.awt.GraphicsEnvironment this]
+  (^Boolean [^java.awt.GraphicsEnvironment this]
     (-> this (.isHeadlessInstance))))
 
 (defn get-available-font-family-names
@@ -142,7 +142,7 @@
    registered in this GraphicsEnvironment. - `boolean`
 
   throws: java.lang.NullPointerException - if font is null"
-  ([^java.awt.GraphicsEnvironment this ^java.awt.Font font]
+  (^Boolean [^java.awt.GraphicsEnvironment this ^java.awt.Font font]
     (-> this (.registerFont font))))
 
 (defn get-all-fonts
@@ -210,7 +210,7 @@
    the specified BufferedImage - `java.awt.Graphics2D`
 
   throws: java.lang.NullPointerException - if img is null"
-  ([^java.awt.GraphicsEnvironment this ^java.awt.image.BufferedImage img]
+  (^java.awt.Graphics2D [^java.awt.GraphicsEnvironment this ^java.awt.image.BufferedImage img]
     (-> this (.createGraphics img))))
 
 (defn get-center-point
@@ -221,6 +221,6 @@
   returns: the point where Windows should be centered - `java.awt.Point`
 
   throws: java.awt.HeadlessException - if isHeadless() returns true"
-  ([^java.awt.GraphicsEnvironment this]
+  (^java.awt.Point [^java.awt.GraphicsEnvironment this]
     (-> this (.getCenterPoint))))
 

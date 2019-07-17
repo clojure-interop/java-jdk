@@ -8,7 +8,7 @@
   "Gets the length of the proportional indicator.
 
   returns: the length of the proportional indicator - `int`"
-  ([^java.awt.Adjustable this]
+  (^Integer [^java.awt.Adjustable this]
     (-> this (.getVisibleAmount))))
 
 (defn set-block-increment
@@ -24,28 +24,28 @@
   returns: the orientation of the adjustable object;
      either HORIZONTAL, VERTICAL,
      or NO_ORIENTATION - `int`"
-  ([^java.awt.Adjustable this]
+  (^Integer [^java.awt.Adjustable this]
     (-> this (.getOrientation))))
 
 (defn get-minimum
   "Gets the minimum value of the adjustable object.
 
   returns: the minimum value of the adjustable object - `int`"
-  ([^java.awt.Adjustable this]
+  (^Integer [^java.awt.Adjustable this]
     (-> this (.getMinimum))))
 
 (defn get-unit-increment
   "Gets the unit value increment for the adjustable object.
 
   returns: the unit value increment for the adjustable object - `int`"
-  ([^java.awt.Adjustable this]
+  (^Integer [^java.awt.Adjustable this]
     (-> this (.getUnitIncrement))))
 
 (defn get-block-increment
   "Gets the block value increment for the adjustable object.
 
   returns: the block value increment for the adjustable object - `int`"
-  ([^java.awt.Adjustable this]
+  (^Integer [^java.awt.Adjustable this]
     (-> this (.getBlockIncrement))))
 
 (defn add-adjustment-listener
@@ -60,7 +60,7 @@
   "Gets the current value of the adjustable object.
 
   returns: the current value of the adjustable object - `int`"
-  ([^java.awt.Adjustable this]
+  (^Integer [^java.awt.Adjustable this]
     (-> this (.getValue))))
 
 (defn remove-adjustment-listener
@@ -116,6 +116,6 @@
   "Gets the maximum value of the adjustable object.
 
   returns: the maximum value of the adjustable object - `int`"
-  ([^java.awt.Adjustable this]
+  (^Integer [^java.awt.Adjustable this]
     (-> this (.getMaximum))))
 

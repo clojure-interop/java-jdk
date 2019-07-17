@@ -120,7 +120,7 @@
            null otherwise. - `java.lang.management.MemoryUsage`
 
   throws: java.lang.IllegalArgumentException - if cd does not represent a MemoryUsage with the attributes described above."
-  ([^javax.management.openmbean.CompositeData cd]
+  (^java.lang.management.MemoryUsage [^javax.management.openmbean.CompositeData cd]
     (MemoryUsage/from cd)))
 
 (defn get-init
@@ -130,14 +130,14 @@
 
   returns: the initial size of memory in bytes;
    -1 if undefined. - `long`"
-  ([^java.lang.management.MemoryUsage this]
+  (^Long [^java.lang.management.MemoryUsage this]
     (-> this (.getInit))))
 
 (defn get-used
   "Returns the amount of used memory in bytes.
 
   returns: the amount of used memory in bytes. - `long`"
-  ([^java.lang.management.MemoryUsage this]
+  (^Long [^java.lang.management.MemoryUsage this]
     (-> this (.getUsed))))
 
 (defn get-committed
@@ -146,7 +146,7 @@
    guaranteed for the Java virtual machine to use.
 
   returns: the amount of committed memory in bytes. - `long`"
-  ([^java.lang.management.MemoryUsage this]
+  (^Long [^java.lang.management.MemoryUsage this]
     (-> this (.getCommitted))))
 
 (defn get-max
@@ -162,13 +162,13 @@
 
   returns: the maximum amount of memory in bytes;
    -1 if undefined. - `long`"
-  ([^java.lang.management.MemoryUsage this]
+  (^Long [^java.lang.management.MemoryUsage this]
     (-> this (.getMax))))
 
 (defn to-string
   "Returns a descriptive representation of this memory usage.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^java.lang.management.MemoryUsage this]
+  (^java.lang.String [^java.lang.management.MemoryUsage this]
     (-> this (.toString))))
 

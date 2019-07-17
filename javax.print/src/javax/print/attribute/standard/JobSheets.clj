@@ -56,6 +56,6 @@
    name is `job-sheets`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.JobSheets this]
+  (^java.lang.String [^javax.print.attribute.standard.JobSheets this]
     (-> this (.getName))))
 

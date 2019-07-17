@@ -45,7 +45,7 @@
 
   returns: The java.util.concurrent.Executor to be
            used to invoke a callback. - `java.util.concurrent.Executor`"
-  ([^javax.xml.ws.spi.ServiceDelegate this]
+  (^java.util.concurrent.Executor [^javax.xml.ws.spi.ServiceDelegate this]
     (-> this (.getExecutor))))
 
 (defn set-executor
@@ -66,14 +66,14 @@
   returns: HandlerResolver The HandlerResolver being
            used by this Service instance, or null
            if there isn't one. - `javax.xml.ws.handler.HandlerResolver`"
-  ([^javax.xml.ws.spi.ServiceDelegate this]
+  (^javax.xml.ws.handler.HandlerResolver [^javax.xml.ws.spi.ServiceDelegate this]
     (-> this (.getHandlerResolver))))
 
 (defn get-service-name
   "Gets the name of this service.
 
   returns: Qualified name of this service - `javax.xml.namespace.QName`"
-  ([^javax.xml.ws.spi.ServiceDelegate this]
+  (^javax.xml.namespace.QName [^javax.xml.ws.spi.ServiceDelegate this]
     (-> this (.getServiceName))))
 
 (defn get-port
@@ -104,7 +104,7 @@
 
   returns: URL for the location of the WSDL document for
            this service - `java.net.URL`"
-  ([^javax.xml.ws.spi.ServiceDelegate this]
+  (^java.net.URL [^javax.xml.ws.spi.ServiceDelegate this]
     (-> this (.getWSDLDocumentLocation))))
 
 (defn get-ports
@@ -116,7 +116,7 @@
            of type javax.xml.namespace.QName - `java.util.Iterator<javax.xml.namespace.QName>`
 
   throws: javax.xml.ws.WebServiceException - If this Service class does not have access to the required WSDL metadata"
-  ([^javax.xml.ws.spi.ServiceDelegate this]
+  (^java.util.Iterator [^javax.xml.ws.spi.ServiceDelegate this]
     (-> this (.getPorts))))
 
 (defn add-port

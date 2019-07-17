@@ -20,6 +20,6 @@
   target - the container that needs to be laid out - `java.awt.Container`
 
   returns: the dimensions >= 0 && <= Integer.MAX_VALUE - `java.awt.Dimension`"
-  ([^javax.swing.plaf.basic.DefaultMenuLayout this ^java.awt.Container target]
+  (^java.awt.Dimension [^javax.swing.plaf.basic.DefaultMenuLayout this ^java.awt.Container target]
     (-> this (.preferredLayoutSize target))))
 

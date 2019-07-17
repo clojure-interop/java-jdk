@@ -20,7 +20,7 @@
    created. - `java.util.Set<java.lang.Object>`
 
   throws: javax.management.ServiceNotFoundException - One of the following errors has occurred: The m-let text file does not contain an MLET tag, the m-let text file is not found, a mandatory attribute of the MLET tag is not specified, the value of url is malformed."
-  ([^javax.management.loading.MLetMBean this ^java.lang.String url]
+  (^java.util.Set [^javax.management.loading.MLetMBean this ^java.lang.String url]
     (-> this (.getMBeansFromURL url))))
 
 (defn add-url
@@ -50,7 +50,7 @@
 
   returns: An URL for reading the resource, or null if the resource could not be found or the caller doesn't have adequate privileges to get the
    resource. - `java.net.URL`"
-  ([^javax.management.loading.MLetMBean this ^java.lang.String name]
+  (^java.net.URL [^javax.management.loading.MLetMBean this ^java.lang.String name]
     (-> this (.getResource name))))
 
 (defn get-resource-as-stream
@@ -60,7 +60,7 @@
   name - The resource name - `java.lang.String`
 
   returns: An input stream for reading the resource, or null if the resource could not be found - `java.io.InputStream`"
-  ([^javax.management.loading.MLetMBean this ^java.lang.String name]
+  (^java.io.InputStream [^javax.management.loading.MLetMBean this ^java.lang.String name]
     (-> this (.getResourceAsStream name))))
 
 (defn get-resources
@@ -77,7 +77,7 @@
    cannot be accessed will not be in the enumeration. - `java.util.Enumeration<java.net.URL>`
 
   throws: java.io.IOException - if an I/O exception occurs when searching for resources."
-  ([^javax.management.loading.MLetMBean this ^java.lang.String name]
+  (^java.util.Enumeration [^javax.management.loading.MLetMBean this ^java.lang.String name]
     (-> this (.getResources name))))
 
 (defn get-library-directory
@@ -87,7 +87,7 @@
   returns: The current directory used by the library loader. - `java.lang.String`
 
   throws: java.lang.UnsupportedOperationException - if this implementation does not support storing native libraries in this way."
-  ([^javax.management.loading.MLetMBean this]
+  (^java.lang.String [^javax.management.loading.MLetMBean this]
     (-> this (.getLibraryDirectory))))
 
 (defn set-library-directory

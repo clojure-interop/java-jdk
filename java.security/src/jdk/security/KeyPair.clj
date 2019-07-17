@@ -23,13 +23,13 @@
   "Returns a reference to the public key component of this key pair.
 
   returns: a reference to the public key. - `java.security.PublicKey`"
-  ([^java.security.KeyPair this]
+  (^java.security.PublicKey [^java.security.KeyPair this]
     (-> this (.getPublic))))
 
 (defn get-private
   "Returns a reference to the private key component of this key pair.
 
   returns: a reference to the private key. - `java.security.PrivateKey`"
-  ([^java.security.KeyPair this]
+  (^java.security.PrivateKey [^java.security.KeyPair this]
     (-> this (.getPrivate))))
 

@@ -17,7 +17,7 @@
    described by this OpenMBeanConstructorInfo instance.
 
   returns: the description. - `java.lang.String`"
-  ([^javax.management.openmbean.OpenMBeanConstructorInfo this]
+  (^java.lang.String [^javax.management.openmbean.OpenMBeanConstructorInfo this]
     (-> this (.getDescription))))
 
 (defn get-name
@@ -25,7 +25,7 @@
    described by this OpenMBeanConstructorInfo instance.
 
   returns: the name. - `java.lang.String`"
-  ([^javax.management.openmbean.OpenMBeanConstructorInfo this]
+  (^java.lang.String [^javax.management.openmbean.OpenMBeanConstructorInfo this]
     (-> this (.getName))))
 
 (defn get-signature
@@ -53,7 +53,7 @@
   obj - the object to be compared for equality with this OpenMBeanConstructorInfo instance; - `java.lang.Object`
 
   returns: true if the specified object is equal to this OpenMBeanConstructorInfo instance. - `boolean`"
-  ([^javax.management.openmbean.OpenMBeanConstructorInfo this ^java.lang.Object obj]
+  (^Boolean [^javax.management.openmbean.OpenMBeanConstructorInfo this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -70,7 +70,7 @@
    Object.hashCode().
 
   returns: the hash code value for this OpenMBeanConstructorInfo instance - `int`"
-  ([^javax.management.openmbean.OpenMBeanConstructorInfo this]
+  (^Integer [^javax.management.openmbean.OpenMBeanConstructorInfo this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -80,6 +80,6 @@
    and the name and signature of the described constructor.
 
   returns: a string representation of this OpenMBeanConstructorInfo instance - `java.lang.String`"
-  ([^javax.management.openmbean.OpenMBeanConstructorInfo this]
+  (^java.lang.String [^javax.management.openmbean.OpenMBeanConstructorInfo this]
     (-> this (.toString))))
 

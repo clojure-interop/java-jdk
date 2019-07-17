@@ -124,7 +124,7 @@
    model to strings.
 
   returns: object responsible for converting values to strings. - `javax.swing.table.TableStringConverter`"
-  ([^javax.swing.table.TableRowSorter this]
+  (^javax.swing.table.TableStringConverter [^javax.swing.table.TableRowSorter this]
     (-> this (.getStringConverter))))
 
 (defn get-comparator
@@ -145,6 +145,6 @@
   returns: the Comparator for the specified column - `java.util.Comparator<?>`
 
   throws: java.lang.IndexOutOfBoundsException - if column is outside the range of the underlying model"
-  ([^javax.swing.table.TableRowSorter this ^Integer column]
+  (^java.util.Comparator [^javax.swing.table.TableRowSorter this ^Integer column]
     (-> this (.getComparator column))))
 

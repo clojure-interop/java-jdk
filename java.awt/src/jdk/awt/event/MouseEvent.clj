@@ -322,7 +322,7 @@
 
   returns: string   string text description of the combination of modifier
                     keys and mouse buttons that were down during the event - `java.lang.String`"
-  ([^Integer modifiers]
+  (^java.lang.String [^Integer modifiers]
     (MouseEvent/getMouseModifiersText modifiers)))
 
 (defn translate-point
@@ -339,7 +339,7 @@
   "Returns the number of mouse clicks associated with this event.
 
   returns: integer value for the number of clicks - `int`"
-  ([^java.awt.event.MouseEvent this]
+  (^Integer [^java.awt.event.MouseEvent this]
     (-> this (.getClickCount))))
 
 (defn get-x-on-screen
@@ -351,7 +351,7 @@
    associated with the Component's GraphicsConfiguration.
 
   returns: x  an integer indicating absolute horizontal position. - `int`"
-  ([^java.awt.event.MouseEvent this]
+  (^Integer [^java.awt.event.MouseEvent this]
     (-> this (.getXOnScreen))))
 
 (defn get-location-on-screen
@@ -364,7 +364,7 @@
 
   returns: a Point object containing the absolute  x
     and y coordinates. - `java.awt.Point`"
-  ([^java.awt.event.MouseEvent this]
+  (^java.awt.Point [^java.awt.event.MouseEvent this]
     (-> this (.getLocationOnScreen))))
 
 (defn popup-trigger?
@@ -378,7 +378,7 @@
 
   returns: boolean, true if this event is the popup menu trigger
            for this platform - `boolean`"
-  ([^java.awt.event.MouseEvent this]
+  (^Boolean [^java.awt.event.MouseEvent this]
     (-> this (.isPopupTrigger))))
 
 (defn get-modifiers-ex
@@ -417,7 +417,7 @@
    The above code will work even if new modifiers are added.
 
   returns: `int`"
-  ([^java.awt.event.MouseEvent this]
+  (^Integer [^java.awt.event.MouseEvent this]
     (-> this (.getModifiersEx))))
 
 (defn get-y-on-screen
@@ -429,7 +429,7 @@
    associated with the Component's GraphicsConfiguration.
 
   returns: y  an integer indicating absolute vertical position. - `int`"
-  ([^java.awt.event.MouseEvent this]
+  (^Integer [^java.awt.event.MouseEvent this]
     (-> this (.getYOnScreen))))
 
 (defn get-y
@@ -438,7 +438,7 @@
 
   returns: y  an integer indicating vertical position relative to
               the component - `int`"
-  ([^java.awt.event.MouseEvent this]
+  (^Integer [^java.awt.event.MouseEvent this]
     (-> this (.getY))))
 
 (defn get-x
@@ -447,7 +447,7 @@
 
   returns: x  an integer indicating horizontal position relative to
               the component - `int`"
-  ([^java.awt.event.MouseEvent this]
+  (^Integer [^java.awt.event.MouseEvent this]
     (-> this (.getX))))
 
 (defn get-button
@@ -496,7 +496,7 @@
 
            NOBUTTON, BUTTON1, BUTTON2 or BUTTON3
            if support for the extended mouse buttons is disabled by Java - `int`"
-  ([^java.awt.event.MouseEvent this]
+  (^Integer [^java.awt.event.MouseEvent this]
     (-> this (.getButton))))
 
 (defn param-string
@@ -504,7 +504,7 @@
    This method is useful for event-logging and for debugging.
 
   returns: a string identifying the event and its attributes - `java.lang.String`"
-  ([^java.awt.event.MouseEvent this]
+  (^java.lang.String [^java.awt.event.MouseEvent this]
     (-> this (.paramString))))
 
 (defn get-point
@@ -512,6 +512,6 @@
 
   returns: a Point object containing the x and y coordinates
            relative to the source component - `java.awt.Point`"
-  ([^java.awt.event.MouseEvent this]
+  (^java.awt.Point [^java.awt.event.MouseEvent this]
     (-> this (.getPoint))))
 

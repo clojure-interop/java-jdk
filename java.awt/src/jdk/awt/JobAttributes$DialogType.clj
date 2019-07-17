@@ -34,13 +34,13 @@
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  ([^java.awt.JobAttributes$DialogType this]
+  (^Integer [^java.awt.JobAttributes$DialogType this]
     (-> this (.hashCode))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^java.awt.JobAttributes$DialogType this]
+  (^java.lang.String [^java.awt.JobAttributes$DialogType this]
     (-> this (.toString))))
 

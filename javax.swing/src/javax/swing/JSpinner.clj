@@ -108,7 +108,7 @@
 
   returns: the previous legal value or null
      if one doesn't exist - `java.lang.Object`"
-  ([^javax.swing.JSpinner this]
+  (^java.lang.Object [^javax.swing.JSpinner this]
     (-> this (.getPreviousValue))))
 
 (defn get-editor
@@ -117,7 +117,7 @@
 
   returns: the component that displays and potentially
       changes the model's value - `javax.swing.JComponent`"
-  ([^javax.swing.JSpinner this]
+  (^javax.swing.JComponent [^javax.swing.JSpinner this]
     (-> this (.getEditor))))
 
 (defn commit-edit
@@ -135,7 +135,7 @@
    (L&F) class used to render this component.
 
   returns: the string `SpinnerUI` - `java.lang.String`"
-  ([^javax.swing.JSpinner this]
+  (^java.lang.String [^javax.swing.JSpinner this]
     (-> this (.getUIClassID))))
 
 (defn get-value
@@ -153,7 +153,7 @@
    getModel().getValue()
 
   returns: `java.lang.Object`"
-  ([^javax.swing.JSpinner this]
+  (^java.lang.Object [^javax.swing.JSpinner this]
     (-> this (.getValue))))
 
 (defn remove-change-listener
@@ -183,14 +183,14 @@
   "Returns the look and feel (L&F) object that renders this component.
 
   returns: the SpinnerUI object that renders this component - `javax.swing.plaf.SpinnerUI`"
-  ([^javax.swing.JSpinner this]
+  (^javax.swing.plaf.SpinnerUI [^javax.swing.JSpinner this]
     (-> this (.getUI))))
 
 (defn get-accessible-context
   "Gets the AccessibleContext for the JSpinner
 
   returns: the AccessibleContext for the JSpinner - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.JSpinner this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.JSpinner this]
     (-> this (.getAccessibleContext))))
 
 (defn set-value
@@ -217,7 +217,7 @@
    this spinners sequence of values.
 
   returns: the value of the model property - `javax.swing.SpinnerModel`"
-  ([^javax.swing.JSpinner this]
+  (^javax.swing.SpinnerModel [^javax.swing.JSpinner this]
     (-> this (.getModel))))
 
 (defn get-next-value
@@ -233,7 +233,7 @@
    getModel().getNextValue()
 
   returns: the next legal value or null if one doesn't exist - `java.lang.Object`"
-  ([^javax.swing.JSpinner this]
+  (^java.lang.Object [^javax.swing.JSpinner this]
     (-> this (.getNextValue))))
 
 (defn set-model

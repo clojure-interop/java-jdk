@@ -14,7 +14,7 @@
   "Fetch the default layout queue.
 
   returns: `javax.swing.text.LayoutQueue`"
-  ([]
+  (^javax.swing.text.LayoutQueue []
     (LayoutQueue/getDefaultQueue )))
 
 (defn *set-default-queue

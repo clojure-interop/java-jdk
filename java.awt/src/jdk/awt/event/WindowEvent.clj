@@ -167,7 +167,7 @@
   "Returns the originator of the event.
 
   returns: the Window object that originated the event - `java.awt.Window`"
-  ([^java.awt.event.WindowEvent this]
+  (^java.awt.Window [^java.awt.event.WindowEvent this]
     (-> this (.getWindow))))
 
 (defn get-opposite-window
@@ -181,7 +181,7 @@
 
   returns: the other Window involved in the focus or activation change, or
            null - `java.awt.Window`"
-  ([^java.awt.event.WindowEvent this]
+  (^java.awt.Window [^java.awt.event.WindowEvent this]
     (-> this (.getOppositeWindow))))
 
 (defn get-old-state
@@ -199,7 +199,7 @@
    and MAXIMIZED_VERT.
 
   returns: a bitwise mask of the previous window state - `int`"
-  ([^java.awt.event.WindowEvent this]
+  (^Integer [^java.awt.event.WindowEvent this]
     (-> this (.getOldState))))
 
 (defn get-new-state
@@ -217,7 +217,7 @@
    and MAXIMIZED_VERT.
 
   returns: a bitwise mask of the new window state - `int`"
-  ([^java.awt.event.WindowEvent this]
+  (^Integer [^java.awt.event.WindowEvent this]
     (-> this (.getNewState))))
 
 (defn param-string
@@ -225,6 +225,6 @@
    This method is useful for event-logging and for debugging.
 
   returns: a string identifying the event and its attributes - `java.lang.String`"
-  ([^java.awt.event.WindowEvent this]
+  (^java.lang.String [^java.awt.event.WindowEvent this]
     (-> this (.paramString))))
 

@@ -147,6 +147,6 @@
            provider; false otherwise. - `boolean`
 
   throws: java.lang.NullPointerException - if the given locale is null"
-  ([^java.util.spi.LocaleServiceProvider this ^java.util.Locale locale]
+  (^Boolean [^java.util.spi.LocaleServiceProvider this ^java.util.Locale locale]
     (-> this (.isSupportedLocale locale))))
 

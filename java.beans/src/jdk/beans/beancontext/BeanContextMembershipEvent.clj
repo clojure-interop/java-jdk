@@ -30,7 +30,7 @@
   "Gets the number of children affected by the notification.
 
   returns: the number of children affected by the notification - `int`"
-  ([^java.beans.beancontext.BeanContextMembershipEvent this]
+  (^Integer [^java.beans.beancontext.BeanContextMembershipEvent this]
     (-> this (.size))))
 
 (defn contains
@@ -40,7 +40,7 @@
 
   returns: true if affected, false
    if not - `boolean`"
-  ([^java.beans.beancontext.BeanContextMembershipEvent this ^java.lang.Object child]
+  (^Boolean [^java.beans.beancontext.BeanContextMembershipEvent this ^java.lang.Object child]
     (-> this (.contains child))))
 
 (defn to-array
@@ -54,6 +54,6 @@
   "Gets the array of children affected by this event.
 
   returns: the array of children effected - `java.util.Iterator`"
-  ([^java.beans.beancontext.BeanContextMembershipEvent this]
+  (^java.util.Iterator [^java.beans.beancontext.BeanContextMembershipEvent this]
     (-> this (.iterator))))
 

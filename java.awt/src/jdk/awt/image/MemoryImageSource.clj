@@ -100,7 +100,7 @@
 
   returns: true if the ImageConsumer
    is on the list; false otherwise. - `boolean`"
-  ([^java.awt.image.MemoryImageSource this ^java.awt.image.ImageConsumer ic]
+  (^Boolean [^java.awt.image.MemoryImageSource this ^java.awt.image.ImageConsumer ic]
     (-> this (.isConsumer ic))))
 
 (defn remove-consumer

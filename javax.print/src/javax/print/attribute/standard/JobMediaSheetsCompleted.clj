@@ -49,7 +49,7 @@
 
   returns: True if object is equivalent to this job media
             sheets completed attribute, false otherwise. - `boolean`"
-  ([^javax.print.attribute.standard.JobMediaSheetsCompleted this ^java.lang.Object object]
+  (^Boolean [^javax.print.attribute.standard.JobMediaSheetsCompleted this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -72,6 +72,6 @@
    `job-media-sheets-completed`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.JobMediaSheetsCompleted this]
+  (^java.lang.String [^javax.print.attribute.standard.JobMediaSheetsCompleted this]
     (-> this (.getName))))
 

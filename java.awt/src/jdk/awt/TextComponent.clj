@@ -21,7 +21,7 @@
    presented by this text component.
 
   returns: the selected text of this text component - `java.lang.String`"
-  ([^java.awt.TextComponent this]
+  (^java.lang.String [^java.awt.TextComponent this]
     (-> this (.getSelectedText))))
 
 (defn set-text
@@ -48,7 +48,7 @@
    By default, this is an empty string.
 
   returns: the value of this TextComponent - `java.lang.String`"
-  ([^java.awt.TextComponent this]
+  (^java.lang.String [^java.awt.TextComponent this]
     (-> this (.getText))))
 
 (defn select-all
@@ -61,7 +61,7 @@
    this text component.
 
   returns: the start position of the selected text - `int`"
-  ([^java.awt.TextComponent this]
+  (^Integer [^java.awt.TextComponent this]
     (-> this (.getSelectionStart))))
 
 (defn enable-input-methods
@@ -113,7 +113,7 @@
 
   returns: true if this text component is
                     editable; false otherwise. - `boolean`"
-  ([^java.awt.TextComponent this]
+  (^Boolean [^java.awt.TextComponent this]
     (-> this (.isEditable))))
 
 (defn get-caret-position
@@ -124,7 +124,7 @@
    caret position is 0.
 
   returns: the position of the text insertion caret - `int`"
-  ([^java.awt.TextComponent this]
+  (^Integer [^java.awt.TextComponent this]
     (-> this (.getCaretPosition))))
 
 (defn remove-notify
@@ -168,7 +168,7 @@
    this text component.
 
   returns: the end position of the selected text - `int`"
-  ([^java.awt.TextComponent this]
+  (^Integer [^java.awt.TextComponent this]
     (-> this (.getSelectionEnd))))
 
 (defn get-accessible-context
@@ -179,7 +179,7 @@
 
   returns: an AccessibleAWTTextComponent that serves as the
            AccessibleContext of this TextComponent - `javax.accessibility.AccessibleContext`"
-  ([^java.awt.TextComponent this]
+  (^javax.accessibility.AccessibleContext [^java.awt.TextComponent this]
     (-> this (.getAccessibleContext))))
 
 (defn set-selection-start
@@ -253,7 +253,7 @@
   returns: This text component's background color.
            If this text component does not have a background color,
            the background color of its parent is returned. - `java.awt.Color`"
-  ([^java.awt.TextComponent this]
+  (^java.awt.Color [^java.awt.TextComponent this]
     (-> this (.getBackground))))
 
 (defn get-input-method-requests
@@ -261,7 +261,7 @@
 
   returns: the input method request handler for this component,
             null by default - `java.awt.im.InputMethodRequests`"
-  ([^java.awt.TextComponent this]
+  (^java.awt.im.InputMethodRequests [^java.awt.TextComponent this]
     (-> this (.getInputMethodRequests))))
 
 (defn get-text-listeners

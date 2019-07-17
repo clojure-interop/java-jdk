@@ -20,7 +20,7 @@
                        processing. - `boolean`
 
   throws: java.lang.RuntimeException - Causes the JAX-WS runtime to cease handler processing and generate a fault."
-  ([^javax.xml.ws.handler.Handler this ^Handler.C context]
+  (^Boolean [^javax.xml.ws.handler.Handler this ^Handler.C context]
     (-> this (.handleMessage context))))
 
 (defn handle-fault
@@ -39,7 +39,7 @@
                        processing. - `boolean`
 
   throws: java.lang.RuntimeException - Causes the JAX-WS runtime to cease handler fault processing and dispatch the fault."
-  ([^javax.xml.ws.handler.Handler this ^Handler.C context]
+  (^Boolean [^javax.xml.ws.handler.Handler this ^Handler.C context]
     (-> this (.handleFault context))))
 
 (defn close

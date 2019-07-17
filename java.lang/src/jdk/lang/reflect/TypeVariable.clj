@@ -40,14 +40,14 @@
    generic declaration declared this type variable.
 
   returns: the generic declaration declared for this type variable. - `TypeVariable.D`"
-  ([^java.lang.reflect.TypeVariable this]
+  (^TypeVariable.D [^java.lang.reflect.TypeVariable this]
     (-> this (.getGenericDeclaration))))
 
 (defn get-name
   "Returns the name of this type variable, as it occurs in the source code.
 
   returns: the name of this type variable, as it appears in the source code - `java.lang.String`"
-  ([^java.lang.reflect.TypeVariable this]
+  (^java.lang.String [^java.lang.reflect.TypeVariable this]
     (-> this (.getName))))
 
 (defn get-annotated-bounds

@@ -226,13 +226,13 @@
 
   returns: An iterator that lazily loads providers for this loader's
             service - `java.util.Iterator<ServiceLoader.S>`"
-  ([^java.util.ServiceLoader this]
+  (^java.util.Iterator [^java.util.ServiceLoader this]
     (-> this (.iterator))))
 
 (defn to-string
   "Returns a string describing this service.
 
   returns: A descriptive string - `java.lang.String`"
-  ([^java.util.ServiceLoader this]
+  (^java.lang.String [^java.util.ServiceLoader this]
     (-> this (.toString))))
 

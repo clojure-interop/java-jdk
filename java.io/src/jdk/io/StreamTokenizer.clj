@@ -235,7 +235,7 @@
   Token['a'], line 10
 
   returns: a string representation of the token - `java.lang.String`"
-  ([^java.io.StreamTokenizer this]
+  (^java.lang.String [^java.io.StreamTokenizer this]
     (-> this (.toString))))
 
 (defn push-back
@@ -261,7 +261,7 @@
   returns: the value of the ttype field. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.StreamTokenizer this]
+  (^Integer [^java.io.StreamTokenizer this]
     (-> this (.nextToken))))
 
 (defn ordinary-char
@@ -348,6 +348,6 @@
   "Return the current line number.
 
   returns: the current line number of this stream tokenizer. - `int`"
-  ([^java.io.StreamTokenizer this]
+  (^Integer [^java.io.StreamTokenizer this]
     (-> this (.lineno))))
 

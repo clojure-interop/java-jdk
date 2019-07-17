@@ -38,7 +38,7 @@
            the algorithm described above. - `javax.naming.ldap.Control`
 
   throws: javax.naming.NamingException - if a naming exception was encountered while attempting to create the control object. If one of the factories accessed throws an exception, it is propagated up to the caller. If an error was encountered while loading and instantiating the factory and object classes, the exception is wrapped inside a NamingException and then rethrown."
-  ([^javax.naming.ldap.Control ctl ^javax.naming.Context ctx ^java.util.Hashtable env]
+  (^javax.naming.ldap.Control [^javax.naming.ldap.Control ctl ^javax.naming.Context ctx ^java.util.Hashtable env]
     (ControlFactory/getControlInstance ctl ctx env)))
 
 (defn get-control-instance
@@ -73,6 +73,6 @@
   returns: A possibly null Control. - `javax.naming.ldap.Control`
 
   throws: javax.naming.NamingException - If ctl contains invalid data that prevents it from being used to create a control. A factory should only throw an exception if it knows how to produce the control (identified by the OID) but is unable to because of, for example invalid BER data."
-  ([^javax.naming.ldap.ControlFactory this ^javax.naming.ldap.Control ctl]
+  (^javax.naming.ldap.Control [^javax.naming.ldap.ControlFactory this ^javax.naming.ldap.Control ctl]
     (-> this (.getControlInstance ctl))))
 

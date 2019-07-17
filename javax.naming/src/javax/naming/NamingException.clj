@@ -51,7 +51,7 @@
   returns: The possibly null detail string explaining more
            about this exception. If null, it means there is no
            detail message for this exception. - `java.lang.String`"
-  ([^javax.naming.NamingException this]
+  (^java.lang.String [^javax.naming.NamingException this]
     (-> this (.getExplanation))))
 
 (defn init-cause
@@ -66,7 +66,7 @@
   returns: a reference to this NamingException instance. - `java.lang.Throwable`
 
   throws: java.lang.IllegalArgumentException - if cause is this exception. (A throwable cannot be its own cause.)"
-  ([^javax.naming.NamingException this ^java.lang.Throwable cause]
+  (^java.lang.Throwable [^javax.naming.NamingException this ^java.lang.Throwable cause]
     (-> this (.initCause cause))))
 
 (defn set-resolved-name
@@ -92,7 +92,7 @@
 
   returns: The possibly null object that was resolved so far.
     null means that the resolved object field has not been set. - `java.lang.Object`"
-  ([^javax.naming.NamingException this]
+  (^java.lang.Object [^javax.naming.NamingException this]
     (-> this (.getResolvedObj))))
 
 (defn set-resolved-obj
@@ -113,9 +113,9 @@
   detail - If true, include details about the resolved object in addition to the other information. - `boolean`
 
   returns: The non-null string containing the string representation. - `java.lang.String`"
-  ([^javax.naming.NamingException this ^Boolean detail]
+  (^java.lang.String [^javax.naming.NamingException this ^Boolean detail]
     (-> this (.toString detail)))
-  ([^javax.naming.NamingException this]
+  (^java.lang.String [^javax.naming.NamingException this]
     (-> this (.toString))))
 
 (defn append-remaining-name
@@ -157,7 +157,7 @@
   returns: The part of the name that was resolved successfully.
             It is a composite name. It can be null, which means
             the resolved name field has not been set. - `javax.naming.Name`"
-  ([^javax.naming.NamingException this]
+  (^javax.naming.Name [^javax.naming.NamingException this]
     (-> this (.getResolvedName))))
 
 (defn get-remaining-name
@@ -166,7 +166,7 @@
   returns: The part of the name that has not been resolved.
             It is a composite name. It can be null, which means
             the remaining name field has not been set. - `javax.naming.Name`"
-  ([^javax.naming.NamingException this]
+  (^javax.naming.Name [^javax.naming.NamingException this]
     (-> this (.getRemainingName))))
 
 (defn get-root-cause
@@ -183,7 +183,7 @@
   returns: The possibly null exception that caused this naming
       exception. If null, it means no root cause has been
       set for this naming exception. - `java.lang.Throwable`"
-  ([^javax.naming.NamingException this]
+  (^java.lang.Throwable [^javax.naming.NamingException this]
     (-> this (.getRootCause))))
 
 (defn get-cause
@@ -194,7 +194,7 @@
 
   returns: the cause of this exception, or null if the
             cause is nonexistent or unknown. - `java.lang.Throwable`"
-  ([^javax.naming.NamingException this]
+  (^java.lang.Throwable [^javax.naming.NamingException this]
     (-> this (.getCause))))
 
 (defn set-root-cause

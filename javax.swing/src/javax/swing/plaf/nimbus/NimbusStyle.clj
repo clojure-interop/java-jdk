@@ -125,7 +125,7 @@
   in - Insets to place return value in. - `java.awt.Insets`
 
   returns: Sizing Insets. - `java.awt.Insets`"
-  ([^javax.swing.plaf.nimbus.NimbusStyle this ^javax.swing.plaf.synth.SynthContext ctx ^java.awt.Insets in]
+  (^java.awt.Insets [^javax.swing.plaf.nimbus.NimbusStyle this ^javax.swing.plaf.synth.SynthContext ctx ^java.awt.Insets in]
     (-> this (.getInsets ctx in))))
 
 (defn get-painter
@@ -138,7 +138,7 @@
   ctx - SynthContext identifying requester - `javax.swing.plaf.synth.SynthContext`
 
   returns: SynthPainter to use - `javax.swing.plaf.synth.SynthPainter`"
-  ([^javax.swing.plaf.nimbus.NimbusStyle this ^javax.swing.plaf.synth.SynthContext ctx]
+  (^javax.swing.plaf.synth.SynthPainter [^javax.swing.plaf.nimbus.NimbusStyle this ^javax.swing.plaf.synth.SynthContext ctx]
     (-> this (.getPainter ctx))))
 
 (defn opaque?
@@ -151,7 +151,7 @@
   ctx - SynthContext identifying requester - `javax.swing.plaf.synth.SynthContext`
 
   returns: true if region is opaque. - `boolean`"
-  ([^javax.swing.plaf.nimbus.NimbusStyle this ^javax.swing.plaf.synth.SynthContext ctx]
+  (^Boolean [^javax.swing.plaf.nimbus.NimbusStyle this ^javax.swing.plaf.synth.SynthContext ctx]
     (-> this (.isOpaque ctx))))
 
 (defn get
@@ -188,7 +188,7 @@
   key - must not be null - `java.lang.Object`
 
   returns: Value of the named property - `java.lang.Object`"
-  ([^javax.swing.plaf.nimbus.NimbusStyle this ^javax.swing.plaf.synth.SynthContext ctx ^java.lang.Object key]
+  (^java.lang.Object [^javax.swing.plaf.nimbus.NimbusStyle this ^javax.swing.plaf.synth.SynthContext ctx ^java.lang.Object key]
     (-> this (.get ctx key))))
 
 (defn get-background-painter
@@ -200,7 +200,7 @@
 
   returns: The background painter associated for the given state, or null if
    none could be found. - `javax.swing.Painter`"
-  ([^javax.swing.plaf.nimbus.NimbusStyle this ^javax.swing.plaf.synth.SynthContext ctx]
+  (^javax.swing.Painter [^javax.swing.plaf.nimbus.NimbusStyle this ^javax.swing.plaf.synth.SynthContext ctx]
     (-> this (.getBackgroundPainter ctx))))
 
 (defn get-foreground-painter
@@ -212,7 +212,7 @@
 
   returns: The foreground painter associated for the given state, or null if
    none could be found. - `javax.swing.Painter`"
-  ([^javax.swing.plaf.nimbus.NimbusStyle this ^javax.swing.plaf.synth.SynthContext ctx]
+  (^javax.swing.Painter [^javax.swing.plaf.nimbus.NimbusStyle this ^javax.swing.plaf.synth.SynthContext ctx]
     (-> this (.getForegroundPainter ctx))))
 
 (defn get-border-painter
@@ -224,6 +224,6 @@
 
   returns: The border painter associated for the given state, or null if
    none could be found. - `javax.swing.Painter`"
-  ([^javax.swing.plaf.nimbus.NimbusStyle this ^javax.swing.plaf.synth.SynthContext ctx]
+  (^javax.swing.Painter [^javax.swing.plaf.nimbus.NimbusStyle this ^javax.swing.plaf.synth.SynthContext ctx]
     (-> this (.getBorderPainter ctx))))
 

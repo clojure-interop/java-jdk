@@ -63,7 +63,7 @@
 
   returns: the X coordinate of the upper-left corner of
    the framing rectangle. - `double`"
-  ([^java.awt.geom.Ellipse2D$Double this]
+  (^Double [^java.awt.geom.Ellipse2D$Double this]
     (-> this (.getX))))
 
 (defn get-y
@@ -72,7 +72,7 @@
 
   returns: the Y coordinate of the upper-left corner of
    the framing rectangle. - `double`"
-  ([^java.awt.geom.Ellipse2D$Double this]
+  (^Double [^java.awt.geom.Ellipse2D$Double this]
     (-> this (.getY))))
 
 (defn get-width
@@ -80,7 +80,7 @@
    double precision.
 
   returns: the width of the framing rectangle. - `double`"
-  ([^java.awt.geom.Ellipse2D$Double this]
+  (^Double [^java.awt.geom.Ellipse2D$Double this]
     (-> this (.getWidth))))
 
 (defn get-height
@@ -88,7 +88,7 @@
    in double precision.
 
   returns: the height of the framing rectangle. - `double`"
-  ([^java.awt.geom.Ellipse2D$Double this]
+  (^Double [^java.awt.geom.Ellipse2D$Double this]
     (-> this (.getHeight))))
 
 (defn empty?
@@ -98,7 +98,7 @@
 
   returns: true if the RectangularShape is empty;
             false otherwise. - `boolean`"
-  ([^java.awt.geom.Ellipse2D$Double this]
+  (^Boolean [^java.awt.geom.Ellipse2D$Double this]
     (-> this (.isEmpty))))
 
 (defn set-frame
@@ -152,6 +152,6 @@
 
   returns: an instance of Rectangle2D that is a
                    high-precision bounding box of the Shape. - `java.awt.geom.Rectangle2D`"
-  ([^java.awt.geom.Ellipse2D$Double this]
+  (^java.awt.geom.Rectangle2D [^java.awt.geom.Ellipse2D$Double this]
     (-> this (.getBounds2D))))
 

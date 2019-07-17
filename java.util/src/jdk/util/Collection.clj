@@ -99,7 +99,7 @@
   returns: true if this collection changed as a result of the call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the addAll operation is not supported by this collection"
-  ([^java.util.Collection this ^Collection.E> c]
+  (^Boolean [^java.util.Collection this ^Collection.E> c]
     (-> this (.addAll c))))
 
 (defn stream
@@ -184,7 +184,7 @@
            element - `boolean`
 
   throws: java.lang.ClassCastException - if the type of the specified element is incompatible with this collection (optional)"
-  ([^java.util.Collection this ^java.lang.Object o]
+  (^Boolean [^java.util.Collection this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn iterator
@@ -194,7 +194,7 @@
    guarantee).
 
   returns: an Iterator over the elements in this collection - `java.util.Iterator<Collection.E>`"
-  ([^java.util.Collection this]
+  (^java.util.Iterator [^java.util.Collection this]
     (-> this (.iterator))))
 
 (defn remove
@@ -211,7 +211,7 @@
   returns: true if an element was removed as a result of this call - `boolean`
 
   throws: java.lang.ClassCastException - if the type of the specified element is incompatible with this collection (optional)"
-  ([^java.util.Collection this ^java.lang.Object o]
+  (^Boolean [^java.util.Collection this ^java.lang.Object o]
     (-> this (.remove o))))
 
 (defn hash-code
@@ -225,7 +225,7 @@
    c1.hashCode()==c2.hashCode().
 
   returns: the hash code value for this collection - `int`"
-  ([^java.util.Collection this]
+  (^Integer [^java.util.Collection this]
     (-> this (.hashCode))))
 
 (defn add
@@ -253,14 +253,14 @@
            call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the add operation is not supported by this collection"
-  ([^java.util.Collection this ^Collection.E e]
+  (^Boolean [^java.util.Collection this ^Collection.E e]
     (-> this (.add e))))
 
 (defn empty?
   "Returns true if this collection contains no elements.
 
   returns: true if this collection contains no elements - `boolean`"
-  ([^java.util.Collection this]
+  (^Boolean [^java.util.Collection this]
     (-> this (.isEmpty))))
 
 (defn size
@@ -269,7 +269,7 @@
    Integer.MAX_VALUE.
 
   returns: the number of elements in this collection - `int`"
-  ([^java.util.Collection this]
+  (^Integer [^java.util.Collection this]
     (-> this (.size))))
 
 (defn retain-all
@@ -283,7 +283,7 @@
   returns: true if this collection changed as a result of the call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the retainAll operation is not supported by this collection"
-  ([^java.util.Collection this ^java.util.Collection c]
+  (^Boolean [^java.util.Collection this ^java.util.Collection c]
     (-> this (.retainAll c))))
 
 (defn clear
@@ -350,7 +350,7 @@
            call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the removeAll method is not supported by this collection"
-  ([^java.util.Collection this ^java.util.Collection c]
+  (^Boolean [^java.util.Collection this ^java.util.Collection c]
     (-> this (.removeAll c))))
 
 (defn equals
@@ -382,7 +382,7 @@
 
   returns: true if the specified object is equal to this
    collection - `boolean`"
-  ([^java.util.Collection this ^java.lang.Object o]
+  (^Boolean [^java.util.Collection this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn contains-all
@@ -395,6 +395,6 @@
            in the specified collection - `boolean`
 
   throws: java.lang.ClassCastException - if the types of one or more elements in the specified collection are incompatible with this collection (optional)"
-  ([^java.util.Collection this ^java.util.Collection c]
+  (^Boolean [^java.util.Collection this ^java.util.Collection c]
     (-> this (.containsAll c))))
 

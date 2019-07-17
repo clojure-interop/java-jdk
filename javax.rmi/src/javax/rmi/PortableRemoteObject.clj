@@ -33,7 +33,7 @@
   returns: the most derived stub for the object. - `java.rmi.Remote`
 
   throws: java.rmi.NoSuchObjectException - if a stub cannot be located for the given server object."
-  ([^java.rmi.Remote obj]
+  (^java.rmi.Remote [^java.rmi.Remote obj]
     (PortableRemoteObject/toStub obj)))
 
 (defn *unexport-object
@@ -56,7 +56,7 @@
   returns: an object which can be cast to the desired type. - `java.lang.Object`
 
   throws: java.lang.ClassCastException - if narrowFrom cannot be cast to narrowTo."
-  ([^java.lang.Object narrow-from ^java.lang.Class narrow-to]
+  (^java.lang.Object [^java.lang.Object narrow-from ^java.lang.Class narrow-to]
     (PortableRemoteObject/narrow narrow-from narrow-to)))
 
 (defn *connect

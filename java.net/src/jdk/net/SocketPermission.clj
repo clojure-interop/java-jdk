@@ -152,7 +152,7 @@
 
   returns: true if the specified permission is implied by this object,
    false if not. - `boolean`"
-  ([^java.net.SocketPermission this ^java.security.Permission p]
+  (^Boolean [^java.net.SocketPermission this ^java.security.Permission p]
     (-> this (.implies p))))
 
 (defn equals
@@ -164,14 +164,14 @@
     same hostname, port range, and actions as this
     SocketPermission object. However, port range will be ignored
     in the comparison if obj only contains the action, 'resolve'. - `boolean`"
-  ([^java.net.SocketPermission this ^java.lang.Object obj]
+  (^Boolean [^java.net.SocketPermission this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Returns the hash code value for this object.
 
   returns: a hash code value for this object. - `int`"
-  ([^java.net.SocketPermission this]
+  (^Integer [^java.net.SocketPermission this]
     (-> this (.hashCode))))
 
 (defn get-actions
@@ -180,7 +180,7 @@
    connect, listen, accept, resolve.
 
   returns: the canonical string representation of the actions. - `java.lang.String`"
-  ([^java.net.SocketPermission this]
+  (^java.lang.String [^java.net.SocketPermission this]
     (-> this (.getActions))))
 
 (defn new-permission-collection
@@ -193,6 +193,6 @@
    method to be implemented in an efficient (and consistent) manner.
 
   returns: a new PermissionCollection object suitable for storing SocketPermissions. - `java.security.PermissionCollection`"
-  ([^java.net.SocketPermission this]
+  (^java.security.PermissionCollection [^java.net.SocketPermission this]
     (-> this (.newPermissionCollection))))
 

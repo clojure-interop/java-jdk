@@ -21,7 +21,7 @@
   returns: the stub for the activatable remote object - `java.rmi.Remote`
 
   throws: java.rmi.activation.UnknownGroupException - if group id in desc is not registered with the activation system"
-  ([^java.rmi.activation.ActivationDesc desc]
+  (^java.rmi.Remote [^java.rmi.activation.ActivationDesc desc]
     (Activatable/register desc)))
 
 (defn *inactive
@@ -46,7 +46,7 @@
    pending/executing calls in which case it cannot be deactivated - `boolean`
 
   throws: java.rmi.activation.UnknownObjectException - if object is not known (it may already be inactive)"
-  ([^java.rmi.activation.ActivationID id]
+  (^Boolean [^java.rmi.activation.ActivationID id]
     (Activatable/inactive id)))
 
 (defn *unregister
@@ -109,11 +109,11 @@
    descriptor with the activation system - `java.rmi.activation.ActivationID`
 
   throws: java.rmi.activation.ActivationException - if activation group is not active"
-  ([^java.rmi.Remote obj ^java.lang.String location ^java.rmi.MarshalledObject data ^Boolean restart ^Integer port ^java.rmi.server.RMIClientSocketFactory csf ^java.rmi.server.RMIServerSocketFactory ssf]
+  (^java.rmi.activation.ActivationID [^java.rmi.Remote obj ^java.lang.String location ^java.rmi.MarshalledObject data ^Boolean restart ^Integer port ^java.rmi.server.RMIClientSocketFactory csf ^java.rmi.server.RMIServerSocketFactory ssf]
     (Activatable/exportObject obj location data restart port csf ssf))
-  ([^java.rmi.Remote obj ^java.lang.String location ^java.rmi.MarshalledObject data ^Boolean restart ^Integer port]
+  (^java.rmi.activation.ActivationID [^java.rmi.Remote obj ^java.lang.String location ^java.rmi.MarshalledObject data ^Boolean restart ^Integer port]
     (Activatable/exportObject obj location data restart port))
-  ([^java.rmi.Remote obj ^java.rmi.activation.ActivationID id ^Integer port]
+  (^java.rmi.Remote [^java.rmi.Remote obj ^java.rmi.activation.ActivationID id ^Integer port]
     (Activatable/exportObject obj id port)))
 
 (defn *unexport-object
@@ -131,6 +131,6 @@
   returns: true if operation is successful, false otherwise - `boolean`
 
   throws: java.rmi.NoSuchObjectException - if the remote object is not currently exported"
-  ([^java.rmi.Remote obj ^Boolean force]
+  (^Boolean [^java.rmi.Remote obj ^Boolean force]
     (Activatable/unexportObject obj force)))
 

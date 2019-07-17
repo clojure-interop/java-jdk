@@ -37,7 +37,7 @@
 
   returns: the binding Object stored with this key; if there
             are no keys, it will return null - `java.lang.Object`"
-  ([^javax.swing.AbstractAction this ^java.lang.String key]
+  (^java.lang.Object [^javax.swing.AbstractAction this ^java.lang.String key]
     (-> this (.getValue key))))
 
 (defn put-value
@@ -52,7 +52,7 @@
   "Returns true if the action is enabled.
 
   returns: true if the action is enabled, false otherwise - `boolean`"
-  ([^javax.swing.AbstractAction this]
+  (^Boolean [^javax.swing.AbstractAction this]
     (-> this (.isEnabled))))
 
 (defn set-enabled

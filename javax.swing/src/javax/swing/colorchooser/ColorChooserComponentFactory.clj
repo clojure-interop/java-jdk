@@ -21,6 +21,6 @@
 
 (defn *get-preview-panel
   "returns: `javax.swing.JComponent`"
-  ([]
+  (^javax.swing.JComponent []
     (ColorChooserComponentFactory/getPreviewPanel )))
 

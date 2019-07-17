@@ -86,7 +86,7 @@
 
   returns: The average number of characters produced
             per byte of input - `float`"
-  ([^java.nio.charset.CharsetDecoder this]
+  (^Float [^java.nio.charset.CharsetDecoder this]
     (-> this (.averageCharsPerByte))))
 
 (defn on-unmappable-character
@@ -99,7 +99,7 @@
   returns: This decoder - `java.nio.charset.CharsetDecoder`
 
   throws: java.lang.IllegalArgumentException - If the precondition on the parameter does not hold"
-  ([^java.nio.charset.CharsetDecoder this ^java.nio.charset.CodingErrorAction new-action]
+  (^java.nio.charset.CharsetDecoder [^java.nio.charset.CharsetDecoder this ^java.nio.charset.CodingErrorAction new-action]
     (-> this (.onUnmappableCharacter new-action))))
 
 (defn unmappable-character-action
@@ -107,14 +107,14 @@
 
   returns: The current unmappable-character action, which is never
            null - `java.nio.charset.CodingErrorAction`"
-  ([^java.nio.charset.CharsetDecoder this]
+  (^java.nio.charset.CodingErrorAction [^java.nio.charset.CharsetDecoder this]
     (-> this (.unmappableCharacterAction))))
 
 (defn malformed-input-action
   "Returns this decoder's current action for malformed-input errors.
 
   returns: The current malformed-input action, which is never null - `java.nio.charset.CodingErrorAction`"
-  ([^java.nio.charset.CharsetDecoder this]
+  (^java.nio.charset.CodingErrorAction [^java.nio.charset.CharsetDecoder this]
     (-> this (.malformedInputAction))))
 
 (defn replacement
@@ -122,7 +122,7 @@
 
   returns: This decoder's current replacement,
             which is never null and is never empty - `java.lang.String`"
-  ([^java.nio.charset.CharsetDecoder this]
+  (^java.lang.String [^java.nio.charset.CharsetDecoder this]
     (-> this (.replacement))))
 
 (defn decode
@@ -200,9 +200,9 @@
   returns: A coder-result object describing the reason for termination - `java.nio.charset.CoderResult`
 
   throws: java.lang.IllegalStateException - If a decoding operation is already in progress and the previous step was an invocation neither of the reset method, nor of this method with a value of false for the endOfInput parameter, nor of this method with a value of true for the endOfInput parameter but a return value indicating an incomplete decoding operation"
-  ([^java.nio.charset.CharsetDecoder this ^java.nio.ByteBuffer in ^java.nio.CharBuffer out ^Boolean end-of-input]
+  (^java.nio.charset.CoderResult [^java.nio.charset.CharsetDecoder this ^java.nio.ByteBuffer in ^java.nio.CharBuffer out ^Boolean end-of-input]
     (-> this (.decode in out end-of-input)))
-  ([^java.nio.charset.CharsetDecoder this ^java.nio.ByteBuffer in]
+  (^java.nio.CharBuffer [^java.nio.charset.CharsetDecoder this ^java.nio.ByteBuffer in]
     (-> this (.decode in))))
 
 (defn replace-with
@@ -217,7 +217,7 @@
   returns: This decoder - `java.nio.charset.CharsetDecoder`
 
   throws: java.lang.IllegalArgumentException - If the preconditions on the parameter do not hold"
-  ([^java.nio.charset.CharsetDecoder this ^java.lang.String new-replacement]
+  (^java.nio.charset.CharsetDecoder [^java.nio.charset.CharsetDecoder this ^java.lang.String new-replacement]
     (-> this (.replaceWith new-replacement))))
 
 (defn detected-charset
@@ -237,7 +237,7 @@
             or null if the charset has not yet been determined - `java.nio.charset.Charset`
 
   throws: java.lang.IllegalStateException - If insufficient bytes have been read to determine a charset"
-  ([^java.nio.charset.CharsetDecoder this]
+  (^java.nio.charset.Charset [^java.nio.charset.CharsetDecoder this]
     (-> this (.detectedCharset))))
 
 (defn flush
@@ -270,7 +270,7 @@
             CoderResult.OVERFLOW - `java.nio.charset.CoderResult`
 
   throws: java.lang.IllegalStateException - If the previous step of the current decoding operation was an invocation neither of the flush method nor of the three-argument decode method with a value of true for the endOfInput parameter"
-  ([^java.nio.charset.CharsetDecoder this ^java.nio.CharBuffer out]
+  (^java.nio.charset.CoderResult [^java.nio.charset.CharsetDecoder this ^java.nio.CharBuffer out]
     (-> this (.flush out))))
 
 (defn reset
@@ -281,7 +281,7 @@
    charset-specific reset actions.
 
   returns: This decoder - `java.nio.charset.CharsetDecoder`"
-  ([^java.nio.charset.CharsetDecoder this]
+  (^java.nio.charset.CharsetDecoder [^java.nio.charset.CharsetDecoder this]
     (-> this (.reset))))
 
 (defn on-malformed-input
@@ -294,7 +294,7 @@
   returns: This decoder - `java.nio.charset.CharsetDecoder`
 
   throws: java.lang.IllegalArgumentException - If the precondition on the parameter does not hold"
-  ([^java.nio.charset.CharsetDecoder this ^java.nio.charset.CodingErrorAction new-action]
+  (^java.nio.charset.CharsetDecoder [^java.nio.charset.CharsetDecoder this ^java.nio.charset.CodingErrorAction new-action]
     (-> this (.onMalformedInput new-action))))
 
 (defn charset-detected?
@@ -319,7 +319,7 @@
             specific charset - `boolean`
 
   throws: java.lang.UnsupportedOperationException - If this decoder does not implement an auto-detecting charset"
-  ([^java.nio.charset.CharsetDecoder this]
+  (^Boolean [^java.nio.charset.CharsetDecoder this]
     (-> this (.isCharsetDetected))))
 
 (defn auto-detecting?
@@ -331,7 +331,7 @@
 
   returns: true if, and only if, this decoder implements an
             auto-detecting charset - `boolean`"
-  ([^java.nio.charset.CharsetDecoder this]
+  (^Boolean [^java.nio.charset.CharsetDecoder this]
     (-> this (.isAutoDetecting))))
 
 (defn max-chars-per-byte
@@ -341,13 +341,13 @@
 
   returns: The maximum number of characters that will be produced per
             byte of input - `float`"
-  ([^java.nio.charset.CharsetDecoder this]
+  (^Float [^java.nio.charset.CharsetDecoder this]
     (-> this (.maxCharsPerByte))))
 
 (defn charset
   "Returns the charset that created this decoder.
 
   returns: This decoder's charset - `java.nio..Charset`"
-  ([^java.nio.charset.CharsetDecoder this]
+  (^java.nio..Charset [^java.nio.charset.CharsetDecoder this]
     (-> this (.charset))))
 

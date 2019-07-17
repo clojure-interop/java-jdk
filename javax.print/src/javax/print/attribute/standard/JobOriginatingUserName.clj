@@ -51,7 +51,7 @@
 
   returns: True if object is equivalent to this job
             originating user name attribute, false otherwise. - `boolean`"
-  ([^javax.print.attribute.standard.JobOriginatingUserName this ^java.lang.Object object]
+  (^Boolean [^javax.print.attribute.standard.JobOriginatingUserName this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -74,6 +74,6 @@
    category name is `job-originating-user-name`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([^javax.print.attribute.standard.JobOriginatingUserName this]
+  (^java.lang.String [^javax.print.attribute.standard.JobOriginatingUserName this]
     (-> this (.getName))))
 

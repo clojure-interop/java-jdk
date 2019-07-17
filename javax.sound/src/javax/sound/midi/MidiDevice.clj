@@ -73,7 +73,7 @@
 
   returns: maximum number of MIDI OUT connections,
    or -1 if an unlimited number of connections is available. - `int`"
-  ([^javax.sound.midi.MidiDevice this]
+  (^Integer [^javax.sound.midi.MidiDevice this]
     (-> this (.getMaxTransmitters))))
 
 (defn get-microsecond-position
@@ -86,7 +86,7 @@
 
   returns: the current time-stamp of the device in microseconds,
    or -1 if time-stamping is not supported by the device. - `long`"
-  ([^javax.sound.midi.MidiDevice this]
+  (^Long [^javax.sound.midi.MidiDevice this]
     (-> this (.getMicrosecondPosition))))
 
 (defn get-transmitter
@@ -106,7 +106,7 @@
   returns: a MIDI OUT transmitter for the device. - `javax.sound.midi.Transmitter`
 
   throws: javax.sound.midi.MidiUnavailableException - thrown if a transmitter is not available due to resource restrictions"
-  ([^javax.sound.midi.MidiDevice this]
+  (^javax.sound.midi.Transmitter [^javax.sound.midi.MidiDevice this]
     (-> this (.getTransmitter))))
 
 (defn get-receiver
@@ -126,7 +126,7 @@
   returns: a receiver for the device. - `javax.sound.midi.Receiver`
 
   throws: javax.sound.midi.MidiUnavailableException - thrown if a receiver is not available due to resource restrictions"
-  ([^javax.sound.midi.MidiDevice this]
+  (^javax.sound.midi.Receiver [^javax.sound.midi.MidiDevice this]
     (-> this (.getReceiver))))
 
 (defn get-max-receivers
@@ -135,7 +135,7 @@
 
   returns: maximum number of MIDI IN connections,
    or -1 if an unlimited number of connections is available. - `int`"
-  ([^javax.sound.midi.MidiDevice this]
+  (^Integer [^javax.sound.midi.MidiDevice this]
     (-> this (.getMaxReceivers))))
 
 (defn close
@@ -153,7 +153,7 @@
    Strings containing its name, vendor, and description.
 
   returns: device info - `javax.sound.midi.MidiDevice.Info`"
-  ([^javax.sound.midi.MidiDevice this]
+  (^javax.sound.midi.MidiDevice.Info [^javax.sound.midi.MidiDevice this]
     (-> this (.getDeviceInfo))))
 
 (defn open?
@@ -161,7 +161,7 @@
 
   returns: true if the device is open, otherwise
    false - `boolean`"
-  ([^javax.sound.midi.MidiDevice this]
+  (^Boolean [^javax.sound.midi.MidiDevice this]
     (-> this (.isOpen))))
 
 (defn open
@@ -191,7 +191,7 @@
    the MidiDeviceTransmitter interface.
 
   returns: an unmodifiable list of the open transmitters - `java.util.List<javax.sound.midi.Transmitter>`"
-  ([^javax.sound.midi.MidiDevice this]
+  (^java.util.List [^javax.sound.midi.MidiDevice this]
     (-> this (.getTransmitters))))
 
 (defn get-receivers
@@ -204,6 +204,6 @@
    the MidiDeviceReceiver interface.
 
   returns: an unmodifiable list of the open receivers - `java.util.List<javax.sound.midi.Receiver>`"
-  ([^javax.sound.midi.MidiDevice this]
+  (^java.util.List [^javax.sound.midi.MidiDevice this]
     (-> this (.getReceivers))))
 

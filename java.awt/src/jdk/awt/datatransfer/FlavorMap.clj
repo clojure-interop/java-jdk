@@ -17,7 +17,7 @@
 
   returns: a java.util.Map of DataFlavors to
            String natives - `java.util.Map<java.awt.datatransfer.DataFlavor,java.lang.String>`"
-  ([^java.awt.datatransfer.FlavorMap this ^java.awt.datatransfer.DataFlavor[] flavors]
+  (^java.util.Map [^java.awt.datatransfer.FlavorMap this flavors]
     (-> this (.getNativesForFlavors flavors))))
 
 (defn get-flavors-for-natives
@@ -31,6 +31,6 @@
 
   returns: a java.util.Map of String natives to
            DataFlavors - `java.util.Map<java.lang.String,java.awt.datatransfer.DataFlavor>`"
-  ([^java.awt.datatransfer.FlavorMap this ^java.lang.String[] natives]
+  (^java.util.Map [^java.awt.datatransfer.FlavorMap this natives]
     (-> this (.getFlavorsForNatives natives))))
 

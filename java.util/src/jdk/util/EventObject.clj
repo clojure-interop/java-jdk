@@ -22,13 +22,13 @@
   "The object on which the Event initially occurred.
 
   returns: The object on which the Event initially occurred. - `java.lang.Object`"
-  ([^java.util.EventObject this]
+  (^java.lang.Object [^java.util.EventObject this]
     (-> this (.getSource))))
 
 (defn to-string
   "Returns a String representation of this EventObject.
 
   returns: A a String representation of this EventObject. - `java.lang.String`"
-  ([^java.util.EventObject this]
+  (^java.lang.String [^java.util.EventObject this]
     (-> this (.toString))))
 

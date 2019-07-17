@@ -15,7 +15,7 @@
    scope in the ScriptContext.
 
   returns: list of scope values - `java.util.List<java.lang.Integer>`"
-  ([^javax.script.SimpleScriptContext this]
+  (^java.util.List [^javax.script.SimpleScriptContext this]
     (-> this (.getScopes))))
 
 (defn set-reader
@@ -30,14 +30,14 @@
   "Returns the Writer for scripts to use when displaying output.
 
   returns: The Writer. - `java.io.Writer`"
-  ([^javax.script.SimpleScriptContext this]
+  (^java.io.Writer [^javax.script.SimpleScriptContext this]
     (-> this (.getWriter))))
 
 (defn get-error-writer
   "Returns the Writer used to display error output.
 
   returns: The Writer - `java.io.Writer`"
-  ([^javax.script.SimpleScriptContext this]
+  (^java.io.Writer [^javax.script.SimpleScriptContext this]
     (-> this (.getErrorWriter))))
 
 (defn get-attribute
@@ -50,9 +50,9 @@
    does not exist in the given scope. - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if the name is empty or if the value of scope is invalid."
-  ([^javax.script.SimpleScriptContext this ^java.lang.String name ^Integer scope]
+  (^java.lang.Object [^javax.script.SimpleScriptContext this ^java.lang.String name ^Integer scope]
     (-> this (.getAttribute name scope)))
-  ([^javax.script.SimpleScriptContext this ^java.lang.String name]
+  (^java.lang.Object [^javax.script.SimpleScriptContext this ^java.lang.String name]
     (-> this (.getAttribute name))))
 
 (defn get-reader
@@ -60,7 +60,7 @@
    input.
 
   returns: The Reader. - `java.io.Reader`"
-  ([^javax.script.SimpleScriptContext this]
+  (^java.io.Reader [^javax.script.SimpleScriptContext this]
     (-> this (.getReader))))
 
 (defn remove-attribute
@@ -72,7 +72,7 @@
   returns: The removed value. - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if the name is empty or if the scope is invalid."
-  ([^javax.script.SimpleScriptContext this ^java.lang.String name ^Integer scope]
+  (^java.lang.Object [^javax.script.SimpleScriptContext this ^java.lang.String name ^Integer scope]
     (-> this (.removeAttribute name scope))))
 
 (defn set-attribute
@@ -110,7 +110,7 @@
   returns: The value of either the  engineScope or globalScope field. - `javax.script.Bindings`
 
   throws: java.lang.IllegalArgumentException - if the value of scope is invalid."
-  ([^javax.script.SimpleScriptContext this ^Integer scope]
+  (^javax.script.Bindings [^javax.script.SimpleScriptContext this ^Integer scope]
     (-> this (.getBindings scope))))
 
 (defn get-attributes-scope
@@ -122,7 +122,7 @@
    name is defined in any scope. - `int`
 
   throws: java.lang.NullPointerException - if name is null."
-  ([^javax.script.SimpleScriptContext this ^java.lang.String name]
+  (^Integer [^javax.script.SimpleScriptContext this ^java.lang.String name]
     (-> this (.getAttributesScope name))))
 
 (defn set-bindings

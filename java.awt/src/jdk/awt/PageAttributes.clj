@@ -117,7 +117,7 @@
    attribute is updated to the value chosen by the user.
 
   returns: one of the constant fields of the MediaType class. - `java.awt.PageAttributes.MediaType`"
-  ([^java.awt.PageAttributes this]
+  (^java.awt.PageAttributes.MediaType [^java.awt.PageAttributes this]
     (-> this (.getMedia))))
 
 (defn set-print-quality-to-default
@@ -130,7 +130,7 @@
   "Returns a string representation of this PageAttributes.
 
   returns: the string representation. - `java.lang.String`"
-  ([^java.awt.PageAttributes this]
+  (^java.lang.String [^java.awt.PageAttributes this]
     (-> this (.toString))))
 
 (defn set-media
@@ -158,7 +158,7 @@
    target printer.
 
   returns: OriginType.PHYSICAL or OriginType.PRINTABLE - `java.awt.PageAttributes.OriginType`"
-  ([^java.awt.PageAttributes this]
+  (^java.awt.PageAttributes.OriginType [^java.awt.PageAttributes this]
     (-> this (.getOrigin))))
 
 (defn get-orientation-requested
@@ -167,7 +167,7 @@
 
   returns: OrientationRequestedType.PORTRAIT or
             OrientationRequestedType.LANDSCAPE. - `java.awt.PageAttributes.OrientationRequestedType`"
-  ([^java.awt.PageAttributes this]
+  (^java.awt.PageAttributes.OrientationRequestedType [^java.awt.PageAttributes this]
     (-> this (.getOrientationRequested))))
 
 (defn set-color
@@ -187,7 +187,7 @@
 
   returns: PrintQualityType.DRAFT, PrintQualityType.NORMAL, or
             PrintQualityType.HIGH - `java.awt.PageAttributes.PrintQualityType`"
-  ([^java.awt.PageAttributes this]
+  (^java.awt.PageAttributes.PrintQualityType [^java.awt.PageAttributes this]
     (-> this (.getPrintQuality))))
 
 (defn set-orientation-requested
@@ -206,14 +206,14 @@
 
   returns: the newly created copy. It is safe to cast this Object into
             a PageAttributes. - `java.lang.Object`"
-  ([^java.awt.PageAttributes this]
+  (^java.lang.Object [^java.awt.PageAttributes this]
     (-> this (.clone))))
 
 (defn hash-code
   "Returns a hash code value for this PageAttributes.
 
   returns: the hash code. - `int`"
-  ([^java.awt.PageAttributes this]
+  (^Integer [^java.awt.PageAttributes this]
     (-> this (.hashCode))))
 
 (defn set
@@ -241,7 +241,7 @@
    by the user.
 
   returns: ColorType.COLOR or ColorType.MONOCHROME. - `java.awt.PageAttributes.ColorType`"
-  ([^java.awt.PageAttributes this]
+  (^java.awt.PageAttributes.ColorType [^java.awt.PageAttributes this]
     (-> this (.getColor))))
 
 (defn set-printer-resolution-to-default
@@ -265,6 +265,6 @@
 
   returns: whether obj is equal to this PageAttribute according to the
             above criteria. - `boolean`"
-  ([^java.awt.PageAttributes this ^java.lang.Object obj]
+  (^Boolean [^java.awt.PageAttributes this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

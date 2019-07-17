@@ -28,7 +28,7 @@
   returns: The current value of the feature (true or false). - `boolean`
 
   throws: org.xml.sax.SAXNotRecognizedException - If the feature value can't be assigned or retrieved."
-  ([^javax.xml.validation.Validator this ^java.lang.String name]
+  (^Boolean [^javax.xml.validation.Validator this ^java.lang.String name]
     (-> this (.getFeature name))))
 
 (defn get-resource-resolver
@@ -38,7 +38,7 @@
         the setResourceResolver(LSResourceResolver) method, or null
         if that method has never been called since this Validator
         has created. - `org.w3c.dom.ls.LSResourceResolver`"
-  ([^javax.xml.validation.Validator this]
+  (^org.w3c.dom.ls.LSResourceResolver [^javax.xml.validation.Validator this]
     (-> this (.getResourceResolver))))
 
 (defn set-resource-resolver
@@ -165,7 +165,7 @@
         the setErrorHandler(ErrorHandler) method, or null
         if that method has never been called since this Validator
         has created. - `org.xml.sax.ErrorHandler`"
-  ([^javax.xml.validation.Validator this]
+  (^org.xml.sax.ErrorHandler [^javax.xml.validation.Validator this]
     (-> this (.getErrorHandler))))
 
 (defn reset
@@ -253,7 +253,7 @@
   returns: The current value of the property. - `java.lang.Object`
 
   throws: org.xml.sax.SAXNotRecognizedException - If the property value can't be assigned or retrieved."
-  ([^javax.xml.validation.Validator this ^java.lang.String name]
+  (^java.lang.Object [^javax.xml.validation.Validator this ^java.lang.String name]
     (-> this (.getProperty name))))
 
 (defn set-feature

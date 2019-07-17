@@ -27,9 +27,9 @@
               of the stream is reached. - `int`
 
   throws: java.lang.NullPointerException - If buf is null."
-  ([^java.util.zip.CheckedInputStream this buf ^Integer off ^Integer len]
+  (^Integer [^java.util.zip.CheckedInputStream this buf ^Integer off ^Integer len]
     (-> this (.read buf off len)))
-  ([^java.util.zip.CheckedInputStream this]
+  (^Integer [^java.util.zip.CheckedInputStream this]
     (-> this (.read))))
 
 (defn skip
@@ -40,13 +40,13 @@
   returns: the actual number of bytes skipped - `long`
 
   throws: java.io.IOException - if an I/O error has occurred"
-  ([^java.util.zip.CheckedInputStream this ^Long n]
+  (^Long [^java.util.zip.CheckedInputStream this ^Long n]
     (-> this (.skip n))))
 
 (defn get-checksum
   "Returns the Checksum for this input stream.
 
   returns: the Checksum value - `java.util.zip.Checksum`"
-  ([^java.util.zip.CheckedInputStream this]
+  (^java.util.zip.Checksum [^java.util.zip.CheckedInputStream this]
     (-> this (.getChecksum))))
 

@@ -36,9 +36,9 @@
            compressed input is reached or a preset dictionary is needed - `int`
 
   throws: java.lang.NullPointerException - If b is null."
-  ([^java.util.zip.InflaterInputStream this b ^Integer off ^Integer len]
+  (^Integer [^java.util.zip.InflaterInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  ([^java.util.zip.InflaterInputStream this]
+  (^Integer [^java.util.zip.InflaterInputStream this]
     (-> this (.read))))
 
 (defn available
@@ -50,7 +50,7 @@
   returns: 1 before EOF and 0 after EOF. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.util.zip.InflaterInputStream this]
+  (^Integer [^java.util.zip.InflaterInputStream this]
     (-> this (.available))))
 
 (defn skip
@@ -61,7 +61,7 @@
   returns: the actual number of bytes skipped. - `long`
 
   throws: java.io.IOException - if an I/O error has occurred"
-  ([^java.util.zip.InflaterInputStream this ^Long n]
+  (^Long [^java.util.zip.InflaterInputStream this ^Long n]
     (-> this (.skip n))))
 
 (defn close
@@ -80,7 +80,7 @@
 
   returns: a boolean indicating if this stream type supports
             the mark and reset methods. - `boolean`"
-  ([^java.util.zip.InflaterInputStream this]
+  (^Boolean [^java.util.zip.InflaterInputStream this]
     (-> this (.markSupported))))
 
 (defn mark

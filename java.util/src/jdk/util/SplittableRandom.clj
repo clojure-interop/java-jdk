@@ -70,7 +70,7 @@
    splitting.
 
   returns: the new SplittableRandom instance - `java.util.SplittableRandom`"
-  ([^java.util.SplittableRandom this]
+  (^java.util.SplittableRandom [^java.util.SplittableRandom this]
     (-> this (.split))))
 
 (defn next-int
@@ -84,11 +84,11 @@
            (inclusive) and the bound (exclusive) - `int`
 
   throws: java.lang.IllegalArgumentException - if origin is greater than or equal to bound"
-  ([^java.util.SplittableRandom this ^Integer origin ^Integer bound]
+  (^Integer [^java.util.SplittableRandom this ^Integer origin ^Integer bound]
     (-> this (.nextInt origin bound)))
-  ([^java.util.SplittableRandom this ^Integer bound]
+  (^Integer [^java.util.SplittableRandom this ^Integer bound]
     (-> this (.nextInt bound)))
-  ([^java.util.SplittableRandom this]
+  (^Integer [^java.util.SplittableRandom this]
     (-> this (.nextInt))))
 
 (defn next-long
@@ -102,11 +102,11 @@
            (inclusive) and the bound (exclusive) - `long`
 
   throws: java.lang.IllegalArgumentException - if origin is greater than or equal to bound"
-  ([^java.util.SplittableRandom this ^Long origin ^Long bound]
+  (^Long [^java.util.SplittableRandom this ^Long origin ^Long bound]
     (-> this (.nextLong origin bound)))
-  ([^java.util.SplittableRandom this ^Long bound]
+  (^Long [^java.util.SplittableRandom this ^Long bound]
     (-> this (.nextLong bound)))
-  ([^java.util.SplittableRandom this]
+  (^Long [^java.util.SplittableRandom this]
     (-> this (.nextLong))))
 
 (defn next-double
@@ -120,18 +120,18 @@
            (inclusive) and the bound (exclusive) - `double`
 
   throws: java.lang.IllegalArgumentException - if origin is greater than or equal to bound"
-  ([^java.util.SplittableRandom this ^Double origin ^Double bound]
+  (^Double [^java.util.SplittableRandom this ^Double origin ^Double bound]
     (-> this (.nextDouble origin bound)))
-  ([^java.util.SplittableRandom this ^Double bound]
+  (^Double [^java.util.SplittableRandom this ^Double bound]
     (-> this (.nextDouble bound)))
-  ([^java.util.SplittableRandom this]
+  (^Double [^java.util.SplittableRandom this]
     (-> this (.nextDouble))))
 
 (defn next-boolean
   "Returns a pseudorandom boolean value.
 
   returns: a pseudorandom boolean value - `boolean`"
-  ([^java.util.SplittableRandom this]
+  (^Boolean [^java.util.SplittableRandom this]
     (-> this (.nextBoolean))))
 
 (defn ints
@@ -148,13 +148,13 @@
            each with the given origin (inclusive) and bound (exclusive) - `java.util.stream.IntStream`
 
   throws: java.lang.IllegalArgumentException - if streamSize is less than zero, or randomNumberOrigin is greater than or equal to randomNumberBound"
-  ([^java.util.SplittableRandom this ^Long stream-size ^Integer random-number-origin ^Integer random-number-bound]
+  (^java.util.stream.IntStream [^java.util.SplittableRandom this ^Long stream-size ^Integer random-number-origin ^Integer random-number-bound]
     (-> this (.ints stream-size random-number-origin random-number-bound)))
-  ([^java.util.SplittableRandom this ^Integer random-number-origin ^Integer random-number-bound]
+  (^java.util.stream.IntStream [^java.util.SplittableRandom this ^Integer random-number-origin ^Integer random-number-bound]
     (-> this (.ints random-number-origin random-number-bound)))
-  ([^java.util.SplittableRandom this ^Long stream-size]
+  (^java.util.stream.IntStream [^java.util.SplittableRandom this ^Long stream-size]
     (-> this (.ints stream-size)))
-  ([^java.util.SplittableRandom this]
+  (^java.util.stream.IntStream [^java.util.SplittableRandom this]
     (-> this (.ints))))
 
 (defn longs
@@ -171,13 +171,13 @@
            each with the given origin (inclusive) and bound (exclusive) - `java.util.stream.LongStream`
 
   throws: java.lang.IllegalArgumentException - if streamSize is less than zero, or randomNumberOrigin is greater than or equal to randomNumberBound"
-  ([^java.util.SplittableRandom this ^Long stream-size ^Long random-number-origin ^Long random-number-bound]
+  (^java.util.stream.LongStream [^java.util.SplittableRandom this ^Long stream-size ^Long random-number-origin ^Long random-number-bound]
     (-> this (.longs stream-size random-number-origin random-number-bound)))
-  ([^java.util.SplittableRandom this ^Long random-number-origin ^Long random-number-bound]
+  (^java.util.stream.LongStream [^java.util.SplittableRandom this ^Long random-number-origin ^Long random-number-bound]
     (-> this (.longs random-number-origin random-number-bound)))
-  ([^java.util.SplittableRandom this ^Long stream-size]
+  (^java.util.stream.LongStream [^java.util.SplittableRandom this ^Long stream-size]
     (-> this (.longs stream-size)))
-  ([^java.util.SplittableRandom this]
+  (^java.util.stream.LongStream [^java.util.SplittableRandom this]
     (-> this (.longs))))
 
 (defn doubles
@@ -194,12 +194,12 @@
            each with the given origin (inclusive) and bound (exclusive) - `java.util.stream.DoubleStream`
 
   throws: java.lang.IllegalArgumentException - if randomNumberOrigin is greater than or equal to randomNumberBound"
-  ([^java.util.SplittableRandom this ^Long stream-size ^Double random-number-origin ^Double random-number-bound]
+  (^java.util.stream.DoubleStream [^java.util.SplittableRandom this ^Long stream-size ^Double random-number-origin ^Double random-number-bound]
     (-> this (.doubles stream-size random-number-origin random-number-bound)))
-  ([^java.util.SplittableRandom this ^Double random-number-origin ^Double random-number-bound]
+  (^java.util.stream.DoubleStream [^java.util.SplittableRandom this ^Double random-number-origin ^Double random-number-bound]
     (-> this (.doubles random-number-origin random-number-bound)))
-  ([^java.util.SplittableRandom this ^Long stream-size]
+  (^java.util.stream.DoubleStream [^java.util.SplittableRandom this ^Long stream-size]
     (-> this (.doubles stream-size)))
-  ([^java.util.SplittableRandom this]
+  (^java.util.stream.DoubleStream [^java.util.SplittableRandom this]
     (-> this (.doubles))))
 

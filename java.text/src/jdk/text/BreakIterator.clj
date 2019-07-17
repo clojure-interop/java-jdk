@@ -193,9 +193,9 @@
   returns: A break iterator for word breaks - `java.text.BreakIterator`
 
   throws: java.lang.NullPointerException - if locale is null"
-  ([^java.util.Locale locale]
+  (^java.text.BreakIterator [^java.util.Locale locale]
     (BreakIterator/getWordInstance locale))
-  ([]
+  (^java.text.BreakIterator []
     (BreakIterator/getWordInstance )))
 
 (defn *get-line-instance
@@ -208,9 +208,9 @@
   returns: A break iterator for line breaks - `java.text.BreakIterator`
 
   throws: java.lang.NullPointerException - if locale is null"
-  ([^java.util.Locale locale]
+  (^java.text.BreakIterator [^java.util.Locale locale]
     (BreakIterator/getLineInstance locale))
-  ([]
+  (^java.text.BreakIterator []
     (BreakIterator/getLineInstance )))
 
 (defn *get-character-instance
@@ -223,9 +223,9 @@
   returns: A break iterator for character breaks - `java.text.BreakIterator`
 
   throws: java.lang.NullPointerException - if locale is null"
-  ([^java.util.Locale locale]
+  (^java.text.BreakIterator [^java.util.Locale locale]
     (BreakIterator/getCharacterInstance locale))
-  ([]
+  (^java.text.BreakIterator []
     (BreakIterator/getCharacterInstance )))
 
 (defn *get-sentence-instance
@@ -238,9 +238,9 @@
   returns: A break iterator for sentence breaks - `java.text.BreakIterator`
 
   throws: java.lang.NullPointerException - if locale is null"
-  ([^java.util.Locale locale]
+  (^java.text.BreakIterator [^java.util.Locale locale]
     (BreakIterator/getSentenceInstance locale))
-  ([]
+  (^java.text.BreakIterator []
     (BreakIterator/getSentenceInstance )))
 
 (defn *get-available-locales
@@ -276,9 +276,9 @@
   returns: The character index of the nth boundary from the current position
    or BreakIterator.DONE if either first or last text boundary
    has been reached. - `int`"
-  ([^java.text.BreakIterator this ^Integer n]
+  (^Integer [^java.text.BreakIterator this ^Integer n]
     (-> this (.next n)))
-  ([^java.text.BreakIterator this]
+  (^Integer [^java.text.BreakIterator this]
     (-> this (.next))))
 
 (defn preceding
@@ -296,7 +296,7 @@
    as the offset. - `int`
 
   throws: java.lang.IllegalArgumentException - if the specified offset is less than the first text boundary or greater than the last text boundary."
-  ([^java.text.BreakIterator this ^Integer offset]
+  (^Integer [^java.text.BreakIterator this ^Integer offset]
     (-> this (.preceding offset))))
 
 (defn set-text
@@ -311,7 +311,7 @@
   "Get the text being scanned
 
   returns: the text being scanned - `java.text.CharacterIterator`"
-  ([^java.text.BreakIterator this]
+  (^java.text.CharacterIterator [^java.text.BreakIterator this]
     (-> this (.getText))))
 
 (defn previous
@@ -323,7 +323,7 @@
   returns: The character index of the previous text boundary or
    BreakIterator.DONE if the current boundary is the first text
    boundary. - `int`"
-  ([^java.text.BreakIterator this]
+  (^Integer [^java.text.BreakIterator this]
     (-> this (.previous))))
 
 (defn current
@@ -336,7 +336,7 @@
 
   returns: The text boundary returned from the above methods, first or last
    text boundary. - `int`"
-  ([^java.text.BreakIterator this]
+  (^Integer [^java.text.BreakIterator this]
     (-> this (.current))))
 
 (defn boundary?
@@ -348,7 +348,7 @@
    false otherwise. - `boolean`
 
   throws: java.lang.IllegalArgumentException - if the specified offset is less than the first text boundary or greater than the last text boundary."
-  ([^java.text.BreakIterator this ^Integer offset]
+  (^Boolean [^java.text.BreakIterator this ^Integer offset]
     (-> this (.isBoundary offset))))
 
 (defn last
@@ -356,14 +356,14 @@
    to the last text boundary.
 
   returns: The character index of the last text boundary. - `int`"
-  ([^java.text.BreakIterator this]
+  (^Integer [^java.text.BreakIterator this]
     (-> this (.last))))
 
 (defn clone
   "Create a copy of this iterator
 
   returns: A copy of this - `java.lang.Object`"
-  ([^java.text.BreakIterator this]
+  (^java.lang.Object [^java.text.BreakIterator this]
     (-> this (.clone))))
 
 (defn following
@@ -381,7 +381,7 @@
    as the offset. - `int`
 
   throws: java.lang.IllegalArgumentException - if the specified offset is less than the first text boundary or greater than the last text boundary."
-  ([^java.text.BreakIterator this ^Integer offset]
+  (^Integer [^java.text.BreakIterator this ^Integer offset]
     (-> this (.following offset))))
 
 (defn first
@@ -389,6 +389,6 @@
    to the first text boundary.
 
   returns: The character index of the first text boundary. - `int`"
-  ([^java.text.BreakIterator this]
+  (^Integer [^java.text.BreakIterator this]
     (-> this (.first))))
 

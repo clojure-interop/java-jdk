@@ -231,14 +231,14 @@
   "Returns true if the selection should be updated after sorting.
 
   returns: whether to update the selection on a sort - `boolean`"
-  ([^javax.swing.JTable this]
+  (^Boolean [^javax.swing.JTable this]
     (-> this (.getUpdateSelectionOnSort))))
 
 (defn get-selection-background
   "Returns the background color for selected cells.
 
   returns: the Color used for the background of selected list items - `java.awt.Color`"
-  ([^javax.swing.JTable this]
+  (^java.awt.Color [^javax.swing.JTable this]
     (-> this (.getSelectionBackground))))
 
 (defn set-selection-background
@@ -260,7 +260,7 @@
 
   returns: whether or not this table is always made large enough
            to fill the height of an enclosing viewport - `boolean`"
-  ([^javax.swing.JTable this]
+  (^Boolean [^javax.swing.JTable this]
     (-> this (.getFillsViewportHeight))))
 
 (defn size-columns-to-fit
@@ -279,14 +279,14 @@
 
   returns: the type of the column at position column
             in the view where the first column is column 0 - `java.lang.Class<?>`"
-  ([^javax.swing.JTable this ^Integer column]
+  (^java.lang.Class [^javax.swing.JTable this ^Integer column]
     (-> this (.getColumnClass column))))
 
 (defn get-selected-row-count
   "Returns the number of selected rows.
 
   returns: the number of selected rows, 0 if no rows are selected - `int`"
-  ([^javax.swing.JTable this]
+  (^Integer [^javax.swing.JTable this]
     (-> this (.getSelectedRowCount))))
 
 (defn change-selection
@@ -326,7 +326,7 @@
 
   returns: true if row is a valid index and the row at
                 that index is selected (where 0 is the first row) - `boolean`"
-  ([^javax.swing.JTable this ^Integer row]
+  (^Boolean [^javax.swing.JTable this ^Integer row]
     (-> this (.isRowSelected row))))
 
 (defn set-column-selection-allowed
@@ -362,7 +362,7 @@
   returns: the index of the row that point lies in,
             or -1 if the result is not in the range
             [0, getRowCount()-1] - `int`"
-  ([^javax.swing.JTable this ^java.awt.Point point]
+  (^Integer [^javax.swing.JTable this ^java.awt.Point point]
     (-> this (.rowAtPoint point))))
 
 (defn convert-column-index-to-model
@@ -375,7 +375,7 @@
   view-column-index - the index of the column in the view - `int`
 
   returns: the index of the corresponding column in the model - `int`"
-  ([^javax.swing.JTable this ^Integer view-column-index]
+  (^Integer [^javax.swing.JTable this ^Integer view-column-index]
     (-> this (.convertColumnIndexToModel view-column-index))))
 
 (defn get-show-vertical-lines?
@@ -384,7 +384,7 @@
 
   returns: true if the table draws vertical lines between cells, false if it
             doesn't - `boolean`"
-  ([^javax.swing.JTable this]
+  (^Boolean [^javax.swing.JTable this]
     (-> this (.getShowVerticalLines))))
 
 (defn set-auto-create-columns-from-model
@@ -400,7 +400,7 @@
   "Returns true if rows can be selected.
 
   returns: true if rows can be selected, otherwise false - `boolean`"
-  ([^javax.swing.JTable this]
+  (^Boolean [^javax.swing.JTable this]
     (-> this (.getRowSelectionAllowed))))
 
 (defn remove-column-selection-interval
@@ -448,7 +448,7 @@
   returns: the TableColumn object that matches the identifier - `javax.swing.table.TableColumn`
 
   throws: java.lang.IllegalArgumentException - if identifier is null or no TableColumn has this identifier"
-  ([^javax.swing.JTable this ^java.lang.Object identifier]
+  (^javax.swing.table.TableColumn [^javax.swing.JTable this ^java.lang.Object identifier]
     (-> this (.getColumn identifier))))
 
 (defn set-show-horizontal-lines
@@ -480,14 +480,14 @@
   column - the column of the cell to edit, where 0 is the first column - `int`
 
   returns: the Component being edited - `java.awt.Component`"
-  ([^javax.swing.JTable this ^javax.swing.table.TableCellEditor editor ^Integer row ^Integer column]
+  (^java.awt.Component [^javax.swing.JTable this ^javax.swing.table.TableCellEditor editor ^Integer row ^Integer column]
     (-> this (.prepareEditor editor row column))))
 
 (defn get-drop-mode
   "Returns the drop mode for this component.
 
   returns: the drop mode for this component - `javax.swing.DropMode`"
-  ([^javax.swing.JTable this]
+  (^javax.swing.DropMode [^javax.swing.JTable this]
     (-> this (.getDropMode))))
 
 (defn get-scrollable-block-increment
@@ -505,7 +505,7 @@
   returns: visibleRect.height or
                                     visibleRect.width
                                     per the orientation - `int`"
-  ([^javax.swing.JTable this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
+  (^Integer [^javax.swing.JTable this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
     (-> this (.getScrollableBlockIncrement visible-rect orientation direction))))
 
 (defn set-drop-mode
@@ -563,7 +563,7 @@
   column - the column whose value is to be queried - `int`
 
   returns: the Object at the specified cell - `java.lang.Object`"
-  ([^javax.swing.JTable this ^Integer row ^Integer column]
+  (^java.lang.Object [^javax.swing.JTable this ^Integer row ^Integer column]
     (-> this (.getValueAt row column))))
 
 (defn get-surrenders-focus-on-keystroke?
@@ -573,14 +573,14 @@
   returns: true if the editor should get the focus
             when keystrokes cause the editor to be
             activated - `boolean`"
-  ([^javax.swing.JTable this]
+  (^Boolean [^javax.swing.JTable this]
     (-> this (.getSurrendersFocusOnKeystroke))))
 
 (defn get-selection-foreground
   "Returns the foreground color for selected cells.
 
   returns: the Color object for the foreground property - `java.awt.Color`"
-  ([^javax.swing.JTable this]
+  (^java.awt.Color [^javax.swing.JTable this]
     (-> this (.getSelectionForeground))))
 
 (defn get-grid-color
@@ -588,7 +588,7 @@
    The default color is look and feel dependent.
 
   returns: the color used to draw grid lines - `java.awt.Color`"
-  ([^javax.swing.JTable this]
+  (^java.awt.Color [^javax.swing.JTable this]
     (-> this (.getGridColor))))
 
 (defn get-column-count
@@ -596,7 +596,7 @@
    be different from the number of columns in the table model.
 
   returns: the number of columns in the table - `int`"
-  ([^javax.swing.JTable this]
+  (^Integer [^javax.swing.JTable this]
     (-> this (.getColumnCount))))
 
 (defn set-fills-viewport-height
@@ -629,7 +629,7 @@
    TableModel.
 
   returns: the number of rows shown in the JTable - `int`"
-  ([^javax.swing.JTable this]
+  (^Integer [^javax.swing.JTable this]
     (-> this (.getRowCount))))
 
 (defn select-all
@@ -647,7 +647,7 @@
   returns: true if row and column are valid indices
                 and the cell at index (row, column) is selected,
                 where the first row and first column are at index 0 - `boolean`"
-  ([^javax.swing.JTable this ^Integer row ^Integer column]
+  (^Boolean [^javax.swing.JTable this ^Integer row ^Integer column]
     (-> this (.isCellSelected row column))))
 
 (defn set-row-margin
@@ -662,7 +662,7 @@
    render this component.
 
   returns: the string `TableUI` - `java.lang.String`"
-  ([^javax.swing.JTable this]
+  (^java.lang.String [^javax.swing.JTable this]
     (-> this (.getUIClassID))))
 
 (defn convert-row-index-to-model
@@ -675,7 +675,7 @@
   returns: the index of the corresponding row in the model - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if sorting is enabled and passed an index outside the range of the JTable as determined by the method getRowCount"
-  ([^javax.swing.JTable this ^Integer view-row-index]
+  (^Integer [^javax.swing.JTable this ^Integer view-row-index]
     (-> this (.convertRowIndexToModel view-row-index))))
 
 (defn get-auto-resize-mode
@@ -683,7 +683,7 @@
    is AUTO_RESIZE_SUBSEQUENT_COLUMNS.
 
   returns: the autoResizeMode of the table - `int`"
-  ([^javax.swing.JTable this]
+  (^Integer [^javax.swing.JTable this]
     (-> this (.getAutoResizeMode))))
 
 (defn set-editing-column
@@ -707,7 +707,7 @@
   "Returns true if columns can be selected.
 
   returns: true if columns can be selected, otherwise false - `boolean`"
-  ([^javax.swing.JTable this]
+  (^Boolean [^javax.swing.JTable this]
     (-> this (.getColumnSelectionAllowed))))
 
 (defn remove-column
@@ -731,7 +731,7 @@
   direction - less than zero to scroll up/left, greater than zero for down/right - `int`
 
   returns: the `unit` increment for scrolling in the specified direction - `int`"
-  ([^javax.swing.JTable this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
+  (^Integer [^javax.swing.JTable this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
     (-> this (.getScrollableUnitIncrement visible-rect orientation direction))))
 
 (defn set-intercell-spacing
@@ -748,7 +748,7 @@
    If nothing is being edited, returns null.
 
   returns: Component handling editing session - `java.awt.Component`"
-  ([^javax.swing.JTable this]
+  (^java.awt.Component [^javax.swing.JTable this]
     (-> this (.getEditorComponent))))
 
 (defn get-cell-editor
@@ -770,9 +770,9 @@
   returns: the editor for this cell;
                     if null return the default editor for
                     this type of cell - `javax.swing.table.TableCellEditor`"
-  ([^javax.swing.JTable this ^Integer row ^Integer column]
+  (^javax.swing.table.TableCellEditor [^javax.swing.JTable this ^Integer row ^Integer column]
     (-> this (.getCellEditor row column)))
-  ([^javax.swing.JTable this]
+  (^javax.swing.table.TableCellEditor [^javax.swing.JTable this]
     (-> this (.getCellEditor))))
 
 (defn cell-editable?
@@ -792,7 +792,7 @@
   column - the column whose value is to be queried - `int`
 
   returns: true if the cell is editable - `boolean`"
-  ([^javax.swing.JTable this ^Integer row ^Integer column]
+  (^Boolean [^javax.swing.JTable this ^Integer row ^Integer column]
     (-> this (.isCellEditable row column))))
 
 (defn set-show-vertical-lines
@@ -833,9 +833,9 @@
 
   returns: false if for any reason the cell cannot be edited,
                   or if the indices are invalid - `boolean`"
-  ([^javax.swing.JTable this ^Integer row ^Integer column ^java.util.EventObject e]
+  (^Boolean [^javax.swing.JTable this ^Integer row ^Integer column ^java.util.EventObject e]
     (-> this (.editCellAt row column e)))
-  ([^javax.swing.JTable this ^Integer row ^Integer column]
+  (^Boolean [^javax.swing.JTable this ^Integer row ^Integer column]
     (-> this (.editCellAt row column))))
 
 (defn set-surrenders-focus-on-keystroke
@@ -878,7 +878,7 @@
 
   returns: the object that provides row selection state, null
             if row selection is not allowed - `javax.swing.ListSelectionModel`"
-  ([^javax.swing.JTable this]
+  (^javax.swing.ListSelectionModel [^javax.swing.JTable this]
     (-> this (.getSelectionModel))))
 
 (defn set-column-selection-interval
@@ -906,7 +906,7 @@
    name `dropLocation` is fired by the component.
 
   returns: the drop location - `javax.swing.JTable.DropLocation`"
-  ([^javax.swing.JTable this]
+  (^javax.swing.JTable.DropLocation [^javax.swing.JTable this]
     (-> this (.getDropLocation))))
 
 (defn set-grid-color
@@ -924,7 +924,7 @@
 
   returns: a Dimension object containing the preferredSize of the JViewport
            which displays this table - `java.awt.Dimension`"
-  ([^javax.swing.JTable this]
+  (^java.awt.Dimension [^javax.swing.JTable this]
     (-> this (.getPreferredScrollableViewportSize))))
 
 (defn get-cell-renderer
@@ -945,7 +945,7 @@
   returns: the assigned renderer; if null
                     returns the default renderer
                     for this type of object - `javax.swing.table.TableCellRenderer`"
-  ([^javax.swing.JTable this ^Integer row ^Integer column]
+  (^javax.swing.table.TableCellRenderer [^javax.swing.JTable this ^Integer row ^Integer column]
     (-> this (.getCellRenderer row column))))
 
 (defn set-ui
@@ -972,7 +972,7 @@
   event - `java.awt.event.MouseEvent`
 
   returns: `java.lang.String`"
-  ([^javax.swing.JTable this ^java.awt.event.MouseEvent event]
+  (^java.lang.String [^javax.swing.JTable this ^java.awt.event.MouseEvent event]
     (-> this (.getToolTipText event))))
 
 (defn remove-notify
@@ -984,7 +984,7 @@
   "Returns the index of the first selected row, -1 if no row is selected.
 
   returns: the index of the first selected row - `int`"
-  ([^javax.swing.JTable this]
+  (^Integer [^javax.swing.JTable this]
     (-> this (.getSelectedRow))))
 
 (defn set-row-selection-interval
@@ -1009,7 +1009,7 @@
   model-column-index - the index of the column in the model - `int`
 
   returns: the index of the corresponding column in the view - `int`"
-  ([^javax.swing.JTable this ^Integer model-column-index]
+  (^Integer [^javax.swing.JTable this ^Integer model-column-index]
     (-> this (.convertColumnIndexToView model-column-index))))
 
 (defn get-row-margin
@@ -1017,7 +1017,7 @@
    getIntercellSpacing().height.
 
   returns: the number of pixels between cells in a row - `int`"
-  ([^javax.swing.JTable this]
+  (^Integer [^javax.swing.JTable this]
     (-> this (.getRowMargin))))
 
 (defn prepare-renderer
@@ -1045,7 +1045,7 @@
   column - the column of the cell to render, where 0 is the first column - `int`
 
   returns: the Component under the event location - `java.awt.Component`"
-  ([^javax.swing.JTable this ^javax.swing.table.TableCellRenderer renderer ^Integer row ^Integer column]
+  (^java.awt.Component [^javax.swing.JTable this ^javax.swing.table.TableCellRenderer renderer ^Integer row ^Integer column]
     (-> this (.prepareRenderer renderer row column))))
 
 (defn value-changed
@@ -1104,7 +1104,7 @@
    getColumnSelectionAllowed().
 
   returns: true if both row and column selection models are enabled - `boolean`"
-  ([^javax.swing.JTable this]
+  (^Boolean [^javax.swing.JTable this]
     (-> this (.getCellSelectionEnabled))))
 
 (defn table-changed
@@ -1128,7 +1128,7 @@
   "Returns the L&F object that renders this component.
 
   returns: the TableUI object that renders this component - `javax.swing.plaf.TableUI`"
-  ([^javax.swing.JTable this]
+  (^javax.swing.plaf.TableUI [^javax.swing.JTable this]
     (-> this (.getUI))))
 
 (defn get-editing-column
@@ -1137,7 +1137,7 @@
 
   returns: the index of the column that contains the cell currently
             being edited; returns -1 if nothing being edited - `int`"
-  ([^javax.swing.JTable this]
+  (^Integer [^javax.swing.JTable this]
     (-> this (.getEditingColumn))))
 
 (defn get-column-name
@@ -1148,14 +1148,14 @@
 
   returns: the name of the column at position column
                           in the view where the first column is column 0 - `java.lang.String`"
-  ([^javax.swing.JTable this ^Integer column]
+  (^java.lang.String [^javax.swing.JTable this ^Integer column]
     (-> this (.getColumnName column))))
 
 (defn get-selected-column-count
   "Returns the number of selected columns.
 
   returns: the number of selected columns, 0 if no columns are selected - `int`"
-  ([^javax.swing.JTable this]
+  (^Integer [^javax.swing.JTable this]
     (-> this (.getSelectedColumnCount))))
 
 (defn move-column
@@ -1202,7 +1202,7 @@
 
   returns: false if autoResizeMode is set
      to AUTO_RESIZE_OFF, otherwise returns true - `boolean`"
-  ([^javax.swing.JTable this]
+  (^Boolean [^javax.swing.JTable this]
     (-> this (.getScrollableTracksViewportWidth))))
 
 (defn column-margin-changed
@@ -1225,7 +1225,7 @@
 
   returns: an AccessibleJTable that serves as the
            AccessibleContext of this JTable - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.JTable this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.JTable this]
     (-> this (.getAccessibleContext))))
 
 (defn set-value-at
@@ -1421,7 +1421,7 @@
   column-class - return the default cell editor for this columnClass - `java.lang.Class<?>`
 
   returns: the default cell editor to be used for this columnClass - `javax.swing.table.TableCellEditor`"
-  ([^javax.swing.JTable this ^java.lang.Class column-class]
+  (^javax.swing.table.TableCellEditor [^javax.swing.JTable this ^java.lang.Class column-class]
     (-> this (.getDefaultEditor column-class))))
 
 (defn get-show-horizontal-lines?
@@ -1430,7 +1430,7 @@
 
   returns: true if the table draws horizontal lines between cells, false if it
             doesn't - `boolean`"
-  ([^javax.swing.JTable this]
+  (^Boolean [^javax.swing.JTable this]
     (-> this (.getShowHorizontalLines))))
 
 (defn set-row-sorter
@@ -1482,7 +1482,7 @@
   returns: false unless getFillsViewportHeight is
            true and the table needs to be stretched to fill
            the viewport - `boolean`"
-  ([^javax.swing.JTable this]
+  (^Boolean [^javax.swing.JTable this]
     (-> this (.getScrollableTracksViewportHeight))))
 
 (defn column-selection-changed
@@ -1504,7 +1504,7 @@
 
   returns: true if column is a valid index and the column at
                 that index is selected (where 0 is the first column) - `boolean`"
-  ([^javax.swing.JTable this ^Integer column]
+  (^Boolean [^javax.swing.JTable this ^Integer column]
     (-> this (.isColumnSelected column))))
 
 (defn print
@@ -1567,15 +1567,15 @@
   returns: true, unless printing is cancelled by the user - `boolean`
 
   throws: java.awt.HeadlessException - if the method is asked to show a printing dialog or run interactively, and GraphicsEnvironment.isHeadless returns true"
-  ([^javax.swing.JTable this ^javax.swing.JTable.PrintMode print-mode ^java.text.MessageFormat header-format ^java.text.MessageFormat footer-format ^Boolean show-print-dialog ^javax.print.attribute.PrintRequestAttributeSet attr ^Boolean interactive ^javax.print.PrintService service]
+  (^Boolean [^javax.swing.JTable this ^javax.swing.JTable.PrintMode print-mode ^java.text.MessageFormat header-format ^java.text.MessageFormat footer-format ^Boolean show-print-dialog ^javax.print.attribute.PrintRequestAttributeSet attr ^Boolean interactive ^javax.print.PrintService service]
     (-> this (.print print-mode header-format footer-format show-print-dialog attr interactive service)))
-  ([^javax.swing.JTable this ^javax.swing.JTable.PrintMode print-mode ^java.text.MessageFormat header-format ^java.text.MessageFormat footer-format ^Boolean show-print-dialog ^javax.print.attribute.PrintRequestAttributeSet attr ^Boolean interactive]
+  (^Boolean [^javax.swing.JTable this ^javax.swing.JTable.PrintMode print-mode ^java.text.MessageFormat header-format ^java.text.MessageFormat footer-format ^Boolean show-print-dialog ^javax.print.attribute.PrintRequestAttributeSet attr ^Boolean interactive]
     (-> this (.print print-mode header-format footer-format show-print-dialog attr interactive)))
-  ([^javax.swing.JTable this ^javax.swing.JTable.PrintMode print-mode ^java.text.MessageFormat header-format ^java.text.MessageFormat footer-format]
+  (^Boolean [^javax.swing.JTable this ^javax.swing.JTable.PrintMode print-mode ^java.text.MessageFormat header-format ^java.text.MessageFormat footer-format]
     (-> this (.print print-mode header-format footer-format)))
-  ([^javax.swing.JTable this ^javax.swing.JTable.PrintMode print-mode]
+  (^Boolean [^javax.swing.JTable this ^javax.swing.JTable.PrintMode print-mode]
     (-> this (.print print-mode)))
-  ([^javax.swing.JTable this]
+  (^Boolean [^javax.swing.JTable this]
     (-> this (.print))))
 
 (defn column-removed
@@ -1592,7 +1592,7 @@
   "Returns whether or not automatic drag handling is enabled.
 
   returns: the value of the dragEnabled property - `boolean`"
-  ([^javax.swing.JTable this]
+  (^Boolean [^javax.swing.JTable this]
     (-> this (.getDragEnabled))))
 
 (defn get-intercell-spacing
@@ -1600,7 +1600,7 @@
    The default spacing is look and feel dependent.
 
   returns: the horizontal and vertical spacing between cells - `java.awt.Dimension`"
-  ([^javax.swing.JTable this]
+  (^java.awt.Dimension [^javax.swing.JTable this]
     (-> this (.getIntercellSpacing))))
 
 (defn set-default-editor
@@ -1622,14 +1622,14 @@
    of this table.
 
   returns: the object that provides the column state of the table - `javax.swing.table.TableColumnModel`"
-  ([^javax.swing.JTable this]
+  (^javax.swing.table.TableColumnModel [^javax.swing.JTable this]
     (-> this (.getColumnModel))))
 
 (defn get-table-header
   "Returns the tableHeader used by this JTable.
 
   returns: the tableHeader used by this table - `javax.swing.table.JTableHeader`"
-  ([^javax.swing.JTable this]
+  (^javax.swing.table.JTableHeader [^javax.swing.JTable this]
     (-> this (.getTableHeader))))
 
 (defn sorter-changed
@@ -1648,7 +1648,7 @@
 
   returns: the index of the row that contains the cell currently
             being edited; returns -1 if nothing being edited - `int`"
-  ([^javax.swing.JTable this]
+  (^Integer [^javax.swing.JTable this]
     (-> this (.getEditingRow))))
 
 (defn get-printable
@@ -1744,7 +1744,7 @@
   footer-format - a MessageFormat specifying the text to be used in printing a footer, or null for none - `java.text.MessageFormat`
 
   returns: a Printable for printing this JTable - `java.awt.print.Printable`"
-  ([^javax.swing.JTable this ^javax.swing.JTable.PrintMode print-mode ^java.text.MessageFormat header-format ^java.text.MessageFormat footer-format]
+  (^java.awt.print.Printable [^javax.swing.JTable this ^javax.swing.JTable.PrintMode print-mode ^java.text.MessageFormat header-format ^java.text.MessageFormat footer-format]
     (-> this (.getPrintable print-mode header-format footer-format))))
 
 (defn column-at-point
@@ -1757,7 +1757,7 @@
   returns: the index of the column that point lies in,
             or -1 if the result is not in the range
             [0, getColumnCount()-1] - `int`"
-  ([^javax.swing.JTable this ^java.awt.Point point]
+  (^Integer [^javax.swing.JTable this ^java.awt.Point point]
     (-> this (.columnAtPoint point))))
 
 (defn convert-row-index-to-view
@@ -1771,7 +1771,7 @@
            the row isn't visible - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if sorting is enabled and passed an index outside the number of rows of the TableModel"
-  ([^javax.swing.JTable this ^Integer model-row-index]
+  (^Integer [^javax.swing.JTable this ^Integer model-row-index]
     (-> this (.convertRowIndexToView model-row-index))))
 
 (defn get-model
@@ -1779,14 +1779,14 @@
    JTable.
 
   returns: the TableModel that provides the data displayed by this JTable - `javax.swing.table.TableModel`"
-  ([^javax.swing.JTable this]
+  (^javax.swing.table.TableModel [^javax.swing.JTable this]
     (-> this (.getModel))))
 
 (defn editing?
   "Returns true if a cell is being edited.
 
   returns: true if the table is editing a cell - `boolean`"
-  ([^javax.swing.JTable this]
+  (^Boolean [^javax.swing.JTable this]
     (-> this (.isEditing))))
 
 (defn get-selected-rows
@@ -1802,7 +1802,7 @@
    -1 if no column is selected.
 
   returns: the index of the first selected column - `int`"
-  ([^javax.swing.JTable this]
+  (^Integer [^javax.swing.JTable this]
     (-> this (.getSelectedColumn))))
 
 (defn get-cell-rect
@@ -1836,7 +1836,7 @@
 
   returns: the rectangle containing the cell at location
             row,column - `java.awt.Rectangle`"
-  ([^javax.swing.JTable this ^Integer row ^Integer column ^Boolean include-spacing]
+  (^java.awt.Rectangle [^javax.swing.JTable this ^Integer row ^Integer column ^Boolean include-spacing]
     (-> this (.getCellRect row column include-spacing))))
 
 (defn create-default-columns-from-model
@@ -1910,7 +1910,7 @@
   column-class - return the default cell renderer for this columnClass - `java.lang.Class<?>`
 
   returns: the renderer for this columnClass - `javax.swing.table.TableCellRenderer`"
-  ([^javax.swing.JTable this ^java.lang.Class column-class]
+  (^javax.swing.table.TableCellRenderer [^javax.swing.JTable this ^java.lang.Class column-class]
     (-> this (.getDefaultRenderer column-class))))
 
 (defn get-row-sorter
@@ -1933,9 +1933,9 @@
   row - the row whose height is to be returned - `int`
 
   returns: the height, in pixels, of the cells in the row - `int`"
-  ([^javax.swing.JTable this ^Integer row]
+  (^Integer [^javax.swing.JTable this ^Integer row]
     (-> this (.getRowHeight row)))
-  ([^javax.swing.JTable this]
+  (^Integer [^javax.swing.JTable this]
     (-> this (.getRowHeight))))
 
 (defn set-default-renderer
@@ -1955,7 +1955,7 @@
 
   returns: true if a RowSorter should be created when
            the model changes - `boolean`"
-  ([^javax.swing.JTable this]
+  (^Boolean [^javax.swing.JTable this]
     (-> this (.getAutoCreateRowSorter))))
 
 (defn get-auto-create-columns-from-model?
@@ -1967,7 +1967,7 @@
    The default is true.
 
   returns: the autoCreateColumnsFromModel of the table - `boolean`"
-  ([^javax.swing.JTable this]
+  (^Boolean [^javax.swing.JTable this]
     (-> this (.getAutoCreateColumnsFromModel))))
 
 (defn set-selection-mode

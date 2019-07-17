@@ -36,7 +36,7 @@
    model with a StyleSheet.
 
   returns: `javax.swing.text.AttributeSet`"
-  ([^javax.swing.text.html.ParagraphView this]
+  (^javax.swing.text.AttributeSet [^javax.swing.text.html.ParagraphView this]
     (-> this (.getAttributes))))
 
 (defn visible?
@@ -48,7 +48,7 @@
    it will be considered visible and return true.
 
   returns: true if the paragraph should be displayed - `boolean`"
-  ([^javax.swing.text.html.ParagraphView this]
+  (^Boolean [^javax.swing.text.html.ParagraphView this]
     (-> this (.isVisible))))
 
 (defn paint
@@ -73,7 +73,7 @@
              typically the view is told to render into the span
              that is returned, although there is no guarantee;
              the parent may choose to resize or break the view - `float`"
-  ([^javax.swing.text.html.ParagraphView this ^Integer axis]
+  (^Float [^javax.swing.text.html.ParagraphView this ^Integer axis]
     (-> this (.getPreferredSpan axis))))
 
 (defn get-minimum-span
@@ -84,7 +84,7 @@
   axis - may be either View.X_AXIS or View.Y_AXIS - `int`
 
   returns: the minimum span the view can be rendered into - `float`"
-  ([^javax.swing.text.html.ParagraphView this ^Integer axis]
+  (^Float [^javax.swing.text.html.ParagraphView this ^Integer axis]
     (-> this (.getMinimumSpan axis))))
 
 (defn get-maximum-span
@@ -95,6 +95,6 @@
   axis - may be either View.X_AXIS or View.Y_AXIS - `int`
 
   returns: the maximum span the view can be rendered into - `float`"
-  ([^javax.swing.text.html.ParagraphView this ^Integer axis]
+  (^Float [^javax.swing.text.html.ParagraphView this ^Integer axis]
     (-> this (.getMaximumSpan axis))))
 

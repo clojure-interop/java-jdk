@@ -25,6 +25,6 @@
 
   returns: the retrieved Locale, or null
             if no Locale could be retrieved. - `java.util.Locale`"
-  ([^javax.security.auth.callback.LanguageCallback this]
+  (^java.util.Locale [^javax.security.auth.callback.LanguageCallback this]
     (-> this (.getLocale))))
 

@@ -38,7 +38,7 @@
   "Obtains this control's current value.
 
   returns: the current value - `java.lang.Object`"
-  ([^javax.sound.sampled.EnumControl this]
+  (^java.lang.Object [^javax.sound.sampled.EnumControl this]
     (-> this (.getValue))))
 
 (defn get-values
@@ -52,6 +52,6 @@
   "Provides a string representation of the control.
 
   returns: a string description - `java.lang.String`"
-  ([^javax.sound.sampled.EnumControl this]
+  (^java.lang.String [^javax.sound.sampled.EnumControl this]
     (-> this (.toString))))
 

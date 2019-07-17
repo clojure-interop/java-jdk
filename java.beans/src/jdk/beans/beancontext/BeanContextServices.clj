@@ -23,7 +23,7 @@
    Service as requested or null - `java.lang.Object`
 
   throws: java.util.TooManyListenersException - if there are too many listeners"
-  ([^java.beans.beancontext.BeanContextServices this ^java.beans.beancontext.BeanContextChild child ^java.lang.Object requestor ^java.lang.Class service-class ^java.lang.Object service-selector ^java.beans.beancontext.BeanContextServiceRevokedListener bcsrl]
+  (^java.lang.Object [^java.beans.beancontext.BeanContextServices this ^java.beans.beancontext.BeanContextChild child ^java.lang.Object requestor ^java.lang.Class service-class ^java.lang.Object service-selector ^java.beans.beancontext.BeanContextServiceRevokedListener bcsrl]
     (-> this (.getService child requestor service-class service-selector bcsrl))))
 
 (defn release-service
@@ -45,7 +45,7 @@
   service-class - the service in question - `java.lang.Class`
 
   returns: true if the service is available - `boolean`"
-  ([^java.beans.beancontext.BeanContextServices this ^java.lang.Class service-class]
+  (^Boolean [^java.beans.beancontext.BeanContextServices this ^java.lang.Class service-class]
     (-> this (.hasService service-class))))
 
 (defn revoke-service
@@ -82,7 +82,7 @@
   service-provider - the BeanContextServiceProvider associated with the service - `java.beans.beancontext.BeanContextServiceProvider`
 
   returns: true if the service was successful added, false otherwise - `boolean`"
-  ([^java.beans.beancontext.BeanContextServices this ^java.lang.Class service-class ^java.beans.beancontext.BeanContextServiceProvider service-provider]
+  (^Boolean [^java.beans.beancontext.BeanContextServices this ^java.lang.Class service-class ^java.beans.beancontext.BeanContextServiceProvider service-provider]
     (-> this (.addService service-class service-provider))))
 
 (defn get-current-service-selectors
@@ -95,7 +95,7 @@
 
   returns: the currently available service selectors
    for the named serviceClass - `java.util.Iterator`"
-  ([^java.beans.beancontext.BeanContextServices this ^java.lang.Class service-class]
+  (^java.util.Iterator [^java.beans.beancontext.BeanContextServices this ^java.lang.Class service-class]
     (-> this (.getCurrentServiceSelectors service-class))))
 
 (defn add-bean-context-services-listener
@@ -118,6 +118,6 @@
 
   returns: an Iterator consisting of the
    currently available services - `java.util.Iterator`"
-  ([^java.beans.beancontext.BeanContextServices this]
+  (^java.util.Iterator [^java.beans.beancontext.BeanContextServices this]
     (-> this (.getCurrentServiceClasses))))
 

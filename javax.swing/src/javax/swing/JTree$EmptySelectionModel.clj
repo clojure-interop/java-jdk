@@ -17,7 +17,7 @@
   "Returns the single instance of EmptySelectionModel.
 
   returns: single instance of EmptySelectionModel - `javax.swing.JTree.EmptySelectionModel`"
-  ([]
+  (^javax.swing.JTree.EmptySelectionModel []
     (JTree$EmptySelectionModel/sharedInstance )))
 
 (defn add-tree-selection-listener
@@ -41,7 +41,7 @@
    does not allow a selection.
 
   paths - the paths to add to the selection; this is ignored - `javax.swing.tree.TreePath[]`"
-  ([^javax.swing.JTree$EmptySelectionModel this ^javax.swing.tree.TreePath[] paths]
+  ([^javax.swing.JTree$EmptySelectionModel this paths]
     (-> this (.addSelectionPaths paths))))
 
 (defn remove-property-change-listener
@@ -65,7 +65,7 @@
    does not allow a selection.
 
   paths - the paths to remove; this is ignored - `javax.swing.tree.TreePath[]`"
-  ([^javax.swing.JTree$EmptySelectionModel this ^javax.swing.tree.TreePath[] paths]
+  ([^javax.swing.JTree$EmptySelectionModel this paths]
     (-> this (.removeSelectionPaths paths))))
 
 (defn set-selection-mode
@@ -89,6 +89,6 @@
    does not allow a selection.
 
   paths - the paths to select; this is ignored - `javax.swing.tree.TreePath[]`"
-  ([^javax.swing.JTree$EmptySelectionModel this ^javax.swing.tree.TreePath[] paths]
+  ([^javax.swing.JTree$EmptySelectionModel this paths]
     (-> this (.setSelectionPaths paths))))
 

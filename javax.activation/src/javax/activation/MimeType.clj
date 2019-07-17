@@ -34,7 +34,7 @@
   "Retrieve the subtype of this object.
 
   returns: the MIME subtype - `java.lang.String`"
-  ([^javax.activation.MimeType this]
+  (^java.lang.String [^javax.activation.MimeType this]
     (-> this (.getSubType))))
 
 (defn remove-parameter
@@ -48,14 +48,14 @@
   "Return the String representation of this object.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([^javax.activation.MimeType this]
+  (^java.lang.String [^javax.activation.MimeType this]
     (-> this (.toString))))
 
 (defn get-parameters
   "Retrieve this object's parameter list.
 
   returns: a MimeTypeParameterList object representing the parameters - `javax.activation.MimeTypeParameterList`"
-  ([^javax.activation.MimeType this]
+  (^javax.activation.MimeTypeParameterList [^javax.activation.MimeType this]
     (-> this (.getParameters))))
 
 (defn write-external
@@ -75,7 +75,7 @@
    without the parameter list.
 
   returns: the MIME type and sub-type - `java.lang.String`"
-  ([^javax.activation.MimeType this]
+  (^java.lang.String [^javax.activation.MimeType this]
     (-> this (.getBaseType))))
 
 (defn get-parameter
@@ -85,7 +85,7 @@
   name - the parameter name - `java.lang.String`
 
   returns: the paramter's value - `java.lang.String`"
-  ([^javax.activation.MimeType this ^java.lang.String name]
+  (^java.lang.String [^javax.activation.MimeType this ^java.lang.String name]
     (-> this (.getParameter name))))
 
 (defn set-primary-type
@@ -101,7 +101,7 @@
   "Retrieve the primary type of this object.
 
   returns: the primary MIME type - `java.lang.String`"
-  ([^javax.activation.MimeType this]
+  (^java.lang.String [^javax.activation.MimeType this]
     (-> this (.getPrimaryType))))
 
 (defn match
@@ -111,7 +111,7 @@
   type - the MimeType object to compare with - `javax.activation.MimeType`
 
   returns: true if they match - `boolean`"
-  ([^javax.activation.MimeType this ^javax.activation.MimeType type]
+  (^Boolean [^javax.activation.MimeType this ^javax.activation.MimeType type]
     (-> this (.match type))))
 
 (defn set-parameter

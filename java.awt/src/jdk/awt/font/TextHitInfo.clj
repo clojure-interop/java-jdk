@@ -49,7 +49,7 @@
 
   returns: a TextHitInfo on the leading edge of the
    character at the specified charIndex. - `java.awt.font.TextHitInfo`"
-  ([^Integer char-index]
+  (^java.awt.font.TextHitInfo [^Integer char-index]
     (TextHitInfo/leading char-index)))
 
 (defn *trailing
@@ -60,7 +60,7 @@
 
   returns: a TextHitInfo on the trailing edge of the
    character at the specified charIndex. - `java.awt.font.TextHitInfo`"
-  ([^Integer char-index]
+  (^java.awt.font.TextHitInfo [^Integer char-index]
     (TextHitInfo/trailing char-index)))
 
 (defn *before-offset
@@ -70,7 +70,7 @@
   offset - an offset associated with the character before the offset - `int`
 
   returns: a TextHitInfo at the specified offset. - `java.awt.font.TextHitInfo`"
-  ([^Integer offset]
+  (^java.awt.font.TextHitInfo [^Integer offset]
     (TextHitInfo/beforeOffset offset)))
 
 (defn *after-offset
@@ -80,14 +80,14 @@
   offset - an offset associated with the character after the offset - `int`
 
   returns: a TextHitInfo at the specified offset. - `java.awt.font.TextHitInfo`"
-  ([^Integer offset]
+  (^java.awt.font.TextHitInfo [^Integer offset]
     (TextHitInfo/afterOffset offset)))
 
 (defn get-char-index
   "Returns the index of the character hit.
 
   returns: the index of the character hit. - `int`"
-  ([^java.awt.font.TextHitInfo this]
+  (^Integer [^java.awt.font.TextHitInfo this]
     (-> this (.getCharIndex))))
 
 (defn leading-edge?
@@ -96,7 +96,7 @@
 
   returns: true if the leading edge of the character was
    hit; false otherwise. - `boolean`"
-  ([^java.awt.font.TextHitInfo this]
+  (^Boolean [^java.awt.font.TextHitInfo this]
     (-> this (.isLeadingEdge))))
 
 (defn get-insertion-index
@@ -105,7 +105,7 @@
    than the character index if the trailing edge was hit.
 
   returns: the insertion index. - `int`"
-  ([^java.awt.font.TextHitInfo this]
+  (^Integer [^java.awt.font.TextHitInfo this]
     (-> this (.getInsertionIndex))))
 
 (defn hash-code
@@ -113,7 +113,7 @@
 
   returns: the hash code of this TextHitInfo, which is
    also the charIndex of this TextHitInfo. - `int`"
-  ([^java.awt.font.TextHitInfo this]
+  (^Integer [^java.awt.font.TextHitInfo this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -124,7 +124,7 @@
 
   returns: true if the specified Object
    equals this TextHitInfo; false otherwise. - `boolean`"
-  ([^java.awt.font.TextHitInfo this ^java.lang.Object obj]
+  (^Boolean [^java.awt.font.TextHitInfo this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn to-string
@@ -133,7 +133,7 @@
 
   returns: a String representing this
    TextHitInfo. - `java.lang.String`"
-  ([^java.awt.font.TextHitInfo this]
+  (^java.lang.String [^java.awt.font.TextHitInfo this]
     (-> this (.toString))))
 
 (defn get-other-hit
@@ -142,7 +142,7 @@
 
   returns: a TextHitInfo on the other side of the
    insertion point. - `java.awt.font.TextHitInfo`"
-  ([^java.awt.font.TextHitInfo this]
+  (^java.awt.font.TextHitInfo [^java.awt.font.TextHitInfo this]
     (-> this (.getOtherHit))))
 
 (defn get-offset-hit
@@ -156,6 +156,6 @@
   returns: a TextHitInfo whose charIndex is
    offset by delta from the charIndex of
    this TextHitInfo. - `java.awt.font.TextHitInfo`"
-  ([^java.awt.font.TextHitInfo this ^Integer delta]
+  (^java.awt.font.TextHitInfo [^java.awt.font.TextHitInfo this ^Integer delta]
     (-> this (.getOffsetHit delta))))
 

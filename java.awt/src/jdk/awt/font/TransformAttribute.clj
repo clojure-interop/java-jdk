@@ -30,7 +30,7 @@
 
   returns: a AffineTransform that is a copy of the wrapped
    transform of this TransformAttribute. - `java.awt.geom.AffineTransform`"
-  ([^java.awt.font.TransformAttribute this]
+  (^java.awt.geom.AffineTransform [^java.awt.font.TransformAttribute this]
     (-> this (.getTransform))))
 
 (defn identity?
@@ -39,14 +39,14 @@
 
   returns: true if the wrapped transform is
    an identity transform; false otherwise. - `boolean`"
-  ([^java.awt.font.TransformAttribute this]
+  (^Boolean [^java.awt.font.TransformAttribute this]
     (-> this (.isIdentity))))
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  ([^java.awt.font.TransformAttribute this]
+  (^Integer [^java.awt.font.TransformAttribute this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -59,6 +59,6 @@
   returns: true if the argument is a TransformAttribute
    whose transform is equal to this TransformAttribute's
    transform. - `boolean`"
-  ([^java.awt.font.TransformAttribute this ^java.lang.Object rhs]
+  (^Boolean [^java.awt.font.TransformAttribute this ^java.lang.Object rhs]
     (-> this (.equals rhs))))
 

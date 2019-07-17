@@ -26,7 +26,7 @@
    ColorModel.
 
   returns: the ColorModel of the output. - `java.awt.image.ColorModel`"
-  ([^java.awt.PaintContext this]
+  (^java.awt.image.ColorModel [^java.awt.PaintContext this]
     (-> this (.getColorModel))))
 
 (defn get-raster
@@ -41,6 +41,6 @@
   returns: a Raster representing the specified
    rectangular area and containing the colors generated for
    the graphics operation. - `java.awt.image.Raster`"
-  ([^java.awt.PaintContext this ^Integer x ^Integer y ^Integer w ^Integer h]
+  (^java.awt.image.Raster [^java.awt.PaintContext this ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.getRaster x y w h))))
 

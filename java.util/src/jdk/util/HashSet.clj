@@ -76,7 +76,7 @@
    the reporting of additional characteristic values.
 
   returns: a Spliterator over the elements in this set - `java.util.Spliterator<HashSet.E>`"
-  ([^java.util.HashSet this]
+  (^java.util.Spliterator [^java.util.HashSet this]
     (-> this (.spliterator))))
 
 (defn contains
@@ -88,7 +88,7 @@
   o - element whose presence in this set is to be tested - `java.lang.Object`
 
   returns: true if this set contains the specified element - `boolean`"
-  ([^java.util.HashSet this ^java.lang.Object o]
+  (^Boolean [^java.util.HashSet this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn iterator
@@ -96,7 +96,7 @@
    are returned in no particular order.
 
   returns: an Iterator over the elements in this set - `java.util.Iterator<HashSet.E>`"
-  ([^java.util.HashSet this]
+  (^java.util.Iterator [^java.util.HashSet this]
     (-> this (.iterator))))
 
 (defn remove
@@ -111,7 +111,7 @@
   o - object to be removed from this set, if present - `java.lang.Object`
 
   returns: true if the set contained the specified element - `boolean`"
-  ([^java.util.HashSet this ^java.lang.Object o]
+  (^Boolean [^java.util.HashSet this ^java.lang.Object o]
     (-> this (.remove o))))
 
 (defn clone
@@ -119,7 +119,7 @@
    themselves are not cloned.
 
   returns: a shallow copy of this set - `java.lang.Object`"
-  ([^java.util.HashSet this]
+  (^java.lang.Object [^java.util.HashSet this]
     (-> this (.clone))))
 
 (defn add
@@ -134,21 +134,21 @@
 
   returns: true if this set did not already contain the specified
    element - `boolean`"
-  ([^java.util.HashSet this ^HashSet.E e]
+  (^Boolean [^java.util.HashSet this ^HashSet.E e]
     (-> this (.add e))))
 
 (defn empty?
   "Returns true if this set contains no elements.
 
   returns: true if this set contains no elements - `boolean`"
-  ([^java.util.HashSet this]
+  (^Boolean [^java.util.HashSet this]
     (-> this (.isEmpty))))
 
 (defn size
   "Returns the number of elements in this set (its cardinality).
 
   returns: the number of elements in this set (its cardinality) - `int`"
-  ([^java.util.HashSet this]
+  (^Integer [^java.util.HashSet this]
     (-> this (.size))))
 
 (defn clear

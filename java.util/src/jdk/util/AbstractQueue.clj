@@ -34,7 +34,7 @@
   returns: true (as specified by Collection.add(E)) - `boolean`
 
   throws: java.lang.IllegalStateException - if the element cannot be added at this time due to capacity restrictions"
-  ([^java.util.AbstractQueue this ^AbstractQueue.E e]
+  (^Boolean [^java.util.AbstractQueue this ^AbstractQueue.E e]
     (-> this (.add e))))
 
 (defn remove
@@ -48,7 +48,7 @@
   returns: the head of this queue - `AbstractQueue.E`
 
   throws: java.util.NoSuchElementException - if this queue is empty"
-  ([^java.util.AbstractQueue this]
+  (^AbstractQueue.E [^java.util.AbstractQueue this]
     (-> this (.remove))))
 
 (defn element
@@ -62,7 +62,7 @@
   returns: the head of this queue - `AbstractQueue.E`
 
   throws: java.util.NoSuchElementException - if this queue is empty"
-  ([^java.util.AbstractQueue this]
+  (^AbstractQueue.E [^java.util.AbstractQueue this]
     (-> this (.element))))
 
 (defn clear
@@ -94,6 +94,6 @@
   returns: true if this queue changed as a result of the call - `boolean`
 
   throws: java.lang.ClassCastException - if the class of an element of the specified collection prevents it from being added to this queue"
-  ([^java.util.AbstractQueue this ^AbstractQueue.E> c]
+  (^Boolean [^java.util.AbstractQueue this ^AbstractQueue.E> c]
     (-> this (.addAll c))))
 

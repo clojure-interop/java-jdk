@@ -53,7 +53,7 @@
   "Description copied from interface: Queue
 
   returns: the head of this queue, or null if this queue is empty - `LinkedTransferQueue.E`"
-  ([^java.util.concurrent.LinkedTransferQueue this]
+  (^LinkedTransferQueue.E [^java.util.concurrent.LinkedTransferQueue this]
     (-> this (.peek))))
 
 (defn spliterator
@@ -66,7 +66,7 @@
    Spliterator.ORDERED, and Spliterator.NONNULL.
 
   returns: a Spliterator over the elements in this queue - `java.util.Spliterator<LinkedTransferQueue.E>`"
-  ([^java.util.concurrent.LinkedTransferQueue this]
+  (^java.util.Spliterator [^java.util.concurrent.LinkedTransferQueue this]
     (-> this (.spliterator))))
 
 (defn try-transfer
@@ -90,16 +90,16 @@
            in which case the element is not left enqueued - `boolean`
 
   throws: java.lang.NullPointerException - if the specified element is null"
-  ([^java.util.concurrent.LinkedTransferQueue this ^LinkedTransferQueue.E e ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^Boolean [^java.util.concurrent.LinkedTransferQueue this ^LinkedTransferQueue.E e ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.tryTransfer e timeout unit)))
-  ([^java.util.concurrent.LinkedTransferQueue this ^LinkedTransferQueue.E e]
+  (^Boolean [^java.util.concurrent.LinkedTransferQueue this ^LinkedTransferQueue.E e]
     (-> this (.tryTransfer e))))
 
 (defn has-waiting-consumer?
   "Description copied from interface: TransferQueue
 
   returns: true if there is at least one waiting consumer - `boolean`"
-  ([^java.util.concurrent.LinkedTransferQueue this]
+  (^Boolean [^java.util.concurrent.LinkedTransferQueue this]
     (-> this (.hasWaitingConsumer))))
 
 (defn offer
@@ -115,9 +115,9 @@
     BlockingQueue.offer) - `boolean`
 
   throws: java.lang.NullPointerException - if the specified element is null"
-  ([^java.util.concurrent.LinkedTransferQueue this ^LinkedTransferQueue.E e ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^Boolean [^java.util.concurrent.LinkedTransferQueue this ^LinkedTransferQueue.E e ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.offer e timeout unit)))
-  ([^java.util.concurrent.LinkedTransferQueue this ^LinkedTransferQueue.E e]
+  (^Boolean [^java.util.concurrent.LinkedTransferQueue this ^LinkedTransferQueue.E e]
     (-> this (.offer e))))
 
 (defn put
@@ -138,7 +138,7 @@
   o - object to be checked for containment in this queue - `java.lang.Object`
 
   returns: true if this queue contains the specified element - `boolean`"
-  ([^java.util.concurrent.LinkedTransferQueue this ^java.lang.Object o]
+  (^Boolean [^java.util.concurrent.LinkedTransferQueue this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn take
@@ -147,7 +147,7 @@
   returns: the head of this queue - `LinkedTransferQueue.E`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([^java.util.concurrent.LinkedTransferQueue this]
+  (^LinkedTransferQueue.E [^java.util.concurrent.LinkedTransferQueue this]
     (-> this (.take))))
 
 (defn iterator
@@ -158,7 +158,7 @@
    weakly consistent.
 
   returns: an iterator over the elements in this queue in proper sequence - `java.util.Iterator<LinkedTransferQueue.E>`"
-  ([^java.util.concurrent.LinkedTransferQueue this]
+  (^java.util.Iterator [^java.util.concurrent.LinkedTransferQueue this]
     (-> this (.iterator))))
 
 (defn remove
@@ -172,7 +172,7 @@
   o - element to be removed from this queue, if present - `java.lang.Object`
 
   returns: true if this queue changed as a result of the call - `boolean`"
-  ([^java.util.concurrent.LinkedTransferQueue this ^java.lang.Object o]
+  (^Boolean [^java.util.concurrent.LinkedTransferQueue this ^java.lang.Object o]
     (-> this (.remove o))))
 
 (defn drain-to
@@ -184,9 +184,9 @@
   returns: the number of elements transferred - `int`
 
   throws: java.lang.NullPointerException - if the specified collection is null"
-  ([^java.util.concurrent.LinkedTransferQueue this ^LinkedTransferQueue.E> c ^Integer max-elements]
+  (^Integer [^java.util.concurrent.LinkedTransferQueue this ^LinkedTransferQueue.E> c ^Integer max-elements]
     (-> this (.drainTo c max-elements)))
-  ([^java.util.concurrent.LinkedTransferQueue this ^LinkedTransferQueue.E> c]
+  (^Integer [^java.util.concurrent.LinkedTransferQueue this ^LinkedTransferQueue.E> c]
     (-> this (.drainTo c))))
 
 (defn poll
@@ -199,9 +199,9 @@
            specified waiting time elapses before an element is available - `LinkedTransferQueue.E`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([^java.util.concurrent.LinkedTransferQueue this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^LinkedTransferQueue.E [^java.util.concurrent.LinkedTransferQueue this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.poll timeout unit)))
-  ([^java.util.concurrent.LinkedTransferQueue this]
+  (^LinkedTransferQueue.E [^java.util.concurrent.LinkedTransferQueue this]
     (-> this (.poll))))
 
 (defn transfer
@@ -225,7 +225,7 @@
 
   returns: Integer.MAX_VALUE (as specified by
            BlockingQueue.remainingCapacity) - `int`"
-  ([^java.util.concurrent.LinkedTransferQueue this]
+  (^Integer [^java.util.concurrent.LinkedTransferQueue this]
     (-> this (.remainingCapacity))))
 
 (defn add
@@ -238,14 +238,14 @@
   returns: true (as specified by Collection.add(E)) - `boolean`
 
   throws: java.lang.NullPointerException - if the specified element is null"
-  ([^java.util.concurrent.LinkedTransferQueue this ^LinkedTransferQueue.E e]
+  (^Boolean [^java.util.concurrent.LinkedTransferQueue this ^LinkedTransferQueue.E e]
     (-> this (.add e))))
 
 (defn empty?
   "Returns true if this queue contains no elements.
 
   returns: true if this queue contains no elements - `boolean`"
-  ([^java.util.concurrent.LinkedTransferQueue this]
+  (^Boolean [^java.util.concurrent.LinkedTransferQueue this]
     (-> this (.isEmpty))))
 
 (defn size
@@ -259,13 +259,13 @@
    number of elements requires an O(n) traversal.
 
   returns: the number of elements in this queue - `int`"
-  ([^java.util.concurrent.LinkedTransferQueue this]
+  (^Integer [^java.util.concurrent.LinkedTransferQueue this]
     (-> this (.size))))
 
 (defn get-waiting-consumer-count
   "Description copied from interface: TransferQueue
 
   returns: the number of consumers waiting to receive elements - `int`"
-  ([^java.util.concurrent.LinkedTransferQueue this]
+  (^Integer [^java.util.concurrent.LinkedTransferQueue this]
     (-> this (.getWaitingConsumerCount))))
 

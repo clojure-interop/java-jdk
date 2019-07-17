@@ -83,7 +83,7 @@
   locale - the specified locale - `java.util.Locale`
 
   returns: `java.awt.ComponentOrientation`"
-  ([^java.util.Locale locale]
+  (^java.awt.ComponentOrientation [^java.util.Locale locale]
     (ComponentOrientation/getOrientation locale)))
 
 (defn horizontal?
@@ -92,7 +92,7 @@
    systems such as Roman.
 
   returns: `boolean`"
-  ([^java.awt.ComponentOrientation this]
+  (^Boolean [^java.awt.ComponentOrientation this]
     (-> this (.isHorizontal))))
 
 (defn left-to-right?
@@ -102,6 +102,6 @@
    systems such as Roman.
 
   returns: `boolean`"
-  ([^java.awt.ComponentOrientation this]
+  (^Boolean [^java.awt.ComponentOrientation this]
     (-> this (.isLeftToRight))))
 

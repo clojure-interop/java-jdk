@@ -10,7 +10,7 @@
   returns: a new instance of a SOAPElementFactory - `javax.xml.soap.SOAPElementFactory`
 
   throws: javax.xml.soap.SOAPException - if there was an error creating the default SOAPElementFactory"
-  ([]
+  (^javax.xml.soap.SOAPElementFactory []
     (SOAPElementFactory/newInstance )))
 
 (defn create
@@ -27,8 +27,8 @@
   returns: `javax.xml.soap.SOAPElement`
 
   throws: javax.xml.soap.SOAPException - if there is an error in creating the SOAPElement object"
-  ([^javax.xml.soap.SOAPElementFactory this ^java.lang.String local-name ^java.lang.String prefix ^java.lang.String uri]
+  (^javax.xml.soap.SOAPElement [^javax.xml.soap.SOAPElementFactory this ^java.lang.String local-name ^java.lang.String prefix ^java.lang.String uri]
     (-> this (.create local-name prefix uri)))
-  ([^javax.xml.soap.SOAPElementFactory this ^javax.xml.soap.Name name]
+  (^javax.xml.soap.SOAPElement [^javax.xml.soap.SOAPElementFactory this ^javax.xml.soap.Name name]
     (-> this (.create name))))
 

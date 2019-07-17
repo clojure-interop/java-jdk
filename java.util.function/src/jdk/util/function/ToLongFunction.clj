@@ -13,6 +13,6 @@
   value - the function argument - `ToLongFunction.T`
 
   returns: the function result - `long`"
-  ([^java.util.function.ToLongFunction this ^ToLongFunction.T value]
+  (^Long [^java.util.function.ToLongFunction this ^ToLongFunction.T value]
     (-> this (.applyAsLong value))))
 

@@ -57,7 +57,7 @@
   "Returns the orientation of this PageFormat.
 
   returns: this PageFormat object's orientation. - `int`"
-  ([^java.awt.print.PageFormat this]
+  (^Integer [^java.awt.print.PageFormat this]
     (-> this (.getOrientation))))
 
 (defn get-width
@@ -66,7 +66,7 @@
    page when determining the width.
 
   returns: the width of the page. - `double`"
-  ([^java.awt.print.PageFormat this]
+  (^Double [^java.awt.print.PageFormat this]
     (-> this (.getWidth))))
 
 (defn get-paper
@@ -82,7 +82,7 @@
 
   returns: a copy of the Paper object associated
             with this PageFormat. - `java.awt.print.Paper`"
-  ([^java.awt.print.PageFormat this]
+  (^java.awt.print.Paper [^java.awt.print.PageFormat this]
     (-> this (.getPaper))))
 
 (defn get-imageable-width
@@ -91,7 +91,7 @@
    of the page.
 
   returns: the width of the page. - `double`"
-  ([^java.awt.print.PageFormat this]
+  (^Double [^java.awt.print.PageFormat this]
     (-> this (.getImageableWidth))))
 
 (defn get-imageable-height
@@ -100,7 +100,7 @@
    of the page.
 
   returns: the height of the page. - `double`"
-  ([^java.awt.print.PageFormat this]
+  (^Double [^java.awt.print.PageFormat this]
     (-> this (.getImageableHeight))))
 
 (defn get-height
@@ -109,7 +109,7 @@
    page when determining the height.
 
   returns: the height of the page. - `double`"
-  ([^java.awt.print.PageFormat this]
+  (^Double [^java.awt.print.PageFormat this]
     (-> this (.getHeight))))
 
 (defn set-orientation
@@ -133,7 +133,7 @@
   returns: the x coordinate of the upper left point of the
    imageable area of the Paper object
    associated with this PageFormat. - `double`"
-  ([^java.awt.print.PageFormat this]
+  (^Double [^java.awt.print.PageFormat this]
     (-> this (.getImageableX))))
 
 (defn clone
@@ -141,7 +141,7 @@
    contents as this PageFormat.
 
   returns: a copy of this PageFormat. - `java.lang.Object`"
-  ([^java.awt.print.PageFormat this]
+  (^java.lang.Object [^java.awt.print.PageFormat this]
     (-> this (.clone))))
 
 (defn get-imageable-y
@@ -154,7 +154,7 @@
   returns: the y coordinate of the upper left point of the
    imageable area of the Paper object
    associated with this PageFormat. - `double`"
-  ([^java.awt.print.PageFormat this]
+  (^Double [^java.awt.print.PageFormat this]
     (-> this (.getImageableY))))
 
 (defn get-matrix

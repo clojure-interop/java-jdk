@@ -18,6 +18,6 @@
    user principal name that was not found, otherwise null.
 
   returns: the user principal name or null - `java.lang.String`"
-  ([^java.nio.file.attribute.UserPrincipalNotFoundException this]
+  (^java.lang.String [^java.nio.file.attribute.UserPrincipalNotFoundException this]
     (-> this (.getName))))
 

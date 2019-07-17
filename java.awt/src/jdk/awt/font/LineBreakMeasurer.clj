@@ -222,9 +222,9 @@
 
   returns: an offset in the text representing the limit of the
       next TextLayout - `int`"
-  ([^java.awt.font.LineBreakMeasurer this ^Float wrapping-width ^Integer offset-limit ^Boolean require-next-word]
+  (^Integer [^java.awt.font.LineBreakMeasurer this ^Float wrapping-width ^Integer offset-limit ^Boolean require-next-word]
     (-> this (.nextOffset wrapping-width offset-limit require-next-word)))
-  ([^java.awt.font.LineBreakMeasurer this ^Float wrapping-width]
+  (^Integer [^java.awt.font.LineBreakMeasurer this ^Float wrapping-width]
     (-> this (.nextOffset wrapping-width))))
 
 (defn next-layout
@@ -239,16 +239,16 @@
       wrappingWidth.  If the current position is at the end
       of the text used by this LineBreakMeasurer,
       null is returned - `java.awt.font.TextLayout`"
-  ([^java.awt.font.LineBreakMeasurer this ^Float wrapping-width ^Integer offset-limit ^Boolean require-next-word]
+  (^java.awt.font.TextLayout [^java.awt.font.LineBreakMeasurer this ^Float wrapping-width ^Integer offset-limit ^Boolean require-next-word]
     (-> this (.nextLayout wrapping-width offset-limit require-next-word)))
-  ([^java.awt.font.LineBreakMeasurer this ^Float wrapping-width]
+  (^java.awt.font.TextLayout [^java.awt.font.LineBreakMeasurer this ^Float wrapping-width]
     (-> this (.nextLayout wrapping-width))))
 
 (defn get-position
   "Returns the current position of this LineBreakMeasurer.
 
   returns: the current position of this LineBreakMeasurer - `int`"
-  ([^java.awt.font.LineBreakMeasurer this]
+  (^Integer [^java.awt.font.LineBreakMeasurer this]
     (-> this (.getPosition))))
 
 (defn set-position

@@ -21,7 +21,7 @@
 
   returns: true if the Certificate
    should be selected, false otherwise - `boolean`"
-  ([^java.security.cert.CertSelector this ^java.security.cert.Certificate cert]
+  (^Boolean [^java.security.cert.CertSelector this ^java.security.cert.Certificate cert]
     (-> this (.match cert))))
 
 (defn clone
@@ -29,6 +29,6 @@
    copy will not affect the original and vice versa.
 
   returns: a copy of this CertSelector - `java.lang.Object`"
-  ([^java.security.cert.CertSelector this]
+  (^java.lang.Object [^java.security.cert.CertSelector this]
     (-> this (.clone))))
 

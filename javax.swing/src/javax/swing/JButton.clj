@@ -53,7 +53,7 @@
    that renders this component.
 
   returns: the string `ButtonUI` - `java.lang.String`"
-  ([^javax.swing.JButton this]
+  (^java.lang.String [^javax.swing.JButton this]
     (-> this (.getUIClassID))))
 
 (defn default-button?
@@ -65,14 +65,14 @@
    to access the default button.
 
   returns: the value of the defaultButton property - `boolean`"
-  ([^javax.swing.JButton this]
+  (^Boolean [^javax.swing.JButton this]
     (-> this (.isDefaultButton))))
 
 (defn default-capable?
   "Gets the value of the defaultCapable property.
 
   returns: the value of the defaultCapable property - `boolean`"
-  ([^javax.swing.JButton this]
+  (^Boolean [^javax.swing.JButton this]
     (-> this (.isDefaultCapable))))
 
 (defn set-default-capable
@@ -105,6 +105,6 @@
 
   returns: an AccessibleJButton that serves as the
            AccessibleContext of this JButton - `javax.accessibility.AccessibleContext`"
-  ([^javax.swing.JButton this]
+  (^javax.accessibility.AccessibleContext [^javax.swing.JButton this]
     (-> this (.getAccessibleContext))))
 

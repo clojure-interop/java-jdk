@@ -14,6 +14,6 @@
   "Gets a result.
 
   returns: a result - `boolean`"
-  ([^java.util.function.BooleanSupplier this]
+  (^Boolean [^java.util.function.BooleanSupplier this]
     (-> this (.getAsBoolean))))
 

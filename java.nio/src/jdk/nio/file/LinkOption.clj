@@ -34,6 +34,6 @@
   returns: the enum constant with the specified name - `java.nio.file.LinkOption`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^java.nio.file.LinkOption [^java.lang.String name]
     (LinkOption/valueOf name)))
 

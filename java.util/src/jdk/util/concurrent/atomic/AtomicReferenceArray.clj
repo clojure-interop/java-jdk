@@ -24,7 +24,7 @@
   new-value - the new value - `AtomicReferenceArray.E`
 
   returns: the previous value - `AtomicReferenceArray.E`"
-  ([^java.util.concurrent.atomic.AtomicReferenceArray this ^Integer i ^AtomicReferenceArray.E new-value]
+  (^AtomicReferenceArray.E [^java.util.concurrent.atomic.AtomicReferenceArray this ^Integer i ^AtomicReferenceArray.E new-value]
     (-> this (.getAndSet i new-value))))
 
 (defn update-and-get
@@ -37,7 +37,7 @@
   update-function - a side-effect-free function - `java.util.function.UnaryOperator<AtomicReferenceArray.E>`
 
   returns: the updated value - `AtomicReferenceArray.E`"
-  ([^java.util.concurrent.atomic.AtomicReferenceArray this ^Integer i ^java.util.function.UnaryOperator update-function]
+  (^AtomicReferenceArray.E [^java.util.concurrent.atomic.AtomicReferenceArray this ^Integer i ^java.util.function.UnaryOperator update-function]
     (-> this (.updateAndGet i update-function))))
 
 (defn get-and-update
@@ -50,14 +50,14 @@
   update-function - a side-effect-free function - `java.util.function.UnaryOperator<AtomicReferenceArray.E>`
 
   returns: the previous value - `AtomicReferenceArray.E`"
-  ([^java.util.concurrent.atomic.AtomicReferenceArray this ^Integer i ^java.util.function.UnaryOperator update-function]
+  (^AtomicReferenceArray.E [^java.util.concurrent.atomic.AtomicReferenceArray this ^Integer i ^java.util.function.UnaryOperator update-function]
     (-> this (.getAndUpdate i update-function))))
 
 (defn to-string
   "Returns the String representation of the current values of array.
 
   returns: the String representation of the current values of array - `java.lang.String`"
-  ([^java.util.concurrent.atomic.AtomicReferenceArray this]
+  (^java.lang.String [^java.util.concurrent.atomic.AtomicReferenceArray this]
     (-> this (.toString))))
 
 (defn accumulate-and-get
@@ -74,14 +74,14 @@
   accumulator-function - a side-effect-free function of two arguments - `java.util.function.BinaryOperator<AtomicReferenceArray.E>`
 
   returns: the updated value - `AtomicReferenceArray.E`"
-  ([^java.util.concurrent.atomic.AtomicReferenceArray this ^Integer i ^AtomicReferenceArray.E x ^java.util.function.BinaryOperator accumulator-function]
+  (^AtomicReferenceArray.E [^java.util.concurrent.atomic.AtomicReferenceArray this ^Integer i ^AtomicReferenceArray.E x ^java.util.function.BinaryOperator accumulator-function]
     (-> this (.accumulateAndGet i x accumulator-function))))
 
 (defn length
   "Returns the length of the array.
 
   returns: the length of the array - `int`"
-  ([^java.util.concurrent.atomic.AtomicReferenceArray this]
+  (^Integer [^java.util.concurrent.atomic.AtomicReferenceArray this]
     (-> this (.length))))
 
 (defn weak-compare-and-set
@@ -97,7 +97,7 @@
   update - the new value - `AtomicReferenceArray.E`
 
   returns: true if successful - `boolean`"
-  ([^java.util.concurrent.atomic.AtomicReferenceArray this ^Integer i ^AtomicReferenceArray.E expect ^AtomicReferenceArray.E update]
+  (^Boolean [^java.util.concurrent.atomic.AtomicReferenceArray this ^Integer i ^AtomicReferenceArray.E expect ^AtomicReferenceArray.E update]
     (-> this (.weakCompareAndSet i expect update))))
 
 (defn lazy-set
@@ -130,7 +130,7 @@
   accumulator-function - a side-effect-free function of two arguments - `java.util.function.BinaryOperator<AtomicReferenceArray.E>`
 
   returns: the previous value - `AtomicReferenceArray.E`"
-  ([^java.util.concurrent.atomic.AtomicReferenceArray this ^Integer i ^AtomicReferenceArray.E x ^java.util.function.BinaryOperator accumulator-function]
+  (^AtomicReferenceArray.E [^java.util.concurrent.atomic.AtomicReferenceArray this ^Integer i ^AtomicReferenceArray.E x ^java.util.function.BinaryOperator accumulator-function]
     (-> this (.getAndAccumulate i x accumulator-function))))
 
 (defn compare-and-set
@@ -143,7 +143,7 @@
 
   returns: true if successful. False return indicates that
    the actual value was not equal to the expected value. - `boolean`"
-  ([^java.util.concurrent.atomic.AtomicReferenceArray this ^Integer i ^AtomicReferenceArray.E expect ^AtomicReferenceArray.E update]
+  (^Boolean [^java.util.concurrent.atomic.AtomicReferenceArray this ^Integer i ^AtomicReferenceArray.E expect ^AtomicReferenceArray.E update]
     (-> this (.compareAndSet i expect update))))
 
 (defn get
@@ -152,6 +152,6 @@
   i - the index - `int`
 
   returns: the current value - `AtomicReferenceArray.E`"
-  ([^java.util.concurrent.atomic.AtomicReferenceArray this ^Integer i]
+  (^AtomicReferenceArray.E [^java.util.concurrent.atomic.AtomicReferenceArray this ^Integer i]
     (-> this (.get i))))
 

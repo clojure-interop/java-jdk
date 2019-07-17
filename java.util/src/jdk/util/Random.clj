@@ -89,13 +89,13 @@
            each with the given origin (inclusive) and bound (exclusive) - `java.util.stream.LongStream`
 
   throws: java.lang.IllegalArgumentException - if streamSize is less than zero, or randomNumberOrigin is greater than or equal to randomNumberBound"
-  ([^java.util.Random this ^Long stream-size ^Long random-number-origin ^Long random-number-bound]
+  (^java.util.stream.LongStream [^java.util.Random this ^Long stream-size ^Long random-number-origin ^Long random-number-bound]
     (-> this (.longs stream-size random-number-origin random-number-bound)))
-  ([^java.util.Random this ^Long random-number-origin ^Long random-number-bound]
+  (^java.util.stream.LongStream [^java.util.Random this ^Long random-number-origin ^Long random-number-bound]
     (-> this (.longs random-number-origin random-number-bound)))
-  ([^java.util.Random this ^Long stream-size]
+  (^java.util.stream.LongStream [^java.util.Random this ^Long stream-size]
     (-> this (.longs stream-size)))
-  ([^java.util.Random this]
+  (^java.util.stream.LongStream [^java.util.Random this]
     (-> this (.longs))))
 
 (defn set-seed
@@ -158,7 +158,7 @@
   returns: the next pseudorandom, uniformly distributed float
            value between 0.0 and 1.0 from this
            random number generator's sequence - `float`"
-  ([^java.util.Random this]
+  (^Float [^java.util.Random this]
     (-> this (.nextFloat))))
 
 (defn next-int
@@ -216,9 +216,9 @@
            from this random number generator's sequence - `int`
 
   throws: java.lang.IllegalArgumentException - if bound is not positive"
-  ([^java.util.Random this ^Integer bound]
+  (^Integer [^java.util.Random this ^Integer bound]
     (-> this (.nextInt bound)))
-  ([^java.util.Random this]
+  (^Integer [^java.util.Random this]
     (-> this (.nextInt))))
 
 (defn next-long
@@ -240,7 +240,7 @@
 
   returns: the next pseudorandom, uniformly distributed long
            value from this random number generator's sequence - `long`"
-  ([^java.util.Random this]
+  (^Long [^java.util.Random this]
     (-> this (.nextLong))))
 
 (defn doubles
@@ -268,13 +268,13 @@
            each with the given origin (inclusive) and bound (exclusive) - `java.util.stream.DoubleStream`
 
   throws: java.lang.IllegalArgumentException - if randomNumberOrigin is greater than or equal to randomNumberBound"
-  ([^java.util.Random this ^Long stream-size ^Double random-number-origin ^Double random-number-bound]
+  (^java.util.stream.DoubleStream [^java.util.Random this ^Long stream-size ^Double random-number-origin ^Double random-number-bound]
     (-> this (.doubles stream-size random-number-origin random-number-bound)))
-  ([^java.util.Random this ^Double random-number-origin ^Double random-number-bound]
+  (^java.util.stream.DoubleStream [^java.util.Random this ^Double random-number-origin ^Double random-number-bound]
     (-> this (.doubles random-number-origin random-number-bound)))
-  ([^java.util.Random this ^Long stream-size]
+  (^java.util.stream.DoubleStream [^java.util.Random this ^Long stream-size]
     (-> this (.doubles stream-size)))
-  ([^java.util.Random this]
+  (^java.util.stream.DoubleStream [^java.util.Random this]
     (-> this (.doubles))))
 
 (defn ints
@@ -308,13 +308,13 @@
            each with the given origin (inclusive) and bound (exclusive) - `java.util.stream.IntStream`
 
   throws: java.lang.IllegalArgumentException - if streamSize is less than zero, or randomNumberOrigin is greater than or equal to randomNumberBound"
-  ([^java.util.Random this ^Long stream-size ^Integer random-number-origin ^Integer random-number-bound]
+  (^java.util.stream.IntStream [^java.util.Random this ^Long stream-size ^Integer random-number-origin ^Integer random-number-bound]
     (-> this (.ints stream-size random-number-origin random-number-bound)))
-  ([^java.util.Random this ^Integer random-number-origin ^Integer random-number-bound]
+  (^java.util.stream.IntStream [^java.util.Random this ^Integer random-number-origin ^Integer random-number-bound]
     (-> this (.ints random-number-origin random-number-bound)))
-  ([^java.util.Random this ^Long stream-size]
+  (^java.util.stream.IntStream [^java.util.Random this ^Long stream-size]
     (-> this (.ints stream-size)))
-  ([^java.util.Random this]
+  (^java.util.stream.IntStream [^java.util.Random this]
     (-> this (.ints))))
 
 (defn next-gaussian
@@ -362,7 +362,7 @@
            double value with mean 0.0 and
            standard deviation 1.0 from this random number
            generator's sequence - `double`"
-  ([^java.util.Random this]
+  (^Double [^java.util.Random this]
     (-> this (.nextGaussian))))
 
 (defn next-bytes
@@ -426,7 +426,7 @@
   returns: the next pseudorandom, uniformly distributed double
            value between 0.0 and 1.0 from this
            random number generator's sequence - `double`"
-  ([^java.util.Random this]
+  (^Double [^java.util.Random this]
     (-> this (.nextDouble))))
 
 (defn next-boolean
@@ -448,6 +448,6 @@
   returns: the next pseudorandom, uniformly distributed
            boolean value from this random number generator's
            sequence - `boolean`"
-  ([^java.util.Random this]
+  (^Boolean [^java.util.Random this]
     (-> this (.nextBoolean))))
 

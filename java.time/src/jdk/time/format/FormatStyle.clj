@@ -62,6 +62,6 @@
   returns: the enum constant with the specified name - `java.time.format.FormatStyle`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([^java.lang.String name]
+  (^java.time.format.FormatStyle [^java.lang.String name]
     (FormatStyle/valueOf name)))
 

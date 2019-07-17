@@ -9,7 +9,7 @@
   returns: the next int element in the iteration - `int`
 
   throws: java.util.NoSuchElementException - if the iteration has no more elements"
-  ([^java.util.PrimitiveIterator$OfInt this]
+  (^Integer [^java.util.PrimitiveIterator$OfInt this]
     (-> this (.nextInt))))
 
 (defn for-each-remaining
