@@ -16,19 +16,19 @@
   source-element - the element that corresponds to the source of the event - `javax.swing.text.Element`
   input-event - InputEvent that triggered the hyperlink event - `java.awt.event.InputEvent`
   target-frame - the Frame to display the document in - `java.lang.String`"
-  ([source type target-url desc source-element input-event target-frame]
+  ([^java.lang.Object source ^javax.swing.event.HyperlinkEvent.EventType type ^java.net.URL target-url ^java.lang.String desc ^javax.swing.text.Element source-element ^java.awt.event.InputEvent input-event ^java.lang.String target-frame]
     (new HTMLFrameHyperlinkEvent source type target-url desc source-element input-event target-frame))
-  ([source type target-url desc source-element target-frame]
+  ([^java.lang.Object source ^javax.swing.event.HyperlinkEvent.EventType type ^java.net.URL target-url ^java.lang.String desc ^javax.swing.text.Element source-element ^java.lang.String target-frame]
     (new HTMLFrameHyperlinkEvent source type target-url desc source-element target-frame))
-  ([source type target-url desc target-frame]
+  ([^java.lang.Object source ^javax.swing.event.HyperlinkEvent.EventType type ^java.net.URL target-url ^java.lang.String desc ^java.lang.String target-frame]
     (new HTMLFrameHyperlinkEvent source type target-url desc target-frame))
-  ([source type target-url target-frame]
+  ([^java.lang.Object source ^javax.swing.event.HyperlinkEvent.EventType type ^java.net.URL target-url ^java.lang.String target-frame]
     (new HTMLFrameHyperlinkEvent source type target-url target-frame)))
 
 (defn get-target
   "returns the target for the link.
 
   returns: `java.lang.String`"
-  ([this]
+  ([^javax.swing.text.html.HTMLFrameHyperlinkEvent this]
     (-> this (.getTarget))))
 

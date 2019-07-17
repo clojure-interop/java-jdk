@@ -13,11 +13,11 @@
   msg - the message to report - `java.lang.String`
   location - the location of the error - `javax.xml.stream.Location`
   th - a nested exception - `java.lang.Throwable`"
-  ([msg location th]
+  ([^java.lang.String msg ^javax.xml.stream.Location location ^java.lang.Throwable th]
     (new XMLStreamException msg location th))
-  ([msg th]
+  ([^java.lang.String msg ^java.lang.Throwable th]
     (new XMLStreamException msg th))
-  ([msg]
+  ([^java.lang.String msg]
     (new XMLStreamException msg))
   ([]
     (new XMLStreamException )))
@@ -26,13 +26,13 @@
   "Gets the nested exception.
 
   returns: Nested exception - `java.lang.Throwable`"
-  ([this]
+  ([^javax.xml.stream.XMLStreamException this]
     (-> this (.getNestedException))))
 
 (defn get-location
   "Gets the location of the exception
 
   returns: the location of the exception, may be null if none is available - `javax.xml.stream.Location`"
-  ([this]
+  ([^javax.xml.stream.XMLStreamException this]
     (-> this (.getLocation))))
 

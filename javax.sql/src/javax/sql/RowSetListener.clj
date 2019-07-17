@@ -17,7 +17,7 @@
    event.getSource.
 
   event - a RowSetEvent object that contains the RowSet object that is the source of the event - `javax.sql.RowSetEvent`"
-  ([this event]
+  ([^. this ^javax.sql.RowSetEvent event]
     (-> this (.rowSetChanged event))))
 
 (defn row-changed
@@ -28,7 +28,7 @@
    event.getSource.
 
   event - a RowSetEvent object that contains the RowSet object that is the source of the event - `javax.sql.RowSetEvent`"
-  ([this event]
+  ([^. this ^javax.sql.RowSetEvent event]
     (-> this (.rowChanged event))))
 
 (defn cursor-moved
@@ -39,6 +39,6 @@
    event.getSource.
 
   event - a RowSetEvent object that contains the RowSet object that is the source of the event - `javax.sql.RowSetEvent`"
-  ([this event]
+  ([^. this ^javax.sql.RowSetEvent event]
     (-> this (.cursorMoved event))))
 

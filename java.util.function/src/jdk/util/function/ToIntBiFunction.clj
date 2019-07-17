@@ -15,6 +15,6 @@
   u - the second function argument - `ToIntBiFunction.U`
 
   returns: the function result - `int`"
-  ([this t u]
+  ([^. this ^ToIntBiFunction.T t ^ToIntBiFunction.U u]
     (-> this (.applyAsInt t u))))
 

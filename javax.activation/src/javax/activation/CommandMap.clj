@@ -37,7 +37,7 @@
   command-map - The new default CommandMap. - `javax.activation.CommandMap`
 
   throws: java.lang.SecurityException - if the caller doesn't have permission to change the default"
-  ([command-map]
+  ([^javax.activation.CommandMap command-map]
     (CommandMap/setDefaultCommandMap command-map)))
 
 (defn get-preferred-commands
@@ -54,9 +54,9 @@
   ds - a DataSource for the data - `javax.activation.DataSource`
 
   returns: the CommandInfo classes that represent the command Beans. - `javax.activation.CommandInfo[]`"
-  ([this mime-type ds]
+  ([^javax.activation.CommandMap this ^java.lang.String mime-type ^javax.activation.DataSource ds]
     (-> this (.getPreferredCommands mime-type ds)))
-  ([this mime-type]
+  ([^javax.activation.CommandMap this ^java.lang.String mime-type]
     (-> this (.getPreferredCommands mime-type))))
 
 (defn get-all-commands
@@ -73,9 +73,9 @@
   ds - a DataSource for the data - `javax.activation.DataSource`
 
   returns: the CommandInfo objects representing all the commands. - `javax.activation.CommandInfo[]`"
-  ([this mime-type ds]
+  ([^javax.activation.CommandMap this ^java.lang.String mime-type ^javax.activation.DataSource ds]
     (-> this (.getAllCommands mime-type ds)))
-  ([this mime-type]
+  ([^javax.activation.CommandMap this ^java.lang.String mime-type]
     (-> this (.getAllCommands mime-type))))
 
 (defn get-command
@@ -92,9 +92,9 @@
   ds - a DataSource for the data - `javax.activation.DataSource`
 
   returns: the CommandInfo corresponding to the command. - `javax.activation.CommandInfo`"
-  ([this mime-type cmd-name ds]
+  ([^javax.activation.CommandMap this ^java.lang.String mime-type ^java.lang.String cmd-name ^javax.activation.DataSource ds]
     (-> this (.getCommand mime-type cmd-name ds)))
-  ([this mime-type cmd-name]
+  ([^javax.activation.CommandMap this ^java.lang.String mime-type ^java.lang.String cmd-name]
     (-> this (.getCommand mime-type cmd-name))))
 
 (defn create-data-content-handler
@@ -112,9 +112,9 @@
   ds - a DataSource for the data - `javax.activation.DataSource`
 
   returns: the DataContentHandler for the MIME type - `javax.activation.DataContentHandler`"
-  ([this mime-type ds]
+  ([^javax.activation.CommandMap this ^java.lang.String mime-type ^javax.activation.DataSource ds]
     (-> this (.createDataContentHandler mime-type ds)))
-  ([this mime-type]
+  ([^javax.activation.CommandMap this ^java.lang.String mime-type]
     (-> this (.createDataContentHandler mime-type))))
 
 (defn get-mime-types
@@ -123,6 +123,6 @@
    null is returned.
 
   returns: array of MIME types as strings, or null if not supported - `java.lang.String[]`"
-  ([this]
+  ([^javax.activation.CommandMap this]
     (-> this (.getMimeTypes))))
 

@@ -18,36 +18,36 @@
   alias - KeyStore alias - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if either cert, key or alias is null"
-  ([cert key alias]
+  ([^java.security.cert.X509Certificate cert ^java.security.PrivateKey key ^java.lang.String alias]
     (new X500PrivateCredential cert key alias))
-  ([cert key]
+  ([^java.security.cert.X509Certificate cert ^java.security.PrivateKey key]
     (new X500PrivateCredential cert key)))
 
 (defn get-certificate
   "Returns the X.509 certificate.
 
   returns: the X509Certificate - `java.security.cert.X509Certificate`"
-  ([this]
+  ([^javax.security.auth.x500.X500PrivateCredential this]
     (-> this (.getCertificate))))
 
 (defn get-private-key
   "Returns the PrivateKey.
 
   returns: the PrivateKey - `java.security.PrivateKey`"
-  ([this]
+  ([^javax.security.auth.x500.X500PrivateCredential this]
     (-> this (.getPrivateKey))))
 
 (defn get-alias
   "Returns the KeyStore alias.
 
   returns: the KeyStore alias - `java.lang.String`"
-  ([this]
+  ([^javax.security.auth.x500.X500PrivateCredential this]
     (-> this (.getAlias))))
 
 (defn destroy
   "Clears the references to the X.509 certificate, private key and the
    KeyStore alias in this object."
-  ([this]
+  ([^javax.security.auth.x500.X500PrivateCredential this]
     (-> this (.destroy))))
 
 (defn destroyed?
@@ -55,6 +55,6 @@
    in this object have been cleared.
 
   returns: true if X509Certificate and the PrivateKey are null - `boolean`"
-  ([this]
+  ([^javax.security.auth.x500.X500PrivateCredential this]
     (-> this (.isDestroyed))))
 

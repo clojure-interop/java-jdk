@@ -102,7 +102,7 @@
    represents the specified char value.
 
   value - the value to be represented by the Character object. - `char`"
-  ([value]
+  ([^Character value]
     (new Character value)))
 
 (def *-min-radix
@@ -684,7 +684,7 @@
   returns: the value 0 if x == y;
            a value less than 0 if x < y; and
            a value greater than 0 if x > y - `int`"
-  ([x y]
+  ([^Character x ^Character y]
     (Character/compare x y)))
 
 (defn *java-identifier-part?
@@ -716,7 +716,7 @@
 
   returns: true if the character may be part of a
             Java identifier; false otherwise. - `boolean`"
-  ([ch]
+  ([^Character ch]
     (Character/isJavaIdentifierPart ch)))
 
 (defn *to-lower-case
@@ -743,7 +743,7 @@
 
   returns: the lowercase equivalent of the character, if any;
             otherwise, the character itself. - `char`"
-  ([ch]
+  ([^Character ch]
     (Character/toLowerCase ch)))
 
 (defn *for-digit
@@ -767,7 +767,7 @@
 
   returns: the char representation of the specified digit
             in the specified radix. - `char`"
-  ([digit radix]
+  ([^Integer digit ^Integer radix]
     (Character/forDigit digit radix)))
 
 (defn *value-of
@@ -785,7 +785,7 @@
   c - a char value. - `char`
 
   returns: a Character instance representing c. - `java.lang.Character`"
-  ([c]
+  ([^Character c]
     (Character/valueOf c)))
 
 (defn *low-surrogate
@@ -811,7 +811,7 @@
 
   returns: the trailing surrogate code unit used to represent the
             character in the UTF-16 encoding - `char`"
-  ([code-point]
+  ([^Integer code-point]
     (Character/lowSurrogate code-point)))
 
 (defn *space-char?
@@ -834,7 +834,7 @@
 
   returns: true if the character is a space character;
             false otherwise. - `boolean`"
-  ([ch]
+  ([^Character ch]
     (Character/isSpaceChar ch)))
 
 (defn *is-space
@@ -844,7 +844,7 @@
 
   returns: true if the character is ISO-LATIN-1 white
                space; false otherwise. - `java.lang.   boolean`"
-  ([ch]
+  ([^Character ch]
     (Character/isSpace ch)))
 
 (defn *get-type
@@ -858,7 +858,7 @@
 
   returns: a value of type int representing the
             character's general category. - `int`"
-  ([ch]
+  ([^Character ch]
     (Character/getType ch)))
 
 (defn *lower-case?
@@ -887,7 +887,7 @@
 
   returns: true if the character is lowercase;
             false otherwise. - `boolean`"
-  ([ch]
+  ([^Character ch]
     (Character/isLowerCase ch)))
 
 (defn *unicode-identifier-start?
@@ -910,7 +910,7 @@
 
   returns: true if the character may start a Unicode
             identifier; false otherwise. - `boolean`"
-  ([ch]
+  ([^Character ch]
     (Character/isUnicodeIdentifierStart ch)))
 
 (defn *is-java-letter-or-digit
@@ -920,7 +920,7 @@
 
   returns: true if the character may be part of a
             Java identifier; false otherwise. - `java.lang.   boolean`"
-  ([ch]
+  ([^Character ch]
     (Character/isJavaLetterOrDigit ch)))
 
 (defn *to-string
@@ -931,7 +931,7 @@
   c - the char to be converted - `char`
 
   returns: the string representation of the specified char - `java.lang.String`"
-  ([c]
+  ([^Character c]
     (Character/toString c)))
 
 (defn *bmp-code-point?
@@ -944,7 +944,7 @@
   returns: true if the specified code point is between
            MIN_VALUE and MAX_VALUE inclusive;
            false otherwise. - `boolean`"
-  ([code-point]
+  ([^Integer code-point]
     (Character/isBmpCodePoint code-point)))
 
 (defn *alphabetic?
@@ -968,7 +968,7 @@
 
   returns: true if the character is a Unicode alphabet
             character, false otherwise. - `boolean`"
-  ([code-point]
+  ([^Integer code-point]
     (Character/isAlphabetic code-point)))
 
 (defn *to-code-point
@@ -981,7 +981,7 @@
 
   returns: the supplementary code point composed from the
            specified surrogate pair. - `int`"
-  ([high low]
+  ([^Character high ^Character low]
     (Character/toCodePoint high low)))
 
 (defn *valid-code-point?
@@ -995,7 +995,7 @@
            MIN_CODE_POINT and
            MAX_CODE_POINT inclusive;
            false otherwise. - `boolean`"
-  ([code-point]
+  ([^Integer code-point]
     (Character/isValidCodePoint code-point)))
 
 (defn *high-surrogate
@@ -1021,7 +1021,7 @@
 
   returns: the leading surrogate code unit used to represent the
             character in the UTF-16 encoding - `char`"
-  ([code-point]
+  ([^Integer code-point]
     (Character/highSurrogate code-point)))
 
 (defn *iso-control?
@@ -1039,7 +1039,7 @@
 
   returns: true if the character is an ISO control character;
             false otherwise. - `boolean`"
-  ([ch]
+  ([^Character ch]
     (Character/isISOControl ch)))
 
 (defn *get-name
@@ -1062,7 +1062,7 @@
            the code point is unassigned. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if the specified codePoint is not a valid Unicode code point."
-  ([code-point]
+  ([^Integer code-point]
     (Character/getName code-point)))
 
 (defn *to-chars
@@ -1083,9 +1083,9 @@
    code point is a supplementary code point. - `int`
 
   throws: java.lang.IllegalArgumentException - if the specified codePoint is not a valid Unicode code point."
-  ([code-point dst dst-index]
+  ([^Integer code-point dst ^Integer dst-index]
     (Character/toChars code-point dst dst-index))
-  ([code-point]
+  ([^Integer code-point]
     (Character/toChars code-point)))
 
 (defn *get-numeric-value
@@ -1118,7 +1118,7 @@
   returns: the numeric value of the character, as a nonnegative int
              value; -2 if the character has a numeric value that is not a
             nonnegative integer; -1 if the character has no numeric value. - `int`"
-  ([ch]
+  ([^Character ch]
     (Character/getNumericValue ch)))
 
 (defn *letter?
@@ -1146,7 +1146,7 @@
 
   returns: true if the character is a letter;
             false otherwise. - `boolean`"
-  ([ch]
+  ([^Character ch]
     (Character/isLetter ch)))
 
 (defn *letter-or-digit?
@@ -1165,7 +1165,7 @@
 
   returns: true if the character is a letter or digit;
             false otherwise. - `boolean`"
-  ([ch]
+  ([^Character ch]
     (Character/isLetterOrDigit ch)))
 
 (defn *upper-case?
@@ -1193,7 +1193,7 @@
 
   returns: true if the character is uppercase;
             false otherwise. - `boolean`"
-  ([ch]
+  ([^Character ch]
     (Character/isUpperCase ch)))
 
 (defn *to-upper-case
@@ -1220,7 +1220,7 @@
 
   returns: the uppercase equivalent of the character, if any;
             otherwise, the character itself. - `char`"
-  ([ch]
+  ([^Character ch]
     (Character/toUpperCase ch)))
 
 (defn *mirrored?
@@ -1240,7 +1240,7 @@
 
   returns: true if the char is mirrored, false
            if the char is not mirrored or is not defined. - `boolean`"
-  ([ch]
+  ([^Character ch]
     (Character/isMirrored ch)))
 
 (defn *offset-by-code-points
@@ -1261,9 +1261,9 @@
   returns: the index within the subarray - `int`
 
   throws: java.lang.NullPointerException - if a is null."
-  ([a start count index code-point-offset]
+  ([a ^Integer start ^Integer count ^Integer index ^Integer code-point-offset]
     (Character/offsetByCodePoints a start count index code-point-offset))
-  ([seq index code-point-offset]
+  ([^java.lang.CharSequence seq ^Integer index ^Integer code-point-offset]
     (Character/offsetByCodePoints seq index code-point-offset)))
 
 (defn *surrogate-pair?
@@ -1283,7 +1283,7 @@
   returns: true if the specified high and
    low-surrogate code values represent a valid surrogate pair;
    false otherwise. - `boolean`"
-  ([high low]
+  ([^Character high ^Character low]
     (Character/isSurrogatePair high low)))
 
 (defn *ideographic?
@@ -1295,7 +1295,7 @@
 
   returns: true if the character is a Unicode ideograph
             character, false otherwise. - `boolean`"
-  ([code-point]
+  ([^Integer code-point]
     (Character/isIdeographic code-point)))
 
 (defn *reverse-bytes
@@ -1306,7 +1306,7 @@
 
   returns: the value obtained by reversing (or, equivalently, swapping)
        the bytes in the specified char value. - `char`"
-  ([ch]
+  ([^Character ch]
     (Character/reverseBytes ch)))
 
 (defn *supplementary-code-point?
@@ -1319,7 +1319,7 @@
            MIN_SUPPLEMENTARY_CODE_POINT and
            MAX_CODE_POINT inclusive;
            false otherwise. - `boolean`"
-  ([code-point]
+  ([^Integer code-point]
     (Character/isSupplementaryCodePoint code-point)))
 
 (defn *unicode-identifier-part?
@@ -1347,7 +1347,7 @@
 
   returns: true if the character may be part of a
             Unicode identifier; false otherwise. - `boolean`"
-  ([ch]
+  ([^Character ch]
     (Character/isUnicodeIdentifierPart ch)))
 
 (defn *high-surrogate?
@@ -1367,7 +1367,7 @@
            MIN_HIGH_SURROGATE and
            MAX_HIGH_SURROGATE inclusive;
            false otherwise. - `boolean`"
-  ([ch]
+  ([^Character ch]
     (Character/isHighSurrogate ch)))
 
 (defn *identifier-ignorable?
@@ -1397,7 +1397,7 @@
   returns: true if the character is an ignorable control
             character that may be part of a Java or Unicode identifier;
              false otherwise. - `boolean`"
-  ([ch]
+  ([^Character ch]
     (Character/isIdentifierIgnorable ch)))
 
 (defn *surrogate?
@@ -1419,7 +1419,7 @@
            MIN_SURROGATE and
            MAX_SURROGATE inclusive;
            false otherwise. - `boolean`"
-  ([ch]
+  ([^Character ch]
     (Character/isSurrogate ch)))
 
 (defn *get-directionality
@@ -1435,7 +1435,7 @@
   ch - char for which the directionality property is requested. - `char`
 
   returns: the directionality property of the char value. - `byte`"
-  ([ch]
+  ([^Character ch]
     (Character/getDirectionality ch)))
 
 (defn *title-case?
@@ -1469,7 +1469,7 @@
 
   returns: true if the character is titlecase;
             false otherwise. - `boolean`"
-  ([ch]
+  ([^Character ch]
     (Character/isTitleCase ch)))
 
 (defn *hash-code
@@ -1479,7 +1479,7 @@
   value - The char for which to return a hash code. - `char`
 
   returns: a hash code value for a char value. - `int`"
-  ([value]
+  ([^Character value]
     (Character/hashCode value)))
 
 (defn *defined?
@@ -1499,7 +1499,7 @@
 
   returns: true if the character has a defined meaning
             in Unicode; false otherwise. - `boolean`"
-  ([ch]
+  ([^Character ch]
     (Character/isDefined ch)))
 
 (defn *is-java-letter
@@ -1509,7 +1509,7 @@
 
   returns: true if the character may start a Java
             identifier; false otherwise. - `java.lang.   boolean`"
-  ([ch]
+  ([^Character ch]
     (Character/isJavaLetter ch)))
 
 (defn *digit?
@@ -1543,7 +1543,7 @@
 
   returns: true if the character is a digit;
             false otherwise. - `boolean`"
-  ([ch]
+  ([^Character ch]
     (Character/isDigit ch)))
 
 (defn *code-point-count
@@ -1563,7 +1563,7 @@
    range - `int`
 
   throws: java.lang.NullPointerException - if seq is null."
-  ([seq begin-index end-index]
+  ([^java.lang.CharSequence seq ^Integer begin-index ^Integer end-index]
     (Character/codePointCount seq begin-index end-index)))
 
 (defn *to-title-case
@@ -1589,7 +1589,7 @@
 
   returns: the titlecase equivalent of the character, if any;
             otherwise, the character itself. - `char`"
-  ([ch]
+  ([^Character ch]
     (Character/toTitleCase ch)))
 
 (defn *code-point-before
@@ -1613,9 +1613,9 @@
   returns: the Unicode code point value before the given index. - `int`
 
   throws: java.lang.NullPointerException - if a is null."
-  ([a index start]
+  ([a ^Integer index ^Integer start]
     (Character/codePointBefore a index start))
-  ([seq index]
+  ([^java.lang.CharSequence seq ^Integer index]
     (Character/codePointBefore seq index)))
 
 (defn *whitespace?
@@ -1646,7 +1646,7 @@
 
   returns: true if the character is a Java whitespace
             character; false otherwise. - `boolean`"
-  ([ch]
+  ([^Character ch]
     (Character/isWhitespace ch)))
 
 (defn *java-identifier-start?
@@ -1673,7 +1673,7 @@
 
   returns: true if the character may start a Java identifier;
             false otherwise. - `boolean`"
-  ([ch]
+  ([^Character ch]
     (Character/isJavaIdentifierStart ch)))
 
 (defn *low-surrogate?
@@ -1693,7 +1693,7 @@
            MIN_LOW_SURROGATE and
            MAX_LOW_SURROGATE inclusive;
            false otherwise. - `boolean`"
-  ([ch]
+  ([^Character ch]
     (Character/isLowSurrogate ch)))
 
 (defn *char-count
@@ -1710,7 +1710,7 @@
   code-point - the character (Unicode code point) to be tested. - `int`
 
   returns: 2 if the character is a valid supplementary character; 1 otherwise. - `int`"
-  ([code-point]
+  ([^Integer code-point]
     (Character/charCount code-point)))
 
 (defn *digit
@@ -1760,7 +1760,7 @@
 
   returns: the numeric value represented by the character in the
             specified radix. - `int`"
-  ([ch radix]
+  ([^Character ch ^Integer radix]
     (Character/digit ch radix)))
 
 (defn *code-point-at
@@ -1782,9 +1782,9 @@
   returns: the Unicode code point at the given index - `int`
 
   throws: java.lang.NullPointerException - if a is null."
-  ([a index limit]
+  ([a ^Integer index ^Integer limit]
     (Character/codePointAt a index limit))
-  ([seq index]
+  ([^java.lang.CharSequence seq ^Integer index]
     (Character/codePointAt seq index)))
 
 (defn char-value
@@ -1792,7 +1792,7 @@
 
   returns: the primitive char value represented by
             this object. - `char`"
-  ([this]
+  ([^java.lang.Character this]
     (-> this (.charValue))))
 
 (defn hash-code
@@ -1800,7 +1800,7 @@
    of invoking charValue().
 
   returns: a hash code value for this Character - `int`"
-  ([this]
+  ([^java.lang.Character this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -1813,7 +1813,7 @@
 
   returns: true if the objects are the same;
             false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.lang.Character this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn to-string
@@ -1824,7 +1824,7 @@
    Character object.
 
   returns: a string representation of this object. - `java.lang.String`"
-  ([this]
+  ([^java.lang.Character this]
     (-> this (.toString))))
 
 (defn compare-to
@@ -1840,6 +1840,6 @@
             than the Character argument (unsigned comparison).
             Note that this is strictly a numerical comparison; it is not
             locale-dependent. - `int`"
-  ([this another-character]
+  ([^java.lang.Character this ^java.lang.Character another-character]
     (-> this (.compareTo another-character))))
 

@@ -22,6 +22,6 @@
   session - SSLSession used on the connection to host - `javax.net.ssl.SSLSession`
 
   returns: true if the host name is acceptable - `boolean`"
-  ([this hostname session]
+  ([^. this ^java.lang.String hostname ^javax.net.ssl.SSLSession session]
     (-> this (.verify hostname session))))
 

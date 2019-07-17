@@ -14,6 +14,6 @@
   value - the function argument - `double`
 
   returns: the function result - `DoubleFunction.R`"
-  ([this value]
+  ([^. this ^Double value]
     (-> this (.apply value))))
 

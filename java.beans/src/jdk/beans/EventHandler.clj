@@ -247,7 +247,7 @@
   listener-method-name - the name of the method in the listener interface that should trigger the action - `java.lang.String`
 
   throws: java.lang.NullPointerException - if action is null"
-  ([target action event-property-name listener-method-name]
+  ([^java.lang.Object target ^java.lang.String action ^java.lang.String event-property-name ^java.lang.String listener-method-name]
     (new EventHandler target action event-property-name listener-method-name)))
 
 (defn *create
@@ -326,18 +326,18 @@
   returns: an object that implements listenerInterface - `<T> T`
 
   throws: java.lang.NullPointerException - if action is null"
-  ([listener-interface target action event-property-name listener-method-name]
+  ([^java.lang.Class listener-interface ^java.lang.Object target ^java.lang.String action ^java.lang.String event-property-name ^java.lang.String listener-method-name]
     (EventHandler/create listener-interface target action event-property-name listener-method-name))
-  ([listener-interface target action event-property-name]
+  ([^java.lang.Class listener-interface ^java.lang.Object target ^java.lang.String action ^java.lang.String event-property-name]
     (EventHandler/create listener-interface target action event-property-name))
-  ([listener-interface target action]
+  ([^java.lang.Class listener-interface ^java.lang.Object target ^java.lang.String action]
     (EventHandler/create listener-interface target action)))
 
 (defn get-target
   "Returns the object to which this event handler will send a message.
 
   returns: the target of this event handler - `java.lang.Object`"
-  ([this]
+  ([^java.beans.EventHandler this]
     (-> this (.getTarget))))
 
 (defn get-action
@@ -347,7 +347,7 @@
    will invoke on the target.
 
   returns: the action of this event handler - `java.lang.String`"
-  ([this]
+  ([^java.beans.EventHandler this]
     (-> this (.getAction))))
 
 (defn get-event-property-name
@@ -355,7 +355,7 @@
    used in the action applied to the target.
 
   returns: the property of the event - `java.lang.String`"
-  ([this]
+  ([^java.beans.EventHandler this]
     (-> this (.getEventPropertyName))))
 
 (defn get-listener-method-name
@@ -364,7 +364,7 @@
    listener interface trigger the action.
 
   returns: the name of the method that will trigger the action - `java.lang.String`"
-  ([this]
+  ([^java.beans.EventHandler this]
     (-> this (.getListenerMethodName))))
 
 (defn invoke
@@ -377,6 +377,6 @@
   arguments - an array of objects containing the values of the arguments passed in the method invocation on the proxy instance, or null if interface method takes no arguments. Arguments of primitive types are wrapped in instances of the appropriate primitive wrapper class, such as java.lang.Integer or java.lang.Boolean. - `java.lang.Object[]`
 
   returns: the result of applying the action to the target - `java.lang.Object`"
-  ([this proxy method arguments]
+  ([^java.beans.EventHandler this ^java.lang.Object proxy ^java.lang.reflect.Method method ^java.lang.Object[] arguments]
     (-> this (.invoke proxy method arguments))))
 

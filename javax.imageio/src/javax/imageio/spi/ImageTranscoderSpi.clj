@@ -13,7 +13,7 @@
 
   vendor-name - the vendor name. - `java.lang.String`
   version - a version identifier. - `java.lang.String`"
-  ([vendor-name version]
+  ([^java.lang.String vendor-name ^java.lang.String version]
     (new ImageTranscoderSpi vendor-name version)))
 
 (defn get-reader-service-provider-name
@@ -24,7 +24,7 @@
 
   returns: a String containing the fully-qualified
    class name of the ImageReaderSpi implementation class. - `java.lang.String`"
-  ([this]
+  ([^javax.imageio.spi.ImageTranscoderSpi this]
     (-> this (.getReaderServiceProviderName))))
 
 (defn get-writer-service-provider-name
@@ -35,7 +35,7 @@
 
   returns: a String containing the fully-qualified
    class name of the ImageWriterSpi implementation class. - `java.lang.String`"
-  ([this]
+  ([^javax.imageio.spi.ImageTranscoderSpi this]
     (-> this (.getWriterServiceProviderName))))
 
 (defn create-transcoder-instance
@@ -43,6 +43,6 @@
    implementation associated with this service provider.
 
   returns: an ImageTranscoder instance. - `javax.imageio.ImageTranscoder`"
-  ([this]
+  ([^javax.imageio.spi.ImageTranscoderSpi this]
     (-> this (.createTranscoderInstance))))
 

@@ -27,14 +27,14 @@
   table - the defaults table, non-null - `javax.swing.UIDefaults`
 
   throws: java.lang.NullPointerException - if table is null"
-  ([this table]
+  ([^javax.swing.plaf.metal.OceanTheme this ^javax.swing.UIDefaults table]
     (-> this (.addCustomEntriesToTable table))))
 
 (defn get-name
   "Return the name of this theme, `Ocean`.
 
   returns: `Ocean` - `java.lang.String`"
-  ([this]
+  ([^javax.swing.plaf.metal.OceanTheme this]
     (-> this (.getName))))
 
 (defn get-desktop-color
@@ -42,7 +42,7 @@
    value of 0xFFFFFF.
 
   returns: the desktop color - `javax.swing.plaf.ColorUIResource`"
-  ([this]
+  ([^javax.swing.plaf.metal.OceanTheme this]
     (-> this (.getDesktopColor))))
 
 (defn get-inactive-control-text-color
@@ -50,7 +50,7 @@
    rgb hex value of 0x999999.
 
   returns: the inactive control text color - `javax.swing.plaf.ColorUIResource`"
-  ([this]
+  ([^javax.swing.plaf.metal.OceanTheme this]
     (-> this (.getInactiveControlTextColor))))
 
 (defn get-control-text-color
@@ -58,7 +58,7 @@
    rgb hex value of 0x333333.
 
   returns: the control text color - `javax.swing.plaf.ColorUIResource`"
-  ([this]
+  ([^javax.swing.plaf.metal.OceanTheme this]
     (-> this (.getControlTextColor))))
 
 (defn get-menu-disabled-foreground
@@ -66,6 +66,6 @@
    rgb hex value of 0x999999.
 
   returns: the menu disabled foreground color - `javax.swing.plaf.ColorUIResource`"
-  ([this]
+  ([^javax.swing.plaf.metal.OceanTheme this]
     (-> this (.getMenuDisabledForeground))))
 

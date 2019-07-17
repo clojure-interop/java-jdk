@@ -48,7 +48,7 @@
   handback - An opaque object to be sent back to the listener when a notification is emitted. This object cannot be used by the Notification broadcaster object. It should be resent unchanged with the notification to the listener. - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - Listener parameter is null."
-  ([this listener filter handback]
+  ([^. this ^javax.management.NotificationListener listener ^javax.management.NotificationFilter filter ^java.lang.Object handback]
     (-> this (.addNotificationListener listener filter handback))))
 
 (defn remove-notification-listener
@@ -60,7 +60,7 @@
   listener - A listener that was previously added to this MBean. - `javax.management.NotificationListener`
 
   throws: javax.management.ListenerNotFoundException - The listener is not registered with the MBean."
-  ([this listener]
+  ([^. this ^javax.management.NotificationListener listener]
     (-> this (.removeNotificationListener listener))))
 
 (defn get-notification-info
@@ -74,6 +74,6 @@
    functioning.
 
   returns: the array of possible notifications. - `javax.management.MBeanNotificationInfo[]`"
-  ([this]
+  ([^. this]
     (-> this (.getNotificationInfo))))
 

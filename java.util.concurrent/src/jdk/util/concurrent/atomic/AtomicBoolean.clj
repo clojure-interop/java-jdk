@@ -14,7 +14,7 @@
   Creates a new AtomicBoolean with the given initial value.
 
   initial-value - the initial value - `boolean`"
-  ([initial-value]
+  ([^Boolean initial-value]
     (new AtomicBoolean initial-value))
   ([]
     (new AtomicBoolean )))
@@ -23,7 +23,7 @@
   "Returns the current value.
 
   returns: the current value - `boolean`"
-  ([this]
+  ([^java.util.concurrent.atomic.AtomicBoolean this]
     (-> this (.get))))
 
 (defn compare-and-set
@@ -35,7 +35,7 @@
 
   returns: true if successful. False return indicates that
    the actual value was not equal to the expected value. - `boolean`"
-  ([this expect update]
+  ([^java.util.concurrent.atomic.AtomicBoolean this ^Boolean expect ^Boolean update]
     (-> this (.compareAndSet expect update))))
 
 (defn weak-compare-and-set
@@ -50,21 +50,21 @@
   update - the new value - `boolean`
 
   returns: true if successful - `boolean`"
-  ([this expect update]
+  ([^java.util.concurrent.atomic.AtomicBoolean this ^Boolean expect ^Boolean update]
     (-> this (.weakCompareAndSet expect update))))
 
 (defn set
   "Unconditionally sets to the given value.
 
   new-value - the new value - `boolean`"
-  ([this new-value]
+  ([^java.util.concurrent.atomic.AtomicBoolean this ^Boolean new-value]
     (-> this (.set new-value))))
 
 (defn lazy-set
   "Eventually sets to the given value.
 
   new-value - the new value - `boolean`"
-  ([this new-value]
+  ([^java.util.concurrent.atomic.AtomicBoolean this ^Boolean new-value]
     (-> this (.lazySet new-value))))
 
 (defn get-and-set?
@@ -73,13 +73,13 @@
   new-value - the new value - `boolean`
 
   returns: the previous value - `boolean`"
-  ([this new-value]
+  ([^java.util.concurrent.atomic.AtomicBoolean this ^Boolean new-value]
     (-> this (.getAndSet new-value))))
 
 (defn to-string
   "Returns the String representation of the current value.
 
   returns: the String representation of the current value - `java.lang.String`"
-  ([this]
+  ([^java.util.concurrent.atomic.AtomicBoolean this]
     (-> this (.toString))))
 

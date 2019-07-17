@@ -15,11 +15,11 @@
   buf-len - compression buffer size - `int`
 
   throws: java.lang.IllegalArgumentException - if bufLen <= 0"
-  ([in defl buf-len]
+  ([^java.io.InputStream in ^java.util.zip.Deflater defl ^Integer buf-len]
     (new DeflaterInputStream in defl buf-len))
-  ([in defl]
+  ([^java.io.InputStream in ^java.util.zip.Deflater defl]
     (new DeflaterInputStream in defl))
-  ([in]
+  ([^java.io.InputStream in]
     (new DeflaterInputStream in)))
 
 (defn close
@@ -27,7 +27,7 @@
    any pending uncompressed data.
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([this]
+  ([^java.util.zip.DeflaterInputStream this]
     (-> this (.close))))
 
 (defn read
@@ -42,9 +42,9 @@
    uncompressed input stream is reached - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if len > b.length - off"
-  ([this b off len]
+  ([^java.util.zip.DeflaterInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  ([this]
+  ([^java.util.zip.DeflaterInputStream this]
     (-> this (.read))))
 
 (defn skip
@@ -59,7 +59,7 @@
   returns: the actual number of bytes skipped - `long`
 
   throws: java.io.IOException - if an I/O error occurs or if this stream is already closed"
-  ([this n]
+  ([^java.util.zip.DeflaterInputStream this ^Long n]
     (-> this (.skip n))))
 
 (defn available
@@ -72,7 +72,7 @@
    reached, otherwise always returns 1 - `int`
 
   throws: java.io.IOException - if an I/O error occurs or if this stream is already closed"
-  ([this]
+  ([^java.util.zip.DeflaterInputStream this]
     (-> this (.available))))
 
 (defn mark-supported
@@ -80,20 +80,20 @@
    the mark() and reset() methods.
 
   returns: false, always - `boolean`"
-  ([this]
+  ([^java.util.zip.DeflaterInputStream this]
     (-> this (.markSupported))))
 
 (defn mark
   "This operation is not supported.
 
   limit - maximum bytes that can be read before invalidating the position marker - `int`"
-  ([this limit]
+  ([^java.util.zip.DeflaterInputStream this ^Integer limit]
     (-> this (.mark limit))))
 
 (defn reset
   "This operation is not supported.
 
   throws: java.io.IOException - always thrown"
-  ([this]
+  ([^java.util.zip.DeflaterInputStream this]
     (-> this (.reset))))
 

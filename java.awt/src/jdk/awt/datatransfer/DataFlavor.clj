@@ -88,11 +88,11 @@
   class-loader - the class loader to use - `java.lang.ClassLoader`
 
   throws: java.lang.ClassNotFoundException - if the class is not loaded"
-  ([mime-type human-presentable-name class-loader]
+  ([^java.lang.String mime-type ^java.lang.String human-presentable-name ^java.lang.ClassLoader class-loader]
     (new DataFlavor mime-type human-presentable-name class-loader))
-  ([representation-class human-presentable-name]
+  ([^java.lang.Class representation-class ^java.lang.String human-presentable-name]
     (new DataFlavor representation-class human-presentable-name))
-  ([mime-type]
+  ([^java.lang.String mime-type]
     (new DataFlavor mime-type))
   ([]
     (new DataFlavor )))
@@ -372,7 +372,7 @@
            specified above, or null,
            if availableFlavors is null,
            has zero length, or contains no text flavors - `java.awt.datatransfer.DataFlavor`"
-  ([available-flavors]
+  ([^java.awt.datatransfer.DataFlavor[] available-flavors]
     (DataFlavor/selectBestTextFlavor available-flavors)))
 
 (defn get-reader-for-text
@@ -397,7 +397,7 @@
            data - `java.io.Reader`
 
   throws: java.lang.IllegalArgumentException - if the Transferable has null data"
-  ([this transferable]
+  ([^java.awt.datatransfer.DataFlavor this ^java.awt.datatransfer.Transferable transferable]
     (-> this (.getReaderForText transferable))))
 
 (defn get-representation-class
@@ -408,7 +408,7 @@
   returns: the Class which objects supporting this
    DataFlavor will return when this DataFlavor
    is requested - `java.lang.Class<?>`"
-  ([this]
+  ([^java.awt.datatransfer.DataFlavor this]
     (-> this (.getRepresentationClass))))
 
 (defn set-human-presentable-name
@@ -417,14 +417,14 @@
    for different countries.
 
   human-presentable-name - the new human presentable name - `java.lang.String`"
-  ([this human-presentable-name]
+  ([^java.awt.datatransfer.DataFlavor this ^java.lang.String human-presentable-name]
     (-> this (.setHumanPresentableName human-presentable-name))))
 
 (defn get-mime-type
   "Returns the MIME type string for this DataFlavor.
 
   returns: the MIME type string for this flavor - `java.lang.String`"
-  ([this]
+  ([^java.awt.datatransfer.DataFlavor this]
     (-> this (.getMimeType))))
 
 (defn representation-class-reader?
@@ -433,14 +433,14 @@
    thereof.
 
   returns: `boolean`"
-  ([this]
+  ([^java.awt.datatransfer.DataFlavor this]
     (-> this (.isRepresentationClassReader))))
 
 (defn get-sub-type
   "Returns the sub MIME type of this DataFlavor.
 
   returns: the Sub MIME type of this DataFlavor - `java.lang.String`"
-  ([this]
+  ([^java.awt.datatransfer.DataFlavor this]
     (-> this (.getSubType))))
 
 (defn flavor-remote-object-type?
@@ -449,14 +449,14 @@
 
   returns: true if the DataFlavor specified represents
     a Remote Object - `boolean`"
-  ([this]
+  ([^java.awt.datatransfer.DataFlavor this]
     (-> this (.isFlavorRemoteObjectType))))
 
 (defn representation-class-serializable?
   "Returns true if the representation class can be serialized.
 
   returns: true if the representation class can be serialized - `boolean`"
-  ([this]
+  ([^java.awt.datatransfer.DataFlavor this]
     (-> this (.isRepresentationClassSerializable))))
 
 (defn get-human-presentable-name
@@ -466,7 +466,7 @@
 
   returns: the human presentable name for the data format that this
       DataFlavor represents - `java.lang.String`"
-  ([this]
+  ([^java.awt.datatransfer.DataFlavor this]
     (-> this (.getHumanPresentableName))))
 
 (defn to-string
@@ -479,7 +479,7 @@
    for a list of text flavors which support the charset parameter.
 
   returns: string representation of this DataFlavor - `java.lang.String`"
-  ([this]
+  ([^java.awt.datatransfer.DataFlavor this]
     (-> this (.toString))))
 
 (defn write-external
@@ -488,7 +488,7 @@
   os - the stream to write the object to - `java.io.ObjectOutput`
 
   throws: java.io.IOException - Includes any I/O exceptions that may occur"
-  ([this os]
+  ([^java.awt.datatransfer.DataFlavor this ^java.io.ObjectOutput os]
     (-> this (.writeExternal os))))
 
 (defn flavor-text-type?
@@ -518,7 +518,7 @@
 
   returns: true if this DataFlavor is a valid
            text flavor as described above; false otherwise - `boolean`"
-  ([this]
+  ([^java.awt.datatransfer.DataFlavor this]
     (-> this (.isFlavorTextType))))
 
 (defn get-parameter
@@ -530,19 +530,19 @@
 
   returns: the value of the name parameter, or null
     if there is no associated value - `java.lang.String`"
-  ([this param-name]
+  ([^java.awt.datatransfer.DataFlavor this ^java.lang.String param-name]
     (-> this (.getParameter param-name))))
 
 (defn get-default-representation-class-as-string
   "returns: `java.lang.String`"
-  ([this]
+  ([^java.awt.datatransfer.DataFlavor this]
     (-> this (.getDefaultRepresentationClassAsString))))
 
 (defn get-primary-type
   "Returns the primary MIME type for this DataFlavor.
 
   returns: the primary MIME type of this DataFlavor - `java.lang.String`"
-  ([this]
+  ([^java.awt.datatransfer.DataFlavor this]
     (-> this (.getPrimaryType))))
 
 (defn representation-class-char-buffer?
@@ -551,7 +551,7 @@
    subclass thereof.
 
   returns: `boolean`"
-  ([this]
+  ([^java.awt.datatransfer.DataFlavor this]
     (-> this (.isRepresentationClassCharBuffer))))
 
 (defn flavor-java-file-list-type?
@@ -560,7 +560,7 @@
 
   returns: true if the DataFlavor specified represents
      a List of File objects - `boolean`"
-  ([this]
+  ([^java.awt.datatransfer.DataFlavor this]
     (-> this (.isFlavorJavaFileListType))))
 
 (defn match
@@ -570,7 +570,7 @@
 
   returns: true if that is equivalent to this
            DataFlavor; false otherwise - `boolean`"
-  ([this that]
+  ([^java.awt.datatransfer.DataFlavor this ^java.awt.datatransfer.DataFlavor that]
     (-> this (.match that))))
 
 (defn flavor-serialized-object-type?
@@ -579,12 +579,12 @@
 
   returns: true if the DataFlavor specified represents
      a Serialized Object - `boolean`"
-  ([this]
+  ([^java.awt.datatransfer.DataFlavor this]
     (-> this (.isFlavorSerializedObjectType))))
 
 (defn get-default-representation-class
   "returns: `java.lang.Class<?>`"
-  ([this]
+  ([^java.awt.datatransfer.DataFlavor this]
     (-> this (.getDefaultRepresentationClass))))
 
 (defn representation-class-byte-buffer?
@@ -593,7 +593,7 @@
    subclass thereof.
 
   returns: `boolean`"
-  ([this]
+  ([^java.awt.datatransfer.DataFlavor this]
     (-> this (.isRepresentationClassByteBuffer))))
 
 (defn clone
@@ -602,7 +602,7 @@
   returns: a clone of this DataFlavor - `java.lang.Object`
 
   throws: java.lang.CloneNotSupportedException - if the object's class does not support the Cloneable interface. Subclasses that override the clone method can also throw this exception to indicate that an instance cannot be cloned."
-  ([this]
+  ([^java.awt.datatransfer.DataFlavor this]
     (-> this (.clone))))
 
 (defn hash-code
@@ -614,7 +614,7 @@
    to the hash code of the String.
 
   returns: a hash code for this DataFlavor - `int`"
-  ([this]
+  ([^java.awt.datatransfer.DataFlavor this]
     (-> this (.hashCode))))
 
 (defn representation-class-input-stream?
@@ -622,7 +622,7 @@
    java.io.InputStream?
 
   returns: `boolean`"
-  ([this]
+  ([^java.awt.datatransfer.DataFlavor this]
     (-> this (.isRepresentationClassInputStream))))
 
 (defn read-external
@@ -631,14 +631,14 @@
   is - the stream to read data from in order to restore the object - `java.io.ObjectInput`
 
   throws: java.io.IOException - if I/O errors occur"
-  ([this is]
+  ([^java.awt.datatransfer.DataFlavor this ^java.io.ObjectInput is]
     (-> this (.readExternal is))))
 
 (defn mime-type-serialized-object?
   "Does the DataFlavor represent a serialized object?
 
   returns: `boolean`"
-  ([this]
+  ([^java.awt.datatransfer.DataFlavor this]
     (-> this (.isMimeTypeSerializedObject))))
 
 (defn mime-type-equal?
@@ -653,14 +653,14 @@
            false otherwise - `boolean`
 
   throws: java.lang.NullPointerException - if mimeType is null"
-  ([this mime-type]
+  ([^java.awt.datatransfer.DataFlavor this ^java.lang.String mime-type]
     (-> this (.isMimeTypeEqual mime-type))))
 
 (defn representation-class-remote?
   "Returns true if the representation class is Remote.
 
   returns: true if the representation class is Remote - `boolean`"
-  ([this]
+  ([^java.awt.datatransfer.DataFlavor this]
     (-> this (.isRepresentationClassRemote))))
 
 (defn equals
@@ -720,6 +720,6 @@
 
   returns: true if that is equivalent to this
            DataFlavor; false otherwise - `boolean`"
-  ([this o]
+  ([^java.awt.datatransfer.DataFlavor this ^java.lang.Object o]
     (-> this (.equals o))))
 

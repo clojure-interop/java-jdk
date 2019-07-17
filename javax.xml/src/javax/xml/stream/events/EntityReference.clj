@@ -20,13 +20,13 @@
   "Return the declaration of this entity.
 
   returns: `javax.xml.stream.events.EntityDeclaration`"
-  ([this]
+  ([^. this]
     (-> this (.getDeclaration))))
 
 (defn get-name
   "The name of the entity
 
   returns: the entity's name, may not be null - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getName))))
 

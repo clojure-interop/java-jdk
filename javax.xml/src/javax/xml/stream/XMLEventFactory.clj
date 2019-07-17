@@ -16,7 +16,7 @@
   returns: the factory implementation - `javax.xml.stream.XMLEventFactory`
 
   throws: javax.xml.stream.FactoryConfigurationError - if an instance of this factory cannot be loaded"
-  ([factory-id class-loader]
+  ([^java.lang.String factory-id ^java.lang.ClassLoader class-loader]
     (XMLEventFactory/newInstance factory-id class-loader))
   ([]
     (XMLEventFactory/newInstance )))
@@ -65,7 +65,7 @@
   returns: the factory implementation - `javax.xml.stream.XMLEventFactory`
 
   throws: javax.xml.stream.FactoryConfigurationError - in case of java.util.service configuration error or if the implementation is not available or cannot be instantiated."
-  ([factory-id class-loader]
+  ([^java.lang.String factory-id ^java.lang.ClassLoader class-loader]
     (XMLEventFactory/newFactory factory-id class-loader))
   ([]
     (XMLEventFactory/newFactory )))
@@ -76,7 +76,7 @@
   content - the space to create - `java.lang.String`
 
   returns: a Characters event - `javax.xml.stream.events.Characters`"
-  ([this content]
+  ([^javax.xml.stream.XMLEventFactory this ^java.lang.String content]
     (-> this (.createIgnorableSpace content))))
 
 (defn create-processing-instruction
@@ -86,14 +86,14 @@
   data - The text of the processing instruction - `java.lang.String`
 
   returns: a ProcessingInstruction event - `javax.xml.stream.events.ProcessingInstruction`"
-  ([this target data]
+  ([^javax.xml.stream.XMLEventFactory this ^java.lang.String target ^java.lang.String data]
     (-> this (.createProcessingInstruction target data))))
 
 (defn create-end-document
   "Creates a new instance of an EndDocument event
 
   returns: an EndDocument event - `javax.xml.stream.events.EndDocument`"
-  ([this]
+  ([^javax.xml.stream.XMLEventFactory this]
     (-> this (.createEndDocument))))
 
 (defn set-location
@@ -103,7 +103,7 @@
    information set the location to null.
 
   location - the location to set on each event created - `javax.xml.stream.Location`"
-  ([this location]
+  ([^javax.xml.stream.XMLEventFactory this ^javax.xml.stream.Location location]
     (-> this (.setLocation location))))
 
 (defn create-comment
@@ -112,7 +112,7 @@
   text - The text of the comment a Comment event - `java.lang.String`
 
   returns: `javax.xml.stream.events.Comment`"
-  ([this text]
+  ([^javax.xml.stream.XMLEventFactory this ^java.lang.String text]
     (-> this (.createComment text))))
 
 (defn create-namespace
@@ -122,9 +122,9 @@
   namespace-uri - the attribute value is set to this value, may not be null - `java.lang.String`
 
   returns: the Namespace with the specified values - `javax.xml.stream.events.Namespace`"
-  ([this prefix namespace-uri]
+  ([^javax.xml.stream.XMLEventFactory this ^java.lang.String prefix ^java.lang.String namespace-uri]
     (-> this (.createNamespace prefix namespace-uri)))
-  ([this namespace-uri]
+  ([^javax.xml.stream.XMLEventFactory this ^java.lang.String namespace-uri]
     (-> this (.createNamespace namespace-uri))))
 
 (defn create-entity-reference
@@ -134,7 +134,7 @@
   declaration - the declaration for the event - `javax.xml.stream.events.EntityDeclaration`
 
   returns: an EntityReference event - `javax.xml.stream.events.EntityReference`"
-  ([this name declaration]
+  ([^javax.xml.stream.XMLEventFactory this ^java.lang.String name ^javax.xml.stream.events.EntityDeclaration declaration]
     (-> this (.createEntityReference name declaration))))
 
 (defn create-attribute
@@ -146,9 +146,9 @@
   value - the attribute value to set, may not be null - `java.lang.String`
 
   returns: the Attribute with specified values - `javax.xml.stream.events.Attribute`"
-  ([this prefix namespace-uri local-name value]
+  ([^javax.xml.stream.XMLEventFactory this ^java.lang.String prefix ^java.lang.String namespace-uri ^java.lang.String local-name ^java.lang.String value]
     (-> this (.createAttribute prefix namespace-uri local-name value)))
-  ([this local-name value]
+  ([^javax.xml.stream.XMLEventFactory this ^java.lang.String local-name ^java.lang.String value]
     (-> this (.createAttribute local-name value))))
 
 (defn create-end-element
@@ -160,11 +160,11 @@
   namespaces - an unordered set of objects that implement Namespace that have gone out of scope, may be null - `java.util.Iterator`
 
   returns: an instance of the requested EndElement - `javax.xml.stream.events.EndElement`"
-  ([this prefix namespace-uri local-name namespaces]
+  ([^javax.xml.stream.XMLEventFactory this ^java.lang.String prefix ^java.lang.String namespace-uri ^java.lang.String local-name ^java.util.Iterator namespaces]
     (-> this (.createEndElement prefix namespace-uri local-name namespaces)))
-  ([this prefix namespace-uri local-name]
+  ([^javax.xml.stream.XMLEventFactory this ^java.lang.String prefix ^java.lang.String namespace-uri ^java.lang.String local-name]
     (-> this (.createEndElement prefix namespace-uri local-name)))
-  ([this name namespaces]
+  ([^javax.xml.stream.XMLEventFactory this ^javax.xml.namespace.QName name ^java.util.Iterator namespaces]
     (-> this (.createEndElement name namespaces))))
 
 (defn create-start-element
@@ -181,11 +181,11 @@
   context - the namespace context of this element - `javax.xml.namespace.NamespaceContext`
 
   returns: an instance of the requested StartElement - `javax.xml.stream.events.StartElement`"
-  ([this prefix namespace-uri local-name attributes namespaces context]
+  ([^javax.xml.stream.XMLEventFactory this ^java.lang.String prefix ^java.lang.String namespace-uri ^java.lang.String local-name ^java.util.Iterator attributes ^java.util.Iterator namespaces ^javax.xml.namespace.NamespaceContext context]
     (-> this (.createStartElement prefix namespace-uri local-name attributes namespaces context)))
-  ([this prefix namespace-uri local-name attributes namespaces]
+  ([^javax.xml.stream.XMLEventFactory this ^java.lang.String prefix ^java.lang.String namespace-uri ^java.lang.String local-name ^java.util.Iterator attributes ^java.util.Iterator namespaces]
     (-> this (.createStartElement prefix namespace-uri local-name attributes namespaces)))
-  ([this name attributes namespaces]
+  ([^javax.xml.stream.XMLEventFactory this ^javax.xml.namespace.QName name ^java.util.Iterator attributes ^java.util.Iterator namespaces]
     (-> this (.createStartElement name attributes namespaces))))
 
 (defn create-start-document
@@ -196,13 +196,13 @@
   standalone - the status of standalone may be set to `true` or `false` - `boolean`
 
   returns: a StartDocument event - `javax.xml.stream.events.StartDocument`"
-  ([this encoding version standalone]
+  ([^javax.xml.stream.XMLEventFactory this ^java.lang.String encoding ^java.lang.String version ^Boolean standalone]
     (-> this (.createStartDocument encoding version standalone)))
-  ([this encoding version]
+  ([^javax.xml.stream.XMLEventFactory this ^java.lang.String encoding ^java.lang.String version]
     (-> this (.createStartDocument encoding version)))
-  ([this encoding]
+  ([^javax.xml.stream.XMLEventFactory this ^java.lang.String encoding]
     (-> this (.createStartDocument encoding)))
-  ([this]
+  ([^javax.xml.stream.XMLEventFactory this]
     (-> this (.createStartDocument))))
 
 (defn create-dtd
@@ -213,7 +213,7 @@
   dtd - the text of the document type definition - `java.lang.String`
 
   returns: a DTD event - `javax.xml.stream.events.DTD`"
-  ([this dtd]
+  ([^javax.xml.stream.XMLEventFactory this ^java.lang.String dtd]
     (-> this (.createDTD dtd))))
 
 (defn create-space
@@ -222,7 +222,7 @@
   content - the content of the space to create - `java.lang.String`
 
   returns: a Characters event - `javax.xml.stream.events.Characters`"
-  ([this content]
+  ([^javax.xml.stream.XMLEventFactory this ^java.lang.String content]
     (-> this (.createSpace content))))
 
 (defn create-c-data
@@ -231,7 +231,7 @@
   content - the string to create - `java.lang.String`
 
   returns: a Characters event - `javax.xml.stream.events.Characters`"
-  ([this content]
+  ([^javax.xml.stream.XMLEventFactory this ^java.lang.String content]
     (-> this (.createCData content))))
 
 (defn create-characters
@@ -241,6 +241,6 @@
   content - the string to create - `java.lang.String`
 
   returns: a Characters event - `javax.xml.stream.events.Characters`"
-  ([this content]
+  ([^javax.xml.stream.XMLEventFactory this ^java.lang.String content]
     (-> this (.createCharacters content))))
 

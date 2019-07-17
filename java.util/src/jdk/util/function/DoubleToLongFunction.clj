@@ -14,6 +14,6 @@
   value - the function argument - `double`
 
   returns: the function result - `long`"
-  ([this value]
+  ([^. this ^Double value]
     (-> this (.applyAsLong value))))
 

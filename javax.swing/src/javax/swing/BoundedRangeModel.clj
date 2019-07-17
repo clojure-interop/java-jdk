@@ -49,7 +49,7 @@
   "Adds a ChangeListener to the model's listener list.
 
   x - the ChangeListener to add - `javax.swing.event.ChangeListener`"
-  ([this x]
+  ([^. this ^javax.swing.event.ChangeListener x]
     (-> this (.addChangeListener x))))
 
 (defn get-value-is-adjusting?
@@ -57,14 +57,14 @@
    of a series of changes.
 
   returns: the valueIsAdjustingProperty. - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.getValueIsAdjusting))))
 
 (defn get-minimum
   "Returns the minimum acceptable value.
 
   returns: the value of the minimum property - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getMinimum))))
 
 (defn get-extent
@@ -72,7 +72,7 @@
    begins at the model's value.
 
   returns: the value of the model's extent property - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getExtent))))
 
 (defn set-extent
@@ -90,7 +90,7 @@
    Notifies any listeners if the model changes.
 
   new-extent - the model's new extent - `int`"
-  ([this new-extent]
+  ([^. this ^Integer new-extent]
     (-> this (.setExtent new-extent))))
 
 (defn get-value
@@ -99,14 +99,14 @@
    and the lower limit is minimum.
 
   returns: the model's value - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getValue))))
 
 (defn remove-change-listener
   "Removes a ChangeListener from the model's listener list.
 
   x - the ChangeListener to remove - `javax.swing.event.ChangeListener`"
-  ([this x]
+  ([^. this ^javax.swing.event.ChangeListener x]
     (-> this (.removeChangeListener x))))
 
 (defn set-maximum
@@ -119,7 +119,7 @@
    Notifies any listeners if the model changes.
 
   new-maximum - the model's new maximum - `int`"
-  ([this new-maximum]
+  ([^. this ^Integer new-maximum]
     (-> this (.setMaximum new-maximum))))
 
 (defn set-range-properties
@@ -133,7 +133,7 @@
   min - an int giving the minimum value - `int`
   max - an int giving the maximum value - `int`
   adjusting - a boolean, true if a series of changes are in progress - `boolean`"
-  ([this value extent min max adjusting]
+  ([^. this ^Integer value ^Integer extent ^Integer min ^Integer max ^Boolean adjusting]
     (-> this (.setRangeProperties value extent min max adjusting))))
 
 (defn set-value-is-adjusting
@@ -147,7 +147,7 @@
    Sliders and scrollbars use this property when a drag is underway.
 
   b - true if the upcoming changes to the value property are part of a series - `boolean`"
-  ([this b]
+  ([^. this ^Boolean b]
     (-> this (.setValueIsAdjusting b))))
 
 (defn set-value
@@ -170,7 +170,7 @@
    Notifies any listeners if the model changes.
 
   new-value - the model's new value - `int`"
-  ([this new-value]
+  ([^. this ^Integer new-value]
     (-> this (.setValue new-value))))
 
 (defn set-minimum
@@ -184,7 +184,7 @@
    Notifies any listeners if the model changes.
 
   new-minimum - the model's new minimum - `int`"
-  ([this new-minimum]
+  ([^. this ^Integer new-minimum]
     (-> this (.setMinimum new-minimum))))
 
 (defn get-maximum
@@ -192,6 +192,6 @@
    limit on the model's value is (maximum - extent).
 
   returns: the value of the maximum property. - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getMaximum))))
 

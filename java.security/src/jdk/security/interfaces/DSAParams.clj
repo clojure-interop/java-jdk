@@ -9,20 +9,20 @@
   "Returns the prime, p.
 
   returns: the prime, p. - `java.math.BigInteger`"
-  ([this]
+  ([^. this]
     (-> this (.getP))))
 
 (defn get-q
   "Returns the subprime, q.
 
   returns: the subprime, q. - `java.math.BigInteger`"
-  ([this]
+  ([^. this]
     (-> this (.getQ))))
 
 (defn get-g
   "Returns the base, g.
 
   returns: the base, g. - `java.math.BigInteger`"
-  ([this]
+  ([^. this]
     (-> this (.getG))))
 

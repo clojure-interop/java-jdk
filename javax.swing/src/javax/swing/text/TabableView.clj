@@ -16,7 +16,7 @@
   e - how to expand the tabs when encountered. - `javax.swing.text.TabExpander`
 
   returns: the desired span >= 0 - `float`"
-  ([this x e]
+  ([^. this ^Float x ^javax.swing.text.TabExpander e]
     (-> this (.getTabbedSpan x e))))
 
 (defn get-partial-span
@@ -33,6 +33,6 @@
   p-1 - the ending location in the text document >= p0 - `int`
 
   returns: the span >= 0 - `float`"
-  ([this p-0 p-1]
+  ([^. this ^Integer p-0 ^Integer p-1]
     (-> this (.getPartialSpan p-0 p-1))))
 

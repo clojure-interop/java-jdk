@@ -14,6 +14,6 @@
   value - the function argument - `long`
 
   returns: the function result - `LongFunction.R`"
-  ([this value]
+  ([^. this ^Long value]
     (-> this (.apply value))))
 

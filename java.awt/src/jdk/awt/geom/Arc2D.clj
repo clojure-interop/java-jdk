@@ -57,7 +57,7 @@
 
   returns: A double value that represents the starting angle
    of the arc in degrees. - `double`"
-  ([this]
+  ([^java.awt.geom.Arc2D this]
     (-> this (.getAngleStart))))
 
 (defn set-arc
@@ -71,13 +71,13 @@
   ang-st - The starting angle of the arc in degrees. - `double`
   ang-ext - The angular extent of the arc in degrees. - `double`
   closure - The closure type for the arc: OPEN, CHORD, or PIE. - `int`"
-  ([this x y w h ang-st ang-ext closure]
+  ([^java.awt.geom.Arc2D this ^Double x ^Double y ^Double w ^Double h ^Double ang-st ^Double ang-ext ^Integer closure]
     (-> this (.setArc x y w h ang-st ang-ext closure)))
-  ([this loc size ang-st ang-ext closure]
+  ([^java.awt.geom.Arc2D this ^java.awt.geom.Point2D loc ^java.awt.geom.Dimension2D size ^Double ang-st ^Double ang-ext ^Integer closure]
     (-> this (.setArc loc size ang-st ang-ext closure)))
-  ([this rect ang-st ang-ext closure]
+  ([^java.awt.geom.Arc2D this ^java.awt.geom.Rectangle2D rect ^Double ang-st ^Double ang-ext ^Integer closure]
     (-> this (.setArc rect ang-st ang-ext closure)))
-  ([this a]
+  ([^java.awt.geom.Arc2D this ^java.awt.geom.Arc2D a]
     (-> this (.setArc a))))
 
 (defn set-angle-extent
@@ -85,7 +85,7 @@
    value.
 
   ang-ext - The angular extent of the arc in degrees. - `double`"
-  ([this ang-ext]
+  ([^java.awt.geom.Arc2D this ^Double ang-ext]
     (-> this (.setAngleExtent ang-ext))))
 
 (defn get-path-iterator
@@ -100,7 +100,7 @@
   at - an optional AffineTransform to be applied to the coordinates as they are returned in the iteration, or null if the untransformed coordinates are desired. - `java.awt.geom.AffineTransform`
 
   returns: A PathIterator that defines the arc's boundary. - `java.awt.geom.PathIterator`"
-  ([this at]
+  ([^java.awt.geom.Arc2D this ^java.awt.geom.AffineTransform at]
     (-> this (.getPathIterator at))))
 
 (defn get-start-point
@@ -110,7 +110,7 @@
 
   returns: A Point2D object representing the
    x,y coordinates of the starting point of the arc. - `java.awt.geom.Point2D`"
-  ([this]
+  ([^java.awt.geom.Arc2D this]
     (-> this (.getStartPoint))))
 
 (defn contains-angle
@@ -121,7 +121,7 @@
 
   returns: true if the arc contains the angle,
    false if the arc doesn't contain the angle. - `boolean`"
-  ([this angle]
+  ([^java.awt.geom.Arc2D this ^Double angle]
     (-> this (.containsAngle angle))))
 
 (defn set-arc-type
@@ -131,7 +131,7 @@
   type - The integer constant that represents the closure type of this arc: OPEN, CHORD, or PIE. - `int`
 
   throws: java.lang.IllegalArgumentException - if type is not 0, 1, or 2.+"
-  ([this type]
+  ([^java.awt.geom.Arc2D this ^Integer type]
     (-> this (.setArcType type))))
 
 (defn get-arc-type
@@ -140,7 +140,7 @@
 
   returns: One of the integer constant closure types defined
    in this class. - `int`"
-  ([this]
+  ([^java.awt.geom.Arc2D this]
     (-> this (.getArcType))))
 
 (defn contains
@@ -154,11 +154,11 @@
 
   returns: true if the arc contains the rectangle,
    false if the arc doesn't contain the rectangle. - `boolean`"
-  ([this x y w h]
+  ([^java.awt.geom.Arc2D this ^Double x ^Double y ^Double w ^Double h]
     (-> this (.contains x y w h)))
-  ([this x y]
+  ([^java.awt.geom.Arc2D this ^Double x ^Double y]
     (-> this (.contains x y)))
-  ([this r]
+  ([^java.awt.geom.Arc2D this ^java.awt.geom.Rectangle2D r]
     (-> this (.contains r))))
 
 (defn set-angle-start
@@ -166,7 +166,7 @@
    value.
 
   ang-st - The starting angle of the arc in degrees. - `double`"
-  ([this ang-st]
+  ([^java.awt.geom.Arc2D this ^Double ang-st]
     (-> this (.setAngleStart ang-st))))
 
 (defn set-arc-by-center
@@ -180,7 +180,7 @@
   ang-st - The starting angle of the arc in degrees. - `double`
   ang-ext - The angular extent of the arc in degrees. - `double`
   closure - The closure type for the arc: OPEN, CHORD, or PIE. - `int`"
-  ([this x y radius ang-st ang-ext closure]
+  ([^java.awt.geom.Arc2D this ^Double x ^Double y ^Double radius ^Double ang-st ^Double ang-ext ^Integer closure]
     (-> this (.setArcByCenter x y radius ang-st ang-ext closure))))
 
 (defn get-bounds-2-d
@@ -197,14 +197,14 @@
 
   returns: the Rectangle2D that represents the arc's
    framing rectangle. - `java.awt.geom.Rectangle2D`"
-  ([this]
+  ([^java.awt.geom.Arc2D this]
     (-> this (.getBounds2D))))
 
 (defn hash-code
   "Returns the hashcode for this Arc2D.
 
   returns: the hashcode for this Arc2D. - `int`"
-  ([this]
+  ([^java.awt.geom.Arc2D this]
     (-> this (.hashCode))))
 
 (defn set-angles
@@ -220,9 +220,9 @@
   y-1 - The Y coordinate of the arc's starting point. - `double`
   x-2 - The X coordinate of the arc's ending point. - `double`
   y-2 - The Y coordinate of the arc's ending point. - `double`"
-  ([this x-1 y-1 x-2 y-2]
+  ([^java.awt.geom.Arc2D this ^Double x-1 ^Double y-1 ^Double x-2 ^Double y-2]
     (-> this (.setAngles x-1 y-1 x-2 y-2)))
-  ([this p-1 p-2]
+  ([^java.awt.geom.Arc2D this ^java.awt.geom.Point2D p-1 ^java.awt.geom.Point2D p-2]
     (-> this (.setAngles p-1 p-2))))
 
 (defn set-arc-by-tangent
@@ -236,7 +236,7 @@
   p-2 - The second point that defines the arc. The starting angle of the arc is tangent to the line specified by points (p1, p2). The ending angle of the arc is tangent to the line specified by points (p2, p3). - `java.awt.geom.Point2D`
   p-3 - The third point that defines the arc. The ending angle of the arc is tangent to the line specified by points (p2, p3). - `java.awt.geom.Point2D`
   radius - The radius of the arc. - `double`"
-  ([this p-1 p-2 p-3 radius]
+  ([^java.awt.geom.Arc2D this ^java.awt.geom.Point2D p-1 ^java.awt.geom.Point2D p-2 ^java.awt.geom.Point2D p-3 ^Double radius]
     (-> this (.setArcByTangent p-1 p-2 p-3 radius))))
 
 (defn set-frame
@@ -250,7 +250,7 @@
   y - the Y coordinate of the upper-left corner of the specified rectangular shape - `double`
   w - the width of the specified rectangular shape - `double`
   h - the height of the specified rectangular shape - `double`"
-  ([this x y w h]
+  ([^java.awt.geom.Arc2D this ^Double x ^Double y ^Double w ^Double h]
     (-> this (.setFrame x y w h))))
 
 (defn equals
@@ -266,7 +266,7 @@
   returns: true if obj is an instance
             of Arc2D and has the same values;
             false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.awt.geom.Arc2D this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn intersects
@@ -280,7 +280,7 @@
 
   returns: true if the arc intersects the rectangle,
    false if the arc doesn't intersect the rectangle. - `boolean`"
-  ([this x y w h]
+  ([^java.awt.geom.Arc2D this ^Double x ^Double y ^Double w ^Double h]
     (-> this (.intersects x y w h))))
 
 (defn get-angle-extent
@@ -288,7 +288,7 @@
 
   returns: A double value that represents the angular extent
    of the arc in degrees. - `double`"
-  ([this]
+  ([^java.awt.geom.Arc2D this]
     (-> this (.getAngleExtent))))
 
 (defn get-end-point
@@ -299,6 +299,6 @@
 
   returns: A Point2D object representing the
    x,y coordinates  of the ending point of the arc. - `java.awt.geom.Point2D`"
-  ([this]
+  ([^java.awt.geom.Arc2D this]
     (-> this (.getEndPoint))))
 

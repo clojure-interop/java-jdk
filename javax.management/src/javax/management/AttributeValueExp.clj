@@ -14,7 +14,7 @@
    specified object attribute, named attr.
 
   attr - the name of the attribute whose value is the value of this ValueExp. - `java.lang.String`"
-  ([attr]
+  ([^java.lang.String attr]
     (new AttributeValueExp attr))
   ([]
     (new AttributeValueExp )))
@@ -23,7 +23,7 @@
   "Returns a string representation of the name of the attribute.
 
   returns: the attribute name. - `java.lang.String`"
-  ([this]
+  ([^javax.management.AttributeValueExp this]
     (-> this (.getAttributeName))))
 
 (defn apply
@@ -40,14 +40,14 @@
   returns: The ValueExp. - `javax.management.ValueExp`
 
   throws: javax.management.BadAttributeValueExpException"
-  ([this name]
+  ([^javax.management.AttributeValueExp this ^javax.management.ObjectName name]
     (-> this (.apply name))))
 
 (defn to-string
   "Returns the string representing its value.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^javax.management.AttributeValueExp this]
     (-> this (.toString))))
 
 (defn set-m-bean-server
@@ -57,6 +57,6 @@
   s - The MBean server on which the query is to be performed. - `javax.management.MBeanServer`
 
   returns: `java.lang.  void`"
-  ([this s]
+  ([^javax.management.AttributeValueExp this ^javax.management.MBeanServer s]
     (-> this (.setMBeanServer s))))
 

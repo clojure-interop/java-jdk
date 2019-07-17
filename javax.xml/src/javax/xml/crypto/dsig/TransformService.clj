@@ -76,16 +76,16 @@
   returns: a new TransformService - `javax.xml.crypto.dsig.TransformService`
 
   throws: java.lang.NullPointerException - if provider, algorithm, or mechanismType is null"
-  ([algorithm mechanism-type provider]
+  ([^java.lang.String algorithm ^java.lang.String mechanism-type ^java.security.Provider provider]
     (TransformService/getInstance algorithm mechanism-type provider))
-  ([algorithm mechanism-type]
+  ([^java.lang.String algorithm ^java.lang.String mechanism-type]
     (TransformService/getInstance algorithm mechanism-type)))
 
 (defn get-mechanism-type
   "Returns the mechanism type supported by this TransformService.
 
   returns: the mechanism type - `java.lang.String`"
-  ([this]
+  ([^javax.xml.crypto.dsig.TransformService this]
     (-> this (.getMechanismType))))
 
 (defn get-algorithm
@@ -93,14 +93,14 @@
    TransformService.
 
   returns: the algorithm URI - `java.lang.String`"
-  ([this]
+  ([^javax.xml.crypto.dsig.TransformService this]
     (-> this (.getAlgorithm))))
 
 (defn get-provider
   "Returns the provider of this TransformService.
 
   returns: the provider - `java.security.Provider`"
-  ([this]
+  ([^javax.xml.crypto.dsig.TransformService this]
     (-> this (.getProvider))))
 
 (defn init
@@ -111,9 +111,9 @@
   context - the XMLCryptoContext containing additional context (may be null if not applicable) - `javax.xml.crypto.XMLCryptoContext`
 
   throws: java.lang.ClassCastException - if the type of parent or context is not compatible with this TransformService"
-  ([this parent context]
+  ([^javax.xml.crypto.dsig.TransformService this ^javax.xml.crypto.XMLStructure parent ^javax.xml.crypto.XMLCryptoContext context]
     (-> this (.init parent context)))
-  ([this params]
+  ([^javax.xml.crypto.dsig.TransformService this ^javax.xml.crypto.dsig.spec.TransformParameterSpec params]
     (-> this (.init params))))
 
 (defn marshal-params
@@ -124,6 +124,6 @@
   context - the XMLCryptoContext containing additional context (may be null if not applicable) - `javax.xml.crypto.XMLCryptoContext`
 
   throws: java.lang.ClassCastException - if the type of parent or context is not compatible with this TransformService"
-  ([this parent context]
+  ([^javax.xml.crypto.dsig.TransformService this ^javax.xml.crypto.XMLStructure parent ^javax.xml.crypto.XMLCryptoContext context]
     (-> this (.marshalParams parent context))))
 

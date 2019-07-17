@@ -10,7 +10,7 @@
   "Returns an iterator over elements of type T.
 
   returns: an Iterator. - `java.util.Iterator<Iterable.T>`"
-  ([this]
+  ([^. this]
     (-> this (.iterator))))
 
 (defn for-each
@@ -26,7 +26,7 @@
   returns: `default void`
 
   throws: java.lang.NullPointerException - if the specified action is null"
-  ([this action]
+  ([^. this ^Iterable.T> action]
     (-> this (.forEach action))))
 
 (defn spliterator
@@ -35,6 +35,6 @@
 
   returns: a Spliterator over the elements described by this
    Iterable. - `default java.util.Spliterator<Iterable.T>`"
-  ([this]
+  ([^. this]
     (-> this (.spliterator))))
 

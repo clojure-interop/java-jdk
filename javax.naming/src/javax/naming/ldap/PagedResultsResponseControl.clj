@@ -33,7 +33,7 @@
   value - The control's ASN.1 BER encoded value. It is not cloned - any changes to value will affect the contents of the control. - `byte[]`
 
   throws: java.io.IOException - If an error was encountered while decoding the control's value."
-  ([id criticality value]
+  ([^java.lang.String id ^Boolean criticality value]
     (new PagedResultsResponseControl id criticality value)))
 
 (def *-oid
@@ -49,7 +49,7 @@
   "Retrieves (an estimate of) the number of entries in the search result.
 
   returns: The number of entries in the search result, or zero if unknown. - `int`"
-  ([this]
+  ([^javax.naming.ldap.PagedResultsResponseControl this]
     (-> this (.getResultSize))))
 
 (defn get-cookie
@@ -59,6 +59,6 @@
   returns: A possibly null server-generated cookie. It is not cloned - any
            changes to the cookie will update the control's state and thus
            are not recommended. - `byte[]`"
-  ([this]
+  ([^javax.naming.ldap.PagedResultsResponseControl this]
     (-> this (.getCookie))))
 

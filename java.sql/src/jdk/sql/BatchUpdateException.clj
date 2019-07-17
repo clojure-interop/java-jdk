@@ -44,13 +44,13 @@
   vendor-code - an exception code used by a particular database vendor - `int`
   update-counts - an array of int, with each elementindicating the update count, Statement.SUCCESS_NO_INFO or Statement.EXECUTE_FAILED for each SQL command in the batch for JDBC drivers that continue processing after a command failure; an update count or Statement.SUCCESS_NO_INFO for each SQL command in the batch prior to the failure for JDBC drivers that stop processing after a command failure Note: There is no validation of updateCounts for overflow and because of this it is recommended that you use the constructor BatchUpdateException(String reason, String SQLState, int vendorCode, long []updateCounts,Throwable cause) . - `int[]`
   cause - the underlying reason for this SQLException (which is saved for later retrieval by the getCause() method); may be null indicating the cause is non-existent or unknown. - `java.lang.Throwable`"
-  ([reason sql-state vendor-code update-counts cause]
+  ([^java.lang.String reason ^java.lang.String sql-state ^Integer vendor-code update-counts ^java.lang.Throwable cause]
     (new BatchUpdateException reason sql-state vendor-code update-counts cause))
-  ([reason sql-state vendor-code update-counts]
+  ([^java.lang.String reason ^java.lang.String sql-state ^Integer vendor-code update-counts]
     (new BatchUpdateException reason sql-state vendor-code update-counts))
-  ([reason sql-state update-counts]
+  ([^java.lang.String reason ^java.lang.String sql-state update-counts]
     (new BatchUpdateException reason sql-state update-counts))
-  ([reason update-counts]
+  ([^java.lang.String reason update-counts]
     (new BatchUpdateException reason update-counts))
   ([update-counts]
     (new BatchUpdateException update-counts))
@@ -84,7 +84,7 @@
        executed successfully but the number of rows affected is unknown
     Statement.EXECUTE_FAILED to indicate that the command
        failed to execute successfully - `int[]`"
-  ([this]
+  ([^java.sql.BatchUpdateException this]
     (-> this (.getUpdateCounts))))
 
 (defn get-large-update-counts
@@ -111,6 +111,6 @@
        executed successfully but the number of rows affected is unknown
     Statement.EXECUTE_FAILED to indicate that the command
        failed to execute successfully - `long[]`"
-  ([this]
+  ([^java.sql.BatchUpdateException this]
     (-> this (.getLargeUpdateCounts))))
 

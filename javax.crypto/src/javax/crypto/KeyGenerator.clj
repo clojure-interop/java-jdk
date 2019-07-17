@@ -83,9 +83,9 @@
   returns: the new KeyGenerator object. - `javax.crypto.KeyGenerator`
 
   throws: java.lang.NullPointerException - if the specified algorithm is null."
-  ([algorithm provider]
+  ([^java.lang.String algorithm ^java.lang.String provider]
     (KeyGenerator/getInstance algorithm provider))
-  ([algorithm]
+  ([^java.lang.String algorithm]
     (KeyGenerator/getInstance algorithm)))
 
 (defn get-algorithm
@@ -96,14 +96,14 @@
    KeyGenerator object.
 
   returns: the algorithm name of this KeyGenerator object. - `java.lang.String`"
-  ([this]
+  ([^javax.crypto.KeyGenerator this]
     (-> this (.getAlgorithm))))
 
 (defn get-provider
   "Returns the provider of this KeyGenerator object.
 
   returns: the provider of this KeyGenerator object - `java.security.Provider`"
-  ([this]
+  ([^javax.crypto.KeyGenerator this]
     (-> this (.getProvider))))
 
 (defn init
@@ -114,15 +114,15 @@
   random - the source of randomness for this key generator - `java.security.SecureRandom`
 
   throws: java.security.InvalidAlgorithmParameterException - if params is inappropriate for this key generator"
-  ([this params random]
+  ([^javax.crypto.KeyGenerator this ^java.security.spec.AlgorithmParameterSpec params ^java.security.SecureRandom random]
     (-> this (.init params random)))
-  ([this random]
+  ([^javax.crypto.KeyGenerator this ^java.security.SecureRandom random]
     (-> this (.init random))))
 
 (defn generate-key
   "Generates a secret key.
 
   returns: the new key - `javax.crypto.SecretKey`"
-  ([this]
+  ([^javax.crypto.KeyGenerator this]
     (-> this (.generateKey))))
 

@@ -161,7 +161,7 @@
   returns: a stream containing the XML data. - `java.io.InputStream`
 
   throws: java.sql.SQLException - if there is an error processing the XML value. An exception is thrown if the state is not readable."
-  ([this]
+  ([^. this]
     (-> this (.getBinaryStream))))
 
 (defn set-string
@@ -180,7 +180,7 @@
   value - the XML value - `java.lang.String`
 
   throws: java.sql.SQLException - if there is an error processing the XML value. The getCause() method of the exception may provide a more detailed exception, for example, if the stream does not contain valid characters. An exception is thrown if the state is not writable."
-  ([this value]
+  ([^. this ^java.lang.String value]
     (-> this (.setString value))))
 
 (defn free
@@ -194,7 +194,7 @@
    calls to free are treated as a no-op.
 
   throws: java.sql.SQLException - if there is an error freeing the XML value."
-  ([this]
+  ([^. this]
     (-> this (.free))))
 
 (defn set-binary-stream
@@ -210,7 +210,7 @@
   returns: a stream to which data can be written. - `java.io.OutputStream`
 
   throws: java.sql.SQLException - if there is an error processing the XML value. An exception is thrown if the state is not writable."
-  ([this]
+  ([^. this]
     (-> this (.setBinaryStream))))
 
 (defn get-string
@@ -229,7 +229,7 @@
   returns: a string representation of the XML value designated by this SQLXML instance. - `java.lang.String`
 
   throws: java.sql.SQLException - if there is an error processing the XML value. The getCause() method of the exception may provide a more detailed exception, for example, if the stream does not contain valid characters. An exception is thrown if the state is not readable."
-  ([this]
+  ([^. this]
     (-> this (.getString))))
 
 (defn get-character-stream
@@ -248,7 +248,7 @@
   returns: a stream containing the XML data. - `java.io.Reader`
 
   throws: java.sql.SQLException - if there is an error processing the XML value. The getCause() method of the exception may provide a more detailed exception, for example, if the stream does not contain valid characters. An exception is thrown if the state is not readable."
-  ([this]
+  ([^. this]
     (-> this (.getCharacterStream))))
 
 (defn get-source
@@ -277,7 +277,7 @@
   returns: a Source for reading the XML value. - `<T extends javax.xml.transform.Source> T`
 
   throws: java.sql.SQLException - if there is an error processing the XML value or if this feature is not supported. The getCause() method of the exception may provide a more detailed exception, for example, if an XML parser exception occurs. An exception is thrown if the state is not readable."
-  ([this source-class]
+  ([^. this ^java.lang.Class source-class]
     (-> this (.getSource source-class))))
 
 (defn set-result
@@ -305,7 +305,7 @@
   returns: Returns a Result for setting the XML value. - `<T extends javax.xml.transform.Result> T`
 
   throws: java.sql.SQLException - if there is an error processing the XML value or if this feature is not supported. The getCause() method of the exception may provide a more detailed exception, for example, if an XML parser exception occurs. An exception is thrown if the state is not writable."
-  ([this result-class]
+  ([^. this ^java.lang.Class result-class]
     (-> this (.setResult result-class))))
 
 (defn set-character-stream
@@ -324,6 +324,6 @@
   returns: a stream to which data can be written. - `java.io.Writer`
 
   throws: java.sql.SQLException - if there is an error processing the XML value. The getCause() method of the exception may provide a more detailed exception, for example, if the stream does not contain valid characters. An exception is thrown if the state is not writable."
-  ([this]
+  ([^. this]
     (-> this (.setCharacterStream))))
 

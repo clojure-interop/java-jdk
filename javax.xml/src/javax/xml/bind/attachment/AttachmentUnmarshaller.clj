@@ -70,7 +70,7 @@
   returns: a DataHandler that represents the MIME attachment. - `javax.activation.DataHandler`
 
   throws: java.lang.IllegalArgumentException - if the attachment for the given cid is not found."
-  ([this cid]
+  ([^javax.xml.bind.attachment.AttachmentUnmarshaller this ^java.lang.String cid]
     (-> this (.getAttachmentAsDataHandler cid))))
 
 (defn get-attachment-as-byte-array
@@ -81,7 +81,7 @@
   returns: byte[] representation of attachment identified by cid. - `byte[]`
 
   throws: java.lang.IllegalArgumentException - if the attachment for the given cid is not found."
-  ([this cid]
+  ([^javax.xml.bind.attachment.AttachmentUnmarshaller this ^java.lang.String cid]
     (-> this (.getAttachmentAsByteArray cid))))
 
 (defn xop-package?
@@ -92,6 +92,6 @@
    This value must not change during the unmarshalling process.
 
   returns: true when MIME context is a XOP Document. - `boolean`"
-  ([this]
+  ([^javax.xml.bind.attachment.AttachmentUnmarshaller this]
     (-> this (.isXOPPackage))))
 

@@ -21,7 +21,7 @@
   returns: the loaded class. - `java.lang.Class<?>`
 
   throws: java.lang.ClassNotFoundException - The specified class could not be found."
-  ([class-name]
+  ([^java.lang.String class-name]
     (DefaultLoaderRepository/loadClass class-name)))
 
 (defn *load-class-without
@@ -33,6 +33,6 @@
   returns: the loaded class. - `java.lang.Class<?>`
 
   throws: java.lang.ClassNotFoundException - The specified class could not be found."
-  ([loader class-name]
+  ([^java.lang.ClassLoader loader ^java.lang.String class-name]
     (DefaultLoaderRepository/loadClassWithout loader class-name)))
 

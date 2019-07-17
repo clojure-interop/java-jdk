@@ -17,7 +17,7 @@
   protection-parameters - the encryption algorithm parameter specification, which may be null - `java.security.spec.AlgorithmParameterSpec`
 
   throws: java.lang.NullPointerException - if protectionAlgorithm is null"
-  ([password protection-algorithm protection-parameters]
+  ([password ^java.lang.String protection-algorithm ^java.security.spec.AlgorithmParameterSpec protection-parameters]
     (new KeyStore$PasswordProtection password protection-algorithm protection-parameters))
   ([password]
     (new KeyStore$PasswordProtection password)))
@@ -35,7 +35,7 @@
    implementation-specific algorithm will be used.
 
   returns: the algorithm name, or null if none was set - `java.lang.String`"
-  ([this]
+  ([^java.security.KeyStore$PasswordProtection this]
     (-> this (.getProtectionAlgorithm))))
 
 (defn get-protection-parameters
@@ -43,7 +43,7 @@
 
   returns: the algorithm parameter specification, or null,
        if none was set - `java.security.spec.AlgorithmParameterSpec`"
-  ([this]
+  ([^java.security.KeyStore$PasswordProtection this]
     (-> this (.getProtectionParameters))))
 
 (defn get-password
@@ -57,20 +57,20 @@
   returns: the password, which may be null - `char[]`
 
   throws: java.lang.IllegalStateException - if the password has been cleared (destroyed)"
-  ([this]
+  ([^java.security.KeyStore$PasswordProtection this]
     (-> this (.getPassword))))
 
 (defn destroy
   "Clears the password.
 
   throws: javax.security.auth.DestroyFailedException - if this method was unable to clear the password"
-  ([this]
+  ([^java.security.KeyStore$PasswordProtection this]
     (-> this (.destroy))))
 
 (defn destroyed?
   "Determines if password has been cleared.
 
   returns: true if the password has been cleared, false otherwise - `boolean`"
-  ([this]
+  ([^java.security.KeyStore$PasswordProtection this]
     (-> this (.isDestroyed))))
 

@@ -32,7 +32,7 @@
   locale - Natural language of the text string. null is interpreted to mean the default locale as returned by Locale.getDefault() - `java.util.Locale`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if message is null."
-  ([message locale]
+  ([^java.lang.String message ^java.util.Locale locale]
     (new PrinterMessageFromOperator message locale)))
 
 (defn equals
@@ -56,7 +56,7 @@
 
   returns: True if object is equivalent to this printer
             message from operator attribute, false otherwise. - `boolean`"
-  ([this object]
+  ([^javax.print.attribute.standard.PrinterMessageFromOperator this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -68,7 +68,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([this]
+  ([^javax.print.attribute.standard.PrinterMessageFromOperator this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -79,6 +79,6 @@
    the category name is `printer-message-from-operator`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([this]
+  ([^javax.print.attribute.standard.PrinterMessageFromOperator this]
     (-> this (.getName))))
 

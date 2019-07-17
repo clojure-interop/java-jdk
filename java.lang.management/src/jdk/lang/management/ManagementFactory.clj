@@ -319,7 +319,7 @@
    MBeanServerConnection, or null if not exist. - `<T> T`
 
   throws: java.lang.IllegalArgumentException - if mxbeanName is not with a valid ObjectName format, or the named MXBean in the connection is not a MXBean provided by the platform, or the named MXBean is not registered in the MBeanServerConnection, or the named MXBean is not an instance of the given mxbeanInterface"
-  ([connection mxbean-name mxbean-interface]
+  ([^javax.management.MBeanServerConnection connection ^java.lang.String mxbean-name ^java.lang.Class mxbean-interface]
     (ManagementFactory/newPlatformMXBeanProxy connection mxbean-name mxbean-interface)))
 
 (defn *get-platform-m-bean-server
@@ -472,9 +472,9 @@
    or null if not exist. - `<T extends java.lang.management.PlatformManagedObject> T`
 
   throws: java.lang.IllegalArgumentException - if mxbeanInterface is not a platform management interface or not a singleton platform MXBean."
-  ([connection mxbean-interface]
+  ([^javax.management.MBeanServerConnection connection ^java.lang.Class mxbean-interface]
     (ManagementFactory/getPlatformMXBean connection mxbean-interface))
-  ([mxbean-interface]
+  ([^java.lang.Class mxbean-interface]
     (ManagementFactory/getPlatformMXBean mxbean-interface)))
 
 (defn *get-platform-mx-beans
@@ -495,8 +495,8 @@
    through the given MBeanServerConnection. - `<T extends java.lang.management.PlatformManagedObject> java.util.List<T>`
 
   throws: java.lang.IllegalArgumentException - if mxbeanInterface is not a platform management interface."
-  ([connection mxbean-interface]
+  ([^javax.management.MBeanServerConnection connection ^java.lang.Class mxbean-interface]
     (ManagementFactory/getPlatformMXBeans connection mxbean-interface))
-  ([mxbean-interface]
+  ([^java.lang.Class mxbean-interface]
     (ManagementFactory/getPlatformMXBeans mxbean-interface)))
 

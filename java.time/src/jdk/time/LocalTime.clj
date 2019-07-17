@@ -71,7 +71,7 @@
   zone - the zone ID to use, not null - `java.time.ZoneId`
 
   returns: the current time using the system clock, not null - `java.time.LocalTime`"
-  ([zone]
+  ([^java.time.ZoneId zone]
     (LocalTime/now zone))
   ([]
     (LocalTime/now )))
@@ -89,11 +89,11 @@
   returns: the local time, not null - `java.time.LocalTime`
 
   throws: java.time.DateTimeException - if the value of any field is out of range"
-  ([hour minute second nano-of-second]
+  ([^Integer hour ^Integer minute ^Integer second ^Integer nano-of-second]
     (LocalTime/of hour minute second nano-of-second))
-  ([hour minute second]
+  ([^Integer hour ^Integer minute ^Integer second]
     (LocalTime/of hour minute second))
-  ([hour minute]
+  ([^Integer hour ^Integer minute]
     (LocalTime/of hour minute)))
 
 (defn *of-second-of-day
@@ -107,7 +107,7 @@
   returns: the local time, not null - `java.time.LocalTime`
 
   throws: java.time.DateTimeException - if the second-of-day value is invalid"
-  ([second-of-day]
+  ([^Long second-of-day]
     (LocalTime/ofSecondOfDay second-of-day)))
 
 (defn *of-nano-of-day
@@ -120,7 +120,7 @@
   returns: the local time, not null - `java.time.LocalTime`
 
   throws: java.time.DateTimeException - if the nanos of day value is invalid"
-  ([nano-of-day]
+  ([^Long nano-of-day]
     (LocalTime/ofNanoOfDay nano-of-day)))
 
 (defn *from
@@ -141,7 +141,7 @@
   returns: the local time, not null - `java.time.LocalTime`
 
   throws: java.time.DateTimeException - if unable to convert to a LocalTime"
-  ([temporal]
+  ([^java.time.temporal.TemporalAccessor temporal]
     (LocalTime/from temporal)))
 
 (defn *parse
@@ -155,9 +155,9 @@
   returns: the parsed local time, not null - `java.time.LocalTime`
 
   throws: java.time.format.DateTimeParseException - if the text cannot be parsed"
-  ([text formatter]
+  ([^java.lang.CharSequence text ^java.time.format.DateTimeFormatter formatter]
     (LocalTime/parse text formatter))
-  ([text]
+  ([^java.lang.CharSequence text]
     (LocalTime/parse text)))
 
 (defn minus-minutes
@@ -171,7 +171,7 @@
   minutes-to-subtract - the minutes to subtract, may be negative - `long`
 
   returns: a LocalTime based on this time with the minutes subtracted, not null - `java.time.LocalTime`"
-  ([this minutes-to-subtract]
+  ([^java.time.LocalTime this ^Long minutes-to-subtract]
     (-> this (.minusMinutes minutes-to-subtract))))
 
 (defn truncated-to
@@ -194,7 +194,7 @@
   returns: a LocalTime based on this time with the time truncated, not null - `java.time.LocalTime`
 
   throws: java.time.DateTimeException - if unable to truncate"
-  ([this unit]
+  ([^java.time.LocalTime this ^java.time.temporal.TemporalUnit unit]
     (-> this (.truncatedTo unit))))
 
 (defn range
@@ -220,14 +220,14 @@
   returns: the range of valid values for the field, not null - `java.time.temporal.ValueRange`
 
   throws: java.time.DateTimeException - if the range for the field cannot be obtained"
-  ([this field]
+  ([^java.time.LocalTime this ^java.time.temporal.TemporalField field]
     (-> this (.range field))))
 
 (defn get-hour
   "Gets the hour-of-day field.
 
   returns: the hour-of-day, from 0 to 23 - `int`"
-  ([this]
+  ([^java.time.LocalTime this]
     (-> this (.getHour))))
 
 (defn at-offset
@@ -239,7 +239,7 @@
   offset - the offset to combine with, not null - `java.time.ZoneOffset`
 
   returns: the offset time formed from this time and the specified offset, not null - `java.time.OffsetTime`"
-  ([this offset]
+  ([^java.time.LocalTime this ^java.time.ZoneOffset offset]
     (-> this (.atOffset offset))))
 
 (defn minus-hours
@@ -253,14 +253,14 @@
   hours-to-subtract - the hours to subtract, may be negative - `long`
 
   returns: a LocalTime based on this time with the hours subtracted, not null - `java.time.LocalTime`"
-  ([this hours-to-subtract]
+  ([^java.time.LocalTime this ^Long hours-to-subtract]
     (-> this (.minusHours hours-to-subtract))))
 
 (defn get-nano
   "Gets the nano-of-second field.
 
   returns: the nano-of-second, from 0 to 999,999,999 - `int`"
-  ([this]
+  ([^java.time.LocalTime this]
     (-> this (.getNano))))
 
 (defn minus-seconds
@@ -274,14 +274,14 @@
   seconds-to-subtract - the seconds to subtract, may be negative - `long`
 
   returns: a LocalTime based on this time with the seconds subtracted, not null - `java.time.LocalTime`"
-  ([this seconds-to-subtract]
+  ([^java.time.LocalTime this ^Long seconds-to-subtract]
     (-> this (.minusSeconds seconds-to-subtract))))
 
 (defn get-second
   "Gets the second-of-minute field.
 
   returns: the second-of-minute, from 0 to 59 - `int`"
-  ([this]
+  ([^java.time.LocalTime this]
     (-> this (.getSecond))))
 
 (defn plus-nanos
@@ -295,7 +295,7 @@
   nanos-to-add - the nanos to add, may be negative - `long`
 
   returns: a LocalTime based on this time with the nanoseconds added, not null - `java.time.LocalTime`"
-  ([this nanos-to-add]
+  ([^java.time.LocalTime this ^Long nanos-to-add]
     (-> this (.plusNanos nanos-to-add))))
 
 (defn plus
@@ -349,9 +349,9 @@
   returns: a LocalTime based on this time with the specified amount added, not null - `java.time.LocalTime`
 
   throws: java.time.DateTimeException - if the addition cannot be made"
-  ([this amount-to-add unit]
+  ([^java.time.LocalTime this ^Long amount-to-add ^java.time.temporal.TemporalUnit unit]
     (-> this (.plus amount-to-add unit)))
-  ([this amount-to-add]
+  ([^java.time.LocalTime this ^java.time.temporal.TemporalAmount amount-to-add]
     (-> this (.plus amount-to-add))))
 
 (defn with-hour
@@ -364,7 +364,7 @@
   returns: a LocalTime based on this time with the requested hour, not null - `java.time.LocalTime`
 
   throws: java.time.DateTimeException - if the hour value is invalid"
-  ([this hour]
+  ([^java.time.LocalTime this ^Integer hour]
     (-> this (.withHour hour))))
 
 (defn with-minute
@@ -377,7 +377,7 @@
   returns: a LocalTime based on this time with the requested minute, not null - `java.time.LocalTime`
 
   throws: java.time.DateTimeException - if the minute value is invalid"
-  ([this minute]
+  ([^java.time.LocalTime this ^Integer minute]
     (-> this (.withMinute minute))))
 
 (defn plus-minutes
@@ -391,7 +391,7 @@
   minutes-to-add - the minutes to add, may be negative - `long`
 
   returns: a LocalTime based on this time with the minutes added, not null - `java.time.LocalTime`"
-  ([this minutes-to-add]
+  ([^java.time.LocalTime this ^Long minutes-to-add]
     (-> this (.plusMinutes minutes-to-add))))
 
 (defn query
@@ -411,7 +411,7 @@
   returns: the query result, null may be returned (defined by the query) - `<R> R`
 
   throws: java.time.DateTimeException - if unable to query (defined by the query)"
-  ([this query]
+  ([^java.time.LocalTime this ^java.time.temporal.TemporalQuery query]
     (-> this (.query query))))
 
 (defn at-date
@@ -423,7 +423,7 @@
   date - the date to combine with, not null - `java.time.LocalDate`
 
   returns: the local date-time formed from this time and the specified date, not null - `java.time.LocalDateTime`"
-  ([this date]
+  ([^java.time.LocalTime this ^java.time.LocalDate date]
     (-> this (.atDate date))))
 
 (defn to-string
@@ -441,7 +441,7 @@
    the time where the omitted parts are implied to be zero.
 
   returns: a string representation of this time, not null - `java.lang.String`"
-  ([this]
+  ([^java.time.LocalTime this]
     (-> this (.toString))))
 
 (defn before?
@@ -454,7 +454,7 @@
   returns: true if this point is before the specified time - `boolean`
 
   throws: java.lang.NullPointerException - if other is null"
-  ([this other]
+  ([^java.time.LocalTime this ^java.time.LocalTime other]
     (-> this (.isBefore other))))
 
 (defn minus
@@ -475,9 +475,9 @@
   returns: a LocalTime based on this time with the specified amount subtracted, not null - `java.time.LocalTime`
 
   throws: java.time.DateTimeException - if the subtraction cannot be made"
-  ([this amount-to-subtract unit]
+  ([^java.time.LocalTime this ^Long amount-to-subtract ^java.time.temporal.TemporalUnit unit]
     (-> this (.minus amount-to-subtract unit)))
-  ([this amount-to-subtract]
+  ([^java.time.LocalTime this ^java.time.temporal.TemporalAmount amount-to-subtract]
     (-> this (.minus amount-to-subtract))))
 
 (defn plus-hours
@@ -491,7 +491,7 @@
   hours-to-add - the hours to add, may be negative - `long`
 
   returns: a LocalTime based on this time with the hours added, not null - `java.time.LocalTime`"
-  ([this hours-to-add]
+  ([^java.time.LocalTime this ^Long hours-to-add]
     (-> this (.plusHours hours-to-add))))
 
 (defn to-second-of-day
@@ -499,7 +499,7 @@
    from 0 to 24 * 60 * 60 - 1.
 
   returns: the second-of-day equivalent to this time - `int`"
-  ([this]
+  ([^java.time.LocalTime this]
     (-> this (.toSecondOfDay))))
 
 (defn get-long
@@ -524,7 +524,7 @@
   returns: the value for the field - `long`
 
   throws: java.time.DateTimeException - if a value for the field cannot be obtained"
-  ([this field]
+  ([^java.time.LocalTime this ^java.time.temporal.TemporalField field]
     (-> this (.getLong field))))
 
 (defn with-nano
@@ -537,7 +537,7 @@
   returns: a LocalTime based on this time with the requested nanosecond, not null - `java.time.LocalTime`
 
   throws: java.time.DateTimeException - if the nanos value is invalid"
-  ([this nano-of-second]
+  ([^java.time.LocalTime this ^Integer nano-of-second]
     (-> this (.withNano nano-of-second))))
 
 (defn until
@@ -585,7 +585,7 @@
   returns: the amount of time between this time and the end time - `long`
 
   throws: java.time.DateTimeException - if the amount cannot be calculated, or the end temporal cannot be converted to a LocalTime"
-  ([this end-exclusive unit]
+  ([^java.time.LocalTime this ^java.time.temporal.Temporal end-exclusive ^java.time.temporal.TemporalUnit unit]
     (-> this (.until end-exclusive unit))))
 
 (defn after?
@@ -598,7 +598,7 @@
   returns: true if this is after the specified time - `boolean`
 
   throws: java.lang.NullPointerException - if other is null"
-  ([this other]
+  ([^java.time.LocalTime this ^java.time.LocalTime other]
     (-> this (.isAfter other))))
 
 (defn minus-nanos
@@ -612,7 +612,7 @@
   nanos-to-subtract - the nanos to subtract, may be negative - `long`
 
   returns: a LocalTime based on this time with the nanoseconds subtracted, not null - `java.time.LocalTime`"
-  ([this nanos-to-subtract]
+  ([^java.time.LocalTime this ^Long nanos-to-subtract]
     (-> this (.minusNanos nanos-to-subtract))))
 
 (defn supported?
@@ -652,7 +652,7 @@
   field - the field to check, null returns false - `java.time.temporal.TemporalField`
 
   returns: true if the field is supported on this time, false if not - `boolean`"
-  ([this field]
+  ([^java.time.LocalTime this ^java.time.temporal.TemporalField field]
     (-> this (.isSupported field))))
 
 (defn with-second
@@ -665,21 +665,21 @@
   returns: a LocalTime based on this time with the requested second, not null - `java.time.LocalTime`
 
   throws: java.time.DateTimeException - if the second value is invalid"
-  ([this second]
+  ([^java.time.LocalTime this ^Integer second]
     (-> this (.withSecond second))))
 
 (defn get-minute
   "Gets the minute-of-hour field.
 
   returns: the minute-of-hour, from 0 to 59 - `int`"
-  ([this]
+  ([^java.time.LocalTime this]
     (-> this (.getMinute))))
 
 (defn hash-code
   "A hash code for this time.
 
   returns: a suitable hash code - `int`"
-  ([this]
+  ([^java.time.LocalTime this]
     (-> this (.hashCode))))
 
 (defn adjust-into
@@ -706,7 +706,7 @@
   returns: the adjusted object, not null - `java.time.temporal.Temporal`
 
   throws: java.time.DateTimeException - if unable to make the adjustment"
-  ([this temporal]
+  ([^java.time.LocalTime this ^java.time.temporal.Temporal temporal]
     (-> this (.adjustInto temporal))))
 
 (defn with
@@ -790,9 +790,9 @@
   returns: a LocalTime based on this with the specified field set, not null - `java.time.LocalTime`
 
   throws: java.time.DateTimeException - if the field cannot be set"
-  ([this field new-value]
+  ([^java.time.LocalTime this ^java.time.temporal.TemporalField field ^Long new-value]
     (-> this (.with field new-value)))
-  ([this adjuster]
+  ([^java.time.LocalTime this ^java.time.temporal.TemporalAdjuster adjuster]
     (-> this (.with adjuster))))
 
 (defn compare-to
@@ -806,7 +806,7 @@
   returns: the comparator value, negative if less, positive if greater - `int`
 
   throws: java.lang.NullPointerException - if other is null"
-  ([this other]
+  ([^java.time.LocalTime this ^java.time.LocalTime other]
     (-> this (.compareTo other))))
 
 (defn to-nano-of-day
@@ -814,7 +814,7 @@
    from 0 to 24 * 60 * 60 * 1,000,000,000 - 1.
 
   returns: the nano of day equivalent to this time - `long`"
-  ([this]
+  ([^java.time.LocalTime this]
     (-> this (.toNanoOfDay))))
 
 (defn plus-seconds
@@ -828,7 +828,7 @@
   secondsto-add - the seconds to add, may be negative - `long`
 
   returns: a LocalTime based on this time with the seconds added, not null - `java.time.LocalTime`"
-  ([this secondsto-add]
+  ([^java.time.LocalTime this ^Long secondsto-add]
     (-> this (.plusSeconds secondsto-add))))
 
 (defn get
@@ -855,7 +855,7 @@
   returns: the value for the field - `int`
 
   throws: java.time.DateTimeException - if a value for the field cannot be obtained or the value is outside the range of valid values for the field"
-  ([this field]
+  ([^java.time.LocalTime this ^java.time.temporal.TemporalField field]
     (-> this (.get field))))
 
 (defn equals
@@ -870,7 +870,7 @@
   obj - the object to check, null returns false - `java.lang.Object`
 
   returns: true if this is equal to the other time - `boolean`"
-  ([this obj]
+  ([^java.time.LocalTime this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn format
@@ -883,6 +883,6 @@
   returns: the formatted time string, not null - `java.lang.String`
 
   throws: java.time.DateTimeException - if an error occurs during printing"
-  ([this formatter]
+  ([^java.time.LocalTime this ^java.time.format.DateTimeFormatter formatter]
     (-> this (.format formatter))))
 

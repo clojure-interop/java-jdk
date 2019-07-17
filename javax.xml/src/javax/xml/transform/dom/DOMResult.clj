@@ -33,11 +33,11 @@
   system-id - The system identifier which may be used in association with this node. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - If nextSibling is not a sibling of node or node is null and nextSibling is not null."
-  ([node next-sibling system-id]
+  ([^org.w3c.dom.Node node ^org.w3c.dom.Node next-sibling ^java.lang.String system-id]
     (new DOMResult node next-sibling system-id))
-  ([node system-id]
+  ([^org.w3c.dom.Node node ^java.lang.String system-id]
     (new DOMResult node system-id))
-  ([node]
+  ([^org.w3c.dom.Node node]
     (new DOMResult node))
   ([]
     (new DOMResult )))
@@ -70,7 +70,7 @@
   node - The node to which the transformation will be appended. - `org.w3c.dom.Node`
 
   throws: java.lang.IllegalStateException - If nextSibling is not null and nextSibling is not a child of node or node is null and nextSibling is not null."
-  ([this node]
+  ([^javax.xml.transform.dom.DOMResult this ^org.w3c.dom.Node node]
     (-> this (.setNode node))))
 
 (defn get-node
@@ -86,7 +86,7 @@
    Calling this method before the transformation will return null.
 
   returns: The node to which the transformation will be appended. - `org.w3c.dom.Node`"
-  ([this]
+  ([^javax.xml.transform.dom.DOMResult this]
     (-> this (.getNode))))
 
 (defn set-next-sibling
@@ -105,7 +105,7 @@
   next-sibling - The child node before which the result nodes will be inserted. - `org.w3c.dom.Node`
 
   throws: java.lang.IllegalArgumentException - If nextSibling is not a descendant of node."
-  ([this next-sibling]
+  ([^javax.xml.transform.dom.DOMResult this ^org.w3c.dom.Node next-sibling]
     (-> this (.setNextSibling next-sibling))))
 
 (defn get-next-sibling
@@ -118,14 +118,14 @@
    then null will be returned.
 
   returns: The child node before which the result nodes will be inserted. - `org.w3c.dom.Node`"
-  ([this]
+  ([^javax.xml.transform.dom.DOMResult this]
     (-> this (.getNextSibling))))
 
 (defn set-system-id
   "Set the systemId that may be used in association with the node.
 
   system-id - The system identifier as a URI string. - `java.lang.String`"
-  ([this system-id]
+  ([^javax.xml.transform.dom.DOMResult this ^java.lang.String system-id]
     (-> this (.setSystemId system-id))))
 
 (defn get-system-id
@@ -138,6 +138,6 @@
    then null will be returned.
 
   returns: The system identifier. - `java.lang.String`"
-  ([this]
+  ([^javax.xml.transform.dom.DOMResult this]
     (-> this (.getSystemId))))
 

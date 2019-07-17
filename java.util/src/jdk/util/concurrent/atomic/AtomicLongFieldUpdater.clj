@@ -25,7 +25,7 @@
   returns: the updater - `<U> java.util.concurrent.atomic.AtomicLongFieldUpdater<U>`
 
   throws: java.lang.IllegalArgumentException - if the field is not a volatile long type"
-  ([tclass field-name]
+  ([^java.lang.Class tclass ^java.lang.String field-name]
     (AtomicLongFieldUpdater/newUpdater tclass field-name)))
 
 (defn get-and-add
@@ -36,7 +36,7 @@
   delta - the value to add - `long`
 
   returns: the previous value - `long`"
-  ([this obj delta]
+  ([^java.util.concurrent.atomic.AtomicLongFieldUpdater this ^AtomicLongFieldUpdater.T obj ^Long delta]
     (-> this (.getAndAdd obj delta))))
 
 (defn get-and-set
@@ -47,7 +47,7 @@
   new-value - the new value - `long`
 
   returns: the previous value - `long`"
-  ([this obj new-value]
+  ([^java.util.concurrent.atomic.AtomicLongFieldUpdater this ^AtomicLongFieldUpdater.T obj ^Long new-value]
     (-> this (.getAndSet obj new-value))))
 
 (defn update-and-get
@@ -60,7 +60,7 @@
   update-function - a side-effect-free function - `java.util.function.LongUnaryOperator`
 
   returns: the updated value - `long`"
-  ([this obj update-function]
+  ([^java.util.concurrent.atomic.AtomicLongFieldUpdater this ^AtomicLongFieldUpdater.T obj ^java.util.function.LongUnaryOperator update-function]
     (-> this (.updateAndGet obj update-function))))
 
 (defn add-and-get
@@ -71,7 +71,7 @@
   delta - the value to add - `long`
 
   returns: the updated value - `long`"
-  ([this obj delta]
+  ([^java.util.concurrent.atomic.AtomicLongFieldUpdater this ^AtomicLongFieldUpdater.T obj ^Long delta]
     (-> this (.addAndGet obj delta))))
 
 (defn get-and-update
@@ -84,7 +84,7 @@
   update-function - a side-effect-free function - `java.util.function.LongUnaryOperator`
 
   returns: the previous value - `long`"
-  ([this obj update-function]
+  ([^java.util.concurrent.atomic.AtomicLongFieldUpdater this ^AtomicLongFieldUpdater.T obj ^java.util.function.LongUnaryOperator update-function]
     (-> this (.getAndUpdate obj update-function))))
 
 (defn accumulate-and-get
@@ -101,7 +101,7 @@
   accumulator-function - a side-effect-free function of two arguments - `java.util.function.LongBinaryOperator`
 
   returns: the updated value - `long`"
-  ([this obj x accumulator-function]
+  ([^java.util.concurrent.atomic.AtomicLongFieldUpdater this ^AtomicLongFieldUpdater.T obj ^Long x ^java.util.function.LongBinaryOperator accumulator-function]
     (-> this (.accumulateAndGet obj x accumulator-function))))
 
 (defn get-and-decrement
@@ -111,7 +111,7 @@
   obj - An object whose field to get and set - `AtomicLongFieldUpdater.T`
 
   returns: the previous value - `long`"
-  ([this obj]
+  ([^java.util.concurrent.atomic.AtomicLongFieldUpdater this ^AtomicLongFieldUpdater.T obj]
     (-> this (.getAndDecrement obj))))
 
 (defn decrement-and-get
@@ -121,7 +121,7 @@
   obj - An object whose field to get and set - `AtomicLongFieldUpdater.T`
 
   returns: the updated value - `long`"
-  ([this obj]
+  ([^java.util.concurrent.atomic.AtomicLongFieldUpdater this ^AtomicLongFieldUpdater.T obj]
     (-> this (.decrementAndGet obj))))
 
 (defn weak-compare-and-set
@@ -142,7 +142,7 @@
   returns: true if successful - `boolean`
 
   throws: java.lang.ClassCastException - if obj is not an instance of the class possessing the field established in the constructor"
-  ([this obj expect update]
+  ([^java.util.concurrent.atomic.AtomicLongFieldUpdater this ^AtomicLongFieldUpdater.T obj ^Long expect ^Long update]
     (-> this (.weakCompareAndSet obj expect update))))
 
 (defn get-and-increment
@@ -152,7 +152,7 @@
   obj - An object whose field to get and set - `AtomicLongFieldUpdater.T`
 
   returns: the previous value - `long`"
-  ([this obj]
+  ([^java.util.concurrent.atomic.AtomicLongFieldUpdater this ^AtomicLongFieldUpdater.T obj]
     (-> this (.getAndIncrement obj))))
 
 (defn lazy-set
@@ -161,7 +161,7 @@
 
   obj - An object whose field to set - `AtomicLongFieldUpdater.T`
   new-value - the new value - `long`"
-  ([this obj new-value]
+  ([^java.util.concurrent.atomic.AtomicLongFieldUpdater this ^AtomicLongFieldUpdater.T obj ^Long new-value]
     (-> this (.lazySet obj new-value))))
 
 (defn set
@@ -171,7 +171,7 @@
 
   obj - An object whose field to set - `AtomicLongFieldUpdater.T`
   new-value - the new value - `long`"
-  ([this obj new-value]
+  ([^java.util.concurrent.atomic.AtomicLongFieldUpdater this ^AtomicLongFieldUpdater.T obj ^Long new-value]
     (-> this (.set obj new-value))))
 
 (defn get-and-accumulate
@@ -188,7 +188,7 @@
   accumulator-function - a side-effect-free function of two arguments - `java.util.function.LongBinaryOperator`
 
   returns: the previous value - `long`"
-  ([this obj x accumulator-function]
+  ([^java.util.concurrent.atomic.AtomicLongFieldUpdater this ^AtomicLongFieldUpdater.T obj ^Long x ^java.util.function.LongBinaryOperator accumulator-function]
     (-> this (.getAndAccumulate obj x accumulator-function))))
 
 (defn compare-and-set
@@ -205,7 +205,7 @@
   returns: true if successful - `boolean`
 
   throws: java.lang.ClassCastException - if obj is not an instance of the class possessing the field established in the constructor"
-  ([this obj expect update]
+  ([^java.util.concurrent.atomic.AtomicLongFieldUpdater this ^AtomicLongFieldUpdater.T obj ^Long expect ^Long update]
     (-> this (.compareAndSet obj expect update))))
 
 (defn get
@@ -215,7 +215,7 @@
   obj - An object whose field to get - `AtomicLongFieldUpdater.T`
 
   returns: the current value - `long`"
-  ([this obj]
+  ([^java.util.concurrent.atomic.AtomicLongFieldUpdater this ^AtomicLongFieldUpdater.T obj]
     (-> this (.get obj))))
 
 (defn increment-and-get
@@ -225,6 +225,6 @@
   obj - An object whose field to get and set - `AtomicLongFieldUpdater.T`
 
   returns: the updated value - `long`"
-  ([this obj]
+  ([^java.util.concurrent.atomic.AtomicLongFieldUpdater this ^AtomicLongFieldUpdater.T obj]
     (-> this (.incrementAndGet obj))))
 

@@ -10,7 +10,7 @@
 
   returns: an object representing the declaring class of the
    underlying member - `java.lang.Class<?>`"
-  ([this]
+  ([^. this]
     (-> this (.getDeclaringClass))))
 
 (defn get-name
@@ -18,7 +18,7 @@
    represented by this Member.
 
   returns: the simple name of the underlying member - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getName))))
 
 (defn get-modifiers
@@ -28,7 +28,7 @@
    the integer.
 
   returns: the Java language modifiers for the underlying member - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getModifiers))))
 
 (defn synthetic?
@@ -37,6 +37,6 @@
 
   returns: true if and only if this member was introduced by
    the compiler. - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.isSynthetic))))
 

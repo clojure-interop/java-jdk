@@ -25,11 +25,11 @@
   class-name - The possibly null class name of the object bound to name. If null, the class name of obj is returned by getClassName(). If obj is also null, getClassName() will return null. - `java.lang.String`
   obj - The possibly null object bound to name. - `java.lang.Object`
   is-relative - true if name is a name relative to the target context (which is named by the first parameter of the listBindings() method); false if name is a URL string. - `boolean`"
-  ([name class-name obj is-relative]
+  ([^java.lang.String name ^java.lang.String class-name ^java.lang.Object obj ^Boolean is-relative]
     (new Binding name class-name obj is-relative))
-  ([name obj is-relative]
+  ([^java.lang.String name ^java.lang.Object obj ^Boolean is-relative]
     (new Binding name obj is-relative))
-  ([name obj]
+  ([^java.lang.String name ^java.lang.Object obj]
     (new Binding name obj)))
 
 (defn get-class-name
@@ -39,21 +39,21 @@
    that object's class name is used. Otherwise, null is returned.
 
   returns: A possibly null string containing class name of object bound. - `java.lang.String`"
-  ([this]
+  ([^javax.naming.Binding this]
     (-> this (.getClassName))))
 
 (defn get-object
   "Retrieves the object bound to the name of this binding.
 
   returns: The object bound; null if this binding does not contain an object. - `java.lang.Object`"
-  ([this]
+  ([^javax.naming.Binding this]
     (-> this (.getObject))))
 
 (defn set-object
   "Sets the object associated with this binding.
 
   obj - The possibly null object to use. - `java.lang.Object`"
-  ([this obj]
+  ([^javax.naming.Binding this ^java.lang.Object obj]
     (-> this (.setObject obj))))
 
 (defn to-string
@@ -65,6 +65,6 @@
    for debugging and is not meant to be interpreted programmatically.
 
   returns: The non-null string representation of this binding. - `java.lang.String`"
-  ([this]
+  ([^javax.naming.Binding this]
     (-> this (.toString))))
 

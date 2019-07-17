@@ -22,7 +22,7 @@
   obj - the server object to export. - `java.rmi.Remote`
 
   throws: java.rmi.RemoteException - if export fails."
-  ([obj]
+  ([^java.rmi.Remote obj]
     (PortableRemoteObject/exportObject obj)))
 
 (defn *to-stub
@@ -33,7 +33,7 @@
   returns: the most derived stub for the object. - `java.rmi.Remote`
 
   throws: java.rmi.NoSuchObjectException - if a stub cannot be located for the given server object."
-  ([obj]
+  ([^java.rmi.Remote obj]
     (PortableRemoteObject/toStub obj)))
 
 (defn *unexport-object
@@ -43,7 +43,7 @@
   obj - the object to unexport. - `java.rmi.Remote`
 
   throws: java.rmi.NoSuchObjectException - if the remote object is not currently exported."
-  ([obj]
+  ([^java.rmi.Remote obj]
     (PortableRemoteObject/unexportObject obj)))
 
 (defn *narrow
@@ -56,7 +56,7 @@
   returns: an object which can be cast to the desired type. - `java.lang.Object`
 
   throws: java.lang.ClassCastException - if narrowFrom cannot be cast to narrowTo."
-  ([narrow-from narrow-to]
+  ([^java.lang.Object narrow-from ^java.lang.Class narrow-to]
     (PortableRemoteObject/narrow narrow-from narrow-to)))
 
 (defn *connect
@@ -70,6 +70,6 @@
   source - a previously connected object. - `java.rmi.Remote`
 
   throws: java.rmi.RemoteException - if source is not connected or if target is already connected to a different ORB than source."
-  ([target source]
+  ([^java.rmi.Remote target ^java.rmi.Remote source]
     (PortableRemoteObject/connect target source)))
 

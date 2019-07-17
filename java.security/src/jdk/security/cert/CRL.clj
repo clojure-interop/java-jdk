@@ -13,14 +13,14 @@
   "Returns the type of this CRL.
 
   returns: the type of this CRL. - `java.lang.String`"
-  ([this]
+  ([^java.security.cert.CRL this]
     (-> this (.getType))))
 
 (defn to-string
   "Returns a string representation of this CRL.
 
   returns: a string representation of this CRL. - `java.lang.String`"
-  ([this]
+  ([^java.security.cert.CRL this]
     (-> this (.toString))))
 
 (defn revoked?
@@ -30,6 +30,6 @@
 
   returns: true if the given certificate is on this CRL,
    false otherwise. - `boolean`"
-  ([this cert]
+  ([^java.security.cert.CRL this ^java.security.cert.Certificate cert]
     (-> this (.isRevoked cert))))
 

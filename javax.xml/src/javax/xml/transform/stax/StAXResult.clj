@@ -21,7 +21,7 @@
   xml-event-writer - XMLEventWriter used to create this StAXResult. - `javax.xml.stream.XMLEventWriter`
 
   throws: java.lang.IllegalArgumentException - If xmlEventWriter == null."
-  ([xml-event-writer]
+  ([^javax.xml.stream.XMLEventWriter xml-event-writer]
     (new StAXResult xml-event-writer)))
 
 (def *-feature
@@ -44,7 +44,7 @@
 
   returns: XMLEventWriter used by this
      StAXResult. - `javax.xml.stream.XMLEventWriter`"
-  ([this]
+  ([^javax.xml.transform.stax.StAXResult this]
     (-> this (.getXMLEventWriter))))
 
 (defn get-xml-stream-writer
@@ -57,7 +57,7 @@
 
   returns: XMLStreamWriter used by this
      StAXResult. - `javax.xml.stream.XMLStreamWriter`"
-  ([this]
+  ([^javax.xml.transform.stax.StAXResult this]
     (-> this (.getXMLStreamWriter))))
 
 (defn set-system-id
@@ -73,13 +73,13 @@
   system-id - Ignored. - `java.lang.String`
 
   throws: java.lang.UnsupportedOperationException - Is always thrown by this method."
-  ([this system-id]
+  ([^javax.xml.transform.stax.StAXResult this ^java.lang.String system-id]
     (-> this (.setSystemId system-id))))
 
 (defn get-system-id
   "The returned system identifier is always null.
 
   returns: The returned system identifier is always null. - `java.lang.String`"
-  ([this]
+  ([^javax.xml.transform.stax.StAXResult this]
     (-> this (.getSystemId))))
 

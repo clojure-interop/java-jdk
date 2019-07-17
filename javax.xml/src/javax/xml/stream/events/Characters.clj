@@ -12,7 +12,7 @@
   "Get the character data of this event
 
   returns: `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getData))))
 
 (defn white-space?
@@ -23,7 +23,7 @@
    are composed of only whitespace characters
 
   returns: `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.isWhiteSpace))))
 
 (defn c-data?
@@ -36,7 +36,7 @@
    in this case.
 
   returns: `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.isCData))))
 
 (defn ignorable-white-space?
@@ -45,6 +45,6 @@
    be SPACE.
 
   returns: `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.isIgnorableWhiteSpace))))
 

@@ -17,7 +17,7 @@
   "Returns the number of pages in this Book.
 
   returns: the number of pages this Book contains. - `int`"
-  ([this]
+  ([^java.awt.print.Book this]
     (-> this (.getNumberOfPages))))
 
 (defn get-page-format
@@ -30,7 +30,7 @@
             orientation of the page. - `java.awt.print.PageFormat`
 
   throws: java.lang.IndexOutOfBoundsException - if the Pageable does not contain the requested page"
-  ([this page-index]
+  ([^java.awt.print.Book this ^Integer page-index]
     (-> this (.getPageFormat page-index))))
 
 (defn get-printable
@@ -42,7 +42,7 @@
   returns: the Printable that renders the page. - `java.awt.print.Printable`
 
   throws: java.lang.IndexOutOfBoundsException - if the Pageable does not contain the requested page"
-  ([this page-index]
+  ([^java.awt.print.Book this ^Integer page-index]
     (-> this (.getPrintable page-index))))
 
 (defn set-page
@@ -54,7 +54,7 @@
   page - the size and orientation of the page - `java.awt.print.PageFormat`
 
   throws: java.lang.IndexOutOfBoundsException - if the specified page is not already in this Book"
-  ([this page-index painter page]
+  ([^java.awt.print.Book this ^Integer page-index ^java.awt.print.Printable painter ^java.awt.print.PageFormat page]
     (-> this (.setPage page-index painter page))))
 
 (defn append
@@ -67,8 +67,8 @@
   num-pages - the number of pages to be added to the this Book. - `int`
 
   throws: java.lang.NullPointerException - If the painter or page argument is null"
-  ([this painter page num-pages]
+  ([^java.awt.print.Book this ^java.awt.print.Printable painter ^java.awt.print.PageFormat page ^Integer num-pages]
     (-> this (.append painter page num-pages)))
-  ([this painter page]
+  ([^java.awt.print.Book this ^java.awt.print.Printable painter ^java.awt.print.PageFormat page]
     (-> this (.append painter page))))
 

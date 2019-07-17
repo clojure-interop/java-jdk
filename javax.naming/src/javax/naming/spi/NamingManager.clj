@@ -52,7 +52,7 @@
   builder - The factory builder to install. If null, no builder is installed. - `javax.naming.spi.ObjectFactoryBuilder`
 
   throws: java.lang.SecurityException - builder cannot be installed for security reasons."
-  ([builder]
+  ([^javax.naming.spi.ObjectFactoryBuilder builder]
     (NamingManager/setObjectFactoryBuilder builder)))
 
 (defn *get-object-instance
@@ -125,7 +125,7 @@
             the algorithm described above. - `java.lang.Object`
 
   throws: javax.naming.NamingException - if a naming exception was encountered while attempting to get a URL context, or if one of the factories accessed throws a NamingException."
-  ([ref-info name name-ctx environment]
+  ([^java.lang.Object ref-info ^javax.naming.Name name ^javax.naming.Context name-ctx ^java.util.Hashtable environment]
     (NamingManager/getObjectInstance ref-info name name-ctx environment)))
 
 (defn *get-url-context
@@ -187,7 +187,7 @@
            context is not found. - `javax.naming.Context`
 
   throws: javax.naming.NamingException - If a naming exception occurs while creating the context."
-  ([scheme environment]
+  ([^java.lang.String scheme ^java.util.Hashtable environment]
     (NamingManager/getURLContext scheme environment)))
 
 (defn *get-initial-context
@@ -207,7 +207,7 @@
   returns: A non-null initial context. - `javax.naming.Context`
 
   throws: javax.naming.NoInitialContextException - If the Context.INITIAL_CONTEXT_FACTORY property is not found or names a nonexistent class or a class that cannot be instantiated, or if the initial context could not be created for some other reason."
-  ([env]
+  ([^java.util.Hashtable env]
     (NamingManager/getInitialContext env)))
 
 (defn *set-initial-context-factory-builder
@@ -221,7 +221,7 @@
   builder - The initial context factory builder to install. If null, no builder is set. - `javax.naming.spi.InitialContextFactoryBuilder`
 
   throws: java.lang.SecurityException - builder cannot be installed for security reasons."
-  ([builder]
+  ([^javax.naming.spi.InitialContextFactoryBuilder builder]
     (NamingManager/setInitialContextFactoryBuilder builder)))
 
 (defn *has-initial-context-factory-builder?
@@ -260,7 +260,7 @@
   returns: A non-null Context object for continuing the operation. - `javax.naming.Context`
 
   throws: javax.naming.NamingException - If a naming exception occurred."
-  ([cpe]
+  ([^javax.naming.CannotProceedException cpe]
     (NamingManager/getContinuationContext cpe)))
 
 (defn *get-state-to-bind
@@ -308,6 +308,6 @@
     binding.  It could be the object (obj) itself. - `java.lang.Object`
 
   throws: javax.naming.NamingException - If one of the factories accessed throws an exception, or if an error was encountered while loading and instantiating the factory and object classes. A factory should only throw an exception if it does not want other factories to be used in an attempt to create an object. See StateFactory.getStateToBind()."
-  ([obj name name-ctx environment]
+  ([^java.lang.Object obj ^javax.naming.Name name ^javax.naming.Context name-ctx ^java.util.Hashtable environment]
     (NamingManager/getStateToBind obj name name-ctx environment)))
 

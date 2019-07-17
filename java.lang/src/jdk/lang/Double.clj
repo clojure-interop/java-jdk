@@ -19,7 +19,7 @@
    represents the primitive double argument.
 
   value - the value to be represented by the Double. - `double`"
-  ([value]
+  ([^Double value]
     (new Double value)))
 
 (def *-positive-infinity
@@ -150,7 +150,7 @@
             d2; and a value greater than 0
             if d1 is numerically greater than
             d2. - `int`"
-  ([d-1 d-2]
+  ([^Double d-1 ^Double d-2]
     (Double/compare d-1 d-2)))
 
 (defn *min
@@ -161,7 +161,7 @@
   b - the second operand - `double`
 
   returns: the smaller of a and b. - `double`"
-  ([a b]
+  ([^Double a ^Double b]
     (Double/min a b)))
 
 (defn *value-of
@@ -323,7 +323,7 @@
                represented by the String argument. - `java.lang.Double`
 
   throws: java.lang.NumberFormatException - if the string does not contain a parsable number."
-  ([s]
+  ([^java.lang.String s]
     (Double/valueOf s)))
 
 (defn *to-hex-string
@@ -398,7 +398,7 @@
   d - the double to be converted. - `double`
 
   returns: a hex string representation of the argument. - `java.lang.String`"
-  ([d]
+  ([^Double d]
     (Double/toHexString d)))
 
 (defn *double-to-raw-long-bits
@@ -436,7 +436,7 @@
   value - a double precision floating-point number. - `double`
 
   returns: the bits that represent the floating-point number. - `long`"
-  ([value]
+  ([^Double value]
     (Double/doubleToRawLongBits value)))
 
 (defn *sum
@@ -446,7 +446,7 @@
   b - the second operand - `double`
 
   returns: the sum of a and b - `double`"
-  ([a b]
+  ([^Double a ^Double b]
     (Double/sum a b)))
 
 (defn *double-to-long-bits
@@ -481,7 +481,7 @@
   value - a double precision floating-point number. - `double`
 
   returns: the bits that represent the floating-point number. - `long`"
-  ([value]
+  ([^Double value]
     (Double/doubleToLongBits value)))
 
 (defn *max
@@ -492,7 +492,7 @@
   b - the second operand - `double`
 
   returns: the greater of a and b - `double`"
-  ([a b]
+  ([^Double a ^Double b]
     (Double/max a b)))
 
 (defn *to-string
@@ -557,7 +557,7 @@
   d - the double to be converted. - `double`
 
   returns: a string representation of the argument. - `java.lang.String`"
-  ([d]
+  ([^Double d]
     (Double/toString d)))
 
 (defn *infinite?
@@ -568,7 +568,7 @@
 
   returns: true if the value of the argument is positive
             infinity or negative infinity; false otherwise. - `boolean`"
-  ([v]
+  ([^Double v]
     (Double/isInfinite v)))
 
 (defn *long-bits-to-double
@@ -632,7 +632,7 @@
 
   returns: the double floating-point value with the same
             bit pattern. - `double`"
-  ([bits]
+  ([^Long bits]
     (Double/longBitsToDouble bits)))
 
 (defn *parse-double
@@ -647,7 +647,7 @@
            argument. - `double`
 
   throws: java.lang.NullPointerException - if the string is null"
-  ([s]
+  ([^java.lang.String s]
     (Double/parseDouble s)))
 
 (defn *na-n?
@@ -658,7 +658,7 @@
 
   returns: true if the value of the argument is NaN;
             false otherwise. - `boolean`"
-  ([v]
+  ([^Double v]
     (Double/isNaN v)))
 
 (defn *finite?
@@ -670,7 +670,7 @@
 
   returns: true if the argument is a finite
    floating-point value, false otherwise. - `boolean`"
-  ([d]
+  ([^Double d]
     (Double/isFinite d)))
 
 (defn *hash-code
@@ -680,7 +680,7 @@
   value - the value to hash - `double`
 
   returns: a hash code value for a double value. - `int`"
-  ([value]
+  ([^Double value]
     (Double/hashCode value)))
 
 (defn short-value
@@ -689,14 +689,14 @@
 
   returns: the double value represented by this object
             converted to type short - `short`"
-  ([this]
+  ([^java.lang.Double this]
     (-> this (.shortValue))))
 
 (defn double-value
   "Returns the double value of this Double object.
 
   returns: the double value represented by this object - `double`"
-  ([this]
+  ([^java.lang.Double this]
     (-> this (.doubleValue))))
 
 (defn long-value
@@ -705,7 +705,7 @@
 
   returns: the double value represented by this object
             converted to type long - `long`"
-  ([this]
+  ([^java.lang.Double this]
     (-> this (.longValue))))
 
 (defn byte-value
@@ -714,7 +714,7 @@
 
   returns: the double value represented by this object
             converted to type byte - `byte`"
-  ([this]
+  ([^java.lang.Double this]
     (-> this (.byteValue))))
 
 (defn to-string
@@ -724,7 +724,7 @@
    toString of one argument.
 
   returns: a String representation of this object. - `java.lang.String`"
-  ([this]
+  ([^java.lang.Double this]
     (-> this (.toString))))
 
 (defn infinite?
@@ -734,7 +734,7 @@
   returns: true if the value represented by this object is
             positive infinity or negative infinity;
             false otherwise. - `boolean`"
-  ([this]
+  ([^java.lang.Double this]
     (-> this (.isInfinite))))
 
 (defn float-value
@@ -743,7 +743,7 @@
 
   returns: the double value represented by this object
             converted to type float - `float`"
-  ([this]
+  ([^java.lang.Double this]
     (-> this (.floatValue))))
 
 (defn na-n?
@@ -752,7 +752,7 @@
 
   returns: true if the value represented by this object is
             NaN; false otherwise. - `boolean`"
-  ([this]
+  ([^java.lang.Double this]
     (-> this (.isNaN))))
 
 (defn int-value
@@ -761,7 +761,7 @@
 
   returns: the double value represented by this object
             converted to type int - `int`"
-  ([this]
+  ([^java.lang.Double this]
     (-> this (.intValue))))
 
 (defn hash-code
@@ -783,7 +783,7 @@
     long v = Double.doubleToLongBits(this.doubleValue());
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^java.lang.Double this]
     (-> this (.hashCode))))
 
 (defn compare-to
@@ -814,7 +814,7 @@
             and a value greater than 0 if this
             Double is numerically greater than
             anotherDouble. - `int`"
-  ([this another-double]
+  ([^java.lang.Double this ^java.lang.Double another-double]
     (-> this (.compareTo another-double))))
 
 (defn equals
@@ -855,6 +855,6 @@
 
   returns: true if the objects are the same;
             false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.lang.Double this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

@@ -14,7 +14,7 @@
    an explanation. All other fields are set to null.
 
   explanation - Possibly null additional detail about this exception. - `java.lang.String`"
-  ([explanation]
+  ([^java.lang.String explanation]
     (new AttributeInUseException explanation))
   ([]
     (new AttributeInUseException )))

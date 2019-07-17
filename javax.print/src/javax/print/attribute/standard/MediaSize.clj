@@ -29,9 +29,9 @@
   media - a media name to associate with this MediaSize - `javax.print.attribute.standard.MediaSizeName`
 
   throws: java.lang.IllegalArgumentException - (Unchecked exception) Thrown if x < 0 or y < 0 or units < 1 or x > y."
-  ([x y units media]
+  ([^Float x ^Float y ^Integer units ^javax.print.attribute.standard.MediaSizeName media]
     (new MediaSize x y units media))
-  ([x y units]
+  ([^Float x ^Float y ^Integer units]
     (new MediaSize x y units)))
 
 (defn *get-media-size-for-name
@@ -41,7 +41,7 @@
 
   returns: size of the media, or null if this media is not associated
    with any size. - `javax.print.attribute.standard.MediaSize`"
-  ([media]
+  ([^javax.print.attribute.standard.MediaSizeName media]
     (MediaSize/getMediaSizeForName media)))
 
 (defn *find-media
@@ -63,7 +63,7 @@
   returns: MediaSizeName matching these dimensions, or null. - `javax.print.attribute.standard.MediaSizeName`
 
   throws: java.lang.IllegalArgumentException - if x <= 0, y <= 0, or units < 1."
-  ([x y units]
+  ([^Float x ^Float y ^Integer units]
     (MediaSize/findMedia x y units)))
 
 (defn get-media-size-name
@@ -71,7 +71,7 @@
 
   returns: the name for this media size, or null if no name was
    associated with this size (an anonymous size). - `javax.print.attribute.standard.MediaSizeName`"
-  ([this]
+  ([^javax.print.attribute.standard.MediaSize this]
     (-> this (.getMediaSizeName))))
 
 (defn equals
@@ -94,7 +94,7 @@
 
   returns: True if object is equivalent to this media size
             attribute, false otherwise. - `boolean`"
-  ([this object]
+  ([^javax.print.attribute.standard.MediaSize this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -106,7 +106,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([this]
+  ([^javax.print.attribute.standard.MediaSize this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -117,6 +117,6 @@
    name is `media-size`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([this]
+  ([^javax.print.attribute.standard.MediaSize this]
     (-> this (.getName))))
 

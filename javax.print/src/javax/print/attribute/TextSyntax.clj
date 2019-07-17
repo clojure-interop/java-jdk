@@ -11,21 +11,21 @@
   "Returns this text attribute's text string.
 
   returns: the text string. - `java.lang.String`"
-  ([this]
+  ([^javax.print.attribute.TextSyntax this]
     (-> this (.getValue))))
 
 (defn get-locale
   "Returns this text attribute's text string's natural language (locale).
 
   returns: the locale - `java.util.Locale`"
-  ([this]
+  ([^javax.print.attribute.TextSyntax this]
     (-> this (.getLocale))))
 
 (defn hash-code
   "Returns a hashcode for this text attribute.
 
   returns: A hashcode value for this object. - `int`"
-  ([this]
+  ([^javax.print.attribute.TextSyntax this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -47,7 +47,7 @@
 
   returns: True if object is equivalent to this text
             attribute, false otherwise. - `boolean`"
-  ([this object]
+  ([^javax.print.attribute.TextSyntax this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn to-string
@@ -55,6 +55,6 @@
    the attribute's underlying text string.
 
   returns: A String identifying this object. - `java.lang.String`"
-  ([this]
+  ([^javax.print.attribute.TextSyntax this]
     (-> this (.toString))))
 

@@ -17,7 +17,7 @@
   returns: an InputStream - `java.io.InputStream`
 
   throws: java.io.IOException"
-  ([this]
+  ([^. this]
     (-> this (.getInputStream))))
 
 (defn get-output-stream
@@ -30,7 +30,7 @@
   returns: an OutputStream - `java.io.OutputStream`
 
   throws: java.io.IOException"
-  ([this]
+  ([^. this]
     (-> this (.getOutputStream))))
 
 (defn get-content-type
@@ -40,7 +40,7 @@
    DataSource implementation can not determine the data type.
 
   returns: the MIME Type - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getContentType))))
 
 (defn get-name
@@ -51,6 +51,6 @@
    entire pathname.)
 
   returns: the name of the object. - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getName))))
 

@@ -21,12 +21,12 @@
 
   returns: a copy of all the collected errors and warnings or an empty array
         if there weren't any - `javax.xml.bind.ValidationEvent[]`"
-  ([this]
+  ([^javax.xml.bind.util.ValidationEventCollector this]
     (-> this (.getEvents))))
 
 (defn reset
   "Clear all collected errors and warnings."
-  ([this]
+  ([^javax.xml.bind.util.ValidationEventCollector this]
     (-> this (.reset))))
 
 (defn has-events?
@@ -35,7 +35,7 @@
 
   returns: true if this event collector contains at least one
            ValidationEvent, false otherwise - `boolean`"
-  ([this]
+  ([^javax.xml.bind.util.ValidationEventCollector this]
     (-> this (.hasEvents))))
 
 (defn handle-event
@@ -48,6 +48,6 @@
            warning/error, false if the provider should terminate the current
            operation with the appropriate UnmarshalException,
            ValidationException, or MarshalException. - `boolean`"
-  ([this event]
+  ([^javax.xml.bind.util.ValidationEventCollector this ^javax.xml.bind.ValidationEvent event]
     (-> this (.handleEvent event))))
 

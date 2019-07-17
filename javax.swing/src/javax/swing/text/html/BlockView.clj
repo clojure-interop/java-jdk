@@ -13,7 +13,7 @@
 
   elem - the element to create a view for - `javax.swing.text.Element`
   axis - either View.X_AXIS or View.Y_AXIS - `int`"
-  ([elem axis]
+  ([^javax.swing.text.Element elem ^Integer axis]
     (new BlockView elem axis)))
 
 (defn changed-update
@@ -22,7 +22,7 @@
   changes - the change information from the associated document - `javax.swing.event.DocumentEvent`
   a - the current allocation of the view - `java.awt.Shape`
   f - the factory to use to rebuild if the view has children - `javax.swing.text.ViewFactory`"
-  ([this changes a f]
+  ([^javax.swing.text.html.BlockView this ^javax.swing.event.DocumentEvent changes ^java.awt.Shape a ^javax.swing.text.ViewFactory f]
     (-> this (.changedUpdate changes a f))))
 
 (defn set-parent
@@ -39,7 +39,7 @@
    view attributes.
 
   parent - the new parent, or null if the view is being removed from a parent it was previously added to - `javax.swing.text.View`"
-  ([this parent]
+  ([^javax.swing.text.html.BlockView this ^javax.swing.text.View parent]
     (-> this (.setParent parent))))
 
 (defn get-preferred-span
@@ -54,7 +54,7 @@
              the parent may choose to resize or break the view - `float`
 
   throws: java.lang.IllegalArgumentException - for an invalid axis type"
-  ([this axis]
+  ([^javax.swing.text.html.BlockView this ^Integer axis]
     (-> this (.getPreferredSpan axis))))
 
 (defn get-minimum-span
@@ -69,7 +69,7 @@
              the parent may choose to resize or break the view - `float`
 
   throws: java.lang.IllegalArgumentException - for an invalid axis type"
-  ([this axis]
+  ([^javax.swing.text.html.BlockView this ^Integer axis]
     (-> this (.getMinimumSpan axis))))
 
 (defn get-maximum-span
@@ -84,7 +84,7 @@
              the parent may choose to resize or break the view - `float`
 
   throws: java.lang.IllegalArgumentException - for an invalid axis type"
-  ([this axis]
+  ([^javax.swing.text.html.BlockView this ^Integer axis]
     (-> this (.getMaximumSpan axis))))
 
 (defn paint
@@ -95,7 +95,7 @@
 
   g - the rendering surface to use - `java.awt.Graphics`
   allocation - the allocated region to render into - `java.awt.Shape`"
-  ([this g allocation]
+  ([^javax.swing.text.html.BlockView this ^java.awt.Graphics g ^java.awt.Shape allocation]
     (-> this (.paint g allocation))))
 
 (defn get-alignment
@@ -104,7 +104,7 @@
   axis - may be either X_AXIS or Y_AXIS - `int`
 
   returns: the alignment - `float`"
-  ([this axis]
+  ([^javax.swing.text.html.BlockView this ^Integer axis]
     (-> this (.getAlignment axis))))
 
 (defn get-resize-weight
@@ -115,7 +115,7 @@
   returns: the weight - `int`
 
   throws: java.lang.IllegalArgumentException - for an invalid axis"
-  ([this axis]
+  ([^javax.swing.text.html.BlockView this ^Integer axis]
     (-> this (.getResizeWeight axis))))
 
 (defn get-attributes
@@ -124,6 +124,6 @@
    model with a StyleSheet.
 
   returns: `javax.swing.text.AttributeSet`"
-  ([this]
+  ([^javax.swing.text.html.BlockView this]
     (-> this (.getAttributes))))
 

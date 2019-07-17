@@ -50,8 +50,8 @@
            or -1 if the channel has reached end-of-stream - `long`
 
   throws: java.lang.IndexOutOfBoundsException - If the preconditions on the offset and length parameters do not hold"
-  ([this dsts offset length]
+  ([^. this ^java.nio.ByteBuffer[] dsts ^Integer offset ^Integer length]
     (-> this (.read dsts offset length)))
-  ([this dsts]
+  ([^. this ^java.nio.ByteBuffer[] dsts]
     (-> this (.read dsts))))
 

@@ -24,7 +24,7 @@
    likely to yield significantly better space and time performance.
 
   value - the value of the Boolean. - `boolean`"
-  ([value]
+  ([^Boolean value]
     (new Boolean value)))
 
 (def *-true
@@ -66,7 +66,7 @@
   returns: the value 0 if x == y;
            a value less than 0 if !x && y; and
            a value greater than 0 if x && !y - `int`"
-  ([x y]
+  ([^Boolean x ^Boolean y]
     (Boolean/compare x y)))
 
 (defn *value-of
@@ -82,7 +82,7 @@
   b - a boolean value. - `boolean`
 
   returns: a Boolean instance representing b. - `java.lang.Boolean`"
-  ([b]
+  ([^Boolean b]
     (Boolean/valueOf b)))
 
 (defn *to-string
@@ -94,7 +94,7 @@
   b - the boolean to be converted - `boolean`
 
   returns: the string representation of the specified boolean - `java.lang.String`"
-  ([b]
+  ([^Boolean b]
     (Boolean/toString b)))
 
 (defn *logical-and
@@ -105,7 +105,7 @@
   b - the second operand - `boolean`
 
   returns: the logical AND of a and b - `boolean`"
-  ([a b]
+  ([^Boolean a ^Boolean b]
     (Boolean/logicalAnd a b)))
 
 (defn *parse-boolean
@@ -119,7 +119,7 @@
   s - the String containing the boolean representation to be parsed - `java.lang.String`
 
   returns: the boolean represented by the string argument - `boolean`"
-  ([s]
+  ([^java.lang.String s]
     (Boolean/parseBoolean s)))
 
 (defn *logical-xor
@@ -130,7 +130,7 @@
   b - the second operand - `boolean`
 
   returns: the logical XOR of a and b - `boolean`"
-  ([a b]
+  ([^Boolean a ^Boolean b]
     (Boolean/logicalXor a b)))
 
 (defn *hash-code
@@ -140,7 +140,7 @@
   value - the value to hash - `boolean`
 
   returns: a hash code value for a boolean value. - `int`"
-  ([value]
+  ([^Boolean value]
     (Boolean/hashCode value)))
 
 (defn *get-boolean?
@@ -160,7 +160,7 @@
   returns: the boolean value of the system property. - `boolean`
 
   throws: java.lang.SecurityException - for the same reasons as System.getProperty"
-  ([name]
+  ([^java.lang.String name]
     (Boolean/getBoolean name)))
 
 (defn *logical-or
@@ -171,7 +171,7 @@
   b - the second operand - `boolean`
 
   returns: the logical OR of a and b - `boolean`"
-  ([a b]
+  ([^Boolean a ^Boolean b]
     (Boolean/logicalOr a b)))
 
 (defn boolean-value
@@ -179,7 +179,7 @@
    primitive.
 
   returns: the primitive boolean value of this object. - `boolean`"
-  ([this]
+  ([^java.lang.Boolean this]
     (-> this (.booleanValue))))
 
 (defn to-string
@@ -189,7 +189,7 @@
    string equal to `false` is returned.
 
   returns: a string representation of this object. - `java.lang.String`"
-  ([this]
+  ([^java.lang.Boolean this]
     (-> this (.toString))))
 
 (defn hash-code
@@ -198,7 +198,7 @@
   returns: the integer 1231 if this object represents
    true; returns the integer 1237 if this
    object represents false. - `int`"
-  ([this]
+  ([^java.lang.Boolean this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -210,7 +210,7 @@
 
   returns: true if the Boolean objects represent the
             same value; false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.lang.Boolean this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn compare-to
@@ -224,6 +224,6 @@
             this object represents false and the argument represents true - `int`
 
   throws: java.lang.NullPointerException - if the argument is null"
-  ([this b]
+  ([^java.lang.Boolean this ^java.lang.Boolean b]
     (-> this (.compareTo b))))
 

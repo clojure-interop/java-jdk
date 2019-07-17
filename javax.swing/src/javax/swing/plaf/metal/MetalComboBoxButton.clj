@@ -20,33 +20,33 @@
   only-icon - `boolean`
   pane - `javax.swing.CellRendererPane`
   list - `javax.swing.JList`"
-  ([cb i only-icon pane list]
+  ([^javax.swing.JComboBox cb ^javax.swing.Icon i ^Boolean only-icon ^javax.swing.CellRendererPane pane ^javax.swing.JList list]
     (new MetalComboBoxButton cb i only-icon pane list))
-  ([cb i pane list]
+  ([^javax.swing.JComboBox cb ^javax.swing.Icon i ^javax.swing.CellRendererPane pane ^javax.swing.JList list]
     (new MetalComboBoxButton cb i pane list)))
 
 (defn get-minimum-size
   "Description copied from class: JComponent
 
   returns: the value of the minimumSize property - `java.awt.Dimension`"
-  ([this]
+  ([^javax.swing.plaf.metal.MetalComboBoxButton this]
     (-> this (.getMinimumSize))))
 
 (defn icon-only?
   "returns: `boolean`"
-  ([this]
+  ([^javax.swing.plaf.metal.MetalComboBoxButton this]
     (-> this (.isIconOnly))))
 
 (defn set-combo-box
   "cb - `javax.swing.JComboBox`"
-  ([this cb]
+  ([^javax.swing.plaf.metal.MetalComboBoxButton this ^javax.swing.JComboBox cb]
     (-> this (.setComboBox cb))))
 
 (defn paint-component
   "Description copied from class: JComponent
 
   g - the Graphics object to protect - `java.awt.Graphics`"
-  ([this g]
+  ([^javax.swing.plaf.metal.MetalComboBoxButton this ^java.awt.Graphics g]
     (-> this (.paintComponent g))))
 
 (defn focus-traversable?
@@ -54,33 +54,33 @@
 
   returns: true if this Component is
    focusable; false otherwise - `boolean`"
-  ([this]
+  ([^javax.swing.plaf.metal.MetalComboBoxButton this]
     (-> this (.isFocusTraversable))))
 
 (defn get-combo-box
   "returns: `javax.swing.JComboBox`"
-  ([this]
+  ([^javax.swing.plaf.metal.MetalComboBoxButton this]
     (-> this (.getComboBox))))
 
 (defn set-icon-only
   "is-icon-only - `boolean`"
-  ([this is-icon-only]
+  ([^javax.swing.plaf.metal.MetalComboBoxButton this ^Boolean is-icon-only]
     (-> this (.setIconOnly is-icon-only))))
 
 (defn set-enabled
   "Description copied from class: AbstractButton
 
   enabled - true to enable the button, otherwise false - `boolean`"
-  ([this enabled]
+  ([^javax.swing.plaf.metal.MetalComboBoxButton this ^Boolean enabled]
     (-> this (.setEnabled enabled))))
 
 (defn get-combo-icon
   "returns: `javax.swing.Icon`"
-  ([this]
+  ([^javax.swing.plaf.metal.MetalComboBoxButton this]
     (-> this (.getComboIcon))))
 
 (defn set-combo-icon
   "i - `javax.swing.Icon`"
-  ([this i]
+  ([^javax.swing.plaf.metal.MetalComboBoxButton this ^javax.swing.Icon i]
     (-> this (.setComboIcon i))))
 

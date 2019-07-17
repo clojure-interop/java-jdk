@@ -43,7 +43,7 @@
 
   accumulator-function - a side-effect-free function of two arguments - `java.util.function.LongBinaryOperator`
   identity - identity (initial value) for the accumulator function - `long`"
-  ([accumulator-function identity]
+  ([^java.util.function.LongBinaryOperator accumulator-function ^Long identity]
     (new LongAccumulator accumulator-function identity)))
 
 (defn double-value
@@ -52,21 +52,21 @@
 
   returns: the numeric value represented by this object after conversion
             to type double. - `double`"
-  ([this]
+  ([^java.util.concurrent.atomic.LongAccumulator this]
     (-> this (.doubleValue))))
 
 (defn long-value
   "Equivalent to get().
 
   returns: the current value - `long`"
-  ([this]
+  ([^java.util.concurrent.atomic.LongAccumulator this]
     (-> this (.longValue))))
 
 (defn to-string
   "Returns the String representation of the current value.
 
   returns: the String representation of the current value - `java.lang.String`"
-  ([this]
+  ([^java.util.concurrent.atomic.LongAccumulator this]
     (-> this (.toString))))
 
 (defn reset
@@ -76,7 +76,7 @@
    updates.  Because this method is intrinsically racy, it should
    only be used when it is known that no threads are concurrently
    updating."
-  ([this]
+  ([^java.util.concurrent.atomic.LongAccumulator this]
     (-> this (.reset))))
 
 (defn float-value
@@ -85,7 +85,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type float. - `float`"
-  ([this]
+  ([^java.util.concurrent.atomic.LongAccumulator this]
     (-> this (.floatValue))))
 
 (defn get-then-reset
@@ -96,14 +96,14 @@
    the reset.
 
   returns: the value before reset - `long`"
-  ([this]
+  ([^java.util.concurrent.atomic.LongAccumulator this]
     (-> this (.getThenReset))))
 
 (defn accumulate
   "Updates with the given value.
 
   x - the value - `long`"
-  ([this x]
+  ([^java.util.concurrent.atomic.LongAccumulator this ^Long x]
     (-> this (.accumulate x))))
 
 (defn int-value
@@ -112,7 +112,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type int. - `int`"
-  ([this]
+  ([^java.util.concurrent.atomic.LongAccumulator this]
     (-> this (.intValue))))
 
 (defn get
@@ -123,6 +123,6 @@
    incorporated.
 
   returns: the current value - `long`"
-  ([this]
+  ([^java.util.concurrent.atomic.LongAccumulator this]
     (-> this (.get))))
 

@@ -31,13 +31,13 @@
   sql-state - an XOPEN or SQL:2003 code identifying the exception - `java.lang.String`
   vendor-code - a database vendor-specific exception code - `int`
   cause - the underlying reason for this SQLException (which is saved for later retrieval by the getCause() method); may be null indicating the cause is non-existent or unknown. - `java.lang.Throwable`"
-  ([reason sql-state vendor-code cause]
+  ([^java.lang.String reason ^java.lang.String sql-state ^Integer vendor-code ^java.lang.Throwable cause]
     (new SQLException reason sql-state vendor-code cause))
-  ([reason sql-state vendor-code]
+  ([^java.lang.String reason ^java.lang.String sql-state ^Integer vendor-code]
     (new SQLException reason sql-state vendor-code))
-  ([reason sql-state]
+  ([^java.lang.String reason ^java.lang.String sql-state]
     (new SQLException reason sql-state))
-  ([reason]
+  ([^java.lang.String reason]
     (new SQLException reason))
   ([]
     (new SQLException )))
@@ -46,7 +46,7 @@
   "Retrieves the SQLState for this SQLException object.
 
   returns: the SQLState value - `java.lang.String`"
-  ([this]
+  ([^java.sql.SQLException this]
     (-> this (.getSQLState))))
 
 (defn get-error-code
@@ -54,7 +54,7 @@
    for this SQLException object.
 
   returns: the vendor's error code - `int`"
-  ([this]
+  ([^java.sql.SQLException this]
     (-> this (.getErrorCode))))
 
 (defn get-next-exception
@@ -63,14 +63,14 @@
 
   returns: the next SQLException object in the chain;
            null if there are none - `java.sql.SQLException`"
-  ([this]
+  ([^java.sql.SQLException this]
     (-> this (.getNextException))))
 
 (defn set-next-exception
   "Adds an SQLException object to the end of the chain.
 
   ex - the new exception that will be added to the end of the SQLException chain - `java.sql.SQLException`"
-  ([this ex]
+  ([^java.sql.SQLException this ^java.sql.SQLException ex]
     (-> this (.setNextException ex))))
 
 (defn iterator
@@ -80,6 +80,6 @@
 
   returns: an iterator over the chained SQLExceptions and causes in the proper
    order - `java.util.Iterator<java.lang.Throwable>`"
-  ([this]
+  ([^java.sql.SQLException this]
     (-> this (.iterator))))
 

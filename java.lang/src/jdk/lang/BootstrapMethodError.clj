@@ -15,9 +15,9 @@
 
   s - the detail message. - `java.lang.String`
   cause - the cause, may be null. - `java.lang.Throwable`"
-  ([s cause]
+  ([^java.lang.String s ^java.lang.Throwable cause]
     (new BootstrapMethodError s cause))
-  ([s]
+  ([^java.lang.String s]
     (new BootstrapMethodError s))
   ([]
     (new BootstrapMethodError )))

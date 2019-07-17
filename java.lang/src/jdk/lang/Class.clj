@@ -87,9 +87,9 @@
   returns: class object representing the desired class - `java.lang.Class<?>`
 
   throws: java.lang.LinkageError - if the linkage fails"
-  ([name initialize loader]
+  ([^java.lang.String name ^Boolean initialize ^java.lang.ClassLoader loader]
     (Class/forName name initialize loader))
-  ([class-name]
+  ([^java.lang.String class-name]
     (Class/forName class-name)))
 
 (defn get-declared-field
@@ -107,7 +107,7 @@
             class - `java.lang.reflect.Field`
 
   throws: java.lang.NoSuchFieldException - if a field with the specified name is not found."
-  ([this name]
+  ([^java.lang.Class this ^java.lang.String name]
     (-> this (.getDeclaredField name))))
 
 (defn annotation?
@@ -117,7 +117,7 @@
 
   returns: true if this class object represents an annotation
         type; false otherwise - `boolean`"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.isAnnotation))))
 
 (defn get-generic-interfaces
@@ -160,7 +160,7 @@
   returns: an array of interfaces implemented by this class - `java.lang.reflect.Type[]`
 
   throws: java.lang.reflect.GenericSignatureFormatError - if the generic class signature does not conform to the format specified in The Java™ Virtual Machine Specification"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.getGenericInterfaces))))
 
 (defn get-declared-annotation
@@ -172,7 +172,7 @@
        directly present on this element, else null - `<A extends java.lang.annotation.Annotation> A`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  ([this annotation-class]
+  ([^java.lang.Class this ^java.lang.Class annotation-class]
     (-> this (.getDeclaredAnnotation annotation-class))))
 
 (defn get-declared-annotations-by-type
@@ -184,7 +184,7 @@
        directly or indirectly present on this element, else an array of length zero - `<A extends java.lang.annotation.Annotation> A[]`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  ([this annotation-class]
+  ([^java.lang.Class this ^java.lang.Class annotation-class]
     (-> this (.getDeclaredAnnotationsByType annotation-class))))
 
 (defn new-instance
@@ -204,7 +204,7 @@
             object. - `Class.T`
 
   throws: java.lang.IllegalAccessException - if the class or its nullary constructor is not accessible."
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.newInstance))))
 
 (defn cast
@@ -216,7 +216,7 @@
   returns: the object after casting, or null if obj is null - `Class.T`
 
   throws: java.lang.ClassCastException - if the object is not null and is not assignable to the type T."
-  ([this obj]
+  ([^java.lang.Class this ^java.lang.Object obj]
     (-> this (.cast obj))))
 
 (defn get-resource
@@ -249,7 +249,7 @@
 
   returns: A  URL object or null if no
                 resource with this name is found - `java.net.URL`"
-  ([this name]
+  ([^java.lang.Class this ^java.lang.String name]
     (-> this (.getResource name))))
 
 (defn array?
@@ -257,7 +257,7 @@
 
   returns: true if this object represents an array class;
             false otherwise. - `boolean`"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.isArray))))
 
 (defn get-protection-domain
@@ -271,7 +271,7 @@
   returns: the ProtectionDomain of this class - `java.security.ProtectionDomain`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPermission method doesn't allow getting the ProtectionDomain."
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.getProtectionDomain))))
 
 (defn get-superclass
@@ -284,7 +284,7 @@
    returned.
 
   returns: the superclass of the class represented by this object. - `java.lang.Class<? super Class.T>`"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.getSuperclass))))
 
 (defn to-generic-string
@@ -310,7 +310,7 @@
 
   returns: a string describing this Class, including
    information about modifiers and type parameters - `java.lang.String`"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.toGenericString))))
 
 (defn get-declared-constructors
@@ -330,7 +330,7 @@
             declared constructors of this class - `java.lang.reflect.Constructor<?>[]`
 
   throws: java.lang.SecurityException - If a security manager, s, is present and any of the following conditions is met: the caller's class loader is not the same as the class loader of this class and invocation of s.checkPermission method with RuntimePermission(`accessDeclaredMembers`) denies access to the declared constructors within this class the caller's class loader is not the same as or an ancestor of the class loader for the current class and invocation of s.checkPackageAccess() denies access to the package of this class"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.getDeclaredConstructors))))
 
 (defn get-modifiers
@@ -357,7 +357,7 @@
    Specification, table 4.1.
 
   returns: the int representing the modifiers for this class - `int`"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.getModifiers))))
 
 (defn get-resource-as-stream
@@ -392,7 +392,7 @@
                 no resource with this name is found - `java.io.InputStream`
 
   throws: java.lang.NullPointerException - If name is null"
-  ([this name]
+  ([^java.lang.Class this ^java.lang.String name]
     (-> this (.getResourceAsStream name))))
 
 (defn get-enum-constants
@@ -403,7 +403,7 @@
        represented by this Class object in the order they're
        declared, or null if this Class object does not
        represent an enum type - `Class.T[]`"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.getEnumConstants))))
 
 (defn get-annotated-superclass
@@ -422,7 +422,7 @@
    value is null.
 
   returns: an object representing the superclass - `java.lang.reflect.AnnotatedType`"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.getAnnotatedSuperclass))))
 
 (defn synthetic?
@@ -431,7 +431,7 @@
 
   returns: true if and only if this class is a synthetic class as
            defined by the Java Language Specification. - `boolean`"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.isSynthetic))))
 
 (defn get-interfaces
@@ -477,7 +477,7 @@
    returned in that order.
 
   returns: an array of interfaces implemented by this class. - `java.lang.Class<?>[]`"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.getInterfaces))))
 
 (defn get-canonical-name
@@ -489,7 +489,7 @@
 
   returns: the canonical name of the underlying class if it exists, and
    null otherwise. - `java.lang.String`"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.getCanonicalName))))
 
 (defn to-string
@@ -502,7 +502,7 @@
    `void`.
 
   returns: a string representation of this class object. - `java.lang.String`"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.toString))))
 
 (defn get-annotation
@@ -514,7 +514,7 @@
        present on this element, else null - `<A extends java.lang.annotation.Annotation> A`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  ([this annotation-class]
+  ([^java.lang.Class this ^java.lang.Class annotation-class]
     (-> this (.getAnnotation annotation-class))))
 
 (defn assignable-from?
@@ -540,7 +540,7 @@
    type cls can be assigned to objects of this class - `boolean`
 
   throws: java.lang.NullPointerException - if the specified Class parameter is null."
-  ([this cls]
+  ([^java.lang.Class this ^java.lang.Class cls]
     (-> this (.isAssignableFrom cls))))
 
 (defn interface?
@@ -549,7 +549,7 @@
 
   returns: true if this object represents an interface;
             false otherwise. - `boolean`"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.isInterface))))
 
 (defn primitive?
@@ -568,7 +568,7 @@
    this method returns true.
 
   returns: true if and only if this class represents a primitive type - `boolean`"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.isPrimitive))))
 
 (defn get-classes
@@ -586,14 +586,14 @@
            members of this class - `java.lang.Class<?>[]`
 
   throws: java.lang.SecurityException - If a security manager, s, is present and the caller's class loader is not the same as or an ancestor of the class loader for the current class and invocation of s.checkPackageAccess() denies access to the package of this class."
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.getClasses))))
 
 (defn get-declared-annotations
   "Description copied from interface: AnnotatedElement
 
   returns: annotations directly present on this element - `java.lang.annotation.Annotation[]`"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.getDeclaredAnnotations))))
 
 (defn get-name
@@ -646,7 +646,7 @@
 
   returns: the name of the class or interface
             represented by this object. - `java.lang.String`"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.getName))))
 
 (defn anonymous-class?
@@ -654,7 +654,7 @@
    is an anonymous class.
 
   returns: true if and only if this class is an anonymous class. - `boolean`"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.isAnonymousClass))))
 
 (defn get-enclosing-constructor
@@ -670,14 +670,14 @@
        that class is a local or anonymous class; otherwise null. - `java.lang.reflect.Constructor<?>`
 
   throws: java.lang.SecurityException - If a security manager, s, is present and any of the following conditions is met: the caller's class loader is not the same as the class loader of the enclosing class and invocation of s.checkPermission method with RuntimePermission(`accessDeclaredMembers`) denies access to the constructors within the enclosing class the caller's class loader is not the same as or an ancestor of the class loader for the enclosing class and invocation of s.checkPackageAccess() denies access to the package of the enclosing class"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.getEnclosingConstructor))))
 
 (defn get-annotations
   "Description copied from interface: AnnotatedElement
 
   returns: annotations present on this element - `java.lang.annotation.Annotation[]`"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.getAnnotations))))
 
 (defn get-annotated-interfaces
@@ -709,7 +709,7 @@
    array of length 0.
 
   returns: an array representing the superinterfaces - `java.lang.reflect.AnnotatedType[]`"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.getAnnotatedInterfaces))))
 
 (defn get-type-parameters
@@ -723,7 +723,7 @@
        the type variables declared by this generic declaration - `java.lang.reflect.TypeVariable<java.lang.Class<Class.T>>[]`
 
   throws: java.lang.reflect.GenericSignatureFormatError - if the generic signature of this generic declaration does not conform to the format specified in The Java™ Virtual Machine Specification"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.getTypeParameters))))
 
 (defn get-class-loader
@@ -746,7 +746,7 @@
             represented by this object. - `java.lang.ClassLoader`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPermission method denies access to the class loader for the class."
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.getClassLoader))))
 
 (defn get-field
@@ -779,7 +779,7 @@
            name - `java.lang.reflect.Field`
 
   throws: java.lang.NoSuchFieldException - if a field with the specified name is not found."
-  ([this name]
+  ([^java.lang.Class this ^java.lang.String name]
     (-> this (.getField name))))
 
 (defn get-enclosing-method
@@ -796,7 +796,7 @@
        that class is a local or anonymous class; otherwise null. - `java.lang.reflect.Method`
 
   throws: java.lang.SecurityException - If a security manager, s, is present and any of the following conditions is met: the caller's class loader is not the same as the class loader of the enclosing class and invocation of s.checkPermission method with RuntimePermission(`accessDeclaredMembers`) denies access to the methods within the enclosing class the caller's class loader is not the same as or an ancestor of the class loader for the enclosing class and invocation of s.checkPackageAccess() denies access to the package of the enclosing class"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.getEnclosingMethod))))
 
 (defn get-generic-superclass
@@ -819,7 +819,7 @@
   returns: the superclass of the class represented by this object - `java.lang.reflect.Type`
 
   throws: java.lang.reflect.GenericSignatureFormatError - if the generic class signature does not conform to the format specified in The Java™ Virtual Machine Specification"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.getGenericSuperclass))))
 
 (defn instance?
@@ -850,7 +850,7 @@
   obj - the object to check - `java.lang.Object`
 
   returns: true if obj is an instance of this class - `boolean`"
-  ([this obj]
+  ([^java.lang.Class this ^java.lang.Object obj]
     (-> this (.isInstance obj))))
 
 (defn get-constructor
@@ -874,7 +874,7 @@
            matches the specified parameterTypes - `java.lang.reflect.Constructor<Class.T>`
 
   throws: java.lang.NoSuchMethodException - if a matching method is not found."
-  ([this parameter-types]
+  ([^java.lang.Class this ^java.lang.Class parameter-types]
     (-> this (.getConstructor parameter-types))))
 
 (defn get-methods
@@ -917,7 +917,7 @@
            public methods of this class - `java.lang.reflect.Method[]`
 
   throws: java.lang.SecurityException - If a security manager, s, is present and the caller's class loader is not the same as or an ancestor of the class loader for the current class and invocation of s.checkPackageAccess() denies access to the package of this class."
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.getMethods))))
 
 (defn local-class?
@@ -925,7 +925,7 @@
    is a local class.
 
   returns: true if and only if this class is a local class. - `boolean`"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.isLocalClass))))
 
 (defn get-annotations-by-type
@@ -937,7 +937,7 @@
        associated with this element, else an array of length zero - `<A extends java.lang.annotation.Annotation> A[]`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  ([this annotation-class]
+  ([^java.lang.Class this ^java.lang.Class annotation-class]
     (-> this (.getAnnotationsByType annotation-class))))
 
 (defn get-declaring-class
@@ -951,7 +951,7 @@
   returns: the declaring class for this class - `java.lang.Class<?>`
 
   throws: java.lang.SecurityException - If a security manager, s, is present and the caller's class loader is not the same as or an ancestor of the class loader for the declaring class and invocation of s.checkPackageAccess() denies access to the package of the declaring class"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.getDeclaringClass))))
 
 (defn get-declared-constructor
@@ -971,7 +971,7 @@
             specified parameter list - `java.lang.reflect.Constructor<Class.T>`
 
   throws: java.lang.NoSuchMethodException - if a matching method is not found."
-  ([this parameter-types]
+  ([^java.lang.Class this ^java.lang.Class parameter-types]
     (-> this (.getDeclaredConstructor parameter-types))))
 
 (defn get-package
@@ -988,7 +988,7 @@
 
   returns: the package of the class, or null if no package
            information is available from the archive or codebase. - `java.lang.Package`"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.getPackage))))
 
 (defn member-class?
@@ -996,7 +996,7 @@
    is a member class.
 
   returns: true if and only if this class is a member class. - `boolean`"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.isMemberClass))))
 
 (defn get-method
@@ -1057,7 +1057,7 @@
            name and parameterTypes - `java.lang.reflect.Method`
 
   throws: java.lang.NoSuchMethodException - if a matching method is not found or if the name is `<init>`or `<clinit>`."
-  ([this name parameter-types]
+  ([^java.lang.Class this ^java.lang.String name ^java.lang.Class parameter-types]
     (-> this (.getMethod name parameter-types))))
 
 (defn get-declared-method
@@ -1084,7 +1084,7 @@
             matching the specified name and parameters - `java.lang.reflect.Method`
 
   throws: java.lang.NoSuchMethodException - if a matching method is not found."
-  ([this name parameter-types]
+  ([^java.lang.Class this ^java.lang.String name ^java.lang.Class parameter-types]
     (-> this (.getDeclaredMethod name parameter-types))))
 
 (defn get-declared-fields
@@ -1106,7 +1106,7 @@
             declared fields of this class - `java.lang.reflect.Field[]`
 
   throws: java.lang.SecurityException - If a security manager, s, is present and any of the following conditions is met: the caller's class loader is not the same as the class loader of this class and invocation of s.checkPermission method with RuntimePermission(`accessDeclaredMembers`) denies access to the declared fields within this class the caller's class loader is not the same as or an ancestor of the class loader for the current class and invocation of s.checkPackageAccess() denies access to the package of this class"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.getDeclaredFields))))
 
 (defn annotation-present?
@@ -1126,7 +1126,7 @@
        type is present on this element, else false - `boolean`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  ([this annotation-class]
+  ([^java.lang.Class this ^java.lang.annotation.Annotation> annotation-class]
     (-> this (.isAnnotationPresent annotation-class))))
 
 (defn get-enclosing-class
@@ -1137,7 +1137,7 @@
   returns: the immediately enclosing class of the underlying class - `java.lang.Class<?>`
 
   throws: java.lang.SecurityException - If a security manager, s, is present and the caller's class loader is not the same as or an ancestor of the class loader for the enclosing class and invocation of s.checkPackageAccess() denies access to the package of the enclosing class"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.getEnclosingClass))))
 
 (defn enum?
@@ -1146,7 +1146,7 @@
 
   returns: true if and only if this class was declared as an enum in the
        source code - `boolean`"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.isEnum))))
 
 (defn get-fields
@@ -1175,7 +1175,7 @@
            public fields - `java.lang.reflect.Field[]`
 
   throws: java.lang.SecurityException - If a security manager, s, is present and the caller's class loader is not the same as or an ancestor of the class loader for the current class and invocation of s.checkPackageAccess() denies access to the package of this class."
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.getFields))))
 
 (defn get-declared-classes
@@ -1192,7 +1192,7 @@
            declared members of this class - `java.lang.Class<?>[]`
 
   throws: java.lang.SecurityException - If a security manager, s, is present and any of the following conditions is met: the caller's class loader is not the same as the class loader of this class and invocation of s.checkPermission method with RuntimePermission(`accessDeclaredMembers`) denies access to the declared classes within this class the caller's class loader is not the same as or an ancestor of the class loader for the current class and invocation of s.checkPackageAccess() denies access to the package of this class"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.getDeclaredClasses))))
 
 (defn get-declared-methods
@@ -1222,7 +1222,7 @@
             declared methods of this class - `java.lang.reflect.Method[]`
 
   throws: java.lang.SecurityException - If a security manager, s, is present and any of the following conditions is met: the caller's class loader is not the same as the class loader of this class and invocation of s.checkPermission method with RuntimePermission(`accessDeclaredMembers`) denies access to the declared methods within this class the caller's class loader is not the same as or an ancestor of the class loader for the current class and invocation of s.checkPackageAccess() denies access to the package of this class"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.getDeclaredMethods))))
 
 (defn get-signers
@@ -1231,7 +1231,7 @@
   returns: the signers of this class, or null if there are no signers.  In
             particular, this method returns null if this object represents
             a primitive type or void. - `java.lang.Object[]`"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.getSigners))))
 
 (defn get-simple-name
@@ -1244,7 +1244,7 @@
    name of an array whose component type is anonymous is `[]`.
 
   returns: the simple name of the underlying class - `java.lang.String`"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.getSimpleName))))
 
 (defn as-subclass
@@ -1266,7 +1266,7 @@
       the specified class object. - `<U> java.lang.Class<? extends U>`
 
   throws: java.lang.ClassCastException - if this Class object does not represent a subclass of the specified class (here `subclass` includes the class itself)."
-  ([this clazz]
+  ([^java.lang.Class this ^java.lang.Class clazz]
     (-> this (.asSubclass clazz))))
 
 (defn get-component-type
@@ -1276,7 +1276,7 @@
 
   returns: the Class representing the component type of this
    class if this class is an array - `java.lang.Class<?>`"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.getComponentType))))
 
 (defn desired-assertion-status
@@ -1298,7 +1298,7 @@
    class when it was (or will be) initialized.
 
   returns: the desired assertion status of the specified class. - `boolean`"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.desiredAssertionStatus))))
 
 (defn get-constructors
@@ -1320,13 +1320,13 @@
            public constructors of this class - `java.lang.reflect.Constructor<?>[]`
 
   throws: java.lang.SecurityException - If a security manager, s, is present and the caller's class loader is not the same as or an ancestor of the class loader for the current class and invocation of s.checkPackageAccess() denies access to the package of this class."
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.getConstructors))))
 
 (defn get-type-name
   "Return an informative string for the name of this type.
 
   returns: an informative string for the name of this type - `java.lang.String`"
-  ([this]
+  ([^java.lang.Class this]
     (-> this (.getTypeName))))
 

@@ -60,7 +60,7 @@
   port - target port. - `int`
 
   throws: java.lang.IllegalArgumentException - if the host or port are invalid."
-  ([host port]
+  ([^java.lang.String host ^Integer port]
     (new SocketHandler host port))
   ([]
     (new SocketHandler )))
@@ -69,13 +69,13 @@
   "Close this output stream.
 
   throws: java.lang.SecurityException - if a security manager exists and if the caller does not have LoggingPermission(`control`)."
-  ([this]
+  ([^java.util.logging.SocketHandler this]
     (-> this (.close))))
 
 (defn publish
   "Format and publish a LogRecord.
 
   record - description of the log event. A null record is silently ignored and is not published - `java.util.logging.LogRecord`"
-  ([this record]
+  ([^java.util.logging.SocketHandler this ^java.util.logging.LogRecord record]
     (-> this (.publish record))))
 

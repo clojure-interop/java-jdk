@@ -104,7 +104,7 @@
   axis - the axis to lay out components along. Can be one of: BoxLayout.X_AXIS, BoxLayout.Y_AXIS, BoxLayout.LINE_AXIS or BoxLayout.PAGE_AXIS - `int`
 
   throws: java.awt.AWTError - if the value of axis is invalid"
-  ([target axis]
+  ([^java.awt.Container target ^Integer axis]
     (new BoxLayout target axis)))
 
 (def *-x-axis
@@ -155,7 +155,7 @@
   target - the affected container - `java.awt.Container`
 
   throws: java.awt.AWTError - if the target isn't the container specified to the BoxLayout constructor"
-  ([this target]
+  ([^javax.swing.BoxLayout this ^java.awt.Container target]
     (-> this (.invalidateLayout target))))
 
 (defn get-axis
@@ -167,7 +167,7 @@
    BoxLayout.PAGE_AXIS
 
   returns: the axis that was used to lay out components - `int`"
-  ([this]
+  ([^javax.swing.BoxLayout this]
     (-> this (.getAxis))))
 
 (defn get-layout-alignment-y
@@ -181,7 +181,7 @@
   returns: the alignment >= 0.0f && <= 1.0f - `float`
 
   throws: java.awt.AWTError - if the target isn't the container specified to the BoxLayout constructor"
-  ([this target]
+  ([^javax.swing.BoxLayout this ^java.awt.Container target]
     (-> this (.getLayoutAlignmentY target))))
 
 (defn preferred-layout-size
@@ -193,7 +193,7 @@
   returns: the dimensions >= 0 && <= Integer.MAX_VALUE - `java.awt.Dimension`
 
   throws: java.awt.AWTError - if the target isn't the container specified to the BoxLayout constructor"
-  ([this target]
+  ([^javax.swing.BoxLayout this ^java.awt.Container target]
     (-> this (.preferredLayoutSize target))))
 
 (defn get-layout-alignment-x
@@ -207,7 +207,7 @@
   returns: the alignment >= 0.0f && <= 1.0f - `float`
 
   throws: java.awt.AWTError - if the target isn't the container specified to the BoxLayout constructor"
-  ([this target]
+  ([^javax.swing.BoxLayout this ^java.awt.Container target]
     (-> this (.getLayoutAlignmentX target))))
 
 (defn minimum-layout-size
@@ -219,14 +219,14 @@
   returns: the dimensions >= 0 && <= Integer.MAX_VALUE - `java.awt.Dimension`
 
   throws: java.awt.AWTError - if the target isn't the container specified to the BoxLayout constructor"
-  ([this target]
+  ([^javax.swing.BoxLayout this ^java.awt.Container target]
     (-> this (.minimumLayoutSize target))))
 
 (defn get-target
   "Returns the container that uses this layout manager.
 
   returns: the container that uses this layout manager - `java.awt.Container`"
-  ([this]
+  ([^javax.swing.BoxLayout this]
     (-> this (.getTarget))))
 
 (defn maximum-layout-size
@@ -238,7 +238,7 @@
   returns: the dimensions >= 0 && <= Integer.MAX_VALUE - `java.awt.Dimension`
 
   throws: java.awt.AWTError - if the target isn't the container specified to the BoxLayout constructor"
-  ([this target]
+  ([^javax.swing.BoxLayout this ^java.awt.Container target]
     (-> this (.maximumLayoutSize target))))
 
 (defn add-layout-component
@@ -246,14 +246,14 @@
 
   name - the name of the component - `java.lang.String`
   comp - the component - `java.awt.Component`"
-  ([this name comp]
+  ([^javax.swing.BoxLayout this ^java.lang.String name ^java.awt.Component comp]
     (-> this (.addLayoutComponent name comp))))
 
 (defn remove-layout-component
   "Not used by this class.
 
   comp - the component - `java.awt.Component`"
-  ([this comp]
+  ([^javax.swing.BoxLayout this ^java.awt.Component comp]
     (-> this (.removeLayoutComponent comp))))
 
 (defn layout-container
@@ -263,6 +263,6 @@
   target - the container to lay out - `java.awt.Container`
 
   throws: java.awt.AWTError - if the target isn't the container specified to the BoxLayout constructor"
-  ([this target]
+  ([^javax.swing.BoxLayout this ^java.awt.Container target]
     (-> this (.layoutContainer target))))
 

@@ -16,13 +16,13 @@
   returns: `java.lang. void`
 
   throws: java.lang.Exception - if a general exception occurs."
-  ([this obj the-call opnum hash]
+  ([^. this ^java.rmi.Remote obj ^java.rmi.server.RemoteCall the-call ^Integer opnum ^Long hash]
     (-> this (.dispatch obj the-call opnum hash))))
 
 (defn get-operations
   "Deprecated. no replacement
 
   returns: operations supported by skeleton - `java.lang..rmi.server.Operation[]`"
-  ([this]
+  ([^. this]
     (-> this (.getOperations))))
 

@@ -23,7 +23,7 @@
   height - the target height to scale the image - `int`
 
   throws: java.lang.IllegalArgumentException - if width equals zero or height equals zero"
-  ([width height]
+  ([^Integer width ^Integer height]
     (new ReplicateScaleFilter width height)))
 
 (defn set-properties
@@ -40,7 +40,7 @@
    with the filtering operation.
 
   props - the properties from the source object - `java.util.Hashtable<?,?>`"
-  ([this props]
+  ([^java.awt.image.ReplicateScaleFilter this ^java.util.Hashtable props]
     (-> this (.setProperties props))))
 
 (defn set-dimensions
@@ -56,7 +56,7 @@
 
   w - the width of the source image - `int`
   h - the height of the source image - `int`"
-  ([this w h]
+  ([^java.awt.image.ReplicateScaleFilter this ^Integer w ^Integer h]
     (-> this (.setDimensions w h))))
 
 (defn set-pixels
@@ -79,6 +79,6 @@
   pixels - the array of pixels - `byte[]`
   off - the offset into the pixels array - `int`
   scansize - the distance from one row of pixels to the next in the pixels array - `int`"
-  ([this x y w h model pixels off scansize]
+  ([^java.awt.image.ReplicateScaleFilter this ^Integer x ^Integer y ^Integer w ^Integer h ^java.awt.image.ColorModel model pixels ^Integer off ^Integer scansize]
     (-> this (.setPixels x y w h model pixels off scansize))))
 

@@ -21,6 +21,6 @@
   returns: a DecimalFormatSymbols instance. - `java.text.DecimalFormatSymbols`
 
   throws: java.lang.NullPointerException - if locale is null"
-  ([this locale]
+  ([^java.text.spi.DecimalFormatSymbolsProvider this ^java.util.Locale locale]
     (-> this (.getInstance locale))))
 

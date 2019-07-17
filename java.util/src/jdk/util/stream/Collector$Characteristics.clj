@@ -61,6 +61,6 @@
   returns: the enum constant with the specified name - `java.util.stream.Collector.Characteristics`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([name]
+  ([^java.lang.String name]
     (Collector$Characteristics/valueOf name)))
 

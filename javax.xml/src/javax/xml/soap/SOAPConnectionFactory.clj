@@ -30,6 +30,6 @@
   returns: the new SOAPConnection object. - `javax.xml.soap.SOAPConnection`
 
   throws: javax.xml.soap.SOAPException - if there was an exception creating the SOAPConnection object."
-  ([this]
+  ([^javax.xml.soap.SOAPConnectionFactory this]
     (-> this (.createConnection))))
 

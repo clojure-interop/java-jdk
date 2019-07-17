@@ -21,26 +21,26 @@
   "x - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([x]
+  ([^javax.swing.JComponent x]
     (MetalScrollPaneUI/createUI x)))
 
 (defn install-ui
   "Description copied from class: ComponentUI
 
   c - the component where this UI delegate is being installed - `javax.swing.JComponent`"
-  ([this c]
+  ([^javax.swing.plaf.metal.MetalScrollPaneUI this ^javax.swing.JComponent c]
     (-> this (.installUI c))))
 
 (defn uninstall-ui
   "Description copied from class: ComponentUI
 
   c - the component from which this UI delegate is being removed; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([this c]
+  ([^javax.swing.plaf.metal.MetalScrollPaneUI this ^javax.swing.JComponent c]
     (-> this (.uninstallUI c))))
 
 (defn install-listeners
   "scroll-pane - `javax.swing.JScrollPane`"
-  ([this scroll-pane]
+  ([^javax.swing.plaf.metal.MetalScrollPaneUI this ^javax.swing.JScrollPane scroll-pane]
     (-> this (.installListeners scroll-pane))))
 
 (defn uninstall-listeners
@@ -49,6 +49,6 @@
   scroll-pane - `javax.swing.JScrollPane`
 
   returns: `java.lang.  void`"
-  ([this scroll-pane]
+  ([^javax.swing.plaf.metal.MetalScrollPaneUI this ^javax.swing.JScrollPane scroll-pane]
     (-> this (.uninstallListeners scroll-pane))))
 

@@ -16,7 +16,7 @@
   start - the beginning index of the span of text - `int`
   end - the ending index of the span of text - `int`
   txt - the String shared by this text span - `java.lang.String`"
-  ([start end txt]
+  ([^Integer start ^Integer end ^java.lang.String txt]
     (new AccessibleTextSequence start end txt)))
 
 (defn -start-index

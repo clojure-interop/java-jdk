@@ -93,7 +93,7 @@
   default-value - `java.lang.String`
 
   returns: `java.lang.String`"
-  ([key default-value]
+  ([^java.lang.String key ^java.lang.String default-value]
     (Toolkit/getProperty key default-value)))
 
 (defn get-image
@@ -127,7 +127,7 @@
                            the specified file. - `java.awt.Image`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkRead method doesn't allow the operation."
-  ([this filename]
+  ([^java.awt.Toolkit this ^java.lang.String filename]
     (-> this (.getImage filename))))
 
 (defn get-screen-resolution
@@ -136,7 +136,7 @@
   returns: this toolkit's screen resolution, in dots-per-inch. - `int`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true"
-  ([this]
+  ([^java.awt.Toolkit this]
     (-> this (.getScreenResolution))))
 
 (defn are-extra-mouse-buttons-enabled
@@ -162,7 +162,7 @@
            false otherwise - `boolean`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true"
-  ([this]
+  ([^java.awt.Toolkit this]
     (-> this (.areExtraMouseButtonsEnabled))))
 
 (defn map-input-method-highlight
@@ -176,14 +176,14 @@
   returns: style attribute map, or null - `java.util.Map<java.awt.font.TextAttribute,?>`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless returns true"
-  ([this highlight]
+  ([^java.awt.Toolkit this ^java.awt.im.InputMethodHighlight highlight]
     (-> this (.mapInputMethodHighlight highlight))))
 
 (defn get-font-list
   "Deprecated. see GraphicsEnvironment.getAvailableFontFamilyNames()
 
   returns: the names of the available fonts in this toolkit. - `java.lang.   java.lang.String[]`"
-  ([this]
+  ([^java.awt.Toolkit this]
     (-> this (.getFontList))))
 
 (defn get-screen-insets
@@ -194,7 +194,7 @@
   returns: the insets of this toolkit's screen, in pixels. - `java.awt.Insets`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true"
-  ([this gc]
+  ([^java.awt.Toolkit this ^java.awt.GraphicsConfiguration gc]
     (-> this (.getScreenInsets gc))))
 
 (defn add-awt-event-listener
@@ -221,7 +221,7 @@
   event-mask - the bitmask of event types to receive - `long`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPermission method doesn't allow the operation."
-  ([this listener event-mask]
+  ([^java.awt.Toolkit this ^java.awt.event.AWTEventListener listener ^Long event-mask]
     (-> this (.addAWTEventListener listener event-mask))))
 
 (defn get-menu-shortcut-key-mask
@@ -240,7 +240,7 @@
                    that is used for menu shortcuts on this toolkit. - `int`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true"
-  ([this]
+  ([^java.awt.Toolkit this]
     (-> this (.getMenuShortcutKeyMask))))
 
 (defn create-drag-gesture-recognizer
@@ -258,7 +258,7 @@
 
   returns: the new object or null.  Always returns null if
    GraphicsEnvironment.isHeadless() returns true. - `<T extends java.awt.dnd.DragGestureRecognizer> T`"
-  ([this abstract-recognizer-class ds c src-actions dgl]
+  ([^java.awt.Toolkit this ^java.lang.Class abstract-recognizer-class ^java.awt.dnd.DragSource ds ^java.awt.Component c ^Integer src-actions ^java.awt.dnd.DragGestureListener dgl]
     (-> this (.createDragGestureRecognizer abstract-recognizer-class ds c src-actions dgl))))
 
 (defn modal-exclusion-type-supported?
@@ -270,7 +270,7 @@
 
   returns: true, if current toolkit supports given modal exclusion
        type, false otherwise - `boolean`"
-  ([this modal-exclusion-type]
+  ([^java.awt.Toolkit this ^java.awt.Dialog.ModalExclusionType modal-exclusion-type]
     (-> this (.isModalExclusionTypeSupported modal-exclusion-type))))
 
 (defn get-system-selection
@@ -307,7 +307,7 @@
            system selection Clipboard - `java.awt.datatransfer.Clipboard`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true"
-  ([this]
+  ([^java.awt.Toolkit this]
     (-> this (.getSystemSelection))))
 
 (defn create-custom-cursor
@@ -325,7 +325,7 @@
   returns: `java.awt.Cursor`
 
   throws: java.lang.IndexOutOfBoundsException - if the hotSpot values are outside the bounds of the cursor"
-  ([this cursor hot-spot name]
+  ([^java.awt.Toolkit this ^java.awt.Image cursor ^java.awt.Point hot-spot ^java.lang.String name]
     (-> this (.createCustomCursor cursor hot-spot name))))
 
 (defn dynamic-layout-active?
@@ -348,7 +348,7 @@
               currently active, false otherwise. - `boolean`
 
   throws: java.awt.HeadlessException - if the GraphicsEnvironment.isHeadless() method returns true"
-  ([this]
+  ([^java.awt.Toolkit this]
     (-> this (.isDynamicLayoutActive))))
 
 (defn get-print-job
@@ -373,9 +373,9 @@
             user cancelled the print job. - `java.awt.PrintJob`
 
   throws: java.lang.NullPointerException - if frame is null"
-  ([this frame jobtitle job-attributes page-attributes]
+  ([^java.awt.Toolkit this ^java.awt.Frame frame ^java.lang.String jobtitle ^java.awt.JobAttributes job-attributes ^java.awt.PageAttributes page-attributes]
     (-> this (.getPrintJob frame jobtitle job-attributes page-attributes)))
-  ([this frame jobtitle props]
+  ([^java.awt.Toolkit this ^java.awt.Frame frame ^java.lang.String jobtitle ^java.util.Properties props]
     (-> this (.getPrintJob frame jobtitle props))))
 
 (defn remove-awt-event-listener
@@ -396,13 +396,13 @@
   listener - the event listener. - `java.awt.event.AWTEventListener`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPermission method doesn't allow the operation."
-  ([this listener]
+  ([^java.awt.Toolkit this ^java.awt.event.AWTEventListener listener]
     (-> this (.removeAWTEventListener listener))))
 
 (defn beep
   "Emits an audio beep depending on native system settings and hardware
    capabilities."
-  ([this]
+  ([^java.awt.Toolkit this]
     (-> this (.beep))))
 
 (defn get-system-event-queue
@@ -419,7 +419,7 @@
   returns: the EventQueue object - `java.awt.EventQueue`
 
   throws: java.lang.SecurityException - if a security manager is set and it denies access to the EventQueue"
-  ([this]
+  ([^java.awt.Toolkit this]
     (-> this (.getSystemEventQueue))))
 
 (defn check-image
@@ -451,7 +451,7 @@
   returns: the bitwise inclusive OR of the
                    ImageObserver flags for the
                    image data that is currently available. - `int`"
-  ([this image width height observer]
+  ([^java.awt.Toolkit this ^java.awt.Image image ^Integer width ^Integer height ^java.awt.image.ImageObserver observer]
     (-> this (.checkImage image width height observer))))
 
 (defn create-drag-source-context-peer
@@ -464,7 +464,7 @@
   returns: `java.awt.dnd.peer.DragSourceContextPeer`
 
   throws: java.awt.dnd.InvalidDnDOperationException"
-  ([this dge]
+  ([^java.awt.Toolkit this ^java.awt.dnd.DragGestureEvent dge]
     (-> this (.createDragSourceContextPeer dge))))
 
 (defn set-dynamic-layout
@@ -489,7 +489,7 @@
   dynamic - If true, Containers should re-layout their components as the Container is being resized. If false, the layout will be validated after resizing is completed. - `boolean`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true"
-  ([this dynamic]
+  ([^java.awt.Toolkit this ^Boolean dynamic]
     (-> this (.setDynamicLayout dynamic))))
 
 (defn get-font-metrics
@@ -499,7 +499,7 @@
   font - a font - `java.awt.Font`
 
   returns: the screen metrics of the specified font in this toolkit - `java.lang.   java.awt.FontMetrics`"
-  ([this font]
+  ([^java.awt.Toolkit this ^java.awt.Font font]
     (-> this (.getFontMetrics font))))
 
 (defn get-best-cursor-size
@@ -522,7 +522,7 @@
    the Toolkit implementation doesn't support custom cursors. - `java.awt.Dimension`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true"
-  ([this preferred-width preferred-height]
+  ([^java.awt.Toolkit this ^Integer preferred-width ^Integer preferred-height]
     (-> this (.getBestCursorSize preferred-width preferred-height))))
 
 (defn sync
@@ -531,7 +531,7 @@
 
    This method ensures that the display is up-to-date. It is useful
    for animation."
-  ([this]
+  ([^java.awt.Toolkit this]
     (-> this (.sync))))
 
 (defn remove-property-change-listener
@@ -544,7 +544,7 @@
 
   name - The name of the property to remove - `java.lang.String`
   pcl - The property change listener - `java.beans.PropertyChangeListener`"
-  ([this name pcl]
+  ([^java.awt.Toolkit this ^java.lang.String name ^java.beans.PropertyChangeListener pcl]
     (-> this (.removePropertyChangeListener name pcl))))
 
 (defn frame-state-supported?
@@ -580,7 +580,7 @@
        this Toolkit implementation, false otherwise. - `boolean`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true."
-  ([this state]
+  ([^java.awt.Toolkit this ^Integer state]
     (-> this (.isFrameStateSupported state))))
 
 (defn get-desktop-property
@@ -595,7 +595,7 @@
   property-name - `java.lang.String`
 
   returns: `java.lang.Object`"
-  ([this property-name]
+  ([^java.awt.Toolkit this ^java.lang.String property-name]
     (-> this (.getDesktopProperty property-name))))
 
 (defn get-system-clipboard
@@ -629,7 +629,7 @@
   returns: the system Clipboard - `java.awt.datatransfer.Clipboard`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true"
-  ([this]
+  ([^java.awt.Toolkit this]
     (-> this (.getSystemClipboard))))
 
 (defn get-property-change-listeners
@@ -641,9 +641,9 @@
   returns: all of the PropertyChangeListener objects
            associated with the specified name of a desktop property
            or an empty array if no such listeners are added - `java.beans.PropertyChangeListener[]`"
-  ([this property-name]
+  ([^java.awt.Toolkit this ^java.lang.String property-name]
     (-> this (.getPropertyChangeListeners property-name)))
-  ([this]
+  ([^java.awt.Toolkit this]
     (-> this (.getPropertyChangeListeners))))
 
 (defn modality-type-supported?
@@ -655,7 +655,7 @@
 
   returns: true, if current toolkit supports given modality
        type, false otherwise - `boolean`"
-  ([this modality-type]
+  ([^java.awt.Toolkit this ^java.awt.Dialog.ModalityType modality-type]
     (-> this (.isModalityTypeSupported modality-type))))
 
 (defn get-maximum-cursor-colors
@@ -672,7 +672,7 @@
    supported by this Toolkit implementation. - `int`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true"
-  ([this]
+  ([^java.awt.Toolkit this]
     (-> this (.getMaximumCursorColors))))
 
 (defn get-awt-event-listeners
@@ -697,9 +697,9 @@
            are currently registered - `java.awt.event.AWTEventListener[]`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPermission method doesn't allow the operation."
-  ([this event-mask]
+  ([^java.awt.Toolkit this ^Long event-mask]
     (-> this (.getAWTEventListeners event-mask)))
-  ([this]
+  ([^java.awt.Toolkit this]
     (-> this (.getAWTEventListeners))))
 
 (defn create-image
@@ -713,9 +713,9 @@
   imagelength - the length of the data in the array. - `int`
 
   returns: an image. - `java.awt.Image`"
-  ([this imagedata imageoffset imagelength]
+  ([^java.awt.Toolkit this imagedata ^Integer imageoffset ^Integer imagelength]
     (-> this (.createImage imagedata imageoffset imagelength)))
-  ([this filename]
+  ([^java.awt.Toolkit this ^java.lang.String filename]
     (-> this (.createImage filename))))
 
 (defn prepare-image
@@ -743,7 +743,7 @@
 
   returns: true if the image has already been
                    fully prepared; false otherwise. - `boolean`"
-  ([this image width height observer]
+  ([^java.awt.Toolkit this ^java.awt.Image image ^Integer width ^Integer height ^java.awt.image.ImageObserver observer]
     (-> this (.prepareImage image width height observer))))
 
 (defn get-locking-key-state?
@@ -760,7 +760,7 @@
   returns: `boolean`
 
   throws: java.lang.IllegalArgumentException - if keyCode is not one of the valid key codes"
-  ([this key-code]
+  ([^java.awt.Toolkit this ^Integer key-code]
     (-> this (.getLockingKeyState key-code))))
 
 (defn set-locking-key-state
@@ -779,7 +779,7 @@
   on - `boolean`
 
   throws: java.lang.IllegalArgumentException - if keyCode is not one of the valid key codes"
-  ([this key-code on]
+  ([^java.awt.Toolkit this ^Integer key-code ^Boolean on]
     (-> this (.setLockingKeyState key-code on))))
 
 (defn always-on-top-supported?
@@ -789,7 +789,7 @@
 
   returns: true, if current toolkit supports the always-on-top mode,
        otherwise returns false - `boolean`"
-  ([this]
+  ([^java.awt.Toolkit this]
     (-> this (.isAlwaysOnTopSupported))))
 
 (defn add-property-change-listener
@@ -801,7 +801,7 @@
 
   name - The name of the property to listen for - `java.lang.String`
   pcl - The property change listener - `java.beans.PropertyChangeListener`"
-  ([this name pcl]
+  ([^java.awt.Toolkit this ^java.lang.String name ^java.beans.PropertyChangeListener pcl]
     (-> this (.addPropertyChangeListener name pcl))))
 
 (defn get-screen-size
@@ -813,7 +813,7 @@
   returns: the size of this toolkit's screen, in pixels. - `java.awt.Dimension`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true"
-  ([this]
+  ([^java.awt.Toolkit this]
     (-> this (.getScreenSize))))
 
 (defn get-color-model
@@ -831,6 +831,6 @@
   returns: the color model of this toolkit's screen. - `java.awt.image.ColorModel`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true"
-  ([this]
+  ([^java.awt.Toolkit this]
     (-> this (.getColorModel))))
 

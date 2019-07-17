@@ -81,7 +81,7 @@
   dsl - the DragSourceListener - `java.awt.dnd.DragSourceListener`
 
   throws: java.lang.IllegalArgumentException - if the source actions for the DragGestureRecognizer associated with the trigger event are equal to DnDConstants.ACTION_NONE."
-  ([dscp trigger drag-cursor drag-image offset t dsl]
+  ([^java.awt.dnd.peer.DragSourceContextPeer dscp ^java.awt.dnd.DragGestureEvent trigger ^java.awt.Cursor drag-cursor ^java.awt.Image drag-image ^java.awt.Point offset ^java.awt.datatransfer.Transferable t ^java.awt.dnd.DragSourceListener dsl]
     (new DragSourceContext dscp trigger drag-cursor drag-image offset t dsl)))
 
 (defn drag-drop-end
@@ -92,7 +92,7 @@
    DragSourceDropEvent.
 
   dsde - the DragSourceDropEvent - `java.awt.dnd.DragSourceDropEvent`"
-  ([this dsde]
+  ([^java.awt.dnd.DragSourceContext this ^java.awt.dnd.DragSourceDropEvent dsde]
     (-> this (.dragDropEnd dsde))))
 
 (defn get-trigger
@@ -100,7 +100,7 @@
    that initially triggered the drag.
 
   returns: the Event that triggered the drag - `java.awt.dnd.DragGestureEvent`"
-  ([this]
+  ([^java.awt.dnd.DragSourceContext this]
     (-> this (.getTrigger))))
 
 (defn get-component
@@ -108,7 +108,7 @@
    DragSourceContext.
 
   returns: the Component that started the drag - `java.awt.Component`"
-  ([this]
+  ([^java.awt.dnd.DragSourceContext this]
     (-> this (.getComponent))))
 
 (defn drag-mouse-moved
@@ -119,14 +119,14 @@
    DragSourceDragEvent.
 
   dsde - the DragSourceDragEvent - `java.awt.dnd.DragSourceDragEvent`"
-  ([this dsde]
+  ([^java.awt.dnd.DragSourceContext this ^java.awt.dnd.DragSourceDragEvent dsde]
     (-> this (.dragMouseMoved dsde))))
 
 (defn get-cursor
   "Returns the current drag Cursor.
 
   returns: the current drag Cursor - `java.awt.Cursor`"
-  ([this]
+  ([^java.awt.dnd.DragSourceContext this]
     (-> this (.getCursor))))
 
 (defn drag-exit
@@ -137,7 +137,7 @@
    DragSourceEvent.
 
   dse - the DragSourceEvent - `java.awt.dnd.DragSourceEvent`"
-  ([this dse]
+  ([^java.awt.dnd.DragSourceContext this ^java.awt.dnd.DragSourceEvent dse]
     (-> this (.dragExit dse))))
 
 (defn get-source-actions
@@ -146,7 +146,7 @@
    drag operation associated with this DragSourceContext.
 
   returns: the drop actions supported by the drag source - `int`"
-  ([this]
+  ([^java.awt.dnd.DragSourceContext this]
     (-> this (.getSourceActions))))
 
 (defn get-drag-source
@@ -155,7 +155,7 @@
 
   returns: the DragSource that
      instantiated this DragSourceContext - `java.awt.dnd.DragSource`"
-  ([this]
+  ([^java.awt.dnd.DragSourceContext this]
     (-> this (.getDragSource))))
 
 (defn remove-drag-source-listener
@@ -163,7 +163,7 @@
    from  this DragSourceContext.
 
   dsl - the DragSourceListener to remove; note that while null is not prohibited, it is not acceptable as a parameter - `java.awt.dnd.DragSourceListener`"
-  ([this dsl]
+  ([^java.awt.dnd.DragSourceContext this ^java.awt.dnd.DragSourceListener dsl]
     (-> this (.removeDragSourceListener dsl))))
 
 (defn get-transferable
@@ -171,13 +171,13 @@
    this DragSourceContext.
 
   returns: the Transferable - `java.awt.datatransfer.Transferable`"
-  ([this]
+  ([^java.awt.dnd.DragSourceContext this]
     (-> this (.getTransferable))))
 
 (defn transferables-flavors-changed
   "Notifies the peer that the Transferable's
    DataFlavors have changed."
-  ([this]
+  ([^java.awt.dnd.DragSourceContext this]
     (-> this (.transferablesFlavorsChanged))))
 
 (defn drop-action-changed
@@ -188,7 +188,7 @@
    DragSourceDragEvent.
 
   dsde - the DragSourceDragEvent - `java.awt.dnd.DragSourceDragEvent`"
-  ([this dsde]
+  ([^java.awt.dnd.DragSourceContext this ^java.awt.dnd.DragSourceDragEvent dsde]
     (-> this (.dropActionChanged dsde))))
 
 (defn drag-enter
@@ -199,7 +199,7 @@
    DragSourceDragEvent.
 
   dsde - the DragSourceDragEvent - `java.awt.dnd.DragSourceDragEvent`"
-  ([this dsde]
+  ([^java.awt.dnd.DragSourceContext this ^java.awt.dnd.DragSourceDragEvent dsde]
     (-> this (.dragEnter dsde))))
 
 (defn set-cursor
@@ -209,7 +209,7 @@
    activated for this drag operation, otherwise it is deactivated.
 
   c - the initial Cursor for this drag operation, or null for the default cursor handling; see java.awt.class level documentation for more details on the cursor handling during drag and drop - `java.awt.Cursor`"
-  ([this c]
+  ([^java.awt.dnd.DragSourceContext this ^java.awt.Cursor c]
     (-> this (.setCursor c))))
 
 (defn add-drag-source-listener
@@ -221,7 +221,7 @@
   dsl - the DragSourceListener to add. Note that while null is not prohibited, it is not acceptable as a parameter. - `java.awt.dnd.DragSourceListener`
 
   throws: java.util.TooManyListenersException - if a DragSourceListener has already been added"
-  ([this dsl]
+  ([^java.awt.dnd.DragSourceContext this ^java.awt.dnd.DragSourceListener dsl]
     (-> this (.addDragSourceListener dsl))))
 
 (defn drag-over
@@ -232,6 +232,6 @@
    DragSourceDragEvent.
 
   dsde - the DragSourceDragEvent - `java.awt.dnd.DragSourceDragEvent`"
-  ([this dsde]
+  ([^java.awt.dnd.DragSourceContext this ^java.awt.dnd.DragSourceDragEvent dsde]
     (-> this (.dragOver dsde))))
 

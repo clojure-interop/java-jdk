@@ -17,7 +17,7 @@
 
   returns: true if the member was successfully added,
    false if the principal was already a member. - `boolean`"
-  ([this user]
+  ([^. this ^java.security.Principal user]
     (-> this (.addMember user))))
 
 (defn remove-member
@@ -27,7 +27,7 @@
 
   returns: true if the principal was removed, or
    false if the principal was not a member. - `boolean`"
-  ([this user]
+  ([^. this ^java.security.Principal user]
     (-> this (.removeMember user))))
 
 (defn member?
@@ -39,7 +39,7 @@
 
   returns: true if the principal is a member of this group,
    false otherwise. - `boolean`"
-  ([this member]
+  ([^. this ^java.security.Principal member]
     (-> this (.isMember member))))
 
 (defn members
@@ -48,6 +48,6 @@
    or Group (which is a subclass of Principal).
 
   returns: an enumeration of the group members. - `java.util.Enumeration<? extends java.security.Principal>`"
-  ([this]
+  ([^. this]
     (-> this (.members))))
 

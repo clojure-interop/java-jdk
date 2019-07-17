@@ -18,7 +18,7 @@
   ctrly-2 - the Y coordinate for the second control point of the resulting CubicCurve2D - `float`
   x-2 - the X coordinate for the end point of the resulting CubicCurve2D - `float`
   y-2 - the Y coordinate for the end point of the resulting CubicCurve2D - `float`"
-  ([x-1 y-1 ctrlx-1 ctrly-1 ctrlx-2 ctrly-2 x-2 y-2]
+  ([^Float x-1 ^Float y-1 ^Float ctrlx-1 ^Float ctrly-1 ^Float ctrlx-2 ^Float ctrly-2 ^Float x-2 ^Float y-2]
     (new CubicCurve2D$Float x-1 y-1 ctrlx-1 ctrly-1 ctrlx-2 ctrly-2 x-2 y-2))
   ([]
     (new CubicCurve2D$Float )))
@@ -108,7 +108,7 @@
 
   returns: the X coordinate of the start point of the
            CubicCurve2D. - `double`"
-  ([this]
+  ([^java.awt.geom.CubicCurve2D$Float this]
     (-> this (.getX1))))
 
 (defn get-p-1
@@ -116,7 +116,7 @@
 
   returns: a Point2D that is the start point of
            the CubicCurve2D. - `java.awt.geom.Point2D`"
-  ([this]
+  ([^java.awt.geom.CubicCurve2D$Float this]
     (-> this (.getP1))))
 
 (defn get-bounds-2-d
@@ -159,7 +159,7 @@
 
   returns: an instance of Rectangle2D that is a
                    high-precision bounding box of the Shape. - `java.awt.geom.Rectangle2D`"
-  ([this]
+  ([^java.awt.geom.CubicCurve2D$Float this]
     (-> this (.getBounds2D))))
 
 (defn get-y-2
@@ -167,7 +167,7 @@
 
   returns: the Y coordinate of the end point of the
            CubicCurve2D. - `double`"
-  ([this]
+  ([^java.awt.geom.CubicCurve2D$Float this]
     (-> this (.getY2))))
 
 (defn get-x-2
@@ -175,7 +175,7 @@
 
   returns: the X coordinate of the end point of the
            CubicCurve2D. - `double`"
-  ([this]
+  ([^java.awt.geom.CubicCurve2D$Float this]
     (-> this (.getX2))))
 
 (defn get-ctrl-y-2
@@ -184,7 +184,7 @@
 
   returns: the Y coordinate of the second control point of the
            CubicCurve2D. - `double`"
-  ([this]
+  ([^java.awt.geom.CubicCurve2D$Float this]
     (-> this (.getCtrlY2))))
 
 (defn get-ctrl-y-1
@@ -192,7 +192,7 @@
 
   returns: the Y coordinate of the first control point of the
            CubicCurve2D. - `double`"
-  ([this]
+  ([^java.awt.geom.CubicCurve2D$Float this]
     (-> this (.getCtrlY1))))
 
 (defn get-y-1
@@ -200,7 +200,7 @@
 
   returns: the Y coordinate of the start point of the
            CubicCurve2D. - `double`"
-  ([this]
+  ([^java.awt.geom.CubicCurve2D$Float this]
     (-> this (.getY1))))
 
 (defn get-ctrl-x-1
@@ -208,7 +208,7 @@
 
   returns: the X coordinate of the first control point of the
            CubicCurve2D. - `double`"
-  ([this]
+  ([^java.awt.geom.CubicCurve2D$Float this]
     (-> this (.getCtrlX1))))
 
 (defn get-p-2
@@ -216,7 +216,7 @@
 
   returns: a Point2D that is the end point of
            the CubicCurve2D. - `java.awt.geom.Point2D`"
-  ([this]
+  ([^java.awt.geom.CubicCurve2D$Float this]
     (-> this (.getP2))))
 
 (defn get-ctrl-x-2
@@ -225,7 +225,7 @@
 
   returns: the X coordinate of the second control point of the
            CubicCurve2D. - `double`"
-  ([this]
+  ([^java.awt.geom.CubicCurve2D$Float this]
     (-> this (.getCtrlX2))))
 
 (defn set-curve
@@ -240,7 +240,7 @@
   ctrly-2 - the Y coordinate used to set the second control point of this CubicCurve2D - `double`
   x-2 - the X coordinate used to set the end point of this CubicCurve2D - `double`
   y-2 - the Y coordinate used to set the end point of this CubicCurve2D - `double`"
-  ([this x-1 y-1 ctrlx-1 ctrly-1 ctrlx-2 ctrly-2 x-2 y-2]
+  ([^java.awt.geom.CubicCurve2D$Float this ^Double x-1 ^Double y-1 ^Double ctrlx-1 ^Double ctrly-1 ^Double ctrlx-2 ^Double ctrly-2 ^Double x-2 ^Double y-2]
     (-> this (.setCurve x-1 y-1 ctrlx-1 ctrly-1 ctrlx-2 ctrly-2 x-2 y-2))))
 
 (defn get-ctrl-p-2
@@ -248,7 +248,7 @@
 
   returns: a Point2D that is the second control point of
            the CubicCurve2D. - `java.awt.geom.Point2D`"
-  ([this]
+  ([^java.awt.geom.CubicCurve2D$Float this]
     (-> this (.getCtrlP2))))
 
 (defn get-ctrl-p-1
@@ -256,6 +256,6 @@
 
   returns: a Point2D that is the first control point of
            the CubicCurve2D. - `java.awt.geom.Point2D`"
-  ([this]
+  ([^java.awt.geom.CubicCurve2D$Float this]
     (-> this (.getCtrlP1))))
 

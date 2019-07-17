@@ -26,13 +26,13 @@
   f - `java.io.File`
 
   returns: `boolean`"
-  ([this f]
+  ([^javax.swing.filechooser.FileFilter this ^java.io.File f]
     (-> this (.accept f))))
 
 (defn get-description
   "The description of this filter. For example: `JPG and GIF Images`
 
   returns: `java.lang.String`"
-  ([this]
+  ([^javax.swing.filechooser.FileFilter this]
     (-> this (.getDescription))))
 

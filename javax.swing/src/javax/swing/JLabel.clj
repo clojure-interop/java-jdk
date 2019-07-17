@@ -63,11 +63,11 @@
   text - The text to be displayed by the label. - `java.lang.String`
   icon - The image to be displayed by the label. - `javax.swing.Icon`
   horizontal-alignment - One of the following constants defined in SwingConstants: LEFT, CENTER, RIGHT, LEADING or TRAILING. - `int`"
-  ([text icon horizontal-alignment]
+  ([^java.lang.String text ^javax.swing.Icon icon ^Integer horizontal-alignment]
     (new JLabel text icon horizontal-alignment))
-  ([text horizontal-alignment]
+  ([^java.lang.String text ^Integer horizontal-alignment]
     (new JLabel text horizontal-alignment))
-  ([text]
+  ([^java.lang.String text]
     (new JLabel text))
   ([]
     (new JLabel )))
@@ -78,7 +78,7 @@
    The default value of this property is CENTER.
 
   alignment - One of the following constants defined in SwingConstants: TOP, CENTER (the default), or BOTTOM. - `int`"
-  ([this alignment]
+  ([^javax.swing.JLabel this ^Integer alignment]
     (-> this (.setVerticalAlignment alignment))))
 
 (defn get-vertical-text-position
@@ -90,7 +90,7 @@
              TOP,
              CENTER, or
              BOTTOM. - `int`"
-  ([this]
+  ([^javax.swing.JLabel this]
     (-> this (.getVerticalTextPosition))))
 
 (defn get-displayed-mnemonic
@@ -101,7 +101,7 @@
    labelFor property when the mnemonic is activated.
 
   returns: int value for the mnemonic key - `int`"
-  ([this]
+  ([^javax.swing.JLabel this]
     (-> this (.getDisplayedMnemonic))))
 
 (defn set-icon
@@ -113,7 +113,7 @@
    This is a JavaBeans bound property.
 
   icon - `javax.swing.Icon`"
-  ([this icon]
+  ([^javax.swing.JLabel this ^javax.swing.Icon icon]
     (-> this (.setIcon icon))))
 
 (defn set-text
@@ -125,7 +125,7 @@
    This is a JavaBeans bound property.
 
   text - `java.lang.String`"
-  ([this text]
+  ([^javax.swing.JLabel this ^java.lang.String text]
     (-> this (.setText text))))
 
 (defn set-icon-text-gap
@@ -137,7 +137,7 @@
    This is a JavaBeans bound property.
 
   icon-text-gap - `int`"
-  ([this icon-text-gap]
+  ([^javax.swing.JLabel this ^Integer icon-text-gap]
     (-> this (.setIconTextGap icon-text-gap))))
 
 (defn set-horizontal-text-position
@@ -147,21 +147,21 @@
   text-position - One of the following constants defined in SwingConstants: LEFT, CENTER, RIGHT, LEADING, or TRAILING (the default). - `int`
 
   throws: java.lang.IllegalArgumentException"
-  ([this text-position]
+  ([^javax.swing.JLabel this ^Integer text-position]
     (-> this (.setHorizontalTextPosition text-position))))
 
 (defn get-text
   "Returns the text string that the label displays.
 
   returns: a String - `java.lang.String`"
-  ([this]
+  ([^javax.swing.JLabel this]
     (-> this (.getText))))
 
 (defn get-icon
   "Returns the graphic image (glyph, icon) that the label displays.
 
   returns: an Icon - `javax.swing.Icon`"
-  ([this]
+  ([^javax.swing.JLabel this]
     (-> this (.getIcon))))
 
 (defn set-vertical-text-position
@@ -173,7 +173,7 @@
    This is a JavaBeans bound property.
 
   text-position - One of the following constants defined in SwingConstants: TOP, CENTER (the default), or BOTTOM. - `int`"
-  ([this text-position]
+  ([^javax.swing.JLabel this ^Integer text-position]
     (-> this (.setVerticalTextPosition text-position))))
 
 (defn get-horizontal-text-position
@@ -187,7 +187,7 @@
              RIGHT,
              LEADING or
              TRAILING. - `int`"
-  ([this]
+  ([^javax.swing.JLabel this]
     (-> this (.getHorizontalTextPosition))))
 
 (defn get-ui-class-id
@@ -195,7 +195,7 @@
    that renders this component.
 
   returns: String `LabelUI` - `java.lang.String`"
-  ([this]
+  ([^javax.swing.JLabel this]
     (-> this (.getUIClassID))))
 
 (defn get-label-for
@@ -206,7 +206,7 @@
    property is set and the labelFor property is also set, the label
    will call the requestFocus method of the component specified by the
    labelFor property when the mnemonic is activated. - `java.awt.Component`"
-  ([this]
+  ([^javax.swing.JLabel this]
     (-> this (.getLabelFor))))
 
 (defn set-label-for
@@ -217,21 +217,21 @@
    labelFor property when the mnemonic is activated.
 
   c - the Component this label is for, or null if the label is not the label for a component - `java.awt.Component`"
-  ([this c]
+  ([^javax.swing.JLabel this ^java.awt.Component c]
     (-> this (.setLabelFor c))))
 
 (defn set-ui
   "Sets the L&F object that renders this component.
 
   ui - the LabelUI L&F object - `javax.swing.plaf.LabelUI`"
-  ([this ui]
+  ([^javax.swing.JLabel this ^javax.swing.plaf.LabelUI ui]
     (-> this (.setUI ui))))
 
 (defn get-ui
   "Returns the L&F object that renders this component.
 
   returns: LabelUI object - `javax.swing.plaf.LabelUI`"
-  ([this]
+  ([^javax.swing.JLabel this]
     (-> this (.getUI))))
 
 (defn set-displayed-mnemonic-index
@@ -253,14 +253,14 @@
   index - Index into the String to underline - `int`
 
   throws: java.lang.IllegalArgumentException - will be thrown if index is >= length of the text, or < -1"
-  ([this index]
+  ([^javax.swing.JLabel this ^Integer index]
     (-> this (.setDisplayedMnemonicIndex index))))
 
 (defn get-accessible-context
   "Get the AccessibleContext of this object
 
   returns: the AccessibleContext of this object - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^javax.swing.JLabel this]
     (-> this (.getAccessibleContext))))
 
 (defn get-vertical-alignment
@@ -271,7 +271,7 @@
              TOP,
              CENTER, or
              BOTTOM. - `int`"
-  ([this]
+  ([^javax.swing.JLabel this]
     (-> this (.getVerticalAlignment))))
 
 (defn image-update
@@ -287,7 +287,7 @@
 
   returns: false if the infoflags indicate that the
               image is completely loaded; true otherwise. - `boolean`"
-  ([this img infoflags x y w h]
+  ([^javax.swing.JLabel this ^java.awt.Image img ^Integer infoflags ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.imageUpdate img infoflags x y w h))))
 
 (defn get-horizontal-alignment
@@ -300,7 +300,7 @@
              RIGHT,
              LEADING or
              TRAILING. - `int`"
-  ([this]
+  ([^javax.swing.JLabel this]
     (-> this (.getHorizontalAlignment))))
 
 (defn get-icon-text-gap
@@ -309,7 +309,7 @@
 
   returns: an int equal to the number of pixels between the text
            and the icon. - `int`"
-  ([this]
+  ([^javax.swing.JLabel this]
     (-> this (.getIconTextGap))))
 
 (defn set-displayed-mnemonic
@@ -320,7 +320,7 @@
    labelFor property when the mnemonic is activated.
 
   key - `int`"
-  ([this key]
+  ([^javax.swing.JLabel this ^Integer key]
     (-> this (.setDisplayedMnemonic key))))
 
 (defn set-horizontal-alignment
@@ -329,7 +329,7 @@
    This is a JavaBeans bound property.
 
   alignment - One of the following constants defined in SwingConstants: LEFT, CENTER (the default for image-only labels), RIGHT, LEADING (the default for text-only labels) or TRAILING. - `int`"
-  ([this alignment]
+  ([^javax.swing.JLabel this ^Integer alignment]
     (-> this (.setHorizontalAlignment alignment))))
 
 (defn get-displayed-mnemonic-index
@@ -337,7 +337,7 @@
    provide decoration for as representing the mnemonic character.
 
   returns: index representing mnemonic character - `int`"
-  ([this]
+  ([^javax.swing.JLabel this]
     (-> this (.getDisplayedMnemonicIndex))))
 
 (defn set-disabled-icon
@@ -347,7 +347,7 @@
    The default value of this property is null.
 
   disabled-icon - the Icon to display when the component is disabled - `javax.swing.Icon`"
-  ([this disabled-icon]
+  ([^javax.swing.JLabel this ^javax.swing.Icon disabled-icon]
     (-> this (.setDisabledIcon disabled-icon))))
 
 (defn get-disabled-icon
@@ -359,11 +359,11 @@
    case they will ignore this.
 
   returns: the disabledIcon property - `javax.swing.Icon`"
-  ([this]
+  ([^javax.swing.JLabel this]
     (-> this (.getDisabledIcon))))
 
 (defn update-ui
   "Resets the UI property to a value from the current look and feel."
-  ([this]
+  ([^javax.swing.JLabel this]
     (-> this (.updateUI))))
 

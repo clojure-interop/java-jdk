@@ -25,7 +25,7 @@
   returns: an AudioFileFormat object describing the audio file format - `javax.sound.sampled.AudioFileFormat`
 
   throws: javax.sound.sampled.UnsupportedAudioFileException - if the stream does not point to valid audio file data recognized by the system"
-  ([this stream]
+  ([^javax.sound.sampled.spi.AudioFileReader this ^java.io.InputStream stream]
     (-> this (.getAudioFileFormat stream))))
 
 (defn get-audio-input-stream
@@ -44,6 +44,6 @@
    in the input stream. - `javax.sound.sampled.AudioInputStream`
 
   throws: javax.sound.sampled.UnsupportedAudioFileException - if the stream does not point to valid audio file data recognized by the system"
-  ([this stream]
+  ([^javax.sound.sampled.spi.AudioFileReader this ^java.io.InputStream stream]
     (-> this (.getAudioInputStream stream))))
 

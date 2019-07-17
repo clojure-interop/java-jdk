@@ -81,9 +81,9 @@
   vgap - the vertical gap - `int`
 
   throws: java.lang.IllegalArgumentException - if the value of both rows and cols is set to zero"
-  ([rows cols hgap vgap]
+  ([^Integer rows ^Integer cols ^Integer hgap ^Integer vgap]
     (new GridLayout rows cols hgap vgap))
-  ([rows cols]
+  ([^Integer rows ^Integer cols]
     (new GridLayout rows cols))
   ([]
     (new GridLayout )))
@@ -92,7 +92,7 @@
   "Gets the vertical gap between components.
 
   returns: the vertical gap between components - `int`"
-  ([this]
+  ([^java.awt.GridLayout this]
     (-> this (.getVgap))))
 
 (defn set-columns
@@ -106,28 +106,28 @@
   cols - the number of columns in this layout - `int`
 
   throws: java.lang.IllegalArgumentException - if the value of both rows and cols is set to zero"
-  ([this cols]
+  ([^java.awt.GridLayout this ^Integer cols]
     (-> this (.setColumns cols))))
 
 (defn set-hgap
   "Sets the horizontal gap between components to the specified value.
 
   hgap - the horizontal gap between components - `int`"
-  ([this hgap]
+  ([^java.awt.GridLayout this ^Integer hgap]
     (-> this (.setHgap hgap))))
 
 (defn get-columns
   "Gets the number of columns in this layout.
 
   returns: the number of columns in this layout - `int`"
-  ([this]
+  ([^java.awt.GridLayout this]
     (-> this (.getColumns))))
 
 (defn set-vgap
   "Sets the vertical gap between components to the specified value.
 
   vgap - the vertical gap between components - `int`"
-  ([this vgap]
+  ([^java.awt.GridLayout this ^Integer vgap]
     (-> this (.setVgap vgap))))
 
 (defn preferred-layout-size
@@ -148,21 +148,21 @@
 
   returns: the preferred dimensions to lay out the
                         subcomponents of the specified container - `java.awt.Dimension`"
-  ([this parent]
+  ([^java.awt.GridLayout this ^java.awt.Container parent]
     (-> this (.preferredLayoutSize parent))))
 
 (defn to-string
   "Returns the string representation of this grid layout's values.
 
   returns: a string representation of this grid layout - `java.lang.String`"
-  ([this]
+  ([^java.awt.GridLayout this]
     (-> this (.toString))))
 
 (defn get-hgap
   "Gets the horizontal gap between components.
 
   returns: the horizontal gap between components - `int`"
-  ([this]
+  ([^java.awt.GridLayout this]
     (-> this (.getHgap))))
 
 (defn minimum-layout-size
@@ -183,14 +183,14 @@
 
   returns: the minimum dimensions needed to lay out the
                         subcomponents of the specified container - `java.awt.Dimension`"
-  ([this parent]
+  ([^java.awt.GridLayout this ^java.awt.Container parent]
     (-> this (.minimumLayoutSize parent))))
 
 (defn get-rows
   "Gets the number of rows in this layout.
 
   returns: the number of rows in this layout - `int`"
-  ([this]
+  ([^java.awt.GridLayout this]
     (-> this (.getRows))))
 
 (defn add-layout-component
@@ -198,7 +198,7 @@
 
   name - the name of the component - `java.lang.String`
   comp - the component to be added - `java.awt.Component`"
-  ([this name comp]
+  ([^java.awt.GridLayout this ^java.lang.String name ^java.awt.Component comp]
     (-> this (.addLayoutComponent name comp))))
 
 (defn set-rows
@@ -207,14 +207,14 @@
   rows - the number of rows in this layout - `int`
 
   throws: java.lang.IllegalArgumentException - if the value of both rows and cols is set to zero"
-  ([this rows]
+  ([^java.awt.GridLayout this ^Integer rows]
     (-> this (.setRows rows))))
 
 (defn remove-layout-component
   "Removes the specified component from the layout.
 
   comp - the component to be removed - `java.awt.Component`"
-  ([this comp]
+  ([^java.awt.GridLayout this ^java.awt.Component comp]
     (-> this (.removeLayoutComponent comp))))
 
 (defn layout-container
@@ -232,6 +232,6 @@
    gap. All components in a grid layout are given the same size.
 
   parent - the container in which to do the layout - `java.awt.Container`"
-  ([this parent]
+  ([^java.awt.GridLayout this ^java.awt.Container parent]
     (-> this (.layoutContainer parent))))
 

@@ -72,7 +72,7 @@
   Creates a new FormView object.
 
   elem - the element to decorate - `javax.swing.text.Element`"
-  ([elem]
+  ([^javax.swing.text.Element elem]
     (new FormView elem)))
 
 (def *-submit
@@ -108,7 +108,7 @@
              The parent may choose to resize or break the view. - `float`
 
   throws: java.lang.IllegalArgumentException - for an invalid axis"
-  ([this axis]
+  ([^javax.swing.text.html.FormView this ^Integer axis]
     (-> this (.getMaximumSpan axis))))
 
 (defn action-performed
@@ -124,6 +124,6 @@
    to the next component in the form.
 
   evt - the ActionEvent. - `java.awt.event.ActionEvent`"
-  ([this evt]
+  ([^javax.swing.text.html.FormView this ^java.awt.event.ActionEvent evt]
     (-> this (.actionPerformed evt))))
 

@@ -16,7 +16,7 @@
   processors - processors (for annotation processing) - `javax.annotation.processing.Processor>`
 
   throws: java.lang.IllegalStateException - if the task has started"
-  ([this processors]
+  ([^. this ^javax.annotation.processing.Processor> processors]
     (-> this (.setProcessors processors))))
 
 (defn set-locale
@@ -26,7 +26,7 @@
   locale - the locale to apply; null means apply no locale - `java.util.Locale`
 
   throws: java.lang.IllegalStateException - if the task has started"
-  ([this locale]
+  ([^. this ^java.util.Locale locale]
     (-> this (.setLocale locale))))
 
 (defn call
@@ -38,6 +38,6 @@
    false otherwise - `java.lang.Boolean`
 
   throws: java.lang.RuntimeException - if an unrecoverable error occurred in a user-supplied component. The cause will be the error in user code."
-  ([this]
+  ([^. this]
     (-> this (.call))))
 

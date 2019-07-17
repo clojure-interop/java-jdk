@@ -1715,11 +1715,11 @@
   l - The java.util.locale to apply during formatting. If l is null then no localization is applied. - `java.util.Locale`
 
   throws: java.io.FileNotFoundException - If the given file name does not denote an existing, writable regular file and a new regular file of that name cannot be created, or if some other error occurs while opening or creating the file"
-  ([file-name csn l]
+  ([^java.lang.String file-name ^java.lang.String csn ^java.util.Locale l]
     (new Formatter file-name csn l))
-  ([a l]
+  ([^java.lang.Appendable a ^java.util.Locale l]
     (new Formatter a l))
-  ([a]
+  ([^java.lang.Appendable a]
     (new Formatter a))
   ([]
     (new Formatter )))
@@ -1734,7 +1734,7 @@
             locale - `java.util.Locale`
 
   throws: java.util.FormatterClosedException - If this formatter has been closed by invoking its close() method"
-  ([this]
+  ([^java.util.Formatter this]
     (-> this (.locale))))
 
 (defn out
@@ -1743,7 +1743,7 @@
   returns: The destination for the output - `java.lang.Appendable`
 
   throws: java.util.FormatterClosedException - If this formatter has been closed by invoking its close() method"
-  ([this]
+  ([^java.util.Formatter this]
     (-> this (.out))))
 
 (defn to-string
@@ -1774,7 +1774,7 @@
             for the output - `java.lang.String`
 
   throws: java.util.FormatterClosedException - If this formatter has been closed by invoking its close() method"
-  ([this]
+  ([^java.util.Formatter this]
     (-> this (.toString))))
 
 (defn flush
@@ -1784,7 +1784,7 @@
    to the underlying stream.
 
   throws: java.util.FormatterClosedException - If this formatter has been closed by invoking its close() method"
-  ([this]
+  ([^java.util.Formatter this]
     (-> this (.flush))))
 
 (defn close
@@ -1796,7 +1796,7 @@
 
     Attempting to invoke any methods except ioException() in
    this formatter after it has been closed will result in a FormatterClosedException."
-  ([this]
+  ([^java.util.Formatter this]
     (-> this (.close))))
 
 (defn io-exception
@@ -1807,7 +1807,7 @@
 
   returns: The last exception thrown by the Appendable or null if
             no such exception exists. - `java.io.IOException`"
-  ([this]
+  ([^java.util.Formatter this]
     (-> this (.ioException))))
 
 (defn format
@@ -1821,8 +1821,8 @@
   returns: This formatter - `java.util.Formatter`
 
   throws: java.util.IllegalFormatException - If a format string contains an illegal syntax, a format specifier that is incompatible with the given arguments, insufficient arguments given the format string, or other illegal conditions. For specification of all possible formatting errors, see the Details section of the formatter class specification."
-  ([this l format args]
+  ([^java.util.Formatter this ^java.util.Locale l ^java.lang.String format ^java.lang.Object args]
     (-> this (.format l format args)))
-  ([this format args]
+  ([^java.util.Formatter this ^java.lang.String format ^java.lang.Object args]
     (-> this (.format format args))))
 

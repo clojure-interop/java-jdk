@@ -15,6 +15,6 @@
    that need to occur when an item is selected (or deselected).
 
   e - `java.awt.event.ItemEvent`"
-  ([this e]
+  ([^. this ^java.awt.event.ItemEvent e]
     (-> this (.itemStateChanged e))))
 

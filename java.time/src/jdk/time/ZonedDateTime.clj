@@ -72,7 +72,7 @@
   zone - the zone ID to use, not null - `java.time.ZoneId`
 
   returns: the current date-time using the system clock, not null - `java.time.ZonedDateTime`"
-  ([zone]
+  ([^java.time.ZoneId zone]
     (ZonedDateTime/now zone))
   ([]
     (ZonedDateTime/now )))
@@ -117,11 +117,11 @@
   returns: the offset date-time, not null - `java.time.ZonedDateTime`
 
   throws: java.time.DateTimeException - if the value of any field is out of range, or if the day-of-month is invalid for the month-year"
-  ([year month day-of-month hour minute second nano-of-second zone]
+  ([^Integer year ^Integer month ^Integer day-of-month ^Integer hour ^Integer minute ^Integer second ^Integer nano-of-second ^java.time.ZoneId zone]
     (ZonedDateTime/of year month day-of-month hour minute second nano-of-second zone))
-  ([date time zone]
+  ([^java.time.LocalDate date ^java.time.LocalTime time ^java.time.ZoneId zone]
     (ZonedDateTime/of date time zone))
-  ([local-date-time zone]
+  ([^java.time.LocalDateTime local-date-time ^java.time.ZoneId zone]
     (ZonedDateTime/of local-date-time zone)))
 
 (defn *of-local
@@ -147,7 +147,7 @@
   preferred-offset - the zone offset, null if no preference - `java.time.ZoneOffset`
 
   returns: the zoned date-time, not null - `java.time.ZonedDateTime`"
-  ([local-date-time zone preferred-offset]
+  ([^java.time.LocalDateTime local-date-time ^java.time.ZoneId zone ^java.time.ZoneOffset preferred-offset]
     (ZonedDateTime/ofLocal local-date-time zone preferred-offset)))
 
 (defn *of-instant
@@ -170,9 +170,9 @@
   zone - the time-zone, not null - `java.time.ZoneId`
 
   returns: the zoned date-time, not null - `java.time.ZonedDateTime`"
-  ([local-date-time offset zone]
+  ([^java.time.LocalDateTime local-date-time ^java.time.ZoneOffset offset ^java.time.ZoneId zone]
     (ZonedDateTime/ofInstant local-date-time offset zone))
-  ([instant zone]
+  ([^java.time.Instant instant ^java.time.ZoneId zone]
     (ZonedDateTime/ofInstant instant zone)))
 
 (defn *of-strict
@@ -188,7 +188,7 @@
   zone - the time-zone, not null - `java.time.ZoneId`
 
   returns: the zoned date-time, not null - `java.time.ZonedDateTime`"
-  ([local-date-time offset zone]
+  ([^java.time.LocalDateTime local-date-time ^java.time.ZoneOffset offset ^java.time.ZoneId zone]
     (ZonedDateTime/ofStrict local-date-time offset zone)))
 
 (defn *from
@@ -214,7 +214,7 @@
   returns: the zoned date-time, not null - `java.time.ZonedDateTime`
 
   throws: java.time.DateTimeException - if unable to convert to an ZonedDateTime"
-  ([temporal]
+  ([^java.time.temporal.TemporalAccessor temporal]
     (ZonedDateTime/from temporal)))
 
 (defn *parse
@@ -228,9 +228,9 @@
   returns: the parsed zoned date-time, not null - `java.time.ZonedDateTime`
 
   throws: java.time.format.DateTimeParseException - if the text cannot be parsed"
-  ([text formatter]
+  ([^java.lang.CharSequence text ^java.time.format.DateTimeFormatter formatter]
     (ZonedDateTime/parse text formatter))
-  ([text]
+  ([^java.lang.CharSequence text]
     (ZonedDateTime/parse text)))
 
 (defn minus-minutes
@@ -248,7 +248,7 @@
   returns: a ZonedDateTime based on this date-time with the minutes subtracted, not null - `java.time.ZonedDateTime`
 
   throws: java.time.DateTimeException - if the result exceeds the supported date range"
-  ([this minutes]
+  ([^java.time.ZonedDateTime this ^Long minutes]
     (-> this (.minusMinutes minutes))))
 
 (defn truncated-to
@@ -280,7 +280,7 @@
   returns: a ZonedDateTime based on this date-time with the time truncated, not null - `java.time.ZonedDateTime`
 
   throws: java.time.DateTimeException - if unable to truncate"
-  ([this unit]
+  ([^java.time.ZonedDateTime this ^java.time.temporal.TemporalUnit unit]
     (-> this (.truncatedTo unit))))
 
 (defn minus-weeks
@@ -302,7 +302,7 @@
   returns: a ZonedDateTime based on this date-time with the weeks subtracted, not null - `java.time.ZonedDateTime`
 
   throws: java.time.DateTimeException - if the result exceeds the supported date range"
-  ([this weeks]
+  ([^java.time.ZonedDateTime this ^Long weeks]
     (-> this (.minusWeeks weeks))))
 
 (defn plus-weeks
@@ -324,7 +324,7 @@
   returns: a ZonedDateTime based on this date-time with the weeks added, not null - `java.time.ZonedDateTime`
 
   throws: java.time.DateTimeException - if the result exceeds the supported date range"
-  ([this weeks]
+  ([^java.time.ZonedDateTime this ^Long weeks]
     (-> this (.plusWeeks weeks))))
 
 (defn range
@@ -350,7 +350,7 @@
   returns: the range of valid values for the field, not null - `java.time.temporal.ValueRange`
 
   throws: java.time.DateTimeException - if the range for the field cannot be obtained"
-  ([this field]
+  ([^java.time.ZonedDateTime this ^java.time.temporal.TemporalField field]
     (-> this (.range field))))
 
 (defn with-earlier-offset-at-overlap
@@ -368,14 +368,14 @@
    This instance is immutable and unaffected by this method call.
 
   returns: a ZonedDateTime based on this date-time with the earlier offset, not null - `java.time.ZonedDateTime`"
-  ([this]
+  ([^java.time.ZonedDateTime this]
     (-> this (.withEarlierOffsetAtOverlap))))
 
 (defn get-hour
   "Gets the hour-of-day field.
 
   returns: the hour-of-day, from 0 to 23 - `int`"
-  ([this]
+  ([^java.time.ZonedDateTime this]
     (-> this (.getHour))))
 
 (defn minus-hours
@@ -403,7 +403,7 @@
   returns: a ZonedDateTime based on this date-time with the hours subtracted, not null - `java.time.ZonedDateTime`
 
   throws: java.time.DateTimeException - if the result exceeds the supported date range"
-  ([this hours]
+  ([^java.time.ZonedDateTime this ^Long hours]
     (-> this (.minusHours hours))))
 
 (defn with-month
@@ -425,14 +425,14 @@
   returns: a ZonedDateTime based on this date-time with the requested month, not null - `java.time.ZonedDateTime`
 
   throws: java.time.DateTimeException - if the month-of-year value is invalid"
-  ([this month]
+  ([^java.time.ZonedDateTime this ^Integer month]
     (-> this (.withMonth month))))
 
 (defn get-nano
   "Gets the nano-of-second field.
 
   returns: the nano-of-second, from 0 to 999,999,999 - `int`"
-  ([this]
+  ([^java.time.ZonedDateTime this]
     (-> this (.getNano))))
 
 (defn get-year
@@ -444,7 +444,7 @@
    To obtain the year-of-era, use get(YEAR_OF_ERA).
 
   returns: the year, from MIN_YEAR to MAX_YEAR - `int`"
-  ([this]
+  ([^java.time.ZonedDateTime this]
     (-> this (.getYear))))
 
 (defn minus-seconds
@@ -462,14 +462,14 @@
   returns: a ZonedDateTime based on this date-time with the seconds subtracted, not null - `java.time.ZonedDateTime`
 
   throws: java.time.DateTimeException - if the result exceeds the supported date range"
-  ([this seconds]
+  ([^java.time.ZonedDateTime this ^Long seconds]
     (-> this (.minusSeconds seconds))))
 
 (defn get-second
   "Gets the second-of-minute field.
 
   returns: the second-of-minute, from 0 to 59 - `int`"
-  ([this]
+  ([^java.time.ZonedDateTime this]
     (-> this (.getSecond))))
 
 (defn plus-nanos
@@ -487,7 +487,7 @@
   returns: a ZonedDateTime based on this date-time with the nanoseconds added, not null - `java.time.ZonedDateTime`
 
   throws: java.time.DateTimeException - if the result exceeds the supported date range"
-  ([this nanos]
+  ([^java.time.ZonedDateTime this ^Long nanos]
     (-> this (.plusNanos nanos))))
 
 (defn get-day-of-year
@@ -496,7 +496,7 @@
    This method returns the primitive int value for the day-of-year.
 
   returns: the day-of-year, from 1 to 365, or 366 in a leap year - `int`"
-  ([this]
+  ([^java.time.ZonedDateTime this]
     (-> this (.getDayOfYear))))
 
 (defn plus
@@ -535,9 +535,9 @@
   returns: a ZonedDateTime based on this date-time with the specified amount added, not null - `java.time.ZonedDateTime`
 
   throws: java.time.DateTimeException - if the addition cannot be made"
-  ([this amount-to-add unit]
+  ([^java.time.ZonedDateTime this ^Long amount-to-add ^java.time.temporal.TemporalUnit unit]
     (-> this (.plus amount-to-add unit)))
-  ([this amount-to-add]
+  ([^java.time.ZonedDateTime this ^java.time.temporal.TemporalAmount amount-to-add]
     (-> this (.plus amount-to-add))))
 
 (defn with-hour
@@ -559,7 +559,7 @@
   returns: a ZonedDateTime based on this date-time with the requested hour, not null - `java.time.ZonedDateTime`
 
   throws: java.time.DateTimeException - if the hour value is invalid"
-  ([this hour]
+  ([^java.time.ZonedDateTime this ^Integer hour]
     (-> this (.withHour hour))))
 
 (defn with-minute
@@ -581,7 +581,7 @@
   returns: a ZonedDateTime based on this date-time with the requested minute, not null - `java.time.ZonedDateTime`
 
   throws: java.time.DateTimeException - if the minute value is invalid"
-  ([this minute]
+  ([^java.time.ZonedDateTime this ^Integer minute]
     (-> this (.withMinute minute))))
 
 (defn plus-minutes
@@ -599,7 +599,7 @@
   returns: a ZonedDateTime based on this date-time with the minutes added, not null - `java.time.ZonedDateTime`
 
   throws: java.time.DateTimeException - if the result exceeds the supported date range"
-  ([this minutes]
+  ([^java.time.ZonedDateTime this ^Long minutes]
     (-> this (.plusMinutes minutes))))
 
 (defn query
@@ -619,7 +619,7 @@
   returns: the query result, null may be returned (defined by the query) - `<R> R`
 
   throws: java.time.DateTimeException - if unable to query (defined by the query)"
-  ([this query]
+  ([^java.time.ZonedDateTime this ^java.time.temporal.TemporalQuery query]
     (-> this (.query query))))
 
 (defn get-day-of-week
@@ -634,7 +634,7 @@
    This includes textual names of the values.
 
   returns: the day-of-week, not null - `java.time.DayOfWeek`"
-  ([this]
+  ([^java.time.ZonedDateTime this]
     (-> this (.getDayOfWeek))))
 
 (defn to-string
@@ -646,7 +646,7 @@
    The output is compatible with ISO-8601 if the offset and ID are the same.
 
   returns: a string representation of this date-time, not null - `java.lang.String`"
-  ([this]
+  ([^java.time.ZonedDateTime this]
     (-> this (.toString))))
 
 (defn plus-months
@@ -668,7 +668,7 @@
   returns: a ZonedDateTime based on this date-time with the months added, not null - `java.time.ZonedDateTime`
 
   throws: java.time.DateTimeException - if the result exceeds the supported date range"
-  ([this months]
+  ([^java.time.ZonedDateTime this ^Long months]
     (-> this (.plusMonths months))))
 
 (defn minus-months
@@ -690,7 +690,7 @@
   returns: a ZonedDateTime based on this date-time with the months subtracted, not null - `java.time.ZonedDateTime`
 
   throws: java.time.DateTimeException - if the result exceeds the supported date range"
-  ([this months]
+  ([^java.time.ZonedDateTime this ^Long months]
     (-> this (.minusMonths months))))
 
 (defn minus
@@ -725,9 +725,9 @@
   returns: a ZonedDateTime based on this date-time with the specified amount subtracted, not null - `java.time.ZonedDateTime`
 
   throws: java.time.DateTimeException - if the subtraction cannot be made"
-  ([this amount-to-subtract unit]
+  ([^java.time.ZonedDateTime this ^Long amount-to-subtract ^java.time.temporal.TemporalUnit unit]
     (-> this (.minus amount-to-subtract unit)))
-  ([this amount-to-subtract]
+  ([^java.time.ZonedDateTime this ^java.time.temporal.TemporalAmount amount-to-subtract]
     (-> this (.minus amount-to-subtract))))
 
 (defn with-fixed-offset-zone
@@ -746,7 +746,7 @@
    This is equivalent to ZonedDateTime.of(zdt.toLocalDateTime(), zdt.getOffset()).
 
   returns: a ZonedDateTime with the zone ID set to the offset, not null - `java.time.ZonedDateTime`"
-  ([this]
+  ([^java.time.ZonedDateTime this]
     (-> this (.withFixedOffsetZone))))
 
 (defn plus-hours
@@ -774,7 +774,7 @@
   returns: a ZonedDateTime based on this date-time with the hours added, not null - `java.time.ZonedDateTime`
 
   throws: java.time.DateTimeException - if the result exceeds the supported date range"
-  ([this hours]
+  ([^java.time.ZonedDateTime this ^Long hours]
     (-> this (.plusHours hours))))
 
 (defn with-zone-same-local
@@ -794,7 +794,7 @@
   zone - the time-zone to change to, not null - `java.time.ZoneId`
 
   returns: a ZonedDateTime based on this date-time with the requested zone, not null - `java.time.ZonedDateTime`"
-  ([this zone]
+  ([^java.time.ZonedDateTime this ^java.time.ZoneId zone]
     (-> this (.withZoneSameLocal zone))))
 
 (defn with-zone-same-instant
@@ -815,7 +815,7 @@
   returns: a ZonedDateTime based on this date-time with the requested zone, not null - `java.time.ZonedDateTime`
 
   throws: java.time.DateTimeException - if the result exceeds the supported date range"
-  ([this zone]
+  ([^java.time.ZonedDateTime this ^java.time.ZoneId zone]
     (-> this (.withZoneSameInstant zone))))
 
 (defn plus-days
@@ -837,7 +837,7 @@
   returns: a ZonedDateTime based on this date-time with the days added, not null - `java.time.ZonedDateTime`
 
   throws: java.time.DateTimeException - if the result exceeds the supported date range"
-  ([this days]
+  ([^java.time.ZonedDateTime this ^Long days]
     (-> this (.plusDays days))))
 
 (defn to-local-time
@@ -847,7 +847,7 @@
    nanosecond as this date-time.
 
   returns: the time part of this date-time, not null - `java.time.LocalTime`"
-  ([this]
+  ([^java.time.ZonedDateTime this]
     (-> this (.toLocalTime))))
 
 (defn get-long
@@ -872,7 +872,7 @@
   returns: the value for the field - `long`
 
   throws: java.time.DateTimeException - if a value for the field cannot be obtained"
-  ([this field]
+  ([^java.time.ZonedDateTime this ^java.time.temporal.TemporalField field]
     (-> this (.getLong field))))
 
 (defn get-offset
@@ -881,7 +881,7 @@
    This is the offset of the local date-time from UTC/Greenwich.
 
   returns: the zone offset, not null - `java.time.ZoneOffset`"
-  ([this]
+  ([^java.time.ZonedDateTime this]
     (-> this (.getOffset))))
 
 (defn with-year
@@ -903,7 +903,7 @@
   returns: a ZonedDateTime based on this date-time with the requested year, not null - `java.time.ZonedDateTime`
 
   throws: java.time.DateTimeException - if the year value is invalid"
-  ([this year]
+  ([^java.time.ZonedDateTime this ^Integer year]
     (-> this (.withYear year))))
 
 (defn with-nano
@@ -925,7 +925,7 @@
   returns: a ZonedDateTime based on this date-time with the requested nanosecond, not null - `java.time.ZonedDateTime`
 
   throws: java.time.DateTimeException - if the nano value is invalid"
-  ([this nano-of-second]
+  ([^java.time.ZonedDateTime this ^Integer nano-of-second]
     (-> this (.withNano nano-of-second))))
 
 (defn to-offset-date-time
@@ -935,7 +935,7 @@
    The zone ID is ignored.
 
   returns: an offset date-time representing the same local date-time and offset, not null - `java.time.OffsetDateTime`"
-  ([this]
+  ([^java.time.ZonedDateTime this]
     (-> this (.toOffsetDateTime))))
 
 (defn with-later-offset-at-overlap
@@ -953,7 +953,7 @@
    This instance is immutable and unaffected by this method call.
 
   returns: a ZonedDateTime based on this date-time with the later offset, not null - `java.time.ZonedDateTime`"
-  ([this]
+  ([^java.time.ZonedDateTime this]
     (-> this (.withLaterOffsetAtOverlap))))
 
 (defn until
@@ -1020,7 +1020,7 @@
   returns: the amount of time between this date-time and the end date-time - `long`
 
   throws: java.time.DateTimeException - if the amount cannot be calculated, or the end temporal cannot be converted to a ZonedDateTime"
-  ([this end-exclusive unit]
+  ([^java.time.ZonedDateTime this ^java.time.temporal.Temporal end-exclusive ^java.time.temporal.TemporalUnit unit]
     (-> this (.until end-exclusive unit))))
 
 (defn get-zone
@@ -1035,7 +1035,7 @@
    See also withFixedOffsetZone().
 
   returns: the time-zone, not null - `java.time.ZoneId`"
-  ([this]
+  ([^java.time.ZonedDateTime this]
     (-> this (.getZone))))
 
 (defn with-day-of-month
@@ -1057,7 +1057,7 @@
   returns: a ZonedDateTime based on this date-time with the requested day, not null - `java.time.ZonedDateTime`
 
   throws: java.time.DateTimeException - if the day-of-month value is invalid, or if the day-of-month is invalid for the month-year"
-  ([this day-of-month]
+  ([^java.time.ZonedDateTime this ^Integer day-of-month]
     (-> this (.withDayOfMonth day-of-month))))
 
 (defn get-day-of-month
@@ -1066,7 +1066,7 @@
    This method returns the primitive int value for the day-of-month.
 
   returns: the day-of-month, from 1 to 31 - `int`"
-  ([this]
+  ([^java.time.ZonedDateTime this]
     (-> this (.getDayOfMonth))))
 
 (defn minus-nanos
@@ -1084,7 +1084,7 @@
   returns: a ZonedDateTime based on this date-time with the nanoseconds subtracted, not null - `java.time.ZonedDateTime`
 
   throws: java.time.DateTimeException - if the result exceeds the supported date range"
-  ([this nanos]
+  ([^java.time.ZonedDateTime this ^Long nanos]
     (-> this (.minusNanos nanos))))
 
 (defn supported?
@@ -1139,7 +1139,7 @@
   field - the field to check, null returns false - `java.time.temporal.TemporalField`
 
   returns: true if the field is supported on this date-time, false if not - `boolean`"
-  ([this field]
+  ([^java.time.ZonedDateTime this ^java.time.temporal.TemporalField field]
     (-> this (.isSupported field))))
 
 (defn minus-years
@@ -1161,7 +1161,7 @@
   returns: a ZonedDateTime based on this date-time with the years subtracted, not null - `java.time.ZonedDateTime`
 
   throws: java.time.DateTimeException - if the result exceeds the supported date range"
-  ([this years]
+  ([^java.time.ZonedDateTime this ^Long years]
     (-> this (.minusYears years))))
 
 (defn with-second
@@ -1183,7 +1183,7 @@
   returns: a ZonedDateTime based on this date-time with the requested second, not null - `java.time.ZonedDateTime`
 
   throws: java.time.DateTimeException - if the second value is invalid"
-  ([this second]
+  ([^java.time.ZonedDateTime this ^Integer second]
     (-> this (.withSecond second))))
 
 (defn to-local-date
@@ -1193,21 +1193,21 @@
    as this date-time.
 
   returns: the date part of this date-time, not null - `java.time.LocalDate`"
-  ([this]
+  ([^java.time.ZonedDateTime this]
     (-> this (.toLocalDate))))
 
 (defn get-minute
   "Gets the minute-of-hour field.
 
   returns: the minute-of-hour, from 0 to 59 - `int`"
-  ([this]
+  ([^java.time.ZonedDateTime this]
     (-> this (.getMinute))))
 
 (defn hash-code
   "A hash code for this date-time.
 
   returns: a suitable hash code - `int`"
-  ([this]
+  ([^java.time.ZonedDateTime this]
     (-> this (.hashCode))))
 
 (defn with
@@ -1261,9 +1261,9 @@
   returns: a ZonedDateTime based on this with the specified field set, not null - `java.time.ZonedDateTime`
 
   throws: java.time.DateTimeException - if the field cannot be set"
-  ([this field new-value]
+  ([^java.time.ZonedDateTime this ^java.time.temporal.TemporalField field ^Long new-value]
     (-> this (.with field new-value)))
-  ([this adjuster]
+  ([^java.time.ZonedDateTime this ^java.time.temporal.TemporalAdjuster adjuster]
     (-> this (.with adjuster))))
 
 (defn to-local-date-time
@@ -1273,7 +1273,7 @@
    as this date-time.
 
   returns: the local date-time part of this date-time, not null - `java.time.LocalDateTime`"
-  ([this]
+  ([^java.time.ZonedDateTime this]
     (-> this (.toLocalDateTime))))
 
 (defn get-month-value
@@ -1284,7 +1284,7 @@
    is used by calling getMonth().
 
   returns: the month-of-year, from 1 to 12 - `int`"
-  ([this]
+  ([^java.time.ZonedDateTime this]
     (-> this (.getMonthValue))))
 
 (defn with-day-of-year
@@ -1306,7 +1306,7 @@
   returns: a ZonedDateTime based on this date with the requested day, not null - `java.time.ZonedDateTime`
 
   throws: java.time.DateTimeException - if the day-of-year value is invalid, or if the day-of-year is invalid for the year"
-  ([this day-of-year]
+  ([^java.time.ZonedDateTime this ^Integer day-of-year]
     (-> this (.withDayOfYear day-of-year))))
 
 (defn get-month
@@ -1318,7 +1318,7 @@
    provides the int value.
 
   returns: the month-of-year, not null - `java.time.Month`"
-  ([this]
+  ([^java.time.ZonedDateTime this]
     (-> this (.getMonth))))
 
 (defn plus-seconds
@@ -1336,7 +1336,7 @@
   returns: a ZonedDateTime based on this date-time with the seconds added, not null - `java.time.ZonedDateTime`
 
   throws: java.time.DateTimeException - if the result exceeds the supported date range"
-  ([this seconds]
+  ([^java.time.ZonedDateTime this ^Long seconds]
     (-> this (.plusSeconds seconds))))
 
 (defn get
@@ -1364,7 +1364,7 @@
   returns: the value for the field - `int`
 
   throws: java.time.DateTimeException - if a value for the field cannot be obtained or the value is outside the range of valid values for the field"
-  ([this field]
+  ([^java.time.ZonedDateTime this ^java.time.temporal.TemporalField field]
     (-> this (.get field))))
 
 (defn equals
@@ -1376,7 +1376,7 @@
   obj - the object to check, null returns false - `java.lang.Object`
 
   returns: true if this is equal to the other date-time - `boolean`"
-  ([this obj]
+  ([^java.time.ZonedDateTime this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn format
@@ -1389,7 +1389,7 @@
   returns: the formatted date-time string, not null - `java.lang.String`
 
   throws: java.time.DateTimeException - if an error occurs during printing"
-  ([this formatter]
+  ([^java.time.ZonedDateTime this ^java.time.format.DateTimeFormatter formatter]
     (-> this (.format formatter))))
 
 (defn plus-years
@@ -1411,7 +1411,7 @@
   returns: a ZonedDateTime based on this date-time with the years added, not null - `java.time.ZonedDateTime`
 
   throws: java.time.DateTimeException - if the result exceeds the supported date range"
-  ([this years]
+  ([^java.time.ZonedDateTime this ^Long years]
     (-> this (.plusYears years))))
 
 (defn minus-days
@@ -1433,6 +1433,6 @@
   returns: a ZonedDateTime based on this date-time with the days subtracted, not null - `java.time.ZonedDateTime`
 
   throws: java.time.DateTimeException - if the result exceeds the supported date range"
-  ([this days]
+  ([^java.time.ZonedDateTime this ^Long days]
     (-> this (.minusDays days))))
 

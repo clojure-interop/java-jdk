@@ -33,11 +33,11 @@
   restart - if true, the object is restarted (reactivated) when either the activator is restarted or the object's activation group is restarted after an unexpected crash; if false, the object is only activated on demand. Specifying restart to be true does not force an initial immediate activation of a newly registered object; initial activation is lazy. - `boolean`
 
   throws: java.lang.IllegalArgumentException - if groupID is null"
-  ([group-id class-name location data restart]
+  ([^java.rmi.activation.ActivationGroupID group-id ^java.lang.String class-name ^java.lang.String location ^java.rmi.MarshalledObject data ^Boolean restart]
     (new ActivationDesc group-id class-name location data restart))
-  ([class-name location data restart]
+  ([^java.lang.String class-name ^java.lang.String location ^java.rmi.MarshalledObject data ^Boolean restart]
     (new ActivationDesc class-name location data restart))
-  ([class-name location data]
+  ([^java.lang.String class-name ^java.lang.String location ^java.rmi.MarshalledObject data]
     (new ActivationDesc class-name location data)))
 
 (defn get-group-id
@@ -47,7 +47,7 @@
    the same groupID in the same virtual machine.
 
   returns: the group identifier - `java.rmi.activation.ActivationGroupID`"
-  ([this]
+  ([^java.rmi.activation.ActivationDesc this]
     (-> this (.getGroupID))))
 
 (defn get-class-name
@@ -55,7 +55,7 @@
    descriptor.
 
   returns: the class name - `java.lang.String`"
-  ([this]
+  ([^java.rmi.activation.ActivationDesc this]
     (-> this (.getClassName))))
 
 (defn get-location
@@ -63,7 +63,7 @@
    this descriptor.
 
   returns: the code location - `java.lang.String`"
-  ([this]
+  ([^java.rmi.activation.ActivationDesc this]
     (-> this (.getLocation))))
 
 (defn get-data
@@ -71,7 +71,7 @@
    data for the object specified by this descriptor.
 
   returns: the object specific `initialization` data - `java.rmi.MarshalledObject<?>`"
-  ([this]
+  ([^java.rmi.activation.ActivationDesc this]
     (-> this (.getData))))
 
 (defn get-restart-mode?
@@ -86,7 +86,7 @@
    method call.  Note that if the restart mode is true, the
    activator does not force an initial immediate activation of
    a newly registered object;  initial activation is lazy. - `boolean`"
-  ([this]
+  ([^java.rmi.activation.ActivationDesc this]
     (-> this (.getRestartMode))))
 
 (defn equals
@@ -95,13 +95,13 @@
   obj - the Object to compare with - `java.lang.Object`
 
   returns: true if these Objects are equal; false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.rmi.activation.ActivationDesc this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Return the same hashCode for similar ActivationDescs.
 
   returns: an integer - `int`"
-  ([this]
+  ([^java.rmi.activation.ActivationDesc this]
     (-> this (.hashCode))))
 

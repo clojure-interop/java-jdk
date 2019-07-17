@@ -25,7 +25,7 @@
   c - the JTextPane component - `javax.swing.JComponent`
 
   returns: the UI - `javax.swing.plaf.ComponentUI`"
-  ([c]
+  ([^javax.swing.JComponent c]
     (BasicEditorPaneUI/createUI c)))
 
 (defn install-ui
@@ -49,7 +49,7 @@
    to represent the model.
 
   c - the editor component - `javax.swing.JComponent`"
-  ([this c]
+  ([^javax.swing.plaf.basic.BasicEditorPaneUI this ^javax.swing.JComponent c]
     (-> this (.installUI c))))
 
 (defn uninstall-ui
@@ -57,7 +57,7 @@
    uninstalls the highlighter, removes views, and nulls out the keymap.
 
   c - the editor component - `javax.swing.JComponent`"
-  ([this c]
+  ([^javax.swing.plaf.basic.BasicEditorPaneUI this ^javax.swing.JComponent c]
     (-> this (.uninstallUI c))))
 
 (defn get-editor-kit
@@ -67,6 +67,6 @@
   tc - the text component for which this UI is installed - `javax.swing.text.JTextComponent`
 
   returns: the editor capabilities - `javax.swing.text.EditorKit`"
-  ([this tc]
+  ([^javax.swing.plaf.basic.BasicEditorPaneUI this ^javax.swing.text.JTextComponent tc]
     (-> this (.getEditorKit tc))))
 

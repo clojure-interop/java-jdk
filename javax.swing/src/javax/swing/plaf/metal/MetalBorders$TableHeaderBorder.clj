@@ -17,7 +17,7 @@
   y - the y position of the painted border - `int`
   w - the width of the painted border - `int`
   h - the height of the painted border - `int`"
-  ([this c g x y w h]
+  ([^javax.swing.plaf.metal.MetalBorders$TableHeaderBorder this ^java.awt.Component c ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintBorder c g x y w h))))
 
 (defn get-border-insets
@@ -27,6 +27,6 @@
   insets - the object to be reinitialized - `java.awt.Insets`
 
   returns: the insets object - `java.awt.Insets`"
-  ([this c insets]
+  ([^javax.swing.plaf.metal.MetalBorders$TableHeaderBorder this ^java.awt.Component c ^java.awt.Insets insets]
     (-> this (.getBorderInsets c insets))))
 

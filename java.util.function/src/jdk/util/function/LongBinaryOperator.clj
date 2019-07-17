@@ -15,6 +15,6 @@
   right - the second operand - `long`
 
   returns: the operator result - `long`"
-  ([this left right]
+  ([^. this ^Long left ^Long right]
     (-> this (.applyAsLong left right))))
 

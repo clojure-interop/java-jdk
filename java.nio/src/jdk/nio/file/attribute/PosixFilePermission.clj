@@ -98,6 +98,6 @@
   returns: the enum constant with the specified name - `java.nio.file.attribute.PosixFilePermission`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([name]
+  ([^java.lang.String name]
     (PosixFilePermission/valueOf name)))
 

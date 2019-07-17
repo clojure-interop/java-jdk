@@ -63,7 +63,7 @@
   forward - the order that certificates are presented to the check method. If true, certificates are presented from target to most-trusted CA (forward); if false, from most-trusted CA to target (reverse). - `boolean`
 
   throws: java.security.cert.CertPathValidatorException - if this PKIXCertPathChecker is unable to check certificates in the specified order; it should never be thrown if the forward flag is false since reverse checking must be supported"
-  ([this forward]
+  ([^java.security.cert.PKIXCertPathChecker this ^Boolean forward]
     (-> this (.init forward))))
 
 (defn forward-checking-supported?
@@ -74,7 +74,7 @@
 
   returns: true if forward checking is supported,
    false otherwise - `boolean`"
-  ([this]
+  ([^java.security.cert.PKIXCertPathChecker this]
     (-> this (.isForwardCheckingSupported))))
 
 (defn get-supported-extensions
@@ -94,7 +94,7 @@
    String format) supported by this
    PKIXCertPathChecker, or null if no
    extensions are supported - `java.util.Set<java.lang.String>`"
-  ([this]
+  ([^java.security.cert.PKIXCertPathChecker this]
     (-> this (.getSupportedExtensions))))
 
 (defn check
@@ -108,9 +108,9 @@
   unresolved-crit-exts - a Collection of OID strings representing the current set of unresolved critical extensions - `java.util.Collection<java.lang.String>`
 
   throws: java.security.cert.CertPathValidatorException - if the specified certificate does not pass the check"
-  ([this cert unresolved-crit-exts]
+  ([^java.security.cert.PKIXCertPathChecker this ^java.security.cert.Certificate cert ^java.util.Collection unresolved-crit-exts]
     (-> this (.check cert unresolved-crit-exts)))
-  ([this cert]
+  ([^java.security.cert.PKIXCertPathChecker this ^java.security.cert.Certificate cert]
     (-> this (.check cert))))
 
 (defn clone
@@ -120,6 +120,6 @@
    override this method, if necessary.
 
   returns: a copy of this PKIXCertPathChecker - `java.lang.Object`"
-  ([this]
+  ([^java.security.cert.PKIXCertPathChecker this]
     (-> this (.clone))))
 

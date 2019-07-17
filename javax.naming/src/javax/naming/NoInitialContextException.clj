@@ -22,7 +22,7 @@
    explanation. All other fields are initialized to null.
 
   explanation - Possibly null additional detail about this exception. - `java.lang.String`"
-  ([explanation]
+  ([^java.lang.String explanation]
     (new NoInitialContextException explanation))
   ([]
     (new NoInitialContextException )))

@@ -18,14 +18,14 @@
   offset - the specified offset >= 0 - `int`
 
   returns: the element index >= 0 - `int`"
-  ([this offset]
+  ([^. this ^Integer offset]
     (-> this (.getElementIndex offset))))
 
 (defn get-document
   "Fetches the document associated with this element.
 
   returns: the document - `javax.swing.text.Document`"
-  ([this]
+  ([^. this]
     (-> this (.getDocument))))
 
 (defn get-end-offset
@@ -42,7 +42,7 @@
 
   returns: the ending offset > getStartOffset() and
        <= getDocument().getLength()  1 - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getEndOffset))))
 
 (defn get-element
@@ -51,7 +51,7 @@
   index - the specified index >= 0 - `int`
 
   returns: the child element - `javax.swing.text.Element`"
-  ([this index]
+  ([^. this ^Integer index]
     (-> this (.getElement index))))
 
 (defn get-element-count
@@ -59,7 +59,7 @@
    If this element is a leaf, a count of zero is returned.
 
   returns: the number of child elements >= 0 - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getElementCount))))
 
 (defn get-name
@@ -68,7 +68,7 @@
    name.
 
   returns: the element name - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getName))))
 
 (defn leaf?
@@ -77,7 +77,7 @@
    has no children, would return false.
 
   returns: true if a leaf element else false - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.isLeaf))))
 
 (defn get-start-offset
@@ -87,7 +87,7 @@
    As a document position, there is an implied forward bias.
 
   returns: the starting offset >= 0 and < getEndOffset(); - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getStartOffset))))
 
 (defn get-parent-element
@@ -95,13 +95,13 @@
    element returns null.
 
   returns: the parent element - `javax.swing.text.Element`"
-  ([this]
+  ([^. this]
     (-> this (.getParentElement))))
 
 (defn get-attributes
   "Fetches the collection of attributes this element contains.
 
   returns: the attributes for the element - `javax.swing.text.AttributeSet`"
-  ([this]
+  ([^. this]
     (-> this (.getAttributes))))
 

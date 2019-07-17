@@ -9,7 +9,7 @@
   "Returns the algorithm URI of this AlgorithmMethod.
 
   returns: the algorithm URI of this AlgorithmMethod - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getAlgorithm))))
 
 (defn get-parameter-spec
@@ -18,6 +18,6 @@
   returns: the algorithm parameters of this AlgorithmMethod.
       Returns null if this AlgorithmMethod does
       not require parameters and they are not specified. - `java.security.spec.AlgorithmParameterSpec`"
-  ([this]
+  ([^. this]
     (-> this (.getParameterSpec))))
 

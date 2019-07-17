@@ -15,7 +15,7 @@
   returns: remote registry stub - `java.lang..rmi.registry.Registry`
 
   throws: java.rmi.RemoteException - if a remote error occurs"
-  ([this host port]
+  ([^. this ^java.lang.String host ^Integer port]
     (-> this (.registryStub host port))))
 
 (defn registry-impl
@@ -28,6 +28,6 @@
   returns: registry stub - `java.lang..rmi.registry.Registry`
 
   throws: java.rmi.RemoteException - if a remote error occurs"
-  ([this port]
+  ([^. this ^Integer port]
     (-> this (.registryImpl port))))
 

@@ -230,9 +230,9 @@
   returns: a suitable Logger - `java.util.logging.Logger`
 
   throws: java.util.MissingResourceException - if the resourceBundleName is non-null and no corresponding resource can be found."
-  ([name resource-bundle-name]
+  ([^java.lang.String name ^java.lang.String resource-bundle-name]
     (Logger/getLogger name resource-bundle-name))
-  ([name]
+  ([^java.lang.String name]
     (Logger/getLogger name)))
 
 (defn *get-anonymous-logger
@@ -259,7 +259,7 @@
   returns: a newly created private Logger - `java.util.logging.Logger`
 
   throws: java.util.MissingResourceException - if the resourceBundleName is non-null and no corresponding resource can be found."
-  ([resource-bundle-name]
+  ([^java.lang.String resource-bundle-name]
     (Logger/getAnonymousLogger resource-bundle-name))
   ([]
     (Logger/getAnonymousLogger )))
@@ -275,9 +275,9 @@
   source-class - name of class that issued the logging request - `java.lang.String`
   source-method - name of method that is being entered - `java.lang.String`
   param-1 - parameter to the method being entered - `java.lang.Object`"
-  ([this source-class source-method param-1]
+  ([^java.util.logging.Logger this ^java.lang.String source-class ^java.lang.String source-method ^java.lang.Object param-1]
     (-> this (.entering source-class source-method param-1)))
-  ([this source-class source-method]
+  ([^java.util.logging.Logger this ^java.lang.String source-class ^java.lang.String source-method]
     (-> this (.entering source-class source-method))))
 
 (defn severe
@@ -288,7 +288,7 @@
    registered output Handler objects.
 
   msg - The string message (or a key in the message catalog) - `java.lang.String`"
-  ([this msg]
+  ([^java.util.logging.Logger this ^java.lang.String msg]
     (-> this (.severe msg))))
 
 (defn set-parent
@@ -300,7 +300,7 @@
   parent - the new parent logger - `java.util.logging.Logger`
 
   throws: java.lang.SecurityException - if a security manager exists and if the caller does not have LoggingPermission(`control`)."
-  ([this parent]
+  ([^java.util.logging.Logger this ^java.util.logging.Logger parent]
     (-> this (.setParent parent))))
 
 (defn warning
@@ -311,7 +311,7 @@
    registered output Handler objects.
 
   msg - The string message (or a key in the message catalog) - `java.lang.String`"
-  ([this msg]
+  ([^java.util.logging.Logger this ^java.lang.String msg]
     (-> this (.warning msg))))
 
 (defn config
@@ -322,7 +322,7 @@
    registered output Handler objects.
 
   msg - The string message (or a key in the message catalog) - `java.lang.String`"
-  ([this msg]
+  ([^java.util.logging.Logger this ^java.lang.String msg]
     (-> this (.config msg))))
 
 (defn fine
@@ -333,7 +333,7 @@
    registered output Handler objects.
 
   msg - The string message (or a key in the message catalog) - `java.lang.String`"
-  ([this msg]
+  ([^java.util.logging.Logger this ^java.lang.String msg]
     (-> this (.fine msg))))
 
 (defn get-use-parent-handlers?
@@ -341,14 +341,14 @@
    to its parent logger.
 
   returns: true if output is to be sent to the logger's parent - `boolean`"
-  ([this]
+  ([^java.util.logging.Logger this]
     (-> this (.getUseParentHandlers))))
 
 (defn get-handlers
   "Get the Handlers associated with this logger.
 
   returns: an array of all registered Handlers - `java.util.logging.Handler[]`"
-  ([this]
+  ([^java.util.logging.Logger this]
     (-> this (.getHandlers))))
 
 (defn get-resource-bundle-name
@@ -361,7 +361,7 @@
    bundle or resource bundle name inherited from its parent.
 
   returns: localization bundle name (may be null) - `java.lang.String`"
-  ([this]
+  ([^java.util.logging.Logger this]
     (-> this (.getResourceBundleName))))
 
 (defn add-handler
@@ -374,7 +374,7 @@
   handler - a logging Handler - `java.util.logging.Handler`
 
   throws: java.lang.SecurityException - if a security manager exists, this logger is not anonymous, and the caller does not have LoggingPermission(`control`)."
-  ([this handler]
+  ([^java.util.logging.Logger this ^java.util.logging.Handler handler]
     (-> this (.addHandler handler))))
 
 (defn info
@@ -385,7 +385,7 @@
    registered output Handler objects.
 
   msg - The string message (or a key in the message catalog) - `java.lang.String`"
-  ([this msg]
+  ([^java.util.logging.Logger this ^java.lang.String msg]
     (-> this (.info msg))))
 
 (defn get-resource-bundle
@@ -400,7 +400,7 @@
    bundle or resource bundle name inherited from its parent.
 
   returns: localization bundle (may be null) - `java.util.ResourceBundle`"
-  ([this]
+  ([^java.util.logging.Logger this]
     (-> this (.getResourceBundle))))
 
 (defn set-resource-bundle
@@ -411,7 +411,7 @@
   bundle - The resource bundle that this logger shall use. - `java.util.ResourceBundle`
 
   throws: java.lang.NullPointerException - if the given bundle is null."
-  ([this bundle]
+  ([^java.util.logging.Logger this ^java.util.ResourceBundle bundle]
     (-> this (.setResourceBundle bundle))))
 
 (defn set-use-parent-handlers
@@ -423,7 +423,7 @@
   use-parent-handlers - true if output is to be sent to the logger's parent. - `boolean`
 
   throws: java.lang.SecurityException - if a security manager exists, this logger is not anonymous, and the caller does not have LoggingPermission(`control`)."
-  ([this use-parent-handlers]
+  ([^java.util.logging.Logger this ^Boolean use-parent-handlers]
     (-> this (.setUseParentHandlers use-parent-handlers))))
 
 (defn log
@@ -436,18 +436,18 @@
   level - One of the message level identifiers, e.g., SEVERE - `java.util.logging.Level`
   msg - The string message (or a key in the message catalog) - `java.lang.String`
   param-1 - parameter to the message - `java.lang.Object`"
-  ([this level msg param-1]
+  ([^java.util.logging.Logger this ^java.util.logging.Level level ^java.lang.String msg ^java.lang.Object param-1]
     (-> this (.log level msg param-1)))
-  ([this level msg]
+  ([^java.util.logging.Logger this ^java.util.logging.Level level ^java.lang.String msg]
     (-> this (.log level msg)))
-  ([this record]
+  ([^java.util.logging.Logger this ^java.util.logging.LogRecord record]
     (-> this (.log record))))
 
 (defn get-name
   "Get the name for this logger.
 
   returns: logger name.  Will be null for anonymous Loggers. - `java.lang.String`"
-  ([this]
+  ([^java.util.logging.Logger this]
     (-> this (.getName))))
 
 (defn logp
@@ -463,9 +463,9 @@
   source-method - name of method that issued the logging request - `java.lang.String`
   msg - The string message (or a key in the message catalog) - `java.lang.String`
   param-1 - Parameter to the log message. - `java.lang.Object`"
-  ([this level source-class source-method msg param-1]
+  ([^java.util.logging.Logger this ^java.util.logging.Level level ^java.lang.String source-class ^java.lang.String source-method ^java.lang.String msg ^java.lang.Object param-1]
     (-> this (.logp level source-class source-method msg param-1)))
-  ([this level source-class source-method msg]
+  ([^java.util.logging.Logger this ^java.util.logging.Level level ^java.lang.String source-class ^java.lang.String source-method ^java.lang.String msg]
     (-> this (.logp level source-class source-method msg))))
 
 (defn loggable?
@@ -476,7 +476,7 @@
   level - a message logging level - `java.util.logging.Level`
 
   returns: true if the given message level is currently being logged. - `boolean`"
-  ([this level]
+  ([^java.util.logging.Logger this ^java.util.logging.Level level]
     (-> this (.isLoggable level))))
 
 (defn throwing
@@ -499,7 +499,7 @@
   source-class - name of class that issued the logging request - `java.lang.String`
   source-method - name of the method. - `java.lang.String`
   thrown - The Throwable that is being thrown. - `java.lang.Throwable`"
-  ([this source-class source-method thrown]
+  ([^java.util.logging.Logger this ^java.lang.String source-class ^java.lang.String source-method ^java.lang.Throwable thrown]
     (-> this (.throwing source-class source-method thrown))))
 
 (defn get-parent
@@ -514,7 +514,7 @@
    in the namespace.
 
   returns: nearest existing parent Logger - `java.util.logging.Logger`"
-  ([this]
+  ([^java.util.logging.Logger this]
     (-> this (.getParent))))
 
 (defn remove-handler
@@ -525,14 +525,14 @@
   handler - a logging Handler - `java.util.logging.Handler`
 
   throws: java.lang.SecurityException - if a security manager exists, this logger is not anonymous, and the caller does not have LoggingPermission(`control`)."
-  ([this handler]
+  ([^java.util.logging.Logger this ^java.util.logging.Handler handler]
     (-> this (.removeHandler handler))))
 
 (defn get-filter
   "Get the current filter for this Logger.
 
   returns: a filter object (may be null) - `java.util.logging.Filter`"
-  ([this]
+  ([^java.util.logging.Logger this]
     (-> this (.getFilter))))
 
 (defn get-level
@@ -541,7 +541,7 @@
    effective level will be inherited from its parent.
 
   returns: this Logger's level - `java.util.logging.Level`"
-  ([this]
+  ([^java.util.logging.Logger this]
     (-> this (.getLevel))))
 
 (defn logrb
@@ -562,9 +562,9 @@
   bundle - Resource bundle to localize msg, can be null. - `java.util.ResourceBundle`
   msg - The string message (or a key in the message catalog) - `java.lang.String`
   params - Parameters to the message (optional, may be none). - `java.lang.Object`"
-  ([this level source-class source-method bundle msg params]
+  ([^java.util.logging.Logger this ^java.util.logging.Level level ^java.lang.String source-class ^java.lang.String source-method ^java.util.ResourceBundle bundle ^java.lang.String msg ^java.lang.Object params]
     (-> this (.logrb level source-class source-method bundle msg params)))
-  ([this level source-class source-method bundle-name msg]
+  ([^java.util.logging.Logger this ^java.util.logging.Level level ^java.lang.String source-class ^java.lang.String source-method ^java.lang.String bundle-name ^java.lang.String msg]
     (-> this (.logrb level source-class source-method bundle-name msg))))
 
 (defn finer
@@ -575,7 +575,7 @@
    registered output Handler objects.
 
   msg - The string message (or a key in the message catalog) - `java.lang.String`"
-  ([this msg]
+  ([^java.util.logging.Logger this ^java.lang.String msg]
     (-> this (.finer msg))))
 
 (defn finest
@@ -586,7 +586,7 @@
    registered output Handler objects.
 
   msg - The string message (or a key in the message catalog) - `java.lang.String`"
-  ([this msg]
+  ([^java.util.logging.Logger this ^java.lang.String msg]
     (-> this (.finest msg))))
 
 (defn exiting
@@ -600,9 +600,9 @@
   source-class - name of class that issued the logging request - `java.lang.String`
   source-method - name of the method - `java.lang.String`
   result - Object that is being returned - `java.lang.Object`"
-  ([this source-class source-method result]
+  ([^java.util.logging.Logger this ^java.lang.String source-class ^java.lang.String source-method ^java.lang.Object result]
     (-> this (.exiting source-class source-method result)))
-  ([this source-class source-method]
+  ([^java.util.logging.Logger this ^java.lang.String source-class ^java.lang.String source-method]
     (-> this (.exiting source-class source-method))))
 
 (defn set-filter
@@ -615,7 +615,7 @@
   new-filter - a filter object (may be null) - `java.util.logging.Filter`
 
   throws: java.lang.SecurityException - if a security manager exists, this logger is not anonymous, and the caller does not have LoggingPermission(`control`)."
-  ([this new-filter]
+  ([^java.util.logging.Logger this ^java.util.logging.Filter new-filter]
     (-> this (.setFilter new-filter))))
 
 (defn set-level
@@ -631,6 +631,6 @@
   new-level - the new value for the log level (may be null) - `java.util.logging.Level`
 
   throws: java.lang.SecurityException - if a security manager exists, this logger is not anonymous, and the caller does not have LoggingPermission(`control`)."
-  ([this new-level]
+  ([^java.util.logging.Logger this ^java.util.logging.Level new-level]
     (-> this (.setLevel new-level))))
 

@@ -26,11 +26,11 @@
   returns: reference (a stub) to the remote registry - `java.rmi.registry.Registry`
 
   throws: java.rmi.RemoteException - if the reference could not be created"
-  ([host port csf]
+  ([^java.lang.String host ^Integer port ^java.rmi.server.RMIClientSocketFactory csf]
     (LocateRegistry/getRegistry host port csf))
-  ([host port]
+  ([^java.lang.String host ^Integer port]
     (LocateRegistry/getRegistry host port))
-  ([port]
+  ([^Integer port]
     (LocateRegistry/getRegistry port))
   ([]
     (LocateRegistry/getRegistry )))
@@ -59,8 +59,8 @@
   returns: the registry - `java.rmi.registry.Registry`
 
   throws: java.rmi.RemoteException - if the registry could not be exported"
-  ([port csf ssf]
+  ([^Integer port ^java.rmi.server.RMIClientSocketFactory csf ^java.rmi.server.RMIServerSocketFactory ssf]
     (LocateRegistry/createRegistry port csf ssf))
-  ([port]
+  ([^Integer port]
     (LocateRegistry/createRegistry port)))
 

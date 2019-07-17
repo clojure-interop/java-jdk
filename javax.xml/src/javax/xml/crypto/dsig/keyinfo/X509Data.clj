@@ -51,6 +51,6 @@
 
   returns: an unmodifiable list of the content in this X509Data
       (never null or empty) - `java.util.List`"
-  ([this]
+  ([^. this]
     (-> this (.getContent))))
 

@@ -8,6 +8,6 @@
   "An undoable edit happened
 
   e - `javax.swing.event.UndoableEditEvent`"
-  ([this e]
+  ([^. this ^javax.swing.event.UndoableEditEvent e]
     (-> this (.undoableEditHappened e))))
 

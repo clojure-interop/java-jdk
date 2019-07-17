@@ -14,6 +14,6 @@
       false otherwise - `boolean`
 
   throws: java.lang.NullPointerException - if feature is null"
-  ([this feature]
+  ([^. this ^java.lang.String feature]
     (-> this (.isFeatureSupported feature))))
 

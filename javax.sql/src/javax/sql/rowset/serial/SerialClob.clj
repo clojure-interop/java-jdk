@@ -50,7 +50,7 @@
        this SerialClob object's data - `java.io.InputStream`
 
   throws: javax.sql.rowset.serial.SerialException - if this SerialClob object was not instantiated with a Clob object; if free had previously been called on this object"
-  ([this]
+  ([^javax.sql.rowset.serial.SerialClob this]
     (-> this (.getAsciiStream))))
 
 (defn set-string
@@ -66,9 +66,9 @@
   returns: the number of characters written - `int`
 
   throws: javax.sql.rowset.serial.SerialException - if there is an error accessing the CLOB value; if an invalid position is set; if an invalid offset value is set; if number of bytes to be written is greater than the SerialClob length; or the combined values of the length and offset is greater than the Clob buffer; if the free method had been previously called on this object"
-  ([this pos str offset length]
+  ([^javax.sql.rowset.serial.SerialClob this ^Long pos ^java.lang.String str ^Integer offset ^Integer length]
     (-> this (.setString pos str offset length)))
-  ([this pos str]
+  ([^javax.sql.rowset.serial.SerialClob this ^Long pos ^java.lang.String str]
     (-> this (.setString pos str))))
 
 (defn free
@@ -80,7 +80,7 @@
    calls to free are treated as a no-op.
 
   throws: java.sql.SQLException - if an error occurs releasing the Clob's resources"
-  ([this]
+  ([^javax.sql.rowset.serial.SerialClob this]
     (-> this (.free))))
 
 (defn position
@@ -99,7 +99,7 @@
            numbering for the return value starts at 1 - `long`
 
   throws: javax.sql.rowset.serial.SerialException - if the free method had been previously called on this object"
-  ([this search-str start]
+  ([^javax.sql.rowset.serial.SerialClob this ^java.lang.String search-str ^Long start]
     (-> this (.position search-str start))))
 
 (defn get-character-stream
@@ -114,9 +114,9 @@
    value can be read. - `java.io.Reader`
 
   throws: java.sql.SQLException - if pos is less than 1 or if pos is greater than the number of characters in the SerialClob or if pos length is greater than the number of characters in the SerialClob;"
-  ([this pos length]
+  ([^javax.sql.rowset.serial.SerialClob this ^Long pos ^Long length]
     (-> this (.getCharacterStream pos length)))
-  ([this]
+  ([^javax.sql.rowset.serial.SerialClob this]
     (-> this (.getCharacterStream))))
 
 (defn length
@@ -127,7 +127,7 @@
            SerialClob object's array of character - `long`
 
   throws: javax.sql.rowset.serial.SerialException - if an error occurs; if free had previously been called on this object"
-  ([this]
+  ([^javax.sql.rowset.serial.SerialClob this]
     (-> this (.length))))
 
 (defn truncate
@@ -141,7 +141,7 @@
   length - the length, in bytes, to which the CLOB value should be truncated - `long`
 
   throws: javax.sql.rowset.serial.SerialException - if there is an error accessing the CLOB value; if the free method had been previously called on this object"
-  ([this length]
+  ([^javax.sql.rowset.serial.SerialClob this ^Long length]
     (-> this (.truncate length))))
 
 (defn get-sub-string
@@ -158,7 +158,7 @@
            consecutive characters - `java.lang.String`
 
   throws: javax.sql.rowset.serial.SerialException - if either of the arguments is out of bounds; if free had previously been called on this object"
-  ([this pos length]
+  ([^javax.sql.rowset.serial.SerialClob this ^Long pos ^Integer length]
     (-> this (.getSubString pos length))))
 
 (defn set-ascii-stream
@@ -175,7 +175,7 @@
   returns: the stream to which ASCII encoded characters can be written - `java.io.OutputStream`
 
   throws: javax.sql.rowset.serial.SerialException - if SerialClob is not instantiated with a Clob object; if the free method had been previously called on this object"
-  ([this pos]
+  ([^javax.sql.rowset.serial.SerialClob this ^Long pos]
     (-> this (.setAsciiStream pos))))
 
 (defn clone
@@ -185,14 +185,14 @@
    The underlying Clob object will be set to null.
 
   returns: a clone of this SerialClob - `java.lang.Object`"
-  ([this]
+  ([^javax.sql.rowset.serial.SerialClob this]
     (-> this (.clone))))
 
 (defn hash-code
   "Returns a hash code for this SerialClob.
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^javax.sql.rowset.serial.SerialClob this]
     (-> this (.hashCode))))
 
 (defn set-character-stream
@@ -209,7 +209,7 @@
   returns: a stream to which Unicode encoded characters can be written - `java.io.Writer`
 
   throws: javax.sql.rowset.serial.SerialException - if the SerialClob is not instantiated with a Clob object; if the free method had been previously called on this object"
-  ([this pos]
+  ([^javax.sql.rowset.serial.SerialClob this ^Long pos]
     (-> this (.setCharacterStream pos))))
 
 (defn equals
@@ -220,6 +220,6 @@
 
   returns: true if the given object represents a SerialClob
             equivalent to this SerialClob, false otherwise - `boolean`"
-  ([this obj]
+  ([^javax.sql.rowset.serial.SerialClob this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

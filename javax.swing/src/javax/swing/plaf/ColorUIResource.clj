@@ -8,8 +8,8 @@
   r - `int`
   g - `int`
   b - `int`"
-  ([r g b]
+  ([^Integer r ^Integer g ^Integer b]
     (new ColorUIResource r g b))
-  ([rgb]
+  ([^Integer rgb]
     (new ColorUIResource rgb)))
 

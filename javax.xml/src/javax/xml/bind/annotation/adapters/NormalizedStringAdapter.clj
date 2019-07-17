@@ -19,7 +19,7 @@
   text - The value to be converted. Can be null. - `java.lang.String`
 
   returns: `java.lang.String`"
-  ([this text]
+  ([^javax.xml.bind.annotation.adapters.NormalizedStringAdapter this ^java.lang.String text]
     (-> this (.unmarshal text))))
 
 (defn marshal
@@ -30,6 +30,6 @@
   s - The value to be convereted. Can be null. - `java.lang.String`
 
   returns: `java.lang.String`"
-  ([this s]
+  ([^javax.xml.bind.annotation.adapters.NormalizedStringAdapter this ^java.lang.String s]
     (-> this (.marshal s))))
 

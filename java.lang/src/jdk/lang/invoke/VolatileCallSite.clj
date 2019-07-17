@@ -24,7 +24,7 @@
   type - the method type that this call site will have - `java.lang.invoke.MethodType`
 
   throws: java.lang.NullPointerException - if the proposed type is null"
-  ([type]
+  ([^java.lang.invoke.MethodType type]
     (new VolatileCallSite type)))
 
 (defn get-target
@@ -39,7 +39,7 @@
    a recent update to the target by another thread.
 
   returns: the linkage state of this call site, a method handle which can change over time - `java.lang.invoke.MethodHandle`"
-  ([this]
+  ([^java.lang.invoke.VolatileCallSite this]
     (-> this (.getTarget))))
 
 (defn set-target
@@ -53,7 +53,7 @@
   new-target - the new target - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NullPointerException - if the proposed new target is null"
-  ([this new-target]
+  ([^java.lang.invoke.VolatileCallSite this ^java.lang.invoke.MethodHandle new-target]
     (-> this (.setTarget new-target))))
 
 (defn dynamic-invoker
@@ -69,6 +69,6 @@
    result = MethodHandles.foldArguments(invoker, getTarget)
 
   returns: a method handle which always invokes this call site's current target - `java.lang.invoke.MethodHandle`"
-  ([this]
+  ([^java.lang.invoke.VolatileCallSite this]
     (-> this (.dynamicInvoker))))
 

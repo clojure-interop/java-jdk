@@ -9,20 +9,20 @@
   b - the byte array to update the checksum with - `byte[]`
   off - the start offset of the data - `int`
   len - the number of bytes to use for the update - `int`"
-  ([this b off len]
+  ([^. this b ^Integer off ^Integer len]
     (-> this (.update b off len)))
-  ([this b]
+  ([^. this ^Integer b]
     (-> this (.update b))))
 
 (defn get-value
   "Returns the current checksum value.
 
   returns: the current checksum value - `long`"
-  ([this]
+  ([^. this]
     (-> this (.getValue))))
 
 (defn reset
   "Resets the checksum to its initial value."
-  ([this]
+  ([^. this]
     (-> this (.reset))))
 

@@ -27,9 +27,9 @@
   old-value - old role value (List of ObjectName objects) - `java.util.List<javax.management.ObjectName>`
 
   throws: java.lang.IllegalArgumentException - if null parameter"
-  ([notif-type source-obj sequence time-stamp message id type-name object-name name new-value old-value]
+  ([^java.lang.String notif-type ^java.lang.Object source-obj ^Long sequence ^Long time-stamp ^java.lang.String message ^java.lang.String id ^java.lang.String type-name ^javax.management.ObjectName object-name ^java.lang.String name ^java.util.List new-value ^java.util.List old-value]
     (new RelationNotification notif-type source-obj sequence time-stamp message id type-name object-name name new-value old-value))
-  ([notif-type source-obj sequence time-stamp message id type-name object-name unreg-m-bean-list]
+  ([^java.lang.String notif-type ^java.lang.Object source-obj ^Long sequence ^Long time-stamp ^java.lang.String message ^java.lang.String id ^java.lang.String type-name ^javax.management.ObjectName object-name ^java.util.List unreg-m-bean-list]
     (new RelationNotification notif-type source-obj sequence time-stamp message id type-name object-name unreg-m-bean-list)))
 
 (def *-relation-basic-creation
@@ -84,14 +84,14 @@
   "Returns the relation identifier of created/removed/updated relation.
 
   returns: the relation id. - `java.lang.String`"
-  ([this]
+  ([^javax.management.relation.RelationNotification this]
     (-> this (.getRelationId))))
 
 (defn get-relation-type-name
   "Returns the relation type name of created/removed/updated relation.
 
   returns: the relation type name. - `java.lang.String`"
-  ([this]
+  ([^javax.management.relation.RelationNotification this]
     (-> this (.getRelationTypeName))))
 
 (defn get-object-name
@@ -99,7 +99,7 @@
    created/removed/updated relation.
 
   returns: the ObjectName if the relation is an MBean, otherwise null. - `javax.management.ObjectName`"
-  ([this]
+  ([^javax.management.relation.RelationNotification this]
     (-> this (.getObjectName))))
 
 (defn get-m-beans-to-unregister
@@ -107,27 +107,27 @@
    due to a relation removal (only for relation removal).
 
   returns: a List of ObjectName. - `java.util.List<javax.management.ObjectName>`"
-  ([this]
+  ([^javax.management.relation.RelationNotification this]
     (-> this (.getMBeansToUnregister))))
 
 (defn get-role-name
   "Returns name of updated role of updated relation (only for role update).
 
   returns: the name of the updated role. - `java.lang.String`"
-  ([this]
+  ([^javax.management.relation.RelationNotification this]
     (-> this (.getRoleName))))
 
 (defn get-old-role-value
   "Returns old value of updated role (only for role update).
 
   returns: the old value of the updated role. - `java.util.List<javax.management.ObjectName>`"
-  ([this]
+  ([^javax.management.relation.RelationNotification this]
     (-> this (.getOldRoleValue))))
 
 (defn get-new-role-value
   "Returns new value of updated role (only for role update).
 
   returns: the new value of the updated role. - `java.util.List<javax.management.ObjectName>`"
-  ([this]
+  ([^javax.management.relation.RelationNotification this]
     (-> this (.getNewRoleValue))))
 

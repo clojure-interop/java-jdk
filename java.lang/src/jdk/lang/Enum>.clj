@@ -33,7 +33,7 @@
         specified name - `<T extends java.lang.Enum<T>> T`
 
   throws: java.lang.IllegalArgumentException - if the specified enum type has no constant with the specified name, or the specified class object does not represent an enum type"
-  ([enum-type name]
+  ([^java.lang.Class enum-type ^java.lang.String name]
     (Enum>/valueOf enum-type name)))
 
 (defn name
@@ -47,7 +47,7 @@
    exact name, which will not vary from release to release.
 
   returns: the name of this enum constant - `java.lang.String`"
-  ([this]
+  ([^java.lang.Enum> this]
     (-> this (.name))))
 
 (defn ordinal
@@ -60,7 +60,7 @@
    as EnumSet and EnumMap.
 
   returns: the ordinal of this enumeration constant - `int`"
-  ([this]
+  ([^java.lang.Enum> this]
     (-> this (.ordinal))))
 
 (defn to-string
@@ -70,7 +70,7 @@
    method when a more `programmer-friendly` string form exists.
 
   returns: the name of this enum constant - `java.lang.String`"
-  ([this]
+  ([^java.lang.Enum> this]
     (-> this (.toString))))
 
 (defn equals
@@ -81,14 +81,14 @@
 
   returns: true if the specified object is equal to this
             enum constant. - `boolean`"
-  ([this other]
+  ([^java.lang.Enum> this ^java.lang.Object other]
     (-> this (.equals other))))
 
 (defn hash-code
   "Returns a hash code for this enum constant.
 
   returns: a hash code for this enum constant. - `int`"
-  ([this]
+  ([^java.lang.Enum> this]
     (-> this (.hashCode))))
 
 (defn compare-to
@@ -104,7 +104,7 @@
 
   returns: a negative integer, zero, or a positive integer as this object
             is less than, equal to, or greater than the specified object. - `int`"
-  ([this o]
+  ([^java.lang.Enum> this ^Enum.E o]
     (-> this (.compareTo o))))
 
 (defn get-declaring-class
@@ -118,6 +118,6 @@
 
   returns: the Class object corresponding to this enum constant's
        enum type - `java.lang.Class<Enum.E>`"
-  ([this]
+  ([^java.lang.Enum> this]
     (-> this (.getDeclaringClass))))
 

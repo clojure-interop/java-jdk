@@ -9,11 +9,11 @@
 
 (defn get-shift
   "returns: `int`"
-  ([this]
+  ([^javax.swing.plaf.metal.MetalIconFactory$TreeLeafIcon this]
     (-> this (.getShift))))
 
 (defn get-additional-height
   "returns: `int`"
-  ([this]
+  ([^javax.swing.plaf.metal.MetalIconFactory$TreeLeafIcon this]
     (-> this (.getAdditionalHeight))))
 

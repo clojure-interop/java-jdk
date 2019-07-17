@@ -30,6 +30,6 @@
   action - The action to be performed for each element - `PrimitiveIterator.T_CONS`
 
   throws: java.lang.NullPointerException - if the specified action is null"
-  ([this action]
+  ([^. this ^PrimitiveIterator.T_CONS action]
     (-> this (.forEachRemaining action))))
 

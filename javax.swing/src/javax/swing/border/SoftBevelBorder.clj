@@ -24,11 +24,11 @@
   highlight-inner-color - the color to use for the bevel inner highlight - `java.awt.Color`
   shadow-outer-color - the color to use for the bevel outer shadow - `java.awt.Color`
   shadow-inner-color - the color to use for the bevel inner shadow - `java.awt.Color`"
-  ([bevel-type highlight-outer-color highlight-inner-color shadow-outer-color shadow-inner-color]
+  ([^Integer bevel-type ^java.awt.Color highlight-outer-color ^java.awt.Color highlight-inner-color ^java.awt.Color shadow-outer-color ^java.awt.Color shadow-inner-color]
     (new SoftBevelBorder bevel-type highlight-outer-color highlight-inner-color shadow-outer-color shadow-inner-color))
-  ([bevel-type highlight shadow]
+  ([^Integer bevel-type ^java.awt.Color highlight ^java.awt.Color shadow]
     (new SoftBevelBorder bevel-type highlight shadow))
-  ([bevel-type]
+  ([^Integer bevel-type]
     (new SoftBevelBorder bevel-type)))
 
 (defn paint-border
@@ -41,7 +41,7 @@
   y - the y position of the painted border - `int`
   width - the width of the painted border - `int`
   height - the height of the painted border - `int`"
-  ([this c g x y width height]
+  ([^javax.swing.border.SoftBevelBorder this ^java.awt.Component c ^java.awt.Graphics g ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.paintBorder c g x y width height))))
 
 (defn get-border-insets
@@ -51,13 +51,13 @@
   insets - the object to be reinitialized - `java.awt.Insets`
 
   returns: the insets object - `java.awt.Insets`"
-  ([this c insets]
+  ([^javax.swing.border.SoftBevelBorder this ^java.awt.Component c ^java.awt.Insets insets]
     (-> this (.getBorderInsets c insets))))
 
 (defn border-opaque?
   "Returns whether or not the border is opaque.
 
   returns: false - `boolean`"
-  ([this]
+  ([^javax.swing.border.SoftBevelBorder this]
     (-> this (.isBorderOpaque))))
 

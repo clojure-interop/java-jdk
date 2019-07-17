@@ -15,9 +15,9 @@
   load-factor - the load factor of the HashMap - `float`
 
   throws: java.lang.IllegalArgumentException - if the initial capacity is less than zero, or the load factor is nonpositive, or the tabular type is null."
-  ([tabular-type initial-capacity load-factor]
+  ([^javax.management.openmbean.TabularType tabular-type ^Integer initial-capacity ^Float load-factor]
     (new TabularDataSupport tabular-type initial-capacity load-factor))
-  ([tabular-type]
+  ([^javax.management.openmbean.TabularType tabular-type]
     (new TabularDataSupport tabular-type)))
 
 (defn values
@@ -39,7 +39,7 @@
 
   returns: a collection view (Collection<CompositeData>) of
    the values contained in this TabularDataSupport instance. - `java.util.Collection<java.lang.Object>`"
-  ([this]
+  ([^javax.management.openmbean.TabularDataSupport this]
     (-> this (.values))))
 
 (defn put-all
@@ -56,14 +56,14 @@
   t - the map whose values are to be added as new rows to this TabularData instance; if t is null or empty, this method returns without doing anything. - `java.util.Map<?,?>`
 
   throws: java.lang.NullPointerException - if a value in t is null."
-  ([this t]
+  ([^javax.management.openmbean.TabularDataSupport this ^java.util.Map t]
     (-> this (.putAll t))))
 
 (defn get-tabular-type
   "Returns the tabular type describing this TabularData instance.
 
   returns: the tabular type. - `javax.management.openmbean.TabularType`"
-  ([this]
+  ([^javax.management.openmbean.TabularDataSupport this]
     (-> this (.getTabularType))))
 
 (defn put
@@ -76,9 +76,9 @@
   returns: the value which is put - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if the value is null"
-  ([this key value]
+  ([^javax.management.openmbean.TabularDataSupport this ^java.lang.Object key ^java.lang.Object value]
     (-> this (.put key value)))
-  ([this value]
+  ([^javax.management.openmbean.TabularDataSupport this ^javax.management.openmbean.CompositeData value]
     (-> this (.put value))))
 
 (defn entry-set
@@ -108,7 +108,7 @@
 
   returns: a collection view (Set<Map.Entry<List<?>,CompositeData>>)
    of the mappings contained in this map. - `java.util.Set<java.util.Map.Entry<java.lang.Object,java.lang.Object>>`"
-  ([this]
+  ([^javax.management.openmbean.TabularDataSupport this]
     (-> this (.entrySet))))
 
 (defn to-string
@@ -120,7 +120,7 @@
    dataMap.toString()).
 
   returns: a string representation of this TabularDataSupport instance - `java.lang.String`"
-  ([this]
+  ([^javax.management.openmbean.TabularDataSupport this]
     (-> this (.toString))))
 
 (defn contains-value
@@ -131,7 +131,7 @@
   value - the row value whose presence in this TabularData instance is to be tested. - `javax.management.openmbean.CompositeData`
 
   returns: true if this TabularData instance contains the specified row value. - `boolean`"
-  ([this value]
+  ([^javax.management.openmbean.TabularDataSupport this ^javax.management.openmbean.CompositeData value]
     (-> this (.containsValue value))))
 
 (defn remove
@@ -143,7 +143,7 @@
            if there was no mapping for key. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if the key is null"
-  ([this key]
+  ([^javax.management.openmbean.TabularDataSupport this ^java.lang.Object key]
     (-> this (.remove key))))
 
 (defn key-set
@@ -165,7 +165,7 @@
 
   returns: a set view (Set<List<?>>) of the keys used to index
    the rows of this TabularDataSupport instance. - `java.util.Set<java.lang.Object>`"
-  ([this]
+  ([^javax.management.openmbean.TabularDataSupport this]
     (-> this (.keySet))))
 
 (defn clone
@@ -174,7 +174,7 @@
    Only a shallow clone of the underlying map is made, i.e. no cloning of the indexes and row values is made as they are immutable.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([this]
+  ([^javax.management.openmbean.TabularDataSupport this]
     (-> this (.clone))))
 
 (defn hash-code
@@ -194,26 +194,26 @@
    but may have a different hash code if it is calculated differently.
 
   returns: the hash code value for this TabularDataSupport instance - `int`"
-  ([this]
+  ([^javax.management.openmbean.TabularDataSupport this]
     (-> this (.hashCode))))
 
 (defn empty?
   "Returns true if this TabularDataSupport instance contains no rows.
 
   returns: true if this TabularDataSupport instance contains no rows. - `boolean`"
-  ([this]
+  ([^javax.management.openmbean.TabularDataSupport this]
     (-> this (.isEmpty))))
 
 (defn size
   "Returns the number of rows in this TabularDataSupport instance.
 
   returns: the number of rows in this TabularDataSupport instance. - `int`"
-  ([this]
+  ([^javax.management.openmbean.TabularDataSupport this]
     (-> this (.size))))
 
 (defn clear
   "Removes all rows from this TabularDataSupport instance."
-  ([this]
+  ([^javax.management.openmbean.TabularDataSupport this]
     (-> this (.clear))))
 
 (defn calculate-index
@@ -227,7 +227,7 @@
   returns: the index that the specified value would have in this TabularData instance. - `java.lang.Object[]`
 
   throws: java.lang.NullPointerException - if value is null."
-  ([this value]
+  ([^javax.management.openmbean.TabularDataSupport this ^javax.management.openmbean.CompositeData value]
     (-> this (.calculateIndex value))))
 
 (defn contains-key
@@ -239,7 +239,7 @@
   key - the index value whose presence in this TabularData instance is to be tested. - `java.lang.Object`
 
   returns: true if this TabularData indexes a row value with the specified key. - `boolean`"
-  ([this key]
+  ([^javax.management.openmbean.TabularDataSupport this ^java.lang.Object key]
     (-> this (.containsKey key))))
 
 (defn get
@@ -251,7 +251,7 @@
            null if this map contains no mapping for the key - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if the key is null"
-  ([this key]
+  ([^javax.management.openmbean.TabularDataSupport this ^java.lang.Object key]
     (-> this (.get key))))
 
 (defn equals
@@ -270,6 +270,6 @@
   obj - the object to be compared for equality with this TabularDataSupport instance; - `java.lang.Object`
 
   returns: true if the specified object is equal to this TabularDataSupport instance. - `boolean`"
-  ([this obj]
+  ([^javax.management.openmbean.TabularDataSupport this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

@@ -65,7 +65,7 @@
   returns: A Base64 encoder. - `java.util.Base64.Encoder`
 
   throws: java.lang.IllegalArgumentException - if lineSeparator includes any character of `The Base64 Alphabet` as specified in Table 1 of RFC 2045."
-  ([line-length line-separator]
+  ([^Integer line-length line-separator]
     (Base64/getMimeEncoder line-length line-separator))
   ([]
     (Base64/getMimeEncoder )))

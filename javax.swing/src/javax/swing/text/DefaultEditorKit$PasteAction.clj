@@ -25,6 +25,6 @@
   "The operation to perform when this action is triggered.
 
   e - the action event - `java.awt.event.ActionEvent`"
-  ([this e]
+  ([^javax.swing.text.DefaultEditorKit$PasteAction this ^java.awt.event.ActionEvent e]
     (-> this (.actionPerformed e))))
 

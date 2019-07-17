@@ -29,7 +29,7 @@
   returns: a new instance of a SOAPFactory - `javax.xml.soap.SOAPFactory`
 
   throws: javax.xml.soap.SOAPException - if there was an error creating the specified SOAPFactory"
-  ([protocol]
+  ([^java.lang.String protocol]
     (SOAPFactory/newInstance protocol))
   ([]
     (SOAPFactory/newInstance )))
@@ -49,9 +49,9 @@
   returns: `javax.xml.soap.SOAPElement`
 
   throws: javax.xml.soap.SOAPException - if there is an error in creating the SOAPElement object"
-  ([this local-name prefix uri]
+  ([^javax.xml.soap.SOAPFactory this ^java.lang.String local-name ^java.lang.String prefix ^java.lang.String uri]
     (-> this (.createElement local-name prefix uri)))
-  ([this dom-element]
+  ([^javax.xml.soap.SOAPFactory this ^org.w3c.dom.Element dom-element]
     (-> this (.createElement dom-element))))
 
 (defn create-detail
@@ -65,7 +65,7 @@
   returns: a Detail object - `javax.xml.soap.Detail`
 
   throws: javax.xml.soap.SOAPException - if there is a SOAP error"
-  ([this]
+  ([^javax.xml.soap.SOAPFactory this]
     (-> this (.createDetail))))
 
 (defn create-fault
@@ -78,9 +78,9 @@
   returns: a SOAPFault object - `javax.xml.soap.SOAPFault`
 
   throws: javax.xml.soap.SOAPException - if there is a SOAP error"
-  ([this reason-text fault-code]
+  ([^javax.xml.soap.SOAPFactory this ^java.lang.String reason-text ^javax.xml.namespace.QName fault-code]
     (-> this (.createFault reason-text fault-code)))
-  ([this]
+  ([^javax.xml.soap.SOAPFactory this]
     (-> this (.createFault))))
 
 (defn create-name
@@ -99,8 +99,8 @@
            local name, namespace prefix, and namespace URI - `javax.xml.soap.Name`
 
   throws: javax.xml.soap.SOAPException - if there is a SOAP error"
-  ([this local-name prefix uri]
+  ([^javax.xml.soap.SOAPFactory this ^java.lang.String local-name ^java.lang.String prefix ^java.lang.String uri]
     (-> this (.createName local-name prefix uri)))
-  ([this local-name]
+  ([^javax.xml.soap.SOAPFactory this ^java.lang.String local-name]
     (-> this (.createName local-name))))
 

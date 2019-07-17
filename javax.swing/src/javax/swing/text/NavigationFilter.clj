@@ -31,7 +31,7 @@
   fb - FilterBypass that can be used to mutate caret position - `javax.swing.text.NavigationFilter.FilterBypass`
   dot - the position >= 0 - `int`
   bias - Bias to place the dot at - `javax.swing.text.Position.Bias`"
-  ([this fb dot bias]
+  ([^javax.swing.text.NavigationFilter this ^javax.swing.text.NavigationFilter.FilterBypass fb ^Integer dot ^javax.swing.text.Position.Bias bias]
     (-> this (.setDot fb dot bias))))
 
 (defn move-dot
@@ -44,7 +44,7 @@
   fb - FilterBypass that can be used to mutate caret position - `javax.swing.text.NavigationFilter.FilterBypass`
   dot - the position >= 0 - `int`
   bias - Bias for new location - `javax.swing.text.Position.Bias`"
-  ([this fb dot bias]
+  ([^javax.swing.text.NavigationFilter this ^javax.swing.text.NavigationFilter.FilterBypass fb ^Integer dot ^javax.swing.text.Position.Bias bias]
     (-> this (.moveDot fb dot bias))))
 
 (defn get-next-visual-position-from
@@ -63,6 +63,6 @@
     location visual position - `int`
 
   throws: javax.swing.text.BadLocationException"
-  ([this text pos bias direction bias-ret]
+  ([^javax.swing.text.NavigationFilter this ^javax.swing.text.JTextComponent text ^Integer pos ^javax.swing.text.Position.Bias bias ^Integer direction ^javax.swing.text.Position.Bias[] bias-ret]
     (-> this (.getNextVisualPositionFrom text pos bias direction bias-ret))))
 

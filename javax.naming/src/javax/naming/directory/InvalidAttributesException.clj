@@ -21,7 +21,7 @@
    explanation. All other fields are set to null.
 
   explanation - Additional detail about this exception. Can be null. - `java.lang.String`"
-  ([explanation]
+  ([^java.lang.String explanation]
     (new InvalidAttributesException explanation))
   ([]
     (new InvalidAttributesException )))

@@ -15,12 +15,12 @@
   x - component to create UI object for - `javax.swing.JComponent`
 
   returns: the UI object - `javax.swing.plaf.ComponentUI`"
-  ([x]
+  ([^javax.swing.JComponent x]
     (SynthTreeUI/createUI x)))
 
 (defn get-expanded-icon
   "returns: `javax.swing.Icon`"
-  ([this]
+  ([^javax.swing.plaf.synth.SynthTreeUI this]
     (-> this (.getExpandedIcon))))
 
 (defn get-context
@@ -29,7 +29,7 @@
   c - Component requesting SynthContext. - `javax.swing.JComponent`
 
   returns: SynthContext describing component. - `javax.swing.plaf.synth.SynthContext`"
-  ([this c]
+  ([^javax.swing.plaf.synth.SynthTreeUI this ^javax.swing.JComponent c]
     (-> this (.getContext c))))
 
 (defn update
@@ -42,7 +42,7 @@
 
   g - the Graphics object used for painting - `java.awt.Graphics`
   c - the component being painted - `javax.swing.JComponent`"
-  ([this g c]
+  ([^javax.swing.plaf.synth.SynthTreeUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.update g c))))
 
 (defn paint-border
@@ -54,7 +54,7 @@
   y - the Y coordinate - `int`
   w - width of the border - `int`
   h - height of the border - `int`"
-  ([this context g x y w h]
+  ([^javax.swing.plaf.synth.SynthTreeUI this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintBorder context g x y w h))))
 
 (defn paint
@@ -64,13 +64,13 @@
 
   g - the Graphics object used for painting - `java.awt.Graphics`
   c - the component being painted - `javax.swing.JComponent`"
-  ([this g c]
+  ([^javax.swing.plaf.synth.SynthTreeUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.paint g c))))
 
 (defn property-change
   "This method gets called when a bound property is changed.
 
   event - A PropertyChangeEvent object describing the event source and the property that has changed. - `java.beans.PropertyChangeEvent`"
-  ([this event]
+  ([^javax.swing.plaf.synth.SynthTreeUI this ^java.beans.PropertyChangeEvent event]
     (-> this (.propertyChange event))))
 

@@ -28,9 +28,9 @@
 
   elem - the element underlying the view - `javax.swing.text.Element`
   word-wrap - should lines be wrapped on word boundaries? - `boolean`"
-  ([elem word-wrap]
+  ([^javax.swing.text.Element elem ^Boolean word-wrap]
     (new WrappedPlainView elem word-wrap))
-  ([elem]
+  ([^javax.swing.text.Element elem]
     (new WrappedPlainView elem)))
 
 (defn changed-update
@@ -40,7 +40,7 @@
   e - the change information from the associated document - `javax.swing.event.DocumentEvent`
   a - the current allocation of the view - `java.awt.Shape`
   f - the factory to use to rebuild if the view has children - `javax.swing.text.ViewFactory`"
-  ([this e a f]
+  ([^javax.swing.text.WrappedPlainView this ^javax.swing.event.DocumentEvent e ^java.awt.Shape a ^javax.swing.text.ViewFactory f]
     (-> this (.changedUpdate e a f))))
 
 (defn get-preferred-span
@@ -57,7 +57,7 @@
              Typically the view is told to render into the span
              that is returned, although there is no guarantee.
              The parent may choose to resize or break the view. - `float`"
-  ([this axis]
+  ([^javax.swing.text.WrappedPlainView this ^Integer axis]
     (-> this (.getPreferredSpan axis))))
 
 (defn remove-update
@@ -68,7 +68,7 @@
   e - the change information from the associated document - `javax.swing.event.DocumentEvent`
   a - the current allocation of the view - `java.awt.Shape`
   f - the factory to use to rebuild if the view has children - `javax.swing.text.ViewFactory`"
-  ([this e a f]
+  ([^javax.swing.text.WrappedPlainView this ^javax.swing.event.DocumentEvent e ^java.awt.Shape a ^javax.swing.text.ViewFactory f]
     (-> this (.removeUpdate e a f))))
 
 (defn get-minimum-span
@@ -85,7 +85,7 @@
              Typically the view is told to render into the span
              that is returned, although there is no guarantee.
              The parent may choose to resize or break the view. - `float`"
-  ([this axis]
+  ([^javax.swing.text.WrappedPlainView this ^Integer axis]
     (-> this (.getMinimumSpan axis))))
 
 (defn get-maximum-span
@@ -102,7 +102,7 @@
              Typically the view is told to render into the span
              that is returned, although there is no guarantee.
              The parent may choose to resize or break the view. - `float`"
-  ([this axis]
+  ([^javax.swing.text.WrappedPlainView this ^Integer axis]
     (-> this (.getMaximumSpan axis))))
 
 (defn insert-update
@@ -113,7 +113,7 @@
   e - the change information from the associated document - `javax.swing.event.DocumentEvent`
   a - the current allocation of the view - `java.awt.Shape`
   f - the factory to use to rebuild if the view has children - `javax.swing.text.ViewFactory`"
-  ([this e a f]
+  ([^javax.swing.text.WrappedPlainView this ^javax.swing.event.DocumentEvent e ^java.awt.Shape a ^javax.swing.text.ViewFactory f]
     (-> this (.insertUpdate e a f))))
 
 (defn paint
@@ -124,7 +124,7 @@
 
   g - the rendering surface to use - `java.awt.Graphics`
   a - the allocated region to render into - `java.awt.Shape`"
-  ([this g a]
+  ([^javax.swing.text.WrappedPlainView this ^java.awt.Graphics g ^java.awt.Shape a]
     (-> this (.paint g a))))
 
 (defn next-tab-stop
@@ -136,7 +136,7 @@
   tab-offset - the position within the text stream that the tab occurred at >= 0. - `int`
 
   returns: the tab stop, measured in points >= 0 - `float`"
-  ([this x tab-offset]
+  ([^javax.swing.text.WrappedPlainView this ^Float x ^Integer tab-offset]
     (-> this (.nextTabStop x tab-offset))))
 
 (defn set-size
@@ -146,6 +146,6 @@
 
   width - the width >= 0 - `float`
   height - the height >= 0 - `float`"
-  ([this width height]
+  ([^javax.swing.text.WrappedPlainView this ^Float width ^Float height]
     (-> this (.setSize width height))))
 

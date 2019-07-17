@@ -58,13 +58,13 @@
   gc - the GraphicsConfiguration of the target screen device; if null, the default system GraphicsConfiguration is assumed - `java.awt.GraphicsConfiguration`
 
   throws: java.lang.IllegalArgumentException - if gc is not from a screen device"
-  ([owner title modal gc]
+  ([^java.awt.Frame owner ^java.lang.String title ^Boolean modal ^java.awt.GraphicsConfiguration gc]
     (new Dialog owner title modal gc))
-  ([owner title modal]
+  ([^java.awt.Frame owner ^java.lang.String title ^Boolean modal]
     (new Dialog owner title modal))
-  ([owner modal]
+  ([^java.awt.Frame owner ^Boolean modal]
     (new Dialog owner modal))
-  ([owner]
+  ([^java.awt.Frame owner]
     (new Dialog owner)))
 
 (def *-default-modality-type
@@ -82,7 +82,7 @@
    setVisible(boolean).
 
   returns: `java.lang.  void`"
-  ([this]
+  ([^java.awt.Dialog this]
     (-> this (.hide))))
 
 (defn set-shape
@@ -111,7 +111,7 @@
    opacity value (see Window.setOpacity(float)). See GraphicsDevice.WindowTranslucency for more details.
 
   shape - the shape to set to the window - `java.awt.Shape`"
-  ([this shape]
+  ([^java.awt.Dialog this ^java.awt.Shape shape]
     (-> this (.setShape shape))))
 
 (defn set-opacity
@@ -140,7 +140,7 @@
    current shape of this window (see Window.setShape(Shape)).
 
   opacity - the opacity level to set to the window - `float`"
-  ([this opacity]
+  ([^java.awt.Dialog this ^Float opacity]
     (-> this (.setOpacity opacity))))
 
 (defn modal?
@@ -151,14 +151,14 @@
 
   returns: true if this dialog window is modal;
               false otherwise - `boolean`"
-  ([this]
+  ([^java.awt.Dialog this]
     (-> this (.isModal))))
 
 (defn get-modality-type
   "Returns the modality type of this dialog.
 
   returns: modality type of this dialog - `java.awt.Dialog.ModalityType`"
-  ([this]
+  ([^java.awt.Dialog this]
     (-> this (.getModalityType))))
 
 (defn set-background
@@ -211,7 +211,7 @@
    configuration of this window due to the native platform requirements.
 
   bg-color - the color to become this window's background color. - `java.awt.Color`"
-  ([this bg-color]
+  ([^java.awt.Dialog this ^java.awt.Color bg-color]
     (-> this (.setBackground bg-color))))
 
 (defn undecorated?
@@ -220,7 +220,7 @@
 
   returns: true if dialog is undecorated;
                           false otherwise. - `boolean`"
-  ([this]
+  ([^java.awt.Dialog this]
     (-> this (.isUndecorated))))
 
 (defn add-notify
@@ -229,7 +229,7 @@
    cause any of its children to be made displayable.
    This method is called internally by the toolkit and should
    not be called directly by programs."
-  ([this]
+  ([^java.awt.Dialog this]
     (-> this (.addNotify))))
 
 (defn show
@@ -237,7 +237,7 @@
    setVisible(boolean).
 
   returns: `java.lang.  void`"
-  ([this]
+  ([^java.awt.Dialog this]
     (-> this (.show))))
 
 (defn resizable?
@@ -246,7 +246,7 @@
 
   returns: true if the user can resize the dialog;
               false otherwise. - `boolean`"
-  ([this]
+  ([^java.awt.Dialog this]
     (-> this (.isResizable))))
 
 (defn set-modality-type
@@ -262,7 +262,7 @@
   type - specifies whether dialog blocks input to other windows when shown. null value and unsupported modality types are equivalent to MODELESS - `java.awt.Dialog.ModalityType`
 
   throws: java.lang.SecurityException - if the calling thread does not have permission to create modal dialogs with the given modalityType"
-  ([this type]
+  ([^java.awt.Dialog this ^java.awt.Dialog.ModalityType type]
     (-> this (.setModalityType type))))
 
 (defn to-back
@@ -290,7 +290,7 @@
 
    If this dialog is modal and blocks some windows, then all of them are
    also sent to the back to keep them below the blocking dialog."
-  ([this]
+  ([^java.awt.Dialog this]
     (-> this (.toBack))))
 
 (defn get-accessible-context
@@ -301,7 +301,7 @@
 
   returns: an AccessibleAWTDialog that serves as the
            AccessibleContext of this Dialog - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^java.awt.Dialog this]
     (-> this (.getAccessibleContext))))
 
 (defn set-visible
@@ -309,7 +309,7 @@
    b.
 
   b - if true, makes the Dialog visible, otherwise hides the Dialog. If the dialog and/or its owner are not yet displayable, both are made displayable. The dialog will be validated prior to being made visible. If false, hides the Dialog and then causes setVisible(true) to return if it is currently blocked. Notes for modal dialogs. setVisible(true): If the dialog is not already visible, this call will not return until the dialog is hidden by calling setVisible(false) or dispose. setVisible(false): Hides the dialog and then returns on setVisible(true) if it is currently blocked. It is OK to call this method from the event dispatching thread because the toolkit ensures that other events are not blocked while this method is blocked. - `boolean`"
-  ([this b]
+  ([^java.awt.Dialog this ^Boolean b]
     (-> this (.setVisible b))))
 
 (defn set-undecorated
@@ -323,7 +323,7 @@
   undecorated - true if no dialog decorations are to be enabled; false if dialog decorations are to be enabled - `boolean`
 
   throws: java.awt.IllegalComponentStateException - if undecorated is false, and the alpha value of this dialog background color is less than 1.0f"
-  ([this undecorated]
+  ([^java.awt.Dialog this ^Boolean undecorated]
     (-> this (.setUndecorated undecorated))))
 
 (defn set-modal
@@ -336,14 +336,14 @@
    until it is hidden and then shown again.
 
   modal - specifies whether dialog blocks input to other windows when shown; calling to setModal(true) is equivalent to setModalityType(Dialog.DEFAULT_MODALITY_TYPE), and calling to setModal(false) is equvivalent to setModalityType(Dialog.ModalityType.MODELESS) - `boolean`"
-  ([this modal]
+  ([^java.awt.Dialog this ^Boolean modal]
     (-> this (.setModal modal))))
 
 (defn set-resizable
   "Sets whether this dialog is resizable by the user.
 
   resizable - true if the user can resize this dialog; false otherwise. - `boolean`"
-  ([this resizable]
+  ([^java.awt.Dialog this ^Boolean resizable]
     (-> this (.setResizable resizable))))
 
 (defn get-title
@@ -352,13 +352,13 @@
 
   returns: the title of this dialog window. The title may be
               null. - `java.lang.String`"
-  ([this]
+  ([^java.awt.Dialog this]
     (-> this (.getTitle))))
 
 (defn set-title
   "Sets the title of the Dialog.
 
   title - the title displayed in the dialog's border; a null value results in an empty title - `java.lang.String`"
-  ([this title]
+  ([^java.awt.Dialog this ^java.lang.String title]
     (-> this (.setTitle title))))
 

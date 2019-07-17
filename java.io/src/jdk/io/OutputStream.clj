@@ -40,9 +40,9 @@
   len - the number of bytes to write. - `int`
 
   throws: java.io.IOException - if an I/O error occurs. In particular, an IOException is thrown if the output stream is closed."
-  ([this b off len]
+  ([^java.io.OutputStream this b ^Integer off ^Integer len]
     (-> this (.write b off len)))
-  ([this b]
+  ([^java.io.OutputStream this ^Integer b]
     (-> this (.write b))))
 
 (defn flush
@@ -62,7 +62,7 @@
    The flush method of OutputStream does nothing.
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this]
+  ([^java.io.OutputStream this]
     (-> this (.flush))))
 
 (defn close
@@ -74,6 +74,6 @@
    The close method of OutputStream does nothing.
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this]
+  ([^java.io.OutputStream this]
     (-> this (.close))))
 

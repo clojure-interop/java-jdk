@@ -67,7 +67,7 @@
 
   returns: the package of the requested name. It may be null if no package
             information is available from the archive or codebase. - `java.lang.Package`"
-  ([name]
+  ([^java.lang.String name]
     (Package/getPackage name)))
 
 (defn *get-packages
@@ -93,7 +93,7 @@
        directly present on this element, else null - `<A extends java.lang.annotation.Annotation> A`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  ([this annotation-class]
+  ([^java.lang.Package this ^java.lang.Class annotation-class]
     (-> this (.getDeclaredAnnotation annotation-class))))
 
 (defn get-declared-annotations-by-type
@@ -105,7 +105,7 @@
        directly or indirectly present on this element, else an array of length zero - `<A extends java.lang.annotation.Annotation> A[]`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  ([this annotation-class]
+  ([^java.lang.Package this ^java.lang.Class annotation-class]
     (-> this (.getDeclaredAnnotationsByType annotation-class))))
 
 (defn to-string
@@ -115,7 +115,7 @@
    If the package version is defined it is appended.
 
   returns: the string representation of the package. - `java.lang.String`"
-  ([this]
+  ([^java.lang.Package this]
     (-> this (.toString))))
 
 (defn get-annotation
@@ -127,14 +127,14 @@
        present on this element, else null - `<A extends java.lang.annotation.Annotation> A`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  ([this annotation-class]
+  ([^java.lang.Package this ^java.lang.Class annotation-class]
     (-> this (.getAnnotation annotation-class))))
 
 (defn get-declared-annotations
   "Description copied from interface: AnnotatedElement
 
   returns: annotations directly present on this element - `java.lang.annotation.Annotation[]`"
-  ([this]
+  ([^java.lang.Package this]
     (-> this (.getDeclaredAnnotations))))
 
 (defn get-name
@@ -143,14 +143,14 @@
   returns: The fully-qualified name of this package as defined in section 6.5.3 of
             The Java™ Language Specification,
             for example, java.lang - `java.lang.String`"
-  ([this]
+  ([^java.lang.Package this]
     (-> this (.getName))))
 
 (defn get-annotations
   "Description copied from interface: AnnotatedElement
 
   returns: annotations present on this element - `java.lang.annotation.Annotation[]`"
-  ([this]
+  ([^java.lang.Package this]
     (-> this (.getAnnotations))))
 
 (defn get-implementation-version
@@ -162,14 +162,14 @@
    by this vendor for this package.
 
   returns: the version of the implementation, null is returned if it is not known. - `java.lang.String`"
-  ([this]
+  ([^java.lang.Package this]
     (-> this (.getImplementationVersion))))
 
 (defn get-implementation-title
   "Return the title of this package.
 
   returns: the title of the implementation, null is returned if it is not known. - `java.lang.String`"
-  ([this]
+  ([^java.lang.Package this]
     (-> this (.getImplementationTitle))))
 
 (defn get-annotations-by-type
@@ -181,7 +181,7 @@
        associated with this element, else an array of length zero - `<A extends java.lang.annotation.Annotation> A[]`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  ([this annotation-class]
+  ([^java.lang.Package this ^java.lang.Class annotation-class]
     (-> this (.getAnnotationsByType annotation-class))))
 
 (defn sealed?
@@ -191,9 +191,9 @@
   url - the code source url - `java.net.URL`
 
   returns: true if this package is sealed with respect to url - `boolean`"
-  ([this url]
+  ([^java.lang.Package this ^java.net.URL url]
     (-> this (.isSealed url)))
-  ([this]
+  ([^java.lang.Package this]
     (-> this (.isSealed))))
 
 (defn get-implementation-vendor
@@ -201,14 +201,14 @@
    vendor or company that provided this implementation.
 
   returns: the vendor that implemented this package.. - `java.lang.String`"
-  ([this]
+  ([^java.lang.Package this]
     (-> this (.getImplementationVendor))))
 
 (defn hash-code
   "Return the hash code computed from the package name.
 
   returns: the hash code computed from the package name. - `int`"
-  ([this]
+  ([^java.lang.Package this]
     (-> this (.hashCode))))
 
 (defn get-specification-vendor
@@ -217,7 +217,7 @@
    of the classes that implement this package.
 
   returns: the specification vendor, null is returned if it is not known. - `java.lang.String`"
-  ([this]
+  ([^java.lang.Package this]
     (-> this (.getSpecificationVendor))))
 
 (defn annotation-present?
@@ -237,7 +237,7 @@
        type is present on this element, else false - `boolean`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  ([this annotation-class]
+  ([^java.lang.Package this ^java.lang.annotation.Annotation> annotation-class]
     (-> this (.isAnnotationPresent annotation-class))))
 
 (defn compatible-with?
@@ -261,7 +261,7 @@
             than or equal to the desired version number - `boolean`
 
   throws: java.lang.NumberFormatException - if the desired or current version is not of the correct dotted form."
-  ([this desired]
+  ([^java.lang.Package this ^java.lang.String desired]
     (-> this (.isCompatibleWith desired))))
 
 (defn get-specification-version
@@ -273,13 +273,13 @@
    numbers are compared.
 
   returns: the specification version, null is returned if it is not known. - `java.lang.String`"
-  ([this]
+  ([^java.lang.Package this]
     (-> this (.getSpecificationVersion))))
 
 (defn get-specification-title
   "Return the title of the specification that this package implements.
 
   returns: the specification title, null is returned if it is not known. - `java.lang.String`"
-  ([this]
+  ([^java.lang.Package this]
     (-> this (.getSpecificationTitle))))
 

@@ -26,7 +26,7 @@
   buf - the input buffer. - `byte[]`
   offset - the offset in the buffer of the first byte to read. - `int`
   length - the maximum number of bytes to read from the buffer. - `int`"
-  ([buf offset length]
+  ([buf ^Integer offset ^Integer length]
     (new ByteArrayInputStream buf offset length))
   ([buf]
     (new ByteArrayInputStream buf)))
@@ -58,9 +58,9 @@
             the stream has been reached. - `int`
 
   throws: java.lang.NullPointerException - If b is null."
-  ([this b off len]
+  ([^java.io.ByteArrayInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  ([this]
+  ([^java.io.ByteArrayInputStream this]
     (-> this (.read))))
 
 (defn skip
@@ -75,7 +75,7 @@
   n - the number of bytes to be skipped. - `long`
 
   returns: the actual number of bytes skipped. - `long`"
-  ([this n]
+  ([^java.io.ByteArrayInputStream this ^Long n]
     (-> this (.skip n))))
 
 (defn available
@@ -87,7 +87,7 @@
 
   returns: the number of remaining bytes that can be read (or skipped
             over) from this input stream without blocking. - `int`"
-  ([this]
+  ([^java.io.ByteArrayInputStream this]
     (-> this (.available))))
 
 (defn mark-supported
@@ -97,7 +97,7 @@
 
   returns: true if this stream instance supports the mark
             and reset methods; false otherwise. - `boolean`"
-  ([this]
+  ([^java.io.ByteArrayInputStream this]
     (-> this (.markSupported))))
 
 (defn mark
@@ -114,14 +114,14 @@
     has no meaning.
 
   read-ahead-limit - the maximum limit of bytes that can be read before the mark position becomes invalid. - `int`"
-  ([this read-ahead-limit]
+  ([^java.io.ByteArrayInputStream this ^Integer read-ahead-limit]
     (-> this (.mark read-ahead-limit))))
 
 (defn reset
   "Resets the buffer to the marked position.  The marked position
    is 0 unless another position was marked or an offset was specified
    in the constructor."
-  ([this]
+  ([^java.io.ByteArrayInputStream this]
     (-> this (.reset))))
 
 (defn close
@@ -130,6 +130,6 @@
    generating an IOException.
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this]
+  ([^java.io.ByteArrayInputStream this]
     (-> this (.close))))
 

@@ -30,7 +30,7 @@
 
   returns: the Id of this SignatureProperties (or
       null if not specified) - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getId))))
 
 (defn get-properties
@@ -40,6 +40,6 @@
 
   returns: an unmodifiable list of one or more
       SignaturePropertys - `java.util.List`"
-  ([this]
+  ([^. this]
     (-> this (.getProperties))))
 

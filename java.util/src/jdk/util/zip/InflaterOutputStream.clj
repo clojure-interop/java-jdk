@@ -15,11 +15,11 @@
   buf-len - decompression buffer size - `int`
 
   throws: java.lang.IllegalArgumentException - if bufLen <= 0"
-  ([out infl buf-len]
+  ([^java.io.OutputStream out ^java.util.zip.Inflater infl ^Integer buf-len]
     (new InflaterOutputStream out infl buf-len))
-  ([out infl]
+  ([^java.io.OutputStream out ^java.util.zip.Inflater infl]
     (new InflaterOutputStream out infl))
-  ([out]
+  ([^java.io.OutputStream out]
     (new InflaterOutputStream out)))
 
 (defn close
@@ -27,7 +27,7 @@
    the underlying output stream.
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([this]
+  ([^java.util.zip.InflaterOutputStream this]
     (-> this (.close))))
 
 (defn flush
@@ -35,7 +35,7 @@
    written.
 
   throws: java.io.IOException - if an I/O error occurs or this stream is already closed"
-  ([this]
+  ([^java.util.zip.InflaterOutputStream this]
     (-> this (.flush))))
 
 (defn finish
@@ -44,7 +44,7 @@
    succession to the same output stream.
 
   throws: java.io.IOException - if an I/O error occurs or this stream is already closed"
-  ([this]
+  ([^java.util.zip.InflaterOutputStream this]
     (-> this (.finish))))
 
 (defn write
@@ -55,8 +55,8 @@
   len - number of bytes to decompress from b - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if off < 0, or if len < 0, or if len > b.length - off"
-  ([this b off len]
+  ([^java.util.zip.InflaterOutputStream this b ^Integer off ^Integer len]
     (-> this (.write b off len)))
-  ([this b]
+  ([^java.util.zip.InflaterOutputStream this ^Integer b]
     (-> this (.write b))))
 

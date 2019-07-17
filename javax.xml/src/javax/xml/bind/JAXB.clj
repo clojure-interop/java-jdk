@@ -53,7 +53,7 @@
   type - `java.lang.Class<T>`
 
   returns: `<T> T`"
-  ([xml type]
+  ([^java.io.File xml ^java.lang.Class type]
     (JAXB/unmarshal xml type)))
 
 (defn *marshal
@@ -63,6 +63,6 @@
   xml - XML will be written to this file. If it already exists, it will be overwritten. - `java.io.File`
 
   throws: javax.xml.bind.DataBindingException - If the operation fails, such as due to I/O error, unbindable classes."
-  ([jaxb-object xml]
+  ([^java.lang.Object jaxb-object ^java.io.File xml]
     (JAXB/marshal jaxb-object xml)))
 

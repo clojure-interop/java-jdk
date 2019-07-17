@@ -93,9 +93,9 @@
   m-11 - the Y coordinate scaling element of the 3x3 matrix - `float`
   m-02 - the X coordinate translation element of the 3x3 matrix - `float`
   m-12 - the Y coordinate translation element of the 3x3 matrix - `float`"
-  ([m-00 m-10 m-01 m-11 m-02 m-12]
+  ([^Float m-00 ^Float m-10 ^Float m-01 ^Float m-11 ^Float m-02 ^Float m-12]
     (new AffineTransform m-00 m-10 m-01 m-11 m-02 m-12))
-  ([tx]
+  ([^java.awt.geom.AffineTransform tx]
     (new AffineTransform tx))
   ([]
     (new AffineTransform )))
@@ -248,7 +248,7 @@
 
   returns: an AffineTransform object that represents a
     translation transformation, created with the specified vector. - `java.awt.geom.AffineTransform`"
-  ([tx ty]
+  ([^Double tx ^Double ty]
     (AffineTransform/getTranslateInstance tx ty)))
 
 (defn *get-rotate-instance
@@ -275,13 +275,13 @@
   returns: an AffineTransform object that rotates
     coordinates around the specified point according to the
     specified rotation vector. - `java.awt.geom.AffineTransform`"
-  ([vecx vecy anchorx anchory]
+  ([^Double vecx ^Double vecy ^Double anchorx ^Double anchory]
     (AffineTransform/getRotateInstance vecx vecy anchorx anchory))
-  ([theta anchorx anchory]
+  ([^Double theta ^Double anchorx ^Double anchory]
     (AffineTransform/getRotateInstance theta anchorx anchory))
-  ([vecx vecy]
+  ([^Double vecx ^Double vecy]
     (AffineTransform/getRotateInstance vecx vecy))
-  ([theta]
+  ([^Double theta]
     (AffineTransform/getRotateInstance theta)))
 
 (defn *get-quadrant-rotate-instance
@@ -302,9 +302,9 @@
   returns: an AffineTransform object that rotates
     coordinates by the specified number of quadrants around the
     specified anchor point. - `java.awt.geom.AffineTransform`"
-  ([numquadrants anchorx anchory]
+  ([^Integer numquadrants ^Double anchorx ^Double anchory]
     (AffineTransform/getQuadrantRotateInstance numquadrants anchorx anchory))
-  ([numquadrants]
+  ([^Integer numquadrants]
     (AffineTransform/getQuadrantRotateInstance numquadrants)))
 
 (defn *get-scale-instance
@@ -321,7 +321,7 @@
 
   returns: an AffineTransform object that scales
     coordinates by the specified factors. - `java.awt.geom.AffineTransform`"
-  ([sx sy]
+  ([^Double sx ^Double sy]
     (AffineTransform/getScaleInstance sx sy)))
 
 (defn *get-shear-instance
@@ -338,7 +338,7 @@
 
   returns: an AffineTransform object that shears
     coordinates by the specified multipliers. - `java.awt.geom.AffineTransform`"
-  ([shx shy]
+  ([^Double shx ^Double shy]
     (AffineTransform/getShearInstance shx shy)))
 
 (defn invert
@@ -357,7 +357,7 @@
    thrown if the invert method is called.
 
   throws: java.awt.geom.NoninvertibleTransformException - if the matrix cannot be inverted."
-  ([this]
+  ([^java.awt.geom.AffineTransform this]
     (-> this (.invert))))
 
 (defn get-type
@@ -376,7 +376,7 @@
 
   returns: the OR combination of any of the indicated flags that
    apply to this transform - `int`"
-  ([this]
+  ([^java.awt.geom.AffineTransform this]
     (-> this (.getType))))
 
 (defn identity?
@@ -385,7 +385,7 @@
 
   returns: true if this AffineTransform is
    an identity transform; false otherwise. - `boolean`"
-  ([this]
+  ([^java.awt.geom.AffineTransform this]
     (-> this (.isIdentity))))
 
 (defn translate
@@ -400,7 +400,7 @@
 
   tx - the distance by which coordinates are translated in the X axis direction - `double`
   ty - the distance by which coordinates are translated in the Y axis direction - `double`"
-  ([this tx ty]
+  ([^java.awt.geom.AffineTransform this ^Double tx ^Double ty]
     (-> this (.translate tx ty))))
 
 (defn scale
@@ -415,7 +415,7 @@
 
   sx - the factor by which coordinates are scaled along the X axis direction - `double`
   sy - the factor by which coordinates are scaled along the Y axis direction - `double`"
-  ([this sx sy]
+  ([^java.awt.geom.AffineTransform this ^Double sx ^Double sy]
     (-> this (.scale sx sy))))
 
 (defn get-translate-y
@@ -424,7 +424,7 @@
 
   returns: a double value that is the Y coordinate of the translation
     element of the affine transformation matrix. - `double`"
-  ([this]
+  ([^java.awt.geom.AffineTransform this]
     (-> this (.getTranslateY))))
 
 (defn delta-transform
@@ -451,9 +451,9 @@
   dst-pts - the array into which the transformed distance vectors are returned. Each vector is stored as a pair of relative x, y coordinates. - `double[]`
   dst-off - the offset to the location of the first transformed vector that is stored in the destination array - `int`
   num-pts - the number of vector coordinate pairs to be transformed - `int`"
-  ([this src-pts src-off dst-pts dst-off num-pts]
+  ([^java.awt.geom.AffineTransform this src-pts ^Integer src-off dst-pts ^Integer dst-off ^Integer num-pts]
     (-> this (.deltaTransform src-pts src-off dst-pts dst-off num-pts)))
-  ([this pt-src pt-dst]
+  ([^java.awt.geom.AffineTransform this ^java.awt.geom.Point2D pt-src ^java.awt.geom.Point2D pt-dst]
     (-> this (.deltaTransform pt-src pt-dst))))
 
 (defn transform
@@ -483,9 +483,9 @@
   pt-dst - the array into which the transform point objects are returned - `java.awt.geom.Point2D[]`
   dst-off - the offset to the location of the first transformed point object that is stored in the destination array - `int`
   num-pts - the number of point objects to be transformed - `int`"
-  ([this pt-src src-off pt-dst dst-off num-pts]
+  ([^java.awt.geom.AffineTransform this ^java.awt.geom.Point2D[] pt-src ^Integer src-off ^java.awt.geom.Point2D[] pt-dst ^Integer dst-off ^Integer num-pts]
     (-> this (.transform pt-src src-off pt-dst dst-off num-pts)))
-  ([this pt-src pt-dst]
+  ([^java.awt.geom.AffineTransform this ^java.awt.geom.Point2D pt-src ^java.awt.geom.Point2D pt-dst]
     (-> this (.transform pt-src pt-dst))))
 
 (defn to-string
@@ -494,7 +494,7 @@
 
   returns: a String representing the value of this
    Object. - `java.lang.String`"
-  ([this]
+  ([^java.awt.geom.AffineTransform this]
     (-> this (.toString))))
 
 (defn get-shear-y
@@ -503,7 +503,7 @@
 
   returns: a double value that is the Y coordinate of the shearing
     element of the affine transformation matrix. - `double`"
-  ([this]
+  ([^java.awt.geom.AffineTransform this]
     (-> this (.getShearY))))
 
 (defn set-to-shear
@@ -517,7 +517,7 @@
 
   shx - the multiplier by which coordinates are shifted in the direction of the positive X axis as a factor of their Y coordinate - `double`
   shy - the multiplier by which coordinates are shifted in the direction of the positive Y axis as a factor of their X coordinate - `double`"
-  ([this shx shy]
+  ([^java.awt.geom.AffineTransform this ^Double shx ^Double shy]
     (-> this (.setToShear shx shy))))
 
 (defn create-inverse
@@ -540,12 +540,12 @@
    inverse transformation. - `java.awt.geom.AffineTransform`
 
   throws: java.awt.geom.NoninvertibleTransformException - if the matrix cannot be inverted."
-  ([this]
+  ([^java.awt.geom.AffineTransform this]
     (-> this (.createInverse))))
 
 (defn set-to-identity
   "Resets this transform to the Identity transform."
-  ([this]
+  ([^java.awt.geom.AffineTransform this]
     (-> this (.setToIdentity))))
 
 (defn set-to-scale
@@ -559,7 +559,7 @@
 
   sx - the factor by which coordinates are scaled along the X axis direction - `double`
   sy - the factor by which coordinates are scaled along the Y axis direction - `double`"
-  ([this sx sy]
+  ([^java.awt.geom.AffineTransform this ^Double sx ^Double sy]
     (-> this (.setToScale sx sy))))
 
 (defn get-translate-x
@@ -568,7 +568,7 @@
 
   returns: a double value that is the X coordinate of the translation
     element of the affine transformation matrix. - `double`"
-  ([this]
+  ([^java.awt.geom.AffineTransform this]
     (-> this (.getTranslateX))))
 
 (defn set-to-rotation
@@ -591,13 +591,13 @@
   vecy - the Y coordinate of the rotation vector - `double`
   anchorx - the X coordinate of the rotation anchor point - `double`
   anchory - the Y coordinate of the rotation anchor point - `double`"
-  ([this vecx vecy anchorx anchory]
+  ([^java.awt.geom.AffineTransform this ^Double vecx ^Double vecy ^Double anchorx ^Double anchory]
     (-> this (.setToRotation vecx vecy anchorx anchory)))
-  ([this theta anchorx anchory]
+  ([^java.awt.geom.AffineTransform this ^Double theta ^Double anchorx ^Double anchory]
     (-> this (.setToRotation theta anchorx anchory)))
-  ([this vecx vecy]
+  ([^java.awt.geom.AffineTransform this ^Double vecx ^Double vecy]
     (-> this (.setToRotation vecx vecy)))
-  ([this theta]
+  ([^java.awt.geom.AffineTransform this ^Double theta]
     (-> this (.setToRotation theta))))
 
 (defn quadrant-rotate
@@ -614,9 +614,9 @@
   numquadrants - the number of 90 degree arcs to rotate by - `int`
   anchorx - the X coordinate of the rotation anchor point - `double`
   anchory - the Y coordinate of the rotation anchor point - `double`"
-  ([this numquadrants anchorx anchory]
+  ([^java.awt.geom.AffineTransform this ^Integer numquadrants ^Double anchorx ^Double anchory]
     (-> this (.quadrantRotate numquadrants anchorx anchory)))
-  ([this numquadrants]
+  ([^java.awt.geom.AffineTransform this ^Integer numquadrants]
     (-> this (.quadrantRotate numquadrants))))
 
 (defn pre-concatenate
@@ -640,7 +640,7 @@
             [this] = [Tx] x [this]
 
   tx - the AffineTransform object to be concatenated with this AffineTransform object. - `java.awt.geom.AffineTransform`"
-  ([this tx]
+  ([^java.awt.geom.AffineTransform this ^java.awt.geom.AffineTransform tx]
     (-> this (.preConcatenate tx))))
 
 (defn get-scale-x
@@ -649,7 +649,7 @@
 
   returns: a double value that is the X coordinate of the scaling
     element of the affine transformation matrix. - `double`"
-  ([this]
+  ([^java.awt.geom.AffineTransform this]
     (-> this (.getScaleX))))
 
 (defn get-shear-x
@@ -658,7 +658,7 @@
 
   returns: a double value that is the X coordinate of the shearing
     element of the affine transformation matrix. - `double`"
-  ([this]
+  ([^java.awt.geom.AffineTransform this]
     (-> this (.getShearX))))
 
 (defn create-transformed-shape
@@ -670,7 +670,7 @@
 
   returns: a new Shape object that defines the geometry
    of the transformed Shape, or null if pSrc is null. - `java.awt.Shape`"
-  ([this p-src]
+  ([^java.awt.geom.AffineTransform this ^java.awt.Shape p-src]
     (-> this (.createTransformedShape p-src))))
 
 (defn clone
@@ -678,14 +678,14 @@
 
   returns: an Object that is a copy of this
    AffineTransform object. - `java.lang.Object`"
-  ([this]
+  ([^java.awt.geom.AffineTransform this]
     (-> this (.clone))))
 
 (defn hash-code
   "Returns the hashcode for this transform.
 
   returns: a hash code for this transform. - `int`"
-  ([this]
+  ([^java.awt.geom.AffineTransform this]
     (-> this (.hashCode))))
 
 (defn set-to-quadrant-rotation
@@ -702,9 +702,9 @@
   numquadrants - the number of 90 degree arcs to rotate by - `int`
   anchorx - the X coordinate of the rotation anchor point - `double`
   anchory - the Y coordinate of the rotation anchor point - `double`"
-  ([this numquadrants anchorx anchory]
+  ([^java.awt.geom.AffineTransform this ^Integer numquadrants ^Double anchorx ^Double anchory]
     (-> this (.setToQuadrantRotation numquadrants anchorx anchory)))
-  ([this numquadrants]
+  ([^java.awt.geom.AffineTransform this ^Integer numquadrants]
     (-> this (.setToQuadrantRotation numquadrants))))
 
 (defn inverse-transform
@@ -725,9 +725,9 @@
   num-pts - the number of point objects to be transformed - `int`
 
   throws: java.awt.geom.NoninvertibleTransformException - if the matrix cannot be inverted."
-  ([this src-pts src-off dst-pts dst-off num-pts]
+  ([^java.awt.geom.AffineTransform this src-pts ^Integer src-off dst-pts ^Integer dst-off ^Integer num-pts]
     (-> this (.inverseTransform src-pts src-off dst-pts dst-off num-pts)))
-  ([this pt-src pt-dst]
+  ([^java.awt.geom.AffineTransform this ^java.awt.geom.Point2D pt-src ^java.awt.geom.Point2D pt-dst]
     (-> this (.inverseTransform pt-src pt-dst))))
 
 (defn shear
@@ -742,7 +742,7 @@
 
   shx - the multiplier by which coordinates are shifted in the direction of the positive X axis as a factor of their Y coordinate - `double`
   shy - the multiplier by which coordinates are shifted in the direction of the positive Y axis as a factor of their X coordinate - `double`"
-  ([this shx shy]
+  ([^java.awt.geom.AffineTransform this ^Double shx ^Double shy]
     (-> this (.shear shx shy))))
 
 (defn set-transform
@@ -755,9 +755,9 @@
   m-11 - the Y coordinate scaling element of the 3x3 matrix - `double`
   m-02 - the X coordinate translation element of the 3x3 matrix - `double`
   m-12 - the Y coordinate translation element of the 3x3 matrix - `double`"
-  ([this m-00 m-10 m-01 m-11 m-02 m-12]
+  ([^java.awt.geom.AffineTransform this ^Double m-00 ^Double m-10 ^Double m-01 ^Double m-11 ^Double m-02 ^Double m-12]
     (-> this (.setTransform m-00 m-10 m-01 m-11 m-02 m-12)))
-  ([this tx]
+  ([^java.awt.geom.AffineTransform this ^java.awt.geom.AffineTransform tx]
     (-> this (.setTransform tx))))
 
 (defn get-matrix
@@ -771,7 +771,7 @@
    the array as { m00 m10 m01 m11 }
 
   flatmatrix - the double array used to store the returned values. - `double[]`"
-  ([this flatmatrix]
+  ([^java.awt.geom.AffineTransform this flatmatrix]
     (-> this (.getMatrix flatmatrix))))
 
 (defn set-to-translation
@@ -785,7 +785,7 @@
 
   tx - the distance by which coordinates are translated in the X axis direction - `double`
   ty - the distance by which coordinates are translated in the Y axis direction - `double`"
-  ([this tx ty]
+  ([^java.awt.geom.AffineTransform this ^Double tx ^Double ty]
     (-> this (.setToTranslation tx ty))))
 
 (defn rotate
@@ -808,13 +808,13 @@
   vecy - the Y coordinate of the rotation vector - `double`
   anchorx - the X coordinate of the rotation anchor point - `double`
   anchory - the Y coordinate of the rotation anchor point - `double`"
-  ([this vecx vecy anchorx anchory]
+  ([^java.awt.geom.AffineTransform this ^Double vecx ^Double vecy ^Double anchorx ^Double anchory]
     (-> this (.rotate vecx vecy anchorx anchory)))
-  ([this theta anchorx anchory]
+  ([^java.awt.geom.AffineTransform this ^Double theta ^Double anchorx ^Double anchory]
     (-> this (.rotate theta anchorx anchory)))
-  ([this vecx vecy]
+  ([^java.awt.geom.AffineTransform this ^Double vecx ^Double vecy]
     (-> this (.rotate vecx vecy)))
-  ([this theta]
+  ([^java.awt.geom.AffineTransform this ^Double theta]
     (-> this (.rotate theta))))
 
 (defn equals
@@ -826,7 +826,7 @@
 
   returns: true if obj equals this
    AffineTransform object; false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.awt.geom.AffineTransform this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn get-scale-y
@@ -835,7 +835,7 @@
 
   returns: a double value that is the Y coordinate of the scaling
     element of the affine transformation matrix. - `double`"
-  ([this]
+  ([^java.awt.geom.AffineTransform this]
     (-> this (.getScaleY))))
 
 (defn get-determinant
@@ -873,7 +873,7 @@
 
   returns: the determinant of the matrix used to transform the
    coordinates. - `double`"
-  ([this]
+  ([^java.awt.geom.AffineTransform this]
     (-> this (.getDeterminant))))
 
 (defn concatenate
@@ -894,6 +894,6 @@
             [this] = [this] x [Tx]
 
   tx - the AffineTransform object to be concatenated with this AffineTransform object. - `java.awt.geom.AffineTransform`"
-  ([this tx]
+  ([^java.awt.geom.AffineTransform this ^java.awt.geom.AffineTransform tx]
     (-> this (.concatenate tx))))
 

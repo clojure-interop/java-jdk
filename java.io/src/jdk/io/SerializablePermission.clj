@@ -53,8 +53,8 @@
   actions - currently unused and must be set to null - `java.lang.String`
 
   throws: java.lang.NullPointerException - if name is null."
-  ([name actions]
+  ([^java.lang.String name ^java.lang.String actions]
     (new SerializablePermission name actions))
-  ([name]
+  ([^java.lang.String name]
     (new SerializablePermission name)))
 

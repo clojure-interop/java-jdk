@@ -13,7 +13,7 @@
    relative URIs and to include in error messages and warnings.
 
   system-id - The system identifier as a URL string. - `java.lang.String`"
-  ([this system-id]
+  ([^. this ^java.lang.String system-id]
     (-> this (.setSystemId system-id))))
 
 (defn get-system-id
@@ -21,6 +21,6 @@
 
   returns: The system identifier that was set with setSystemId, or null
    if setSystemId was not called. - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getSystemId))))
 

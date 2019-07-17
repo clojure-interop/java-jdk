@@ -21,6 +21,6 @@
   "Invoked when the mouse wheel is rotated.
 
   e - `java.awt.event.MouseWheelEvent`"
-  ([this e]
+  ([^. this ^java.awt.event.MouseWheelEvent e]
     (-> this (.mouseWheelMoved e))))
 

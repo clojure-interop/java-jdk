@@ -26,7 +26,7 @@
 
   returns: the row where the last item in path is visible or -1
            if any elements in path aren't currently visible - `int`"
-  ([this path]
+  ([^javax.swing.tree.FixedHeightLayoutCache this ^javax.swing.tree.TreePath path]
     (-> this (.getRowForPath path))))
 
 (defn tree-nodes-inserted
@@ -37,7 +37,7 @@
    ascending order.
 
   e - the TreeModelEvent - `javax.swing.event.TreeModelEvent`"
-  ([this e]
+  ([^javax.swing.tree.FixedHeightLayoutCache this ^javax.swing.event.TreeModelEvent e]
     (-> this (.treeNodesInserted e))))
 
 (defn tree-nodes-removed
@@ -51,7 +51,7 @@
    e.childIndices() returns the indices the nodes had before they were deleted in ascending order.
 
   e - the TreeModelEvent - `javax.swing.event.TreeModelEvent`"
-  ([this e]
+  ([^javax.swing.tree.FixedHeightLayoutCache this ^javax.swing.event.TreeModelEvent e]
     (-> this (.treeNodesRemoved e))))
 
 (defn expanded?
@@ -60,14 +60,14 @@
   path - `javax.swing.tree.TreePath`
 
   returns: `boolean`"
-  ([this path]
+  ([^javax.swing.tree.FixedHeightLayoutCache this ^javax.swing.tree.TreePath path]
     (-> this (.isExpanded path))))
 
 (defn get-row-count
   "Returns the number of visible rows.
 
   returns: the number of rows being displayed - `int`"
-  ([this]
+  ([^javax.swing.tree.FixedHeightLayoutCache this]
     (-> this (.getRowCount))))
 
 (defn set-root-visible
@@ -75,7 +75,7 @@
    the TreeModel is visible.
 
   root-visible - true if the root node of the tree is to be displayed - `boolean`"
-  ([this root-visible]
+  ([^javax.swing.tree.FixedHeightLayoutCache this ^Boolean root-visible]
     (-> this (.setRootVisible root-visible))))
 
 (defn get-visible-child-count
@@ -84,7 +84,7 @@
   path - the path being queried - `javax.swing.tree.TreePath`
 
   returns: the number of visible children for the specified path - `int`"
-  ([this path]
+  ([^javax.swing.tree.FixedHeightLayoutCache this ^javax.swing.tree.TreePath path]
     (-> this (.getVisibleChildCount path))))
 
 (defn tree-nodes-changed
@@ -100,7 +100,7 @@
    e.childIndices() returns the index(es) of the changed node(s).
 
   e - the TreeModelEvent - `javax.swing.event.TreeModelEvent`"
-  ([this e]
+  ([^javax.swing.tree.FixedHeightLayoutCache this ^javax.swing.event.TreeModelEvent e]
     (-> this (.treeNodesChanged e))))
 
 (defn invalidate-path-bounds
@@ -108,7 +108,7 @@
    is all that could change.
 
   path - the path being updated - `javax.swing.tree.TreePath`"
-  ([this path]
+  ([^javax.swing.tree.FixedHeightLayoutCache this ^javax.swing.tree.TreePath path]
     (-> this (.invalidatePathBounds path))))
 
 (defn get-visible-paths-from
@@ -119,7 +119,7 @@
   path - the starting location for the enumeration - `javax.swing.tree.TreePath`
 
   returns: the Enumerator starting at the desired location - `java.util.Enumeration<javax.swing.tree.TreePath>`"
-  ([this path]
+  ([^javax.swing.tree.FixedHeightLayoutCache this ^javax.swing.tree.TreePath path]
     (-> this (.getVisiblePathsFrom path))))
 
 (defn tree-structure-changed
@@ -132,7 +132,7 @@
    e.childIndices() returns null.
 
   e - the TreeModelEvent - `javax.swing.event.TreeModelEvent`"
-  ([this e]
+  ([^javax.swing.tree.FixedHeightLayoutCache this ^javax.swing.event.TreeModelEvent e]
     (-> this (.treeStructureChanged e))))
 
 (defn get-expanded-state?
@@ -141,7 +141,7 @@
   path - the path being queried - `javax.swing.tree.TreePath`
 
   returns: true if the path is expanded and visible, false otherwise - `boolean`"
-  ([this path]
+  ([^javax.swing.tree.FixedHeightLayoutCache this ^javax.swing.tree.TreePath path]
     (-> this (.getExpandedState path))))
 
 (defn set-row-height
@@ -149,7 +149,7 @@
    0 this will throw an IllegalArgumentException.
 
   row-height - the height of each cell, in pixels - `int`"
-  ([this row-height]
+  ([^javax.swing.tree.FixedHeightLayoutCache this ^Integer row-height]
     (-> this (.setRowHeight row-height))))
 
 (defn get-path-for-row
@@ -159,7 +159,7 @@
   row - the row being queried - `int`
 
   returns: the TreePath for the given row - `javax.swing.tree.TreePath`"
-  ([this row]
+  ([^javax.swing.tree.FixedHeightLayoutCache this ^Integer row]
     (-> this (.getPathForRow row))))
 
 (defn get-bounds
@@ -169,7 +169,7 @@
   place-in - a Rectangle object giving the available space - `java.awt.Rectangle`
 
   returns: a Rectangle object specifying the space to be used - `java.awt.Rectangle`"
-  ([this path place-in]
+  ([^javax.swing.tree.FixedHeightLayoutCache this ^javax.swing.tree.TreePath path ^java.awt.Rectangle place-in]
     (-> this (.getBounds path place-in))))
 
 (defn set-expanded-state
@@ -178,20 +178,20 @@
 
   path - the path being expanded or collapsed - `javax.swing.tree.TreePath`
   is-expanded - true if the path should be expanded, false otherwise - `boolean`"
-  ([this path is-expanded]
+  ([^javax.swing.tree.FixedHeightLayoutCache this ^javax.swing.tree.TreePath path ^Boolean is-expanded]
     (-> this (.setExpandedState path is-expanded))))
 
 (defn set-model
   "Sets the TreeModel that will provide the data.
 
   new-model - the TreeModel that is to provide the data - `javax.swing.tree.TreeModel`"
-  ([this new-model]
+  ([^javax.swing.tree.FixedHeightLayoutCache this ^javax.swing.tree.TreeModel new-model]
     (-> this (.setModel new-model))))
 
 (defn invalidate-sizes
   "Informs the TreeState that it needs to recalculate all the sizes
    it is referencing."
-  ([this]
+  ([^javax.swing.tree.FixedHeightLayoutCache this]
     (-> this (.invalidateSizes))))
 
 (defn get-path-closest-to
@@ -205,6 +205,6 @@
   y - the vertical component of the desired location - `int`
 
   returns: the TreePath closest to the specified point - `javax.swing.tree.TreePath`"
-  ([this x y]
+  ([^javax.swing.tree.FixedHeightLayoutCache this ^Integer x ^Integer y]
     (-> this (.getPathClosestTo x y))))
 

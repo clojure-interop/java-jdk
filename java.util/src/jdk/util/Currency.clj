@@ -55,7 +55,7 @@
   returns: the Currency instance for the given currency code - `java.util.Currency`
 
   throws: java.lang.NullPointerException - if currencyCode is null"
-  ([currency-code]
+  ([^java.lang.String currency-code]
     (Currency/getInstance currency-code)))
 
 (defn *get-available-currencies
@@ -73,7 +73,7 @@
   "Gets the ISO 4217 currency code of this currency.
 
   returns: the ISO 4217 currency code of this currency. - `java.lang.String`"
-  ([this]
+  ([^java.util.Currency this]
     (-> this (.getCurrencyCode))))
 
 (defn get-symbol
@@ -87,9 +87,9 @@
   returns: the symbol of this currency for the specified locale - `java.lang.String`
 
   throws: java.lang.NullPointerException - if locale is null"
-  ([this locale]
+  ([^java.util.Currency this ^java.util.Locale locale]
     (-> this (.getSymbol locale)))
-  ([this]
+  ([^java.util.Currency this]
     (-> this (.getSymbol))))
 
 (defn get-default-fraction-digits
@@ -100,14 +100,14 @@
    -1 is returned.
 
   returns: the default number of fraction digits used with this currency - `int`"
-  ([this]
+  ([^java.util.Currency this]
     (-> this (.getDefaultFractionDigits))))
 
 (defn get-numeric-code
   "Returns the ISO 4217 numeric code of this currency.
 
   returns: the ISO 4217 numeric code of this currency - `int`"
-  ([this]
+  ([^java.util.Currency this]
     (-> this (.getNumericCode))))
 
 (defn get-display-name
@@ -120,15 +120,15 @@
   returns: the display name of this currency for the specified locale - `java.lang.String`
 
   throws: java.lang.NullPointerException - if locale is null"
-  ([this locale]
+  ([^java.util.Currency this ^java.util.Locale locale]
     (-> this (.getDisplayName locale)))
-  ([this]
+  ([^java.util.Currency this]
     (-> this (.getDisplayName))))
 
 (defn to-string
   "Returns the ISO 4217 currency code of this currency.
 
   returns: the ISO 4217 currency code of this currency - `java.lang.String`"
-  ([this]
+  ([^java.util.Currency this]
     (-> this (.toString))))
 

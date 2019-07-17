@@ -139,7 +139,7 @@
    to null.  The root logger's level is set to Level.INFO.
 
   throws: java.lang.SecurityException - if a security manager exists and if the caller does not have LoggingPermission(`control`)."
-  ([this]
+  ([^java.util.logging.LogManager this]
     (-> this (.reset))))
 
 (defn check-access
@@ -150,7 +150,7 @@
    we return normally.
 
   throws: java.lang.SecurityException - if a security manager exists and if the caller does not have LoggingPermission(`control`)."
-  ([this]
+  ([^java.util.logging.LogManager this]
     (-> this (.checkAccess))))
 
 (defn remove-property-change-listener
@@ -165,7 +165,7 @@
   returns: `java.lang.  void`
 
   throws: java.lang.SecurityException - if a security manager exists and if the caller does not have LoggingPermission(`control`)."
-  ([this l]
+  ([^java.util.logging.LogManager this ^java.beans.PropertyChangeListener l]
     (-> this (.removePropertyChangeListener l))))
 
 (defn get-logger-names
@@ -183,7 +183,7 @@
    time since its name was returned by this method.
 
   returns: enumeration of logger name strings - `java.util.Enumeration<java.lang.String>`"
-  ([this]
+  ([^java.util.logging.LogManager this]
     (-> this (.getLoggerNames))))
 
 (defn get-property
@@ -193,7 +193,7 @@
   name - property name - `java.lang.String`
 
   returns: property value - `java.lang.String`"
-  ([this name]
+  ([^java.util.logging.LogManager this ^java.lang.String name]
     (-> this (.getProperty name))))
 
 (defn add-logger
@@ -213,7 +213,7 @@
             false if a logger of that name already exists. - `boolean`
 
   throws: java.lang.NullPointerException - if the logger name is null."
-  ([this logger]
+  ([^java.util.logging.LogManager this ^java.util.logging.Logger logger]
     (-> this (.addLogger logger))))
 
 (defn read-configuration
@@ -227,9 +227,9 @@
   ins - stream to read properties from - `java.io.InputStream`
 
   throws: java.lang.SecurityException - if a security manager exists and if the caller does not have LoggingPermission(`control`)."
-  ([this ins]
+  ([^java.util.logging.LogManager this ^java.io.InputStream ins]
     (-> this (.readConfiguration ins)))
-  ([this]
+  ([^java.util.logging.LogManager this]
     (-> this (.readConfiguration))))
 
 (defn add-property-change-listener
@@ -244,7 +244,7 @@
   returns: `java.lang.  void`
 
   throws: java.lang.SecurityException - if a security manager exists and if the caller does not have LoggingPermission(`control`)."
-  ([this l]
+  ([^java.util.logging.LogManager this ^java.beans.PropertyChangeListener l]
     (-> this (.addPropertyChangeListener l))))
 
 (defn get-logger
@@ -262,6 +262,6 @@
   name - name of the logger - `java.lang.String`
 
   returns: matching logger or null if none is found - `java.util.logging.Logger`"
-  ([this name]
+  ([^java.util.logging.LogManager this ^java.lang.String name]
     (-> this (.getLogger name))))
 

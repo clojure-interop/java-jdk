@@ -24,9 +24,9 @@
   src-raster - The Raster from which to copy pixels. - `java.awt.image.Raster`
 
   throws: java.lang.NullPointerException - if srcRaster is null."
-  ([this dx dy src-raster]
+  ([^java.awt.image.WritableRaster this ^Integer dx ^Integer dy ^java.awt.image.Raster src-raster]
     (-> this (.setRect dx dy src-raster)))
-  ([this src-raster]
+  ([^java.awt.image.WritableRaster this ^java.awt.image.Raster src-raster]
     (-> this (.setRect src-raster))))
 
 (defn get-writable-parent
@@ -35,7 +35,7 @@
 
   returns: the parent of this WritableRaster, or
             null. - `java.awt.image.WritableRaster`"
-  ([this]
+  ([^java.awt.image.WritableRaster this]
     (-> this (.getWritableParent))))
 
 (defn set-pixels
@@ -52,7 +52,7 @@
   i-array - The input int pixel array. - `int[]`
 
   throws: java.lang.NullPointerException - if iArray is null."
-  ([this x y w h i-array]
+  ([^java.awt.image.WritableRaster this ^Integer x ^Integer y ^Integer w ^Integer h i-array]
     (-> this (.setPixels x y w h i-array))))
 
 (defn set-sample
@@ -68,7 +68,7 @@
   s - The input sample. - `int`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if the coordinates or the band index are not in bounds."
-  ([this x y b s]
+  ([^java.awt.image.WritableRaster this ^Integer x ^Integer y ^Integer b ^Integer s]
     (-> this (.setSample x y b s))))
 
 (defn set-pixel
@@ -82,7 +82,7 @@
   i-array - The input samples in a int array. - `int[]`
 
   throws: java.lang.NullPointerException - if iArray is null."
-  ([this x y i-array]
+  ([^java.awt.image.WritableRaster this ^Integer x ^Integer y i-array]
     (-> this (.setPixel x y i-array))))
 
 (defn set-data-elements
@@ -106,9 +106,9 @@
   in-data - An object reference to an array of type defined by getTransferType() and length w*h*getNumDataElements() containing the pixel data to place between x,y and x+w-1, y+h-1. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if inData is null."
-  ([this x y w h in-data]
+  ([^java.awt.image.WritableRaster this ^Integer x ^Integer y ^Integer w ^Integer h ^java.lang.Object in-data]
     (-> this (.setDataElements x y w h in-data)))
-  ([this x y in-data]
+  ([^java.awt.image.WritableRaster this ^Integer x ^Integer y ^java.lang.Object in-data]
     (-> this (.setDataElements x y in-data))))
 
 (defn set-samples
@@ -126,7 +126,7 @@
   i-array - The input int sample array. - `int[]`
 
   throws: java.lang.NullPointerException - if iArray is null."
-  ([this x y w h b i-array]
+  ([^java.awt.image.WritableRaster this ^Integer x ^Integer y ^Integer w ^Integer h ^Integer b i-array]
     (-> this (.setSamples x y w h b i-array))))
 
 (defn create-writable-translated-child
@@ -142,7 +142,7 @@
            for the specified location. - `java.awt.image.WritableRaster`
 
   throws: java.awt.image.RasterFormatException - if computing either childMinX this.getWidth() or childMinY this.getHeight() results in integer overflow"
-  ([this child-min-x child-min-y]
+  ([^java.awt.image.WritableRaster this ^Integer child-min-x ^Integer child-min-y]
     (-> this (.createWritableTranslatedChild child-min-x child-min-y))))
 
 (defn create-writable-child
@@ -189,6 +189,6 @@
            DataBuffer of this WritableRaster. - `java.awt.image.WritableRaster`
 
   throws: java.awt.image.RasterFormatException - if w or h is less than or equal to zero, or computing any of parentX w, parentY h, childMinX w, or childMinY h results in integer overflow"
-  ([this parent-x parent-y w h child-min-x child-min-y band-list]
+  ([^java.awt.image.WritableRaster this ^Integer parent-x ^Integer parent-y ^Integer w ^Integer h ^Integer child-min-x ^Integer child-min-y band-list]
     (-> this (.createWritableChild parent-x parent-y w h child-min-x child-min-y band-list))))
 

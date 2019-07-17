@@ -60,7 +60,7 @@
    associated with this console.
 
   returns: The printwriter associated with this console - `java.io.PrintWriter`"
-  ([this]
+  ([^java.io.Console this]
     (-> this (.writer))))
 
 (defn reader
@@ -93,7 +93,7 @@
    by a linefeed, or an end of stream.
 
   returns: The reader associated with this console - `java.io.Reader`"
-  ([this]
+  ([^java.io.Console this]
     (-> this (.reader))))
 
 (defn format
@@ -106,7 +106,7 @@
   returns: This console - `java.io.Console`
 
   throws: java.util.IllegalFormatException - If a format string contains an illegal syntax, a format specifier that is incompatible with the given arguments, insufficient arguments given the format string, or other illegal conditions. For specification of all possible formatting errors, see the Details section of the formatter class specification."
-  ([this fmt args]
+  ([^java.io.Console this ^java.lang.String fmt ^java.lang.Object args]
     (-> this (.format fmt args))))
 
 (defn printf
@@ -125,7 +125,7 @@
   returns: This console - `java.io.Console`
 
   throws: java.util.IllegalFormatException - If a format string contains an illegal syntax, a format specifier that is incompatible with the given arguments, insufficient arguments given the format string, or other illegal conditions. For specification of all possible formatting errors, see the Details section of the formatter class specification."
-  ([this format args]
+  ([^java.io.Console this ^java.lang.String format ^java.lang.Object args]
     (-> this (.printf format args))))
 
 (defn read-line
@@ -140,9 +140,9 @@
             if an end of stream has been reached. - `java.lang.String`
 
   throws: java.util.IllegalFormatException - If a format string contains an illegal syntax, a format specifier that is incompatible with the given arguments, insufficient arguments given the format string, or other illegal conditions. For specification of all possible formatting errors, see the Details section of the formatter class specification."
-  ([this fmt args]
+  ([^java.io.Console this ^java.lang.String fmt ^java.lang.Object args]
     (-> this (.readLine fmt args)))
-  ([this]
+  ([^java.io.Console this]
     (-> this (.readLine))))
 
 (defn read-password
@@ -157,14 +157,14 @@
             or null if an end of stream has been reached. - `char[]`
 
   throws: java.util.IllegalFormatException - If a format string contains an illegal syntax, a format specifier that is incompatible with the given arguments, insufficient arguments given the format string, or other illegal conditions. For specification of all possible formatting errors, see the Details section of the formatter class specification."
-  ([this fmt args]
+  ([^java.io.Console this ^java.lang.String fmt ^java.lang.Object args]
     (-> this (.readPassword fmt args)))
-  ([this]
+  ([^java.io.Console this]
     (-> this (.readPassword))))
 
 (defn flush
   "Flushes the console and forces any buffered output to be written
    immediately ."
-  ([this]
+  ([^java.io.Console this]
     (-> this (.flush))))
 

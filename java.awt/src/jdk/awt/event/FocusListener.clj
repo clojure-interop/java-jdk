@@ -17,13 +17,13 @@
   "Invoked when a component gains the keyboard focus.
 
   e - `java.awt.event.FocusEvent`"
-  ([this e]
+  ([^. this ^java.awt.event.FocusEvent e]
     (-> this (.focusGained e))))
 
 (defn focus-lost
   "Invoked when a component loses the keyboard focus.
 
   e - `java.awt.event.FocusEvent`"
-  ([this e]
+  ([^. this ^java.awt.event.FocusEvent e]
     (-> this (.focusLost e))))
 

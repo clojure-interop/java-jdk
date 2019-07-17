@@ -47,6 +47,6 @@
   p - a visitor-specified parameter - `TypeKindVisitor8.P`
 
   returns: the result of defaultAction - `TypeKindVisitor8.R`"
-  ([this t p]
+  ([^javax.lang.model.util.TypeKindVisitor8 this ^javax.lang.model.type.IntersectionType t ^TypeKindVisitor8.P p]
     (-> this (.visitIntersection t p))))
 

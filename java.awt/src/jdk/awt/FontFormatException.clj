@@ -10,6 +10,6 @@
   Report a FontFormatException for the reason specified.
 
   reason - a String message indicating why the font is not accepted. - `java.lang.String`"
-  ([reason]
+  ([^java.lang.String reason]
     (new FontFormatException reason)))
 

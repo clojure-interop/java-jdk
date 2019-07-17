@@ -25,13 +25,13 @@
   c - the JTextPane object - `javax.swing.JComponent`
 
   returns: the UI - `javax.swing.plaf.ComponentUI`"
-  ([c]
+  ([^javax.swing.JComponent c]
     (BasicTextPaneUI/createUI c)))
 
 (defn install-ui
   "Description copied from class: BasicEditorPaneUI
 
   c - the editor component - `javax.swing.JComponent`"
-  ([this c]
+  ([^javax.swing.plaf.basic.BasicTextPaneUI this ^javax.swing.JComponent c]
     (-> this (.installUI c))))
 

@@ -25,9 +25,9 @@
 
   source - the object where the event originated - `java.lang.Object`
   id - the event type - `int`"
-  ([source id]
+  ([^java.lang.Object source ^Integer id]
     (new AWTEvent source id))
-  ([event]
+  ([^java.awt.Event event]
     (new AWTEvent event)))
 
 (def *-component-event-mask
@@ -201,21 +201,21 @@
    client use.
 
   new-source - the new Object to which the event should be dispatched - `java.lang.Object`"
-  ([this new-source]
+  ([^java.awt.AWTEvent this ^java.lang.Object new-source]
     (-> this (.setSource new-source))))
 
 (defn get-id
   "Returns the event type.
 
   returns: `int`"
-  ([this]
+  ([^java.awt.AWTEvent this]
     (-> this (.getID))))
 
 (defn to-string
   "Returns a String representation of this object.
 
   returns: A a String representation of this EventObject. - `java.lang.String`"
-  ([this]
+  ([^java.awt.AWTEvent this]
     (-> this (.toString))))
 
 (defn param-string
@@ -226,6 +226,6 @@
    null.
 
   returns: a string representation of this event - `java.lang.String`"
-  ([this]
+  ([^java.awt.AWTEvent this]
     (-> this (.paramString))))
 

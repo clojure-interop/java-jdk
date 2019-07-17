@@ -15,13 +15,13 @@
    have changed.
 
   an-item - the list object to select or null to clear the selection - `java.lang.Object`"
-  ([this an-item]
+  ([^. this ^java.lang.Object an-item]
     (-> this (.setSelectedItem an-item))))
 
 (defn get-selected-item
   "Returns the selected item
 
   returns: The selected item or null if there is no selection - `java.lang.Object`"
-  ([this]
+  ([^. this]
     (-> this (.getSelectedItem))))
 

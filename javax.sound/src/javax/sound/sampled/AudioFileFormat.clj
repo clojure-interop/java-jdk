@@ -73,37 +73,37 @@
   format - the format of the audio data contained in the file - `javax.sound.sampled.AudioFormat`
   frame-length - the audio data length in sample frames, or AudioSystem.NOT_SPECIFIED - `int`
   properties - a Map<String,Object> object with properties - `java.util.Map<java.lang.String,java.lang.Object>`"
-  ([type format frame-length properties]
+  ([^javax.sound.sampled.AudioFileFormat.Type type ^javax.sound.sampled.AudioFormat format ^Integer frame-length ^java.util.Map properties]
     (new AudioFileFormat type format frame-length properties))
-  ([type format frame-length]
+  ([^javax.sound.sampled.AudioFileFormat.Type type ^javax.sound.sampled.AudioFormat format ^Integer frame-length]
     (new AudioFileFormat type format frame-length)))
 
 (defn get-type
   "Obtains the audio file type, such as WAVE or AU.
 
   returns: the audio file type - `javax.sound.sampled.AudioFileFormat.Type`"
-  ([this]
+  ([^javax.sound.sampled.AudioFileFormat this]
     (-> this (.getType))))
 
 (defn get-byte-length
   "Obtains the size in bytes of the entire audio file (not just its audio data).
 
   returns: the audio file length in bytes - `int`"
-  ([this]
+  ([^javax.sound.sampled.AudioFileFormat this]
     (-> this (.getByteLength))))
 
 (defn get-format
   "Obtains the format of the audio data contained in the audio file.
 
   returns: the audio data format - `javax.sound.sampled.AudioFormat`"
-  ([this]
+  ([^javax.sound.sampled.AudioFileFormat this]
     (-> this (.getFormat))))
 
 (defn get-frame-length
   "Obtains the length of the audio data contained in the file, expressed in sample frames.
 
   returns: the number of sample frames of audio data in the file - `int`"
-  ([this]
+  ([^javax.sound.sampled.AudioFileFormat this]
     (-> this (.getFrameLength))))
 
 (defn properties
@@ -114,7 +114,7 @@
   returns: a Map<String,Object> object containing
            all properties. If no properties are recognized, an empty map is
            returned. - `java.util.Map<java.lang.String,java.lang.Object>`"
-  ([this]
+  ([^javax.sound.sampled.AudioFileFormat this]
     (-> this (.properties))))
 
 (defn get-property
@@ -130,13 +130,13 @@
 
   returns: the value of the property with the specified key,
            or null if the property does not exist. - `java.lang.Object`"
-  ([this key]
+  ([^javax.sound.sampled.AudioFileFormat this ^java.lang.String key]
     (-> this (.getProperty key))))
 
 (defn to-string
   "Provides a string representation of the file format.
 
   returns: the file format as a string - `java.lang.String`"
-  ([this]
+  ([^javax.sound.sampled.AudioFileFormat this]
     (-> this (.toString))))
 

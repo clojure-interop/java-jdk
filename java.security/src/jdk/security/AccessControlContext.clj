@@ -51,9 +51,9 @@
   combiner - the DomainCombiner to be associated with the provided AccessControlContext. - `java.security.DomainCombiner`
 
   throws: java.lang.NullPointerException - if the provided context is null."
-  ([acc combiner]
+  ([^java.security.AccessControlContext acc ^java.security.DomainCombiner combiner]
     (new AccessControlContext acc combiner))
-  ([context]
+  ([^java.security.ProtectionDomain[] context]
     (new AccessControlContext context)))
 
 (defn get-domain-combiner
@@ -65,7 +65,7 @@
             if there is none. - `java.security.DomainCombiner`
 
   throws: java.lang.SecurityException - if a security manager is installed and the caller does not have the `getDomainCombiner` SecurityPermission"
-  ([this]
+  ([^java.security.AccessControlContext this]
     (-> this (.getDomainCombiner))))
 
 (defn check-permission
@@ -83,7 +83,7 @@
   perm - the requested permission. - `java.security.Permission`
 
   throws: java.security.AccessControlException - if the specified permission is not permitted, based on the current security policy and the context encapsulated by this object."
-  ([this perm]
+  ([^java.security.AccessControlContext this ^java.security.Permission perm]
     (-> this (.checkPermission perm))))
 
 (defn equals
@@ -96,7 +96,7 @@
 
   returns: true if obj is an AccessControlContext, and has the
    same set of ProtectionDomains as this context, false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.security.AccessControlContext this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -105,6 +105,6 @@
    domains in the context together.
 
   returns: a hash code value for this context. - `int`"
-  ([this]
+  ([^java.security.AccessControlContext this]
     (-> this (.hashCode))))
 

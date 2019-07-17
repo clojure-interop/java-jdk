@@ -13,7 +13,7 @@
    one, or null otherwise.
 
   returns: the set of legal values. - `java.util.Set<?>`"
-  ([this]
+  ([^. this]
     (-> this (.getLegalValues))))
 
 (defn has-legal-values?
@@ -21,7 +21,7 @@
    legal values, or false otherwise.
 
   returns: true if there is a set of legal values. - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.hasLegalValues))))
 
 (defn get-open-type
@@ -29,7 +29,7 @@
    described by this OpenMBeanParameterInfo instance.
 
   returns: the open type. - `javax.management.openmbean.OpenType<?>`"
-  ([this]
+  ([^. this]
     (-> this (.getOpenType))))
 
 (defn get-min-value
@@ -37,7 +37,7 @@
    null otherwise.
 
   returns: the minimum value. - `java.lang.Comparable<?>`"
-  ([this]
+  ([^. this]
     (-> this (.getMinValue))))
 
 (defn to-string
@@ -48,7 +48,7 @@
    and the string representation of its default, min, max and legal values.
 
   returns: a string representation of this OpenMBeanParameterInfo instance - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.toString))))
 
 (defn get-default-value
@@ -56,7 +56,7 @@
    null otherwise.
 
   returns: the default value. - `java.lang.Object`"
-  ([this]
+  ([^. this]
     (-> this (.getDefaultValue))))
 
 (defn get-max-value
@@ -64,7 +64,7 @@
    null otherwise.
 
   returns: the maximum value. - `java.lang.Comparable<?>`"
-  ([this]
+  ([^. this]
     (-> this (.getMaxValue))))
 
 (defn get-name
@@ -72,7 +72,7 @@
    described by this OpenMBeanParameterInfo instance.
 
   returns: the name. - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getName))))
 
 (defn has-max-value?
@@ -80,7 +80,7 @@
    value, or false otherwise.
 
   returns: true if there is a maximum value. - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.hasMaxValue))))
 
 (defn get-description
@@ -88,7 +88,7 @@
    described by this OpenMBeanParameterInfo instance.
 
   returns: the description. - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getDescription))))
 
 (defn value?
@@ -101,7 +101,7 @@
    for the parameter described by this
    OpenMBeanParameterInfo instance,
    false otherwise. - `boolean`"
-  ([this obj]
+  ([^. this ^java.lang.Object obj]
     (-> this (.isValue obj))))
 
 (defn has-default-value?
@@ -109,7 +109,7 @@
    value, or false otherwise.
 
   returns: true if there is a default value. - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.hasDefaultValue))))
 
 (defn hash-code
@@ -125,7 +125,7 @@
    Object.hashCode().
 
   returns: the hash code value for this OpenMBeanParameterInfo instance - `int`"
-  ([this]
+  ([^. this]
     (-> this (.hashCode))))
 
 (defn has-min-value?
@@ -133,7 +133,7 @@
    value, or false otherwise.
 
   returns: true if there is a minimum value. - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.hasMinValue))))
 
 (defn equals
@@ -153,6 +153,6 @@
   obj - the object to be compared for equality with this OpenMBeanParameterInfo instance; - `java.lang.Object`
 
   returns: true if the specified object is equal to this OpenMBeanParameterInfo instance. - `boolean`"
-  ([this obj]
+  ([^. this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

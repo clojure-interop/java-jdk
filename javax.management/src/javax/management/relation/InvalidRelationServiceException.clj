@@ -9,7 +9,7 @@
   Constructor with given message put in exception.
 
   message - the detail message. - `java.lang.String`"
-  ([message]
+  ([^java.lang.String message]
     (new InvalidRelationServiceException message))
   ([]
     (new InvalidRelationServiceException )))

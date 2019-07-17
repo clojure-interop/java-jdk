@@ -11,6 +11,6 @@
    specified message.
 
   s - the message to generate when a RasterFormatException is thrown - `java.lang.String`"
-  ([s]
+  ([^java.lang.String s]
     (new RasterFormatException s)))
 

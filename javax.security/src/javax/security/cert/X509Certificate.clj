@@ -105,7 +105,7 @@
            from the input stream. - `javax.security.cert.X509Certificate`
 
   throws: javax.security.cert.CertificateException - if a class initialization or certificate parsing error occurs."
-  ([in-stream]
+  ([^java.io.InputStream in-stream]
     (X509Certificate/getInstance in-stream)))
 
 (defn get-serial-number
@@ -122,7 +122,7 @@
    CertificateSerialNumber  ::=  INTEGER
 
   returns: the serial number. - `java.math.BigInteger`"
-  ([this]
+  ([^javax.security.cert.X509Certificate this]
     (-> this (.getSerialNumber))))
 
 (defn get-not-before
@@ -142,7 +142,7 @@
        generalTime    GeneralizedTime }
 
   returns: the start date of the validity period. - `java.util.Date`"
-  ([this]
+  ([^javax.security.cert.X509Certificate this]
     (-> this (.getNotBefore))))
 
 (defn get-not-after
@@ -151,7 +151,7 @@
    for relevant ASN.1 definitions.
 
   returns: the end date of the validity period. - `java.util.Date`"
-  ([this]
+  ([^javax.security.cert.X509Certificate this]
     (-> this (.getNotAfter))))
 
 (defn check-validity
@@ -162,9 +162,9 @@
   date - the Date to check against to see if this certificate is valid at that date/time. - `java.util.Date`
 
   throws: javax.security.cert.CertificateExpiredException - if the certificate has expired with respect to the date supplied."
-  ([this date]
+  ([^javax.security.cert.X509Certificate this ^java.util.Date date]
     (-> this (.checkValidity date)))
-  ([this]
+  ([^javax.security.cert.X509Certificate this]
     (-> this (.checkValidity))))
 
 (defn get-version
@@ -177,7 +177,7 @@
    Version  ::=  INTEGER  {  v1(0), v2(1), v3(2)  }
 
   returns: the version number from the ASN.1 encoding, i.e. 0, 1 or 2. - `int`"
-  ([this]
+  ([^javax.security.cert.X509Certificate this]
     (-> this (.getVersion))))
 
 (defn get-subject-dn
@@ -192,7 +192,7 @@
    and other relevant definitions.
 
   returns: a Principal whose name is the subject name. - `java.security.Principal`"
-  ([this]
+  ([^javax.security.cert.X509Certificate this]
     (-> this (.getSubjectDN))))
 
 (defn get-issuer-dn
@@ -226,7 +226,7 @@
    TeletexString or UniversalString.
 
   returns: a Principal whose name is the issuer distinguished name. - `java.security.Principal`"
-  ([this]
+  ([^javax.security.cert.X509Certificate this]
     (-> this (.getIssuerDN))))
 
 (defn get-sig-alg-params
@@ -240,7 +240,7 @@
 
   returns: the DER-encoded signature algorithm parameters, or
            null if no parameters are present. - `byte[]`"
-  ([this]
+  ([^javax.security.cert.X509Certificate this]
     (-> this (.getSigAlgParams))))
 
 (defn get-sig-alg-name
@@ -262,7 +262,7 @@
    OID string.
 
   returns: the signature algorithm name. - `java.lang.String`"
-  ([this]
+  ([^javax.security.cert.X509Certificate this]
     (-> this (.getSigAlgName))))
 
 (defn get-sig-alg-oid
@@ -276,6 +276,6 @@
    relevant ASN.1 definitions.
 
   returns: the signature algorithm OID string. - `java.lang.String`"
-  ([this]
+  ([^javax.security.cert.X509Certificate this]
     (-> this (.getSigAlgOID))))
 

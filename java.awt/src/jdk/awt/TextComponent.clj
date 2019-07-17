@@ -21,7 +21,7 @@
    presented by this text component.
 
   returns: the selected text of this text component - `java.lang.String`"
-  ([this]
+  ([^java.awt.TextComponent this]
     (-> this (.getSelectedText))))
 
 (defn set-text
@@ -29,7 +29,7 @@
    text component to be the specified text.
 
   t - the new text; if this parameter is null then the text is set to the empty string `` - `java.lang.String`"
-  ([this t]
+  ([^java.awt.TextComponent this ^java.lang.String t]
     (-> this (.setText t))))
 
 (defn add-text-listener
@@ -40,7 +40,7 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   l - the text event listener - `java.awt.event.TextListener`"
-  ([this l]
+  ([^java.awt.TextComponent this ^java.awt.event.TextListener l]
     (-> this (.addTextListener l))))
 
 (defn get-text
@@ -48,12 +48,12 @@
    By default, this is an empty string.
 
   returns: the value of this TextComponent - `java.lang.String`"
-  ([this]
+  ([^java.awt.TextComponent this]
     (-> this (.getText))))
 
 (defn select-all
   "Selects all the text in this text component."
-  ([this]
+  ([^java.awt.TextComponent this]
     (-> this (.selectAll))))
 
 (defn get-selection-start
@@ -61,7 +61,7 @@
    this text component.
 
   returns: the start position of the selected text - `int`"
-  ([this]
+  ([^java.awt.TextComponent this]
     (-> this (.getSelectionStart))))
 
 (defn enable-input-methods
@@ -73,7 +73,7 @@
    component is enabled or disabled by default is implementation dependent.
 
   enable - true to enable, false to disable - `boolean`"
-  ([this enable]
+  ([^java.awt.TextComponent this ^Boolean enable]
     (-> this (.enableInputMethods enable))))
 
 (defn set-caret-position
@@ -90,14 +90,14 @@
   position - the position of the text insertion caret - `int`
 
   throws: java.lang.IllegalArgumentException - if position is less than zero"
-  ([this position]
+  ([^java.awt.TextComponent this ^Integer position]
     (-> this (.setCaretPosition position))))
 
 (defn set-background
   "Sets the background color of this text component.
 
   c - The color to become this text component's color. If this parameter is null then this text component will inherit the background color of its parent. - `java.awt.Color`"
-  ([this c]
+  ([^java.awt.TextComponent this ^java.awt.Color c]
     (-> this (.setBackground c))))
 
 (defn add-notify
@@ -105,7 +105,7 @@
    native screen resource.
    This method is called internally by the toolkit and should
    not be called directly by programs."
-  ([this]
+  ([^java.awt.TextComponent this]
     (-> this (.addNotify))))
 
 (defn editable?
@@ -113,7 +113,7 @@
 
   returns: true if this text component is
                     editable; false otherwise. - `boolean`"
-  ([this]
+  ([^java.awt.TextComponent this]
     (-> this (.isEditable))))
 
 (defn get-caret-position
@@ -124,7 +124,7 @@
    caret position is 0.
 
   returns: the position of the text insertion caret - `int`"
-  ([this]
+  ([^java.awt.TextComponent this]
     (-> this (.getCaretPosition))))
 
 (defn remove-notify
@@ -132,7 +132,7 @@
    The peer allows us to modify the appearance of the
    TextComponent without changing its
    functionality."
-  ([this]
+  ([^java.awt.TextComponent this]
     (-> this (.removeNotify))))
 
 (defn select
@@ -160,7 +160,7 @@
 
   selection-start - the zero-based index of the first character (char value) to be selected - `int`
   selection-end - the zero-based end position of the text to be selected; the character (char value) at selectionEnd is not selected - `int`"
-  ([this selection-start selection-end]
+  ([^java.awt.TextComponent this ^Integer selection-start ^Integer selection-end]
     (-> this (.select selection-start selection-end))))
 
 (defn get-selection-end
@@ -168,7 +168,7 @@
    this text component.
 
   returns: the end position of the selected text - `int`"
-  ([this]
+  ([^java.awt.TextComponent this]
     (-> this (.getSelectionEnd))))
 
 (defn get-accessible-context
@@ -179,7 +179,7 @@
 
   returns: an AccessibleAWTTextComponent that serves as the
            AccessibleContext of this TextComponent - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^java.awt.TextComponent this]
     (-> this (.getAccessibleContext))))
 
 (defn set-selection-start
@@ -193,7 +193,7 @@
    silently, and without failure.
 
   selection-start - the start position of the selected text - `int`"
-  ([this selection-start]
+  ([^java.awt.TextComponent this ^Integer selection-start]
     (-> this (.setSelectionStart selection-start))))
 
 (defn set-editable
@@ -208,7 +208,7 @@
    calling setBackground.
 
   b - a flag indicating whether this text component is user editable. - `boolean`"
-  ([this b]
+  ([^java.awt.TextComponent this ^Boolean b]
     (-> this (.setEditable b))))
 
 (defn get-listeners
@@ -240,7 +240,7 @@
             listeners have been added - `<T extends java.util.EventListener> T[]`
 
   throws: java.lang.ClassCastException - if listenerType doesn't specify a class or interface that implements java.util.EventListener"
-  ([this listener-type]
+  ([^java.awt.TextComponent this ^java.lang.Class listener-type]
     (-> this (.getListeners listener-type))))
 
 (defn get-background
@@ -253,7 +253,7 @@
   returns: This text component's background color.
            If this text component does not have a background color,
            the background color of its parent is returned. - `java.awt.Color`"
-  ([this]
+  ([^java.awt.TextComponent this]
     (-> this (.getBackground))))
 
 (defn get-input-method-requests
@@ -261,7 +261,7 @@
 
   returns: the input method request handler for this component,
             null by default - `java.awt.im.InputMethodRequests`"
-  ([this]
+  ([^java.awt.TextComponent this]
     (-> this (.getInputMethodRequests))))
 
 (defn get-text-listeners
@@ -271,7 +271,7 @@
   returns: all of this text component's TextListeners
            or an empty array if no text
            listeners are currently registered - `java.awt.event.TextListener[]`"
-  ([this]
+  ([^java.awt.TextComponent this]
     (-> this (.getTextListeners))))
 
 (defn set-selection-end
@@ -284,7 +284,7 @@
    silently, and without failure.
 
   selection-end - the end position of the selected text - `int`"
-  ([this selection-end]
+  ([^java.awt.TextComponent this ^Integer selection-end]
     (-> this (.setSelectionEnd selection-end))))
 
 (defn remove-text-listener
@@ -295,6 +295,6 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   l - the text listener - `java.awt.event.TextListener`"
-  ([this l]
+  ([^java.awt.TextComponent this ^java.awt.event.TextListener l]
     (-> this (.removeTextListener l))))
 

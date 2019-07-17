@@ -16,7 +16,7 @@
   mime-type - MIME media type string. If it is a text media type, it is assumed to contain a `charset=utf-16` parameter. - `java.lang.String`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if mimeType is null."
-  ([mime-type]
+  ([^java.lang.String mime-type]
     (new DocFlavor$CHAR_ARRAY mime-type)))
 
 (def *-text-plain

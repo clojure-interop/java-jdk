@@ -80,18 +80,18 @@
   url-path - the URL path part of the URL. If null, defaults to the empty string. - `java.lang.String`
 
   throws: java.net.MalformedURLException - if one of the parts is syntactically incorrect, or if host is null and it is not possible to find the local host name, or if port is negative."
-  ([protocol host port url-path]
+  ([^java.lang.String protocol ^java.lang.String host ^Integer port ^java.lang.String url-path]
     (new JMXServiceURL protocol host port url-path))
-  ([protocol host port]
+  ([^java.lang.String protocol ^java.lang.String host ^Integer port]
     (new JMXServiceURL protocol host port))
-  ([service-url]
+  ([^java.lang.String service-url]
     (new JMXServiceURL service-url)))
 
 (defn get-protocol
   "The protocol part of the Service URL.
 
   returns: the protocol part of the Service URL.  This is never null. - `java.lang.String`"
-  ([this]
+  ([^javax.management.remote.JMXServiceURL this]
     (-> this (.getProtocol))))
 
 (defn get-host
@@ -109,7 +109,7 @@
    square brackets are not included in the return value here.
 
   returns: the host part of the Service URL.  This is never null. - `java.lang.String`"
-  ([this]
+  ([^javax.management.remote.JMXServiceURL this]
     (-> this (.getHost))))
 
 (defn get-port
@@ -117,7 +117,7 @@
    specified, the returned value is 0.
 
   returns: the port of the Service URL, or 0 if none. - `int`"
-  ([this]
+  ([^javax.management.remote.JMXServiceURL this]
     (-> this (.getPort))))
 
 (defn get-url-path
@@ -127,7 +127,7 @@
 
   returns: the URL Path part of the Service URL.  This is never
    null. - `java.lang.String`"
-  ([this]
+  ([^javax.management.remote.JMXServiceURL this]
     (-> this (.getURLPath))))
 
 (defn to-string
@@ -146,7 +146,7 @@
    decimal form.  If the value is zero, it is omitted.
 
   returns: the string representation of this Service URL. - `java.lang.String`"
-  ([this]
+  ([^javax.management.remote.JMXServiceURL this]
     (-> this (.toString))))
 
 (defn equals
@@ -160,13 +160,13 @@
 
   returns: true if this object is the same as the
    obj argument; false otherwise. - `boolean`"
-  ([this obj]
+  ([^javax.management.remote.JMXServiceURL this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^javax.management.remote.JMXServiceURL this]
     (-> this (.hashCode))))
 

@@ -50,20 +50,20 @@
 
   returns: true if this event type is the same as
    obj; false otherwise - `boolean`"
-  ([this obj]
+  ([^javax.sound.sampled.LineEvent$Type this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Finalizes the hashcode method.
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^javax.sound.sampled.LineEvent$Type this]
     (-> this (.hashCode))))
 
 (defn to-string
   "Returns the type name as the string representation.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^javax.sound.sampled.LineEvent$Type this]
     (-> this (.toString))))
 

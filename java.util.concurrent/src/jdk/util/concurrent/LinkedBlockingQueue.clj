@@ -34,7 +34,7 @@
   capacity - the capacity of this queue - `int`
 
   throws: java.lang.IllegalArgumentException - if capacity is not greater than zero"
-  ([capacity]
+  ([^Integer capacity]
     (new LinkedBlockingQueue capacity))
   ([]
     (new LinkedBlockingQueue )))
@@ -43,7 +43,7 @@
   "Description copied from interface: Queue
 
   returns: the head of this queue, or null if this queue is empty - `LinkedBlockingQueue.E`"
-  ([this]
+  ([^java.util.concurrent.LinkedBlockingQueue this]
     (-> this (.peek))))
 
 (defn spliterator
@@ -56,7 +56,7 @@
    Spliterator.ORDERED, and Spliterator.NONNULL.
 
   returns: a Spliterator over the elements in this queue - `java.util.Spliterator<LinkedBlockingQueue.E>`"
-  ([this]
+  ([^java.util.concurrent.LinkedBlockingQueue this]
     (-> this (.spliterator))))
 
 (defn offer
@@ -71,9 +71,9 @@
            the specified waiting time elapses before space is available - `boolean`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([this e timeout unit]
+  ([^java.util.concurrent.LinkedBlockingQueue this ^LinkedBlockingQueue.E e ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.offer e timeout unit)))
-  ([this e]
+  ([^java.util.concurrent.LinkedBlockingQueue this ^LinkedBlockingQueue.E e]
     (-> this (.offer e))))
 
 (defn put
@@ -83,7 +83,7 @@
   e - the element to add - `LinkedBlockingQueue.E`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([this e]
+  ([^java.util.concurrent.LinkedBlockingQueue this ^LinkedBlockingQueue.E e]
     (-> this (.put e))))
 
 (defn contains
@@ -94,14 +94,14 @@
   o - object to be checked for containment in this queue - `java.lang.Object`
 
   returns: true if this queue contains the specified element - `boolean`"
-  ([this o]
+  ([^java.util.concurrent.LinkedBlockingQueue this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn to-string
   "Description copied from class: AbstractCollection
 
   returns: a string representation of this collection - `java.lang.String`"
-  ([this]
+  ([^java.util.concurrent.LinkedBlockingQueue this]
     (-> this (.toString))))
 
 (defn take
@@ -110,7 +110,7 @@
   returns: the head of this queue - `LinkedBlockingQueue.E`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([this]
+  ([^java.util.concurrent.LinkedBlockingQueue this]
     (-> this (.take))))
 
 (defn iterator
@@ -121,7 +121,7 @@
    weakly consistent.
 
   returns: an iterator over the elements in this queue in proper sequence - `java.util.Iterator<LinkedBlockingQueue.E>`"
-  ([this]
+  ([^java.util.concurrent.LinkedBlockingQueue this]
     (-> this (.iterator))))
 
 (defn remove
@@ -135,7 +135,7 @@
   o - element to be removed from this queue, if present - `java.lang.Object`
 
   returns: true if this queue changed as a result of the call - `boolean`"
-  ([this o]
+  ([^java.util.concurrent.LinkedBlockingQueue this ^java.lang.Object o]
     (-> this (.remove o))))
 
 (defn drain-to
@@ -147,9 +147,9 @@
   returns: the number of elements transferred - `int`
 
   throws: java.lang.UnsupportedOperationException - if addition of elements is not supported by the specified collection"
-  ([this c max-elements]
+  ([^java.util.concurrent.LinkedBlockingQueue this ^LinkedBlockingQueue.E> c ^Integer max-elements]
     (-> this (.drainTo c max-elements)))
-  ([this c]
+  ([^java.util.concurrent.LinkedBlockingQueue this ^LinkedBlockingQueue.E> c]
     (-> this (.drainTo c))))
 
 (defn poll
@@ -162,9 +162,9 @@
            specified waiting time elapses before an element is available - `LinkedBlockingQueue.E`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([this timeout unit]
+  ([^java.util.concurrent.LinkedBlockingQueue this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.poll timeout unit)))
-  ([this]
+  ([^java.util.concurrent.LinkedBlockingQueue this]
     (-> this (.poll))))
 
 (defn remaining-capacity
@@ -179,20 +179,20 @@
    insert or remove an element.
 
   returns: the remaining capacity - `int`"
-  ([this]
+  ([^java.util.concurrent.LinkedBlockingQueue this]
     (-> this (.remainingCapacity))))
 
 (defn size
   "Returns the number of elements in this queue.
 
   returns: the number of elements in this queue - `int`"
-  ([this]
+  ([^java.util.concurrent.LinkedBlockingQueue this]
     (-> this (.size))))
 
 (defn clear
   "Atomically removes all of the elements from this queue.
    The queue will be empty after this call returns."
-  ([this]
+  ([^java.util.concurrent.LinkedBlockingQueue this]
     (-> this (.clear))))
 
 (defn to-array
@@ -228,8 +228,8 @@
   returns: an array containing all of the elements in this queue - `<T> T[]`
 
   throws: java.lang.ArrayStoreException - if the runtime type of the specified array is not a supertype of the runtime type of every element in this queue"
-  ([this a]
+  ([^java.util.concurrent.LinkedBlockingQueue this a]
     (-> this (.toArray a)))
-  ([this]
+  ([^java.util.concurrent.LinkedBlockingQueue this]
     (-> this (.toArray))))
 

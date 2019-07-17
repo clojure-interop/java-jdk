@@ -45,7 +45,7 @@
   ps - The HTTP proxy selector, or null to unset the proxy selector. - `java.net.ProxySelector`
 
   throws: java.lang.SecurityException - If a security manager has been installed and it denies NetPermission(`setProxySelector`)"
-  ([ps]
+  ([^java.net.ProxySelector ps]
     (ProxySelector/setDefault ps)))
 
 (defn select
@@ -70,7 +70,7 @@
             that represents a direct connection. - `java.util.List<java.net.Proxy>`
 
   throws: java.lang.IllegalArgumentException - if the argument is null"
-  ([this uri]
+  ([^java.net.ProxySelector this ^java.net.URI uri]
     (-> this (.select uri))))
 
 (defn connect-failed
@@ -85,6 +85,6 @@
   ioe - The I/O exception thrown when the connect failed. - `java.io.IOException`
 
   throws: java.lang.IllegalArgumentException - if either argument is null"
-  ([this uri sa ioe]
+  ([^java.net.ProxySelector this ^java.net.URI uri ^java.net.SocketAddress sa ^java.io.IOException ioe]
     (-> this (.connectFailed uri sa ioe))))
 

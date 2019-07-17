@@ -21,9 +21,9 @@
 
   detail - A possibly null string containing details of the exception. - `java.lang.String`
   ex - A possibly null root exception that caused this exception. - `java.lang.Throwable`"
-  ([detail ex]
+  ([^java.lang.String detail ^java.lang.Throwable ex]
     (new AuthenticationException detail ex))
-  ([detail]
+  ([^java.lang.String detail]
     (new AuthenticationException detail))
   ([]
     (new AuthenticationException )))

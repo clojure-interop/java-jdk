@@ -63,7 +63,7 @@
   returns: granted lease - `java.rmi.dgc.Lease`
 
   throws: java.rmi.RemoteException - if dirty call fails"
-  ([this ids sequence-num lease]
+  ([^. this ^java.rmi.server.ObjID[] ids ^Long sequence-num ^java.rmi.dgc.Lease lease]
     (-> this (.dirty ids sequence-num lease))))
 
 (defn clean
@@ -80,6 +80,6 @@
   strong - make 'strong' clean call - `boolean`
 
   throws: java.rmi.RemoteException - if clean call fails"
-  ([this ids sequence-num vmid strong]
+  ([^. this ^java.rmi.server.ObjID[] ids ^Long sequence-num ^java.rmi.dgc.VMID vmid ^Boolean strong]
     (-> this (.clean ids sequence-num vmid strong))))
 

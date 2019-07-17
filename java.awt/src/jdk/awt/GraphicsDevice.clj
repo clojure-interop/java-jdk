@@ -75,7 +75,7 @@
    bit depths are supported.
 
   returns: the current display mode of this graphics device. - `java.awt.DisplayMode`"
-  ([this]
+  ([^java.awt.GraphicsDevice this]
     (-> this (.getDisplayMode))))
 
 (defn get-full-screen-window
@@ -84,7 +84,7 @@
 
   returns: the full-screen window, or null if the device is
    not in full-screen mode. - `java.awt.Window`"
-  ([this]
+  ([^java.awt.GraphicsDevice this]
     (-> this (.getFullScreenWindow))))
 
 (defn get-type
@@ -92,7 +92,7 @@
 
   returns: the type of this GraphicsDevice, which can
    either be TYPE_RASTER_SCREEN, TYPE_PRINTER or TYPE_IMAGE_BUFFER. - `int`"
-  ([this]
+  ([^java.awt.GraphicsDevice this]
     (-> this (.getType))))
 
 (defn get-display-modes
@@ -105,7 +105,7 @@
    bit depths are supported.
 
   returns: all of the display modes available for this graphics device. - `java.awt.DisplayMode[]`"
-  ([this]
+  ([^java.awt.GraphicsDevice this]
     (-> this (.getDisplayModes))))
 
 (defn display-change-supported?
@@ -118,7 +118,7 @@
 
   returns: whether low-level display changes are supported for this
    graphics device. - `boolean`"
-  ([this]
+  ([^java.awt.GraphicsDevice this]
     (-> this (.isDisplayChangeSupported))))
 
 (defn get-i-dstring
@@ -142,7 +142,7 @@
 
   returns: a String that is the identification
    of this GraphicsDevice. - `java.lang.String`"
-  ([this]
+  ([^java.awt.GraphicsDevice this]
     (-> this (.getIDstring))))
 
 (defn window-translucency-supported?
@@ -152,7 +152,7 @@
   translucency-kind - a kind of translucency support - `java.awt.GraphicsDevice.WindowTranslucency`
 
   returns: whether the given translucency kind is supported - `boolean`"
-  ([this translucency-kind]
+  ([^java.awt.GraphicsDevice this ^java.awt.GraphicsDevice.WindowTranslucency translucency-kind]
     (-> this (.isWindowTranslucencySupported translucency-kind))))
 
 (defn set-display-mode
@@ -198,7 +198,7 @@
   dm - The new display mode of this graphics device. - `java.awt.DisplayMode`
 
   throws: java.lang.IllegalArgumentException - if the DisplayMode supplied is null, or is not available in the array returned by getDisplayModes"
-  ([this dm]
+  ([^java.awt.GraphicsDevice this ^java.awt.DisplayMode dm]
     (-> this (.setDisplayMode dm))))
 
 (defn get-configurations
@@ -208,7 +208,7 @@
   returns: an array of GraphicsConfiguration
    objects that are associated with this
    GraphicsDevice. - `java.awt.GraphicsConfiguration[]`"
-  ([this]
+  ([^java.awt.GraphicsDevice this]
     (-> this (.getConfigurations))))
 
 (defn full-screen-supported?
@@ -222,7 +222,7 @@
 
   returns: whether full-screen exclusive mode is available for
    this graphics device - `boolean`"
-  ([this]
+  ([^java.awt.GraphicsDevice this]
     (-> this (.isFullScreenSupported))))
 
 (defn get-available-accelerated-memory
@@ -250,7 +250,7 @@
   returns: number of bytes available in accelerated memory.
    A negative return value indicates that the amount of accelerated memory
    on this GraphicsDevice is indeterminate. - `int`"
-  ([this]
+  ([^java.awt.GraphicsDevice this]
     (-> this (.getAvailableAcceleratedMemory))))
 
 (defn set-full-screen-window
@@ -296,7 +296,7 @@
    automatically restored to their original state.
 
   w - a window to use as the full-screen window; null if returning to windowed mode. Some platforms expect the fullscreen window to be a top-level component (i.e., a Frame); therefore it is preferable to use a Frame here rather than a Window. - `java.awt.Window`"
-  ([this w]
+  ([^java.awt.GraphicsDevice this ^java.awt.Window w]
     (-> this (.setFullScreenWindow w))))
 
 (defn get-default-configuration
@@ -305,7 +305,7 @@
 
   returns: the default GraphicsConfiguration
    of this GraphicsDevice. - `java.awt.GraphicsConfiguration`"
-  ([this]
+  ([^java.awt.GraphicsDevice this]
     (-> this (.getDefaultConfiguration))))
 
 (defn get-best-configuration
@@ -317,6 +317,6 @@
   returns: a GraphicsConfiguration that passes
    the criteria defined in the specified
    GraphicsConfigTemplate. - `java.awt.GraphicsConfiguration`"
-  ([this gct]
+  ([^java.awt.GraphicsDevice this ^java.awt.GraphicsConfigTemplate gct]
     (-> this (.getBestConfiguration gct))))
 

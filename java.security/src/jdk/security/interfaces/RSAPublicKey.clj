@@ -7,6 +7,6 @@
   "Returns the public exponent.
 
   returns: the public exponent - `java.math.BigInteger`"
-  ([this]
+  ([^. this]
     (-> this (.getPublicExponent))))
 

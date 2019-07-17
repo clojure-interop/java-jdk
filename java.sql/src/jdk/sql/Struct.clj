@@ -20,7 +20,7 @@
             is the generic representation - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.getSQLTypeName))))
 
 (defn get-attributes
@@ -44,8 +44,8 @@
   returns: an array containing the ordered attribute values - `java.lang.Object[]`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this map]
+  ([^. this ^java.util.Map> map]
     (-> this (.getAttributes map)))
-  ([this]
+  ([^. this]
     (-> this (.getAttributes))))
 

@@ -879,9 +879,9 @@
   returns: the given regular expression compiled into a pattern with the given flags - `java.util.regex.Pattern`
 
   throws: java.lang.IllegalArgumentException - If bit values other than those corresponding to the defined match flags are set in flags"
-  ([regex flags]
+  ([^java.lang.String regex ^Integer flags]
     (Pattern/compile regex flags))
-  ([regex]
+  ([^java.lang.String regex]
     (Pattern/compile regex)))
 
 (defn *matches
@@ -909,7 +909,7 @@
   returns: whether or not the regular expression matches on the input - `boolean`
 
   throws: java.util.regex.PatternSyntaxException - If the expression's syntax is invalid"
-  ([regex input]
+  ([^java.lang.String regex ^java.lang.CharSequence input]
     (Pattern/matches regex input)))
 
 (defn *quote
@@ -925,14 +925,14 @@
   s - The string to be literalized - `java.lang.String`
 
   returns: A literal string replacement - `java.lang.String`"
-  ([s]
+  ([^java.lang.String s]
     (Pattern/quote s)))
 
 (defn pattern
   "Returns the regular expression from which this pattern was compiled.
 
   returns: The source of this pattern - `java.lang.String`"
-  ([this]
+  ([^java.util.regex.Pattern this]
     (-> this (.pattern))))
 
 (defn to-string
@@ -941,7 +941,7 @@
    compiled.
 
   returns: The string representation of this pattern - `java.lang.String`"
-  ([this]
+  ([^java.util.regex.Pattern this]
     (-> this (.toString))))
 
 (defn matcher
@@ -950,14 +950,14 @@
   input - The character sequence to be matched - `java.lang.CharSequence`
 
   returns: A new matcher for this pattern - `java.util.regex.Matcher`"
-  ([this input]
+  ([^java.util.regex.Pattern this ^java.lang.CharSequence input]
     (-> this (.matcher input))))
 
 (defn flags
   "Returns this pattern's match flags.
 
   returns: The match flags specified when this pattern was compiled - `int`"
-  ([this]
+  ([^java.util.regex.Pattern this]
     (-> this (.flags))))
 
 (defn split
@@ -1018,16 +1018,16 @@
 
   returns: The array of strings computed by splitting the input
             around matches of this pattern - `java.lang.String[]`"
-  ([this input limit]
+  ([^java.util.regex.Pattern this ^java.lang.CharSequence input ^Integer limit]
     (-> this (.split input limit)))
-  ([this input]
+  ([^java.util.regex.Pattern this ^java.lang.CharSequence input]
     (-> this (.split input))))
 
 (defn as-predicate
   "Creates a predicate which can be used to match a string.
 
   returns: The predicate which can be used for matching on a string - `java.util.function.Predicate<java.lang.String>`"
-  ([this]
+  ([^java.util.regex.Pattern this]
     (-> this (.asPredicate))))
 
 (defn split-as-stream
@@ -1058,6 +1058,6 @@
 
   returns: The stream of strings computed by splitting the input
             around matches of this pattern - `java.util.stream.Stream<java.lang.String>`"
-  ([this input]
+  ([^java.util.regex.Pattern this ^java.lang.CharSequence input]
     (-> this (.splitAsStream input))))
 

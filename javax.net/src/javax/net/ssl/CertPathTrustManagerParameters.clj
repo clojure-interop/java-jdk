@@ -17,13 +17,13 @@
   parameters - the CertPathParameters to be used - `java.security.cert.CertPathParameters`
 
   throws: java.lang.NullPointerException - if parameters is null"
-  ([parameters]
+  ([^java.security.cert.CertPathParameters parameters]
     (new CertPathTrustManagerParameters parameters)))
 
 (defn get-parameters
   "Return a clone of the CertPathParameters encapsulated by this class.
 
   returns: a clone of the CertPathParameters encapsulated by this class. - `java.security.cert.CertPathParameters`"
-  ([this]
+  ([^javax.net.ssl.CertPathTrustManagerParameters this]
     (-> this (.getParameters))))
 

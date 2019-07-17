@@ -38,9 +38,9 @@
   load-factor - Load factor. - `float`
 
   throws: java.lang.IllegalArgumentException - if the initial capacity is less than zero."
-  ([initial-capacity load-factor]
+  ([^Integer initial-capacity ^Float load-factor]
     (new JobStateReasons initial-capacity load-factor))
-  ([initial-capacity]
+  ([^Integer initial-capacity]
     (new JobStateReasons initial-capacity))
   ([]
     (new JobStateReasons )))
@@ -58,7 +58,7 @@
             already contain the specified element. - `boolean`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if the specified element is null."
-  ([this o]
+  ([^javax.print.attribute.standard.JobStateReasons this ^javax.print.attribute.standard.JobStateReason o]
     (-> this (.add o))))
 
 (defn get-category
@@ -69,7 +69,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([this]
+  ([^javax.print.attribute.standard.JobStateReasons this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -80,6 +80,6 @@
    name is `job-state-reasons`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([this]
+  ([^javax.print.attribute.standard.JobStateReasons this]
     (-> this (.getName))))
 

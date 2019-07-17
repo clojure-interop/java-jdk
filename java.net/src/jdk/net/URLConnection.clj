@@ -114,7 +114,7 @@
    URLConnection objects to the specified value.
 
   defaultallowuserinteraction - the new value. - `boolean`"
-  ([defaultallowuserinteraction]
+  ([^Boolean defaultallowuserinteraction]
     (URLConnection/setDefaultAllowUserInteraction defaultallowuserinteraction)))
 
 (defn *set-default-request-property
@@ -126,7 +126,7 @@
   value - the value associated with the key. - `java.lang.String`
 
   returns: `java.lang.   void`"
-  ([key value]
+  ([^java.lang.String key ^java.lang.String value]
     (URLConnection/setDefaultRequestProperty key value)))
 
 (defn *set-file-name-map
@@ -140,7 +140,7 @@
   map - the FileNameMap to be set - `java.net.FileNameMap`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkSetFactory method doesn't allow the operation."
-  ([map]
+  ([^java.net.FileNameMap map]
     (URLConnection/setFileNameMap map)))
 
 (defn *guess-content-type-from-name
@@ -153,7 +153,7 @@
 
   returns: a guess as to what the content type of the object is,
             based upon its file name. - `java.lang.String`"
-  ([fname]
+  ([^java.lang.String fname]
     (URLConnection/guessContentTypeFromName fname)))
 
 (defn *get-default-request-property
@@ -165,7 +165,7 @@
 
   returns: the value of the default request property
    for the specified key. - `java.lang.   java.lang.String`"
-  ([key]
+  ([^java.lang.String key]
     (URLConnection/getDefaultRequestProperty key)))
 
 (defn *guess-content-type-from-stream
@@ -186,7 +186,7 @@
                can be determined. - `java.lang.String`
 
   throws: java.io.IOException - if an I/O error occurs while reading the input stream."
-  ([is]
+  ([^java.io.InputStream is]
     (URLConnection/guessContentTypeFromStream is)))
 
 (defn *get-file-name-map
@@ -214,7 +214,7 @@
   fac - the desired factory. - `java.net.ContentHandlerFactory`
 
   throws: java.lang.Error - if the factory has already been defined."
-  ([fac]
+  ([^java.net.ContentHandlerFactory fac]
     (URLConnection/setContentHandlerFactory fac)))
 
 (defn get-header-field
@@ -227,7 +227,7 @@
 
   returns: the value of the named header field, or null
             if there is no such field in the header. - `java.lang.String`"
-  ([this name]
+  ([^java.net.URLConnection this ^java.lang.String name]
     (-> this (.getHeaderField name))))
 
 (defn set-allow-user-interaction
@@ -237,7 +237,7 @@
   allowuserinteraction - the new value. - `boolean`
 
   throws: java.lang.IllegalStateException - if already connected"
-  ([this allowuserinteraction]
+  ([^java.net.URLConnection this ^Boolean allowuserinteraction]
     (-> this (.setAllowUserInteraction allowuserinteraction))))
 
 (defn add-request-property
@@ -249,7 +249,7 @@
   value - the value associated with it. - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if already connected"
-  ([this key value]
+  ([^java.net.URLConnection this ^java.lang.String key ^java.lang.String value]
     (-> this (.addRequestProperty key value))))
 
 (defn get-read-timeout
@@ -258,7 +258,7 @@
 
   returns: an int that indicates the read timeout
            value in milliseconds - `int`"
-  ([this]
+  ([^java.net.URLConnection this]
     (-> this (.getReadTimeout))))
 
 (defn get-allow-user-interaction?
@@ -267,14 +267,14 @@
 
   returns: the value of the allowUserInteraction field for
             this object. - `boolean`"
-  ([this]
+  ([^java.net.URLConnection this]
     (-> this (.getAllowUserInteraction))))
 
 (defn get-if-modified-since
   "Returns the value of this object's ifModifiedSince field.
 
   returns: the value of this object's ifModifiedSince field. - `long`"
-  ([this]
+  ([^java.net.URLConnection this]
     (-> this (.getIfModifiedSince))))
 
 (defn get-do-input?
@@ -283,7 +283,7 @@
 
   returns: the value of this URLConnection's
             doInput flag. - `boolean`"
-  ([this]
+  ([^java.net.URLConnection this]
     (-> this (.getDoInput))))
 
 (defn get-use-caches?
@@ -292,7 +292,7 @@
 
   returns: the value of this URLConnection's
             useCaches field. - `boolean`"
-  ([this]
+  ([^java.net.URLConnection this]
     (-> this (.getUseCaches))))
 
 (defn get-header-field-key
@@ -304,7 +304,7 @@
   returns: the key for the nth header field,
             or null if there are fewer than n+1
             fields. - `java.lang.String`"
-  ([this n]
+  ([^java.net.URLConnection this ^Integer n]
     (-> this (.getHeaderFieldKey n))))
 
 (defn get-header-field-int
@@ -321,7 +321,7 @@
   returns: the value of the named field, parsed as an integer. The
             Default value is returned if the field is
             missing or malformed. - `int`"
-  ([this name default]
+  ([^java.net.URLConnection this ^java.lang.String name ^Integer default]
     (-> this (.getHeaderFieldInt name default))))
 
 (defn set-if-modified-since
@@ -331,7 +331,7 @@
   ifmodifiedsince - the new value. - `long`
 
   throws: java.lang.IllegalStateException - if already connected"
-  ([this ifmodifiedsince]
+  ([^java.net.URLConnection this ^Long ifmodifiedsince]
     (-> this (.setIfModifiedSince ifmodifiedsince))))
 
 (defn get-content-encoding
@@ -339,14 +339,14 @@
 
   returns: the content encoding of the resource that the URL references,
             or null if not known. - `java.lang.String`"
-  ([this]
+  ([^java.net.URLConnection this]
     (-> this (.getContentEncoding))))
 
 (defn to-string
   "Returns a String representation of this URL connection.
 
   returns: a string representation of this URLConnection. - `java.lang.String`"
-  ([this]
+  ([^java.net.URLConnection this]
     (-> this (.toString))))
 
 (defn get-header-field-long
@@ -363,7 +363,7 @@
   returns: the value of the named field, parsed as a long. The
             Default value is returned if the field is
             missing or malformed. - `long`"
-  ([this name default]
+  ([^java.net.URLConnection this ^java.lang.String name ^Long default]
     (-> this (.getHeaderFieldLong name default))))
 
 (defn get-content-type
@@ -371,7 +371,7 @@
 
   returns: the content type of the resource that the URL references,
             or null if not known. - `java.lang.String`"
-  ([this]
+  ([^java.net.URLConnection this]
     (-> this (.getContentType))))
 
 (defn get-last-modified
@@ -380,7 +380,7 @@
 
   returns: the date the resource referenced by this
             URLConnection was last modified, or 0 if not known. - `long`"
-  ([this]
+  ([^java.net.URLConnection this]
     (-> this (.getLastModified))))
 
 (defn get-request-properties
@@ -394,7 +394,7 @@
   returns: a Map of the general request properties for this connection. - `java.util.Map<java.lang.String,java.util.List<java.lang.String>>`
 
   throws: java.lang.IllegalStateException - if already connected"
-  ([this]
+  ([^java.net.URLConnection this]
     (-> this (.getRequestProperties))))
 
 (defn get-header-field-date
@@ -413,7 +413,7 @@
   returns: the value of the field, parsed as a date. The value of the
             Default argument is returned if the field is
             missing or malformed. - `long`"
-  ([this name default]
+  ([^java.net.URLConnection this ^java.lang.String name ^Long default]
     (-> this (.getHeaderFieldDate name default))))
 
 (defn get-date
@@ -422,7 +422,7 @@
   returns: the sending date of the resource that the URL references,
             or 0 if not known. The value returned is the
             number of milliseconds since January 1, 1970 GMT. - `long`"
-  ([this]
+  ([^java.net.URLConnection this]
     (-> this (.getDate))))
 
 (defn get-content-length-long
@@ -432,7 +432,7 @@
   returns: the content length of the resource that this connection's URL
             references, or -1 if the content length is
             not known. - `long`"
-  ([this]
+  ([^java.net.URLConnection this]
     (-> this (.getContentLengthLong))))
 
 (defn set-use-caches
@@ -450,7 +450,7 @@
   usecaches - a boolean indicating whether or not to allow caching - `boolean`
 
   throws: java.lang.IllegalStateException - if already connected"
-  ([this usecaches]
+  ([^java.net.URLConnection this ^Boolean usecaches]
     (-> this (.setUseCaches usecaches))))
 
 (defn connect
@@ -470,7 +470,7 @@
    connection, if necessary.
 
   throws: java.net.SocketTimeoutException - if the timeout expires before the connection can be established"
-  ([this]
+  ([^java.net.URLConnection this]
     (-> this (.connect))))
 
 (defn get-do-output?
@@ -479,7 +479,7 @@
 
   returns: the value of this URLConnection's
             doOutput flag. - `boolean`"
-  ([this]
+  ([^java.net.URLConnection this]
     (-> this (.getDoOutput))))
 
 (defn set-do-input
@@ -493,7 +493,7 @@
   doinput - the new value. - `boolean`
 
   throws: java.lang.IllegalStateException - if already connected"
-  ([this doinput]
+  ([^java.net.URLConnection this ^Boolean doinput]
     (-> this (.setDoInput doinput))))
 
 (defn set-request-property
@@ -509,7 +509,7 @@
   value - the value associated with it. - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if already connected"
-  ([this key value]
+  ([^java.net.URLConnection this ^java.lang.String key ^java.lang.String value]
     (-> this (.setRequestProperty key value))))
 
 (defn get-request-property
@@ -522,7 +522,7 @@
              connection. If key is null, then null is returned. - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if already connected"
-  ([this key]
+  ([^java.net.URLConnection this ^java.lang.String key]
     (-> this (.getRequestProperty key))))
 
 (defn get-output-stream
@@ -531,7 +531,7 @@
   returns: an output stream that writes to this connection. - `java.io.OutputStream`
 
   throws: java.io.IOException - if an I/O error occurs while creating the output stream."
-  ([this]
+  ([^java.net.URLConnection this]
     (-> this (.getOutputStream))))
 
 (defn get-default-use-caches?
@@ -544,7 +544,7 @@
 
   returns: the default value of a URLConnection's
             useCaches flag. - `boolean`"
-  ([this]
+  ([^java.net.URLConnection this]
     (-> this (.getDefaultUseCaches))))
 
 (defn set-read-timeout
@@ -562,7 +562,7 @@
   timeout - an int that specifies the timeout value to be used in milliseconds - `int`
 
   throws: java.lang.IllegalArgumentException - if the timeout parameter is negative"
-  ([this timeout]
+  ([^java.net.URLConnection this ^Integer timeout]
     (-> this (.setReadTimeout timeout))))
 
 (defn get-header-fields
@@ -573,7 +573,7 @@
    the corresponding field values.
 
   returns: a Map of header fields - `java.util.Map<java.lang.String,java.util.List<java.lang.String>>`"
-  ([this]
+  ([^java.net.URLConnection this]
     (-> this (.getHeaderFields))))
 
 (defn get-expiration
@@ -582,7 +582,7 @@
   returns: the expiration date of the resource that this URL references,
             or 0 if not known. The value is the number of milliseconds since
             January 1, 1970 GMT. - `long`"
-  ([this]
+  ([^java.net.URLConnection this]
     (-> this (.getExpiration))))
 
 (defn get-connect-timeout
@@ -593,7 +593,7 @@
 
   returns: an int that indicates the connect timeout
            value in milliseconds - `int`"
-  ([this]
+  ([^java.net.URLConnection this]
     (-> this (.getConnectTimeout))))
 
 (defn get-url
@@ -602,7 +602,7 @@
 
   returns: the value of this URLConnection's URL
             field. - `java.net.URL`"
-  ([this]
+  ([^java.net.URLConnection this]
     (-> this (.getURL))))
 
 (defn get-input-stream
@@ -615,7 +615,7 @@
   returns: an input stream that reads from this open connection. - `java.io.InputStream`
 
   throws: java.io.IOException - if an I/O error occurs while creating the input stream."
-  ([this]
+  ([^java.net.URLConnection this]
     (-> this (.getInputStream))))
 
 (defn get-permission
@@ -654,7 +654,7 @@
    URLConnection. - `java.security.Permission`
 
   throws: java.io.IOException - if the computation of the permission requires network or file I/O and an exception occurs while computing it."
-  ([this]
+  ([^java.net.URLConnection this]
     (-> this (.getPermission))))
 
 (defn set-connect-timeout
@@ -672,7 +672,7 @@
   timeout - an int that specifies the connect timeout value in milliseconds - `int`
 
   throws: java.lang.IllegalArgumentException - if the timeout parameter is negative"
-  ([this timeout]
+  ([^java.net.URLConnection this ^Integer timeout]
     (-> this (.setConnectTimeout timeout))))
 
 (defn get-content-length
@@ -685,7 +685,7 @@
   returns: the content length of the resource that this connection's URL
             references, -1 if the content length is not known,
             or if the content length is greater than Integer.MAX_VALUE. - `int`"
-  ([this]
+  ([^java.net.URLConnection this]
     (-> this (.getContentLength))))
 
 (defn set-do-output
@@ -699,7 +699,7 @@
   dooutput - the new value. - `boolean`
 
   throws: java.lang.IllegalStateException - if already connected"
-  ([this dooutput]
+  ([^java.net.URLConnection this ^Boolean dooutput]
     (-> this (.setDoOutput dooutput))))
 
 (defn get-content
@@ -714,9 +714,9 @@
                  determine the specific kind of object returned. - `java.lang.Object`
 
   throws: java.io.IOException - if an I/O error occurs while getting the content."
-  ([this classes]
+  ([^java.net.URLConnection this ^java.lang.Class[] classes]
     (-> this (.getContent classes)))
-  ([this]
+  ([^java.net.URLConnection this]
     (-> this (.getContent))))
 
 (defn set-default-use-caches
@@ -724,6 +724,6 @@
    specified value.
 
   defaultusecaches - the new value. - `boolean`"
-  ([this defaultusecaches]
+  ([^java.net.URLConnection this ^Boolean defaultusecaches]
     (-> this (.setDefaultUseCaches defaultusecaches))))
 

@@ -12,7 +12,7 @@
    class with an argument indicating the illegal index.
 
   index - the illegal index. - `int`"
-  ([index]
+  ([^Integer index]
     (new ArrayIndexOutOfBoundsException index))
   ([]
     (new ArrayIndexOutOfBoundsException )))

@@ -10,7 +10,7 @@
   Constructs a new MirroredTypeException for the specified type.
 
   type - the type being accessed - `javax.lang.model.type.TypeMirror`"
-  ([type]
+  ([^javax.lang.model.type.TypeMirror type]
     (new MirroredTypeException type)))
 
 (defn get-type-mirror
@@ -19,6 +19,6 @@
    serialized and then read back in.
 
   returns: the type mirror, or null if unavailable - `javax.lang.model.type.TypeMirror`"
-  ([this]
+  ([^javax.lang.model.type.MirroredTypeException this]
     (-> this (.getTypeMirror))))
 

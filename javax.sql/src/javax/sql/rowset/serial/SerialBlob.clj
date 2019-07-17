@@ -56,9 +56,9 @@
    be read. - `java.io.InputStream`
 
   throws: java.sql.SQLException - if pos is less than 1 or if pos is greater than the number of bytes in the Blob or if pos length is greater than the number of bytes in the Blob"
-  ([this pos length]
+  ([^javax.sql.rowset.serial.SerialBlob this ^Long pos ^Long length]
     (-> this (.getBinaryStream pos length)))
-  ([this]
+  ([^javax.sql.rowset.serial.SerialBlob this]
     (-> this (.getBinaryStream))))
 
 (defn set-bytes
@@ -76,9 +76,9 @@
   returns: the number of bytes written - `int`
 
   throws: javax.sql.rowset.serial.SerialException - if there is an error accessing the BLOB value; if an invalid position is set; if an invalid offset value is set; if number of bytes to be written is greater than the SerialBlob length; or the combined values of the length and offset is greater than the Blob buffer; if free had previously been called on this object"
-  ([this pos bytes offset length]
+  ([^javax.sql.rowset.serial.SerialBlob this ^Long pos bytes ^Integer offset ^Integer length]
     (-> this (.setBytes pos bytes offset length)))
-  ([this pos bytes]
+  ([^javax.sql.rowset.serial.SerialBlob this ^Long pos bytes]
     (-> this (.setBytes pos bytes))))
 
 (defn free
@@ -88,7 +88,7 @@
    subsequent calls to free are treated as a no-op.
 
   throws: java.sql.SQLException - if an error occurs releasing the Blob's resources"
-  ([this]
+  ([^javax.sql.rowset.serial.SerialBlob this]
     (-> this (.free))))
 
 (defn set-binary-stream
@@ -106,7 +106,7 @@
            be written - `java.io.OutputStream`
 
   throws: java.sql.SQLException - if there is an error accessing the BLOB value"
-  ([this pos]
+  ([^javax.sql.rowset.serial.SerialBlob this ^Long pos]
     (-> this (.setBinaryStream pos))))
 
 (defn get-bytes
@@ -126,7 +126,7 @@
            position and containing the given number of consecutive bytes - `byte[]`
 
   throws: javax.sql.rowset.serial.SerialException - if the given starting position is out of bounds; if free had previously been called on this object"
-  ([this pos length]
+  ([^javax.sql.rowset.serial.SerialBlob this ^Long pos ^Integer length]
     (-> this (.getBytes pos length))))
 
 (defn position
@@ -144,7 +144,7 @@
            numbering for the return value starts at 1 - `long`
 
   throws: javax.sql.rowset.serial.SerialException - if an error occurs when serializing the blob; if free had previously been called on this object"
-  ([this pattern start]
+  ([^javax.sql.rowset.serial.SerialBlob this pattern ^Long start]
     (-> this (.position pattern start))))
 
 (defn length
@@ -155,7 +155,7 @@
            SerialBlob object's array of bytes - `long`
 
   throws: javax.sql.rowset.serial.SerialException - if an error occurs; if free had previously been called on this object"
-  ([this]
+  ([^javax.sql.rowset.serial.SerialBlob this]
     (-> this (.length))))
 
 (defn truncate
@@ -165,7 +165,7 @@
   length - the length, in bytes, to which the BLOB value that this Blob object represents should be truncated - `long`
 
   throws: javax.sql.rowset.serial.SerialException - if there is an error accessing the Blob value; or the length to truncate is greater that the SerialBlob length; if free had previously been called on this object"
-  ([this length]
+  ([^javax.sql.rowset.serial.SerialBlob this ^Long length]
     (-> this (.truncate length))))
 
 (defn clone
@@ -175,14 +175,14 @@
    The underlying Blob object will be set to null.
 
   returns: a clone of this SerialBlob - `java.lang.Object`"
-  ([this]
+  ([^javax.sql.rowset.serial.SerialBlob this]
     (-> this (.clone))))
 
 (defn hash-code
   "Returns a hash code for this SerialBlob.
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^javax.sql.rowset.serial.SerialBlob this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -193,6 +193,6 @@
 
   returns: true if the given object represents a SerialBlob
             equivalent to this SerialBlob, false otherwise - `boolean`"
-  ([this obj]
+  ([^javax.sql.rowset.serial.SerialBlob this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

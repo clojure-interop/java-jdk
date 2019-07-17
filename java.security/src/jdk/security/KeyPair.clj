@@ -16,20 +16,20 @@
 
   public-key - the public key. - `java.security.PublicKey`
   private-key - the private key. - `java.security.PrivateKey`"
-  ([public-key private-key]
+  ([^java.security.PublicKey public-key ^java.security.PrivateKey private-key]
     (new KeyPair public-key private-key)))
 
 (defn get-public
   "Returns a reference to the public key component of this key pair.
 
   returns: a reference to the public key. - `java.security.PublicKey`"
-  ([this]
+  ([^java.security.KeyPair this]
     (-> this (.getPublic))))
 
 (defn get-private
   "Returns a reference to the private key component of this key pair.
 
   returns: a reference to the private key. - `java.security.PrivateKey`"
-  ([this]
+  ([^java.security.KeyPair this]
     (-> this (.getPrivate))))
 

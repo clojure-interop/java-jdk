@@ -151,9 +151,9 @@
   text - the text to initialize with; may be null - `java.lang.String`
 
   throws: java.lang.NullPointerException - if the type parameter is null"
-  ([type text]
+  ([^java.lang.String type ^java.lang.String text]
     (new JEditorPane type text))
-  ([initial-page]
+  ([^java.net.URL initial-page]
     (new JEditorPane initial-page))
   ([]
     (new JEditorPane )))
@@ -204,7 +204,7 @@
 
   returns: the editor kit, or null if there is nothing
      registered for the given type - `javax.swing.text.EditorKit`"
-  ([type]
+  ([^java.lang.String type]
     (JEditorPane/createEditorKitForContentType type)))
 
 (defn *register-editor-kit-for-content-type
@@ -218,9 +218,9 @@
   type - the non-null content type - `java.lang.String`
   classname - the class to load later - `java.lang.String`
   loader - the ClassLoader to use to load the name - `java.lang.ClassLoader`"
-  ([type classname loader]
+  ([^java.lang.String type ^java.lang.String classname ^java.lang.ClassLoader loader]
     (JEditorPane/registerEditorKitForContentType type classname loader))
-  ([type classname]
+  ([^java.lang.String type ^java.lang.String classname]
     (JEditorPane/registerEditorKitForContentType type classname)))
 
 (defn *get-editor-kit-class-name-for-content-type
@@ -230,7 +230,7 @@
   type - the non-null content type - `java.lang.String`
 
   returns: `java.lang.String`"
-  ([type]
+  ([^java.lang.String type]
     (JEditorPane/getEditorKitClassNameForContentType type)))
 
 (defn set-editor-kit
@@ -251,7 +251,7 @@
    of the internal state.
 
   kit - the desired editor behavior - `javax.swing.text.EditorKit`"
-  ([this kit]
+  ([^javax.swing.JEditorPane this ^javax.swing.text.EditorKit kit]
     (-> this (.setEditorKit kit))))
 
 (defn set-content-type
@@ -278,7 +278,7 @@
   type - the non-null mime type for the content editing support - `java.lang.String`
 
   throws: java.lang.NullPointerException - if the type parameter is null"
-  ([this type]
+  ([^javax.swing.JEditorPane this ^java.lang.String type]
     (-> this (.setContentType type))))
 
 (defn set-text
@@ -318,7 +318,7 @@
    string.
 
   t - the new text to be set; if null the old text will be deleted - `java.lang.String`"
-  ([this t]
+  ([^javax.swing.JEditorPane this ^java.lang.String t]
     (-> this (.setText t))))
 
 (defn get-text
@@ -330,7 +330,7 @@
    a StringWriter.
 
   returns: the text - `java.lang.String`"
-  ([this]
+  ([^javax.swing.JEditorPane this]
     (-> this (.getText))))
 
 (defn set-editor-kit-for-content-type
@@ -341,7 +341,7 @@
 
   type - the non-null content type - `java.lang.String`
   k - the editor kit to be set - `javax.swing.text.EditorKit`"
-  ([this type k]
+  ([^javax.swing.JEditorPane this ^java.lang.String type ^javax.swing.text.EditorKit k]
     (-> this (.setEditorKitForContentType type k))))
 
 (defn read
@@ -356,7 +356,7 @@
   desc - an object describing the stream - `java.lang.Object`
 
   throws: java.io.IOException - as thrown by the stream being used to initialize"
-  ([this in desc]
+  ([^javax.swing.JEditorPane this ^java.io.InputStream in ^java.lang.Object desc]
     (-> this (.read in desc))))
 
 (defn get-editor-kit-for-content-type
@@ -378,14 +378,14 @@
   type - the non-null content type - `java.lang.String`
 
   returns: the editor kit - `javax.swing.text.EditorKit`"
-  ([this type]
+  ([^javax.swing.JEditorPane this ^java.lang.String type]
     (-> this (.getEditorKitForContentType type))))
 
 (defn get-ui-class-id
   "Gets the class ID for the UI.
 
   returns: the string `EditorPaneUI` - `java.lang.String`"
-  ([this]
+  ([^javax.swing.JEditorPane this]
     (-> this (.getUIClassID))))
 
 (defn get-content-type
@@ -395,14 +395,14 @@
    currently installed EditorKit.
 
   returns: the content type, null if no editor kit set - `java.lang.String`"
-  ([this]
+  ([^javax.swing.JEditorPane this]
     (-> this (.getContentType))))
 
 (defn remove-hyperlink-listener
   "Removes a hyperlink listener.
 
   listener - the listener - `javax.swing.event.HyperlinkListener`"
-  ([this listener]
+  ([^javax.swing.JEditorPane this ^javax.swing.event.HyperlinkListener listener]
     (-> this (.removeHyperlinkListener listener))))
 
 (defn set-page
@@ -464,7 +464,7 @@
   page - the URL of the page - `java.net.URL`
 
   throws: java.io.IOException - for a null or invalid page specification, or exception from the stream being read"
-  ([this page]
+  ([^javax.swing.JEditorPane this ^java.net.URL page]
     (-> this (.setPage page))))
 
 (defn scroll-to-reference
@@ -481,7 +481,7 @@
    is not visible.
 
   reference - the named location to scroll to - `java.lang.String`"
-  ([this reference]
+  ([^javax.swing.JEditorPane this ^java.lang.String reference]
     (-> this (.scrollToReference reference))))
 
 (defn get-scrollable-tracks-viewport-width?
@@ -490,7 +490,7 @@
 
   returns: true if a viewport should force the Scrollables width to
    match its own, false otherwise - `boolean`"
-  ([this]
+  ([^javax.swing.JEditorPane this]
     (-> this (.getScrollableTracksViewportWidth))))
 
 (defn get-accessible-context
@@ -501,7 +501,7 @@
 
   returns: an AccessibleJEditorPane that serves as the
            AccessibleContext of this JEditorPane - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^javax.swing.JEditorPane this]
     (-> this (.getAccessibleContext))))
 
 (defn get-hyperlink-listeners
@@ -510,7 +510,7 @@
 
   returns: all of the HyperLinkListeners added or an empty
            array if no listeners have been added - `javax.swing.event.HyperlinkListener[]`"
-  ([this]
+  ([^javax.swing.JEditorPane this]
     (-> this (.getHyperlinkListeners))))
 
 (defn replace-selection
@@ -524,7 +524,7 @@
    editable, beep and return.
 
   content - the content to replace the selection with. This value can be null - `java.lang.String`"
-  ([this content]
+  ([^javax.swing.JEditorPane this ^java.lang.String content]
     (-> this (.replaceSelection content))))
 
 (defn add-hyperlink-listener
@@ -532,7 +532,7 @@
    when a link is selected and entered.
 
   listener - the listener - `javax.swing.event.HyperlinkListener`"
-  ([this listener]
+  ([^javax.swing.JEditorPane this ^javax.swing.event.HyperlinkListener listener]
     (-> this (.addHyperlinkListener listener))))
 
 (defn get-scrollable-tracks-viewport-height?
@@ -542,7 +542,7 @@
   returns: true if a viewport should force the
             Scrollable's height to match its own,
             false otherwise - `boolean`"
-  ([this]
+  ([^javax.swing.JEditorPane this]
     (-> this (.getScrollableTracksViewportHeight))))
 
 (defn get-page
@@ -552,7 +552,7 @@
    resolved.
 
   returns: the URL, or null if none - `java.net.URL`"
-  ([this]
+  ([^javax.swing.JEditorPane this]
     (-> this (.getPage))))
 
 (defn fire-hyperlink-update
@@ -564,7 +564,7 @@
    last to first.
 
   e - the event - `javax.swing.event.HyperlinkEvent`"
-  ([this e]
+  ([^javax.swing.JEditorPane this ^javax.swing.event.HyperlinkEvent e]
     (-> this (.fireHyperlinkUpdate e))))
 
 (defn get-editor-kit
@@ -573,7 +573,7 @@
    if necessary.
 
   returns: the editor kit - `javax.swing.text.EditorKit`"
-  ([this]
+  ([^javax.swing.JEditorPane this]
     (-> this (.getEditorKit))))
 
 (defn get-preferred-size
@@ -591,6 +591,6 @@
    their minimum size, refusing to shrink any further.
 
   returns: a Dimension containing the preferred size - `java.awt.Dimension`"
-  ([this]
+  ([^javax.swing.JEditorPane this]
     (-> this (.getPreferredSize))))
 

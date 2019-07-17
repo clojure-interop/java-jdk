@@ -24,51 +24,51 @@
   shadow - the color of the shadow - `java.awt.Color`
   dark-shadow - the color of the dark shadow - `java.awt.Color`
   highlight - the color of the highlight - `java.awt.Color`"
-  ([direction background shadow dark-shadow highlight]
+  ([^Integer direction ^java.awt.Color background ^java.awt.Color shadow ^java.awt.Color dark-shadow ^java.awt.Color highlight]
     (new BasicArrowButton direction background shadow dark-shadow highlight))
-  ([direction]
+  ([^Integer direction]
     (new BasicArrowButton direction)))
 
 (defn get-direction
   "Returns the direction of the arrow.
 
   returns: `int`"
-  ([this]
+  ([^javax.swing.plaf.basic.BasicArrowButton this]
     (-> this (.getDirection))))
 
 (defn set-direction
   "Sets the direction of the arrow.
 
   direction - the direction of the arrow; one of of SwingConstants.NORTH, SwingConstants.SOUTH, SwingConstants.EAST or SwingConstants.WEST - `int`"
-  ([this direction]
+  ([^javax.swing.plaf.basic.BasicArrowButton this ^Integer direction]
     (-> this (.setDirection direction))))
 
 (defn paint
   "Description copied from class: JComponent
 
   g - the Graphics context in which to paint - `java.awt.Graphics`"
-  ([this g]
+  ([^javax.swing.plaf.basic.BasicArrowButton this ^java.awt.Graphics g]
     (-> this (.paint g))))
 
 (defn get-preferred-size
   "Returns the preferred size of the BasicArrowButton.
 
   returns: the preferred size - `java.awt.Dimension`"
-  ([this]
+  ([^javax.swing.plaf.basic.BasicArrowButton this]
     (-> this (.getPreferredSize))))
 
 (defn get-minimum-size
   "Returns the minimum size of the BasicArrowButton.
 
   returns: the minimum size - `java.awt.Dimension`"
-  ([this]
+  ([^javax.swing.plaf.basic.BasicArrowButton this]
     (-> this (.getMinimumSize))))
 
 (defn get-maximum-size
   "Returns the maximum size of the BasicArrowButton.
 
   returns: the maximum size - `java.awt.Dimension`"
-  ([this]
+  ([^javax.swing.plaf.basic.BasicArrowButton this]
     (-> this (.getMaximumSize))))
 
 (defn focus-traversable?
@@ -79,7 +79,7 @@
    focus, this method is overriden to return false.
 
   returns: false - `boolean`"
-  ([this]
+  ([^javax.swing.plaf.basic.BasicArrowButton this]
     (-> this (.isFocusTraversable))))
 
 (defn paint-triangle
@@ -91,6 +91,6 @@
   size - the size of the triangle to draw - `int`
   direction - the direction in which to draw the arrow; one of SwingConstants.NORTH, SwingConstants.SOUTH, SwingConstants.EAST or SwingConstants.WEST - `int`
   is-enabled - whether or not the arrow is drawn enabled - `boolean`"
-  ([this g x y size direction is-enabled]
+  ([^javax.swing.plaf.basic.BasicArrowButton this ^java.awt.Graphics g ^Integer x ^Integer y ^Integer size ^Integer direction ^Boolean is-enabled]
     (-> this (.paintTriangle g x y size direction is-enabled))))
 

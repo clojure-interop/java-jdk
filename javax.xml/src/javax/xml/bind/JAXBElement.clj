@@ -37,23 +37,23 @@
   declared-type - Java binding of xml element declaration's type - `java.lang.Class<JAXBElement.T>`
   scope - Java binding of scope of xml element declaration. Passing null is the same as passing GlobalScope.class - `java.lang.Class`
   value - Java instance representing xml element's value. - `JAXBElement.T`"
-  ([name declared-type scope value]
+  ([^javax.xml.namespace.QName name ^java.lang.Class declared-type ^java.lang.Class scope ^JAXBElement.T value]
     (new JAXBElement name declared-type scope value))
-  ([name declared-type value]
+  ([^javax.xml.namespace.QName name ^java.lang.Class declared-type ^JAXBElement.T value]
     (new JAXBElement name declared-type value)))
 
 (defn get-declared-type
   "Returns the Java binding of the xml element declaration's type attribute.
 
   returns: `java.lang.Class<JAXBElement.T>`"
-  ([this]
+  ([^javax.xml.bind.JAXBElement this]
     (-> this (.getDeclaredType))))
 
 (defn set-nil
   "Set whether this element has nil content.
 
   value - `boolean`"
-  ([this value]
+  ([^javax.xml.bind.JAXBElement this ^Boolean value]
     (-> this (.setNil value))))
 
 (defn get-value
@@ -63,21 +63,21 @@
    this value is null
 
   returns: `JAXBElement.T`"
-  ([this]
+  ([^javax.xml.bind.JAXBElement this]
     (-> this (.getValue))))
 
 (defn get-name
   "Returns the xml element tag name.
 
   returns: `javax.xml.namespace.QName`"
-  ([this]
+  ([^javax.xml.bind.JAXBElement this]
     (-> this (.getName))))
 
 (defn global-scope?
   "Returns true iff this xml element declaration is global.
 
   returns: `boolean`"
-  ([this]
+  ([^javax.xml.bind.JAXBElement this]
     (-> this (.isGlobalScope))))
 
 (defn nil?
@@ -90,7 +90,7 @@
    valid for a nil xml element to have attribute(s).
 
   returns: `boolean`"
-  ([this]
+  ([^javax.xml.bind.JAXBElement this]
     (-> this (.isNil))))
 
 (defn set-value
@@ -100,7 +100,7 @@
       Details of constraint are described at isNil().
 
   t - `JAXBElement.T`"
-  ([this t]
+  ([^javax.xml.bind.JAXBElement this ^JAXBElement.T t]
     (-> this (.setValue t))))
 
 (defn type-substituted?
@@ -108,13 +108,13 @@
    type than xml element declaration's declared type.
 
   returns: `boolean`"
-  ([this]
+  ([^javax.xml.bind.JAXBElement this]
     (-> this (.isTypeSubstituted))))
 
 (defn get-scope
   "Returns scope of xml element declaration.
 
   returns: GlobalScope.class if this element is of global scope. - `java.lang.Class`"
-  ([this]
+  ([^javax.xml.bind.JAXBElement this]
     (-> this (.getScope))))
 

@@ -147,9 +147,9 @@
 
   factory - AbstractFormatterFactory used for formatting. - `javax.swing.JFormattedTextField.AbstractFormatterFactory`
   current-value - Initial value to use - `java.lang.Object`"
-  ([factory current-value]
+  ([^javax.swing.JFormattedTextField.AbstractFormatterFactory factory ^java.lang.Object current-value]
     (new JFormattedTextField factory current-value))
-  ([value]
+  ([^java.lang.Object value]
     (new JFormattedTextField value))
   ([]
     (new JFormattedTextField )))
@@ -201,7 +201,7 @@
    there is no public setter for it.
 
   returns: true if the current value being edited is valid. - `boolean`"
-  ([this]
+  ([^javax.swing.JFormattedTextField this]
     (-> this (.isEditValid))))
 
 (defn get-focus-lost-behavior
@@ -214,7 +214,7 @@
    they occur, so that the value of this will have no effect.
 
   returns: returns behavior when focus is lost - `int`"
-  ([this]
+  ([^javax.swing.JFormattedTextField this]
     (-> this (.getFocusLostBehavior))))
 
 (defn set-focus-lost-behavior
@@ -235,7 +235,7 @@
   behavior - Identifies behavior when focus is lost - `int`
 
   throws: java.lang.IllegalArgumentException - if behavior is not one of the known values"
-  ([this behavior]
+  ([^javax.swing.JFormattedTextField this ^Integer behavior]
     (-> this (.setFocusLostBehavior behavior))))
 
 (defn set-document
@@ -245,7 +245,7 @@
    A PropertyChange event (`document`) is propagated to each listener.
 
   doc - the document to display/edit - `javax.swing.text.Document`"
-  ([this doc]
+  ([^javax.swing.JFormattedTextField this ^javax.swing.text.Document doc]
     (-> this (.setDocument doc))))
 
 (defn commit-edit
@@ -255,7 +255,7 @@
    AbstractFormatter installed.
 
   throws: java.text.ParseException - if the AbstractFormatter is not able to format the current value"
-  ([this]
+  ([^javax.swing.JFormattedTextField this]
     (-> this (.commitEdit))))
 
 (defn get-actions
@@ -266,14 +266,14 @@
    to events, such as in a keymap.
 
   returns: the command list - `javax.swing.Action[]`"
-  ([this]
+  ([^javax.swing.JFormattedTextField this]
     (-> this (.getActions))))
 
 (defn get-ui-class-id
   "Gets the class ID for a UI.
 
   returns: the string `FormattedTextFieldUI` - `java.lang.String`"
-  ([this]
+  ([^javax.swing.JFormattedTextField this]
     (-> this (.getUIClassID))))
 
 (defn get-value
@@ -283,7 +283,7 @@
    commitEdit followed by getValue.
 
   returns: Last valid value - `java.lang.Object`"
-  ([this]
+  ([^javax.swing.JFormattedTextField this]
     (-> this (.getValue))))
 
 (defn get-formatter
@@ -291,7 +291,7 @@
    parse the current value.
 
   returns: AbstractFormatter used for formatting - `javax.swing.JFormattedTextField.AbstractFormatter`"
-  ([this]
+  ([^javax.swing.JFormattedTextField this]
     (-> this (.getFormatter))))
 
 (defn get-formatter-factory
@@ -299,7 +299,7 @@
 
   returns: AbstractFormatterFactory used to determine
            AbstractFormatters - `javax.swing.JFormattedTextField.AbstractFormatterFactory`"
-  ([this]
+  ([^javax.swing.JFormattedTextField this]
     (-> this (.getFormatterFactory))))
 
 (defn set-formatter-factory
@@ -321,7 +321,7 @@
    This is a JavaBeans bound property.
 
   tf - AbstractFormatterFactory used to lookup instances of AbstractFormatter - `javax.swing.JFormattedTextField.AbstractFormatterFactory`"
-  ([this tf]
+  ([^javax.swing.JFormattedTextField this ^javax.swing.JFormattedTextField.AbstractFormatterFactory tf]
     (-> this (.setFormatterFactory tf))))
 
 (defn set-value
@@ -336,6 +336,6 @@
    This is a JavaBeans bound property.
 
   value - Current value to display - `java.lang.Object`"
-  ([this value]
+  ([^javax.swing.JFormattedTextField this ^java.lang.Object value]
     (-> this (.setValue value))))
 

@@ -108,16 +108,16 @@
   barrier-action - the command to execute when the barrier is tripped, or null if there is no action - `java.lang.Runnable`
 
   throws: java.lang.IllegalArgumentException - if parties is less than 1"
-  ([parties barrier-action]
+  ([^Integer parties ^java.lang.Runnable barrier-action]
     (new CyclicBarrier parties barrier-action))
-  ([parties]
+  ([^Integer parties]
     (new CyclicBarrier parties)))
 
 (defn get-parties
   "Returns the number of parties required to trip this barrier.
 
   returns: the number of parties required to trip this barrier - `int`"
-  ([this]
+  ([^java.util.concurrent.CyclicBarrier this]
     (-> this (.getParties))))
 
 (defn await
@@ -175,9 +175,9 @@
            to arrive and zero indicates the last to arrive - `int`
 
   throws: java.lang.InterruptedException - if the current thread was interrupted while waiting"
-  ([this timeout unit]
+  ([^java.util.concurrent.CyclicBarrier this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.await timeout unit)))
-  ([this]
+  ([^java.util.concurrent.CyclicBarrier this]
     (-> this (.await))))
 
 (defn broken?
@@ -187,7 +187,7 @@
            barrier due to interruption or timeout since
            construction or the last reset, or a barrier action
            failed due to an exception; false otherwise. - `boolean`"
-  ([this]
+  ([^java.util.concurrent.CyclicBarrier this]
     (-> this (.isBroken))))
 
 (defn reset
@@ -198,7 +198,7 @@
    carry out; threads need to re-synchronize in some other way,
    and choose one to perform the reset.  It may be preferable to
    instead create a new barrier for subsequent use."
-  ([this]
+  ([^java.util.concurrent.CyclicBarrier this]
     (-> this (.reset))))
 
 (defn get-number-waiting
@@ -206,6 +206,6 @@
    This method is primarily useful for debugging and assertions.
 
   returns: the number of parties currently blocked in await() - `int`"
-  ([this]
+  ([^java.util.concurrent.CyclicBarrier this]
     (-> this (.getNumberWaiting))))
 

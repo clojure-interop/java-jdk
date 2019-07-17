@@ -24,7 +24,7 @@
 
   class-name - the fully qualified name of the class of the lock object. - `java.lang.String`
   identity-hash-code - the identity hash code of the lock object. - `int`"
-  ([class-name identity-hash-code]
+  ([^java.lang.String class-name ^Integer identity-hash-code]
     (new LockInfo class-name identity-hash-code)))
 
 (defn *from
@@ -52,14 +52,14 @@
            null otherwise. - `java.lang.management.LockInfo`
 
   throws: java.lang.IllegalArgumentException - if cd does not represent a LockInfo with the attributes described above."
-  ([cd]
+  ([^javax.management.openmbean.CompositeData cd]
     (LockInfo/from cd)))
 
 (defn get-class-name
   "Returns the fully qualified name of the class of the lock object.
 
   returns: the fully qualified name of the class of the lock object. - `java.lang.String`"
-  ([this]
+  ([^java.lang.management.LockInfo this]
     (-> this (.getClassName))))
 
 (defn get-identity-hash-code
@@ -67,7 +67,7 @@
    returned from the System.identityHashCode(java.lang.Object) method.
 
   returns: the identity hash code of the lock object. - `int`"
-  ([this]
+  ([^java.lang.management.LockInfo this]
     (-> this (.getIdentityHashCode))))
 
 (defn to-string
@@ -83,6 +83,6 @@
    where lock is the lock object.
 
   returns: the string representation of a lock. - `java.lang.String`"
-  ([this]
+  ([^java.lang.management.LockInfo this]
     (-> this (.toString))))
 

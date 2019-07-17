@@ -32,7 +32,7 @@
   params - the initialization parameters (may be null) - `java.security.cert.CertStoreParameters`
 
   throws: java.security.InvalidAlgorithmParameterException - if the initialization parameters are inappropriate for this CertStoreSpi"
-  ([params]
+  ([^java.security.cert.CertStoreParameters params]
     (new CertStoreSpi params)))
 
 (defn engine-get-certificates
@@ -59,7 +59,7 @@
            match the specified selector (never null) - `java.util.Collection<? extends java.security.cert.Certificate>`
 
   throws: java.security.cert.CertStoreException - if an exception occurs"
-  ([this selector]
+  ([^java.security.cert.CertStoreSpi this ^java.security.cert.CertSelector selector]
     (-> this (.engineGetCertificates selector))))
 
 (defn engine-get-cr-ls
@@ -86,6 +86,6 @@
            match the specified selector (never null) - `java.util.Collection<? extends java.security.cert.CRL>`
 
   throws: java.security.cert.CertStoreException - if an exception occurs"
-  ([this selector]
+  ([^java.security.cert.CertStoreSpi this ^java.security.cert.CRLSelector selector]
     (-> this (.engineGetCRLs selector))))
 

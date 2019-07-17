@@ -23,13 +23,13 @@
   source - A source object containing valid XmlInfoset instance consistent with the W3C WS-Addressing Core recommendation. - `javax.xml.transform.Source`
 
   throws: javax.xml.ws.WebServiceException - If the source does NOT contain a valid W3C WS-Addressing EndpointReference."
-  ([source]
+  ([^javax.xml.transform.Source source]
     (new W3CEndpointReference source)))
 
 (defn write-to
   "write this EndpointReference to the specified infoset format
 
   result - for writing infoset - `javax.xml.transform.Result`"
-  ([this result]
+  ([^javax.xml.ws.wsaddressing.W3CEndpointReference this ^javax.xml.transform.Result result]
     (-> this (.writeTo result))))
 

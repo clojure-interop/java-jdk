@@ -10,7 +10,7 @@
   "Returns an InetAddress for this address.
 
   returns: the InetAddress for this address. - `java.net.InetAddress`"
-  ([this]
+  ([^java.net.InterfaceAddress this]
     (-> this (.getAddress))))
 
 (defn get-broadcast
@@ -22,7 +22,7 @@
 
   returns: the InetAddress representing the broadcast
            address or null if there is no broadcast address. - `java.net.InetAddress`"
-  ([this]
+  ([^java.net.InterfaceAddress this]
     (-> this (.getBroadcast))))
 
 (defn get-network-prefix-length
@@ -34,7 +34,7 @@
 
   returns: a short representing the prefix length for the
            subnet of that address. - `short`"
-  ([this]
+  ([^java.net.InterfaceAddress this]
     (-> this (.getNetworkPrefixLength))))
 
 (defn equals
@@ -51,14 +51,14 @@
 
   returns: true if the objects are the same;
             false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.net.InterfaceAddress this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Returns a hashcode for this Interface address.
 
   returns: a hash code value for this Interface address. - `int`"
-  ([this]
+  ([^java.net.InterfaceAddress this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -66,6 +66,6 @@
    string returned is of the form: InetAddress / prefix length [ broadcast address ].
 
   returns: a string representation of this Interface address. - `java.lang.String`"
-  ([this]
+  ([^java.net.InterfaceAddress this]
     (-> this (.toString))))
 

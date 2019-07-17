@@ -293,9 +293,9 @@
   locale - the locale for this message format - `java.util.Locale`
 
   throws: java.lang.IllegalArgumentException - if the pattern is invalid"
-  ([pattern locale]
+  ([^java.lang.String pattern ^java.util.Locale locale]
     (new MessageFormat pattern locale))
-  ([pattern]
+  ([^java.lang.String pattern]
     (new MessageFormat pattern)))
 
 (defn *format
@@ -310,7 +310,7 @@
   returns: the formatted string - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if the pattern is invalid, or if an argument in the arguments array is not of the type expected by the format element(s) that use it."
-  ([pattern arguments]
+  ([^java.lang.String pattern ^java.lang.Object arguments]
     (MessageFormat/format pattern arguments)))
 
 (defn set-format-by-argument-index
@@ -329,7 +329,7 @@
 
   argument-index - the argument index for which to use the new format - `int`
   new-format - the new format to use - `java.text.Format`"
-  ([this argument-index new-format]
+  ([^java.text.MessageFormat this ^Integer argument-index ^java.text.Format new-format]
     (-> this (.setFormatByArgumentIndex argument-index new-format))))
 
 (defn get-formats
@@ -347,7 +347,7 @@
    the parse methods.
 
   returns: the formats used for the format elements in the pattern - `java.text.Format[]`"
-  ([this]
+  ([^java.text.MessageFormat this]
     (-> this (.getFormats))))
 
 (defn parse-object
@@ -374,7 +374,7 @@
            error, returns null. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if pos is null."
-  ([this source pos]
+  ([^java.text.MessageFormat this ^java.lang.String source ^java.text.ParsePosition pos]
     (-> this (.parseObject source pos))))
 
 (defn set-formats-by-argument-index
@@ -399,7 +399,7 @@
   new-formats - the new formats to use - `java.text.Format[]`
 
   throws: java.lang.NullPointerException - if newFormats is null"
-  ([this new-formats]
+  ([^java.text.MessageFormat this ^java.text.Format[] new-formats]
     (-> this (.setFormatsByArgumentIndex new-formats))))
 
 (defn set-format
@@ -418,14 +418,14 @@
   new-format - the format to use for the specified format element - `java.text.Format`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if formatElementIndex is equal to or larger than the number of format elements in the pattern string"
-  ([this format-element-index new-format]
+  ([^java.text.MessageFormat this ^Integer format-element-index ^java.text.Format new-format]
     (-> this (.setFormat format-element-index new-format))))
 
 (defn get-locale
   "Gets the locale that's used when creating or comparing subformats.
 
   returns: the locale used when creating or comparing subformats - `java.util.Locale`"
-  ([this]
+  ([^java.text.MessageFormat this]
     (-> this (.getLocale))))
 
 (defn to-pattern
@@ -434,7 +434,7 @@
    does not necessarily equal the previously applied pattern.
 
   returns: a pattern representing the current state of the message format - `java.lang.String`"
-  ([this]
+  ([^java.text.MessageFormat this]
     (-> this (.toPattern))))
 
 (defn format-to-character-iterator
@@ -469,7 +469,7 @@
   returns: AttributedCharacterIterator describing the formatted value. - `java.text.AttributedCharacterIterator`
 
   throws: java.lang.NullPointerException - if arguments is null."
-  ([this arguments]
+  ([^java.text.MessageFormat this ^java.lang.Object arguments]
     (-> this (.formatToCharacterIterator arguments))))
 
 (defn set-locale
@@ -488,14 +488,14 @@
    Subformats that have already been created are not affected.
 
   locale - the locale to be used when creating or comparing subformats - `java.util.Locale`"
-  ([this locale]
+  ([^java.text.MessageFormat this ^java.util.Locale locale]
     (-> this (.setLocale locale))))
 
 (defn clone
   "Creates and returns a copy of this object.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([this]
+  ([^java.text.MessageFormat this]
     (-> this (.clone))))
 
 (defn parse
@@ -529,16 +529,16 @@
   pos - the parse position - `java.text.ParsePosition`
 
   returns: an array of parsed objects - `java.lang.Object[]`"
-  ([this source pos]
+  ([^java.text.MessageFormat this ^java.lang.String source ^java.text.ParsePosition pos]
     (-> this (.parse source pos)))
-  ([this source]
+  ([^java.text.MessageFormat this ^java.lang.String source]
     (-> this (.parse source))))
 
 (defn hash-code
   "Generates a hash code for the message format object.
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^java.text.MessageFormat this]
     (-> this (.hashCode))))
 
 (defn set-formats
@@ -563,7 +563,7 @@
   new-formats - the new formats to use - `java.text.Format[]`
 
   throws: java.lang.NullPointerException - if newFormats is null"
-  ([this new-formats]
+  ([^java.text.MessageFormat this ^java.text.Format[] new-formats]
     (-> this (.setFormats new-formats))))
 
 (defn apply-pattern
@@ -576,7 +576,7 @@
   pattern - the pattern for this message format - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if the pattern is invalid"
-  ([this pattern]
+  ([^java.text.MessageFormat this ^java.lang.String pattern]
     (-> this (.applyPattern pattern))))
 
 (defn equals
@@ -586,7 +586,7 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.text.MessageFormat this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn format
@@ -654,7 +654,7 @@
    text appended - `java.lang.StringBuffer`
 
   throws: java.lang.IllegalArgumentException - if an argument in the arguments array is not of the type expected by the format element(s) that use it."
-  ([this arguments result pos]
+  ([^java.text.MessageFormat this ^java.lang.Object[] arguments ^java.lang.StringBuffer result ^java.text.FieldPosition pos]
     (-> this (.format arguments result pos))))
 
 (defn get-formats-by-argument-index
@@ -675,6 +675,6 @@
    null is returned in the array.
 
   returns: the formats used for the arguments within the pattern - `java.text.Format[]`"
-  ([this]
+  ([^java.text.MessageFormat this]
     (-> this (.getFormatsByArgumentIndex))))
 

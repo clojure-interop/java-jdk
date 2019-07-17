@@ -16,7 +16,7 @@
   class-name - Fully-qualified representation class name. - `java.lang.String`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if className is null."
-  ([class-name]
+  ([^java.lang.String class-name]
     (new DocFlavor$SERVICE_FORMATTED class-name)))
 
 (def *-renderable-image

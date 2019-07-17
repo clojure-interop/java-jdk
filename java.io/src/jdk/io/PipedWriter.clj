@@ -13,7 +13,7 @@
   snk - The piped reader to connect to. - `java.io.PipedReader`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([snk]
+  ([^java.io.PipedReader snk]
     (new PipedWriter snk))
   ([]
     (new PipedWriter )))
@@ -38,7 +38,7 @@
   snk - the piped reader to connect to. - `java.io.PipedReader`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this snk]
+  ([^java.io.PipedWriter this ^java.io.PipedReader snk]
     (-> this (.connect snk))))
 
 (defn write
@@ -55,9 +55,9 @@
   len - the number of characters to write. - `int`
 
   throws: java.io.IOException - if the pipe is broken, unconnected, closed or an I/O error occurs."
-  ([this cbuf off len]
+  ([^java.io.PipedWriter this cbuf ^Integer off ^Integer len]
     (-> this (.write cbuf off len)))
-  ([this c]
+  ([^java.io.PipedWriter this ^Integer c]
     (-> this (.write c))))
 
 (defn flush
@@ -66,7 +66,7 @@
    This will notify any readers that characters are waiting in the pipe.
 
   throws: java.io.IOException - if the pipe is closed, or an I/O error occurs."
-  ([this]
+  ([^java.io.PipedWriter this]
     (-> this (.flush))))
 
 (defn close
@@ -75,6 +75,6 @@
    writing characters.
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this]
+  ([^java.io.PipedWriter this]
     (-> this (.close))))
 

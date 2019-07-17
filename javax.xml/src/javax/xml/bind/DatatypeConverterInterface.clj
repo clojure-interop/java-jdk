@@ -54,7 +54,7 @@
   returns: An array of bytes represented by the string argument. - `byte[]`
 
   throws: java.lang.IllegalArgumentException - if string parameter does not conform to lexical value space defined in XML Schema Part 2: Datatypes for xsd:base64Binary"
-  ([this lexical-xsd-base-64-binary]
+  ([^. this ^java.lang.String lexical-xsd-base-64-binary]
     (-> this (.parseBase64Binary lexical-xsd-base-64-binary))))
 
 (defn parse-date-time
@@ -65,7 +65,7 @@
   returns: A Calendar object represented by the string argument. - `java.util.Calendar`
 
   throws: java.lang.IllegalArgumentException - if string parameter does not conform to lexical value space defined in XML Schema Part 2: Datatypes for xsd:dateTime."
-  ([this lexical-xsd-date-time]
+  ([^. this ^java.lang.String lexical-xsd-date-time]
     (-> this (.parseDateTime lexical-xsd-date-time))))
 
 (defn print-unsigned-int
@@ -74,7 +74,7 @@
   val - A long value - `long`
 
   returns: A string containing a lexical representation of xsd:unsignedInt - `java.lang.String`"
-  ([this val]
+  ([^. this ^Long val]
     (-> this (.printUnsignedInt val))))
 
 (defn print-q-name
@@ -86,7 +86,7 @@
   returns: A string containing a lexical representation of QName - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if val is null or if nsc is non-null or nsc.getPrefix(nsprefixFromVal) is null."
-  ([this val nsc]
+  ([^. this ^javax.xml.namespace.QName val ^javax.xml.namespace.NamespaceContext nsc]
     (-> this (.printQName val nsc))))
 
 (defn parse-q-name
@@ -102,7 +102,7 @@
   returns: A QName value represented by the string argument. - `javax.xml.namespace.QName`
 
   throws: java.lang.IllegalArgumentException - if string parameter does not conform to XML Schema Part 2 specification or if namespace prefix of lexicalXSDQname is not bound to a URI in NamespaceContext nsc."
-  ([this lexical-xsdq-name nsc]
+  ([^. this ^java.lang.String lexical-xsdq-name ^javax.xml.namespace.NamespaceContext nsc]
     (-> this (.parseQName lexical-xsdq-name nsc))))
 
 (defn print-time
@@ -113,7 +113,7 @@
   returns: A string containing a lexical representation of xsd:time - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if val is null."
-  ([this val]
+  ([^. this ^java.util.Calendar val]
     (-> this (.printTime val))))
 
 (defn print-short
@@ -122,7 +122,7 @@
   val - A short value - `short`
 
   returns: A string containing a lexical representation of xsd:short - `java.lang.String`"
-  ([this val]
+  ([^. this ^Short val]
     (-> this (.printShort val))))
 
 (defn print-any-simple-type
@@ -131,7 +131,7 @@
   val - A string value - `java.lang.String`
 
   returns: A string containing a lexical representation of xsd:AnySimpleType - `java.lang.String`"
-  ([this val]
+  ([^. this ^java.lang.String val]
     (-> this (.printAnySimpleType val))))
 
 (defn parse-string
@@ -140,7 +140,7 @@
   lexical-xsd-string - A lexical representation of the XML Schema datatype xsd:string - `java.lang.String`
 
   returns: A string that is the same as the input string. - `java.lang.String`"
-  ([this lexical-xsd-string]
+  ([^. this ^java.lang.String lexical-xsd-string]
     (-> this (.parseString lexical-xsd-string))))
 
 (defn parse-short
@@ -151,7 +151,7 @@
   returns: A short value represented by the string argument. - `short`
 
   throws: java.lang.NumberFormatException - lexicalXSDShort is not a valid string representation of a short value."
-  ([this lexical-xsd-short]
+  ([^. this ^java.lang.String lexical-xsd-short]
     (-> this (.parseShort lexical-xsd-short))))
 
 (defn parse-time
@@ -162,7 +162,7 @@
   returns: A Calendar value represented by the string argument. - `java.util.Calendar`
 
   throws: java.lang.IllegalArgumentException - if string parameter does not conform to lexical value space defined in XML Schema Part 2: Datatypes for xsd:Time."
-  ([this lexical-xsd-time]
+  ([^. this ^java.lang.String lexical-xsd-time]
     (-> this (.parseTime lexical-xsd-time))))
 
 (defn parse-hex-binary
@@ -173,7 +173,7 @@
   returns: An array of bytes represented by the string argument. - `byte[]`
 
   throws: java.lang.IllegalArgumentException - if string parameter does not conform to lexical value space defined in XML Schema Part 2: Datatypes for xsd:hexBinary."
-  ([this lexical-xsd-hex-binary]
+  ([^. this ^java.lang.String lexical-xsd-hex-binary]
     (-> this (.parseHexBinary lexical-xsd-hex-binary))))
 
 (defn print-unsigned-short
@@ -182,7 +182,7 @@
   val - An int value - `int`
 
   returns: A string containing a lexical representation of xsd:unsignedShort - `java.lang.String`"
-  ([this val]
+  ([^. this ^Integer val]
     (-> this (.printUnsignedShort val))))
 
 (defn parse-float
@@ -193,7 +193,7 @@
   returns: A float value represented by the string argument. - `float`
 
   throws: java.lang.NumberFormatException - lexicalXSDFloat is not a valid string representation of a float value."
-  ([this lexical-xsd-float]
+  ([^. this ^java.lang.String lexical-xsd-float]
     (-> this (.parseFloat lexical-xsd-float))))
 
 (defn print-base-64-binary
@@ -204,7 +204,7 @@
   returns: A string containing a lexical representation of xsd:base64Binary - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if val is null."
-  ([this val]
+  ([^. this val]
     (-> this (.printBase64Binary val))))
 
 (defn parse-date
@@ -215,7 +215,7 @@
   returns: A Calendar value represented by the string argument. - `java.util.Calendar`
 
   throws: java.lang.IllegalArgumentException - if string parameter does not conform to lexical value space defined in XML Schema Part 2: Datatypes for xsd:Date."
-  ([this lexical-xsd-date]
+  ([^. this ^java.lang.String lexical-xsd-date]
     (-> this (.parseDate lexical-xsd-date))))
 
 (defn parse-integer
@@ -226,7 +226,7 @@
   returns: A BigInteger value represented by the string argument. - `java.math.BigInteger`
 
   throws: java.lang.NumberFormatException - lexicalXSDInteger is not a valid string representation of a BigInteger value."
-  ([this lexical-xsd-integer]
+  ([^. this ^java.lang.String lexical-xsd-integer]
     (-> this (.parseInteger lexical-xsd-integer))))
 
 (defn print-string
@@ -235,7 +235,7 @@
   val - A string value. - `java.lang.String`
 
   returns: A string containing a lexical representation of xsd:string - `java.lang.String`"
-  ([this val]
+  ([^. this ^java.lang.String val]
     (-> this (.printString val))))
 
 (defn parse-decimal
@@ -246,7 +246,7 @@
   returns: A BigDecimal value represented by the string argument. - `java.math.BigDecimal`
 
   throws: java.lang.NumberFormatException - lexicalXSDDecimal is not a valid string representation of BigDecimal."
-  ([this lexical-xsd-decimal]
+  ([^. this ^java.lang.String lexical-xsd-decimal]
     (-> this (.parseDecimal lexical-xsd-decimal))))
 
 (defn print-decimal
@@ -257,7 +257,7 @@
   returns: A string containing a lexical representation of xsd:decimal - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - val is null."
-  ([this val]
+  ([^. this ^java.math.BigDecimal val]
     (-> this (.printDecimal val))))
 
 (defn print-date-time
@@ -268,7 +268,7 @@
   returns: A string containing a lexical representation of xsd:dateTime - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if val is null."
-  ([this val]
+  ([^. this ^java.util.Calendar val]
     (-> this (.printDateTime val))))
 
 (defn print-date
@@ -279,7 +279,7 @@
   returns: A string containing a lexical representation of xsd:date - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if val is null."
-  ([this val]
+  ([^. this ^java.util.Calendar val]
     (-> this (.printDate val))))
 
 (defn print-long
@@ -288,7 +288,7 @@
   val - A long value - `long`
 
   returns: A string containing a lexical representation of xsd:long - `java.lang.String`"
-  ([this val]
+  ([^. this ^Long val]
     (-> this (.printLong val))))
 
 (defn print-float
@@ -297,7 +297,7 @@
   val - A float value - `float`
 
   returns: A string containing a lexical representation of xsd:float - `java.lang.String`"
-  ([this val]
+  ([^. this ^Float val]
     (-> this (.printFloat val))))
 
 (defn print-byte
@@ -306,7 +306,7 @@
   val - A byte value - `byte`
 
   returns: A string containing a lexical representation of xsd:byte - `java.lang.String`"
-  ([this val]
+  ([^. this ^Byte val]
     (-> this (.printByte val))))
 
 (defn parse-boolean
@@ -317,7 +317,7 @@
   returns: A boolean value represented by the string argument. - `boolean`
 
   throws: java.lang.IllegalArgumentException - if string parameter does not conform to lexical value space defined in XML Schema Part 2: Datatypes for xsd:boolean."
-  ([this lexical-xsd-boolean]
+  ([^. this ^java.lang.String lexical-xsd-boolean]
     (-> this (.parseBoolean lexical-xsd-boolean))))
 
 (defn print-integer
@@ -328,7 +328,7 @@
   returns: A string containing a lexical representation of xsd:integer - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - val is null."
-  ([this val]
+  ([^. this ^java.math.BigInteger val]
     (-> this (.printInteger val))))
 
 (defn parse-double
@@ -339,7 +339,7 @@
   returns: A double value represented by the string argument. - `double`
 
   throws: java.lang.NumberFormatException - lexicalXSDDouble is not a valid string representation of a double value."
-  ([this lexical-xsd-double]
+  ([^. this ^java.lang.String lexical-xsd-double]
     (-> this (.parseDouble lexical-xsd-double))))
 
 (defn parse-long
@@ -350,7 +350,7 @@
   returns: A long value represented by the string argument. - `long`
 
   throws: java.lang.NumberFormatException - lexicalXSDLong is not a valid string representation of a long value."
-  ([this lexical-xsd-long]
+  ([^. this ^java.lang.String lexical-xsd-long]
     (-> this (.parseLong lexical-xsd-long))))
 
 (defn print-int
@@ -359,7 +359,7 @@
   val - An int value - `int`
 
   returns: A string containing a lexical representation of xsd:int - `java.lang.String`"
-  ([this val]
+  ([^. this ^Integer val]
     (-> this (.printInt val))))
 
 (defn parse-any-simple-type
@@ -370,7 +370,7 @@
 
   returns: A string containing the lexical representation of the
        simple type. - `java.lang.String`"
-  ([this lexical-xsd-any-simple-type]
+  ([^. this ^java.lang.String lexical-xsd-any-simple-type]
     (-> this (.parseAnySimpleType lexical-xsd-any-simple-type))))
 
 (defn print-double
@@ -379,7 +379,7 @@
   val - A double value - `double`
 
   returns: A string containing a lexical representation of xsd:double - `java.lang.String`"
-  ([this val]
+  ([^. this ^Double val]
     (-> this (.printDouble val))))
 
 (defn parse-unsigned-short
@@ -390,7 +390,7 @@
   returns: An int value represented by the string argument. - `int`
 
   throws: java.lang.NumberFormatException - if string parameter can not be parsed into an int value."
-  ([this lexical-xsd-unsigned-short]
+  ([^. this ^java.lang.String lexical-xsd-unsigned-short]
     (-> this (.parseUnsignedShort lexical-xsd-unsigned-short))))
 
 (defn parse-byte
@@ -401,7 +401,7 @@
   returns: A byte value represented by the string argument. - `byte`
 
   throws: java.lang.NumberFormatException - lexicalXSDByte does not contain a parseable byte."
-  ([this lexical-xsd-byte]
+  ([^. this ^java.lang.String lexical-xsd-byte]
     (-> this (.parseByte lexical-xsd-byte))))
 
 (defn print-boolean
@@ -410,7 +410,7 @@
   val - A boolean value - `boolean`
 
   returns: A string containing a lexical representation of xsd:boolean - `java.lang.String`"
-  ([this val]
+  ([^. this ^Boolean val]
     (-> this (.printBoolean val))))
 
 (defn print-hex-binary
@@ -421,7 +421,7 @@
   returns: A string containing a lexical representation of xsd:hexBinary - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if val is null."
-  ([this val]
+  ([^. this val]
     (-> this (.printHexBinary val))))
 
 (defn parse-unsigned-int
@@ -432,7 +432,7 @@
   returns: A long value represented by the string argument. - `long`
 
   throws: java.lang.NumberFormatException - if string parameter can not be parsed into a long value."
-  ([this lexical-xsd-unsigned-int]
+  ([^. this ^java.lang.String lexical-xsd-unsigned-int]
     (-> this (.parseUnsignedInt lexical-xsd-unsigned-int))))
 
 (defn parse-int
@@ -443,6 +443,6 @@
   returns: An int value represented byte the string argument. - `int`
 
   throws: java.lang.NumberFormatException - lexicalXSDInt is not a valid string representation of an int value."
-  ([this lexical-xsd-int]
+  ([^. this ^java.lang.String lexical-xsd-int]
     (-> this (.parseInt lexical-xsd-int))))
 

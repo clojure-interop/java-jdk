@@ -45,7 +45,7 @@
   fac - the socket factory - `java.rmi.server.RMISocketFactory`
 
   throws: java.io.IOException - if the RMI socket factory is already set"
-  ([fac]
+  ([^java.rmi.server.RMISocketFactory fac]
     (RMISocketFactory/setSocketFactory fac)))
 
 (defn *get-socket-factory
@@ -81,7 +81,7 @@
   fh - the failure handler - `java.rmi.server.RMIFailureHandler`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkSetFactory method doesn't allow the operation."
-  ([fh]
+  ([^java.rmi.server.RMIFailureHandler fh]
     (RMISocketFactory/setFailureHandler fh)))
 
 (defn *get-failure-handler
@@ -101,7 +101,7 @@
   returns: a socket connected to the specified host and port. - `java.net.Socket`
 
   throws: java.io.IOException - if an I/O error occurs during socket creation"
-  ([this host port]
+  ([^java.rmi.server.RMISocketFactory this ^java.lang.String host ^Integer port]
     (-> this (.createSocket host port))))
 
 (defn create-server-socket
@@ -113,6 +113,6 @@
   returns: the server socket on the specified port - `java.net.ServerSocket`
 
   throws: java.io.IOException - if an I/O error occurs during server socket creation"
-  ([this port]
+  ([^java.rmi.server.RMISocketFactory this ^Integer port]
     (-> this (.createServerSocket port))))
 

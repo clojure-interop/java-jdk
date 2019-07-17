@@ -30,7 +30,7 @@
   "Returns the value contained in the editor.
 
   returns: the value contained in the editor - `java.lang.Object`"
-  ([this]
+  ([^. this]
     (-> this (.getCellEditorValue))))
 
 (defn cell-editable?
@@ -45,7 +45,7 @@
   an-event - the event the editor should use to consider whether to begin editing or not - `java.util.EventObject`
 
   returns: true if editing can be started - `boolean`"
-  ([this an-event]
+  ([^. this ^java.util.EventObject an-event]
     (-> this (.isCellEditable an-event))))
 
 (defn should-select-cell?
@@ -63,7 +63,7 @@
 
   returns: true if the editor would like the editing cell to be selected;
       otherwise returns false - `boolean`"
-  ([this an-event]
+  ([^. this ^java.util.EventObject an-event]
     (-> this (.shouldSelectCell an-event))))
 
 (defn stop-cell-editing
@@ -73,13 +73,13 @@
    and can not accept invalid entries.
 
   returns: true if editing was stopped; false otherwise - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.stopCellEditing))))
 
 (defn cancel-cell-editing
   "Tells the editor to cancel editing and not accept any partially
    edited value."
-  ([this]
+  ([^. this]
     (-> this (.cancelCellEditing))))
 
 (defn add-cell-editor-listener
@@ -87,13 +87,13 @@
    stops, or cancels editing.
 
   l - the CellEditorListener - `javax.swing.event.CellEditorListener`"
-  ([this l]
+  ([^. this ^javax.swing.event.CellEditorListener l]
     (-> this (.addCellEditorListener l))))
 
 (defn remove-cell-editor-listener
   "Removes a listener from the list that's notified
 
   l - the CellEditorListener - `javax.swing.event.CellEditorListener`"
-  ([this l]
+  ([^. this ^javax.swing.event.CellEditorListener l]
     (-> this (.removeCellEditorListener l))))
 

@@ -30,7 +30,7 @@
   value - the value to be present - `double`
 
   returns: an OptionalDouble with the value present - `java.util.OptionalDouble`"
-  ([value]
+  ([^Double value]
     (OptionalDouble/of value)))
 
 (defn get-as-double
@@ -40,7 +40,7 @@
   returns: the value held by this OptionalDouble - `double`
 
   throws: java.util.NoSuchElementException - if there is no value present"
-  ([this]
+  ([^java.util.OptionalDouble this]
     (-> this (.getAsDouble))))
 
 (defn or-else-throw
@@ -52,14 +52,14 @@
   returns: the present value - `<X extends java.lang.Throwable> double`
 
   throws: X - if there is no value present"
-  ([this exception-supplier]
+  ([^java.util.OptionalDouble this ^java.util.function.Supplier exception-supplier]
     (-> this (.orElseThrow exception-supplier))))
 
 (defn present?
   "Return true if there is a value present, otherwise false.
 
   returns: true if there is a value present, otherwise false - `boolean`"
-  ([this]
+  ([^java.util.OptionalDouble this]
     (-> this (.isPresent))))
 
 (defn to-string
@@ -86,7 +86,7 @@
    between implementations and versions.
 
   returns: the string representation of this instance - `java.lang.String`"
-  ([this]
+  ([^java.util.OptionalDouble this]
     (-> this (.toString))))
 
 (defn or-else-get
@@ -98,7 +98,7 @@
   returns: the value if present otherwise the result of other.getAsDouble() - `double`
 
   throws: java.lang.NullPointerException - if value is not present and other is null"
-  ([this other]
+  ([^java.util.OptionalDouble this ^java.util.function.DoubleSupplier other]
     (-> this (.orElseGet other))))
 
 (defn if-present
@@ -108,7 +108,7 @@
   consumer - block to be executed if a value is present - `java.util.function.DoubleConsumer`
 
   throws: java.lang.NullPointerException - if value is present and consumer is null"
-  ([this consumer]
+  ([^java.util.OptionalDouble this ^java.util.function.DoubleConsumer consumer]
     (-> this (.ifPresent consumer))))
 
 (defn hash-code
@@ -116,7 +116,7 @@
    no value is present.
 
   returns: hash code value of the present value or 0 if no value is present - `int`"
-  ([this]
+  ([^java.util.OptionalDouble this]
     (-> this (.hashCode))))
 
 (defn or-else
@@ -125,7 +125,7 @@
   other - the value to be returned if there is no value present - `double`
 
   returns: the value, if present, otherwise other - `double`"
-  ([this other]
+  ([^java.util.OptionalDouble this ^Double other]
     (-> this (.orElse other))))
 
 (defn equals
@@ -140,6 +140,6 @@
 
   returns: {code true} if the other object is `equal to` this object
    otherwise false - `boolean`"
-  ([this obj]
+  ([^java.util.OptionalDouble this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

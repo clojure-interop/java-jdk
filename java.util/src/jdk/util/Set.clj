@@ -55,7 +55,7 @@
   returns: true if this set changed as a result of the call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the addAll operation is not supported by this set"
-  ([this c]
+  ([^. this ^Set.E> c]
     (-> this (.addAll c))))
 
 (defn spliterator
@@ -66,7 +66,7 @@
    characteristic values.
 
   returns: a Spliterator over the elements in this set - `default java.util.Spliterator<Set.E>`"
-  ([this]
+  ([^. this]
     (-> this (.spliterator))))
 
 (defn contains
@@ -80,7 +80,7 @@
   returns: true if this set contains the specified element - `boolean`
 
   throws: java.lang.ClassCastException - if the type of the specified element is incompatible with this set (optional)"
-  ([this o]
+  ([^. this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn iterator
@@ -89,7 +89,7 @@
    class that provides a guarantee).
 
   returns: an iterator over the elements in this set - `java.util.Iterator<Set.E>`"
-  ([this]
+  ([^. this]
     (-> this (.iterator))))
 
 (defn remove
@@ -107,7 +107,7 @@
   returns: true if this set contained the specified element - `boolean`
 
   throws: java.lang.ClassCastException - if the type of the specified element is incompatible with this set (optional)"
-  ([this o]
+  ([^. this ^java.lang.Object o]
     (-> this (.remove o))))
 
 (defn hash-code
@@ -120,7 +120,7 @@
    Object.hashCode().
 
   returns: the hash code value for this set - `int`"
-  ([this]
+  ([^. this]
     (-> this (.hashCode))))
 
 (defn add
@@ -147,14 +147,14 @@
            element - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the add operation is not supported by this set"
-  ([this e]
+  ([^. this ^Set.E e]
     (-> this (.add e))))
 
 (defn empty?
   "Returns true if this set contains no elements.
 
   returns: true if this set contains no elements - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.isEmpty))))
 
 (defn size
@@ -163,7 +163,7 @@
    Integer.MAX_VALUE.
 
   returns: the number of elements in this set (its cardinality) - `int`"
-  ([this]
+  ([^. this]
     (-> this (.size))))
 
 (defn retain-all
@@ -179,7 +179,7 @@
   returns: true if this set changed as a result of the call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the retainAll operation is not supported by this set"
-  ([this c]
+  ([^. this ^java.util.Collection c]
     (-> this (.retainAll c))))
 
 (defn clear
@@ -187,7 +187,7 @@
    The set will be empty after this call returns.
 
   throws: java.lang.UnsupportedOperationException - if the clear method is not supported by this set"
-  ([this]
+  ([^. this]
     (-> this (.clear))))
 
 (defn to-array
@@ -229,9 +229,9 @@
   returns: an array containing all the elements in this set - `<T> T[]`
 
   throws: java.lang.ArrayStoreException - if the runtime type of the specified array is not a supertype of the runtime type of every element in this set"
-  ([this a]
+  ([^. this a]
     (-> this (.toArray a)))
-  ([this]
+  ([^. this]
     (-> this (.toArray))))
 
 (defn remove-all
@@ -246,7 +246,7 @@
   returns: true if this set changed as a result of the call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the removeAll operation is not supported by this set"
-  ([this c]
+  ([^. this ^java.util.Collection c]
     (-> this (.removeAll c))))
 
 (defn equals
@@ -261,7 +261,7 @@
   o - object to be compared for equality with this set - `java.lang.Object`
 
   returns: true if the specified object is equal to this set - `boolean`"
-  ([this o]
+  ([^. this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn contains-all
@@ -275,6 +275,6 @@
            specified collection - `boolean`
 
   throws: java.lang.ClassCastException - if the types of one or more elements in the specified collection are incompatible with this set (optional)"
-  ([this c]
+  ([^. this ^java.util.Collection c]
     (-> this (.containsAll c))))
 

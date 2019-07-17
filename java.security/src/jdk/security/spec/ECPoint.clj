@@ -16,7 +16,7 @@
   y - the affine y-coordinate. - `java.math.BigInteger`
 
   throws: java.lang.NullPointerException - if x or y is null."
-  ([x y]
+  ([^java.math.BigInteger x ^java.math.BigInteger y]
     (new ECPoint x y)))
 
 (def *-point-infinity
@@ -32,7 +32,7 @@
    Note: POINT_INFINITY has a null affine x-coordinate.
 
   returns: the affine x-coordinate. - `java.math.BigInteger`"
-  ([this]
+  ([^java.security.spec.ECPoint this]
     (-> this (.getAffineX))))
 
 (defn get-affine-y
@@ -40,7 +40,7 @@
    Note: POINT_INFINITY has a null affine y-coordinate.
 
   returns: the affine y-coordinate. - `java.math.BigInteger`"
-  ([this]
+  ([^java.security.spec.ECPoint this]
     (-> this (.getAffineY))))
 
 (defn equals
@@ -51,13 +51,13 @@
 
   returns: true if obj is an instance of
    ECPoint and the affine coordinates match, false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.security.spec.ECPoint this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Returns a hash code value for this elliptic curve point.
 
   returns: a hash code value. - `int`"
-  ([this]
+  ([^java.security.spec.ECPoint this]
     (-> this (.hashCode))))
 

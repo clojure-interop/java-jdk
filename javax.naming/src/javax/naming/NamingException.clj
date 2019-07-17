@@ -33,7 +33,7 @@
    All unspecified fields are set to null.
 
   explanation - A possibly null string containing additional detail about this exception. - `java.lang.String`"
-  ([explanation]
+  ([^java.lang.String explanation]
     (new NamingException explanation))
   ([]
     (new NamingException )))
@@ -42,7 +42,7 @@
   "Add name as the last component in remaining name.
 
   name - The component to add. If name is null, this method does not do anything. - `java.lang.String`"
-  ([this name]
+  ([^javax.naming.NamingException this ^java.lang.String name]
     (-> this (.appendRemainingComponent name))))
 
 (defn get-explanation
@@ -51,7 +51,7 @@
   returns: The possibly null detail string explaining more
            about this exception. If null, it means there is no
            detail message for this exception. - `java.lang.String`"
-  ([this]
+  ([^javax.naming.NamingException this]
     (-> this (.getExplanation))))
 
 (defn init-cause
@@ -66,7 +66,7 @@
   returns: a reference to this NamingException instance. - `java.lang.Throwable`
 
   throws: java.lang.IllegalArgumentException - if cause is this exception. (A throwable cannot be its own cause.)"
-  ([this cause]
+  ([^javax.naming.NamingException this ^java.lang.Throwable cause]
     (-> this (.initCause cause))))
 
 (defn set-resolved-name
@@ -83,7 +83,7 @@
    affect the copy in this NamingException and vice versa.
 
   name - The possibly null name to set resolved name to. If null, it sets the resolved name field to null. - `javax.naming.Name`"
-  ([this name]
+  ([^javax.naming.NamingException this ^javax.naming.Name name]
     (-> this (.setResolvedName name))))
 
 (defn get-resolved-obj
@@ -92,14 +92,14 @@
 
   returns: The possibly null object that was resolved so far.
     null means that the resolved object field has not been set. - `java.lang.Object`"
-  ([this]
+  ([^javax.naming.NamingException this]
     (-> this (.getResolvedObj))))
 
 (defn set-resolved-obj
   "Sets the resolved object field of this exception.
 
   obj - The possibly null object to set resolved object to. If null, the resolved object field is set to null. - `java.lang.Object`"
-  ([this obj]
+  ([^javax.naming.NamingException this ^java.lang.Object obj]
     (-> this (.setResolvedObj obj))))
 
 (defn to-string
@@ -113,9 +113,9 @@
   detail - If true, include details about the resolved object in addition to the other information. - `boolean`
 
   returns: The non-null string containing the string representation. - `java.lang.String`"
-  ([this detail]
+  ([^javax.naming.NamingException this ^Boolean detail]
     (-> this (.toString detail)))
-  ([this]
+  ([^javax.naming.NamingException this]
     (-> this (.toString))))
 
 (defn append-remaining-name
@@ -130,7 +130,7 @@
    affect the remaining name field in this NamingException and vice versa.
 
   name - The possibly null name containing ordered components to add. If name is null, this method does not do anything. - `javax.naming.Name`"
-  ([this name]
+  ([^javax.naming.NamingException this ^javax.naming.Name name]
     (-> this (.appendRemainingName name))))
 
 (defn set-remaining-name
@@ -147,7 +147,7 @@
    affect the copy in this NamingException and vice versa.
 
   name - The possibly null name to set remaining name to. If null, it sets the remaining name field to null. - `javax.naming.Name`"
-  ([this name]
+  ([^javax.naming.NamingException this ^javax.naming.Name name]
     (-> this (.setRemainingName name))))
 
 (defn get-resolved-name
@@ -157,7 +157,7 @@
   returns: The part of the name that was resolved successfully.
             It is a composite name. It can be null, which means
             the resolved name field has not been set. - `javax.naming.Name`"
-  ([this]
+  ([^javax.naming.NamingException this]
     (-> this (.getResolvedName))))
 
 (defn get-remaining-name
@@ -166,7 +166,7 @@
   returns: The part of the name that has not been resolved.
             It is a composite name. It can be null, which means
             the remaining name field has not been set. - `javax.naming.Name`"
-  ([this]
+  ([^javax.naming.NamingException this]
     (-> this (.getRemainingName))))
 
 (defn get-root-cause
@@ -183,7 +183,7 @@
   returns: The possibly null exception that caused this naming
       exception. If null, it means no root cause has been
       set for this naming exception. - `java.lang.Throwable`"
-  ([this]
+  ([^javax.naming.NamingException this]
     (-> this (.getRootCause))))
 
 (defn get-cause
@@ -194,7 +194,7 @@
 
   returns: the cause of this exception, or null if the
             cause is nonexistent or unknown. - `java.lang.Throwable`"
-  ([this]
+  ([^javax.naming.NamingException this]
     (-> this (.getCause))))
 
 (defn set-root-cause
@@ -206,6 +206,6 @@
    of recording this information.
 
   e - The possibly null exception that caused the naming operation to fail. If null, it means this naming exception has no root cause. - `java.lang.Throwable`"
-  ([this e]
+  ([^javax.naming.NamingException this ^java.lang.Throwable e]
     (-> this (.setRootCause e))))
 

@@ -67,7 +67,7 @@
   b - component-listener-b - `java.awt.event.ComponentListener`
 
   returns: `java.awt.event.ComponentListener`"
-  ([a b]
+  ([^java.awt.event.ComponentListener a ^java.awt.event.ComponentListener b]
     (AWTEventMulticaster/add a b)))
 
 (defn *remove
@@ -78,7 +78,7 @@
   oldl - the component-listener being removed - `java.awt.event.ComponentListener`
 
   returns: `java.awt.event.ComponentListener`"
-  ([l oldl]
+  ([^java.awt.event.ComponentListener l ^java.awt.event.ComponentListener oldl]
     (AWTEventMulticaster/remove l oldl)))
 
 (defn *get-listeners
@@ -103,7 +103,7 @@
             chained by the specified multicast listener - `<T extends java.util.EventListener> T[]`
 
   throws: java.lang.NullPointerException - if the specified listenertype parameter is null"
-  ([l listener-type]
+  ([^java.util.EventListener l ^java.lang.Class listener-type]
     (AWTEventMulticaster/getListeners l listener-type)))
 
 (defn component-removed
@@ -111,7 +111,7 @@
    componentRemoved methods on listener-a and listener-b.
 
   e - the component event - `java.awt.event.ContainerEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.ContainerEvent e]
     (-> this (.componentRemoved e))))
 
 (defn window-opened
@@ -119,7 +119,7 @@
    windowOpened methods on listener-a and listener-b.
 
   e - the window event - `java.awt.event.WindowEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.WindowEvent e]
     (-> this (.windowOpened e))))
 
 (defn window-state-changed
@@ -127,7 +127,7 @@
    windowStateChanged methods on listener-a and listener-b.
 
   e - the window event - `java.awt.event.WindowEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.WindowEvent e]
     (-> this (.windowStateChanged e))))
 
 (defn mouse-moved
@@ -135,7 +135,7 @@
    mouseMoved methods on listener-a and listener-b.
 
   e - the mouse event - `java.awt.event.MouseEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.MouseEvent e]
     (-> this (.mouseMoved e))))
 
 (defn adjustment-value-changed
@@ -143,7 +143,7 @@
    adjustmentValueChanged methods on listener-a and listener-b.
 
   e - the adjustment event - `java.awt.event.AdjustmentEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.AdjustmentEvent e]
     (-> this (.adjustmentValueChanged e))))
 
 (defn key-typed
@@ -151,7 +151,7 @@
    keyTyped methods on listener-a and listener-b.
 
   e - the key event - `java.awt.event.KeyEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.KeyEvent e]
     (-> this (.keyTyped e))))
 
 (defn component-resized
@@ -159,7 +159,7 @@
    componentResized methods on listener-a and listener-b.
 
   e - the component event - `java.awt.event.ComponentEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.ComponentEvent e]
     (-> this (.componentResized e))))
 
 (defn caret-position-changed
@@ -167,7 +167,7 @@
    caretPositionChanged methods on listener-a and listener-b.
 
   e - the item event - `java.awt.event.InputMethodEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.InputMethodEvent e]
     (-> this (.caretPositionChanged e))))
 
 (defn focus-gained
@@ -175,7 +175,7 @@
    focusGained methods on listener-a and listener-b.
 
   e - the focus event - `java.awt.event.FocusEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.FocusEvent e]
     (-> this (.focusGained e))))
 
 (defn mouse-wheel-moved
@@ -183,7 +183,7 @@
    mouseWheelMoved methods on listener-a and listener-b.
 
   e - the mouse event - `java.awt.event.MouseWheelEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.MouseWheelEvent e]
     (-> this (.mouseWheelMoved e))))
 
 (defn ancestor-resized
@@ -191,7 +191,7 @@
    ancestorResized methods on listener-a and listener-b.
 
   e - the item event - `java.awt.event.HierarchyEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.HierarchyEvent e]
     (-> this (.ancestorResized e))))
 
 (defn window-gained-focus
@@ -199,7 +199,7 @@
    methods on listener-a and listener-b.
 
   e - the window event - `java.awt.event.WindowEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.WindowEvent e]
     (-> this (.windowGainedFocus e))))
 
 (defn input-method-text-changed
@@ -207,7 +207,7 @@
    inputMethodTextChanged methods on listener-a and listener-b.
 
   e - the item event - `java.awt.event.InputMethodEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.InputMethodEvent e]
     (-> this (.inputMethodTextChanged e))))
 
 (defn window-closing
@@ -215,7 +215,7 @@
    windowClosing methods on listener-a and listener-b.
 
   e - the window event - `java.awt.event.WindowEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.WindowEvent e]
     (-> this (.windowClosing e))))
 
 (defn mouse-pressed
@@ -223,7 +223,7 @@
    mousePressed methods on listener-a and listener-b.
 
   e - the mouse event - `java.awt.event.MouseEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.MouseEvent e]
     (-> this (.mousePressed e))))
 
 (defn mouse-released
@@ -231,7 +231,7 @@
    mouseReleased methods on listener-a and listener-b.
 
   e - the mouse event - `java.awt.event.MouseEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.MouseEvent e]
     (-> this (.mouseReleased e))))
 
 (defn key-pressed
@@ -239,7 +239,7 @@
    keyPressed methods on listener-a and listener-b.
 
   e - the key event - `java.awt.event.KeyEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.KeyEvent e]
     (-> this (.keyPressed e))))
 
 (defn focus-lost
@@ -247,7 +247,7 @@
    focusLost methods on listener-a and listener-b.
 
   e - the focus event - `java.awt.event.FocusEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.FocusEvent e]
     (-> this (.focusLost e))))
 
 (defn component-hidden
@@ -255,7 +255,7 @@
    componentHidden methods on listener-a and listener-b.
 
   e - the component event - `java.awt.event.ComponentEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.ComponentEvent e]
     (-> this (.componentHidden e))))
 
 (defn ancestor-moved
@@ -263,7 +263,7 @@
    ancestorMoved methods on listener-a and listener-b.
 
   e - the item event - `java.awt.event.HierarchyEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.HierarchyEvent e]
     (-> this (.ancestorMoved e))))
 
 (defn window-closed
@@ -271,7 +271,7 @@
    windowClosed methods on listener-a and listener-b.
 
   e - the window event - `java.awt.event.WindowEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.WindowEvent e]
     (-> this (.windowClosed e))))
 
 (defn key-released
@@ -279,7 +279,7 @@
    keyReleased methods on listener-a and listener-b.
 
   e - the key event - `java.awt.event.KeyEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.KeyEvent e]
     (-> this (.keyReleased e))))
 
 (defn component-moved
@@ -287,7 +287,7 @@
    componentMoved methods on listener-a and listener-b.
 
   e - the component event - `java.awt.event.ComponentEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.ComponentEvent e]
     (-> this (.componentMoved e))))
 
 (defn mouse-exited
@@ -295,7 +295,7 @@
    mouseExited methods on listener-a and listener-b.
 
   e - the mouse event - `java.awt.event.MouseEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.MouseEvent e]
     (-> this (.mouseExited e))))
 
 (defn component-shown
@@ -303,7 +303,7 @@
    componentShown methods on listener-a and listener-b.
 
   e - the component event - `java.awt.event.ComponentEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.ComponentEvent e]
     (-> this (.componentShown e))))
 
 (defn window-activated
@@ -311,7 +311,7 @@
    windowActivated methods on listener-a and listener-b.
 
   e - the window event - `java.awt.event.WindowEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.WindowEvent e]
     (-> this (.windowActivated e))))
 
 (defn action-performed
@@ -319,7 +319,7 @@
    actionPerformed methods on listener-a and listener-b.
 
   e - the action event - `java.awt.event.ActionEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.ActionEvent e]
     (-> this (.actionPerformed e))))
 
 (defn window-iconified
@@ -327,7 +327,7 @@
    windowIconified methods on listener-a and listener-b.
 
   e - the window event - `java.awt.event.WindowEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.WindowEvent e]
     (-> this (.windowIconified e))))
 
 (defn mouse-entered
@@ -335,7 +335,7 @@
    mouseEntered methods on listener-a and listener-b.
 
   e - the mouse event - `java.awt.event.MouseEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.MouseEvent e]
     (-> this (.mouseEntered e))))
 
 (defn component-added
@@ -343,7 +343,7 @@
    componentAdded methods on listener-a and listener-b.
 
   e - the component event - `java.awt.event.ContainerEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.ContainerEvent e]
     (-> this (.componentAdded e))))
 
 (defn window-deactivated
@@ -351,7 +351,7 @@
    windowDeactivated methods on listener-a and listener-b.
 
   e - the window event - `java.awt.event.WindowEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.WindowEvent e]
     (-> this (.windowDeactivated e))))
 
 (defn window-lost-focus
@@ -359,14 +359,14 @@
    methods on listener-a and listener-b.
 
   e - the window event - `java.awt.event.WindowEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.WindowEvent e]
     (-> this (.windowLostFocus e))))
 
 (defn text-value-changed
   "Description copied from interface: TextListener
 
   e - `java.awt.event.TextEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.TextEvent e]
     (-> this (.textValueChanged e))))
 
 (defn window-deiconified
@@ -374,7 +374,7 @@
    windowDeiconified methods on listener-a and listener-b.
 
   e - the window event - `java.awt.event.WindowEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.WindowEvent e]
     (-> this (.windowDeiconified e))))
 
 (defn mouse-dragged
@@ -382,7 +382,7 @@
    mouseDragged methods on listener-a and listener-b.
 
   e - the mouse event - `java.awt.event.MouseEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.MouseEvent e]
     (-> this (.mouseDragged e))))
 
 (defn item-state-changed
@@ -390,7 +390,7 @@
    itemStateChanged methods on listener-a and listener-b.
 
   e - the item event - `java.awt.event.ItemEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.ItemEvent e]
     (-> this (.itemStateChanged e))))
 
 (defn mouse-clicked
@@ -398,7 +398,7 @@
    mouseClicked methods on listener-a and listener-b.
 
   e - the mouse event - `java.awt.event.MouseEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.MouseEvent e]
     (-> this (.mouseClicked e))))
 
 (defn hierarchy-changed
@@ -406,6 +406,6 @@
    hierarchyChanged methods on listener-a and listener-b.
 
   e - the item event - `java.awt.event.HierarchyEvent`"
-  ([this e]
+  ([^java.awt.AWTEventMulticaster this ^java.awt.event.HierarchyEvent e]
     (-> this (.hierarchyChanged e))))
 

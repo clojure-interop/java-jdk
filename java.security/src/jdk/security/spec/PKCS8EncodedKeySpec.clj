@@ -38,7 +38,7 @@
 
   returns: the PKCS #8 encoding of the key. Returns a new array
    each time this method is called. - `byte[]`"
-  ([this]
+  ([^java.security.spec.PKCS8EncodedKeySpec this]
     (-> this (.getEncoded))))
 
 (defn get-format
@@ -46,6 +46,6 @@
    key specification.
 
   returns: the string `PKCS#8`. - `java.lang.String`"
-  ([this]
+  ([^java.security.spec.PKCS8EncodedKeySpec this]
     (-> this (.getFormat))))
 

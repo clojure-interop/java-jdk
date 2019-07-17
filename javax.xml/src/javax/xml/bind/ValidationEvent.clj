@@ -14,14 +14,14 @@
    ValidationError.ERROR, or ValidationError.FATAL_ERROR.
 
   returns: the severity code for this warning/error - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getSeverity))))
 
 (defn get-message
   "Retrieve the text message for this warning/error.
 
   returns: the text message for this warning/error or null if one wasn't set - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getMessage))))
 
 (defn get-linked-exception
@@ -29,13 +29,13 @@
 
   returns: the linked exception for this warning/error or null if one
            wasn't set - `java.lang.Throwable`"
-  ([this]
+  ([^. this]
     (-> this (.getLinkedException))))
 
 (defn get-locator
   "Retrieve the locator for this warning/error.
 
   returns: the locator that indicates where the warning/error occurred - `javax.xml.bind.ValidationEventLocator`"
-  ([this]
+  ([^. this]
     (-> this (.getLocator))))
 

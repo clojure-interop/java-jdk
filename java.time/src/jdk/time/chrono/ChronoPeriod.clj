@@ -18,14 +18,14 @@
   "Checks if any of the supported units of this period are negative.
 
   returns: true if any unit of this period is negative - `default boolean`"
-  ([this]
+  ([^. this]
     (-> this (.isNegative))))
 
 (defn is-zero
   "Checks if all the supported units of this period are zero.
 
   returns: true if this period is zero-length - `default boolean`"
-  ([this]
+  ([^. this]
     (-> this (.isZero))))
 
 (defn multiplied-by
@@ -43,7 +43,7 @@
     by the scalar, not null - `java.time.chrono.ChronoPeriod`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs"
-  ([this scalar]
+  ([^. this ^Integer scalar]
     (-> this (.multipliedBy scalar))))
 
 (defn get-units
@@ -58,7 +58,7 @@
    to access the entire state of the period.
 
   returns: a list containing the supported units, not null - `java.util.List<java.time.temporal.TemporalUnit>`"
-  ([this]
+  ([^. this]
     (-> this (.getUnits))))
 
 (defn plus
@@ -75,7 +75,7 @@
   returns: a ChronoPeriod based on this period with the requested period added, not null - `java.time.chrono.ChronoPeriod`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs"
-  ([this amount-to-add]
+  ([^. this ^java.time.temporal.TemporalAmount amount-to-add]
     (-> this (.plus amount-to-add))))
 
 (defn to-string
@@ -84,7 +84,7 @@
    The output will include the period amounts and chronology.
 
   returns: a string representation of this period, not null - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.toString))))
 
 (defn minus
@@ -101,7 +101,7 @@
   returns: a ChronoPeriod based on this period with the requested period subtracted, not null - `java.time.chrono.ChronoPeriod`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs"
-  ([this amount-to-subtract]
+  ([^. this ^java.time.temporal.TemporalAmount amount-to-subtract]
     (-> this (.minus amount-to-subtract))))
 
 (defn add-to
@@ -128,7 +128,7 @@
   returns: an object of the same type with the adjustment made, not null - `java.time.temporal.Temporal`
 
   throws: java.time.DateTimeException - if unable to add"
-  ([this temporal]
+  ([^. this ^java.time.temporal.Temporal temporal]
     (-> this (.addTo temporal))))
 
 (defn negated
@@ -142,7 +142,7 @@
   returns: a ChronoPeriod based on this period with the amounts negated, not null - `default java.time.chrono.ChronoPeriod`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs, which only happens if one of the units has the value Long.MIN_VALUE"
-  ([this]
+  ([^. this]
     (-> this (.negated))))
 
 (defn normalized
@@ -159,7 +159,7 @@
     unit normalized, not null - `java.time.chrono.ChronoPeriod`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs"
-  ([this]
+  ([^. this]
     (-> this (.normalized))))
 
 (defn *between
@@ -180,7 +180,7 @@
   end-date-exclusive - the end date, exclusive, in any chronology, not null - `java.time.chrono.ChronoLocalDate`
 
   returns: the period between this date and the end date, not null - `java.time.chrono.ChronoPeriod`"
-  ([start-date-inclusive end-date-exclusive]
+  ([^java.time.chrono.ChronoLocalDate start-date-inclusive ^java.time.chrono.ChronoLocalDate end-date-exclusive]
     (null/between start-date-inclusive end-date-exclusive)))
 
 (defn get-chronology
@@ -191,14 +191,14 @@
    to ChronoLocalDate instances of the same chronology.
 
   returns: the chronology defining the period, not null - `java.time.chrono.Chronology`"
-  ([this]
+  ([^. this]
     (-> this (.getChronology))))
 
 (defn hash-code
   "A hash code for this period.
 
   returns: a suitable hash code - `int`"
-  ([this]
+  ([^. this]
     (-> this (.hashCode))))
 
 (defn subtract-from
@@ -225,7 +225,7 @@
   returns: an object of the same type with the adjustment made, not null - `java.time.temporal.Temporal`
 
   throws: java.time.DateTimeException - if unable to subtract"
-  ([this temporal]
+  ([^. this ^java.time.temporal.Temporal temporal]
     (-> this (.subtractFrom temporal))))
 
 (defn get
@@ -241,7 +241,7 @@
   returns: the long value of the unit - `long`
 
   throws: java.time.DateTimeException - if the unit is not supported"
-  ([this unit]
+  ([^. this ^java.time.temporal.TemporalUnit unit]
     (-> this (.get unit))))
 
 (defn equals
@@ -255,6 +255,6 @@
   obj - the object to check, null returns false - `java.lang.Object`
 
   returns: true if this is equal to the other period - `boolean`"
-  ([this obj]
+  ([^. this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

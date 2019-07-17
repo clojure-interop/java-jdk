@@ -19,6 +19,6 @@
   Constructs a ChangeEvent object.
 
   source - the Object that is the source of the event (typically this) - `java.lang.Object`"
-  ([source]
+  ([^java.lang.Object source]
     (new ChangeEvent source)))
 

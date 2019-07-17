@@ -23,7 +23,7 @@
   locale - Natural language of the text string. null is interpreted to mean the default locale as returned by Locale.getDefault() - `java.util.Locale`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if info is null."
-  ([info locale]
+  ([^java.lang.String info ^java.util.Locale locale]
     (new PrinterInfo info locale)))
 
 (defn equals
@@ -46,7 +46,7 @@
 
   returns: True if object is equivalent to this printer
             info attribute, false otherwise. - `boolean`"
-  ([this object]
+  ([^javax.print.attribute.standard.PrinterInfo this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -57,7 +57,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([this]
+  ([^javax.print.attribute.standard.PrinterInfo this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -67,6 +67,6 @@
    For class PrinterInfo, the category name is `printer-info`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([this]
+  ([^javax.print.attribute.standard.PrinterInfo this]
     (-> this (.getName))))
 

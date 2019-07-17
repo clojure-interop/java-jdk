@@ -84,7 +84,7 @@
   returns: New instance of a DatatypeFactory - `javax.xml.datatype.DatatypeFactory`
 
   throws: javax.xml.datatype.DatatypeConfigurationException - if factoryClassName is null, or the factory class cannot be loaded, instantiated."
-  ([factory-class-name class-loader]
+  ([^java.lang.String factory-class-name ^java.lang.ClassLoader class-loader]
     (DatatypeFactory/newInstance factory-class-name class-loader))
   ([]
     (DatatypeFactory/newInstance )))
@@ -111,9 +111,9 @@
   returns: New Duration created from the specified values. - `javax.xml.datatype.Duration`
 
   throws: java.lang.IllegalArgumentException - If the values are not a valid representation of a Duration: if all the fields (years, months, ...) are null or if any of the fields is negative."
-  ([this is-positive years months days hours minutes seconds]
+  ([^javax.xml.datatype.DatatypeFactory this ^Boolean is-positive ^java.math.BigInteger years ^java.math.BigInteger months ^java.math.BigInteger days ^java.math.BigInteger hours ^java.math.BigInteger minutes ^java.math.BigDecimal seconds]
     (-> this (.newDuration is-positive years months days hours minutes seconds)))
-  ([this lexical-representation]
+  ([^javax.xml.datatype.DatatypeFactory this ^java.lang.String lexical-representation]
     (-> this (.newDuration lexical-representation))))
 
 (defn new-duration-day-time
@@ -143,9 +143,9 @@
    and second. - `javax.xml.datatype.Duration`
 
   throws: java.lang.IllegalArgumentException - If the values are not a valid representation of a Duration: if all the fields (day, hour, ...) are null or if any of the fields is negative."
-  ([this is-positive day hour minute second]
+  ([^javax.xml.datatype.DatatypeFactory this ^Boolean is-positive ^java.math.BigInteger day ^java.math.BigInteger hour ^java.math.BigInteger minute ^java.math.BigInteger second]
     (-> this (.newDurationDayTime is-positive day hour minute second)))
-  ([this lexical-representation]
+  ([^javax.xml.datatype.DatatypeFactory this ^java.lang.String lexical-representation]
     (-> this (.newDurationDayTime lexical-representation))))
 
 (defn new-duration-year-month
@@ -168,9 +168,9 @@
   returns: New Duration created using the specified year and month. - `javax.xml.datatype.Duration`
 
   throws: java.lang.IllegalArgumentException - If the values are not a valid representation of a Duration: if all of the fields (year, month) are null or if any of the fields is negative."
-  ([this is-positive year month]
+  ([^javax.xml.datatype.DatatypeFactory this ^Boolean is-positive ^java.math.BigInteger year ^java.math.BigInteger month]
     (-> this (.newDurationYearMonth is-positive year month)))
-  ([this lexical-representation]
+  ([^javax.xml.datatype.DatatypeFactory this ^java.lang.String lexical-representation]
     (-> this (.newDurationYearMonth lexical-representation))))
 
 (defn new-xml-gregorian-calendar
@@ -194,11 +194,11 @@
   returns: XMLGregorianCalendar created from specified values. - `javax.xml.datatype.XMLGregorianCalendar`
 
   throws: java.lang.IllegalArgumentException - If any individual parameter's value is outside the maximum value constraint for the field as determined by the Date/Time Data Mapping table in XMLGregorianCalendar or if the composite values constitute an invalid XMLGregorianCalendar instance as determined by XMLGregorianCalendar.isValid()."
-  ([this year month day hour minute second fractional-second timezone]
+  ([^javax.xml.datatype.DatatypeFactory this ^java.math.BigInteger year ^Integer month ^Integer day ^Integer hour ^Integer minute ^Integer second ^java.math.BigDecimal fractional-second ^Integer timezone]
     (-> this (.newXMLGregorianCalendar year month day hour minute second fractional-second timezone)))
-  ([this lexical-representation]
+  ([^javax.xml.datatype.DatatypeFactory this ^java.lang.String lexical-representation]
     (-> this (.newXMLGregorianCalendar lexical-representation)))
-  ([this]
+  ([^javax.xml.datatype.DatatypeFactory this]
     (-> this (.newXMLGregorianCalendar))))
 
 (defn new-xml-gregorian-calendar-date
@@ -218,7 +218,7 @@
   returns: XMLGregorianCalendar created from parameter values. - `javax.xml.datatype.XMLGregorianCalendar`
 
   throws: java.lang.IllegalArgumentException - If any individual parameter's value is outside the maximum value constraint for the field as determined by the Date/Time Data Mapping table in XMLGregorianCalendar or if the composite values constitute an invalid XMLGregorianCalendar instance as determined by XMLGregorianCalendar.isValid()."
-  ([this year month day timezone]
+  ([^javax.xml.datatype.DatatypeFactory this ^Integer year ^Integer month ^Integer day ^Integer timezone]
     (-> this (.newXMLGregorianCalendarDate year month day timezone))))
 
 (defn new-xml-gregorian-calendar-time
@@ -236,8 +236,8 @@
   returns: XMLGregorianCalendar created from parameter values. - `javax.xml.datatype.XMLGregorianCalendar`
 
   throws: java.lang.IllegalArgumentException - If any individual parameter's value is outside the maximum value constraint for the field as determined by the Date/Time Data Mapping table in XMLGregorianCalendar or if the composite values constitute an invalid XMLGregorianCalendar instance as determined by XMLGregorianCalendar.isValid()."
-  ([this hours minutes seconds fractional-second timezone]
+  ([^javax.xml.datatype.DatatypeFactory this ^Integer hours ^Integer minutes ^Integer seconds ^java.math.BigDecimal fractional-second ^Integer timezone]
     (-> this (.newXMLGregorianCalendarTime hours minutes seconds fractional-second timezone)))
-  ([this hours minutes seconds timezone]
+  ([^javax.xml.datatype.DatatypeFactory this ^Integer hours ^Integer minutes ^Integer seconds ^Integer timezone]
     (-> this (.newXMLGregorianCalendarTime hours minutes seconds timezone))))
 

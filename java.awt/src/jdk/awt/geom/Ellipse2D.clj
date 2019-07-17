@@ -46,9 +46,9 @@
             intersects method returns true
             and the containment calculations would be too expensive to
             perform. - `boolean`"
-  ([this x y w h]
+  ([^java.awt.geom.Ellipse2D this ^Double x ^Double y ^Double w ^Double h]
     (-> this (.contains x y w h)))
-  ([this x y]
+  ([^java.awt.geom.Ellipse2D this ^Double x ^Double y]
     (-> this (.contains x y))))
 
 (defn intersects
@@ -85,7 +85,7 @@
             the interior of the rectangular area intersect, or are
             both highly likely to intersect and intersection calculations
             would be too expensive to perform; false otherwise. - `boolean`"
-  ([this x y w h]
+  ([^java.awt.geom.Ellipse2D this ^Double x ^Double y ^Double w ^Double h]
     (-> this (.intersects x y w h))))
 
 (defn get-path-iterator
@@ -102,14 +102,14 @@
   returns: the PathIterator object that returns the
             geometry of the outline of this Ellipse2D,
             one segment at a time. - `java.awt.geom.PathIterator`"
-  ([this at]
+  ([^java.awt.geom.Ellipse2D this ^java.awt.geom.AffineTransform at]
     (-> this (.getPathIterator at))))
 
 (defn hash-code
   "Returns the hashcode for this Ellipse2D.
 
   returns: the hashcode for this Ellipse2D. - `int`"
-  ([this]
+  ([^java.awt.geom.Ellipse2D this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -124,6 +124,6 @@
   returns: true if obj is an instance
             of Ellipse2D and has the same values;
             false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.awt.geom.Ellipse2D this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

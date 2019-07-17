@@ -18,7 +18,7 @@
   returns: ComponentUI implementation for x - `javax.swing.plaf.ComponentUI`
 
   throws: java.lang.NullPointerException - if x is null"
-  ([x]
+  ([^javax.swing.JComponent x]
     (MetalMenuBarUI/createUI x)))
 
 (defn install-ui
@@ -28,7 +28,7 @@
   c - the component where this UI delegate is being installed - `javax.swing.JComponent`
 
   throws: java.lang.NullPointerException - if c is null."
-  ([this c]
+  ([^javax.swing.plaf.metal.MetalMenuBarUI this ^javax.swing.JComponent c]
     (-> this (.installUI c))))
 
 (defn uninstall-ui
@@ -38,7 +38,7 @@
   c - the component where this UI delegate is being installed - `javax.swing.JComponent`
 
   throws: java.lang.NullPointerException - if c is null."
-  ([this c]
+  ([^javax.swing.plaf.metal.MetalMenuBarUI this ^javax.swing.JComponent c]
     (-> this (.uninstallUI c))))
 
 (defn update
@@ -49,6 +49,6 @@
   c - JComponent painting on - `javax.swing.JComponent`
 
   throws: java.lang.NullPointerException - if g or c is null"
-  ([this g c]
+  ([^javax.swing.plaf.metal.MetalMenuBarUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.update g c))))
 

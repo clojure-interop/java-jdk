@@ -10,13 +10,13 @@
   "Return the URI.
 
   returns: the URI that is the cause of this exception. - `java.net.URI`"
-  ([this]
+  ([^. this]
     (-> this (.getUnsupportedURI))))
 
 (defn get-reason
   "Return the reason for the event.
 
   returns: one of the predefined reasons enumerated in this interface. - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getReason))))
 

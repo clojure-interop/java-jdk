@@ -391,13 +391,13 @@
   returns: a resource bundle for the given base name and locale - `java.util.ResourceBundle`
 
   throws: java.lang.NullPointerException - if baseName, targetLocale, loader, or control is null"
-  ([base-name target-locale loader control]
+  ([^java.lang.String base-name ^java.util.Locale target-locale ^java.lang.ClassLoader loader ^java.util.ResourceBundle.Control control]
     (ResourceBundle/getBundle base-name target-locale loader control))
-  ([base-name target-locale control]
+  ([^java.lang.String base-name ^java.util.Locale target-locale ^java.util.ResourceBundle.Control control]
     (ResourceBundle/getBundle base-name target-locale control))
-  ([base-name control]
+  ([^java.lang.String base-name ^java.util.ResourceBundle.Control control]
     (ResourceBundle/getBundle base-name control))
-  ([base-name]
+  ([^java.lang.String base-name]
     (ResourceBundle/getBundle base-name)))
 
 (defn *clear-cache
@@ -407,7 +407,7 @@
   loader - the class loader - `java.lang.ClassLoader`
 
   throws: java.lang.NullPointerException - if loader is null"
-  ([loader]
+  ([^java.lang.ClassLoader loader]
     (ResourceBundle/clearCache loader))
   ([]
     (ResourceBundle/clearCache )))
@@ -421,7 +421,7 @@
 
   returns: The base name of the resource bundle, as provided to and expected
    by the ResourceBundle.getBundle(...) methods. - `java.lang.String`"
-  ([this]
+  ([^java.util.ResourceBundle this]
     (-> this (.getBaseBundleName))))
 
 (defn get-string
@@ -435,7 +435,7 @@
   returns: the string for the given key - `java.lang.String`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([this key]
+  ([^java.util.ResourceBundle this ^java.lang.String key]
     (-> this (.getString key))))
 
 (defn get-string-array
@@ -449,7 +449,7 @@
   returns: the string array for the given key - `java.lang.String[]`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([this key]
+  ([^java.util.ResourceBundle this ^java.lang.String key]
     (-> this (.getStringArray key))))
 
 (defn get-object
@@ -465,7 +465,7 @@
   returns: the object for the given key - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([this key]
+  ([^java.util.ResourceBundle this ^java.lang.String key]
     (-> this (.getObject key))))
 
 (defn get-locale
@@ -474,7 +474,7 @@
    corresponds to the requested locale or is a fallback.
 
   returns: the locale of this resource bundle - `java.util.Locale`"
-  ([this]
+  ([^java.util.ResourceBundle this]
     (-> this (.getLocale))))
 
 (defn get-keys
@@ -482,7 +482,7 @@
 
   returns: an Enumeration of the keys contained in
            this ResourceBundle and its parent bundles. - `java.util.Enumeration<java.lang.String>`"
-  ([this]
+  ([^java.util.ResourceBundle this]
     (-> this (.getKeys))))
 
 (defn contains-key
@@ -496,7 +496,7 @@
           parent bundles; false otherwise. - `boolean`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([this key]
+  ([^java.util.ResourceBundle this ^java.lang.String key]
     (-> this (.containsKey key))))
 
 (defn key-set
@@ -505,6 +505,6 @@
 
   returns: a Set of all keys contained in this
            ResourceBundle and its parent bundles. - `java.util.Set<java.lang.String>`"
-  ([this]
+  ([^java.util.ResourceBundle this]
     (-> this (.keySet))))
 

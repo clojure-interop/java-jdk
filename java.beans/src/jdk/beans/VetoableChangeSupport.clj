@@ -50,7 +50,7 @@
   Constructs a VetoableChangeSupport object.
 
   source-bean - The bean to be given as the source for any events. - `java.lang.Object`"
-  ([source-bean]
+  ([^java.lang.Object source-bean]
     (new VetoableChangeSupport source-bean)))
 
 (defn add-vetoable-change-listener
@@ -65,9 +65,9 @@
 
   property-name - The name of the property to listen on. - `java.lang.String`
   listener - The VetoableChangeListener to be added - `java.beans.VetoableChangeListener`"
-  ([this property-name listener]
+  ([^java.beans.VetoableChangeSupport this ^java.lang.String property-name ^java.beans.VetoableChangeListener listener]
     (-> this (.addVetoableChangeListener property-name listener)))
-  ([this listener]
+  ([^java.beans.VetoableChangeSupport this ^java.beans.VetoableChangeListener listener]
     (-> this (.addVetoableChangeListener listener))))
 
 (defn remove-vetoable-change-listener
@@ -82,9 +82,9 @@
 
   property-name - The name of the property that was listened on. - `java.lang.String`
   listener - The VetoableChangeListener to be removed - `java.beans.VetoableChangeListener`"
-  ([this property-name listener]
+  ([^java.beans.VetoableChangeSupport this ^java.lang.String property-name ^java.beans.VetoableChangeListener listener]
     (-> this (.removeVetoableChangeListener property-name listener)))
-  ([this listener]
+  ([^java.beans.VetoableChangeSupport this ^java.beans.VetoableChangeListener listener]
     (-> this (.removeVetoableChangeListener listener))))
 
 (defn get-vetoable-change-listeners
@@ -97,9 +97,9 @@
            the named property.  If no such listeners have been added,
            or if propertyName is null, an empty array is
            returned. - `java.beans.VetoableChangeListener[]`"
-  ([this property-name]
+  ([^java.beans.VetoableChangeSupport this ^java.lang.String property-name]
     (-> this (.getVetoableChangeListeners property-name)))
-  ([this]
+  ([^java.beans.VetoableChangeSupport this]
     (-> this (.getVetoableChangeListeners))))
 
 (defn fire-vetoable-change
@@ -123,9 +123,9 @@
   new-value - the new value of the property - `java.lang.Object`
 
   throws: java.beans.PropertyVetoException - if one of listeners vetoes the property update"
-  ([this property-name old-value new-value]
+  ([^java.beans.VetoableChangeSupport this ^java.lang.String property-name ^java.lang.Object old-value ^java.lang.Object new-value]
     (-> this (.fireVetoableChange property-name old-value new-value)))
-  ([this event]
+  ([^java.beans.VetoableChangeSupport this ^java.beans.PropertyChangeEvent event]
     (-> this (.fireVetoableChange event))))
 
 (defn has-listeners?
@@ -136,6 +136,6 @@
   property-name - the property name. - `java.lang.String`
 
   returns: true if there are one or more listeners for the given property - `boolean`"
-  ([this property-name]
+  ([^java.beans.VetoableChangeSupport this ^java.lang.String property-name]
     (-> this (.hasListeners property-name))))
 

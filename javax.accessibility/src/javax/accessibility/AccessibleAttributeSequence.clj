@@ -15,7 +15,7 @@
   start - the beginning index of the span of text - `int`
   end - the ending index of the span of text - `int`
   attr - the AttributeSet shared by this text span - `javax.swing.text.AttributeSet`"
-  ([start end attr]
+  ([^Integer start ^Integer end ^javax.swing.text.AttributeSet attr]
     (new AccessibleAttributeSequence start end attr)))
 
 (defn -start-index

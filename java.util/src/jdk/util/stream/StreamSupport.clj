@@ -33,9 +33,9 @@
   parallel - if true then the returned stream is a parallel stream; if false the returned stream is a sequential stream. - `boolean`
 
   returns: a new sequential or parallel Stream - `<T> java.util..Stream<T>`"
-  ([supplier characteristics parallel]
+  ([^java.util.Spliterator> supplier ^Integer characteristics ^Boolean parallel]
     (StreamSupport/stream supplier characteristics parallel))
-  ([spliterator parallel]
+  ([^java.util.Spliterator spliterator ^Boolean parallel]
     (StreamSupport/stream spliterator parallel)))
 
 (defn *int-stream
@@ -64,9 +64,9 @@
   parallel - if true then the returned stream is a parallel stream; if false the returned stream is a sequential stream. - `boolean`
 
   returns: a new sequential or parallel IntStream - `java.util.stream.IntStream`"
-  ([supplier characteristics parallel]
+  ([^java.util.Spliterator.OfInt> supplier ^Integer characteristics ^Boolean parallel]
     (StreamSupport/intStream supplier characteristics parallel))
-  ([spliterator parallel]
+  ([^java.util.Spliterator.OfInt spliterator ^Boolean parallel]
     (StreamSupport/intStream spliterator parallel)))
 
 (defn *long-stream
@@ -95,9 +95,9 @@
   parallel - if true then the returned stream is a parallel stream; if false the returned stream is a sequential stream. - `boolean`
 
   returns: a new sequential or parallel LongStream - `java.util.stream.LongStream`"
-  ([supplier characteristics parallel]
+  ([^java.util.Spliterator.OfLong> supplier ^Integer characteristics ^Boolean parallel]
     (StreamSupport/longStream supplier characteristics parallel))
-  ([spliterator parallel]
+  ([^java.util.Spliterator.OfLong spliterator ^Boolean parallel]
     (StreamSupport/longStream spliterator parallel)))
 
 (defn *double-stream
@@ -126,8 +126,8 @@
   parallel - if true then the returned stream is a parallel stream; if false the returned stream is a sequential stream. - `boolean`
 
   returns: a new sequential or parallel DoubleStream - `java.util.stream.DoubleStream`"
-  ([supplier characteristics parallel]
+  ([^java.util.Spliterator.OfDouble> supplier ^Integer characteristics ^Boolean parallel]
     (StreamSupport/doubleStream supplier characteristics parallel))
-  ([spliterator parallel]
+  ([^java.util.Spliterator.OfDouble spliterator ^Boolean parallel]
     (StreamSupport/doubleStream spliterator parallel)))
 

@@ -63,13 +63,13 @@
   new-right-component - the Component that will appear on the right of a horizontally-split pane, or at the bottom of a vertically-split pane - `java.awt.Component`
 
   throws: java.lang.IllegalArgumentException - if orientation is not one of HORIZONTAL_SPLIT or VERTICAL_SPLIT"
-  ([new-orientation new-continuous-layout new-left-component new-right-component]
+  ([^Integer new-orientation ^Boolean new-continuous-layout ^java.awt.Component new-left-component ^java.awt.Component new-right-component]
     (new JSplitPane new-orientation new-continuous-layout new-left-component new-right-component))
-  ([new-orientation new-left-component new-right-component]
+  ([^Integer new-orientation ^java.awt.Component new-left-component ^java.awt.Component new-right-component]
     (new JSplitPane new-orientation new-left-component new-right-component))
-  ([new-orientation new-continuous-layout]
+  ([^Integer new-orientation ^Boolean new-continuous-layout]
     (new JSplitPane new-orientation new-continuous-layout))
-  ([new-orientation]
+  ([^Integer new-orientation]
     (new JSplitPane new-orientation))
   ([]
     (new JSplitPane )))
@@ -199,21 +199,21 @@
   "Returns the component above, or to the left of the divider.
 
   returns: the Component displayed in that position - `java.awt.Component`"
-  ([this]
+  ([^javax.swing.JSplitPane this]
     (-> this (.getTopComponent))))
 
 (defn get-right-component
   "Returns the component to the right (or below) the divider.
 
   returns: the Component displayed in that position - `java.awt.Component`"
-  ([this]
+  ([^javax.swing.JSplitPane this]
     (-> this (.getRightComponent))))
 
 (defn get-orientation
   "Returns the orientation.
 
   returns: an integer giving the orientation - `int`"
-  ([this]
+  ([^javax.swing.JSplitPane this]
     (-> this (.getOrientation))))
 
 (defn get-divider-location
@@ -223,14 +223,14 @@
    value bigger than the current size).
 
   returns: an integer specifying the location of the divider - `int`"
-  ([this]
+  ([^javax.swing.JSplitPane this]
     (-> this (.getDividerLocation))))
 
 (defn set-divider-size
   "Sets the size of the divider.
 
   new-size - an integer giving the size of the divider in pixels - `int`"
-  ([this new-size]
+  ([^javax.swing.JSplitPane this ^Integer new-size]
     (-> this (.setDividerSize new-size))))
 
 (defn get-maximum-divider-location
@@ -240,7 +240,7 @@
   returns: an integer specifying a UI-specific value for the maximum
             location (typically a pixel count); or -1 if the  UI is
             null - `int`"
-  ([this]
+  ([^javax.swing.JSplitPane this]
     (-> this (.getMaximumDividerLocation))))
 
 (defn set-one-touch-expandable
@@ -253,14 +253,14 @@
    they will ignore this property.
 
   new-value - true to specify that the split pane should provide a collapse/expand widget - `boolean`"
-  ([this new-value]
+  ([^javax.swing.JSplitPane this ^Boolean new-value]
     (-> this (.setOneTouchExpandable new-value))))
 
 (defn get-bottom-component
   "Returns the component below, or to the right of the divider.
 
   returns: the Component displayed in that position - `java.awt.Component`"
-  ([this]
+  ([^javax.swing.JSplitPane this]
     (-> this (.getBottomComponent))))
 
 (defn set-divider-location
@@ -277,28 +277,28 @@
   proportional-location - a double-precision floating point value that specifies a percentage, from zero (top/left) to 1.0 (bottom/right) - `double`
 
   throws: java.lang.IllegalArgumentException - if the specified location is < 0 or > 1.0"
-  ([this proportional-location]
+  ([^javax.swing.JSplitPane this ^Double proportional-location]
     (-> this (.setDividerLocation proportional-location))))
 
 (defn set-bottom-component
   "Sets the component below, or to the right of the divider.
 
   comp - the Component to display in that position - `java.awt.Component`"
-  ([this comp]
+  ([^javax.swing.JSplitPane this ^java.awt.Component comp]
     (-> this (.setBottomComponent comp))))
 
 (defn get-left-component
   "Returns the component to the left (or above) the divider.
 
   returns: the Component displayed in that position - `java.awt.Component`"
-  ([this]
+  ([^javax.swing.JSplitPane this]
     (-> this (.getLeftComponent))))
 
 (defn get-ui-class-id
   "Returns the name of the L&F class that renders this component.
 
   returns: the string `SplitPaneUI` - `java.lang.String`"
-  ([this]
+  ([^javax.swing.JSplitPane this]
     (-> this (.getUIClassID))))
 
 (defn validate-root?
@@ -308,35 +308,35 @@
    will validate the JSplitPane and all its descendants.
 
   returns: true - `boolean`"
-  ([this]
+  ([^javax.swing.JSplitPane this]
     (-> this (.isValidateRoot))))
 
 (defn one-touch-expandable?
   "Gets the oneTouchExpandable property.
 
   returns: the value of the oneTouchExpandable property - `boolean`"
-  ([this]
+  ([^javax.swing.JSplitPane this]
     (-> this (.isOneTouchExpandable))))
 
 (defn set-ui
   "Sets the L&F object that renders this component.
 
   ui - the SplitPaneUI L&F object - `javax.swing.plaf.SplitPaneUI`"
-  ([this ui]
+  ([^javax.swing.JSplitPane this ^javax.swing.plaf.SplitPaneUI ui]
     (-> this (.setUI ui))))
 
 (defn get-divider-size
   "Returns the size of the divider.
 
   returns: an integer giving the size of the divider in pixels - `int`"
-  ([this]
+  ([^javax.swing.JSplitPane this]
     (-> this (.getDividerSize))))
 
 (defn reset-to-preferred-sizes
   "Lays out the JSplitPane layout based on the preferred size
    of the children components. This will likely result in changing
    the divider location."
-  ([this]
+  ([^javax.swing.JSplitPane this]
     (-> this (.resetToPreferredSizes))))
 
 (defn remove
@@ -345,7 +345,7 @@
    rightComponent instance variable, as necessary.
 
   component - the Component to remove - `java.awt.Component`"
-  ([this component]
+  ([^javax.swing.JSplitPane this ^java.awt.Component component]
     (-> this (.remove component))))
 
 (defn set-last-divider-location
@@ -353,7 +353,7 @@
    newLastLocation.
 
   new-last-location - an integer specifying the last divider location in pixels, from the left (or upper) edge of the pane to the left (or upper) edge of the divider - `int`"
-  ([this new-last-location]
+  ([^javax.swing.JSplitPane this ^Integer new-last-location]
     (-> this (.setLastDividerLocation new-last-location))))
 
 (defn get-ui
@@ -361,7 +361,7 @@
    current look and feel.
 
   returns: the SplitPaneUI object that renders this component - `javax.swing.plaf.SplitPaneUI`"
-  ([this]
+  ([^javax.swing.JSplitPane this]
     (-> this (.getUI))))
 
 (defn get-minimum-divider-location
@@ -371,7 +371,7 @@
   returns: an integer specifying a UI-specific value for the minimum
             location (typically a pixel count); or -1 if the UI is
             null - `int`"
-  ([this]
+  ([^javax.swing.JSplitPane this]
     (-> this (.getMinimumDividerLocation))))
 
 (defn get-accessible-context
@@ -382,7 +382,7 @@
 
   returns: an AccessibleJSplitPane that serves as the
            AccessibleContext of this JSplitPane - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^javax.swing.JSplitPane this]
     (-> this (.getAccessibleContext))))
 
 (defn get-resize-weight
@@ -390,7 +390,7 @@
 
   returns: how extra space is to be distributed on a resize of the
            split pane - `double`"
-  ([this]
+  ([^javax.swing.JSplitPane this]
     (-> this (.getResizeWeight))))
 
 (defn set-orientation
@@ -402,7 +402,7 @@
   orientation - an integer specifying the orientation - `int`
 
   throws: java.lang.IllegalArgumentException - if orientation is not one of: HORIZONTAL_SPLIT or VERTICAL_SPLIT."
-  ([this orientation]
+  ([^javax.swing.JSplitPane this ^Integer orientation]
     (-> this (.setOrientation orientation))))
 
 (defn set-resize-weight
@@ -418,14 +418,14 @@
   value - as described above - `double`
 
   throws: java.lang.IllegalArgumentException - if value is < 0 or > 1"
-  ([this value]
+  ([^javax.swing.JSplitPane this ^Double value]
     (-> this (.setResizeWeight value))))
 
 (defn set-top-component
   "Sets the component above, or to the left of the divider.
 
   comp - the Component to display in that position - `java.awt.Component`"
-  ([this comp]
+  ([^javax.swing.JSplitPane this ^java.awt.Component comp]
     (-> this (.setTopComponent comp))))
 
 (defn get-last-divider-location
@@ -434,7 +434,7 @@
   returns: an integer specifying the last divider location as a count
          of pixels from the left (or upper) edge of the pane to the
          left (or upper) edge of the divider - `int`"
-  ([this]
+  ([^javax.swing.JSplitPane this]
     (-> this (.getLastDividerLocation))))
 
 (defn set-continuous-layout
@@ -447,41 +447,41 @@
    they will ignore this property.
 
   new-continuous-layout - true if the components should continuously be redrawn as the divider changes position - `boolean`"
-  ([this new-continuous-layout]
+  ([^javax.swing.JSplitPane this ^Boolean new-continuous-layout]
     (-> this (.setContinuousLayout new-continuous-layout))))
 
 (defn remove-all
   "Removes all the child components from the split pane. Resets the
    leftComonent and rightComponent
    instance variables."
-  ([this]
+  ([^javax.swing.JSplitPane this]
     (-> this (.removeAll))))
 
 (defn continuous-layout?
   "Gets the continuousLayout property.
 
   returns: the value of the continuousLayout property - `boolean`"
-  ([this]
+  ([^javax.swing.JSplitPane this]
     (-> this (.isContinuousLayout))))
 
 (defn set-left-component
   "Sets the component to the left (or above) the divider.
 
   comp - the Component to display in that position - `java.awt.Component`"
-  ([this comp]
+  ([^javax.swing.JSplitPane this ^java.awt.Component comp]
     (-> this (.setLeftComponent comp))))
 
 (defn update-ui
   "Notification from the UIManager that the L&F has changed.
    Replaces the current UI object with the latest version from the
    UIManager."
-  ([this]
+  ([^javax.swing.JSplitPane this]
     (-> this (.updateUI))))
 
 (defn set-right-component
   "Sets the component to the right (or below) the divider.
 
   comp - the Component to display in that position - `java.awt.Component`"
-  ([this comp]
+  ([^javax.swing.JSplitPane this ^java.awt.Component comp]
     (-> this (.setRightComponent comp))))
 

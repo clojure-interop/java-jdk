@@ -9,33 +9,33 @@
 
   elem - `javax.swing.text.html.parser.Element`
   fictional - `boolean`"
-  ([elem fictional]
+  ([^javax.swing.text.html.parser.Element elem ^Boolean fictional]
     (new TagElement elem fictional))
-  ([elem]
+  ([^javax.swing.text.html.parser.Element elem]
     (new TagElement elem)))
 
 (defn breaks-flow
   "returns: `boolean`"
-  ([this]
+  ([^javax.swing.text.html.parser.TagElement this]
     (-> this (.breaksFlow))))
 
 (defn preformatted?
   "returns: `boolean`"
-  ([this]
+  ([^javax.swing.text.html.parser.TagElement this]
     (-> this (.isPreformatted))))
 
 (defn get-element
   "returns: `javax.swing.text.html.parser.Element`"
-  ([this]
+  ([^javax.swing.text.html.parser.TagElement this]
     (-> this (.getElement))))
 
 (defn get-html-tag
   "returns: `javax.swing.text.html.HTML.Tag`"
-  ([this]
+  ([^javax.swing.text.html.parser.TagElement this]
     (-> this (.getHTMLTag))))
 
 (defn fictional
   "returns: `boolean`"
-  ([this]
+  ([^javax.swing.text.html.parser.TagElement this]
     (-> this (.fictional))))
 

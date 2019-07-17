@@ -99,7 +99,7 @@
    have the name `posix`.
 
   returns: the name of the attribute view - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.name))))
 
 (defn read-attributes
@@ -108,7 +108,7 @@
   returns: the file attributes - `java.nio.file.attribute.PosixFileAttributes`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([this]
+  ([^. this]
     (-> this (.readAttributes))))
 
 (defn set-permissions
@@ -117,7 +117,7 @@
   perms - the new set of permissions - `java.util.Set<java.nio.file.attribute.PosixFilePermission>`
 
   throws: java.lang.ClassCastException - if the sets contains elements that are not of type PosixFilePermission"
-  ([this perms]
+  ([^. this ^java.util.Set perms]
     (-> this (.setPermissions perms))))
 
 (defn set-group
@@ -126,6 +126,6 @@
   group - the new file group-owner - `java.nio.file.attribute.GroupPrincipal`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([this group]
+  ([^. this ^java.nio.file.attribute.GroupPrincipal group]
     (-> this (.setGroup group))))
 

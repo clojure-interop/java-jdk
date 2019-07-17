@@ -46,9 +46,9 @@
 
   s - the text for the menu label - `java.lang.String`
   b - can the menu be torn off (not yet implemented) - `boolean`"
-  ([s b]
+  ([^java.lang.String s ^Boolean b]
     (new JMenu s b))
-  ([s]
+  ([^java.lang.String s]
     (new JMenu s))
   ([]
     (new JMenu )))
@@ -64,7 +64,7 @@
   d - the number of milliseconds to delay - `int`
 
   throws: java.lang.IllegalArgumentException - if d is less than 0"
-  ([this d]
+  ([^javax.swing.JMenu this ^Integer d]
     (-> this (.setDelay d))))
 
 (defn get-component
@@ -74,7 +74,7 @@
    an event is inside a menu component.
 
   returns: the Component that paints this menu item - `java.awt.Component`"
-  ([this]
+  ([^javax.swing.JMenu this]
     (-> this (.getComponent))))
 
 (defn get-item
@@ -89,7 +89,7 @@
             if the item as the specified position is not a menu item - `javax.swing.JMenuItem`
 
   throws: java.lang.IllegalArgumentException - if the value of pos < 0"
-  ([this pos]
+  ([^javax.swing.JMenu this ^Integer pos]
     (-> this (.getItem pos))))
 
 (defn get-menu-component
@@ -99,7 +99,7 @@
 
   returns: the component requested, or null
                     if there is no popup menu - `java.awt.Component`"
-  ([this n]
+  ([^javax.swing.JMenu this ^Integer n]
     (-> this (.getMenuComponent n))))
 
 (defn get-popup-menu
@@ -107,7 +107,7 @@
    no popupmenu, it will create one.
 
   returns: `javax.swing.JPopupMenu`"
-  ([this]
+  ([^javax.swing.JMenu this]
     (-> this (.getPopupMenu))))
 
 (defn get-item-count
@@ -115,14 +115,14 @@
    This method is included for AWT compatibility.
 
   returns: an integer equal to the number of items on the menu - `int`"
-  ([this]
+  ([^javax.swing.JMenu this]
     (-> this (.getItemCount))))
 
 (defn add-menu-listener
   "Adds a listener for menu events.
 
   l - the listener to be added - `javax.swing.event.MenuListener`"
-  ([this l]
+  ([^javax.swing.JMenu this ^javax.swing.event.MenuListener l]
     (-> this (.addMenuListener l))))
 
 (defn get-menu-components
@@ -132,14 +132,14 @@
 
   returns: an array of Components or an empty array
             if there is no popup menu - `java.awt.Component[]`"
-  ([this]
+  ([^javax.swing.JMenu this]
     (-> this (.getMenuComponents))))
 
 (defn remove-menu-listener
   "Removes a listener for menu events.
 
   l - the listener to be removed - `javax.swing.event.MenuListener`"
-  ([this l]
+  ([^javax.swing.JMenu this ^javax.swing.event.MenuListener l]
     (-> this (.removeMenuListener l))))
 
 (defn get-delay
@@ -153,14 +153,14 @@
    to manage the idiosyncrasies of the various UI implementations.
 
   returns: the delay property - `int`"
-  ([this]
+  ([^javax.swing.JMenu this]
     (-> this (.getDelay))))
 
 (defn set-selected
   "Sets the selection status of the menu.
 
   b - true to select (highlight) the menu; false to de-select the menu - `boolean`"
-  ([this b]
+  ([^javax.swing.JMenu this ^Boolean b]
     (-> this (.setSelected b))))
 
 (defn do-click
@@ -168,14 +168,14 @@
    AbstractButton.doClick in order to make the menu pop up.
 
   press-time - indicates the number of milliseconds the button was pressed for - `int`"
-  ([this press-time]
+  ([^javax.swing.JMenu this ^Integer press-time]
     (-> this (.doClick press-time))))
 
 (defn get-ui-class-id
   "Returns the name of the L&F class that renders this component.
 
   returns: the string `MenuUI` - `java.lang.String`"
-  ([this]
+  ([^javax.swing.JMenu this]
     (-> this (.getUIClassID))))
 
 (defn menu-selection-changed
@@ -184,12 +184,12 @@
    Overrides JMenuItem.menuSelectionChanged.
 
   is-included - true if this menu is active, false if it is not - `boolean`"
-  ([this is-included]
+  ([^javax.swing.JMenu this ^Boolean is-included]
     (-> this (.menuSelectionChanged is-included))))
 
 (defn add-separator
   "Appends a new separator to the end of the menu."
-  ([this]
+  ([^javax.swing.JMenu this]
     (-> this (.addSeparator))))
 
 (defn insert-separator
@@ -198,7 +198,7 @@
   index - an integer specifying the position at which to insert the menu separator - `int`
 
   throws: java.lang.IllegalArgumentException - if the value of index < 0"
-  ([this index]
+  ([^javax.swing.JMenu this ^Integer index]
     (-> this (.insertSeparator index))))
 
 (defn set-popup-menu-visible
@@ -206,7 +206,7 @@
    not enabled, this method will have no effect.
 
   b - a boolean value -- true to make the menu visible, false to hide it - `boolean`"
-  ([this b]
+  ([^javax.swing.JMenu this ^Boolean b]
     (-> this (.setPopupMenuVisible b))))
 
 (defn set-menu-location
@@ -214,7 +214,7 @@
 
   x - the x coordinate of the popup's new position - `int`
   y - the y coordinate of the popup's new position - `int`"
-  ([this x y]
+  ([^javax.swing.JMenu this ^Integer x ^Integer y]
     (-> this (.setMenuLocation x y))))
 
 (defn set-accelerator
@@ -224,7 +224,7 @@
   key-stroke - the keystroke combination which will invoke the JMenuItem's actionlisteners without navigating the menu hierarchy - `javax.swing.KeyStroke`
 
   throws: java.lang.Error - if invoked -- this method is not defined for JMenu. Use setMnemonic instead"
-  ([this key-stroke]
+  ([^javax.swing.JMenu this ^javax.swing.KeyStroke key-stroke]
     (-> this (.setAccelerator key-stroke))))
 
 (defn top-level-menu?
@@ -234,7 +234,7 @@
   returns: true if the menu is activated from the menu bar;
            false if the menu is activated from a menu item
            on another menu - `boolean`"
-  ([this]
+  ([^javax.swing.JMenu this]
     (-> this (.isTopLevelMenu))))
 
 (defn remove
@@ -242,7 +242,7 @@
    popup menu, this method will have no effect.
 
   item - the JMenuItem to be removed from the menu - `javax.swing.JMenuItem`"
-  ([this item]
+  ([^javax.swing.JMenu this ^javax.swing.JMenuItem item]
     (-> this (.remove item))))
 
 (defn get-accessible-context
@@ -253,7 +253,7 @@
 
   returns: an AccessibleJMenu that serves as the
            AccessibleContext of this JMenu - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^javax.swing.JMenu this]
     (-> this (.getAccessibleContext))))
 
 (defn get-sub-elements
@@ -265,7 +265,7 @@
    interface, this array will only contain JMenuItems.
 
   returns: an array of MenuElement objects - `javax.swing.MenuElement[]`"
-  ([this]
+  ([^javax.swing.JMenu this]
     (-> this (.getSubElements))))
 
 (defn apply-component-orientation
@@ -276,7 +276,7 @@
   o - the new component orientation of this menu and the components contained within it. - `java.awt.ComponentOrientation`
 
   throws: java.lang.NullPointerException - if orientation is null."
-  ([this o]
+  ([^javax.swing.JMenu this ^java.awt.ComponentOrientation o]
     (-> this (.applyComponentOrientation o))))
 
 (defn tear-off?
@@ -286,7 +286,7 @@
   returns: true if the menu can be torn off, else false - `boolean`
 
   throws: java.lang.Error - if invoked -- this method is not yet implemented"
-  ([this]
+  ([^javax.swing.JMenu this]
     (-> this (.isTearOff))))
 
 (defn insert
@@ -297,14 +297,14 @@
   pos - an integer specifying the position at which to add the new menu item - `int`
 
   throws: java.lang.IllegalArgumentException - when the value of pos < 0"
-  ([this s pos]
+  ([^javax.swing.JMenu this ^java.lang.String s ^Integer pos]
     (-> this (.insert s pos))))
 
 (defn selected?
   "Returns true if the menu is currently selected (highlighted).
 
   returns: true if the menu is selected, else false - `boolean`"
-  ([this]
+  ([^javax.swing.JMenu this]
     (-> this (.isSelected))))
 
 (defn menu-component?
@@ -314,7 +314,7 @@
   c - the Component to be tested - `java.awt.Component`
 
   returns: true if the Component exists, false otherwise - `boolean`"
-  ([this c]
+  ([^javax.swing.JMenu this ^java.awt.Component c]
     (-> this (.isMenuComponent c))))
 
 (defn get-menu-listeners
@@ -323,7 +323,7 @@
 
   returns: all of the MenuListeners added or an empty
            array if no listeners have been added - `javax.swing.event.MenuListener[]`"
-  ([this]
+  ([^javax.swing.JMenu this]
     (-> this (.getMenuListeners))))
 
 (defn add
@@ -335,21 +335,21 @@
   index - the position at which to insert the component - `int`
 
   returns: the Component added - `java.awt.Component`"
-  ([this c index]
+  ([^javax.swing.JMenu this ^java.awt.Component c ^Integer index]
     (-> this (.add c index)))
-  ([this menu-item]
+  ([^javax.swing.JMenu this ^javax.swing.JMenuItem menu-item]
     (-> this (.add menu-item))))
 
 (defn set-component-orientation
   "Description copied from class: Component
 
   o - `java.awt.ComponentOrientation`"
-  ([this o]
+  ([^javax.swing.JMenu this ^java.awt.ComponentOrientation o]
     (-> this (.setComponentOrientation o))))
 
 (defn remove-all
   "Removes all menu items from this menu."
-  ([this]
+  ([^javax.swing.JMenu this]
     (-> this (.removeAll))))
 
 (defn set-model
@@ -357,25 +357,25 @@
    that the user clicks to open or close the menu.
 
   new-model - the ButtonModel - `javax.swing.ButtonModel`"
-  ([this new-model]
+  ([^javax.swing.JMenu this ^javax.swing.ButtonModel new-model]
     (-> this (.setModel new-model))))
 
 (defn popup-menu-visible?
   "Returns true if the menu's popup window is visible.
 
   returns: true if the menu is visible, else false - `boolean`"
-  ([this]
+  ([^javax.swing.JMenu this]
     (-> this (.isPopupMenuVisible))))
 
 (defn update-ui
   "Resets the UI property with a value from the current look and feel."
-  ([this]
+  ([^javax.swing.JMenu this]
     (-> this (.updateUI))))
 
 (defn get-menu-component-count
   "Returns the number of components on the menu.
 
   returns: an integer containing the number of components on the menu - `int`"
-  ([this]
+  ([^javax.swing.JMenu this]
     (-> this (.getMenuComponentCount))))
 

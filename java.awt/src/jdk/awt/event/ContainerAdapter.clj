@@ -26,13 +26,13 @@
   "Invoked when a component has been added to the container.
 
   e - `java.awt.event.ContainerEvent`"
-  ([this e]
+  ([^java.awt.event.ContainerAdapter this ^java.awt.event.ContainerEvent e]
     (-> this (.componentAdded e))))
 
 (defn component-removed
   "Invoked when a component has been removed from the container.
 
   e - `java.awt.event.ContainerEvent`"
-  ([this e]
+  ([^java.awt.event.ContainerAdapter this ^java.awt.event.ContainerEvent e]
     (-> this (.componentRemoved e))))
 

@@ -15,6 +15,6 @@
   right - the second operand - `int`
 
   returns: the operator result - `int`"
-  ([this left right]
+  ([^. this ^Integer left ^Integer right]
     (-> this (.applyAsInt left right))))
 

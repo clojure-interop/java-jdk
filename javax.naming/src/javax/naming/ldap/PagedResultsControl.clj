@@ -89,9 +89,9 @@
   criticality - If true then the server must honor the control and return search results as indicated by pageSize or refuse to perform the search. If false, then the server need not honor the control. - `boolean`
 
   throws: java.io.IOException - If an error was encountered while encoding the supplied arguments into a control."
-  ([page-size cookie criticality]
+  ([^Integer page-size cookie ^Boolean criticality]
     (new PagedResultsControl page-size cookie criticality))
-  ([page-size criticality]
+  ([^Integer page-size ^Boolean criticality]
     (new PagedResultsControl page-size criticality)))
 
 (def *-oid

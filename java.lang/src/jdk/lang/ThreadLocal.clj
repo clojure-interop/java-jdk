@@ -65,7 +65,7 @@
    by an invocation of the initialValue() method.
 
   returns: the current thread's value of this thread-local - `ThreadLocal.T`"
-  ([this]
+  ([^java.lang.ThreadLocal this]
     (-> this (.get))))
 
 (defn set
@@ -75,7 +75,7 @@
    method to set the values of thread-locals.
 
   value - the value to be stored in the current thread's copy of this thread-local. - `ThreadLocal.T`"
-  ([this value]
+  ([^java.lang.ThreadLocal this ^ThreadLocal.T value]
     (-> this (.set value))))
 
 (defn remove
@@ -86,6 +86,6 @@
    unless its value is set by the current thread
    in the interim.  This may result in multiple invocations of the
    initialValue method in the current thread."
-  ([this]
+  ([^java.lang.ThreadLocal this]
     (-> this (.remove))))
 

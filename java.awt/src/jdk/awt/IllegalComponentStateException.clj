@@ -12,7 +12,7 @@
    exception.
 
   s - the String that contains a detailed message - `java.lang.String`"
-  ([s]
+  ([^java.lang.String s]
     (new IllegalComponentStateException s))
   ([]
     (new IllegalComponentStateException )))

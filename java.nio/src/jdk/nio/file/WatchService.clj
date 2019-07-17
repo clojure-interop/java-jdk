@@ -77,7 +77,7 @@
    has no effect.
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([this]
+  ([^. this]
     (-> this (.close))))
 
 (defn poll
@@ -90,9 +90,9 @@
   returns: the next watch key, or null - `java.nio.file.WatchKey`
 
   throws: java.nio.file.ClosedWatchServiceException - if this watch service is closed, or it is closed while waiting for the next key"
-  ([this timeout unit]
+  ([^. this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.poll timeout unit)))
-  ([this]
+  ([^. this]
     (-> this (.poll))))
 
 (defn take
@@ -101,6 +101,6 @@
   returns: the next watch key - `java.nio.file.WatchKey`
 
   throws: java.nio.file.ClosedWatchServiceException - if this watch service is closed, or it is closed while waiting for the next key"
-  ([this]
+  ([^. this]
     (-> this (.take))))
 

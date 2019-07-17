@@ -32,6 +32,6 @@
     This method otherwise behaves exactly as specified by the Channel interface.
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([this]
+  ([^. this]
     (-> this (.close))))
 

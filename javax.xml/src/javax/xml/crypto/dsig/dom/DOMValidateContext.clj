@@ -26,7 +26,7 @@
   node - the node - `org.w3c.dom.Node`
 
   throws: java.lang.NullPointerException - if ks or node is null"
-  ([ks node]
+  ([^javax.xml.crypto.KeySelector ks ^org.w3c.dom.Node node]
     (new DOMValidateContext ks node)))
 
 (defn set-node
@@ -35,13 +35,13 @@
   node - the node - `org.w3c.dom.Node`
 
   throws: java.lang.NullPointerException - if node is null"
-  ([this node]
+  ([^javax.xml.crypto.dsig.dom.DOMValidateContext this ^org.w3c.dom.Node node]
     (-> this (.setNode node))))
 
 (defn get-node
   "Returns the node.
 
   returns: the node (never null) - `org.w3c.dom.Node`"
-  ([this]
+  ([^javax.xml.crypto.dsig.dom.DOMValidateContext this]
     (-> this (.getNode))))
 

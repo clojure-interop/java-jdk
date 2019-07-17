@@ -48,7 +48,7 @@
 
   level - a logging level value - `java.util.logging.Level`
   msg - the raw non-localized logging message (may be null) - `java.lang.String`"
-  ([level msg]
+  ([^java.util.logging.Level level ^java.lang.String msg]
     (new LogRecord level msg)))
 
 (defn get-source-class-name
@@ -64,28 +64,28 @@
    May be null if no information could be obtained.
 
   returns: the source class name - `java.lang.String`"
-  ([this]
+  ([^java.util.logging.LogRecord this]
     (-> this (.getSourceClassName))))
 
 (defn set-parameters
   "Set the parameters to the log message.
 
   parameters - the log message parameters. (may be null) - `java.lang.Object[]`"
-  ([this parameters]
+  ([^java.util.logging.LogRecord this ^java.lang.Object[] parameters]
     (-> this (.setParameters parameters))))
 
 (defn set-thrown
   "Set a throwable associated with the log event.
 
   thrown - a throwable (may be null) - `java.lang.Throwable`"
-  ([this thrown]
+  ([^java.util.logging.LogRecord this ^java.lang.Throwable thrown]
     (-> this (.setThrown thrown))))
 
 (defn set-source-class-name
   "Set the name of the class that (allegedly) issued the logging request.
 
   source-class-name - the source class name (may be null) - `java.lang.String`"
-  ([this source-class-name]
+  ([^java.util.logging.LogRecord this ^java.lang.String source-class-name]
     (-> this (.setSourceClassName source-class-name))))
 
 (defn get-resource-bundle-name
@@ -96,7 +96,7 @@
    The result may be null if the message is not localizable.
 
   returns: the localization resource bundle name - `java.lang.String`"
-  ([this]
+  ([^java.util.logging.LogRecord this]
     (-> this (.getResourceBundleName))))
 
 (defn set-sequence-number
@@ -106,7 +106,7 @@
    so it should not normally be necessary to use this method.
 
   seq - the sequence number - `long`"
-  ([this seq]
+  ([^java.util.logging.LogRecord this ^Long seq]
     (-> this (.setSequenceNumber seq))))
 
 (defn get-parameters
@@ -114,7 +114,7 @@
 
   returns: the log message parameters.  May be null if
                     there are no parameters. - `java.lang.Object[]`"
-  ([this]
+  ([^java.util.logging.LogRecord this]
     (-> this (.getParameters))))
 
 (defn get-resource-bundle
@@ -126,35 +126,35 @@
    ResourceBundle is available.
 
   returns: the localization resource bundle - `java.util.ResourceBundle`"
-  ([this]
+  ([^java.util.logging.LogRecord this]
     (-> this (.getResourceBundle))))
 
 (defn set-source-method-name
   "Set the name of the method that (allegedly) issued the logging request.
 
   source-method-name - the source method name (may be null) - `java.lang.String`"
-  ([this source-method-name]
+  ([^java.util.logging.LogRecord this ^java.lang.String source-method-name]
     (-> this (.setSourceMethodName source-method-name))))
 
 (defn get-millis
   "Get event time in milliseconds since 1970.
 
   returns: event time in millis since 1970 - `long`"
-  ([this]
+  ([^java.util.logging.LogRecord this]
     (-> this (.getMillis))))
 
 (defn set-resource-bundle
   "Set the localization resource bundle.
 
   bundle - localization bundle (may be null) - `java.util.ResourceBundle`"
-  ([this bundle]
+  ([^java.util.logging.LogRecord this ^java.util.ResourceBundle bundle]
     (-> this (.setResourceBundle bundle))))
 
 (defn set-resource-bundle-name
   "Set the localization resource bundle name.
 
   name - localization bundle name (may be null) - `java.lang.String`"
-  ([this name]
+  ([^java.util.logging.LogRecord this ^java.lang.String name]
     (-> this (.setResourceBundleName name))))
 
 (defn get-thrown
@@ -164,7 +164,7 @@
    exception object. Otherwise null.
 
   returns: a throwable - `java.lang.Throwable`"
-  ([this]
+  ([^java.util.logging.LogRecord this]
     (-> this (.getThrown))))
 
 (defn get-source-method-name
@@ -180,14 +180,14 @@
    May be null if no information could be obtained.
 
   returns: the source method name - `java.lang.String`"
-  ([this]
+  ([^java.util.logging.LogRecord this]
     (-> this (.getSourceMethodName))))
 
 (defn get-level
   "Get the logging message level, for example Level.SEVERE.
 
   returns: the logging message level - `java.util.logging.Level`"
-  ([this]
+  ([^java.util.logging.LogRecord this]
     (-> this (.getLevel))))
 
 (defn get-thread-id
@@ -197,35 +197,35 @@
    may not map to any operating system ID.
 
   returns: thread ID - `int`"
-  ([this]
+  ([^java.util.logging.LogRecord this]
     (-> this (.getThreadID))))
 
 (defn get-logger-name
   "Get the source Logger's name.
 
   returns: source logger name (may be null) - `java.lang.String`"
-  ([this]
+  ([^java.util.logging.LogRecord this]
     (-> this (.getLoggerName))))
 
 (defn set-level
   "Set the logging message level, for example Level.SEVERE.
 
   level - the logging message level - `java.util.logging.Level`"
-  ([this level]
+  ([^java.util.logging.LogRecord this ^java.util.logging.Level level]
     (-> this (.setLevel level))))
 
 (defn set-logger-name
   "Set the source Logger's name.
 
   name - the source logger name (may be null) - `java.lang.String`"
-  ([this name]
+  ([^java.util.logging.LogRecord this ^java.lang.String name]
     (-> this (.setLoggerName name))))
 
 (defn set-thread-id
   "Set an identifier for the thread where the message originated.
 
   thread-id - the thread ID - `int`"
-  ([this thread-id]
+  ([^java.util.logging.LogRecord this ^Integer thread-id]
     (-> this (.setThreadID thread-id))))
 
 (defn get-message
@@ -241,21 +241,21 @@
    with the localized value.
 
   returns: the raw message string - `java.lang.String`"
-  ([this]
+  ([^java.util.logging.LogRecord this]
     (-> this (.getMessage))))
 
 (defn set-millis
   "Set event time.
 
   millis - event time in millis since 1970 - `long`"
-  ([this millis]
+  ([^java.util.logging.LogRecord this ^Long millis]
     (-> this (.setMillis millis))))
 
 (defn set-message
   "Set the `raw` log message, before localization or formatting.
 
   message - the raw message string (may be null) - `java.lang.String`"
-  ([this message]
+  ([^java.util.logging.LogRecord this ^java.lang.String message]
     (-> this (.setMessage message))))
 
 (defn get-sequence-number
@@ -266,6 +266,6 @@
    each new LogRecord in increasing order.
 
   returns: the sequence number - `long`"
-  ([this]
+  ([^java.util.logging.LogRecord this]
     (-> this (.getSequenceNumber))))
 

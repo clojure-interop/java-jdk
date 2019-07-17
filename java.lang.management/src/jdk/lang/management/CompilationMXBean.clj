@@ -24,7 +24,7 @@
   "Returns the name of the Just-in-time (JIT) compiler.
 
   returns: the name of the JIT compiler. - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getName))))
 
 (defn compilation-time-monitoring-supported?
@@ -33,7 +33,7 @@
 
   returns: true if the monitoring of compilation time is
    supported ; false otherwise. - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.isCompilationTimeMonitoringSupported))))
 
 (defn get-total-compilation-time
@@ -57,6 +57,6 @@
   returns: Compilation time in milliseconds - `long`
 
   throws: java.lang.UnsupportedOperationException - if the Java virtual machine does not support this operation."
-  ([this]
+  ([^. this]
     (-> this (.getTotalCompilationTime))))
 

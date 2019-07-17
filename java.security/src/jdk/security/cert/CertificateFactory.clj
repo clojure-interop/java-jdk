@@ -87,16 +87,16 @@
   returns: a certificate factory object for the specified type. - `java.security.cert.CertificateFactory`
 
   throws: java.security.cert.CertificateException - if a CertificateFactorySpi implementation for the specified algorithm is not available from the specified provider."
-  ([type provider]
+  ([^java.lang.String type ^java.lang.String provider]
     (CertificateFactory/getInstance type provider))
-  ([type]
+  ([^java.lang.String type]
     (CertificateFactory/getInstance type)))
 
 (defn get-provider
   "Returns the provider of this certificate factory.
 
   returns: the provider of this certificate factory. - `java.security.Provider`"
-  ([this]
+  ([^java.security.cert.CertificateFactory this]
     (-> this (.getProvider))))
 
 (defn get-type
@@ -105,7 +105,7 @@
 
   returns: the name of the certificate type associated with this
    certificate factory. - `java.lang.String`"
-  ([this]
+  ([^java.security.cert.CertificateFactory this]
     (-> this (.getType))))
 
 (defn generate-certificate
@@ -143,7 +143,7 @@
    from the input stream. - `java.security.cert.Certificate`
 
   throws: java.security.cert.CertificateException - on parsing errors."
-  ([this in-stream]
+  ([^java.security.cert.CertificateFactory this ^java.io.InputStream in-stream]
     (-> this (.generateCertificate in-stream))))
 
 (defn get-cert-path-encodings
@@ -159,7 +159,7 @@
 
   returns: an Iterator over the names of the supported
            CertPath encodings (as Strings) - `java.util.Iterator<java.lang.String>`"
-  ([this]
+  ([^java.security.cert.CertificateFactory this]
     (-> this (.getCertPathEncodings))))
 
 (defn generate-cert-path
@@ -177,9 +177,9 @@
      InputStream - `java.security.cert.CertPath`
 
   throws: java.security.cert.CertificateException - if an exception occurs while decoding or the encoding requested is not supported"
-  ([this in-stream encoding]
+  ([^java.security.cert.CertificateFactory this ^java.io.InputStream in-stream ^java.lang.String encoding]
     (-> this (.generateCertPath in-stream encoding)))
-  ([this in-stream]
+  ([^java.security.cert.CertificateFactory this ^java.io.InputStream in-stream]
     (-> this (.generateCertPath in-stream))))
 
 (defn generate-certificates
@@ -216,7 +216,7 @@
    initialized with the data from the input stream. - `java.util.Collection<? extends java.security.cert.Certificate>`
 
   throws: java.security.cert.CertificateException - on parsing errors."
-  ([this in-stream]
+  ([^java.security.cert.CertificateFactory this ^java.io.InputStream in-stream]
     (-> this (.generateCertificates in-stream))))
 
 (defn generate-crl
@@ -247,7 +247,7 @@
    from the input stream. - `java.security.cert.CRL`
 
   throws: java.security.cert.CRLException - on parsing errors."
-  ([this in-stream]
+  ([^java.security.cert.CertificateFactory this ^java.io.InputStream in-stream]
     (-> this (.generateCRL in-stream))))
 
 (defn generate-cr-ls
@@ -282,6 +282,6 @@
    stream. - `java.util.Collection<? extends java.security.cert.CRL>`
 
   throws: java.security.cert.CRLException - on parsing errors."
-  ([this in-stream]
+  ([^java.security.cert.CertificateFactory this ^java.io.InputStream in-stream]
     (-> this (.generateCRLs in-stream))))
 

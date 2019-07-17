@@ -33,7 +33,7 @@
            is available - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs or the given column number is out of bounds"
-  ([this column-index]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index]
     (-> this (.getTableName column-index))))
 
 (defn get-column-label
@@ -45,7 +45,7 @@
   returns: the suggested column name to use in printouts and displays - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs or the given column number is out of bounds"
-  ([this column-index]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index]
     (-> this (.getColumnLabel column-index))))
 
 (defn get-precision
@@ -57,7 +57,7 @@
   returns: the precision for values stored in the designated column - `int`
 
   throws: java.sql.SQLException - if a database access error occurs or the given column number is out of bounds"
-  ([this column-index]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index]
     (-> this (.getPrecision column-index))))
 
 (defn get-catalog-name
@@ -70,7 +70,7 @@
            String if no catalog name is available - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs or the given column number is out of bounds"
-  ([this column-index]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index]
     (-> this (.getCatalogName column-index))))
 
 (defn set-precision
@@ -81,7 +81,7 @@
   precision - the total number of decimal digits; must be 0 or more - `int`
 
   throws: java.sql.SQLException - if a database access error occurs, columnIndex is out of bounds, or precision is less than 0"
-  ([this column-index precision]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index ^Integer precision]
     (-> this (.setPrecision column-index precision))))
 
 (defn set-column-type-name
@@ -92,7 +92,7 @@
   type-name - the data source-specific type name; if typeName is null, an empty String is set - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs or the given column number is out of bounds"
-  ([this column-index type-name]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index ^java.lang.String type-name]
     (-> this (.setColumnTypeName column-index type-name))))
 
 (defn definitely-writable?
@@ -105,7 +105,7 @@
            definitely succeed; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs or the given column number is out of bounds"
-  ([this column-index]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index]
     (-> this (.isDefinitelyWritable column-index))))
 
 (defn set-case-sensitive
@@ -116,7 +116,7 @@
   property - true to indicate that the column name is case sensitive; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs or the given column number is out of bounds"
-  ([this column-index property]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index ^Boolean property]
     (-> this (.setCaseSensitive column-index property))))
 
 (defn set-signed
@@ -127,7 +127,7 @@
   property - true to indicate that a column value is a signed number; false to indicate that it is not - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs or the given column number is out of bounds"
-  ([this column-index property]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index ^Boolean property]
     (-> this (.setSigned column-index property))))
 
 (defn searchable?
@@ -140,7 +140,7 @@
            WHERE clause; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs or the given column number is out of bounds"
-  ([this column-index]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index]
     (-> this (.isSearchable column-index))))
 
 (defn set-auto-increment
@@ -152,7 +152,7 @@
   property - true if the given column is automatically incremented; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs or the given index is out of bounds"
-  ([this column-index property]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index ^Boolean property]
     (-> this (.setAutoIncrement column-index property))))
 
 (defn set-currency
@@ -163,7 +163,7 @@
   property - true if the value is a cash value; false otherwise. - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs or the given column number is out of bounds"
-  ([this column-index property]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index ^Boolean property]
     (-> this (.setCurrency column-index property))))
 
 (defn set-column-label
@@ -176,7 +176,7 @@
   label - the column label to be used in printouts and displays; if the column label is null, an empty String is set - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs or the given column index is out of bounds"
-  ([this column-index label]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index ^java.lang.String label]
     (-> this (.setColumnLabel column-index label))))
 
 (defn set-schema-name
@@ -188,7 +188,7 @@
   schema-name - the schema name for the table from which a value in the designated column was derived; may be an empty String or null - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs or the given column number is out of bounds"
-  ([this column-index schema-name]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index ^java.lang.String schema-name]
     (-> this (.setSchemaName column-index schema-name))))
 
 (defn get-column-count
@@ -198,7 +198,7 @@
   returns: the number of columns - `int`
 
   throws: java.sql.SQLException - if an error occurs determining the column count"
-  ([this]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this]
     (-> this (.getColumnCount))))
 
 (defn get-column-display-size
@@ -210,7 +210,7 @@
            column - `int`
 
   throws: java.sql.SQLException - if a database access error occurs or the given column number is out of bounds"
-  ([this column-index]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index]
     (-> this (.getColumnDisplaySize column-index))))
 
 (defn auto-increment?
@@ -223,7 +223,7 @@
            false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs or the given column number is out of bounds"
-  ([this column-index]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index]
     (-> this (.isAutoIncrement column-index))))
 
 (defn set-searchable
@@ -234,7 +234,7 @@
   property - true to indicate that a column value can be used in a WHERE clause; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs or the given column number is out of bounds"
-  ([this column-index property]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index ^Boolean property]
     (-> this (.setSearchable column-index property))))
 
 (defn get-schema-name
@@ -247,7 +247,7 @@
            name is available - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs or the given column number is out of bounds"
-  ([this column-index]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index]
     (-> this (.getSchemaName column-index))))
 
 (defn unwrap
@@ -264,7 +264,7 @@
   returns: an object that implements the interface. May be a proxy for the actual implementing object. - `<T> T`
 
   throws: java.sql.SQLException - If no object found that implements the interface"
-  ([this iface]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^java.lang.Class iface]
     (-> this (.unwrap iface))))
 
 (defn set-nullable
@@ -276,7 +276,7 @@
   property - one of the following ResultSetMetaData constants: columnNoNulls, columnNullable, or columnNullableUnknown - `int`
 
   throws: java.sql.SQLException - if a database access error occurs, the given column number is out of bounds, or the value supplied for the property parameter is not one of the following constants: ResultSetMetaData.columnNoNulls, ResultSetMetaData.columnNullable, or ResultSetMetaData.columnNullableUnknown"
-  ([this column-index property]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index ^Integer property]
     (-> this (.setNullable column-index property))))
 
 (defn set-catalog-name
@@ -288,7 +288,7 @@
   catalog-name - the column's table's catalog name; if the catalogName is null, an empty String is set - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs or the given column number is out of bounds"
-  ([this column-index catalog-name]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index ^java.lang.String catalog-name]
     (-> this (.setCatalogName column-index catalog-name))))
 
 (defn set-table-name
@@ -299,7 +299,7 @@
   table-name - the column's table name; may be null or an empty string - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs or the given column number is out of bounds"
-  ([this column-index table-name]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index ^java.lang.String table-name]
     (-> this (.setTableName column-index table-name))))
 
 (defn get-column-type
@@ -313,7 +313,7 @@
    stored in the designated column - `int`
 
   throws: java.sql.SQLException - if a database access error occurs or the given column number is out of bounds"
-  ([this column-index]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index]
     (-> this (.getColumnType column-index))))
 
 (defn get-column-type-name
@@ -325,7 +325,7 @@
   returns: the type name used by the data source - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs or the given column number is out of bounds"
-  ([this column-index]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index]
     (-> this (.getColumnTypeName column-index))))
 
 (defn currency?
@@ -338,7 +338,7 @@
            false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs or the given column number is out of bounds"
-  ([this column-index]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index]
     (-> this (.isCurrency column-index))))
 
 (defn get-scale
@@ -350,7 +350,7 @@
   returns: the scale for values stored in the designated column - `int`
 
   throws: java.sql.SQLException - if a database access error occurs or the given column number is out of bounds"
-  ([this column-index]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index]
     (-> this (.getScale column-index))))
 
 (defn get-column-name
@@ -361,7 +361,7 @@
   returns: the column name of the designated column - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs or the given column number is out of bounds"
-  ([this column-index]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index]
     (-> this (.getColumnName column-index))))
 
 (defn set-column-display-size
@@ -372,7 +372,7 @@
   size - the maximum size of the column in chars; must be 0 or more - `int`
 
   throws: java.sql.SQLException - if a database access error occurs, the given column number is out of bounds, or size is less than 0"
-  ([this column-index size]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index ^Integer size]
     (-> this (.setColumnDisplaySize column-index size))))
 
 (defn get-column-class-name
@@ -396,7 +396,7 @@
           name used for custom mapping when there is a custom mapping. - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs or the given column number is out of bounds"
-  ([this column-index]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index]
     (-> this (.getColumnClassName column-index))))
 
 (defn set-column-count
@@ -406,7 +406,7 @@
   column-count - an int giving the number of columns in the RowSet object - `int`
 
   throws: java.sql.SQLException - if the given number is equal to or less than zero"
-  ([this column-count]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-count]
     (-> this (.setColumnCount column-count))))
 
 (defn signed?
@@ -419,7 +419,7 @@
            number; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs or the given column number is out of bounds"
-  ([this column-index]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index]
     (-> this (.isSigned column-index))))
 
 (defn set-column-type
@@ -430,7 +430,7 @@
   sql-type - the designated column's SQL type, which must be one of the constants in the class java.sql.Types - `int`
 
   throws: java.sql.SQLException - if a database access error occurs, the given column number is out of bounds, or the column type specified is not one of the constants in java.sql.Types"
-  ([this column-index sql-type]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index ^Integer sql-type]
     (-> this (.setColumnType column-index sql-type))))
 
 (defn is-nullable
@@ -445,7 +445,7 @@
            columnNullableUnknown - `int`
 
   throws: java.sql.SQLException - if a database access error occurs or the given column number is out of bounds"
-  ([this column-index]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index]
     (-> this (.isNullable column-index))))
 
 (defn set-scale
@@ -456,7 +456,7 @@
   scale - the number of digits to the right of the decimal point; must be zero or greater - `int`
 
   throws: java.sql.SQLException - if a database access error occurs, columnIndex is out of bounds, or scale is less than 0"
-  ([this column-index scale]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index ^Integer scale]
     (-> this (.setScale column-index scale))))
 
 (defn writable?
@@ -471,7 +471,7 @@
             will succeed; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs or the given column number is out of bounds"
-  ([this column-index]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index]
     (-> this (.isWritable column-index))))
 
 (defn set-column-name
@@ -481,7 +481,7 @@
   column-name - a String object indicating the column name; if the given name is null, an empty String is set - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs or the given column index is out of bounds"
-  ([this column-index column-name]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index ^java.lang.String column-name]
     (-> this (.setColumnName column-index column-name))))
 
 (defn read-only?
@@ -494,7 +494,7 @@
    and thus not updatable; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs or the given column number is out of bounds"
-  ([this column-index]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index]
     (-> this (.isReadOnly column-index))))
 
 (defn wrapper-for?
@@ -511,7 +511,7 @@
   returns: true if this implements the interface or directly or indirectly wraps an object that does. - `boolean`
 
   throws: java.sql.SQLException - if an error occurs while determining whether this is a wrapper for an object with the given interface."
-  ([this interfaces]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^java.lang.Class interfaces]
     (-> this (.isWrapperFor interfaces))))
 
 (defn case-sensitive?
@@ -524,6 +524,6 @@
             false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs or the given column number is out of bounds"
-  ([this column-index]
+  ([^javax.sql.rowset.RowSetMetaDataImpl this ^Integer column-index]
     (-> this (.isCaseSensitive column-index))))
 

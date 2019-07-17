@@ -25,13 +25,13 @@
   protocol - - the name of the SOAP protocol that the resulting SAAJ tree should support - `java.lang.String`
 
   throws: javax.xml.soap.SOAPException - if a SOAPMessage supporting the specified protocol cannot be created"
-  ([protocol]
+  ([^java.lang.String protocol]
     (new SAAJResult protocol))
   ([]
     (new SAAJResult )))
 
 (defn get-result
   "returns: the resulting Tree that was created under the specified root Node. - `javax.xml.soap.Node`"
-  ([this]
+  ([^javax.xml.soap.SAAJResult this]
     (-> this (.getResult))))
 

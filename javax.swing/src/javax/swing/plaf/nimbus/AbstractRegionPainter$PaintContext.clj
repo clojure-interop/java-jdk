@@ -17,8 +17,8 @@
   cache-mode - A hint as to which caching mode to use. If null, then set to no caching. - `javax.swing.plaf.nimbus.AbstractRegionPainter.PaintContext.CacheMode`
   max-h - The maximum scale in the horizontal direction to use before punting and redrawing from scratch. For example, if maxH is 2, then we will attempt to scale any cached images up to 2x the canvas width before redrawing from scratch. Reasonable maxH values may improve painting performance. If set too high, then you may get poor looking graphics at higher zoom levels. Must be >= 1. - `double`
   max-v - The maximum scale in the vertical direction to use before punting and redrawing from scratch. For example, if maxV is 2, then we will attempt to scale any cached images up to 2x the canvas height before redrawing from scratch. Reasonable maxV values may improve painting performance. If set too high, then you may get poor looking graphics at higher zoom levels. Must be >= 1. - `double`"
-  ([insets canvas-size inverted cache-mode max-h max-v]
+  ([^java.awt.Insets insets ^java.awt.Dimension canvas-size ^Boolean inverted ^javax.swing.plaf.nimbus.AbstractRegionPainter.PaintContext.CacheMode cache-mode ^Double max-h ^Double max-v]
     (new AbstractRegionPainter$PaintContext insets canvas-size inverted cache-mode max-h max-v))
-  ([insets canvas-size inverted]
+  ([^java.awt.Insets insets ^java.awt.Dimension canvas-size ^Boolean inverted]
     (new AbstractRegionPainter$PaintContext insets canvas-size inverted)))
 

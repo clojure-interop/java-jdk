@@ -23,7 +23,7 @@
   a-component - `java.awt.Component`
 
   returns: `java.awt.Component`"
-  ([this a-container a-component]
+  ([^javax.swing.DefaultFocusManager this ^java.awt.Container a-container ^java.awt.Component a-component]
     (-> this (.getComponentAfter a-container a-component))))
 
 (defn get-component-before
@@ -31,21 +31,21 @@
   a-component - `java.awt.Component`
 
   returns: `java.awt.Component`"
-  ([this a-container a-component]
+  ([^javax.swing.DefaultFocusManager this ^java.awt.Container a-container ^java.awt.Component a-component]
     (-> this (.getComponentBefore a-container a-component))))
 
 (defn get-first-component
   "a-container - `java.awt.Container`
 
   returns: `java.awt.Component`"
-  ([this a-container]
+  ([^javax.swing.DefaultFocusManager this ^java.awt.Container a-container]
     (-> this (.getFirstComponent a-container))))
 
 (defn get-last-component
   "a-container - `java.awt.Container`
 
   returns: `java.awt.Component`"
-  ([this a-container]
+  ([^javax.swing.DefaultFocusManager this ^java.awt.Container a-container]
     (-> this (.getLastComponent a-container))))
 
 (defn compare-tab-order
@@ -53,6 +53,6 @@
   b - `java.awt.Component`
 
   returns: `boolean`"
-  ([this a b]
+  ([^javax.swing.DefaultFocusManager this ^java.awt.Component a ^java.awt.Component b]
     (-> this (.compareTabOrder a b))))
 

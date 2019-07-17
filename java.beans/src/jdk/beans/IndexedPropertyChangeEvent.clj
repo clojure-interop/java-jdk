@@ -23,7 +23,7 @@
   old-value - The old value of the property. - `java.lang.Object`
   new-value - The new value of the property. - `java.lang.Object`
   index - index of the property element that was changed. - `int`"
-  ([source property-name old-value new-value index]
+  ([^java.lang.Object source ^java.lang.String property-name ^java.lang.Object old-value ^java.lang.Object new-value ^Integer index]
     (new IndexedPropertyChangeEvent source property-name old-value new-value index)))
 
 (defn get-index
@@ -31,6 +31,6 @@
 
   returns: The index specifying the property element that was
            changed. - `int`"
-  ([this]
+  ([^java.beans.IndexedPropertyChangeEvent this]
     (-> this (.getIndex))))
 

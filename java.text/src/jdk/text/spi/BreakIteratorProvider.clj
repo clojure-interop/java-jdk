@@ -15,7 +15,7 @@
   returns: A break iterator for word breaks - `java.text.BreakIterator`
 
   throws: java.lang.NullPointerException - if locale is null"
-  ([this locale]
+  ([^java.text.spi.BreakIteratorProvider this ^java.util.Locale locale]
     (-> this (.getWordInstance locale))))
 
 (defn get-line-instance
@@ -28,7 +28,7 @@
   returns: A break iterator for line breaks - `java.text.BreakIterator`
 
   throws: java.lang.NullPointerException - if locale is null"
-  ([this locale]
+  ([^java.text.spi.BreakIteratorProvider this ^java.util.Locale locale]
     (-> this (.getLineInstance locale))))
 
 (defn get-character-instance
@@ -41,7 +41,7 @@
   returns: A break iterator for character breaks - `java.text.BreakIterator`
 
   throws: java.lang.NullPointerException - if locale is null"
-  ([this locale]
+  ([^java.text.spi.BreakIteratorProvider this ^java.util.Locale locale]
     (-> this (.getCharacterInstance locale))))
 
 (defn get-sentence-instance
@@ -54,6 +54,6 @@
   returns: A break iterator for sentence breaks - `java.text.BreakIterator`
 
   throws: java.lang.NullPointerException - if locale is null"
-  ([this locale]
+  ([^java.text.spi.BreakIteratorProvider this ^java.util.Locale locale]
     (-> this (.getSentenceInstance locale))))
 

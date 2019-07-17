@@ -105,7 +105,7 @@
 
   returns: true if client authentication is required,
             or false if no client authentication is desired. - `boolean`"
-  ([this]
+  ([^javax.net.ssl.SSLSocket this]
     (-> this (.getNeedClientAuth))))
 
 (defn get-supported-protocols
@@ -113,7 +113,7 @@
    on an SSL connection.
 
   returns: an array of protocols supported - `java.lang.String[]`"
-  ([this]
+  ([^javax.net.ssl.SSLSocket this]
     (-> this (.getSupportedProtocols))))
 
 (defn get-handshake-session
@@ -147,7 +147,7 @@
            SSLSession currently being negotiated. - `javax.net.ssl.SSLSession`
 
   throws: java.lang.UnsupportedOperationException - if the underlying provider does not implement the operation."
-  ([this]
+  ([^javax.net.ssl.SSLSocket this]
     (-> this (.getHandshakeSession))))
 
 (defn set-use-client-mode
@@ -164,7 +164,7 @@
   mode - true if the socket should start its handshaking in `client` mode - `boolean`
 
   throws: java.lang.IllegalArgumentException - if a mode change is attempted after the initial handshake has begun."
-  ([this mode]
+  ([^javax.net.ssl.SSLSocket this ^Boolean mode]
     (-> this (.setUseClientMode mode))))
 
 (defn remove-handshake-completed-listener
@@ -173,7 +173,7 @@
   listener - the HandShake Completed event listener - `javax.net.ssl.HandshakeCompletedListener`
 
   throws: java.lang.IllegalArgumentException - if the listener is not registered, or the argument is null."
-  ([this listener]
+  ([^javax.net.ssl.SSLSocket this ^javax.net.ssl.HandshakeCompletedListener listener]
     (-> this (.removeHandshakeCompletedListener listener))))
 
 (defn get-use-client-mode?
@@ -182,7 +182,7 @@
 
   returns: true if the socket should do handshaking
             in `client` mode - `boolean`"
-  ([this]
+  ([^javax.net.ssl.SSLSocket this]
     (-> this (.getUseClientMode))))
 
 (defn set-want-client-auth
@@ -204,7 +204,7 @@
    this method or setNeedClientAuth(boolean).
 
   want - set to true if client authentication is requested, or false if no client authentication is desired. - `boolean`"
-  ([this want]
+  ([^javax.net.ssl.SSLSocket this ^Boolean want]
     (-> this (.setWantClientAuth want))))
 
 (defn get-ssl-parameters
@@ -213,7 +213,7 @@
    are always non-null.
 
   returns: the SSLParameters in effect for this SSLSocket. - `javax.net.ssl.SSLParameters`"
-  ([this]
+  ([^javax.net.ssl.SSLSocket this]
     (-> this (.getSSLParameters))))
 
 (defn get-session
@@ -232,7 +232,7 @@
    cipher suite of `SSL_NULL_WITH_NULL_NULL`.
 
   returns: the SSLSession - `javax.net.ssl.SSLSession`"
-  ([this]
+  ([^javax.net.ssl.SSLSocket this]
     (-> this (.getSession))))
 
 (defn get-enabled-cipher-suites
@@ -247,7 +247,7 @@
    anonymous suite is enabled but authentication is required.
 
   returns: an array of cipher suite names - `java.lang.String[]`"
-  ([this]
+  ([^javax.net.ssl.SSLSocket this]
     (-> this (.getEnabledCipherSuites))))
 
 (defn get-supported-cipher-suites
@@ -258,7 +258,7 @@
    cipher suites might be useful in specialized applications.
 
   returns: an array of cipher suite names - `java.lang.String[]`"
-  ([this]
+  ([^javax.net.ssl.SSLSocket this]
     (-> this (.getSupportedCipherSuites))))
 
 (defn set-ssl-parameters
@@ -283,7 +283,7 @@
   params - the parameters - `javax.net.ssl.SSLParameters`
 
   throws: java.lang.IllegalArgumentException - if the setEnabledCipherSuites() or the setEnabledProtocols() call fails"
-  ([this params]
+  ([^javax.net.ssl.SSLSocket this ^javax.net.ssl.SSLParameters params]
     (-> this (.setSSLParameters params))))
 
 (defn start-handshake
@@ -302,7 +302,7 @@
    and may throw an IOException.
 
   throws: java.io.IOException - on a network level error"
-  ([this]
+  ([^javax.net.ssl.SSLSocket this]
     (-> this (.startHandshake))))
 
 (defn set-enabled-cipher-suites
@@ -319,7 +319,7 @@
   suites - Names of all the cipher suites to enable - `java.lang.String[]`
 
   throws: java.lang.IllegalArgumentException - when one or more of the ciphers named by the parameter is not supported, or when the parameter is null."
-  ([this suites]
+  ([^javax.net.ssl.SSLSocket this ^java.lang.String[] suites]
     (-> this (.setEnabledCipherSuites suites))))
 
 (defn get-enable-session-creation?
@@ -328,7 +328,7 @@
   returns: true indicates that sessions may be created; this
             is the default.  false indicates that an existing session
             must be resumed - `boolean`"
-  ([this]
+  ([^javax.net.ssl.SSLSocket this]
     (-> this (.getEnableSessionCreation))))
 
 (defn add-handshake-completed-listener
@@ -338,7 +338,7 @@
   listener - the HandShake Completed event listener - `javax.net.ssl.HandshakeCompletedListener`
 
   throws: java.lang.IllegalArgumentException - if the argument is null."
-  ([this listener]
+  ([^javax.net.ssl.SSLSocket this ^javax.net.ssl.HandshakeCompletedListener listener]
     (-> this (.addHandshakeCompletedListener listener))))
 
 (defn set-enable-session-creation
@@ -348,7 +348,7 @@
    handshaking.
 
   flag - true indicates that sessions may be created; this is the default. false indicates that an existing session must be resumed - `boolean`"
-  ([this flag]
+  ([^javax.net.ssl.SSLSocket this ^Boolean flag]
     (-> this (.setEnableSessionCreation flag))))
 
 (defn set-enabled-protocols
@@ -362,7 +362,7 @@
   protocols - Names of all the protocols to enable. - `java.lang.String[]`
 
   throws: java.lang.IllegalArgumentException - when one or more of the protocols named by the parameter is not supported or when the protocols parameter is null."
-  ([this protocols]
+  ([^javax.net.ssl.SSLSocket this ^java.lang.String[] protocols]
     (-> this (.setEnabledProtocols protocols))))
 
 (defn set-need-client-auth
@@ -385,7 +385,7 @@
    this method or setWantClientAuth(boolean).
 
   need - set to true if client authentication is required, or false if no client authentication is desired. - `boolean`"
-  ([this need]
+  ([^javax.net.ssl.SSLSocket this ^Boolean need]
     (-> this (.setNeedClientAuth need))))
 
 (defn get-enabled-protocols
@@ -393,7 +393,7 @@
    enabled for use on this connection.
 
   returns: an array of protocols - `java.lang.String[]`"
-  ([this]
+  ([^javax.net.ssl.SSLSocket this]
     (-> this (.getEnabledProtocols))))
 
 (defn get-want-client-auth?
@@ -402,6 +402,6 @@
 
   returns: true if client authentication is requested,
             or false if no client authentication is desired. - `boolean`"
-  ([this]
+  ([^javax.net.ssl.SSLSocket this]
     (-> this (.getWantClientAuth))))
 

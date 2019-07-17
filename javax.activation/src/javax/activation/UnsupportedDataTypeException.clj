@@ -11,7 +11,7 @@
    message.
 
   s - The detail message. - `java.lang.String`"
-  ([s]
+  ([^java.lang.String s]
     (new UnsupportedDataTypeException s))
   ([]
     (new UnsupportedDataTypeException )))

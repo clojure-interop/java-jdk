@@ -114,11 +114,11 @@
   transfer-type - the data type of the array used to represent pixel values. The data type must be either DataBuffer.TYPE_BYTE or DataBuffer.TYPE_USHORT. - `int`
 
   throws: java.lang.IllegalArgumentException - if transferType is not one of DataBuffer.TYPE_BYTE or DataBuffer.TYPE_USHORT"
-  ([bits size cmap start hasalpha trans transfer-type]
+  ([^Integer bits ^Integer size cmap ^Integer start ^Boolean hasalpha ^Integer trans ^Integer transfer-type]
     (new IndexColorModel bits size cmap start hasalpha trans transfer-type))
-  ([bits size r g b trans]
+  ([^Integer bits ^Integer size r g b ^Integer trans]
     (new IndexColorModel bits size r g b trans))
-  ([bits size r g b]
+  ([^Integer bits ^Integer size r g b]
     (new IndexColorModel bits size r g b)))
 
 (defn get-transparency
@@ -126,7 +126,7 @@
    or TRANSLUCENT
 
   returns: the transparency of this IndexColorModel - `int`"
-  ([this]
+  ([^java.awt.image.IndexColorModel this]
     (-> this (.getTransparency))))
 
 (defn compatible-sample-model?
@@ -139,7 +139,7 @@
   returns: true if the specified SampleModel
    is compatible with this ColorModel; false
    otherwise. - `boolean`"
-  ([this sm]
+  ([^java.awt.image.IndexColorModel this ^java.awt.image.SampleModel sm]
     (-> this (.isCompatibleSampleModel sm))))
 
 (defn get-data-element
@@ -161,7 +161,7 @@
    ColorModel corresponding to the specified components. - `int`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if the components array is not large enough to hold all of the color and alpha components starting at offset"
-  ([this components offset]
+  ([^java.awt.image.IndexColorModel this components ^Integer offset]
     (-> this (.getDataElement components offset))))
 
 (defn get-rgb
@@ -175,7 +175,7 @@
   pixel - the specified pixel - `int`
 
   returns: the color and alpha components of the specified pixel - `int`"
-  ([this pixel]
+  ([^java.awt.image.IndexColorModel this ^Integer pixel]
     (-> this (.getRGB pixel))))
 
 (defn get-data-elements
@@ -208,9 +208,9 @@
    alpha components. - `java.lang.Object`
 
   throws: java.lang.ClassCastException - if pixel is not a primitive array of type transferType"
-  ([this components offset pixel]
+  ([^java.awt.image.IndexColorModel this components ^Integer offset ^java.lang.Object pixel]
     (-> this (.getDataElements components offset pixel)))
-  ([this rgb pixel]
+  ([^java.awt.image.IndexColorModel this ^Integer rgb ^java.lang.Object pixel]
     (-> this (.getDataElements rgb pixel))))
 
 (defn get-transparent-pixel
@@ -225,7 +225,7 @@
   returns: the index of a transparent pixel in this
            IndexColorModel object, or -1 if there
            is no such pixel - `int`"
-  ([this]
+  ([^java.awt.image.IndexColorModel this]
     (-> this (.getTransparentPixel))))
 
 (defn get-blues
@@ -234,7 +234,7 @@
    getMapSize are written.
 
   b - the specified array into which the elements of the array of blue color components are copied - `byte[]`"
-  ([this b]
+  ([^java.awt.image.IndexColorModel this b]
     (-> this (.getBlues b))))
 
 (defn get-rg-bs
@@ -246,7 +246,7 @@
    written.
 
   rgb - the specified array into which the converted ARGB values from this array of color and alpha components are copied. - `int[]`"
-  ([this rgb]
+  ([^java.awt.image.IndexColorModel this rgb]
     (-> this (.getRGBs rgb))))
 
 (defn to-string
@@ -255,7 +255,7 @@
 
   returns: a String representing the contents of this
    ColorModel object. - `java.lang.String`"
-  ([this]
+  ([^java.awt.image.IndexColorModel this]
     (-> this (.toString))))
 
 (defn get-alpha
@@ -268,7 +268,7 @@
   pixel - the specified pixel - `int`
 
   returns: the value of the alpha component for the specified pixel - `int`"
-  ([this pixel]
+  ([^java.awt.image.IndexColorModel this ^Integer pixel]
     (-> this (.getAlpha pixel))))
 
 (defn get-red
@@ -283,7 +283,7 @@
   pixel - the specified pixel - `int`
 
   returns: the value of the red color component for the specified pixel - `int`"
-  ([this pixel]
+  ([^java.awt.image.IndexColorModel this ^Integer pixel]
     (-> this (.getRed pixel))))
 
 (defn get-green
@@ -298,7 +298,7 @@
   pixel - the specified pixel - `int`
 
   returns: the value of the green color component for the specified pixel - `int`"
-  ([this pixel]
+  ([^java.awt.image.IndexColorModel this ^Integer pixel]
     (-> this (.getGreen pixel))))
 
 (defn get-reds
@@ -307,7 +307,7 @@
    getMapSize are written.
 
   r - the specified array into which the elements of the array of red color components are copied - `byte[]`"
-  ([this r]
+  ([^java.awt.image.IndexColorModel this r]
     (-> this (.getReds r))))
 
 (defn get-greens
@@ -316,7 +316,7 @@
    getMapSize are written.
 
   g - the specified array into which the elements of the array of green color components are copied - `byte[]`"
-  ([this g]
+  ([^java.awt.image.IndexColorModel this g]
     (-> this (.getGreens g))))
 
 (defn get-components
@@ -341,7 +341,7 @@
 
   returns: an array containing the color and alpha components of the
    specified pixel starting at the specified offset. - `int[]`"
-  ([this pixel components offset]
+  ([^java.awt.image.IndexColorModel this ^Integer pixel components ^Integer offset]
     (-> this (.getComponents pixel components offset))))
 
 (defn compatible-raster?
@@ -353,7 +353,7 @@
 
   returns: true if raster is compatible
    with this ColorModel; false otherwise. - `boolean`"
-  ([this raster]
+  ([^java.awt.image.IndexColorModel this ^java.awt.image.Raster raster]
     (-> this (.isCompatibleRaster raster))))
 
 (defn get-valid-pixels
@@ -365,7 +365,7 @@
    between 0 and the map size.
 
   returns: a BigInteger indicating the valid/invalid pixels. - `java.math.BigInteger`"
-  ([this]
+  ([^java.awt.image.IndexColorModel this]
     (-> this (.getValidPixels))))
 
 (defn valid?
@@ -375,9 +375,9 @@
 
   returns: true if pixel
    is valid; false otherwise. - `boolean`"
-  ([this pixel]
+  ([^java.awt.image.IndexColorModel this ^Integer pixel]
     (-> this (.isValid pixel)))
-  ([this]
+  ([^java.awt.image.IndexColorModel this]
     (-> this (.isValid))))
 
 (defn create-compatible-writable-raster
@@ -397,7 +397,7 @@
    width and height. - `java.awt.image.WritableRaster`
 
   throws: java.lang.UnsupportedOperationException - if the number of bits in a pixel is greater than 16"
-  ([this w h]
+  ([^java.awt.image.IndexColorModel this ^Integer w ^Integer h]
     (-> this (.createCompatibleWritableRaster w h))))
 
 (defn get-component-size
@@ -407,7 +407,7 @@
 
   returns: an array containing the number of bits of each color
            and alpha component of this IndexColorModel - `int[]`"
-  ([this]
+  ([^java.awt.image.IndexColorModel this]
     (-> this (.getComponentSize))))
 
 (defn create-compatible-sample-model
@@ -422,7 +422,7 @@
    width and height. - `java.awt.image.SampleModel`
 
   throws: java.lang.IllegalArgumentException - if w or h is not greater than 0"
-  ([this w h]
+  ([^java.awt.image.IndexColorModel this ^Integer w ^Integer h]
     (-> this (.createCompatibleSampleModel w h))))
 
 (defn get-blue
@@ -437,7 +437,7 @@
   pixel - the specified pixel - `int`
 
   returns: the value of the blue color component for the specified pixel - `int`"
-  ([this pixel]
+  ([^java.awt.image.IndexColorModel this ^Integer pixel]
     (-> this (.getBlue pixel))))
 
 (defn convert-to-int-discrete
@@ -460,7 +460,7 @@
        Raster - `java.awt.image.BufferedImage`
 
   throws: java.lang.IllegalArgumentException - if the raster argument is not compatible with this IndexColorModel"
-  ([this raster force-argb]
+  ([^java.awt.image.IndexColorModel this ^java.awt.image.Raster raster ^Boolean force-argb]
     (-> this (.convertToIntDiscrete raster force-argb))))
 
 (defn get-alphas
@@ -469,14 +469,14 @@
    by getMapSize are written.
 
   a - the specified array into which the elements of the array of alpha components are copied - `byte[]`"
-  ([this a]
+  ([^java.awt.image.IndexColorModel this a]
     (-> this (.getAlphas a))))
 
 (defn finalize
   "Disposes of system resources associated with this
    ColorModel once this ColorModel is no
    longer referenced."
-  ([this]
+  ([^java.awt.image.IndexColorModel this]
     (-> this (.finalize))))
 
 (defn get-map-size
@@ -484,6 +484,6 @@
    IndexColorModel.
 
   returns: the size of the color and alpha component arrays. - `int`"
-  ([this]
+  ([^java.awt.image.IndexColorModel this]
     (-> this (.getMapSize))))
 

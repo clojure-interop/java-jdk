@@ -205,7 +205,7 @@
   provider-id - A String object with the unique ID of the synchronization provider being registered - `java.lang.String`
 
   throws: javax.sql.rowset.spi.SyncFactoryException - if an attempt is made to supply an empty or null provider name"
-  ([provider-id]
+  ([^java.lang.String provider-id]
     (SyncFactory/registerProvider provider-id)))
 
 (defn *get-sync-factory
@@ -222,7 +222,7 @@
   provider-id - The unique-id of the synchronization provider - `java.lang.String`
 
   throws: javax.sql.rowset.spi.SyncFactoryException - If an attempt is made to unregister a SyncProvider implementation that was not registered."
-  ([provider-id]
+  ([^java.lang.String provider-id]
     (SyncFactory/unregisterProvider provider-id)))
 
 (defn *get-instance
@@ -233,7 +233,7 @@
   returns: a SyncProvider implementation - `javax.sql.rowset.spi.SyncProvider`
 
   throws: javax.sql.rowset.spi.SyncFactoryException - If the SyncProvider cannot be found, the providerID is null, or some error was encountered when trying to invoke this provider."
-  ([provider-id]
+  ([^java.lang.String provider-id]
     (SyncFactory/getInstance provider-id)))
 
 (defn *get-registered-providers
@@ -271,9 +271,9 @@
   level - a Level object instance indicating the degree of logging required - `java.util.logging.Level`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPermission method denies calling setLogger"
-  ([logger level]
+  ([^java.util.logging.Logger logger ^java.util.logging.Level level]
     (SyncFactory/setLogger logger level))
-  ([logger]
+  ([^java.util.logging.Logger logger]
     (SyncFactory/setLogger logger)))
 
 (defn *get-logger
@@ -302,6 +302,6 @@
   ctx - a valid JNDI context - `javax.naming.Context`
 
   throws: javax.sql.rowset.spi.SyncFactoryException - if the supplied JNDI context is null"
-  ([ctx]
+  ([^javax.naming.Context ctx]
     (SyncFactory/setJNDIContext ctx)))
 

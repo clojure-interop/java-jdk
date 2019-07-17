@@ -115,13 +115,13 @@
   dst-savings - The amount of time in milliseconds saved during daylight saving time. - `int`
 
   throws: java.lang.IllegalArgumentException - if the month, day, dayOfWeek, time more, or time parameters are out of range for the start or end rule, or if a time mode value is invalid."
-  ([raw-offset id start-month start-day start-day-of-week start-time start-time-mode end-month end-day end-day-of-week end-time end-time-mode dst-savings]
+  ([^Integer raw-offset ^java.lang.String id ^Integer start-month ^Integer start-day ^Integer start-day-of-week ^Integer start-time ^Integer start-time-mode ^Integer end-month ^Integer end-day ^Integer end-day-of-week ^Integer end-time ^Integer end-time-mode ^Integer dst-savings]
     (new SimpleTimeZone raw-offset id start-month start-day start-day-of-week start-time start-time-mode end-month end-day end-day-of-week end-time end-time-mode dst-savings))
-  ([raw-offset id start-month start-day start-day-of-week start-time end-month end-day end-day-of-week end-time dst-savings]
+  ([^Integer raw-offset ^java.lang.String id ^Integer start-month ^Integer start-day ^Integer start-day-of-week ^Integer start-time ^Integer end-month ^Integer end-day ^Integer end-day-of-week ^Integer end-time ^Integer dst-savings]
     (new SimpleTimeZone raw-offset id start-month start-day start-day-of-week start-time end-month end-day end-day-of-week end-time dst-savings))
-  ([raw-offset id start-month start-day start-day-of-week start-time end-month end-day end-day-of-week end-time]
+  ([^Integer raw-offset ^java.lang.String id ^Integer start-month ^Integer start-day ^Integer start-day-of-week ^Integer start-time ^Integer end-month ^Integer end-day ^Integer end-day-of-week ^Integer end-time]
     (new SimpleTimeZone raw-offset id start-month start-day start-day-of-week start-time end-month end-day end-day-of-week end-time))
-  ([raw-offset id]
+  ([^Integer raw-offset ^java.lang.String id]
     (new SimpleTimeZone raw-offset id)))
 
 (def *-wall-time
@@ -155,7 +155,7 @@
   "Sets the daylight saving time starting year.
 
   year - The daylight saving starting year. - `int`"
-  ([this year]
+  ([^java.util.SimpleTimeZone this ^Integer year]
     (-> this (.setStartYear year))))
 
 (defn in-daylight-time
@@ -165,7 +165,7 @@
 
   returns: true if daylight saving time is in effective at the
    given date; false otherwise. - `boolean`"
-  ([this date]
+  ([^java.util.SimpleTimeZone this ^java.util.Date date]
     (-> this (.inDaylightTime date))))
 
 (defn set-dst-savings
@@ -173,21 +173,21 @@
    during daylight saving time.
 
   millis-saved-during-dst - the number of milliseconds the time is advanced with respect to standard time when the daylight saving time rules are in effect. A positive number, typically one hour (3600000). - `int`"
-  ([this millis-saved-during-dst]
+  ([^java.util.SimpleTimeZone this ^Integer millis-saved-during-dst]
     (-> this (.setDSTSavings millis-saved-during-dst))))
 
 (defn get-raw-offset
   "Gets the GMT offset for this time zone.
 
   returns: the GMT offset value in milliseconds - `int`"
-  ([this]
+  ([^java.util.SimpleTimeZone this]
     (-> this (.getRawOffset))))
 
 (defn to-string
   "Returns a string representation of this time zone.
 
   returns: a string representation of this time zone. - `java.lang.String`"
-  ([this]
+  ([^java.util.SimpleTimeZone this]
     (-> this (.toString))))
 
 (defn get-dst-savings
@@ -198,7 +198,7 @@
    respect to standard time when the daylight saving rules are in
    effect, or 0 (zero) if this time zone doesn't observe daylight
    saving time. - `int`"
-  ([this]
+  ([^java.util.SimpleTimeZone this]
     (-> this (.getDSTSavings))))
 
 (defn get-offset
@@ -225,9 +225,9 @@
   returns: The milliseconds to add to UTC to get local time. - `int`
 
   throws: java.lang.IllegalArgumentException - the era, month, day, dayOfWeek, or millis parameters are out of range"
-  ([this era year month day day-of-week millis]
+  ([^java.util.SimpleTimeZone this ^Integer era ^Integer year ^Integer month ^Integer day ^Integer day-of-week ^Integer millis]
     (-> this (.getOffset era year month day day-of-week millis)))
-  ([this date]
+  ([^java.util.SimpleTimeZone this ^Long date]
     (-> this (.getOffset date))))
 
 (defn set-end-rule
@@ -241,11 +241,11 @@
   after - If true, this rule selects the first endDayOfWeek on or after endDay. If false, this rule selects the last endDayOfWeek on or before endDay of the month. - `boolean`
 
   throws: java.lang.IllegalArgumentException - the endMonth, endDay, endDayOfWeek, or endTime parameters are out of range"
-  ([this end-month end-day end-day-of-week end-time after]
+  ([^java.util.SimpleTimeZone this ^Integer end-month ^Integer end-day ^Integer end-day-of-week ^Integer end-time ^Boolean after]
     (-> this (.setEndRule end-month end-day end-day-of-week end-time after)))
-  ([this end-month end-day end-day-of-week end-time]
+  ([^java.util.SimpleTimeZone this ^Integer end-month ^Integer end-day ^Integer end-day-of-week ^Integer end-time]
     (-> this (.setEndRule end-month end-day end-day-of-week end-time)))
-  ([this end-month end-day end-time]
+  ([^java.util.SimpleTimeZone this ^Integer end-month ^Integer end-day ^Integer end-time]
     (-> this (.setEndRule end-month end-day end-time))))
 
 (defn set-raw-offset
@@ -253,7 +253,7 @@
    This is the offset to add to UTC to get local time.
 
   offset-millis - the given base time zone offset to GMT. - `int`"
-  ([this offset-millis]
+  ([^java.util.SimpleTimeZone this ^Integer offset-millis]
     (-> this (.setRawOffset offset-millis))))
 
 (defn has-same-rules?
@@ -263,21 +263,21 @@
 
   returns: true if the given zone is a SimpleTimeZone and has the
    same rules and offset as this one - `boolean`"
-  ([this other]
+  ([^java.util.SimpleTimeZone this ^java.util.TimeZone other]
     (-> this (.hasSameRules other))))
 
 (defn clone
   "Returns a clone of this SimpleTimeZone instance.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([this]
+  ([^java.util.SimpleTimeZone this]
     (-> this (.clone))))
 
 (defn hash-code
   "Generates the hash code for the SimpleDateFormat object.
 
   returns: the hash code for this object - `int`"
-  ([this]
+  ([^java.util.SimpleTimeZone this]
     (-> this (.hashCode))))
 
 (defn observes-daylight-time
@@ -286,7 +286,7 @@
 
   returns: true if this SimpleTimeZone observes
    Daylight Saving Time; false otherwise. - `boolean`"
-  ([this]
+  ([^java.util.SimpleTimeZone this]
     (-> this (.observesDaylightTime))))
 
 (defn equals
@@ -296,7 +296,7 @@
 
   returns: True if the given obj is the same as this
                SimpleTimeZone object; false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.util.SimpleTimeZone this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn set-start-rule
@@ -310,11 +310,11 @@
   after - If true, this rule selects the first dayOfWeek on or after dayOfMonth. If false, this rule selects the last dayOfWeek on or before dayOfMonth. - `boolean`
 
   throws: java.lang.IllegalArgumentException - if the startMonth, startDay, startDayOfWeek, or startTime parameters are out of range"
-  ([this start-month start-day start-day-of-week start-time after]
+  ([^java.util.SimpleTimeZone this ^Integer start-month ^Integer start-day ^Integer start-day-of-week ^Integer start-time ^Boolean after]
     (-> this (.setStartRule start-month start-day start-day-of-week start-time after)))
-  ([this start-month start-day start-day-of-week start-time]
+  ([^java.util.SimpleTimeZone this ^Integer start-month ^Integer start-day ^Integer start-day-of-week ^Integer start-time]
     (-> this (.setStartRule start-month start-day start-day-of-week start-time)))
-  ([this start-month start-day start-time]
+  ([^java.util.SimpleTimeZone this ^Integer start-month ^Integer start-day ^Integer start-time]
     (-> this (.setStartRule start-month start-day start-time))))
 
 (defn use-daylight-time
@@ -322,6 +322,6 @@
 
   returns: true if this time zone uses daylight saving time;
    false otherwise. - `boolean`"
-  ([this]
+  ([^java.util.SimpleTimeZone this]
     (-> this (.useDaylightTime))))
 

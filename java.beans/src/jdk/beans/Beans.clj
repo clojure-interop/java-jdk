@@ -54,11 +54,11 @@
   returns: a JavaBean - `java.lang.Object`
 
   throws: java.lang.ClassNotFoundException - if the class of a serialized object could not be found."
-  ([cls bean-name bean-context initializer]
+  ([^java.lang.ClassLoader cls ^java.lang.String bean-name ^java.beans.beancontext.BeanContext bean-context ^java.beans.AppletInitializer initializer]
     (Beans/instantiate cls bean-name bean-context initializer))
-  ([cls bean-name bean-context]
+  ([^java.lang.ClassLoader cls ^java.lang.String bean-name ^java.beans.beancontext.BeanContext bean-context]
     (Beans/instantiate cls bean-name bean-context))
-  ([cls bean-name]
+  ([^java.lang.ClassLoader cls ^java.lang.String bean-name]
     (Beans/instantiate cls bean-name)))
 
 (defn *get-instance-of
@@ -77,7 +77,7 @@
 
   returns: an object representing a specified type view of the
    source object - `java.lang.Object`"
-  ([bean target-type]
+  ([^java.lang.Object bean ^java.lang.Class target-type]
     (Beans/getInstanceOf bean target-type)))
 
 (defn *instance-of?
@@ -90,7 +90,7 @@
   target-type - The type of view we'd like to get. - `java.lang.Class<?>`
 
   returns: `true` if the given bean supports the given targetType. - `boolean`"
-  ([bean target-type]
+  ([^java.lang.Object bean ^java.lang.Class target-type]
     (Beans/isInstanceOf bean target-type)))
 
 (defn *design-time?
@@ -126,7 +126,7 @@
   is-design-time - True if we're in an application builder tool. - `boolean`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPropertiesAccess method doesn't allow setting of system properties."
-  ([is-design-time]
+  ([^Boolean is-design-time]
     (Beans/setDesignTime is-design-time)))
 
 (defn *set-gui-available
@@ -142,6 +142,6 @@
   is-gui-available - True if GUI interaction is available. - `boolean`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPropertiesAccess method doesn't allow setting of system properties."
-  ([is-gui-available]
+  ([^Boolean is-gui-available]
     (Beans/setGuiAvailable is-gui-available)))
 

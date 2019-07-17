@@ -22,7 +22,7 @@
   context - SynthContext identifying requester - `javax.swing.plaf.synth.SynthContext`
 
   returns: true if region is opaque. - `boolean`"
-  ([this context]
+  ([^javax.swing.plaf.synth.SynthStyle this ^javax.swing.plaf.synth.SynthContext context]
     (-> this (.isOpaque context))))
 
 (defn get-insets
@@ -32,7 +32,7 @@
   insets - Insets to place return value in. - `java.awt.Insets`
 
   returns: Sizing Insets. - `java.awt.Insets`"
-  ([this context insets]
+  ([^javax.swing.plaf.synth.SynthStyle this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Insets insets]
     (-> this (.getInsets context insets))))
 
 (defn get-painter
@@ -42,7 +42,7 @@
   context - SynthContext identifying requester - `javax.swing.plaf.synth.SynthContext`
 
   returns: SynthPainter to use - `javax.swing.plaf.synth.SynthPainter`"
-  ([this context]
+  ([^javax.swing.plaf.synth.SynthStyle this ^javax.swing.plaf.synth.SynthContext context]
     (-> this (.getPainter context))))
 
 (defn get-string
@@ -54,7 +54,7 @@
   default-value - Value to return if the property has not been specified, or is not a String - `java.lang.String`
 
   returns: Value of the named property - `java.lang.String`"
-  ([this context key default-value]
+  ([^javax.swing.plaf.synth.SynthStyle this ^javax.swing.plaf.synth.SynthContext context ^java.lang.Object key ^java.lang.String default-value]
     (-> this (.getString context key default-value))))
 
 (defn get-icon
@@ -65,7 +65,7 @@
   key - Property being requested. - `java.lang.Object`
 
   returns: Value of the named property, or null if not specified - `javax.swing.Icon`"
-  ([this context key]
+  ([^javax.swing.plaf.synth.SynthStyle this ^javax.swing.plaf.synth.SynthContext context ^java.lang.Object key]
     (-> this (.getIcon context key))))
 
 (defn get-int
@@ -79,7 +79,7 @@
   default-value - Value to return if the property has not been specified, or is not a Number - `int`
 
   returns: Value of the named property - `int`"
-  ([this context key default-value]
+  ([^javax.swing.plaf.synth.SynthStyle this ^javax.swing.plaf.synth.SynthContext context ^java.lang.Object key ^Integer default-value]
     (-> this (.getInt context key default-value))))
 
 (defn uninstall-defaults
@@ -90,7 +90,7 @@
    it may never be called.
 
   context - SynthContext identifying component to install properties to. - `javax.swing.plaf.synth.SynthContext`"
-  ([this context]
+  ([^javax.swing.plaf.synth.SynthStyle this ^javax.swing.plaf.synth.SynthContext context]
     (-> this (.uninstallDefaults context))))
 
 (defn get-graphics-utils
@@ -99,7 +99,7 @@
   context - SynthContext identifying requester - `javax.swing.plaf.synth.SynthContext`
 
   returns: SynthGraphicsUtils - `javax.swing.plaf.synth.SynthGraphicsUtils`"
-  ([this context]
+  ([^javax.swing.plaf.synth.SynthStyle this ^javax.swing.plaf.synth.SynthContext context]
     (-> this (.getGraphicsUtils context))))
 
 (defn get-font
@@ -111,7 +111,7 @@
   context - SynthContext identifying requester - `javax.swing.plaf.synth.SynthContext`
 
   returns: Font to render with - `java.awt.Font`"
-  ([this context]
+  ([^javax.swing.plaf.synth.SynthStyle this ^javax.swing.plaf.synth.SynthContext context]
     (-> this (.getFont context))))
 
 (defn get-boolean?
@@ -123,7 +123,7 @@
   default-value - Value to return if the property has not been specified, or is not a Boolean - `boolean`
 
   returns: Value of the named property - `boolean`"
-  ([this context key default-value]
+  ([^javax.swing.plaf.synth.SynthStyle this ^javax.swing.plaf.synth.SynthContext context ^java.lang.Object key ^Boolean default-value]
     (-> this (.getBoolean context key default-value))))
 
 (defn get-color
@@ -138,7 +138,7 @@
   type - Type of color being requested. - `javax.swing.plaf.synth.ColorType`
 
   returns: Color - `java.awt.Color`"
-  ([this context type]
+  ([^javax.swing.plaf.synth.SynthStyle this ^javax.swing.plaf.synth.SynthContext context ^javax.swing.plaf.synth.ColorType type]
     (-> this (.getColor context type))))
 
 (defn get
@@ -148,7 +148,7 @@
   key - Property being requested. - `java.lang.Object`
 
   returns: Value of the named property - `java.lang.Object`"
-  ([this context key]
+  ([^javax.swing.plaf.synth.SynthStyle this ^javax.swing.plaf.synth.SynthContext context ^java.lang.Object key]
     (-> this (.get context key))))
 
 (defn install-defaults
@@ -156,6 +156,6 @@
    JComponent from context.
 
   context - SynthContext identifying component to install properties to. - `javax.swing.plaf.synth.SynthContext`"
-  ([this context]
+  ([^javax.swing.plaf.synth.SynthStyle this ^javax.swing.plaf.synth.SynthContext context]
     (-> this (.installDefaults context))))
 

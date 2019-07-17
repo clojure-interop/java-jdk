@@ -52,7 +52,7 @@
   trust-anchors - a Set of TrustAnchors - `java.util.Set<java.security.cert.TrustAnchor>`
 
   throws: java.security.InvalidAlgorithmParameterException - if the specified Set is empty (trustAnchors.isEmpty() == true)"
-  ([trust-anchors]
+  ([^java.util.Set trust-anchors]
     (new PKIXParameters trust-anchors)))
 
 (defn revocation-enabled?
@@ -63,7 +63,7 @@
    setting the value of this flag.
 
   returns: the current value of the RevocationEnabled flag - `boolean`"
-  ([this]
+  ([^java.security.cert.PKIXParameters this]
     (-> this (.isRevocationEnabled))))
 
 (defn get-policy-qualifiers-rejected?
@@ -78,7 +78,7 @@
    a more sophisticated policy must set this flag to false.
 
   returns: the current value of the PolicyQualifiersRejected flag - `boolean`"
-  ([this]
+  ([^java.security.cert.PKIXParameters this]
     (-> this (.getPolicyQualifiersRejected))))
 
 (defn set-policy-mapping-inhibited
@@ -87,7 +87,7 @@
    flag is false).
 
   val - true if policy mapping is to be inhibited, false otherwise - `boolean`"
-  ([this val]
+  ([^java.security.cert.PKIXParameters this ^Boolean val]
     (-> this (.setPolicyMappingInhibited val))))
 
 (defn set-revocation-enabled
@@ -106,7 +106,7 @@
    addCertPathChecker or setCertPathCheckers methods).
 
   val - the new value of the RevocationEnabled flag - `boolean`"
-  ([this val]
+  ([^java.security.cert.PKIXParameters this ^Boolean val]
     (-> this (.setRevocationEnabled val))))
 
 (defn set-explicit-policy-required
@@ -115,7 +115,7 @@
    By default, the ExplicitPolicyRequired flag is false.
 
   val - true if explicit policy is to be required, false otherwise - `boolean`"
-  ([this val]
+  ([^java.security.cert.PKIXParameters this ^Boolean val]
     (-> this (.setExplicitPolicyRequired val))))
 
 (defn get-cert-stores
@@ -124,7 +124,7 @@
 
   returns: an immutable List of CertStores
    (may be empty, but never null) - `java.util.List<java.security.cert.CertStore>`"
-  ([this]
+  ([^java.security.cert.PKIXParameters this]
     (-> this (.getCertStores))))
 
 (defn set-date
@@ -135,7 +135,7 @@
    against subsequent modifications.
 
   date - the Date, or null for the current time - `java.util.Date`"
-  ([this date]
+  ([^java.security.cert.PKIXParameters this ^java.util.Date date]
     (-> this (.setDate date))))
 
 (defn add-cert-path-checker
@@ -147,7 +147,7 @@
    against subsequent modifications.
 
   checker - a PKIXCertPathChecker to add to the list of checks. If null, the checker is ignored (not added to list). - `java.security.cert.PKIXCertPathChecker`"
-  ([this checker]
+  ([^java.security.cert.PKIXParameters this ^java.security.cert.PKIXCertPathChecker checker]
     (-> this (.addCertPathChecker checker))))
 
 (defn set-sig-provider
@@ -157,7 +157,7 @@
    supporting the algorithm will be used.
 
   sig-provider - the signature provider's name (or null) - `java.lang.String`"
-  ([this sig-provider]
+  ([^java.security.cert.PKIXParameters this ^java.lang.String sig-provider]
     (-> this (.setSigProvider sig-provider))))
 
 (defn set-cert-stores
@@ -173,7 +173,7 @@
   stores - a List of CertStores (or null) - `java.util.List<java.security.cert.CertStore>`
 
   throws: java.lang.ClassCastException - if any of the elements in the list are not of type java.security.cert.CertStore"
-  ([this stores]
+  ([^java.security.cert.PKIXParameters this ^java.util.List stores]
     (-> this (.setCertStores stores))))
 
 (defn add-cert-store
@@ -181,7 +181,7 @@
    CertStores used in finding certificates and CRLs.
 
   store - the CertStore to add. If null, the store is ignored (not added to list). - `java.security.cert.CertStore`"
-  ([this store]
+  ([^java.security.cert.PKIXParameters this ^java.security.cert.CertStore store]
     (-> this (.addCertStore store))))
 
 (defn set-policy-qualifiers-rejected
@@ -203,7 +203,7 @@
    qualifiers in this manner in order to be PKIX compliant.
 
   qualifiers-rejected - the new value of the PolicyQualifiersRejected flag - `boolean`"
-  ([this qualifiers-rejected]
+  ([^java.security.cert.PKIXParameters this ^Boolean qualifiers-rejected]
     (-> this (.setPolicyQualifiersRejected qualifiers-rejected))))
 
 (defn explicit-policy-required?
@@ -213,14 +213,14 @@
 
   returns: true if explicit policy is required,
    false otherwise - `boolean`"
-  ([this]
+  ([^java.security.cert.PKIXParameters this]
     (-> this (.isExplicitPolicyRequired))))
 
 (defn to-string
   "Returns a formatted string describing the parameters.
 
   returns: a formatted string describing the parameters. - `java.lang.String`"
-  ([this]
+  ([^java.security.cert.PKIXParameters this]
     (-> this (.toString))))
 
 (defn any-policy-inhibited?
@@ -229,7 +229,7 @@
 
   returns: true if the any policy OID is inhibited,
    false otherwise - `boolean`"
-  ([this]
+  ([^java.security.cert.PKIXParameters this]
     (-> this (.isAnyPolicyInhibited))))
 
 (defn get-date
@@ -240,7 +240,7 @@
    subsequent modifications.
 
   returns: the Date, or null if not set - `java.util.Date`"
-  ([this]
+  ([^java.security.cert.PKIXParameters this]
     (-> this (.getDate))))
 
 (defn set-cert-path-checkers
@@ -274,7 +274,7 @@
   checkers - a List of PKIXCertPathCheckers. May be null, in which case no additional checkers will be used. - `java.util.List<java.security.cert.PKIXCertPathChecker>`
 
   throws: java.lang.ClassCastException - if any of the elements in the list are not of type java.security.cert.PKIXCertPathChecker"
-  ([this checkers]
+  ([^java.security.cert.PKIXParameters this ^java.util.List checkers]
     (-> this (.setCertPathCheckers checkers))))
 
 (defn policy-mapping-inhibited?
@@ -283,7 +283,7 @@
    flag is false).
 
   returns: true if policy mapping is inhibited, false otherwise - `boolean`"
-  ([this]
+  ([^java.security.cert.PKIXParameters this]
     (-> this (.isPolicyMappingInhibited))))
 
 (defn get-trust-anchors
@@ -292,7 +292,7 @@
 
   returns: an immutable Set of TrustAnchors
    (never null) - `java.util.Set<java.security.cert.TrustAnchor>`"
-  ([this]
+  ([^java.security.cert.PKIXParameters this]
     (-> this (.getTrustAnchors))))
 
 (defn set-trust-anchors
@@ -304,7 +304,7 @@
   trust-anchors - a Set of TrustAnchors - `java.util.Set<java.security.cert.TrustAnchor>`
 
   throws: java.security.InvalidAlgorithmParameterException - if the specified Set is empty (trustAnchors.isEmpty() == true)"
-  ([this trust-anchors]
+  ([^java.security.cert.PKIXParameters this ^java.util.Set trust-anchors]
     (-> this (.setTrustAnchors trust-anchors))))
 
 (defn clone
@@ -312,7 +312,7 @@
    to the copy will not affect the original and vice versa.
 
   returns: a copy of this PKIXParameters object - `java.lang.Object`"
-  ([this]
+  ([^java.security.cert.PKIXParameters this]
     (-> this (.clone))))
 
 (defn get-initial-policies
@@ -326,7 +326,7 @@
   returns: an immutable Set of initial policy OIDs in
    String format, or an empty Set (implying any
    policy is acceptable). Never returns null. - `java.util.Set<java.lang.String>`"
-  ([this]
+  ([^java.security.cert.PKIXParameters this]
     (-> this (.getInitialPolicies))))
 
 (defn get-cert-path-checkers
@@ -338,7 +338,7 @@
   returns: an immutable List of
    PKIXCertPathCheckers (may be empty, but not
    null) - `java.util.List<java.security.cert.PKIXCertPathChecker>`"
-  ([this]
+  ([^java.security.cert.PKIXParameters this]
     (-> this (.getCertPathCheckers))))
 
 (defn set-initial-policies
@@ -356,7 +356,7 @@
   initial-policies - a Set of initial policy OIDs in String format (or null) - `java.util.Set<java.lang.String>`
 
   throws: java.lang.ClassCastException - if any of the elements in the set are not of type String"
-  ([this initial-policies]
+  ([^java.security.cert.PKIXParameters this ^java.util.Set initial-policies]
     (-> this (.setInitialPolicies initial-policies))))
 
 (defn get-target-cert-constraints
@@ -369,7 +369,7 @@
 
   returns: a CertSelector specifying the constraints
    on the target certificate (or null) - `java.security.cert.CertSelector`"
-  ([this]
+  ([^java.security.cert.PKIXParameters this]
     (-> this (.getTargetCertConstraints))))
 
 (defn get-sig-provider
@@ -377,7 +377,7 @@
    if not set.
 
   returns: the signature provider's name (or null) - `java.lang.String`"
-  ([this]
+  ([^java.security.cert.PKIXParameters this]
     (-> this (.getSigProvider))))
 
 (defn set-target-cert-constraints
@@ -390,7 +390,7 @@
    to protect against subsequent modifications.
 
   selector - a CertSelector specifying the constraints on the target certificate (or null) - `java.security.cert.CertSelector`"
-  ([this selector]
+  ([^java.security.cert.PKIXParameters this ^java.security.cert.CertSelector selector]
     (-> this (.setTargetCertConstraints selector))))
 
 (defn set-any-policy-inhibited
@@ -400,6 +400,6 @@
    returns false).
 
   val - true if the any policy OID is to be inhibited, false otherwise - `boolean`"
-  ([this val]
+  ([^java.security.cert.PKIXParameters this ^Boolean val]
     (-> this (.setAnyPolicyInhibited val))))
 

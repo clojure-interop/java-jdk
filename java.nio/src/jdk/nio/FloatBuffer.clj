@@ -194,7 +194,7 @@
   returns: The new float buffer - `java.nio.FloatBuffer`
 
   throws: java.lang.IllegalArgumentException - If the capacity is a negative integer"
-  ([capacity]
+  ([^Integer capacity]
     (FloatBuffer/allocate capacity)))
 
 (defn *wrap
@@ -215,7 +215,7 @@
   returns: The new float buffer - `java.nio.FloatBuffer`
 
   throws: java.lang.IndexOutOfBoundsException - If the preconditions on the offset and length parameters do not hold"
-  ([array offset length]
+  ([array ^Integer offset ^Integer length]
     (FloatBuffer/wrap array offset length))
   ([array]
     (FloatBuffer/wrap array)))
@@ -235,7 +235,7 @@
             of the first element of the buffer - `int`
 
   throws: java.nio.ReadOnlyBufferException - If this buffer is backed by an array but is read-only"
-  ([this]
+  ([^java.nio.FloatBuffer this]
     (-> this (.arrayOffset))))
 
 (defn compact
@@ -259,7 +259,7 @@
   returns: This buffer - `java.nio.FloatBuffer`
 
   throws: java.nio.ReadOnlyBufferException - If this buffer is read-only"
-  ([this]
+  ([^java.nio.FloatBuffer this]
     (-> this (.compact))))
 
 (defn put
@@ -296,18 +296,18 @@
   returns: This buffer - `java.nio.FloatBuffer`
 
   throws: java.nio.BufferOverflowException - If there is insufficient space in this buffer"
-  ([this src offset length]
+  ([^java.nio.FloatBuffer this src ^Integer offset ^Integer length]
     (-> this (.put src offset length)))
-  ([this index f]
+  ([^java.nio.FloatBuffer this ^Integer index ^Float f]
     (-> this (.put index f)))
-  ([this f]
+  ([^java.nio.FloatBuffer this ^Float f]
     (-> this (.put f))))
 
 (defn to-string
   "Returns a string summarizing the state of this buffer.
 
   returns: A summary string - `java.lang.String`"
-  ([this]
+  ([^java.nio.FloatBuffer this]
     (-> this (.toString))))
 
 (defn duplicate
@@ -324,7 +324,7 @@
    only if, this buffer is read-only.
 
   returns: The new float buffer - `java.nio.FloatBuffer`"
-  ([this]
+  ([^java.nio.FloatBuffer this]
     (-> this (.duplicate))))
 
 (defn has-array?
@@ -336,14 +336,14 @@
 
   returns: true if, and only if, this buffer
             is backed by an array and is not read-only - `boolean`"
-  ([this]
+  ([^java.nio.FloatBuffer this]
     (-> this (.hasArray))))
 
 (defn direct?
   "Tells whether or not this float buffer is direct.
 
   returns: true if, and only if, this buffer is direct - `boolean`"
-  ([this]
+  ([^java.nio.FloatBuffer this]
     (-> this (.isDirect))))
 
 (defn order
@@ -355,7 +355,7 @@
    byte buffer at the moment that the view is created.
 
   returns: This buffer's byte order - `java.nio.ByteOrder`"
-  ([this]
+  ([^java.nio.FloatBuffer this]
     (-> this (.order))))
 
 (defn slice
@@ -374,7 +374,7 @@
    is read-only.
 
   returns: The new float buffer - `java.nio.FloatBuffer`"
-  ([this]
+  ([^java.nio.FloatBuffer this]
     (-> this (.slice))))
 
 (defn hash-code
@@ -389,7 +389,7 @@
    is known that their contents will not change.
 
   returns: The current hash code of this buffer - `int`"
-  ([this]
+  ([^java.nio.FloatBuffer this]
     (-> this (.hashCode))))
 
 (defn compare-to
@@ -416,7 +416,7 @@
 
   returns: A negative integer, zero, or a positive integer as this buffer
             is less than, equal to, or greater than the given buffer - `int`"
-  ([this that]
+  ([^java.nio.FloatBuffer this ^java.nio.FloatBuffer that]
     (-> this (.compareTo that))))
 
 (defn get
@@ -453,11 +453,11 @@
   returns: This buffer - `java.nio.FloatBuffer`
 
   throws: java.nio.BufferUnderflowException - If there are fewer than length floats remaining in this buffer"
-  ([this dst offset length]
+  ([^java.nio.FloatBuffer this dst ^Integer offset ^Integer length]
     (-> this (.get dst offset length)))
-  ([this index]
+  ([^java.nio.FloatBuffer this ^Integer index]
     (-> this (.get index)))
-  ([this]
+  ([^java.nio.FloatBuffer this]
     (-> this (.get))))
 
 (defn equals
@@ -491,7 +491,7 @@
 
   returns: true if, and only if, this buffer is equal to the
              given object - `boolean`"
-  ([this ob]
+  ([^java.nio.FloatBuffer this ^java.lang.Object ob]
     (-> this (.equals ob))))
 
 (defn array
@@ -508,7 +508,7 @@
   returns: The array that backs this buffer - `float[]`
 
   throws: java.nio.ReadOnlyBufferException - If this buffer is backed by an array but is read-only"
-  ([this]
+  ([^java.nio.FloatBuffer this]
     (-> this (.array))))
 
 (defn as-read-only-buffer
@@ -528,6 +528,6 @@
    exactly the same way as the duplicate method.
 
   returns: The new, read-only float buffer - `java.nio.FloatBuffer`"
-  ([this]
+  ([^java.nio.FloatBuffer this]
     (-> this (.asReadOnlyBuffer))))
 

@@ -34,7 +34,7 @@
   returns: length of the BLOB in bytes - `long`
 
   throws: java.sql.SQLException - if there is an error accessing the length of the BLOB"
-  ([this]
+  ([^. this]
     (-> this (.length))))
 
 (defn get-bytes
@@ -52,7 +52,7 @@
            byte at position pos - `byte[]`
 
   throws: java.sql.SQLException - if there is an error accessing the BLOB value; if pos is less than 1 or length is less than 0"
-  ([this pos length]
+  ([^. this ^Long pos ^Integer length]
     (-> this (.getBytes pos length))))
 
 (defn get-binary-stream
@@ -65,9 +65,9 @@
   returns: InputStream through which the partial Blob value can be read. - `java.io.InputStream`
 
   throws: java.sql.SQLException - if pos is less than 1 or if pos is greater than the number of bytes in the Blob or if pos length is greater than the number of bytes in the Blob"
-  ([this pos length]
+  ([^. this ^Long pos ^Long length]
     (-> this (.getBinaryStream pos length)))
-  ([this]
+  ([^. this]
     (-> this (.getBinaryStream))))
 
 (defn position
@@ -83,7 +83,7 @@
   returns: the position at which the pattern appears, else -1 - `long`
 
   throws: java.sql.SQLException - if there is an error accessing the BLOB or if start is less than 1"
-  ([this pattern start]
+  ([^. this pattern ^Long start]
     (-> this (.position pattern start))))
 
 (defn set-bytes
@@ -112,9 +112,9 @@
   returns: the number of bytes written - `int`
 
   throws: java.sql.SQLException - if there is an error accessing the BLOB value or if pos is less than 1"
-  ([this pos bytes offset len]
+  ([^. this ^Long pos bytes ^Integer offset ^Integer len]
     (-> this (.setBytes pos bytes offset len)))
-  ([this pos bytes]
+  ([^. this ^Long pos bytes]
     (-> this (.setBytes pos bytes))))
 
 (defn set-binary-stream
@@ -139,7 +139,7 @@
            be written - `java.io.OutputStream`
 
   throws: java.sql.SQLException - if there is an error accessing the BLOB value or if pos is less than 1"
-  ([this pos]
+  ([^. this ^Long pos]
     (-> this (.setBinaryStream pos))))
 
 (defn truncate
@@ -155,7 +155,7 @@
   len - the length, in bytes, to which the BLOB value that this Blob object represents should be truncated - `long`
 
   throws: java.sql.SQLException - if there is an error accessing the BLOB value or if len is less than 0"
-  ([this len]
+  ([^. this ^Long len]
     (-> this (.truncate len))))
 
 (defn free
@@ -169,6 +169,6 @@
    calls to free are treated as a no-op.
 
   throws: java.sql.SQLException - if an error occurs releasing the Blob's resources"
-  ([this]
+  ([^. this]
     (-> this (.free))))
 

@@ -81,7 +81,7 @@
   s - a String containing the value to be written. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if s is null."
-  ([this s]
+  ([^. this ^java.lang.String s]
     (-> this (.writeUTF s))))
 
 (defn write-bytes
@@ -106,7 +106,7 @@
   s - a String containing the value to be written. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if s is null."
-  ([this s]
+  ([^. this ^java.lang.String s]
     (-> this (.writeBytes s))))
 
 (defn write-double
@@ -126,7 +126,7 @@
   v - a double containing the value to be written. - `double`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this v]
+  ([^. this ^Double v]
     (-> this (.writeDouble v))))
 
 (defn write-doubles
@@ -147,7 +147,7 @@
   len - the number of doubles to write. - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if off is negative, len is negative, or off len is greater than d.length."
-  ([this d off len]
+  ([^. this d ^Integer off ^Integer len]
     (-> this (.writeDoubles d off len))))
 
 (defn write-boolean
@@ -164,7 +164,7 @@
   v - the boolean to be written. - `boolean`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this v]
+  ([^. this ^Boolean v]
     (-> this (.writeBoolean v))))
 
 (defn flush-before
@@ -177,7 +177,7 @@
   pos - a long containing the length of the stream prefix that may be flushed to the destination. - `long`
 
   throws: java.lang.IndexOutOfBoundsException - if pos lies in the flushed portion of the stream or past the current stream position."
-  ([this pos]
+  ([^. this ^Long pos]
     (-> this (.flushBefore pos))))
 
 (defn write-long
@@ -217,7 +217,7 @@
   v - a long containing the value to be written. - `long`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this v]
+  ([^. this ^Long v]
     (-> this (.writeLong v))))
 
 (defn write-short
@@ -246,7 +246,7 @@
   v - an int containing the short value to be written. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this v]
+  ([^. this ^Integer v]
     (-> this (.writeShort v))))
 
 (defn write-floats
@@ -267,7 +267,7 @@
   len - the number of floats to write. - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if off is negative, len is negative, or off len is greater than f.length."
-  ([this f off len]
+  ([^. this f ^Integer off ^Integer len]
     (-> this (.writeFloats f off len))))
 
 (defn write-shorts
@@ -288,7 +288,7 @@
   len - the number of shorts to write. - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if off is negative, len is negative, or off len is greater than s.length."
-  ([this s off len]
+  ([^. this s ^Integer off ^Integer len]
     (-> this (.writeShorts s off len))))
 
 (defn write-longs
@@ -309,7 +309,7 @@
   len - the number of longs to write. - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if off is negative, len is negative, or off len is greater than l.length."
-  ([this l off len]
+  ([^. this l ^Integer off ^Integer len]
     (-> this (.writeLongs l off len))))
 
 (defn write-bit
@@ -327,7 +327,7 @@
   bit - an int whose least significant bit is to be written to the stream. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this bit]
+  ([^. this ^Integer bit]
     (-> this (.writeBit bit))))
 
 (defn write-int
@@ -359,7 +359,7 @@
   v - an int containing the value to be written. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this v]
+  ([^. this ^Integer v]
     (-> this (.writeInt v))))
 
 (defn write-float
@@ -378,7 +378,7 @@
   v - a float containing the value to be written. - `float`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this v]
+  ([^. this ^Float v]
     (-> this (.writeFloat v))))
 
 (defn write-chars
@@ -399,9 +399,9 @@
   len - the number of chars to write. - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if off is negative, len is negative, or off len is greater than c.length."
-  ([this c off len]
+  ([^. this c ^Integer off ^Integer len]
     (-> this (.writeChars c off len)))
-  ([this s]
+  ([^. this ^java.lang.String s]
     (-> this (.writeChars s))))
 
 (defn write-char
@@ -410,7 +410,7 @@
   v - an int containing the char (unsigned short) value to be written. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this v]
+  ([^. this ^Integer v]
     (-> this (.writeChar v))))
 
 (defn write-byte
@@ -427,7 +427,7 @@
   v - an int containing the byte value to be written. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this v]
+  ([^. this ^Integer v]
     (-> this (.writeByte v))))
 
 (defn write-bits
@@ -455,7 +455,7 @@
   num-bits - an int between 0 and 64, inclusive. - `int`
 
   throws: java.lang.IllegalArgumentException - if numBits is not between 0 and 64, inclusive."
-  ([this bits num-bits]
+  ([^. this ^Long bits ^Integer num-bits]
     (-> this (.writeBits bits num-bits))))
 
 (defn write-ints
@@ -476,7 +476,7 @@
   len - the number of ints to write. - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if off is negative, len is negative, or off len is greater than i.length."
-  ([this i off len]
+  ([^. this i ^Integer off ^Integer len]
     (-> this (.writeInts i off len))))
 
 (defn write
@@ -498,8 +498,8 @@
   len - the number of bytes to write. - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if off is negative, len is negative, or off len is greater than b.length."
-  ([this b off len]
+  ([^. this b ^Integer off ^Integer len]
     (-> this (.write b off len)))
-  ([this b]
+  ([^. this ^Integer b]
     (-> this (.write b))))
 

@@ -20,14 +20,14 @@
 
   verb - The command verb this CommandInfo decribes. - `java.lang.String`
   class-name - The command's fully qualified class name. - `java.lang.String`"
-  ([verb class-name]
+  ([^java.lang.String verb ^java.lang.String class-name]
     (new CommandInfo verb class-name)))
 
 (defn get-command-name
   "Return the command verb.
 
   returns: the command verb. - `java.lang.String`"
-  ([this]
+  ([^javax.activation.CommandInfo this]
     (-> this (.getCommandName))))
 
 (defn get-command-class
@@ -39,7 +39,7 @@
    A VALID VALUE!
 
   returns: The class name of the command, or null - `java.lang.String`"
-  ([this]
+  ([^javax.activation.CommandInfo this]
     (-> this (.getCommandClass))))
 
 (defn get-command-object
@@ -71,6 +71,6 @@
   returns: The bean - `java.lang.Object`
 
   throws: java.io.IOException"
-  ([this dh loader]
+  ([^javax.activation.CommandInfo this ^javax.activation.DataHandler dh ^java.lang.ClassLoader loader]
     (-> this (.getCommandObject dh loader))))
 

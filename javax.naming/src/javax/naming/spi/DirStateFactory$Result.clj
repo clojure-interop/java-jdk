@@ -11,20 +11,20 @@
 
   obj - The possibly null object to be bound. - `java.lang.Object`
   out-attrs - The possibly null attributes to be bound. - `javax.naming.directory.Attributes`"
-  ([obj out-attrs]
+  ([^java.lang.Object obj ^javax.naming.directory.Attributes out-attrs]
     (new DirStateFactory$Result obj out-attrs)))
 
 (defn get-object
   "Retrieves the object to be bound.
 
   returns: The possibly null object to be bound. - `java.lang.Object`"
-  ([this]
+  ([^javax.naming.spi.DirStateFactory$Result this]
     (-> this (.getObject))))
 
 (defn get-attributes
   "Retrieves the attributes to be bound.
 
   returns: The possibly null attributes to be bound. - `javax.naming.directory.Attributes`"
-  ([this]
+  ([^javax.naming.spi.DirStateFactory$Result this]
     (-> this (.getAttributes))))
 

@@ -16,11 +16,11 @@
   write-method-name - The name of the method used for writing the property value. May be null if the property is read-only. - `java.lang.String`
 
   throws: java.beans.IntrospectionException - if an exception occurs during introspection."
-  ([property-name bean-class read-method-name write-method-name]
+  ([^java.lang.String property-name ^java.lang.Class bean-class ^java.lang.String read-method-name ^java.lang.String write-method-name]
     (new PropertyDescriptor property-name bean-class read-method-name write-method-name))
-  ([property-name read-method write-method]
+  ([^java.lang.String property-name ^java.lang.reflect.Method read-method ^java.lang.reflect.Method write-method]
     (new PropertyDescriptor property-name read-method write-method))
-  ([property-name bean-class]
+  ([^java.lang.String property-name ^java.lang.Class bean-class]
     (new PropertyDescriptor property-name bean-class)))
 
 (defn get-write-method
@@ -28,7 +28,7 @@
 
   returns: The method that should be used to write the property value.
    May return null if the property can't be written. - `java.lang.reflect.Method`"
-  ([this]
+  ([^java.beans.PropertyDescriptor this]
     (-> this (.getWriteMethod))))
 
 (defn set-write-method
@@ -37,7 +37,7 @@
   write-method - The new write method. - `java.lang.reflect.Method`
 
   throws: java.beans.IntrospectionException - if the write method is invalid"
-  ([this write-method]
+  ([^java.beans.PropertyDescriptor this ^java.lang.reflect.Method write-method]
     (-> this (.setWriteMethod write-method))))
 
 (defn set-constrained
@@ -45,7 +45,7 @@
    event to get fired when the property is changed.
 
   constrained - True if this is a constrained property. - `boolean`"
-  ([this constrained]
+  ([^java.beans.PropertyDescriptor this ^Boolean constrained]
     (-> this (.setConstrained constrained))))
 
 (defn create-property-editor
@@ -60,7 +60,7 @@
 
   returns: a property editor instance or null if a property editor has
            not been defined or cannot be created - `java.beans.PropertyEditor`"
-  ([this bean]
+  ([^java.beans.PropertyDescriptor this ^java.lang.Object bean]
     (-> this (.createPropertyEditor bean))))
 
 (defn get-property-type
@@ -74,7 +74,7 @@
 
   returns: the Class object that represents the Java type info,
            or null if the type cannot be determined - `java.lang.Class<?>`"
-  ([this]
+  ([^java.beans.PropertyDescriptor this]
     (-> this (.getPropertyType))))
 
 (defn set-read-method
@@ -83,7 +83,7 @@
   read-method - The new read method. - `java.lang.reflect.Method`
 
   throws: java.beans.IntrospectionException - if the read method is invalid"
-  ([this read-method]
+  ([^java.beans.PropertyDescriptor this ^java.lang.reflect.Method read-method]
     (-> this (.setReadMethod read-method))))
 
 (defn get-read-method
@@ -91,7 +91,7 @@
 
   returns: The method that should be used to read the property value.
    May return null if the property can't be read. - `java.lang.reflect.Method`"
-  ([this]
+  ([^java.beans.PropertyDescriptor this]
     (-> this (.getReadMethod))))
 
 (defn hash-code
@@ -99,7 +99,7 @@
    See Object.hashCode() for a complete description.
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^java.beans.PropertyDescriptor this]
     (-> this (.hashCode))))
 
 (defn constrained?
@@ -107,7 +107,7 @@
    event to get fired when the property is changed.
 
   returns: True if this is a constrained property. - `boolean`"
-  ([this]
+  ([^java.beans.PropertyDescriptor this]
     (-> this (.isConstrained))))
 
 (defn bound?
@@ -115,7 +115,7 @@
    get fired when the property is changed.
 
   returns: True if this is a bound property. - `boolean`"
-  ([this]
+  ([^java.beans.PropertyDescriptor this]
     (-> this (.isBound))))
 
 (defn get-property-editor-class
@@ -127,7 +127,7 @@
             indicating that no special editor has been registered,
             so the PropertyEditorManager should be used to locate
             a suitable PropertyEditor. - `java.lang.Class<?>`"
-  ([this]
+  ([^java.beans.PropertyDescriptor this]
     (-> this (.getPropertyEditorClass))))
 
 (defn set-bound
@@ -135,7 +135,7 @@
    get fired when the property is changed.
 
   bound - True if this is a bound property. - `boolean`"
-  ([this bound]
+  ([^java.beans.PropertyDescriptor this ^Boolean bound]
     (-> this (.setBound bound))))
 
 (defn equals
@@ -148,7 +148,7 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.beans.PropertyDescriptor this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn set-property-editor-class
@@ -158,6 +158,6 @@
    this method.
 
   property-editor-class - The Class for the desired PropertyEditor. - `java.lang.Class<?>`"
-  ([this property-editor-class]
+  ([^java.beans.PropertyDescriptor this ^java.lang.Class property-editor-class]
     (-> this (.setPropertyEditorClass property-editor-class))))
 

@@ -11,7 +11,7 @@
   returns: `javax.xml.stream.events.XMLEvent`
 
   throws: javax.xml.stream.XMLStreamException - if there is an error with the underlying XML."
-  ([this]
+  ([^. this]
     (-> this (.nextEvent))))
 
 (defn has-next?
@@ -19,7 +19,7 @@
    Returns true if there are more events and false otherwise.
 
   returns: true if the event reader has more events, false otherwise - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.hasNext))))
 
 (defn peek
@@ -30,7 +30,7 @@
   returns: `javax.xml.stream.events.XMLEvent`
 
   throws: javax.xml.stream.XMLStreamException"
-  ([this]
+  ([^. this]
     (-> this (.peek))))
 
 (defn get-element-text
@@ -41,7 +41,7 @@
   returns: `java.lang.String`
 
   throws: javax.xml.stream.XMLStreamException - if the current event is not a START_ELEMENT or if a non text element is encountered"
-  ([this]
+  ([^. this]
     (-> this (.getElementText))))
 
 (defn next-tag
@@ -55,7 +55,7 @@
   returns: `javax.xml.stream.events.XMLEvent`
 
   throws: javax.xml.stream.XMLStreamException - if anything other than space characters are encountered"
-  ([this]
+  ([^. this]
     (-> this (.nextTag))))
 
 (defn get-property
@@ -66,7 +66,7 @@
   returns: The value of the property - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if the property is not supported"
-  ([this name]
+  ([^. this ^java.lang.String name]
     (-> this (.getProperty name))))
 
 (defn close
@@ -74,6 +74,6 @@
    underlying input source.
 
   throws: javax.xml.stream.XMLStreamException - if there are errors freeing associated resources"
-  ([this]
+  ([^. this]
     (-> this (.close))))
 

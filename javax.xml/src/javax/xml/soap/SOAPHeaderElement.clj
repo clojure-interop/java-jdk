@@ -20,7 +20,7 @@
   actor-uri - a String giving the URI of the actor to set - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if there is a problem in setting the actor."
-  ([this actor-uri]
+  ([^. this ^java.lang.String actor-uri]
     (-> this (.setActor actor-uri))))
 
 (defn set-role
@@ -30,7 +30,7 @@
   uri - - the URI of the Role - `java.lang.String`
 
   throws: javax.xml.soap.SOAPException - if there is an error in setting the role"
-  ([this uri]
+  ([^. this ^java.lang.String uri]
     (-> this (.setRole uri))))
 
 (defn get-actor
@@ -41,7 +41,7 @@
    equivalent to getRole()
 
   returns: a String giving the URI of the actor - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getActor))))
 
 (defn get-role
@@ -51,7 +51,7 @@
   returns: a String giving the URI of the Role - `java.lang.String`
 
   throws: java.lang.UnsupportedOperationException - if this message does not support the SOAP 1.2 concept of Fault Role."
-  ([this]
+  ([^. this]
     (-> this (.getRole))))
 
 (defn set-must-understand
@@ -66,7 +66,7 @@
   must-understand - true to set the mustUnderstand attribute to true; false to set it to false - `boolean`
 
   throws: java.lang.IllegalArgumentException - if there is a problem in setting the mustUnderstand attribute"
-  ([this must-understand]
+  ([^. this ^Boolean must-understand]
     (-> this (.setMustUnderstand must-understand))))
 
 (defn get-must-understand?
@@ -76,7 +76,7 @@
   returns: true if the mustUnderstand attribute of this
           SOAPHeaderElement object is turned on; false
            otherwise - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.getMustUnderstand))))
 
 (defn set-relay
@@ -93,7 +93,7 @@
   relay - the new value of the relay attribute - `boolean`
 
   throws: javax.xml.soap.SOAPException - if there is a problem in setting the relay attribute."
-  ([this relay]
+  ([^. this ^Boolean relay]
     (-> this (.setRelay relay))))
 
 (defn get-relay?
@@ -104,6 +104,6 @@
    false otherwise - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if this message does not support the SOAP 1.2 concept of Relay attribute."
-  ([this]
+  ([^. this]
     (-> this (.getRelay))))
 

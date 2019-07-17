@@ -43,13 +43,13 @@
   scrollbars - a constant that determines what scrollbars are created to view the text area - `int`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless returns true"
-  ([text rows columns scrollbars]
+  ([^java.lang.String text ^Integer rows ^Integer columns ^Integer scrollbars]
     (new TextArea text rows columns scrollbars))
-  ([text rows columns]
+  ([^java.lang.String text ^Integer rows ^Integer columns]
     (new TextArea text rows columns))
-  ([rows columns]
+  ([^Integer rows ^Integer columns]
     (new TextArea rows columns))
-  ([text]
+  ([^java.lang.String text]
     (new TextArea text))
   ([]
     (new TextArea )))
@@ -96,9 +96,9 @@
   returns: the minimum dimensions required to display
                          the text area with the specified
                          number of rows and columns - `java.awt.Dimension`"
-  ([this rows columns]
+  ([^java.awt.TextArea this ^Integer rows ^Integer columns]
     (-> this (.getMinimumSize rows columns)))
-  ([this]
+  ([^java.awt.TextArea this]
     (-> this (.getMinimumSize))))
 
 (defn set-columns
@@ -107,21 +107,21 @@
   columns - the number of columns - `int`
 
   throws: java.lang.IllegalArgumentException - if the value supplied for columns is less than 0"
-  ([this columns]
+  ([^java.awt.TextArea this ^Integer columns]
     (-> this (.setColumns columns))))
 
 (defn get-columns
   "Returns the number of columns in this text area.
 
   returns: the number of columns in the text area - `int`"
-  ([this]
+  ([^java.awt.TextArea this]
     (-> this (.getColumns))))
 
 (defn add-notify
   "Creates the TextArea's peer.  The peer allows us to modify
    the appearance of the TextArea without changing any of its
    functionality."
-  ([this]
+  ([^java.awt.TextArea this]
     (-> this (.addNotify))))
 
 (defn get-scrollbar-visibility
@@ -134,7 +134,7 @@
    application discretion over scroll bars.
 
   returns: an integer that indicates which scroll bars are used - `int`"
-  ([this]
+  ([^java.awt.TextArea this]
     (-> this (.getScrollbarVisibility))))
 
 (defn preferred-size
@@ -145,16 +145,16 @@
   columns - `int`
 
   returns: `java.lang.  java.awt.Dimension`"
-  ([this rows columns]
+  ([^java.awt.TextArea this ^Integer rows ^Integer columns]
     (-> this (.preferredSize rows columns)))
-  ([this]
+  ([^java.awt.TextArea this]
     (-> this (.preferredSize))))
 
 (defn get-rows
   "Returns the number of rows in the text area.
 
   returns: the number of rows in the text area - `int`"
-  ([this]
+  ([^java.awt.TextArea this]
     (-> this (.getRows))))
 
 (defn get-accessible-context
@@ -166,7 +166,7 @@
 
   returns: an AccessibleAWTTextArea that serves as the
            AccessibleContext of this TextArea - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^java.awt.TextArea this]
     (-> this (.getAccessibleContext))))
 
 (defn replace-text
@@ -178,7 +178,7 @@
   end - `int`
 
   returns: `java.lang.  void`"
-  ([this str start end]
+  ([^java.awt.TextArea this ^java.lang.String str ^Integer start ^Integer end]
     (-> this (.replaceText str start end))))
 
 (defn append
@@ -188,7 +188,7 @@
    behavior.
 
   str - the non-null text to append - `java.lang.String`"
-  ([this str]
+  ([^java.awt.TextArea this ^java.lang.String str]
     (-> this (.append str))))
 
 (defn insert-text
@@ -199,7 +199,7 @@
   pos - `int`
 
   returns: `java.lang.  void`"
-  ([this str pos]
+  ([^java.awt.TextArea this ^java.lang.String str ^Integer pos]
     (-> this (.insertText str pos))))
 
 (defn insert
@@ -211,7 +211,7 @@
 
   str - the non-null text to insert - `java.lang.String`
   pos - the position at which to insert - `int`"
-  ([this str pos]
+  ([^java.awt.TextArea this ^java.lang.String str ^Integer pos]
     (-> this (.insert str pos))))
 
 (defn replace-range
@@ -229,7 +229,7 @@
   str - the non-null text to use as the replacement - `java.lang.String`
   start - the start position - `int`
   end - the end position - `int`"
-  ([this str start end]
+  ([^java.awt.TextArea this ^java.lang.String str ^Integer start ^Integer end]
     (-> this (.replaceRange str start end))))
 
 (defn append-text
@@ -239,7 +239,7 @@
   str - `java.lang.String`
 
   returns: `java.lang.  void`"
-  ([this str]
+  ([^java.awt.TextArea this ^java.lang.String str]
     (-> this (.appendText str))))
 
 (defn set-rows
@@ -248,7 +248,7 @@
   rows - the number of rows - `int`
 
   throws: java.lang.IllegalArgumentException - if the value supplied for rows is less than 0"
-  ([this rows]
+  ([^java.awt.TextArea this ^Integer rows]
     (-> this (.setRows rows))))
 
 (defn minimum-size
@@ -259,9 +259,9 @@
   columns - `int`
 
   returns: `java.lang.  java.awt.Dimension`"
-  ([this rows columns]
+  ([^java.awt.TextArea this ^Integer rows ^Integer columns]
     (-> this (.minimumSize rows columns)))
-  ([this]
+  ([^java.awt.TextArea this]
     (-> this (.minimumSize))))
 
 (defn get-preferred-size
@@ -274,8 +274,8 @@
   returns: the preferred dimensions required to display
                          the text area with the specified
                          number of rows and columns - `java.awt.Dimension`"
-  ([this rows columns]
+  ([^java.awt.TextArea this ^Integer rows ^Integer columns]
     (-> this (.getPreferredSize rows columns)))
-  ([this]
+  ([^java.awt.TextArea this]
     (-> this (.getPreferredSize))))
 

@@ -8,7 +8,7 @@
   "Gets the name of this location.
 
   returns: a name - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getName))))
 
 (defn output-location?
@@ -17,6 +17,6 @@
    output.
 
   returns: true if this is an output location, false otherwise - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.isOutputLocation))))
 

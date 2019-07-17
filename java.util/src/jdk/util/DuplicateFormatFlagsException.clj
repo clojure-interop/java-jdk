@@ -13,14 +13,14 @@
   Constructs an instance of this class with the specified flags.
 
   f - The set of format flags which contain a duplicate flag. - `java.lang.String`"
-  ([f]
+  ([^java.lang.String f]
     (new DuplicateFormatFlagsException f)))
 
 (defn get-flags
   "Returns the set of flags which contains a duplicate flag.
 
   returns: The flags - `java.lang.String`"
-  ([this]
+  ([^java.util.DuplicateFormatFlagsException this]
     (-> this (.getFlags))))
 
 (defn get-message
@@ -28,6 +28,6 @@
 
   returns: the detail message string of this Throwable instance
             (which may be null). - `java.lang.String`"
-  ([this]
+  ([^java.util.DuplicateFormatFlagsException this]
     (-> this (.getMessage))))
 

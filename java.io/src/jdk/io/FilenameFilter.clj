@@ -15,6 +15,6 @@
 
   returns: true if and only if the name should be
    included in the file list; false otherwise. - `boolean`"
-  ([this dir name]
+  ([^. this ^java.io.File dir ^java.lang.String name]
     (-> this (.accept dir name))))
 

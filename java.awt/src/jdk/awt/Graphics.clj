@@ -103,17 +103,17 @@
 
   returns: false if the image pixels are still changing;
              true otherwise. - `boolean`"
-  ([this img dx-1 dy-1 dx-2 dy-2 sx-1 sy-1 sx-2 sy-2 bgcolor observer]
+  ([^java.awt.Graphics this ^java.awt.Image img ^Integer dx-1 ^Integer dy-1 ^Integer dx-2 ^Integer dy-2 ^Integer sx-1 ^Integer sy-1 ^Integer sx-2 ^Integer sy-2 ^java.awt.Color bgcolor ^java.awt.image.ImageObserver observer]
     (-> this (.drawImage img dx-1 dy-1 dx-2 dy-2 sx-1 sy-1 sx-2 sy-2 bgcolor observer)))
-  ([this img dx-1 dy-1 dx-2 dy-2 sx-1 sy-1 sx-2 sy-2 observer]
+  ([^java.awt.Graphics this ^java.awt.Image img ^Integer dx-1 ^Integer dy-1 ^Integer dx-2 ^Integer dy-2 ^Integer sx-1 ^Integer sy-1 ^Integer sx-2 ^Integer sy-2 ^java.awt.image.ImageObserver observer]
     (-> this (.drawImage img dx-1 dy-1 dx-2 dy-2 sx-1 sy-1 sx-2 sy-2 observer)))
-  ([this img x y width height bgcolor observer]
+  ([^java.awt.Graphics this ^java.awt.Image img ^Integer x ^Integer y ^Integer width ^Integer height ^java.awt.Color bgcolor ^java.awt.image.ImageObserver observer]
     (-> this (.drawImage img x y width height bgcolor observer)))
-  ([this img x y width height observer]
+  ([^java.awt.Graphics this ^java.awt.Image img ^Integer x ^Integer y ^Integer width ^Integer height ^java.awt.image.ImageObserver observer]
     (-> this (.drawImage img x y width height observer)))
-  ([this img x y bgcolor observer]
+  ([^java.awt.Graphics this ^java.awt.Image img ^Integer x ^Integer y ^java.awt.Color bgcolor ^java.awt.image.ImageObserver observer]
     (-> this (.drawImage img x y bgcolor observer)))
-  ([this img x y observer]
+  ([^java.awt.Graphics this ^java.awt.Image img ^Integer x ^Integer y ^java.awt.image.ImageObserver observer]
     (-> this (.drawImage img x y observer))))
 
 (defn draw-arc
@@ -149,7 +149,7 @@
   height - the height of the arc to be drawn. - `int`
   start-angle - the beginning angle. - `int`
   arc-angle - the angular extent of the arc, relative to the start angle. - `int`"
-  ([this x y width height start-angle arc-angle]
+  ([^java.awt.Graphics this ^Integer x ^Integer y ^Integer width ^Integer height ^Integer start-angle ^Integer arc-angle]
     (-> this (.drawArc x y width height start-angle arc-angle))))
 
 (defn copy-area
@@ -171,7 +171,7 @@
   height - the height of the source rectangle. - `int`
   dx - the horizontal distance to copy the pixels. - `int`
   dy - the vertical distance to copy the pixels. - `int`"
-  ([this x y width height dx dy]
+  ([^java.awt.Graphics this ^Integer x ^Integer y ^Integer width ^Integer height ^Integer dx ^Integer dy]
     (-> this (.copyArea x y width height dx dy))))
 
 (defn draw-oval
@@ -188,7 +188,7 @@
   y - the y coordinate of the upper left corner of the oval to be drawn. - `int`
   width - the width of the oval to be drawn. - `int`
   height - the height of the oval to be drawn. - `int`"
-  ([this x y width height]
+  ([^java.awt.Graphics this ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.drawOval x y width height))))
 
 (defn get-clip
@@ -202,7 +202,7 @@
   returns: a Shape object representing the
                 current clipping area, or null if
                 no clip is set. - `java.awt.Shape`"
-  ([this]
+  ([^java.awt.Graphics this]
     (-> this (.getClip))))
 
 (defn translate
@@ -216,7 +216,7 @@
 
   x - the x coordinate. - `int`
   y - the y coordinate. - `int`"
-  ([this x y]
+  ([^java.awt.Graphics this ^Integer x ^Integer y]
     (-> this (.translate x y))))
 
 (defn clip-rect
@@ -236,7 +236,7 @@
   y - the y coordinate of the rectangle to intersect the clip with - `int`
   width - the width of the rectangle to intersect the clip with - `int`
   height - the height of the rectangle to intersect the clip with - `int`"
-  ([this x y width height]
+  ([^java.awt.Graphics this ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.clipRect x y width height))))
 
 (defn draw-polyline
@@ -249,7 +249,7 @@
   x-points - an array of x points - `int[]`
   y-points - an array of y points - `int[]`
   n-points - the total number of points - `int`"
-  ([this x-points y-points n-points]
+  ([^java.awt.Graphics this x-points y-points ^Integer n-points]
     (-> this (.drawPolyline x-points y-points n-points))))
 
 (defn hit-clip
@@ -278,7 +278,7 @@
   returns: true if the specified rectangle intersects
            the bounds of the current clip; false
            otherwise. - `boolean`"
-  ([this x y width height]
+  ([^java.awt.Graphics this ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.hitClip x y width height))))
 
 (defn dispose
@@ -302,7 +302,7 @@
    call dispose when finished using
    a Graphics object only if it was created
    directly from a component or another Graphics object."
-  ([this]
+  ([^java.awt.Graphics this]
     (-> this (.dispose))))
 
 (defn fill-polygon
@@ -324,9 +324,9 @@
   x-points - a an array of x coordinates. - `int[]`
   y-points - a an array of y coordinates. - `int[]`
   n-points - a the total number of points. - `int`"
-  ([this x-points y-points n-points]
+  ([^java.awt.Graphics this x-points y-points ^Integer n-points]
     (-> this (.fillPolygon x-points y-points n-points)))
-  ([this p]
+  ([^java.awt.Graphics this ^java.awt.Polygon p]
     (-> this (.fillPolygon p))))
 
 (defn to-string
@@ -334,7 +334,7 @@
                           Graphics object's value.
 
   returns: a string representation of this graphics context. - `java.lang.String`"
-  ([this]
+  ([^java.awt.Graphics this]
     (-> this (.toString))))
 
 (defn get-clip-bounds
@@ -352,9 +352,9 @@
   r - the rectangle where the current clipping area is copied to. Any current values in this rectangle are overwritten. - `java.awt.Rectangle`
 
   returns: the bounding rectangle of the current clipping area. - `java.awt.Rectangle`"
-  ([this r]
+  ([^java.awt.Graphics this ^java.awt.Rectangle r]
     (-> this (.getClipBounds r)))
-  ([this]
+  ([^java.awt.Graphics this]
     (-> this (.getClipBounds))))
 
 (defn fill-3-d-rect
@@ -369,7 +369,7 @@
   width - the width of the rectangle to be filled. - `int`
   height - the height of the rectangle to be filled. - `int`
   raised - a boolean value that determines whether the rectangle appears to be raised above the surface or etched into the surface. - `boolean`"
-  ([this x y width height raised]
+  ([^java.awt.Graphics this ^Integer x ^Integer y ^Integer width ^Integer height ^Boolean raised]
     (-> this (.fill3DRect x y width height raised))))
 
 (defn draw-line
@@ -381,7 +381,7 @@
   y-1 - the first point's y coordinate. - `int`
   x-2 - the second point's x coordinate. - `int`
   y-2 - the second point's y coordinate. - `int`"
-  ([this x-1 y-1 x-2 y-2]
+  ([^java.awt.Graphics this ^Integer x-1 ^Integer y-1 ^Integer x-2 ^Integer y-2]
     (-> this (.drawLine x-1 y-1 x-2 y-2))))
 
 (defn draw-bytes
@@ -401,7 +401,7 @@
   y - the y coordinate of the baseline of the text - `int`
 
   throws: java.lang.NullPointerException - if data is null."
-  ([this data offset length x y]
+  ([^java.awt.Graphics this data ^Integer offset ^Integer length ^Integer x ^Integer y]
     (-> this (.drawBytes data offset length x y))))
 
 (defn draw-polygon
@@ -421,9 +421,9 @@
   x-points - a an array of x coordinates. - `int[]`
   y-points - a an array of y coordinates. - `int[]`
   n-points - a the total number of points. - `int`"
-  ([this x-points y-points n-points]
+  ([^java.awt.Graphics this x-points y-points ^Integer n-points]
     (-> this (.drawPolygon x-points y-points n-points)))
-  ([this p]
+  ([^java.awt.Graphics this ^java.awt.Polygon p]
     (-> this (.drawPolygon p))))
 
 (defn get-font-metrics
@@ -432,9 +432,9 @@
   f - the specified font - `java.awt.Font`
 
   returns: the font metrics for the specified font. - `java.awt.FontMetrics`"
-  ([this f]
+  ([^java.awt.Graphics this ^java.awt.Font f]
     (-> this (.getFontMetrics f)))
-  ([this]
+  ([^java.awt.Graphics this]
     (-> this (.getFontMetrics))))
 
 (defn draw-string
@@ -448,7 +448,7 @@
   y - the y coordinate. - `int`
 
   throws: java.lang.NullPointerException - if str is null."
-  ([this str x y]
+  ([^java.awt.Graphics this ^java.lang.String str ^Integer x ^Integer y]
     (-> this (.drawString str x y))))
 
 (defn set-clip
@@ -462,9 +462,9 @@
   y - the y coordinate of the new clip rectangle. - `int`
   width - the width of the new clip rectangle. - `int`
   height - the height of the new clip rectangle. - `int`"
-  ([this x y width height]
+  ([^java.awt.Graphics this ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.setClip x y width height)))
-  ([this clip]
+  ([^java.awt.Graphics this ^java.awt.Shape clip]
     (-> this (.setClip clip))))
 
 (defn fill-arc
@@ -499,7 +499,7 @@
   height - the height of the arc to be filled. - `int`
   start-angle - the beginning angle. - `int`
   arc-angle - the angular extent of the arc, relative to the start angle. - `int`"
-  ([this x y width height start-angle arc-angle]
+  ([^java.awt.Graphics this ^Integer x ^Integer y ^Integer width ^Integer height ^Integer start-angle ^Integer arc-angle]
     (-> this (.fillArc x y width height start-angle arc-angle))))
 
 (defn set-xor-mode
@@ -517,7 +517,7 @@
    drawn twice, then all pixels are restored to their original values.
 
   c-1 - the XOR alternation color - `java.awt.Color`"
-  ([this c-1]
+  ([^java.awt.Graphics this ^java.awt.Color c-1]
     (-> this (.setXORMode c-1))))
 
 (defn set-color
@@ -526,7 +526,7 @@
    context use this specified color.
 
   c - the new rendering color. - `java.awt.Color`"
-  ([this c]
+  ([^java.awt.Graphics this ^java.awt.Color c]
     (-> this (.setColor c))))
 
 (defn draw-rect
@@ -541,7 +541,7 @@
   y - the y coordinate of the rectangle to be drawn. - `int`
   width - the width of the rectangle to be drawn. - `int`
   height - the height of the rectangle to be drawn. - `int`"
-  ([this x y width height]
+  ([^java.awt.Graphics this ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.drawRect x y width height))))
 
 (defn fill-round-rect
@@ -557,7 +557,7 @@
   height - the height of the rectangle to be filled. - `int`
   arc-width - the horizontal diameter of the arc at the four corners. - `int`
   arc-height - the vertical diameter of the arc at the four corners. - `int`"
-  ([this x y width height arc-width arc-height]
+  ([^java.awt.Graphics this ^Integer x ^Integer y ^Integer width ^Integer height ^Integer arc-width ^Integer arc-height]
     (-> this (.fillRoundRect x y width height arc-width arc-height))))
 
 (defn set-font
@@ -566,7 +566,7 @@
    use this font. A null argument is silently ignored.
 
   font - the font. - `java.awt.Font`"
-  ([this font]
+  ([^java.awt.Graphics this ^java.awt.Font font]
     (-> this (.setFont font))))
 
 (defn draw-3-d-rect
@@ -585,7 +585,7 @@
   width - the width of the rectangle to be drawn. - `int`
   height - the height of the rectangle to be drawn. - `int`
   raised - a boolean that determines whether the rectangle appears to be raised above the surface or sunk into the surface. - `boolean`"
-  ([this x y width height raised]
+  ([^java.awt.Graphics this ^Integer x ^Integer y ^Integer width ^Integer height ^Boolean raised]
     (-> this (.draw3DRect x y width height raised))))
 
 (defn create
@@ -619,9 +619,9 @@
   height - the height of the clipping rectangle. - `int`
 
   returns: a new graphics context. - `java.awt.Graphics`"
-  ([this x y width height]
+  ([^java.awt.Graphics this ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.create x y width height)))
-  ([this]
+  ([^java.awt.Graphics this]
     (-> this (.create))))
 
 (defn set-paint-mode
@@ -630,14 +630,14 @@
    This sets the logical pixel operation function to the paint or
    overwrite mode.  All subsequent rendering operations will
    overwrite the destination with the current color."
-  ([this]
+  ([^java.awt.Graphics this]
     (-> this (.setPaintMode))))
 
 (defn get-font
   "Gets the current font.
 
   returns: this graphics context's current font. - `java.awt.Font`"
-  ([this]
+  ([^java.awt.Graphics this]
     (-> this (.getFont))))
 
 (defn draw-round-rect
@@ -653,7 +653,7 @@
   height - the height of the rectangle to be drawn. - `int`
   arc-width - the horizontal diameter of the arc at the four corners. - `int`
   arc-height - the vertical diameter of the arc at the four corners. - `int`"
-  ([this x y width height arc-width arc-height]
+  ([^java.awt.Graphics this ^Integer x ^Integer y ^Integer width ^Integer height ^Integer arc-width ^Integer arc-height]
     (-> this (.drawRoundRect x y width height arc-width arc-height))))
 
 (defn draw-chars
@@ -669,14 +669,14 @@
   y - the y coordinate of the baseline of the text - `int`
 
   throws: java.lang.NullPointerException - if data is null."
-  ([this data offset length x y]
+  ([^java.awt.Graphics this data ^Integer offset ^Integer length ^Integer x ^Integer y]
     (-> this (.drawChars data offset length x y))))
 
 (defn get-color
   "Gets this graphics context's current color.
 
   returns: this graphics context's current color. - `java.awt.Color`"
-  ([this]
+  ([^java.awt.Graphics this]
     (-> this (.getColor))))
 
 (defn clear-rect
@@ -693,7 +693,7 @@
   y - the y coordinate of the rectangle to clear. - `int`
   width - the width of the rectangle to clear. - `int`
   height - the height of the rectangle to clear. - `int`"
-  ([this x y width height]
+  ([^java.awt.Graphics this ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.clearRect x y width height))))
 
 (defn get-clip-rect
@@ -702,7 +702,7 @@
 
   returns: the bounding rectangle of the current clipping area
                 or null if no clip is set. - `java.lang.  java.awt.Rectangle`"
-  ([this]
+  ([^java.awt.Graphics this]
     (-> this (.getClipRect))))
 
 (defn fill-rect
@@ -720,7 +720,7 @@
   y - the y coordinate of the rectangle to be filled. - `int`
   width - the width of the rectangle to be filled. - `int`
   height - the height of the rectangle to be filled. - `int`"
-  ([this x y width height]
+  ([^java.awt.Graphics this ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.fillRect x y width height))))
 
 (defn fill-oval
@@ -731,11 +731,11 @@
   y - the y coordinate of the upper left corner of the oval to be filled. - `int`
   width - the width of the oval to be filled. - `int`
   height - the height of the oval to be filled. - `int`"
-  ([this x y width height]
+  ([^java.awt.Graphics this ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.fillOval x y width height))))
 
 (defn finalize
   "Disposes of this graphics context once it is no longer referenced."
-  ([this]
+  ([^java.awt.Graphics this]
     (-> this (.finalize))))
 

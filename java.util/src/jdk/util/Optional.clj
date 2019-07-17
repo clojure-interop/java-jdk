@@ -58,7 +58,7 @@
    otherwise an empty Optional - `<U> java.util.Optional<U>`
 
   throws: java.lang.NullPointerException - if the mapping function is null"
-  ([this mapper]
+  ([^java.util.Optional this mapper]
     (-> this (.map mapper))))
 
 (defn or-else-throw
@@ -70,14 +70,14 @@
   returns: the present value - `<X extends java.lang.Throwable> Optional.T`
 
   throws: X - if there is no value present"
-  ([this exception-supplier]
+  ([^java.util.Optional this exception-supplier]
     (-> this (.orElseThrow exception-supplier))))
 
 (defn present?
   "Return true if there is a value present, otherwise false.
 
   returns: true if there is a value present, otherwise false - `boolean`"
-  ([this]
+  ([^java.util.Optional this]
     (-> this (.isPresent))))
 
 (defn to-string
@@ -86,7 +86,7 @@
    between implementations and versions.
 
   returns: the string representation of this instance - `java.lang.String`"
-  ([this]
+  ([^java.util.Optional this]
     (-> this (.toString))))
 
 (defn flat-map
@@ -104,7 +104,7 @@
    otherwise an empty Optional - `<U> java.util.Optional<U>`
 
   throws: java.lang.NullPointerException - if the mapping function is null or returns a null result"
-  ([this mapper]
+  ([^java.util.Optional this ^Optional.T,java.util.Optional> mapper]
     (-> this (.flatMap mapper))))
 
 (defn or-else-get
@@ -116,7 +116,7 @@
   returns: the value if present otherwise the result of other.get() - `Optional.T`
 
   throws: java.lang.NullPointerException - if value is not present and other is null"
-  ([this other]
+  ([^java.util.Optional this ^Optional.T> other]
     (-> this (.orElseGet other))))
 
 (defn filter
@@ -131,7 +131,7 @@
    otherwise an empty Optional - `java.util.Optional<Optional.T>`
 
   throws: java.lang.NullPointerException - if the predicate is null"
-  ([this predicate]
+  ([^java.util.Optional this ^Optional.T> predicate]
     (-> this (.filter predicate))))
 
 (defn if-present
@@ -141,7 +141,7 @@
   consumer - block to be executed if a value is present - `Optional.T>`
 
   throws: java.lang.NullPointerException - if value is present and consumer is null"
-  ([this consumer]
+  ([^java.util.Optional this ^Optional.T> consumer]
     (-> this (.ifPresent consumer))))
 
 (defn hash-code
@@ -149,7 +149,7 @@
    no value is present.
 
   returns: hash code value of the present value or 0 if no value is present - `int`"
-  ([this]
+  ([^java.util.Optional this]
     (-> this (.hashCode))))
 
 (defn or-else
@@ -158,7 +158,7 @@
   other - the value to be returned if there is no value present, may be null - `Optional.T`
 
   returns: the value, if present, otherwise other - `Optional.T`"
-  ([this other]
+  ([^java.util.Optional this ^Optional.T other]
     (-> this (.orElse other))))
 
 (defn get
@@ -168,7 +168,7 @@
   returns: the non-null value held by this Optional - `Optional.T`
 
   throws: java.util.NoSuchElementException - if there is no value present"
-  ([this]
+  ([^java.util.Optional this]
     (-> this (.get))))
 
 (defn equals
@@ -183,6 +183,6 @@
 
   returns: {code true} if the other object is `equal to` this object
    otherwise false - `boolean`"
-  ([this obj]
+  ([^java.util.Optional this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

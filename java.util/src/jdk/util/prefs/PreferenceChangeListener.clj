@@ -8,6 +8,6 @@
    its value is changed.
 
   evt - A PreferenceChangeEvent object describing the event source and the preference that has changed. - `java.util.prefs.PreferenceChangeEvent`"
-  ([this evt]
+  ([^. this ^java.util.prefs.PreferenceChangeEvent evt]
     (-> this (.preferenceChange evt))))
 

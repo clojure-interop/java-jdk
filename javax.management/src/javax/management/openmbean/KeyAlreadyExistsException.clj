@@ -10,7 +10,7 @@
   A KeyAlreadyExistsException with a detail message.
 
   msg - the detail message. - `java.lang.String`"
-  ([msg]
+  ([^java.lang.String msg]
     (new KeyAlreadyExistsException msg))
   ([]
     (new KeyAlreadyExistsException )))

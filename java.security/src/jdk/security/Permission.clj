@@ -35,7 +35,7 @@
   Constructs a permission with the specified name.
 
   name - name of the Permission object being created. - `java.lang.String`"
-  ([name]
+  ([^java.lang.String name]
     (new Permission name)))
 
 (defn check-guard
@@ -48,7 +48,7 @@
   object - the object being guarded (currently ignored). - `java.lang.Object`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPermission method doesn't allow access."
-  ([this object]
+  ([^java.security.Permission this ^java.lang.Object object]
     (-> this (.checkGuard object))))
 
 (defn implies
@@ -66,7 +66,7 @@
 
   returns: true if the specified permission is implied by this object,
    false if not. - `boolean`"
-  ([this permission]
+  ([^java.security.Permission this ^java.security.Permission permission]
     (-> this (.implies permission))))
 
 (defn equals
@@ -78,7 +78,7 @@
   obj - the object we are testing for equality with this object. - `java.lang.Object`
 
   returns: true if both Permission objects are equivalent. - `boolean`"
-  ([this obj]
+  ([^java.security.Permission this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -99,7 +99,7 @@
        two Permission objects must produce the same integer result.
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^java.security.Permission this]
     (-> this (.hashCode))))
 
 (defn get-name
@@ -108,7 +108,7 @@
    the name will be a pathname.
 
   returns: the name of this Permission. - `java.lang.String`"
-  ([this]
+  ([^java.security.Permission this]
     (-> this (.getName))))
 
 (defn get-actions
@@ -128,7 +128,7 @@
    `read,write` when the getActions method is invoked.
 
   returns: the actions of this Permission. - `java.lang.String`"
-  ([this]
+  ([^java.security.Permission this]
     (-> this (.getActions))))
 
 (defn new-permission-collection
@@ -144,7 +144,7 @@
 
   returns: a new PermissionCollection object for this type of Permission, or
    null if one is not defined. - `java.security.PermissionCollection`"
-  ([this]
+  ([^java.security.Permission this]
     (-> this (.newPermissionCollection))))
 
 (defn to-string
@@ -154,6 +154,6 @@
    '(`ClassName` `name`)' if actions list is null or empty.
 
   returns: information about this Permission. - `java.lang.String`"
-  ([this]
+  ([^java.security.Permission this]
     (-> this (.toString))))
 

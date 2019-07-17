@@ -39,6 +39,6 @@
   id - Region identifier - `javax.swing.plaf.synth.Region`
 
   returns: SynthStyle for region. - `javax.swing.plaf.synth.SynthStyle`"
-  ([this c id]
+  ([^javax.swing.plaf.synth.SynthStyleFactory this ^javax.swing.JComponent c ^javax.swing.plaf.synth.Region id]
     (-> this (.getStyle c id))))
 

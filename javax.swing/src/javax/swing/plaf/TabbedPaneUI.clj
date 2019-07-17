@@ -14,7 +14,7 @@
   y - `int`
 
   returns: `int`"
-  ([this pane x y]
+  ([^javax.swing.plaf.TabbedPaneUI this ^javax.swing.JTabbedPane pane ^Integer x ^Integer y]
     (-> this (.tabForCoordinate pane x y))))
 
 (defn get-tab-bounds
@@ -22,13 +22,13 @@
   index - `int`
 
   returns: `java.awt.Rectangle`"
-  ([this pane index]
+  ([^javax.swing.plaf.TabbedPaneUI this ^javax.swing.JTabbedPane pane ^Integer index]
     (-> this (.getTabBounds pane index))))
 
 (defn get-tab-run-count
   "pane - `javax.swing.JTabbedPane`
 
   returns: `int`"
-  ([this pane]
+  ([^javax.swing.plaf.TabbedPaneUI this ^javax.swing.JTabbedPane pane]
     (-> this (.getTabRunCount pane))))
 

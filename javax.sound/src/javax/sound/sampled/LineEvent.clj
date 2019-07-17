@@ -22,14 +22,14 @@
   position - the number of sample frames that the line had already processed when the event occurred, or AudioSystem.NOT_SPECIFIED - `long`
 
   throws: java.lang.IllegalArgumentException - if line is null."
-  ([line type position]
+  ([^javax.sound.sampled.Line line ^javax.sound.sampled.LineEvent.Type type ^Long position]
     (new LineEvent line type position)))
 
 (defn get-line
   "Obtains the audio line that is the source of this event.
 
   returns: the line responsible for this event - `javax.sound.sampled.Line`"
-  ([this]
+  ([^javax.sound.sampled.LineEvent this]
     (-> this (.getLine))))
 
 (defn get-type
@@ -37,7 +37,7 @@
 
   returns: this event's type (LineEvent.Type.OPEN, LineEvent.Type.CLOSE,
    LineEvent.Type.START, or LineEvent.Type.STOP) - `javax.sound.sampled.LineEvent.Type`"
-  ([this]
+  ([^javax.sound.sampled.LineEvent this]
     (-> this (.getType))))
 
 (defn get-frame-position
@@ -53,7 +53,7 @@
    should be AudioSystem.NOT_SPECIFIED.
 
   returns: the line's position as a sample frame number - `long`"
-  ([this]
+  ([^javax.sound.sampled.LineEvent this]
     (-> this (.getFramePosition))))
 
 (defn to-string
@@ -61,6 +61,6 @@
    between implementations of Java Sound.
 
   returns: a string describing the event. - `java.lang.String`"
-  ([this]
+  ([^javax.sound.sampled.LineEvent this]
     (-> this (.toString))))
 

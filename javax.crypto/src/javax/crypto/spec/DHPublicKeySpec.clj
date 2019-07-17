@@ -17,27 +17,27 @@
   y - public value y - `java.math.BigInteger`
   p - prime modulus p - `java.math.BigInteger`
   g - base generator g - `java.math.BigInteger`"
-  ([y p g]
+  ([^java.math.BigInteger y ^java.math.BigInteger p ^java.math.BigInteger g]
     (new DHPublicKeySpec y p g)))
 
 (defn get-y
   "Returns the public value y.
 
   returns: the public value y - `java.math.BigInteger`"
-  ([this]
+  ([^javax.crypto.spec.DHPublicKeySpec this]
     (-> this (.getY))))
 
 (defn get-p
   "Returns the prime modulus p.
 
   returns: the prime modulus p - `java.math.BigInteger`"
-  ([this]
+  ([^javax.crypto.spec.DHPublicKeySpec this]
     (-> this (.getP))))
 
 (defn get-g
   "Returns the base generator g.
 
   returns: the base generator g - `java.math.BigInteger`"
-  ([this]
+  ([^javax.crypto.spec.DHPublicKeySpec this]
     (-> this (.getG))))
 

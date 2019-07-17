@@ -21,7 +21,7 @@
 
   txtr - the BufferedImage object with the texture used for painting - `java.awt.image.BufferedImage`
   anchor - the Rectangle2D in user space used to anchor and replicate the texture - `java.awt.geom.Rectangle2D`"
-  ([txtr anchor]
+  ([^java.awt.image.BufferedImage txtr ^java.awt.geom.Rectangle2D anchor]
     (new TexturePaint txtr anchor)))
 
 (defn get-image
@@ -29,7 +29,7 @@
    fill the shapes.
 
   returns: a BufferedImage. - `java.awt.image.BufferedImage`"
-  ([this]
+  ([^java.awt.TexturePaint this]
     (-> this (.getImage))))
 
 (defn get-anchor-rect
@@ -38,7 +38,7 @@
 
   returns: the Rectangle2D used to anchor and
    size this TexturePaint. - `java.awt.geom.Rectangle2D`"
-  ([this]
+  ([^java.awt.TexturePaint this]
     (-> this (.getAnchorRect))))
 
 (defn create-context
@@ -56,7 +56,7 @@
 
   returns: the PaintContext for
            generating color patterns. - `java.awt.PaintContext`"
-  ([this cm device-bounds user-bounds xform hints]
+  ([^java.awt.TexturePaint this ^java.awt.image.ColorModel cm ^java.awt.Rectangle device-bounds ^java.awt.geom.Rectangle2D user-bounds ^java.awt.geom.AffineTransform xform ^java.awt.RenderingHints hints]
     (-> this (.createContext cm device-bounds user-bounds xform hints))))
 
 (defn get-transparency
@@ -64,6 +64,6 @@
 
   returns: the transparency mode for this TexturePaint
    as an integer value. - `int`"
-  ([this]
+  ([^java.awt.TexturePaint this]
     (-> this (.getTransparency))))
 

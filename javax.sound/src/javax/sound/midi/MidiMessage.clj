@@ -48,7 +48,7 @@
    method.
 
   returns: the byte array containing the complete MidiMessage data - `byte[]`"
-  ([this]
+  ([^javax.sound.midi.MidiMessage this]
     (-> this (.getMessage))))
 
 (defn get-status
@@ -58,7 +58,7 @@
    MidiMessage class description.
 
   returns: the integer representation of this event's status byte - `int`"
-  ([this]
+  ([^javax.sound.midi.MidiMessage this]
     (-> this (.getStatus))))
 
 (defn get-length
@@ -69,7 +69,7 @@
    exclusive messages.
 
   returns: the length of the message in bytes - `int`"
-  ([this]
+  ([^javax.sound.midi.MidiMessage this]
     (-> this (.getLength))))
 
 (defn clone
@@ -77,6 +77,6 @@
    as this object.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([this]
+  ([^javax.sound.midi.MidiMessage this]
     (-> this (.clone))))
 

@@ -74,9 +74,9 @@
   gc - the GraphicsConfiguration that is used to construct the new JFrame with; if gc is null, the system default GraphicsConfiguration is assumed - `java.awt.GraphicsConfiguration`
 
   throws: java.lang.IllegalArgumentException - if gc is not from a screen device. This exception is always thrown when GraphicsEnvironment.isHeadless() returns true."
-  ([title gc]
+  ([^java.lang.String title ^java.awt.GraphicsConfiguration gc]
     (new JFrame title gc))
-  ([gc]
+  ([^java.awt.GraphicsConfiguration gc]
     (new JFrame gc))
   ([]
     (new JFrame )))
@@ -112,7 +112,7 @@
       frame.getRootPane().setWindowDecorationStyle(JRootPane.FRAME);
 
   default-look-and-feel-decorated - A hint as to whether or not current look and feel should provide window decorations - `boolean`"
-  ([default-look-and-feel-decorated]
+  ([^Boolean default-look-and-feel-decorated]
     (JFrame/setDefaultLookAndFeelDecorated default-look-and-feel-decorated)))
 
 (defn *default-look-and-feel-decorated?
@@ -132,7 +132,7 @@
    more information.
 
   manager - the LayoutManager - `java.awt.LayoutManager`"
-  ([this manager]
+  ([^javax.swing.JFrame this ^java.awt.LayoutManager manager]
     (-> this (.setLayout manager))))
 
 (defn set-layered-pane
@@ -142,7 +142,7 @@
   layered-pane - the layeredPane object for this frame - `javax.swing.JLayeredPane`
 
   throws: java.awt.IllegalComponentStateException - (a runtime exception) if the layered pane parameter is null"
-  ([this layered-pane]
+  ([^javax.swing.JFrame this ^javax.swing.JLayeredPane layered-pane]
     (-> this (.setLayeredPane layered-pane))))
 
 (defn set-default-close-operation
@@ -187,14 +187,14 @@
   operation - the operation which should be performed when the user closes the frame - `int`
 
   throws: java.lang.IllegalArgumentException - if defaultCloseOperation value isn't one of the above valid values"
-  ([this operation]
+  ([^javax.swing.JFrame this ^Integer operation]
     (-> this (.setDefaultCloseOperation operation))))
 
 (defn get-content-pane
   "Returns the contentPane object for this frame.
 
   returns: the contentPane property - `java.awt.Container`"
-  ([this]
+  ([^javax.swing.JFrame this]
     (-> this (.getContentPane))))
 
 (defn get-graphics
@@ -204,7 +204,7 @@
 
   returns: a graphics context for this component, or null
                if it has none - `java.awt.Graphics`"
-  ([this]
+  ([^javax.swing.JFrame this]
     (-> this (.getGraphics))))
 
 (defn update
@@ -212,14 +212,14 @@
    prevent an unnecessary call to clear the background.
 
   g - the Graphics context in which to paint - `java.awt.Graphics`"
-  ([this g]
+  ([^javax.swing.JFrame this ^java.awt.Graphics g]
     (-> this (.update g))))
 
 (defn get-j-menu-bar
   "Returns the menubar set on this frame.
 
   returns: the menubar for this frame - `javax.swing.JMenuBar`"
-  ([this]
+  ([^javax.swing.JFrame this]
     (-> this (.getJMenuBar))))
 
 (defn set-transfer-handler
@@ -244,7 +244,7 @@
    The Java Tutorial, for more information.
 
   new-handler - the new TransferHandler - `javax.swing.TransferHandler`"
-  ([this new-handler]
+  ([^javax.swing.JFrame this ^javax.swing.TransferHandler new-handler]
     (-> this (.setTransferHandler new-handler))))
 
 (defn remove
@@ -257,7 +257,7 @@
   comp - the component to be removed - `java.awt.Component`
 
   throws: java.lang.NullPointerException - if comp is null"
-  ([this comp]
+  ([^javax.swing.JFrame this ^java.awt.Component comp]
     (-> this (.remove comp))))
 
 (defn repaint
@@ -270,14 +270,14 @@
   y - the y coordinate - `int`
   width - the width - `int`
   height - the height - `int`"
-  ([this time x y width height]
+  ([^javax.swing.JFrame this ^Long time ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.repaint time x y width height))))
 
 (defn get-glass-pane
   "Returns the glassPane object for this frame.
 
   returns: the glassPane property - `java.awt.Component`"
-  ([this]
+  ([^javax.swing.JFrame this]
     (-> this (.getGlassPane))))
 
 (defn get-accessible-context
@@ -288,7 +288,7 @@
 
   returns: an AccessibleJFrame that serves as the
            AccessibleContext of this JFrame - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^javax.swing.JFrame this]
     (-> this (.getAccessibleContext))))
 
 (defn set-glass-pane
@@ -296,7 +296,7 @@
    This method is called by the constructor.
 
   glass-pane - the glassPane object for this frame - `java.awt.Component`"
-  ([this glass-pane]
+  ([^javax.swing.JFrame this ^java.awt.Component glass-pane]
     (-> this (.setGlassPane glass-pane))))
 
 (defn set-icon-image
@@ -322,28 +322,28 @@
    just a single image for all contexts or no image at all.
 
   image - the icon image to be displayed. - `java.awt.Image`"
-  ([this image]
+  ([^javax.swing.JFrame this ^java.awt.Image image]
     (-> this (.setIconImage image))))
 
 (defn set-j-menu-bar
   "Sets the menubar for this frame.
 
   menubar - the menubar being placed in the frame - `javax.swing.JMenuBar`"
-  ([this menubar]
+  ([^javax.swing.JFrame this ^javax.swing.JMenuBar menubar]
     (-> this (.setJMenuBar menubar))))
 
 (defn get-transfer-handler
   "Gets the transferHandler property.
 
   returns: the value of the transferHandler property - `javax.swing.TransferHandler`"
-  ([this]
+  ([^javax.swing.JFrame this]
     (-> this (.getTransferHandler))))
 
 (defn get-root-pane
   "Returns the rootPane object for this frame.
 
   returns: the rootPane property - `javax.swing.JRootPane`"
-  ([this]
+  ([^javax.swing.JFrame this]
     (-> this (.getRootPane))))
 
 (defn set-content-pane
@@ -358,14 +358,14 @@
   content-pane - the contentPane object for this frame - `java.awt.Container`
 
   throws: java.awt.IllegalComponentStateException - (a runtime exception) if the content pane parameter is null"
-  ([this content-pane]
+  ([^javax.swing.JFrame this ^java.awt.Container content-pane]
     (-> this (.setContentPane content-pane))))
 
 (defn get-layered-pane
   "Returns the layeredPane object for this frame.
 
   returns: the layeredPane property - `javax.swing.JLayeredPane`"
-  ([this]
+  ([^javax.swing.JFrame this]
     (-> this (.getLayeredPane))))
 
 (defn get-default-close-operation
@@ -373,6 +373,6 @@
    initiates a `close` on this frame.
 
   returns: an integer indicating the window-close operation - `int`"
-  ([this]
+  ([^javax.swing.JFrame this]
     (-> this (.getDefaultCloseOperation))))
 

@@ -32,7 +32,7 @@
    path.
 
   returns: the winding rule. - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getWindingRule))))
 
 (defn done?
@@ -40,14 +40,14 @@
 
   returns: true if all the segments have
    been read; false otherwise. - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.isDone))))
 
 (defn next
   "Moves the iterator to the next segment of the path forwards
    along the primary direction of traversal as long as there are
    more points in that direction."
-  ([this]
+  ([^. this]
     (-> this (.next))))
 
 (defn current-segment
@@ -66,6 +66,6 @@
   coords - an array that holds the data returned from this method - `float[]`
 
   returns: the path-segment type of the current path segment. - `int`"
-  ([this coords]
+  ([^. this coords]
     (-> this (.currentSegment coords))))
 

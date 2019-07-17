@@ -9,6 +9,6 @@
   Constructs an UnsupportedFlavorException.
 
   flavor - the flavor object which caused the exception. May be null. - `java.awt.datatransfer.DataFlavor`"
-  ([flavor]
+  ([^java.awt.datatransfer.DataFlavor flavor]
     (new UnsupportedFlavorException flavor)))
 

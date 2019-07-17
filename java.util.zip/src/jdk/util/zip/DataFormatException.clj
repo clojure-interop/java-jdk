@@ -10,7 +10,7 @@
    A detail message is a String that describes this particular exception.
 
   s - the String containing a detail message - `java.lang.String`"
-  ([s]
+  ([^java.lang.String s]
     (new DataFormatException s))
   ([]
     (new DataFormatException )))

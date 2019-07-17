@@ -12,7 +12,7 @@
   "Obtain the format identifier part of the XID.
 
   returns: Format identifier. O means the OSI CCR format. - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getFormatId))))
 
 (defn get-global-transaction-id
@@ -20,7 +20,7 @@
    of bytes.
 
   returns: Global transaction identifier. - `byte[]`"
-  ([this]
+  ([^. this]
     (-> this (.getGlobalTransactionId))))
 
 (defn get-branch-qualifier
@@ -28,6 +28,6 @@
    of bytes.
 
   returns: Global transaction identifier. - `byte[]`"
-  ([this]
+  ([^. this]
     (-> this (.getBranchQualifier))))
 

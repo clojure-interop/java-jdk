@@ -17,6 +17,6 @@
   "Returns the address and port of this socket as a String.
 
   returns: a string representation of this socket. - `java.lang.String`"
-  ([this]
+  ([^java.net.SocketImpl this]
     (-> this (.toString))))
 

@@ -95,7 +95,7 @@
    as the underlying TableModel.
 
   model - the underlying TableModel to use, null is treated as an empty model - `TableRowSorter.M`"
-  ([model]
+  ([^TableRowSorter.M model]
     (new TableRowSorter model))
   ([]
     (new TableRowSorter )))
@@ -106,7 +106,7 @@
    can be used to set an empty model.
 
   model - the underlying model to use, or null - `TableRowSorter.M`"
-  ([this model]
+  ([^javax.swing.table.TableRowSorter this ^TableRowSorter.M model]
     (-> this (.setModel model))))
 
 (defn set-string-converter
@@ -116,7 +116,7 @@
    registered Comparator, to strings.
 
   string-converter - the object responsible for converting values from the model to strings - `javax.swing.table.TableStringConverter`"
-  ([this string-converter]
+  ([^javax.swing.table.TableRowSorter this ^javax.swing.table.TableStringConverter string-converter]
     (-> this (.setStringConverter string-converter))))
 
 (defn get-string-converter
@@ -124,7 +124,7 @@
    model to strings.
 
   returns: object responsible for converting values to strings. - `javax.swing.table.TableStringConverter`"
-  ([this]
+  ([^javax.swing.table.TableRowSorter this]
     (-> this (.getStringConverter))))
 
 (defn get-comparator
@@ -145,6 +145,6 @@
   returns: the Comparator for the specified column - `java.util.Comparator<?>`
 
   throws: java.lang.IndexOutOfBoundsException - if column is outside the range of the underlying model"
-  ([this column]
+  ([^javax.swing.table.TableRowSorter this ^Integer column]
     (-> this (.getComparator column))))
 

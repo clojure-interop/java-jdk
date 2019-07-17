@@ -29,9 +29,9 @@
   suffix - the sequence of characters to be used at the end - `java.lang.CharSequence`
 
   throws: java.lang.NullPointerException - if prefix, delimiter, or suffix is null"
-  ([delimiter prefix suffix]
+  ([^java.lang.CharSequence delimiter ^java.lang.CharSequence prefix ^java.lang.CharSequence suffix]
     (new StringJoiner delimiter prefix suffix))
-  ([delimiter]
+  ([^java.lang.CharSequence delimiter]
     (new StringJoiner delimiter)))
 
 (defn set-empty-value
@@ -47,7 +47,7 @@
   returns: this StringJoiner itself so the calls may be chained - `java.util.StringJoiner`
 
   throws: java.lang.NullPointerException - when the emptyValue parameter is null"
-  ([this empty-value]
+  ([^java.util.StringJoiner this ^java.lang.CharSequence empty-value]
     (-> this (.setEmptyValue empty-value))))
 
 (defn to-string
@@ -57,7 +57,7 @@
    prefix  suffix or the emptyValue characters are returned
 
   returns: the string representation of this StringJoiner - `java.lang.String`"
-  ([this]
+  ([^java.util.StringJoiner this]
     (-> this (.toString))))
 
 (defn add
@@ -68,7 +68,7 @@
   new-element - The element to add - `java.lang.CharSequence`
 
   returns: a reference to this StringJoiner - `java.util.StringJoiner`"
-  ([this new-element]
+  ([^java.util.StringJoiner this ^java.lang.CharSequence new-element]
     (-> this (.add new-element))))
 
 (defn merge
@@ -89,7 +89,7 @@
   returns: This StringJoiner - `java.util.StringJoiner`
 
   throws: java.lang.NullPointerException - if the other StringJoiner is null"
-  ([this other]
+  ([^java.util.StringJoiner this ^java.util.StringJoiner other]
     (-> this (.merge other))))
 
 (defn length
@@ -101,6 +101,6 @@
    toString().length().
 
   returns: the length of the current value of StringJoiner - `int`"
-  ([this]
+  ([^java.util.StringJoiner this]
     (-> this (.length))))
 

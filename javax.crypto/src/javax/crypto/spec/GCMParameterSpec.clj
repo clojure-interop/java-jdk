@@ -39,16 +39,16 @@
   len - the number of IV bytes - `int`
 
   throws: java.lang.IllegalArgumentException - if tLen is negative, src is null, len or offset is negative, or the sum of offset and len is greater than the length of the src byte array."
-  ([t-len src offset len]
+  ([^Integer t-len src ^Integer offset ^Integer len]
     (new GCMParameterSpec t-len src offset len))
-  ([t-len src]
+  ([^Integer t-len src]
     (new GCMParameterSpec t-len src)))
 
 (defn get-t-len
   "Returns the authentication tag length.
 
   returns: the authentication tag length (in bits) - `int`"
-  ([this]
+  ([^javax.crypto.spec.GCMParameterSpec this]
     (-> this (.getTLen))))
 
 (defn get-iv
@@ -56,6 +56,6 @@
 
   returns: the IV.  Creates a new array each time this method
    is called. - `byte[]`"
-  ([this]
+  ([^javax.crypto.spec.GCMParameterSpec this]
     (-> this (.getIV))))
 

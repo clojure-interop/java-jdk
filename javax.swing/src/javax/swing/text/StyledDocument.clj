@@ -11,7 +11,7 @@
   attr - the set of attributes - `javax.swing.text.AttributeSet`
 
   returns: the color - `java.awt.Color`"
-  ([this attr]
+  ([^. this ^javax.swing.text.AttributeSet attr]
     (-> this (.getForeground attr))))
 
 (defn set-paragraph-attributes
@@ -21,7 +21,7 @@
   length - the length of the change >= 0 - `int`
   s - the non-null attributes to change to. Any attributes defined will be applied to the text for the given range. - `javax.swing.text.AttributeSet`
   replace - indicates whether or not the previous attributes should be cleared before the new attributes are set. If true, the operation will replace the previous attributes entirely. If false, the new attributes will be merged with the previous attributes. - `boolean`"
-  ([this offset length s replace]
+  ([^. this ^Integer offset ^Integer length ^javax.swing.text.AttributeSet s ^Boolean replace]
     (-> this (.setParagraphAttributes offset length s replace))))
 
 (defn get-logical-style
@@ -30,7 +30,7 @@
   p - the position >= 0 - `int`
 
   returns: the style - `javax.swing.text.Style`"
-  ([this p]
+  ([^. this ^Integer p]
     (-> this (.getLogicalStyle p))))
 
 (defn set-character-attributes
@@ -46,7 +46,7 @@
   length - the length of the change >= 0 - `int`
   s - the non-null attributes to change to. Any attributes defined will be applied to the text for the given range. - `javax.swing.text.AttributeSet`
   replace - indicates whether or not the previous attributes should be cleared before the new attributes as set. If true, the operation will replace the previous attributes entirely. If false, the new attributes will be merged with the previous attributes. - `boolean`"
-  ([this offset length s replace]
+  ([^. this ^Integer offset ^Integer length ^javax.swing.text.AttributeSet s ^Boolean replace]
     (-> this (.setCharacterAttributes offset length s replace))))
 
 (defn set-logical-style
@@ -59,7 +59,7 @@
 
   pos - the starting position >= 0 - `int`
   s - the style to set - `javax.swing.text.Style`"
-  ([this pos s]
+  ([^. this ^Integer pos ^javax.swing.text.Style s]
     (-> this (.setLogicalStyle pos s))))
 
 (defn add-style
@@ -71,7 +71,7 @@
   parent - the parent style. This may be null if unspecified attributes need not be resolved in some other style. - `javax.swing.text.Style`
 
   returns: the style - `javax.swing.text.Style`"
-  ([this nm parent]
+  ([^. this ^java.lang.String nm ^javax.swing.text.Style parent]
     (-> this (.addStyle nm parent))))
 
 (defn get-character-element
@@ -81,7 +81,7 @@
   pos - the offset >= 0 - `int`
 
   returns: the element - `javax.swing.text.Element`"
-  ([this pos]
+  ([^. this ^Integer pos]
     (-> this (.getCharacterElement pos))))
 
 (defn get-font
@@ -93,7 +93,7 @@
   attr - the set of attributes - `javax.swing.text.AttributeSet`
 
   returns: the font - `java.awt.Font`"
-  ([this attr]
+  ([^. this ^javax.swing.text.AttributeSet attr]
     (-> this (.getFont attr))))
 
 (defn get-background
@@ -104,14 +104,14 @@
   attr - the set of attributes - `javax.swing.text.AttributeSet`
 
   returns: the color - `java.awt.Color`"
-  ([this attr]
+  ([^. this ^javax.swing.text.AttributeSet attr]
     (-> this (.getBackground attr))))
 
 (defn remove-style
   "Removes a named style previously added to the document.
 
   nm - the name of the style to remove - `java.lang.String`"
-  ([this nm]
+  ([^. this ^java.lang.String nm]
     (-> this (.removeStyle nm))))
 
 (defn get-paragraph-element
@@ -121,7 +121,7 @@
   pos - the offset >= 0 - `int`
 
   returns: the element - `javax.swing.text.Element`"
-  ([this pos]
+  ([^. this ^Integer pos]
     (-> this (.getParagraphElement pos))))
 
 (defn get-style
@@ -130,6 +130,6 @@
   nm - the name of the style - `java.lang.String`
 
   returns: the style - `javax.swing.text.Style`"
-  ([this nm]
+  ([^. this ^java.lang.String nm]
     (-> this (.getStyle nm))))
 

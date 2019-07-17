@@ -120,7 +120,7 @@
 
   returns: An array of all locales for which this locale service provider
    can provide localized objects or names. - `java.util.Locale[]`"
-  ([this]
+  ([^java.util.spi.LocaleServiceProvider this]
     (-> this (.getAvailableLocales))))
 
 (defn supported-locale?
@@ -147,6 +147,6 @@
            provider; false otherwise. - `boolean`
 
   throws: java.lang.NullPointerException - if the given locale is null"
-  ([this locale]
+  ([^java.util.spi.LocaleServiceProvider this ^java.util.Locale locale]
     (-> this (.isSupportedLocale locale))))
 

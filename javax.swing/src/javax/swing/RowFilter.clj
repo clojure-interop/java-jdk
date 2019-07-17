@@ -85,7 +85,7 @@
   returns: a RowFilter implementing the specified criteria - `<M,I> javax.swing.RowFilter<M,I>`
 
   throws: java.lang.NullPointerException - if regex is null"
-  ([regex indices]
+  ([^java.lang.String regex ^Integer indices]
     (RowFilter/regexFilter regex indices)))
 
 (defn *date-filter
@@ -104,7 +104,7 @@
   returns: a RowFilter implementing the specified criteria - `<M,I> javax.swing.RowFilter<M,I>`
 
   throws: java.lang.NullPointerException - if date is null"
-  ([type date indices]
+  ([^javax.swing.RowFilter.ComparisonType type ^java.util.Date date ^Integer indices]
     (RowFilter/dateFilter type date indices)))
 
 (defn *number-filter
@@ -124,7 +124,7 @@
   returns: a RowFilter implementing the specified criteria - `<M,I> javax.swing.RowFilter<M,I>`
 
   throws: java.lang.IllegalArgumentException - if any of the indices are < 0, type is null or number is null"
-  ([type number indices]
+  ([^javax.swing.RowFilter.ComparisonType type ^java.lang.Number number ^Integer indices]
     (RowFilter/numberFilter type number indices)))
 
 (defn *or-filter
@@ -180,7 +180,7 @@
   returns: a RowFilter implementing the specified criteria - `<M,I> javax.swing.RowFilter<M,I>`
 
   throws: java.lang.IllegalArgumentException - if filter is null"
-  ([filter]
+  ([^javax.swing.RowFilter filter]
     (RowFilter/notFilter filter)))
 
 (defn include
@@ -194,6 +194,6 @@
   entry - a non-null object that wraps the underlying object from the model - `RowFilter.I>`
 
   returns: true if the entry should be shown - `boolean`"
-  ([this entry]
+  ([^javax.swing.RowFilter this ^RowFilter.I> entry]
     (-> this (.include entry))))
 

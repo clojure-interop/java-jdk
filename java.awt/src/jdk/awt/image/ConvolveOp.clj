@@ -39,9 +39,9 @@
   kernel - the specified Kernel - `java.awt.image.Kernel`
   edge-condition - the specified edge condition - `int`
   hints - the specified RenderingHints object - `java.awt.RenderingHints`"
-  ([kernel edge-condition hints]
+  ([^java.awt.image.Kernel kernel ^Integer edge-condition ^java.awt.RenderingHints hints]
     (new ConvolveOp kernel edge-condition hints))
-  ([kernel]
+  ([^java.awt.image.Kernel kernel]
     (new ConvolveOp kernel)))
 
 (def *-edge-zero-fill
@@ -66,14 +66,14 @@
   "Returns the edge condition.
 
   returns: the edge condition of this ConvolveOp. - `int`"
-  ([this]
+  ([^java.awt.image.ConvolveOp this]
     (-> this (.getEdgeCondition))))
 
 (defn get-kernel
   "Returns the Kernel.
 
   returns: the Kernel of this ConvolveOp. - `java.awt.image.Kernel`"
-  ([this]
+  ([^java.awt.image.ConvolveOp this]
     (-> this (.getKernel))))
 
 (defn filter
@@ -93,7 +93,7 @@
   returns: the filtered BufferedImage - `java.awt.image.BufferedImage`
 
   throws: java.lang.NullPointerException - if src is null"
-  ([this src dst]
+  ([^java.awt.image.ConvolveOp this ^java.awt.image.BufferedImage src ^java.awt.image.BufferedImage dst]
     (-> this (.filter src dst))))
 
 (defn create-compatible-dest-image
@@ -105,7 +105,7 @@
 
   returns: a destination BufferedImage with the correct
            size and number of bands. - `java.awt.image.BufferedImage`"
-  ([this src dest-cm]
+  ([^java.awt.image.ConvolveOp this ^java.awt.image.BufferedImage src ^java.awt.image.ColorModel dest-cm]
     (-> this (.createCompatibleDestImage src dest-cm))))
 
 (defn create-compatible-dest-raster
@@ -116,7 +116,7 @@
 
   returns: a WritableRaster that is compatible with
            src - `java.awt.image.WritableRaster`"
-  ([this src]
+  ([^java.awt.image.ConvolveOp this ^java.awt.image.Raster src]
     (-> this (.createCompatibleDestRaster src))))
 
 (defn get-bounds-2-d
@@ -128,7 +128,7 @@
 
   returns: The Rectangle2D representing the destination
    image's bounding box. - `java.awt.geom.Rectangle2D`"
-  ([this src]
+  ([^java.awt.image.ConvolveOp this ^java.awt.image.BufferedImage src]
     (-> this (.getBounds2D src))))
 
 (defn get-point-2-d
@@ -142,7 +142,7 @@
 
   returns: The Point2D in the destination image that
    corresponds to the specified point in the source image. - `java.awt.geom.Point2D`"
-  ([this src-pt dst-pt]
+  ([^java.awt.image.ConvolveOp this ^java.awt.geom.Point2D src-pt ^java.awt.geom.Point2D dst-pt]
     (-> this (.getPoint2D src-pt dst-pt))))
 
 (defn get-rendering-hints
@@ -151,6 +151,6 @@
   returns: The RenderingHints object for this
    BufferedImageOp.  Returns
    null if no hints have been set. - `java.awt.RenderingHints`"
-  ([this]
+  ([^java.awt.image.ConvolveOp this]
     (-> this (.getRenderingHints))))
 

@@ -56,7 +56,7 @@
    for more information.
 
   returns: true if this component is completely opaque - `boolean`"
-  ([this]
+  ([^javax.swing.table.DefaultTableCellRenderer this]
     (-> this (.isOpaque))))
 
 (defn set-foreground
@@ -64,7 +64,7 @@
    the unselected-foreground color to the specified color.
 
   c - set the foreground color to this value - `java.awt.Color`"
-  ([this c]
+  ([^javax.swing.table.DefaultTableCellRenderer this ^java.awt.Color c]
     (-> this (.setForeground c))))
 
 (defn get-table-cell-renderer-component
@@ -85,7 +85,7 @@
   column - the column of the cell to render - `int`
 
   returns: the default table cell renderer - `java.awt.Component`"
-  ([this table value is-selected has-focus row column]
+  ([^javax.swing.table.DefaultTableCellRenderer this ^javax.swing.JTable table ^java.lang.Object value ^Boolean is-selected ^Boolean has-focus ^Integer row ^Integer column]
     (-> this (.getTableCellRendererComponent table value is-selected has-focus row column))))
 
 (defn fire-property-change
@@ -96,14 +96,14 @@
   property-name - the property whose value has changed - `java.lang.String`
   old-value - the property's previous value - `boolean`
   new-value - the property's new value - `boolean`"
-  ([this property-name old-value new-value]
+  ([^javax.swing.table.DefaultTableCellRenderer this ^java.lang.String property-name ^Boolean old-value ^Boolean new-value]
     (-> this (.firePropertyChange property-name old-value new-value))))
 
 (defn validate
   "Overridden for performance reasons.
    See the Implementation Note
    for more information."
-  ([this]
+  ([^javax.swing.table.DefaultTableCellRenderer this]
     (-> this (.validate))))
 
 (defn set-background
@@ -111,7 +111,7 @@
    the unselected-background color to the specified color.
 
   c - set the background color to this value - `java.awt.Color`"
-  ([this c]
+  ([^javax.swing.table.DefaultTableCellRenderer this ^java.awt.Color c]
     (-> this (.setBackground c))))
 
 (defn repaint
@@ -124,25 +124,25 @@
   y - the y value of the dirty region - `int`
   width - the width of the dirty region - `int`
   height - the height of the dirty region - `int`"
-  ([this tm x y width height]
+  ([^javax.swing.table.DefaultTableCellRenderer this ^Long tm ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.repaint tm x y width height)))
-  ([this r]
+  ([^javax.swing.table.DefaultTableCellRenderer this ^java.awt.Rectangle r]
     (-> this (.repaint r)))
-  ([this]
+  ([^javax.swing.table.DefaultTableCellRenderer this]
     (-> this (.repaint))))
 
 (defn invalidate
   "Overridden for performance reasons.
    See the Implementation Note
    for more information."
-  ([this]
+  ([^javax.swing.table.DefaultTableCellRenderer this]
     (-> this (.invalidate))))
 
 (defn revalidate
   "Overridden for performance reasons.
    See the Implementation Note
    for more information."
-  ([this]
+  ([^javax.swing.table.DefaultTableCellRenderer this]
     (-> this (.revalidate))))
 
 (defn update-ui
@@ -150,6 +150,6 @@
    [L&F] has changed.
    Replaces the current UI object with the latest version from the
    UIManager."
-  ([this]
+  ([^javax.swing.table.DefaultTableCellRenderer this]
     (-> this (.updateUI))))
 

@@ -11,7 +11,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([this]
+  ([^. this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -24,6 +24,6 @@
    return the same name from the getName() method.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getName))))
 

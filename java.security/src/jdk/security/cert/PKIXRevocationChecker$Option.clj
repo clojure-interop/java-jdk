@@ -74,6 +74,6 @@
   returns: the enum constant with the specified name - `java.security.cert.PKIXRevocationChecker.Option`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([name]
+  ([^java.lang.String name]
     (PKIXRevocationChecker$Option/valueOf name)))
 

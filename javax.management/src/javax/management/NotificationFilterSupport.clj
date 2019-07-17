@@ -36,7 +36,7 @@
   notification - The notification to be sent. - `javax.management.Notification`
 
   returns: true if the notification should be sent to the listener, false otherwise. - `boolean`"
-  ([this notification]
+  ([^javax.management.NotificationFilterSupport this ^javax.management.Notification notification]
     (-> this (.isNotificationEnabled notification))))
 
 (defn enable-type
@@ -64,7 +64,7 @@
   prefix - The prefix. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - The prefix parameter is null."
-  ([this prefix]
+  ([^javax.management.NotificationFilterSupport this ^java.lang.String prefix]
     (-> this (.enableType prefix))))
 
 (defn disable-type
@@ -73,18 +73,18 @@
    this method has no effect.
 
   prefix - The prefix. - `java.lang.String`"
-  ([this prefix]
+  ([^javax.management.NotificationFilterSupport this ^java.lang.String prefix]
     (-> this (.disableType prefix))))
 
 (defn disable-all-types
   "Disables all notification types."
-  ([this]
+  ([^javax.management.NotificationFilterSupport this]
     (-> this (.disableAllTypes))))
 
 (defn get-enabled-types
   "Gets all the enabled notification types for this filter.
 
   returns: The list containing all the enabled notification types. - `java.util.Vector<java.lang.String>`"
-  ([this]
+  ([^javax.management.NotificationFilterSupport this]
     (-> this (.getEnabledTypes))))
 

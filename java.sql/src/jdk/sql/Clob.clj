@@ -33,7 +33,7 @@
            CLOB data - `java.io.InputStream`
 
   throws: java.sql.SQLException - if there is an error accessing the CLOB value"
-  ([this]
+  ([^. this]
     (-> this (.getAsciiStream))))
 
 (defn set-string
@@ -59,9 +59,9 @@
   returns: the number of characters written - `int`
 
   throws: java.sql.SQLException - if there is an error accessing the CLOB value or if pos is less than 1"
-  ([this pos str offset len]
+  ([^. this ^Long pos ^java.lang.String str ^Integer offset ^Integer len]
     (-> this (.setString pos str offset len)))
-  ([this pos str]
+  ([^. this ^Long pos ^java.lang.String str]
     (-> this (.setString pos str))))
 
 (defn free
@@ -75,7 +75,7 @@
    calls to free are treated as a no-op.
 
   throws: java.sql.SQLException - if an error occurs releasing the Clob's resources"
-  ([this]
+  ([^. this]
     (-> this (.free))))
 
 (defn position
@@ -91,7 +91,7 @@
            present; the first position is 1 - `long`
 
   throws: java.sql.SQLException - if there is an error accessing the CLOB value or if pos is less than 1"
-  ([this searchstr start]
+  ([^. this ^java.lang.String searchstr ^Long start]
     (-> this (.position searchstr start))))
 
 (defn get-character-stream
@@ -104,9 +104,9 @@
   returns: Reader through which the partial Clob value can be read. - `java.io.Reader`
 
   throws: java.sql.SQLException - if pos is less than 1 or if pos is greater than the number of characters in the Clob or if pos length is greater than the number of characters in the Clob"
-  ([this pos length]
+  ([^. this ^Long pos ^Long length]
     (-> this (.getCharacterStream pos length)))
-  ([this]
+  ([^. this]
     (-> this (.getCharacterStream))))
 
 (defn length
@@ -117,7 +117,7 @@
   returns: length of the CLOB in characters - `long`
 
   throws: java.sql.SQLException - if there is an error accessing the length of the CLOB value"
-  ([this]
+  ([^. this]
     (-> this (.length))))
 
 (defn truncate
@@ -134,7 +134,7 @@
   len - the length, in characters, to which the CLOB value should be truncated - `long`
 
   throws: java.sql.SQLException - if there is an error accessing the CLOB value or if len is less than 0"
-  ([this len]
+  ([^. this ^Long len]
     (-> this (.truncate len))))
 
 (defn get-sub-string
@@ -152,7 +152,7 @@
            the CLOB value designated by this Clob object - `java.lang.String`
 
   throws: java.sql.SQLException - if there is an error accessing the CLOB value; if pos is less than 1 or length is less than 0"
-  ([this pos length]
+  ([^. this ^Long pos ^Integer length]
     (-> this (.getSubString pos length))))
 
 (defn set-ascii-stream
@@ -176,7 +176,7 @@
   returns: the stream to which ASCII encoded characters can be written - `java.io.OutputStream`
 
   throws: java.sql.SQLException - if there is an error accessing the CLOB value or if pos is less than 1"
-  ([this pos]
+  ([^. this ^Long pos]
     (-> this (.setAsciiStream pos))))
 
 (defn set-character-stream
@@ -200,6 +200,6 @@
   returns: a stream to which Unicode encoded characters can be written - `java.io.Writer`
 
   throws: java.sql.SQLException - if there is an error accessing the CLOB value or if pos is less than 1"
-  ([this pos]
+  ([^. this ^Long pos]
     (-> this (.setCharacterStream pos))))
 

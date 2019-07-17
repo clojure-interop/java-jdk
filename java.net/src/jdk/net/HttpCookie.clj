@@ -39,7 +39,7 @@
   value - a String specifying the value of the cookie - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if the cookie name contains illegal characters"
-  ([name value]
+  ([^java.lang.String name ^java.lang.String value]
     (new HttpCookie name value)))
 
 (defn *parse
@@ -53,7 +53,7 @@
   returns: a List of cookie parsed from header line string - `java.util.List<java.net.HttpCookie>`
 
   throws: java.lang.IllegalArgumentException - if header string violates the cookie specification's syntax or the cookie name contains illegal characters."
-  ([header]
+  ([^java.lang.String header]
     (HttpCookie/parse header)))
 
 (defn *domain-matches
@@ -101,7 +101,7 @@
   host - the host name in question - `java.lang.String`
 
   returns: true if they domain-matches; false if not - `boolean`"
-  ([domain host]
+  ([^java.lang.String domain ^java.lang.String host]
     (HttpCookie/domainMatches domain host)))
 
 (defn set-http-only
@@ -110,7 +110,7 @@
    engines like javascript.
 
   http-only - if true make the cookie HTTP only, i.e. only visible as part of an HTTP request. - `boolean`"
-  ([this http-only]
+  ([^java.net.HttpCookie this ^Boolean http-only]
     (-> this (.setHttpOnly http-only))))
 
 (defn set-version
@@ -121,7 +121,7 @@
   v - 0 if the cookie should comply with the original Netscape specification; 1 if the cookie should comply with RFC 2965/2109 - `int`
 
   throws: java.lang.IllegalArgumentException - if v is neither 0 nor 1"
-  ([this v]
+  ([^java.net.HttpCookie this ^Integer v]
     (-> this (.setVersion v))))
 
 (defn set-secure
@@ -131,7 +131,7 @@
     The default value is false.
 
   flag - If true, the cookie can only be sent over a secure protocol like HTTPS. If false, it can be sent over any protocol. - `boolean`"
-  ([this flag]
+  ([^java.net.HttpCookie this ^Boolean flag]
     (-> this (.setSecure flag))))
 
 (defn http-only?
@@ -140,7 +140,7 @@
    scripting engines, like javascript.
 
   returns: true if this cookie should be considered HTTPOnly - `boolean`"
-  ([this]
+  ([^java.net.HttpCookie this]
     (-> this (.isHttpOnly))))
 
 (defn set-comment
@@ -149,7 +149,7 @@
    to the user. Comments are not supported by Netscape Version 0 cookies.
 
   purpose - a String specifying the comment to display to the user - `java.lang.String`"
-  ([this purpose]
+  ([^java.net.HttpCookie this ^java.lang.String purpose]
     (-> this (.setComment purpose))))
 
 (defn set-comment-url
@@ -158,7 +158,7 @@
    to the user. Comment URL is RFC 2965 only.
 
   purpose - a String specifying the comment URL to display to the user - `java.lang.String`"
-  ([this purpose]
+  ([^java.net.HttpCookie this ^java.lang.String purpose]
     (-> this (.setCommentURL purpose))))
 
 (defn set-portlist
@@ -166,7 +166,7 @@
    to which a cookie may be sent back in a Cookie header.
 
   ports - a String specify the port list, which is comma separated series of digits - `java.lang.String`"
-  ([this ports]
+  ([^java.net.HttpCookie this ^java.lang.String ports]
     (-> this (.setPortlist ports))))
 
 (defn set-path
@@ -183,7 +183,7 @@
    information on setting path names for cookies.
 
   uri - a String specifying a path - `java.lang.String`"
-  ([this uri]
+  ([^java.net.HttpCookie this ^java.lang.String uri]
     (-> this (.setPath uri))))
 
 (defn has-expired?
@@ -191,7 +191,7 @@
 
   returns: true to indicate this HTTP cookie has expired;
             otherwise, false - `boolean`"
-  ([this]
+  ([^java.net.HttpCookie this]
     (-> this (.hasExpired))))
 
 (defn to-string
@@ -200,7 +200,7 @@
    but without the leading `Cookie:` token.
 
   returns: a string form of the cookie. The string has the defined format - `java.lang.String`"
-  ([this]
+  ([^java.net.HttpCookie this]
     (-> this (.toString))))
 
 (defn get-path
@@ -209,14 +209,14 @@
 
   returns: a String specifying a path that contains a servlet name,
             for example, /catalog - `java.lang.String`"
-  ([this]
+  ([^java.net.HttpCookie this]
     (-> this (.getPath))))
 
 (defn get-value
   "Returns the value of the cookie.
 
   returns: a String containing the cookie's present value - `java.lang.String`"
-  ([this]
+  ([^java.net.HttpCookie this]
     (-> this (.getValue))))
 
 (defn get-name
@@ -224,7 +224,7 @@
    creation.
 
   returns: a String specifying the cookie's name - `java.lang.String`"
-  ([this]
+  ([^java.net.HttpCookie this]
     (-> this (.getName))))
 
 (defn get-comment-url
@@ -233,7 +233,7 @@
 
   returns: a String containing the comment URL, or null
             if none - `java.lang.String`"
-  ([this]
+  ([^java.net.HttpCookie this]
     (-> this (.getCommentURL))))
 
 (defn get-version
@@ -244,7 +244,7 @@
 
   returns: 0 if the cookie complies with the original Netscape
             specification; 1 if the cookie complies with RFC 2965/2109 - `int`"
-  ([this]
+  ([^java.net.HttpCookie this]
     (-> this (.getVersion))))
 
 (defn get-comment
@@ -252,7 +252,7 @@
    null if the cookie has no comment.
 
   returns: a String containing the comment, or null if none - `java.lang.String`"
-  ([this]
+  ([^java.net.HttpCookie this]
     (-> this (.getComment))))
 
 (defn set-value
@@ -265,7 +265,7 @@
    behave the same way on all browsers.
 
   new-value - a String specifying the new value - `java.lang.String`"
-  ([this new-value]
+  ([^java.net.HttpCookie this ^java.lang.String new-value]
     (-> this (.setValue new-value))))
 
 (defn get-domain
@@ -273,14 +273,14 @@
    is set by RFC 2965.
 
   returns: a String containing the domain name - `java.lang.String`"
-  ([this]
+  ([^java.net.HttpCookie this]
     (-> this (.getDomain))))
 
 (defn clone
   "Create and return a copy of this object.
 
   returns: a clone of this HTTP cookie - `java.lang.Object`"
-  ([this]
+  ([^java.net.HttpCookie this]
     (-> this (.clone))))
 
 (defn hash-code
@@ -293,7 +293,7 @@
     getPath().hashCode()
 
   returns: this HTTP cookie's hash code - `int`"
-  ([this]
+  ([^java.net.HttpCookie this]
     (-> this (.hashCode))))
 
 (defn set-discard
@@ -301,7 +301,7 @@
    This is RFC 2965 only attribute.
 
   discard - true indicates to discard cookie unconditionally - `boolean`"
-  ([this discard]
+  ([^java.net.HttpCookie this ^Boolean discard]
     (-> this (.setDiscard discard))))
 
 (defn set-domain
@@ -315,14 +315,14 @@
    to the server that sent them.
 
   pattern - a String containing the domain name within which this cookie is visible; form is according to RFC 2965 - `java.lang.String`"
-  ([this pattern]
+  ([^java.net.HttpCookie this ^java.lang.String pattern]
     (-> this (.setDomain pattern))))
 
 (defn get-discard?
   "Returns the discard attribute of the cookie
 
   returns: a boolean to represent this cookie's discard attribute - `boolean`"
-  ([this]
+  ([^java.net.HttpCookie this]
     (-> this (.getDiscard))))
 
 (defn set-max-age
@@ -338,7 +338,7 @@
    cookie to be deleted.
 
   expiry - an integer specifying the maximum age of the cookie in seconds; if zero, the cookie should be discarded immediately; otherwise, the cookie's max age is unspecified. - `long`"
-  ([this expiry]
+  ([^java.net.HttpCookie this ^Long expiry]
     (-> this (.setMaxAge expiry))))
 
 (defn equals
@@ -352,14 +352,14 @@
 
   returns: true if two HTTP cookies equal to each other;
             otherwise, false - `boolean`"
-  ([this obj]
+  ([^java.net.HttpCookie this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn get-portlist
   "Returns the port list attribute of the cookie
 
   returns: a String contains the port list or null if none - `java.lang.String`"
-  ([this]
+  ([^java.net.HttpCookie this]
     (-> this (.getPortlist))))
 
 (defn get-secure?
@@ -369,7 +369,7 @@
 
   returns: false if the cookie can be sent over any standard
             protocol; otherwise, true - `boolean`"
-  ([this]
+  ([^java.net.HttpCookie this]
     (-> this (.getSecure))))
 
 (defn get-max-age
@@ -377,6 +377,6 @@
    -1 indicating the cookie will persist until browser shutdown.
 
   returns: an integer specifying the maximum age of the cookie in seconds - `long`"
-  ([this]
+  ([^java.net.HttpCookie this]
     (-> this (.getMaxAge))))
 

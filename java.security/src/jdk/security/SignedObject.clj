@@ -94,7 +94,7 @@
   signing-engine - the signature signing engine. - `java.security.Signature`
 
   throws: java.io.IOException - if an error occurs during serialization"
-  ([object signing-key signing-engine]
+  ([^java.io.Serializable object ^java.security.PrivateKey signing-key ^java.security.Signature signing-engine]
     (new SignedObject object signing-key signing-engine)))
 
 (defn get-object
@@ -104,7 +104,7 @@
   returns: the encapsulated object. - `java.lang.Object`
 
   throws: java.io.IOException - if an error occurs during de-serialization"
-  ([this]
+  ([^java.security.SignedObject this]
     (-> this (.getObject))))
 
 (defn get-signature
@@ -113,14 +113,14 @@
 
   returns: the signature. Returns a new array each time this
    method is called. - `byte[]`"
-  ([this]
+  ([^java.security.SignedObject this]
     (-> this (.getSignature))))
 
 (defn get-algorithm
   "Retrieves the name of the signature algorithm.
 
   returns: the signature algorithm name. - `java.lang.String`"
-  ([this]
+  ([^java.security.SignedObject this]
     (-> this (.getAlgorithm))))
 
 (defn verify
@@ -135,6 +135,6 @@
    is valid, false otherwise - `boolean`
 
   throws: java.security.SignatureException - if signature verification failed."
-  ([this verification-key verification-engine]
+  ([^java.security.SignedObject this ^java.security.PublicKey verification-key ^java.security.Signature verification-engine]
     (-> this (.verify verification-key verification-engine))))
 

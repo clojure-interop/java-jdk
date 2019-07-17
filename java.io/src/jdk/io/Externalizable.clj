@@ -36,7 +36,7 @@
   out - the stream to write the object to - `java.io.ObjectOutput`
 
   throws: java.io.IOException - Includes any I/O exceptions that may occur"
-  ([this out]
+  ([^. this ^java.io.ObjectOutput out]
     (-> this (.writeExternal out))))
 
 (defn read-external
@@ -49,6 +49,6 @@
   in - the stream to read data from in order to restore the object - `java.io.ObjectInput`
 
   throws: java.io.IOException - if I/O errors occur"
-  ([this in]
+  ([^. this ^java.io.ObjectInput in]
     (-> this (.readExternal in))))
 

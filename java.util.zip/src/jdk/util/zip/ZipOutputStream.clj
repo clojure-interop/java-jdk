@@ -12,9 +12,9 @@
 
   out - the actual output stream - `java.io.OutputStream`
   charset - the java.nio.charset.charset to be used to encode the entry names and comments - `java.nio.charset.Charset`"
-  ([out charset]
+  ([^java.io.OutputStream out ^java.nio.charset.Charset charset]
     (new ZipOutputStream out charset))
-  ([out]
+  ([^java.io.OutputStream out]
     (new ZipOutputStream out)))
 
 (def *-stored
@@ -279,7 +279,7 @@
   comment - the comment string - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if the length of the specified ZIP file comment is greater than 0xFFFF bytes"
-  ([this comment]
+  ([^java.util.zip.ZipOutputStream this ^java.lang.String comment]
     (-> this (.setComment comment))))
 
 (defn set-method
@@ -290,7 +290,7 @@
   method - the default compression method - `int`
 
   throws: java.lang.IllegalArgumentException - if the specified compression method is invalid"
-  ([this method]
+  ([^java.util.zip.ZipOutputStream this ^Integer method]
     (-> this (.setMethod method))))
 
 (defn set-level
@@ -300,7 +300,7 @@
   level - the compression level (0-9) - `int`
 
   throws: java.lang.IllegalArgumentException - if the compression level is invalid"
-  ([this level]
+  ([^java.util.zip.ZipOutputStream this ^Integer level]
     (-> this (.setLevel level))))
 
 (defn put-next-entry
@@ -313,7 +313,7 @@
   e - the ZIP entry to be written - `java.util.zip.ZipEntry`
 
   throws: java.util.zip.ZipException - if a ZIP format error has occurred"
-  ([this e]
+  ([^java.util.zip.ZipOutputStream this ^java.util.zip.ZipEntry e]
     (-> this (.putNextEntry e))))
 
 (defn close-entry
@@ -321,7 +321,7 @@
    the next entry.
 
   throws: java.util.zip.ZipException - if a ZIP format error has occurred"
-  ([this]
+  ([^java.util.zip.ZipOutputStream this]
     (-> this (.closeEntry))))
 
 (defn write
@@ -333,7 +333,7 @@
   len - the number of bytes that are written - `int`
 
   throws: java.util.zip.ZipException - if a ZIP file error has occurred"
-  ([this b off len]
+  ([^java.util.zip.ZipOutputStream this b ^Integer off ^Integer len]
     (-> this (.write b off len))))
 
 (defn finish
@@ -342,13 +342,13 @@
    in succession to the same output stream.
 
   throws: java.util.zip.ZipException - if a ZIP file error has occurred"
-  ([this]
+  ([^java.util.zip.ZipOutputStream this]
     (-> this (.finish))))
 
 (defn close
   "Closes the ZIP output stream as well as the stream being filtered.
 
   throws: java.util.zip.ZipException - if a ZIP file error has occurred"
-  ([this]
+  ([^java.util.zip.ZipOutputStream this]
     (-> this (.close))))
 

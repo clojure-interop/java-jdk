@@ -11,7 +11,7 @@
 
   src - The non-null source that fired the event. - `java.lang.Object`
   notice - The non-null unsolicited notification. - `javax.naming.ldap.UnsolicitedNotification`"
-  ([src notice]
+  ([^java.lang.Object src ^javax.naming.ldap.UnsolicitedNotification notice]
     (new UnsolicitedNotificationEvent src notice)))
 
 (defn get-notification
@@ -19,7 +19,7 @@
 
   returns: The non-null unsolicited notification that caused this
    event to be fired. - `javax.naming.ldap.UnsolicitedNotification`"
-  ([this]
+  ([^javax.naming.ldap.UnsolicitedNotificationEvent this]
     (-> this (.getNotification))))
 
 (defn dispatch
@@ -27,6 +27,6 @@
    a listener using this event.
 
   listener - The non-null listener on which to invoke notificationReceived. - `javax.naming.ldap.UnsolicitedNotificationListener`"
-  ([this listener]
+  ([^javax.naming.ldap.UnsolicitedNotificationEvent this ^javax.naming.ldap.UnsolicitedNotificationListener listener]
     (-> this (.dispatch listener))))
 

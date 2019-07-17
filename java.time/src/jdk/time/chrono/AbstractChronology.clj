@@ -100,7 +100,7 @@
   returns: the resolved date, null if insufficient information to create a date - `java.time.chrono.ChronoLocalDate`
 
   throws: java.time.DateTimeException - if the date cannot be resolved, typically because of a conflict in the input data"
-  ([this field-values resolver-style]
+  ([^java.time.chrono.AbstractChronology this ^java.util.Map field-values ^java.time.format.ResolverStyle resolver-style]
     (-> this (.resolveDate field-values resolver-style))))
 
 (defn compare-to
@@ -113,7 +113,7 @@
   other - the other chronology to compare to, not null - `java.time.chrono.Chronology`
 
   returns: the comparator value, negative if less, positive if greater - `int`"
-  ([this other]
+  ([^java.time.chrono.AbstractChronology this ^java.time.chrono.Chronology other]
     (-> this (.compareTo other))))
 
 (defn equals
@@ -124,7 +124,7 @@
   obj - the object to check, null returns false - `java.lang.Object`
 
   returns: true if this is equal to the other chronology - `boolean`"
-  ([this obj]
+  ([^java.time.chrono.AbstractChronology this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -133,13 +133,13 @@
    The hash code should be based on the entire state of the object.
 
   returns: a suitable hash code - `int`"
-  ([this]
+  ([^java.time.chrono.AbstractChronology this]
     (-> this (.hashCode))))
 
 (defn to-string
   "Outputs this chronology as a String, using the chronology ID.
 
   returns: a string representation of this chronology, not null - `java.lang.String`"
-  ([this]
+  ([^java.time.chrono.AbstractChronology this]
     (-> this (.toString))))
 

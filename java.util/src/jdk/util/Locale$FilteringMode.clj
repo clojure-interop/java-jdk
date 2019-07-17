@@ -78,6 +78,6 @@
   returns: the enum constant with the specified name - `java.util.Locale.FilteringMode`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([name]
+  ([^java.lang.String name]
     (Locale$FilteringMode/valueOf name)))
 

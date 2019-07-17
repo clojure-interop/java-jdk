@@ -91,7 +91,7 @@
   returns: the factory implementation - `javax.xml.stream.XMLInputFactory`
 
   throws: javax.xml.stream.FactoryConfigurationError - if an instance of this factory cannot be loaded"
-  ([factory-id class-loader]
+  ([^java.lang.String factory-id ^java.lang.ClassLoader class-loader]
     (XMLOutputFactory/newInstance factory-id class-loader))
   ([]
     (XMLOutputFactory/newInstance )))
@@ -132,7 +132,7 @@
   returns: the factory implementation - `javax.xml.stream.XMLOutputFactory`
 
   throws: javax.xml.stream.FactoryConfigurationError - in case of java.util.service configuration error or if the implementation is not available or cannot be instantiated."
-  ([factory-id class-loader]
+  ([^java.lang.String factory-id ^java.lang.ClassLoader class-loader]
     (XMLOutputFactory/newFactory factory-id class-loader))
   ([]
     (XMLOutputFactory/newFactory )))
@@ -146,9 +146,9 @@
   returns: `javax.xml.stream.XMLStreamWriter`
 
   throws: javax.xml.stream.XMLStreamException"
-  ([this stream encoding]
+  ([^javax.xml.stream.XMLOutputFactory this ^java.io.OutputStream stream ^java.lang.String encoding]
     (-> this (.createXMLStreamWriter stream encoding)))
-  ([this stream]
+  ([^javax.xml.stream.XMLOutputFactory this ^java.io.Writer stream]
     (-> this (.createXMLStreamWriter stream))))
 
 (defn create-xml-event-writer
@@ -160,9 +160,9 @@
   returns: `javax.xml.stream.XMLEventWriter`
 
   throws: javax.xml.stream.XMLStreamException"
-  ([this stream encoding]
+  ([^javax.xml.stream.XMLOutputFactory this ^java.io.OutputStream stream ^java.lang.String encoding]
     (-> this (.createXMLEventWriter stream encoding)))
-  ([this result]
+  ([^javax.xml.stream.XMLOutputFactory this ^javax.xml.transform.Result result]
     (-> this (.createXMLEventWriter result))))
 
 (defn set-property
@@ -172,7 +172,7 @@
   value - The value of the property - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if the property is not supported"
-  ([this name value]
+  ([^javax.xml.stream.XMLOutputFactory this ^java.lang.String name ^java.lang.Object value]
     (-> this (.setProperty name value))))
 
 (defn get-property
@@ -183,7 +183,7 @@
   returns: The value of the property - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if the property is not supported"
-  ([this name]
+  ([^javax.xml.stream.XMLOutputFactory this ^java.lang.String name]
     (-> this (.getProperty name))))
 
 (defn property-supported?
@@ -192,6 +192,6 @@
   name - The name of the property (may not be null) - `java.lang.String`
 
   returns: true if the property is supported and false otherwise - `boolean`"
-  ([this name]
+  ([^javax.xml.stream.XMLOutputFactory this ^java.lang.String name]
     (-> this (.isPropertySupported name))))
 

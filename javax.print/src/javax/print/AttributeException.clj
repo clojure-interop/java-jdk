@@ -18,7 +18,7 @@
    Attribute.
 
   returns: unsupported attribute classes - `java.lang.Class[]`"
-  ([this]
+  ([^. this]
     (-> this (.getUnsupportedAttributes))))
 
 (defn get-unsupported-values
@@ -27,6 +27,6 @@
    value of the attribute, or null if there are no such attribute values.
 
   returns: unsupported attribute values - `javax.print.attribute.Attribute[]`"
-  ([this]
+  ([^. this]
     (-> this (.getUnsupportedValues))))
 

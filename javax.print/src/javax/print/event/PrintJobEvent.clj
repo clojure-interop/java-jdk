@@ -14,7 +14,7 @@
   reason - an int specifying the reason. - `int`
 
   throws: java.lang.IllegalArgumentException - if source is null."
-  ([source reason]
+  ([^javax.print.DocPrintJob source ^Integer reason]
     (new PrintJobEvent source reason)))
 
 (def *-job-canceled
@@ -82,7 +82,7 @@
   "Gets the reason for this event.
 
   returns: reason int. - `int`"
-  ([this]
+  ([^javax.print.event.PrintJobEvent this]
     (-> this (.getPrintEventType))))
 
 (defn get-print-job
@@ -92,6 +92,6 @@
   returns: the DocPrintJob object that represents the
             print job that reports the events encapsulated by this
             PrintJobEvent. - `javax.print.DocPrintJob`"
-  ([this]
+  ([^javax.print.event.PrintJobEvent this]
     (-> this (.getPrintJob))))
 

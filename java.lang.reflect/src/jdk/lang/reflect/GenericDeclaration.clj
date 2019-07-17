@@ -14,6 +14,6 @@
        the type variables declared by this generic declaration - `java.lang.reflect.TypeVariable<?>[]`
 
   throws: java.lang.reflect.GenericSignatureFormatError - if the generic signature of this generic declaration does not conform to the format specified in The Java™ Virtual Machine Specification"
-  ([this]
+  ([^. this]
     (-> this (.getTypeParameters))))
 

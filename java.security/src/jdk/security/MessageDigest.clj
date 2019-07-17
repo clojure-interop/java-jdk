@@ -77,9 +77,9 @@
   returns: a MessageDigest object that implements the specified algorithm. - `java.security.MessageDigest`
 
   throws: java.security.NoSuchAlgorithmException - if a MessageDigestSpi implementation for the specified algorithm is not available from the specified provider."
-  ([algorithm provider]
+  ([^java.lang.String algorithm ^java.lang.String provider]
     (MessageDigest/getInstance algorithm provider))
-  ([algorithm]
+  ([^java.lang.String algorithm]
     (MessageDigest/getInstance algorithm)))
 
 (defn *equal?
@@ -96,7 +96,7 @@
   "Returns the provider of this message digest object.
 
   returns: the provider of this message digest object - `java.security.Provider`"
-  ([this]
+  ([^java.security.MessageDigest this]
     (-> this (.getProvider))))
 
 (defn update
@@ -106,9 +106,9 @@
   input - the array of bytes. - `byte[]`
   offset - the offset to start from in the array of bytes. - `int`
   len - the number of bytes to use, starting at offset. - `int`"
-  ([this input offset len]
+  ([^java.security.MessageDigest this input ^Integer offset ^Integer len]
     (-> this (.update input offset len)))
-  ([this input]
+  ([^java.security.MessageDigest this ^Byte input]
     (-> this (.update input))))
 
 (defn digest
@@ -122,23 +122,23 @@
   returns: the number of bytes placed into buf - `int`
 
   throws: java.security.DigestException - if an error occurs."
-  ([this buf offset len]
+  ([^java.security.MessageDigest this buf ^Integer offset ^Integer len]
     (-> this (.digest buf offset len)))
-  ([this input]
+  ([^java.security.MessageDigest this input]
     (-> this (.digest input)))
-  ([this]
+  ([^java.security.MessageDigest this]
     (-> this (.digest))))
 
 (defn to-string
   "Returns a string representation of this message digest object.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^java.security.MessageDigest this]
     (-> this (.toString))))
 
 (defn reset
   "Resets the digest for further use."
-  ([this]
+  ([^java.security.MessageDigest this]
     (-> this (.reset))))
 
 (defn get-algorithm
@@ -150,7 +150,7 @@
    for information about standard algorithm names.
 
   returns: the name of the algorithm - `java.lang.String`"
-  ([this]
+  ([^java.security.MessageDigest this]
     (-> this (.getAlgorithm))))
 
 (defn get-digest-length
@@ -159,7 +159,7 @@
 
   returns: the digest length in bytes, or 0 if this operation is not
    supported by the provider and the implementation is not cloneable. - `int`"
-  ([this]
+  ([^java.security.MessageDigest this]
     (-> this (.getDigestLength))))
 
 (defn clone
@@ -168,6 +168,6 @@
   returns: a clone if the implementation is cloneable. - `java.lang.Object`
 
   throws: java.lang.CloneNotSupportedException - if this is called on an implementation that does not support Cloneable."
-  ([this]
+  ([^java.security.MessageDigest this]
     (-> this (.clone))))
 

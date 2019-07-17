@@ -142,9 +142,9 @@
   member - the member to which this permission applies. May be null or `-`, which represents a member that is implied by any member but does not imply any other member. - `java.lang.String`
   object-name - the object name to which this permission applies. May be null, which represents an object name that is implied by any object name but does not imply any other object name. - `javax.management.ObjectName`
   actions - the action string. - `java.lang.String`"
-  ([class-name member object-name actions]
+  ([^java.lang.String class-name ^java.lang.String member ^javax.management.ObjectName object-name ^java.lang.String actions]
     (new MBeanPermission class-name member object-name actions))
-  ([name actions]
+  ([^java.lang.String name ^java.lang.String actions]
     (new MBeanPermission name actions)))
 
 (defn get-actions
@@ -152,14 +152,14 @@
    this method always returns present actions in alphabetical order.
 
   returns: the canonical string representation of the actions. - `java.lang.String`"
-  ([this]
+  ([^javax.management.MBeanPermission this]
     (-> this (.getActions))))
 
 (defn hash-code
   "Returns the hash code value for this object.
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^javax.management.MBeanPermission this]
     (-> this (.hashCode))))
 
 (defn implies
@@ -204,7 +204,7 @@
 
   returns: true if the specified permission is implied by this object,
    false if not. - `boolean`"
-  ([this p]
+  ([^javax.management.MBeanPermission this ^java.security.Permission p]
     (-> this (.implies p))))
 
 (defn equals
@@ -216,6 +216,6 @@
 
   returns: true if obj is an MBeanPermission, and has the
    same name and actions as this MBeanPermission object. - `boolean`"
-  ([this obj]
+  ([^javax.management.MBeanPermission this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

@@ -14,7 +14,7 @@
   mime-type - MIME media type string. - `java.lang.String`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if mimeType is null."
-  ([mime-type]
+  ([^java.lang.String mime-type]
     (new DocFlavor$BYTE_ARRAY mime-type)))
 
 (def *-text-plain-host

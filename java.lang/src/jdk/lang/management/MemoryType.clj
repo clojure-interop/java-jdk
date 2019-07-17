@@ -54,13 +54,13 @@
   returns: the enum constant with the specified name - `java.lang.management.MemoryType`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([name]
+  ([^java.lang.String name]
     (MemoryType/valueOf name)))
 
 (defn to-string
   "Returns the string representation of this MemoryType.
 
   returns: the string representation of this MemoryType. - `java.lang.String`"
-  ([this]
+  ([^java.lang.management.MemoryType this]
     (-> this (.toString))))
 

@@ -85,7 +85,7 @@
   file-name - The name of the mailcap file to open - `java.lang.String`
 
   throws: java.io.IOException - if the file can't be accessed"
-  ([file-name]
+  ([^java.lang.String file-name]
     (new MailcapCommandMap file-name))
   ([]
     (new MailcapCommandMap )))
@@ -103,7 +103,7 @@
   mime-type - the MIME type - `java.lang.String`
 
   returns: the CommandInfo objects representing the preferred commands. - `javax.activation.CommandInfo[]`"
-  ([this mime-type]
+  ([^javax.activation.MailcapCommandMap this ^java.lang.String mime-type]
     (-> this (.getPreferredCommands mime-type))))
 
 (defn get-all-commands
@@ -113,7 +113,7 @@
   mime-type - the MIME type - `java.lang.String`
 
   returns: the CommandInfo objects representing all the commands. - `javax.activation.CommandInfo[]`"
-  ([this mime-type]
+  ([^javax.activation.MailcapCommandMap this ^java.lang.String mime-type]
     (-> this (.getAllCommands mime-type))))
 
 (defn get-command
@@ -123,7 +123,7 @@
   cmd-name - the command name - `java.lang.String`
 
   returns: the CommandInfo object corresponding to the command. - `javax.activation.CommandInfo`"
-  ([this mime-type cmd-name]
+  ([^javax.activation.MailcapCommandMap this ^java.lang.String mime-type ^java.lang.String cmd-name]
     (-> this (.getCommand mime-type cmd-name))))
 
 (defn add-mailcap
@@ -134,7 +134,7 @@
    format.
 
   mail-cap - a correctly formatted mailcap string - `java.lang.String`"
-  ([this mail-cap]
+  ([^javax.activation.MailcapCommandMap this ^java.lang.String mail-cap]
     (-> this (.addMailcap mail-cap))))
 
 (defn create-data-content-handler
@@ -143,14 +143,14 @@
   mime-type - the MIME type - `java.lang.String`
 
   returns: the DataContentHandler - `javax.activation.DataContentHandler`"
-  ([this mime-type]
+  ([^javax.activation.MailcapCommandMap this ^java.lang.String mime-type]
     (-> this (.createDataContentHandler mime-type))))
 
 (defn get-mime-types
   "Get all the MIME types known to this command map.
 
   returns: array of MIME types as strings - `java.lang.String[]`"
-  ([this]
+  ([^javax.activation.MailcapCommandMap this]
     (-> this (.getMimeTypes))))
 
 (defn get-native-commands
@@ -167,6 +167,6 @@
   mime-type - `java.lang.String`
 
   returns: array of native command entries - `java.lang.String[]`"
-  ([this mime-type]
+  ([^javax.activation.MailcapCommandMap this ^java.lang.String mime-type]
     (-> this (.getNativeCommands mime-type))))
 

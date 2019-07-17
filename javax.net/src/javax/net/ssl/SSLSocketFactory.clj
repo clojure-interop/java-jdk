@@ -35,7 +35,7 @@
    authentication (that is, no anonymous cipher suites).
 
   returns: array of the cipher suites enabled by default - `java.lang.String[]`"
-  ([this]
+  ([^javax.net.ssl.SSLSocketFactory this]
     (-> this (.getDefaultCipherSuites))))
 
 (defn get-supported-cipher-suites
@@ -46,7 +46,7 @@
    cipher suites are useful in specialized applications.
 
   returns: an array of cipher suite names - `java.lang.String[]`"
-  ([this]
+  ([^javax.net.ssl.SSLSocketFactory this]
     (-> this (.getSupportedCipherSuites))))
 
 (defn create-socket
@@ -65,8 +65,8 @@
   returns: a socket connected to the specified host and port - `java.net.Socket`
 
   throws: java.io.IOException - if an I/O error occurs when creating the socket"
-  ([this s host port auto-close]
+  ([^javax.net.ssl.SSLSocketFactory this ^java.net.Socket s ^java.lang.String host ^Integer port ^Boolean auto-close]
     (-> this (.createSocket s host port auto-close)))
-  ([this s consumed auto-close]
+  ([^javax.net.ssl.SSLSocketFactory this ^java.net.Socket s ^java.io.InputStream consumed ^Boolean auto-close]
     (-> this (.createSocket s consumed auto-close))))
 

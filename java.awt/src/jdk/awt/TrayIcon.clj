@@ -45,18 +45,18 @@
   popup - the menu to be used for the tray icon's popup menu; if the value is null no popup menu is shown - `java.awt.PopupMenu`
 
   throws: java.lang.IllegalArgumentException - if image is null"
-  ([image tooltip popup]
+  ([^java.awt.Image image ^java.lang.String tooltip ^java.awt.PopupMenu popup]
     (new TrayIcon image tooltip popup))
-  ([image tooltip]
+  ([^java.awt.Image image ^java.lang.String tooltip]
     (new TrayIcon image tooltip))
-  ([image]
+  ([^java.awt.Image image]
     (new TrayIcon image)))
 
 (defn get-image
   "Returns the current image used for this TrayIcon.
 
   returns: the image - `java.awt.Image`"
-  ([this]
+  ([^java.awt.TrayIcon this]
     (-> this (.getImage))))
 
 (defn add-mouse-listener
@@ -73,14 +73,14 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   listener - the mouse listener - `java.awt.event.MouseListener`"
-  ([this listener]
+  ([^java.awt.TrayIcon this ^java.awt.event.MouseListener listener]
     (-> this (.addMouseListener listener))))
 
 (defn get-popup-menu
   "Returns the popup menu associated with this TrayIcon.
 
   returns: the popup menu or null if none exists - `java.awt.PopupMenu`"
-  ([this]
+  ([^java.awt.TrayIcon this]
     (-> this (.getPopupMenu))))
 
 (defn add-mouse-motion-listener
@@ -96,7 +96,7 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   listener - the mouse listener - `java.awt.event.MouseMotionListener`"
-  ([this listener]
+  ([^java.awt.TrayIcon this ^java.awt.event.MouseMotionListener listener]
     (-> this (.addMouseMotionListener listener))))
 
 (defn set-image
@@ -116,7 +116,7 @@
   image - the non-null Image to be used - `java.awt.Image`
 
   throws: java.lang.NullPointerException - if image is null"
-  ([this image]
+  ([^java.awt.TrayIcon this ^java.awt.Image image]
     (-> this (.setImage image))))
 
 (defn image-auto-size?
@@ -124,7 +124,7 @@
 
   returns: true if the image will be auto-sized,
    false otherwise - `boolean`"
-  ([this]
+  ([^java.awt.TrayIcon this]
     (-> this (.isImageAutoSize))))
 
 (defn add-action-listener
@@ -139,7 +139,7 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   listener - the action listener - `java.awt.event.ActionListener`"
-  ([this listener]
+  ([^java.awt.TrayIcon this ^java.awt.event.ActionListener listener]
     (-> this (.addActionListener listener))))
 
 (defn display-message
@@ -163,7 +163,7 @@
   message-type - an enum indicating the message type - `java.awt.TrayIcon.MessageType`
 
   throws: java.lang.NullPointerException - if both caption and text are null"
-  ([this caption text message-type]
+  ([^java.awt.TrayIcon this ^java.lang.String caption ^java.lang.String text ^java.awt.TrayIcon.MessageType message-type]
     (-> this (.displayMessage caption text message-type))))
 
 (defn remove-mouse-motion-listener
@@ -172,7 +172,7 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   listener - the mouse listener - `java.awt.event.MouseMotionListener`"
-  ([this listener]
+  ([^java.awt.TrayIcon this ^java.awt.event.MouseMotionListener listener]
     (-> this (.removeMouseMotionListener listener))))
 
 (defn set-tool-tip
@@ -185,7 +185,7 @@
    the number of characters that may be displayed is platform-dependent.
 
   tooltip - the string for the tooltip; if the value is null no tooltip is shown - `java.lang.String`"
-  ([this tooltip]
+  ([^java.awt.TrayIcon this ^java.lang.String tooltip]
     (-> this (.setToolTip tooltip))))
 
 (defn get-action-listeners
@@ -195,7 +195,7 @@
   returns: all of the ActionListeners registered on
    this TrayIcon or an empty array if no action
    listeners are currently registered - `java.awt.event.ActionListener[]`"
-  ([this]
+  ([^java.awt.TrayIcon this]
     (-> this (.getActionListeners))))
 
 (defn remove-mouse-listener
@@ -204,7 +204,7 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   listener - the mouse listener - `java.awt.event.MouseListener`"
-  ([this listener]
+  ([^java.awt.TrayIcon this ^java.awt.event.MouseListener listener]
     (-> this (.removeMouseListener listener))))
 
 (defn set-image-auto-size
@@ -222,7 +222,7 @@
    fit the tray icon space.
 
   autosize - true to auto-size the image, false otherwise - `boolean`"
-  ([this autosize]
+  ([^java.awt.TrayIcon this ^Boolean autosize]
     (-> this (.setImageAutoSize autosize))))
 
 (defn remove-action-listener
@@ -231,7 +231,7 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   listener - the action listener - `java.awt.event.ActionListener`"
-  ([this listener]
+  ([^java.awt.TrayIcon this ^java.awt.event.ActionListener listener]
     (-> this (.removeActionListener listener))))
 
 (defn get-tool-tip
@@ -239,7 +239,7 @@
    TrayIcon.
 
   returns: the tooltip string or null if none exists - `java.lang.String`"
-  ([this]
+  ([^java.awt.TrayIcon this]
     (-> this (.getToolTip))))
 
 (defn get-mouse-listeners
@@ -249,14 +249,14 @@
   returns: all of the MouseListeners registered on
    this TrayIcon or an empty array if no mouse
    listeners are currently registered - `java.awt.event.MouseListener[]`"
-  ([this]
+  ([^java.awt.TrayIcon this]
     (-> this (.getMouseListeners))))
 
 (defn get-action-command
   "Returns the command name of the action event fired by this tray icon.
 
   returns: the action command name, or null if none exists - `java.lang.String`"
-  ([this]
+  ([^java.awt.TrayIcon this]
     (-> this (.getActionCommand))))
 
 (defn set-popup-menu
@@ -282,7 +282,7 @@
   popup - a PopupMenu or null to remove any popup menu - `java.awt.PopupMenu`
 
   throws: java.lang.IllegalArgumentException - if the popup is already set for another TrayIcon"
-  ([this popup]
+  ([^java.awt.TrayIcon this ^java.awt.PopupMenu popup]
     (-> this (.setPopupMenu popup))))
 
 (defn get-size
@@ -292,7 +292,7 @@
    result of the SystemTray.getTrayIconSize().
 
   returns: the size of the tray icon, in pixels - `java.awt.Dimension`"
-  ([this]
+  ([^java.awt.TrayIcon this]
     (-> this (.getSize))))
 
 (defn set-action-command
@@ -301,7 +301,7 @@
    null.
 
   command - a string used to set the tray icon's action command. - `java.lang.String`"
-  ([this command]
+  ([^java.awt.TrayIcon this ^java.lang.String command]
     (-> this (.setActionCommand command))))
 
 (defn get-mouse-motion-listeners
@@ -311,6 +311,6 @@
   returns: all of the MouseInputListeners registered on
    this TrayIcon or an empty array if no mouse
    listeners are currently registered - `java.awt.event.MouseMotionListener[]`"
-  ([this]
+  ([^java.awt.TrayIcon this]
     (-> this (.getMouseMotionListeners))))
 

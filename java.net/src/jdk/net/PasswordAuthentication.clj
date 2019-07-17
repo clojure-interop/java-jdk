@@ -15,14 +15,14 @@
 
   user-name - the user name - `java.lang.String`
   password - the user's password - `char[]`"
-  ([user-name password]
+  ([^java.lang.String user-name password]
     (new PasswordAuthentication user-name password)))
 
 (defn get-user-name
   "Returns the user name.
 
   returns: the user name - `java.lang.String`"
-  ([this]
+  ([^java.net.PasswordAuthentication this]
     (-> this (.getUserName))))
 
 (defn get-password
@@ -33,6 +33,6 @@
    it is no longer needed.
 
   returns: the password - `char[]`"
-  ([this]
+  ([^java.net.PasswordAuthentication this]
     (-> this (.getPassword))))
 

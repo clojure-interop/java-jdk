@@ -11,6 +11,6 @@
   "Constructor.
 
   name - `java.lang.String`"
-  ([name]
+  ([^java.lang.String name]
     (new HTMLEditorKit$HTMLTextAction name)))
 

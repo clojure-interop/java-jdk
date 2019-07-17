@@ -44,9 +44,9 @@
 
   returns: content-id URI, cid, to the attachment containing
            data or null if data should be inlined. - `java.lang.String`"
-  ([this data offset length mime-type element-namespace element-local-name]
+  ([^javax.xml.bind.attachment.AttachmentMarshaller this data ^Integer offset ^Integer length ^java.lang.String mime-type ^java.lang.String element-namespace ^java.lang.String element-local-name]
     (-> this (.addMtomAttachment data offset length mime-type element-namespace element-local-name)))
-  ([this data element-namespace element-local-name]
+  ([^javax.xml.bind.attachment.AttachmentMarshaller this ^javax.activation.DataHandler data ^java.lang.String element-namespace ^java.lang.String element-local-name]
     (-> this (.addMtomAttachment data element-namespace element-local-name))))
 
 (defn xop-package?
@@ -72,7 +72,7 @@
    Creating XOP Pacakges.
 
   returns: true when MIME context is a XOP Package. - `boolean`"
-  ([this]
+  ([^javax.xml.bind.attachment.AttachmentMarshaller this]
     (-> this (.isXOPPackage))))
 
 (defn add-swa-ref-attachment
@@ -91,6 +91,6 @@
 
   returns: must be a valid URI used as cid. Must satisfy Conformance Requirement R2928 from
          WS-I Attachments Profile Version 1.0. - `java.lang.String`"
-  ([this data]
+  ([^javax.xml.bind.attachment.AttachmentMarshaller this ^javax.activation.DataHandler data]
     (-> this (.addSwaRefAttachment data))))
 

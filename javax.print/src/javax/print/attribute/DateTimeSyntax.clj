@@ -29,7 +29,7 @@
    value.
 
   returns: the Date. - `java.util.Date`"
-  ([this]
+  ([^javax.print.attribute.DateTimeSyntax this]
     (-> this (.getValue))))
 
 (defn equals
@@ -49,7 +49,7 @@
 
   returns: True if object is equivalent to this date-time
             attribute, false otherwise. - `boolean`"
-  ([this object]
+  ([^javax.print.attribute.DateTimeSyntax this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn hash-code
@@ -57,7 +57,7 @@
    that of this attribute's java.util.Date value.
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^javax.print.attribute.DateTimeSyntax this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -67,6 +67,6 @@
    converted to a string.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^javax.print.attribute.DateTimeSyntax this]
     (-> this (.toString))))
 

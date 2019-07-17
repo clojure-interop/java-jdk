@@ -9,6 +9,6 @@
    LineEvent methods to obtain information about the event.
 
   event - a line event that describes the change - `javax.sound.sampled.LineEvent`"
-  ([this event]
+  ([^. this ^javax.sound.sampled.LineEvent event]
     (-> this (.update event))))
 

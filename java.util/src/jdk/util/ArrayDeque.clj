@@ -43,7 +43,7 @@
    sufficient to hold the specified number of elements.
 
   num-elements - lower bound on initial capacity of the deque - `int`"
-  ([num-elements]
+  ([^Integer num-elements]
     (new ArrayDeque num-elements))
   ([]
     (new ArrayDeque )))
@@ -56,7 +56,7 @@
 
   returns: the head of the queue represented by this deque, or
            null if this deque is empty - `ArrayDeque.E`"
-  ([this]
+  ([^java.util.ArrayDeque this]
     (-> this (.peek))))
 
 (defn offer-first
@@ -67,7 +67,7 @@
   returns: true (as specified by Deque.offerFirst(E)) - `boolean`
 
   throws: java.lang.NullPointerException - if the specified element is null"
-  ([this e]
+  ([^java.util.ArrayDeque this ^ArrayDeque.E e]
     (-> this (.offerFirst e))))
 
 (defn get-first
@@ -76,7 +76,7 @@
   returns: the head of this deque - `ArrayDeque.E`
 
   throws: java.util.NoSuchElementException - if this deque is empty"
-  ([this]
+  ([^java.util.ArrayDeque this]
     (-> this (.getFirst))))
 
 (defn spliterator
@@ -90,14 +90,14 @@
    the reporting of additional characteristic values.
 
   returns: a Spliterator over the elements in this deque - `java.util.Spliterator<ArrayDeque.E>`"
-  ([this]
+  ([^java.util.ArrayDeque this]
     (-> this (.spliterator))))
 
 (defn peek-first
   "Description copied from interface: Deque
 
   returns: the head of this deque, or null if this deque is empty - `ArrayDeque.E`"
-  ([this]
+  ([^java.util.ArrayDeque this]
     (-> this (.peekFirst))))
 
 (defn remove-first-occurrence
@@ -112,7 +112,7 @@
   o - element to be removed from this deque, if present - `java.lang.Object`
 
   returns: true if the deque contained the specified element - `boolean`"
-  ([this o]
+  ([^java.util.ArrayDeque this ^java.lang.Object o]
     (-> this (.removeFirstOccurrence o))))
 
 (defn offer
@@ -125,14 +125,14 @@
   returns: true (as specified by Queue.offer(E)) - `boolean`
 
   throws: java.lang.NullPointerException - if the specified element is null"
-  ([this e]
+  ([^java.util.ArrayDeque this ^ArrayDeque.E e]
     (-> this (.offer e))))
 
 (defn peek-last
   "Description copied from interface: Deque
 
   returns: the tail of this deque, or null if this deque is empty - `ArrayDeque.E`"
-  ([this]
+  ([^java.util.ArrayDeque this]
     (-> this (.peekLast))))
 
 (defn pop
@@ -145,7 +145,7 @@
            of the stack represented by this deque) - `ArrayDeque.E`
 
   throws: java.util.NoSuchElementException - if this deque is empty"
-  ([this]
+  ([^java.util.ArrayDeque this]
     (-> this (.pop))))
 
 (defn contains
@@ -156,7 +156,7 @@
   o - object to be checked for containment in this deque - `java.lang.Object`
 
   returns: true if this deque contains the specified element - `boolean`"
-  ([this o]
+  ([^java.util.ArrayDeque this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn push
@@ -168,7 +168,7 @@
   e - the element to push - `ArrayDeque.E`
 
   throws: java.lang.NullPointerException - if the specified element is null"
-  ([this e]
+  ([^java.util.ArrayDeque this ^ArrayDeque.E e]
     (-> this (.push e))))
 
 (defn get-last
@@ -177,7 +177,7 @@
   returns: the tail of this deque - `ArrayDeque.E`
 
   throws: java.util.NoSuchElementException - if this deque is empty"
-  ([this]
+  ([^java.util.ArrayDeque this]
     (-> this (.getLast))))
 
 (defn iterator
@@ -187,7 +187,7 @@
    remove() or popped (via successive calls to pop()).
 
   returns: an iterator over the elements in this deque - `java.util.Iterator<ArrayDeque.E>`"
-  ([this]
+  ([^java.util.ArrayDeque this]
     (-> this (.iterator))))
 
 (defn element
@@ -200,7 +200,7 @@
   returns: the head of the queue represented by this deque - `ArrayDeque.E`
 
   throws: java.util.NoSuchElementException - if this deque is empty"
-  ([this]
+  ([^java.util.ArrayDeque this]
     (-> this (.element))))
 
 (defn remove-first
@@ -209,7 +209,7 @@
   returns: the head of this deque - `ArrayDeque.E`
 
   throws: java.util.NoSuchElementException - if this deque is empty"
-  ([this]
+  ([^java.util.ArrayDeque this]
     (-> this (.removeFirst))))
 
 (defn remove
@@ -225,16 +225,16 @@
   o - element to be removed from this deque, if present - `java.lang.Object`
 
   returns: true if this deque contained the specified element - `boolean`"
-  ([this o]
+  ([^java.util.ArrayDeque this ^java.lang.Object o]
     (-> this (.remove o)))
-  ([this]
+  ([^java.util.ArrayDeque this]
     (-> this (.remove))))
 
 (defn poll-last
   "Description copied from interface: Deque
 
   returns: the tail of this deque, or null if this deque is empty - `ArrayDeque.E`"
-  ([this]
+  ([^java.util.ArrayDeque this]
     (-> this (.pollLast))))
 
 (defn poll
@@ -246,7 +246,7 @@
 
   returns: the head of the queue represented by this deque, or
            null if this deque is empty - `ArrayDeque.E`"
-  ([this]
+  ([^java.util.ArrayDeque this]
     (-> this (.poll))))
 
 (defn offer-last
@@ -257,14 +257,14 @@
   returns: true (as specified by Deque.offerLast(E)) - `boolean`
 
   throws: java.lang.NullPointerException - if the specified element is null"
-  ([this e]
+  ([^java.util.ArrayDeque this ^ArrayDeque.E e]
     (-> this (.offerLast e))))
 
 (defn poll-first
   "Description copied from interface: Deque
 
   returns: the head of this deque, or null if this deque is empty - `ArrayDeque.E`"
-  ([this]
+  ([^java.util.ArrayDeque this]
     (-> this (.pollFirst))))
 
 (defn add-last
@@ -275,14 +275,14 @@
   e - the element to add - `ArrayDeque.E`
 
   throws: java.lang.NullPointerException - if the specified element is null"
-  ([this e]
+  ([^java.util.ArrayDeque this ^ArrayDeque.E e]
     (-> this (.addLast e))))
 
 (defn clone
   "Returns a copy of this deque.
 
   returns: a copy of this deque - `java.util.ArrayDeque<ArrayDeque.E>`"
-  ([this]
+  ([^java.util.ArrayDeque this]
     (-> this (.clone))))
 
 (defn remove-last-occurrence
@@ -297,7 +297,7 @@
   o - element to be removed from this deque, if present - `java.lang.Object`
 
   returns: true if the deque contained the specified element - `boolean`"
-  ([this o]
+  ([^java.util.ArrayDeque this ^java.lang.Object o]
     (-> this (.removeLastOccurrence o))))
 
 (defn add
@@ -310,7 +310,7 @@
   returns: true (as specified by Collection.add(E)) - `boolean`
 
   throws: java.lang.NullPointerException - if the specified element is null"
-  ([this e]
+  ([^java.util.ArrayDeque this ^ArrayDeque.E e]
     (-> this (.add e))))
 
 (defn descending-iterator
@@ -318,27 +318,27 @@
 
   returns: an iterator over the elements in this deque in reverse
    sequence - `java.util.Iterator<ArrayDeque.E>`"
-  ([this]
+  ([^java.util.ArrayDeque this]
     (-> this (.descendingIterator))))
 
 (defn empty?
   "Returns true if this deque contains no elements.
 
   returns: true if this deque contains no elements - `boolean`"
-  ([this]
+  ([^java.util.ArrayDeque this]
     (-> this (.isEmpty))))
 
 (defn size
   "Returns the number of elements in this deque.
 
   returns: the number of elements in this deque - `int`"
-  ([this]
+  ([^java.util.ArrayDeque this]
     (-> this (.size))))
 
 (defn clear
   "Removes all of the elements from this deque.
    The deque will be empty after this call returns."
-  ([this]
+  ([^java.util.ArrayDeque this]
     (-> this (.clear))))
 
 (defn remove-last
@@ -347,7 +347,7 @@
   returns: the tail of this deque - `ArrayDeque.E`
 
   throws: java.util.NoSuchElementException - if this deque is empty"
-  ([this]
+  ([^java.util.ArrayDeque this]
     (-> this (.removeLast))))
 
 (defn add-first
@@ -356,7 +356,7 @@
   e - the element to add - `ArrayDeque.E`
 
   throws: java.lang.NullPointerException - if the specified element is null"
-  ([this e]
+  ([^java.util.ArrayDeque this ^ArrayDeque.E e]
     (-> this (.addFirst e))))
 
 (defn to-array
@@ -393,8 +393,8 @@
   returns: an array containing all of the elements in this deque - `<T> T[]`
 
   throws: java.lang.ArrayStoreException - if the runtime type of the specified array is not a supertype of the runtime type of every element in this deque"
-  ([this a]
+  ([^java.util.ArrayDeque this a]
     (-> this (.toArray a)))
-  ([this]
+  ([^java.util.ArrayDeque this]
     (-> this (.toArray))))
 

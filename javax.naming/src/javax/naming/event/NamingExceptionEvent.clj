@@ -16,14 +16,14 @@
 
   source - The non-null context in which the exception was thrown. - `javax.naming.event.EventContext`
   exc - The non-null NamingException that was thrown. - `javax.naming.NamingException`"
-  ([source exc]
+  ([^javax.naming.event.EventContext source ^javax.naming.NamingException exc]
     (new NamingExceptionEvent source exc)))
 
 (defn get-exception
   "Retrieves the exception that was thrown.
 
   returns: The exception that was thrown. - `javax.naming.NamingException`"
-  ([this]
+  ([^javax.naming.event.NamingExceptionEvent this]
     (-> this (.getException))))
 
 (defn get-event-context
@@ -31,7 +31,7 @@
    This returns the same object as EventObject.getSource().
 
   returns: The non-null EventContext that fired this event. - `javax.naming.event.EventContext`"
-  ([this]
+  ([^javax.naming.event.NamingExceptionEvent this]
     (-> this (.getEventContext))))
 
 (defn dispatch
@@ -39,6 +39,6 @@
    a listener using this event.
 
   listener - The non-null naming listener on which to invoke the method. - `javax.naming.event.NamingListener`"
-  ([this listener]
+  ([^javax.naming.event.NamingExceptionEvent this ^javax.naming.event.NamingListener listener]
     (-> this (.dispatch listener))))
 

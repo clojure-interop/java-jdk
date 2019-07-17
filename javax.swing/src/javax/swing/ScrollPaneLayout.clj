@@ -27,14 +27,14 @@
   scrollpane - `javax.swing.JScrollPane`
 
   returns: the size and position of the viewport border - `java.lang.  java.awt.Rectangle`"
-  ([this scrollpane]
+  ([^javax.swing.ScrollPaneLayout this ^javax.swing.JScrollPane scrollpane]
     (-> this (.getViewportBorderBounds scrollpane))))
 
 (defn get-vertical-scroll-bar-policy
   "Returns the vertical scrollbar-display policy.
 
   returns: an integer giving the display policy - `int`"
-  ([this]
+  ([^javax.swing.ScrollPaneLayout this]
     (-> this (.getVerticalScrollBarPolicy))))
 
 (defn preferred-layout-size
@@ -50,14 +50,14 @@
 
   returns: a Dimension object specifying the preferred size of the
            viewport and any scrollbars - `java.awt.Dimension`"
-  ([this parent]
+  ([^javax.swing.ScrollPaneLayout this ^java.awt.Container parent]
     (-> this (.preferredLayoutSize parent))))
 
 (defn get-row-header
   "Returns the JViewport object that is the row header.
 
   returns: the JViewport object that is the row header - `javax.swing.JViewport`"
-  ([this]
+  ([^javax.swing.ScrollPaneLayout this]
     (-> this (.getRowHeader))))
 
 (defn sync-with-scroll-pane
@@ -76,7 +76,7 @@
    scrollpane.setLayout(mySPLayout):
 
   sp - `javax.swing.JScrollPane`"
-  ([this sp]
+  ([^javax.swing.ScrollPaneLayout this ^javax.swing.JScrollPane sp]
     (-> this (.syncWithScrollPane sp))))
 
 (defn set-horizontal-scroll-bar-policy
@@ -93,7 +93,7 @@
   x - an int giving the display policy - `int`
 
   throws: java.lang.IllegalArgumentException - if x is not a valid horizontal scrollbar policy, as listed above"
-  ([this x]
+  ([^javax.swing.ScrollPaneLayout this ^Integer x]
     (-> this (.setHorizontalScrollBarPolicy x))))
 
 (defn set-vertical-scroll-bar-policy
@@ -111,7 +111,7 @@
   x - an integer giving the display policy - `int`
 
   throws: java.lang.IllegalArgumentException - if x is an invalid vertical scroll bar policy, as listed above"
-  ([this x]
+  ([^javax.swing.ScrollPaneLayout this ^Integer x]
     (-> this (.setVerticalScrollBarPolicy x))))
 
 (defn minimum-layout-size
@@ -124,7 +124,7 @@
   parent - the Container that will be laid out - `java.awt.Container`
 
   returns: a Dimension object specifying the minimum size - `java.awt.Dimension`"
-  ([this parent]
+  ([^javax.swing.ScrollPaneLayout this ^java.awt.Container parent]
     (-> this (.minimumLayoutSize parent))))
 
 (defn get-viewport
@@ -132,21 +132,21 @@
    scrollable contents.
 
   returns: the JViewport object that displays the scrollable contents - `javax.swing.JViewport`"
-  ([this]
+  ([^javax.swing.ScrollPaneLayout this]
     (-> this (.getViewport))))
 
 (defn get-horizontal-scroll-bar-policy
   "Returns the horizontal scrollbar-display policy.
 
   returns: an integer giving the display policy - `int`"
-  ([this]
+  ([^javax.swing.ScrollPaneLayout this]
     (-> this (.getHorizontalScrollBarPolicy))))
 
 (defn get-column-header
   "Returns the JViewport object that is the column header.
 
   returns: the JViewport object that is the column header - `javax.swing.JViewport`"
-  ([this]
+  ([^javax.swing.ScrollPaneLayout this]
     (-> this (.getColumnHeader))))
 
 (defn add-layout-component
@@ -167,21 +167,21 @@
   c - the the component to be added - `java.awt.Component`
 
   throws: java.lang.IllegalArgumentException - if s is an invalid key"
-  ([this s c]
+  ([^javax.swing.ScrollPaneLayout this ^java.lang.String s ^java.awt.Component c]
     (-> this (.addLayoutComponent s c))))
 
 (defn remove-layout-component
   "Removes the specified component from the layout.
 
   c - the component to remove - `java.awt.Component`"
-  ([this c]
+  ([^javax.swing.ScrollPaneLayout this ^java.awt.Component c]
     (-> this (.removeLayoutComponent c))))
 
 (defn get-vertical-scroll-bar
   "Returns the JScrollBar object that handles vertical scrolling.
 
   returns: the JScrollBar object that handles vertical scrolling - `javax.swing.JScrollBar`"
-  ([this]
+  ([^javax.swing.ScrollPaneLayout this]
     (-> this (.getVerticalScrollBar))))
 
 (defn layout-container
@@ -215,14 +215,14 @@
    corners, and a column header gets upper corners.
 
   parent - the Container to lay out - `java.awt.Container`"
-  ([this parent]
+  ([^javax.swing.ScrollPaneLayout this ^java.awt.Container parent]
     (-> this (.layoutContainer parent))))
 
 (defn get-horizontal-scroll-bar
   "Returns the JScrollBar object that handles horizontal scrolling.
 
   returns: the JScrollBar object that handles horizontal scrolling - `javax.swing.JScrollBar`"
-  ([this]
+  ([^javax.swing.ScrollPaneLayout this]
     (-> this (.getHorizontalScrollBar))))
 
 (defn get-corner
@@ -233,6 +233,6 @@
   returns: the Component at the specified corner, as defined in
            ScrollPaneConstants; if key is not one of the
             four corners, null is returned - `java.awt.Component`"
-  ([this key]
+  ([^javax.swing.ScrollPaneLayout this ^java.lang.String key]
     (-> this (.getCorner key))))
 

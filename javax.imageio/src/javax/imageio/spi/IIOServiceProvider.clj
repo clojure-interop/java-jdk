@@ -16,7 +16,7 @@
   version - a version identifier. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if version is null."
-  ([vendor-name version]
+  ([^java.lang.String vendor-name ^java.lang.String version]
     (new IIOServiceProvider vendor-name version))
   ([]
     (new IIOServiceProvider )))
@@ -36,7 +36,7 @@
 
   registry - a ServiceRegistry where this object has been registered. - `javax.imageio.spi.ServiceRegistry`
   category - a Class object indicating the registry category under which this object has been registered. - `java.lang.Class<?>`"
-  ([this registry category]
+  ([^javax.imageio.spi.IIOServiceProvider this ^javax.imageio.spi.ServiceRegistry registry ^java.lang.Class category]
     (-> this (.onRegistration registry category))))
 
 (defn on-deregistration
@@ -49,7 +49,7 @@
 
   registry - a ServiceRegistry from which this object is being (wholly or partially) deregistered. - `javax.imageio.spi.ServiceRegistry`
   category - a Class object indicating the registry category from which this object is being deregistered. - `java.lang.Class<?>`"
-  ([this registry category]
+  ([^javax.imageio.spi.IIOServiceProvider this ^javax.imageio.spi.ServiceRegistry registry ^java.lang.Class category]
     (-> this (.onDeregistration registry category))))
 
 (defn get-vendor-name
@@ -63,7 +63,7 @@
 
   returns: a non-null String containing
    the name of the vendor. - `java.lang.String`"
-  ([this]
+  ([^javax.imageio.spi.IIOServiceProvider this]
     (-> this (.getVendorName))))
 
 (defn get-version
@@ -78,7 +78,7 @@
 
   returns: a non-null String containing
    the version of this service provider. - `java.lang.String`"
-  ([this]
+  ([^javax.imageio.spi.IIOServiceProvider this]
     (-> this (.getVersion))))
 
 (defn get-description
@@ -91,6 +91,6 @@
 
   returns: a String containing a description of this
    service provider. - `java.lang.String`"
-  ([this locale]
+  ([^javax.imageio.spi.IIOServiceProvider this ^java.util.Locale locale]
     (-> this (.getDescription locale))))
 

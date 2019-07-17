@@ -14,6 +14,6 @@
   "Gets a result.
 
   returns: a result - `double`"
-  ([this]
+  ([^. this]
     (-> this (.getAsDouble))))
 

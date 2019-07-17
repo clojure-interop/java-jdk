@@ -12,7 +12,7 @@
    the array of relations passed in.  Duplicate entries are ignored.
 
   relations - an array of AccessibleRelation describing the relation set. - `javax.accessibility.AccessibleRelation[]`"
-  ([relations]
+  ([^javax.accessibility.AccessibleRelation[] relations]
     (new AccessibleRelationSet relations))
   ([]
     (new AccessibleRelationSet )))
@@ -22,7 +22,7 @@
    entries are ignored.
 
   relations - AccessibleRelation array describing the relation set. - `javax.accessibility.AccessibleRelation[]`"
-  ([this relations]
+  ([^javax.accessibility.AccessibleRelationSet this ^javax.accessibility.AccessibleRelation[] relations]
     (-> this (.addAll relations))))
 
 (defn contains
@@ -32,7 +32,7 @@
   key - the AccessibleRelation key - `java.lang.String`
 
   returns: true if the relation is in the relation set; otherwise false - `boolean`"
-  ([this key]
+  ([^javax.accessibility.AccessibleRelationSet this ^java.lang.String key]
     (-> this (.contains key))))
 
 (defn to-string
@@ -40,7 +40,7 @@
    using the default locale.
 
   returns: comma separated localized String - `java.lang.String`"
-  ([this]
+  ([^javax.accessibility.AccessibleRelationSet this]
     (-> this (.toString))))
 
 (defn remove
@@ -54,7 +54,7 @@
 
   returns: true if the relation is in the relation set; false if the
    relation set is unchanged - `boolean`"
-  ([this relation]
+  ([^javax.accessibility.AccessibleRelationSet this ^javax.accessibility.AccessibleRelation relation]
     (-> this (.remove relation))))
 
 (defn add
@@ -67,26 +67,26 @@
 
   returns: true if relation is added to the relation set; false if the
    relation set is unchanged - `boolean`"
-  ([this relation]
+  ([^javax.accessibility.AccessibleRelationSet this ^javax.accessibility.AccessibleRelation relation]
     (-> this (.add relation))))
 
 (defn size
   "Returns the number of relations in the relation set.
 
   returns: the number of relations in the relation set - `int`"
-  ([this]
+  ([^javax.accessibility.AccessibleRelationSet this]
     (-> this (.size))))
 
 (defn clear
   "Removes all the relations from the current relation set."
-  ([this]
+  ([^javax.accessibility.AccessibleRelationSet this]
     (-> this (.clear))))
 
 (defn to-array
   "Returns the current relation set as an array of AccessibleRelation
 
   returns: AccessibleRelation array contacting the current relation. - `javax.accessibility.AccessibleRelation[]`"
-  ([this]
+  ([^javax.accessibility.AccessibleRelationSet this]
     (-> this (.toArray))))
 
 (defn get
@@ -96,6 +96,6 @@
 
   returns: the relation, if one exists, that matches the specified key.
    Otherwise, null is returned. - `javax.accessibility.AccessibleRelation`"
-  ([this key]
+  ([^javax.accessibility.AccessibleRelationSet this ^java.lang.String key]
     (-> this (.get key))))
 

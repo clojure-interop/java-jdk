@@ -235,7 +235,7 @@
   "Returns the cursor to use over hyper links.
 
   returns: `java.awt.Cursor`"
-  ([this]
+  ([^javax.swing.text.html.HTMLEditorKit this]
     (-> this (.getLinkCursor))))
 
 (defn get-view-factory
@@ -244,7 +244,7 @@
    kit.
 
   returns: the factory - `javax.swing.text.ViewFactory`"
-  ([this]
+  ([^javax.swing.text.html.HTMLEditorKit this]
     (-> this (.getViewFactory))))
 
 (defn auto-form-submission?
@@ -253,7 +253,7 @@
 
   returns: true  if html form submission is processed automatically,
            false otherwise. - `boolean`"
-  ([this]
+  ([^javax.swing.text.html.HTMLEditorKit this]
     (-> this (.isAutoFormSubmission))))
 
 (defn create-default-document
@@ -261,14 +261,14 @@
    that is appropriate for this type of editor.
 
   returns: the model - `javax.swing.text.Document`"
-  ([this]
+  ([^javax.swing.text.html.HTMLEditorKit this]
     (-> this (.createDefaultDocument))))
 
 (defn set-link-cursor
   "Sets the cursor to use over links.
 
   cursor - `java.awt.Cursor`"
-  ([this cursor]
+  ([^javax.swing.text.html.HTMLEditorKit this ^java.awt.Cursor cursor]
     (-> this (.setLinkCursor cursor))))
 
 (defn get-style-sheet
@@ -278,14 +278,14 @@
    instances.
 
   returns: `javax.swing.text.html.StyleSheet`"
-  ([this]
+  ([^javax.swing.text.html.HTMLEditorKit this]
     (-> this (.getStyleSheet))))
 
 (defn set-default-cursor
   "Sets the default cursor.
 
   cursor - `java.awt.Cursor`"
-  ([this cursor]
+  ([^javax.swing.text.html.HTMLEditorKit this ^java.awt.Cursor cursor]
     (-> this (.setDefaultCursor cursor))))
 
 (defn read
@@ -301,7 +301,7 @@
   pos - the location in the document to place the content - `int`
 
   throws: java.io.IOException - on any I/O error"
-  ([this in doc pos]
+  ([^javax.swing.text.html.HTMLEditorKit this ^java.io.Reader in ^javax.swing.text.Document doc ^Integer pos]
     (-> this (.read in doc pos))))
 
 (defn get-actions
@@ -311,7 +311,7 @@
    locally for style operations.
 
   returns: the command list - `javax.swing.Action[]`"
-  ([this]
+  ([^javax.swing.text.html.HTMLEditorKit this]
     (-> this (.getActions))))
 
 (defn get-content-type
@@ -320,14 +320,14 @@
    the type text/html.
 
   returns: the type - `java.lang.String`"
-  ([this]
+  ([^javax.swing.text.html.HTMLEditorKit this]
     (-> this (.getContentType))))
 
 (defn get-default-cursor
   "Returns the default cursor.
 
   returns: `java.awt.Cursor`"
-  ([this]
+  ([^javax.swing.text.html.HTMLEditorKit this]
     (-> this (.getDefaultCursor))))
 
 (defn install
@@ -335,7 +335,7 @@
    a JEditorPane.
 
   c - the JEditorPane - `javax.swing.JEditorPane`"
-  ([this c]
+  ([^javax.swing.text.html.HTMLEditorKit this ^javax.swing.JEditorPane c]
     (-> this (.install c))))
 
 (defn get-input-attributes
@@ -343,7 +343,7 @@
    editing actions.
 
   returns: the attribute set - `javax.swing.text.MutableAttributeSet`"
-  ([this]
+  ([^javax.swing.text.html.HTMLEditorKit this]
     (-> this (.getInputAttributes))))
 
 (defn insert-html
@@ -357,14 +357,14 @@
   insert-tag - the first tag to start inserting into document - `javax.swing.text.html.HTML.Tag`
 
   throws: java.lang.RuntimeException - (will eventually be a BadLocationException) if pos is invalid"
-  ([this doc offset html pop-depth push-depth insert-tag]
+  ([^javax.swing.text.html.HTMLEditorKit this ^javax.swing.text.html.HTMLDocument doc ^Integer offset ^java.lang.String html ^Integer pop-depth ^Integer push-depth ^javax.swing.text.html.HTML.Tag insert-tag]
     (-> this (.insertHTML doc offset html pop-depth push-depth insert-tag))))
 
 (defn get-accessible-context
   "returns the AccessibleContext associated with this editor kit
 
   returns: the AccessibleContext associated with this editor kit - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^javax.swing.text.html.HTMLEditorKit this]
     (-> this (.getAccessibleContext))))
 
 (defn deinstall
@@ -373,14 +373,14 @@
    listeners that were attached.
 
   c - the JEditorPane - `javax.swing.JEditorPane`"
-  ([this c]
+  ([^javax.swing.text.html.HTMLEditorKit this ^javax.swing.JEditorPane c]
     (-> this (.deinstall c))))
 
 (defn clone
   "Creates a copy of the editor kit.
 
   returns: the copy - `java.lang.Object`"
-  ([this]
+  ([^javax.swing.text.html.HTMLEditorKit this]
     (-> this (.clone))))
 
 (defn write
@@ -393,7 +393,7 @@
   len - the amount to write out - `int`
 
   throws: java.io.IOException - on any I/O error"
-  ([this out doc pos len]
+  ([^javax.swing.text.html.HTMLEditorKit this ^java.io.Writer out ^javax.swing.text.Document doc ^Integer pos ^Integer len]
     (-> this (.write out doc pos len))))
 
 (defn set-style-sheet
@@ -407,7 +407,7 @@
    if desired.
 
   s - `javax.swing.text.html.StyleSheet`"
-  ([this s]
+  ([^javax.swing.text.html.HTMLEditorKit this ^javax.swing.text.html.StyleSheet s]
     (-> this (.setStyleSheet s))))
 
 (defn set-auto-form-submission
@@ -416,6 +416,6 @@
    By default it is set to true.
 
   is-auto - `boolean`"
-  ([this is-auto]
+  ([^javax.swing.text.html.HTMLEditorKit this ^Boolean is-auto]
     (-> this (.setAutoFormSubmission is-auto))))
 

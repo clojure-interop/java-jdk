@@ -8,14 +8,14 @@
   "Returns the relation type name.
 
   returns: the relation type name. - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getRelationTypeName))))
 
 (defn get-role-infos
   "Returns the list of role definitions (ArrayList of RoleInfo objects).
 
   returns: an ArrayList of RoleInfo. - `java.util.List<javax.management.relation.RoleInfo>`"
-  ([this]
+  ([^. this]
     (-> this (.getRoleInfos))))
 
 (defn get-role-info
@@ -28,6 +28,6 @@
    does not exist - `javax.management.relation.RoleInfo`
 
   throws: java.lang.IllegalArgumentException - if null parameter"
-  ([this role-info-name]
+  ([^. this ^java.lang.String role-info-name]
     (-> this (.getRoleInfo role-info-name))))
 

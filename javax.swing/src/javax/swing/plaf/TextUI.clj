@@ -19,9 +19,9 @@
   returns: the coordinates as a rectangle - `java.awt.Rectangle`
 
   throws: javax.swing.text.BadLocationException - if the given position does not represent a valid location in the associated document"
-  ([this t pos bias]
+  ([^javax.swing.plaf.TextUI this ^javax.swing.text.JTextComponent t ^Integer pos ^javax.swing.text.Position.Bias bias]
     (-> this (.modelToView t pos bias)))
-  ([this t pos]
+  ([^javax.swing.plaf.TextUI this ^javax.swing.text.JTextComponent t ^Integer pos]
     (-> this (.modelToView t pos))))
 
 (defn view-to-model
@@ -34,9 +34,9 @@
 
   returns: the location within the model that best represents the
            given point in the view >= 0 - `int`"
-  ([this t pt bias-return]
+  ([^javax.swing.plaf.TextUI this ^javax.swing.text.JTextComponent t ^java.awt.Point pt ^javax.swing.text.Position.Bias[] bias-return]
     (-> this (.viewToModel t pt bias-return)))
-  ([this t pt]
+  ([^javax.swing.plaf.TextUI this ^javax.swing.text.JTextComponent t ^java.awt.Point pt]
     (-> this (.viewToModel t pt))))
 
 (defn get-next-visual-position-from
@@ -55,7 +55,7 @@
     location visual position - `int`
 
   throws: javax.swing.text.BadLocationException"
-  ([this t pos b direction bias-ret]
+  ([^javax.swing.plaf.TextUI this ^javax.swing.text.JTextComponent t ^Integer pos ^javax.swing.text.Position.Bias b ^Integer direction ^javax.swing.text.Position.Bias[] bias-ret]
     (-> this (.getNextVisualPositionFrom t pos b direction bias-ret))))
 
 (defn damage-range
@@ -67,9 +67,9 @@
   p-1 - the end of the range >= p0 - `int`
   first-bias - `javax.swing.text.Position.Bias`
   second-bias - `javax.swing.text.Position.Bias`"
-  ([this t p-0 p-1 first-bias second-bias]
+  ([^javax.swing.plaf.TextUI this ^javax.swing.text.JTextComponent t ^Integer p-0 ^Integer p-1 ^javax.swing.text.Position.Bias first-bias ^javax.swing.text.Position.Bias second-bias]
     (-> this (.damageRange t p-0 p-1 first-bias second-bias)))
-  ([this t p-0 p-1]
+  ([^javax.swing.plaf.TextUI this ^javax.swing.text.JTextComponent t ^Integer p-0 ^Integer p-1]
     (-> this (.damageRange t p-0 p-1))))
 
 (defn get-editor-kit
@@ -81,7 +81,7 @@
   t - `javax.swing.text.JTextComponent`
 
   returns: the editor kit binding - `javax.swing.text.EditorKit`"
-  ([this t]
+  ([^javax.swing.plaf.TextUI this ^javax.swing.text.JTextComponent t]
     (-> this (.getEditorKit t))))
 
 (defn get-root-view
@@ -93,7 +93,7 @@
   t - `javax.swing.text.JTextComponent`
 
   returns: the view - `javax.swing.text.View`"
-  ([this t]
+  ([^javax.swing.plaf.TextUI this ^javax.swing.text.JTextComponent t]
     (-> this (.getRootView t))))
 
 (defn get-tool-tip-text
@@ -103,6 +103,6 @@
   pt - `java.awt.Point`
 
   returns: `java.lang.String`"
-  ([this t pt]
+  ([^javax.swing.plaf.TextUI this ^javax.swing.text.JTextComponent t ^java.awt.Point pt]
     (-> this (.getToolTipText t pt))))
 

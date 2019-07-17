@@ -17,7 +17,7 @@
   offset - the offset in key, where the DES key material starts. - `int`
 
   throws: java.lang.NullPointerException - if the given key material is null"
-  ([key offset]
+  ([key ^Integer offset]
     (new DESKeySpec key offset))
   ([key]
     (new DESKeySpec key)))
@@ -41,7 +41,7 @@
    otherwise. - `boolean`
 
   throws: java.security.InvalidKeyException - if the given key material is null, or starting at offset inclusive, is shorter than 8 bytes."
-  ([key offset]
+  ([key ^Integer offset]
     (DESKeySpec/isParityAdjusted key offset)))
 
 (defn *weak?
@@ -54,7 +54,7 @@
    otherwise. - `boolean`
 
   throws: java.security.InvalidKeyException - if the given key material is null, or starting at offset inclusive, is shorter than 8 bytes."
-  ([key offset]
+  ([key ^Integer offset]
     (DESKeySpec/isWeak key offset)))
 
 (defn get-key
@@ -62,6 +62,6 @@
 
   returns: the DES key material. Returns a new array
    each time this method is called. - `byte[]`"
-  ([this]
+  ([^javax.crypto.spec.DESKeySpec this]
     (-> this (.getKey))))
 

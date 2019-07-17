@@ -246,11 +246,11 @@
   returns: a new instance of a JAXBContext - `javax.xml.bind.JAXBContext`
 
   throws: javax.xml.bind.JAXBException - if an error was encountered while creating the JAXBContext such as failure to locate either ObjectFactory.class or jaxb.index in the packages an ambiguity among global elements contained in the contextPath failure to locate a value for the context factory provider property mixing schema derived packages from different providers on the same contextPath"
-  ([context-path class-loader properties]
+  ([^java.lang.String context-path ^java.lang.ClassLoader class-loader ^java.util.Map properties]
     (JAXBContext/newInstance context-path class-loader properties))
-  ([context-path class-loader]
+  ([^java.lang.String context-path ^java.lang.ClassLoader class-loader]
     (JAXBContext/newInstance context-path class-loader))
-  ([context-path]
+  ([^java.lang.String context-path]
     (JAXBContext/newInstance context-path)))
 
 (defn create-unmarshaller
@@ -260,7 +260,7 @@
   returns: an Unmarshaller object - `javax.xml.bind.Unmarshaller`
 
   throws: javax.xml.bind.JAXBException - if an error was encountered while creating the Unmarshaller object"
-  ([this]
+  ([^javax.xml.bind.JAXBContext this]
     (-> this (.createUnmarshaller))))
 
 (defn create-marshaller
@@ -270,7 +270,7 @@
   returns: a Marshaller object - `javax.xml.bind.Marshaller`
 
   throws: javax.xml.bind.JAXBException - if an error was encountered while creating the Marshaller object"
-  ([this]
+  ([^javax.xml.bind.JAXBContext this]
     (-> this (.createMarshaller))))
 
 (defn create-validator
@@ -279,7 +279,7 @@
   returns: a Validator object - `javax.xml.bind.Validator`
 
   throws: javax.xml.bind.JAXBException - if an error was encountered while creating the Validator object"
-  ([this]
+  ([^javax.xml.bind.JAXBContext this]
     (-> this (.createValidator))))
 
 (defn create-binder
@@ -291,9 +291,9 @@
   returns: always a new valid Binder object. - `<T> javax.xml.bind.Binder<T>`
 
   throws: java.lang.UnsupportedOperationException - if DOM API corresponding to domType is not supported by the implementation."
-  ([this dom-type]
+  ([^javax.xml.bind.JAXBContext this ^java.lang.Class dom-type]
     (-> this (.createBinder dom-type)))
-  ([this]
+  ([^javax.xml.bind.JAXBContext this]
     (-> this (.createBinder))))
 
 (defn create-jaxb-introspector
@@ -303,7 +303,7 @@
   returns: always return a non-null valid JAXBIntrospector object. - `javax.xml.bind.JAXBIntrospector`
 
   throws: java.lang.UnsupportedOperationException - Calling this method on JAXB 1.0 implementations will throw an UnsupportedOperationException."
-  ([this]
+  ([^javax.xml.bind.JAXBContext this]
     (-> this (.createJAXBIntrospector))))
 
 (defn generate-schema
@@ -312,6 +312,6 @@
   output-resolver - this object controls the output to which schemas will be sent. - `javax.xml.bind.SchemaOutputResolver`
 
   throws: java.io.IOException - if SchemaOutputResolver throws an IOException."
-  ([this output-resolver]
+  ([^javax.xml.bind.JAXBContext this ^javax.xml.bind.SchemaOutputResolver output-resolver]
     (-> this (.generateSchema output-resolver))))
 

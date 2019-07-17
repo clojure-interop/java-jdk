@@ -31,11 +31,11 @@
   mode - the mode in which the file is to be opened - `int`
 
   throws: java.io.IOException - if an I/O error has occurred"
-  ([file verify mode]
+  ([^java.io.File file ^Boolean verify ^Integer mode]
     (new JarFile file verify mode))
-  ([name verify]
+  ([^java.lang.String name ^Boolean verify]
     (new JarFile name verify))
-  ([name]
+  ([^java.lang.String name]
     (new JarFile name)))
 
 (def *-manifest-name
@@ -292,7 +292,7 @@
   returns: the jar file manifest, or null if none - `java.util.jar.Manifest`
 
   throws: java.lang.IllegalStateException - may be thrown if the jar file has been closed"
-  ([this]
+  ([^java.util.jar.JarFile this]
     (-> this (.getManifest))))
 
 (defn get-jar-entry
@@ -305,7 +305,7 @@
            null if not found. - `java.util.jar.JarEntry`
 
   throws: java.lang.IllegalStateException - may be thrown if the jar file has been closed"
-  ([this name]
+  ([^java.util.jar.JarFile this ^java.lang.String name]
     (-> this (.getJarEntry name))))
 
 (defn get-entry
@@ -318,21 +318,21 @@
            null if not found - `java.util.zip.ZipEntry`
 
   throws: java.lang.IllegalStateException - may be thrown if the jar file has been closed"
-  ([this name]
+  ([^java.util.jar.JarFile this ^java.lang.String name]
     (-> this (.getEntry name))))
 
 (defn entries
   "Returns an enumeration of the zip file entries.
 
   returns: an enumeration of the ZIP file entries - `java.util.Enumeration<java.util.jar.JarEntry>`"
-  ([this]
+  ([^java.util.jar.JarFile this]
     (-> this (.entries))))
 
 (defn stream
   "Description copied from class: ZipFile
 
   returns: an ordered Stream of entries in this ZIP file - `java.util..Stream<java.util.jar.JarEntry>`"
-  ([this]
+  ([^java.util.jar.JarFile this]
     (-> this (.stream))))
 
 (defn get-input-stream
@@ -345,6 +345,6 @@
            zip file entry - `java.io.InputStream`
 
   throws: java.util.zip.ZipException - if a zip file format error has occurred"
-  ([this ze]
+  ([^java.util.jar.JarFile this ^java.util.zip.ZipEntry ze]
     (-> this (.getInputStream ze))))
 

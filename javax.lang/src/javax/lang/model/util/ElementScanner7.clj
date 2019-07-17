@@ -53,6 +53,6 @@
   p - a visitor-specified parameter - `ElementScanner7.P`
 
   returns: the result of scanning - `ElementScanner7.R`"
-  ([this e p]
+  ([^javax.lang.model.util.ElementScanner7 this ^javax.lang.model.element.VariableElement e ^ElementScanner7.P p]
     (-> this (.visitVariable e p))))
 

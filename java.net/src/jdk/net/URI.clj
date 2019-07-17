@@ -459,15 +459,15 @@
   fragment - Fragment - `java.lang.String`
 
   throws: java.net.URISyntaxException - If both a scheme and a path are given but the path is relative, if the URI string constructed from the given components violates RFC 2396, or if the authority component of the string is present but cannot be parsed as a server-based authority"
-  ([scheme user-info host port path query fragment]
+  ([^java.lang.String scheme ^java.lang.String user-info ^java.lang.String host ^Integer port ^java.lang.String path ^java.lang.String query ^java.lang.String fragment]
     (new URI scheme user-info host port path query fragment))
-  ([scheme authority path query fragment]
+  ([^java.lang.String scheme ^java.lang.String authority ^java.lang.String path ^java.lang.String query ^java.lang.String fragment]
     (new URI scheme authority path query fragment))
-  ([scheme host path fragment]
+  ([^java.lang.String scheme ^java.lang.String host ^java.lang.String path ^java.lang.String fragment]
     (new URI scheme host path fragment))
-  ([scheme ssp fragment]
+  ([^java.lang.String scheme ^java.lang.String ssp ^java.lang.String fragment]
     (new URI scheme ssp fragment))
-  ([str]
+  ([^java.lang.String str]
     (new URI str)))
 
 (defn *create
@@ -489,7 +489,7 @@
   returns: The new URI - `java.net.URI`
 
   throws: java.lang.NullPointerException - If str is null"
-  ([str]
+  ([^java.lang.String str]
     (URI/create str)))
 
 (defn opaque?
@@ -501,7 +501,7 @@
    a fragment; all other components are undefined.
 
   returns: true if, and only if, this URI is opaque - `boolean`"
-  ([this]
+  ([^java.net.URI this]
     (-> this (.isOpaque))))
 
 (defn get-raw-query
@@ -512,7 +512,7 @@
 
   returns: The raw query component of this URI,
             or null if the query is undefined - `java.lang.String`"
-  ([this]
+  ([^java.net.URI this]
     (-> this (.getRawQuery))))
 
 (defn get-raw-path
@@ -525,7 +525,7 @@
 
   returns: The path component of this URI,
             or null if the path is undefined - `java.lang.String`"
-  ([this]
+  ([^java.net.URI this]
     (-> this (.getRawPath))))
 
 (defn normalize
@@ -563,7 +563,7 @@
 
   returns: A URI equivalent to this URI,
             but whose path is in normal form - `java.net.URI`"
-  ([this]
+  ([^java.net.URI this]
     (-> this (.normalize))))
 
 (defn get-authority
@@ -575,7 +575,7 @@
 
   returns: The decoded authority component of this URI,
             or null if the authority is undefined - `java.lang.String`"
-  ([this]
+  ([^java.net.URI this]
     (-> this (.getAuthority))))
 
 (defn resolve
@@ -629,7 +629,7 @@
   returns: The resulting URI - `java.net.URI`
 
   throws: java.lang.NullPointerException - If uri is null"
-  ([this uri]
+  ([^java.net.URI this ^java.net.URI uri]
     (-> this (.resolve uri))))
 
 (defn get-fragment
@@ -641,7 +641,7 @@
 
   returns: The decoded fragment component of this URI,
             or null if the fragment is undefined - `java.lang.String`"
-  ([this]
+  ([^java.net.URI this]
     (-> this (.getFragment))))
 
 (defn get-scheme-specific-part
@@ -653,7 +653,7 @@
 
   returns: The decoded scheme-specific part of this URI
             (never null) - `java.lang.String`"
-  ([this]
+  ([^java.net.URI this]
     (-> this (.getSchemeSpecificPart))))
 
 (defn to-string
@@ -668,7 +668,7 @@
    section 5.2, step 7.
 
   returns: The string form of this URI - `java.lang.String`"
-  ([this]
+  ([^java.net.URI this]
     (-> this (.toString))))
 
 (defn get-user-info
@@ -680,7 +680,7 @@
 
   returns: The decoded user-information component of this URI,
             or null if the user information is undefined - `java.lang.String`"
-  ([this]
+  ([^java.net.URI this]
     (-> this (.getUserInfo))))
 
 (defn to-ascii-string
@@ -694,7 +694,7 @@
   returns: The string form of this URI, encoded as needed
             so that it only contains characters in the US-ASCII
             charset - `java.lang.String`"
-  ([this]
+  ([^java.net.URI this]
     (-> this (.toASCIIString))))
 
 (defn get-path
@@ -706,7 +706,7 @@
 
   returns: The decoded path component of this URI,
             or null if the path is undefined - `java.lang.String`"
-  ([this]
+  ([^java.net.URI this]
     (-> this (.getPath))))
 
 (defn get-query
@@ -718,7 +718,7 @@
 
   returns: The decoded query component of this URI,
             or null if the query is undefined - `java.lang.String`"
-  ([this]
+  ([^java.net.URI this]
     (-> this (.getQuery))))
 
 (defn get-raw-authority
@@ -733,7 +733,7 @@
 
   returns: The raw authority component of this URI,
             or null if the authority is undefined - `java.lang.String`"
-  ([this]
+  ([^java.net.URI this]
     (-> this (.getRawAuthority))))
 
 (defn get-scheme
@@ -748,7 +748,7 @@
 
   returns: The scheme component of this URI,
             or null if the scheme is undefined - `java.lang.String`"
-  ([this]
+  ([^java.net.URI this]
     (-> this (.getScheme))))
 
 (defn get-raw-user-info
@@ -760,7 +760,7 @@
 
   returns: The raw user-information component of this URI,
             or null if the user information is undefined - `java.lang.String`"
-  ([this]
+  ([^java.net.URI this]
     (-> this (.getRawUserInfo))))
 
 (defn parse-server-authority
@@ -806,7 +806,7 @@
             as a server-based authority - `java.net.URI`
 
   throws: java.net.URISyntaxException - If the authority component of this URI is defined but cannot be parsed as a server-based authority according to RFC 2396"
-  ([this]
+  ([^java.net.URI this]
     (-> this (.parseServerAuthority))))
 
 (defn get-raw-fragment
@@ -817,7 +817,7 @@
 
   returns: The raw fragment component of this URI,
             or null if the fragment is undefined - `java.lang.String`"
-  ([this]
+  ([^java.net.URI this]
     (-> this (.getRawFragment))))
 
 (defn get-port
@@ -828,7 +828,7 @@
 
   returns: The port component of this URI,
             or -1 if the port is undefined - `int`"
-  ([this]
+  ([^java.net.URI this]
     (-> this (.getPort))))
 
 (defn hash-code
@@ -837,7 +837,7 @@
    Object.hashCode method.
 
   returns: A hash-code value for this URI - `int`"
-  ([this]
+  ([^java.net.URI this]
     (-> this (.hashCode))))
 
 (defn get-host
@@ -874,7 +874,7 @@
 
   returns: The host component of this URI,
             or null if the host is undefined - `java.lang.String`"
-  ([this]
+  ([^java.net.URI this]
     (-> this (.getHost))))
 
 (defn compare-to
@@ -940,7 +940,7 @@
             less than, equal to, or greater than the given URI - `int`
 
   throws: java.lang.ClassCastException - If the given object is not a URI"
-  ([this that]
+  ([^java.net.URI this ^java.net.URI that]
     (-> this (.compareTo that))))
 
 (defn get-raw-scheme-specific-part
@@ -952,7 +952,7 @@
 
   returns: The raw scheme-specific part of this URI
             (never null) - `java.lang.String`"
-  ([this]
+  ([^java.net.URI this]
     (-> this (.getRawSchemeSpecificPart))))
 
 (defn relativize
@@ -978,7 +978,7 @@
   returns: The resulting URI - `java.net.URI`
 
   throws: java.lang.NullPointerException - If uri is null"
-  ([this uri]
+  ([^java.net.URI this ^java.net.URI uri]
     (-> this (.relativize uri))))
 
 (defn equals
@@ -1016,7 +1016,7 @@
 
   returns: true if, and only if, the given object is a URI that
             is identical to this URI - `boolean`"
-  ([this ob]
+  ([^java.net.URI this ^java.lang.Object ob]
     (-> this (.equals ob))))
 
 (defn to-url
@@ -1029,7 +1029,7 @@
   returns: A URL constructed from this URI - `java.net.URL`
 
   throws: java.lang.IllegalArgumentException - If this URL is not absolute"
-  ([this]
+  ([^java.net.URI this]
     (-> this (.toURL))))
 
 (defn absolute?
@@ -1038,6 +1038,6 @@
     A URI is absolute if, and only if, it has a scheme component.
 
   returns: true if, and only if, this URI is absolute - `boolean`"
-  ([this]
+  ([^java.net.URI this]
     (-> this (.isAbsolute))))
 

@@ -22,9 +22,9 @@
 
   out - A character-output stream - `java.io.Writer`
   auto-flush - A boolean; if true, the println, printf, or format methods will flush the output buffer - `boolean`"
-  ([out auto-flush]
+  ([^java.io.Writer out ^Boolean auto-flush]
     (new PrintWriter out auto-flush))
-  ([out]
+  ([^java.io.Writer out]
     (new PrintWriter out)))
 
 (defn printf
@@ -46,14 +46,14 @@
   returns: This writer - `java.io.PrintWriter`
 
   throws: java.util.IllegalFormatException - If a format string contains an illegal syntax, a format specifier that is incompatible with the given arguments, insufficient arguments given the format string, or other illegal conditions. For specification of all possible formatting errors, see the Details section of the formatter class specification."
-  ([this l format args]
+  ([^java.io.PrintWriter this ^java.util.Locale l ^java.lang.String format ^java.lang.Object args]
     (-> this (.printf l format args)))
-  ([this format args]
+  ([^java.io.PrintWriter this ^java.lang.String format ^java.lang.Object args]
     (-> this (.printf format args))))
 
 (defn flush
   "Flushes the stream."
-  ([this]
+  ([^java.io.PrintWriter this]
     (-> this (.flush))))
 
 (defn println
@@ -62,15 +62,15 @@
    println().
 
   x - the boolean value to be printed - `boolean`"
-  ([this x]
+  ([^java.io.PrintWriter this ^Boolean x]
     (-> this (.println x)))
-  ([this]
+  ([^java.io.PrintWriter this]
     (-> this (.println))))
 
 (defn close
   "Closes the stream and releases any system resources associated
    with it. Closing a previously closed stream has no effect."
-  ([this]
+  ([^java.io.PrintWriter this]
     (-> this (.close))))
 
 (defn append
@@ -91,9 +91,9 @@
   returns: This writer - `java.io.PrintWriter`
 
   throws: java.lang.IndexOutOfBoundsException - If start or end are negative, start is greater than end, or end is greater than csq.length()"
-  ([this csq start end]
+  ([^java.io.PrintWriter this ^java.lang.CharSequence csq ^Integer start ^Integer end]
     (-> this (.append csq start end)))
-  ([this csq]
+  ([^java.io.PrintWriter this ^java.lang.CharSequence csq]
     (-> this (.append csq))))
 
 (defn print
@@ -102,7 +102,7 @@
    are written in exactly the manner of the write(int) method.
 
   b - The boolean to be printed - `boolean`"
-  ([this b]
+  ([^java.io.PrintWriter this ^Boolean b]
     (-> this (.print b))))
 
 (defn write
@@ -111,9 +111,9 @@
   buf - Array of characters - `char[]`
   off - Offset from which to start writing characters - `int`
   len - Number of characters to write - `int`"
-  ([this buf off len]
+  ([^java.io.PrintWriter this buf ^Integer off ^Integer len]
     (-> this (.write buf off len)))
-  ([this c]
+  ([^java.io.PrintWriter this ^Integer c]
     (-> this (.write c))))
 
 (defn check-error
@@ -122,7 +122,7 @@
   returns: true if the print stream has encountered an error,
             either on the underlying output stream or during a format
             conversion. - `boolean`"
-  ([this]
+  ([^java.io.PrintWriter this]
     (-> this (.checkError))))
 
 (defn format
@@ -137,8 +137,8 @@
   returns: This writer - `java.io.PrintWriter`
 
   throws: java.util.IllegalFormatException - If a format string contains an illegal syntax, a format specifier that is incompatible with the given arguments, insufficient arguments given the format string, or other illegal conditions. For specification of all possible formatting errors, see the Details section of the formatter class specification."
-  ([this l format args]
+  ([^java.io.PrintWriter this ^java.util.Locale l ^java.lang.String format ^java.lang.Object args]
     (-> this (.format l format args)))
-  ([this format args]
+  ([^java.io.PrintWriter this ^java.lang.String format ^java.lang.Object args]
     (-> this (.format format args))))
 

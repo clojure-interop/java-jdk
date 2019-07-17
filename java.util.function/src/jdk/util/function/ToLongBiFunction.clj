@@ -15,6 +15,6 @@
   u - the second function argument - `ToLongBiFunction.U`
 
   returns: the function result - `long`"
-  ([this t u]
+  ([^. this ^ToLongBiFunction.T t ^ToLongBiFunction.U u]
     (-> this (.applyAsLong t u))))
 

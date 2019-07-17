@@ -28,7 +28,7 @@
   returns: an object that implements the interface. May be a proxy for the actual implementing object. - `<T> T`
 
   throws: java.sql.SQLException - If no object found that implements the interface"
-  ([this iface]
+  ([^. this ^java.lang.Class iface]
     (-> this (.unwrap iface))))
 
 (defn wrapper-for?
@@ -45,6 +45,6 @@
   returns: true if this implements the interface or directly or indirectly wraps an object that does. - `boolean`
 
   throws: java.sql.SQLException - if an error occurs while determining whether this is a wrapper for an object with the given interface."
-  ([this iface]
+  ([^. this ^java.lang.Class iface]
     (-> this (.isWrapperFor iface))))
 

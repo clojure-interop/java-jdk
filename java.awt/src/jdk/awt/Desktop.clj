@@ -68,7 +68,7 @@
 
   returns: true if the specified action is supported on
            the current platform; false otherwise - `boolean`"
-  ([this action]
+  ([^java.awt.Desktop this ^java.awt.Desktop.Action action]
     (-> this (.isSupported action))))
 
 (defn open
@@ -80,7 +80,7 @@
   file - the file to be opened with the associated application - `java.io.File`
 
   throws: java.lang.NullPointerException - if file is null"
-  ([this file]
+  ([^java.awt.Desktop this ^java.io.File file]
     (-> this (.open file))))
 
 (defn edit
@@ -90,7 +90,7 @@
   file - the file to be opened for editing - `java.io.File`
 
   throws: java.lang.NullPointerException - if the specified file is null"
-  ([this file]
+  ([^java.awt.Desktop this ^java.io.File file]
     (-> this (.edit file))))
 
 (defn print
@@ -100,7 +100,7 @@
   file - the file to be printed - `java.io.File`
 
   throws: java.lang.NullPointerException - if the specified file is null"
-  ([this file]
+  ([^java.awt.Desktop this ^java.io.File file]
     (-> this (.print file))))
 
 (defn browse
@@ -121,7 +121,7 @@
   uri - the URI to be displayed in the user default browser - `java.net.URI`
 
   throws: java.lang.NullPointerException - if uri is null"
-  ([this uri]
+  ([^java.awt.Desktop this ^java.net.URI uri]
     (-> this (.browse uri))))
 
 (defn mail
@@ -137,8 +137,8 @@
   mailto-uri - the specified mailto: URI - `java.net.URI`
 
   throws: java.lang.NullPointerException - if the specified URI is null"
-  ([this mailto-uri]
+  ([^java.awt.Desktop this ^java.net.URI mailto-uri]
     (-> this (.mail mailto-uri)))
-  ([this]
+  ([^java.awt.Desktop this]
     (-> this (.mail))))
 

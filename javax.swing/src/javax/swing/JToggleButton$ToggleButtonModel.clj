@@ -23,20 +23,20 @@
   "Checks if the button is selected.
 
   returns: true if the button is selected - `boolean`"
-  ([this]
+  ([^javax.swing.JToggleButton$ToggleButtonModel this]
     (-> this (.isSelected))))
 
 (defn set-selected
   "Sets the selected state of the button.
 
   b - true selects the toggle button, false deselects the toggle button. - `boolean`"
-  ([this b]
+  ([^javax.swing.JToggleButton$ToggleButtonModel this ^Boolean b]
     (-> this (.setSelected b))))
 
 (defn set-pressed
   "Sets the pressed state of the toggle button.
 
   b - whether or not the button should be pressed - `boolean`"
-  ([this b]
+  ([^javax.swing.JToggleButton$ToggleButtonModel this ^Boolean b]
     (-> this (.setPressed b))))
 

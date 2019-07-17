@@ -11,6 +11,6 @@
 
   returns: The contained message; returns null if no
             message is present in this message context - `javax.xml.ws.LogicalMessage`"
-  ([this]
+  ([^. this]
     (-> this (.getMessage))))
 

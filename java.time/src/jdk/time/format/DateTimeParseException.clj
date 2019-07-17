@@ -14,22 +14,22 @@
   parsed-data - the parsed text, should not be null - `java.lang.CharSequence`
   error-index - the index in the parsed string that was invalid, should be a valid index - `int`
   cause - the cause exception, may be null - `java.lang.Throwable`"
-  ([message parsed-data error-index cause]
+  ([^java.lang.String message ^java.lang.CharSequence parsed-data ^Integer error-index ^java.lang.Throwable cause]
     (new DateTimeParseException message parsed-data error-index cause))
-  ([message parsed-data error-index]
+  ([^java.lang.String message ^java.lang.CharSequence parsed-data ^Integer error-index]
     (new DateTimeParseException message parsed-data error-index)))
 
 (defn get-parsed-string
   "Returns the string that was being parsed.
 
   returns: the string that was being parsed, should not be null. - `java.lang.String`"
-  ([this]
+  ([^java.time.format.DateTimeParseException this]
     (-> this (.getParsedString))))
 
 (defn get-error-index
   "Returns the index where the error was found.
 
   returns: the index in the parsed string that was invalid, should be a valid index - `int`"
-  ([this]
+  ([^java.time.format.DateTimeParseException this]
     (-> this (.getErrorIndex))))
 

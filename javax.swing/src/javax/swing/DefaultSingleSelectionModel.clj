@@ -21,40 +21,40 @@
   "Description copied from interface: SingleSelectionModel
 
   returns: the model's selection, or -1 if there is no selection - `int`"
-  ([this]
+  ([^javax.swing.DefaultSingleSelectionModel this]
     (-> this (.getSelectedIndex))))
 
 (defn set-selected-index
   "Description copied from interface: SingleSelectionModel
 
   index - an int specifying the model selection - `int`"
-  ([this index]
+  ([^javax.swing.DefaultSingleSelectionModel this ^Integer index]
     (-> this (.setSelectedIndex index))))
 
 (defn clear-selection
   "Description copied from interface: SingleSelectionModel"
-  ([this]
+  ([^javax.swing.DefaultSingleSelectionModel this]
     (-> this (.clearSelection))))
 
 (defn selected?
   "Description copied from interface: SingleSelectionModel
 
   returns: true if a value is currently selected - `boolean`"
-  ([this]
+  ([^javax.swing.DefaultSingleSelectionModel this]
     (-> this (.isSelected))))
 
 (defn add-change-listener
   "Adds a ChangeListener to the button.
 
   l - the ChangeListener to add - `javax.swing.event.ChangeListener`"
-  ([this l]
+  ([^javax.swing.DefaultSingleSelectionModel this ^javax.swing.event.ChangeListener l]
     (-> this (.addChangeListener l))))
 
 (defn remove-change-listener
   "Removes a ChangeListener from the button.
 
   l - the ChangeListener to remove - `javax.swing.event.ChangeListener`"
-  ([this l]
+  ([^javax.swing.DefaultSingleSelectionModel this ^javax.swing.event.ChangeListener l]
     (-> this (.removeChangeListener l))))
 
 (defn get-change-listeners
@@ -64,7 +64,7 @@
   returns: all of this model's ChangeListeners
            or an empty
            array if no change listeners are currently registered - `javax.swing.event.ChangeListener[]`"
-  ([this]
+  ([^javax.swing.DefaultSingleSelectionModel this]
     (-> this (.getChangeListeners))))
 
 (defn get-listeners
@@ -97,6 +97,6 @@
             listeners have been added - `<T extends java.util.EventListener> T[]`
 
   throws: java.lang.ClassCastException - if listenerType doesn't specify a class or interface that implements java.util.EventListener"
-  ([this listener-type]
+  ([^javax.swing.DefaultSingleSelectionModel this ^java.lang.Class listener-type]
     (-> this (.getListeners listener-type))))
 

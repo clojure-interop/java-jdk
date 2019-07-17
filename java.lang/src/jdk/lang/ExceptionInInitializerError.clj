@@ -22,7 +22,7 @@
    message string is set to null.
 
   thrown - The exception thrown - `java.lang.Throwable`"
-  ([thrown]
+  ([^java.lang.Throwable thrown]
     (new ExceptionInInitializerError thrown))
   ([]
     (new ExceptionInInitializerError )))
@@ -39,7 +39,7 @@
            ExceptionInInitializerError, or null
            if this ExceptionInInitializerError has no saved
            throwable object. - `java.lang.Throwable`"
-  ([this]
+  ([^java.lang.ExceptionInInitializerError this]
     (-> this (.getException))))
 
 (defn get-cause
@@ -48,6 +48,6 @@
 
   returns: the cause of this error or null if the
             cause is nonexistent or unknown. - `java.lang.Throwable`"
-  ([this]
+  ([^java.lang.ExceptionInInitializerError this]
     (-> this (.getCause))))
 

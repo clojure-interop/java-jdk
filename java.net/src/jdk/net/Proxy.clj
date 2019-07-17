@@ -19,7 +19,7 @@
   sa - the SocketAddress for that proxy - `java.net.SocketAddress`
 
   throws: java.lang.IllegalArgumentException - when the type and the address are incompatible"
-  ([type sa]
+  ([^java.net.Proxy.Type type ^java.net.SocketAddress sa]
     (new Proxy type sa)))
 
 (def *-no-proxy
@@ -39,7 +39,7 @@
   "Returns the proxy type.
 
   returns: a Type representing the proxy type - `java.net.Proxy.Type`"
-  ([this]
+  ([^java.net.Proxy this]
     (-> this (.type))))
 
 (defn address
@@ -48,7 +48,7 @@
 
   returns: a SocketAddress representing the socket end
            point of the proxy - `java.net.SocketAddress`"
-  ([this]
+  ([^java.net.Proxy this]
     (-> this (.address))))
 
 (defn to-string
@@ -58,7 +58,7 @@
    if its type is not DIRECT.
 
   returns: a string representation of this object. - `java.lang.String`"
-  ([this]
+  ([^java.net.Proxy this]
     (-> this (.toString))))
 
 (defn equals
@@ -74,13 +74,13 @@
 
   returns: true if the objects are the same;
             false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.net.Proxy this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Returns a hashcode for this Proxy.
 
   returns: a hash code value for this Proxy. - `int`"
-  ([this]
+  ([^java.net.Proxy this]
     (-> this (.hashCode))))
 

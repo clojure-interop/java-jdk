@@ -18,7 +18,7 @@
   locale - Natural language of the text string. null is interpreted to mean the default locale as returned by Locale.getDefault() - `java.util.Locale`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if makeAndModel is null."
-  ([make-and-model locale]
+  ([^java.lang.String make-and-model ^java.util.Locale locale]
     (new PrinterMakeAndModel make-and-model locale)))
 
 (defn equals
@@ -41,7 +41,7 @@
 
   returns: True if object is equivalent to this printer
             make and model attribute, false otherwise. - `boolean`"
-  ([this object]
+  ([^javax.print.attribute.standard.PrinterMakeAndModel this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -53,7 +53,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([this]
+  ([^javax.print.attribute.standard.PrinterMakeAndModel this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -64,6 +64,6 @@
    category name is `printer-make-and-model`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([this]
+  ([^javax.print.attribute.standard.PrinterMakeAndModel this]
     (-> this (.getName))))
 

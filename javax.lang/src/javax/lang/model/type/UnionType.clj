@@ -10,6 +10,6 @@
   "Return the alternatives comprising this union type.
 
   returns: the alternatives comprising this union type. - `java.util.List<? extends javax.lang.model.type.TypeMirror>`"
-  ([this]
+  ([^. this]
     (-> this (.getAlternatives))))
 

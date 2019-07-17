@@ -16,6 +16,6 @@
 
   returns: the remaining delay; zero or negative values indicate
    that the delay has already elapsed - `long`"
-  ([this unit]
+  ([^. this ^java.util.concurrent.TimeUnit unit]
     (-> this (.getDelay unit))))
 

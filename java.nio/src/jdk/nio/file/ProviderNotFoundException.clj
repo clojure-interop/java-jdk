@@ -9,7 +9,7 @@
   Constructs an instance of this class.
 
   msg - the detail message - `java.lang.String`"
-  ([msg]
+  ([^java.lang.String msg]
     (new ProviderNotFoundException msg))
   ([]
     (new ProviderNotFoundException )))

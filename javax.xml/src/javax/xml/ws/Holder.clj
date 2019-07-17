@@ -9,7 +9,7 @@
   Create a new holder with the specified value.
 
   value - The value to be stored in the holder. - `Holder.T`"
-  ([value]
+  ([^Holder.T value]
     (new Holder value))
   ([]
     (new Holder )))

@@ -21,14 +21,14 @@
 
   rdbl-image - the RenderableImage to be rendered. - `java.awt.image.renderable.RenderableImage`
   rc - the RenderContext to use for producing the pixels. - `java.awt.image.renderable.RenderContext`"
-  ([rdbl-image rc]
+  ([^java.awt.image.renderable.RenderableImage rdbl-image ^java.awt.image.renderable.RenderContext rc]
     (new RenderableImageProducer rdbl-image rc)))
 
 (defn set-render-context
   "Sets a new RenderContext to use for the next startProduction() call.
 
   rc - the new RenderContext. - `java.awt.image.renderable.RenderContext`"
-  ([this rc]
+  ([^java.awt.image.renderable.RenderableImageProducer this ^java.awt.image.renderable.RenderContext rc]
     (-> this (.setRenderContext rc))))
 
 (defn add-consumer
@@ -36,7 +36,7 @@
    data for this image.
 
   ic - an ImageConsumer to be added to the interest list. - `java.awt.image.ImageConsumer`"
-  ([this ic]
+  ([^java.awt.image.renderable.RenderableImageProducer this ^java.awt.image.ImageConsumer ic]
     (-> this (.addConsumer ic))))
 
 (defn consumer?
@@ -46,7 +46,7 @@
   ic - the ImageConsumer to be checked. - `java.awt.image.ImageConsumer`
 
   returns: true if the ImageConsumer is on the list; false otherwise. - `boolean`"
-  ([this ic]
+  ([^java.awt.image.renderable.RenderableImageProducer this ^java.awt.image.ImageConsumer ic]
     (-> this (.isConsumer ic))))
 
 (defn remove-consumer
@@ -54,7 +54,7 @@
    data for this image.
 
   ic - the ImageConsumer to be removed. - `java.awt.image.ImageConsumer`"
-  ([this ic]
+  ([^java.awt.image.renderable.RenderableImageProducer this ^java.awt.image.ImageConsumer ic]
     (-> this (.removeConsumer ic))))
 
 (defn start-production
@@ -63,7 +63,7 @@
    image data through the ImageConsumer interface.
 
   ic - the ImageConsumer to be added to the list of consumers. - `java.awt.image.ImageConsumer`"
-  ([this ic]
+  ([^java.awt.image.renderable.RenderableImageProducer this ^java.awt.image.ImageConsumer ic]
     (-> this (.startProduction ic))))
 
 (defn request-top-down-left-right-resend
@@ -71,13 +71,13 @@
    one more time in top-down, left-right order.
 
   ic - the ImageConsumer requesting the resend. - `java.awt.image.ImageConsumer`"
-  ([this ic]
+  ([^java.awt.image.renderable.RenderableImageProducer this ^java.awt.image.ImageConsumer ic]
     (-> this (.requestTopDownLeftRightResend ic))))
 
 (defn run
   "The runnable method for this class. This will produce an image using
    the current RenderableImage and RenderContext and send it to all the
    ImageConsumer currently registered with this class."
-  ([this]
+  ([^java.awt.image.renderable.RenderableImageProducer this]
     (-> this (.run))))
 

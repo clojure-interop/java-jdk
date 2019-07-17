@@ -15,6 +15,6 @@
   right - the second operand - `double`
 
   returns: the operator result - `double`"
-  ([this left right]
+  ([^. this ^Double left ^Double right]
     (-> this (.applyAsDouble left right))))
 

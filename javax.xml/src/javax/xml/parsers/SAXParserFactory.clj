@@ -30,7 +30,7 @@
   returns: New instance of a SAXParserFactory - `javax.xml.parsers.SAXParserFactory`
 
   throws: javax.xml.parsers.FactoryConfigurationError - if factoryClassName is null, or the factory class cannot be loaded, instantiated."
-  ([factory-class-name class-loader]
+  ([^java.lang.String factory-class-name ^java.lang.ClassLoader class-loader]
     (SAXParserFactory/newInstance factory-class-name class-loader))
   ([]
     (SAXParserFactory/newInstance )))
@@ -41,7 +41,7 @@
    to false.
 
   awareness - true if the parser produced by this code will provide support for XML namespaces; false otherwise. - `boolean`"
-  ([this awareness]
+  ([^javax.xml.parsers.SAXParserFactory this ^Boolean awareness]
     (-> this (.setNamespaceAware awareness))))
 
 (defn get-feature?
@@ -53,7 +53,7 @@
   returns: Value of the requested property. - `boolean`
 
   throws: javax.xml.parsers.ParserConfigurationException - if a parser cannot be created which satisfies the requested configuration."
-  ([this name]
+  ([^javax.xml.parsers.SAXParserFactory this ^java.lang.String name]
     (-> this (.getFeature name))))
 
 (defn set-validating
@@ -77,7 +77,7 @@
    method to associate a schema to a parser.
 
   validating - true if the parser produced by this code will validate documents as they are parsed; false otherwise. - `boolean`"
-  ([this validating]
+  ([^javax.xml.parsers.SAXParserFactory this ^Boolean validating]
     (-> this (.setValidating validating))))
 
 (defn set-schema
@@ -122,7 +122,7 @@
   schema - Schema to use, null to remove a schema. - `javax.xml.validation.Schema`
 
   throws: java.lang.UnsupportedOperationException - When implementation does not override this method"
-  ([this schema]
+  ([^javax.xml.parsers.SAXParserFactory this ^javax.xml.validation.Schema schema]
     (-> this (.setSchema schema))))
 
 (defn set-x-include-aware
@@ -137,7 +137,7 @@
   state - Set XInclude processing to true or false - `boolean`
 
   throws: java.lang.UnsupportedOperationException - When implementation does not override this method"
-  ([this state]
+  ([^javax.xml.parsers.SAXParserFactory this ^Boolean state]
     (-> this (.setXIncludeAware state))))
 
 (defn get-schema
@@ -150,7 +150,7 @@
         is created. - `javax.xml.validation.Schema`
 
   throws: java.lang.UnsupportedOperationException - When implementation does not override this method"
-  ([this]
+  ([^javax.xml.parsers.SAXParserFactory this]
     (-> this (.getSchema))))
 
 (defn set-feature
@@ -177,7 +177,7 @@
   value - The value of the feature to be set. - `boolean`
 
   throws: javax.xml.parsers.ParserConfigurationException - if a parser cannot be created which satisfies the requested configuration."
-  ([this name value]
+  ([^javax.xml.parsers.SAXParserFactory this ^java.lang.String name ^Boolean value]
     (-> this (.setFeature name value))))
 
 (defn new-sax-parser
@@ -187,7 +187,7 @@
   returns: A new instance of a SAXParser. - `javax.xml.parsers.SAXParser`
 
   throws: javax.xml.parsers.ParserConfigurationException - if a parser cannot be created which satisfies the requested configuration."
-  ([this]
+  ([^javax.xml.parsers.SAXParserFactory this]
     (-> this (.newSAXParser))))
 
 (defn namespace-aware?
@@ -196,7 +196,7 @@
 
   returns: true if the factory is configured to produce
            parsers which are namespace aware; false otherwise. - `boolean`"
-  ([this]
+  ([^javax.xml.parsers.SAXParserFactory this]
     (-> this (.isNamespaceAware))))
 
 (defn validating?
@@ -205,7 +205,7 @@
 
   returns: true if the factory is configured to produce parsers which validate
            the XML content during parse; false otherwise. - `boolean`"
-  ([this]
+  ([^javax.xml.parsers.SAXParserFactory this]
     (-> this (.isValidating))))
 
 (defn x-include-aware?
@@ -214,6 +214,6 @@
   returns: current state of XInclude processing - `boolean`
 
   throws: java.lang.UnsupportedOperationException - When implementation does not override this method"
-  ([this]
+  ([^javax.xml.parsers.SAXParserFactory this]
     (-> this (.isXIncludeAware))))
 

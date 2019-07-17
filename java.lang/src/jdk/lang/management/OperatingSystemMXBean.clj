@@ -31,7 +31,7 @@
   returns: the operating system name. - `java.lang.String`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPropertiesAccess method doesn't allow access to this system property."
-  ([this]
+  ([^. this]
     (-> this (.getName))))
 
 (defn get-arch
@@ -41,7 +41,7 @@
   returns: the operating system architecture. - `java.lang.String`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPropertiesAccess method doesn't allow access to this system property."
-  ([this]
+  ([^. this]
     (-> this (.getArch))))
 
 (defn get-version
@@ -51,7 +51,7 @@
   returns: the operating system version. - `java.lang.String`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPropertiesAccess method doesn't allow access to this system property."
-  ([this]
+  ([^. this]
     (-> this (.getVersion))))
 
 (defn get-available-processors
@@ -63,7 +63,7 @@
 
   returns: the number of processors available to the virtual
             machine; never smaller than one. - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getAvailableProcessors))))
 
 (defn get-system-load-average
@@ -83,6 +83,6 @@
    expensive to implement this method.
 
   returns: the system load average; or a negative value if not available. - `double`"
-  ([this]
+  ([^. this]
     (-> this (.getSystemLoadAverage))))
 

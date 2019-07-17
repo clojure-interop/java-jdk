@@ -26,11 +26,11 @@
   mode - the mode of the dialog; either FileDialog.LOAD or FileDialog.SAVE - `int`
 
   throws: java.lang.IllegalArgumentException - if an illegal file dialog mode is supplied"
-  ([parent title mode]
+  ([^java.awt.Frame parent ^java.lang.String title ^Integer mode]
     (new FileDialog parent title mode))
-  ([parent title]
+  ([^java.awt.Frame parent ^java.lang.String title]
     (new FileDialog parent title))
-  ([parent]
+  ([^java.awt.Frame parent]
     (new FileDialog parent)))
 
 (def *-load
@@ -58,7 +58,7 @@
   returns: the mode of this file dialog window, either
                  FileDialog.LOAD or
                  FileDialog.SAVE - `int`"
-  ([this]
+  ([^java.awt.FileDialog this]
     (-> this (.getMode))))
 
 (defn get-files
@@ -69,7 +69,7 @@
 
   returns: files that the user selects or an empty array
               if the user cancels the file dialog. - `java.io.File[]`"
-  ([this]
+  ([^java.awt.FileDialog this]
     (-> this (.getFiles))))
 
 (defn set-mode
@@ -80,20 +80,20 @@
   mode - the mode for this file dialog, either FileDialog.LOAD or FileDialog.SAVE - `int`
 
   throws: java.lang.IllegalArgumentException - if an illegal file dialog mode is supplied"
-  ([this mode]
+  ([^java.awt.FileDialog this ^Integer mode]
     (-> this (.setMode mode))))
 
 (defn add-notify
   "Creates the file dialog's peer.  The peer allows us to change the look
    of the file dialog without changing its functionality."
-  ([this]
+  ([^java.awt.FileDialog this]
     (-> this (.addNotify))))
 
 (defn set-multiple-mode
   "Enables or disables multiple file selection for the file dialog.
 
   enable - if true, multiple file selection is enabled; false - disabled. - `boolean`"
-  ([this enable]
+  ([^java.awt.FileDialog this ^Boolean enable]
     (-> this (.setMultipleMode enable))))
 
 (defn multiple-mode?
@@ -101,7 +101,7 @@
 
   returns: true if the file dialog allows the multiple
                     file selection; false otherwise. - `boolean`"
-  ([this]
+  ([^java.awt.FileDialog this]
     (-> this (.isMultipleMode))))
 
 (defn set-file
@@ -121,7 +121,7 @@
    null as the file.
 
   file - the file being set - `java.lang.String`"
-  ([this file]
+  ([^java.awt.FileDialog this ^java.lang.String file]
     (-> this (.setFile file))))
 
 (defn get-file
@@ -130,7 +130,7 @@
 
   returns: the currently selected file of this file dialog window,
                   or null if none is selected - `java.lang.String`"
-  ([this]
+  ([^java.awt.FileDialog this]
     (-> this (.getFile))))
 
 (defn set-filename-filter
@@ -140,7 +140,7 @@
    implementation for Microsoft Windows.
 
   filter - the specified filter - `java.io.FilenameFilter`"
-  ([this filter]
+  ([^java.awt.FileDialog this ^java.io.FilenameFilter filter]
     (-> this (.setFilenameFilter filter))))
 
 (defn get-directory
@@ -148,7 +148,7 @@
 
   returns: the (potentially null or invalid)
             directory of this FileDialog - `java.lang.String`"
-  ([this]
+  ([^java.awt.FileDialog this]
     (-> this (.getDirectory))))
 
 (defn set-directory
@@ -163,7 +163,7 @@
    specifying null as the directory.
 
   dir - the specified directory - `java.lang.String`"
-  ([this dir]
+  ([^java.awt.FileDialog this ^java.lang.String dir]
     (-> this (.setDirectory dir))))
 
 (defn get-filename-filter
@@ -173,6 +173,6 @@
    implementation for Microsoft Windows.
 
   returns: this file dialog's filename filter - `java.io.FilenameFilter`"
-  ([this]
+  ([^java.awt.FileDialog this]
     (-> this (.getFilenameFilter))))
 

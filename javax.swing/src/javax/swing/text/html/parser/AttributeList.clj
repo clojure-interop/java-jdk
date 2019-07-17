@@ -21,9 +21,9 @@
   value - `java.lang.String`
   values - `java.util.Vector<?>`
   next - `javax.swing.text.html.parser.AttributeList`"
-  ([name type modifier value values next]
+  ([^java.lang.String name ^Integer type ^Integer modifier ^java.lang.String value ^java.util.Vector values ^javax.swing.text.html.parser.AttributeList next]
     (new AttributeList name type modifier value values next))
-  ([name]
+  ([^java.lang.String name]
     (new AttributeList name)))
 
 (defn -name
@@ -72,50 +72,50 @@
   "nm - `java.lang.String`
 
   returns: `int`"
-  ([nm]
+  ([^java.lang.String nm]
     (AttributeList/name2type nm)))
 
 (defn *type-2name
   "tp - `int`
 
   returns: `java.lang.String`"
-  ([tp]
+  ([^Integer tp]
     (AttributeList/type2name tp)))
 
 (defn get-name
   "returns: attribute name - `java.lang.String`"
-  ([this]
+  ([^javax.swing.text.html.parser.AttributeList this]
     (-> this (.getName))))
 
 (defn get-type
   "returns: attribute type - `int`"
-  ([this]
+  ([^javax.swing.text.html.parser.AttributeList this]
     (-> this (.getType))))
 
 (defn get-modifier
   "returns: attribute modifier - `int`"
-  ([this]
+  ([^javax.swing.text.html.parser.AttributeList this]
     (-> this (.getModifier))))
 
 (defn get-values
   "returns: possible attribute values - `java.util.Enumeration<?>`"
-  ([this]
+  ([^javax.swing.text.html.parser.AttributeList this]
     (-> this (.getValues))))
 
 (defn get-value
   "returns: default attribute value - `java.lang.String`"
-  ([this]
+  ([^javax.swing.text.html.parser.AttributeList this]
     (-> this (.getValue))))
 
 (defn get-next
   "returns: the next attribute in the list - `javax.swing.text.html.parser.AttributeList`"
-  ([this]
+  ([^javax.swing.text.html.parser.AttributeList this]
     (-> this (.getNext))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: string representation - `java.lang.String`"
-  ([this]
+  ([^javax.swing.text.html.parser.AttributeList this]
     (-> this (.toString))))
 

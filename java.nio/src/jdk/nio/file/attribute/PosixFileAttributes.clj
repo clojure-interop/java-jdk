@@ -11,14 +11,14 @@
   "Returns the owner of the file.
 
   returns: the file owner - `java.nio.file.attribute.UserPrincipal`"
-  ([this]
+  ([^. this]
     (-> this (.owner))))
 
 (defn group
   "Returns the group owner of the file.
 
   returns: the file group owner - `java.nio.file.attribute.GroupPrincipal`"
-  ([this]
+  ([^. this]
     (-> this (.group))))
 
 (defn permissions
@@ -28,6 +28,6 @@
    to be modified and passed to the setPermissions method to update the file's permissions.
 
   returns: the file permissions - `java.util.Set<java.nio.file.attribute.PosixFilePermission>`"
-  ([this]
+  ([^. this]
     (-> this (.permissions))))
 

@@ -9,6 +9,6 @@
   Constructs an instance of this class.
 
   file - a string identifying the file causing the cycle or null if not known - `java.lang.String`"
-  ([file]
+  ([^java.lang.String file]
     (new FileSystemLoopException file)))
 

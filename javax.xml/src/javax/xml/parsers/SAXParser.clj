@@ -41,7 +41,7 @@
            implementation of this class. - `org.xml.sax.Parser`
 
   throws: org.xml.sax.SAXException - If any SAX errors occur during processing."
-  ([this]
+  ([^javax.xml.parsers.SAXParser this]
     (-> this (.getParser))))
 
 (defn reset
@@ -57,7 +57,7 @@
    Schema.
 
   throws: java.lang.UnsupportedOperationException - When Implementations do not override this method"
-  ([this]
+  ([^javax.xml.parsers.SAXParser this]
     (-> this (.reset))))
 
 (defn get-property
@@ -69,7 +69,7 @@
   returns: Value of the requested property. - `java.lang.Object`
 
   throws: org.xml.sax.SAXNotRecognizedException - When the underlying XMLReader does not recognize the property name."
-  ([this name]
+  ([^javax.xml.parsers.SAXParser this ^java.lang.String name]
     (-> this (.getProperty name))))
 
 (defn get-xml-reader
@@ -80,7 +80,7 @@
            implementation of this class. - `org.xml.sax.XMLReader`
 
   throws: org.xml.sax.SAXException - If any SAX errors occur during processing."
-  ([this]
+  ([^javax.xml.parsers.SAXParser this]
     (-> this (.getXMLReader))))
 
 (defn get-schema
@@ -93,7 +93,7 @@
     if none in use - `javax.xml.validation.Schema`
 
   throws: java.lang.UnsupportedOperationException - When implementation does not override this method"
-  ([this]
+  ([^javax.xml.parsers.SAXParser this]
     (-> this (.getSchema))))
 
 (defn parse
@@ -107,9 +107,9 @@
   system-id - The systemId which is needed for resolving relative URIs. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - If the given InputStream is null."
-  ([this is hb system-id]
+  ([^javax.xml.parsers.SAXParser this ^java.io.InputStream is ^org.xml.sax.HandlerBase hb ^java.lang.String system-id]
     (-> this (.parse is hb system-id)))
-  ([this is hb]
+  ([^javax.xml.parsers.SAXParser this ^java.io.InputStream is ^org.xml.sax.HandlerBase hb]
     (-> this (.parse is hb))))
 
 (defn set-property
@@ -143,7 +143,7 @@
   value - The value of the property to be set. - `java.lang.Object`
 
   throws: org.xml.sax.SAXNotRecognizedException - When the underlying XMLReader does not recognize the property name."
-  ([this name value]
+  ([^javax.xml.parsers.SAXParser this ^java.lang.String name ^java.lang.Object value]
     (-> this (.setProperty name value))))
 
 (defn namespace-aware?
@@ -152,7 +152,7 @@
 
   returns: true if this parser is configured to
            understand namespaces; false otherwise. - `boolean`"
-  ([this]
+  ([^javax.xml.parsers.SAXParser this]
     (-> this (.isNamespaceAware))))
 
 (defn validating?
@@ -161,7 +161,7 @@
 
   returns: true if this parser is configured to
            validate XML documents; false otherwise. - `boolean`"
-  ([this]
+  ([^javax.xml.parsers.SAXParser this]
     (-> this (.isValidating))))
 
 (defn x-include-aware?
@@ -172,6 +172,6 @@
         when this parser was created from factory. - `boolean`
 
   throws: java.lang.UnsupportedOperationException - When implementation does not override this method"
-  ([this]
+  ([^javax.xml.parsers.SAXParser this]
     (-> this (.isXIncludeAware))))
 

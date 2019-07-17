@@ -11,7 +11,7 @@
    detail message.
 
   msg - the detail message. - `java.lang.String`"
-  ([msg]
+  ([^java.lang.String msg]
     (new NoSuchPaddingException msg))
   ([]
     (new NoSuchPaddingException )))

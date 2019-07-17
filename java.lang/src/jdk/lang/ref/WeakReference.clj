@@ -23,8 +23,8 @@
 
   referent - object the new weak reference will refer to - `WeakReference.T`
   q - the queue with which the reference is to be registered, or null if registration is not required - `WeakReference.T>`"
-  ([referent q]
+  ([^WeakReference.T referent ^WeakReference.T> q]
     (new WeakReference referent q))
-  ([referent]
+  ([^WeakReference.T referent]
     (new WeakReference referent)))
 

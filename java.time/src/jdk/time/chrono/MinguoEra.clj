@@ -44,7 +44,7 @@
   returns: the enum constant with the specified name - `java.time.chrono.MinguoEra`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([name]
+  ([^java.lang.String name]
     (MinguoEra/valueOf name)))
 
 (defn *of
@@ -58,7 +58,7 @@
   returns: the era singleton, not null - `java.time.chrono.MinguoEra`
 
   throws: java.time.DateTimeException - if the value is invalid"
-  ([minguo-era]
+  ([^Integer minguo-era]
     (MinguoEra/of minguo-era)))
 
 (defn get-value
@@ -67,6 +67,6 @@
    The era BEFORE_ROC has the value 0, while the era ROC has the value 1.
 
   returns: the era value, from 0 (BEFORE_ROC) to 1 (ROC) - `int`"
-  ([this]
+  ([^java.time.chrono.MinguoEra this]
     (-> this (.getValue))))
 

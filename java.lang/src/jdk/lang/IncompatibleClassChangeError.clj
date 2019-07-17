@@ -12,7 +12,7 @@
    specified detail message.
 
   s - the detail message. - `java.lang.String`"
-  ([s]
+  ([^java.lang.String s]
     (new IncompatibleClassChangeError s))
   ([]
     (new IncompatibleClassChangeError )))

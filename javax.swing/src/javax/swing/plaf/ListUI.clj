@@ -21,7 +21,7 @@
   returns: the cell index closest to the given location, or -1 - `int`
 
   throws: java.lang.NullPointerException - if location is null"
-  ([this list location]
+  ([^javax.swing.plaf.ListUI this ^javax.swing.JList list ^java.awt.Point location]
     (-> this (.locationToIndex list location))))
 
 (defn index-to-location
@@ -33,7 +33,7 @@
   index - the cell index - `int`
 
   returns: the origin of the cell, or null - `java.awt.Point`"
-  ([this list index]
+  ([^javax.swing.plaf.ListUI this ^javax.swing.JList list ^Integer index]
     (-> this (.indexToLocation list index))))
 
 (defn get-cell-bounds
@@ -51,6 +51,6 @@
   index-2 - the second index in the range - `int`
 
   returns: the bounding rectangle for the range of cells, or null - `java.awt.Rectangle`"
-  ([this list index-1 index-2]
+  ([^javax.swing.plaf.ListUI this ^javax.swing.JList list ^Integer index-1 ^Integer index-2]
     (-> this (.getCellBounds list index-1 index-2))))
 

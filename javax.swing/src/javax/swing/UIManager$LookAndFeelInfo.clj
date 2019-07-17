@@ -13,7 +13,7 @@
 
   name - a String specifying the name of the look and feel - `java.lang.String`
   class-name - a String specifying the name of the class that implements the look and feel - `java.lang.String`"
-  ([name class-name]
+  ([^java.lang.String name ^java.lang.String class-name]
     (new UIManager$LookAndFeelInfo name class-name)))
 
 (defn get-name
@@ -21,7 +21,7 @@
    for a menu or other presentation
 
   returns: a String containing the name - `java.lang.String`"
-  ([this]
+  ([^javax.swing.UIManager$LookAndFeelInfo this]
     (-> this (.getName))))
 
 (defn get-class-name
@@ -29,7 +29,7 @@
 
   returns: the name of the class that implements this
                 LookAndFeel - `java.lang.String`"
-  ([this]
+  ([^javax.swing.UIManager$LookAndFeelInfo this]
     (-> this (.getClassName))))
 
 (defn to-string
@@ -37,6 +37,6 @@
    object's properties.
 
   returns: a String representation of this object - `java.lang.String`"
-  ([this]
+  ([^javax.swing.UIManager$LookAndFeelInfo this]
     (-> this (.toString))))
 

@@ -23,7 +23,7 @@
   "Returns the thickness of the underline.
 
   returns: the thickness of the underline. - `float`"
-  ([this]
+  ([^java.awt.font.LineMetrics this]
     (-> this (.getUnderlineThickness))))
 
 (defn get-baseline-index
@@ -34,7 +34,7 @@
    HANGING_BASELINE.
 
   returns: the baseline of the text. - `int`"
-  ([this]
+  ([^java.awt.font.LineMetrics this]
     (-> this (.getBaselineIndex))))
 
 (defn get-ascent
@@ -45,14 +45,14 @@
    can extend above the ascender line.
 
   returns: the ascent of the text. - `float`"
-  ([this]
+  ([^java.awt.font.LineMetrics this]
     (-> this (.getAscent))))
 
 (defn get-strikethrough-thickness
   "Returns the thickness of the strike-through line.
 
   returns: the thickness of the strike-through line. - `float`"
-  ([this]
+  ([^java.awt.font.LineMetrics this]
     (-> this (.getStrikethroughThickness))))
 
 (defn get-num-chars
@@ -62,7 +62,7 @@
 
   returns: the number of characters (char values) in the text with which
            this LineMetrics was created. - `int`"
-  ([this]
+  ([^java.awt.font.LineMetrics this]
     (-> this (.getNumChars))))
 
 (defn get-descent
@@ -74,7 +74,7 @@
    line.
 
   returns: the descent of the text. - `float`"
-  ([this]
+  ([^java.awt.font.LineMetrics this]
     (-> this (.getDescent))))
 
 (defn get-baseline-offsets
@@ -89,7 +89,7 @@
    is usually positive.
 
   returns: the baseline offsets of the text. - `float[]`"
-  ([this]
+  ([^java.awt.font.LineMetrics this]
     (-> this (.getBaselineOffsets))))
 
 (defn get-underline-offset
@@ -97,7 +97,7 @@
    the baseline.
 
   returns: the position of the underline. - `float`"
-  ([this]
+  ([^java.awt.font.LineMetrics this]
     (-> this (.getUnderlineOffset))))
 
 (defn get-strikethrough-offset
@@ -105,7 +105,7 @@
    relative to the baseline.
 
   returns: the position of the strike-through line. - `float`"
-  ([this]
+  ([^java.awt.font.LineMetrics this]
     (-> this (.getStrikethroughOffset))))
 
 (defn get-height
@@ -114,7 +114,7 @@
    descent and the leading.
 
   returns: the height of the text. - `float`"
-  ([this]
+  ([^java.awt.font.LineMetrics this]
     (-> this (.getHeight))))
 
 (defn get-leading
@@ -124,6 +124,6 @@
    top of the next line.
 
   returns: the leading of the text. - `float`"
-  ([this]
+  ([^java.awt.font.LineMetrics this]
     (-> this (.getLeading))))
 

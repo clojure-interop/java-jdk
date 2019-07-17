@@ -12,7 +12,7 @@
   "Get the ObjectStreamClass that describes the fields in the stream.
 
   returns: the descriptor class that describes the serializable fields - `java.io.ObjectStreamClass`"
-  ([this]
+  ([^java.io.ObjectInputStream$GetField this]
     (-> this (.getObjectStreamClass))))
 
 (defn defaulted
@@ -24,7 +24,7 @@
   returns: true, if and only if the named field is defaulted - `boolean`
 
   throws: java.io.IOException - if there are I/O errors while reading from the underlying InputStream"
-  ([this name]
+  ([^java.io.ObjectInputStream$GetField this ^java.lang.String name]
     (-> this (.defaulted name))))
 
 (defn get
@@ -36,6 +36,6 @@
   returns: the value of the named boolean field - `boolean`
 
   throws: java.io.IOException - if there are I/O errors while reading from the underlying InputStream"
-  ([this name val]
+  ([^java.io.ObjectInputStream$GetField this ^java.lang.String name ^Boolean val]
     (-> this (.get name val))))
 

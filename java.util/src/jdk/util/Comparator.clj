@@ -101,7 +101,7 @@
            second. - `int`
 
   throws: java.lang.NullPointerException - if an argument is null and this comparator does not permit null arguments"
-  ([this o-1 o-2]
+  ([^. this ^Comparator.T o-1 ^Comparator.T o-2]
     (-> this (.compare o-1 o-2))))
 
 (defn reversed
@@ -110,7 +110,7 @@
 
   returns: a comparator that imposes the reverse ordering of this
            comparator. - `default java.util.Comparator<Comparator.T>`"
-  ([this]
+  ([^. this]
     (-> this (.reversed))))
 
 (defn *nulls-first
@@ -141,7 +141,7 @@
            long sort key - `default java.util.Comparator<Comparator.T>`
 
   throws: java.lang.NullPointerException - if the argument is null."
-  ([this key-extractor]
+  ([^. this ^Comparator.T> key-extractor]
     (-> this (.thenComparingLong key-extractor))))
 
 (defn then-comparing-int
@@ -154,7 +154,7 @@
            int sort key - `default java.util.Comparator<Comparator.T>`
 
   throws: java.lang.NullPointerException - if the argument is null."
-  ([this key-extractor]
+  ([^. this ^Comparator.T> key-extractor]
     (-> this (.thenComparingInt key-extractor))))
 
 (defn *comparing-double
@@ -184,9 +184,9 @@
            and then comparing on the key extracted by the keyExtractor function - `default <U> java.util.Comparator<Comparator.T>`
 
   throws: java.lang.NullPointerException - if either argument is null."
-  ([this key-extractor key-comparator]
+  ([^. this key-extractor key-comparator]
     (-> this (.thenComparing key-extractor key-comparator)))
-  ([this other]
+  ([^. this ^Comparator.T> other]
     (-> this (.thenComparing other))))
 
 (defn *natural-order
@@ -209,7 +209,7 @@
            double sort key - `default java.util.Comparator<Comparator.T>`
 
   throws: java.lang.NullPointerException - if the argument is null."
-  ([this key-extractor]
+  ([^. this ^Comparator.T> key-extractor]
     (-> this (.thenComparingDouble key-extractor))))
 
 (defn *reverse-order
@@ -295,7 +295,7 @@
   returns: true only if the specified object is also
             a comparator and it imposes the same ordering as this
             comparator. - `boolean`"
-  ([this obj]
+  ([^. this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn *nulls-last

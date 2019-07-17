@@ -12,6 +12,6 @@
 
   o - the observable object. - `java.util.Observable`
   arg - an argument passed to the notifyObservers method. - `java.lang.Object`"
-  ([this o arg]
+  ([^. this ^java.util.Observable o ^java.lang.Object arg]
     (-> this (.update o arg))))
 

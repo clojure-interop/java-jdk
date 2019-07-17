@@ -35,9 +35,9 @@
 
   text - the text of the button - `java.lang.String`
   icon - the Icon image to display on the button - `javax.swing.Icon`"
-  ([text icon]
+  ([^java.lang.String text ^javax.swing.Icon icon]
     (new JButton text icon))
-  ([icon]
+  ([^javax.swing.Icon icon]
     (new JButton icon))
   ([]
     (new JButton )))
@@ -45,7 +45,7 @@
 (defn update-ui
   "Resets the UI property to a value from the current look and
    feel."
-  ([this]
+  ([^javax.swing.JButton this]
     (-> this (.updateUI))))
 
 (defn get-ui-class-id
@@ -53,7 +53,7 @@
    that renders this component.
 
   returns: the string `ButtonUI` - `java.lang.String`"
-  ([this]
+  ([^javax.swing.JButton this]
     (-> this (.getUIClassID))))
 
 (defn default-button?
@@ -65,14 +65,14 @@
    to access the default button.
 
   returns: the value of the defaultButton property - `boolean`"
-  ([this]
+  ([^javax.swing.JButton this]
     (-> this (.isDefaultButton))))
 
 (defn default-capable?
   "Gets the value of the defaultCapable property.
 
   returns: the value of the defaultCapable property - `boolean`"
-  ([this]
+  ([^javax.swing.JButton this]
     (-> this (.isDefaultCapable))))
 
 (defn set-default-capable
@@ -84,7 +84,7 @@
    specified by the look and feel.
 
   default-capable - true if this button will be capable of being the default button on the RootPane; otherwise false - `boolean`"
-  ([this default-capable]
+  ([^javax.swing.JButton this ^Boolean default-capable]
     (-> this (.setDefaultCapable default-capable))))
 
 (defn remove-notify
@@ -93,7 +93,7 @@
    RootPane, and if so, sets the RootPane's
    default button to null to ensure the
    RootPane doesn't hold onto an invalid button reference."
-  ([this]
+  ([^javax.swing.JButton this]
     (-> this (.removeNotify))))
 
 (defn get-accessible-context
@@ -105,6 +105,6 @@
 
   returns: an AccessibleJButton that serves as the
            AccessibleContext of this JButton - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^javax.swing.JButton this]
     (-> this (.getAccessibleContext))))
 

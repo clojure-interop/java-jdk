@@ -37,14 +37,14 @@
 
   returns: the numeric value represented by this object after conversion
             to type double. - `double`"
-  ([this]
+  ([^java.util.concurrent.atomic.LongAdder this]
     (-> this (.doubleValue))))
 
 (defn long-value
   "Equivalent to sum().
 
   returns: the sum - `long`"
-  ([this]
+  ([^java.util.concurrent.atomic.LongAdder this]
     (-> this (.longValue))))
 
 (defn sum
@@ -55,7 +55,7 @@
    incorporated.
 
   returns: the sum - `long`"
-  ([this]
+  ([^java.util.concurrent.atomic.LongAdder this]
     (-> this (.sum))))
 
 (defn sum-then-reset
@@ -66,19 +66,19 @@
    the reset.
 
   returns: the sum - `long`"
-  ([this]
+  ([^java.util.concurrent.atomic.LongAdder this]
     (-> this (.sumThenReset))))
 
 (defn to-string
   "Returns the String representation of the sum().
 
   returns: the String representation of the sum() - `java.lang.String`"
-  ([this]
+  ([^java.util.concurrent.atomic.LongAdder this]
     (-> this (.toString))))
 
 (defn increment
   "Equivalent to add(1)."
-  ([this]
+  ([^java.util.concurrent.atomic.LongAdder this]
     (-> this (.increment))))
 
 (defn reset
@@ -87,7 +87,7 @@
    effective if there are no concurrent updates.  Because this
    method is intrinsically racy, it should only be used when it is
    known that no threads are concurrently updating."
-  ([this]
+  ([^java.util.concurrent.atomic.LongAdder this]
     (-> this (.reset))))
 
 (defn float-value
@@ -96,12 +96,12 @@
 
   returns: the numeric value represented by this object after conversion
             to type float. - `float`"
-  ([this]
+  ([^java.util.concurrent.atomic.LongAdder this]
     (-> this (.floatValue))))
 
 (defn decrement
   "Equivalent to add(-1)."
-  ([this]
+  ([^java.util.concurrent.atomic.LongAdder this]
     (-> this (.decrement))))
 
 (defn int-value
@@ -110,13 +110,13 @@
 
   returns: the numeric value represented by this object after conversion
             to type int. - `int`"
-  ([this]
+  ([^java.util.concurrent.atomic.LongAdder this]
     (-> this (.intValue))))
 
 (defn add
   "Adds the given value.
 
   x - the value to add - `long`"
-  ([this x]
+  ([^java.util.concurrent.atomic.LongAdder this ^Long x]
     (-> this (.add x))))
 

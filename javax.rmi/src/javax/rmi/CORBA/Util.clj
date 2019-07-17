@@ -22,7 +22,7 @@
    to return false. - `boolean`
 
   throws: java.rmi.RemoteException - The Java to IDL specification does not specify the conditions that cause a RemoteException to be thrown."
-  ([stub]
+  ([^javax.rmi.CORBA.Stub stub]
     (Util/isLocal stub)))
 
 (defn *register-target
@@ -31,7 +31,7 @@
 
   tie - the tie to register. - `javax.rmi.CORBA.Tie`
   target - the target for the tie. - `java.rmi.Remote`"
-  ([tie target]
+  ([^javax.rmi.CORBA.Tie tie ^java.rmi.Remote target]
     (Util/registerTarget tie target)))
 
 (defn *copy-objects
@@ -45,7 +45,7 @@
   returns: the copied or connected objects. - `java.lang.Object[]`
 
   throws: java.rmi.RemoteException - if any object could not be copied or connected."
-  ([obj orb]
+  ([^java.lang.Object[] obj ^org.omg.CORBA.ORB orb]
     (Util/copyObjects obj orb)))
 
 (defn *copy-object
@@ -58,7 +58,7 @@
   returns: the copy or connected object. - `java.lang.Object`
 
   throws: java.rmi.RemoteException - if the object could not be copied or connected."
-  ([obj orb]
+  ([^java.lang.Object obj ^org.omg.CORBA.ORB orb]
     (Util/copyObject obj orb)))
 
 (defn *write-any
@@ -66,7 +66,7 @@
 
   out - the stream in which to write the any. - `org.omg.CORBA.portable.OutputStream`
   obj - the object to write as an any. - `java.lang.Object`"
-  ([out obj]
+  ([^org.omg.CORBA.portable.OutputStream out ^java.lang.Object obj]
     (Util/writeAny out obj)))
 
 (defn *write-abstract-object
@@ -80,7 +80,7 @@
 
   out - the stream in which to write the object. - `org.omg.CORBA.portable.OutputStream`
   obj - the object to write. - `java.lang.Object`"
-  ([out obj]
+  ([^org.omg.CORBA.portable.OutputStream out ^java.lang.Object obj]
     (Util/writeAbstractObject out obj)))
 
 (defn *unexport-object
@@ -90,7 +90,7 @@
   target - the object to unexport. - `java.rmi.Remote`
 
   throws: java.rmi.NoSuchObjectException"
-  ([target]
+  ([^java.rmi.Remote target]
     (Util/unexportObject target)))
 
 (defn *read-any
@@ -99,7 +99,7 @@
   in - the stream from which to read the any. - `org.omg.CORBA.portable.InputStream`
 
   returns: the object read from the stream. - `java.lang.Object`"
-  ([in]
+  ([^org.omg.CORBA.portable.InputStream in]
     (Util/readAny in)))
 
 (defn *load-class
@@ -128,7 +128,7 @@
   returns: the Class object representing the loaded class. - `java.lang.Class`
 
   throws: java.lang.ClassNotFoundException - if class cannot be loaded."
-  ([class-name remote-codebase loader]
+  ([^java.lang.String class-name ^java.lang.String remote-codebase ^java.lang.ClassLoader loader]
     (Util/loadClass class-name remote-codebase loader)))
 
 (defn *create-value-handler
@@ -146,7 +146,7 @@
   orig - the exception to wrap. - `java.lang.Throwable`
 
   returns: the wrapped exception. - `java.rmi.RemoteException`"
-  ([orig]
+  ([^java.lang.Throwable orig]
     (Util/wrapException orig)))
 
 (defn *get-tie
@@ -155,7 +155,7 @@
   target - `java.rmi.Remote`
 
   returns: the tie or null if no tie is registered for the given target. - `javax.rmi.CORBA.Tie`"
-  ([target]
+  ([^java.rmi.Remote target]
     (Util/getTie target)))
 
 (defn *write-remote-object
@@ -168,7 +168,7 @@
 
   out - the stream in which to write the object. - `org.omg.CORBA.portable.OutputStream`
   obj - the object to write. - `java.lang.Object`"
-  ([out obj]
+  ([^org.omg.CORBA.portable.OutputStream out ^java.lang.Object obj]
     (Util/writeRemoteObject out obj)))
 
 (defn *get-codebase
@@ -177,7 +177,7 @@
   clz - the class to get a codebase for. - `java.lang.Class`
 
   returns: a space-separated list of URLs, or null. - `java.lang.String`"
-  ([clz]
+  ([^java.lang.Class clz]
     (Util/getCodebase clz)))
 
 (defn *map-system-exception
@@ -186,6 +186,6 @@
   ex - the SystemException to map. - `org.omg.CORBA.SystemException`
 
   returns: the mapped exception. - `java.rmi.RemoteException`"
-  ([ex]
+  ([^org.omg.CORBA.SystemException ex]
     (Util/mapSystemException ex)))
 

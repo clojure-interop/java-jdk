@@ -31,7 +31,7 @@
   parent-component - The component triggering the operation being monitored. - `java.awt.Component`
   message - Descriptive text to be placed in the dialog box if one is popped up. - `java.lang.Object`
   in - The input stream to be monitored. - `java.io.InputStream`"
-  ([parent-component message in]
+  ([^java.awt.Component parent-component ^java.lang.Object message ^java.io.InputStream in]
     (new ProgressMonitorInputStream parent-component message in)))
 
 (defn get-progress-monitor
@@ -40,7 +40,7 @@
    descriptive text partway through reading the file.
 
   returns: the ProgressMonitor object used by this object - `javax.swing.ProgressMonitor`"
-  ([this]
+  ([^javax.swing.ProgressMonitorInputStream this]
     (-> this (.getProgressMonitor))))
 
 (defn read
@@ -56,11 +56,11 @@
                the stream has been reached. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this b off len]
+  ([^javax.swing.ProgressMonitorInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  ([this b]
+  ([^javax.swing.ProgressMonitorInputStream this b]
     (-> this (.read b)))
-  ([this]
+  ([^javax.swing.ProgressMonitorInputStream this]
     (-> this (.read))))
 
 (defn skip
@@ -72,7 +72,7 @@
   returns: the actual number of bytes skipped. - `long`
 
   throws: java.io.IOException - if the stream does not support seek, or if some other I/O error occurs."
-  ([this n]
+  ([^javax.swing.ProgressMonitorInputStream this ^Long n]
     (-> this (.skip n))))
 
 (defn close
@@ -80,7 +80,7 @@
    to close the progress monitor as well as the stream.
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this]
+  ([^javax.swing.ProgressMonitorInputStream this]
     (-> this (.close))))
 
 (defn reset
@@ -88,6 +88,6 @@
    to reset the progress monitor as well as the stream.
 
   throws: java.io.IOException - if the stream has not been marked or if the mark has been invalidated."
-  ([this]
+  ([^javax.swing.ProgressMonitorInputStream this]
     (-> this (.reset))))
 

@@ -13,7 +13,7 @@
   target - the target to be permanently associated with this call site - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NullPointerException - if the proposed target is null"
-  ([target]
+  ([^java.lang.invoke.MethodHandle target]
     (new ConstantCallSite target)))
 
 (defn get-target
@@ -25,7 +25,7 @@
   returns: the immutable linkage state of this call site, a constant method handle - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.IllegalStateException - if the ConstantCallSite constructor has not completed"
-  ([this]
+  ([^java.lang.invoke.ConstantCallSite this]
     (-> this (.getTarget))))
 
 (defn set-target
@@ -35,7 +35,7 @@
   ignore - a new target proposed for the call site, which is ignored - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.UnsupportedOperationException - because this kind of call site cannot change its target"
-  ([this ignore]
+  ([^java.lang.invoke.ConstantCallSite this ^java.lang.invoke.MethodHandle ignore]
     (-> this (.setTarget ignore))))
 
 (defn dynamic-invoker
@@ -46,6 +46,6 @@
   returns: the immutable linkage state of this call site, a constant method handle - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.IllegalStateException - if the ConstantCallSite constructor has not completed"
-  ([this]
+  ([^java.lang.invoke.ConstantCallSite this]
     (-> this (.dynamicInvoker))))
 

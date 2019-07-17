@@ -9,7 +9,7 @@
    an existing Border instance.
 
   delegate - the border being wrapped - `javax.swing.border.Border`"
-  ([delegate]
+  ([^javax.swing.border.Border delegate]
     (new BorderUIResource delegate)))
 
 (defn *get-etched-border-ui-resource
@@ -41,7 +41,7 @@
   y - the y position of the painted border - `int`
   width - the width of the painted border - `int`
   height - the height of the painted border - `int`"
-  ([this c g x y width height]
+  ([^javax.swing.plaf.BorderUIResource this ^java.awt.Component c ^java.awt.Graphics g ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.paintBorder c g x y width height))))
 
 (defn get-border-insets
@@ -50,13 +50,13 @@
   c - the component for which this border insets value applies - `java.awt.Component`
 
   returns: `java.awt.Insets`"
-  ([this c]
+  ([^javax.swing.plaf.BorderUIResource this ^java.awt.Component c]
     (-> this (.getBorderInsets c))))
 
 (defn border-opaque?
   "Description copied from interface: Border
 
   returns: `boolean`"
-  ([this]
+  ([^javax.swing.plaf.BorderUIResource this]
     (-> this (.isBorderOpaque))))
 

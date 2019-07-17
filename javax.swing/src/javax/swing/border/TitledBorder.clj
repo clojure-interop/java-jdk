@@ -38,15 +38,15 @@
   title-position - the position for the title - `int`
   title-font - the font of the title - `java.awt.Font`
   title-color - the color of the title - `java.awt.Color`"
-  ([border title title-justification title-position title-font title-color]
+  ([^javax.swing.border.Border border ^java.lang.String title ^Integer title-justification ^Integer title-position ^java.awt.Font title-font ^java.awt.Color title-color]
     (new TitledBorder border title title-justification title-position title-font title-color))
-  ([border title title-justification title-position title-font]
+  ([^javax.swing.border.Border border ^java.lang.String title ^Integer title-justification ^Integer title-position ^java.awt.Font title-font]
     (new TitledBorder border title title-justification title-position title-font))
-  ([border title title-justification title-position]
+  ([^javax.swing.border.Border border ^java.lang.String title ^Integer title-justification ^Integer title-position]
     (new TitledBorder border title title-justification title-position))
-  ([border title]
+  ([^javax.swing.border.Border border ^java.lang.String title]
     (new TitledBorder border title))
-  ([title]
+  ([^java.lang.String title]
     (new TitledBorder title)))
 
 (def *-default-position
@@ -164,14 +164,14 @@
   c - the component where this border will be drawn - `java.awt.Component`
 
   returns: the Dimension object - `java.awt.Dimension`"
-  ([this c]
+  ([^javax.swing.border.TitledBorder this ^java.awt.Component c]
     (-> this (.getMinimumSize c))))
 
 (defn set-title-position
   "Sets the title-position of the titled border.
 
   title-position - the position for the border - `int`"
-  ([this title-position]
+  ([^javax.swing.border.TitledBorder this ^Integer title-position]
     (-> this (.setTitlePosition title-position))))
 
 (defn paint-border
@@ -184,28 +184,28 @@
   y - the y position of the painted border - `int`
   width - the width of the painted border - `int`
   height - the height of the painted border - `int`"
-  ([this c g x y width height]
+  ([^javax.swing.border.TitledBorder this ^java.awt.Component c ^java.awt.Graphics g ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.paintBorder c g x y width height))))
 
 (defn set-title-justification
   "Sets the title-justification of the titled border.
 
   title-justification - the justification for the border - `int`"
-  ([this title-justification]
+  ([^javax.swing.border.TitledBorder this ^Integer title-justification]
     (-> this (.setTitleJustification title-justification))))
 
 (defn get-border
   "Returns the border of the titled border.
 
   returns: the border of the titled border - `javax.swing.border.Border`"
-  ([this]
+  ([^javax.swing.border.TitledBorder this]
     (-> this (.getBorder))))
 
 (defn set-title-color
   "Sets the title-color of the titled border.
 
   title-color - the color for the border title - `java.awt.Color`"
-  ([this title-color]
+  ([^javax.swing.border.TitledBorder this ^java.awt.Color title-color]
     (-> this (.setTitleColor title-color))))
 
 (defn get-baseline-resize-behavior
@@ -218,7 +218,7 @@
            resized - `java.awt.Component.BaselineResizeBehavior`
 
   throws: java.lang.NullPointerException"
-  ([this c]
+  ([^javax.swing.border.TitledBorder this ^java.awt.Component c]
     (-> this (.getBaselineResizeBehavior c))))
 
 (defn get-border-insets
@@ -228,56 +228,56 @@
   insets - the object to be reinitialized - `java.awt.Insets`
 
   returns: the insets object - `java.awt.Insets`"
-  ([this c insets]
+  ([^javax.swing.border.TitledBorder this ^java.awt.Component c ^java.awt.Insets insets]
     (-> this (.getBorderInsets c insets))))
 
 (defn get-title-justification
   "Returns the title-justification of the titled border.
 
   returns: the title-justification of the titled border - `int`"
-  ([this]
+  ([^javax.swing.border.TitledBorder this]
     (-> this (.getTitleJustification))))
 
 (defn get-title-color
   "Returns the title-color of the titled border.
 
   returns: the title-color of the titled border - `java.awt.Color`"
-  ([this]
+  ([^javax.swing.border.TitledBorder this]
     (-> this (.getTitleColor))))
 
 (defn get-title-font
   "Returns the title-font of the titled border.
 
   returns: the title-font of the titled border - `java.awt.Font`"
-  ([this]
+  ([^javax.swing.border.TitledBorder this]
     (-> this (.getTitleFont))))
 
 (defn set-title-font
   "Sets the title-font of the titled border.
 
   title-font - the font for the border title - `java.awt.Font`"
-  ([this title-font]
+  ([^javax.swing.border.TitledBorder this ^java.awt.Font title-font]
     (-> this (.setTitleFont title-font))))
 
 (defn get-title-position
   "Returns the title-position of the titled border.
 
   returns: the title-position of the titled border - `int`"
-  ([this]
+  ([^javax.swing.border.TitledBorder this]
     (-> this (.getTitlePosition))))
 
 (defn border-opaque?
   "Returns whether or not the border is opaque.
 
   returns: false - `boolean`"
-  ([this]
+  ([^javax.swing.border.TitledBorder this]
     (-> this (.isBorderOpaque))))
 
 (defn set-border
   "Sets the border of the titled border.
 
   border - the border - `javax.swing.border.Border`"
-  ([this border]
+  ([^javax.swing.border.TitledBorder this ^javax.swing.border.Border border]
     (-> this (.setBorder border))))
 
 (defn get-baseline
@@ -291,20 +291,20 @@
            baseline - `int`
 
   throws: java.lang.NullPointerException"
-  ([this c width height]
+  ([^javax.swing.border.TitledBorder this ^java.awt.Component c ^Integer width ^Integer height]
     (-> this (.getBaseline c width height))))
 
 (defn get-title
   "Returns the title of the titled border.
 
   returns: the title of the titled border - `java.lang.String`"
-  ([this]
+  ([^javax.swing.border.TitledBorder this]
     (-> this (.getTitle))))
 
 (defn set-title
   "Sets the title of the titled border.
 
   title - the title for the border - `java.lang.String`"
-  ([this title]
+  ([^javax.swing.border.TitledBorder this ^java.lang.String title]
     (-> this (.setTitle title))))
 

@@ -45,11 +45,11 @@
   group - a check box group for this check box, or null for no group. - `java.awt.CheckboxGroup`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless returns true"
-  ([label state group]
+  ([^java.lang.String label ^Boolean state ^java.awt.CheckboxGroup group]
     (new Checkbox label state group))
-  ([label state]
+  ([^java.lang.String label ^Boolean state]
     (new Checkbox label state))
-  ([label]
+  ([^java.lang.String label]
     (new Checkbox label))
   ([]
     (new Checkbox )))
@@ -62,7 +62,7 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   l - the item listener - `java.awt.event.ItemListener`"
-  ([this l]
+  ([^java.awt.Checkbox this ^java.awt.event.ItemListener l]
     (-> this (.addItemListener l))))
 
 (defn remove-item-listener
@@ -72,7 +72,7 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   l - the item listener - `java.awt.event.ItemListener`"
-  ([this l]
+  ([^java.awt.Checkbox this ^java.awt.event.ItemListener l]
     (-> this (.removeItemListener l))))
 
 (defn set-state
@@ -87,7 +87,7 @@
    ItemEvent is by user interaction.
 
   state - the boolean state of the check box - `boolean`"
-  ([this state]
+  ([^java.awt.Checkbox this ^Boolean state]
     (-> this (.setState state))))
 
 (defn get-checkbox-group
@@ -95,7 +95,7 @@
 
   returns: this check box's group, or null
                  if the check box is not part of a check box group. - `java.awt.CheckboxGroup`"
-  ([this]
+  ([^java.awt.Checkbox this]
     (-> this (.getCheckboxGroup))))
 
 (defn get-state?
@@ -104,13 +104,13 @@
    and false indicates the `off` state.
 
   returns: the state of this check box, as a boolean value - `boolean`"
-  ([this]
+  ([^java.awt.Checkbox this]
     (-> this (.getState))))
 
 (defn add-notify
   "Creates the peer of the Checkbox. The peer allows you to change the
    look of the Checkbox without changing its functionality."
-  ([this]
+  ([^java.awt.Checkbox this]
     (-> this (.addNotify))))
 
 (defn get-label
@@ -118,7 +118,7 @@
 
   returns: the label of this check box, or null
                     if this check box has no label. - `java.lang.String`"
-  ([this]
+  ([^java.awt.Checkbox this]
     (-> this (.getLabel))))
 
 (defn get-accessible-context
@@ -129,7 +129,7 @@
 
   returns: an AccessibleAWTCheckbox that serves as the
            AccessibleContext of this Checkbox - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^java.awt.Checkbox this]
     (-> this (.getAccessibleContext))))
 
 (defn set-checkbox-group
@@ -145,7 +145,7 @@
    the new group and its state is true.
 
   g - the new check box group, or null to remove this check box from any check box group - `java.awt.CheckboxGroup`"
-  ([this g]
+  ([^java.awt.Checkbox this ^java.awt.CheckboxGroup g]
     (-> this (.setCheckboxGroup g))))
 
 (defn get-selected-objects
@@ -153,7 +153,7 @@
    label or null if the checkbox is not selected.
 
   returns: `java.lang.Object[]`"
-  ([this]
+  ([^java.awt.Checkbox this]
     (-> this (.getSelectedObjects))))
 
 (defn get-listeners
@@ -185,14 +185,14 @@
             listeners have been added - `<T extends java.util.EventListener> T[]`
 
   throws: java.lang.ClassCastException - if listenerType doesn't specify a class or interface that implements java.util.EventListener"
-  ([this listener-type]
+  ([^java.awt.Checkbox this ^java.lang.Class listener-type]
     (-> this (.getListeners listener-type))))
 
 (defn set-label
   "Sets this check box's label to be the string argument.
 
   label - a string to set as the new label, or null for no label. - `java.lang.String`"
-  ([this label]
+  ([^java.awt.Checkbox this ^java.lang.String label]
     (-> this (.setLabel label))))
 
 (defn get-item-listeners
@@ -202,6 +202,6 @@
   returns: all of this checkbox's ItemListeners
            or an empty array if no item
            listeners are currently registered - `java.awt.event.ItemListener[]`"
-  ([this]
+  ([^java.awt.Checkbox this]
     (-> this (.getItemListeners))))
 

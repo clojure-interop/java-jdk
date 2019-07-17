@@ -42,23 +42,23 @@
   namespace-map - the map of namespace prefixes. Each key is a namespace prefix String that maps to a corresponding namespace URI String. - `java.util.Map`
 
   throws: java.lang.NullPointerException - if expression, filter or namespaceMap are null"
-  ([expression filter namespace-map]
+  ([^java.lang.String expression ^javax.xml.crypto.dsig.spec.XPathType.Filter filter ^java.util.Map namespace-map]
     (new XPathType expression filter namespace-map))
-  ([expression filter]
+  ([^java.lang.String expression ^javax.xml.crypto.dsig.spec.XPathType.Filter filter]
     (new XPathType expression filter)))
 
 (defn get-expression
   "Returns the XPath expression to be evaluated.
 
   returns: the XPath expression to be evaluated - `java.lang.String`"
-  ([this]
+  ([^javax.xml.crypto.dsig.spec.XPathType this]
     (-> this (.getExpression))))
 
 (defn get-filter
   "Returns the filter operation.
 
   returns: the filter operation - `javax.xml.crypto.dsig.spec.XPathType.Filter`"
-  ([this]
+  ([^javax.xml.crypto.dsig.spec.XPathType this]
     (-> this (.getFilter))))
 
 (defn get-namespace-map
@@ -70,6 +70,6 @@
 
   returns: a Map of namespace prefixes to namespace URIs
       (may be empty, but never null) - `java.util.Map`"
-  ([this]
+  ([^javax.xml.crypto.dsig.spec.XPathType this]
     (-> this (.getNamespaceMap))))
 

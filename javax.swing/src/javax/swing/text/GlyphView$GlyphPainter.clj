@@ -28,28 +28,28 @@
   p-1 - the ending document offset >= p0 - `int`
 
   returns: `javax.swing.text.GlyphView.GlyphPainter`"
-  ([this v p-0 p-1]
+  ([^javax.swing.text.GlyphView$GlyphPainter this ^javax.swing.text.GlyphView v ^Integer p-0 ^Integer p-1]
     (-> this (.getPainter v p-0 p-1))))
 
 (defn get-ascent
   "v - `javax.swing.text.GlyphView`
 
   returns: `float`"
-  ([this v]
+  ([^javax.swing.text.GlyphView$GlyphPainter this ^javax.swing.text.GlyphView v]
     (-> this (.getAscent v))))
 
 (defn get-descent
   "v - `javax.swing.text.GlyphView`
 
   returns: `float`"
-  ([this v]
+  ([^javax.swing.text.GlyphView$GlyphPainter this ^javax.swing.text.GlyphView v]
     (-> this (.getDescent v))))
 
 (defn get-height
   "v - `javax.swing.text.GlyphView`
 
   returns: `float`"
-  ([this v]
+  ([^javax.swing.text.GlyphView$GlyphPainter this ^javax.swing.text.GlyphView v]
     (-> this (.getHeight v))))
 
 (defn paint
@@ -60,7 +60,7 @@
   a - `java.awt.Shape`
   p-0 - `int`
   p-1 - `int`"
-  ([this v g a p-0 p-1]
+  ([^javax.swing.text.GlyphView$GlyphPainter this ^javax.swing.text.GlyphView v ^java.awt.Graphics g ^java.awt.Shape a ^Integer p-0 ^Integer p-1]
     (-> this (.paint v g a p-0 p-1))))
 
 (defn get-bounded-position
@@ -77,7 +77,7 @@
   len - specifies the distance into the view where a potential break is desired >= 0. - `float`
 
   returns: the maximum model location possible for a break. - `int`"
-  ([this v p-0 x len]
+  ([^javax.swing.text.GlyphView$GlyphPainter this ^javax.swing.text.GlyphView v ^Integer p-0 ^Float x ^Float len]
     (-> this (.getBoundedPosition v p-0 x len))))
 
 (defn view-to-model
@@ -92,7 +92,7 @@
 
   returns: the location within the model that best represents the
            given point of view - `int`"
-  ([this v x y a bias-return]
+  ([^javax.swing.text.GlyphView$GlyphPainter this ^javax.swing.text.GlyphView v ^Float x ^Float y ^java.awt.Shape a ^javax.swing.text.Position.Bias[] bias-return]
     (-> this (.viewToModel v x y a bias-return))))
 
 (defn get-span
@@ -106,7 +106,7 @@
   x - `float`
 
   returns: `float`"
-  ([this v p-0 p-1 e x]
+  ([^javax.swing.text.GlyphView$GlyphPainter this ^javax.swing.text.GlyphView v ^Integer p-0 ^Integer p-1 ^javax.swing.text.TabExpander e ^Float x]
     (-> this (.getSpan v p-0 p-1 e x))))
 
 (defn model-to-view
@@ -122,7 +122,7 @@
   returns: the bounding box of the given position - `java.awt.Shape`
 
   throws: javax.swing.text.BadLocationException - if the given position does not represent a valid location in the associated document"
-  ([this v pos bias a]
+  ([^javax.swing.text.GlyphView$GlyphPainter this ^javax.swing.text.GlyphView v ^Integer pos ^javax.swing.text.Position.Bias bias ^java.awt.Shape a]
     (-> this (.modelToView v pos bias a))))
 
 (defn get-next-visual-position-from
@@ -143,6 +143,6 @@
     location visual position. - `int`
 
   throws: javax.swing.text.BadLocationException"
-  ([this v pos b a direction bias-ret]
+  ([^javax.swing.text.GlyphView$GlyphPainter this ^javax.swing.text.GlyphView v ^Integer pos ^javax.swing.text.Position.Bias b ^java.awt.Shape a ^Integer direction ^javax.swing.text.Position.Bias[] bias-ret]
     (-> this (.getNextVisualPositionFrom v pos b a direction bias-ret))))
 

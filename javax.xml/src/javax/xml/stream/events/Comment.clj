@@ -8,6 +8,6 @@
    does not exist
 
   returns: `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getText))))
 

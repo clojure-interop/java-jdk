@@ -20,7 +20,7 @@
        operation invocation. - `Dispatch.T`
 
   throws: javax.xml.ws.WebServiceException - If there is any error in the configuration of the Dispatch instance"
-  ([this msg]
+  ([^. this ^Dispatch.T msg]
     (-> this (.invoke msg))))
 
 (defn invoke-async
@@ -43,9 +43,9 @@
        and any use of it will result in non-portable behaviour. - `java.util.concurrent.Future<?>`
 
   throws: javax.xml.ws.WebServiceException - If there is any error in the configuration of the Dispatch instance"
-  ([this msg handler]
+  ([^. this ^Dispatch.T msg ^javax.xml.ws.AsyncHandler handler]
     (-> this (.invokeAsync msg handler)))
-  ([this msg]
+  ([^. this ^Dispatch.T msg]
     (-> this (.invokeAsync msg))))
 
 (defn invoke-one-way
@@ -63,6 +63,6 @@
   msg - An object that will form the message or payload of the message used to invoke the operation. - `Dispatch.T`
 
   throws: javax.xml.ws.WebServiceException - If there is any error in the configuration of the Dispatch instance or if an error occurs during the invocation."
-  ([this msg]
+  ([^. this ^Dispatch.T msg]
     (-> this (.invokeOneWay msg))))
 

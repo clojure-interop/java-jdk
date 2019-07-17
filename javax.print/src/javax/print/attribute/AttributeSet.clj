@@ -83,7 +83,7 @@
             call. - `boolean`
 
   throws: javax.print.attribute.UnmodifiableSetException - (Unchecked exception) Thrown if this attribute set does not support the addAll(AttributeSet) method."
-  ([this attributes]
+  ([^. this ^javax.print.attribute.AttributeSet attributes]
     (-> this (.addAll attributes))))
 
 (defn contains-value
@@ -94,7 +94,7 @@
 
   returns: true if this attribute set contains the given
         attribute  value. - `boolean`"
-  ([this attribute]
+  ([^. this ^javax.print.attribute.Attribute attribute]
     (-> this (.containsValue attribute))))
 
 (defn remove
@@ -109,7 +109,7 @@
             attribute set. - `boolean`
 
   throws: javax.print.attribute.UnmodifiableSetException - (unchecked exception) Thrown if this attribute set does not support the remove() operation."
-  ([this category]
+  ([^. this ^java.lang.Class category]
     (-> this (.remove category))))
 
 (defn hash-code
@@ -122,7 +122,7 @@
    Object.hashCode().
 
   returns: The hash code value for this attribute set. - `int`"
-  ([this]
+  ([^. this]
     (-> this (.hashCode))))
 
 (defn add
@@ -137,14 +137,14 @@
             of this attribute set. - `boolean`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if the attribute is null."
-  ([this attribute]
+  ([^. this ^javax.print.attribute.Attribute attribute]
     (-> this (.add attribute))))
 
 (defn empty?
   "Returns true if this attribute set contains no attributes.
 
   returns: true if this attribute set contains no attributes. - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.isEmpty))))
 
 (defn size
@@ -153,14 +153,14 @@
    returns  Integer.MAX_VALUE.
 
   returns: The number of attributes in this attribute set. - `int`"
-  ([this]
+  ([^. this]
     (-> this (.size))))
 
 (defn clear
   "Removes all attributes from this attribute set.
 
   throws: javax.print.attribute.UnmodifiableSetException - (unchecked exception) Thrown if this attribute set does not support the clear() operation."
-  ([this]
+  ([^. this]
     (-> this (.clear))))
 
 (defn to-array
@@ -168,7 +168,7 @@
 
   returns: the Attributes contained in this set as an array, zero length
    if the AttributeSet is empty. - `javax.print.attribute.Attribute[]`"
-  ([this]
+  ([^. this]
     (-> this (.toArray))))
 
 (defn contains-key
@@ -179,7 +179,7 @@
 
   returns: true if this attribute set contains an attribute
            value for the specified category. - `boolean`"
-  ([this category]
+  ([^. this ^java.lang.Class category]
     (-> this (.containsKey category))))
 
 (defn get
@@ -195,7 +195,7 @@
             category. - `javax.print.attribute.Attribute`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if the category is null."
-  ([this category]
+  ([^. this ^java.lang.Class category]
     (-> this (.get category))))
 
 (defn equals
@@ -210,6 +210,6 @@
 
   returns: true if the specified object is equal to this
          attribute   set. - `boolean`"
-  ([this object]
+  ([^. this ^java.lang.Object object]
     (-> this (.equals object))))
 

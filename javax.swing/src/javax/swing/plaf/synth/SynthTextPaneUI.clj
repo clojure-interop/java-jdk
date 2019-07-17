@@ -24,7 +24,7 @@
   c - the JTextPane object - `javax.swing.JComponent`
 
   returns: the UI object - `javax.swing.plaf.ComponentUI`"
-  ([c]
+  ([^javax.swing.JComponent c]
     (SynthTextPaneUI/createUI c)))
 
 (defn install-ui
@@ -47,7 +47,7 @@
    to represent the model.
 
   c - the editor component - `javax.swing.JComponent`"
-  ([this c]
+  ([^javax.swing.plaf.synth.SynthTextPaneUI this ^javax.swing.JComponent c]
     (-> this (.installUI c))))
 
 (defn paint-border
@@ -59,6 +59,6 @@
   y - the Y coordinate - `int`
   w - width of the border - `int`
   h - height of the border - `int`"
-  ([this context g x y w h]
+  ([^javax.swing.plaf.synth.SynthTextPaneUI this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintBorder context g x y w h))))
 

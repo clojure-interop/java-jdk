@@ -10,7 +10,7 @@
    If a receiver is currently set, it is replaced with this one.
 
   receiver - the desired receiver. - `javax.sound.midi.Receiver`"
-  ([this receiver]
+  ([^. this ^javax.sound.midi.Receiver receiver]
     (-> this (.setReceiver receiver))))
 
 (defn get-receiver
@@ -18,7 +18,7 @@
 
   returns: the current receiver.  If no receiver is currently set,
    returns null - `javax.sound.midi.Receiver`"
-  ([this]
+  ([^. this]
     (-> this (.getReceiver))))
 
 (defn close
@@ -36,6 +36,6 @@
    Transmitter is closed, too.  For a detailed
    description of open/close behaviour see the class description
    of MidiDevice."
-  ([this]
+  ([^. this]
     (-> this (.close))))
 

@@ -11,6 +11,6 @@
    this service may now be made.
 
   bcsae - the BeanContextServiceAvailableEvent - `java.beans.beancontext.BeanContextServiceAvailableEvent`"
-  ([this bcsae]
+  ([^. this ^java.beans.beancontext.BeanContextServiceAvailableEvent bcsae]
     (-> this (.serviceAvailable bcsae))))
 

@@ -33,7 +33,7 @@
 
   elem - the element this view is responsible for - `javax.swing.text.Element`
   axis - either View.X_AXIS or View.Y_AXIS - `int`"
-  ([elem axis]
+  ([^javax.swing.text.Element elem ^Integer axis]
     (new BoxView elem axis)))
 
 (defn get-preferred-span
@@ -48,7 +48,7 @@
              the parent may choose to resize or break the view - `float`
 
   throws: java.lang.IllegalArgumentException - for an invalid axis type"
-  ([this axis]
+  ([^javax.swing.text.BoxView this ^Integer axis]
     (-> this (.getPreferredSpan axis))))
 
 (defn get-width
@@ -56,7 +56,7 @@
    it was last allocated.
 
   returns: the current width of the box - `int`"
-  ([this]
+  ([^javax.swing.text.BoxView this]
     (-> this (.getWidth))))
 
 (defn get-axis
@@ -65,7 +65,7 @@
 
   returns: the major axis of the box, either
     View.X_AXIS or View.Y_AXIS - `int`"
-  ([this]
+  ([^javax.swing.text.BoxView this]
     (-> this (.getAxis))))
 
 (defn get-child-allocation
@@ -81,7 +81,7 @@
   returns: the allocation to the child; or null
             if a is null;
             or null if the layout is invalid - `java.awt.Shape`"
-  ([this index a]
+  ([^javax.swing.text.BoxView this ^Integer index ^java.awt.Shape a]
     (-> this (.getChildAllocation index a))))
 
 (defn set-axis
@@ -89,7 +89,7 @@
    the child views are tiled.
 
   axis - either View.X_AXIS or View.Y_AXIS - `int`"
-  ([this axis]
+  ([^javax.swing.text.BoxView this ^Integer axis]
     (-> this (.setAxis axis))))
 
 (defn replace
@@ -101,7 +101,7 @@
   index - the starting index into the child views to insert the new views; this should be a value >= 0 and <= getViewCount - `int`
   length - the number of existing child views to remove; This should be a value >= 0 and <= (getViewCount() - offset) - `int`
   elems - the child views to add; this value can be nullto indicate no children are being added (useful to remove) - `javax.swing.text.View[]`"
-  ([this index length elems]
+  ([^javax.swing.text.BoxView this ^Integer index ^Integer length ^javax.swing.text.View[] elems]
     (-> this (.replace index length elems))))
 
 (defn get-minimum-span
@@ -116,7 +116,7 @@
              the parent may choose to resize or break the view - `float`
 
   throws: java.lang.IllegalArgumentException - for an invalid axis type"
-  ([this axis]
+  ([^javax.swing.text.BoxView this ^Integer axis]
     (-> this (.getMinimumSpan axis))))
 
 (defn get-maximum-span
@@ -131,7 +131,7 @@
              the parent may choose to resize or break the view - `float`
 
   throws: java.lang.IllegalArgumentException - for an invalid axis type"
-  ([this axis]
+  ([^javax.swing.text.BoxView this ^Integer axis]
     (-> this (.getMaximumSpan axis))))
 
 (defn get-height
@@ -139,7 +139,7 @@
    it was last allocated.
 
   returns: the current height of the box - `int`"
-  ([this]
+  ([^javax.swing.text.BoxView this]
     (-> this (.getHeight))))
 
 (defn paint
@@ -151,7 +151,7 @@
 
   g - the rendering surface to use - `java.awt.Graphics`
   allocation - the allocated region to render into - `java.awt.Shape`"
-  ([this g allocation]
+  ([^javax.swing.text.BoxView this ^java.awt.Graphics g ^java.awt.Shape allocation]
     (-> this (.paint g allocation))))
 
 (defn layout-changed
@@ -165,7 +165,7 @@
    is called on this view (typically in paint).
 
   axis - either View.X_AXIS or View.Y_AXIS - `int`"
-  ([this axis]
+  ([^javax.swing.text.BoxView this ^Integer axis]
     (-> this (.layoutChanged axis))))
 
 (defn get-alignment
@@ -185,7 +185,7 @@
      center of the view - `float`
 
   throws: java.lang.IllegalArgumentException - for an invalid axis"
-  ([this axis]
+  ([^javax.swing.text.BoxView this ^Integer axis]
     (-> this (.getAlignment axis))))
 
 (defn get-resize-weight
@@ -196,7 +196,7 @@
   returns: the weight - `int`
 
   throws: java.lang.IllegalArgumentException - for an invalid axis"
-  ([this axis]
+  ([^javax.swing.text.BoxView this ^Integer axis]
     (-> this (.getResizeWeight axis))))
 
 (defn set-size
@@ -207,7 +207,7 @@
 
   width - the width >= 0 - `float`
   height - the height >= 0 - `float`"
-  ([this width height]
+  ([^javax.swing.text.BoxView this ^Float width ^Float height]
     (-> this (.setSize width height))))
 
 (defn preference-changed
@@ -220,7 +220,7 @@
   child - the child view - `javax.swing.text.View`
   width - true if the width preference should change - `boolean`
   height - true if the height preference should change - `boolean`"
-  ([this child width height]
+  ([^javax.swing.text.BoxView this ^javax.swing.text.View child ^Boolean width ^Boolean height]
     (-> this (.preferenceChanged child width height))))
 
 (defn view-to-model
@@ -234,7 +234,7 @@
 
   returns: the location within the model that best represents the
     given point in the view >= 0 - `int`"
-  ([this x y a bias]
+  ([^javax.swing.text.BoxView this ^Float x ^Float y ^java.awt.Shape a ^javax.swing.text.Position.Bias[] bias]
     (-> this (.viewToModel x y a bias))))
 
 (defn model-to-view
@@ -249,6 +249,6 @@
   returns: the bounding box of the given position - `java.awt.Shape`
 
   throws: javax.swing.text.BadLocationException - if the given position does not represent a valid location in the associated document"
-  ([this pos a b]
+  ([^javax.swing.text.BoxView this ^Integer pos ^java.awt.Shape a ^javax.swing.text.Position.Bias b]
     (-> this (.modelToView pos a b))))
 

@@ -23,9 +23,9 @@
   paint - the Paint object used to generate a color - `java.awt.Paint`
 
   throws: java.lang.NullPointerException - if the specified stroke is null"
-  ([stroke paint]
+  ([^java.awt.BasicStroke stroke ^java.awt.Paint paint]
     (new StrokeBorder stroke paint))
-  ([stroke]
+  ([^java.awt.BasicStroke stroke]
     (new StrokeBorder stroke)))
 
 (defn paint-border
@@ -44,7 +44,7 @@
   height - the height of the painted border - `int`
 
   throws: java.lang.NullPointerException - if the specified g is null"
-  ([this c g x y width height]
+  ([^javax.swing.border.StrokeBorder this ^java.awt.Component c ^java.awt.Graphics g ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.paintBorder c g x y width height))))
 
 (defn get-border-insets
@@ -60,7 +60,7 @@
   returns: the reinitialized insets parameter - `java.awt.Insets`
 
   throws: java.lang.NullPointerException - if the specified insets is null"
-  ([this c insets]
+  ([^javax.swing.border.StrokeBorder this ^java.awt.Component c ^java.awt.Insets insets]
     (-> this (.getBorderInsets c insets))))
 
 (defn get-stroke
@@ -68,7 +68,7 @@
    during the border rendering.
 
   returns: the BasicStroke object - `java.awt.BasicStroke`"
-  ([this]
+  ([^javax.swing.border.StrokeBorder this]
     (-> this (.getStroke))))
 
 (defn get-paint
@@ -77,6 +77,6 @@
 
   returns: the Paint object or null
            if the paint parameter is not set - `java.awt.Paint`"
-  ([this]
+  ([^javax.swing.border.StrokeBorder this]
     (-> this (.getPaint))))
 

@@ -11,6 +11,6 @@
   "Returns the name of the attribute view.
 
   returns: the name of the attribute view - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.name))))
 

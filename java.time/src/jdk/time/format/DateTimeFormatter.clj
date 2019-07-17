@@ -842,9 +842,9 @@
   returns: the formatter based on the pattern, not null - `java.time.format.DateTimeFormatter`
 
   throws: java.lang.IllegalArgumentException - if the pattern is invalid"
-  ([pattern locale]
+  ([^java.lang.String pattern ^java.util.Locale locale]
     (DateTimeFormatter/ofPattern pattern locale))
-  ([pattern]
+  ([^java.lang.String pattern]
     (DateTimeFormatter/ofPattern pattern)))
 
 (defn *of-localized-date
@@ -869,7 +869,7 @@
   date-style - the formatter style to obtain, not null - `java.time.format.FormatStyle`
 
   returns: the date formatter, not null - `java.time.format.DateTimeFormatter`"
-  ([date-style]
+  ([^java.time.format.FormatStyle date-style]
     (DateTimeFormatter/ofLocalizedDate date-style)))
 
 (defn *of-localized-time
@@ -894,7 +894,7 @@
   time-style - the formatter style to obtain, not null - `java.time.format.FormatStyle`
 
   returns: the time formatter, not null - `java.time.format.DateTimeFormatter`"
-  ([time-style]
+  ([^java.time.format.FormatStyle time-style]
     (DateTimeFormatter/ofLocalizedTime time-style)))
 
 (defn *of-localized-date-time
@@ -920,9 +920,9 @@
   time-style - the time formatter style to obtain, not null - `java.time.format.FormatStyle`
 
   returns: the date, time or date-time formatter, not null - `java.time.format.DateTimeFormatter`"
-  ([date-style time-style]
+  ([^java.time.format.FormatStyle date-style ^java.time.format.FormatStyle time-style]
     (DateTimeFormatter/ofLocalizedDateTime date-style time-style))
-  ([date-time-style]
+  ([^java.time.format.FormatStyle date-time-style]
     (DateTimeFormatter/ofLocalizedDateTime date-time-style)))
 
 (defn *parsed-excess-days
@@ -1031,7 +1031,7 @@
   returns: the parsed date-time, not null - `java.time.temporal.TemporalAccessor`
 
   throws: java.lang.IllegalArgumentException - if less than 2 types are specified"
-  ([this text queries]
+  ([^java.time.format.DateTimeFormatter this ^java.lang.CharSequence text ^java.time.temporal.TemporalQuery queries]
     (-> this (.parseBest text queries))))
 
 (defn format-to
@@ -1049,14 +1049,14 @@
   appendable - the appendable to format to, not null - `java.lang.Appendable`
 
   throws: java.time.DateTimeException - if an error occurs during formatting"
-  ([this temporal appendable]
+  ([^java.time.format.DateTimeFormatter this ^java.time.temporal.TemporalAccessor temporal ^java.lang.Appendable appendable]
     (-> this (.formatTo temporal appendable))))
 
 (defn get-decimal-style
   "Gets the DecimalStyle to be used during formatting.
 
   returns: the locale of this formatter, not null - `java.time.format.DecimalStyle`"
-  ([this]
+  ([^java.time.format.DateTimeFormatter this]
     (-> this (.getDecimalStyle))))
 
 (defn with-chronology
@@ -1092,7 +1092,7 @@
   chrono - the new chronology, null if no override - `java.time.chrono.Chronology`
 
   returns: a formatter based on this formatter with the requested override chronology, not null - `java.time.format.DateTimeFormatter`"
-  ([this chrono]
+  ([^java.time.format.DateTimeFormatter this ^java.time.chrono.Chronology chrono]
     (-> this (.withChronology chrono))))
 
 (defn get-resolver-style
@@ -1104,7 +1104,7 @@
    See withResolverStyle(ResolverStyle) for more details.
 
   returns: the resolver style of this formatter, not null - `java.time.format.ResolverStyle`"
-  ([this]
+  ([^java.time.format.DateTimeFormatter this]
     (-> this (.getResolverStyle))))
 
 (defn with-decimal-style
@@ -1115,7 +1115,7 @@
   decimal-style - the new DecimalStyle, not null - `java.time.format.DecimalStyle`
 
   returns: a formatter based on this formatter with the requested DecimalStyle, not null - `java.time.format.DateTimeFormatter`"
-  ([this decimal-style]
+  ([^java.time.format.DateTimeFormatter this ^java.time.format.DecimalStyle decimal-style]
     (-> this (.withDecimalStyle decimal-style))))
 
 (defn get-locale
@@ -1125,14 +1125,14 @@
    localization, such as the text or localized pattern.
 
   returns: the locale of this formatter, not null - `java.util.Locale`"
-  ([this]
+  ([^java.time.format.DateTimeFormatter this]
     (-> this (.getLocale))))
 
 (defn to-string
   "Returns a description of the underlying formatters.
 
   returns: a description of this formatter, not null - `java.lang.String`"
-  ([this]
+  ([^java.time.format.DateTimeFormatter this]
     (-> this (.toString))))
 
 (defn with-zone
@@ -1171,7 +1171,7 @@
   zone - the new override zone, null if no override - `java.time.ZoneId`
 
   returns: a formatter based on this formatter with the requested override zone, not null - `java.time.format.DateTimeFormatter`"
-  ([this zone]
+  ([^java.time.format.DateTimeFormatter this ^java.time.ZoneId zone]
     (-> this (.withZone zone))))
 
 (defn get-zone
@@ -1182,7 +1182,7 @@
    See withZone(ZoneId) for more details on overriding.
 
   returns: the override zone of this formatter, null if no override - `java.time.ZoneId`"
-  ([this]
+  ([^java.time.format.DateTimeFormatter this]
     (-> this (.getZone))))
 
 (defn get-resolver-fields
@@ -1194,7 +1194,7 @@
    See withResolverFields(Set) for more details.
 
   returns: the immutable set of resolver fields of this formatter, null if no fields - `java.util.Set<java.time.temporal.TemporalField>`"
-  ([this]
+  ([^java.time.format.DateTimeFormatter this]
     (-> this (.getResolverFields))))
 
 (defn get-chronology
@@ -1205,7 +1205,7 @@
    See withChronology(Chronology) for more details on overriding.
 
   returns: the override chronology of this formatter, null if no override - `java.time.chrono.Chronology`"
-  ([this]
+  ([^java.time.format.DateTimeFormatter this]
     (-> this (.getChronology))))
 
 (defn parse
@@ -1237,9 +1237,9 @@
   returns: the parsed temporal object, not null - `java.time.temporal.TemporalAccessor`
 
   throws: java.time.format.DateTimeParseException - if unable to parse the requested result"
-  ([this text position]
+  ([^java.time.format.DateTimeFormatter this ^java.lang.CharSequence text ^java.text.ParsePosition position]
     (-> this (.parse text position)))
-  ([this text]
+  ([^java.time.format.DateTimeFormatter this ^java.lang.CharSequence text]
     (-> this (.parse text))))
 
 (defn with-locale
@@ -1253,7 +1253,7 @@
   locale - the new locale, not null - `java.util.Locale`
 
   returns: a formatter based on this formatter with the requested locale, not null - `java.time.format.DateTimeFormatter`"
-  ([this locale]
+  ([^java.time.format.DateTimeFormatter this ^java.util.Locale locale]
     (-> this (.withLocale locale))))
 
 (defn with-resolver-fields
@@ -1295,7 +1295,7 @@
   resolver-fields - the new set of resolver fields, null if no fields - `java.time.temporal.TemporalField`
 
   returns: a formatter based on this formatter with the requested resolver style, not null - `java.time.format.DateTimeFormatter`"
-  ([this resolver-fields]
+  ([^java.time.format.DateTimeFormatter this ^java.time.temporal.TemporalField resolver-fields]
     (-> this (.withResolverFields resolver-fields))))
 
 (defn parse-unresolved
@@ -1336,7 +1336,7 @@
   returns: the parsed text, null if the parse results in an error - `java.time.temporal.TemporalAccessor`
 
   throws: java.time.DateTimeException - if some problem occurs during parsing"
-  ([this text position]
+  ([^java.time.format.DateTimeFormatter this ^java.lang.CharSequence text ^java.text.ParsePosition position]
     (-> this (.parseUnresolved text position))))
 
 (defn format
@@ -1349,7 +1349,7 @@
   returns: the formatted string, not null - `java.lang.String`
 
   throws: java.time.DateTimeException - if an error occurs during formatting"
-  ([this temporal]
+  ([^java.time.format.DateTimeFormatter this ^java.time.temporal.TemporalAccessor temporal]
     (-> this (.format temporal))))
 
 (defn to-format
@@ -1368,9 +1368,9 @@
   parse-query - the query defining the type to parse to, not null - `java.time.temporal.TemporalQuery<?>`
 
   returns: this formatter as a classic format instance, not null - `java.text.Format`"
-  ([this parse-query]
+  ([^java.time.format.DateTimeFormatter this ^java.time.temporal.TemporalQuery parse-query]
     (-> this (.toFormat parse-query)))
-  ([this]
+  ([^java.time.format.DateTimeFormatter this]
     (-> this (.toFormat))))
 
 (defn with-resolver-style
@@ -1392,6 +1392,6 @@
   resolver-style - the new resolver style, not null - `java.time.format.ResolverStyle`
 
   returns: a formatter based on this formatter with the requested resolver style, not null - `java.time.format.DateTimeFormatter`"
-  ([this resolver-style]
+  ([^java.time.format.DateTimeFormatter this ^java.time.format.ResolverStyle resolver-style]
     (-> this (.withResolverStyle resolver-style))))
 

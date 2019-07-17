@@ -73,7 +73,7 @@
 
   returns: maximum number of MIDI OUT connections,
    or -1 if an unlimited number of connections is available. - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getMaxTransmitters))))
 
 (defn get-microsecond-position
@@ -86,7 +86,7 @@
 
   returns: the current time-stamp of the device in microseconds,
    or -1 if time-stamping is not supported by the device. - `long`"
-  ([this]
+  ([^. this]
     (-> this (.getMicrosecondPosition))))
 
 (defn get-transmitter
@@ -106,7 +106,7 @@
   returns: a MIDI OUT transmitter for the device. - `javax.sound.midi.Transmitter`
 
   throws: javax.sound.midi.MidiUnavailableException - thrown if a transmitter is not available due to resource restrictions"
-  ([this]
+  ([^. this]
     (-> this (.getTransmitter))))
 
 (defn get-receiver
@@ -126,7 +126,7 @@
   returns: a receiver for the device. - `javax.sound.midi.Receiver`
 
   throws: javax.sound.midi.MidiUnavailableException - thrown if a receiver is not available due to resource restrictions"
-  ([this]
+  ([^. this]
     (-> this (.getReceiver))))
 
 (defn get-max-receivers
@@ -135,7 +135,7 @@
 
   returns: maximum number of MIDI IN connections,
    or -1 if an unlimited number of connections is available. - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getMaxReceivers))))
 
 (defn close
@@ -145,7 +145,7 @@
    All Receiver and Transmitter instances
    open from this device are closed. This includes instances retrieved
    via MidiSystem."
-  ([this]
+  ([^. this]
     (-> this (.close))))
 
 (defn get-device-info
@@ -153,7 +153,7 @@
    Strings containing its name, vendor, and description.
 
   returns: device info - `javax.sound.midi.MidiDevice.Info`"
-  ([this]
+  ([^. this]
     (-> this (.getDeviceInfo))))
 
 (defn open?
@@ -161,7 +161,7 @@
 
   returns: true if the device is open, otherwise
    false - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.isOpen))))
 
 (defn open
@@ -178,7 +178,7 @@
    to reopen such a device will always result in a MidiUnavailableException.
 
   throws: javax.sound.midi.MidiUnavailableException - thrown if the device cannot be opened due to resource restrictions."
-  ([this]
+  ([^. this]
     (-> this (.open))))
 
 (defn get-transmitters
@@ -191,7 +191,7 @@
    the MidiDeviceTransmitter interface.
 
   returns: an unmodifiable list of the open transmitters - `java.util.List<javax.sound.midi.Transmitter>`"
-  ([this]
+  ([^. this]
     (-> this (.getTransmitters))))
 
 (defn get-receivers
@@ -204,6 +204,6 @@
    the MidiDeviceReceiver interface.
 
   returns: an unmodifiable list of the open receivers - `java.util.List<javax.sound.midi.Receiver>`"
-  ([this]
+  ([^. this]
     (-> this (.getReceivers))))
 

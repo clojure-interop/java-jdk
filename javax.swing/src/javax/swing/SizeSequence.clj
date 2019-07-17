@@ -90,9 +90,9 @@
 
   num-entries - the number of sizes to track - `int`
   value - the initial value of each size - `int`"
-  ([num-entries value]
+  ([^Integer num-entries ^Integer value]
     (new SizeSequence num-entries value))
-  ([num-entries]
+  ([^Integer num-entries]
     (new SizeSequence num-entries))
   ([]
     (new SizeSequence )))
@@ -106,14 +106,14 @@
    corresponding item in sizes.
 
   sizes - the array of sizes to be contained in this SizeSequence - `int[]`"
-  ([this sizes]
+  ([^javax.swing.SizeSequence this sizes]
     (-> this (.setSizes sizes))))
 
 (defn get-sizes
   "Returns the size of all entries.
 
   returns: a new array containing the sizes in this object - `int[]`"
-  ([this]
+  ([^javax.swing.SizeSequence this]
     (-> this (.getSizes))))
 
 (defn get-position
@@ -131,7 +131,7 @@
   index - the index of the entry whose position is desired - `int`
 
   returns: the starting position of the specified entry - `int`"
-  ([this index]
+  ([^javax.swing.SizeSequence this ^Integer index]
     (-> this (.getPosition index))))
 
 (defn get-index
@@ -143,7 +143,7 @@
   position - the position of the entry - `int`
 
   returns: the index of the entry that occupies the specified position - `int`"
-  ([this position]
+  ([^javax.swing.SizeSequence this ^Integer position]
     (-> this (.getIndex position))))
 
 (defn get-size
@@ -155,7 +155,7 @@
   index - the index corresponding to the entry - `int`
 
   returns: the size of the entry - `int`"
-  ([this index]
+  ([^javax.swing.SizeSequence this ^Integer index]
     (-> this (.getSize index))))
 
 (defn set-size
@@ -167,7 +167,7 @@
 
   index - the index corresponding to the entry - `int`
   size - the size of the entry - `int`"
-  ([this index size]
+  ([^javax.swing.SizeSequence this ^Integer index ^Integer size]
     (-> this (.setSize index size))))
 
 (defn insert-entries
@@ -184,7 +184,7 @@
   value - the size to be assigned to each new entry - `int`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if the parameters are outside of the range: (0 <= start < (getSizes().length)) AND (length >= 0)"
-  ([this start length value]
+  ([^javax.swing.SizeSequence this ^Integer start ^Integer length ^Integer value]
     (-> this (.insertEntries start length value))))
 
 (defn remove-entries
@@ -199,6 +199,6 @@
 
   start - the index of the first entry to be removed - `int`
   length - the number of entries to be removed - `int`"
-  ([this start length]
+  ([^javax.swing.SizeSequence this ^Integer start ^Integer length]
     (-> this (.removeEntries start length))))
 

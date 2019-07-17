@@ -15,48 +15,48 @@
 
   returns: true if this info object is the same as the
    obj argument; false otherwise - `boolean`"
-  ([this obj]
+  ([^javax.sound.sampled.Mixer$Info this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Finalizes the hashcode method.
 
   returns: the hashcode for this object - `int`"
-  ([this]
+  ([^javax.sound.sampled.Mixer$Info this]
     (-> this (.hashCode))))
 
 (defn get-name
   "Obtains the name of the mixer.
 
   returns: a string that names the mixer - `java.lang.String`"
-  ([this]
+  ([^javax.sound.sampled.Mixer$Info this]
     (-> this (.getName))))
 
 (defn get-vendor
   "Obtains the vendor of the mixer.
 
   returns: a string that names the mixer's vendor - `java.lang.String`"
-  ([this]
+  ([^javax.sound.sampled.Mixer$Info this]
     (-> this (.getVendor))))
 
 (defn get-description
   "Obtains the description of the mixer.
 
   returns: a textual description of the mixer - `java.lang.String`"
-  ([this]
+  ([^javax.sound.sampled.Mixer$Info this]
     (-> this (.getDescription))))
 
 (defn get-version
   "Obtains the version of the mixer.
 
   returns: textual version information for the mixer - `java.lang.String`"
-  ([this]
+  ([^javax.sound.sampled.Mixer$Info this]
     (-> this (.getVersion))))
 
 (defn to-string
   "Provides a string representation of the mixer info.
 
   returns: a string describing the info object - `java.lang.String`"
-  ([this]
+  ([^javax.sound.sampled.Mixer$Info this]
     (-> this (.toString))))
 

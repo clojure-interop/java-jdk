@@ -12,7 +12,7 @@
    specified.
 
   initial-capacity - initial capacity - `int`"
-  ([initial-capacity]
+  ([^Integer initial-capacity]
     (new RoleUnresolvedList initial-capacity))
   ([]
     (new RoleUnresolvedList )))
@@ -34,7 +34,7 @@
    be added. - `java.util.List<javax.management.relation.RoleUnresolved>`
 
   throws: java.lang.IllegalArgumentException - if this RoleUnresolvedList contains an element that is not a RoleUnresolved."
-  ([this]
+  ([^javax.management.relation.RoleUnresolvedList this]
     (-> this (.asList))))
 
 (defn add
@@ -47,9 +47,9 @@
   role - - The RoleUnresolved object to be inserted. - `javax.management.relation.RoleUnresolved`
 
   throws: java.lang.IllegalArgumentException - if the unresolved role is null."
-  ([this index role]
+  ([^javax.management.relation.RoleUnresolvedList this ^Integer index ^javax.management.relation.RoleUnresolved role]
     (-> this (.add index role)))
-  ([this role]
+  ([^javax.management.relation.RoleUnresolvedList this ^javax.management.relation.RoleUnresolved role]
     (-> this (.add role))))
 
 (defn set
@@ -61,7 +61,7 @@
   role - - The value to which the unresolved role element should be set. - `javax.management.relation.RoleUnresolved`
 
   throws: java.lang.IllegalArgumentException - if the unresolved role is null."
-  ([this index role]
+  ([^javax.management.relation.RoleUnresolvedList this ^Integer index ^javax.management.relation.RoleUnresolved role]
     (-> this (.set index role))))
 
 (defn add-all
@@ -75,8 +75,8 @@
   returns: true if this list changed as a result of the call. - `boolean`
 
   throws: java.lang.IllegalArgumentException - if the role is null."
-  ([this index role-list]
+  ([^javax.management.relation.RoleUnresolvedList this ^Integer index ^javax.management.relation.RoleUnresolvedList role-list]
     (-> this (.addAll index role-list)))
-  ([this role-list]
+  ([^javax.management.relation.RoleUnresolvedList this ^javax.management.relation.RoleUnresolvedList role-list]
     (-> this (.addAll role-list))))
 

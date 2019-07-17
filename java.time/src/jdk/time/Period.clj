@@ -54,7 +54,7 @@
   years - the number of years, positive or negative - `int`
 
   returns: the period of years, not null - `java.time.Period`"
-  ([years]
+  ([^Integer years]
     (Period/ofYears years)))
 
 (defn *of-months
@@ -66,7 +66,7 @@
   months - the number of months, positive or negative - `int`
 
   returns: the period of months, not null - `java.time.Period`"
-  ([months]
+  ([^Integer months]
     (Period/ofMonths months)))
 
 (defn *of-weeks
@@ -79,7 +79,7 @@
   weeks - the number of weeks, positive or negative - `int`
 
   returns: the period, with the input weeks converted to days, not null - `java.time.Period`"
-  ([weeks]
+  ([^Integer weeks]
     (Period/ofWeeks weeks)))
 
 (defn *of-days
@@ -91,7 +91,7 @@
   days - the number of days, positive or negative - `int`
 
   returns: the period of days, not null - `java.time.Period`"
-  ([days]
+  ([^Integer days]
     (Period/ofDays days)))
 
 (defn *of
@@ -104,7 +104,7 @@
   days - the amount of days, may be negative - `int`
 
   returns: the period of years, months and days, not null - `java.time.Period`"
-  ([years months days]
+  ([^Integer years ^Integer months ^Integer days]
     (Period/of years months days)))
 
 (defn *from
@@ -126,7 +126,7 @@
   returns: the equivalent period, not null - `java.time.Period`
 
   throws: java.time.DateTimeException - if unable to convert to a Period"
-  ([amount]
+  ([^java.time.temporal.TemporalAmount amount]
     (Period/from amount)))
 
 (defn *parse
@@ -169,7 +169,7 @@
   returns: the parsed period, not null - `java.time.Period`
 
   throws: java.time.format.DateTimeParseException - if the text cannot be parsed to a period"
-  ([text]
+  ([^java.lang.CharSequence text]
     (Period/parse text)))
 
 (defn *between
@@ -190,7 +190,7 @@
   end-date-exclusive - the end date, exclusive, not null - `java.time.LocalDate`
 
   returns: the period between this date and the end date, not null - `java.time.Period`"
-  ([start-date-inclusive end-date-exclusive]
+  ([^java.time.LocalDate start-date-inclusive ^java.time.LocalDate end-date-exclusive]
     (Period/between start-date-inclusive end-date-exclusive)))
 
 (defn get-months
@@ -203,7 +203,7 @@
    of `1 year and 3 months`.
 
   returns: the amount of months of this period, may be negative - `int`"
-  ([this]
+  ([^java.time.Period this]
     (-> this (.getMonths))))
 
 (defn negative?
@@ -212,7 +212,7 @@
    This checks whether the years, months or days units are less than zero.
 
   returns: true if any unit of this period is negative - `boolean`"
-  ([this]
+  ([^java.time.Period this]
     (-> this (.isNegative))))
 
 (defn zero?
@@ -221,7 +221,7 @@
    A zero period has the value zero for the years, months and days units.
 
   returns: true if this period is zero-length - `boolean`"
-  ([this]
+  ([^java.time.Period this]
     (-> this (.isZero))))
 
 (defn multiplied-by
@@ -239,7 +239,7 @@
   returns: a Period based on this period with the amounts multiplied by the scalar, not null - `java.time.Period`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs"
-  ([this scalar]
+  ([^java.time.Period this ^Integer scalar]
     (-> this (.multipliedBy scalar))))
 
 (defn get-units
@@ -253,7 +253,7 @@
    to access the entire state of the period.
 
   returns: a list containing the years, months and days units, not null - `java.util.List<java.time.temporal.TemporalUnit>`"
-  ([this]
+  ([^java.time.Period this]
     (-> this (.getUnits))))
 
 (defn with-days
@@ -267,7 +267,7 @@
   days - the days to represent, may be negative - `int`
 
   returns: a Period based on this period with the requested days, not null - `java.time.Period`"
-  ([this days]
+  ([^java.time.Period this ^Integer days]
     (-> this (.withDays days))))
 
 (defn plus
@@ -289,7 +289,7 @@
   returns: a Period based on this period with the requested period added, not null - `java.time.Period`
 
   throws: java.time.DateTimeException - if the specified amount has a non-ISO chronology or contains an invalid unit"
-  ([this amount-to-add]
+  ([^java.time.Period this ^java.time.temporal.TemporalAmount amount-to-add]
     (-> this (.plus amount-to-add))))
 
 (defn to-string
@@ -299,7 +299,7 @@
    A zero period will be represented as zero days, 'P0D'.
 
   returns: a string representation of this period, not null - `java.lang.String`"
-  ([this]
+  ([^java.time.Period this]
     (-> this (.toString))))
 
 (defn plus-months
@@ -316,7 +316,7 @@
   returns: a Period based on this period with the specified months added, not null - `java.time.Period`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs"
-  ([this months-to-add]
+  ([^java.time.Period this ^Long months-to-add]
     (-> this (.plusMonths months-to-add))))
 
 (defn minus-months
@@ -333,7 +333,7 @@
   returns: a Period based on this period with the specified months subtracted, not null - `java.time.Period`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs"
-  ([this months-to-subtract]
+  ([^java.time.Period this ^Long months-to-subtract]
     (-> this (.minusMonths months-to-subtract))))
 
 (defn minus
@@ -355,7 +355,7 @@
   returns: a Period based on this period with the requested period subtracted, not null - `java.time.Period`
 
   throws: java.time.DateTimeException - if the specified amount has a non-ISO chronology or contains an invalid unit"
-  ([this amount-to-subtract]
+  ([^java.time.Period this ^java.time.temporal.TemporalAmount amount-to-subtract]
     (-> this (.minus amount-to-subtract))))
 
 (defn add-to
@@ -392,7 +392,7 @@
   returns: an object of the same type with the adjustment made, not null - `java.time.temporal.Temporal`
 
   throws: java.time.DateTimeException - if unable to add"
-  ([this temporal]
+  ([^java.time.Period this ^java.time.temporal.Temporal temporal]
     (-> this (.addTo temporal))))
 
 (defn to-total-months
@@ -404,7 +404,7 @@
    This instance is immutable and unaffected by this method call.
 
   returns: the total number of months in the period, may be negative - `long`"
-  ([this]
+  ([^java.time.Period this]
     (-> this (.toTotalMonths))))
 
 (defn plus-days
@@ -421,7 +421,7 @@
   returns: a Period based on this period with the specified days added, not null - `java.time.Period`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs"
-  ([this days-to-add]
+  ([^java.time.Period this ^Long days-to-add]
     (-> this (.plusDays days-to-add))))
 
 (defn get-days
@@ -430,7 +430,7 @@
    This returns the days unit.
 
   returns: the amount of days of this period, may be negative - `int`"
-  ([this]
+  ([^java.time.Period this]
     (-> this (.getDays))))
 
 (defn negated
@@ -445,7 +445,7 @@
   returns: a Period based on this period with the amounts negated, not null - `java.time.Period`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs, which only happens if one of the units has the value Long.MIN_VALUE"
-  ([this]
+  ([^java.time.Period this]
     (-> this (.negated))))
 
 (defn get-years
@@ -458,7 +458,7 @@
    of `1 year and 3 months`.
 
   returns: the amount of years of this period, may be negative - `int`"
-  ([this]
+  ([^java.time.Period this]
     (-> this (.getYears))))
 
 (defn with-years
@@ -476,7 +476,7 @@
   years - the years to represent, may be negative - `int`
 
   returns: a Period based on this period with the requested years, not null - `java.time.Period`"
-  ([this years]
+  ([^java.time.Period this ^Integer years]
     (-> this (.withYears years))))
 
 (defn normalized
@@ -496,7 +496,7 @@
   returns: a Period based on this period with excess months normalized to years, not null - `java.time.Period`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs"
-  ([this]
+  ([^java.time.Period this]
     (-> this (.normalized))))
 
 (defn with-months
@@ -514,7 +514,7 @@
   months - the months to represent, may be negative - `int`
 
   returns: a Period based on this period with the requested months, not null - `java.time.Period`"
-  ([this months]
+  ([^java.time.Period this ^Integer months]
     (-> this (.withMonths months))))
 
 (defn minus-years
@@ -531,7 +531,7 @@
   returns: a Period based on this period with the specified years subtracted, not null - `java.time.Period`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs"
-  ([this years-to-subtract]
+  ([^java.time.Period this ^Long years-to-subtract]
     (-> this (.minusYears years-to-subtract))))
 
 (defn get-chronology
@@ -543,14 +543,14 @@
    system, in which today's rules for leap years are applied for all time.
 
   returns: the ISO chronology, not null - `java.time.chrono.IsoChronology`"
-  ([this]
+  ([^java.time.Period this]
     (-> this (.getChronology))))
 
 (defn hash-code
   "A hash code for this period.
 
   returns: a suitable hash code - `int`"
-  ([this]
+  ([^java.time.Period this]
     (-> this (.hashCode))))
 
 (defn subtract-from
@@ -587,7 +587,7 @@
   returns: an object of the same type with the adjustment made, not null - `java.time.temporal.Temporal`
 
   throws: java.time.DateTimeException - if unable to subtract"
-  ([this temporal]
+  ([^java.time.Period this ^java.time.temporal.Temporal temporal]
     (-> this (.subtractFrom temporal))))
 
 (defn get
@@ -603,7 +603,7 @@
   returns: the long value of the unit - `long`
 
   throws: java.time.DateTimeException - if the unit is not supported"
-  ([this unit]
+  ([^java.time.Period this ^java.time.temporal.TemporalUnit unit]
     (-> this (.get unit))))
 
 (defn equals
@@ -617,7 +617,7 @@
   obj - the object to check, null returns false - `java.lang.Object`
 
   returns: true if this is equal to the other period - `boolean`"
-  ([this obj]
+  ([^java.time.Period this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn plus-years
@@ -634,7 +634,7 @@
   returns: a Period based on this period with the specified years added, not null - `java.time.Period`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs"
-  ([this years-to-add]
+  ([^java.time.Period this ^Long years-to-add]
     (-> this (.plusYears years-to-add))))
 
 (defn minus-days
@@ -651,6 +651,6 @@
   returns: a Period based on this period with the specified days subtracted, not null - `java.time.Period`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs"
-  ([this days-to-subtract]
+  ([^java.time.Period this ^Long days-to-subtract]
     (-> this (.minusDays days-to-subtract))))
 

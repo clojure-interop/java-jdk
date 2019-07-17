@@ -16,9 +16,9 @@
 
   cname - a String naming the invalid class. - `java.lang.String`
   reason - a String describing the reason for the exception. - `java.lang.String`"
-  ([cname reason]
+  ([^java.lang.String cname ^java.lang.String reason]
     (new InvalidClassException cname reason))
-  ([reason]
+  ([^java.lang.String reason]
     (new InvalidClassException reason)))
 
 (defn -classname
@@ -35,6 +35,6 @@
 
   returns: the detail message string of this Throwable instance
             (which may be null). - `java.lang.String`"
-  ([this]
+  ([^java.io.InvalidClassException this]
     (-> this (.getMessage))))
 

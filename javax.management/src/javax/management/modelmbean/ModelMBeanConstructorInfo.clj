@@ -44,18 +44,18 @@
   descriptor - An instance of Descriptor containing the appropriate metadata for this instance of the MBeanConstructorInfo. If it is null then a default descriptor will be created. If the descriptor does not contain the field `displayName` this field is added in the descriptor with its default value. - `javax.management.Descriptor`
 
   throws: javax.management.RuntimeOperationsException - Wraps an IllegalArgumentException. The descriptor is invalid, or descriptor field `name` is not equal to name parameter, or descriptor field `descriptorType` is not equal to `operation` or descriptor field `role` is present but not equal to `constructor`."
-  ([name description signature descriptor]
+  ([^java.lang.String name ^java.lang.String description ^javax.management.MBeanParameterInfo[] signature ^javax.management.Descriptor descriptor]
     (new ModelMBeanConstructorInfo name description signature descriptor))
-  ([description constructor-method descriptor]
+  ([^java.lang.String description ^java.lang.reflect.Constructor constructor-method ^javax.management.Descriptor descriptor]
     (new ModelMBeanConstructorInfo description constructor-method descriptor))
-  ([description constructor-method]
+  ([^java.lang.String description ^java.lang.reflect.Constructor constructor-method]
     (new ModelMBeanConstructorInfo description constructor-method)))
 
 (defn clone
   "Creates and returns a new ModelMBeanConstructorInfo which is a duplicate of this ModelMBeanConstructorInfo.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([this]
+  ([^javax.management.modelmbean.ModelMBeanConstructorInfo this]
     (-> this (.clone))))
 
 (defn get-descriptor
@@ -63,7 +63,7 @@
 
   returns: Descriptor associated with the
    ModelMBeanConstructorInfo object. - `javax.management.Descriptor`"
-  ([this]
+  ([^javax.management.modelmbean.ModelMBeanConstructorInfo this]
     (-> this (.getDescriptor))))
 
 (defn set-descriptor
@@ -78,13 +78,13 @@
   in-descriptor - replaces the Descriptor associated with the ModelMBeanConstructor. If the descriptor does not contain all the following fields, the missing ones are added with their default values: displayName, name, role, descriptorType. - `javax.management.Descriptor`
 
   throws: javax.management.RuntimeOperationsException - Wraps an IllegalArgumentException. The descriptor is invalid, or descriptor field `name` is present but not equal to name parameter, or descriptor field `descriptorType` is present but not equal to `operation` or descriptor field `role` is present but not equal to `constructor`."
-  ([this in-descriptor]
+  ([^javax.management.modelmbean.ModelMBeanConstructorInfo this ^javax.management.Descriptor in-descriptor]
     (-> this (.setDescriptor in-descriptor))))
 
 (defn to-string
   "Returns a string containing the entire contents of the ModelMBeanConstructorInfo in human readable form.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^javax.management.modelmbean.ModelMBeanConstructorInfo this]
     (-> this (.toString))))
 

@@ -30,7 +30,7 @@
    Earlier eras have sequentially lower values, which may be negative.
 
   returns: the numeric era value - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getValue))))
 
 (defn is-supported
@@ -52,7 +52,7 @@
   field - the field to check, null returns false - `java.time.temporal.TemporalField`
 
   returns: true if the field is supported on this era, false if not - `default boolean`"
-  ([this field]
+  ([^. this ^java.time.temporal.TemporalField field]
     (-> this (.isSupported field))))
 
 (defn range
@@ -80,7 +80,7 @@
   returns: the range of valid values for the field, not null - `default java.time.temporal.ValueRange`
 
   throws: java.time.DateTimeException - if the range for the field cannot be obtained"
-  ([this field]
+  ([^. this ^java.time.temporal.TemporalField field]
     (-> this (.range field))))
 
 (defn get
@@ -105,7 +105,7 @@
   returns: the value for the field - `default int`
 
   throws: java.time.DateTimeException - if a value for the field cannot be obtained or the value is outside the range of valid values for the field"
-  ([this field]
+  ([^. this ^java.time.temporal.TemporalField field]
     (-> this (.get field))))
 
 (defn get-long
@@ -129,7 +129,7 @@
   returns: the value for the field - `default long`
 
   throws: java.time.DateTimeException - if a value for the field cannot be obtained"
-  ([this field]
+  ([^. this ^java.time.temporal.TemporalField field]
     (-> this (.getLong field))))
 
 (defn query
@@ -149,7 +149,7 @@
   returns: the query result, null may be returned (defined by the query) - `default <R> R`
 
   throws: java.time.DateTimeException - if unable to query (defined by the query)"
-  ([this query]
+  ([^. this ^java.time.temporal.TemporalQuery query]
     (-> this (.query query))))
 
 (defn adjust-into
@@ -176,7 +176,7 @@
   returns: the adjusted object, not null - `default java.time.temporal.Temporal`
 
   throws: java.time.DateTimeException - if unable to make the adjustment"
-  ([this temporal]
+  ([^. this ^java.time.temporal.Temporal temporal]
     (-> this (.adjustInto temporal))))
 
 (defn get-display-name
@@ -192,6 +192,6 @@
   locale - the locale to use, not null - `java.util.Locale`
 
   returns: the text value of the era, not null - `default java.lang.String`"
-  ([this style locale]
+  ([^. this ^java.time.format.TextStyle style ^java.util.Locale locale]
     (-> this (.getDisplayName style locale))))
 

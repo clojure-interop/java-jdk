@@ -13,23 +13,23 @@
   id - The control's object identifier string. - `java.lang.String`
   criticality - The control's criticality. - `boolean`
   value - The control's ASN.1 BER encoded value. It is not cloned - any changes to value will affect the contents of the control. It may be null. - `byte[]`"
-  ([id criticality value]
+  ([^java.lang.String id ^Boolean criticality value]
     (new BasicControl id criticality value))
-  ([id]
+  ([^java.lang.String id]
     (new BasicControl id)))
 
 (defn get-id
   "Retrieves the control's object identifier string.
 
   returns: The non-null object identifier string. - `java.lang.String`"
-  ([this]
+  ([^javax.naming.ldap.BasicControl this]
     (-> this (.getID))))
 
 (defn critical?
   "Determines the control's criticality.
 
   returns: true if the control is critical; false otherwise. - `boolean`"
-  ([this]
+  ([^javax.naming.ldap.BasicControl this]
     (-> this (.isCritical))))
 
 (defn get-encoded-value
@@ -40,6 +40,6 @@
   returns: A possibly null byte array representing the control's
             ASN.1 BER encoded value. It is not cloned - any changes to the
             returned value will affect the contents of the control. - `byte[]`"
-  ([this]
+  ([^javax.naming.ldap.BasicControl this]
     (-> this (.getEncodedValue))))
 

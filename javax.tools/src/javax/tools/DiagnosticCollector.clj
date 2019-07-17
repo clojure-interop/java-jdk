@@ -12,13 +12,13 @@
   "Description copied from interface: DiagnosticListener
 
   diagnostic - a diagnostic representing the problem that was found - `DiagnosticCollector.S>`"
-  ([this diagnostic]
+  ([^javax.tools.DiagnosticCollector this ^DiagnosticCollector.S> diagnostic]
     (-> this (.report diagnostic))))
 
 (defn get-diagnostics
   "Gets a list view of diagnostics collected by this object.
 
   returns: a list view of diagnostics - `java.util.List<javax.tools.Diagnostic<? extends DiagnosticCollector.S>>`"
-  ([this]
+  ([^javax.tools.DiagnosticCollector this]
     (-> this (.getDiagnostics))))
 

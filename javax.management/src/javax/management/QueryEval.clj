@@ -31,6 +31,6 @@
    called.
 
   s - The MBean server on which the query is to be performed. - `javax.management.MBeanServer`"
-  ([this s]
+  ([^javax.management.QueryEval this ^javax.management.MBeanServer s]
     (-> this (.setMBeanServer s))))
 

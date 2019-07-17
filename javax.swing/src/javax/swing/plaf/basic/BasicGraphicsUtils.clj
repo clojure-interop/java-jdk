@@ -12,7 +12,7 @@
   text-icon-gap - `int`
 
   returns: `java.awt.Dimension`"
-  ([b text-icon-gap]
+  ([^javax.swing.AbstractButton b ^Integer text-icon-gap]
     (BasicGraphicsUtils/getPreferredButtonSize b text-icon-gap)))
 
 (defn *draw-lowered-bezel
@@ -25,7 +25,7 @@
   dark-shadow - `java.awt.Color`
   highlight - `java.awt.Color`
   light-highlight - `java.awt.Color`"
-  ([g x y w h shadow dark-shadow highlight light-highlight]
+  ([^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^java.awt.Color shadow ^java.awt.Color dark-shadow ^java.awt.Color highlight ^java.awt.Color light-highlight]
     (BasicGraphicsUtils/drawLoweredBezel g x y w h shadow dark-shadow highlight light-highlight)))
 
 (defn *draw-bezel
@@ -40,7 +40,7 @@
   dark-shadow - `java.awt.Color`
   highlight - `java.awt.Color`
   light-highlight - `java.awt.Color`"
-  ([g x y w h is-pressed is-default shadow dark-shadow highlight light-highlight]
+  ([^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Boolean is-pressed ^Boolean is-default ^java.awt.Color shadow ^java.awt.Color dark-shadow ^java.awt.Color highlight ^java.awt.Color light-highlight]
     (BasicGraphicsUtils/drawBezel g x y w h is-pressed is-default shadow dark-shadow highlight light-highlight)))
 
 (defn *draw-etched-rect
@@ -53,7 +53,7 @@
   dark-shadow - `java.awt.Color`
   highlight - `java.awt.Color`
   light-highlight - `java.awt.Color`"
-  ([g x y w h shadow dark-shadow highlight light-highlight]
+  ([^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^java.awt.Color shadow ^java.awt.Color dark-shadow ^java.awt.Color highlight ^java.awt.Color light-highlight]
     (BasicGraphicsUtils/drawEtchedRect g x y w h shadow dark-shadow highlight light-highlight)))
 
 (defn *draw-string-underline-char-at
@@ -70,7 +70,7 @@
   underlined-index - Index of character in text to underline - `int`
   x - x coordinate to draw at - `int`
   y - y coordinate to draw at - `int`"
-  ([g text underlined-index x y]
+  ([^java.awt.Graphics g ^java.lang.String text ^Integer underlined-index ^Integer x ^Integer y]
     (BasicGraphicsUtils/drawStringUnderlineCharAt g text underlined-index x y)))
 
 (defn *draw-dashed-rect
@@ -79,7 +79,7 @@
   y - `int`
   width - `int`
   height - `int`"
-  ([g x y width height]
+  ([^java.awt.Graphics g ^Integer x ^Integer y ^Integer width ^Integer height]
     (BasicGraphicsUtils/drawDashedRect g x y width height)))
 
 (defn *draw-string
@@ -94,7 +94,7 @@
   underlined-char - `int`
   x - `int`
   y - `int`"
-  ([g text underlined-char x y]
+  ([^java.awt.Graphics g ^java.lang.String text ^Integer underlined-char ^Integer x ^Integer y]
     (BasicGraphicsUtils/drawString g text underlined-char x y)))
 
 (defn *get-etched-insets
@@ -113,7 +113,7 @@
   h - `int`
   shadow - `java.awt.Color`
   highlight - `java.awt.Color`"
-  ([g x y w h shadow highlight]
+  ([^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^java.awt.Color shadow ^java.awt.Color highlight]
     (BasicGraphicsUtils/drawGroove g x y w h shadow highlight)))
 
 (defn *get-groove-insets

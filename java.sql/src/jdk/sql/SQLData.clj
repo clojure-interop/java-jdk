@@ -45,7 +45,7 @@
               when this object was constructed and populated - `java.lang.String`
 
   throws: java.sql.SQLException - if there is a database access error"
-  ([this]
+  ([^. this]
     (-> this (.getSQLTypeName))))
 
 (defn read-sql
@@ -74,7 +74,7 @@
   type-name - the SQL type name of the value on the data stream - `java.lang.String`
 
   throws: java.sql.SQLException - if there is a database access error"
-  ([this stream type-name]
+  ([^. this ^java.sql.SQLInput stream ^java.lang.String type-name]
     (-> this (.readSQL stream type-name))))
 
 (defn write-sql
@@ -93,6 +93,6 @@
   stream - the SQLOutput object to which to write the data for the value that was custom mapped - `java.sql.SQLOutput`
 
   throws: java.sql.SQLException - if there is a database access error"
-  ([this stream]
+  ([^. this ^java.sql.SQLOutput stream]
     (-> this (.writeSQL stream))))
 

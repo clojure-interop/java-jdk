@@ -21,7 +21,7 @@
    represents the specified long argument.
 
   value - the value to be represented by the Long object. - `long`"
-  ([value]
+  ([^Long value]
     (new Long value)))
 
 (def *-min-value
@@ -82,7 +82,7 @@
   returns: the value 0 if x == y;
            a value less than 0 if x < y; and
            a value greater than 0 if x > y - `int`"
-  ([x y]
+  ([^Long x ^Long y]
     (Long/compare x y)))
 
 (defn *remainder-unsigned
@@ -95,7 +95,7 @@
 
   returns: the unsigned remainder of the first argument divided by
    the second argument - `long`"
-  ([dividend divisor]
+  ([^Long dividend ^Long divisor]
     (Long/remainderUnsigned dividend divisor)))
 
 (defn *min
@@ -106,7 +106,7 @@
   b - the second operand - `long`
 
   returns: the smaller of a and b - `long`"
-  ([a b]
+  ([^Long a ^Long b]
     (Long/min a b)))
 
 (defn *value-of
@@ -133,9 +133,9 @@
                radix. - `java.lang.Long`
 
   throws: java.lang.NumberFormatException - If the String does not contain a parsable long."
-  ([s radix]
+  ([^java.lang.String s ^Integer radix]
     (Long/valueOf s radix))
-  ([s]
+  ([^java.lang.String s]
     (Long/valueOf s)))
 
 (defn *to-hex-string
@@ -176,7 +176,7 @@
   returns: the string representation of the unsigned long
             value represented by the argument in hexadecimal
             (base 16). - `java.lang.String`"
-  ([i]
+  ([^Long i]
     (Long/toHexString i)))
 
 (defn *divide-unsigned
@@ -194,7 +194,7 @@
 
   returns: the unsigned quotient of the first argument divided by
    the second argument - `long`"
-  ([dividend divisor]
+  ([^Long dividend ^Long divisor]
     (Long/divideUnsigned dividend divisor)))
 
 (defn *highest-one-bit
@@ -209,7 +209,7 @@
   returns: a long value with a single one-bit, in the position
        of the highest-order one-bit in the specified value, or zero if
        the specified value is itself equal to zero. - `long`"
-  ([i]
+  ([^Long i]
     (Long/highestOneBit i)))
 
 (defn *sum
@@ -219,7 +219,7 @@
   b - the second operand - `long`
 
   returns: the sum of a and b - `long`"
-  ([a b]
+  ([^Long a ^Long b]
     (Long/sum a b)))
 
 (defn *reverse
@@ -231,7 +231,7 @@
 
   returns: the value obtained by reversing order of the bits in the
        specified long value. - `long`"
-  ([i]
+  ([^Long i]
     (Long/reverse i)))
 
 (defn *decode
@@ -274,7 +274,7 @@
               value represented by nm - `java.lang.Long`
 
   throws: java.lang.NumberFormatException - if the String does not contain a parsable long."
-  ([nm]
+  ([^java.lang.String nm]
     (Long/decode nm)))
 
 (defn *max
@@ -285,7 +285,7 @@
   b - the second operand - `long`
 
   returns: the greater of a and b - `long`"
-  ([a b]
+  ([^Long a ^Long b]
     (Long/max a b)))
 
 (defn *to-string
@@ -329,9 +329,9 @@
   radix - the radix to use in the string representation. - `int`
 
   returns: a string representation of the argument in the specified radix. - `java.lang.String`"
-  ([i radix]
+  ([^Long i ^Integer radix]
     (Long/toString i radix))
-  ([i]
+  ([^Long i]
     (Long/toString i)))
 
 (defn *rotate-right
@@ -353,7 +353,7 @@
   returns: the value obtained by rotating the two's complement binary
        representation of the specified long value right by the
        specified number of bits. - `long`"
-  ([i distance]
+  ([^Long i ^Integer distance]
     (Long/rotateRight i distance)))
 
 (defn *compare-unsigned
@@ -367,7 +367,7 @@
            than 0 if x < y as unsigned values; and
            a value greater than 0 if x > y as
            unsigned values - `int`"
-  ([x y]
+  ([^Long x ^Long y]
     (Long/compareUnsigned x y)))
 
 (defn *get-long
@@ -407,9 +407,9 @@
   returns: the Long value of the property. - `java.lang.Long`
 
   throws: java.lang.SecurityException - for the same reasons as System.getProperty"
-  ([nm val]
+  ([^java.lang.String nm ^Long val]
     (Long/getLong nm val))
-  ([nm]
+  ([^java.lang.String nm]
     (Long/getLong nm)))
 
 (defn *to-octal-string
@@ -443,7 +443,7 @@
 
   returns: the string representation of the unsigned long
             value represented by the argument in octal (base 8). - `java.lang.String`"
-  ([i]
+  ([^Long i]
     (Long/toOctalString i)))
 
 (defn *reverse-bytes
@@ -454,7 +454,7 @@
 
   returns: the value obtained by reversing the bytes in the specified
        long value. - `long`"
-  ([i]
+  ([^Long i]
     (Long/reverseBytes i)))
 
 (defn *bit-count
@@ -466,7 +466,7 @@
 
   returns: the number of one-bits in the two's complement binary
        representation of the specified long value. - `int`"
-  ([i]
+  ([^Long i]
     (Long/bitCount i)))
 
 (defn *rotate-left
@@ -488,7 +488,7 @@
   returns: the value obtained by rotating the two's complement binary
        representation of the specified long value left by the
        specified number of bits. - `long`"
-  ([i distance]
+  ([^Long i ^Integer distance]
     (Long/rotateLeft i distance)))
 
 (defn *parse-unsigned-long
@@ -528,9 +528,9 @@
                argument in the specified radix. - `long`
 
   throws: java.lang.NumberFormatException - if the String does not contain a parsable long."
-  ([s radix]
+  ([^java.lang.String s ^Integer radix]
     (Long/parseUnsignedLong s radix))
-  ([s]
+  ([^java.lang.String s]
     (Long/parseUnsignedLong s)))
 
 (defn *parse-long
@@ -590,9 +590,9 @@
                the specified radix. - `long`
 
   throws: java.lang.NumberFormatException - if the string does not contain a parsable long."
-  ([s radix]
+  ([^java.lang.String s ^Integer radix]
     (Long/parseLong s radix))
-  ([s]
+  ([^java.lang.String s]
     (Long/parseLong s)))
 
 (defn *hash-code
@@ -602,7 +602,7 @@
   value - the value to hash - `long`
 
   returns: a hash code value for a long value. - `int`"
-  ([value]
+  ([^Long value]
     (Long/hashCode value)))
 
 (defn *to-binary-string
@@ -629,7 +629,7 @@
 
   returns: the string representation of the unsigned long
             value represented by the argument in binary (base 2). - `java.lang.String`"
-  ([i]
+  ([^Long i]
     (Long/toBinaryString i)))
 
 (defn *number-of-leading-zeros
@@ -651,7 +651,7 @@
        (`leftmost`) one-bit in the two's complement binary representation
        of the specified long value, or 64 if the value
        is equal to zero. - `int`"
-  ([i]
+  ([^Long i]
     (Long/numberOfLeadingZeros i)))
 
 (defn *lowest-one-bit
@@ -666,7 +666,7 @@
   returns: a long value with a single one-bit, in the position
        of the lowest-order one-bit in the specified value, or zero if
        the specified value is itself equal to zero. - `long`"
-  ([i]
+  ([^Long i]
     (Long/lowestOneBit i)))
 
 (defn *number-of-trailing-zeros
@@ -682,7 +682,7 @@
        one-bit in the two's complement binary representation of the
        specified long value, or 64 if the value is equal
        to zero. - `int`"
-  ([i]
+  ([^Long i]
     (Long/numberOfTrailingZeros i)))
 
 (defn *signum
@@ -693,7 +693,7 @@
   i - the value whose signum is to be computed - `long`
 
   returns: the signum function of the specified long value. - `int`"
-  ([i]
+  ([^Long i]
     (Long/signum i)))
 
 (defn *to-unsigned-string
@@ -720,9 +720,9 @@
   radix - the radix to use in the string representation. - `int`
 
   returns: an unsigned string representation of the argument in the specified radix. - `java.lang.String`"
-  ([i radix]
+  ([^Long i ^Integer radix]
     (Long/toUnsignedString i radix))
-  ([i]
+  ([^Long i]
     (Long/toUnsignedString i)))
 
 (defn short-value
@@ -731,7 +731,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type short. - `short`"
-  ([this]
+  ([^java.lang.Long this]
     (-> this (.shortValue))))
 
 (defn double-value
@@ -740,7 +740,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type double. - `double`"
-  ([this]
+  ([^java.lang.Long this]
     (-> this (.doubleValue))))
 
 (defn long-value
@@ -749,7 +749,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type long. - `long`"
-  ([this]
+  ([^java.lang.Long this]
     (-> this (.longValue))))
 
 (defn byte-value
@@ -758,7 +758,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type byte. - `byte`"
-  ([this]
+  ([^java.lang.Long this]
     (-> this (.byteValue))))
 
 (defn to-string
@@ -770,7 +770,7 @@
 
   returns: a string representation of the value of this object in
             base 10. - `java.lang.String`"
-  ([this]
+  ([^java.lang.Long this]
     (-> this (.toString))))
 
 (defn float-value
@@ -779,7 +779,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type float. - `float`"
-  ([this]
+  ([^java.lang.Long this]
     (-> this (.floatValue))))
 
 (defn int-value
@@ -788,7 +788,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type int. - `int`"
-  ([this]
+  ([^java.lang.Long this]
     (-> this (.intValue))))
 
 (defn hash-code
@@ -801,7 +801,7 @@
     (int)(this.longValue()^(this.longValue()>>>32))
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^java.lang.Long this]
     (-> this (.hashCode))))
 
 (defn compare-to
@@ -816,7 +816,7 @@
             than 0 if this Long is numerically
              greater than the argument Long (signed
              comparison). - `int`"
-  ([this another-long]
+  ([^java.lang.Long this ^java.lang.Long another-long]
     (-> this (.compareTo another-long))))
 
 (defn equals
@@ -829,6 +829,6 @@
 
   returns: true if the objects are the same;
             false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.lang.Long this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

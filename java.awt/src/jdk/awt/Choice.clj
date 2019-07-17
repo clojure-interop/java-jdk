@@ -52,7 +52,7 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   l - the item listener - `java.awt.event.ItemListener`"
-  ([this l]
+  ([^java.awt.Choice this ^java.awt.event.ItemListener l]
     (-> this (.addItemListener l))))
 
 (defn add-item
@@ -64,7 +64,7 @@
   item - the item to be added - `java.lang.String`
 
   throws: java.lang.NullPointerException - if the item's value is equal to null"
-  ([this item]
+  ([^java.awt.Choice this ^java.lang.String item]
     (-> this (.addItem item))))
 
 (defn get-item
@@ -74,14 +74,14 @@
   index - the index at which to begin - `int`
 
   returns: `java.lang.String`"
-  ([this index]
+  ([^java.awt.Choice this ^Integer index]
     (-> this (.getItem index))))
 
 (defn get-item-count
   "Returns the number of items in this Choice menu.
 
   returns: the number of items in this Choice menu - `int`"
-  ([this]
+  ([^java.awt.Choice this]
     (-> this (.getItemCount))))
 
 (defn remove-item-listener
@@ -92,7 +92,7 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   l - the item listener - `java.awt.event.ItemListener`"
-  ([this l]
+  ([^java.awt.Choice this ^java.awt.event.ItemListener l]
     (-> this (.removeItemListener l))))
 
 (defn get-selected-index
@@ -101,14 +101,14 @@
 
   returns: the index of the currently selected item, or -1 if nothing
     is currently selected - `int`"
-  ([this]
+  ([^java.awt.Choice this]
     (-> this (.getSelectedIndex))))
 
 (defn add-notify
   "Creates the Choice's peer.  This peer allows us
    to change the look
    of the Choice without changing its functionality."
-  ([this]
+  ([^java.awt.Choice this]
     (-> this (.addNotify))))
 
 (defn select
@@ -124,7 +124,7 @@
   pos - the position of the selected item - `int`
 
   throws: java.lang.IllegalArgumentException - if the specified position is greater than the number of items or less than zero"
-  ([this pos]
+  ([^java.awt.Choice this ^Integer pos]
     (-> this (.select pos))))
 
 (defn remove
@@ -139,7 +139,7 @@
   item - the item to remove from this Choice menu - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if the item doesn't exist in the choice menu"
-  ([this item]
+  ([^java.awt.Choice this ^java.lang.String item]
     (-> this (.remove item))))
 
 (defn get-accessible-context
@@ -151,7 +151,7 @@
 
   returns: an AccessibleAWTChoice that serves as the
            AccessibleContext of this Choice - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^java.awt.Choice this]
     (-> this (.getAccessibleContext))))
 
 (defn get-selected-item
@@ -159,7 +159,7 @@
 
   returns: a string representation of the currently
                        selected item in this choice menu - `java.lang.String`"
-  ([this]
+  ([^java.awt.Choice this]
     (-> this (.getSelectedItem))))
 
 (defn insert
@@ -181,7 +181,7 @@
   index - the position at which the item should be inserted - `int`
 
   throws: java.lang.IllegalArgumentException - if index is less than 0"
-  ([this item index]
+  ([^java.awt.Choice this ^java.lang.String item ^Integer index]
     (-> this (.insert item index))))
 
 (defn get-selected-objects
@@ -189,7 +189,7 @@
    item.  If this choice has no items, returns null.
 
   returns: `java.lang.Object[]`"
-  ([this]
+  ([^java.awt.Choice this]
     (-> this (.getSelectedObjects))))
 
 (defn add
@@ -198,7 +198,7 @@
   item - the item to be added - `java.lang.String`
 
   throws: java.lang.NullPointerException - if the item's value is null"
-  ([this item]
+  ([^java.awt.Choice this ^java.lang.String item]
     (-> this (.add item))))
 
 (defn get-listeners
@@ -230,12 +230,12 @@
             listeners have been added - `<T extends java.util.EventListener> T[]`
 
   throws: java.lang.ClassCastException - if listenerType doesn't specify a class or interface that implements java.util.EventListener"
-  ([this listener-type]
+  ([^java.awt.Choice this ^java.lang.Class listener-type]
     (-> this (.getListeners listener-type))))
 
 (defn remove-all
   "Removes all items from the choice menu."
-  ([this]
+  ([^java.awt.Choice this]
     (-> this (.removeAll))))
 
 (defn count-items
@@ -243,7 +243,7 @@
    replaced by getItemCount().
 
   returns: `java.lang.  int`"
-  ([this]
+  ([^java.awt.Choice this]
     (-> this (.countItems))))
 
 (defn get-item-listeners
@@ -253,6 +253,6 @@
   returns: all of this choice's ItemListeners
            or an empty array if no item
            listeners are currently registered - `java.awt.event.ItemListener[]`"
-  ([this]
+  ([^java.awt.Choice this]
     (-> this (.getItemListeners))))
 

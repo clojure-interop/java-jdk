@@ -61,7 +61,7 @@
   c - the collection of elements to initially contain - `ConcurrentLinkedQueue.E>`
 
   throws: java.lang.NullPointerException - if the specified collection or any of its elements are null"
-  ([c]
+  ([^ConcurrentLinkedQueue.E> c]
     (new ConcurrentLinkedQueue c))
   ([]
     (new ConcurrentLinkedQueue )))
@@ -77,14 +77,14 @@
   returns: true if this queue changed as a result of the call - `boolean`
 
   throws: java.lang.NullPointerException - if the specified collection or any of its elements are null"
-  ([this c]
+  ([^java.util.concurrent.ConcurrentLinkedQueue this ^ConcurrentLinkedQueue.E> c]
     (-> this (.addAll c))))
 
 (defn peek
   "Description copied from interface: Queue
 
   returns: the head of this queue, or null if this queue is empty - `ConcurrentLinkedQueue.E`"
-  ([this]
+  ([^java.util.concurrent.ConcurrentLinkedQueue this]
     (-> this (.peek))))
 
 (defn spliterator
@@ -97,7 +97,7 @@
    Spliterator.ORDERED, and Spliterator.NONNULL.
 
   returns: a Spliterator over the elements in this queue - `java.util.Spliterator<ConcurrentLinkedQueue.E>`"
-  ([this]
+  ([^java.util.concurrent.ConcurrentLinkedQueue this]
     (-> this (.spliterator))))
 
 (defn offer
@@ -109,7 +109,7 @@
   returns: true (as specified by Queue.offer(E)) - `boolean`
 
   throws: java.lang.NullPointerException - if the specified element is null"
-  ([this e]
+  ([^java.util.concurrent.ConcurrentLinkedQueue this ^ConcurrentLinkedQueue.E e]
     (-> this (.offer e))))
 
 (defn contains
@@ -120,7 +120,7 @@
   o - object to be checked for containment in this queue - `java.lang.Object`
 
   returns: true if this queue contains the specified element - `boolean`"
-  ([this o]
+  ([^java.util.concurrent.ConcurrentLinkedQueue this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn iterator
@@ -131,7 +131,7 @@
    weakly consistent.
 
   returns: an iterator over the elements in this queue in proper sequence - `java.util.Iterator<ConcurrentLinkedQueue.E>`"
-  ([this]
+  ([^java.util.concurrent.ConcurrentLinkedQueue this]
     (-> this (.iterator))))
 
 (defn remove
@@ -145,14 +145,14 @@
   o - element to be removed from this queue, if present - `java.lang.Object`
 
   returns: true if this queue changed as a result of the call - `boolean`"
-  ([this o]
+  ([^java.util.concurrent.ConcurrentLinkedQueue this ^java.lang.Object o]
     (-> this (.remove o))))
 
 (defn poll
   "Description copied from interface: Queue
 
   returns: the head of this queue, or null if this queue is empty - `ConcurrentLinkedQueue.E`"
-  ([this]
+  ([^java.util.concurrent.ConcurrentLinkedQueue this]
     (-> this (.poll))))
 
 (defn add
@@ -165,14 +165,14 @@
   returns: true (as specified by Collection.add(E)) - `boolean`
 
   throws: java.lang.NullPointerException - if the specified element is null"
-  ([this e]
+  ([^java.util.concurrent.ConcurrentLinkedQueue this ^ConcurrentLinkedQueue.E e]
     (-> this (.add e))))
 
 (defn empty?
   "Returns true if this queue contains no elements.
 
   returns: true if this queue contains no elements - `boolean`"
-  ([this]
+  ([^java.util.concurrent.ConcurrentLinkedQueue this]
     (-> this (.isEmpty))))
 
 (defn size
@@ -190,7 +190,7 @@
    applications.
 
   returns: the number of elements in this queue - `int`"
-  ([this]
+  ([^java.util.concurrent.ConcurrentLinkedQueue this]
     (-> this (.size))))
 
 (defn to-array
@@ -226,8 +226,8 @@
   returns: an array containing all of the elements in this queue - `<T> T[]`
 
   throws: java.lang.ArrayStoreException - if the runtime type of the specified array is not a supertype of the runtime type of every element in this queue"
-  ([this a]
+  ([^java.util.concurrent.ConcurrentLinkedQueue this a]
     (-> this (.toArray a)))
-  ([this]
+  ([^java.util.concurrent.ConcurrentLinkedQueue this]
     (-> this (.toArray))))
 

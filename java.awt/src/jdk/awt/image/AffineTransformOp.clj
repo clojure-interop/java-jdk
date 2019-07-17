@@ -34,7 +34,7 @@
   hints - The RenderingHints object used to specify the interpolation type for the operation. - `java.awt.RenderingHints`
 
   throws: java.awt.image.ImagingOpException - if the transform is non-invertible."
-  ([xform hints]
+  ([^java.awt.geom.AffineTransform xform ^java.awt.RenderingHints hints]
     (new AffineTransformOp xform hints)))
 
 (def *-type-nearest-neighbor
@@ -65,7 +65,7 @@
   "Returns the interpolation type used by this op.
 
   returns: the interpolation type. - `int`"
-  ([this]
+  ([^java.awt.image.AffineTransformOp this]
     (-> this (.getInterpolationType))))
 
 (defn filter
@@ -96,7 +96,7 @@
   returns: The filtered BufferedImage. - `java.awt.image.BufferedImage`
 
   throws: java.lang.IllegalArgumentException - if src and dst are the same"
-  ([this src dst]
+  ([^java.awt.image.AffineTransformOp this ^java.awt.image.BufferedImage src ^java.awt.image.BufferedImage dst]
     (-> this (.filter src dst))))
 
 (defn get-bounds-2-d
@@ -109,7 +109,7 @@
 
   returns: The Rectangle2D representing the destination's
    bounding box. - `java.awt.geom.Rectangle2D`"
-  ([this src]
+  ([^java.awt.image.AffineTransformOp this ^java.awt.image.BufferedImage src]
     (-> this (.getBounds2D src))))
 
 (defn create-compatible-dest-image
@@ -126,7 +126,7 @@
   dest-cm - ColorModel of the destination. If null, an appropriate ColorModel is used. - `java.awt.image.ColorModel`
 
   returns: The zeroed destination image. - `java.awt.image.BufferedImage`"
-  ([this src dest-cm]
+  ([^java.awt.image.AffineTransformOp this ^java.awt.image.BufferedImage src ^java.awt.image.ColorModel dest-cm]
     (-> this (.createCompatibleDestImage src dest-cm))))
 
 (defn create-compatible-dest-raster
@@ -137,7 +137,7 @@
   src - The Raster to be transformed. - `java.awt.image.Raster`
 
   returns: The zeroed destination Raster. - `java.awt.image.WritableRaster`"
-  ([this src]
+  ([^java.awt.image.AffineTransformOp this ^java.awt.image.Raster src]
     (-> this (.createCompatibleDestRaster src))))
 
 (defn get-point-2-d
@@ -150,20 +150,20 @@
 
   returns: The Point2D in the destination that corresponds to
    the specified point in the source. - `java.awt.geom.Point2D`"
-  ([this src-pt dst-pt]
+  ([^java.awt.image.AffineTransformOp this ^java.awt.geom.Point2D src-pt ^java.awt.geom.Point2D dst-pt]
     (-> this (.getPoint2D src-pt dst-pt))))
 
 (defn get-transform
   "Returns the affine transform used by this transform operation.
 
   returns: The AffineTransform associated with this op. - `java.awt.geom.AffineTransform`"
-  ([this]
+  ([^java.awt.image.AffineTransformOp this]
     (-> this (.getTransform))))
 
 (defn get-rendering-hints
   "Returns the rendering hints used by this transform operation.
 
   returns: The RenderingHints object associated with this op. - `java.awt.RenderingHints`"
-  ([this]
+  ([^java.awt.image.AffineTransformOp this]
     (-> this (.getRenderingHints))))
 

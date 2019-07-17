@@ -10,6 +10,6 @@
   Constructs a ProfileDataException with the specified detail message.
 
   s - the specified detail message - `java.lang.String`"
-  ([s]
+  ([^java.lang.String s]
     (new ProfileDataException s)))
 

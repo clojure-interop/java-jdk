@@ -40,7 +40,7 @@
   id - An integer indicating the type of event. For information on allowable values, see the class description for ComponentEvent - `int`
 
   throws: java.lang.IllegalArgumentException - if source is null"
-  ([source id]
+  ([^java.awt.Component source ^Integer id]
     (new ComponentEvent source id)))
 
 (def *-component-first
@@ -97,7 +97,7 @@
   returns: the Component object that originated
    the event, or null if the object is not a
    Component. - `java.awt.Component`"
-  ([this]
+  ([^java.awt.event.ComponentEvent this]
     (-> this (.getComponent))))
 
 (defn param-string
@@ -105,6 +105,6 @@
    This method is useful for event-logging and for debugging.
 
   returns: a string identifying the event and its attributes - `java.lang.String`"
-  ([this]
+  ([^java.awt.event.ComponentEvent this]
     (-> this (.paramString))))
 

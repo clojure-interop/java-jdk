@@ -27,7 +27,7 @@
   y - the Y coordinate to which to set the upper-left corner of the imageable area of this Paper - `double`
   width - the value to which to set the width of the imageable area of this Paper - `double`
   height - the value to which to set the height of the imageable area of this Paper - `double`"
-  ([this x y width height]
+  ([^java.awt.print.Paper this ^Double x ^Double y ^Double width ^Double height]
     (-> this (.setImageableArea x y width height))))
 
 (defn get-width
@@ -36,7 +36,7 @@
 
   returns: the width of the page described by this
    Paper. - `double`"
-  ([this]
+  ([^java.awt.print.Paper this]
     (-> this (.getWidth))))
 
 (defn get-imageable-width
@@ -44,7 +44,7 @@
    area.
 
   returns: the width of the imageable area. - `double`"
-  ([this]
+  ([^java.awt.print.Paper this]
     (-> this (.getImageableWidth))))
 
 (defn get-imageable-height
@@ -52,7 +52,7 @@
    area.
 
   returns: the height of the imageable area. - `double`"
-  ([this]
+  ([^java.awt.print.Paper this]
     (-> this (.getImageableHeight))))
 
 (defn get-height
@@ -60,7 +60,7 @@
 
   returns: the height of the page described by this
             Paper. - `double`"
-  ([this]
+  ([^java.awt.print.Paper this]
     (-> this (.getHeight))))
 
 (defn set-size
@@ -72,7 +72,7 @@
 
   width - the value to which to set this Paper object's width - `double`
   height - the value to which to set this Paper object's height - `double`"
-  ([this width height]
+  ([^java.awt.print.Paper this ^Double width ^Double height]
     (-> this (.setSize width height))))
 
 (defn get-imageable-x
@@ -80,7 +80,7 @@
    Paper object's imageable area.
 
   returns: the x coordinate of the imageable area. - `double`"
-  ([this]
+  ([^java.awt.print.Paper this]
     (-> this (.getImageableX))))
 
 (defn clone
@@ -88,7 +88,7 @@
    as this Paper.
 
   returns: a copy of this Paper. - `java.lang.Object`"
-  ([this]
+  ([^java.awt.print.Paper this]
     (-> this (.clone))))
 
 (defn get-imageable-y
@@ -96,6 +96,6 @@
    Paper object's imageable area.
 
   returns: the y coordinate of the imageable area. - `double`"
-  ([this]
+  ([^java.awt.print.Paper this]
     (-> this (.getImageableY))))
 

@@ -234,7 +234,7 @@
            c is a member. - `java.util.prefs.Preferences`
 
   throws: java.lang.NullPointerException - if c is null."
-  ([c]
+  ([^java.lang.Class c]
     (Preferences/userNodeForPackage c)))
 
 (defn *system-node-for-package
@@ -275,7 +275,7 @@
            c is a member. - `java.util.prefs.Preferences`
 
   throws: java.lang.NullPointerException - if c is null."
-  ([c]
+  ([^java.lang.Class c]
     (Preferences/systemNodeForPackage c)))
 
 (defn *user-root
@@ -322,7 +322,7 @@
   is - the input stream from which to read the XML document. - `java.io.InputStream`
 
   throws: java.io.IOException - if reading from the specified input stream results in an IOException."
-  ([is]
+  ([^java.io.InputStream is]
     (Preferences/importPreferences is)))
 
 (defn put-int
@@ -336,7 +336,7 @@
   value - value whose string form is to be associated with key. - `int`
 
   throws: java.lang.NullPointerException - if key is null."
-  ([this key value]
+  ([^java.util.prefs.Preferences this ^java.lang.String key ^Integer value]
     (-> this (.putInt key value))))
 
 (defn keys
@@ -353,7 +353,7 @@
            preference node. - `java.lang.String[]`
 
   throws: java.util.prefs.BackingStoreException - if this operation cannot be completed due to a failure in the backing store, or inability to communicate with it."
-  ([this]
+  ([^java.util.prefs.Preferences this]
     (-> this (.keys))))
 
 (defn children-names
@@ -364,7 +364,7 @@
   returns: the names of the children of this preference node. - `java.lang.String[]`
 
   throws: java.util.prefs.BackingStoreException - if this operation cannot be completed due to a failure in the backing store, or inability to communicate with it."
-  ([this]
+  ([^java.util.prefs.Preferences this]
     (-> this (.childrenNames))))
 
 (defn put-boolean
@@ -378,7 +378,7 @@
   value - value whose string form is to be associated with key. - `boolean`
 
   throws: java.lang.NullPointerException - if key is null."
-  ([this key value]
+  ([^java.util.prefs.Preferences this ^java.lang.String key ^Boolean value]
     (-> this (.putBoolean key value))))
 
 (defn export-node
@@ -403,7 +403,7 @@
   os - the output stream on which to emit the XML document. - `java.io.OutputStream`
 
   throws: java.io.IOException - if writing to the specified output stream results in an IOException."
-  ([this os]
+  ([^java.util.prefs.Preferences this ^java.io.OutputStream os]
     (-> this (.exportNode os))))
 
 (defn put
@@ -414,7 +414,7 @@
   value - value to be associated with the specified key. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if key or value is null."
-  ([this key value]
+  ([^java.util.prefs.Preferences this ^java.lang.String key ^java.lang.String value]
     (-> this (.put key value))))
 
 (defn node-exists
@@ -434,7 +434,7 @@
   returns: true if the specified node exists. - `boolean`
 
   throws: java.util.prefs.BackingStoreException - if this operation cannot be completed due to a failure in the backing store, or inability to communicate with it."
-  ([this path-name]
+  ([^java.util.prefs.Preferences this ^java.lang.String path-name]
     (-> this (.nodeExists path-name))))
 
 (defn parent
@@ -444,14 +444,14 @@
   returns: the parent of this preference node. - `java.util.prefs.Preferences`
 
   throws: java.lang.IllegalStateException - if this node (or an ancestor) has been removed with the removeNode() method."
-  ([this]
+  ([^java.util.prefs.Preferences this]
     (-> this (.parent))))
 
 (defn absolute-path
   "Returns this preference node's absolute path name.
 
   returns: this preference node's absolute path name. - `java.lang.String`"
-  ([this]
+  ([^java.util.prefs.Preferences this]
     (-> this (.absolutePath))))
 
 (defn flush
@@ -474,7 +474,7 @@
    but not on others.
 
   throws: java.util.prefs.BackingStoreException - if this operation cannot be completed due to a failure in the backing store, or inability to communicate with it."
-  ([this]
+  ([^java.util.prefs.Preferences this]
     (-> this (.flush))))
 
 (defn to-string
@@ -483,7 +483,7 @@
    `System`)  ` Preference Node: `  this.absolutePath().
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^java.util.prefs.Preferences this]
     (-> this (.toString))))
 
 (defn put-float
@@ -497,7 +497,7 @@
   value - value whose string form is to be associated with key. - `float`
 
   throws: java.lang.NullPointerException - if key is null."
-  ([this key value]
+  ([^java.util.prefs.Preferences this ^java.lang.String key ^Float value]
     (-> this (.putFloat key value))))
 
 (defn add-node-change-listener
@@ -525,7 +525,7 @@
   ncl - The NodeChangeListener to add. - `java.util.prefs.NodeChangeListener`
 
   throws: java.lang.NullPointerException - if ncl is null."
-  ([this ncl]
+  ([^java.util.prefs.Preferences this ^java.util.prefs.NodeChangeListener ncl]
     (-> this (.addNodeChangeListener ncl))))
 
 (defn put-byte-array
@@ -544,14 +544,14 @@
   value - value whose string form is to be associated with key. - `byte[]`
 
   throws: java.lang.NullPointerException - if key or value is null."
-  ([this key value]
+  ([^java.util.prefs.Preferences this ^java.lang.String key value]
     (-> this (.putByteArray key value))))
 
 (defn name
   "Returns this preference node's name, relative to its parent.
 
   returns: this preference node's name, relative to its parent. - `java.lang.String`"
-  ([this]
+  ([^java.util.prefs.Preferences this]
     (-> this (.name))))
 
 (defn get-long
@@ -577,7 +577,7 @@
            a long. - `long`
 
   throws: java.lang.IllegalStateException - if this node (or an ancestor) has been removed with the removeNode() method."
-  ([this key def]
+  ([^java.util.prefs.Preferences this ^java.lang.String key ^Long def]
     (-> this (.getLong key def))))
 
 (defn sync
@@ -589,7 +589,7 @@
    method had been invoked on this node.
 
   throws: java.util.prefs.BackingStoreException - if this operation cannot be completed due to a failure in the backing store, or inability to communicate with it."
-  ([this]
+  ([^java.util.prefs.Preferences this]
     (-> this (.sync))))
 
 (defn get-int
@@ -615,7 +615,7 @@
            an int. - `int`
 
   throws: java.lang.IllegalStateException - if this node (or an ancestor) has been removed with the removeNode() method."
-  ([this key def]
+  ([^java.util.prefs.Preferences this ^java.lang.String key ^Integer def]
     (-> this (.getInt key def))))
 
 (defn remove-node
@@ -640,7 +640,7 @@
    representing a non-empty collection of preferences and/or children.
 
   throws: java.util.prefs.BackingStoreException - if this operation cannot be completed due to a failure in the backing store, or inability to communicate with it."
-  ([this]
+  ([^java.util.prefs.Preferences this]
     (-> this (.removeNode))))
 
 (defn put-double
@@ -654,7 +654,7 @@
   value - value whose string form is to be associated with key. - `double`
 
   throws: java.lang.NullPointerException - if key is null."
-  ([this key value]
+  ([^java.util.prefs.Preferences this ^java.lang.String key ^Double value]
     (-> this (.putDouble key value))))
 
 (defn remove
@@ -669,7 +669,7 @@
   key - key whose mapping is to be removed from the preference node. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if key is null."
-  ([this key]
+  ([^java.util.prefs.Preferences this ^java.lang.String key]
     (-> this (.remove key))))
 
 (defn add-preference-change-listener
@@ -691,7 +691,7 @@
   pcl - The preference change listener to add. - `java.util.prefs.PreferenceChangeListener`
 
   throws: java.lang.NullPointerException - if pcl is null."
-  ([this pcl]
+  ([^java.util.prefs.Preferences this ^java.util.prefs.PreferenceChangeListener pcl]
     (-> this (.addPreferenceChangeListener pcl))))
 
 (defn export-subtree
@@ -716,7 +716,7 @@
   os - the output stream on which to emit the XML document. - `java.io.OutputStream`
 
   throws: java.io.IOException - if writing to the specified output stream results in an IOException."
-  ([this os]
+  ([^java.util.prefs.Preferences this ^java.io.OutputStream os]
     (-> this (.exportSubtree os))))
 
 (defn user-node?
@@ -726,7 +726,7 @@
   returns: true if this preference node is in the user
            preference tree, false if it's in the system
            preference tree. - `boolean`"
-  ([this]
+  ([^java.util.prefs.Preferences this]
     (-> this (.isUserNode))))
 
 (defn remove-preference-change-listener
@@ -736,7 +736,7 @@
   pcl - The preference change listener to remove. - `java.util.prefs.PreferenceChangeListener`
 
   throws: java.lang.IllegalArgumentException - if pcl was not a registered preference change listener on this node."
-  ([this pcl]
+  ([^java.util.prefs.Preferences this ^java.util.prefs.PreferenceChangeListener pcl]
     (-> this (.removePreferenceChangeListener pcl))))
 
 (defn get-byte-array
@@ -768,7 +768,7 @@
            a byte array. - `byte[]`
 
   throws: java.lang.IllegalStateException - if this node (or an ancestor) has been removed with the removeNode() method."
-  ([this key def]
+  ([^java.util.prefs.Preferences this ^java.lang.String key def]
     (-> this (.getByteArray key def))))
 
 (defn get-boolean?
@@ -799,7 +799,7 @@
            a boolean. - `boolean`
 
   throws: java.lang.IllegalStateException - if this node (or an ancestor) has been removed with the removeNode() method."
-  ([this key def]
+  ([^java.util.prefs.Preferences this ^java.lang.String key ^Boolean def]
     (-> this (.getBoolean key def))))
 
 (defn clear
@@ -813,7 +813,7 @@
    they will be returned by succeeding calls to get.
 
   throws: java.util.prefs.BackingStoreException - if this operation cannot be completed due to a failure in the backing store, or inability to communicate with it."
-  ([this]
+  ([^java.util.prefs.Preferences this]
     (-> this (.clear))))
 
 (defn get-float
@@ -839,7 +839,7 @@
            a float. - `float`
 
   throws: java.lang.IllegalStateException - if this node (or an ancestor) has been removed with the removeNode() method."
-  ([this key def]
+  ([^java.util.prefs.Preferences this ^java.lang.String key ^Float def]
     (-> this (.getFloat key def))))
 
 (defn get-double
@@ -865,7 +865,7 @@
            a double. - `double`
 
   throws: java.lang.IllegalStateException - if this node (or an ancestor) has been removed with the removeNode() method."
-  ([this key def]
+  ([^java.util.prefs.Preferences this ^java.lang.String key ^Double def]
     (-> this (.getDouble key def))))
 
 (defn put-long
@@ -879,7 +879,7 @@
   value - value whose string form is to be associated with key. - `long`
 
   throws: java.lang.NullPointerException - if key is null."
-  ([this key value]
+  ([^java.util.prefs.Preferences this ^java.lang.String key ^Long value]
     (-> this (.putLong key value))))
 
 (defn get
@@ -900,7 +900,7 @@
            store is inaccessible. - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if this node (or an ancestor) has been removed with the removeNode() method."
-  ([this key def]
+  ([^java.util.prefs.Preferences this ^java.lang.String key ^java.lang.String def]
     (-> this (.get key def))))
 
 (defn remove-node-change-listener
@@ -910,7 +910,7 @@
   ncl - The NodeChangeListener to remove. - `java.util.prefs.NodeChangeListener`
 
   throws: java.lang.IllegalArgumentException - if ncl was not a registered NodeChangeListener on this node."
-  ([this ncl]
+  ([^java.util.prefs.Preferences this ^java.util.prefs.NodeChangeListener ncl]
     (-> this (.removeNodeChangeListener ncl))))
 
 (defn node
@@ -930,6 +930,6 @@
   returns: the specified preference node. - `java.util.prefs.Preferences`
 
   throws: java.lang.IllegalArgumentException - if the path name is invalid (i.e., it contains multiple consecutive slash characters, or ends with a slash character and is more than one character long)."
-  ([this path-name]
+  ([^java.util.prefs.Preferences this ^java.lang.String path-name]
     (-> this (.node path-name))))
 

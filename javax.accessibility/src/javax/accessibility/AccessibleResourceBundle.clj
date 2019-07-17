@@ -17,6 +17,6 @@
 
   returns: an array of an Object array representing a
    key-value pair. - `java.lang.Object[][]`"
-  ([this]
+  ([^javax.accessibility.AccessibleResourceBundle this]
     (-> this (.getContents))))
 

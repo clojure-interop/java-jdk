@@ -152,7 +152,7 @@
   returns: an Inet6Address object created from the raw IP address. - `java.net.Inet6Address`
 
   throws: java.net.UnknownHostException - if IP address is of illegal length, or if the interface does not have a numeric scope_id assigned for the given address type."
-  ([host addr nif]
+  ([^java.lang.String host addr ^java.net.NetworkInterface nif]
     (Inet6Address/getByAddress host addr nif)))
 
 (defn site-local-address?
@@ -160,7 +160,7 @@
 
   returns: a boolean indicating if the InetAddress is a site local
            address; or false if address is not a site local unicast address. - `boolean`"
-  ([this]
+  ([^java.net.Inet6Address this]
     (-> this (.isSiteLocalAddress))))
 
 (defn loopback-address?
@@ -168,7 +168,7 @@
 
   returns: a boolean indicating if the InetAddress is a loopback
            address; or false otherwise. - `boolean`"
-  ([this]
+  ([^java.net.Inet6Address this]
     (-> this (.isLoopbackAddress))))
 
 (defn get-host-address
@@ -179,7 +179,7 @@
    the instance.
 
   returns: the raw IP address in a string format. - `java.lang.String`"
-  ([this]
+  ([^java.net.Inet6Address this]
     (-> this (.getHostAddress))))
 
 (defn link-local-address?
@@ -187,7 +187,7 @@
 
   returns: a boolean indicating if the InetAddress is a link local
            address; or false if address is not a link local unicast address. - `boolean`"
-  ([this]
+  ([^java.net.Inet6Address this]
     (-> this (.isLinkLocalAddress))))
 
 (defn any-local-address?
@@ -195,7 +195,7 @@
 
   returns: a boolean indicating if the Inetaddress is
            a wildcard address. - `boolean`"
-  ([this]
+  ([^java.net.Inet6Address this]
     (-> this (.isAnyLocalAddress))))
 
 (defn mc-link-local?
@@ -204,7 +204,7 @@
   returns: a boolean indicating if the address has is a multicast
            address of link-local scope, false if it is not of link-local
            scope or it is not a multicast address - `boolean`"
-  ([this]
+  ([^java.net.Inet6Address this]
     (-> this (.isMCLinkLocal))))
 
 (defn mc-global?
@@ -213,7 +213,7 @@
   returns: a boolean indicating if the address has is a multicast
            address of global scope, false if it is not of global scope or
            it is not a multicast address - `boolean`"
-  ([this]
+  ([^java.net.Inet6Address this]
     (-> this (.isMCGlobal))))
 
 (defn multicast-address?
@@ -223,7 +223,7 @@
 
   returns: a boolean indicating if the InetAddress is an IP
            multicast address - `boolean`"
-  ([this]
+  ([^java.net.Inet6Address this]
     (-> this (.isMulticastAddress))))
 
 (defn mc-node-local?
@@ -232,7 +232,7 @@
   returns: a boolean indicating if the address has is a multicast
            address of node-local scope, false if it is not of node-local
            scope or it is not a multicast address - `boolean`"
-  ([this]
+  ([^java.net.Inet6Address this]
     (-> this (.isMCNodeLocal))))
 
 (defn i-pv-4-compatible-address?
@@ -241,7 +241,7 @@
 
   returns: a boolean indicating if the InetAddress is an IPv4
            compatible IPv6 address; or false if address is IPv4 address. - `boolean`"
-  ([this]
+  ([^java.net.Inet6Address this]
     (-> this (.isIPv4CompatibleAddress))))
 
 (defn get-address
@@ -250,7 +250,7 @@
    getAddress()[0].
 
   returns: the raw IP address of this object. - `byte[]`"
-  ([this]
+  ([^java.net.Inet6Address this]
     (-> this (.getAddress))))
 
 (defn get-scope-id
@@ -258,7 +258,7 @@
    an interface. If no scoped_id is set, the returned value is zero.
 
   returns: the scopeId, or zero if not set. - `int`"
-  ([this]
+  ([^java.net.Inet6Address this]
     (-> this (.getScopeId))))
 
 (defn mc-org-local?
@@ -267,7 +267,7 @@
   returns: a boolean indicating if the address has is a multicast
            address of organization-local scope, false if it is not of
            organization-local scope or it is not a multicast address - `boolean`"
-  ([this]
+  ([^java.net.Inet6Address this]
     (-> this (.isMCOrgLocal))))
 
 (defn get-scoped-interface
@@ -275,7 +275,7 @@
    with a scoped interface.
 
   returns: the scoped interface, or null if not set. - `java.net.NetworkInterface`"
-  ([this]
+  ([^java.net.Inet6Address this]
     (-> this (.getScopedInterface))))
 
 (defn mc-site-local?
@@ -284,14 +284,14 @@
   returns: a boolean indicating if the address has is a multicast
            address of site-local scope, false if it is not  of site-local
            scope or it is not a multicast address - `boolean`"
-  ([this]
+  ([^java.net.Inet6Address this]
     (-> this (.isMCSiteLocal))))
 
 (defn hash-code
   "Returns a hashcode for this IP address.
 
   returns: a hash code value for this IP address. - `int`"
-  ([this]
+  ([^java.net.Inet6Address this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -306,6 +306,6 @@
   obj - the object to compare against. - `java.lang.Object`
 
   returns: true if the objects are the same; false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.net.Inet6Address this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

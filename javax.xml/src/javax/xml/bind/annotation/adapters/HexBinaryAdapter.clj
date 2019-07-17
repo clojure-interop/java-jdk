@@ -17,7 +17,7 @@
   s - The value to be converted. Can be null. - `java.lang.String`
 
   returns: `byte[]`"
-  ([this s]
+  ([^javax.xml.bind.annotation.adapters.HexBinaryAdapter this ^java.lang.String s]
     (-> this (.unmarshal s))))
 
 (defn marshal
@@ -26,6 +26,6 @@
   bytes - The value to be convereted. Can be null. - `byte[]`
 
   returns: `java.lang.String`"
-  ([this bytes]
+  ([^javax.xml.bind.annotation.adapters.HexBinaryAdapter this bytes]
     (-> this (.marshal bytes))))
 

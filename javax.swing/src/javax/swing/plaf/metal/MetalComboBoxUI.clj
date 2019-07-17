@@ -21,7 +21,7 @@
   "c - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([c]
+  ([^javax.swing.JComponent c]
     (MetalComboBoxUI/createUI c)))
 
 (defn get-minimum-size
@@ -30,7 +30,7 @@
   c - the component whose minimum size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: a Dimension object or null - `java.awt.Dimension`"
-  ([this c]
+  ([^javax.swing.plaf.metal.MetalComboBoxUI this ^javax.swing.JComponent c]
     (-> this (.getMinimumSize c))))
 
 (defn paint-current-value
@@ -41,25 +41,25 @@
   has-focus - whether or not the JComboBox has focus - `boolean`
 
   throws: java.lang.NullPointerException - if any of the arguments are null."
-  ([this g bounds has-focus]
+  ([^javax.swing.plaf.metal.MetalComboBoxUI this ^java.awt.Graphics g ^java.awt.Rectangle bounds ^Boolean has-focus]
     (-> this (.paintCurrentValue g bounds has-focus))))
 
 (defn create-property-change-listener
   "Description copied from class: BasicComboBoxUI
 
   returns: an instance of a PropertyChangeListener or null - `java.beans.PropertyChangeListener`"
-  ([this]
+  ([^javax.swing.plaf.metal.MetalComboBoxUI this]
     (-> this (.createPropertyChangeListener))))
 
 (defn configure-editor
   "Description copied from class: BasicComboBoxUI"
-  ([this]
+  ([^javax.swing.plaf.metal.MetalComboBoxUI this]
     (-> this (.configureEditor))))
 
 (defn layout-combo-box
   "parent - `java.awt.Container`
   manager - `javax.swing.plaf.metal.MetalComboBoxUI.MetalComboBoxLayoutManager`"
-  ([this parent manager]
+  ([^javax.swing.plaf.metal.MetalComboBoxUI this ^java.awt.Container parent ^javax.swing.plaf.metal.MetalComboBoxUI.MetalComboBoxLayoutManager manager]
     (-> this (.layoutComboBox parent manager))))
 
 (defn paint
@@ -67,7 +67,7 @@
 
   g - the Graphics context in which to paint - `java.awt.Graphics`
   c - the component being painted; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([this g c]
+  ([^javax.swing.plaf.metal.MetalComboBoxUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.paint g c))))
 
 (defn get-baseline
@@ -81,7 +81,7 @@
                     baseline - `int`
 
   throws: java.lang.NullPointerException - if c is null"
-  ([this c width height]
+  ([^javax.swing.plaf.metal.MetalComboBoxUI this ^javax.swing.JComponent c ^Integer width ^Integer height]
     (-> this (.getBaseline c width height))))
 
 (defn paint-current-value-background
@@ -92,11 +92,11 @@
   has-focus - whether or not the JComboBox has focus - `boolean`
 
   throws: java.lang.NullPointerException - if any of the arguments are null."
-  ([this g bounds has-focus]
+  ([^javax.swing.plaf.metal.MetalComboBoxUI this ^java.awt.Graphics g ^java.awt.Rectangle bounds ^Boolean has-focus]
     (-> this (.paintCurrentValueBackground g bounds has-focus))))
 
 (defn unconfigure-editor
   "Description copied from class: BasicComboBoxUI"
-  ([this]
+  ([^javax.swing.plaf.metal.MetalComboBoxUI this]
     (-> this (.unconfigureEditor))))
 

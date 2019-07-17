@@ -123,7 +123,7 @@
   syntax - A non-null list of properties that specify the syntax of this compound name. See class description for contents of properties. - `java.util.Properties`
 
   throws: javax.naming.InvalidNameException - If 'n' violates the syntax specified by syntax."
-  ([n syntax]
+  ([^java.lang.String n ^java.util.Properties syntax]
     (new CompoundName n syntax)))
 
 (defn add-all
@@ -142,9 +142,9 @@
   returns: The updated CompoundName, not a new one. Cannot be null. - `javax.naming.Name`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - If posn is outside the specified range."
-  ([this posn n]
+  ([^javax.naming.CompoundName this ^Integer posn ^javax.naming.Name n]
     (-> this (.addAll posn n)))
-  ([this suffix]
+  ([^javax.naming.CompoundName this ^javax.naming.Name suffix]
     (-> this (.addAll suffix))))
 
 (defn ends-with
@@ -161,7 +161,7 @@
 
   returns: true if n is a CompoundName and
            is a suffix of this compound name, false otherwise. - `boolean`"
-  ([this n]
+  ([^javax.naming.CompoundName this ^javax.naming.Name n]
     (-> this (.endsWith n))))
 
 (defn get-suffix
@@ -178,7 +178,7 @@
            size(), an empty compound name is returned. - `javax.naming.Name`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - If posn is outside the specified range."
-  ([this posn]
+  ([^javax.naming.CompoundName this ^Integer posn]
     (-> this (.getSuffix posn))))
 
 (defn get-all
@@ -189,7 +189,7 @@
 
   returns: A non-null enumeration of the components of this
    compound name. Each element of the enumeration is of class String. - `java.util.Enumeration<java.lang.String>`"
-  ([this]
+  ([^javax.naming.CompoundName this]
     (-> this (.getAll))))
 
 (defn to-string
@@ -203,7 +203,7 @@
    to create a new equivalent compound name.
 
   returns: A non-null string representation of this compound name. - `java.lang.String`"
-  ([this]
+  ([^javax.naming.CompoundName this]
     (-> this (.toString))))
 
 (defn remove
@@ -217,7 +217,7 @@
   returns: The component removed (a String). - `java.lang.Object`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - If posn is outside the specified range (includes case where compound name is empty)."
-  ([this posn]
+  ([^javax.naming.CompoundName this ^Integer posn]
     (-> this (.remove posn))))
 
 (defn starts-with
@@ -234,7 +234,7 @@
 
   returns: true if n is a CompoundName and
                    is a prefix of this compound name, false otherwise. - `boolean`"
-  ([this n]
+  ([^javax.naming.CompoundName this ^javax.naming.Name n]
     (-> this (.startsWith n))))
 
 (defn clone
@@ -244,7 +244,7 @@
    The clone and this compound name share the same syntax.
 
   returns: A non-null copy of this compound name. - `java.lang.Object`"
-  ([this]
+  ([^javax.naming.CompoundName this]
     (-> this (.clone))))
 
 (defn hash-code
@@ -257,7 +257,7 @@
    a name has the same hash code as its lowercased equivalent.
 
   returns: An int representing the hash code of this name. - `int`"
-  ([this]
+  ([^javax.naming.CompoundName this]
     (-> this (.hashCode))))
 
 (defn add
@@ -273,9 +273,9 @@
   returns: The updated CompoundName, not a new one. Cannot be null. - `javax.naming.Name`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - If posn is outside the specified range."
-  ([this posn comp]
+  ([^javax.naming.CompoundName this ^Integer posn ^java.lang.String comp]
     (-> this (.add posn comp)))
-  ([this comp]
+  ([^javax.naming.CompoundName this ^java.lang.String comp]
     (-> this (.add comp))))
 
 (defn empty?
@@ -283,14 +283,14 @@
    A compound name is empty if it has zero components.
 
   returns: true if this compound name is empty, false otherwise. - `boolean`"
-  ([this]
+  ([^javax.naming.CompoundName this]
     (-> this (.isEmpty))))
 
 (defn size
   "Retrieves the number of components in this compound name.
 
   returns: The nonnegative number of components in this compound name. - `int`"
-  ([this]
+  ([^javax.naming.CompoundName this]
     (-> this (.size))))
 
 (defn compare-to
@@ -325,7 +325,7 @@
             is less than, equal to, or greater than the given Object. - `int`
 
   throws: java.lang.ClassCastException - if obj is not a CompoundName."
-  ([this obj]
+  ([^javax.naming.CompoundName this ^java.lang.Object obj]
     (-> this (.compareTo obj))))
 
 (defn get-prefix
@@ -342,7 +342,7 @@
            the range [0,posn). - `javax.naming.Name`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - If posn is outside the specified range."
-  ([this posn]
+  ([^javax.naming.CompoundName this ^Integer posn]
     (-> this (.getPrefix posn))))
 
 (defn get
@@ -353,7 +353,7 @@
   returns: The component at index posn. - `java.lang.String`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if posn is outside the specified range."
-  ([this posn]
+  ([^javax.naming.CompoundName this ^Integer posn]
     (-> this (.get posn))))
 
 (defn equals
@@ -378,6 +378,6 @@
   obj - The possibly null object to compare against. - `java.lang.Object`
 
   returns: true if obj is equal to this compound name, false otherwise. - `boolean`"
-  ([this obj]
+  ([^javax.naming.CompoundName this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

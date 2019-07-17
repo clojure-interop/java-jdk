@@ -77,7 +77,7 @@
   p - the new system Policy object. - `java.security.Policy`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPermission method doesn't allow setting the Policy."
-  ([p]
+  ([^java.security.Policy p]
     (Policy/setPolicy p)))
 
 (defn *get-instance
@@ -98,9 +98,9 @@
   returns: the new Policy object. - `java.security.Policy`
 
   throws: java.lang.SecurityException - if the caller does not have permission to get a Policy instance for the specified type."
-  ([type params provider]
+  ([^java.lang.String type ^java.security.Policy.Parameters params ^java.lang.String provider]
     (Policy/getInstance type params provider))
-  ([type params]
+  ([^java.lang.String type ^java.security.Policy.Parameters params]
     (Policy/getInstance type params)))
 
 (defn get-provider
@@ -111,7 +111,7 @@
    Otherwise this method returns null.
 
   returns: the Provider of this Policy, or null. - `java.security.Provider`"
-  ([this]
+  ([^java.security.Policy this]
     (-> this (.getProvider))))
 
 (defn get-type
@@ -122,7 +122,7 @@
    Otherwise this method returns null.
 
   returns: the type of this Policy, or null. - `java.lang.String`"
-  ([this]
+  ([^java.security.Policy this]
     (-> this (.getType))))
 
 (defn get-parameters
@@ -133,7 +133,7 @@
    Otherwise this method returns null.
 
   returns: Policy parameters, or null. - `java.security.Policy.Parameters`"
-  ([this]
+  ([^java.security.Policy this]
     (-> this (.getParameters))))
 
 (defn get-permissions
@@ -160,7 +160,7 @@
             and it must support heterogeneous Permission types.
             If this operation is not supported,
             Policy.UNSUPPORTED_EMPTY_COLLECTION is returned. - `java.security.PermissionCollection`"
-  ([this codesource]
+  ([^java.security.Policy this ^java.security.CodeSource codesource]
     (-> this (.getPermissions codesource))))
 
 (defn implies
@@ -173,7 +173,7 @@
 
   returns: true if `permission` is a proper subset of a permission
    granted to this ProtectionDomain. - `boolean`"
-  ([this domain permission]
+  ([^java.security.Policy this ^java.security.ProtectionDomain domain ^java.security.Permission permission]
     (-> this (.implies domain permission))))
 
 (defn refresh
@@ -184,6 +184,6 @@
     The default implementation of this method does nothing.
    This method should be overridden if a refresh operation is supported
    by the policy implementation."
-  ([this]
+  ([^java.security.Policy this]
     (-> this (.refresh))))
 

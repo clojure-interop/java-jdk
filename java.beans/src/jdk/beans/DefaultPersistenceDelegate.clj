@@ -39,7 +39,7 @@
        new DefaultPersistenceDelegate(new String[]{`name`, `style`, `size`});
 
   constructor-property-names - The property names for the arguments of this constructor. - `java.lang.String[]`"
-  ([constructor-property-names]
+  ([^java.lang.String[] constructor-property-names]
     (new DefaultPersistenceDelegate constructor-property-names))
   ([]
     (new DefaultPersistenceDelegate )))

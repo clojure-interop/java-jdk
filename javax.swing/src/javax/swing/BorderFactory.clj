@@ -30,7 +30,7 @@
   right - an integer specifying the width of the right side, in pixels - `int`
 
   returns: the Border object - `javax.swing.border.Border`"
-  ([top left bottom right]
+  ([^Integer top ^Integer left ^Integer bottom ^Integer right]
     (BorderFactory/createEmptyBorder top left bottom right))
   ([]
     (BorderFactory/createEmptyBorder )))
@@ -58,7 +58,7 @@
   color - a Color to use for the border - `java.awt.Color`
 
   returns: the MatteBorder object - `javax.swing.border.MatteBorder`"
-  ([top left bottom right color]
+  ([^Integer top ^Integer left ^Integer bottom ^Integer right ^java.awt.Color color]
     (BorderFactory/createMatteBorder top left bottom right color)))
 
 (defn *create-lowered-bevel-border
@@ -84,15 +84,15 @@
   title-color - a Color object specifying the title color - `java.awt.Color`
 
   returns: the TitledBorder object - `javax.swing.border.TitledBorder`"
-  ([border title title-justification title-position title-font title-color]
+  ([^javax.swing.border.Border border ^java.lang.String title ^Integer title-justification ^Integer title-position ^java.awt.Font title-font ^java.awt.Color title-color]
     (BorderFactory/createTitledBorder border title title-justification title-position title-font title-color))
-  ([border title title-justification title-position title-font]
+  ([^javax.swing.border.Border border ^java.lang.String title ^Integer title-justification ^Integer title-position ^java.awt.Font title-font]
     (BorderFactory/createTitledBorder border title title-justification title-position title-font))
-  ([border title title-justification title-position]
+  ([^javax.swing.border.Border border ^java.lang.String title ^Integer title-justification ^Integer title-position]
     (BorderFactory/createTitledBorder border title title-justification title-position))
-  ([border title]
+  ([^javax.swing.border.Border border ^java.lang.String title]
     (BorderFactory/createTitledBorder border title))
-  ([title]
+  ([^java.lang.String title]
     (BorderFactory/createTitledBorder title)))
 
 (defn *create-dashed-border
@@ -110,11 +110,11 @@
   returns: the Border object - `javax.swing.border.Border`
 
   throws: java.lang.IllegalArgumentException - if the specified thickness is less than 1, or if the specified length is less than 1, or if the specified spacing is less than 0"
-  ([paint thickness length spacing rounded]
+  ([^java.awt.Paint paint ^Float thickness ^Float length ^Float spacing ^Boolean rounded]
     (BorderFactory/createDashedBorder paint thickness length spacing rounded))
-  ([paint length spacing]
+  ([^java.awt.Paint paint ^Float length ^Float spacing]
     (BorderFactory/createDashedBorder paint length spacing))
-  ([paint]
+  ([^java.awt.Paint paint]
     (BorderFactory/createDashedBorder paint)))
 
 (defn *create-compound-border
@@ -125,7 +125,7 @@
   inside-border - a Border object for the inner edge of the compound border - `javax.swing.border.Border`
 
   returns: the CompoundBorder object - `javax.swing.border.CompoundBorder`"
-  ([outside-border inside-border]
+  ([^javax.swing.border.Border outside-border ^javax.swing.border.Border inside-border]
     (BorderFactory/createCompoundBorder outside-border inside-border))
   ([]
     (BorderFactory/createCompoundBorder )))
@@ -139,11 +139,11 @@
   shadow - a Color object for the border shadows - `java.awt.Color`
 
   returns: the Border object - `javax.swing.border.Border`"
-  ([type highlight shadow]
+  ([^Integer type ^java.awt.Color highlight ^java.awt.Color shadow]
     (BorderFactory/createEtchedBorder type highlight shadow))
-  ([highlight shadow]
+  ([^java.awt.Color highlight ^java.awt.Color shadow]
     (BorderFactory/createEtchedBorder highlight shadow))
-  ([type]
+  ([^Integer type]
     (BorderFactory/createEtchedBorder type))
   ([]
     (BorderFactory/createEtchedBorder )))
@@ -173,11 +173,11 @@
   shadow-inner - a color of the inner edge of the shadow area - `java.awt.Color`
 
   returns: the Border object - `javax.swing.border.Border`"
-  ([type highlight-outer highlight-inner shadow-outer shadow-inner]
+  ([^Integer type ^java.awt.Color highlight-outer ^java.awt.Color highlight-inner ^java.awt.Color shadow-outer ^java.awt.Color shadow-inner]
     (BorderFactory/createSoftBevelBorder type highlight-outer highlight-inner shadow-outer shadow-inner))
-  ([type highlight shadow]
+  ([^Integer type ^java.awt.Color highlight ^java.awt.Color shadow]
     (BorderFactory/createSoftBevelBorder type highlight shadow))
-  ([type]
+  ([^Integer type]
     (BorderFactory/createSoftBevelBorder type)))
 
 (defn *create-bevel-border
@@ -192,11 +192,11 @@
   shadow-inner - a Color object for the inner edge of the shadow area - `java.awt.Color`
 
   returns: the Border object - `javax.swing.border.Border`"
-  ([type highlight-outer highlight-inner shadow-outer shadow-inner]
+  ([^Integer type ^java.awt.Color highlight-outer ^java.awt.Color highlight-inner ^java.awt.Color shadow-outer ^java.awt.Color shadow-inner]
     (BorderFactory/createBevelBorder type highlight-outer highlight-inner shadow-outer shadow-inner))
-  ([type highlight shadow]
+  ([^Integer type ^java.awt.Color highlight ^java.awt.Color shadow]
     (BorderFactory/createBevelBorder type highlight shadow))
-  ([type]
+  ([^Integer type]
     (BorderFactory/createBevelBorder type)))
 
 (defn *create-stroke-border
@@ -210,9 +210,9 @@
   returns: the Border object - `javax.swing.border.Border`
 
   throws: java.lang.NullPointerException - if the specified stroke is null"
-  ([stroke paint]
+  ([^java.awt.BasicStroke stroke ^java.awt.Paint paint]
     (BorderFactory/createStrokeBorder stroke paint))
-  ([stroke]
+  ([^java.awt.BasicStroke stroke]
     (BorderFactory/createStrokeBorder stroke)))
 
 (defn *create-line-border
@@ -223,10 +223,10 @@
   rounded - whether or not border corners should be round - `boolean`
 
   returns: the Border object - `javax.swing.border.Border`"
-  ([color thickness rounded]
+  ([^java.awt.Color color ^Integer thickness ^Boolean rounded]
     (BorderFactory/createLineBorder color thickness rounded))
-  ([color thickness]
+  ([^java.awt.Color color ^Integer thickness]
     (BorderFactory/createLineBorder color thickness))
-  ([color]
+  ([^java.awt.Color color]
     (BorderFactory/createLineBorder color)))
 

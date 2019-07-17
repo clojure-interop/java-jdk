@@ -17,7 +17,7 @@
   path - `javax.swing.tree.TreePath`
 
   returns: `int`"
-  ([this tree path]
+  ([^javax.swing.plaf.TreeUI this ^javax.swing.JTree tree ^javax.swing.tree.TreePath path]
     (-> this (.getRowForPath tree path))))
 
 (defn get-path-bounds
@@ -29,7 +29,7 @@
   path - `javax.swing.tree.TreePath`
 
   returns: `java.awt.Rectangle`"
-  ([this tree path]
+  ([^javax.swing.plaf.TreeUI this ^javax.swing.JTree tree ^javax.swing.tree.TreePath path]
     (-> this (.getPathBounds tree path))))
 
 (defn get-row-count
@@ -38,7 +38,7 @@
   tree - `javax.swing.JTree`
 
   returns: `int`"
-  ([this tree]
+  ([^javax.swing.plaf.TreeUI this ^javax.swing.JTree tree]
     (-> this (.getRowCount tree))))
 
 (defn get-closest-path-for-location
@@ -53,7 +53,7 @@
   y - `int`
 
   returns: `javax.swing.tree.TreePath`"
-  ([this tree x y]
+  ([^javax.swing.plaf.TreeUI this ^javax.swing.JTree tree ^Integer x ^Integer y]
     (-> this (.getClosestPathForLocation tree x y))))
 
 (defn get-path-for-row
@@ -64,7 +64,7 @@
   row - `int`
 
   returns: `javax.swing.tree.TreePath`"
-  ([this tree row]
+  ([^javax.swing.plaf.TreeUI this ^javax.swing.JTree tree ^Integer row]
     (-> this (.getPathForRow tree row))))
 
 (defn get-editing-path
@@ -73,7 +73,7 @@
   tree - `javax.swing.JTree`
 
   returns: `javax.swing.tree.TreePath`"
-  ([this tree]
+  ([^javax.swing.plaf.TreeUI this ^javax.swing.JTree tree]
     (-> this (.getEditingPath tree))))
 
 (defn editing?
@@ -83,7 +83,7 @@
   tree - `javax.swing.JTree`
 
   returns: `boolean`"
-  ([this tree]
+  ([^javax.swing.plaf.TreeUI this ^javax.swing.JTree tree]
     (-> this (.isEditing tree))))
 
 (defn start-editing-at-path
@@ -92,7 +92,7 @@
 
   tree - `javax.swing.JTree`
   path - `javax.swing.tree.TreePath`"
-  ([this tree path]
+  ([^javax.swing.plaf.TreeUI this ^javax.swing.JTree tree ^javax.swing.tree.TreePath path]
     (-> this (.startEditingAtPath tree path))))
 
 (defn cancel-editing
@@ -101,7 +101,7 @@
    editing session to stop.
 
   tree - `javax.swing.JTree`"
-  ([this tree]
+  ([^javax.swing.plaf.TreeUI this ^javax.swing.JTree tree]
     (-> this (.cancelEditing tree))))
 
 (defn stop-editing
@@ -112,6 +112,6 @@
   tree - `javax.swing.JTree`
 
   returns: `boolean`"
-  ([this tree]
+  ([^javax.swing.plaf.TreeUI this ^javax.swing.JTree tree]
     (-> this (.stopEditing tree))))
 

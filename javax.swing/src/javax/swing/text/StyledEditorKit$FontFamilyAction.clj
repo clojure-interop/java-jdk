@@ -22,13 +22,13 @@
 
   nm - the action name - `java.lang.String`
   family - the font family - `java.lang.String`"
-  ([nm family]
+  ([^java.lang.String nm ^java.lang.String family]
     (new StyledEditorKit$FontFamilyAction nm family)))
 
 (defn action-performed
   "Sets the font family.
 
   e - the event - `java.awt.event.ActionEvent`"
-  ([this e]
+  ([^javax.swing.text.StyledEditorKit$FontFamilyAction this ^java.awt.event.ActionEvent e]
     (-> this (.actionPerformed e))))
 

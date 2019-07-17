@@ -32,20 +32,20 @@
    may be null.
 
   value - the value of the attribute - `java.lang.Object`"
-  ([value]
+  ([^java.lang.Object value]
     (new Annotation value)))
 
 (defn get-value
   "Returns the value of the attribute, which may be null.
 
   returns: the value of the attribute - `java.lang.Object`"
-  ([this]
+  ([^java.text.Annotation this]
     (-> this (.getValue))))
 
 (defn to-string
   "Returns the String representation of this Annotation.
 
   returns: the String representation of this Annotation - `java.lang.String`"
-  ([this]
+  ([^java.text.Annotation this]
     (-> this (.toString))))
 

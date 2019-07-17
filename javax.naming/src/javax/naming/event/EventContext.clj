@@ -131,7 +131,7 @@
   l - The nonnull listener. - `javax.naming.event.NamingListener`
 
   throws: javax.naming.NamingException - If a problem was encountered while adding the listener."
-  ([this target scope l]
+  ([^. this ^javax.naming.Name target ^Integer scope ^javax.naming.event.NamingListener l]
     (-> this (.addNamingListener target scope l))))
 
 (defn remove-naming-listener
@@ -149,7 +149,7 @@
   l - The nonnull listener. - `javax.naming.event.NamingListener`
 
   throws: javax.naming.NamingException - If a problem was encountered while removing the listener."
-  ([this l]
+  ([^. this ^javax.naming.event.NamingListener l]
     (-> this (.removeNamingListener l))))
 
 (defn target-must-exist
@@ -159,6 +159,6 @@
   returns: true if the target must exist; false if the target need not exist. - `boolean`
 
   throws: javax.naming.NamingException - If the context's behavior in this regard cannot be determined."
-  ([this]
+  ([^. this]
     (-> this (.targetMustExist))))
 

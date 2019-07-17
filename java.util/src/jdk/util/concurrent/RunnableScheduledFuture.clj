@@ -11,6 +11,6 @@
    run only once.
 
   returns: true if this task is periodic - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.isPeriodic))))
 

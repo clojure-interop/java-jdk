@@ -14,7 +14,7 @@
   x-path-list - a list of one or more XPathType objects. The list is defensively copied to protect against subsequent modification. - `java.util.List`
 
   throws: java.lang.ClassCastException - if xPathList contains any entries that are not of type XPathType"
-  ([x-path-list]
+  ([^java.util.List x-path-list]
     (new XPathFilter2ParameterSpec x-path-list)))
 
 (defn get-x-path-list
@@ -24,6 +24,6 @@
 
   returns: a List of XPathType objects
       (never null or empty) - `java.util.List`"
-  ([this]
+  ([^javax.xml.crypto.dsig.spec.XPathFilter2ParameterSpec this]
     (-> this (.getXPathList))))
 

@@ -15,7 +15,7 @@
   Creates a clipboard object.
 
   name - `java.lang.String`"
-  ([name]
+  ([^java.lang.String name]
     (new Clipboard name)))
 
 (defn get-flavor-listeners
@@ -24,7 +24,7 @@
 
   returns: all of this clipboard's FlavorListeners or an empty
            array if no listeners are currently registered - `java.awt.datatransfer.FlavorListener[]`"
-  ([this]
+  ([^java.awt.datatransfer.Clipboard this]
     (-> this (.getFlavorListeners))))
 
 (defn data-flavor-available?
@@ -38,7 +38,7 @@
            false otherwise - `boolean`
 
   throws: java.lang.NullPointerException - if flavor is null"
-  ([this flavor]
+  ([^java.awt.datatransfer.Clipboard this ^java.awt.datatransfer.DataFlavor flavor]
     (-> this (.isDataFlavorAvailable flavor))))
 
 (defn get-data
@@ -53,7 +53,7 @@
            in the specified DataFlavor - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if flavor is null"
-  ([this flavor]
+  ([^java.awt.datatransfer.Clipboard this ^java.awt.datatransfer.DataFlavor flavor]
     (-> this (.getData flavor))))
 
 (defn set-contents
@@ -79,7 +79,7 @@
   owner - the object which owns the clipboard content - `java.awt.datatransfer.ClipboardOwner`
 
   throws: java.lang.IllegalStateException - if the clipboard is currently unavailable"
-  ([this contents owner]
+  ([^java.awt.datatransfer.Clipboard this ^java.awt.datatransfer.Transferable contents ^java.awt.datatransfer.ClipboardOwner owner]
     (-> this (.setContents contents owner))))
 
 (defn get-available-data-flavors
@@ -92,7 +92,7 @@
            contents of this clipboard can be provided - `java.awt.datatransfer.DataFlavor[]`
 
   throws: java.lang.IllegalStateException - if this clipboard is currently unavailable"
-  ([this]
+  ([^java.awt.datatransfer.Clipboard this]
     (-> this (.getAvailableDataFlavors))))
 
 (defn add-flavor-listener
@@ -102,14 +102,14 @@
    is thrown and no action is performed.
 
   listener - the listener to be added - `java.awt.datatransfer.FlavorListener`"
-  ([this listener]
+  ([^java.awt.datatransfer.Clipboard this ^java.awt.datatransfer.FlavorListener listener]
     (-> this (.addFlavorListener listener))))
 
 (defn get-name
   "Returns the name of this clipboard object.
 
   returns: `java.lang.String`"
-  ([this]
+  ([^java.awt.datatransfer.Clipboard this]
     (-> this (.getName))))
 
 (defn remove-flavor-listener
@@ -122,7 +122,7 @@
    is thrown and no action is performed.
 
   listener - the listener to be removed - `java.awt.datatransfer.FlavorListener`"
-  ([this listener]
+  ([^java.awt.datatransfer.Clipboard this ^java.awt.datatransfer.FlavorListener listener]
     (-> this (.removeFlavorListener listener))))
 
 (defn get-contents
@@ -139,6 +139,6 @@
   returns: the current transferable object on the clipboard - `java.awt.datatransfer.Transferable`
 
   throws: java.lang.IllegalStateException - if the clipboard is currently unavailable"
-  ([this requestor]
+  ([^java.awt.datatransfer.Clipboard this ^java.lang.Object requestor]
     (-> this (.getContents requestor))))
 

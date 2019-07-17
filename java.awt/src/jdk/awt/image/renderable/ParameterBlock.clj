@@ -72,9 +72,9 @@
 
   sources - a Vector of source images - `java.util.Vector<java.lang.Object>`
   parameters - a Vector of parameters to be used in the rendering operation - `java.util.Vector<java.lang.Object>`"
-  ([sources parameters]
+  ([^java.util.Vector sources ^java.util.Vector parameters]
     (new ParameterBlock sources parameters))
-  ([sources]
+  ([^java.util.Vector sources]
     (new ParameterBlock sources))
   ([]
     (new ParameterBlock )))
@@ -88,14 +88,14 @@
            the parameter at the specified index
            into the parameters
            Vector. - `java.lang.Object`"
-  ([this index]
+  ([^java.awt.image.renderable.ParameterBlock this ^Integer index]
     (-> this (.getObjectParameter index))))
 
 (defn set-parameters
   "Sets the entire Vector of parameters to a given Vector.
 
   parameters - the specified Vector of parameters - `java.util.Vector<java.lang.Object>`"
-  ([this parameters]
+  ([^java.awt.image.renderable.ParameterBlock this ^java.util.Vector parameters]
     (-> this (.setParameters parameters))))
 
 (defn get-num-sources
@@ -103,7 +103,7 @@
 
   returns: the number of source images in the sources
            Vector. - `int`"
-  ([this]
+  ([^java.awt.image.renderable.ParameterBlock this]
     (-> this (.getNumSources))))
 
 (defn get-param-classes
@@ -111,7 +111,7 @@
    of the parameters.
 
   returns: an array of Class objects. - `java.lang.Class[]`"
-  ([this]
+  ([^java.awt.image.renderable.ParameterBlock this]
     (-> this (.getParamClasses))))
 
 (defn add-source
@@ -123,26 +123,26 @@
 
   returns: a new ParameterBlock containing the specified
            source. - `java.awt.image.renderable.ParameterBlock`"
-  ([this source]
+  ([^java.awt.image.renderable.ParameterBlock this ^java.lang.Object source]
     (-> this (.addSource source))))
 
 (defn remove-parameters
   "Clears the list of parameters."
-  ([this]
+  ([^java.awt.image.renderable.ParameterBlock this]
     (-> this (.removeParameters))))
 
 (defn set-sources
   "Sets the entire Vector of sources to a given Vector.
 
   sources - the Vector of source images - `java.util.Vector<java.lang.Object>`"
-  ([this sources]
+  ([^java.awt.image.renderable.ParameterBlock this ^java.util.Vector sources]
     (-> this (.setSources sources))))
 
 (defn get-parameters
   "Returns the entire Vector of parameters.
 
   returns: the parameters Vector. - `java.util.Vector<java.lang.Object>`"
-  ([this]
+  ([^java.awt.image.renderable.ParameterBlock this]
     (-> this (.getParameters))))
 
 (defn get-int-parameter
@@ -156,7 +156,7 @@
            as a int value. - `int`
 
   throws: java.lang.ClassCastException - if the parameter at the specified index is not a Integer"
-  ([this index]
+  ([^java.awt.image.renderable.ParameterBlock this ^Integer index]
     (-> this (.getIntParameter index))))
 
 (defn get-byte-parameter
@@ -170,7 +170,7 @@
            as a byte value. - `byte`
 
   throws: java.lang.ClassCastException - if the parameter at the specified index is not a Byte"
-  ([this index]
+  ([^java.awt.image.renderable.ParameterBlock this ^Integer index]
     (-> this (.getByteParameter index))))
 
 (defn get-source
@@ -182,7 +182,7 @@
   returns: an Object that represents the source located
            at the specified index in the sources
            Vector. - `java.lang.Object`"
-  ([this index]
+  ([^java.awt.image.renderable.ParameterBlock this ^Integer index]
     (-> this (.getSource index))))
 
 (defn get-long-parameter
@@ -196,7 +196,7 @@
            as a long value. - `long`
 
   throws: java.lang.ClassCastException - if the parameter at the specified index is not a Long"
-  ([this index]
+  ([^java.awt.image.renderable.ParameterBlock this ^Integer index]
     (-> this (.getLongParameter index))))
 
 (defn get-double-parameter
@@ -210,7 +210,7 @@
            as a double value. - `double`
 
   throws: java.lang.ClassCastException - if the parameter at the specified index is not a Double"
-  ([this index]
+  ([^java.awt.image.renderable.ParameterBlock this ^Integer index]
     (-> this (.getDoubleParameter index))))
 
 (defn get-rendered-source
@@ -223,7 +223,7 @@
   returns: a RenderedImage that represents the source
            image that is at the specified index in the
            sources Vector. - `java.awt.image.RenderedImage`"
-  ([this index]
+  ([^java.awt.image.renderable.ParameterBlock this ^Integer index]
     (-> this (.getRenderedSource index))))
 
 (defn clone
@@ -235,12 +235,12 @@
    parameters themselves will still be visible.
 
   returns: an Object clone of the ParameterBlock. - `java.lang.Object`"
-  ([this]
+  ([^java.awt.image.renderable.ParameterBlock this]
     (-> this (.clone))))
 
 (defn remove-sources
   "Clears the list of source images."
-  ([this]
+  ([^java.awt.image.renderable.ParameterBlock this]
     (-> this (.removeSources))))
 
 (defn add
@@ -250,7 +250,7 @@
 
   returns: a new ParameterBlock containing
            the specified parameter. - `java.awt.image.renderable.ParameterBlock`"
-  ([this obj]
+  ([^java.awt.image.renderable.ParameterBlock this ^java.lang.Object obj]
     (-> this (.add obj))))
 
 (defn get-num-parameters
@@ -258,7 +258,7 @@
 
   returns: the number of parameters in the parameters
            Vector. - `int`"
-  ([this]
+  ([^java.awt.image.renderable.ParameterBlock this]
     (-> this (.getNumParameters))))
 
 (defn set
@@ -271,7 +271,7 @@
 
   returns: a new ParameterBlock containing
           the specified parameter. - `java.awt.image.renderable.ParameterBlock`"
-  ([this obj index]
+  ([^java.awt.image.renderable.ParameterBlock this ^java.lang.Object obj ^Integer index]
     (-> this (.set obj index))))
 
 (defn get-renderable-source
@@ -284,7 +284,7 @@
   returns: a RenderableImage that represents the source
            image that is at the specified index in the
            sources Vector. - `java.awt.image.renderable.RenderableImage`"
-  ([this index]
+  ([^java.awt.image.renderable.ParameterBlock this ^Integer index]
     (-> this (.getRenderableSource index))))
 
 (defn shallow-clone
@@ -293,14 +293,14 @@
    changes will be visible to both versions.
 
   returns: an Object clone of the ParameterBlock. - `java.lang.Object`"
-  ([this]
+  ([^java.awt.image.renderable.ParameterBlock this]
     (-> this (.shallowClone))))
 
 (defn get-sources
   "Returns the entire Vector of sources.
 
   returns: the sources Vector. - `java.util.Vector<java.lang.Object>`"
-  ([this]
+  ([^java.awt.image.renderable.ParameterBlock this]
     (-> this (.getSources))))
 
 (defn get-char-parameter
@@ -314,7 +314,7 @@
            as a char value. - `char`
 
   throws: java.lang.ClassCastException - if the parameter at the specified index is not a Character"
-  ([this index]
+  ([^java.awt.image.renderable.ParameterBlock this ^Integer index]
     (-> this (.getCharParameter index))))
 
 (defn get-short-parameter
@@ -328,7 +328,7 @@
            as a short value. - `short`
 
   throws: java.lang.ClassCastException - if the parameter at the specified index is not a Short"
-  ([this index]
+  ([^java.awt.image.renderable.ParameterBlock this ^Integer index]
     (-> this (.getShortParameter index))))
 
 (defn set-source
@@ -342,7 +342,7 @@
   returns: a new ParameterBlock that contains the
            specified source at the specified
            index. - `java.awt.image.renderable.ParameterBlock`"
-  ([this source index]
+  ([^java.awt.image.renderable.ParameterBlock this ^java.lang.Object source ^Integer index]
     (-> this (.setSource source index))))
 
 (defn get-float-parameter
@@ -356,6 +356,6 @@
            as a float value. - `float`
 
   throws: java.lang.ClassCastException - if the parameter at the specified index is not a Float"
-  ([this index]
+  ([^java.awt.image.renderable.ParameterBlock this ^Integer index]
     (-> this (.getFloatParameter index))))
 

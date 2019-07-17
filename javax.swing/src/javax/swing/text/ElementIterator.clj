@@ -43,28 +43,28 @@
    default root element of the document.
 
   document - a Document. - `javax.swing.text.Document`"
-  ([document]
+  ([^javax.swing.text.Document document]
     (new ElementIterator document)))
 
 (defn clone
   "Clones the ElementIterator.
 
   returns: a cloned ElementIterator Object. - `java.lang.Object`"
-  ([this]
+  ([^javax.swing.text.ElementIterator this]
     (-> this (.clone))))
 
 (defn first
   "Fetches the first element.
 
   returns: an Element. - `javax.swing.text.Element`"
-  ([this]
+  ([^javax.swing.text.ElementIterator this]
     (-> this (.first))))
 
 (defn depth
   "Fetches the current depth of element tree.
 
   returns: the depth. - `int`"
-  ([this]
+  ([^javax.swing.text.ElementIterator this]
     (-> this (.depth))))
 
 (defn current
@@ -72,7 +72,7 @@
 
   returns: element on top of the stack or
             null if the root element is null - `javax.swing.text.Element`"
-  ([this]
+  ([^javax.swing.text.ElementIterator this]
     (-> this (.current))))
 
 (defn next
@@ -82,7 +82,7 @@
 
   returns: the next element or null
             at the end of the list. - `javax.swing.text.Element`"
-  ([this]
+  ([^javax.swing.text.ElementIterator this]
     (-> this (.next))))
 
 (defn previous
@@ -91,6 +91,6 @@
    is null, then null is returned.
 
   returns: previous Element if available - `javax.swing.text.Element`"
-  ([this]
+  ([^javax.swing.text.ElementIterator this]
     (-> this (.previous))))
 

@@ -53,7 +53,7 @@
   returns: An empty enum set of the specified type. - `<E extends java.lang.Enum<E>> java.util.EnumSet<E>`
 
   throws: java.lang.NullPointerException - if elementType is null"
-  ([element-type]
+  ([^java.lang.Class element-type]
     (EnumSet>/noneOf element-type)))
 
 (defn *all-of
@@ -65,7 +65,7 @@
   returns: An enum set containing all the elements in the specified type. - `<E extends java.lang.Enum<E>> java.util.EnumSet<E>`
 
   throws: java.lang.NullPointerException - if elementType is null"
-  ([element-type]
+  ([^java.lang.Class element-type]
     (EnumSet>/allOf element-type)))
 
 (defn *copy-of
@@ -77,7 +77,7 @@
   returns: A copy of the specified enum set. - `<E extends java.lang.Enum<E>> java.util.EnumSet<E>`
 
   throws: java.lang.NullPointerException - if s is null"
-  ([s]
+  ([^java.util.EnumSet s]
     (EnumSet>/copyOf s)))
 
 (defn *complement-of
@@ -90,7 +90,7 @@
   returns: The complement of the specified set in this set - `<E extends java.lang.Enum<E>> java.util.EnumSet<E>`
 
   throws: java.lang.NullPointerException - if s is null"
-  ([s]
+  ([^java.util.EnumSet s]
     (EnumSet>/complementOf s)))
 
 (defn *of
@@ -142,6 +142,6 @@
   "Returns a copy of this set.
 
   returns: a copy of this set - `java.util.EnumSet<EnumSet.E>`"
-  ([this]
+  ([^java.util.EnumSet> this]
     (-> this (.clone))))
 

@@ -15,7 +15,7 @@
   c - component to create UI object for - `javax.swing.JComponent`
 
   returns: the UI object - `javax.swing.plaf.ComponentUI`"
-  ([c]
+  ([^javax.swing.JComponent c]
     (SynthPanelUI/createUI c)))
 
 (defn install-ui
@@ -38,7 +38,7 @@
    Initialize any appropriate instance data.
 
   c - the component where this UI delegate is being installed - `javax.swing.JComponent`"
-  ([this c]
+  ([^javax.swing.plaf.synth.SynthPanelUI this ^javax.swing.JComponent c]
     (-> this (.installUI c))))
 
 (defn uninstall-ui
@@ -59,7 +59,7 @@
    Nullify any allocated instance data objects to allow for GC.
 
   c - the component from which this UI delegate is being removed; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([this c]
+  ([^javax.swing.plaf.synth.SynthPanelUI this ^javax.swing.JComponent c]
     (-> this (.uninstallUI c))))
 
 (defn get-context
@@ -68,7 +68,7 @@
   c - Component requesting SynthContext. - `javax.swing.JComponent`
 
   returns: SynthContext describing component. - `javax.swing.plaf.synth.SynthContext`"
-  ([this c]
+  ([^javax.swing.plaf.synth.SynthPanelUI this ^javax.swing.JComponent c]
     (-> this (.getContext c))))
 
 (defn update
@@ -81,7 +81,7 @@
 
   g - the Graphics object used for painting - `java.awt.Graphics`
   c - the component being painted - `javax.swing.JComponent`"
-  ([this g c]
+  ([^javax.swing.plaf.synth.SynthPanelUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.update g c))))
 
 (defn paint
@@ -91,7 +91,7 @@
 
   g - the Graphics object used for painting - `java.awt.Graphics`
   c - the component being painted - `javax.swing.JComponent`"
-  ([this g c]
+  ([^javax.swing.plaf.synth.SynthPanelUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.paint g c))))
 
 (defn paint-border
@@ -103,13 +103,13 @@
   y - the Y coordinate - `int`
   w - width of the border - `int`
   h - height of the border - `int`"
-  ([this context g x y w h]
+  ([^javax.swing.plaf.synth.SynthPanelUI this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintBorder context g x y w h))))
 
 (defn property-change
   "This method gets called when a bound property is changed.
 
   pce - A PropertyChangeEvent object describing the event source and the property that has changed. - `java.beans.PropertyChangeEvent`"
-  ([this pce]
+  ([^javax.swing.plaf.synth.SynthPanelUI this ^java.beans.PropertyChangeEvent pce]
     (-> this (.propertyChange pce))))
 

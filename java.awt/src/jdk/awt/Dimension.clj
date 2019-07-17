@@ -25,9 +25,9 @@
 
   width - the specified width - `int`
   height - the specified height - `int`"
-  ([width height]
+  ([^Integer width ^Integer height]
     (new Dimension width height))
-  ([d]
+  ([^java.awt.Dimension d]
     (new Dimension d))
   ([]
     (new Dimension )))
@@ -55,7 +55,7 @@
    precision.
 
   returns: the width of this Dimension. - `double`"
-  ([this]
+  ([^java.awt.Dimension this]
     (-> this (.getWidth))))
 
 (defn get-height
@@ -63,7 +63,7 @@
    precision.
 
   returns: the height of this Dimension. - `double`"
-  ([this]
+  ([^java.awt.Dimension this]
     (-> this (.getHeight))))
 
 (defn set-size
@@ -75,9 +75,9 @@
 
   width - the new width for the Dimension object - `double`
   height - the new height for the Dimension object - `double`"
-  ([this width height]
+  ([^java.awt.Dimension this ^Double width ^Double height]
     (-> this (.setSize width height)))
-  ([this d]
+  ([^java.awt.Dimension this ^java.awt.Dimension d]
     (-> this (.setSize d))))
 
 (defn get-size
@@ -87,7 +87,7 @@
 
   returns: the size of this dimension, a new instance of
              Dimension with the same width and height - `java.awt.Dimension`"
-  ([this]
+  ([^java.awt.Dimension this]
     (-> this (.getSize))))
 
 (defn equals
@@ -97,14 +97,14 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.awt.Dimension this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Returns the hash code for this Dimension.
 
   returns: a hash code for this Dimension - `int`"
-  ([this]
+  ([^java.awt.Dimension this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -117,6 +117,6 @@
 
   returns: a string representation of this Dimension
             object - `java.lang.String`"
-  ([this]
+  ([^java.awt.Dimension this]
     (-> this (.toString))))
 

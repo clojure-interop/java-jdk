@@ -38,7 +38,7 @@
   orientation - an integer specifying SwingConstants.HORIZONTAL or SwingConstants.VERTICAL - `int`
 
   throws: java.lang.IllegalArgumentException - if orientation is neither SwingConstants.HORIZONTAL nor SwingConstants.VERTICAL"
-  ([orientation]
+  ([^Integer orientation]
     (new JSeparator orientation))
   ([]
     (new JSeparator )))
@@ -47,26 +47,26 @@
   "Returns the L&F object that renders this component.
 
   returns: the SeparatorUI object that renders this component - `javax.swing.plaf.SeparatorUI`"
-  ([this]
+  ([^javax.swing.JSeparator this]
     (-> this (.getUI))))
 
 (defn set-ui
   "Sets the L&F object that renders this component.
 
   ui - the SeparatorUI L&F object - `javax.swing.plaf.SeparatorUI`"
-  ([this ui]
+  ([^javax.swing.JSeparator this ^javax.swing.plaf.SeparatorUI ui]
     (-> this (.setUI ui))))
 
 (defn update-ui
   "Resets the UI property to a value from the current look and feel."
-  ([this]
+  ([^javax.swing.JSeparator this]
     (-> this (.updateUI))))
 
 (defn get-ui-class-id
   "Returns the name of the L&F class that renders this component.
 
   returns: the string `SeparatorUI` - `java.lang.String`"
-  ([this]
+  ([^javax.swing.JSeparator this]
     (-> this (.getUIClassID))))
 
 (defn get-orientation
@@ -76,7 +76,7 @@
              following constants defined in SwingConstants:
              VERTICAL, or
              HORIZONTAL. - `int`"
-  ([this]
+  ([^javax.swing.JSeparator this]
     (-> this (.getOrientation))))
 
 (defn set-orientation
@@ -86,7 +86,7 @@
   orientation - either SwingConstants.HORIZONTAL or SwingConstants.VERTICAL - `int`
 
   throws: java.lang.IllegalArgumentException - if orientation is neither SwingConstants.HORIZONTAL nor SwingConstants.VERTICAL"
-  ([this orientation]
+  ([^javax.swing.JSeparator this ^Integer orientation]
     (-> this (.setOrientation orientation))))
 
 (defn get-accessible-context
@@ -97,6 +97,6 @@
 
   returns: an AccessibleJSeparator that serves as the
            AccessibleContext of this JSeparator - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^javax.swing.JSeparator this]
     (-> this (.getAccessibleContext))))
 

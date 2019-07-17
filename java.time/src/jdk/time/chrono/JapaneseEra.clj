@@ -74,7 +74,7 @@
   returns: the JapaneseEra singleton, not null - `java.time.chrono.JapaneseEra`
 
   throws: java.time.DateTimeException - if the value is invalid"
-  ([japanese-era]
+  ([^Integer japanese-era]
     (JapaneseEra/of japanese-era)))
 
 (defn *value-of
@@ -88,7 +88,7 @@
   returns: the JapaneseEra singleton, never null - `java.time.chrono.JapaneseEra`
 
   throws: java.lang.IllegalArgumentException - if there is not JapaneseEra with the specified name"
-  ([japanese-era]
+  ([^java.lang.String japanese-era]
     (JapaneseEra/valueOf japanese-era)))
 
 (defn *values
@@ -117,7 +117,7 @@
   locale - the locale to use, not null - `java.util.Locale`
 
   returns: the text value of the era, not null - `java.lang.String`"
-  ([this style locale]
+  ([^java.time.chrono.JapaneseEra this ^java.time.format.TextStyle style ^java.util.Locale locale]
     (-> this (.getDisplayName style locale))))
 
 (defn get-value
@@ -128,7 +128,7 @@
    Earlier eras are numbered 0 (TAISHO), -1 (MEIJI)).
 
   returns: the era value - `int`"
-  ([this]
+  ([^java.time.chrono.JapaneseEra this]
     (-> this (.getValue))))
 
 (defn range
@@ -156,13 +156,13 @@
   returns: the range of valid values for the field, not null - `java.time.temporal.ValueRange`
 
   throws: java.time.DateTimeException - if the range for the field cannot be obtained"
-  ([this field]
+  ([^java.time.chrono.JapaneseEra this ^java.time.temporal.TemporalField field]
     (-> this (.range field))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^java.time.chrono.JapaneseEra this]
     (-> this (.toString))))
 

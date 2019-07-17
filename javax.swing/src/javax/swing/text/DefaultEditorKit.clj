@@ -483,7 +483,7 @@
    is text/plain.
 
   returns: the type - `java.lang.String`"
-  ([this]
+  ([^javax.swing.text.DefaultEditorKit this]
     (-> this (.getContentType))))
 
 (defn get-view-factory
@@ -493,7 +493,7 @@
    factory, so this method has no implementation.
 
   returns: the view factory - `javax.swing.text.ViewFactory`"
-  ([this]
+  ([^javax.swing.text.DefaultEditorKit this]
     (-> this (.getViewFactory))))
 
 (defn get-actions
@@ -502,7 +502,7 @@
    view produced by this kit.
 
   returns: the command list - `javax.swing.Action[]`"
-  ([this]
+  ([^javax.swing.text.DefaultEditorKit this]
     (-> this (.getActions))))
 
 (defn create-caret
@@ -510,7 +510,7 @@
    produced by the associated ViewFactory.
 
   returns: the caret - `javax.swing.text.Caret`"
-  ([this]
+  ([^javax.swing.text.DefaultEditorKit this]
     (-> this (.createCaret))))
 
 (defn create-default-document
@@ -518,7 +518,7 @@
    that is appropriate for this type of editor.
 
   returns: the model - `javax.swing.text.Document`"
-  ([this]
+  ([^javax.swing.text.DefaultEditorKit this]
     (-> this (.createDefaultDocument))))
 
 (defn read
@@ -531,7 +531,7 @@
   pos - The location in the document to place the content >=0. - `int`
 
   throws: java.io.IOException - on any I/O error"
-  ([this in doc pos]
+  ([^javax.swing.text.DefaultEditorKit this ^java.io.InputStream in ^javax.swing.text.Document doc ^Integer pos]
     (-> this (.read in doc pos))))
 
 (defn write
@@ -544,6 +544,6 @@
   len - The amount to write out >=0. - `int`
 
   throws: java.io.IOException - on any I/O error"
-  ([this out doc pos len]
+  ([^javax.swing.text.DefaultEditorKit this ^java.io.OutputStream out ^javax.swing.text.Document doc ^Integer pos ^Integer len]
     (-> this (.write out doc pos len))))
 

@@ -14,23 +14,23 @@
 
   key - the key represented by this entry - `AbstractMap.SimpleImmutableEntry.K`
   value - the value represented by this entry - `AbstractMap.SimpleImmutableEntry.V`"
-  ([key value]
+  ([^AbstractMap.SimpleImmutableEntry.K key ^AbstractMap.SimpleImmutableEntry.V value]
     (new AbstractMap$SimpleImmutableEntry key value))
-  ([entry]
+  ([^AbstractMap.SimpleImmutableEntry.V> entry]
     (new AbstractMap$SimpleImmutableEntry entry)))
 
 (defn get-key
   "Returns the key corresponding to this entry.
 
   returns: the key corresponding to this entry - `AbstractMap.SimpleImmutableEntry.K`"
-  ([this]
+  ([^java.util.AbstractMap$SimpleImmutableEntry this]
     (-> this (.getKey))))
 
 (defn get-value
   "Returns the value corresponding to this entry.
 
   returns: the value corresponding to this entry - `AbstractMap.SimpleImmutableEntry.V`"
-  ([this]
+  ([^java.util.AbstractMap$SimpleImmutableEntry this]
     (-> this (.getValue))))
 
 (defn set-value
@@ -44,7 +44,7 @@
   returns: (Does not return) - `AbstractMap.SimpleImmutableEntry.V`
 
   throws: java.lang.UnsupportedOperationException - always"
-  ([this value]
+  ([^java.util.AbstractMap$SimpleImmutableEntry this ^AbstractMap.SimpleImmutableEntry.V value]
     (-> this (.setValue value))))
 
 (defn equals
@@ -68,7 +68,7 @@
 
   returns: true if the specified object is equal to this map
            entry - `boolean`"
-  ([this o]
+  ([^java.util.AbstractMap$SimpleImmutableEntry this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn hash-code
@@ -83,7 +83,7 @@
    contract of Object.hashCode().
 
   returns: the hash code value for this map entry - `int`"
-  ([this]
+  ([^java.util.AbstractMap$SimpleImmutableEntry this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -93,6 +93,6 @@
    followed by the string representation of this entry's value.
 
   returns: a String representation of this map entry - `java.lang.String`"
-  ([this]
+  ([^java.util.AbstractMap$SimpleImmutableEntry this]
     (-> this (.toString))))
 

@@ -27,14 +27,14 @@
   "Invoked when a window has been opened.
 
   e - `java.awt.event.WindowEvent`"
-  ([this e]
+  ([^java.awt.event.WindowAdapter this ^java.awt.event.WindowEvent e]
     (-> this (.windowOpened e))))
 
 (defn window-state-changed
   "Invoked when a window state is changed.
 
   e - `java.awt.event.WindowEvent`"
-  ([this e]
+  ([^java.awt.event.WindowAdapter this ^java.awt.event.WindowEvent e]
     (-> this (.windowStateChanged e))))
 
 (defn window-gained-focus
@@ -43,7 +43,7 @@
    events.
 
   e - `java.awt.event.WindowEvent`"
-  ([this e]
+  ([^java.awt.event.WindowAdapter this ^java.awt.event.WindowEvent e]
     (-> this (.windowGainedFocus e))))
 
 (defn window-closing
@@ -51,35 +51,35 @@
    The close operation can be overridden at this point.
 
   e - `java.awt.event.WindowEvent`"
-  ([this e]
+  ([^java.awt.event.WindowAdapter this ^java.awt.event.WindowEvent e]
     (-> this (.windowClosing e))))
 
 (defn window-closed
   "Invoked when a window has been closed.
 
   e - `java.awt.event.WindowEvent`"
-  ([this e]
+  ([^java.awt.event.WindowAdapter this ^java.awt.event.WindowEvent e]
     (-> this (.windowClosed e))))
 
 (defn window-activated
   "Invoked when a window is activated.
 
   e - `java.awt.event.WindowEvent`"
-  ([this e]
+  ([^java.awt.event.WindowAdapter this ^java.awt.event.WindowEvent e]
     (-> this (.windowActivated e))))
 
 (defn window-iconified
   "Invoked when a window is iconified.
 
   e - `java.awt.event.WindowEvent`"
-  ([this e]
+  ([^java.awt.event.WindowAdapter this ^java.awt.event.WindowEvent e]
     (-> this (.windowIconified e))))
 
 (defn window-deactivated
   "Invoked when a window is de-activated.
 
   e - `java.awt.event.WindowEvent`"
-  ([this e]
+  ([^java.awt.event.WindowAdapter this ^java.awt.event.WindowEvent e]
     (-> this (.windowDeactivated e))))
 
 (defn window-lost-focus
@@ -88,13 +88,13 @@
    its subcomponents.
 
   e - `java.awt.event.WindowEvent`"
-  ([this e]
+  ([^java.awt.event.WindowAdapter this ^java.awt.event.WindowEvent e]
     (-> this (.windowLostFocus e))))
 
 (defn window-deiconified
   "Invoked when a window is de-iconified.
 
   e - `java.awt.event.WindowEvent`"
-  ([this e]
+  ([^java.awt.event.WindowAdapter this ^java.awt.event.WindowEvent e]
     (-> this (.windowDeiconified e))))
 

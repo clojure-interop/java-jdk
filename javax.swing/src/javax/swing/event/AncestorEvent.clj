@@ -23,7 +23,7 @@
   id - an int specifying ANCESTOR_ADDED, ANCESTOR_REMOVED or ANCESTOR_MOVED - `int`
   ancestor - a Container object specifying the ancestor-component whose display-status changed - `java.awt.Container`
   ancestor-parent - a Container object specifying the ancestor's parent - `java.awt.Container`"
-  ([source id ancestor ancestor-parent]
+  ([^javax.swing.JComponent source ^Integer id ^java.awt.Container ancestor ^java.awt.Container ancestor-parent]
     (new AncestorEvent source id ancestor ancestor-parent)))
 
 (def *-ancestor-added
@@ -56,7 +56,7 @@
   "Returns the ancestor that the event actually occurred on.
 
   returns: `java.awt.Container`"
-  ([this]
+  ([^javax.swing.event.AncestorEvent this]
     (-> this (.getAncestor))))
 
 (defn get-ancestor-parent
@@ -65,13 +65,13 @@
    the ancestor may no longer be in the component hierarchy.
 
   returns: `java.awt.Container`"
-  ([this]
+  ([^javax.swing.event.AncestorEvent this]
     (-> this (.getAncestorParent))))
 
 (defn get-component
   "Returns the component that the listener was added to.
 
   returns: `javax.swing.JComponent`"
-  ([this]
+  ([^javax.swing.event.AncestorEvent this]
     (-> this (.getComponent))))
 

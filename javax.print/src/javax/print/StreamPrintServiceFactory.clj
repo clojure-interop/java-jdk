@@ -43,7 +43,7 @@
 
   returns: - matching factories for stream print service instance,
              empty if no suitable factories could be located. - `javax.print.StreamPrintServiceFactory[]`"
-  ([flavor output-mime-type]
+  ([^javax.print.DocFlavor flavor ^java.lang.String output-mime-type]
     (StreamPrintServiceFactory/lookupStreamPrintServiceFactories flavor output-mime-type)))
 
 (defn get-output-format
@@ -51,7 +51,7 @@
    by printers obtained from this factory.
 
   returns: the output format described as a mime type. - `java.lang.String`"
-  ([this]
+  ([^javax.print.StreamPrintServiceFactory this]
     (-> this (.getOutputFormat))))
 
 (defn get-supported-doc-flavors
@@ -59,7 +59,7 @@
    by printers obtained from this factory.
 
   returns: array of supported doc flavors. - `javax.print.DocFlavor[]`"
-  ([this]
+  ([^javax.print.StreamPrintServiceFactory this]
     (-> this (.getSupportedDocFlavors))))
 
 (defn get-print-service
@@ -94,6 +94,6 @@
 
   returns: a PrintService which will generate the format specified by the
    DocFlavor supported by this Factory. - `javax.print.StreamPrintService`"
-  ([this out]
+  ([^javax.print.StreamPrintServiceFactory this ^java.io.OutputStream out]
     (-> this (.getPrintService out))))
 

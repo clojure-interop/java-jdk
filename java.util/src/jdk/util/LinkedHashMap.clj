@@ -124,11 +124,11 @@
   access-order - the ordering mode - true for access-order, false for insertion-order - `boolean`
 
   throws: java.lang.IllegalArgumentException - if the initial capacity is negative or the load factor is nonpositive"
-  ([initial-capacity load-factor access-order]
+  ([^Integer initial-capacity ^Float load-factor ^Boolean access-order]
     (new LinkedHashMap initial-capacity load-factor access-order))
-  ([initial-capacity load-factor]
+  ([^Integer initial-capacity ^Float load-factor]
     (new LinkedHashMap initial-capacity load-factor))
-  ([initial-capacity]
+  ([^Integer initial-capacity]
     (new LinkedHashMap initial-capacity))
   ([]
     (new LinkedHashMap )))
@@ -150,21 +150,21 @@
    HashMap.
 
   returns: a view of the values contained in this map - `java.util.Collection<LinkedHashMap.V>`"
-  ([this]
+  ([^java.util.LinkedHashMap this]
     (-> this (.values))))
 
 (defn for-each
   "Description copied from interface: Map
 
   action - The action to be performed for each entry - `LinkedHashMap.V>`"
-  ([this action]
+  ([^java.util.LinkedHashMap this ^LinkedHashMap.V> action]
     (-> this (.forEach action))))
 
 (defn replace-all
   "Description copied from interface: Map
 
   function - the function to apply to each entry - `LinkedHashMap.V>`"
-  ([this function]
+  ([^java.util.LinkedHashMap this ^LinkedHashMap.V> function]
     (-> this (.replaceAll function))))
 
 (defn entry-set
@@ -185,7 +185,7 @@
    HashMap.
 
   returns: a set view of the mappings contained in this map - `java.util.Set<java.util.Map.Entry<LinkedHashMap.K,LinkedHashMap.V>>`"
-  ([this]
+  ([^java.util.LinkedHashMap this]
     (-> this (.entrySet))))
 
 (defn contains-value
@@ -196,7 +196,7 @@
 
   returns: true if this map maps one or more keys to the
            specified value - `boolean`"
-  ([this value]
+  ([^java.util.LinkedHashMap this ^java.lang.Object value]
     (-> this (.containsValue value))))
 
 (defn get-or-default
@@ -208,7 +208,7 @@
 
   returns: the value to which the specified key is mapped, or
    defaultValue if this map contains no mapping for the key - `LinkedHashMap.V`"
-  ([this key default-value]
+  ([^java.util.LinkedHashMap this ^java.lang.Object key ^LinkedHashMap.V default-value]
     (-> this (.getOrDefault key default-value))))
 
 (defn key-set
@@ -228,13 +228,13 @@
    HashMap.
 
   returns: a set view of the keys contained in this map - `java.util.Set<LinkedHashMap.K>`"
-  ([this]
+  ([^java.util.LinkedHashMap this]
     (-> this (.keySet))))
 
 (defn clear
   "Removes all of the mappings from this map.
    The map will be empty after this call returns."
-  ([this]
+  ([^java.util.LinkedHashMap this]
     (-> this (.clear))))
 
 (defn get
@@ -256,6 +256,6 @@
 
   returns: the value to which the specified key is mapped, or
            null if this map contains no mapping for the key - `LinkedHashMap.V`"
-  ([this key]
+  ([^java.util.LinkedHashMap this ^java.lang.Object key]
     (-> this (.get key))))
 

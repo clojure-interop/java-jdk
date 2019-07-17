@@ -146,7 +146,7 @@
    when undoable edits are made to the document.
 
   listener - the observer to register - `javax.swing.event.UndoableEditListener`"
-  ([this listener]
+  ([^. this ^javax.swing.event.UndoableEditListener listener]
     (-> this (.addUndoableEditListener listener))))
 
 (defn remove-undoable-edit-listener
@@ -154,7 +154,7 @@
    so it will no longer receive updates.
 
   listener - the observer to register - `javax.swing.event.UndoableEditListener`"
-  ([this listener]
+  ([^. this ^javax.swing.event.UndoableEditListener listener]
     (-> this (.removeUndoableEditListener listener))))
 
 (defn get-text
@@ -188,9 +188,9 @@
   txt - the Segment object to return the text in - `javax.swing.text.Segment`
 
   throws: javax.swing.text.BadLocationException - Some portion of the given range was not a valid part of the document. The location in the exception is the first bad position encountered."
-  ([this offset length txt]
+  ([^. this ^Integer offset ^Integer length ^javax.swing.text.Segment txt]
     (-> this (.getText offset length txt)))
-  ([this offset length]
+  ([^. this ^Integer offset ^Integer length]
     (-> this (.getText offset length))))
 
 (defn remove-document-listener
@@ -198,7 +198,7 @@
    so it will no longer receive change updates.
 
   listener - the observer to register - `javax.swing.event.DocumentListener`"
-  ([this listener]
+  ([^. this ^javax.swing.event.DocumentListener listener]
     (-> this (.removeDocumentListener listener))))
 
 (defn get-root-elements
@@ -218,7 +218,7 @@
    Annotations.
 
   returns: the root element - `javax.swing.text.Element[]`"
-  ([this]
+  ([^. this]
     (-> this (.getRootElements))))
 
 (defn remove
@@ -255,7 +255,7 @@
   len - the number of characters to remove >= 0 - `int`
 
   throws: javax.swing.text.BadLocationException - some portion of the removal range was not a valid part of the document. The location in the exception is the first bad position encountered."
-  ([this offs len]
+  ([^. this ^Integer offs ^Integer len]
     (-> this (.remove offs len))))
 
 (defn get-start-position
@@ -264,7 +264,7 @@
    located at the beginning of the document.
 
   returns: the position - `javax.swing.text.Position`"
-  ([this]
+  ([^. this]
     (-> this (.getStartPosition))))
 
 (defn get-length
@@ -272,7 +272,7 @@
    in the document.
 
   returns: number of characters >= 0 - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getLength))))
 
 (defn get-property
@@ -281,7 +281,7 @@
   key - a non-null property key - `java.lang.Object`
 
   returns: the properties - `java.lang.Object`"
-  ([this key]
+  ([^. this ^java.lang.Object key]
     (-> this (.getProperty key))))
 
 (defn render
@@ -293,7 +293,7 @@
    make any mutations.
 
   r - a Runnable used to render the model - `java.lang.Runnable`"
-  ([this r]
+  ([^. this ^java.lang.Runnable r]
     (-> this (.render r))))
 
 (defn put-property
@@ -305,7 +305,7 @@
 
   key - the non-null property key - `java.lang.Object`
   value - the property value - `java.lang.Object`"
-  ([this key value]
+  ([^. this ^java.lang.Object key ^java.lang.Object value]
     (-> this (.putProperty key value))))
 
 (defn add-document-listener
@@ -313,7 +313,7 @@
    when changes are made to the document.
 
   listener - the observer to register - `javax.swing.event.DocumentListener`"
-  ([this listener]
+  ([^. this ^javax.swing.event.DocumentListener listener]
     (-> this (.addDocumentListener listener))))
 
 (defn insert-string
@@ -341,7 +341,7 @@
   a - the attributes to associate with the inserted content. This may be null if there are no attributes. - `javax.swing.text.AttributeSet`
 
   throws: javax.swing.text.BadLocationException - the given insert position is not a valid position within the document"
-  ([this offset str a]
+  ([^. this ^Integer offset ^java.lang.String str ^javax.swing.text.AttributeSet a]
     (-> this (.insertString offset str a))))
 
 (defn get-end-position
@@ -350,7 +350,7 @@
    located at the end of the document.
 
   returns: the position - `javax.swing.text.Position`"
-  ([this]
+  ([^. this]
     (-> this (.getEndPosition))))
 
 (defn get-default-root-element
@@ -359,7 +359,7 @@
    structures is provided.
 
   returns: the root element - `javax.swing.text.Element`"
-  ([this]
+  ([^. this]
     (-> this (.getDefaultRootElement))))
 
 (defn create-position
@@ -377,6 +377,6 @@
   returns: the position - `javax.swing.text.Position`
 
   throws: javax.swing.text.BadLocationException - if the given position does not represent a valid location in the associated document"
-  ([this offs]
+  ([^. this ^Integer offs]
     (-> this (.createPosition offs))))
 

@@ -27,14 +27,14 @@
    retrieved). - `javax.management.relation.RoleResult`
 
   throws: java.lang.IllegalArgumentException - if null role name"
-  ([this role-name-array]
+  ([^. this ^java.lang.String[] role-name-array]
     (-> this (.getRoles role-name-array))))
 
 (defn get-relation-type-name
   "Returns name of associated relation type.
 
   returns: the name of the relation type. - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getRelationTypeName))))
 
 (defn get-role
@@ -47,14 +47,14 @@
   returns: the ArrayList of ObjectName objects being the role value - `java.util.List<javax.management.ObjectName>`
 
   throws: java.lang.IllegalArgumentException - if null role name"
-  ([this role-name]
+  ([^. this ^java.lang.String role-name]
     (-> this (.getRole role-name))))
 
 (defn retrieve-all-roles
   "Returns all roles in the relation without checking read mode.
 
   returns: a RoleList. - `javax.management.relation.RoleList`"
-  ([this]
+  ([^. this]
     (-> this (.retrieveAllRoles))))
 
 (defn get-role-cardinality
@@ -65,7 +65,7 @@
   returns: the number of currently referenced MBeans in that role - `java.lang.Integer`
 
   throws: java.lang.IllegalArgumentException - if null role name"
-  ([this role-name]
+  ([^. this ^java.lang.String role-name]
     (-> this (.getRoleCardinality role-name))))
 
 (defn get-all-roles
@@ -76,7 +76,7 @@
    readable). - `javax.management.relation.RoleResult`
 
   throws: javax.management.relation.RelationServiceNotRegisteredException - if the Relation Service is not registered in the MBean Server"
-  ([this]
+  ([^. this]
     (-> this (.getAllRoles))))
 
 (defn set-role
@@ -90,7 +90,7 @@
   role - role to be set (name and new value) - `javax.management.relation.Role`
 
   throws: java.lang.IllegalArgumentException - if null role"
-  ([this role]
+  ([^. this ^javax.management.relation.Role role]
     (-> this (.setRole role))))
 
 (defn get-relation-id
@@ -98,7 +98,7 @@
    inside the Relation Service).
 
   returns: the relation id. - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getRelationId))))
 
 (defn get-referenced-m-beans
@@ -106,7 +106,7 @@
 
   returns: a HashMap mapping:
     ObjectName -> ArrayList of String (role names) - `java.util.Map<javax.management.ObjectName,java.util.List<java.lang.String>>`"
-  ([this]
+  ([^. this]
     (-> this (.getReferencedMBeans))))
 
 (defn set-roles
@@ -124,14 +124,14 @@
    set). - `javax.management.relation.RoleResult`
 
   throws: java.lang.IllegalArgumentException - if null role list"
-  ([this role-list]
+  ([^. this ^javax.management.relation.RoleList role-list]
     (-> this (.setRoles role-list))))
 
 (defn get-relation-service-name
   "Returns ObjectName of the Relation Service handling the relation.
 
   returns: the ObjectName of the Relation Service. - `javax.management.ObjectName`"
-  ([this]
+  ([^. this]
     (-> this (.getRelationServiceName))))
 
 (defn handle-m-bean-unregistration
@@ -148,6 +148,6 @@
   role-name - name of role where the MBean is referenced - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if null parameter"
-  ([this object-name role-name]
+  ([^. this ^javax.management.ObjectName object-name ^java.lang.String role-name]
     (-> this (.handleMBeanUnregistration object-name role-name))))
 

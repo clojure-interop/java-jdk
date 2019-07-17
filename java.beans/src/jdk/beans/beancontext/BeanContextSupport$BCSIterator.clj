@@ -8,18 +8,18 @@
   "Description copied from interface: Iterator
 
   returns: true if the iteration has more elements - `boolean`"
-  ([this]
+  ([^java.beans.beancontext.BeanContextSupport$BCSIterator this]
     (-> this (.hasNext))))
 
 (defn next
   "Description copied from interface: Iterator
 
   returns: the next element in the iteration - `java.lang.Object`"
-  ([this]
+  ([^java.beans.beancontext.BeanContextSupport$BCSIterator this]
     (-> this (.next))))
 
 (defn remove
   "Description copied from interface: Iterator"
-  ([this]
+  ([^java.beans.beancontext.BeanContextSupport$BCSIterator this]
     (-> this (.remove))))
 

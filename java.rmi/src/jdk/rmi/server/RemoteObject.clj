@@ -16,7 +16,7 @@
   returns: the stub for the remote object, obj. - `java.rmi.Remote`
 
   throws: java.rmi.NoSuchObjectException - if the stub for the remote object could not be found."
-  ([obj]
+  ([^java.rmi.Remote obj]
     (RemoteObject/toStub obj)))
 
 (defn get-ref
@@ -32,7 +32,7 @@
    be unportable.
 
   returns: remote reference for the remote object - `java.rmi.server.RemoteRef`"
-  ([this]
+  ([^java.rmi.server.RemoteObject this]
     (-> this (.getRef))))
 
 (defn hash-code
@@ -41,7 +41,7 @@
    (in order to support remote objects as keys in hash tables).
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^java.rmi.server.RemoteObject this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -57,13 +57,13 @@
   obj - the Object to compare with - `java.lang.Object`
 
   returns: true if these Objects are equal; false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.rmi.server.RemoteObject this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn to-string
   "Returns a String that represents the value of this remote object.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^java.rmi.server.RemoteObject this]
     (-> this (.toString))))
 

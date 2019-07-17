@@ -43,7 +43,7 @@
   html - `java.lang.String`
 
   returns: `javax.swing.text.View`"
-  ([c html]
+  ([^javax.swing.JComponent c ^java.lang.String html]
     (BasicHTML/createHTMLView c html)))
 
 (defn *get-html-baseline
@@ -57,7 +57,7 @@
                     baseline - `int`
 
   throws: java.lang.IllegalArgumentException - if width or height is < 0"
-  ([view w h]
+  ([^javax.swing.text.View view ^Integer w ^Integer h]
     (BasicHTML/getHTMLBaseline view w h)))
 
 (defn *html-string?
@@ -68,7 +68,7 @@
   s - `java.lang.String`
 
   returns: `boolean`"
-  ([s]
+  ([^java.lang.String s]
     (BasicHTML/isHTMLString s)))
 
 (defn *update-renderer
@@ -83,6 +83,6 @@
 
   c - `javax.swing.JComponent`
   text - `java.lang.String`"
-  ([c text]
+  ([^javax.swing.JComponent c ^java.lang.String text]
     (BasicHTML/updateRenderer c text)))
 

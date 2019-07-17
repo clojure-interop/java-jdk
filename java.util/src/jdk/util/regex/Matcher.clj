@@ -73,7 +73,7 @@
   s - The string to be literalized - `java.lang.String`
 
   returns: A literal string replacement - `java.lang.String`"
-  ([s]
+  ([^java.lang.String s]
     (Matcher/quoteReplacement s)))
 
 (defn replace-all
@@ -107,7 +107,7 @@
   returns: The string constructed by replacing each matching subsequence
             by the replacement string, substituting captured subsequences
             as needed - `java.lang.String`"
-  ([this replacement]
+  ([^java.util.regex.Matcher this ^java.lang.String replacement]
     (-> this (.replaceAll replacement))))
 
 (defn use-anchoring-bounds
@@ -129,7 +129,7 @@
   b - a boolean indicating whether or not to use anchoring bounds. - `boolean`
 
   returns: this matcher - `java.util.regex.Matcher`"
-  ([this b]
+  ([^java.util.regex.Matcher this ^Boolean b]
     (-> this (.useAnchoringBounds b))))
 
 (defn find
@@ -149,9 +149,9 @@
             pattern - `boolean`
 
   throws: java.lang.IndexOutOfBoundsException - If start is less than zero or if start is greater than the length of the input sequence."
-  ([this start]
+  ([^java.util.regex.Matcher this ^Integer start]
     (-> this (.find start)))
-  ([this]
+  ([^java.util.regex.Matcher this]
     (-> this (.find))))
 
 (defn has-transparent-bounds?
@@ -168,7 +168,7 @@
 
   returns: true iff this matcher is using transparent bounds,
            false otherwise. - `boolean`"
-  ([this]
+  ([^java.util.regex.Matcher this]
     (-> this (.hasTransparentBounds))))
 
 (defn use-transparent-bounds
@@ -194,7 +194,7 @@
   b - a boolean indicating whether to use opaque or transparent regions - `boolean`
 
   returns: this matcher - `java.util.regex.Matcher`"
-  ([this b]
+  ([^java.util.regex.Matcher this ^Boolean b]
     (-> this (.useTransparentBounds b))))
 
 (defn use-pattern
@@ -211,7 +211,7 @@
   returns: This matcher - `java.util.regex.Matcher`
 
   throws: java.lang.IllegalArgumentException - If newPattern is null"
-  ([this new-pattern]
+  ([^java.util.regex.Matcher this ^java.util.regex.Pattern new-pattern]
     (-> this (.usePattern new-pattern))))
 
 (defn append-tail
@@ -225,7 +225,7 @@
   sb - The target string buffer - `java.lang.StringBuffer`
 
   returns: The target string buffer - `java.lang.StringBuffer`"
-  ([this sb]
+  ([^java.util.regex.Matcher this ^java.lang.StringBuffer sb]
     (-> this (.appendTail sb))))
 
 (defn group
@@ -255,9 +255,9 @@
             failed to match part of the input - `java.lang.String`
 
   throws: java.lang.IllegalStateException - If no match has yet been attempted, or if the previous match operation failed"
-  ([this group]
+  ([^java.util.regex.Matcher this ^Integer group]
     (-> this (.group group)))
-  ([this]
+  ([^java.util.regex.Matcher this]
     (-> this (.group))))
 
 (defn require-end
@@ -272,7 +272,7 @@
 
   returns: true iff more input could change a positive match into a
             negative one. - `boolean`"
-  ([this]
+  ([^java.util.regex.Matcher this]
     (-> this (.requireEnd))))
 
 (defn replace-first
@@ -306,7 +306,7 @@
   returns: The string constructed by replacing the first matching
             subsequence by the replacement string, substituting captured
             subsequences as needed - `java.lang.String`"
-  ([this replacement]
+  ([^java.util.regex.Matcher this ^java.lang.String replacement]
     (-> this (.replaceFirst replacement))))
 
 (defn to-string
@@ -315,7 +315,7 @@
    that may be useful for debugging. The exact format is unspecified.
 
   returns: The string representation of this matcher - `java.lang.String`"
-  ([this]
+  ([^java.util.regex.Matcher this]
     (-> this (.toString))))
 
 (defn reset
@@ -330,9 +330,9 @@
   input - The new input character sequence - `java.lang.CharSequence`
 
   returns: This matcher - `java.util.regex.Matcher`"
-  ([this input]
+  ([^java.util.regex.Matcher this ^java.lang.CharSequence input]
     (-> this (.reset input)))
-  ([this]
+  ([^java.util.regex.Matcher this]
     (-> this (.reset))))
 
 (defn hit-end
@@ -344,7 +344,7 @@
 
   returns: true iff the end of input was hit in the last match; false
             otherwise - `boolean`"
-  ([this]
+  ([^java.util.regex.Matcher this]
     (-> this (.hitEnd))))
 
 (defn region-start
@@ -354,7 +354,7 @@
    regionEnd (exclusive).
 
   returns: The starting point of this matcher's region - `int`"
-  ([this]
+  ([^java.util.regex.Matcher this]
     (-> this (.regionStart))))
 
 (defn to-match-result
@@ -363,7 +363,7 @@
    matcher.
 
   returns: a MatchResult with the state of this matcher - `java.util.regex.MatchResult`"
-  ([this]
+  ([^java.util.regex.Matcher this]
     (-> this (.toMatchResult))))
 
 (defn start
@@ -382,9 +382,9 @@
             itself did not match anything - `int`
 
   throws: java.lang.IllegalStateException - If no match has yet been attempted, or if the previous match operation failed"
-  ([this group]
+  ([^java.util.regex.Matcher this ^Integer group]
     (-> this (.start group)))
-  ([this]
+  ([^java.util.regex.Matcher this]
     (-> this (.start))))
 
 (defn looking-at
@@ -400,7 +400,7 @@
 
   returns: true if, and only if, a prefix of the input
             sequence matches this matcher's pattern - `boolean`"
-  ([this]
+  ([^java.util.regex.Matcher this]
     (-> this (.lookingAt))))
 
 (defn region
@@ -422,7 +422,7 @@
   returns: this matcher - `java.util.regex.Matcher`
 
   throws: java.lang.IndexOutOfBoundsException - If start or end is less than zero, if start is greater than the length of the input sequence, if end is greater than the length of the input sequence, or if start is greater than end."
-  ([this start end]
+  ([^java.util.regex.Matcher this ^Integer start ^Integer end]
     (-> this (.region start end))))
 
 (defn matches
@@ -433,14 +433,14 @@
 
   returns: true if, and only if, the entire region sequence
             matches this matcher's pattern - `boolean`"
-  ([this]
+  ([^java.util.regex.Matcher this]
     (-> this (.matches))))
 
 (defn pattern
   "Returns the pattern that is interpreted by this matcher.
 
   returns: The pattern for which this matcher was created - `java.util.regex.Pattern`"
-  ([this]
+  ([^java.util.regex.Matcher this]
     (-> this (.pattern))))
 
 (defn region-end
@@ -450,7 +450,7 @@
    regionEnd (exclusive).
 
   returns: the ending point of this matcher's region - `int`"
-  ([this]
+  ([^java.util.regex.Matcher this]
     (-> this (.regionEnd))))
 
 (defn has-anchoring-bounds?
@@ -466,7 +466,7 @@
 
   returns: true iff this matcher is using anchoring bounds,
            false otherwise. - `boolean`"
-  ([this]
+  ([^java.util.regex.Matcher this]
     (-> this (.hasAnchoringBounds))))
 
 (defn group-count
@@ -480,7 +480,7 @@
    this matcher.
 
   returns: The number of capturing groups in this matcher's pattern - `int`"
-  ([this]
+  ([^java.util.regex.Matcher this]
     (-> this (.groupCount))))
 
 (defn end
@@ -499,9 +499,9 @@
             but the group itself did not match anything - `int`
 
   throws: java.lang.IllegalStateException - If no match has yet been attempted, or if the previous match operation failed"
-  ([this group]
+  ([^java.util.regex.Matcher this ^Integer group]
     (-> this (.end group)))
-  ([this]
+  ([^java.util.regex.Matcher this]
     (-> this (.end))))
 
 (defn append-replacement
@@ -570,6 +570,6 @@
   returns: This matcher - `java.util.regex.Matcher`
 
   throws: java.lang.IllegalStateException - If no match has yet been attempted, or if the previous match operation failed"
-  ([this sb replacement]
+  ([^java.util.regex.Matcher this ^java.lang.StringBuffer sb ^java.lang.String replacement]
     (-> this (.appendReplacement sb replacement))))
 

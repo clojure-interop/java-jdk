@@ -31,7 +31,7 @@
 
   returns: true if this method dispatched the event;
            false otherwise - `boolean`"
-  ([this e]
+  ([^java.awt.DefaultKeyboardFocusManager this ^java.awt.AWTEvent e]
     (-> this (.dispatchEvent e))))
 
 (defn dispatch-key-event
@@ -52,7 +52,7 @@
   e - the KeyEvent to be dispatched - `java.awt.event.KeyEvent`
 
   returns: true - `boolean`"
-  ([this e]
+  ([^java.awt.DefaultKeyboardFocusManager this ^java.awt.event.KeyEvent e]
     (-> this (.dispatchKeyEvent e))))
 
 (defn post-process-key-event
@@ -64,7 +64,7 @@
   e - the KeyEvent to post-process - `java.awt.event.KeyEvent`
 
   returns: true - `boolean`"
-  ([this e]
+  ([^java.awt.DefaultKeyboardFocusManager this ^java.awt.event.KeyEvent e]
     (-> this (.postProcessKeyEvent e))))
 
 (defn process-key-event
@@ -77,7 +77,7 @@
 
   focused-component - the Component that is the basis for a focus traversal operation if the specified event represents a focus traversal key for the Component - `java.awt.Component`
   e - the event that may represent a focus traversal key - `java.awt.event.KeyEvent`"
-  ([this focused-component e]
+  ([^java.awt.DefaultKeyboardFocusManager this ^java.awt.Component focused-component ^java.awt.event.KeyEvent e]
     (-> this (.processKeyEvent focused-component e))))
 
 (defn focus-previous-component
@@ -85,7 +85,7 @@
    FocusTraversalPolicy.
 
   a-component - the Component that is the basis for the focus traversal operation - `java.awt.Component`"
-  ([this a-component]
+  ([^java.awt.DefaultKeyboardFocusManager this ^java.awt.Component a-component]
     (-> this (.focusPreviousComponent a-component))))
 
 (defn focus-next-component
@@ -93,7 +93,7 @@
    FocusTraversalPolicy.
 
   a-component - the Component that is the basis for the focus traversal operation - `java.awt.Component`"
-  ([this a-component]
+  ([^java.awt.DefaultKeyboardFocusManager this ^java.awt.Component a-component]
     (-> this (.focusNextComponent a-component))))
 
 (defn up-focus-cycle
@@ -105,7 +105,7 @@
    focus cycle root is unchanged.
 
   a-component - the Component that is the basis for the focus traversal operation - `java.awt.Component`"
-  ([this a-component]
+  ([^java.awt.DefaultKeyboardFocusManager this ^java.awt.Component a-component]
     (-> this (.upFocusCycle a-component))))
 
 (defn down-focus-cycle
@@ -116,6 +116,6 @@
    traversal operation occurs.
 
   a-container - the Container that is the basis for the focus traversal operation - `java.awt.Container`"
-  ([this a-container]
+  ([^java.awt.DefaultKeyboardFocusManager this ^java.awt.Container a-container]
     (-> this (.downFocusCycle a-container))))
 

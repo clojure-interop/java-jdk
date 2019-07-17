@@ -35,7 +35,7 @@
 
   returns: true if the event did not already exist in the
    track and was added, otherwise false - `boolean`"
-  ([this event]
+  ([^javax.sound.midi.Track this ^javax.sound.midi.MidiEvent event]
     (-> this (.add event))))
 
 (defn remove
@@ -45,7 +45,7 @@
 
   returns: true if the event existed in the track and was removed,
    otherwise false - `boolean`"
-  ([this event]
+  ([^javax.sound.midi.Track this ^javax.sound.midi.MidiEvent event]
     (-> this (.remove event))))
 
 (defn get
@@ -56,14 +56,14 @@
   returns: the event at the specified index - `javax.sound.midi.MidiEvent`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if the specified index is negative or not less than the current size of this track."
-  ([this index]
+  ([^javax.sound.midi.Track this ^Integer index]
     (-> this (.get index))))
 
 (defn size
   "Obtains the number of events in this track.
 
   returns: the size of the track's event vector - `int`"
-  ([this]
+  ([^javax.sound.midi.Track this]
     (-> this (.size))))
 
 (defn ticks
@@ -73,6 +73,6 @@
    the tempo of the music as set by the sequencer.)
 
   returns: the duration, in ticks - `long`"
-  ([this]
+  ([^javax.sound.midi.Track this]
     (-> this (.ticks))))
 

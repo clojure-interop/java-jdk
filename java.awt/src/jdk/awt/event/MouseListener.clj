@@ -24,34 +24,34 @@
    and released) on a component.
 
   e - `java.awt.event.MouseEvent`"
-  ([this e]
+  ([^. this ^java.awt.event.MouseEvent e]
     (-> this (.mouseClicked e))))
 
 (defn mouse-pressed
   "Invoked when a mouse button has been pressed on a component.
 
   e - `java.awt.event.MouseEvent`"
-  ([this e]
+  ([^. this ^java.awt.event.MouseEvent e]
     (-> this (.mousePressed e))))
 
 (defn mouse-released
   "Invoked when a mouse button has been released on a component.
 
   e - `java.awt.event.MouseEvent`"
-  ([this e]
+  ([^. this ^java.awt.event.MouseEvent e]
     (-> this (.mouseReleased e))))
 
 (defn mouse-entered
   "Invoked when the mouse enters a component.
 
   e - `java.awt.event.MouseEvent`"
-  ([this e]
+  ([^. this ^java.awt.event.MouseEvent e]
     (-> this (.mouseEntered e))))
 
 (defn mouse-exited
   "Invoked when the mouse exits a component.
 
   e - `java.awt.event.MouseEvent`"
-  ([this e]
+  ([^. this ^java.awt.event.MouseEvent e]
     (-> this (.mouseExited e))))
 

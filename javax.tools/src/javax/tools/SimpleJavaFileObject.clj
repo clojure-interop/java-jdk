@@ -25,7 +25,7 @@
 
   returns: true if this file object is compatible; false
    otherwise - `boolean`"
-  ([this simple-name kind]
+  ([^javax.tools.SimpleJavaFileObject this ^java.lang.String simple-name ^javax.tools.JavaFileObject.Kind kind]
     (-> this (.isNameCompatible simple-name kind))))
 
 (defn open-writer
@@ -35,14 +35,14 @@
   returns: a Writer wrapping the result of openOutputStream - `java.io.Writer`
 
   throws: java.lang.IllegalStateException - if this file object was opened for reading and does not support writing"
-  ([this]
+  ([^javax.tools.SimpleJavaFileObject this]
     (-> this (.openWriter))))
 
 (defn get-kind
   "Description copied from interface: JavaFileObject
 
   returns: this.kind - `javax.tools.JavaFileObject.Kind`"
-  ([this]
+  ([^javax.tools.SimpleJavaFileObject this]
     (-> this (.getKind))))
 
 (defn delete
@@ -51,7 +51,7 @@
    obeyed.
 
   returns: false - `boolean`"
-  ([this]
+  ([^javax.tools.SimpleJavaFileObject this]
     (-> this (.delete))))
 
 (defn get-access-level
@@ -60,7 +60,7 @@
    JavaFileObject is obeyed.
 
   returns: the access level - `javax.lang.model.element.Modifier`"
-  ([this]
+  ([^javax.tools.SimpleJavaFileObject this]
     (-> this (.getAccessLevel))))
 
 (defn open-input-stream
@@ -71,14 +71,14 @@
   returns: an InputStream - `java.io.InputStream`
 
   throws: java.io.IOException - if an I/O error occurred"
-  ([this]
+  ([^javax.tools.SimpleJavaFileObject this]
     (-> this (.openInputStream))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^javax.tools.SimpleJavaFileObject this]
     (-> this (.toString))))
 
 (defn open-output-stream
@@ -89,7 +89,7 @@
   returns: an OutputStream - `java.io.OutputStream`
 
   throws: java.io.IOException - if an I/O error occurred"
-  ([this]
+  ([^javax.tools.SimpleJavaFileObject this]
     (-> this (.openOutputStream))))
 
 (defn get-last-modified
@@ -98,21 +98,21 @@
    obeyed.
 
   returns: 0L - `long`"
-  ([this]
+  ([^javax.tools.SimpleJavaFileObject this]
     (-> this (.getLastModified))))
 
 (defn to-uri
   "Description copied from interface: FileObject
 
   returns: a URI - `java.net.URI`"
-  ([this]
+  ([^javax.tools.SimpleJavaFileObject this]
     (-> this (.toUri))))
 
 (defn get-name
   "Description copied from interface: FileObject
 
   returns: a user-friendly name - `java.lang.String`"
-  ([this]
+  ([^javax.tools.SimpleJavaFileObject this]
     (-> this (.getName))))
 
 (defn open-reader
@@ -125,7 +125,7 @@
   returns: a Reader wrapping the result of getCharContent - `java.io.Reader`
 
   throws: java.lang.IllegalStateException - if this file object was opened for writing and does not support reading"
-  ([this ignore-encoding-errors]
+  ([^javax.tools.SimpleJavaFileObject this ^Boolean ignore-encoding-errors]
     (-> this (.openReader ignore-encoding-errors))))
 
 (defn get-char-content
@@ -138,7 +138,7 @@
   returns: a CharSequence if available; null otherwise - `java.lang.CharSequence`
 
   throws: java.io.IOException - if an I/O error occurred"
-  ([this ignore-encoding-errors]
+  ([^javax.tools.SimpleJavaFileObject this ^Boolean ignore-encoding-errors]
     (-> this (.getCharContent ignore-encoding-errors))))
 
 (defn get-nesting-kind
@@ -148,6 +148,6 @@
 
   returns: the nesting kind, or null if the nesting kind
    is not known - `javax.lang.model.element.NestingKind`"
-  ([this]
+  ([^javax.tools.SimpleJavaFileObject this]
     (-> this (.getNestingKind))))
 

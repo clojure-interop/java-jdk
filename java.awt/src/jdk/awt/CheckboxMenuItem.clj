@@ -29,9 +29,9 @@
   state - the initial state of the menu item, where true indicates `on` and false indicates `off.` - `boolean`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true"
-  ([label state]
+  ([^java.lang.String label ^Boolean state]
     (new CheckboxMenuItem label state))
-  ([label]
+  ([^java.lang.String label]
     (new CheckboxMenuItem label))
   ([]
     (new CheckboxMenuItem )))
@@ -44,7 +44,7 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   l - the item listener - `java.awt.event.ItemListener`"
-  ([this l]
+  ([^java.awt.CheckboxMenuItem this ^java.awt.event.ItemListener l]
     (-> this (.addItemListener l))))
 
 (defn remove-item-listener
@@ -54,7 +54,7 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   l - the item listener - `java.awt.event.ItemListener`"
-  ([this l]
+  ([^java.awt.CheckboxMenuItem this ^java.awt.event.ItemListener l]
     (-> this (.removeItemListener l))))
 
 (defn set-state
@@ -70,7 +70,7 @@
    ItemEvent is by user interaction.
 
   b - true if the check box menu item is on, otherwise false - `boolean`"
-  ([this b]
+  ([^java.awt.CheckboxMenuItem this ^Boolean b]
     (-> this (.setState b))))
 
 (defn get-state?
@@ -80,7 +80,7 @@
   returns: the state of this check box menu item, where
                        true indicates `on` and
                        false indicates `off` - `boolean`"
-  ([this]
+  ([^java.awt.CheckboxMenuItem this]
     (-> this (.getState))))
 
 (defn add-notify
@@ -88,7 +88,7 @@
    change the look of the checkbox item without changing its
    functionality.
    Most applications do not call this method directly."
-  ([this]
+  ([^java.awt.CheckboxMenuItem this]
     (-> this (.addNotify))))
 
 (defn get-accessible-context
@@ -99,7 +99,7 @@
 
   returns: an AccessibleAWTCheckboxMenuItem that serves as the
            AccessibleContext of this CheckboxMenuItem - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^java.awt.CheckboxMenuItem this]
     (-> this (.getAccessibleContext))))
 
 (defn param-string
@@ -111,7 +111,7 @@
    null.
 
   returns: the parameter string of this check box menu item - `java.lang.String`"
-  ([this]
+  ([^java.awt.CheckboxMenuItem this]
     (-> this (.paramString))))
 
 (defn get-selected-objects
@@ -119,7 +119,7 @@
    label or null if the checkbox is not selected.
 
   returns: `java.lang.Object[]`"
-  ([this]
+  ([^java.awt.CheckboxMenuItem this]
     (-> this (.getSelectedObjects))))
 
 (defn get-listeners
@@ -151,7 +151,7 @@
             listeners have been added - `<T extends java.util.EventListener> T[]`
 
   throws: java.lang.ClassCastException - if listenerType doesn't specify a class or interface that implements java.util.EventListener"
-  ([this listener-type]
+  ([^java.awt.CheckboxMenuItem this ^java.lang.Class listener-type]
     (-> this (.getListeners listener-type))))
 
 (defn get-item-listeners
@@ -161,6 +161,6 @@
   returns: all of this checkbox menuitem's ItemListeners
            or an empty array if no item
            listeners are currently registered - `java.awt.event.ItemListener[]`"
-  ([this]
+  ([^java.awt.CheckboxMenuItem this]
     (-> this (.getItemListeners))))
 

@@ -15,6 +15,6 @@
 
   t - the first input argument - `ObjIntConsumer.T`
   value - the second input argument - `int`"
-  ([this t value]
+  ([^. this ^ObjIntConsumer.T t ^Integer value]
     (-> this (.accept t value))))
 

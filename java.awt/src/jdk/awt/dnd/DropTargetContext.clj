@@ -16,7 +16,7 @@
    DropTargetContext.
 
   returns: the DropTarget associated with this DropTargetContext - `java.awt.dnd.DropTarget`"
-  ([this]
+  ([^java.awt.dnd.DropTargetContext this]
     (-> this (.getDropTarget))))
 
 (defn get-component
@@ -24,19 +24,19 @@
    this DropTargetContext.
 
   returns: the Component associated with this Context - `java.awt.Component`"
-  ([this]
+  ([^java.awt.dnd.DropTargetContext this]
     (-> this (.getComponent))))
 
 (defn add-notify
   "Called when associated with the DropTargetContextPeer.
 
   dtcp - the DropTargetContextPeer - `java.awt.dnd.peer.DropTargetContextPeer`"
-  ([this dtcp]
+  ([^java.awt.dnd.DropTargetContext this ^java.awt.dnd.peer.DropTargetContextPeer dtcp]
     (-> this (.addNotify dtcp))))
 
 (defn remove-notify
   "Called when disassociated with the DropTargetContextPeer."
-  ([this]
+  ([^java.awt.dnd.DropTargetContext this]
     (-> this (.removeNotify))))
 
 (defn drop-complete
@@ -46,6 +46,6 @@
   success - true for success, false if not - `boolean`
 
   throws: java.awt.dnd.InvalidDnDOperationException - if a drop is not outstanding/extant"
-  ([this success]
+  ([^java.awt.dnd.DropTargetContext this ^Boolean success]
     (-> this (.dropComplete success))))
 

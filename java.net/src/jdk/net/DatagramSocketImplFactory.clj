@@ -9,6 +9,6 @@
   "Creates a new DatagramSocketImpl instance.
 
   returns: a new instance of DatagramSocketImpl. - `java.net.DatagramSocketImpl`"
-  ([this]
+  ([^. this]
     (-> this (.createDatagramSocketImpl))))
 

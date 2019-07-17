@@ -14,7 +14,7 @@
   returns: A valid non-null instance of a Transformer. - `javax.xml.transform.Transformer`
 
   throws: javax.xml.transform.TransformerConfigurationException - if a Transformer can not be created."
-  ([this]
+  ([^. this]
     (-> this (.newTransformer))))
 
 (defn get-output-properties
@@ -45,6 +45,6 @@
    so that they remain valid XPath values.
 
   returns: A Properties object, never null. - `java.util.Properties`"
-  ([this]
+  ([^. this]
     (-> this (.getOutputProperties))))
 

@@ -46,7 +46,7 @@
   length - the number of characters to remove >= 0 - `int`
 
   throws: javax.swing.text.BadLocationException - some portion of the removal range was not a valid part of the document. The location in the exception is the first bad position encountered."
-  ([this fb offset length]
+  ([^javax.swing.text.DocumentFilter this ^javax.swing.text.DocumentFilter.FilterBypass fb ^Integer offset ^Integer length]
     (-> this (.remove fb offset length))))
 
 (defn insert-string
@@ -61,7 +61,7 @@
   attr - the attributes to associate with the inserted content. This may be null if there are no attributes. - `javax.swing.text.AttributeSet`
 
   throws: javax.swing.text.BadLocationException - the given insert position is not a valid position within the document"
-  ([this fb offset string attr]
+  ([^javax.swing.text.DocumentFilter this ^javax.swing.text.DocumentFilter.FilterBypass fb ^Integer offset ^java.lang.String string ^javax.swing.text.AttributeSet attr]
     (-> this (.insertString fb offset string attr))))
 
 (defn replace
@@ -77,6 +77,6 @@
   attrs - AttributeSet indicating attributes of inserted text, null is legal. - `javax.swing.text.AttributeSet`
 
   throws: javax.swing.text.BadLocationException - the given insert position is not a valid position within the document"
-  ([this fb offset length text attrs]
+  ([^javax.swing.text.DocumentFilter this ^javax.swing.text.DocumentFilter.FilterBypass fb ^Integer offset ^Integer length ^java.lang.String text ^javax.swing.text.AttributeSet attrs]
     (-> this (.replace fb offset length text attrs))))
 

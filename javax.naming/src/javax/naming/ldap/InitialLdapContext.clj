@@ -67,7 +67,7 @@
   conn-ctls - connection request controls for the initial context. If null, no connection request controls are used. - `javax.naming.ldap.Control[]`
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  ([environment conn-ctls]
+  ([^java.util.Hashtable environment ^javax.naming.ldap.Control[] conn-ctls]
     (new InitialLdapContext environment conn-ctls))
   ([]
     (new InitialLdapContext )))
@@ -81,7 +81,7 @@
    the operation did not generate any response. - `javax.naming.ldap.ExtendedResponse`
 
   throws: javax.naming.NamingException - If an error occurred while performing the extended operation."
-  ([this request]
+  ([^javax.naming.ldap.InitialLdapContext this ^javax.naming.ldap.ExtendedRequest request]
     (-> this (.extendedOperation request))))
 
 (defn new-instance
@@ -92,7 +92,7 @@
   returns: A non-null LdapContext instance. - `javax.naming.ldap.LdapContext`
 
   throws: javax.naming.NamingException - If an error occurred while creating the new instance."
-  ([this req-ctls]
+  ([^javax.naming.ldap.InitialLdapContext this ^javax.naming.ldap.Control[] req-ctls]
     (-> this (.newInstance req-ctls))))
 
 (defn reconnect
@@ -101,7 +101,7 @@
   conn-ctls - The possibly null controls to use. If null, no controls are used. - `javax.naming.ldap.Control[]`
 
   throws: javax.naming.NamingException - If an error occurred while reconnecting."
-  ([this conn-ctls]
+  ([^javax.naming.ldap.InitialLdapContext this ^javax.naming.ldap.Control[] conn-ctls]
     (-> this (.reconnect conn-ctls))))
 
 (defn get-connect-controls
@@ -111,7 +111,7 @@
    have been set for this context. - `javax.naming.ldap.Control[]`
 
   throws: javax.naming.NamingException - If an error occurred while getting the request controls."
-  ([this]
+  ([^javax.naming.ldap.InitialLdapContext this]
     (-> this (.getConnectControls))))
 
 (defn set-request-controls
@@ -120,7 +120,7 @@
   request-controls - The possibly null controls to use. If null, no controls are used. - `javax.naming.ldap.Control[]`
 
   throws: javax.naming.NamingException - If an error occurred while setting the request controls."
-  ([this request-controls]
+  ([^javax.naming.ldap.InitialLdapContext this ^javax.naming.ldap.Control[] request-controls]
     (-> this (.setRequestControls request-controls))))
 
 (defn get-request-controls
@@ -130,7 +130,7 @@
    have been set for this context. - `javax.naming.ldap.Control[]`
 
   throws: javax.naming.NamingException - If an error occurred while getting the request controls."
-  ([this]
+  ([^javax.naming.ldap.InitialLdapContext this]
     (-> this (.getRequestControls))))
 
 (defn get-response-controls
@@ -140,6 +140,6 @@
    method invoked on this context did not produce any controls. - `javax.naming.ldap.Control[]`
 
   throws: javax.naming.NamingException - If an error occurred while getting the response controls."
-  ([this]
+  ([^javax.naming.ldap.InitialLdapContext this]
     (-> this (.getResponseControls))))
 

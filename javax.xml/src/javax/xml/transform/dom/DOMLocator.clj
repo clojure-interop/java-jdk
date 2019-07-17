@@ -12,6 +12,6 @@
   "Return the node where the event occurred.
 
   returns: The node that is the location for the event. - `org.w3c.dom.Node`"
-  ([this]
+  ([^. this]
     (-> this (.getOriginatingNode))))
 

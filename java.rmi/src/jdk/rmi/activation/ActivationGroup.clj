@@ -107,7 +107,7 @@
   returns: the activation group for the VM - `java.rmi.activation.ActivationGroup`
 
   throws: java.rmi.activation.ActivationException - if group already exists or if error occurs during group creation"
-  ([id desc incarnation]
+  ([^java.rmi.activation.ActivationGroupID id ^java.rmi.activation.ActivationGroupDesc desc ^Long incarnation]
     (ActivationGroup/createGroup id desc incarnation)))
 
 (defn *current-group-id
@@ -139,7 +139,7 @@
   system - remote reference to the ActivationSystem - `java.rmi.activation.ActivationSystem`
 
   throws: java.rmi.activation.ActivationException - if activation system is already set"
-  ([system]
+  ([^java.rmi.activation.ActivationSystem system]
     (ActivationGroup/setSystem system)))
 
 (defn *get-system
@@ -196,7 +196,7 @@
            returns false. - `boolean`
 
   throws: java.rmi.activation.UnknownObjectException - if object is unknown (may already be inactive)"
-  ([this id]
+  ([^java.rmi.activation.ActivationGroup this ^java.rmi.activation.ActivationID id]
     (-> this (.inactiveObject id))))
 
 (defn active-object
@@ -212,6 +212,6 @@
   obj - the remote object implementation - `java.rmi.Remote`
 
   throws: java.rmi.activation.UnknownObjectException - if object is not registered"
-  ([this id obj]
+  ([^java.rmi.activation.ActivationGroup this ^java.rmi.activation.ActivationID id ^java.rmi.Remote obj]
     (-> this (.activeObject id obj))))
 

@@ -12,14 +12,14 @@
 
   width - the width of the source image - `int`
   height - the height of the source image - `int`"
-  ([this width height]
+  ([^. this ^Integer width ^Integer height]
     (-> this (.setDimensions width height))))
 
 (defn set-properties
   "Sets the extensible list of properties associated with this image.
 
   props - the list of properties to be associated with this image - `java.util.Hashtable<?,?>`"
-  ([this props]
+  ([^. this ^java.util.Hashtable props]
     (-> this (.setProperties props))))
 
 (defn set-color-model
@@ -37,7 +37,7 @@
    on using a ColorModel more convenient for the filtering process.
 
   model - the specified ColorModel - `java.awt.image.ColorModel`"
-  ([this model]
+  ([^. this ^java.awt.image.ColorModel model]
     (-> this (.setColorModel model))))
 
 (defn set-hints
@@ -54,7 +54,7 @@
    indicated hint, the results are undefined.
 
   hintflags - a set of hints that the ImageConsumer uses to process the pixels - `int`"
-  ([this hintflags]
+  ([^. this ^Integer hintflags]
     (-> this (.setHints hintflags))))
 
 (defn set-pixels
@@ -75,7 +75,7 @@
   pixels - the array of pixels - `byte[]`
   off - the offset into the pixels array - `int`
   scansize - the distance from one row of pixels to the next in the pixels array - `int`"
-  ([this x y w h model pixels off scansize]
+  ([^. this ^Integer x ^Integer y ^Integer w ^Integer h ^java.awt.image.ColorModel model pixels ^Integer off ^Integer scansize]
     (-> this (.setPixels x y w h model pixels off scansize))))
 
 (defn image-complete
@@ -88,6 +88,6 @@
    unless it is interested in successive frames.
 
   status - the status of image loading - `int`"
-  ([this status]
+  ([^. this ^Integer status]
     (-> this (.imageComplete status))))
 

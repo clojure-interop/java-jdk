@@ -10,7 +10,7 @@
    object is bound.
 
   returns: PrintService object. - `javax.print.PrintService`"
-  ([this]
+  ([^. this]
     (-> this (.getPrintService))))
 
 (defn get-attributes
@@ -27,7 +27,7 @@
    The returned value may be an empty set but should not be null.
 
   returns: the print job attributes - `javax.print.attribute.PrintJobAttributeSet`"
-  ([this]
+  ([^. this]
     (-> this (.getAttributes))))
 
 (defn add-print-job-listener
@@ -37,7 +37,7 @@
    If listener is already registered, it will be registered again.
 
   listener - The object implementing the listener interface - `javax.print.event.PrintJobListener`"
-  ([this listener]
+  ([^. this ^javax.print.event.PrintJobListener listener]
     (-> this (.addPrintJobListener listener))))
 
 (defn remove-print-job-listener
@@ -49,7 +49,7 @@
    only one of the registrations will be removed.
 
   listener - The object implementing the listener interface - `javax.print.event.PrintJobListener`"
-  ([this listener]
+  ([^. this ^javax.print.event.PrintJobListener listener]
     (-> this (.removePrintJobListener listener))))
 
 (defn add-print-job-attribute-listener
@@ -76,7 +76,7 @@
 
   listener - The object implementing the listener interface - `javax.print.event.PrintJobAttributeListener`
   attributes - The attributes to listen on, or null to mean all attributes that can change, as determined by the job. - `javax.print.attribute.PrintJobAttributeSet`"
-  ([this listener attributes]
+  ([^. this ^javax.print.event.PrintJobAttributeListener listener ^javax.print.attribute.PrintJobAttributeSet attributes]
     (-> this (.addPrintJobAttributeListener listener attributes))))
 
 (defn remove-print-job-attribute-listener
@@ -89,7 +89,7 @@
    set of attributes, no guarantee is made which listener is removed.
 
   listener - The object implementing the listener interface - `javax.print.event.PrintJobAttributeListener`"
-  ([this listener]
+  ([^. this ^javax.print.event.PrintJobAttributeListener listener]
     (-> this (.removePrintJobAttributeListener listener))))
 
 (defn print
@@ -113,6 +113,6 @@
   attributes - The job attributes to be applied to this print job. If this parameter is null then the default attributes are used. - `javax.print.attribute.PrintRequestAttributeSet`
 
   throws: javax.print.PrintException - The exception additionally may implement an interface that more precisely describes the cause of the exception FlavorException. If the document has a flavor not supported by this print job. AttributeException. If one or more of the attributes are not valid for this print job."
-  ([this doc attributes]
+  ([^. this ^javax.print.Doc doc ^javax.print.attribute.PrintRequestAttributeSet attributes]
     (-> this (.print doc attributes))))
 

@@ -9,7 +9,7 @@
    items are selected.
 
   returns: `java.lang.Object[]`"
-  ([this]
+  ([^. this]
     (-> this (.getSelectedObjects))))
 
 (defn add-item-listener
@@ -19,7 +19,7 @@
    null, no exception is thrown and no action is performed.
 
   l - the listener to receive events - `java.awt.event.ItemListener`"
-  ([this l]
+  ([^. this ^java.awt.event.ItemListener l]
     (-> this (.addItemListener l))))
 
 (defn remove-item-listener
@@ -28,6 +28,6 @@
    no exception is thrown and no action is performed.
 
   l - the listener being removed - `java.awt.event.ItemListener`"
-  ([this l]
+  ([^. this ^java.awt.event.ItemListener l]
     (-> this (.removeItemListener l))))
 

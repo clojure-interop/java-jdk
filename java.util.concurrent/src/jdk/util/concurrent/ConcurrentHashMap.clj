@@ -196,11 +196,11 @@
   concurrency-level - the estimated number of concurrently updating threads. The implementation may use this value as a sizing hint. - `int`
 
   throws: java.lang.IllegalArgumentException - if the initial capacity is negative or the load factor or concurrencyLevel are nonpositive"
-  ([initial-capacity load-factor concurrency-level]
+  ([^Integer initial-capacity ^Float load-factor ^Integer concurrency-level]
     (new ConcurrentHashMap initial-capacity load-factor concurrency-level))
-  ([initial-capacity load-factor]
+  ([^Integer initial-capacity ^Float load-factor]
     (new ConcurrentHashMap initial-capacity load-factor))
-  ([initial-capacity]
+  ([^Integer initial-capacity]
     (new ConcurrentHashMap initial-capacity))
   ([]
     (new ConcurrentHashMap )))
@@ -214,7 +214,7 @@
   returns: the new set - `<K> java.util.concurrent.ConcurrentHashMap.KeySetView<K,java.lang.Boolean>`
 
   throws: java.lang.IllegalArgumentException - if the initial capacity of elements is negative"
-  ([initial-capacity]
+  ([^Integer initial-capacity]
     (ConcurrentHashMap/newKeySet initial-capacity))
   ([]
     (ConcurrentHashMap/newKeySet )))
@@ -228,9 +228,9 @@
   action - the action - `U>`
 
   returns: `<U> void`"
-  ([this parallelism-threshold transformer action]
+  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold transformer action]
     (-> this (.forEachKey parallelism-threshold transformer action)))
-  ([this parallelism-threshold action]
+  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^ConcurrentHashMap.K> action]
     (-> this (.forEachKey parallelism-threshold action))))
 
 (defn values
@@ -250,7 +250,7 @@
    and Spliterator.NONNULL.
 
   returns: the collection view - `java.util.Collection<ConcurrentHashMap.V>`"
-  ([this]
+  ([^java.util.concurrent.ConcurrentHashMap this]
     (-> this (.values))))
 
 (defn for-each
@@ -262,11 +262,11 @@
   action - the action - `U>`
 
   returns: `<U> void`"
-  ([this parallelism-threshold transformer action]
+  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold transformer action]
     (-> this (.forEach parallelism-threshold transformer action)))
-  ([this parallelism-threshold action]
+  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^ConcurrentHashMap.V> action]
     (-> this (.forEach parallelism-threshold action)))
-  ([this action]
+  ([^java.util.concurrent.ConcurrentHashMap this ^ConcurrentHashMap.V> action]
     (-> this (.forEach action))))
 
 (defn reduce-entries-to-int
@@ -281,21 +281,21 @@
 
   returns: the result of accumulating the given transformation
    of all entries - `int`"
-  ([this parallelism-threshold transformer basis reducer]
+  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.ToIntFunction> transformer ^Integer basis ^java.util.function.IntBinaryOperator reducer]
     (-> this (.reduceEntriesToInt parallelism-threshold transformer basis reducer))))
 
 (defn keys
   "Returns an enumeration of the keys in this table.
 
   returns: an enumeration of the keys in this table - `java.util.Enumeration<ConcurrentHashMap.K>`"
-  ([this]
+  ([^java.util.concurrent.ConcurrentHashMap this]
     (-> this (.keys))))
 
 (defn replace-all
   "Description copied from interface: ConcurrentMap
 
   function - the function to apply to each entry - `ConcurrentHashMap.V>`"
-  ([this function]
+  ([^java.util.concurrent.ConcurrentHashMap this ^ConcurrentHashMap.V> function]
     (-> this (.replaceAll function))))
 
 (defn put-all
@@ -304,7 +304,7 @@
    keys currently in the specified map.
 
   m - mappings to be stored in this map - `ConcurrentHashMap.V>`"
-  ([this m]
+  ([^java.util.concurrent.ConcurrentHashMap this ^ConcurrentHashMap.V> m]
     (-> this (.putAll m))))
 
 (defn put-if-absent
@@ -327,7 +327,7 @@
            or null if there was no mapping for the key - `ConcurrentHashMap.V`
 
   throws: java.lang.NullPointerException - if the specified key or value is null"
-  ([this key value]
+  ([^java.util.concurrent.ConcurrentHashMap this ^ConcurrentHashMap.K key ^ConcurrentHashMap.V value]
     (-> this (.putIfAbsent key value))))
 
 (defn reduce-keys
@@ -341,9 +341,9 @@
 
   returns: the result of accumulating the given transformation
    of all keys - `<U> U`"
-  ([this parallelism-threshold transformer reducer]
+  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold transformer reducer]
     (-> this (.reduceKeys parallelism-threshold transformer reducer)))
-  ([this parallelism-threshold reducer]
+  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^ConcurrentHashMap.K> reducer]
     (-> this (.reduceKeys parallelism-threshold reducer))))
 
 (defn reduce-entries
@@ -357,9 +357,9 @@
 
   returns: the result of accumulating the given transformation
    of all entries - `<U> U`"
-  ([this parallelism-threshold transformer reducer]
+  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold transformer reducer]
     (-> this (.reduceEntries parallelism-threshold transformer reducer)))
-  ([this parallelism-threshold reducer]
+  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^java.util.Map.Entry> reducer]
     (-> this (.reduceEntries parallelism-threshold reducer))))
 
 (defn put
@@ -376,7 +376,7 @@
            null if there was no mapping for key - `ConcurrentHashMap.V`
 
   throws: java.lang.NullPointerException - if the specified key or value is null"
-  ([this key value]
+  ([^java.util.concurrent.ConcurrentHashMap this ^ConcurrentHashMap.K key ^ConcurrentHashMap.V value]
     (-> this (.put key value))))
 
 (defn reduce-keys-to-long
@@ -391,7 +391,7 @@
 
   returns: the result of accumulating the given transformation
    of all keys - `long`"
-  ([this parallelism-threshold transformer basis reducer]
+  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^ConcurrentHashMap.K> transformer ^Long basis ^java.util.function.LongBinaryOperator reducer]
     (-> this (.reduceKeysToLong parallelism-threshold transformer basis reducer))))
 
 (defn entry-set
@@ -410,7 +410,7 @@
    Spliterator.DISTINCT, and Spliterator.NONNULL.
 
   returns: the set view - `java.util.Set<java.util.Map.Entry<ConcurrentHashMap.K,ConcurrentHashMap.V>>`"
-  ([this]
+  ([^java.util.concurrent.ConcurrentHashMap this]
     (-> this (.entrySet))))
 
 (defn contains
@@ -429,7 +429,7 @@
            false otherwise - `boolean`
 
   throws: java.lang.NullPointerException - if the specified value is null"
-  ([this value]
+  ([^java.util.concurrent.ConcurrentHashMap this ^java.lang.Object value]
     (-> this (.contains value))))
 
 (defn reduce-values-to-long
@@ -444,7 +444,7 @@
 
   returns: the result of accumulating the given transformation
    of all values - `long`"
-  ([this parallelism-threshold transformer basis reducer]
+  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^ConcurrentHashMap.V> transformer ^Long basis ^java.util.function.LongBinaryOperator reducer]
     (-> this (.reduceValuesToLong parallelism-threshold transformer basis reducer))))
 
 (defn to-string
@@ -457,7 +457,7 @@
    associated value.
 
   returns: a string representation of this map - `java.lang.String`"
-  ([this]
+  ([^java.util.concurrent.ConcurrentHashMap this]
     (-> this (.toString))))
 
 (defn contains-value
@@ -471,7 +471,7 @@
            specified value - `boolean`
 
   throws: java.lang.NullPointerException - if the specified value is null"
-  ([this value]
+  ([^java.util.concurrent.ConcurrentHashMap this ^java.lang.Object value]
     (-> this (.containsValue value))))
 
 (defn search-keys
@@ -486,7 +486,7 @@
 
   returns: a non-null result from applying the given search
    function on each key, or null if none - `<U> U`"
-  ([this parallelism-threshold search-function]
+  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold search-function]
     (-> this (.searchKeys parallelism-threshold search-function))))
 
 (defn get-or-default
@@ -500,7 +500,7 @@
   returns: the mapping for the key, if present; else the default value - `ConcurrentHashMap.V`
 
   throws: java.lang.NullPointerException - if the specified key is null"
-  ([this key default-value]
+  ([^java.util.concurrent.ConcurrentHashMap this ^java.lang.Object key ^ConcurrentHashMap.V default-value]
     (-> this (.getOrDefault key default-value))))
 
 (defn replace
@@ -523,9 +523,9 @@
   returns: true if the value was replaced - `boolean`
 
   throws: java.lang.NullPointerException - if any of the arguments are null"
-  ([this key old-value new-value]
+  ([^java.util.concurrent.ConcurrentHashMap this ^ConcurrentHashMap.K key ^ConcurrentHashMap.V old-value ^ConcurrentHashMap.V new-value]
     (-> this (.replace key old-value new-value)))
-  ([this key value]
+  ([^java.util.concurrent.ConcurrentHashMap this ^ConcurrentHashMap.K key ^ConcurrentHashMap.V value]
     (-> this (.replace key value))))
 
 (defn reduce-keys-to-int
@@ -540,7 +540,7 @@
 
   returns: the result of accumulating the given transformation
    of all keys - `int`"
-  ([this parallelism-threshold transformer basis reducer]
+  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^ConcurrentHashMap.K> transformer ^Integer basis ^java.util.function.IntBinaryOperator reducer]
     (-> this (.reduceKeysToInt parallelism-threshold transformer basis reducer))))
 
 (defn reduce-values-to-int
@@ -555,7 +555,7 @@
 
   returns: the result of accumulating the given transformation
    of all values - `int`"
-  ([this parallelism-threshold transformer basis reducer]
+  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^ConcurrentHashMap.V> transformer ^Integer basis ^java.util.function.IntBinaryOperator reducer]
     (-> this (.reduceValuesToInt parallelism-threshold transformer basis reducer))))
 
 (defn remove
@@ -577,9 +577,9 @@
   returns: true if the value was removed - `boolean`
 
   throws: java.lang.NullPointerException - if the specified key is null"
-  ([this key value]
+  ([^java.util.concurrent.ConcurrentHashMap this ^java.lang.Object key ^java.lang.Object value]
     (-> this (.remove key value)))
-  ([this key]
+  ([^java.util.concurrent.ConcurrentHashMap this ^java.lang.Object key]
     (-> this (.remove key))))
 
 (defn mapping-count
@@ -590,7 +590,7 @@
    there are concurrent insertions or removals.
 
   returns: the number of mappings - `long`"
-  ([this]
+  ([^java.util.concurrent.ConcurrentHashMap this]
     (-> this (.mappingCount))))
 
 (defn key-set
@@ -604,9 +604,9 @@
   returns: the set view - `java.util.concurrent.ConcurrentHashMap.KeySetView<ConcurrentHashMap.K,ConcurrentHashMap.V>`
 
   throws: java.lang.NullPointerException - if the mappedValue is null"
-  ([this mapped-value]
+  ([^java.util.concurrent.ConcurrentHashMap this ^ConcurrentHashMap.V mapped-value]
     (-> this (.keySet mapped-value)))
-  ([this]
+  ([^java.util.concurrent.ConcurrentHashMap this]
     (-> this (.keySet))))
 
 (defn for-each-entry
@@ -618,9 +618,9 @@
   action - the action - `U>`
 
   returns: `<U> void`"
-  ([this parallelism-threshold transformer action]
+  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold transformer action]
     (-> this (.forEachEntry parallelism-threshold transformer action)))
-  ([this parallelism-threshold action]
+  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^java.util.Map.Entry> action]
     (-> this (.forEachEntry parallelism-threshold action))))
 
 (defn search-values
@@ -635,7 +635,7 @@
 
   returns: a non-null result from applying the given search
    function on each value, or null if none - `<U> U`"
-  ([this parallelism-threshold search-function]
+  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold search-function]
     (-> this (.searchValues parallelism-threshold search-function))))
 
 (defn reduce-values
@@ -649,9 +649,9 @@
 
   returns: the result of accumulating the given transformation
    of all values - `<U> U`"
-  ([this parallelism-threshold transformer reducer]
+  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold transformer reducer]
     (-> this (.reduceValues parallelism-threshold transformer reducer)))
-  ([this parallelism-threshold reducer]
+  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^ConcurrentHashMap.V> reducer]
     (-> this (.reduceValues parallelism-threshold reducer))))
 
 (defn reduce-to-int
@@ -666,7 +666,7 @@
 
   returns: the result of accumulating the given transformation
    of all (key, value) pairs - `int`"
-  ([this parallelism-threshold transformer basis reducer]
+  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^ConcurrentHashMap.V> transformer ^Integer basis ^java.util.function.IntBinaryOperator reducer]
     (-> this (.reduceToInt parallelism-threshold transformer basis reducer))))
 
 (defn reduce-values-to-double
@@ -681,7 +681,7 @@
 
   returns: the result of accumulating the given transformation
    of all values - `double`"
-  ([this parallelism-threshold transformer basis reducer]
+  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^ConcurrentHashMap.V> transformer ^Double basis ^java.util.function.DoubleBinaryOperator reducer]
     (-> this (.reduceValuesToDouble parallelism-threshold transformer basis reducer))))
 
 (defn compute-if-present
@@ -699,7 +699,7 @@
   returns: the new value associated with the specified key, or null if none - `ConcurrentHashMap.V`
 
   throws: java.lang.NullPointerException - if the specified key or remappingFunction is null"
-  ([this key remapping-function]
+  ([^java.util.concurrent.ConcurrentHashMap this ^ConcurrentHashMap.K key ^ConcurrentHashMap.V> remapping-function]
     (-> this (.computeIfPresent key remapping-function))))
 
 (defn hash-code
@@ -708,7 +708,7 @@
    key.hashCode() ^ value.hashCode().
 
   returns: the hash code value for this map - `int`"
-  ([this]
+  ([^java.util.concurrent.ConcurrentHashMap this]
     (-> this (.hashCode))))
 
 (defn reduce-to-double
@@ -723,14 +723,14 @@
 
   returns: the result of accumulating the given transformation
    of all (key, value) pairs - `double`"
-  ([this parallelism-threshold transformer basis reducer]
+  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^ConcurrentHashMap.V> transformer ^Double basis ^java.util.function.DoubleBinaryOperator reducer]
     (-> this (.reduceToDouble parallelism-threshold transformer basis reducer))))
 
 (defn empty?
   "Returns true if this map contains no key-value mappings.
 
   returns: true if this map contains no key-value mappings - `boolean`"
-  ([this]
+  ([^java.util.concurrent.ConcurrentHashMap this]
     (-> this (.isEmpty))))
 
 (defn size
@@ -739,7 +739,7 @@
    Integer.MAX_VALUE.
 
   returns: the number of key-value mappings in this map - `int`"
-  ([this]
+  ([^java.util.concurrent.ConcurrentHashMap this]
     (-> this (.size))))
 
 (defn reduce
@@ -753,12 +753,12 @@
 
   returns: the result of accumulating the given transformation
    of all (key, value) pairs - `<U> U`"
-  ([this parallelism-threshold transformer reducer]
+  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold transformer reducer]
     (-> this (.reduce parallelism-threshold transformer reducer))))
 
 (defn clear
   "Removes all of the mappings from this map."
-  ([this]
+  ([^java.util.concurrent.ConcurrentHashMap this]
     (-> this (.clear))))
 
 (defn reduce-entries-to-double
@@ -773,7 +773,7 @@
 
   returns: the result of accumulating the given transformation
    of all entries - `double`"
-  ([this parallelism-threshold transformer basis reducer]
+  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.ToDoubleFunction> transformer ^Double basis ^java.util.function.DoubleBinaryOperator reducer]
     (-> this (.reduceEntriesToDouble parallelism-threshold transformer basis reducer))))
 
 (defn for-each-value
@@ -785,9 +785,9 @@
   action - the action - `U>`
 
   returns: `<U> void`"
-  ([this parallelism-threshold transformer action]
+  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold transformer action]
     (-> this (.forEachValue parallelism-threshold transformer action)))
-  ([this parallelism-threshold action]
+  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^ConcurrentHashMap.V> action]
     (-> this (.forEachValue parallelism-threshold action))))
 
 (defn reduce-entries-to-long
@@ -802,7 +802,7 @@
 
   returns: the result of accumulating the given transformation
    of all entries - `long`"
-  ([this parallelism-threshold transformer basis reducer]
+  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.ToLongFunction> transformer ^Long basis ^java.util.function.LongBinaryOperator reducer]
     (-> this (.reduceEntriesToLong parallelism-threshold transformer basis reducer))))
 
 (defn contains-key
@@ -815,7 +815,7 @@
            equals method; false otherwise - `boolean`
 
   throws: java.lang.NullPointerException - if the specified key is null"
-  ([this key]
+  ([^java.util.concurrent.ConcurrentHashMap this ^java.lang.Object key]
     (-> this (.containsKey key))))
 
 (defn search
@@ -830,7 +830,7 @@
 
   returns: a non-null result from applying the given search
    function on each (key, value), or null if none - `<U> U`"
-  ([this parallelism-threshold search-function]
+  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold search-function]
     (-> this (.search parallelism-threshold search-function))))
 
 (defn get
@@ -848,7 +848,7 @@
            null if this map contains no mapping for the key - `ConcurrentHashMap.V`
 
   throws: java.lang.NullPointerException - if the specified key is null"
-  ([this key]
+  ([^java.util.concurrent.ConcurrentHashMap this ^java.lang.Object key]
     (-> this (.get key))))
 
 (defn reduce-keys-to-double
@@ -863,7 +863,7 @@
 
   returns: the result of accumulating the given transformation
    of all keys - `double`"
-  ([this parallelism-threshold transformer basis reducer]
+  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^ConcurrentHashMap.K> transformer ^Double basis ^java.util.function.DoubleBinaryOperator reducer]
     (-> this (.reduceKeysToDouble parallelism-threshold transformer basis reducer))))
 
 (defn merge
@@ -884,7 +884,7 @@
   returns: the new value associated with the specified key, or null if none - `ConcurrentHashMap.V`
 
   throws: java.lang.NullPointerException - if the specified key or the remappingFunction is null"
-  ([this key value remapping-function]
+  ([^java.util.concurrent.ConcurrentHashMap this ^ConcurrentHashMap.K key ^ConcurrentHashMap.V value ^ConcurrentHashMap.V> remapping-function]
     (-> this (.merge key value remapping-function))))
 
 (defn equals
@@ -897,7 +897,7 @@
   o - object to be compared for equality with this map - `java.lang.Object`
 
   returns: true if the specified object is equal to this map - `boolean`"
-  ([this o]
+  ([^java.util.concurrent.ConcurrentHashMap this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn compute
@@ -915,7 +915,7 @@
   returns: the new value associated with the specified key, or null if none - `ConcurrentHashMap.V`
 
   throws: java.lang.NullPointerException - if the specified key or remappingFunction is null"
-  ([this key remapping-function]
+  ([^java.util.concurrent.ConcurrentHashMap this ^ConcurrentHashMap.K key ^ConcurrentHashMap.V> remapping-function]
     (-> this (.compute key remapping-function))))
 
 (defn reduce-to-long
@@ -930,7 +930,7 @@
 
   returns: the result of accumulating the given transformation
    of all (key, value) pairs - `long`"
-  ([this parallelism-threshold transformer basis reducer]
+  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^ConcurrentHashMap.V> transformer ^Long basis ^java.util.function.LongBinaryOperator reducer]
     (-> this (.reduceToLong parallelism-threshold transformer basis reducer))))
 
 (defn search-entries
@@ -945,14 +945,14 @@
 
   returns: a non-null result from applying the given search
    function on each entry, or null if none - `<U> U`"
-  ([this parallelism-threshold search-function]
+  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold search-function]
     (-> this (.searchEntries parallelism-threshold search-function))))
 
 (defn elements
   "Returns an enumeration of the values in this table.
 
   returns: an enumeration of the values in this table - `java.util.Enumeration<ConcurrentHashMap.V>`"
-  ([this]
+  ([^java.util.concurrent.ConcurrentHashMap this]
     (-> this (.elements))))
 
 (defn compute-if-absent
@@ -972,6 +972,6 @@
            the specified key, or null if the computed value is null - `ConcurrentHashMap.V`
 
   throws: java.lang.NullPointerException - if the specified key or mappingFunction is null"
-  ([this key mapping-function]
+  ([^java.util.concurrent.ConcurrentHashMap this ^ConcurrentHashMap.K key ^ConcurrentHashMap.V> mapping-function]
     (-> this (.computeIfAbsent key mapping-function))))
 

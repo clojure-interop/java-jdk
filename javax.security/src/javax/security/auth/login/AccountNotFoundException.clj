@@ -14,7 +14,7 @@
    this particular exception.
 
   msg - the detail message. - `java.lang.String`"
-  ([msg]
+  ([^java.lang.String msg]
     (new AccountNotFoundException msg))
   ([]
     (new AccountNotFoundException )))

@@ -14,7 +14,7 @@
   Creates a new panel with the specified layout manager.
 
   layout - the layout manager for this panel. - `java.awt.LayoutManager`"
-  ([layout]
+  ([^java.awt.LayoutManager layout]
     (new Panel layout))
   ([]
     (new Panel )))
@@ -22,7 +22,7 @@
 (defn add-notify
   "Creates the Panel's peer.  The peer allows you to modify the
    appearance of the panel without changing its functionality."
-  ([this]
+  ([^java.awt.Panel this]
     (-> this (.addNotify))))
 
 (defn get-accessible-context
@@ -33,6 +33,6 @@
 
   returns: an AccessibleAWTPanel that serves as the
            AccessibleContext of this Panel - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^java.awt.Panel this]
     (-> this (.getAccessibleContext))))
 

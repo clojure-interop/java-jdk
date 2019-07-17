@@ -44,7 +44,7 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.text.AttributedCharacterIterator$Attribute this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -52,7 +52,7 @@
    the one in Object, but is also final.
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^java.text.AttributedCharacterIterator$Attribute this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -61,6 +61,6 @@
    and `)`.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^java.text.AttributedCharacterIterator$Attribute this]
     (-> this (.toString))))
 

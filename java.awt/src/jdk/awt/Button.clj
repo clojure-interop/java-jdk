@@ -51,7 +51,7 @@
   label - a string label for the button, or null for no label - `java.lang.String`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true"
-  ([label]
+  ([^java.lang.String label]
     (new Button label))
   ([]
     (new Button )))
@@ -64,14 +64,14 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   l - the action listener - `java.awt.event.ActionListener`"
-  ([this l]
+  ([^java.awt.Button this ^java.awt.event.ActionListener l]
     (-> this (.addActionListener l))))
 
 (defn add-notify
   "Creates the peer of the button.  The button's peer allows the
    application to change the look of the button without changing
    its functionality."
-  ([this]
+  ([^java.awt.Button this]
     (-> this (.addNotify))))
 
 (defn get-action-listeners
@@ -81,7 +81,7 @@
   returns: all of this button's ActionListeners
            or an empty array if no action
            listeners are currently registered - `java.awt.event.ActionListener[]`"
-  ([this]
+  ([^java.awt.Button this]
     (-> this (.getActionListeners))))
 
 (defn get-label
@@ -89,7 +89,7 @@
 
   returns: the button's label, or null
                   if the button has no label. - `java.lang.String`"
-  ([this]
+  ([^java.awt.Button this]
     (-> this (.getLabel))))
 
 (defn get-accessible-context
@@ -102,7 +102,7 @@
 
   returns: an AccessibleAWTButton that serves as the
            AccessibleContext of this Button - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^java.awt.Button this]
     (-> this (.getAccessibleContext))))
 
 (defn remove-action-listener
@@ -113,7 +113,7 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   l - the action listener - `java.awt.event.ActionListener`"
-  ([this l]
+  ([^java.awt.Button this ^java.awt.event.ActionListener l]
     (-> this (.removeActionListener l))))
 
 (defn get-listeners
@@ -145,7 +145,7 @@
             listeners have been added - `<T extends java.util.EventListener> T[]`
 
   throws: java.lang.ClassCastException - if listenerType doesn't specify a class or interface that implements java.util.EventListener"
-  ([this listener-type]
+  ([^java.awt.Button this ^java.lang.Class listener-type]
     (-> this (.getListeners listener-type))))
 
 (defn get-action-command
@@ -154,7 +154,7 @@
    returns the label of the button.
 
   returns: `java.lang.String`"
-  ([this]
+  ([^java.awt.Button this]
     (-> this (.getActionCommand))))
 
 (defn set-action-command
@@ -163,13 +163,13 @@
    set to match the label of the button.
 
   command - a string used to set the button's action command. If the string is null then the action command is set to match the label of the button. - `java.lang.String`"
-  ([this command]
+  ([^java.awt.Button this ^java.lang.String command]
     (-> this (.setActionCommand command))))
 
 (defn set-label
   "Sets the button's label to be the specified string.
 
   label - the new label, or null if the button has no label. - `java.lang.String`"
-  ([this label]
+  ([^java.awt.Button this ^java.lang.String label]
     (-> this (.setLabel label))))
 

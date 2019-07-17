@@ -44,6 +44,6 @@
   returns: the enum constant with the specified name - `javax.xml.bind.annotation.XmlNsForm`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([name]
+  ([^java.lang.String name]
     (XmlNsForm/valueOf name)))
 

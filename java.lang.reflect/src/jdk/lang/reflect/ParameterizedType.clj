@@ -27,7 +27,7 @@
        arguments to this type - `java.lang.reflect.Type[]`
 
   throws: java.lang.TypeNotPresentException - if any of the actual type arguments refers to a non-existent type declaration"
-  ([this]
+  ([^. this]
     (-> this (.getActualTypeArguments))))
 
 (defn get-raw-type
@@ -36,7 +36,7 @@
 
   returns: the Type object representing the class or interface
        that declared this type - `java.lang.reflect.Type`"
-  ([this]
+  ([^. this]
     (-> this (.getRawType))))
 
 (defn get-owner-type
@@ -51,6 +51,6 @@
        null is returned - `java.lang.reflect.Type`
 
   throws: java.lang.TypeNotPresentException - if the owner type refers to a non-existent type declaration"
-  ([this]
+  ([^. this]
     (-> this (.getOwnerType))))
 

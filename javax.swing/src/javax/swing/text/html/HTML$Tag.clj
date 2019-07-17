@@ -498,7 +498,7 @@
 
   returns: true if this tag is a block
      tag, otherwise returns false - `boolean`"
-  ([this]
+  ([^javax.swing.text.html.HTML$Tag this]
     (-> this (.isBlock))))
 
 (defn breaks-flow
@@ -509,7 +509,7 @@
   returns: true if this tag causes a
      line break to the flow of data, otherwise returns
      false - `boolean`"
-  ([this]
+  ([^javax.swing.text.html.HTML$Tag this]
     (-> this (.breaksFlow))))
 
 (defn preformatted?
@@ -519,7 +519,7 @@
 
   returns: true if this tag is pre-formatted,
      otherwise returns false - `boolean`"
-  ([this]
+  ([^javax.swing.text.html.HTML$Tag this]
     (-> this (.isPreformatted))))
 
 (defn to-string
@@ -527,6 +527,6 @@
    tag.
 
   returns: the String representation of the tag - `java.lang.String`"
-  ([this]
+  ([^javax.swing.text.html.HTML$Tag this]
     (-> this (.toString))))
 

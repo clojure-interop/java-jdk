@@ -13,11 +13,11 @@
   cause - the cause - `java.lang.Throwable`
   enable-suppression - whether or not suppressed exceptions are enabled - `boolean`
   writable-stack-trace - whether or not the stack trace is writable - `boolean`"
-  ([message cause enable-suppression writable-stack-trace]
+  ([^java.lang.String message ^java.lang.Throwable cause ^Boolean enable-suppression ^Boolean writable-stack-trace]
     (new LambdaConversionException message cause enable-suppression writable-stack-trace))
-  ([message cause]
+  ([^java.lang.String message ^java.lang.Throwable cause]
     (new LambdaConversionException message cause))
-  ([message]
+  ([^java.lang.String message]
     (new LambdaConversionException message))
   ([]
     (new LambdaConversionException )))

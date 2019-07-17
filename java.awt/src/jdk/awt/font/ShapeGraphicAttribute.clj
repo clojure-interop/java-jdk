@@ -13,7 +13,7 @@
   shape - the Shape to render. The Shape is rendered with its origin at the origin of this ShapeGraphicAttribute in the host TextLayout. This object maintains a reference to shape. - `java.awt.Shape`
   alignment - one of the alignments from this ShapeGraphicAttribute. - `int`
   stroke - true if the Shape should be stroked; false if the Shape should be filled. - `boolean`"
-  ([shape alignment stroke]
+  ([^java.awt.Shape shape ^Integer alignment ^Boolean stroke]
     (new ShapeGraphicAttribute shape alignment stroke)))
 
 (def *-stroke
@@ -39,7 +39,7 @@
    bounds of its Shape.
 
   returns: the ascent of this ShapeGraphicAttribute. - `float`"
-  ([this]
+  ([^java.awt.font.ShapeGraphicAttribute this]
     (-> this (.getAscent))))
 
 (defn get-descent
@@ -49,7 +49,7 @@
    bounds of its Shape.
 
   returns: the descent of this ShapeGraphicAttribute. - `float`"
-  ([this]
+  ([^java.awt.font.ShapeGraphicAttribute this]
     (-> this (.getDescent))))
 
 (defn get-advance
@@ -59,7 +59,7 @@
    bounds of its Shape.
 
   returns: the advance of this ShapeGraphicAttribute. - `float`"
-  ([this]
+  ([^java.awt.font.ShapeGraphicAttribute this]
     (-> this (.getAdvance))))
 
 (defn draw
@@ -69,7 +69,7 @@
   graphics - the Graphics2D into which to render the graphic - `java.awt.Graphics2D`
   x - the user-space X coordinate where the graphic is rendered - `float`
   y - the user-space Y coordinate where the graphic is rendered - `float`"
-  ([this graphics x y]
+  ([^java.awt.font.ShapeGraphicAttribute this ^java.awt.Graphics2D graphics ^Float x ^Float y]
     (-> this (.draw graphics x y))))
 
 (defn get-bounds
@@ -81,7 +81,7 @@
 
   returns: a Rectangle2D that encloses all of the bits
    rendered by this ShapeGraphicAttribute. - `java.awt.geom.Rectangle2D`"
-  ([this]
+  ([^java.awt.font.ShapeGraphicAttribute this]
     (-> this (.getBounds))))
 
 (defn get-outline
@@ -95,7 +95,7 @@
 
   returns: the Shape representing this graphic attribute,
      suitable for stroking or filling. - `java.awt.Shape`"
-  ([this tx]
+  ([^java.awt.font.ShapeGraphicAttribute this ^java.awt.geom.AffineTransform tx]
     (-> this (.getOutline tx))))
 
 (defn hash-code
@@ -103,7 +103,7 @@
 
   returns: a hash code value for this
    ShapeGraphicAttribute. - `int`"
-  ([this]
+  ([^java.awt.font.ShapeGraphicAttribute this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -115,6 +115,6 @@
   returns: true if this
    ShapeGraphicAttribute equals rhs;
    false otherwise. - `boolean`"
-  ([this rhs]
+  ([^java.awt.font.ShapeGraphicAttribute this ^java.lang.Object rhs]
     (-> this (.equals rhs))))
 

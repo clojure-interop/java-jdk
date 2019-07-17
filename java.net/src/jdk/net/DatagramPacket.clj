@@ -24,13 +24,13 @@
   length - the packet data length. - `int`
   address - the destination address. - `java.net.InetAddress`
   port - the destination port number. - `int`"
-  ([buf offset length address port]
+  ([buf ^Integer offset ^Integer length ^java.net.InetAddress address ^Integer port]
     (new DatagramPacket buf offset length address port))
-  ([buf offset length address]
+  ([buf ^Integer offset ^Integer length ^java.net.SocketAddress address]
     (new DatagramPacket buf offset length address))
-  ([buf offset length]
+  ([buf ^Integer offset ^Integer length]
     (new DatagramPacket buf offset length))
-  ([buf length]
+  ([buf ^Integer length]
     (new DatagramPacket buf length)))
 
 (defn set-data
@@ -42,9 +42,9 @@
   length - the length of the data and/or the length of the buffer used to receive data - `int`
 
   throws: java.lang.NullPointerException - if the argument is null"
-  ([this buf offset length]
+  ([^java.net.DatagramPacket this buf ^Integer offset ^Integer length]
     (-> this (.setData buf offset length)))
-  ([this buf]
+  ([^java.net.DatagramPacket this buf]
     (-> this (.setData buf))))
 
 (defn get-data
@@ -53,7 +53,7 @@
    and runs for length long.
 
   returns: the buffer used to receive or  send data - `byte[]`"
-  ([this]
+  ([^java.net.DatagramPacket this]
     (-> this (.getData))))
 
 (defn set-socket-address
@@ -63,7 +63,7 @@
   address - the SocketAddress - `java.net.SocketAddress`
 
   throws: java.lang.IllegalArgumentException - if address is null or is a SocketAddress subclass not supported by this socket"
-  ([this address]
+  ([^java.net.DatagramPacket this ^java.net.SocketAddress address]
     (-> this (.setSocketAddress address))))
 
 (defn get-address
@@ -72,7 +72,7 @@
 
   returns: the IP address of the machine to which this datagram is being
             sent or from which the datagram was received. - `java.net.InetAddress`"
-  ([this]
+  ([^java.net.DatagramPacket this]
     (-> this (.getAddress))))
 
 (defn set-length
@@ -85,7 +85,7 @@
   length - the length to set for this packet. - `int`
 
   throws: java.lang.IllegalArgumentException - if the length is negative of if the length is greater than the packet's data buffer length."
-  ([this length]
+  ([^java.net.DatagramPacket this ^Integer length]
     (-> this (.setLength length))))
 
 (defn set-address
@@ -93,7 +93,7 @@
    is being sent.
 
   iaddr - the InetAddress - `java.net.InetAddress`"
-  ([this iaddr]
+  ([^java.net.DatagramPacket this ^java.net.InetAddress iaddr]
     (-> this (.setAddress iaddr))))
 
 (defn get-offset
@@ -102,7 +102,7 @@
 
   returns: the offset of the data to be sent or the offset of the
             data received. - `int`"
-  ([this]
+  ([^java.net.DatagramPacket this]
     (-> this (.getOffset))))
 
 (defn get-socket-address
@@ -110,7 +110,7 @@
    host that this packet is being sent to or is coming from.
 
   returns: the SocketAddress - `java.net.SocketAddress`"
-  ([this]
+  ([^java.net.DatagramPacket this]
     (-> this (.getSocketAddress))))
 
 (defn set-port
@@ -118,7 +118,7 @@
    is being sent.
 
   iport - the port number - `int`"
-  ([this iport]
+  ([^java.net.DatagramPacket this ^Integer iport]
     (-> this (.setPort iport))))
 
 (defn get-length
@@ -127,7 +127,7 @@
 
   returns: the length of the data to be sent or the length of the
             data received. - `int`"
-  ([this]
+  ([^java.net.DatagramPacket this]
     (-> this (.getLength))))
 
 (defn get-port
@@ -136,6 +136,6 @@
 
   returns: the port number on the remote host to which this datagram is
             being sent or from which the datagram was received. - `int`"
-  ([this]
+  ([^java.net.DatagramPacket this]
     (-> this (.getPort))))
 

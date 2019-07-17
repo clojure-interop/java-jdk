@@ -48,7 +48,7 @@
   cell-has-focus - True if the specified cell has the focus. - `boolean`
 
   returns: A component whose paint() method will render the specified value. - `java.awt.Component`"
-  ([this list value index is-selected cell-has-focus]
+  ([^javax.swing.DefaultListCellRenderer this ^javax.swing.JList list ^java.lang.Object value ^Integer index ^Boolean is-selected ^Boolean cell-has-focus]
     (-> this (.getListCellRendererComponent list value index is-selected cell-has-focus))))
 
 (defn opaque?
@@ -59,21 +59,21 @@
   returns: true if the background is completely opaque
            and differs from the JList's background;
            false otherwise - `boolean`"
-  ([this]
+  ([^javax.swing.DefaultListCellRenderer this]
     (-> this (.isOpaque))))
 
 (defn validate
   "Overridden for performance reasons.
    See the Implementation Note
    for more information."
-  ([this]
+  ([^javax.swing.DefaultListCellRenderer this]
     (-> this (.validate))))
 
 (defn invalidate
   "Overridden for performance reasons.
    See the Implementation Note
    for more information."
-  ([this]
+  ([^javax.swing.DefaultListCellRenderer this]
     (-> this (.invalidate))))
 
 (defn repaint
@@ -86,18 +86,18 @@
   y - the y value of the dirty region - `int`
   width - the width of the dirty region - `int`
   height - the height of the dirty region - `int`"
-  ([this tm x y width height]
+  ([^javax.swing.DefaultListCellRenderer this ^Long tm ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.repaint tm x y width height)))
-  ([this r]
+  ([^javax.swing.DefaultListCellRenderer this ^java.awt.Rectangle r]
     (-> this (.repaint r)))
-  ([this]
+  ([^javax.swing.DefaultListCellRenderer this]
     (-> this (.repaint))))
 
 (defn revalidate
   "Overridden for performance reasons.
    See the Implementation Note
    for more information."
-  ([this]
+  ([^javax.swing.DefaultListCellRenderer this]
     (-> this (.revalidate))))
 
 (defn fire-property-change
@@ -108,6 +108,6 @@
   property-name - the programmatic name of the property that was changed - `java.lang.String`
   old-value - the old value of the property (as a byte) - `byte`
   new-value - the new value of the property (as a byte) - `byte`"
-  ([this property-name old-value new-value]
+  ([^javax.swing.DefaultListCellRenderer this ^java.lang.String property-name ^Byte old-value ^Byte new-value]
     (-> this (.firePropertyChange property-name old-value new-value))))
 

@@ -59,7 +59,7 @@
   returns: an ImageInputStream, or null. - `javax.imageio.stream.ImageInputStream`
 
   throws: java.lang.IllegalArgumentException - if input is null."
-  ([input]
+  ([^java.lang.Object input]
     (ImageIO/createImageInputStream input)))
 
 (defn *scan-for-plugins
@@ -108,7 +108,7 @@
   returns: an Iterator containing ImageWriters. - `java.util.Iterator<javax.imageio.ImageWriter>`
 
   throws: java.lang.IllegalArgumentException - if MIMEType is null."
-  ([mime-type]
+  ([^java.lang.String mime-type]
     (ImageIO/getImageWritersByMIMEType mime-type)))
 
 (defn *read
@@ -139,7 +139,7 @@
    contents of the input, or null. - `java.awt.image.BufferedImage`
 
   throws: java.lang.IllegalArgumentException - if input is null."
-  ([input]
+  ([^java.io.File input]
     (ImageIO/read input)))
 
 (defn *get-image-readers-by-mime-type
@@ -153,7 +153,7 @@
    ImageReaders. - `java.util.Iterator<javax.imageio.ImageReader>`
 
   throws: java.lang.IllegalArgumentException - if MIMEType is null."
-  ([mime-type]
+  ([^java.lang.String mime-type]
     (ImageIO/getImageReadersByMIMEType mime-type)))
 
 (defn *get-image-writers
@@ -168,7 +168,7 @@
   returns: an Iterator containing ImageWriters. - `java.util.Iterator<javax.imageio.ImageWriter>`
 
   throws: java.lang.IllegalArgumentException - if any parameter is null."
-  ([type format-name]
+  ([^javax.imageio.ImageTypeSpecifier type ^java.lang.String format-name]
     (ImageIO/getImageWriters type format-name)))
 
 (defn *set-use-cache
@@ -193,7 +193,7 @@
     On startup, the value is set to true.
 
   use-cache - a boolean indicating whether a cache file should be used, in cases where it is optional. - `boolean`"
-  ([use-cache]
+  ([^Boolean use-cache]
     (ImageIO/setUseCache use-cache)))
 
 (defn *get-writer-format-names
@@ -229,7 +229,7 @@
    ImageTranscoders. - `java.util.Iterator<javax.imageio.ImageTranscoder>`
 
   throws: java.lang.IllegalArgumentException - if reader or writer is null."
-  ([reader writer]
+  ([^javax.imageio.ImageReader reader ^javax.imageio.ImageWriter writer]
     (ImageIO/getImageTranscoders reader writer)))
 
 (defn *get-image-writers-by-suffix
@@ -242,7 +242,7 @@
   returns: an Iterator containing ImageWriters. - `java.util.Iterator<javax.imageio.ImageWriter>`
 
   throws: java.lang.IllegalArgumentException - if fileSuffix is null."
-  ([file-suffix]
+  ([^java.lang.String file-suffix]
     (ImageIO/getImageWritersBySuffix file-suffix)))
 
 (defn *get-image-readers-by-suffix
@@ -256,7 +256,7 @@
    ImageReaders. - `java.util.Iterator<javax.imageio.ImageReader>`
 
   throws: java.lang.IllegalArgumentException - if fileSuffix is null."
-  ([file-suffix]
+  ([^java.lang.String file-suffix]
     (ImageIO/getImageReadersBySuffix file-suffix)))
 
 (defn *set-cache-directory
@@ -268,7 +268,7 @@
   cache-directory - a File specifying a directory. - `java.io.File`
 
   throws: java.lang.SecurityException - if the security manager denies access to the directory."
-  ([cache-directory]
+  ([^java.io.File cache-directory]
     (ImageIO/setCacheDirectory cache-directory)))
 
 (defn *get-image-readers-by-format-name
@@ -282,7 +282,7 @@
    ImageReaders. - `java.util.Iterator<javax.imageio.ImageReader>`
 
   throws: java.lang.IllegalArgumentException - if formatName is null."
-  ([format-name]
+  ([^java.lang.String format-name]
     (ImageIO/getImageReadersByFormatName format-name)))
 
 (defn *get-image-reader
@@ -302,7 +302,7 @@
   returns: an ImageReader, or null. - `javax.imageio.ImageReader`
 
   throws: java.lang.IllegalArgumentException - if writer is null."
-  ([writer]
+  ([^javax.imageio.ImageWriter writer]
     (ImageIO/getImageReader writer)))
 
 (defn *get-image-readers
@@ -319,7 +319,7 @@
   returns: an Iterator containing ImageReaders. - `java.util.Iterator<javax.imageio.ImageReader>`
 
   throws: java.lang.IllegalArgumentException - if input is null."
-  ([input]
+  ([^java.lang.Object input]
     (ImageIO/getImageReaders input)))
 
 (defn *write
@@ -341,7 +341,7 @@
   returns: false if no appropriate writer is found. - `boolean`
 
   throws: java.lang.IllegalArgumentException - if any parameter is null."
-  ([im format-name output]
+  ([^java.awt.image.RenderedImage im ^java.lang.String format-name ^javax.imageio.stream.ImageOutputStream output]
     (ImageIO/write im format-name output)))
 
 (defn *get-image-writers-by-format-name
@@ -355,7 +355,7 @@
    ImageWriters. - `java.util.Iterator<javax.imageio.ImageWriter>`
 
   throws: java.lang.IllegalArgumentException - if formatName is null."
-  ([format-name]
+  ([^java.lang.String format-name]
     (ImageIO/getImageWritersByFormatName format-name)))
 
 (defn *get-image-writer
@@ -382,7 +382,7 @@
   returns: an ImageWriter, or null. - `javax.imageio.ImageWriter`
 
   throws: java.lang.IllegalArgumentException - if reader is null."
-  ([reader]
+  ([^javax.imageio.ImageReader reader]
     (ImageIO/getImageWriter reader)))
 
 (defn *get-use-cache?
@@ -423,6 +423,6 @@
    null. - `javax.imageio.stream.ImageOutputStream`
 
   throws: java.lang.IllegalArgumentException - if output is null."
-  ([output]
+  ([^java.lang.Object output]
     (ImageIO/createImageOutputStream output)))
 

@@ -9,6 +9,6 @@
   "Called when the response to an asynchronous operation is available.
 
   res - The response to the operation invocation. - `javax.xml.ws.Response<AsyncHandler.T>`"
-  ([this res]
+  ([^. this ^javax.xml.ws.Response res]
     (-> this (.handleResponse res))))
 

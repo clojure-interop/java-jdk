@@ -158,9 +158,9 @@
    different object. - `javax.management.remote.JMXConnector`
 
   throws: java.lang.NullPointerException - if serviceURL is null."
-  ([service-url environment]
+  ([^javax.management.remote.JMXServiceURL service-url ^java.util.Map environment]
     (JMXConnectorFactory/connect service-url environment))
-  ([service-url]
+  ([^javax.management.remote.JMXServiceURL service-url]
     (JMXConnectorFactory/connect service-url)))
 
 (defn *new-jmx-connector
@@ -176,6 +176,6 @@
    a different object. - `javax.management.remote.JMXConnector`
 
   throws: java.lang.NullPointerException - if serviceURL is null."
-  ([service-url environment]
+  ([^javax.management.remote.JMXServiceURL service-url ^java.util.Map environment]
     (JMXConnectorFactory/newJMXConnector service-url environment)))
 

@@ -38,7 +38,7 @@
   c-handler - The HTTP cookie handler, or null to unset. - `java.net.CookieHandler`
 
   throws: java.lang.SecurityException - If a security manager has been installed and it denies NetPermission(`setCookieHandler`)"
-  ([c-handler]
+  ([^java.net.CookieHandler c-handler]
     (CookieHandler/setDefault c-handler)))
 
 (defn get
@@ -66,7 +66,7 @@
               cookies containing state information - `java.util.Map<java.lang.String,java.util.List<java.lang.String>>`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([this uri request-headers]
+  ([^java.net.CookieHandler this ^java.net.URI uri ^java.util.Map> request-headers]
     (-> this (.get uri request-headers))))
 
 (defn put
@@ -78,6 +78,6 @@
   response-headers - an immutable map from field names to lists of field values representing the response header fields returned - `java.util.Map<java.lang.String,java.util.List<java.lang.String>>`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([this uri response-headers]
+  ([^java.net.CookieHandler this ^java.net.URI uri ^java.util.Map> response-headers]
     (-> this (.put uri response-headers))))
 

@@ -46,6 +46,6 @@
 
   returns: the BeanContextChild (or subinterface)
    associated with this object - `java.beans.beancontext.BeanContextChild`"
-  ([this]
+  ([^. this]
     (-> this (.getBeanContextProxy))))
 

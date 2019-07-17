@@ -27,20 +27,20 @@
   key-char - a char specifying the key's character value, if any -- null if the key has no character value - `char`
   p - an array of MenuElement objects specifying a path to a menu item affected by the drag - `javax.swing.MenuElement[]`
   m - a MenuSelectionManager object that handles selections - `javax.swing.MenuSelectionManager`"
-  ([source id when modifiers key-code key-char p m]
+  ([^java.awt.Component source ^Integer id ^Long when ^Integer modifiers ^Integer key-code ^Character key-char ^javax.swing.MenuElement[] p ^javax.swing.MenuSelectionManager m]
     (new MenuKeyEvent source id when modifiers key-code key-char p m)))
 
 (defn get-path
   "Returns the path to the menu item referenced by this event.
 
   returns: an array of MenuElement objects representing the path value - `javax.swing.MenuElement[]`"
-  ([this]
+  ([^javax.swing.event.MenuKeyEvent this]
     (-> this (.getPath))))
 
 (defn get-menu-selection-manager
   "Returns the current menu selection manager.
 
   returns: a MenuSelectionManager object - `javax.swing.MenuSelectionManager`"
-  ([this]
+  ([^javax.swing.event.MenuKeyEvent this]
     (-> this (.getMenuSelectionManager))))
 

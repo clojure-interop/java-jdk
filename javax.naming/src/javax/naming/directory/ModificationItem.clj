@@ -17,7 +17,7 @@
   attr - The non-null attribute to use for modification. - `javax.naming.directory.Attribute`
 
   throws: java.lang.IllegalArgumentException - If attr is null, or if mod_op is not one of the ones specified above."
-  ([mod-op attr]
+  ([^Integer mod-op ^javax.naming.directory.Attribute attr]
     (new ModificationItem mod-op attr)))
 
 (defn get-modification-op
@@ -27,14 +27,14 @@
            DirContext.ADD_ATTRIBUTE
            DirContext.REPLACE_ATTRIBUTE
            DirContext.REMOVE_ATTRIBUTE - `int`"
-  ([this]
+  ([^javax.naming.directory.ModificationItem this]
     (-> this (.getModificationOp))))
 
 (defn get-attribute
   "Retrieves the attribute associated with this modification item.
 
   returns: The non-null attribute to use for the modification. - `javax.naming.directory.Attribute`"
-  ([this]
+  ([^javax.naming.directory.ModificationItem this]
     (-> this (.getAttribute))))
 
 (defn to-string
@@ -44,6 +44,6 @@
    interpreted programmatically.
 
   returns: The non-null string representation of this modification item. - `java.lang.String`"
-  ([this]
+  ([^javax.naming.directory.ModificationItem this]
     (-> this (.toString))))
 

@@ -18,7 +18,7 @@
   value - Integer value. - `int`
 
   throws: java.lang.IllegalArgumentException - (Unchecked exception) Thrown if value is less than 0."
-  ([value]
+  ([^Integer value]
     (new QueuedJobCount value)))
 
 (defn equals
@@ -38,7 +38,7 @@
 
   returns: True if object is equivalent to this queued job
             count attribute, false otherwise. - `boolean`"
-  ([this object]
+  ([^javax.print.attribute.standard.QueuedJobCount this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -49,7 +49,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([this]
+  ([^javax.print.attribute.standard.QueuedJobCount this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -60,6 +60,6 @@
    category name is `queued-job-count`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([this]
+  ([^javax.print.attribute.standard.QueuedJobCount this]
     (-> this (.getName))))
 

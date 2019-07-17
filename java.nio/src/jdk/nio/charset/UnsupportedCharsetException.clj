@@ -10,13 +10,13 @@
   Constructs an instance of this class.
 
   charset-name - The name of the unsupported charset - `java.lang.String`"
-  ([charset-name]
+  ([^java.lang.String charset-name]
     (new UnsupportedCharsetException charset-name)))
 
 (defn get-charset-name
   "Retrieves the name of the unsupported charset.
 
   returns: The name of the unsupported charset - `java.lang.String`"
-  ([this]
+  ([^java.nio.charset.UnsupportedCharsetException this]
     (-> this (.getCharsetName))))
 

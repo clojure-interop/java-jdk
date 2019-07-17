@@ -18,7 +18,7 @@
   forward - the order that certificates are presented to the check method. If true, certificates are presented from target to trust anchor (forward); if false, from trust anchor to target (reverse). - `boolean`
 
   throws: java.security.cert.CertPathValidatorException - if this CertPathChecker is unable to check certificates in the specified order"
-  ([this forward]
+  ([^. this ^Boolean forward]
     (-> this (.init forward))))
 
 (defn forward-checking-supported?
@@ -29,7 +29,7 @@
 
   returns: true if forward checking is supported, false
            otherwise - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.isForwardCheckingSupported))))
 
 (defn check
@@ -40,6 +40,6 @@
   cert - the Certificate to be checked - `java.security.cert.Certificate`
 
   throws: java.security.cert.CertPathValidatorException - if the specified certificate does not pass the check"
-  ([this cert]
+  ([^. this ^java.security.cert.Certificate cert]
     (-> this (.check cert))))
 

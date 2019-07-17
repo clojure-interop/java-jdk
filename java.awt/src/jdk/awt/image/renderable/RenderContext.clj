@@ -29,11 +29,11 @@
   usr-2dev - an AffineTransform. - `java.awt.geom.AffineTransform`
   aoi - a Shape representing the area of interest. - `java.awt.Shape`
   hints - a RenderingHints object containing rendering hints. - `java.awt.RenderingHints`"
-  ([usr-2dev aoi hints]
+  ([^java.awt.geom.AffineTransform usr-2dev ^java.awt.Shape aoi ^java.awt.RenderingHints hints]
     (new RenderContext usr-2dev aoi hints))
-  ([usr-2dev hints]
+  ([^java.awt.geom.AffineTransform usr-2dev ^java.awt.RenderingHints hints]
     (new RenderContext usr-2dev hints))
-  ([usr-2dev]
+  ([^java.awt.geom.AffineTransform usr-2dev]
     (new RenderContext usr-2dev)))
 
 (defn concetenate-transform
@@ -43,7 +43,7 @@
   mod-transform - the AffineTransform to append to the current usr2dev transform. - `java.awt.geom.AffineTransform`
 
   returns: `java.lang.  void`"
-  ([this mod-transform]
+  ([^java.awt.image.renderable.RenderContext this ^java.awt.geom.AffineTransform mod-transform]
     (-> this (.concetenateTransform mod-transform))))
 
 (defn get-rendering-hints
@@ -51,7 +51,7 @@
 
   returns: a RenderingHints object that represents
    the rendering hints of this RenderContext. - `java.awt.RenderingHints`"
-  ([this]
+  ([^java.awt.image.renderable.RenderContext this]
     (-> this (.getRenderingHints))))
 
 (defn pre-concetenate-transform
@@ -61,7 +61,7 @@
   mod-transform - the AffineTransform to prepend to the current usr2dev transform. - `java.awt.geom.AffineTransform`
 
   returns: `java.lang.  void`"
-  ([this mod-transform]
+  ([^java.awt.image.renderable.RenderContext this ^java.awt.geom.AffineTransform mod-transform]
     (-> this (.preConcetenateTransform mod-transform))))
 
 (defn concatenate-transform
@@ -72,14 +72,14 @@
    [this] = [this] x [modTransform]
 
   mod-transform - the AffineTransform to append to the current usr2dev transform. - `java.awt.geom.AffineTransform`"
-  ([this mod-transform]
+  ([^java.awt.image.renderable.RenderContext this ^java.awt.geom.AffineTransform mod-transform]
     (-> this (.concatenateTransform mod-transform))))
 
 (defn set-area-of-interest
   "Sets the current area of interest.  The old area is discarded.
 
   new-aoi - The new area of interest. - `java.awt.Shape`"
-  ([this new-aoi]
+  ([^java.awt.image.renderable.RenderContext this ^java.awt.Shape new-aoi]
     (-> this (.setAreaOfInterest new-aoi))))
 
 (defn pre-concatenate-transform
@@ -90,7 +90,7 @@
    [this] = [modTransform] x [this]
 
   mod-transform - the AffineTransform to prepend to the current usr2dev transform. - `java.awt.geom.AffineTransform`"
-  ([this mod-transform]
+  ([^java.awt.image.renderable.RenderContext this ^java.awt.geom.AffineTransform mod-transform]
     (-> this (.preConcatenateTransform mod-transform))))
 
 (defn get-area-of-interest
@@ -99,7 +99,7 @@
 
   returns: a reference to the area of interest of the RenderContext,
            or null if none is specified. - `java.awt.Shape`"
-  ([this]
+  ([^java.awt.image.renderable.RenderContext this]
     (-> this (.getAreaOfInterest))))
 
 (defn clone
@@ -108,7 +108,7 @@
    while the area of interest is copied by reference.
 
   returns: the new cloned RenderContext. - `java.lang.Object`"
-  ([this]
+  ([^java.awt.image.renderable.RenderContext this]
     (-> this (.clone))))
 
 (defn set-transform
@@ -116,20 +116,20 @@
    in the RenderContext to a given transform.
 
   new-transform - the new AffineTransform. - `java.awt.geom.AffineTransform`"
-  ([this new-transform]
+  ([^java.awt.image.renderable.RenderContext this ^java.awt.geom.AffineTransform new-transform]
     (-> this (.setTransform new-transform))))
 
 (defn get-transform
   "Gets the current user-to-device AffineTransform.
 
   returns: a reference to the current AffineTransform. - `java.awt.geom.AffineTransform`"
-  ([this]
+  ([^java.awt.image.renderable.RenderContext this]
     (-> this (.getTransform))))
 
 (defn set-rendering-hints
   "Sets the rendering hints of this RenderContext.
 
   hints - a RenderingHints object that represents the rendering hints to assign to this RenderContext. - `java.awt.RenderingHints`"
-  ([this hints]
+  ([^java.awt.image.renderable.RenderContext this ^java.awt.RenderingHints hints]
     (-> this (.setRenderingHints hints))))
 

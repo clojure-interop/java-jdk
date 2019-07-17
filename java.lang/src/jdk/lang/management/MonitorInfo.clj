@@ -20,7 +20,7 @@
   stack-frame - the stack frame that locked the object monitor. - `java.lang.StackTraceElement`
 
   throws: java.lang.IllegalArgumentException - if stackDepth ≥ 0 but stackFrame is null, or stackDepth < 0 but stackFrame is not null."
-  ([class-name identity-hash-code stack-depth stack-frame]
+  ([^java.lang.String class-name ^Integer identity-hash-code ^Integer stack-depth ^java.lang.StackTraceElement stack-frame]
     (new MonitorInfo class-name identity-hash-code stack-depth stack-frame)))
 
 (defn *from
@@ -54,7 +54,7 @@
            null otherwise. - `java.lang.management.MonitorInfo`
 
   throws: java.lang.IllegalArgumentException - if cd does not represent a MonitorInfo with the attributes described above."
-  ([cd]
+  ([^javax.management.openmbean.CompositeData cd]
     (MonitorInfo/from cd)))
 
 (defn get-locked-stack-depth
@@ -64,7 +64,7 @@
 
   returns: the depth in the stack trace where the object monitor
            was locked, or a negative number if not available. - `int`"
-  ([this]
+  ([^java.lang.management.MonitorInfo this]
     (-> this (.getLockedStackDepth))))
 
 (defn get-locked-stack-frame
@@ -72,6 +72,6 @@
 
   returns: StackTraceElement that locked the object monitor,
            or null if not available. - `java.lang.StackTraceElement`"
-  ([this]
+  ([^java.lang.management.MonitorInfo this]
     (-> this (.getLockedStackFrame))))
 

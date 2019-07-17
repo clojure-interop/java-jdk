@@ -27,6 +27,6 @@
                interface. - `javax.naming.Context`
 
   throws: javax.naming.NamingException - If cannot create an initial context."
-  ([this environment]
+  ([^. this ^java.util.Hashtable environment]
     (-> this (.getInitialContext environment))))
 

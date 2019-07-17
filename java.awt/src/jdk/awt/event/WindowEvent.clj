@@ -32,13 +32,13 @@
   new-state - New state of the window for window state change event. See #getNewState() for allowable values - `int`
 
   throws: java.lang.IllegalArgumentException - if source is null"
-  ([source id opposite old-state new-state]
+  ([^java.awt.Window source ^Integer id ^java.awt.Window opposite ^Integer old-state ^Integer new-state]
     (new WindowEvent source id opposite old-state new-state))
-  ([source id old-state new-state]
+  ([^java.awt.Window source ^Integer id ^Integer old-state ^Integer new-state]
     (new WindowEvent source id old-state new-state))
-  ([source id opposite]
+  ([^java.awt.Window source ^Integer id ^java.awt.Window opposite]
     (new WindowEvent source id opposite))
-  ([source id]
+  ([^java.awt.Window source ^Integer id]
     (new WindowEvent source id)))
 
 (def *-window-first
@@ -167,7 +167,7 @@
   "Returns the originator of the event.
 
   returns: the Window object that originated the event - `java.awt.Window`"
-  ([this]
+  ([^java.awt.event.WindowEvent this]
     (-> this (.getWindow))))
 
 (defn get-opposite-window
@@ -181,7 +181,7 @@
 
   returns: the other Window involved in the focus or activation change, or
            null - `java.awt.Window`"
-  ([this]
+  ([^java.awt.event.WindowEvent this]
     (-> this (.getOppositeWindow))))
 
 (defn get-old-state
@@ -199,7 +199,7 @@
    and MAXIMIZED_VERT.
 
   returns: a bitwise mask of the previous window state - `int`"
-  ([this]
+  ([^java.awt.event.WindowEvent this]
     (-> this (.getOldState))))
 
 (defn get-new-state
@@ -217,7 +217,7 @@
    and MAXIMIZED_VERT.
 
   returns: a bitwise mask of the new window state - `int`"
-  ([this]
+  ([^java.awt.event.WindowEvent this]
     (-> this (.getNewState))))
 
 (defn param-string
@@ -225,6 +225,6 @@
    This method is useful for event-logging and for debugging.
 
   returns: a string identifying the event and its attributes - `java.lang.String`"
-  ([this]
+  ([^java.awt.event.WindowEvent this]
     (-> this (.paramString))))
 

@@ -34,7 +34,7 @@
   value - Integer value. - `int`
 
   throws: java.lang.IllegalArgumentException - (Unchecked exception) Thrown if value is less than 1 or greater than 100."
-  ([value]
+  ([^Integer value]
     (new JobPriority value)))
 
 (defn equals
@@ -54,7 +54,7 @@
 
   returns: True if object is equivalent to this job
             priority attribute, false otherwise. - `boolean`"
-  ([this object]
+  ([^javax.print.attribute.standard.JobPriority this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -65,7 +65,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([this]
+  ([^javax.print.attribute.standard.JobPriority this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -75,6 +75,6 @@
    For class JobPriority, the category name is `job-priority`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([this]
+  ([^javax.print.attribute.standard.JobPriority this]
     (-> this (.getName))))
 

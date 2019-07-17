@@ -10,6 +10,6 @@
    stream.
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([this]
+  ([^. this]
     (-> this (.flush))))
 

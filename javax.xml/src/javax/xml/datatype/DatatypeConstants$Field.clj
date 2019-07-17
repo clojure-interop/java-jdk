@@ -10,13 +10,13 @@
    and not for display to end-users.
 
   returns: a non-null valid String constant. - `java.lang.String`"
-  ([this]
+  ([^javax.xml.datatype.DatatypeConstants$Field this]
     (-> this (.toString))))
 
 (defn get-id
   "Get id of this Field.
 
   returns: Id of field. - `int`"
-  ([this]
+  ([^javax.xml.datatype.DatatypeConstants$Field this]
     (-> this (.getId))))
 

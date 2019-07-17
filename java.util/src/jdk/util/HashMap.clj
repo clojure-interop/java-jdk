@@ -96,9 +96,9 @@
   load-factor - the load factor - `float`
 
   throws: java.lang.IllegalArgumentException - if the initial capacity is negative or the load factor is nonpositive"
-  ([initial-capacity load-factor]
+  ([^Integer initial-capacity ^Float load-factor]
     (new HashMap initial-capacity load-factor))
-  ([initial-capacity]
+  ([^Integer initial-capacity]
     (new HashMap initial-capacity))
   ([]
     (new HashMap )))
@@ -117,21 +117,21 @@
    support the add or addAll operations.
 
   returns: a view of the values contained in this map - `java.util.Collection<HashMap.V>`"
-  ([this]
+  ([^java.util.HashMap this]
     (-> this (.values))))
 
 (defn for-each
   "Description copied from interface: Map
 
   action - The action to be performed for each entry - `HashMap.V>`"
-  ([this action]
+  ([^java.util.HashMap this ^HashMap.V> action]
     (-> this (.forEach action))))
 
 (defn replace-all
   "Description copied from interface: Map
 
   function - the function to apply to each entry - `HashMap.V>`"
-  ([this function]
+  ([^java.util.HashMap this ^HashMap.V> function]
     (-> this (.replaceAll function))))
 
 (defn put-all
@@ -142,7 +142,7 @@
   m - mappings to be stored in this map - `HashMap.V>`
 
   throws: java.lang.NullPointerException - if the specified map is null"
-  ([this m]
+  ([^java.util.HashMap this ^HashMap.V> m]
     (-> this (.putAll m))))
 
 (defn put-if-absent
@@ -156,7 +156,7 @@
            (A null return can also indicate that the map
            previously associated null with the key,
            if the implementation supports null values.) - `HashMap.V`"
-  ([this key value]
+  ([^java.util.HashMap this ^HashMap.K key ^HashMap.V value]
     (-> this (.putIfAbsent key value))))
 
 (defn put
@@ -171,7 +171,7 @@
            null if there was no mapping for key.
            (A null return can also indicate that the map
            previously associated null with key.) - `HashMap.V`"
-  ([this key value]
+  ([^java.util.HashMap this ^HashMap.K key ^HashMap.V value]
     (-> this (.put key value))))
 
 (defn entry-set
@@ -189,7 +189,7 @@
    add or addAll operations.
 
   returns: a set view of the mappings contained in this map - `java.util.Set<java.util.Map.Entry<HashMap.K,HashMap.V>>`"
-  ([this]
+  ([^java.util.HashMap this]
     (-> this (.entrySet))))
 
 (defn contains-value
@@ -200,7 +200,7 @@
 
   returns: true if this map maps one or more keys to the
            specified value - `boolean`"
-  ([this value]
+  ([^java.util.HashMap this ^java.lang.Object value]
     (-> this (.containsValue value))))
 
 (defn get-or-default
@@ -211,7 +211,7 @@
 
   returns: the value to which the specified key is mapped, or
    defaultValue if this map contains no mapping for the key - `HashMap.V`"
-  ([this key default-value]
+  ([^java.util.HashMap this ^java.lang.Object key ^HashMap.V default-value]
     (-> this (.getOrDefault key default-value))))
 
 (defn replace
@@ -222,9 +222,9 @@
   new-value - value to be associated with the specified key - `HashMap.V`
 
   returns: true if the value was replaced - `boolean`"
-  ([this key old-value new-value]
+  ([^java.util.HashMap this ^HashMap.K key ^HashMap.V old-value ^HashMap.V new-value]
     (-> this (.replace key old-value new-value)))
-  ([this key value]
+  ([^java.util.HashMap this ^HashMap.K key ^HashMap.V value]
     (-> this (.replace key value))))
 
 (defn remove
@@ -234,9 +234,9 @@
   value - value expected to be associated with the specified key - `java.lang.Object`
 
   returns: true if the value was removed - `boolean`"
-  ([this key value]
+  ([^java.util.HashMap this ^java.lang.Object key ^java.lang.Object value]
     (-> this (.remove key value)))
-  ([this key]
+  ([^java.util.HashMap this ^java.lang.Object key]
     (-> this (.remove key))))
 
 (defn key-set
@@ -253,7 +253,7 @@
    operations.
 
   returns: a set view of the keys contained in this map - `java.util.Set<HashMap.K>`"
-  ([this]
+  ([^java.util.HashMap this]
     (-> this (.keySet))))
 
 (defn clone
@@ -261,7 +261,7 @@
    values themselves are not cloned.
 
   returns: a shallow copy of this map - `java.lang.Object`"
-  ([this]
+  ([^java.util.HashMap this]
     (-> this (.clone))))
 
 (defn compute-if-present
@@ -271,27 +271,27 @@
   remapping-function - the function to compute a value - `HashMap.V>`
 
   returns: the new value associated with the specified key, or null if none - `HashMap.V`"
-  ([this key remapping-function]
+  ([^java.util.HashMap this ^HashMap.K key ^HashMap.V> remapping-function]
     (-> this (.computeIfPresent key remapping-function))))
 
 (defn empty?
   "Returns true if this map contains no key-value mappings.
 
   returns: true if this map contains no key-value mappings - `boolean`"
-  ([this]
+  ([^java.util.HashMap this]
     (-> this (.isEmpty))))
 
 (defn size
   "Returns the number of key-value mappings in this map.
 
   returns: the number of key-value mappings in this map - `int`"
-  ([this]
+  ([^java.util.HashMap this]
     (-> this (.size))))
 
 (defn clear
   "Removes all of the mappings from this map.
    The map will be empty after this call returns."
-  ([this]
+  ([^java.util.HashMap this]
     (-> this (.clear))))
 
 (defn contains-key
@@ -302,7 +302,7 @@
 
   returns: true if this map contains a mapping for the specified
    key. - `boolean`"
-  ([this key]
+  ([^java.util.HashMap this ^java.lang.Object key]
     (-> this (.containsKey key))))
 
 (defn get
@@ -324,7 +324,7 @@
 
   returns: the value to which the specified key is mapped, or
            null if this map contains no mapping for the key - `HashMap.V`"
-  ([this key]
+  ([^java.util.HashMap this ^java.lang.Object key]
     (-> this (.get key))))
 
 (defn merge
@@ -336,7 +336,7 @@
 
   returns: the new value associated with the specified key, or null if no
            value is associated with the key - `HashMap.V`"
-  ([this key value remapping-function]
+  ([^java.util.HashMap this ^HashMap.K key ^HashMap.V value ^HashMap.V> remapping-function]
     (-> this (.merge key value remapping-function))))
 
 (defn compute
@@ -346,7 +346,7 @@
   remapping-function - the function to compute a value - `HashMap.V>`
 
   returns: the new value associated with the specified key, or null if none - `HashMap.V`"
-  ([this key remapping-function]
+  ([^java.util.HashMap this ^HashMap.K key ^HashMap.V> remapping-function]
     (-> this (.compute key remapping-function))))
 
 (defn compute-if-absent
@@ -357,6 +357,6 @@
 
   returns: the current (existing or computed) value associated with
            the specified key, or null if the computed value is null - `HashMap.V`"
-  ([this key mapping-function]
+  ([^java.util.HashMap this ^HashMap.K key ^HashMap.V> mapping-function]
     (-> this (.computeIfAbsent key mapping-function))))
 

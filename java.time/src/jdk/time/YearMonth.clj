@@ -36,7 +36,7 @@
   zone - the zone ID to use, not null - `java.time.ZoneId`
 
   returns: the current year-month using the system clock, not null - `java.time.YearMonth`"
-  ([zone]
+  ([^java.time.ZoneId zone]
     (YearMonth/now zone))
   ([]
     (YearMonth/now )))
@@ -50,7 +50,7 @@
   returns: the year-month, not null - `java.time.YearMonth`
 
   throws: java.time.DateTimeException - if the year value is invalid"
-  ([year month]
+  ([^Integer year ^java.time.Month month]
     (YearMonth/of year month)))
 
 (defn *from
@@ -73,7 +73,7 @@
   returns: the year-month, not null - `java.time.YearMonth`
 
   throws: java.time.DateTimeException - if unable to convert to a YearMonth"
-  ([temporal]
+  ([^java.time.temporal.TemporalAccessor temporal]
     (YearMonth/from temporal)))
 
 (defn *parse
@@ -87,9 +87,9 @@
   returns: the parsed year-month, not null - `java.time.YearMonth`
 
   throws: java.time.format.DateTimeParseException - if the text cannot be parsed"
-  ([text formatter]
+  ([^java.lang.CharSequence text ^java.time.format.DateTimeFormatter formatter]
     (YearMonth/parse text formatter))
-  ([text]
+  ([^java.lang.CharSequence text]
     (YearMonth/parse text)))
 
 (defn length-of-year
@@ -98,7 +98,7 @@
    This returns the length of the year in days, either 365 or 366.
 
   returns: 366 if the year is leap, 365 otherwise - `int`"
-  ([this]
+  ([^java.time.YearMonth this]
     (-> this (.lengthOfYear))))
 
 (defn range
@@ -124,7 +124,7 @@
   returns: the range of valid values for the field, not null - `java.time.temporal.ValueRange`
 
   throws: java.time.DateTimeException - if the range for the field cannot be obtained"
-  ([this field]
+  ([^java.time.YearMonth this ^java.time.temporal.TemporalField field]
     (-> this (.range field))))
 
 (defn valid-day?
@@ -136,7 +136,7 @@
   day-of-month - the day-of-month to validate, from 1 to 31, invalid value returns false - `int`
 
   returns: true if the day is valid for this year-month - `boolean`"
-  ([this day-of-month]
+  ([^java.time.YearMonth this ^Integer day-of-month]
     (-> this (.isValidDay day-of-month))))
 
 (defn with-month
@@ -149,7 +149,7 @@
   returns: a YearMonth based on this year-month with the requested month, not null - `java.time.YearMonth`
 
   throws: java.time.DateTimeException - if the month-of-year value is invalid"
-  ([this month]
+  ([^java.time.YearMonth this ^Integer month]
     (-> this (.withMonth month))))
 
 (defn at-day
@@ -169,7 +169,7 @@
   returns: the date formed from this year-month and the specified day, not null - `java.time.LocalDate`
 
   throws: java.time.DateTimeException - if the day is invalid for the year-month"
-  ([this day-of-month]
+  ([^java.time.YearMonth this ^Integer day-of-month]
     (-> this (.atDay day-of-month))))
 
 (defn get-year
@@ -180,7 +180,7 @@
    The year returned by this method is proleptic as per get(YEAR).
 
   returns: the year, from MIN_YEAR to MAX_YEAR - `int`"
-  ([this]
+  ([^java.time.YearMonth this]
     (-> this (.getYear))))
 
 (defn plus
@@ -233,9 +233,9 @@
   returns: a YearMonth based on this year-month with the specified amount added, not null - `java.time.YearMonth`
 
   throws: java.time.DateTimeException - if the addition cannot be made"
-  ([this amount-to-add unit]
+  ([^java.time.YearMonth this ^Long amount-to-add ^java.time.temporal.TemporalUnit unit]
     (-> this (.plus amount-to-add unit)))
-  ([this amount-to-add]
+  ([^java.time.YearMonth this ^java.time.temporal.TemporalAmount amount-to-add]
     (-> this (.plus amount-to-add))))
 
 (defn leap-year?
@@ -255,7 +255,7 @@
    This is historically inaccurate, but is correct for the ISO-8601 standard.
 
   returns: true if the year is leap, false otherwise - `boolean`"
-  ([this]
+  ([^java.time.YearMonth this]
     (-> this (.isLeapYear))))
 
 (defn query
@@ -275,7 +275,7 @@
   returns: the query result, null may be returned (defined by the query) - `<R> R`
 
   throws: java.time.DateTimeException - if unable to query (defined by the query)"
-  ([this query]
+  ([^java.time.YearMonth this ^java.time.temporal.TemporalQuery query]
     (-> this (.query query))))
 
 (defn to-string
@@ -284,7 +284,7 @@
    The output will be in the format uuuu-MM:
 
   returns: a string representation of this year-month, not null - `java.lang.String`"
-  ([this]
+  ([^java.time.YearMonth this]
     (-> this (.toString))))
 
 (defn plus-months
@@ -297,7 +297,7 @@
   returns: a YearMonth based on this year-month with the months added, not null - `java.time.YearMonth`
 
   throws: java.time.DateTimeException - if the result exceeds the supported range"
-  ([this months-to-add]
+  ([^java.time.YearMonth this ^Long months-to-add]
     (-> this (.plusMonths months-to-add))))
 
 (defn before?
@@ -306,7 +306,7 @@
   other - the other year-month to compare to, not null - `java.time.YearMonth`
 
   returns: true if this point is before the specified year-month - `boolean`"
-  ([this other]
+  ([^java.time.YearMonth this ^java.time.YearMonth other]
     (-> this (.isBefore other))))
 
 (defn minus-months
@@ -319,7 +319,7 @@
   returns: a YearMonth based on this year-month with the months subtracted, not null - `java.time.YearMonth`
 
   throws: java.time.DateTimeException - if the result exceeds the supported range"
-  ([this months-to-subtract]
+  ([^java.time.YearMonth this ^Long months-to-subtract]
     (-> this (.minusMonths months-to-subtract))))
 
 (defn minus
@@ -340,9 +340,9 @@
   returns: a YearMonth based on this year-month with the specified amount subtracted, not null - `java.time.YearMonth`
 
   throws: java.time.DateTimeException - if the subtraction cannot be made"
-  ([this amount-to-subtract unit]
+  ([^java.time.YearMonth this ^Long amount-to-subtract ^java.time.temporal.TemporalUnit unit]
     (-> this (.minus amount-to-subtract unit)))
-  ([this amount-to-subtract]
+  ([^java.time.YearMonth this ^java.time.temporal.TemporalAmount amount-to-subtract]
     (-> this (.minus amount-to-subtract))))
 
 (defn get-long
@@ -367,7 +367,7 @@
   returns: the value for the field - `long`
 
   throws: java.time.DateTimeException - if a value for the field cannot be obtained"
-  ([this field]
+  ([^java.time.YearMonth this ^java.time.temporal.TemporalField field]
     (-> this (.getLong field))))
 
 (defn with-year
@@ -380,7 +380,7 @@
   returns: a YearMonth based on this year-month with the requested year, not null - `java.time.YearMonth`
 
   throws: java.time.DateTimeException - if the year value is invalid"
-  ([this year]
+  ([^java.time.YearMonth this ^Integer year]
     (-> this (.withYear year))))
 
 (defn at-end-of-month
@@ -396,7 +396,7 @@
     LocalDate date = year.atMonth(month).atEndOfMonth();
 
   returns: the last valid date of this year-month, not null - `java.time.LocalDate`"
-  ([this]
+  ([^java.time.YearMonth this]
     (-> this (.atEndOfMonth))))
 
 (defn length-of-month
@@ -406,7 +406,7 @@
    For example, a date in January would return 31.
 
   returns: the length of the month in days, from 28 to 31 - `int`"
-  ([this]
+  ([^java.time.YearMonth this]
     (-> this (.lengthOfMonth))))
 
 (defn until
@@ -454,7 +454,7 @@
   returns: the amount of time between this year-month and the end year-month - `long`
 
   throws: java.time.DateTimeException - if the amount cannot be calculated, or the end temporal cannot be converted to a YearMonth"
-  ([this end-exclusive unit]
+  ([^java.time.YearMonth this ^java.time.temporal.Temporal end-exclusive ^java.time.temporal.TemporalUnit unit]
     (-> this (.until end-exclusive unit))))
 
 (defn after?
@@ -463,7 +463,7 @@
   other - the other year-month to compare to, not null - `java.time.YearMonth`
 
   returns: true if this is after the specified year-month - `boolean`"
-  ([this other]
+  ([^java.time.YearMonth this ^java.time.YearMonth other]
     (-> this (.isAfter other))))
 
 (defn supported?
@@ -493,7 +493,7 @@
   field - the field to check, null returns false - `java.time.temporal.TemporalField`
 
   returns: true if the field is supported on this year-month, false if not - `boolean`"
-  ([this field]
+  ([^java.time.YearMonth this ^java.time.temporal.TemporalField field]
     (-> this (.isSupported field))))
 
 (defn minus-years
@@ -506,14 +506,14 @@
   returns: a YearMonth based on this year-month with the years subtracted, not null - `java.time.YearMonth`
 
   throws: java.time.DateTimeException - if the result exceeds the supported range"
-  ([this years-to-subtract]
+  ([^java.time.YearMonth this ^Long years-to-subtract]
     (-> this (.minusYears years-to-subtract))))
 
 (defn hash-code
   "A hash code for this year-month.
 
   returns: a suitable hash code - `int`"
-  ([this]
+  ([^java.time.YearMonth this]
     (-> this (.hashCode))))
 
 (defn adjust-into
@@ -542,7 +542,7 @@
   returns: the adjusted object, not null - `java.time.temporal.Temporal`
 
   throws: java.time.DateTimeException - if unable to make the adjustment"
-  ([this temporal]
+  ([^java.time.YearMonth this ^java.time.temporal.Temporal temporal]
     (-> this (.adjustInto temporal))))
 
 (defn with
@@ -592,9 +592,9 @@
   returns: a YearMonth based on this with the specified field set, not null - `java.time.YearMonth`
 
   throws: java.time.DateTimeException - if the field cannot be set"
-  ([this field new-value]
+  ([^java.time.YearMonth this ^java.time.temporal.TemporalField field ^Long new-value]
     (-> this (.with field new-value)))
-  ([this adjuster]
+  ([^java.time.YearMonth this ^java.time.temporal.TemporalAdjuster adjuster]
     (-> this (.with adjuster))))
 
 (defn get-month-value
@@ -605,7 +605,7 @@
    is used by calling getMonth().
 
   returns: the month-of-year, from 1 to 12 - `int`"
-  ([this]
+  ([^java.time.YearMonth this]
     (-> this (.getMonthValue))))
 
 (defn compare-to
@@ -617,7 +617,7 @@
   other - the other year-month to compare to, not null - `java.time.YearMonth`
 
   returns: the comparator value, negative if less, positive if greater - `int`"
-  ([this other]
+  ([^java.time.YearMonth this ^java.time.YearMonth other]
     (-> this (.compareTo other))))
 
 (defn get-month
@@ -629,7 +629,7 @@
    provides the int value.
 
   returns: the month-of-year, not null - `java.time.Month`"
-  ([this]
+  ([^java.time.YearMonth this]
     (-> this (.getMonth))))
 
 (defn get
@@ -656,7 +656,7 @@
   returns: the value for the field - `int`
 
   throws: java.time.DateTimeException - if a value for the field cannot be obtained or the value is outside the range of valid values for the field"
-  ([this field]
+  ([^java.time.YearMonth this ^java.time.temporal.TemporalField field]
     (-> this (.get field))))
 
 (defn equals
@@ -667,7 +667,7 @@
   obj - the object to check, null returns false - `java.lang.Object`
 
   returns: true if this is equal to the other year-month - `boolean`"
-  ([this obj]
+  ([^java.time.YearMonth this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn format
@@ -680,7 +680,7 @@
   returns: the formatted year-month string, not null - `java.lang.String`
 
   throws: java.time.DateTimeException - if an error occurs during printing"
-  ([this formatter]
+  ([^java.time.YearMonth this ^java.time.format.DateTimeFormatter formatter]
     (-> this (.format formatter))))
 
 (defn plus-years
@@ -693,6 +693,6 @@
   returns: a YearMonth based on this year-month with the years added, not null - `java.time.YearMonth`
 
   throws: java.time.DateTimeException - if the result exceeds the supported range"
-  ([this years-to-add]
+  ([^java.time.YearMonth this ^Long years-to-add]
     (-> this (.plusYears years-to-add))))
 

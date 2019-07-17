@@ -25,9 +25,9 @@
 
   message - the detail message, may be null - `java.lang.String`
   cause - the cause, may be null - `java.lang.Throwable`"
-  ([message cause]
+  ([^java.lang.String message ^java.lang.Throwable cause]
     (new AssertionError message cause))
-  ([detail-message]
+  ([^java.lang.Object detail-message]
     (new AssertionError detail-message))
   ([]
     (new AssertionError )))

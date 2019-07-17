@@ -21,7 +21,7 @@
    OpenMBeanParameterInfo interface (typically OpenMBeanParameterInfoSupport).
 
   returns: the signature. - `javax.management.MBeanParameterInfo[]`"
-  ([this]
+  ([^. this]
     (-> this (.getSignature))))
 
 (defn get-impact
@@ -32,7 +32,7 @@
    The returned constant is one of MBeanOperationInfo.INFO, MBeanOperationInfo.ACTION, MBeanOperationInfo.ACTION_INFO, or MBeanOperationInfo.UNKNOWN.
 
   returns: the impact code. - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getImpact))))
 
 (defn to-string
@@ -42,7 +42,7 @@
    and the name, signature, return open type and impact of the described operation.
 
   returns: a string representation of this OpenMBeanOperationInfo instance - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.toString))))
 
 (defn get-name
@@ -50,7 +50,7 @@
    described by this OpenMBeanOperationInfo instance.
 
   returns: the name. - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getName))))
 
 (defn get-description
@@ -58,7 +58,7 @@
    described by this OpenMBeanOperationInfo instance.
 
   returns: the description. - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getDescription))))
 
 (defn get-return-type
@@ -69,7 +69,7 @@
    getReturnOpenType().getClassName().
 
   returns: the return type. - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getReturnType))))
 
 (defn hash-code
@@ -86,7 +86,7 @@
    Object.hashCode().
 
   returns: the hash code value for this OpenMBeanOperationInfo instance - `int`"
-  ([this]
+  ([^. this]
     (-> this (.hashCode))))
 
 (defn get-return-open-type
@@ -95,7 +95,7 @@
    instance.
 
   returns: the return type. - `javax.management.openmbean.OpenType<?>`"
-  ([this]
+  ([^. this]
     (-> this (.getReturnOpenType))))
 
 (defn equals
@@ -116,6 +116,6 @@
   obj - the object to be compared for equality with this OpenMBeanOperationInfo instance; - `java.lang.Object`
 
   returns: true if the specified object is equal to this OpenMBeanOperationInfo instance. - `boolean`"
-  ([this obj]
+  ([^. this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

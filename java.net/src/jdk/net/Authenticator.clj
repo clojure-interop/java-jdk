@@ -38,7 +38,7 @@
   a - The authenticator to be set. If a is null then any previously set authenticator is removed. - `java.net.Authenticator`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPermission method doesn't allow setting the default authenticator."
-  ([a]
+  ([^java.net.Authenticator a]
     (Authenticator/setDefault a)))
 
 (defn *request-password-authentication
@@ -62,10 +62,10 @@
   returns: The username/password, or null if one can't be gotten. - `java.net.PasswordAuthentication`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPermission method doesn't allow the password authentication request."
-  ([host addr port protocol prompt scheme url req-type]
+  ([^java.lang.String host ^java.net.InetAddress addr ^Integer port ^java.lang.String protocol ^java.lang.String prompt ^java.lang.String scheme ^java.net.URL url ^java.net.Authenticator.RequestorType req-type]
     (Authenticator/requestPasswordAuthentication host addr port protocol prompt scheme url req-type))
-  ([host addr port protocol prompt scheme]
+  ([^java.lang.String host ^java.net.InetAddress addr ^Integer port ^java.lang.String protocol ^java.lang.String prompt ^java.lang.String scheme]
     (Authenticator/requestPasswordAuthentication host addr port protocol prompt scheme))
-  ([addr port protocol prompt scheme]
+  ([^java.net.InetAddress addr ^Integer port ^java.lang.String protocol ^java.lang.String prompt ^java.lang.String scheme]
     (Authenticator/requestPasswordAuthentication addr port protocol prompt scheme)))
 

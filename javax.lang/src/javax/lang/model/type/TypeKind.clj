@@ -195,7 +195,7 @@
   returns: the enum constant with the specified name - `javax.lang.model.type.TypeKind`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([name]
+  ([^java.lang.String name]
     (TypeKind/valueOf name)))
 
 (defn primitive?
@@ -203,6 +203,6 @@
    type and false otherwise.
 
   returns: true if this kind corresponds to a primitive type - `boolean`"
-  ([this]
+  ([^javax.lang.model.type.TypeKind this]
     (-> this (.isPrimitive))))
 

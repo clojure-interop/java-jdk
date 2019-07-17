@@ -94,13 +94,13 @@
   dash-phase - the offset to start the dashing pattern - `float`
 
   throws: java.lang.IllegalArgumentException - if dash lengths are all zero."
-  ([width cap join miterlimit dash dash-phase]
+  ([^Float width ^Integer cap ^Integer join ^Float miterlimit dash ^Float dash-phase]
     (new BasicStroke width cap join miterlimit dash dash-phase))
-  ([width cap join miterlimit]
+  ([^Float width ^Integer cap ^Integer join ^Float miterlimit]
     (new BasicStroke width cap join miterlimit))
-  ([width cap join]
+  ([^Float width ^Integer cap ^Integer join]
     (new BasicStroke width cap join))
-  ([width]
+  ([^Float width]
     (new BasicStroke width))
   ([]
     (new BasicStroke )))
@@ -173,7 +173,7 @@
    to an even element of the dash array and transparent otherwise.
 
   returns: the dash array. - `float[]`"
-  ([this]
+  ([^java.awt.BasicStroke this]
     (-> this (.getDashArray))))
 
 (defn get-end-cap
@@ -182,7 +182,7 @@
   returns: the end cap style of this BasicStroke as one
    of the static int values that define possible end cap
    styles. - `int`"
-  ([this]
+  ([^java.awt.BasicStroke this]
     (-> this (.getEndCap))))
 
 (defn get-dash-phase
@@ -193,7 +193,7 @@
    the beginning of the stroke.
 
   returns: the dash phase as a float value. - `float`"
-  ([this]
+  ([^java.awt.BasicStroke this]
     (-> this (.getDashPhase))))
 
 (defn get-line-join
@@ -202,7 +202,7 @@
   returns: the line join style of the BasicStroke as one
    of the static int values that define possible line
    join styles. - `int`"
-  ([this]
+  ([^java.awt.BasicStroke this]
     (-> this (.getLineJoin))))
 
 (defn create-stroked-shape
@@ -212,7 +212,7 @@
   s - the Shape boundary be stroked - `java.awt.Shape`
 
   returns: the Shape of the stroked outline. - `java.awt.Shape`"
-  ([this s]
+  ([^java.awt.BasicStroke this ^java.awt.Shape s]
     (-> this (.createStrokedShape s))))
 
 (defn get-line-width
@@ -222,14 +222,14 @@
    the user space coordinate system.
 
   returns: the line width of this BasicStroke. - `float`"
-  ([this]
+  ([^java.awt.BasicStroke this]
     (-> this (.getLineWidth))))
 
 (defn hash-code
   "Returns the hashcode for this stroke.
 
   returns: a hash code for this stroke. - `int`"
-  ([this]
+  ([^java.awt.BasicStroke this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -243,13 +243,13 @@
   returns: true if the width, join, cap, miter limit, dash, and
               dash phase are the same for both objects;
               false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.awt.BasicStroke this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn get-miter-limit
   "Returns the limit of miter joins.
 
   returns: the limit of miter joins of the BasicStroke. - `float`"
-  ([this]
+  ([^java.awt.BasicStroke this]
     (-> this (.getMiterLimit))))
 

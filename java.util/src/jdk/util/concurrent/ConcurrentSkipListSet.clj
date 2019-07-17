@@ -48,7 +48,7 @@
    the specified comparator.
 
   comparator - the comparator that will be used to order this set. If null, the java.lang.natural ordering of the elements will be used. - `ConcurrentSkipListSet.E>`"
-  ([comparator]
+  ([^ConcurrentSkipListSet.E> comparator]
     (new ConcurrentSkipListSet comparator))
   ([]
     (new ConcurrentSkipListSet )))
@@ -62,7 +62,7 @@
            or null if there is no such element - `ConcurrentSkipListSet.E`
 
   throws: java.lang.ClassCastException - if the specified element cannot be compared with the elements currently in the set"
-  ([this e]
+  ([^java.util.concurrent.ConcurrentSkipListSet this ^ConcurrentSkipListSet.E e]
     (-> this (.floor e))))
 
 (defn spliterator
@@ -81,7 +81,7 @@
    same total ordering as the set's comparator.
 
   returns: a Spliterator over the elements in this set - `java.util.Spliterator<ConcurrentSkipListSet.E>`"
-  ([this]
+  ([^java.util.concurrent.ConcurrentSkipListSet this]
     (-> this (.spliterator))))
 
 (defn tail-set
@@ -94,9 +94,9 @@
            than or equal to fromElement - `java.util.NavigableSet<ConcurrentSkipListSet.E>`
 
   throws: java.lang.ClassCastException - if fromElement is not compatible with this set's comparator (or, if the set has no comparator, if fromElement does not implement Comparable). Implementations may, but are not required to, throw this exception if fromElement cannot be compared to elements currently in the set."
-  ([this from-element inclusive]
+  ([^java.util.concurrent.ConcurrentSkipListSet this ^ConcurrentSkipListSet.E from-element ^Boolean inclusive]
     (-> this (.tailSet from-element inclusive)))
-  ([this from-element]
+  ([^java.util.concurrent.ConcurrentSkipListSet this ^ConcurrentSkipListSet.E from-element]
     (-> this (.tailSet from-element))))
 
 (defn contains
@@ -109,14 +109,14 @@
   returns: true if this set contains the specified element - `boolean`
 
   throws: java.lang.ClassCastException - if the specified element cannot be compared with the elements currently in this set"
-  ([this o]
+  ([^java.util.concurrent.ConcurrentSkipListSet this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn iterator
   "Returns an iterator over the elements in this set in ascending order.
 
   returns: an iterator over the elements in this set in ascending order - `java.util.Iterator<ConcurrentSkipListSet.E>`"
-  ([this]
+  ([^java.util.concurrent.ConcurrentSkipListSet this]
     (-> this (.iterator))))
 
 (defn descending-set
@@ -130,7 +130,7 @@
    view of s essentially equivalent to s.
 
   returns: a reverse order view of this set - `java.util.NavigableSet<ConcurrentSkipListSet.E>`"
-  ([this]
+  ([^java.util.concurrent.ConcurrentSkipListSet this]
     (-> this (.descendingSet))))
 
 (defn sub-set
@@ -145,9 +145,9 @@
            fromElement, inclusive, to toElement, exclusive - `java.util.NavigableSet<ConcurrentSkipListSet.E>`
 
   throws: java.lang.ClassCastException - if fromElement and toElement cannot be compared to one another using this set's comparator (or, if the set has no comparator, using natural ordering). Implementations may, but are not required to, throw this exception if fromElement or toElement cannot be compared to elements currently in the set."
-  ([this from-element from-inclusive to-element to-inclusive]
+  ([^java.util.concurrent.ConcurrentSkipListSet this ^ConcurrentSkipListSet.E from-element ^Boolean from-inclusive ^ConcurrentSkipListSet.E to-element ^Boolean to-inclusive]
     (-> this (.subSet from-element from-inclusive to-element to-inclusive)))
-  ([this from-element to-element]
+  ([^java.util.concurrent.ConcurrentSkipListSet this ^ConcurrentSkipListSet.E from-element ^ConcurrentSkipListSet.E to-element]
     (-> this (.subSet from-element to-element))))
 
 (defn remove
@@ -163,14 +163,14 @@
   returns: true if this set contained the specified element - `boolean`
 
   throws: java.lang.ClassCastException - if o cannot be compared with the elements currently in this set"
-  ([this o]
+  ([^java.util.concurrent.ConcurrentSkipListSet this ^java.lang.Object o]
     (-> this (.remove o))))
 
 (defn poll-last
   "Description copied from interface: NavigableSet
 
   returns: the last element, or null if this set is empty - `ConcurrentSkipListSet.E`"
-  ([this]
+  ([^java.util.concurrent.ConcurrentSkipListSet this]
     (-> this (.pollLast))))
 
 (defn comparator
@@ -179,7 +179,7 @@
   returns: the comparator used to order the elements in this set,
            or null if this set uses the natural ordering
            of its elements - `java.util.Comparator<? super ConcurrentSkipListSet.E>`"
-  ([this]
+  ([^java.util.concurrent.ConcurrentSkipListSet this]
     (-> this (.comparator))))
 
 (defn last
@@ -188,14 +188,14 @@
   returns: the last (highest) element currently in this set - `ConcurrentSkipListSet.E`
 
   throws: java.util.NoSuchElementException - if this set is empty"
-  ([this]
+  ([^java.util.concurrent.ConcurrentSkipListSet this]
     (-> this (.last))))
 
 (defn poll-first
   "Description copied from interface: NavigableSet
 
   returns: the first element, or null if this set is empty - `ConcurrentSkipListSet.E`"
-  ([this]
+  ([^java.util.concurrent.ConcurrentSkipListSet this]
     (-> this (.pollFirst))))
 
 (defn higher
@@ -207,7 +207,7 @@
            or null if there is no such element - `ConcurrentSkipListSet.E`
 
   throws: java.lang.ClassCastException - if the specified element cannot be compared with the elements currently in the set"
-  ([this e]
+  ([^java.util.concurrent.ConcurrentSkipListSet this ^ConcurrentSkipListSet.E e]
     (-> this (.higher e))))
 
 (defn clone
@@ -215,7 +215,7 @@
    instance. (The elements themselves are not cloned.)
 
   returns: a shallow copy of this set - `java.util.concurrent.ConcurrentSkipListSet<ConcurrentSkipListSet.E>`"
-  ([this]
+  ([^java.util.concurrent.ConcurrentSkipListSet this]
     (-> this (.clone))))
 
 (defn lower
@@ -227,7 +227,7 @@
            or null if there is no such element - `ConcurrentSkipListSet.E`
 
   throws: java.lang.ClassCastException - if the specified element cannot be compared with the elements currently in the set"
-  ([this e]
+  ([^java.util.concurrent.ConcurrentSkipListSet this ^ConcurrentSkipListSet.E e]
     (-> this (.lower e))))
 
 (defn add
@@ -243,21 +243,21 @@
            specified element - `boolean`
 
   throws: java.lang.ClassCastException - if e cannot be compared with the elements currently in this set"
-  ([this e]
+  ([^java.util.concurrent.ConcurrentSkipListSet this ^ConcurrentSkipListSet.E e]
     (-> this (.add e))))
 
 (defn descending-iterator
   "Returns an iterator over the elements in this set in descending order.
 
   returns: an iterator over the elements in this set in descending order - `java.util.Iterator<ConcurrentSkipListSet.E>`"
-  ([this]
+  ([^java.util.concurrent.ConcurrentSkipListSet this]
     (-> this (.descendingIterator))))
 
 (defn empty?
   "Returns true if this set contains no elements.
 
   returns: true if this set contains no elements - `boolean`"
-  ([this]
+  ([^java.util.concurrent.ConcurrentSkipListSet this]
     (-> this (.isEmpty))))
 
 (defn size
@@ -275,7 +275,7 @@
    useful in concurrent applications.
 
   returns: the number of elements in this set - `int`"
-  ([this]
+  ([^java.util.concurrent.ConcurrentSkipListSet this]
     (-> this (.size))))
 
 (defn head-set
@@ -288,14 +288,14 @@
            (or equal to, if inclusive is true) toElement - `java.util.NavigableSet<ConcurrentSkipListSet.E>`
 
   throws: java.lang.ClassCastException - if toElement is not compatible with this set's comparator (or, if the set has no comparator, if toElement does not implement Comparable). Implementations may, but are not required to, throw this exception if toElement cannot be compared to elements currently in the set."
-  ([this to-element inclusive]
+  ([^java.util.concurrent.ConcurrentSkipListSet this ^ConcurrentSkipListSet.E to-element ^Boolean inclusive]
     (-> this (.headSet to-element inclusive)))
-  ([this to-element]
+  ([^java.util.concurrent.ConcurrentSkipListSet this ^ConcurrentSkipListSet.E to-element]
     (-> this (.headSet to-element))))
 
 (defn clear
   "Removes all of the elements from this set."
-  ([this]
+  ([^java.util.concurrent.ConcurrentSkipListSet this]
     (-> this (.clear))))
 
 (defn ceiling
@@ -307,7 +307,7 @@
            or null if there is no such element - `ConcurrentSkipListSet.E`
 
   throws: java.lang.ClassCastException - if the specified element cannot be compared with the elements currently in the set"
-  ([this e]
+  ([^java.util.concurrent.ConcurrentSkipListSet this ^ConcurrentSkipListSet.E e]
     (-> this (.ceiling e))))
 
 (defn remove-all
@@ -321,7 +321,7 @@
   returns: true if this set changed as a result of the call - `boolean`
 
   throws: java.lang.ClassCastException - if the types of one or more elements in this set are incompatible with the specified collection"
-  ([this c]
+  ([^java.util.concurrent.ConcurrentSkipListSet this ^java.util.Collection c]
     (-> this (.removeAll c))))
 
 (defn equals
@@ -336,7 +336,7 @@
   o - the object to be compared for equality with this set - `java.lang.Object`
 
   returns: true if the specified object is equal to this set - `boolean`"
-  ([this o]
+  ([^java.util.concurrent.ConcurrentSkipListSet this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn first
@@ -345,6 +345,6 @@
   returns: the first (lowest) element currently in this set - `ConcurrentSkipListSet.E`
 
   throws: java.util.NoSuchElementException - if this set is empty"
-  ([this]
+  ([^java.util.concurrent.ConcurrentSkipListSet this]
     (-> this (.first))))
 

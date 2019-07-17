@@ -26,8 +26,8 @@
   append - boolean if true, then data will be written to the end of the file rather than the beginning. - `boolean`
 
   throws: java.io.IOException - if the named file exists but is a directory rather than a regular file, does not exist but cannot be created, or cannot be opened for any other reason"
-  ([file-name append]
+  ([^java.lang.String file-name ^Boolean append]
     (new FileWriter file-name append))
-  ([file-name]
+  ([^java.lang.String file-name]
     (new FileWriter file-name)))
 

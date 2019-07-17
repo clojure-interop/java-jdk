@@ -43,6 +43,6 @@
    that users and developers know what to expect.
 
   returns: a copy of this CertStoreParameters - `java.lang.Object`"
-  ([this]
+  ([^. this]
     (-> this (.clone))))
 

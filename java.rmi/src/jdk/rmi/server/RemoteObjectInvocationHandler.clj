@@ -20,7 +20,7 @@
   ref - the remote ref - `java.rmi.server.RemoteRef`
 
   throws: java.lang.NullPointerException - if ref is null"
-  ([ref]
+  ([^java.rmi.server.RemoteRef ref]
     (new RemoteObjectInvocationHandler ref)))
 
 (defn invoke
@@ -81,6 +81,6 @@
    instance - `java.lang.Object`
 
   throws: java.lang.Throwable - the exception to throw from the method invocation on the proxy instance"
-  ([this proxy method args]
+  ([^java.rmi.server.RemoteObjectInvocationHandler this ^java.lang.Object proxy ^java.lang.reflect.Method method ^java.lang.Object[] args]
     (-> this (.invoke proxy method args))))
 

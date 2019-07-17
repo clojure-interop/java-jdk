@@ -128,9 +128,9 @@
 
   returns: true if the file type is supported for this audio input stream,
    otherwise false - `boolean`"
-  ([file-type stream]
+  ([^javax.sound.sampled.AudioFileFormat.Type file-type ^javax.sound.sampled.AudioInputStream stream]
     (AudioSystem/isFileTypeSupported file-type stream))
-  ([file-type]
+  ([^javax.sound.sampled.AudioFileFormat.Type file-type]
     (AudioSystem/isFileTypeSupported file-type)))
 
 (defn *get-clip
@@ -149,7 +149,7 @@
   returns: a clip object from the specified mixer - `javax.sound.sampled.Clip`
 
   throws: javax.sound.sampled.LineUnavailableException - if a clip is not available from this mixer due to resource restrictions"
-  ([mixer-info]
+  ([^javax.sound.sampled.Mixer.Info mixer-info]
     (AudioSystem/getClip mixer-info))
   ([]
     (AudioSystem/getClip )))
@@ -163,7 +163,7 @@
   returns: an array of Line.Info objects describing source lines matching
    the type requested.  If no matching source lines are supported, an array of length 0
    is returned. - `javax.sound.sampled.Line.Info[]`"
-  ([info]
+  ([^javax.sound.sampled.Line.Info info]
     (AudioSystem/getSourceLineInfo info)))
 
 (defn *get-target-line-info
@@ -175,7 +175,7 @@
   returns: an array of Line.Info objects describing target lines matching
    the type requested.  If no matching target lines are supported, an array of length 0
    is returned. - `javax.sound.sampled.Line.Info[]`"
-  ([info]
+  ([^javax.sound.sampled.Line.Info info]
     (AudioSystem/getTargetLineInfo info)))
 
 (defn *get-audio-file-types
@@ -186,7 +186,7 @@
 
   returns: array of file types.  If no file types are supported,
    an array of length 0 is returned. - `javax.sound.sampled.AudioFileFormat.Type[]`"
-  ([stream]
+  ([^javax.sound.sampled.AudioInputStream stream]
     (AudioSystem/getAudioFileTypes stream))
   ([]
     (AudioSystem/getAudioFileTypes )))
@@ -213,9 +213,9 @@
   returns: the desired TargetDataLine object - `javax.sound.sampled.TargetDataLine`
 
   throws: javax.sound.sampled.LineUnavailableException - if a matching target data line is not available from the specified mixer due to resource restrictions"
-  ([format mixerinfo]
+  ([^javax.sound.sampled.AudioFormat format ^javax.sound.sampled.Mixer.Info mixerinfo]
     (AudioSystem/getTargetDataLine format mixerinfo))
-  ([format]
+  ([^javax.sound.sampled.AudioFormat format]
     (AudioSystem/getTargetDataLine format)))
 
 (defn *get-audio-file-format
@@ -232,7 +232,7 @@
   returns: an AudioFileFormat object describing the stream's audio file format - `javax.sound.sampled.AudioFileFormat`
 
   throws: javax.sound.sampled.UnsupportedAudioFileException - if the stream does not point to valid audio file data recognized by the system"
-  ([stream]
+  ([^java.io.InputStream stream]
     (AudioSystem/getAudioFileFormat stream)))
 
 (defn *line-supported?
@@ -244,7 +244,7 @@
 
   returns: true if at least one matching line is
    supported, otherwise false - `boolean`"
-  ([info]
+  ([^javax.sound.sampled.Line.Info info]
     (AudioSystem/isLineSupported info)))
 
 (defn *get-mixer
@@ -255,7 +255,7 @@
   returns: the requested mixer - `javax.sound.sampled.Mixer`
 
   throws: java.lang.SecurityException - if the requested mixer is unavailable because of security restrictions"
-  ([info]
+  ([^javax.sound.sampled.Mixer.Info info]
     (AudioSystem/getMixer info)))
 
 (defn *get-mixer-info
@@ -277,7 +277,7 @@
 
   returns: array of formats.  If no formats of the specified
    encoding are supported, an array of length 0 is returned. - `javax.sound.sampled.AudioFormat[]`"
-  ([target-encoding source-format]
+  ([^javax.sound.sampled.AudioFormat.Encoding target-encoding ^javax.sound.sampled.AudioFormat source-format]
     (AudioSystem/getTargetFormats target-encoding source-format)))
 
 (defn *conversion-supported?
@@ -290,7 +290,7 @@
 
   returns: true if the conversion is supported,
    otherwise false - `boolean`"
-  ([target-encoding source-format]
+  ([^javax.sound.sampled.AudioFormat.Encoding target-encoding ^javax.sound.sampled.AudioFormat source-format]
     (AudioSystem/isConversionSupported target-encoding source-format)))
 
 (defn *get-line
@@ -323,7 +323,7 @@
   returns: a line of the requested kind - `javax.sound.sampled.Line`
 
   throws: javax.sound.sampled.LineUnavailableException - if a matching line is not available due to resource restrictions"
-  ([info]
+  ([^javax.sound.sampled.Line.Info info]
     (AudioSystem/getLine info)))
 
 (defn *get-source-data-line
@@ -348,9 +348,9 @@
   returns: the desired SourceDataLine object - `javax.sound.sampled.SourceDataLine`
 
   throws: javax.sound.sampled.LineUnavailableException - if a matching source data line is not available from the specified mixer due to resource restrictions"
-  ([format mixerinfo]
+  ([^javax.sound.sampled.AudioFormat format ^javax.sound.sampled.Mixer.Info mixerinfo]
     (AudioSystem/getSourceDataLine format mixerinfo))
-  ([format]
+  ([^javax.sound.sampled.AudioFormat format]
     (AudioSystem/getSourceDataLine format)))
 
 (defn *write
@@ -368,7 +368,7 @@
   returns: the number of bytes written to the output stream - `int`
 
   throws: java.io.IOException - if an input/output exception occurs"
-  ([stream file-type out]
+  ([^javax.sound.sampled.AudioInputStream stream ^javax.sound.sampled.AudioFileFormat.Type file-type ^java.io.OutputStream out]
     (AudioSystem/write stream file-type out)))
 
 (defn *get-audio-input-stream
@@ -381,9 +381,9 @@
   returns: an audio input stream of the indicated encoding - `javax.sound.sampled.AudioInputStream`
 
   throws: java.lang.IllegalArgumentException - if the conversion is not supported"
-  ([target-encoding source-stream]
+  ([^javax.sound.sampled.AudioFormat.Encoding target-encoding ^javax.sound.sampled.AudioInputStream source-stream]
     (AudioSystem/getAudioInputStream target-encoding source-stream))
-  ([stream]
+  ([^java.io.InputStream stream]
     (AudioSystem/getAudioInputStream stream)))
 
 (defn *get-target-encodings
@@ -396,6 +396,6 @@
   returns: array of encodings.  If sourceEncodingis not supported,
    an array of length 0 is returned. Otherwise, the array will have a length
    of at least 1, representing sourceEncoding (no conversion). - `javax.sound.sampled.AudioFormat.Encoding[]`"
-  ([source-encoding]
+  ([^javax.sound.sampled.AudioFormat.Encoding source-encoding]
     (AudioSystem/getTargetEncodings source-encoding)))
 

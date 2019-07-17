@@ -12,7 +12,7 @@
   name - the JAR file entry name - `java.lang.String`
 
   throws: java.lang.NullPointerException - if the entry name is null"
-  ([name]
+  ([^java.lang.String name]
     (new JarEntry name)))
 
 (def *-locsig
@@ -263,7 +263,7 @@
    entry, or null if none - `java.util.jar.Attributes`
 
   throws: java.io.IOException - if an I/O error has occurred"
-  ([this]
+  ([^java.util.jar.JarEntry this]
     (-> this (.getAttributes))))
 
 (defn get-certificates
@@ -282,7 +282,7 @@
 
   returns: the Certificate objects for this entry, or
    null if none. - `java.security.cert.Certificate[]`"
-  ([this]
+  ([^java.util.jar.JarEntry this]
     (-> this (.getCertificates))))
 
 (defn get-code-signers
@@ -297,6 +297,6 @@
 
   returns: the CodeSigner objects for this entry, or
    null if none. - `java.security.CodeSigner[]`"
-  ([this]
+  ([^java.util.jar.JarEntry this]
     (-> this (.getCodeSigners))))
 

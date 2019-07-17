@@ -30,7 +30,7 @@
   "Equivalent to sum().
 
   returns: the sum - `double`"
-  ([this]
+  ([^java.util.concurrent.atomic.DoubleAdder this]
     (-> this (.doubleValue))))
 
 (defn long-value
@@ -39,7 +39,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type long. - `long`"
-  ([this]
+  ([^java.util.concurrent.atomic.DoubleAdder this]
     (-> this (.longValue))))
 
 (defn sum
@@ -53,7 +53,7 @@
    updates to a single variable.
 
   returns: the sum - `double`"
-  ([this]
+  ([^java.util.concurrent.atomic.DoubleAdder this]
     (-> this (.sum))))
 
 (defn sum-then-reset
@@ -64,14 +64,14 @@
    the reset.
 
   returns: the sum - `double`"
-  ([this]
+  ([^java.util.concurrent.atomic.DoubleAdder this]
     (-> this (.sumThenReset))))
 
 (defn to-string
   "Returns the String representation of the sum().
 
   returns: the String representation of the sum() - `java.lang.String`"
-  ([this]
+  ([^java.util.concurrent.atomic.DoubleAdder this]
     (-> this (.toString))))
 
 (defn reset
@@ -80,7 +80,7 @@
    effective if there are no concurrent updates.  Because this
    method is intrinsically racy, it should only be used when it is
    known that no threads are concurrently updating."
-  ([this]
+  ([^java.util.concurrent.atomic.DoubleAdder this]
     (-> this (.reset))))
 
 (defn float-value
@@ -89,7 +89,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type float. - `float`"
-  ([this]
+  ([^java.util.concurrent.atomic.DoubleAdder this]
     (-> this (.floatValue))))
 
 (defn int-value
@@ -98,13 +98,13 @@
 
   returns: the numeric value represented by this object after conversion
             to type int. - `int`"
-  ([this]
+  ([^java.util.concurrent.atomic.DoubleAdder this]
     (-> this (.intValue))))
 
 (defn add
   "Adds the given value.
 
   x - the value to add - `double`"
-  ([this x]
+  ([^java.util.concurrent.atomic.DoubleAdder this ^Double x]
     (-> this (.add x))))
 

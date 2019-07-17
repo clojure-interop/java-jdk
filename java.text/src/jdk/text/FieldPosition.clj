@@ -45,16 +45,16 @@
 
   attribute - Format.Field constant identifying a field - `java.text.Format.Field`
   field-id - integer constant identifying a field - `int`"
-  ([attribute field-id]
+  ([^java.text.Format.Field attribute ^Integer field-id]
     (new FieldPosition attribute field-id))
-  ([field]
+  ([^Integer field]
     (new FieldPosition field)))
 
 (defn set-end-index
   "Sets the end index.  For use by subclasses of Format.
 
   ei - the end index - `int`"
-  ([this ei]
+  ([^java.text.FieldPosition this ^Integer ei]
     (-> this (.setEndIndex ei))))
 
 (defn get-end-index
@@ -62,35 +62,35 @@
    requested field.
 
   returns: the end index - `int`"
-  ([this]
+  ([^java.text.FieldPosition this]
     (-> this (.getEndIndex))))
 
 (defn to-string
   "Return a string representation of this FieldPosition.
 
   returns: a string representation of this object - `java.lang.String`"
-  ([this]
+  ([^java.text.FieldPosition this]
     (-> this (.toString))))
 
 (defn set-begin-index
   "Sets the begin index.  For use by subclasses of Format.
 
   bi - the begin index - `int`"
-  ([this bi]
+  ([^java.text.FieldPosition this ^Integer bi]
     (-> this (.setBeginIndex bi))))
 
 (defn get-begin-index
   "Retrieves the index of the first character in the requested field.
 
   returns: the begin index - `int`"
-  ([this]
+  ([^java.text.FieldPosition this]
     (-> this (.getBeginIndex))))
 
 (defn get-field
   "Retrieves the field identifier.
 
   returns: the field identifier - `int`"
-  ([this]
+  ([^java.text.FieldPosition this]
     (-> this (.getField))))
 
 (defn get-field-attribute
@@ -99,14 +99,14 @@
    the field is specified only by an integer field ID.
 
   returns: Identifier for the field - `java.text.Format.Field`"
-  ([this]
+  ([^java.text.FieldPosition this]
     (-> this (.getFieldAttribute))))
 
 (defn hash-code
   "Returns a hash code for this FieldPosition.
 
   returns: a hash code value for this object - `int`"
-  ([this]
+  ([^java.text.FieldPosition this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -116,6 +116,6 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.text.FieldPosition this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

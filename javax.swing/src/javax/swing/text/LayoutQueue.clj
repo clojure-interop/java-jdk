@@ -21,7 +21,7 @@
   "Set the default layout queue.
 
   q - the new queue. - `javax.swing.text.LayoutQueue`"
-  ([q]
+  ([^javax.swing.text.LayoutQueue q]
     (LayoutQueue/setDefaultQueue q)))
 
 (defn add-task
@@ -29,6 +29,6 @@
    the results are not believed to be visible.
 
   task - `java.lang.Runnable`"
-  ([this task]
+  ([^javax.swing.text.LayoutQueue this ^java.lang.Runnable task]
     (-> this (.addTask task))))
 

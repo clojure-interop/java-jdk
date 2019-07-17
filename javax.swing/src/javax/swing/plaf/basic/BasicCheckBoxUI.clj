@@ -21,11 +21,11 @@
   "b - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([b]
+  ([^javax.swing.JComponent b]
     (BasicCheckBoxUI/createUI b)))
 
 (defn get-property-prefix
   "returns: `java.lang.String`"
-  ([this]
+  ([^javax.swing.plaf.basic.BasicCheckBoxUI this]
     (-> this (.getPropertyPrefix))))
 

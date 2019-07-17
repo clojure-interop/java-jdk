@@ -19,7 +19,7 @@
    a key typed event.
 
   e - `java.awt.event.KeyEvent`"
-  ([this e]
+  ([^. this ^java.awt.event.KeyEvent e]
     (-> this (.keyTyped e))))
 
 (defn key-pressed
@@ -28,7 +28,7 @@
    a key pressed event.
 
   e - `java.awt.event.KeyEvent`"
-  ([this e]
+  ([^. this ^java.awt.event.KeyEvent e]
     (-> this (.keyPressed e))))
 
 (defn key-released
@@ -37,6 +37,6 @@
    a key released event.
 
   e - `java.awt.event.KeyEvent`"
-  ([this e]
+  ([^. this ^java.awt.event.KeyEvent e]
     (-> this (.keyReleased e))))
 

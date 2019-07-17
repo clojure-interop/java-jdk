@@ -12,14 +12,14 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([this obj]
+  ([^javax.sound.sampled.Control$Type this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Finalizes the hashCode method
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^javax.sound.sampled.Control$Type this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -27,6 +27,6 @@
    the same name that was passed to the constructor.
 
   returns: the control type name - `java.lang.String`"
-  ([this]
+  ([^javax.sound.sampled.Control$Type this]
     (-> this (.toString))))
 

@@ -21,7 +21,7 @@
   "x - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([x]
+  ([^javax.swing.JComponent x]
     (MetalTabbedPaneUI/createUI x)))
 
 (defn update
@@ -29,7 +29,7 @@
 
   g - the Graphics context in which to paint - `java.awt.Graphics`
   c - the component being painted; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([this g c]
+  ([^javax.swing.plaf.metal.MetalTabbedPaneUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.update g c))))
 
 (defn paint
@@ -37,6 +37,6 @@
 
   g - the Graphics context in which to paint - `java.awt.Graphics`
   c - the component being painted; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([this g c]
+  ([^javax.swing.plaf.metal.MetalTabbedPaneUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.paint g c))))
 

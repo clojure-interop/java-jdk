@@ -38,21 +38,21 @@
 (defn invalidate
   "Overridden to avoid propagating a invalidate up the tree when the
    cell renderer child is configured."
-  ([this]
+  ([^javax.swing.CellRendererPane this]
     (-> this (.invalidate))))
 
 (defn paint
   "Shouldn't be called.
 
   g - the specified Graphics window - `java.awt.Graphics`"
-  ([this g]
+  ([^javax.swing.CellRendererPane this ^java.awt.Graphics g]
     (-> this (.paint g))))
 
 (defn update
   "Shouldn't be called.
 
   g - the specified Graphics window - `java.awt.Graphics`"
-  ([this g]
+  ([^javax.swing.CellRendererPane this ^java.awt.Graphics g]
     (-> this (.update g))))
 
 (defn paint-component
@@ -74,11 +74,11 @@
   w - `int`
   h - `int`
   should-validate - `boolean`"
-  ([this g c p x y w h should-validate]
+  ([^javax.swing.CellRendererPane this ^java.awt.Graphics g ^java.awt.Component c ^java.awt.Container p ^Integer x ^Integer y ^Integer w ^Integer h ^Boolean should-validate]
     (-> this (.paintComponent g c p x y w h should-validate)))
-  ([this g c p x y w h]
+  ([^javax.swing.CellRendererPane this ^java.awt.Graphics g ^java.awt.Component c ^java.awt.Container p ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintComponent g c p x y w h)))
-  ([this g c p r]
+  ([^javax.swing.CellRendererPane this ^java.awt.Graphics g ^java.awt.Component c ^java.awt.Container p ^java.awt.Rectangle r]
     (-> this (.paintComponent g c p r))))
 
 (defn get-accessible-context
@@ -89,6 +89,6 @@
 
   returns: an AccessibleCellRendererPane that serves as the
            AccessibleContext of this CellRendererPane - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^javax.swing.CellRendererPane this]
     (-> this (.getAccessibleContext))))
 

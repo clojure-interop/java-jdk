@@ -64,7 +64,7 @@
    otherwise not null - `java.time.zone.ZoneRules`
 
   throws: java.time.zone.ZoneRulesException - if rules cannot be obtained for the zone ID"
-  ([zone-id for-caching]
+  ([^java.lang.String zone-id ^Boolean for-caching]
     (ZoneRulesProvider/getRules zone-id for-caching)))
 
 (defn *get-versions
@@ -92,7 +92,7 @@
     from oldest to newest, not null - `java.util.NavigableMap<java.lang.String,java.time.zone.ZoneRules>`
 
   throws: java.time.zone.ZoneRulesException - if history cannot be obtained for the zone ID"
-  ([zone-id]
+  ([^java.lang.String zone-id]
     (ZoneRulesProvider/getVersions zone-id)))
 
 (defn *register-provider
@@ -110,7 +110,7 @@
   provider - the provider to register, not null - `java.time.zone.ZoneRulesProvider`
 
   throws: java.time.zone.ZoneRulesException - if a zone ID is already registered"
-  ([provider]
+  ([^java.time.zone.ZoneRulesProvider provider]
     (ZoneRulesProvider/registerProvider provider)))
 
 (defn *refresh

@@ -308,6 +308,6 @@
   returns: the enum constant with the specified name - `java.awt.font.NumericShaper.Range`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([name]
+  ([^java.lang.String name]
     (NumericShaper$Range/valueOf name)))
 

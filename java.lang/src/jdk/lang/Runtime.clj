@@ -29,7 +29,7 @@
   returns: `java.lang.   void`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkExit method doesn't allow the exit."
-  ([value]
+  ([^Boolean value]
     (Runtime/runFinalizersOnExit value)))
 
 (defn add-shutdown-hook
@@ -106,7 +106,7 @@
   hook - An initialized but unstarted Thread object - `java.lang.Thread`
 
   throws: java.lang.IllegalArgumentException - If the specified hook has already been registered, or if it can be determined that the hook is already running or has already been run"
-  ([this hook]
+  ([^java.lang.Runtime this ^java.lang.Thread hook]
     (-> this (.addShutdownHook hook))))
 
 (defn total-memory
@@ -119,7 +119,7 @@
 
   returns: the total amount of memory currently available for current
             and future objects, measured in bytes. - `long`"
-  ([this]
+  ([^java.lang.Runtime this]
     (-> this (.totalMemory))))
 
 (defn trace-instructions
@@ -138,7 +138,7 @@
    detailed instruction trace it is performing.
 
   on - true to enable instruction tracing; false to disable this feature. - `boolean`"
-  ([this on]
+  ([^java.lang.Runtime this ^Boolean on]
     (-> this (.traceInstructions on))))
 
 (defn max-memory
@@ -147,7 +147,7 @@
 
   returns: the maximum amount of memory that the virtual machine will
             attempt to use, measured in bytes - `long`"
-  ([this]
+  ([^java.lang.Runtime this]
     (-> this (.maxMemory))))
 
 (defn load
@@ -181,7 +181,7 @@
   filename - the file to load. - `java.lang.String`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkLink method doesn't allow loading of the specified dynamic library"
-  ([this filename]
+  ([^java.lang.Runtime this ^java.lang.String filename]
     (-> this (.load filename))))
 
 (defn halt
@@ -198,7 +198,7 @@
   status - Termination status. By convention, a nonzero status code indicates abnormal termination. If the exit (equivalently, System.exit) method has already been invoked then this status code will override the status code passed to that method. - `int`
 
   throws: java.lang.SecurityException - If a security manager is present and its checkExit method does not permit an exit with the specified status"
-  ([this status]
+  ([^java.lang.Runtime this ^Integer status]
     (-> this (.halt status))))
 
 (defn exec
@@ -226,11 +226,11 @@
   returns: A new Process object for managing the subprocess - `java.lang.Process`
 
   throws: java.lang.SecurityException - If a security manager exists and its checkExec method doesn't allow creation of the subprocess"
-  ([this command envp dir]
+  ([^java.lang.Runtime this ^java.lang.String command ^java.lang.String[] envp ^java.io.File dir]
     (-> this (.exec command envp dir)))
-  ([this command envp]
+  ([^java.lang.Runtime this ^java.lang.String command ^java.lang.String[] envp]
     (-> this (.exec command envp)))
-  ([this command]
+  ([^java.lang.Runtime this ^java.lang.String command]
     (-> this (.exec command))))
 
 (defn load-library
@@ -267,7 +267,7 @@
   libname - the name of the library. - `java.lang.String`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkLink method doesn't allow loading of the specified dynamic library"
-  ([this libname]
+  ([^java.lang.Runtime this ^java.lang.String libname]
     (-> this (.loadLibrary libname))))
 
 (defn get-localized-output-stream
@@ -279,7 +279,7 @@
   out - OutputStream to localize - `java.io.OutputStream`
 
   returns: a localized output stream - `java.lang.  java.io.OutputStream`"
-  ([this out]
+  ([^java.lang.Runtime this ^java.io.OutputStream out]
     (-> this (.getLocalizedOutputStream out))))
 
 (defn available-processors
@@ -292,7 +292,7 @@
 
   returns: the maximum number of processors available to the virtual
             machine; never smaller than one - `int`"
-  ([this]
+  ([^java.lang.Runtime this]
     (-> this (.availableProcessors))))
 
 (defn free-memory
@@ -303,7 +303,7 @@
 
   returns: an approximation to the total amount of memory currently
             available for future allocated objects, measured in bytes. - `long`"
-  ([this]
+  ([^java.lang.Runtime this]
     (-> this (.freeMemory))))
 
 (defn exit
@@ -332,7 +332,7 @@
   status - Termination status. By convention, a nonzero status code indicates abnormal termination. - `int`
 
   throws: java.lang.SecurityException - If a security manager is present and its checkExit method does not permit exiting with the specified status"
-  ([this status]
+  ([^java.lang.Runtime this ^Integer status]
     (-> this (.exit status))))
 
 (defn trace-method-calls
@@ -349,7 +349,7 @@
    virtual machine cease emitting per-call debugging information.
 
   on - true to enable instruction tracing; false to disable this feature. - `boolean`"
-  ([this on]
+  ([^java.lang.Runtime this ^Boolean on]
     (-> this (.traceMethodCalls on))))
 
 (defn get-localized-input-stream
@@ -361,7 +361,7 @@
   in - InputStream to localize - `java.io.InputStream`
 
   returns: a localized input stream - `java.lang.  java.io.InputStream`"
-  ([this in]
+  ([^java.lang.Runtime this ^java.io.InputStream in]
     (-> this (.getLocalizedInputStream in))))
 
 (defn remove-shutdown-hook
@@ -374,7 +374,7 @@
    otherwise. - `boolean`
 
   throws: java.lang.IllegalStateException - If the virtual machine is already in the process of shutting down"
-  ([this hook]
+  ([^java.lang.Runtime this ^java.lang.Thread hook]
     (-> this (.removeShutdownHook hook))))
 
 (defn run-finalization
@@ -392,7 +392,7 @@
 
    The method System.runFinalization() is the conventional
    and convenient means of invoking this method."
-  ([this]
+  ([^java.lang.Runtime this]
     (-> this (.runFinalization))))
 
 (defn gc
@@ -410,6 +410,6 @@
 
    The method System.gc() is the conventional and convenient
    means of invoking this method."
-  ([this]
+  ([^java.lang.Runtime this]
     (-> this (.gc))))
 

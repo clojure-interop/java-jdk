@@ -18,44 +18,44 @@
   direction - `int`
   width - `int`
   free-standing - `boolean`"
-  ([direction width free-standing]
+  ([^Integer direction ^Integer width ^Boolean free-standing]
     (new MetalScrollButton direction width free-standing)))
 
 (defn set-free-standing
   "free-standing - `boolean`"
-  ([this free-standing]
+  ([^javax.swing.plaf.metal.MetalScrollButton this ^Boolean free-standing]
     (-> this (.setFreeStanding free-standing))))
 
 (defn paint
   "Description copied from class: JComponent
 
   g - the Graphics context in which to paint - `java.awt.Graphics`"
-  ([this g]
+  ([^javax.swing.plaf.metal.MetalScrollButton this ^java.awt.Graphics g]
     (-> this (.paint g))))
 
 (defn get-preferred-size
   "Description copied from class: BasicArrowButton
 
   returns: the preferred size - `java.awt.Dimension`"
-  ([this]
+  ([^javax.swing.plaf.metal.MetalScrollButton this]
     (-> this (.getPreferredSize))))
 
 (defn get-minimum-size
   "Description copied from class: BasicArrowButton
 
   returns: the minimum size - `java.awt.Dimension`"
-  ([this]
+  ([^javax.swing.plaf.metal.MetalScrollButton this]
     (-> this (.getMinimumSize))))
 
 (defn get-maximum-size
   "Description copied from class: BasicArrowButton
 
   returns: the maximum size - `java.awt.Dimension`"
-  ([this]
+  ([^javax.swing.plaf.metal.MetalScrollButton this]
     (-> this (.getMaximumSize))))
 
 (defn get-button-width
   "returns: `int`"
-  ([this]
+  ([^javax.swing.plaf.metal.MetalScrollButton this]
     (-> this (.getButtonWidth))))
 

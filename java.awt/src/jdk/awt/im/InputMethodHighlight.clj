@@ -46,11 +46,11 @@
   style - the rendering style attributes for the text range, or null - `java.util.Map<java.awt.font.TextAttribute,?>`
 
   throws: java.lang.IllegalArgumentException - if a state other than RAW_TEXT or CONVERTED_TEXT is given"
-  ([selected state variation style]
+  ([^Boolean selected ^Integer state ^Integer variation ^java.util.Map style]
     (new InputMethodHighlight selected state variation style))
-  ([selected state variation]
+  ([^Boolean selected ^Integer state ^Integer variation]
     (new InputMethodHighlight selected state variation))
-  ([selected state]
+  ([^Boolean selected ^Integer state]
     (new InputMethodHighlight selected state)))
 
 (def *-raw-text
@@ -105,27 +105,27 @@
   "Returns whether the text range is selected.
 
   returns: `boolean`"
-  ([this]
+  ([^java.awt.im.InputMethodHighlight this]
     (-> this (.isSelected))))
 
 (defn get-state
   "Returns the conversion state of the text range.
 
   returns: The conversion state for the text range - RAW_TEXT or CONVERTED_TEXT. - `int`"
-  ([this]
+  ([^java.awt.im.InputMethodHighlight this]
     (-> this (.getState))))
 
 (defn get-variation
   "Returns the variation of the text range.
 
   returns: `int`"
-  ([this]
+  ([^java.awt.im.InputMethodHighlight this]
     (-> this (.getVariation))))
 
 (defn get-style
   "Returns the rendering style attributes for the text range, or null.
 
   returns: `java.util.Map<java.awt.font.TextAttribute,?>`"
-  ([this]
+  ([^java.awt.im.InputMethodHighlight this]
     (-> this (.getStyle))))
 

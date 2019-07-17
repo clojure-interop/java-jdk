@@ -75,9 +75,9 @@
         has changed. - `Binder.XmlNode`
 
   throws: javax.xml.bind.JAXBException - If any unexpected problem occurs updating corresponding XML content."
-  ([this jaxb-object xml-node]
+  ([^javax.xml.bind.Binder this ^java.lang.Object jaxb-object ^Binder.XmlNode xml-node]
     (-> this (.updateXML jaxb-object xml-node)))
-  ([this jaxb-object]
+  ([^javax.xml.bind.Binder this ^java.lang.Object jaxb-object]
     (-> this (.updateXML jaxb-object))))
 
 (defn marshal
@@ -98,7 +98,7 @@
   xml-node - The parameter must be a Node that accepts children. - `Binder.XmlNode`
 
   throws: javax.xml.bind.JAXBException - If any unexpected problem occurs during the marshalling."
-  ([this jaxb-object xml-node]
+  ([^javax.xml.bind.Binder this ^java.lang.Object jaxb-object ^Binder.XmlNode xml-node]
     (-> this (.marshal jaxb-object xml-node))))
 
 (defn set-event-handler
@@ -115,7 +115,7 @@
   handler - the validation event handler - `javax.xml.bind.ValidationEventHandler`
 
   throws: javax.xml.bind.JAXBException - if an error was encountered while setting the event handler"
-  ([this handler]
+  ([^javax.xml.bind.Binder this ^javax.xml.bind.ValidationEventHandler handler]
     (-> this (.setEventHandler handler))))
 
 (defn get-event-handler
@@ -126,7 +126,7 @@
            if it hasn't been set - `javax.xml.bind.ValidationEventHandler`
 
   throws: javax.xml.bind.JAXBException - if an error was encountered while getting the current event handler"
-  ([this]
+  ([^javax.xml.bind.Binder this]
     (-> this (.getEventHandler))))
 
 (defn update-jaxb
@@ -153,7 +153,7 @@
         element has changed. - `java.lang.Object`
 
   throws: javax.xml.bind.JAXBException - If any unexpected problem occurs updating corresponding JAXB mapped content."
-  ([this xml-node]
+  ([^javax.xml.bind.Binder this ^Binder.XmlNode xml-node]
     (-> this (.updateJAXB xml-node))))
 
 (defn get-xml-node
@@ -177,7 +177,7 @@
         XML element. - `Binder.XmlNode`
 
   throws: java.lang.IllegalArgumentException - If the jaxbObject parameter is null"
-  ([this jaxb-object]
+  ([^javax.xml.bind.Binder this ^java.lang.Object jaxb-object]
     (-> this (.getXMLNode jaxb-object))))
 
 (defn set-schema
@@ -185,7 +185,7 @@
    performs validation on their XML content.
 
   schema - set to null to disable validation. - `javax.xml.validation.Schema`"
-  ([this schema]
+  ([^javax.xml.bind.Binder this ^javax.xml.validation.Schema schema]
     (-> this (.setSchema schema))))
 
 (defn get-property
@@ -205,7 +205,7 @@
   returns: the value of the requested property - `java.lang.Object`
 
   throws: javax.xml.bind.PropertyException - when there is an error retrieving the given property or value property name"
-  ([this name]
+  ([^javax.xml.bind.Binder this ^java.lang.String name]
     (-> this (.getProperty name))))
 
 (defn get-jaxb-node
@@ -229,7 +229,7 @@
         JAXB object. - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - If the node parameter is null"
-  ([this xml-node]
+  ([^javax.xml.bind.Binder this ^Binder.XmlNode xml-node]
     (-> this (.getJAXBNode xml-node))))
 
 (defn get-schema
@@ -237,7 +237,7 @@
    setSchema(Schema) method.
 
   returns: the Schema object for validation or null if not present - `javax.xml.validation.Schema`"
-  ([this]
+  ([^javax.xml.bind.Binder this]
     (-> this (.getSchema))))
 
 (defn set-property
@@ -255,7 +255,7 @@
   value - the value of the property to be set - `java.lang.Object`
 
   throws: javax.xml.bind.PropertyException - when there is an error processing the given property or value"
-  ([this name value]
+  ([^javax.xml.bind.Binder this ^java.lang.String name ^java.lang.Object value]
     (-> this (.setProperty name value))))
 
 (defn unmarshal
@@ -282,8 +282,8 @@
    of node - `<T> javax.xml.bind.JAXBElement<T>`
 
   throws: javax.xml.bind.JAXBException - If any unexpected errors occur while unmarshalling"
-  ([this xml-node declared-type]
+  ([^javax.xml.bind.Binder this ^Binder.XmlNode xml-node ^java.lang.Class declared-type]
     (-> this (.unmarshal xml-node declared-type)))
-  ([this xml-node]
+  ([^javax.xml.bind.Binder this ^Binder.XmlNode xml-node]
     (-> this (.unmarshal xml-node))))
 

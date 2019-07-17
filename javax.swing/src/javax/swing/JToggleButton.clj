@@ -38,18 +38,18 @@
   text - the text of the toggle button - `java.lang.String`
   icon - the image that the button should display - `javax.swing.Icon`
   selected - if true, the button is initially selected; otherwise, the button is initially unselected - `boolean`"
-  ([text icon selected]
+  ([^java.lang.String text ^javax.swing.Icon icon ^Boolean selected]
     (new JToggleButton text icon selected))
-  ([icon selected]
+  ([^javax.swing.Icon icon ^Boolean selected]
     (new JToggleButton icon selected))
-  ([icon]
+  ([^javax.swing.Icon icon]
     (new JToggleButton icon))
   ([]
     (new JToggleButton )))
 
 (defn update-ui
   "Resets the UI property to a value from the current look and feel."
-  ([this]
+  ([^javax.swing.JToggleButton this]
     (-> this (.updateUI))))
 
 (defn get-ui-class-id
@@ -57,7 +57,7 @@
    that renders this component.
 
   returns: String `ToggleButtonUI` - `java.lang.String`"
-  ([this]
+  ([^javax.swing.JToggleButton this]
     (-> this (.getUIClassID))))
 
 (defn get-accessible-context
@@ -68,6 +68,6 @@
 
   returns: an AccessibleJToggleButton that serves as the
            AccessibleContext of this JToggleButton - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^javax.swing.JToggleButton this]
     (-> this (.getAccessibleContext))))
 

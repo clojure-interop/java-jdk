@@ -56,7 +56,7 @@
   scrollbar-display-policy - policy for when scrollbars should be shown - `int`
 
   throws: java.lang.IllegalArgumentException - if the specified scrollbar display policy is invalid"
-  ([scrollbar-display-policy]
+  ([^Integer scrollbar-display-policy]
     (new ScrollPane scrollbar-display-policy))
   ([]
     (new ScrollPane )))
@@ -94,7 +94,7 @@
    overridden to prevent the layout mgr from being set.
 
   mgr - the specified layout manager - `java.awt.LayoutManager`"
-  ([this mgr]
+  ([^java.awt.ScrollPane this ^java.awt.LayoutManager mgr]
     (-> this (.setLayout mgr))))
 
 (defn get-scroll-position
@@ -106,7 +106,7 @@
   returns: the coordinate position for the current scroll position - `java.awt.Point`
 
   throws: java.lang.NullPointerException - if the scrollpane does not contain a child"
-  ([this]
+  ([^java.awt.ScrollPane this]
     (-> this (.getScrollPosition))))
 
 (defn get-v-scrollbar-width
@@ -115,7 +115,7 @@
    displayed by the scroll pane or not.
 
   returns: the width of a vertical scrollbar in pixels - `int`"
-  ([this]
+  ([^java.awt.ScrollPane this]
     (-> this (.getVScrollbarWidth))))
 
 (defn get-v-adjustable
@@ -125,21 +125,21 @@
    Adjustable to maintain backward compatibility.
 
   returns: `java.awt.Adjustable`"
-  ([this]
+  ([^java.awt.ScrollPane this]
     (-> this (.getVAdjustable))))
 
 (defn get-scrollbar-display-policy
   "Returns the display policy for the scrollbars.
 
   returns: the display policy for the scrollbars - `int`"
-  ([this]
+  ([^java.awt.ScrollPane this]
     (-> this (.getScrollbarDisplayPolicy))))
 
 (defn get-viewport-size
   "Returns the current size of the scroll pane's view port.
 
   returns: the size of the view port in pixels - `java.awt.Dimension`"
-  ([this]
+  ([^java.awt.ScrollPane this]
     (-> this (.getViewportSize))))
 
 (defn get-h-scrollbar-height
@@ -148,12 +148,12 @@
    displayed by the scroll pane or not.
 
   returns: the height of a horizontal scrollbar in pixels - `int`"
-  ([this]
+  ([^java.awt.ScrollPane this]
     (-> this (.getHScrollbarHeight))))
 
 (defn add-notify
   "Creates the scroll pane's peer."
-  ([this]
+  ([^java.awt.ScrollPane this]
     (-> this (.addNotify))))
 
 (defn layout
@@ -161,7 +161,7 @@
    replaced by doLayout().
 
   returns: `java.lang.  void`"
-  ([this]
+  ([^java.awt.ScrollPane this]
     (-> this (.layout))))
 
 (defn set-wheel-scrolling-enabled
@@ -169,14 +169,14 @@
    Wheel scrolling is enabled by default.
 
   handle-wheel - true if scrolling should be done automatically for a MouseWheelEvent, false otherwise. - `boolean`"
-  ([this handle-wheel]
+  ([^java.awt.ScrollPane this ^Boolean handle-wheel]
     (-> this (.setWheelScrollingEnabled handle-wheel))))
 
 (defn print-components
   "Prints the component in this scroll pane.
 
   g - the specified Graphics window - `java.awt.Graphics`"
-  ([this g]
+  ([^java.awt.ScrollPane this ^java.awt.Graphics g]
     (-> this (.printComponents g))))
 
 (defn get-accessible-context
@@ -187,7 +187,7 @@
 
   returns: an AccessibleAWTScrollPane that serves as the
            AccessibleContext of this ScrollPane - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^java.awt.ScrollPane this]
     (-> this (.getAccessibleContext))))
 
 (defn param-string
@@ -199,7 +199,7 @@
    null.
 
   returns: the parameter string of this scroll pane - `java.lang.String`"
-  ([this]
+  ([^java.awt.ScrollPane this]
     (-> this (.paramString))))
 
 (defn set-scroll-position
@@ -217,9 +217,9 @@
   y - the y position to scroll to - `int`
 
   throws: java.lang.NullPointerException - if the scrollpane does not contain a child"
-  ([this x y]
+  ([^java.awt.ScrollPane this ^Integer x ^Integer y]
     (-> this (.setScrollPosition x y)))
-  ([this p]
+  ([^java.awt.ScrollPane this ^java.awt.Point p]
     (-> this (.setScrollPosition p))))
 
 (defn do-layout
@@ -227,7 +227,7 @@
    If the new preferred size of the child causes the current scroll
    position to be invalid, the scroll position is set to the closest
    valid position."
-  ([this]
+  ([^java.awt.ScrollPane this]
     (-> this (.doLayout))))
 
 (defn get-h-adjustable
@@ -237,7 +237,7 @@
    Adjustable to maintain backward compatibility.
 
   returns: `java.awt.Adjustable`"
-  ([this]
+  ([^java.awt.ScrollPane this]
     (-> this (.getHAdjustable))))
 
 (defn wheel-scrolling-enabled?
@@ -245,6 +245,6 @@
    the mouse wheel.  Wheel scrolling is enabled by default.
 
   returns: `boolean`"
-  ([this]
+  ([^java.awt.ScrollPane this]
     (-> this (.isWheelScrollingEnabled))))
 

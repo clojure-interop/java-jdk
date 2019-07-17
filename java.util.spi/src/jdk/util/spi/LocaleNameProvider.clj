@@ -23,7 +23,7 @@
        available. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if languageCode or locale is null"
-  ([this language-code locale]
+  ([^java.util.spi.LocaleNameProvider this ^java.lang.String language-code ^java.util.Locale locale]
     (-> this (.getDisplayLanguage language-code locale))))
 
 (defn get-display-script
@@ -44,7 +44,7 @@
        available. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if scriptCode or locale is null"
-  ([this script-code locale]
+  ([^java.util.spi.LocaleNameProvider this ^java.lang.String script-code ^java.util.Locale locale]
     (-> this (.getDisplayScript script-code locale))))
 
 (defn get-display-country
@@ -65,7 +65,7 @@
        available. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if countryCode or locale is null"
-  ([this country-code locale]
+  ([^java.util.spi.LocaleNameProvider this ^java.lang.String country-code ^java.util.Locale locale]
     (-> this (.getDisplayCountry country-code locale))))
 
 (defn get-display-variant
@@ -81,6 +81,6 @@
        available. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if variant or locale is null"
-  ([this variant locale]
+  ([^java.util.spi.LocaleNameProvider this ^java.lang.String variant ^java.util.Locale locale]
     (-> this (.getDisplayVariant variant locale))))
 

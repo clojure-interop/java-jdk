@@ -16,6 +16,6 @@
   message - The detail message. - `java.lang.String`
 
   throws: java.lang.NullPointerException - When message is null."
-  ([message]
+  ([^java.lang.String message]
     (new XPathFunctionException message)))
 

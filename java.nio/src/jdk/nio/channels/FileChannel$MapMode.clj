@@ -31,6 +31,6 @@
   "Returns a string describing this file-mapping mode.
 
   returns: A descriptive string - `java.lang.String`"
-  ([this]
+  ([^java.nio.channels.FileChannel$MapMode this]
     (-> this (.toString))))
 

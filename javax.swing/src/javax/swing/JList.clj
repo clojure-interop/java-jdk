@@ -212,7 +212,7 @@
   data-model - the model for the list - `javax.swing.ListModel<JList.E>`
 
   throws: java.lang.IllegalArgumentException - if the model is null"
-  ([data-model]
+  ([^javax.swing.ListModel data-model]
     (new JList data-model))
   ([]
     (new JList )))
@@ -251,7 +251,7 @@
    ListUI implementations.
 
   returns: the color to draw the background of selected items - `java.awt.Color`"
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.getSelectionBackground))))
 
 (defn set-layout-orientation
@@ -297,7 +297,7 @@
   layout-orientation - the new layout orientation, one of: VERTICAL, HORIZONTAL_WRAP or VERTICAL_WRAP - `int`
 
   throws: java.lang.IllegalArgumentException - if layoutOrientation isn't one of the allowable values"
-  ([this layout-orientation]
+  ([^javax.swing.JList this ^Integer layout-orientation]
     (-> this (.setLayoutOrientation layout-orientation))))
 
 (defn set-selection-background
@@ -313,14 +313,14 @@
    This is a JavaBeans bound property.
 
   selection-background - the Color to use for the background of selected cells - `java.awt.Color`"
-  ([this selection-background]
+  ([^javax.swing.JList this ^java.awt.Color selection-background]
     (-> this (.setSelectionBackground selection-background))))
 
 (defn get-fixed-cell-height
   "Returns the value of the fixedCellHeight property.
 
   returns: the fixed cell height - `int`"
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.getFixedCellHeight))))
 
 (defn get-value-is-adjusting?
@@ -330,7 +330,7 @@
    the list's selection model.
 
   returns: the value of the selection model's isAdjusting property. - `boolean`"
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.getValueIsAdjusting))))
 
 (defn add-list-selection-listener
@@ -342,14 +342,14 @@
    source property set to this list.
 
   listener - the ListSelectionListener to add - `javax.swing.event.ListSelectionListener`"
-  ([this listener]
+  ([^javax.swing.JList this ^javax.swing.event.ListSelectionListener listener]
     (-> this (.addListSelectionListener listener))))
 
 (defn clear-selection
   "Clears the selection; after calling this method, isSelectionEmpty
    will return true. This is a cover method that delegates to the
    method of the same name on the list's selection model."
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.clearSelection))))
 
 (defn set-cell-renderer
@@ -369,7 +369,7 @@
    This is a JavaBeans bound property.
 
   cell-renderer - the ListCellRenderer that paints list cells - `JList.E>`"
-  ([this cell-renderer]
+  ([^javax.swing.JList this ^JList.E> cell-renderer]
     (-> this (.setCellRenderer cell-renderer))))
 
 (defn get-lead-selection-index
@@ -377,7 +377,7 @@
    delegates to the method of the same name on the list's selection model.
 
   returns: the lead selection index - `int`"
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.getLeadSelectionIndex))))
 
 (defn set-visible-row-count
@@ -405,7 +405,7 @@
    This is a JavaBeans bound property.
 
   visible-row-count - an integer specifying the preferred number of rows to display without requiring scrolling - `int`"
-  ([this visible-row-count]
+  ([^javax.swing.JList this ^Integer visible-row-count]
     (-> this (.setVisibleRowCount visible-row-count))))
 
 (defn set-selection-foreground
@@ -421,7 +421,7 @@
    This is a JavaBeans bound property.
 
   selection-foreground - the Color to use in the foreground for selected list items - `java.awt.Color`"
-  ([this selection-foreground]
+  ([^javax.swing.JList this ^java.awt.Color selection-foreground]
     (-> this (.setSelectionForeground selection-foreground))))
 
 (defn ensure-index-is-visible
@@ -434,7 +434,7 @@
    results in nothing.
 
   index - the index of the cell to make visible - `int`"
-  ([this index]
+  ([^javax.swing.JList this ^Integer index]
     (-> this (.ensureIndexIsVisible index))))
 
 (defn get-anchor-selection-index
@@ -442,14 +442,14 @@
    delegates to the method of the same name on the list's selection model.
 
   returns: the anchor selection index - `int`"
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.getAnchorSelectionIndex))))
 
 (defn get-drop-mode
   "Returns the drop mode for this component.
 
   returns: the drop mode for this component - `javax.swing.DropMode`"
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.getDropMode))))
 
 (defn get-scrollable-block-increment
@@ -489,7 +489,7 @@
            always positive - `int`
 
   throws: java.lang.IllegalArgumentException - if visibleRect is null, or orientation isn't one of SwingConstants.VERTICAL or SwingConstants.HORIZONTAL"
-  ([this visible-rect orientation direction]
+  ([^javax.swing.JList this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
     (-> this (.getScrollableBlockIncrement visible-rect orientation direction))))
 
 (defn set-drop-mode
@@ -513,7 +513,7 @@
   drop-mode - the drop mode to use - `javax.swing.DropMode`
 
   throws: java.lang.IllegalArgumentException - if the drop mode is unsupported or null"
-  ([this drop-mode]
+  ([^javax.swing.JList this ^javax.swing.DropMode drop-mode]
     (-> this (.setDropMode drop-mode))))
 
 (defn get-selection-foreground
@@ -523,7 +523,7 @@
    ListUI implementations.
 
   returns: the color to draw the foreground of selected items - `java.awt.Color`"
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.getSelectionForeground))))
 
 (defn selected-index?
@@ -535,7 +535,7 @@
 
   returns: true if the specified index is selected,
            else false - `boolean`"
-  ([this index]
+  ([^javax.swing.JList this ^Integer index]
     (-> this (.isSelectedIndex index))))
 
 (defn set-fixed-cell-height
@@ -549,7 +549,7 @@
    This is a JavaBeans bound property.
 
   height - the height to be used for for all cells in the list - `int`"
-  ([this height]
+  ([^javax.swing.JList this ^Integer height]
     (-> this (.setFixedCellHeight height))))
 
 (defn get-ui-class-id
@@ -558,7 +558,7 @@
    the look and feel for this component.
 
   returns: the string `ListUI` - `java.lang.String`"
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.getUIClassID))))
 
 (defn set-fixed-cell-width
@@ -572,7 +572,7 @@
    This is a JavaBeans bound property.
 
   width - the width to be used for all cells in the list - `int`"
-  ([this width]
+  ([^javax.swing.JList this ^Integer width]
     (-> this (.setFixedCellWidth width))))
 
 (defn get-selected-index
@@ -584,7 +584,7 @@
    This method is a cover that delegates to getMinSelectionIndex.
 
   returns: the smallest selected cell index - `int`"
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.getSelectedIndex))))
 
 (defn set-selection-model
@@ -599,7 +599,7 @@
   selection-model - the ListSelectionModel that implements the selections - `javax.swing.ListSelectionModel`
 
   throws: java.lang.IllegalArgumentException - if selectionModel is null"
-  ([this selection-model]
+  ([^javax.swing.JList this ^javax.swing.ListSelectionModel selection-model]
     (-> this (.setSelectionModel selection-model))))
 
 (defn location-to-index
@@ -616,7 +616,7 @@
   location - the coordinates of the point - `java.awt.Point`
 
   returns: the cell index closest to the given location, or -1 - `int`"
-  ([this location]
+  ([^javax.swing.JList this ^java.awt.Point location]
     (-> this (.locationToIndex location))))
 
 (defn set-selection-interval
@@ -630,7 +630,7 @@
 
   anchor - the first index to select - `int`
   lead - the last index to select - `int`"
-  ([this anchor lead]
+  ([^javax.swing.JList this ^Integer anchor ^Integer lead]
     (-> this (.setSelectionInterval anchor lead))))
 
 (defn get-scrollable-unit-increment
@@ -649,7 +649,7 @@
            always positive - `int`
 
   throws: java.lang.IllegalArgumentException - if visibleRect is null, or orientation isn't one of SwingConstants.VERTICAL or SwingConstants.HORIZONTAL"
-  ([this visible-rect orientation direction]
+  ([^javax.swing.JList this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
     (-> this (.getScrollableUnitIncrement visible-rect orientation direction))))
 
 (defn set-prototype-cell-value
@@ -677,7 +677,7 @@
    This is a JavaBeans bound property.
 
   prototype-cell-value - the value on which to base fixedCellWidth and fixedCellHeight - `JList.E`"
-  ([this prototype-cell-value]
+  ([^javax.swing.JList this ^JList.E prototype-cell-value]
     (-> this (.setPrototypeCellValue prototype-cell-value))))
 
 (defn get-last-visible-index
@@ -686,7 +686,7 @@
    Note that the returned cell may only be partially visible.
 
   returns: the index of the last visible cell - `int`"
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.getLastVisibleIndex))))
 
 (defn get-layout-orientation
@@ -697,7 +697,7 @@
    style` with the content flowing horizontally then vertically.
 
   returns: the value of the layoutOrientation property - `int`"
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.getLayoutOrientation))))
 
 (defn get-selection-model
@@ -707,7 +707,7 @@
 
   returns: the ListSelectionModel that maintains the
            list's selections - `javax.swing.ListSelectionModel`"
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.getSelectionModel))))
 
 (defn get-drop-location
@@ -731,7 +731,7 @@
    this property.
 
   returns: the drop location - `javax.swing.JList.DropLocation`"
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.getDropLocation))))
 
 (defn remove-selection-interval
@@ -746,7 +746,7 @@
 
   index-0 - the first index to remove from the selection - `int`
   index-1 - the last index to remove from the selection - `int`"
-  ([this index-0 index-1]
+  ([^javax.swing.JList this ^Integer index-0 ^Integer index-1]
     (-> this (.removeSelectionInterval index-0 index-1))))
 
 (defn get-preferred-scrollable-viewport-size
@@ -783,14 +783,14 @@
 
   returns: a dimension containing the size of the viewport needed
             to display visibleRowCount rows - `java.awt.Dimension`"
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.getPreferredScrollableViewportSize))))
 
 (defn get-cell-renderer
   "Returns the object responsible for painting list items.
 
   returns: the value of the cellRenderer property - `javax.swing.ListCellRenderer<? super JList.E>`"
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.getCellRenderer))))
 
 (defn add-selection-interval
@@ -805,14 +805,14 @@
 
   anchor - the first index to add to the selection - `int`
   lead - the last index to add to the selection - `int`"
-  ([this anchor lead]
+  ([^javax.swing.JList this ^Integer anchor ^Integer lead]
     (-> this (.addSelectionInterval anchor lead))))
 
 (defn get-selected-values
   "Deprecated. As of JDK 1.7, replaced by getSelectedValuesList()
 
   returns: the selected values, or an empty array if nothing is selected - `java.lang.  java.lang.Object[]`"
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.getSelectedValues))))
 
 (defn set-ui
@@ -820,14 +820,14 @@
    renders this component.
 
   ui - the ListUI object - `javax.swing.plaf.ListUI`"
-  ([this ui]
+  ([^javax.swing.JList this ^javax.swing.plaf.ListUI ui]
     (-> this (.setUI ui))))
 
 (defn remove-list-selection-listener
   "Removes a selection listener from the list.
 
   listener - the ListSelectionListener to remove - `javax.swing.event.ListSelectionListener`"
-  ([this listener]
+  ([^javax.swing.JList this ^javax.swing.event.ListSelectionListener listener]
     (-> this (.removeListSelectionListener listener))))
 
 (defn get-tool-tip-text
@@ -848,7 +848,7 @@
   event - the MouseEvent to fetch the tooltip text for - `java.awt.event.MouseEvent`
 
   returns: `java.lang.String`"
-  ([this event]
+  ([^javax.swing.JList this ^java.awt.event.MouseEvent event]
     (-> this (.getToolTipText event))))
 
 (defn get-selected-indices
@@ -857,7 +857,7 @@
 
   returns: all of the selected indices, in increasing order,
            or an empty array if nothing is selected - `int[]`"
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.getSelectedIndices))))
 
 (defn set-drag-enabled
@@ -881,7 +881,7 @@
   b - whether or not to enable automatic drag handling - `boolean`
 
   throws: java.awt.HeadlessException - if b is true and GraphicsEnvironment.isHeadless() returns true"
-  ([this b]
+  ([^javax.swing.JList this ^Boolean b]
     (-> this (.setDragEnabled b))))
 
 (defn get-max-selection-index
@@ -890,7 +890,7 @@
    name on the list's selection model.
 
   returns: the largest selected cell index - `int`"
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.getMaxSelectionIndex))))
 
 (defn get-ui
@@ -898,7 +898,7 @@
    renders this component.
 
   returns: the ListUI object that renders this component - `javax.swing.plaf.ListUI`"
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.getUI))))
 
 (defn selection-empty?
@@ -907,7 +907,7 @@
    name on the list's selection model.
 
   returns: true if nothing is selected, else false - `boolean`"
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.isSelectionEmpty))))
 
 (defn get-min-selection-index
@@ -916,7 +916,7 @@
    name on the list's selection model.
 
   returns: the smallest selected cell index, or -1 - `int`"
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.getMinSelectionIndex))))
 
 (defn set-value-is-adjusting
@@ -939,7 +939,7 @@
    more details.
 
   b - the new value for the property - `boolean`"
-  ([this b]
+  ([^javax.swing.JList this ^Boolean b]
     (-> this (.setValueIsAdjusting b))))
 
 (defn get-scrollable-tracks-viewport-width?
@@ -954,7 +954,7 @@
 
   returns: whether or not an enclosing viewport should force the list's
            width to match its own - `boolean`"
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.getScrollableTracksViewportWidth))))
 
 (defn get-visible-row-count
@@ -963,7 +963,7 @@
    interpret this value.
 
   returns: the value of the visibleRowCount property. - `int`"
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.getVisibleRowCount))))
 
 (defn get-accessible-context
@@ -975,7 +975,7 @@
 
   returns: an AccessibleJList that serves as the
            AccessibleContext of this JList - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.getAccessibleContext))))
 
 (defn index-to-location
@@ -989,7 +989,7 @@
   index - the cell index - `int`
 
   returns: the origin of the cell, or null - `java.awt.Point`"
-  ([this index]
+  ([^javax.swing.JList this ^Integer index]
     (-> this (.indexToLocation index))))
 
 (defn get-list-selection-listeners
@@ -998,7 +998,7 @@
 
   returns: all of the ListSelectionListeners on this list, or
            an empty array if no listeners have been added - `javax.swing.event.ListSelectionListener[]`"
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.getListSelectionListeners))))
 
 (defn set-selected-value
@@ -1006,7 +1006,7 @@
 
   an-object - the object to select - `java.lang.Object`
   should-scroll - true if the list should scroll to display the selected object, if one exists; otherwise false - `boolean`"
-  ([this an-object should-scroll]
+  ([^javax.swing.JList this ^java.lang.Object an-object ^Boolean should-scroll]
     (-> this (.setSelectedValue an-object should-scroll))))
 
 (defn set-selected-indices
@@ -1020,7 +1020,7 @@
   indices - an array of the indices of the cells to select, non-null - `int[]`
 
   throws: java.lang.NullPointerException - if the given array is null"
-  ([this indices]
+  ([^javax.swing.JList this indices]
     (-> this (.setSelectedIndices indices))))
 
 (defn get-first-visible-index
@@ -1032,7 +1032,7 @@
    Note that the returned cell may only be partially visible.
 
   returns: the index of the first visible cell - `int`"
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.getFirstVisibleIndex))))
 
 (defn get-scrollable-tracks-viewport-height?
@@ -1047,7 +1047,7 @@
 
   returns: whether or not an enclosing viewport should force the list's
            height to match its own - `boolean`"
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.getScrollableTracksViewportHeight))))
 
 (defn get-selection-mode
@@ -1056,14 +1056,14 @@
    list's selection model.
 
   returns: the current selection mode - `int`"
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.getSelectionMode))))
 
 (defn get-drag-enabled?
   "Returns whether or not automatic drag handling is enabled.
 
   returns: the value of the dragEnabled property - `boolean`"
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.getDragEnabled))))
 
 (defn set-selected-index
@@ -1074,7 +1074,7 @@
    how values less than 0 are handled.
 
   index - the index of the cell to select - `int`"
-  ([this index]
+  ([^javax.swing.JList this ^Integer index]
     (-> this (.setSelectedIndex index))))
 
 (defn get-selected-values-list
@@ -1082,7 +1082,7 @@
    on their indices in the list.
 
   returns: the selected items, or an empty list if nothing is selected - `java.util.List<JList.E>`"
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.getSelectedValuesList))))
 
 (defn set-list-data
@@ -1095,7 +1095,7 @@
    after invoking this method results in undefined behavior.
 
   list-data - an array of E containing the items to display in the list - `JList.E[]`"
-  ([this list-data]
+  ([^javax.swing.JList this ^JList.E[] list-data]
     (-> this (.setListData list-data))))
 
 (defn get-cell-bounds
@@ -1116,14 +1116,14 @@
   index-1 - the second index in the range - `int`
 
   returns: the bounding rectangle for the range of cells, or null - `java.awt.Rectangle`"
-  ([this index-0 index-1]
+  ([^javax.swing.JList this ^Integer index-0 ^Integer index-1]
     (-> this (.getCellBounds index-0 index-1))))
 
 (defn get-fixed-cell-width
   "Returns the value of the fixedCellWidth property.
 
   returns: the fixed cell width - `int`"
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.getFixedCellWidth))))
 
 (defn get-model
@@ -1132,7 +1132,7 @@
 
   returns: the ListModel that provides the displayed
                             list of items - `javax.swing.ListModel<JList.E>`"
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.getModel))))
 
 (defn get-selected-value
@@ -1145,7 +1145,7 @@
    getMinSelectionIndex.
 
   returns: the first selected value - `JList.E`"
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.getSelectedValue))))
 
 (defn get-prototype-cell-value
@@ -1154,7 +1154,7 @@
    is no such value.
 
   returns: the value of the prototypeCellValue property - `JList.E`"
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.getPrototypeCellValue))))
 
 (defn set-model
@@ -1167,7 +1167,7 @@
   model - the ListModel that provides the list of items for display - `javax.swing.ListModel<JList.E>`
 
   throws: java.lang.IllegalArgumentException - if model is null"
-  ([this model]
+  ([^javax.swing.JList this ^javax.swing.ListModel model]
     (-> this (.setModel model))))
 
 (defn update-ui
@@ -1176,7 +1176,7 @@
    by the developer (rather than the look and feel itself), this also causes
    the cell renderer and its children to be updated, by calling
    SwingUtilities.updateComponentTreeUI on it."
-  ([this]
+  ([^javax.swing.JList this]
     (-> this (.updateUI))))
 
 (defn set-selection-mode
@@ -1203,7 +1203,7 @@
   selection-mode - the selection mode - `int`
 
   throws: java.lang.IllegalArgumentException - if the selection mode isn't one of those allowed"
-  ([this selection-mode]
+  ([^javax.swing.JList this ^Integer selection-mode]
     (-> this (.setSelectionMode selection-mode))))
 
 (defn get-next-match
@@ -1218,6 +1218,6 @@
    starts with the prefix; otherwise -1 - `int`
 
   throws: java.lang.IllegalArgumentException - if prefix is null or startIndex is out of bounds"
-  ([this prefix start-index bias]
+  ([^javax.swing.JList this ^java.lang.String prefix ^Integer start-index ^javax.swing.text.Position.Bias bias]
     (-> this (.getNextMatch prefix start-index bias))))
 

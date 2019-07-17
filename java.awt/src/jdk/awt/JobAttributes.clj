@@ -48,9 +48,9 @@
   sides - SidesType.ONE_SIDED, SidesType.TWO_SIDED_LONG_EDGE, or SidesType.TWO_SIDED_SHORT_EDGE - `java.awt.JobAttributes.SidesType`
 
   throws: java.lang.IllegalArgumentException - if one or more of the above conditions is violated"
-  ([copies default-selection destination dialog file-name max-page min-page multiple-document-handling page-ranges printer sides]
+  ([^Integer copies ^java.awt.JobAttributes.DefaultSelectionType default-selection ^java.awt.JobAttributes.DestinationType destination ^java.awt.JobAttributes.DialogType dialog ^java.lang.String file-name ^Integer max-page ^Integer min-page ^java.awt.JobAttributes.MultipleDocumentHandlingType multiple-document-handling page-ranges ^java.lang.String printer ^java.awt.JobAttributes.SidesType sides]
     (new JobAttributes copies default-selection destination dialog file-name max-page min-page multiple-document-handling page-ranges printer sides))
-  ([obj]
+  ([^java.awt.JobAttributes obj]
     (new JobAttributes obj))
   ([]
     (new JobAttributes )))
@@ -60,7 +60,7 @@
    attributes. This attribute is updated to the value chosen by the user.
 
   returns: the possibly null file name - `java.lang.String`"
-  ([this]
+  ([^java.awt.JobAttributes this]
     (-> this (.getFileName))))
 
 (defn set-destination
@@ -71,14 +71,14 @@
   destination - DesintationType.FILE or DesintationType.PRINTER. - `java.awt.JobAttributes.DestinationType`
 
   throws: java.lang.IllegalArgumentException - if destination is null."
-  ([this destination]
+  ([^java.awt.JobAttributes this ^java.awt.JobAttributes.DestinationType destination]
     (-> this (.setDestination destination))))
 
 (defn set-sides-to-default
   "Sets how consecutive pages should be imposed upon the sides of the
    print medium for jobs using these attributes to the default. The
    default imposition is SidesType.ONE_SIDED."
-  ([this]
+  ([^java.awt.JobAttributes this]
     (-> this (.setSidesToDefault))))
 
 (defn set-copies
@@ -89,7 +89,7 @@
   copies - an integer greater than 0 - `int`
 
   throws: java.lang.IllegalArgumentException - if copies is less than or equal to 0"
-  ([this copies]
+  ([^java.awt.JobAttributes this ^Integer copies]
     (-> this (.setCopies copies))))
 
 (defn set-file-name
@@ -97,7 +97,7 @@
    attributes. Default is platform-dependent and implementation-defined.
 
   file-name - the possibly null file name. - `java.lang.String`"
-  ([this file-name]
+  ([^java.awt.JobAttributes this ^java.lang.String file-name]
     (-> this (.setFileName file-name))))
 
 (defn set-page-ranges
@@ -113,7 +113,7 @@
   page-ranges - an array of integer arrays of 2 elements. An array is interpreted as a range spanning all pages including and between the specified pages. Ranges must be in ascending order and must not overlap. Specified page numbers cannot be less than minPage nor greater than maxPage. For example: (new int[][] { new int[] { 1, 3 }, new int[] { 5, 5 }, new int[] { 15, 19 } }), specifies pages 1, 2, 3, 5, 15, 16, 17, 18, and 19. Note that (new int[][] { new int[] { 1, 1 }, new int[] { 1, 2 } }), is an invalid set of page ranges because the two ranges overlap. - `int[][]`
 
   throws: java.lang.IllegalArgumentException - if one or more of the above conditions is violated."
-  ([this page-ranges]
+  ([^java.awt.JobAttributes this page-ranges]
     (-> this (.setPageRanges page-ranges))))
 
 (defn set-min-page
@@ -124,7 +124,7 @@
   min-page - an integer greater than zero and less than or equal to maxPage. - `int`
 
   throws: java.lang.IllegalArgumentException - if one or more of the above conditions is violated."
-  ([this min-page]
+  ([^java.awt.JobAttributes this ^Integer min-page]
     (-> this (.setMinPage min-page))))
 
 (defn get-to-page
@@ -139,7 +139,7 @@
   returns: an integer greater than zero and greater than or equal
             to toPage and greater than or equal to minPage
             and less than or equal to maxPage. - `int`"
-  ([this]
+  ([^java.awt.JobAttributes this]
     (-> this (.getToPage))))
 
 (defn get-printer
@@ -147,7 +147,7 @@
    attribute is updated to the value chosen by the user.
 
   returns: the possibly null printer name. - `java.lang.String`"
-  ([this]
+  ([^java.awt.JobAttributes this]
     (-> this (.getPrinter))))
 
 (defn get-destination
@@ -156,13 +156,13 @@
    user.
 
   returns: DesintationType.FILE or DesintationType.PRINTER - `java.awt.JobAttributes.DestinationType`"
-  ([this]
+  ([^java.awt.JobAttributes this]
     (-> this (.getDestination))))
 
 (defn set-copies-to-default
   "Sets the number of copies the application should render for jobs using
    these attributes to the default. The default number of copies is 1."
-  ([this]
+  ([^java.awt.JobAttributes this]
     (-> this (.setCopiesToDefault))))
 
 (defn get-default-selection
@@ -173,14 +173,14 @@
 
   returns: DefaultSelectionType.ALL, DefaultSelectionType.RANGE, or
             DefaultSelectionType.SELECTION - `java.awt.JobAttributes.DefaultSelectionType`"
-  ([this]
+  ([^java.awt.JobAttributes this]
     (-> this (.getDefaultSelection))))
 
 (defn to-string
   "Returns a string representation of this JobAttributes.
 
   returns: the string representation. - `java.lang.String`"
-  ([this]
+  ([^java.awt.JobAttributes this]
     (-> this (.toString))))
 
 (defn set-to-page
@@ -195,7 +195,7 @@
   to-page - an integer greater than zero and greater than or equal to fromPage and greater than or equal to minPage and less than or equal to maxPage. - `int`
 
   throws: java.lang.IllegalArgumentException - if one or more of the above conditions is violated."
-  ([this to-page]
+  ([^java.awt.JobAttributes this ^Integer to-page]
     (-> this (.setToPage to-page))))
 
 (defn set-from-page
@@ -210,7 +210,7 @@
   from-page - an integer greater than zero and less than or equal to toPage and greater than or equal to minPage and less than or equal to maxPage. - `int`
 
   throws: java.lang.IllegalArgumentException - if one or more of the above conditions is violated."
-  ([this from-page]
+  ([^java.awt.JobAttributes this ^Integer from-page]
     (-> this (.setFromPage from-page))))
 
 (defn get-copies
@@ -219,7 +219,7 @@
    by the user.
 
   returns: an integer greater than 0. - `int`"
-  ([this]
+  ([^java.awt.JobAttributes this]
     (-> this (.getCopies))))
 
 (defn set-sides
@@ -241,7 +241,7 @@
   sides - SidesType.ONE_SIDED, SidesType.TWO_SIDED_LONG_EDGE, or SidesType.TWO_SIDED_SHORT_EDGE. - `java.awt.JobAttributes.SidesType`
 
   throws: java.lang.IllegalArgumentException - if sides is null."
-  ([this sides]
+  ([^java.awt.JobAttributes this ^java.awt.JobAttributes.SidesType sides]
     (-> this (.setSides sides))))
 
 (defn set-printer
@@ -249,14 +249,14 @@
    Default is platform-dependent and implementation-defined.
 
   printer - the possibly null printer name. - `java.lang.String`"
-  ([this printer]
+  ([^java.awt.JobAttributes this ^java.lang.String printer]
     (-> this (.setPrinter printer))))
 
 (defn set-multiple-document-handling-to-default
   "Sets the handling of multiple copies, including collation, for jobs
    using these attributes to the default. The default handling is
    MultipleDocumentHandlingType.SEPARATE_DOCUMENTS_UNCOLLATED_COPIES."
-  ([this]
+  ([^java.awt.JobAttributes this]
     (-> this (.setMultipleDocumentHandlingToDefault))))
 
 (defn get-max-page
@@ -267,7 +267,7 @@
 
   returns: an integer greater than zero and greater than or equal
             to minPage. - `int`"
-  ([this]
+  ([^java.awt.JobAttributes this]
     (-> this (.getMaxPage))))
 
 (defn clone
@@ -275,14 +275,14 @@
 
   returns: the newly created copy; it is safe to cast this Object into
             a JobAttributes - `java.lang.Object`"
-  ([this]
+  ([^java.awt.JobAttributes this]
     (-> this (.clone))))
 
 (defn hash-code
   "Returns a hash code value for this JobAttributes.
 
   returns: the hash code. - `int`"
-  ([this]
+  ([^java.awt.JobAttributes this]
     (-> this (.hashCode))))
 
 (defn set
@@ -290,7 +290,7 @@
    the same values as the attributes of obj.
 
   obj - the JobAttributes to copy - `java.awt.JobAttributes`"
-  ([this obj]
+  ([^java.awt.JobAttributes this ^java.awt.JobAttributes obj]
     (-> this (.set obj))))
 
 (defn get-min-page
@@ -301,7 +301,7 @@
 
   returns: an integer greater than zero and less than or equal
             to maxPage. - `int`"
-  ([this]
+  ([^java.awt.JobAttributes this]
     (-> this (.getMinPage))))
 
 (defn get-sides
@@ -322,7 +322,7 @@
 
   returns: SidesType.ONE_SIDED, SidesType.TWO_SIDED_LONG_EDGE, or
             SidesType.TWO_SIDED_SHORT_EDGE. - `java.awt.JobAttributes.SidesType`"
-  ([this]
+  ([^java.awt.JobAttributes this]
     (-> this (.getSides))))
 
 (defn set-dialog
@@ -339,7 +339,7 @@
   dialog - DialogType.COMMON, DialogType.NATIVE, or DialogType.NONE. - `java.awt.JobAttributes.DialogType`
 
   throws: java.lang.IllegalArgumentException - if dialog is null."
-  ([this dialog]
+  ([^java.awt.JobAttributes this ^java.awt.JobAttributes.DialogType dialog]
     (-> this (.setDialog dialog))))
 
 (defn get-page-ranges
@@ -359,7 +359,7 @@
             (new int[][] { new int[] { 1, 3 }, new int[] { 5, 5 },
                            new int[] { 15, 19 } }),
             specifies pages 1, 2, 3, 5, 15, 16, 17, 18, and 19. - `int[][]`"
-  ([this]
+  ([^java.awt.JobAttributes this]
     (-> this (.getPageRanges))))
 
 (defn get-multiple-document-handling
@@ -369,7 +369,7 @@
 
   returns: MultipleDocumentHandlingType.SEPARATE_DOCUMENTS_COLLATED_COPIES or
        MultipleDocumentHandlingType.SEPARATE_DOCUMENTS_UNCOLLATED_COPIES. - `java.awt.JobAttributes.MultipleDocumentHandlingType`"
-  ([this]
+  ([^java.awt.JobAttributes this]
     (-> this (.getMultipleDocumentHandling))))
 
 (defn set-max-page
@@ -380,7 +380,7 @@
   max-page - an integer greater than zero and greater than or equal to minPage - `int`
 
   throws: java.lang.IllegalArgumentException - if one or more of the above conditions is violated"
-  ([this max-page]
+  ([^java.awt.JobAttributes this ^Integer max-page]
     (-> this (.setMaxPage max-page))))
 
 (defn set-multiple-document-handling
@@ -392,7 +392,7 @@
   multiple-document-handling - MultipleDocumentHandlingType.SEPARATE_DOCUMENTS_COLLATED_COPIES or MultipleDocumentHandlingType.SEPARATE_DOCUMENTS_UNCOLLATED_COPIES. - `java.awt.JobAttributes.MultipleDocumentHandlingType`
 
   throws: java.lang.IllegalArgumentException - if multipleDocumentHandling is null."
-  ([this multiple-document-handling]
+  ([^java.awt.JobAttributes this ^java.awt.JobAttributes.MultipleDocumentHandlingType multiple-document-handling]
     (-> this (.setMultipleDocumentHandling multiple-document-handling))))
 
 (defn set-default-selection
@@ -404,7 +404,7 @@
   default-selection - DefaultSelectionType.ALL, DefaultSelectionType.RANGE, or DefaultSelectionType.SELECTION. - `java.awt.JobAttributes.DefaultSelectionType`
 
   throws: java.lang.IllegalArgumentException - if defaultSelection is null"
-  ([this default-selection]
+  ([^java.awt.JobAttributes this ^java.awt.JobAttributes.DefaultSelectionType default-selection]
     (-> this (.setDefaultSelection default-selection))))
 
 (defn equals
@@ -420,7 +420,7 @@
 
   returns: whether obj is equal to this JobAttribute according to the
             above criteria. - `boolean`"
-  ([this obj]
+  ([^java.awt.JobAttributes this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn get-dialog
@@ -436,7 +436,7 @@
 
   returns: DialogType.COMMON, DialogType.NATIVE, or
             DialogType.NONE - `java.awt.JobAttributes.DialogType`"
-  ([this]
+  ([^java.awt.JobAttributes this]
     (-> this (.getDialog))))
 
 (defn get-from-page
@@ -451,6 +451,6 @@
   returns: an integer greater than zero and less than or equal to
             toPage and greater than or equal to minPage and
             less than or equal to maxPage. - `int`"
-  ([this]
+  ([^java.awt.JobAttributes this]
     (-> this (.getFromPage))))
 

@@ -181,7 +181,7 @@
    the given fairness policy.
 
   fair - true if this lock should use a fair ordering policy - `boolean`"
-  ([fair]
+  ([^Boolean fair]
     (new ReentrantReadWriteLock fair))
   ([]
     (new ReentrantReadWriteLock )))
@@ -190,14 +190,14 @@
   "Description copied from interface: ReadWriteLock
 
   returns: the lock used for writing - `java.util.concurrent.locks.ReentrantReadWriteLock.WriteLock`"
-  ([this]
+  ([^java.util.concurrent.locks.ReentrantReadWriteLock this]
     (-> this (.writeLock))))
 
 (defn fair?
   "Returns true if this lock has fairness set true.
 
   returns: true if this lock has fairness set true - `boolean`"
-  ([this]
+  ([^java.util.concurrent.locks.ReentrantReadWriteLock this]
     (-> this (.isFair))))
 
 (defn get-queue-length
@@ -209,7 +209,7 @@
    synchronization control.
 
   returns: the estimated number of threads waiting for this lock - `int`"
-  ([this]
+  ([^java.util.concurrent.locks.ReentrantReadWriteLock this]
     (-> this (.getQueueLength))))
 
 (defn has-waiters?
@@ -225,7 +225,7 @@
   returns: true if there are any waiting threads - `boolean`
 
   throws: java.lang.IllegalMonitorStateException - if this lock is not held"
-  ([this condition]
+  ([^java.util.concurrent.locks.ReentrantReadWriteLock this ^java.util.concurrent.locks.Condition condition]
     (-> this (.hasWaiters condition))))
 
 (defn get-write-hold-count
@@ -235,7 +235,7 @@
 
   returns: the number of holds on the write lock by the current thread,
            or zero if the write lock is not held by the current thread - `int`"
-  ([this]
+  ([^java.util.concurrent.locks.ReentrantReadWriteLock this]
     (-> this (.getWriteHoldCount))))
 
 (defn to-string
@@ -246,7 +246,7 @@
    read locks.
 
   returns: a string identifying this lock, as well as its lock state - `java.lang.String`"
-  ([this]
+  ([^java.util.concurrent.locks.ReentrantReadWriteLock this]
     (-> this (.toString))))
 
 (defn write-locked-by-current-thread?
@@ -254,7 +254,7 @@
 
   returns: true if the current thread holds the write lock and
            false otherwise - `boolean`"
-  ([this]
+  ([^java.util.concurrent.locks.ReentrantReadWriteLock this]
     (-> this (.isWriteLockedByCurrentThread))))
 
 (defn get-read-lock-count
@@ -263,7 +263,7 @@
    synchronization control.
 
   returns: the number of read locks held - `int`"
-  ([this]
+  ([^java.util.concurrent.locks.ReentrantReadWriteLock this]
     (-> this (.getReadLockCount))))
 
 (defn has-queued-threads?
@@ -275,7 +275,7 @@
 
   returns: true if there may be other threads waiting to
            acquire the lock - `boolean`"
-  ([this]
+  ([^java.util.concurrent.locks.ReentrantReadWriteLock this]
     (-> this (.hasQueuedThreads))))
 
 (defn has-queued-thread?
@@ -290,7 +290,7 @@
   returns: true if the given thread is queued waiting for this lock - `boolean`
 
   throws: java.lang.NullPointerException - if the thread is null"
-  ([this thread]
+  ([^java.util.concurrent.locks.ReentrantReadWriteLock this ^java.lang.Thread thread]
     (-> this (.hasQueuedThread thread))))
 
 (defn write-locked?
@@ -300,7 +300,7 @@
 
   returns: true if any thread holds the write lock and
            false otherwise - `boolean`"
-  ([this]
+  ([^java.util.concurrent.locks.ReentrantReadWriteLock this]
     (-> this (.isWriteLocked))))
 
 (defn get-read-hold-count
@@ -310,7 +310,7 @@
 
   returns: the number of holds on the read lock by the current thread,
            or zero if the read lock is not held by the current thread - `int`"
-  ([this]
+  ([^java.util.concurrent.locks.ReentrantReadWriteLock this]
     (-> this (.getReadHoldCount))))
 
 (defn get-wait-queue-length
@@ -326,13 +326,13 @@
   returns: the estimated number of waiting threads - `int`
 
   throws: java.lang.IllegalMonitorStateException - if this lock is not held"
-  ([this condition]
+  ([^java.util.concurrent.locks.ReentrantReadWriteLock this ^java.util.concurrent.locks.Condition condition]
     (-> this (.getWaitQueueLength condition))))
 
 (defn read-lock
   "Description copied from interface: ReadWriteLock
 
   returns: the lock used for reading - `java.util.concurrent.locks.ReentrantReadWriteLock.ReadLock`"
-  ([this]
+  ([^java.util.concurrent.locks.ReentrantReadWriteLock this]
     (-> this (.readLock))))
 

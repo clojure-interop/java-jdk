@@ -13,7 +13,7 @@
   Constructs a new view wrapped on an element.
 
   elem - the element - `javax.swing.text.Element`"
-  ([elem]
+  ([^javax.swing.text.Element elem]
     (new PasswordView elem)))
 
 (defn model-to-view
@@ -27,7 +27,7 @@
   returns: the bounding box of the given position - `java.awt.Shape`
 
   throws: javax.swing.text.BadLocationException - if the given position does not represent a valid location in the associated document"
-  ([this pos a b]
+  ([^javax.swing.text.PasswordView this ^Integer pos ^java.awt.Shape a ^javax.swing.text.Position.Bias b]
     (-> this (.modelToView pos a b))))
 
 (defn view-to-model
@@ -41,7 +41,7 @@
 
   returns: the location within the model that best represents the
     given point in the view - `int`"
-  ([this fx fy a bias]
+  ([^javax.swing.text.PasswordView this ^Float fx ^Float fy ^java.awt.Shape a ^javax.swing.text.Position.Bias[] bias]
     (-> this (.viewToModel fx fy a bias))))
 
 (defn get-preferred-span
@@ -54,6 +54,6 @@
              Typically the view is told to render into the span
              that is returned, although there is no guarantee.
              The parent may choose to resize or break the view. - `float`"
-  ([this axis]
+  ([^javax.swing.text.PasswordView this ^Integer axis]
     (-> this (.getPreferredSpan axis))))
 

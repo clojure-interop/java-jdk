@@ -27,7 +27,7 @@
   ta - a text area - `javax.swing.JComponent`
 
   returns: the UI - `javax.swing.plaf.ComponentUI`"
-  ([ta]
+  ([^javax.swing.JComponent ta]
     (BasicTextAreaUI/createUI ta)))
 
 (defn get-preferred-size
@@ -38,7 +38,7 @@
   returns: the preferred size - `java.awt.Dimension`
 
   throws: java.lang.IllegalArgumentException - if invalid value is passed"
-  ([this c]
+  ([^javax.swing.plaf.basic.BasicTextAreaUI this ^javax.swing.JComponent c]
     (-> this (.getPreferredSize c))))
 
 (defn get-minimum-size
@@ -49,7 +49,7 @@
   returns: the minimum size - `java.awt.Dimension`
 
   throws: java.lang.IllegalArgumentException - if invalid value is passed"
-  ([this c]
+  ([^javax.swing.plaf.basic.BasicTextAreaUI this ^javax.swing.JComponent c]
     (-> this (.getMinimumSize c))))
 
 (defn create
@@ -59,7 +59,7 @@
   elem - the element - `javax.swing.text.Element`
 
   returns: the view - `javax.swing.text.View`"
-  ([this elem]
+  ([^javax.swing.plaf.basic.BasicTextAreaUI this ^javax.swing.text.Element elem]
     (-> this (.create elem))))
 
 (defn get-baseline
@@ -73,7 +73,7 @@
                     baseline - `int`
 
   throws: java.lang.NullPointerException - if c is null"
-  ([this c width height]
+  ([^javax.swing.plaf.basic.BasicTextAreaUI this ^javax.swing.JComponent c ^Integer width ^Integer height]
     (-> this (.getBaseline c width height))))
 
 (defn get-baseline-resize-behavior
@@ -86,6 +86,6 @@
            size changes - `java.awt.Component.BaselineResizeBehavior`
 
   throws: java.lang.NullPointerException - if c is null"
-  ([this c]
+  ([^javax.swing.plaf.basic.BasicTextAreaUI this ^javax.swing.JComponent c]
     (-> this (.getBaselineResizeBehavior c))))
 

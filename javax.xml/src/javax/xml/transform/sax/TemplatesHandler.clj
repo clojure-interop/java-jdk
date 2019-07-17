@@ -14,7 +14,7 @@
   returns: The Templates object that was created during
    the SAX event process, or null if no Templates object has
    been created. - `javax.xml.transform.Templates`"
-  ([this]
+  ([^. this]
     (-> this (.getTemplates))))
 
 (defn set-system-id
@@ -24,7 +24,7 @@
    called before the startDocument event.
 
   system-id - Base URI for this stylesheet. - `java.lang.String`"
-  ([this system-id]
+  ([^. this ^java.lang.String system-id]
     (-> this (.setSystemId system-id))))
 
 (defn get-system-id
@@ -32,6 +32,6 @@
    URLs will be resolved.
 
   returns: The systemID that was set with setSystemId(java.lang.String). - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getSystemId))))
 

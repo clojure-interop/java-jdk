@@ -39,7 +39,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class`"
-  ([this]
+  ([^javax.print.attribute.standard.DialogTypeSelection this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -50,6 +50,6 @@
    `dialog-type-selection`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([this]
+  ([^javax.print.attribute.standard.DialogTypeSelection this]
     (-> this (.getName))))
 

@@ -23,7 +23,7 @@
   column-index - the index of the column - `int`
 
   returns: the common ancestor class of the object values in the model. - `java.lang.Class<?>`"
-  ([this column-index]
+  ([^. this ^Integer column-index]
     (-> this (.getColumnClass column-index))))
 
 (defn add-table-model-listener
@@ -31,7 +31,7 @@
    to the data model occurs.
 
   l - the TableModelListener - `javax.swing.event.TableModelListener`"
-  ([this l]
+  ([^. this ^javax.swing.event.TableModelListener l]
     (-> this (.addTableModelListener l))))
 
 (defn get-value-at
@@ -42,7 +42,7 @@
   column-index - the column whose value is to be queried - `int`
 
   returns: the value Object at the specified cell - `java.lang.Object`"
-  ([this row-index column-index]
+  ([^. this ^Integer row-index ^Integer column-index]
     (-> this (.getValueAt row-index column-index))))
 
 (defn get-column-count
@@ -51,7 +51,7 @@
    should create and display by default.
 
   returns: the number of columns in the model - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getColumnCount))))
 
 (defn remove-table-model-listener
@@ -59,7 +59,7 @@
    change to the data model occurs.
 
   l - the TableModelListener - `javax.swing.event.TableModelListener`"
-  ([this l]
+  ([^. this ^javax.swing.event.TableModelListener l]
     (-> this (.removeTableModelListener l))))
 
 (defn get-row-count
@@ -69,7 +69,7 @@
    is called frequently during rendering.
 
   returns: the number of rows in the model - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getRowCount))))
 
 (defn cell-editable?
@@ -82,7 +82,7 @@
   column-index - the column whose value to be queried - `int`
 
   returns: true if the cell is editable - `boolean`"
-  ([this row-index column-index]
+  ([^. this ^Integer row-index ^Integer column-index]
     (-> this (.isCellEditable row-index column-index))))
 
 (defn get-column-name
@@ -93,7 +93,7 @@
   column-index - the index of the column - `int`
 
   returns: the name of the column - `java.lang.String`"
-  ([this column-index]
+  ([^. this ^Integer column-index]
     (-> this (.getColumnName column-index))))
 
 (defn set-value-at
@@ -103,6 +103,6 @@
   a-value - the new value - `java.lang.Object`
   row-index - the row whose value is to be changed - `int`
   column-index - the column whose value is to be changed - `int`"
-  ([this a-value row-index column-index]
+  ([^. this ^java.lang.Object a-value ^Integer row-index ^Integer column-index]
     (-> this (.setValueAt a-value row-index column-index))))
 

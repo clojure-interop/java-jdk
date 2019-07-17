@@ -39,7 +39,7 @@
 
   returns: true if the encoded forms of the two certificates
            match, false otherwise. - `boolean`"
-  ([this other]
+  ([^javax.security.cert.Certificate this ^java.lang.Object other]
     (-> this (.equals other))))
 
 (defn hash-code
@@ -47,7 +47,7 @@
    encoded form.
 
   returns: the hashcode value. - `int`"
-  ([this]
+  ([^javax.security.cert.Certificate this]
     (-> this (.hashCode))))
 
 (defn get-encoded
@@ -59,7 +59,7 @@
   returns: encoded form of this certificate - `byte[]`
 
   throws: javax.security.cert.CertificateEncodingException - on internal certificate encoding failure"
-  ([this]
+  ([^javax.security.cert.Certificate this]
     (-> this (.getEncoded))))
 
 (defn verify
@@ -72,22 +72,22 @@
   sig-provider - the name of the signature provider. - `java.lang.String`
 
   throws: java.security.NoSuchAlgorithmException - on unsupported signature algorithms."
-  ([this key sig-provider]
+  ([^javax.security.cert.Certificate this ^java.security.PublicKey key ^java.lang.String sig-provider]
     (-> this (.verify key sig-provider)))
-  ([this key]
+  ([^javax.security.cert.Certificate this ^java.security.PublicKey key]
     (-> this (.verify key))))
 
 (defn to-string
   "Returns a string representation of this certificate.
 
   returns: a string representation of this certificate. - `java.lang.String`"
-  ([this]
+  ([^javax.security.cert.Certificate this]
     (-> this (.toString))))
 
 (defn get-public-key
   "Gets the public key from this certificate.
 
   returns: the public key. - `java.security.PublicKey`"
-  ([this]
+  ([^javax.security.cert.Certificate this]
     (-> this (.getPublicKey))))
 

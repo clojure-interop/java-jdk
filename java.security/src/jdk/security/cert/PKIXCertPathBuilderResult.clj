@@ -36,7 +36,7 @@
   subject-public-key - the public key of the subject - `java.security.PublicKey`
 
   throws: java.lang.NullPointerException - if the certPath, trustAnchor or subjectPublicKey parameters are null"
-  ([cert-path trust-anchor policy-tree subject-public-key]
+  ([^java.security.cert.CertPath cert-path ^java.security.cert.TrustAnchor trust-anchor ^java.security.cert.PolicyNode policy-tree ^java.security.PublicKey subject-public-key]
     (new PKIXCertPathBuilderResult cert-path trust-anchor policy-tree subject-public-key)))
 
 (defn get-cert-path
@@ -48,7 +48,7 @@
 
   returns: the built and validated CertPath (never
    null) - `java.security.cert.CertPath`"
-  ([this]
+  ([^java.security.cert.PKIXCertPathBuilderResult this]
     (-> this (.getCertPath))))
 
 (defn to-string
@@ -57,6 +57,6 @@
 
   returns: a String describing the contents of this
            PKIXCertPathBuilderResult - `java.lang.String`"
-  ([this]
+  ([^java.security.cert.PKIXCertPathBuilderResult this]
     (-> this (.toString))))
 

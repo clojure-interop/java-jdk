@@ -25,7 +25,7 @@
    the specific Exception.
 
   exception - The exception thrown - `java.lang.Exception`"
-  ([exception]
+  ([^java.lang.Exception exception]
     (new PrivilegedActionException exception)))
 
 (defn get-exception
@@ -38,7 +38,7 @@
 
   returns: the exception thrown by the privileged computation that
            resulted in this PrivilegedActionException. - `java.lang.Exception`"
-  ([this]
+  ([^java.security.PrivilegedActionException this]
     (-> this (.getException))))
 
 (defn get-cause
@@ -47,13 +47,13 @@
    PrivilegedActionException).
 
   returns: the cause of this exception. - `java.lang.Throwable`"
-  ([this]
+  ([^java.security.PrivilegedActionException this]
     (-> this (.getCause))))
 
 (defn to-string
   "Description copied from class: Throwable
 
   returns: a string representation of this throwable. - `java.lang.String`"
-  ([this]
+  ([^java.security.PrivilegedActionException this]
     (-> this (.toString))))
 

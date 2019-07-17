@@ -44,7 +44,7 @@
   returns: the updater - `<U,W> java.util.concurrent.atomic.AtomicReferenceFieldUpdater<U,W>`
 
   throws: java.lang.ClassCastException - if the field is of the wrong type"
-  ([tclass vclass field-name]
+  ([^java.lang.Class tclass ^java.lang.Class vclass ^java.lang.String field-name]
     (AtomicReferenceFieldUpdater/newUpdater tclass vclass field-name)))
 
 (defn get-and-set
@@ -55,7 +55,7 @@
   new-value - the new value - `AtomicReferenceFieldUpdater.V`
 
   returns: the previous value - `AtomicReferenceFieldUpdater.V`"
-  ([this obj new-value]
+  ([^java.util.concurrent.atomic.AtomicReferenceFieldUpdater this ^AtomicReferenceFieldUpdater.T obj ^AtomicReferenceFieldUpdater.V new-value]
     (-> this (.getAndSet obj new-value))))
 
 (defn update-and-get
@@ -68,7 +68,7 @@
   update-function - a side-effect-free function - `java.util.function.UnaryOperator<AtomicReferenceFieldUpdater.V>`
 
   returns: the updated value - `AtomicReferenceFieldUpdater.V`"
-  ([this obj update-function]
+  ([^java.util.concurrent.atomic.AtomicReferenceFieldUpdater this ^AtomicReferenceFieldUpdater.T obj ^java.util.function.UnaryOperator update-function]
     (-> this (.updateAndGet obj update-function))))
 
 (defn get-and-update
@@ -81,7 +81,7 @@
   update-function - a side-effect-free function - `java.util.function.UnaryOperator<AtomicReferenceFieldUpdater.V>`
 
   returns: the previous value - `AtomicReferenceFieldUpdater.V`"
-  ([this obj update-function]
+  ([^java.util.concurrent.atomic.AtomicReferenceFieldUpdater this ^AtomicReferenceFieldUpdater.T obj ^java.util.function.UnaryOperator update-function]
     (-> this (.getAndUpdate obj update-function))))
 
 (defn accumulate-and-get
@@ -98,7 +98,7 @@
   accumulator-function - a side-effect-free function of two arguments - `java.util.function.BinaryOperator<AtomicReferenceFieldUpdater.V>`
 
   returns: the updated value - `AtomicReferenceFieldUpdater.V`"
-  ([this obj x accumulator-function]
+  ([^java.util.concurrent.atomic.AtomicReferenceFieldUpdater this ^AtomicReferenceFieldUpdater.T obj ^AtomicReferenceFieldUpdater.V x ^java.util.function.BinaryOperator accumulator-function]
     (-> this (.accumulateAndGet obj x accumulator-function))))
 
 (defn weak-compare-and-set
@@ -117,7 +117,7 @@
   update - the new value - `AtomicReferenceFieldUpdater.V`
 
   returns: true if successful - `boolean`"
-  ([this obj expect update]
+  ([^java.util.concurrent.atomic.AtomicReferenceFieldUpdater this ^AtomicReferenceFieldUpdater.T obj ^AtomicReferenceFieldUpdater.V expect ^AtomicReferenceFieldUpdater.V update]
     (-> this (.weakCompareAndSet obj expect update))))
 
 (defn lazy-set
@@ -126,7 +126,7 @@
 
   obj - An object whose field to set - `AtomicReferenceFieldUpdater.T`
   new-value - the new value - `AtomicReferenceFieldUpdater.V`"
-  ([this obj new-value]
+  ([^java.util.concurrent.atomic.AtomicReferenceFieldUpdater this ^AtomicReferenceFieldUpdater.T obj ^AtomicReferenceFieldUpdater.V new-value]
     (-> this (.lazySet obj new-value))))
 
 (defn set
@@ -136,7 +136,7 @@
 
   obj - An object whose field to set - `AtomicReferenceFieldUpdater.T`
   new-value - the new value - `AtomicReferenceFieldUpdater.V`"
-  ([this obj new-value]
+  ([^java.util.concurrent.atomic.AtomicReferenceFieldUpdater this ^AtomicReferenceFieldUpdater.T obj ^AtomicReferenceFieldUpdater.V new-value]
     (-> this (.set obj new-value))))
 
 (defn get-and-accumulate
@@ -153,7 +153,7 @@
   accumulator-function - a side-effect-free function of two arguments - `java.util.function.BinaryOperator<AtomicReferenceFieldUpdater.V>`
 
   returns: the previous value - `AtomicReferenceFieldUpdater.V`"
-  ([this obj x accumulator-function]
+  ([^java.util.concurrent.atomic.AtomicReferenceFieldUpdater this ^AtomicReferenceFieldUpdater.T obj ^AtomicReferenceFieldUpdater.V x ^java.util.function.BinaryOperator accumulator-function]
     (-> this (.getAndAccumulate obj x accumulator-function))))
 
 (defn compare-and-set
@@ -168,7 +168,7 @@
   update - the new value - `AtomicReferenceFieldUpdater.V`
 
   returns: true if successful - `boolean`"
-  ([this obj expect update]
+  ([^java.util.concurrent.atomic.AtomicReferenceFieldUpdater this ^AtomicReferenceFieldUpdater.T obj ^AtomicReferenceFieldUpdater.V expect ^AtomicReferenceFieldUpdater.V update]
     (-> this (.compareAndSet obj expect update))))
 
 (defn get
@@ -178,6 +178,6 @@
   obj - An object whose field to get - `AtomicReferenceFieldUpdater.T`
 
   returns: the current value - `AtomicReferenceFieldUpdater.V`"
-  ([this obj]
+  ([^java.util.concurrent.atomic.AtomicReferenceFieldUpdater this ^AtomicReferenceFieldUpdater.T obj]
     (-> this (.get obj))))
 

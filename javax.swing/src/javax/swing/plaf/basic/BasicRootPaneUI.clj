@@ -13,21 +13,21 @@
   "c - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([c]
+  ([^javax.swing.JComponent c]
     (BasicRootPaneUI/createUI c)))
 
 (defn install-ui
   "Description copied from class: ComponentUI
 
   c - the component where this UI delegate is being installed - `javax.swing.JComponent`"
-  ([this c]
+  ([^javax.swing.plaf.basic.BasicRootPaneUI this ^javax.swing.JComponent c]
     (-> this (.installUI c))))
 
 (defn uninstall-ui
   "Description copied from class: ComponentUI
 
   c - the component from which this UI delegate is being removed; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([this c]
+  ([^javax.swing.plaf.basic.BasicRootPaneUI this ^javax.swing.JComponent c]
     (-> this (.uninstallUI c))))
 
 (defn property-change
@@ -36,6 +36,6 @@
    reinstall the keyboard actions.
 
   e - A PropertyChangeEvent object describing the event source and the property that has changed. - `java.beans.PropertyChangeEvent`"
-  ([this e]
+  ([^javax.swing.plaf.basic.BasicRootPaneUI this ^java.beans.PropertyChangeEvent e]
     (-> this (.propertyChange e))))
 

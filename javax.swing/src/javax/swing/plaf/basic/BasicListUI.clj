@@ -18,7 +18,7 @@
   list - `javax.swing.JComponent`
 
   returns: A new ListUI implementation for the Windows look and feel. - `javax.swing.plaf.ComponentUI`"
-  ([list]
+  ([^javax.swing.JComponent list]
     (BasicListUI/createUI list)))
 
 (defn install-ui
@@ -27,7 +27,7 @@
    in order.
 
   c - the component where this UI delegate is being installed - `javax.swing.JComponent`"
-  ([this c]
+  ([^javax.swing.plaf.basic.BasicListUI this ^javax.swing.JComponent c]
     (-> this (.installUI c))))
 
 (defn uninstall-ui
@@ -36,7 +36,7 @@
    in order.  Sets this.list to null.
 
   c - the component from which this UI delegate is being removed; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([this c]
+  ([^javax.swing.plaf.basic.BasicListUI this ^javax.swing.JComponent c]
     (-> this (.uninstallUI c))))
 
 (defn get-baseline-resize-behavior
@@ -49,7 +49,7 @@
            size changes - `java.awt.Component.BaselineResizeBehavior`
 
   throws: java.lang.NullPointerException - if c is null"
-  ([this c]
+  ([^javax.swing.plaf.basic.BasicListUI this ^javax.swing.JComponent c]
     (-> this (.getBaselineResizeBehavior c))))
 
 (defn location-to-index
@@ -65,7 +65,7 @@
   returns: the cell index closest to the given location, or -1 - `int`
 
   throws: java.lang.NullPointerException - if location is null"
-  ([this list location]
+  ([^javax.swing.plaf.basic.BasicListUI this ^javax.swing.JList list ^java.awt.Point location]
     (-> this (.locationToIndex list location))))
 
 (defn paint
@@ -75,7 +75,7 @@
 
   g - the Graphics context in which to paint - `java.awt.Graphics`
   c - the component being painted; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([this g c]
+  ([^javax.swing.plaf.basic.BasicListUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.paint g c))))
 
 (defn index-to-location
@@ -87,7 +87,7 @@
   index - the cell index - `int`
 
   returns: the origin of the cell, or null - `java.awt.Point`"
-  ([this list index]
+  ([^javax.swing.plaf.basic.BasicListUI this ^javax.swing.JList list ^Integer index]
     (-> this (.indexToLocation list index))))
 
 (defn get-cell-bounds
@@ -105,7 +105,7 @@
   index-2 - the second index in the range - `int`
 
   returns: the bounding rectangle for the range of cells, or null - `java.awt.Rectangle`"
-  ([this list index-1 index-2]
+  ([^javax.swing.plaf.basic.BasicListUI this ^javax.swing.JList list ^Integer index-1 ^Integer index-2]
     (-> this (.getCellBounds list index-1 index-2))))
 
 (defn get-baseline
@@ -119,7 +119,7 @@
                     baseline - `int`
 
   throws: java.lang.NullPointerException - if c is null"
-  ([this c width height]
+  ([^javax.swing.plaf.basic.BasicListUI this ^javax.swing.JComponent c ^Integer width ^Integer height]
     (-> this (.getBaseline c width height))))
 
 (defn get-preferred-size
@@ -177,6 +177,6 @@
   c - The JList component. - `javax.swing.JComponent`
 
   returns: The total size of the list. - `java.awt.Dimension`"
-  ([this c]
+  ([^javax.swing.plaf.basic.BasicListUI this ^javax.swing.JComponent c]
     (-> this (.getPreferredSize c))))
 

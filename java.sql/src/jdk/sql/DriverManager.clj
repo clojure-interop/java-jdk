@@ -53,16 +53,16 @@
   da - the DriverAction implementation to be used when DriverManager#deregisterDriver is called - `java.sql.DriverAction`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([driver da]
+  ([^java.sql.Driver driver ^java.sql.DriverAction da]
     (DriverManager/registerDriver driver da))
-  ([driver]
+  ([^java.sql.Driver driver]
     (DriverManager/registerDriver driver)))
 
 (defn *println
   "Prints a message to the current JDBC log stream.
 
   message - a log or tracing message - `java.lang.String`"
-  ([message]
+  ([^java.lang.String message]
     (DriverManager/println message)))
 
 (defn *set-login-timeout
@@ -71,7 +71,7 @@
    been identified.
 
   seconds - the login time limit in seconds; zero means there is no limit - `int`"
-  ([seconds]
+  ([^Integer seconds]
     (DriverManager/setLoginTimeout seconds)))
 
 (defn *set-log-stream
@@ -82,7 +82,7 @@
   returns: `java.lang.   void`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPermission method denies setting the log stream"
-  ([out]
+  ([^java.io.PrintStream out]
     (DriverManager/setLogStream out)))
 
 (defn *set-log-writer
@@ -107,7 +107,7 @@
   out - the new logging/tracing PrintStream object; null to disable logging and tracing - `java.io.PrintWriter`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPermission method denies setting the log writer"
-  ([out]
+  ([^java.io.PrintWriter out]
     (DriverManager/setLogWriter out)))
 
 (defn *get-log-writer
@@ -139,11 +139,11 @@
   returns: a connection to the URL - `java.sql.Connection`
 
   throws: java.sql.SQLException - if a database access error occurs or the url is null"
-  ([url user password]
+  ([^java.lang.String url ^java.lang.String user ^java.lang.String password]
     (DriverManager/getConnection url user password))
-  ([url info]
+  ([^java.lang.String url ^java.util.Properties info]
     (DriverManager/getConnection url info))
-  ([url]
+  ([^java.lang.String url]
     (DriverManager/getConnection url)))
 
 (defn *get-log-stream
@@ -185,7 +185,7 @@
   driver - the JDBC Driver to remove - `java.sql.Driver`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([driver]
+  ([^java.sql.Driver driver]
     (DriverManager/deregisterDriver driver)))
 
 (defn *get-driver
@@ -199,7 +199,7 @@
    that can connect to the given URL - `java.sql.Driver`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([url]
+  ([^java.lang.String url]
     (DriverManager/getDriver url)))
 
 (defn *get-login-timeout

@@ -7,14 +7,14 @@
   "Returns the system ID of the XML data
 
   returns: the system ID, defaults to `` - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getSystemId))))
 
 (defn get-character-encoding-scheme
   "Returns the encoding style of the XML data
 
   returns: the character encoding, defaults to `UTF-8` - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getCharacterEncodingScheme))))
 
 (defn encoding-set
@@ -22,14 +22,14 @@
    the encoding declaration of the document
 
   returns: `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.encodingSet))))
 
 (defn standalone?
   "Returns if this XML is standalone
 
   returns: the standalone state of XML, defaults to `no` - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.isStandalone))))
 
 (defn standalone-set
@@ -37,13 +37,13 @@
    the encoding declaration of the document.
 
   returns: `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.standaloneSet))))
 
 (defn get-version
   "Returns the version of XML of this XML stream
 
   returns: the version of XML, defaults to `1.0` - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getVersion))))
 

@@ -64,9 +64,9 @@
    function to the input elements, and whose values are the result of
    applying a value mapping function to all input elements equal to the key
    and combining them using the merge function - `<T,K,U,M extends java.util.concurrent.ConcurrentMap<K,U>> java.util.stream.Collector<T,?,M>`"
-  ([key-mapper value-mapper merge-function map-supplier]
+  ([key-mapper value-mapper ^java.util.function.BinaryOperator merge-function ^java.util.function.Supplier map-supplier]
     (Collectors/toConcurrentMap key-mapper value-mapper merge-function map-supplier))
-  ([key-mapper value-mapper merge-function]
+  ([key-mapper value-mapper ^java.util.function.BinaryOperator merge-function]
     (Collectors/toConcurrentMap key-mapper value-mapper merge-function))
   ([key-mapper value-mapper]
     (Collectors/toConcurrentMap key-mapper value-mapper)))
@@ -140,9 +140,9 @@
 
   returns: A Collector which concatenates CharSequence elements,
    separated by the specified delimiter, in encounter order - `java.util.stream.Collector<java.lang.CharSequence,?,java.lang.String>`"
-  ([delimiter prefix suffix]
+  ([^java.lang.CharSequence delimiter ^java.lang.CharSequence prefix ^java.lang.CharSequence suffix]
     (Collectors/joining delimiter prefix suffix))
-  ([delimiter]
+  ([^java.lang.CharSequence delimiter]
     (Collectors/joining delimiter))
   ([]
     (Collectors/joining )))
@@ -159,11 +159,11 @@
   op - a BinaryOperator<U> used to reduce the mapped values - `java.util.function.BinaryOperator<U>`
 
   returns: a Collector implementing the map-reduce operation - `<T,U> java.util.stream.Collector<T,?,U>`"
-  ([identity mapper op]
+  ([identity mapper ^java.util.function.BinaryOperator op]
     (Collectors/reducing identity mapper op))
-  ([identity op]
+  ([identity ^java.util.function.BinaryOperator op]
     (Collectors/reducing identity op))
-  ([op]
+  ([^java.util.function.BinaryOperator op]
     (Collectors/reducing op)))
 
 (defn *to-list
@@ -217,7 +217,7 @@
 
   returns: a Collector which collects all the input elements into a
    Collection, in encounter order - `<T,C extends java.util.Collection<T>> java.util.stream.Collector<T,?,C>`"
-  ([collection-factory]
+  ([^java.util.function.Supplier collection-factory]
     (Collectors/toCollection collection-factory)))
 
 (defn *to-set
@@ -264,7 +264,7 @@
   downstream - a Collector implementing the downstream reduction - `T,A,D>`
 
   returns: a concurrent, unordered Collector implementing the cascaded group-by operation - `<T,K,A,D,M extends java.util.concurrent.ConcurrentMap<K,D>> java.util.stream.Collector<T,?,M>`"
-  ([classifier map-factory downstream]
+  ([classifier ^java.util.function.Supplier map-factory downstream]
     (Collectors/groupingByConcurrent classifier map-factory downstream))
   ([classifier downstream]
     (Collectors/groupingByConcurrent classifier downstream))
@@ -292,9 +292,9 @@
    elements, and whose values are the result of applying a value mapping
    function to all input elements equal to the key and combining them
    using the merge function - `<T,K,U,M extends java.util.Map<K,U>> java.util.stream.Collector<T,?,M>`"
-  ([key-mapper value-mapper merge-function map-supplier]
+  ([key-mapper value-mapper ^java.util.function.BinaryOperator merge-function ^java.util.function.Supplier map-supplier]
     (Collectors/toMap key-mapper value-mapper merge-function map-supplier))
-  ([key-mapper value-mapper merge-function]
+  ([key-mapper value-mapper ^java.util.function.BinaryOperator merge-function]
     (Collectors/toMap key-mapper value-mapper merge-function))
   ([key-mapper value-mapper]
     (Collectors/toMap key-mapper value-mapper)))
@@ -368,7 +368,7 @@
 
   returns: a collector which performs the action of the downstream collector,
    followed by an additional finishing step - `<T,A,R,RR> java.util.stream.Collector<T,A,RR>`"
-  ([downstream finisher]
+  ([^java.util.stream.Collector downstream ^java.util.function.Function finisher]
     (Collectors/collectingAndThen downstream finisher)))
 
 (defn *partitioning-by
@@ -428,7 +428,7 @@
   downstream - a Collector implementing the downstream reduction - `T,A,D>`
 
   returns: a Collector implementing the cascaded group-by operation - `<T,K,D,A,M extends java.util.Map<K,D>> java.util.stream.Collector<T,?,M>`"
-  ([classifier map-factory downstream]
+  ([classifier ^java.util.function.Supplier map-factory downstream]
     (Collectors/groupingBy classifier map-factory downstream))
   ([classifier downstream]
     (Collectors/groupingBy classifier downstream))

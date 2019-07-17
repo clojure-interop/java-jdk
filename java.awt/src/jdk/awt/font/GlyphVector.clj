@@ -132,9 +132,9 @@
      coordinates. - `java.awt.Shape`
 
   throws: java.lang.IndexOutOfBoundsException - if glyphIndex is less than 0 or greater than or equal to the number of glyphs in this GlyphVector"
-  ([this glyph-index x y]
+  ([^java.awt.font.GlyphVector this ^Integer glyph-index ^Float x ^Float y]
     (-> this (.getGlyphOutline glyph-index x y)))
-  ([this glyph-index]
+  ([^java.awt.font.GlyphVector this ^Integer glyph-index]
     (-> this (.getGlyphOutline glyph-index))))
 
 (defn get-glyph-char-indices
@@ -153,7 +153,7 @@
   code-return - the array into which to return the character indices - `int[]`
 
   returns: an array of character indices, one per glyph. - `int[]`"
-  ([this begin-glyph-index num-entries code-return]
+  ([^java.awt.font.GlyphVector this ^Integer begin-glyph-index ^Integer num-entries code-return]
     (-> this (.getGlyphCharIndices begin-glyph-index num-entries code-return))))
 
 (defn get-glyph-positions
@@ -178,14 +178,14 @@
     beginGlyphIndex and numEntries. - `float[]`
 
   throws: java.lang.IllegalArgumentException - if numEntries is less than 0"
-  ([this begin-glyph-index num-entries position-return]
+  ([^java.awt.font.GlyphVector this ^Integer begin-glyph-index ^Integer num-entries position-return]
     (-> this (.getGlyphPositions begin-glyph-index num-entries position-return))))
 
 (defn perform-default-layout
   "Assigns default positions to each glyph in this
    GlyphVector. This can destroy information
    generated during initial layout of this GlyphVector."
-  ([this]
+  ([^java.awt.font.GlyphVector this]
     (-> this (.performDefaultLayout))))
 
 (defn get-glyph-justification-info
@@ -200,7 +200,7 @@
      GlyphVector. - `java.awt.font.GlyphJustificationInfo`
 
   throws: java.lang.IndexOutOfBoundsException - if glyphIndex is less than 0 or greater than or equal to the number of glyphs in this GlyphVector"
-  ([this glyph-index]
+  ([^java.awt.font.GlyphVector this ^Integer glyph-index]
     (-> this (.getGlyphJustificationInfo glyph-index))))
 
 (defn get-glyph-visual-bounds
@@ -215,14 +215,14 @@
      glyph at the specified glyphIndex. - `java.awt.Shape`
 
   throws: java.lang.IndexOutOfBoundsException - if glyphIndex is less than 0 or greater than or equal to the number of glyphs in this GlyphVector"
-  ([this glyph-index]
+  ([^java.awt.font.GlyphVector this ^Integer glyph-index]
     (-> this (.getGlyphVisualBounds glyph-index))))
 
 (defn get-num-glyphs
   "Returns the number of glyphs in this GlyphVector.
 
   returns: number of glyphs in this GlyphVector. - `int`"
-  ([this]
+  ([^java.awt.font.GlyphVector this]
     (-> this (.getNumGlyphs))))
 
 (defn get-visual-bounds
@@ -234,7 +234,7 @@
 
   returns: a Rectangle2D that is the bounding box
    of this GlyphVector. - `java.awt.geom.Rectangle2D`"
-  ([this]
+  ([^java.awt.font.GlyphVector this]
     (-> this (.getVisualBounds))))
 
 (defn get-glyph-codes
@@ -252,7 +252,7 @@
   returns: an array of glyphcodes for the specified glyphs. - `int[]`
 
   throws: java.lang.IllegalArgumentException - if numEntries is less than 0"
-  ([this begin-glyph-index num-entries code-return]
+  ([^java.awt.font.GlyphVector this ^Integer begin-glyph-index ^Integer num-entries code-return]
     (-> this (.getGlyphCodes begin-glyph-index num-entries code-return))))
 
 (defn get-glyph-position
@@ -269,7 +269,7 @@
      at the specified glyphIndex. - `java.awt.geom.Point2D`
 
   throws: java.lang.IndexOutOfBoundsException - if glyphIndex is less than 0 or greater than the number of glyphs in this GlyphVector"
-  ([this glyph-index]
+  ([^java.awt.font.GlyphVector this ^Integer glyph-index]
     (-> this (.getGlyphPosition glyph-index))))
 
 (defn get-layout-flags
@@ -282,7 +282,7 @@
    to the results of related calls.
 
   returns: an int containing the flags describing the state - `int`"
-  ([this]
+  ([^java.awt.font.GlyphVector this]
     (-> this (.getLayoutFlags))))
 
 (defn get-logical-bounds
@@ -292,7 +292,7 @@
 
   returns: a Rectangle2D that is the logical bounds of this
    GlyphVector. - `java.awt.geom.Rectangle2D`"
-  ([this]
+  ([^java.awt.font.GlyphVector this]
     (-> this (.getLogicalBounds))))
 
 (defn get-glyph-pixel-bounds
@@ -313,7 +313,7 @@
   y - the Y position at which to render this GlyphVector. - `float`
 
   returns: a Rectangle bounding the pixels that would be affected. - `java.awt.Rectangle`"
-  ([this index render-frc x y]
+  ([^java.awt.font.GlyphVector this ^Integer index ^java.awt.font.FontRenderContext render-frc ^Float x ^Float y]
     (-> this (.getGlyphPixelBounds index render-frc x y))))
 
 (defn set-glyph-position
@@ -328,7 +328,7 @@
   new-pos - the Point2D at which to position the glyph at the specified glyphIndex - `java.awt.geom.Point2D`
 
   throws: java.lang.IndexOutOfBoundsException - if glyphIndex is less than 0 or greater than the number of glyphs in this GlyphVector"
-  ([this glyph-index new-pos]
+  ([^java.awt.font.GlyphVector this ^Integer glyph-index ^java.awt.geom.Point2D new-pos]
     (-> this (.setGlyphPosition glyph-index new-pos))))
 
 (defn set-glyph-transform
@@ -344,7 +344,7 @@
   new-tx - the new transform of the glyph at glyphIndex - `java.awt.geom.AffineTransform`
 
   throws: java.lang.IndexOutOfBoundsException - if glyphIndex is less than 0 or greater than or equal to the number of glyphs in this GlyphVector"
-  ([this glyph-index new-tx]
+  ([^java.awt.font.GlyphVector this ^Integer glyph-index ^java.awt.geom.AffineTransform new-tx]
     (-> this (.setGlyphTransform glyph-index new-tx))))
 
 (defn get-outline
@@ -358,9 +358,9 @@
   returns: a Shape that is the outline of this
      GlyphVector when rendered at the specified
      coordinates. - `java.awt.Shape`"
-  ([this x y]
+  ([^java.awt.font.GlyphVector this ^Float x ^Float y]
     (-> this (.getOutline x y)))
-  ([this]
+  ([^java.awt.font.GlyphVector this]
     (-> this (.getOutline))))
 
 (defn get-glyph-logical-bounds
@@ -379,7 +379,7 @@
      glyph at the specified glyphIndex. - `java.awt.Shape`
 
   throws: java.lang.IndexOutOfBoundsException - if glyphIndex is less than 0 or greater than or equal to the number of glyphs in this GlyphVector"
-  ([this glyph-index]
+  ([^java.awt.font.GlyphVector this ^Integer glyph-index]
     (-> this (.getGlyphLogicalBounds glyph-index))))
 
 (defn get-font-render-context
@@ -388,7 +388,7 @@
 
   returns: FontRenderContext used to create this
    GlyphVector. - `java.awt.font.FontRenderContext`"
-  ([this]
+  ([^java.awt.font.GlyphVector this]
     (-> this (.getFontRenderContext))))
 
 (defn get-font
@@ -397,7 +397,7 @@
 
   returns: Font used to create this
    GlyphVector. - `java.awt.Font`"
-  ([this]
+  ([^java.awt.font.GlyphVector this]
     (-> this (.getFont))))
 
 (defn get-pixel-bounds
@@ -418,7 +418,7 @@
   y - the y-coordinate at which to render this GlyphVector. - `float`
 
   returns: a Rectangle bounding the pixels that would be affected. - `java.awt.Rectangle`"
-  ([this render-frc x y]
+  ([^java.awt.font.GlyphVector this ^java.awt.font.FontRenderContext render-frc ^Float x ^Float y]
     (-> this (.getPixelBounds render-frc x y))))
 
 (defn get-glyph-metrics
@@ -432,7 +432,7 @@
      into this GlyphVector. - `java.awt.font.GlyphMetrics`
 
   throws: java.lang.IndexOutOfBoundsException - if glyphIndex is less than 0 or greater than or equal to the number of glyphs in this GlyphVector"
-  ([this glyph-index]
+  ([^java.awt.font.GlyphVector this ^Integer glyph-index]
     (-> this (.getGlyphMetrics glyph-index))))
 
 (defn get-glyph-code
@@ -447,7 +447,7 @@
    glyphIndex. - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if glyphIndex is less than 0 or greater than or equal to the number of glyphs in this GlyphVector"
-  ([this glyph-index]
+  ([^java.awt.font.GlyphVector this ^Integer glyph-index]
     (-> this (.getGlyphCode glyph-index))))
 
 (defn equals
@@ -459,7 +459,7 @@
   returns: true if the specified
      GlyphVector equals this GlyphVector;
      false otherwise. - `boolean`"
-  ([this set]
+  ([^java.awt.font.GlyphVector this ^java.awt.font.GlyphVector set]
     (-> this (.equals set))))
 
 (defn get-glyph-transform
@@ -475,7 +475,7 @@
      the glyph at the specified glyphIndex. - `java.awt.geom.AffineTransform`
 
   throws: java.lang.IndexOutOfBoundsException - if glyphIndex is less than 0 or greater than or equal to the number of glyphs in this GlyphVector"
-  ([this glyph-index]
+  ([^java.awt.font.GlyphVector this ^Integer glyph-index]
     (-> this (.getGlyphTransform glyph-index))))
 
 (defn get-glyph-char-index
@@ -488,6 +488,6 @@
   glyph-index - the index of the glyph - `int`
 
   returns: the index of the first character represented by the glyph - `int`"
-  ([this glyph-index]
+  ([^java.awt.font.GlyphVector this ^Integer glyph-index]
     (-> this (.getGlyphCharIndex glyph-index))))
 

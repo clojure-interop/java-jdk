@@ -15,7 +15,7 @@
    1.0 is represented as 0x00010000.
 
   returns: the version of the OpenType font. - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getVersion))))
 
 (defn get-font-table
@@ -33,9 +33,9 @@
               sfntTag and containing the bytes
               starting at offset byte and including
               count bytes. - `byte[]`"
-  ([this sfnt-tag offset count]
+  ([^. this ^Integer sfnt-tag ^Integer offset ^Integer count]
     (-> this (.getFontTable sfnt-tag offset count)))
-  ([this sfnt-tag]
+  ([^. this ^Integer sfnt-tag]
     (-> this (.getFontTable sfnt-tag))))
 
 (defn get-font-table-size
@@ -46,6 +46,6 @@
 
   returns: the size of the table corresponding to the specified
    tag. - `int`"
-  ([this sfnt-tag]
+  ([^. this ^Integer sfnt-tag]
     (-> this (.getFontTableSize sfnt-tag))))
 

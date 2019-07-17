@@ -22,7 +22,7 @@
   "c - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([c]
+  ([^javax.swing.JComponent c]
     (MetalSeparatorUI/createUI c)))
 
 (defn paint
@@ -30,7 +30,7 @@
 
   g - the Graphics context in which to paint - `java.awt.Graphics`
   c - the component being painted; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([this g c]
+  ([^javax.swing.plaf.metal.MetalSeparatorUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.paint g c))))
 
 (defn get-preferred-size
@@ -39,6 +39,6 @@
   c - the component whose preferred size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: `java.awt.Dimension`"
-  ([this c]
+  ([^javax.swing.plaf.metal.MetalSeparatorUI this ^javax.swing.JComponent c]
     (-> this (.getPreferredSize c))))
 

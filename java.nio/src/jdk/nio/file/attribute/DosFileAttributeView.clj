@@ -52,7 +52,7 @@
    have the name `dos`.
 
   returns: the name of the attribute view - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.name))))
 
 (defn read-attributes
@@ -61,7 +61,7 @@
   returns: the file attributes - `java.nio.file.attribute.DosFileAttributes`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([this]
+  ([^. this]
     (-> this (.readAttributes))))
 
 (defn set-read-only
@@ -75,7 +75,7 @@
   value - the new value of the attribute - `boolean`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([this value]
+  ([^. this ^Boolean value]
     (-> this (.setReadOnly value))))
 
 (defn set-hidden
@@ -89,7 +89,7 @@
   value - the new value of the attribute - `boolean`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([this value]
+  ([^. this ^Boolean value]
     (-> this (.setHidden value))))
 
 (defn set-system
@@ -103,7 +103,7 @@
   value - the new value of the attribute - `boolean`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([this value]
+  ([^. this ^Boolean value]
     (-> this (.setSystem value))))
 
 (defn set-archive
@@ -117,6 +117,6 @@
   value - the new value of the attribute - `boolean`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([this value]
+  ([^. this ^Boolean value]
     (-> this (.setArchive value))))
 

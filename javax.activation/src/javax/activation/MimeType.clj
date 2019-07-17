@@ -14,9 +14,9 @@
   sub - the MIME sub-type - `java.lang.String`
 
   throws: javax.activation.MimeTypeParseException - if the primary type or subtype is not a valid token"
-  ([primary sub]
+  ([^java.lang.String primary ^java.lang.String sub]
     (new MimeType primary sub))
-  ([rawdata]
+  ([^java.lang.String rawdata]
     (new MimeType rawdata))
   ([]
     (new MimeType )))
@@ -27,35 +27,35 @@
   sub - the MIME subtype - `java.lang.String`
 
   throws: javax.activation.MimeTypeParseException - if the subtype is not a valid token"
-  ([this sub]
+  ([^javax.activation.MimeType this ^java.lang.String sub]
     (-> this (.setSubType sub))))
 
 (defn get-sub-type
   "Retrieve the subtype of this object.
 
   returns: the MIME subtype - `java.lang.String`"
-  ([this]
+  ([^javax.activation.MimeType this]
     (-> this (.getSubType))))
 
 (defn remove-parameter
   "Remove any value associated with the given name.
 
   name - the parameter name - `java.lang.String`"
-  ([this name]
+  ([^javax.activation.MimeType this ^java.lang.String name]
     (-> this (.removeParameter name))))
 
 (defn to-string
   "Return the String representation of this object.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^javax.activation.MimeType this]
     (-> this (.toString))))
 
 (defn get-parameters
   "Retrieve this object's parameter list.
 
   returns: a MimeTypeParameterList object representing the parameters - `javax.activation.MimeTypeParameterList`"
-  ([this]
+  ([^javax.activation.MimeType this]
     (-> this (.getParameters))))
 
 (defn write-external
@@ -67,7 +67,7 @@
   out - the ObjectOutput object to write to - `java.io.ObjectOutput`
 
   throws: java.io.IOException - Includes any I/O exceptions that may occur"
-  ([this out]
+  ([^javax.activation.MimeType this ^java.io.ObjectOutput out]
     (-> this (.writeExternal out))))
 
 (defn get-base-type
@@ -75,7 +75,7 @@
    without the parameter list.
 
   returns: the MIME type and sub-type - `java.lang.String`"
-  ([this]
+  ([^javax.activation.MimeType this]
     (-> this (.getBaseType))))
 
 (defn get-parameter
@@ -85,7 +85,7 @@
   name - the parameter name - `java.lang.String`
 
   returns: the paramter's value - `java.lang.String`"
-  ([this name]
+  ([^javax.activation.MimeType this ^java.lang.String name]
     (-> this (.getParameter name))))
 
 (defn set-primary-type
@@ -94,14 +94,14 @@
   primary - the primary MIME type - `java.lang.String`
 
   throws: javax.activation.MimeTypeParseException - if the primary type is not a valid token"
-  ([this primary]
+  ([^javax.activation.MimeType this ^java.lang.String primary]
     (-> this (.setPrimaryType primary))))
 
 (defn get-primary-type
   "Retrieve the primary type of this object.
 
   returns: the primary MIME type - `java.lang.String`"
-  ([this]
+  ([^javax.activation.MimeType this]
     (-> this (.getPrimaryType))))
 
 (defn match
@@ -111,7 +111,7 @@
   type - the MimeType object to compare with - `javax.activation.MimeType`
 
   returns: true if they match - `boolean`"
-  ([this type]
+  ([^javax.activation.MimeType this ^javax.activation.MimeType type]
     (-> this (.match type))))
 
 (defn set-parameter
@@ -120,7 +120,7 @@
 
   name - the parameter name - `java.lang.String`
   value - the paramter's value - `java.lang.String`"
-  ([this name value]
+  ([^javax.activation.MimeType this ^java.lang.String name ^java.lang.String value]
     (-> this (.setParameter name value))))
 
 (defn read-external
@@ -133,6 +133,6 @@
   in - the ObjectInput object to read from - `java.io.ObjectInput`
 
   throws: java.lang.ClassNotFoundException - If the class for an object being restored cannot be found."
-  ([this in]
+  ([^javax.activation.MimeType this ^java.io.ObjectInput in]
     (-> this (.readExternal in))))
 

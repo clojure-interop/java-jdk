@@ -70,9 +70,9 @@
   returns: the new AlgorithmParameterGenerator object. - `java.security.AlgorithmParameterGenerator`
 
   throws: java.security.NoSuchAlgorithmException - if an AlgorithmParameterGeneratorSpi implementation for the specified algorithm is not available from the specified provider."
-  ([algorithm provider]
+  ([^java.lang.String algorithm ^java.lang.String provider]
     (AlgorithmParameterGenerator/getInstance algorithm provider))
-  ([algorithm]
+  ([^java.lang.String algorithm]
     (AlgorithmParameterGenerator/getInstance algorithm)))
 
 (defn get-algorithm
@@ -80,14 +80,14 @@
    generator is associated with.
 
   returns: the string name of the algorithm. - `java.lang.String`"
-  ([this]
+  ([^java.security.AlgorithmParameterGenerator this]
     (-> this (.getAlgorithm))))
 
 (defn get-provider
   "Returns the provider of this algorithm parameter generator object.
 
   returns: the provider of this algorithm parameter generator object - `java.security.Provider`"
-  ([this]
+  ([^java.security.AlgorithmParameterGenerator this]
     (-> this (.getProvider))))
 
 (defn init
@@ -96,15 +96,15 @@
 
   size - the size (number of bits). - `int`
   random - the source of randomness. - `java.security.SecureRandom`"
-  ([this size random]
+  ([^java.security.AlgorithmParameterGenerator this ^Integer size ^java.security.SecureRandom random]
     (-> this (.init size random)))
-  ([this size]
+  ([^java.security.AlgorithmParameterGenerator this ^Integer size]
     (-> this (.init size))))
 
 (defn generate-parameters
   "Generates the parameters.
 
   returns: the new AlgorithmParameters object. - `java.security.AlgorithmParameters`"
-  ([this]
+  ([^java.security.AlgorithmParameterGenerator this]
     (-> this (.generateParameters))))
 

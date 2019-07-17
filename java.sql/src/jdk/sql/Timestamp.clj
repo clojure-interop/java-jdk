@@ -50,9 +50,9 @@
    the Timestamp object.
 
   time - milliseconds since January 1, 1970, 00:00:00 GMT. A negative number is the number of milliseconds before January 1, 1970, 00:00:00 GMT. - `long`"
-  ([time]
+  ([^Long time]
     (new Timestamp time))
-  ([year month date hour minute second nano]
+  ([^Integer year ^Integer month ^Integer date ^Integer hour ^Integer minute ^Integer second ^Integer nano]
     (new Timestamp year month date hour minute second nano)))
 
 (defn *value-of
@@ -64,7 +64,7 @@
   returns: corresponding Timestamp value - `java.sql.Timestamp`
 
   throws: java.lang.IllegalArgumentException - if the given argument does not have the format yyyy-[m]m-[d]d hh:mm:ss[.f...]"
-  ([s]
+  ([^java.lang.String s]
     (Timestamp/valueOf s)))
 
 (defn *from
@@ -80,7 +80,7 @@
     the provided instant - `java.sql.Timestamp`
 
   throws: java.lang.NullPointerException - if instant is null."
-  ([instant]
+  ([^java.time.Instant instant]
     (Timestamp/from instant)))
 
 (defn to-instant
@@ -90,7 +90,7 @@
    point on the time-line as this Timestamp.
 
   returns: an instant representing the same point on the time-line - `java.time.Instant`"
-  ([this]
+  ([^java.sql.Timestamp this]
     (-> this (.toInstant))))
 
 (defn set-time
@@ -98,7 +98,7 @@
    time milliseconds after January 1, 1970 00:00:00 GMT.
 
   time - the number of milliseconds. - `long`"
-  ([this time]
+  ([^java.sql.Timestamp this ^Long time]
     (-> this (.setTime time))))
 
 (defn after
@@ -109,7 +109,7 @@
 
   returns: true if this Timestamp object is later;
           false otherwise - `boolean`"
-  ([this ts]
+  ([^java.sql.Timestamp this ^java.sql.Timestamp ts]
     (-> this (.after ts))))
 
 (defn set-nanos
@@ -119,14 +119,14 @@
   n - the new fractional seconds component - `int`
 
   throws: java.lang.IllegalArgumentException - if the given argument is greater than 999999999 or less than 0"
-  ([this n]
+  ([^java.sql.Timestamp this ^Integer n]
     (-> this (.setNanos n))))
 
 (defn get-nanos
   "Gets this Timestamp object's nanos value.
 
   returns: this Timestamp object's fractional seconds component - `int`"
-  ([this]
+  ([^java.sql.Timestamp this]
     (-> this (.getNanos))))
 
 (defn to-string
@@ -136,7 +136,7 @@
 
   returns: a String object in
              yyyy-mm-dd hh:mm:ss.fffffffff format - `java.lang.String`"
-  ([this]
+  ([^java.sql.Timestamp this]
     (-> this (.toString))))
 
 (defn hash-code
@@ -152,7 +152,7 @@
    implementation and therefore does not include nanos in its computation.
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^java.sql.Timestamp this]
     (-> this (.hashCode))))
 
 (defn to-local-date-time
@@ -163,7 +163,7 @@
    date-time value as this Timestamp in the local time zone.
 
   returns: a LocalDateTime object representing the same date-time value - `java.time.LocalDateTime`"
-  ([this]
+  ([^java.sql.Timestamp this]
     (-> this (.toLocalDateTime))))
 
 (defn compare-to
@@ -177,7 +177,7 @@
             Timestamp object is before the given argument;
             and a value greater than 0 if this
             Timestamp object is after the given argument. - `int`"
-  ([this ts]
+  ([^java.sql.Timestamp this ^java.sql.Timestamp ts]
     (-> this (.compareTo ts))))
 
 (defn before
@@ -188,7 +188,7 @@
 
   returns: true if this Timestamp object is earlier;
           false otherwise - `boolean`"
-  ([this ts]
+  ([^java.sql.Timestamp this ^java.sql.Timestamp ts]
     (-> this (.before ts))))
 
 (defn get-time
@@ -197,7 +197,7 @@
 
   returns: the number of milliseconds since January 1, 1970, 00:00:00 GMT
             represented by this date. - `long`"
-  ([this]
+  ([^java.sql.Timestamp this]
     (-> this (.getTime))))
 
 (defn equals
@@ -209,6 +209,6 @@
   returns: true if the given Timestamp
            object is equal to this Timestamp object;
            false otherwise - `boolean`"
-  ([this ts]
+  ([^java.sql.Timestamp this ^java.sql.Timestamp ts]
     (-> this (.equals ts))))
 

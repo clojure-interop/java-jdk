@@ -17,29 +17,29 @@
   attributes - the attributes - `java.util.Set<java.security.KeyStore.Entry.Attribute>`
 
   throws: java.lang.NullPointerException - if trustedCert or attributes is null"
-  ([trusted-cert attributes]
+  ([^java.security.cert.Certificate trusted-cert ^java.util.Set attributes]
     (new KeyStore$TrustedCertificateEntry trusted-cert attributes))
-  ([trusted-cert]
+  ([^java.security.cert.Certificate trusted-cert]
     (new KeyStore$TrustedCertificateEntry trusted-cert)))
 
 (defn get-trusted-certificate
   "Gets the trusted Certficate from this entry.
 
   returns: the trusted Certificate from this entry - `java.security.cert.Certificate`"
-  ([this]
+  ([^java.security.KeyStore$TrustedCertificateEntry this]
     (-> this (.getTrustedCertificate))))
 
 (defn get-attributes
   "Retrieves the attributes associated with an entry.
 
   returns: an unmodifiable Set of attributes, possibly empty - `java.util.Set<java.security.KeyStore.Entry.Attribute>`"
-  ([this]
+  ([^java.security.KeyStore$TrustedCertificateEntry this]
     (-> this (.getAttributes))))
 
 (defn to-string
   "Returns a string representation of this TrustedCertificateEntry.
 
   returns: a string representation of this TrustedCertificateEntry. - `java.lang.String`"
-  ([this]
+  ([^java.security.KeyStore$TrustedCertificateEntry this]
     (-> this (.toString))))
 

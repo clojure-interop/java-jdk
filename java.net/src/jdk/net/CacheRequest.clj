@@ -23,13 +23,13 @@
            be written - `java.io.OutputStream`
 
   throws: java.io.IOException - if an I/O error occurs while writing the response body"
-  ([this]
+  ([^java.net.CacheRequest this]
     (-> this (.getBody))))
 
 (defn abort
   "Aborts the attempt to cache the response. If an IOException is
    encountered while reading the response or writing to the cache,
    the current cache store operation will be abandoned."
-  ([this]
+  ([^java.net.CacheRequest this]
     (-> this (.abort))))
 

@@ -32,9 +32,9 @@
   target - the target object of this expression - `java.lang.Object`
   method-name - the name of the method to invoke on the specified target - `java.lang.String`
   arguments - the array of arguments to invoke the specified method - `java.lang.Object[]`"
-  ([value target method-name arguments]
+  ([^java.lang.Object value ^java.lang.Object target ^java.lang.String method-name ^java.lang.Object[] arguments]
     (new Expression value target method-name arguments))
-  ([target method-name arguments]
+  ([^java.lang.Object target ^java.lang.String method-name ^java.lang.Object[] arguments]
     (new Expression target method-name arguments)))
 
 (defn execute
@@ -72,7 +72,7 @@
    if the return type of the underlying method is void.
 
   throws: java.lang.NullPointerException - if the value of the target or methodName property is null"
-  ([this]
+  ([^java.beans.Expression this]
     (-> this (.execute))))
 
 (defn get-value
@@ -100,7 +100,7 @@
   returns: The result of applying this method to these arguments. - `java.lang.Object`
 
   throws: java.lang.Exception - if the method with the specified methodName throws an exception"
-  ([this]
+  ([^java.beans.Expression this]
     (-> this (.getValue))))
 
 (defn set-value
@@ -110,13 +110,13 @@
    expression.
 
   value - The value of this expression. - `java.lang.Object`"
-  ([this value]
+  ([^java.beans.Expression this ^java.lang.Object value]
     (-> this (.setValue value))))
 
 (defn to-string
   "Prints the value of this expression using a Java-style syntax.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^java.beans.Expression this]
     (-> this (.toString))))
 

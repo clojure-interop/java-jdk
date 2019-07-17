@@ -28,7 +28,7 @@
 
   returns: the X.509 encoding of the key. Returns a new array
    each time this method is called. - `byte[]`"
-  ([this]
+  ([^java.security.spec.X509EncodedKeySpec this]
     (-> this (.getEncoded))))
 
 (defn get-format
@@ -36,6 +36,6 @@
    key specification.
 
   returns: the string `X.509`. - `java.lang.String`"
-  ([this]
+  ([^java.security.spec.X509EncodedKeySpec this]
     (-> this (.getFormat))))
 

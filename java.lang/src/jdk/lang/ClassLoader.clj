@@ -114,7 +114,7 @@
 
   returns: A URL object for reading the
             resource, or null if the resource could not be found - `java.net.URL`"
-  ([name]
+  ([^java.lang.String name]
     (ClassLoader/getSystemResource name)))
 
 (defn *get-system-resources
@@ -130,7 +130,7 @@
             objects - `java.util.Enumeration<java.net.URL>`
 
   throws: java.io.IOException - If I/O errors occur"
-  ([name]
+  ([^java.lang.String name]
     (ClassLoader/getSystemResources name)))
 
 (defn *get-system-resource-as-stream
@@ -142,7 +142,7 @@
 
   returns: An input stream for reading the resource, or null
             if the resource could not be found - `java.io.InputStream`"
-  ([name]
+  ([^java.lang.String name]
     (ClassLoader/getSystemResourceAsStream name)))
 
 (defn *get-system-class-loader
@@ -199,7 +199,7 @@
             access to will not be in the enumeration. - `java.util.Enumeration<java.net.URL>`
 
   throws: java.io.IOException - If I/O errors occur"
-  ([this name]
+  ([^java.lang.ClassLoader this ^java.lang.String name]
     (-> this (.getResources name))))
 
 (defn clear-assertion-status
@@ -208,7 +208,7 @@
    status settings associated with the class loader.  This method is
    provided so that class loaders can be made to ignore any command line or
    persistent assertion status settings and `start with a clean slate.`"
-  ([this]
+  ([^java.lang.ClassLoader this]
     (-> this (.clearAssertionStatus))))
 
 (defn set-class-assertion-status
@@ -224,7 +224,7 @@
 
   class-name - The fully qualified class name of the top-level class whose assertion status is to be set. - `java.lang.String`
   enabled - true if the named class is to have assertions enabled when (and if) it is initialized, false if the class is to have assertions disabled. - `boolean`"
-  ([this class-name enabled]
+  ([^java.lang.ClassLoader this ^java.lang.String class-name ^Boolean enabled]
     (-> this (.setClassAssertionStatus class-name enabled))))
 
 (defn get-resource
@@ -245,7 +245,7 @@
   returns: A URL object for reading the resource, or
             null if the resource could not be found or the invoker
             doesn't have adequate  privileges to get the resource. - `java.net.URL`"
-  ([this name]
+  ([^java.lang.ClassLoader this ^java.lang.String name]
     (-> this (.getResource name))))
 
 (defn get-resource-as-stream
@@ -257,7 +257,7 @@
 
   returns: An input stream for reading the resource, or null
             if the resource could not be found - `java.io.InputStream`"
-  ([this name]
+  ([^java.lang.ClassLoader this ^java.lang.String name]
     (-> this (.getResourceAsStream name))))
 
 (defn set-default-assertion-status
@@ -268,7 +268,7 @@
    invoking setPackageAssertionStatus(String, boolean) or setClassAssertionStatus(String, boolean).
 
   enabled - true if classes loaded by this class loader will henceforth have assertions enabled by default, false if they will have assertions disabled by default. - `boolean`"
-  ([this enabled]
+  ([^java.lang.ClassLoader this ^Boolean enabled]
     (-> this (.setDefaultAssertionStatus enabled))))
 
 (defn load-class
@@ -283,7 +283,7 @@
   returns: The resulting Class object - `java.lang.Class<?>`
 
   throws: java.lang.ClassNotFoundException - If the class was not found"
-  ([this name]
+  ([^java.lang.ClassLoader this ^java.lang.String name]
     (-> this (.loadClass name))))
 
 (defn set-package-assertion-status
@@ -310,7 +310,7 @@
 
   package-name - The name of the package whose package default assertion status is to be set. A null value indicates the unnamed package that is `current` (see section 7.4.2 of The Java™ Language Specification.) - `java.lang.String`
   enabled - true if classes loaded by this classloader and belonging to the named package or any of its subpackages will have assertions enabled by default, false if they will have assertions disabled by default. - `boolean`"
-  ([this package-name enabled]
+  ([^java.lang.ClassLoader this ^java.lang.String package-name ^Boolean enabled]
     (-> this (.setPackageAssertionStatus package-name enabled))))
 
 (defn get-parent
@@ -328,6 +328,6 @@
   returns: The parent ClassLoader - `java.lang.ClassLoader`
 
   throws: java.lang.SecurityException - If a security manager exists and its checkPermission method doesn't allow access to this class loader's parent class loader."
-  ([this]
+  ([^java.lang.ClassLoader this]
     (-> this (.getParent))))
 

@@ -32,6 +32,6 @@
   returns: the server socket on the specified port - `java.net.ServerSocket`
 
   throws: java.io.IOException - if an I/O error occurs during server socket creation"
-  ([this port]
+  ([^. this ^Integer port]
     (-> this (.createServerSocket port))))
 

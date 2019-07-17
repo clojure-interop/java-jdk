@@ -53,8 +53,8 @@
                    null if none of the requested  are supported. - `java.lang.Object`
 
   throws: java.io.IOException - if an I/O error occurs while reading the object."
-  ([this urlc classes]
+  ([^java.net.ContentHandler this ^java.net.URLConnection urlc ^java.lang.Class[] classes]
     (-> this (.getContent urlc classes)))
-  ([this urlc]
+  ([^java.net.ContentHandler this ^java.net.URLConnection urlc]
     (-> this (.getContent urlc))))
 

@@ -17,22 +17,22 @@
   message - The detail message. - `java.lang.String`
 
   throws: java.lang.NullPointerException - When message is null."
-  ([message]
+  ([^java.lang.String message]
     (new XPathException message)))
 
 (defn get-cause
   "Get the cause of this XPathException.
 
   returns: Cause of this XPathException. - `java.lang.Throwable`"
-  ([this]
+  ([^javax.xml.xpath.XPathException this]
     (-> this (.getCause))))
 
 (defn print-stack-trace
   "Print stack trace to specified PrintStream.
 
   s - Print stack trace to this PrintStream. - `java.io.PrintStream`"
-  ([this s]
+  ([^javax.xml.xpath.XPathException this ^java.io.PrintStream s]
     (-> this (.printStackTrace s)))
-  ([this]
+  ([^javax.xml.xpath.XPathException this]
     (-> this (.printStackTrace))))
 

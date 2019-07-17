@@ -90,11 +90,11 @@
   returns: the Class object representing the loaded class - `java.lang.Class<?>`
 
   throws: java.net.MalformedURLException - if codebase is non-null and contains an invalid URL, or if codebase is null and a provider-specific URL used to load classes is invalid"
-  ([codebase name default-loader]
+  ([^java.lang.String codebase ^java.lang.String name ^java.lang.ClassLoader default-loader]
     (RMIClassLoader/loadClass codebase name default-loader))
-  ([codebase name]
+  ([^java.net.URL codebase ^java.lang.String name]
     (RMIClassLoader/loadClass codebase name))
-  ([name]
+  ([^java.lang.String name]
     (RMIClassLoader/loadClass name)))
 
 (defn *load-proxy-class
@@ -119,7 +119,7 @@
   returns: a dynamic proxy class that implements the named interfaces - `java.lang.Class<?>`
 
   throws: java.net.MalformedURLException - if codebase is non-null and contains an invalid URL, or if codebase is null and a provider-specific URL used to load classes is invalid"
-  ([codebase interfaces default-loader]
+  ([^java.lang.String codebase ^java.lang.String[] interfaces ^java.lang.ClassLoader default-loader]
     (RMIClassLoader/loadProxyClass codebase interfaces default-loader)))
 
 (defn *get-class-loader
@@ -148,7 +148,7 @@
    path - `java.lang.ClassLoader`
 
   throws: java.net.MalformedURLException - if codebase is non-null and contains an invalid URL, or if codebase is null and a provider-specific URL used to identify the class loader is invalid"
-  ([codebase]
+  ([^java.lang.String codebase]
     (RMIClassLoader/getClassLoader codebase)))
 
 (defn *get-class-annotation
@@ -166,7 +166,7 @@
    it gets marshalled, or null - `java.lang.String`
 
   throws: java.lang.NullPointerException - if cl is null"
-  ([cl]
+  ([^java.lang.Class cl]
     (RMIClassLoader/getClassAnnotation cl)))
 
 (defn *get-default-provider-instance
@@ -381,6 +381,6 @@
   loader - a class loader from which to get the security context - `java.lang.ClassLoader`
 
   returns: the security context - `java.lang.   java.lang.Object`"
-  ([loader]
+  ([^java.lang.ClassLoader loader]
     (RMIClassLoader/getSecurityContext loader)))
 

@@ -17,7 +17,7 @@
   initial-size - The number of char values that will fit into this buffer before it is automatically expanded - `int`
 
   throws: java.lang.IllegalArgumentException - If initialSize is negative"
-  ([initial-size]
+  ([^Integer initial-size]
     (new StringWriter initial-size))
   ([]
     (new StringWriter )))
@@ -28,9 +28,9 @@
   cbuf - Array of characters - `char[]`
   off - Offset from which to start writing characters - `int`
   len - Number of characters to write - `int`"
-  ([this cbuf off len]
+  ([^java.io.StringWriter this cbuf ^Integer off ^Integer len]
     (-> this (.write cbuf off len)))
-  ([this c]
+  ([^java.io.StringWriter this ^Integer c]
     (-> this (.write c))))
 
 (defn append
@@ -51,28 +51,28 @@
   returns: This writer - `java.io.StringWriter`
 
   throws: java.lang.IndexOutOfBoundsException - If start or end are negative, start is greater than end, or end is greater than csq.length()"
-  ([this csq start end]
+  ([^java.io.StringWriter this ^java.lang.CharSequence csq ^Integer start ^Integer end]
     (-> this (.append csq start end)))
-  ([this csq]
+  ([^java.io.StringWriter this ^java.lang.CharSequence csq]
     (-> this (.append csq))))
 
 (defn to-string
   "Return the buffer's current value as a string.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^java.io.StringWriter this]
     (-> this (.toString))))
 
 (defn get-buffer
   "Return the string buffer itself.
 
   returns: StringBuffer holding the current buffer value. - `java.lang.StringBuffer`"
-  ([this]
+  ([^java.io.StringWriter this]
     (-> this (.getBuffer))))
 
 (defn flush
   "Flush the stream."
-  ([this]
+  ([^java.io.StringWriter this]
     (-> this (.flush))))
 
 (defn close
@@ -81,6 +81,6 @@
    an IOException.
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([this]
+  ([^java.io.StringWriter this]
     (-> this (.close))))
 

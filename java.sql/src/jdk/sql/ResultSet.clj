@@ -115,7 +115,7 @@
    have been visibly updated by the owner or another; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed result set"
-  ([this]
+  ([^. this]
     (-> this (.rowUpdated))))
 
 (defn get-binary-stream
@@ -140,7 +140,7 @@
            null - `java.io.InputStream`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs or this method is called on a closed result set"
-  ([this column-index]
+  ([^. this ^Integer column-index]
     (-> this (.getBinaryStream column-index))))
 
 (defn set-fetch-size
@@ -156,7 +156,7 @@
   rows - the number of rows to fetch - `int`
 
   throws: java.sql.SQLException - if a database access error occurs; this method is called on a closed result set or the condition rows >= 0 is not satisfied"
-  ([this rows]
+  ([^. this ^Integer rows]
     (-> this (.setFetchSize rows))))
 
 (defn get-n-character-stream
@@ -174,7 +174,7 @@
    null in the Java programming language. - `java.io.Reader`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs or this method is called on a closed result set"
-  ([this column-index]
+  ([^. this ^Integer column-index]
     (-> this (.getNCharacterStream column-index))))
 
 (defn get-sqlxml
@@ -187,7 +187,7 @@
   returns: a SQLXML object that maps an SQL XML value - `java.sql.SQLXML`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs or this method is called on a closed result set"
-  ([this column-index]
+  ([^. this ^Integer column-index]
     (-> this (.getSQLXML column-index))))
 
 (defn get-unicode-stream
@@ -202,7 +202,7 @@
            null - `java.lang..io.InputStream`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs or this method is called on a closed result set"
-  ([this column-index]
+  ([^. this ^Integer column-index]
     (-> this (.getUnicodeStream column-index))))
 
 (defn get-row-id
@@ -216,7 +216,7 @@
        value returned is null - `java.sql.RowId`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs or this method is called on a closed result set"
-  ([this column-index]
+  ([^. this ^Integer column-index]
     (-> this (.getRowId column-index))))
 
 (defn get-ascii-stream
@@ -243,7 +243,7 @@
    value returned is null - `java.io.InputStream`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs or this method is called on a closed result set"
-  ([this column-index]
+  ([^. this ^Integer column-index]
     (-> this (.getAsciiStream column-index))))
 
 (defn update-date
@@ -257,7 +257,7 @@
   x - the new column value - `java.sql.Date`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs; the result set concurrency is CONCUR_READ_ONLY or this method is called on a closed result set"
-  ([this column-index x]
+  ([^. this ^Integer column-index ^java.sql.Date x]
     (-> this (.updateDate column-index x))))
 
 (defn get-byte
@@ -271,7 +271,7 @@
    value returned is 0 - `byte`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs or this method is called on a closed result set"
-  ([this column-index]
+  ([^. this ^Integer column-index]
     (-> this (.getByte column-index))))
 
 (defn update-float
@@ -285,7 +285,7 @@
   x - the new column value - `float`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs; the result set concurrency is CONCUR_READ_ONLY or this method is called on a closed result set"
-  ([this column-index x]
+  ([^. this ^Integer column-index ^Float x]
     (-> this (.updateFloat column-index x))))
 
 (defn next
@@ -313,7 +313,7 @@
    false if there are no more rows - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed result set"
-  ([this]
+  ([^. this]
     (-> this (.next))))
 
 (defn update-timestamp
@@ -328,7 +328,7 @@
   x - the new column value - `java.sql.Timestamp`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs; the result set concurrency is CONCUR_READ_ONLY or this method is called on a closed result set"
-  ([this column-index x]
+  ([^. this ^Integer column-index ^java.sql.Timestamp x]
     (-> this (.updateTimestamp column-index x))))
 
 (defn get-ref
@@ -342,7 +342,7 @@
            value - `java.sql.Ref`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs or this method is called on a closed result set"
-  ([this column-index]
+  ([^. this ^Integer column-index]
     (-> this (.getRef column-index))))
 
 (defn before-first?
@@ -358,7 +358,7 @@
    result set contains no rows - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed result set"
-  ([this]
+  ([^. this]
     (-> this (.isBeforeFirst))))
 
 (defn get-type
@@ -371,7 +371,7 @@
            or ResultSet.TYPE_SCROLL_SENSITIVE - `int`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed result set"
-  ([this]
+  ([^. this]
     (-> this (.getType))))
 
 (defn update-array
@@ -385,7 +385,7 @@
   x - the new column value - `java.sql.Array`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs; the result set concurrency is CONCUR_READ_ONLY or this method is called on a closed result set"
-  ([this column-index x]
+  ([^. this ^Integer column-index ^java.sql.Array x]
     (-> this (.updateArray column-index x))))
 
 (defn move-to-current-row
@@ -394,7 +394,7 @@
    the insert row.
 
   throws: java.sql.SQLException - if a database access error occurs; this method is called on a closed result set or the result set concurrency is CONCUR_READ_ONLY"
-  ([this]
+  ([^. this]
     (-> this (.moveToCurrentRow))))
 
 (defn update-ref
@@ -408,7 +408,7 @@
   x - the new column value - `java.sql.Ref`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs; the result set concurrency is CONCUR_READ_ONLY or this method is called on a closed result set"
-  ([this column-index x]
+  ([^. this ^Integer column-index ^java.sql.Ref x]
     (-> this (.updateRef column-index x))))
 
 (defn get-n-string
@@ -425,7 +425,7 @@
    value returned is null - `java.lang.String`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs or this method is called on a closed result set"
-  ([this column-index]
+  ([^. this ^Integer column-index]
     (-> this (.getNString column-index))))
 
 (defn update-big-decimal
@@ -440,7 +440,7 @@
   x - the new column value - `java.math.BigDecimal`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs; the result set concurrency is CONCUR_READ_ONLY or this method is called on a closed result set"
-  ([this column-index x]
+  ([^. this ^Integer column-index ^java.math.BigDecimal x]
     (-> this (.updateBigDecimal column-index x))))
 
 (defn get-string
@@ -454,7 +454,7 @@
    value returned is null - `java.lang.String`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs or this method is called on a closed result set"
-  ([this column-index]
+  ([^. this ^Integer column-index]
     (-> this (.getString column-index))))
 
 (defn get-short
@@ -468,7 +468,7 @@
    value returned is 0 - `short`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs or this method is called on a closed result set"
-  ([this column-index]
+  ([^. this ^Integer column-index]
     (-> this (.getShort column-index))))
 
 (defn update-row
@@ -477,7 +477,7 @@
    This method cannot be called when the cursor is on the insert row.
 
   throws: java.sql.SQLException - if a database access error occurs; the result set concurrency is CONCUR_READ_ONLY; this method is called on a closed result set or if this method is called when the cursor is on the insert row"
-  ([this]
+  ([^. this]
     (-> this (.updateRow))))
 
 (defn update-null
@@ -491,7 +491,7 @@
   column-index - the first column is 1, the second is 2, ... - `int`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs; the result set concurrency is CONCUR_READ_ONLY or this method is called on a closed result set"
-  ([this column-index]
+  ([^. this ^Integer column-index]
     (-> this (.updateNull column-index))))
 
 (defn clear-warnings
@@ -501,7 +501,7 @@
    reported for this ResultSet object.
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed result set"
-  ([this]
+  ([^. this]
     (-> this (.clearWarnings))))
 
 (defn get-timestamp
@@ -520,9 +520,9 @@
    the value returned is null in the Java programming language - `java.sql.Timestamp`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs or this method is called on a closed result set"
-  ([this column-index cal]
+  ([^. this ^Integer column-index ^java.util.Calendar cal]
     (-> this (.getTimestamp column-index cal)))
-  ([this column-index]
+  ([^. this ^Integer column-index]
     (-> this (.getTimestamp column-index))))
 
 (defn get-warnings
@@ -547,7 +547,7 @@
            null if there are none - `java.sql.SQLWarning`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed result set"
-  ([this]
+  ([^. this]
     (-> this (.getWarnings))))
 
 (defn update-blob
@@ -565,9 +565,9 @@
   length - the number of bytes in the parameter data. - `long`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs; the result set concurrency is CONCUR_READ_ONLY or this method is called on a closed result set"
-  ([this column-index input-stream length]
+  ([^. this ^Integer column-index ^java.io.InputStream input-stream ^Long length]
     (-> this (.updateBlob column-index input-stream length)))
-  ([this column-index x]
+  ([^. this ^Integer column-index ^java.sql.Blob x]
     (-> this (.updateBlob column-index x))))
 
 (defn update-n-clob
@@ -589,9 +589,9 @@
   length - the number of characters in the parameter data. - `long`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if the driver does not support national character sets; if the driver can detect that a data conversion error could occur; this method is called on a closed result set, if a database access error occurs or the result set concurrency is CONCUR_READ_ONLY"
-  ([this column-index reader length]
+  ([^. this ^Integer column-index ^java.io.Reader reader ^Long length]
     (-> this (.updateNClob column-index reader length)))
-  ([this column-index n-clob]
+  ([^. this ^Integer column-index ^java.sql.NClob n-clob]
     (-> this (.updateNClob column-index n-clob))))
 
 (defn get-object
@@ -611,9 +611,9 @@
    representing the SQL value - `java.lang.Object`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs or this method is called on a closed result set"
-  ([this column-index map]
+  ([^. this ^Integer column-index ^java.util.Map> map]
     (-> this (.getObject column-index map)))
-  ([this column-index]
+  ([^. this ^Integer column-index]
     (-> this (.getObject column-index))))
 
 (defn get-fetch-direction
@@ -623,7 +623,7 @@
   returns: the current fetch direction for this ResultSet object - `int`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed result set"
-  ([this]
+  ([^. this]
     (-> this (.getFetchDirection))))
 
 (defn get-bytes
@@ -638,7 +638,7 @@
    value returned is null - `byte[]`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs or this method is called on a closed result set"
-  ([this column-index]
+  ([^. this ^Integer column-index]
     (-> this (.getBytes column-index))))
 
 (defn get-statement
@@ -653,7 +653,7 @@
    if the result set was produced some other way - `java.sql.Statement`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed result set"
-  ([this]
+  ([^. this]
     (-> this (.getStatement))))
 
 (defn get-clob
@@ -667,7 +667,7 @@
            CLOB value in the specified column - `java.sql.Clob`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs or this method is called on a closed result set"
-  ([this column-index]
+  ([^. this ^Integer column-index]
     (-> this (.getClob column-index))))
 
 (defn get-blob
@@ -681,7 +681,7 @@
            BLOB value in the specified column - `java.sql.Blob`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs or this method is called on a closed result set"
-  ([this column-index]
+  ([^. this ^Integer column-index]
     (-> this (.getBlob column-index))))
 
 (defn get-date
@@ -700,9 +700,9 @@
    the value returned is null in the Java programming language - `java.sql.Date`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs or this method is called on a closed result set"
-  ([this column-index cal]
+  ([^. this ^Integer column-index ^java.util.Calendar cal]
     (-> this (.getDate column-index cal)))
-  ([this column-index]
+  ([^. this ^Integer column-index]
     (-> this (.getDate column-index))))
 
 (defn update-string
@@ -716,7 +716,7 @@
   x - the new column value - `java.lang.String`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs; the result set concurrency is CONCUR_READ_ONLY or this method is called on a closed result set"
-  ([this column-index x]
+  ([^. this ^Integer column-index ^java.lang.String x]
     (-> this (.updateString column-index x))))
 
 (defn update-int
@@ -730,7 +730,7 @@
   x - the new column value - `int`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs; the result set concurrency is CONCUR_READ_ONLY or this method is called on a closed result set"
-  ([this column-index x]
+  ([^. this ^Integer column-index ^Integer x]
     (-> this (.updateInt column-index x))))
 
 (defn get-character-stream
@@ -745,7 +745,7 @@
    null in the Java programming language. - `java.io.Reader`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs or this method is called on a closed result set"
-  ([this column-index]
+  ([^. this ^Integer column-index]
     (-> this (.getCharacterStream column-index))))
 
 (defn get-long
@@ -759,7 +759,7 @@
    value returned is 0 - `long`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs or this method is called on a closed result set"
-  ([this column-index]
+  ([^. this ^Integer column-index]
     (-> this (.getLong column-index))))
 
 (defn update-boolean
@@ -773,7 +773,7 @@
   x - the new column value - `boolean`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs; the result set concurrency is CONCUR_READ_ONLY or this method is called on a closed result set"
-  ([this column-index x]
+  ([^. this ^Integer column-index ^Boolean x]
     (-> this (.updateBoolean column-index x))))
 
 (defn closed?
@@ -783,7 +783,7 @@
   returns: true if this ResultSet object is closed; false if it is still open - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.isClosed))))
 
 (defn get-cursor-name
@@ -806,7 +806,7 @@
   returns: the SQL name for this ResultSet object's cursor - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed result set"
-  ([this]
+  ([^. this]
     (-> this (.getCursorName))))
 
 (defn update-ascii-stream
@@ -822,9 +822,9 @@
   length - the length of the stream - `int`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs; the result set concurrency is CONCUR_READ_ONLY or this method is called on a closed result set"
-  ([this column-index x length]
+  ([^. this ^Integer column-index ^java.io.InputStream x ^Integer length]
     (-> this (.updateAsciiStream column-index x length)))
-  ([this column-index x]
+  ([^. this ^Integer column-index ^java.io.InputStream x]
     (-> this (.updateAsciiStream column-index x))))
 
 (defn get-int
@@ -838,7 +838,7 @@
    value returned is 0 - `int`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs or this method is called on a closed result set"
-  ([this column-index]
+  ([^. this ^Integer column-index]
     (-> this (.getInt column-index))))
 
 (defn previous
@@ -858,7 +858,7 @@
    false if the cursor is positioned before the first row - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs; this method is called on a closed result set or the result set type is TYPE_FORWARD_ONLY"
-  ([this]
+  ([^. this]
     (-> this (.previous))))
 
 (defn get-array
@@ -872,7 +872,7 @@
            ARRAY value in the specified column - `java.sql.Array`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs or this method is called on a closed result set"
-  ([this column-index]
+  ([^. this ^Integer column-index]
     (-> this (.getArray column-index))))
 
 (defn update-byte
@@ -886,7 +886,7 @@
   x - the new column value - `byte`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs; the result set concurrency is CONCUR_READ_ONLY or this method is called on a closed result set"
-  ([this column-index x]
+  ([^. this ^Integer column-index ^Byte x]
     (-> this (.updateByte column-index x))))
 
 (defn update-double
@@ -900,7 +900,7 @@
   x - the new column value - `double`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs; the result set concurrency is CONCUR_READ_ONLY or this method is called on a closed result set"
-  ([this column-index x]
+  ([^. this ^Integer column-index ^Double x]
     (-> this (.updateDouble column-index x))))
 
 (defn update-long
@@ -914,7 +914,7 @@
   x - the new column value - `long`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs; the result set concurrency is CONCUR_READ_ONLY or this method is called on a closed result set"
-  ([this column-index x]
+  ([^. this ^Integer column-index ^Long x]
     (-> this (.updateLong column-index x))))
 
 (defn get-meta-data
@@ -924,7 +924,7 @@
   returns: the description of this ResultSet object's columns - `java.sql.ResultSetMetaData`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed result set"
-  ([this]
+  ([^. this]
     (-> this (.getMetaData))))
 
 (defn was-null
@@ -939,7 +939,7 @@
            NULL and false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed result set"
-  ([this]
+  ([^. this]
     (-> this (.wasNull))))
 
 (defn update-time
@@ -953,7 +953,7 @@
   x - the new column value - `java.sql.Time`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs; the result set concurrency is CONCUR_READ_ONLY or this method is called on a closed result set"
-  ([this column-index x]
+  ([^. this ^Integer column-index ^java.sql.Time x]
     (-> this (.updateTime column-index x))))
 
 (defn first?
@@ -968,7 +968,7 @@
    false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed result set"
-  ([this]
+  ([^. this]
     (-> this (.isFirst))))
 
 (defn get-row
@@ -982,7 +982,7 @@
   returns: the current row number; 0 if there is no current row - `int`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed result set"
-  ([this]
+  ([^. this]
     (-> this (.getRow))))
 
 (defn find-column
@@ -994,7 +994,7 @@
   returns: the column index of the given column name - `int`
 
   throws: java.sql.SQLException - if the ResultSet object does not contain a column labeled columnLabel, a database access error occurs or this method is called on a closed result set"
-  ([this column-label]
+  ([^. this ^java.lang.String column-label]
     (-> this (.findColumn column-label))))
 
 (defn close
@@ -1022,7 +1022,7 @@
    object that is already closed is a no-op.
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.close))))
 
 (defn before-first
@@ -1031,7 +1031,7 @@
    first row. This method has no effect if the result set contains no rows.
 
   throws: java.sql.SQLException - if a database access error occurs; this method is called on a closed result set or the result set type is TYPE_FORWARD_ONLY"
-  ([this]
+  ([^. this]
     (-> this (.beforeFirst))))
 
 (defn last
@@ -1042,7 +1042,7 @@
    false if there are no rows in the result set - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs; this method is called on a closed result set or the result set type is TYPE_FORWARD_ONLY"
-  ([this]
+  ([^. this]
     (-> this (.last))))
 
 (defn after-last
@@ -1051,7 +1051,7 @@
    last row. This method has no effect if the result set contains no rows.
 
   throws: java.sql.SQLException - if a database access error occurs; this method is called on a closed result set or the result set type is TYPE_FORWARD_ONLY"
-  ([this]
+  ([^. this]
     (-> this (.afterLast))))
 
 (defn update-row-id
@@ -1065,7 +1065,7 @@
   x - the column value - `java.sql.RowId`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs; the result set concurrency is CONCUR_READ_ONLY or this method is called on a closed result set"
-  ([this column-index x]
+  ([^. this ^Integer column-index ^java.sql.RowId x]
     (-> this (.updateRowId column-index x))))
 
 (defn update-n-character-stream
@@ -1087,9 +1087,9 @@
   length - the length of the stream - `long`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs; the result set concurrency is CONCUR_READ_ONLY or this method is called on a closed result set"
-  ([this column-index x length]
+  ([^. this ^Integer column-index ^java.io.Reader x ^Long length]
     (-> this (.updateNCharacterStream column-index x length)))
-  ([this column-index x]
+  ([^. this ^Integer column-index ^java.io.Reader x]
     (-> this (.updateNCharacterStream column-index x))))
 
 (defn refresh-row
@@ -1114,7 +1114,7 @@
    refreshRow frequently will likely slow performance.
 
   throws: java.sql.SQLException - if a database access error occurs; this method is called on a closed result set; the result set type is TYPE_FORWARD_ONLY or if this method is called when the cursor is on the insert row"
-  ([this]
+  ([^. this]
     (-> this (.refreshRow))))
 
 (defn move-to-insert-row
@@ -1135,7 +1135,7 @@
    getter method can be called on a column value.
 
   throws: java.sql.SQLException - if a database access error occurs; this method is called on a closed result set or the result set concurrency is CONCUR_READ_ONLY"
-  ([this]
+  ([^. this]
     (-> this (.moveToInsertRow))))
 
 (defn update-n-string
@@ -1151,7 +1151,7 @@
   n-string - the value for the column to be updated - `java.lang.String`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if the driver does not support national character sets; if the driver can detect that a data conversion error could occur; this method is called on a closed result set; the result set concurrency is CONCUR_READ_ONLY or if a database access error occurs"
-  ([this column-index n-string]
+  ([^. this ^Integer column-index ^java.lang.String n-string]
     (-> this (.updateNString column-index n-string))))
 
 (defn update-object
@@ -1178,11 +1178,11 @@
   returns: `default void`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs; the result set concurrency is CONCUR_READ_ONLY or this method is called on a closed result set"
-  ([this column-index x target-sql-type scale-or-length]
+  ([^. this ^Integer column-index ^java.lang.Object x ^java.sql.SQLType target-sql-type ^Integer scale-or-length]
     (-> this (.updateObject column-index x target-sql-type scale-or-length)))
-  ([this column-index x scale-or-length]
+  ([^. this ^Integer column-index ^java.lang.Object x ^Integer scale-or-length]
     (-> this (.updateObject column-index x scale-or-length)))
-  ([this column-index x]
+  ([^. this ^Integer column-index ^java.lang.Object x]
     (-> this (.updateObject column-index x))))
 
 (defn get-url
@@ -1197,7 +1197,7 @@
    the value returned is null in the Java programming language - `java.net.URL`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs; this method is called on a closed result set or if a URL is malformed"
-  ([this column-index]
+  ([^. this ^Integer column-index]
     (-> this (.getURL column-index))))
 
 (defn get-fetch-size
@@ -1207,7 +1207,7 @@
   returns: the current fetch size for this ResultSet object - `int`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed result set"
-  ([this]
+  ([^. this]
     (-> this (.getFetchSize))))
 
 (defn get-concurrency
@@ -1220,7 +1220,7 @@
            or ResultSet.CONCUR_UPDATABLE - `int`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed result set"
-  ([this]
+  ([^. this]
     (-> this (.getConcurrency))))
 
 (defn update-short
@@ -1234,7 +1234,7 @@
   x - the new column value - `short`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs; the result set concurrency is CONCUR_READ_ONLY or this method is called on a closed result set"
-  ([this column-index x]
+  ([^. this ^Integer column-index ^Short x]
     (-> this (.updateShort column-index x))))
 
 (defn get-boolean?
@@ -1255,7 +1255,7 @@
    value returned is false - `boolean`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs or this method is called on a closed result set"
-  ([this column-index]
+  ([^. this ^Integer column-index]
     (-> this (.getBoolean column-index))))
 
 (defn get-n-clob
@@ -1269,7 +1269,7 @@
            NCLOB value in the specified column - `java.sql.NClob`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if the driver does not support national character sets; if the driver can detect that a data conversion error could occur; this method is called on a closed result set or if a database access error occurs"
-  ([this column-index]
+  ([^. this ^Integer column-index]
     (-> this (.getNClob column-index))))
 
 (defn row-inserted
@@ -1284,7 +1284,7 @@
    have been inserted; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed result set"
-  ([this]
+  ([^. this]
     (-> this (.rowInserted))))
 
 (defn relative
@@ -1305,7 +1305,7 @@
            false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs; this method is called on a closed result set or the result set type is TYPE_FORWARD_ONLY"
-  ([this rows]
+  ([^. this ^Integer rows]
     (-> this (.relative rows))))
 
 (defn update-character-stream
@@ -1321,9 +1321,9 @@
   length - the length of the stream - `int`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs; the result set concurrency is CONCUR_READ_ONLY or this method is called on a closed result set"
-  ([this column-index x length]
+  ([^. this ^Integer column-index ^java.io.Reader x ^Integer length]
     (-> this (.updateCharacterStream column-index x length)))
-  ([this column-index x]
+  ([^. this ^Integer column-index ^java.io.Reader x]
     (-> this (.updateCharacterStream column-index x))))
 
 (defn after-last?
@@ -1339,7 +1339,7 @@
    result set contains no rows - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed result set"
-  ([this]
+  ([^. this]
     (-> this (.isAfterLast))))
 
 (defn get-holdability
@@ -1348,7 +1348,7 @@
   returns: either ResultSet.HOLD_CURSORS_OVER_COMMIT or ResultSet.CLOSE_CURSORS_AT_COMMIT - `int`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed result set"
-  ([this]
+  ([^. this]
     (-> this (.getHoldability))))
 
 (defn update-clob
@@ -1370,9 +1370,9 @@
   length - the number of characters in the parameter data. - `long`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs; the result set concurrency is CONCUR_READ_ONLY or this method is called on a closed result set"
-  ([this column-index reader length]
+  ([^. this ^Integer column-index ^java.io.Reader reader ^Long length]
     (-> this (.updateClob column-index reader length)))
-  ([this column-index x]
+  ([^. this ^Integer column-index ^java.sql.Clob x]
     (-> this (.updateClob column-index x))))
 
 (defn update-binary-stream
@@ -1388,9 +1388,9 @@
   length - the length of the stream - `int`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs; the result set concurrency is CONCUR_READ_ONLY or this method is called on a closed result set"
-  ([this column-index x length]
+  ([^. this ^Integer column-index ^java.io.InputStream x ^Integer length]
     (-> this (.updateBinaryStream column-index x length)))
-  ([this column-index x]
+  ([^. this ^Integer column-index ^java.io.InputStream x]
     (-> this (.updateBinaryStream column-index x))))
 
 (defn update-bytes
@@ -1404,7 +1404,7 @@
   x - the new column value - `byte[]`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs; the result set concurrency is CONCUR_READ_ONLY or this method is called on a closed result set"
-  ([this column-index x]
+  ([^. this ^Integer column-index x]
     (-> this (.updateBytes column-index x))))
 
 (defn get-float
@@ -1418,7 +1418,7 @@
    value returned is 0 - `float`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs or this method is called on a closed result set"
-  ([this column-index]
+  ([^. this ^Integer column-index]
     (-> this (.getFloat column-index))))
 
 (defn get-time
@@ -1437,9 +1437,9 @@
    the value returned is null in the Java programming language - `java.sql.Time`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs or this method is called on a closed result set"
-  ([this column-index cal]
+  ([^. this ^Integer column-index ^java.util.Calendar cal]
     (-> this (.getTime column-index cal)))
-  ([this column-index]
+  ([^. this ^Integer column-index]
     (-> this (.getTime column-index))))
 
 (defn get-double
@@ -1453,7 +1453,7 @@
    value returned is 0 - `double`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs or this method is called on a closed result set"
-  ([this column-index]
+  ([^. this ^Integer column-index]
     (-> this (.getDouble column-index))))
 
 (defn row-deleted
@@ -1469,7 +1469,7 @@
    have been deleted by the owner or another; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed result set"
-  ([this]
+  ([^. this]
     (-> this (.rowDeleted))))
 
 (defn get-big-decimal
@@ -1483,9 +1483,9 @@
    value returned is null - `java.lang..math.BigDecimal`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs or this method is called on a closed result set"
-  ([this column-index scale]
+  ([^. this ^Integer column-index ^Integer scale]
     (-> this (.getBigDecimal column-index scale)))
-  ([this column-index]
+  ([^. this ^Integer column-index]
     (-> this (.getBigDecimal column-index))))
 
 (defn set-fetch-direction
@@ -1499,7 +1499,7 @@
   direction - an int specifying the suggested fetch direction; one of ResultSet.FETCH_FORWARD, ResultSet.FETCH_REVERSE, or ResultSet.FETCH_UNKNOWN - `int`
 
   throws: java.sql.SQLException - if a database access error occurs; this method is called on a closed result set or the result set type is TYPE_FORWARD_ONLY and the fetch direction is not FETCH_FORWARD"
-  ([this direction]
+  ([^. this ^Integer direction]
     (-> this (.setFetchDirection direction))))
 
 (defn absolute
@@ -1537,7 +1537,7 @@
    last row - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs; this method is called on a closed result set or the result set type is TYPE_FORWARD_ONLY"
-  ([this row]
+  ([^. this ^Integer row]
     (-> this (.absolute row))))
 
 (defn cancel-row-updates
@@ -1551,7 +1551,7 @@
    effect.
 
   throws: java.sql.SQLException - if a database access error occurs; this method is called on a closed result set; the result set concurrency is CONCUR_READ_ONLY or if this method is called when the cursor is on the insert row"
-  ([this]
+  ([^. this]
     (-> this (.cancelRowUpdates))))
 
 (defn update-sqlxml
@@ -1566,7 +1566,7 @@
   xml-object - the value for the column to be updated - `java.sql.SQLXML`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs; this method is called on a closed result set; the java.xml.transform.Result, Writer or OutputStream has not been closed for the SQLXML object; if there is an error processing the XML value or the result set concurrency is CONCUR_READ_ONLY. The getCause method of the exception may provide a more detailed exception, for example, if the stream does not contain valid XML."
-  ([this column-index xml-object]
+  ([^. this ^Integer column-index ^java.sql.SQLXML xml-object]
     (-> this (.updateSQLXML column-index xml-object))))
 
 (defn delete-row
@@ -1575,7 +1575,7 @@
    the cursor is on the insert row.
 
   throws: java.sql.SQLException - if a database access error occurs; the result set concurrency is CONCUR_READ_ONLY; this method is called on a closed result set or if this method is called when the cursor is on the insert row"
-  ([this]
+  ([^. this]
     (-> this (.deleteRow))))
 
 (defn first
@@ -1586,7 +1586,7 @@
    false if there are no rows in the result set - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs; this method is called on a closed result set or the result set type is TYPE_FORWARD_ONLY"
-  ([this]
+  ([^. this]
     (-> this (.first))))
 
 (defn insert-row
@@ -1595,7 +1595,7 @@
    The cursor must be on the insert row when this method is called.
 
   throws: java.sql.SQLException - if a database access error occurs; the result set concurrency is CONCUR_READ_ONLY, this method is called on a closed result set, if this method is called when the cursor is not on the insert row, or if not all of non-nullable columns in the insert row have been given a non-null value"
-  ([this]
+  ([^. this]
     (-> this (.insertRow))))
 
 (defn last?
@@ -1614,6 +1614,6 @@
    false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed result set"
-  ([this]
+  ([^. this]
     (-> this (.isLast))))
 

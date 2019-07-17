@@ -19,7 +19,7 @@
   role-value - role value (List of ObjectName objects) - `java.util.List<javax.management.ObjectName>`
 
   throws: java.lang.IllegalArgumentException - if null parameter"
-  ([role-name role-value]
+  ([^java.lang.String role-name ^java.util.List role-value]
     (new Role role-name role-value)))
 
 (defn *role-value-to-string
@@ -31,21 +31,21 @@
    newlines (\n). - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if null parameter"
-  ([role-value]
+  ([^java.util.List role-value]
     (Role/roleValueToString role-value)))
 
 (defn get-role-name
   "Retrieves role name.
 
   returns: the role name. - `java.lang.String`"
-  ([this]
+  ([^javax.management.relation.Role this]
     (-> this (.getRoleName))))
 
 (defn get-role-value
   "Retrieves role value.
 
   returns: ArrayList of ObjectName objects for referenced MBeans. - `java.util.List<javax.management.ObjectName>`"
-  ([this]
+  ([^javax.management.relation.Role this]
     (-> this (.getRoleValue))))
 
 (defn set-role-name
@@ -54,7 +54,7 @@
   role-name - role name - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if null parameter"
-  ([this role-name]
+  ([^javax.management.relation.Role this ^java.lang.String role-name]
     (-> this (.setRoleName role-name))))
 
 (defn set-role-value
@@ -63,20 +63,20 @@
   role-value - List of ObjectName objects for referenced MBeans. - `java.util.List<javax.management.ObjectName>`
 
   throws: java.lang.IllegalArgumentException - if null parameter"
-  ([this role-value]
+  ([^javax.management.relation.Role this ^java.util.List role-value]
     (-> this (.setRoleValue role-value))))
 
 (defn to-string
   "Returns a string describing the role.
 
   returns: the description of the role. - `java.lang.String`"
-  ([this]
+  ([^javax.management.relation.Role this]
     (-> this (.toString))))
 
 (defn clone
   "Clone the role object.
 
   returns: a Role that is an independent copy of the current Role object. - `java.lang.Object`"
-  ([this]
+  ([^javax.management.relation.Role this]
     (-> this (.clone))))
 

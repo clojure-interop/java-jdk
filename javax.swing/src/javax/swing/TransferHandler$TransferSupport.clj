@@ -27,14 +27,14 @@
   transferable - the transferable - `java.awt.datatransfer.Transferable`
 
   throws: java.lang.NullPointerException - if either parameter is null"
-  ([component transferable]
+  ([^java.awt.Component component ^java.awt.datatransfer.Transferable transferable]
     (new TransferHandler$TransferSupport component transferable)))
 
 (defn get-component
   "Returns the target component of this transfer.
 
   returns: the target component - `java.awt.Component`"
-  ([this]
+  ([^javax.swing.TransferHandler$TransferSupport this]
     (-> this (.getComponent))))
 
 (defn drop?
@@ -43,7 +43,7 @@
 
   returns: true if this is a drop operation,
            false otherwise. - `boolean`"
-  ([this]
+  ([^javax.swing.TransferHandler$TransferSupport this]
     (-> this (.isDrop))))
 
 (defn get-source-drop-actions
@@ -70,7 +70,7 @@
   returns: the drag source's supported drop actions - `int`
 
   throws: java.lang.IllegalStateException - if this is not a drop"
-  ([this]
+  ([^javax.swing.TransferHandler$TransferSupport this]
     (-> this (.getSourceDropActions))))
 
 (defn get-drop-action
@@ -92,7 +92,7 @@
   returns: the action chosen for the drop - `int`
 
   throws: java.lang.IllegalStateException - if this is not a drop"
-  ([this]
+  ([^javax.swing.TransferHandler$TransferSupport this]
     (-> this (.getDropAction))))
 
 (defn get-drop-location
@@ -110,7 +110,7 @@
   returns: the drop location - `javax.swing.TransferHandler.DropLocation`
 
   throws: java.lang.IllegalStateException - if this is not a drop"
-  ([this]
+  ([^javax.swing.TransferHandler$TransferSupport this]
     (-> this (.getDropLocation))))
 
 (defn get-transferable
@@ -122,7 +122,7 @@
    Transferable and asking it directly.
 
   returns: the Transferable associated with this transfer - `java.awt.datatransfer.Transferable`"
-  ([this]
+  ([^javax.swing.TransferHandler$TransferSupport this]
     (-> this (.getTransferable))))
 
 (defn set-show-drop-location
@@ -142,7 +142,7 @@
   show-drop-location - whether or not to indicate the drop location - `boolean`
 
   throws: java.lang.IllegalStateException - if this is not a drop"
-  ([this show-drop-location]
+  ([^javax.swing.TransferHandler$TransferSupport this ^Boolean show-drop-location]
     (-> this (.setShowDropLocation show-drop-location))))
 
 (defn set-drop-action
@@ -159,7 +159,7 @@
   drop-action - the drop action - `int`
 
   throws: java.lang.IllegalStateException - if this is not a drop"
-  ([this drop-action]
+  ([^javax.swing.TransferHandler$TransferSupport this ^Integer drop-action]
     (-> this (.setDropAction drop-action))))
 
 (defn get-user-drop-action
@@ -183,14 +183,14 @@
   returns: the user drop action - `int`
 
   throws: java.lang.IllegalStateException - if this is not a drop"
-  ([this]
+  ([^javax.swing.TransferHandler$TransferSupport this]
     (-> this (.getUserDropAction))))
 
 (defn get-data-flavors
   "Returns the data flavors for this transfer.
 
   returns: the data flavors for this transfer - `java.awt.datatransfer.DataFlavor[]`"
-  ([this]
+  ([^javax.swing.TransferHandler$TransferSupport this]
     (-> this (.getDataFlavors))))
 
 (defn data-flavor-supported?
@@ -199,6 +199,6 @@
   df - the DataFlavor to test - `java.awt.datatransfer.DataFlavor`
 
   returns: whether or not the given flavor is supported. - `boolean`"
-  ([this df]
+  ([^javax.swing.TransferHandler$TransferSupport this ^java.awt.datatransfer.DataFlavor df]
     (-> this (.isDataFlavorSupported df))))
 

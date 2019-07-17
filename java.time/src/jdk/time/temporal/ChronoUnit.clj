@@ -202,7 +202,7 @@
   returns: the enum constant with the specified name - `java.time.temporal.ChronoUnit`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([name]
+  ([^java.lang.String name]
     (ChronoUnit/valueOf name)))
 
 (defn get-duration
@@ -212,7 +212,7 @@
    Days vary due to daylight saving time, while months have different lengths.
 
   returns: the estimated duration of this unit, not null - `java.time.Duration`"
-  ([this]
+  ([^java.time.temporal.ChronoUnit this]
     (-> this (.getDuration))))
 
 (defn duration-estimated?
@@ -225,7 +225,7 @@
    daylight saving time and months have different lengths.
 
   returns: true if the duration is estimated, false if accurate - `boolean`"
-  ([this]
+  ([^java.time.temporal.ChronoUnit this]
     (-> this (.isDurationEstimated))))
 
 (defn date-based?
@@ -235,7 +235,7 @@
    Time-based units and FOREVER return false.
 
   returns: true if a date unit, false if a time unit - `boolean`"
-  ([this]
+  ([^java.time.temporal.ChronoUnit this]
     (-> this (.isDateBased))))
 
 (defn time-based?
@@ -245,7 +245,7 @@
    Date-based units and FOREVER return false.
 
   returns: true if a time unit, false if a date unit - `boolean`"
-  ([this]
+  ([^java.time.temporal.ChronoUnit this]
     (-> this (.isTimeBased))))
 
 (defn supported-by?
@@ -254,7 +254,7 @@
   temporal - the temporal object to check, not null - `java.time.temporal.Temporal`
 
   returns: true if the unit is supported - `boolean`"
-  ([this temporal]
+  ([^java.time.temporal.ChronoUnit this ^java.time.temporal.Temporal temporal]
     (-> this (.isSupportedBy temporal))))
 
 (defn add-to
@@ -264,7 +264,7 @@
   amount - the amount of this unit to add, positive or negative - `long`
 
   returns: the adjusted temporal object, not null - `<R extends java.time.temporal.Temporal> R`"
-  ([this temporal amount]
+  ([^java.time.temporal.ChronoUnit this temporal ^Long amount]
     (-> this (.addTo temporal amount))))
 
 (defn between
@@ -276,13 +276,13 @@
   returns: the amount of time between temporal1Inclusive and temporal2Exclusive
     in terms of this unit; positive if temporal2Exclusive is later than
     temporal1Inclusive, negative if earlier - `long`"
-  ([this temporal-1-inclusive temporal-2-exclusive]
+  ([^java.time.temporal.ChronoUnit this ^java.time.temporal.Temporal temporal-1-inclusive ^java.time.temporal.Temporal temporal-2-exclusive]
     (-> this (.between temporal-1-inclusive temporal-2-exclusive))))
 
 (defn to-string
   "Description copied from class: Enum
 
   returns: the name of this enum constant - `java.lang.String`"
-  ([this]
+  ([^java.time.temporal.ChronoUnit this]
     (-> this (.toString))))
 

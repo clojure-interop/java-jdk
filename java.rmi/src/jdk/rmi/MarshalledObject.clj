@@ -35,7 +35,7 @@
   obj - the object to be serialized (must be serializable) - `MarshalledObject.T`
 
   throws: java.io.IOException - if an IOException occurs; an IOException may occur if obj is not serializable."
-  ([obj]
+  ([^MarshalledObject.T obj]
     (new MarshalledObject obj)))
 
 (defn get
@@ -46,14 +46,14 @@
   returns: a copy of the contained object - `MarshalledObject.T`
 
   throws: java.io.IOException - if an IOException occurs while deserializing the object from its internal representation."
-  ([this]
+  ([^java.rmi.MarshalledObject this]
     (-> this (.get))))
 
 (defn hash-code
   "Return a hash code for this MarshalledObject.
 
   returns: a hash code - `int`"
-  ([this]
+  ([^java.rmi.MarshalledObject this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -70,6 +70,6 @@
 
   returns: true if the argument contains an equivalent
    serialized object; false otherwise - `boolean`"
-  ([this obj]
+  ([^java.rmi.MarshalledObject this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

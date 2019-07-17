@@ -143,9 +143,9 @@
   maximum - the maximum value of the scroll bar - `int`
 
   throws: java.lang.IllegalArgumentException - when an illegal value for the orientation argument is supplied"
-  ([orientation value visible minimum maximum]
+  ([^Integer orientation ^Integer value ^Integer visible ^Integer minimum ^Integer maximum]
     (new Scrollbar orientation value visible minimum maximum))
-  ([orientation]
+  ([^Integer orientation]
     (new Scrollbar orientation))
   ([]
     (new Scrollbar )))
@@ -173,7 +173,7 @@
   returns: all of this scrollbar's AdjustmentListeners
            or an empty array if no adjustment
            listeners are currently registered - `java.awt.event.AdjustmentListener[]`"
-  ([this]
+  ([^java.awt.Scrollbar this]
     (-> this (.getAdjustmentListeners))))
 
 (defn get-visible-amount
@@ -195,7 +195,7 @@
    the value returned by getVisibleAmount.
 
   returns: the visible amount of this scroll bar - `int`"
-  ([this]
+  ([^java.awt.Scrollbar this]
     (-> this (.getVisibleAmount))))
 
 (defn set-block-increment
@@ -210,7 +210,7 @@
    will result in a value of 1 being set.
 
   v - the amount by which to increment or decrement the scroll bar's value - `int`"
-  ([this v]
+  ([^java.awt.Scrollbar this ^Integer v]
     (-> this (.setBlockIncrement v))))
 
 (defn get-value-is-adjusting?
@@ -218,7 +218,7 @@
    result of actions being taken by the user.
 
   returns: the value of the valueIsAdjusting property - `boolean`"
-  ([this]
+  ([^java.awt.Scrollbar this]
     (-> this (.getValueIsAdjusting))))
 
 (defn get-orientation
@@ -227,14 +227,14 @@
   returns: the orientation of this scroll bar, either
                  Scrollbar.HORIZONTAL or
                  Scrollbar.VERTICAL - `int`"
-  ([this]
+  ([^java.awt.Scrollbar this]
     (-> this (.getOrientation))))
 
 (defn get-minimum
   "Gets the minimum value of this scroll bar.
 
   returns: the minimum value of this scroll bar - `int`"
-  ([this]
+  ([^java.awt.Scrollbar this]
     (-> this (.getMinimum))))
 
 (defn get-unit-increment
@@ -250,7 +250,7 @@
    can be ignored by the underlying controls.
 
   returns: the unit increment of this scroll bar - `int`"
-  ([this]
+  ([^java.awt.Scrollbar this]
     (-> this (.getUnitIncrement))))
 
 (defn get-block-increment
@@ -263,7 +263,7 @@
    The block increment must be greater than zero.
 
   returns: the block increment of this scroll bar - `int`"
-  ([this]
+  ([^java.awt.Scrollbar this]
     (-> this (.getBlockIncrement))))
 
 (defn add-adjustment-listener
@@ -274,7 +274,7 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   l - the adjustment listener - `java.awt.event.AdjustmentListener`"
-  ([this l]
+  ([^java.awt.Scrollbar this ^java.awt.event.AdjustmentListener l]
     (-> this (.addAdjustmentListener l))))
 
 (defn set-line-increment
@@ -284,14 +284,14 @@
   v - `int`
 
   returns: `java.lang.  void`"
-  ([this v]
+  ([^java.awt.Scrollbar this ^Integer v]
     (-> this (.setLineIncrement v))))
 
 (defn get-value
   "Gets the current value of this scroll bar.
 
   returns: the current value of this scroll bar - `int`"
-  ([this]
+  ([^java.awt.Scrollbar this]
     (-> this (.getValue))))
 
 (defn remove-adjustment-listener
@@ -302,14 +302,14 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   l - the adjustment listener - `java.awt.event.AdjustmentListener`"
-  ([this l]
+  ([^java.awt.Scrollbar this ^java.awt.event.AdjustmentListener l]
     (-> this (.removeAdjustmentListener l))))
 
 (defn add-notify
   "Creates the Scrollbar's peer.  The peer allows you to modify
    the appearance of the Scrollbar without changing any of its
    functionality."
-  ([this]
+  ([^java.awt.Scrollbar this]
     (-> this (.addNotify))))
 
 (defn set-maximum
@@ -332,14 +332,14 @@
    Integer.MIN_VALUE  1.
 
   new-maximum - the new maximum value for this scroll bar - `int`"
-  ([this new-maximum]
+  ([^java.awt.Scrollbar this ^Integer new-maximum]
     (-> this (.setMaximum new-maximum))))
 
 (defn set-value-is-adjusting
   "Sets the valueIsAdjusting property.
 
   b - new adjustment-in-progress status - `boolean`"
-  ([this b]
+  ([^java.awt.Scrollbar this ^Boolean b]
     (-> this (.setValueIsAdjusting b))))
 
 (defn get-accessible-context
@@ -351,7 +351,7 @@
 
   returns: an AccessibleAWTScrollBar that serves as the
            AccessibleContext of this ScrollBar - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^java.awt.Scrollbar this]
     (-> this (.getAccessibleContext))))
 
 (defn set-values
@@ -382,7 +382,7 @@
   visible - is the visible amount of the scroll bar - `int`
   minimum - is the minimum value of the scroll bar - `int`
   maximum - is the maximum value of the scroll bar - `int`"
-  ([this value visible minimum maximum]
+  ([^java.awt.Scrollbar this ^Integer value ^Integer visible ^Integer minimum ^Integer maximum]
     (-> this (.setValues value visible minimum maximum))))
 
 (defn set-unit-increment
@@ -400,7 +400,7 @@
    can be ignored by the underlying controls.
 
   v - the amount by which to increment or decrement the scroll bar's value - `int`"
-  ([this v]
+  ([^java.awt.Scrollbar this ^Integer v]
     (-> this (.setUnitIncrement v))))
 
 (defn set-value
@@ -422,7 +422,7 @@
    AdjustmentEvent.
 
   new-value - the new value of the scroll bar - `int`"
-  ([this new-value]
+  ([^java.awt.Scrollbar this ^Integer new-value]
     (-> this (.setValue new-value))))
 
 (defn set-orientation
@@ -431,7 +431,7 @@
   orientation - the orientation of this scroll bar, either Scrollbar.HORIZONTAL or Scrollbar.VERTICAL - `int`
 
   throws: java.lang.IllegalArgumentException - if the value supplied for orientation is not a legal value"
-  ([this orientation]
+  ([^java.awt.Scrollbar this ^Integer orientation]
     (-> this (.setOrientation orientation))))
 
 (defn set-page-increment
@@ -441,7 +441,7 @@
   v - `int`
 
   returns: `java.lang.  void`"
-  ([this v]
+  ([^java.awt.Scrollbar this ^Integer v]
     (-> this (.setPageIncrement v))))
 
 (defn get-visible
@@ -449,7 +449,7 @@
    replaced by getVisibleAmount().
 
   returns: `java.lang.  int`"
-  ([this]
+  ([^java.awt.Scrollbar this]
     (-> this (.getVisible))))
 
 (defn get-line-increment
@@ -457,7 +457,7 @@
    replaced by getUnitIncrement().
 
   returns: `java.lang.  int`"
-  ([this]
+  ([^java.awt.Scrollbar this]
     (-> this (.getLineIncrement))))
 
 (defn set-visible-amount
@@ -491,7 +491,7 @@
    mutually consistent.
 
   new-amount - the new visible amount - `int`"
-  ([this new-amount]
+  ([^java.awt.Scrollbar this ^Integer new-amount]
     (-> this (.setVisibleAmount new-amount))))
 
 (defn get-listeners
@@ -521,7 +521,7 @@
             or an empty array if no such listeners have been added - `<T extends java.util.EventListener> T[]`
 
   throws: java.lang.ClassCastException - if listenerType doesn't specify a class or interface that implements java.util.EventListener"
-  ([this listener-type]
+  ([^java.awt.Scrollbar this ^java.lang.Class listener-type]
     (-> this (.getListeners listener-type))))
 
 (defn set-minimum
@@ -544,14 +544,14 @@
    Integer.MAX_VALUE - 1.
 
   new-minimum - the new minimum value for this scroll bar - `int`"
-  ([this new-minimum]
+  ([^java.awt.Scrollbar this ^Integer new-minimum]
     (-> this (.setMinimum new-minimum))))
 
 (defn get-maximum
   "Gets the maximum value of this scroll bar.
 
   returns: the maximum value of this scroll bar - `int`"
-  ([this]
+  ([^java.awt.Scrollbar this]
     (-> this (.getMaximum))))
 
 (defn get-page-increment
@@ -559,6 +559,6 @@
    replaced by getBlockIncrement().
 
   returns: `java.lang.  int`"
-  ([this]
+  ([^java.awt.Scrollbar this]
     (-> this (.getPageIncrement))))
 

@@ -7,12 +7,12 @@
   "Constructor.
 
   filechooser - `javax.swing.JFileChooser`"
-  ([filechooser]
+  ([^javax.swing.JFileChooser filechooser]
     (new BasicDirectoryModel filechooser)))
 
 (defn get-files
   "returns: `java.util.Vector<java.io.File>`"
-  ([this]
+  ([^javax.swing.plaf.basic.BasicDirectoryModel this]
     (-> this (.getFiles))))
 
 (defn rename-file
@@ -23,31 +23,31 @@
 
   returns: true if rename succeeded,
           otherwise false - `boolean`"
-  ([this old-file new-file]
+  ([^javax.swing.plaf.basic.BasicDirectoryModel this ^java.io.File old-file ^java.io.File new-file]
     (-> this (.renameFile old-file new-file))))
 
 (defn validate-file-cache
   ""
-  ([this]
+  ([^javax.swing.plaf.basic.BasicDirectoryModel this]
     (-> this (.validateFileCache))))
 
 (defn contains
   "o - `java.lang.Object`
 
   returns: `boolean`"
-  ([this o]
+  ([^javax.swing.plaf.basic.BasicDirectoryModel this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn invalidate-file-cache
   "This method is used to interrupt file loading thread."
-  ([this]
+  ([^javax.swing.plaf.basic.BasicDirectoryModel this]
     (-> this (.invalidateFileCache))))
 
 (defn property-change
   "Description copied from interface: PropertyChangeListener
 
   e - A PropertyChangeEvent object describing the event source and the property that has changed. - `java.beans.PropertyChangeEvent`"
-  ([this e]
+  ([^javax.swing.plaf.basic.BasicDirectoryModel this ^java.beans.PropertyChangeEvent e]
     (-> this (.propertyChange e))))
 
 (defn get-element-at
@@ -56,7 +56,7 @@
   index - the requested index - `int`
 
   returns: the value at index - `java.lang.Object`"
-  ([this index]
+  ([^javax.swing.plaf.basic.BasicDirectoryModel this ^Integer index]
     (-> this (.getElementAt index))))
 
 (defn remove-property-change-listener
@@ -65,12 +65,12 @@
    If listener is null, no exception is thrown and no action is performed.
 
   listener - the PropertyChangeListener to be removed - `java.beans.PropertyChangeListener`"
-  ([this listener]
+  ([^javax.swing.plaf.basic.BasicDirectoryModel this ^java.beans.PropertyChangeListener listener]
     (-> this (.removePropertyChangeListener listener))))
 
 (defn fire-contents-changed
   ""
-  ([this]
+  ([^javax.swing.plaf.basic.BasicDirectoryModel this]
     (-> this (.fireContentsChanged))))
 
 (defn get-property-change-listeners
@@ -80,33 +80,33 @@
   returns: all of this component's PropertyChangeListeners
            or an empty array if no property change
            listeners are currently registered - `java.beans.PropertyChangeListener[]`"
-  ([this]
+  ([^javax.swing.plaf.basic.BasicDirectoryModel this]
     (-> this (.getPropertyChangeListeners))))
 
 (defn interval-added
   "Obsolete - not used.
 
   e - `javax.swing.event.ListDataEvent`"
-  ([this e]
+  ([^javax.swing.plaf.basic.BasicDirectoryModel this ^javax.swing.event.ListDataEvent e]
     (-> this (.intervalAdded e))))
 
 (defn get-directories
   "returns: `java.util.Vector<java.io.File>`"
-  ([this]
+  ([^javax.swing.plaf.basic.BasicDirectoryModel this]
     (-> this (.getDirectories))))
 
 (defn interval-removed
   "Obsolete - not used.
 
   e - `javax.swing.event.ListDataEvent`"
-  ([this e]
+  ([^javax.swing.plaf.basic.BasicDirectoryModel this ^javax.swing.event.ListDataEvent e]
     (-> this (.intervalRemoved e))))
 
 (defn index-of
   "o - `java.lang.Object`
 
   returns: `int`"
-  ([this o]
+  ([^javax.swing.plaf.basic.BasicDirectoryModel this ^java.lang.Object o]
     (-> this (.indexOf o))))
 
 (defn add-property-change-listener
@@ -117,13 +117,13 @@
    no exception is thrown and no action is performed.
 
   listener - the property change listener to be added - `java.beans.PropertyChangeListener`"
-  ([this listener]
+  ([^javax.swing.plaf.basic.BasicDirectoryModel this ^java.beans.PropertyChangeListener listener]
     (-> this (.addPropertyChangeListener listener))))
 
 (defn get-size
   "Description copied from interface: ListModel
 
   returns: the length of the list - `int`"
-  ([this]
+  ([^javax.swing.plaf.basic.BasicDirectoryModel this]
     (-> this (.getSize))))
 

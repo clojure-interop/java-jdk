@@ -57,14 +57,14 @@
   "Sets the revocation options.
 
   options - a set of revocation options. The set is copied to protect against subsequent modification. - `java.util.Set<java.security.cert.PKIXRevocationChecker.Option>`"
-  ([this options]
+  ([^java.security.cert.PKIXRevocationChecker this ^java.util.Set options]
     (-> this (.setOptions options))))
 
 (defn set-ocsp-extensions
   "Sets the optional OCSP request extensions.
 
   extensions - a list of extensions. The list is copied to protect against subsequent modification. - `java.util.List<java.security.cert.Extension>`"
-  ([this extensions]
+  ([^java.security.cert.PKIXRevocationChecker this ^java.util.List extensions]
     (-> this (.setOcspExtensions extensions))))
 
 (defn get-ocsp-responder-cert
@@ -76,7 +76,7 @@
    responder's certificate is determined as specified in RFC 2560.
 
   returns: the responder's certificate, or null if not set - `java.security.cert.X509Certificate`"
-  ([this]
+  ([^java.security.cert.PKIXRevocationChecker this]
     (-> this (.getOcspResponderCert))))
 
 (defn set-ocsp-responses
@@ -84,7 +84,7 @@
    the revocation status of the specified certificates when OCSP is used.
 
   responses - a map of OCSP responses. Each key is an X509Certificate that maps to the corresponding DER-encoded OCSP response for that certificate. A deep copy of the map is performed to protect against subsequent modification. - `java.util.Map<java.security.cert.X509Certificate,byte[]>`"
-  ([this responses]
+  ([^java.security.cert.PKIXRevocationChecker this ^java.util.Map responses]
     (-> this (.setOcspResponses responses))))
 
 (defn get-ocsp-responder
@@ -95,7 +95,7 @@
    Access Extension, as defined in RFC 5280.
 
   returns: the responder URI, or null if not set - `java.net.URI`"
-  ([this]
+  ([^java.security.cert.PKIXRevocationChecker this]
     (-> this (.getOcspResponder))))
 
 (defn get-soft-fail-exceptions
@@ -111,7 +111,7 @@
 
   returns: an unmodifiable list containing the ignored exceptions. The list
            is empty if no exceptions have been ignored. - `java.util.List<java.security.cert.CertPathValidatorException>`"
-  ([this]
+  ([^java.security.cert.PKIXRevocationChecker this]
     (-> this (.getSoftFailExceptions))))
 
 (defn set-ocsp-responder
@@ -121,7 +121,7 @@
    Extension, as defined in RFC 5280.
 
   uri - the responder URI - `java.net.URI`"
-  ([this uri]
+  ([^java.security.cert.PKIXRevocationChecker this ^java.net.URI uri]
     (-> this (.setOcspResponder uri))))
 
 (defn get-ocsp-extensions
@@ -129,7 +129,7 @@
 
   returns: an unmodifiable list of extensions. The list is empty if no
            extensions have been specified. - `java.util.List<java.security.cert.Extension>`"
-  ([this]
+  ([^java.security.cert.PKIXRevocationChecker this]
     (-> this (.getOcspExtensions))))
 
 (defn get-options
@@ -137,14 +137,14 @@
 
   returns: an unmodifiable set of revocation options. The set is empty if
            no options have been specified. - `java.util.Set<java.security.cert.PKIXRevocationChecker.Option>`"
-  ([this]
+  ([^java.security.cert.PKIXRevocationChecker this]
     (-> this (.getOptions))))
 
 (defn clone
   "Description copied from class: PKIXCertPathChecker
 
   returns: a copy of this PKIXCertPathChecker - `java.security.cert.PKIXRevocationChecker`"
-  ([this]
+  ([^java.security.cert.PKIXRevocationChecker this]
     (-> this (.clone))))
 
 (defn get-ocsp-responses
@@ -156,7 +156,7 @@
           DER-encoded OCSP response for that certificate. A deep copy of
           the map is returned to protect against subsequent modification.
           Returns an empty map if no responses have been specified. - `java.util.Map<java.security.cert.X509Certificate,byte[]>`"
-  ([this]
+  ([^java.security.cert.PKIXRevocationChecker this]
     (-> this (.getOcspResponses))))
 
 (defn set-ocsp-responder-cert
@@ -166,6 +166,6 @@
    and ocsp.responderCertSerialNumber security properties.
 
   cert - the responder's certificate - `java.security.cert.X509Certificate`"
-  ([this cert]
+  ([^java.security.cert.PKIXRevocationChecker this ^java.security.cert.X509Certificate cert]
     (-> this (.setOcspResponderCert cert))))
 

@@ -11,9 +11,9 @@
 
   e - the exception to nest - `java.lang.Exception`
   msg - the message to report - `java.lang.String`"
-  ([e msg]
+  ([^java.lang.Exception e ^java.lang.String msg]
     (new FactoryConfigurationError e msg))
-  ([e]
+  ([^java.lang.Exception e]
     (new FactoryConfigurationError e))
   ([]
     (new FactoryConfigurationError )))
@@ -22,7 +22,7 @@
   "Return the nested exception (if any)
 
   returns: the nested exception or null - `java.lang.Exception`"
-  ([this]
+  ([^javax.xml.stream.FactoryConfigurationError this]
     (-> this (.getException))))
 
 (defn get-cause
@@ -30,13 +30,13 @@
 
   returns: the cause of this throwable or null if the
             cause is nonexistent or unknown. - `java.lang.Throwable`"
-  ([this]
+  ([^javax.xml.stream.FactoryConfigurationError this]
     (-> this (.getCause))))
 
 (defn get-message
   "Report the message associated with this error
 
   returns: the string value of the message - `java.lang.String`"
-  ([this]
+  ([^javax.xml.stream.FactoryConfigurationError this]
     (-> this (.getMessage))))
 

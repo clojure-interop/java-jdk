@@ -43,7 +43,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([this]
+  ([^javax.print.attribute.standard.Fidelity this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -54,6 +54,6 @@
    `ipp-attribute-fidelity`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([this]
+  ([^javax.print.attribute.standard.Fidelity this]
     (-> this (.getName))))
 

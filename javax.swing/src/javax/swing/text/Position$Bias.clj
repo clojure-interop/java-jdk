@@ -30,6 +30,6 @@
   "string representation
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^javax.swing.text.Position$Bias this]
     (-> this (.toString))))
 

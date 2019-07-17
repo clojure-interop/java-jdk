@@ -23,13 +23,13 @@
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^java.awt.PageAttributes$OriginType this]
     (-> this (.hashCode))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^java.awt.PageAttributes$OriginType this]
     (-> this (.toString))))
 

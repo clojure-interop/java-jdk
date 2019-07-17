@@ -11,27 +11,27 @@
 
   bcs - The context in which the service has become available - `java.beans.beancontext.BeanContextServices`
   sc - A Class reference to the newly available service - `java.lang.Class`"
-  ([bcs sc]
+  ([^java.beans.beancontext.BeanContextServices bcs ^java.lang.Class sc]
     (new BeanContextServiceAvailableEvent bcs sc)))
 
 (defn get-source-as-bean-context-services
   "Gets the source as a reference of type BeanContextServices.
 
   returns: The context in which the service has become available - `java.beans.beancontext.BeanContextServices`"
-  ([this]
+  ([^java.beans.beancontext.BeanContextServiceAvailableEvent this]
     (-> this (.getSourceAsBeanContextServices))))
 
 (defn get-service-class
   "Gets the service class that is the subject of this notification.
 
   returns: A Class reference to the newly available service - `java.lang.Class`"
-  ([this]
+  ([^java.beans.beancontext.BeanContextServiceAvailableEvent this]
     (-> this (.getServiceClass))))
 
 (defn get-current-service-selectors
   "Gets the list of service dependent selectors.
 
   returns: the current selectors available from the service - `java.util.Iterator`"
-  ([this]
+  ([^java.beans.beancontext.BeanContextServiceAvailableEvent this]
     (-> this (.getCurrentServiceSelectors))))
 

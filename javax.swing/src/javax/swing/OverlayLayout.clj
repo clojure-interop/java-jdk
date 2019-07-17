@@ -28,7 +28,7 @@
    created is dedicated to the given container.
 
   target - the container to do layout against - `java.awt.Container`"
-  ([target]
+  ([^java.awt.Container target]
     (new OverlayLayout target)))
 
 (defn invalidate-layout
@@ -36,7 +36,7 @@
    which causes any cached calculations to be flushed.
 
   target - the container - `java.awt.Container`"
-  ([this target]
+  ([^javax.swing.OverlayLayout this ^java.awt.Container target]
     (-> this (.invalidateLayout target))))
 
 (defn get-layout-alignment-y
@@ -45,7 +45,7 @@
   target - the container - `java.awt.Container`
 
   returns: the alignment >= 0.0f && <= 1.0f - `float`"
-  ([this target]
+  ([^javax.swing.OverlayLayout this ^java.awt.Container target]
     (-> this (.getLayoutAlignmentY target))))
 
 (defn preferred-layout-size
@@ -57,7 +57,7 @@
   target - the component which needs to be laid out - `java.awt.Container`
 
   returns: a Dimension object containing the preferred dimensions - `java.awt.Dimension`"
-  ([this target]
+  ([^javax.swing.OverlayLayout this ^java.awt.Container target]
     (-> this (.preferredLayoutSize target))))
 
 (defn get-layout-alignment-x
@@ -66,7 +66,7 @@
   target - the container - `java.awt.Container`
 
   returns: the alignment >= 0.0f && <= 1.0f - `float`"
-  ([this target]
+  ([^javax.swing.OverlayLayout this ^java.awt.Container target]
     (-> this (.getLayoutAlignmentX target))))
 
 (defn minimum-layout-size
@@ -77,14 +77,14 @@
   target - the component which needs to be laid out - `java.awt.Container`
 
   returns: a Dimension object containing the minimum dimensions - `java.awt.Dimension`"
-  ([this target]
+  ([^javax.swing.OverlayLayout this ^java.awt.Container target]
     (-> this (.minimumLayoutSize target))))
 
 (defn get-target
   "Returns the container that uses this layout manager.
 
   returns: the container that uses this layout manager - `java.awt.Container`"
-  ([this]
+  ([^javax.swing.OverlayLayout this]
     (-> this (.getTarget))))
 
 (defn maximum-layout-size
@@ -97,7 +97,7 @@
 
   returns: a Dimension object containing the maximum
            dimensions - `java.awt.Dimension`"
-  ([this target]
+  ([^javax.swing.OverlayLayout this ^java.awt.Container target]
     (-> this (.maximumLayoutSize target))))
 
 (defn add-layout-component
@@ -106,7 +106,7 @@
 
   name - the name of the component - `java.lang.String`
   comp - the the component to be added - `java.awt.Component`"
-  ([this name comp]
+  ([^javax.swing.OverlayLayout this ^java.lang.String name ^java.awt.Component comp]
     (-> this (.addLayoutComponent name comp))))
 
 (defn remove-layout-component
@@ -114,7 +114,7 @@
    this class to know when to invalidate layout.
 
   comp - the component to remove - `java.awt.Component`"
-  ([this comp]
+  ([^javax.swing.OverlayLayout this ^java.awt.Component comp]
     (-> this (.removeLayoutComponent comp))))
 
 (defn layout-container
@@ -123,6 +123,6 @@
   target - the container to lay out - `java.awt.Container`
 
   throws: java.awt.AWTError - if the target isn't the container specified to the constructor"
-  ([this target]
+  ([^javax.swing.OverlayLayout this ^java.awt.Container target]
     (-> this (.layoutContainer target))))
 

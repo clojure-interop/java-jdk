@@ -26,7 +26,7 @@
 
   returns: a String array with all of the values for the
            specified header - `java.lang.String[]`"
-  ([this name]
+  ([^javax.xml.soap.MimeHeaders this ^java.lang.String name]
     (-> this (.getHeader name))))
 
 (defn set-header
@@ -40,7 +40,7 @@
   value - a String with the value that will replace the current value of the specified header - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if there was a problem in the mime header name or the value being set"
-  ([this name value]
+  ([^javax.xml.soap.MimeHeaders this ^java.lang.String name ^java.lang.String value]
     (-> this (.setHeader name value))))
 
 (defn add-header
@@ -53,7 +53,7 @@
   value - a String with the value of the header to be added - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if there was a problem in the mime header name or value being added"
-  ([this name value]
+  ([^javax.xml.soap.MimeHeaders this ^java.lang.String name ^java.lang.String value]
     (-> this (.addHeader name value))))
 
 (defn remove-header
@@ -61,12 +61,12 @@
    given name.
 
   name - a String with the name of the header for which to search - `java.lang.String`"
-  ([this name]
+  ([^javax.xml.soap.MimeHeaders this ^java.lang.String name]
     (-> this (.removeHeader name))))
 
 (defn remove-all-headers
   "Removes all the header entries from this MimeHeaders object."
-  ([this]
+  ([^javax.xml.soap.MimeHeaders this]
     (-> this (.removeAllHeaders))))
 
 (defn get-all-headers
@@ -74,7 +74,7 @@
 
   returns: an Iterator object over this MimeHeaders
             object's list of MimeHeader objects - `java.util.Iterator`"
-  ([this]
+  ([^javax.xml.soap.MimeHeaders this]
     (-> this (.getAllHeaders))))
 
 (defn get-matching-headers
@@ -85,7 +85,7 @@
 
   returns: an Iterator object over the MimeHeader
             objects whose name matches one of the names in the given list - `java.util.Iterator`"
-  ([this names]
+  ([^javax.xml.soap.MimeHeaders this ^java.lang.String[] names]
     (-> this (.getMatchingHeaders names))))
 
 (defn get-non-matching-headers
@@ -96,6 +96,6 @@
 
   returns: an Iterator object over the MimeHeader
             objects whose name does not match one of the names in the given list - `java.util.Iterator`"
-  ([this names]
+  ([^javax.xml.soap.MimeHeaders this ^java.lang.String[] names]
     (-> this (.getNonMatchingHeaders names))))
 

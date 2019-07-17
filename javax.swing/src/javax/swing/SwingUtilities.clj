@@ -10,7 +10,7 @@
   b - `java.awt.Rectangle`
 
   returns: `boolean`"
-  ([a b]
+  ([^java.awt.Rectangle a ^java.awt.Rectangle b]
     (SwingUtilities/isRectangleContainingRectangle a b)))
 
 (defn *window-for-component
@@ -25,7 +25,7 @@
   returns: the first Window  ancestor of c, or
            null if c is not contained inside a
            Window. - `java.awt.Window`"
-  ([c]
+  ([^java.awt.Component c]
     (SwingUtilities/windowForComponent c)))
 
 (defn *convert-rectangle
@@ -43,7 +43,7 @@
   destination - `java.awt.Component`
 
   returns: `java.awt.Rectangle`"
-  ([source a-rectangle destination]
+  ([^java.awt.Component source ^java.awt.Rectangle a-rectangle ^java.awt.Component destination]
     (SwingUtilities/convertRectangle source a-rectangle destination)))
 
 (defn *invoke-later
@@ -80,7 +80,7 @@
    Unlike the rest of Swing, this method can be invoked from any thread.
 
   do-run - `java.lang.Runnable`"
-  ([do-run]
+  ([^java.lang.Runnable do-run]
     (SwingUtilities/invokeLater do-run)))
 
 (defn *compute-difference
@@ -92,7 +92,7 @@
   rect-b - `java.awt.Rectangle`
 
   returns: `java.awt.Rectangle[]`"
-  ([rect-a rect-b]
+  ([^java.awt.Rectangle rect-a ^java.awt.Rectangle rect-b]
     (SwingUtilities/computeDifference rect-a rect-b)))
 
 (defn *invoke-and-wait
@@ -141,7 +141,7 @@
   do-run - `java.lang.Runnable`
 
   throws: java.lang.InterruptedException - if we're interrupted while waiting for the event dispatching thread to finish executing doRun.run()"
-  ([do-run]
+  ([^java.lang.Runnable do-run]
     (SwingUtilities/invokeAndWait do-run)))
 
 (defn *get-unwrapped-view
@@ -161,7 +161,7 @@
    If such a descendant can not be found, null is returned. - `java.awt.Component`
 
   throws: java.lang.NullPointerException - if viewport is null"
-  ([viewport]
+  ([^javax.swing.JViewport viewport]
     (SwingUtilities/getUnwrappedView viewport)))
 
 (defn *get-accessible-child
@@ -175,7 +175,7 @@
   i - zero-based index of child - `int`
 
   returns: the nth Accessible child of the object - `javax.accessibility.Accessible`"
-  ([c i]
+  ([^java.awt.Component c ^Integer i]
     (SwingUtilities/getAccessibleChild c i)))
 
 (defn *left-mouse-button?
@@ -184,7 +184,7 @@
   an-event - a MouseEvent object - `java.awt.event.MouseEvent`
 
   returns: true if the left mouse button was active - `boolean`"
-  ([an-event]
+  ([^java.awt.event.MouseEvent an-event]
     (SwingUtilities/isLeftMouseButton an-event)))
 
 (defn *find-focus-owner
@@ -196,7 +196,7 @@
   returns: the focus owner, or null if there is no focus
            owner, or if the focus owner is not comp, or a
            descendant of comp - `java.lang.   java.awt.Component`"
-  ([c]
+  ([^java.awt.Component c]
     (SwingUtilities/findFocusOwner c)))
 
 (defn *middle-mouse-button?
@@ -205,7 +205,7 @@
   an-event - a MouseEvent object - `java.awt.event.MouseEvent`
 
   returns: true if the middle mouse button was active - `boolean`"
-  ([an-event]
+  ([^java.awt.event.MouseEvent an-event]
     (SwingUtilities/isMiddleMouseButton an-event)))
 
 (defn *get-ui-input-map
@@ -218,7 +218,7 @@
   condition - `int`
 
   returns: `javax.swing.InputMap`"
-  ([component condition]
+  ([^javax.swing.JComponent component ^Integer condition]
     (SwingUtilities/getUIInputMap component condition)))
 
 (defn *calculate-inner-area
@@ -236,7 +236,7 @@
   returns: null if the Component is null;
            otherwise, returns the passed-in rectangle (if non-null)
            or a new rectangle specifying position and size information - `java.awt.Rectangle`"
-  ([c r]
+  ([^javax.swing.JComponent c ^java.awt.Rectangle r]
     (SwingUtilities/calculateInnerArea c r)))
 
 (defn *get-accessible-state-set
@@ -250,7 +250,7 @@
 
   returns: an instance of AccessibleStateSet containing the current state
    set of the object - `javax.accessibility.AccessibleStateSet`"
-  ([c]
+  ([^java.awt.Component c]
     (SwingUtilities/getAccessibleStateSet c)))
 
 (defn *get-ui-action-map
@@ -261,7 +261,7 @@
   component - `javax.swing.JComponent`
 
   returns: `javax.swing.ActionMap`"
-  ([component]
+  ([^javax.swing.JComponent component]
     (SwingUtilities/getUIActionMap component)))
 
 (defn *layout-compound-label
@@ -286,9 +286,9 @@
   text-icon-gap - `int`
 
   returns: `java.lang.String`"
-  ([c fm text icon vertical-alignment horizontal-alignment vertical-text-position horizontal-text-position view-r icon-r text-r text-icon-gap]
+  ([^javax.swing.JComponent c ^java.awt.FontMetrics fm ^java.lang.String text ^javax.swing.Icon icon ^Integer vertical-alignment ^Integer horizontal-alignment ^Integer vertical-text-position ^Integer horizontal-text-position ^java.awt.Rectangle view-r ^java.awt.Rectangle icon-r ^java.awt.Rectangle text-r ^Integer text-icon-gap]
     (SwingUtilities/layoutCompoundLabel c fm text icon vertical-alignment horizontal-alignment vertical-text-position horizontal-text-position view-r icon-r text-r text-icon-gap))
-  ([fm text icon vertical-alignment horizontal-alignment vertical-text-position horizontal-text-position view-r icon-r text-r text-icon-gap]
+  ([^java.awt.FontMetrics fm ^java.lang.String text ^javax.swing.Icon icon ^Integer vertical-alignment ^Integer horizontal-alignment ^Integer vertical-text-position ^Integer horizontal-text-position ^java.awt.Rectangle view-r ^java.awt.Rectangle icon-r ^java.awt.Rectangle text-r ^Integer text-icon-gap]
     (SwingUtilities/layoutCompoundLabel fm text icon vertical-alignment horizontal-alignment vertical-text-position horizontal-text-position view-r icon-r text-r text-icon-gap)))
 
 (defn *get-unwrapped-parent
@@ -302,7 +302,7 @@
    If such an ancestor can not be found, null is returned. - `java.awt.Container`
 
   throws: java.lang.NullPointerException - if component is null"
-  ([component]
+  ([^java.awt.Component component]
     (SwingUtilities/getUnwrappedParent component)))
 
 (defn *get-ancestor-of-class
@@ -314,7 +314,7 @@
   comp - `java.awt.Component`
 
   returns: `java.awt.Container`"
-  ([c comp]
+  ([^java.lang.Class c ^java.awt.Component comp]
     (SwingUtilities/getAncestorOfClass c comp)))
 
 (defn *paint-component
@@ -358,9 +358,9 @@
   y - an int specifying the top of the area to draw in, in pixels measured down from the top edge of the graphics context - `int`
   w - an int specifying the width of the area draw in, in pixels - `int`
   h - an int specifying the height of the area draw in, in pixels - `int`"
-  ([g c p x y w h]
+  ([^java.awt.Graphics g ^java.awt.Component c ^java.awt.Container p ^Integer x ^Integer y ^Integer w ^Integer h]
     (SwingUtilities/paintComponent g c p x y w h))
-  ([g c p r]
+  ([^java.awt.Graphics g ^java.awt.Component c ^java.awt.Container p ^java.awt.Rectangle r]
     (SwingUtilities/paintComponent g c p r)))
 
 (defn *update-component-tree-ui
@@ -369,7 +369,7 @@
    with the current look and feel.
 
   c - `java.awt.Component`"
-  ([c]
+  ([^java.awt.Component c]
     (SwingUtilities/updateComponentTreeUI c)))
 
 (defn *get-local-bounds
@@ -378,7 +378,7 @@
   a-component - `java.awt.Component`
 
   returns: `java.awt.Rectangle`"
-  ([a-component]
+  ([^java.awt.Component a-component]
     (SwingUtilities/getLocalBounds a-component)))
 
 (defn *compute-union
@@ -392,7 +392,7 @@
   dest - the coordinates of the second rectangle; the union of the two rectangles is returned in this rectangle - `java.awt.Rectangle`
 
   returns: the dest Rectangle - `java.awt.Rectangle`"
-  ([x y width height dest]
+  ([^Integer x ^Integer y ^Integer width ^Integer height ^java.awt.Rectangle dest]
     (SwingUtilities/computeUnion x y width height dest)))
 
 (defn *compute-intersection
@@ -409,7 +409,7 @@
   dest - the second rectangle - `java.awt.Rectangle`
 
   returns: dest, modified to specify the intersection - `java.awt.Rectangle`"
-  ([x y width height dest]
+  ([^Integer x ^Integer y ^Integer width ^Integer height ^java.awt.Rectangle dest]
     (SwingUtilities/computeIntersection x y width height dest)))
 
 (defn *replace-ui-input-map
@@ -420,7 +420,7 @@
   component - `javax.swing.JComponent`
   type - `int`
   ui-input-map - `javax.swing.InputMap`"
-  ([component type ui-input-map]
+  ([^javax.swing.JComponent component ^Integer type ^javax.swing.InputMap ui-input-map]
     (SwingUtilities/replaceUIInputMap component type ui-input-map)))
 
 (defn *event-dispatch-thread?
@@ -445,7 +445,7 @@
   c - `java.awt.Component`
 
   returns: the number of accessible children in the object. - `int`"
-  ([c]
+  ([^java.awt.Component c]
     (SwingUtilities/getAccessibleChildrenCount c)))
 
 (defn *convert-mouse-event
@@ -466,7 +466,7 @@
   destination - `java.awt.Component`
 
   returns: `java.awt.event.MouseEvent`"
-  ([source source-event destination]
+  ([^java.awt.Component source ^java.awt.event.MouseEvent source-event ^java.awt.Component destination]
     (SwingUtilities/convertMouseEvent source source-event destination)))
 
 (defn *get-root
@@ -475,7 +475,7 @@
   c - `java.awt.Component`
 
   returns: the first ancestor of c that's a Window or the last Applet ancestor - `java.awt.Component`"
-  ([c]
+  ([^java.awt.Component c]
     (SwingUtilities/getRoot c)))
 
 (defn *process-key-bindings
@@ -492,7 +492,7 @@
   event - KeyEvent used to identify which bindings to process, as well as which Component has focus. - `java.awt.event.KeyEvent`
 
   returns: true if a binding has found and processed - `boolean`"
-  ([event]
+  ([^java.awt.event.KeyEvent event]
     (SwingUtilities/processKeyBindings event)))
 
 (defn *get-deepest-component-at
@@ -508,7 +508,7 @@
   y - the y target location - `int`
 
   returns: `java.awt.Component`"
-  ([parent x y]
+  ([^java.awt.Component parent ^Integer x ^Integer y]
     (SwingUtilities/getDeepestComponentAt parent x y)))
 
 (defn *right-mouse-button?
@@ -517,7 +517,7 @@
   an-event - a MouseEvent object - `java.awt.event.MouseEvent`
 
   returns: true if the right mouse button was active - `boolean`"
-  ([an-event]
+  ([^java.awt.event.MouseEvent an-event]
     (SwingUtilities/isRightMouseButton an-event)))
 
 (defn *notify-action
@@ -542,7 +542,7 @@
   modifiers - `int`
 
   returns: `boolean`"
-  ([action ks event sender modifiers]
+  ([^javax.swing.Action action ^javax.swing.KeyStroke ks ^java.awt.event.KeyEvent event ^java.lang.Object sender ^Integer modifiers]
     (SwingUtilities/notifyAction action ks event sender modifiers)))
 
 (defn *convert-point
@@ -561,9 +561,9 @@
   destination - `java.awt.Component`
 
   returns: `java.awt.Point`"
-  ([source x y destination]
+  ([^java.awt.Component source ^Integer x ^Integer y ^java.awt.Component destination]
     (SwingUtilities/convertPoint source x y destination))
-  ([source a-point destination]
+  ([^java.awt.Component source ^java.awt.Point a-point ^java.awt.Component destination]
     (SwingUtilities/convertPoint source a-point destination)))
 
 (defn *convert-point-to-screen
@@ -572,7 +572,7 @@
 
   p - a Point object (converted to the new coordinate system) - `java.awt.Point`
   c - a Component object - `java.awt.Component`"
-  ([p c]
+  ([^java.awt.Point p ^java.awt.Component c]
     (SwingUtilities/convertPointToScreen p c)))
 
 (defn *replace-ui-action-map
@@ -582,7 +582,7 @@
 
   component - `javax.swing.JComponent`
   ui-action-map - `javax.swing.ActionMap`"
-  ([component ui-action-map]
+  ([^javax.swing.JComponent component ^javax.swing.ActionMap ui-action-map]
     (SwingUtilities/replaceUIActionMap component ui-action-map)))
 
 (defn *compute-string-width
@@ -593,7 +593,7 @@
   str - the String to compute - `java.lang.String`
 
   returns: an int containing the string width - `int`"
-  ([fm str]
+  ([^java.awt.FontMetrics fm ^java.lang.String str]
     (SwingUtilities/computeStringWidth fm str)))
 
 (defn *get-accessible-at
@@ -606,7 +606,7 @@
 
   returns: the Accessible at the specified location,
       if it exists; otherwise null - `javax.accessibility.Accessible`"
-  ([c p]
+  ([^java.awt.Component c ^java.awt.Point p]
     (SwingUtilities/getAccessibleAt c p)))
 
 (defn *get-root-pane
@@ -616,7 +616,7 @@
   c - `java.awt.Component`
 
   returns: the JRootPane for Component c or null. - `javax.swing.JRootPane`"
-  ([c]
+  ([^java.awt.Component c]
     (SwingUtilities/getRootPane c)))
 
 (defn *descending-from?
@@ -626,7 +626,7 @@
   b - `java.awt.Component`
 
   returns: `boolean`"
-  ([a b]
+  ([^java.awt.Component a ^java.awt.Component b]
     (SwingUtilities/isDescendingFrom a b)))
 
 (defn *get-ancestor-named
@@ -638,7 +638,7 @@
   comp - `java.awt.Component`
 
   returns: `java.awt.Container`"
-  ([name comp]
+  ([^java.lang.String name ^java.awt.Component comp]
     (SwingUtilities/getAncestorNamed name comp)))
 
 (defn *convert-point-from-screen
@@ -647,7 +647,7 @@
 
   p - a Point object (converted to the new coordinate system) - `java.awt.Point`
   c - a Component object - `java.awt.Component`"
-  ([p c]
+  ([^java.awt.Point p ^java.awt.Component c]
     (SwingUtilities/convertPointFromScreen p c)))
 
 (defn *get-accessible-index-in-parent
@@ -661,7 +661,7 @@
 
   returns: -1 of this object does not have an accessible parent.
    Otherwise, the index of the child in its accessible parent. - `int`"
-  ([c]
+  ([^java.awt.Component c]
     (SwingUtilities/getAccessibleIndexInParent c)))
 
 (defn *get-window-ancestor
@@ -673,6 +673,6 @@
   returns: the first Window  ancestor of c, or
            null if c is not contained inside a
            Window. - `java.awt.Window`"
-  ([c]
+  ([^java.awt.Component c]
     (SwingUtilities/getWindowAncestor c)))
 

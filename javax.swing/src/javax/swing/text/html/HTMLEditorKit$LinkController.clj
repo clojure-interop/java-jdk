@@ -16,20 +16,20 @@
    follow the reference specified by a link.
 
   e - the mouse event - `java.awt.event.MouseEvent`"
-  ([this e]
+  ([^javax.swing.text.html.HTMLEditorKit$LinkController this ^java.awt.event.MouseEvent e]
     (-> this (.mouseClicked e))))
 
 (defn mouse-dragged
   "Description copied from class: MouseAdapter
 
   e - `java.awt.event.MouseEvent`"
-  ([this e]
+  ([^javax.swing.text.html.HTMLEditorKit$LinkController this ^java.awt.event.MouseEvent e]
     (-> this (.mouseDragged e))))
 
 (defn mouse-moved
   "Description copied from class: MouseAdapter
 
   e - `java.awt.event.MouseEvent`"
-  ([this e]
+  ([^javax.swing.text.html.HTMLEditorKit$LinkController this ^java.awt.event.MouseEvent e]
     (-> this (.mouseMoved e))))
 

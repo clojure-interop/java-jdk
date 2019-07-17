@@ -15,14 +15,14 @@
    point as defined by Character.isValidCodePoint(int).
 
   c - The illegal Unicode code point - `int`"
-  ([c]
+  ([^Integer c]
     (new IllegalFormatCodePointException c)))
 
 (defn get-code-point
   "Returns the illegal code point as defined by Character.isValidCodePoint(int).
 
   returns: The illegal Unicode code point - `int`"
-  ([this]
+  ([^java.util.IllegalFormatCodePointException this]
     (-> this (.getCodePoint))))
 
 (defn get-message
@@ -30,6 +30,6 @@
 
   returns: the detail message string of this Throwable instance
             (which may be null). - `java.lang.String`"
-  ([this]
+  ([^java.util.IllegalFormatCodePointException this]
     (-> this (.getMessage))))
 

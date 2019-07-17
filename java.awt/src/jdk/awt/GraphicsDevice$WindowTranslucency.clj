@@ -57,6 +57,6 @@
   returns: the enum constant with the specified name - `java.awt.GraphicsDevice.WindowTranslucency`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([name]
+  ([^java.lang.String name]
     (GraphicsDevice$WindowTranslucency/valueOf name)))
 

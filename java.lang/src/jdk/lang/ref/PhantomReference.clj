@@ -32,7 +32,7 @@
 
   referent - the object the new phantom reference will refer to - `PhantomReference.T`
   q - the queue with which the reference is to be registered, or null if registration is not required - `PhantomReference.T>`"
-  ([referent q]
+  ([^PhantomReference.T referent ^PhantomReference.T> q]
     (new PhantomReference referent q)))
 
 (defn get
@@ -41,6 +41,6 @@
    null.
 
   returns: null - `PhantomReference.T`"
-  ([this]
+  ([^java.lang.ref.PhantomReference this]
     (-> this (.get))))
 

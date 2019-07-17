@@ -14,7 +14,7 @@
   "Constructor.
 
   bindings - `java.lang.Object[]`"
-  ([bindings]
+  ([^java.lang.Object[] bindings]
     (new UIDefaults$LazyInputMap bindings)))
 
 (defn create-value
@@ -24,6 +24,6 @@
   table - a UIDefaults table - `javax.swing.UIDefaults`
 
   returns: the InputMap - `java.lang.Object`"
-  ([this table]
+  ([^javax.swing.UIDefaults$LazyInputMap this ^javax.swing.UIDefaults table]
     (-> this (.createValue table))))
 

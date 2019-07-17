@@ -17,22 +17,22 @@
   exception - The SQLException the driver is about to throw to the application - `java.sql.SQLException`
 
   throws: java.lang.IllegalArgumentException - if con is null."
-  ([con statement exception]
+  ([^javax.sql.PooledConnection con ^java.sql.PreparedStatement statement ^java.sql.SQLException exception]
     (new StatementEvent con statement exception))
-  ([con statement]
+  ([^javax.sql.PooledConnection con ^java.sql.PreparedStatement statement]
     (new StatementEvent con statement)))
 
 (defn get-statement
   "Returns the PreparedStatement that is being closed or is invalid
 
   returns: The PreparedStatement that is being closed or is invalid - `java.sql.PreparedStatement`"
-  ([this]
+  ([^javax.sql.StatementEvent this]
     (-> this (.getStatement))))
 
 (defn get-sql-exception
   "Returns the SQLException the driver is about to throw
 
   returns: The SQLException the driver is about to throw - `java.sql.SQLException`"
-  ([this]
+  ([^javax.sql.StatementEvent this]
     (-> this (.getSQLException))))
 

@@ -43,7 +43,7 @@
   soundbank - soundbank containing instruments to unload - `javax.sound.midi.Soundbank`
 
   throws: java.lang.IllegalArgumentException - thrown if the soundbank is not supported."
-  ([this soundbank]
+  ([^. this ^javax.sound.midi.Soundbank soundbank]
     (-> this (.unloadAllInstruments soundbank))))
 
 (defn get-default-soundbank
@@ -53,7 +53,7 @@
    be loaded explicitly from an external soundbank.
 
   returns: default soundbank, or null if one does not exist. - `javax.sound.midi.Soundbank`"
-  ([this]
+  ([^. this]
     (-> this (.getDefaultSoundbank))))
 
 (defn load-all-instruments
@@ -67,7 +67,7 @@
    loaded (for example, if the Synthesizer had insufficient memory) - `boolean`
 
   throws: java.lang.IllegalArgumentException - if the requested soundbank is incompatible with this synthesizer."
-  ([this soundbank]
+  ([^. this ^javax.sound.midi.Soundbank soundbank]
     (-> this (.loadAllInstruments soundbank))))
 
 (defn load-instruments
@@ -85,14 +85,14 @@
    loaded (for example, if the Synthesizer had insufficient memory) - `boolean`
 
   throws: java.lang.IllegalArgumentException - thrown if the soundbank is not supported."
-  ([this soundbank patch-list]
+  ([^. this ^javax.sound.midi.Soundbank soundbank ^javax.sound.midi.Patch[] patch-list]
     (-> this (.loadInstruments soundbank patch-list))))
 
 (defn get-max-polyphony
   "Obtains the maximum number of notes that this synthesizer can sound simultaneously.
 
   returns: the maximum number of simultaneous notes - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getMaxPolyphony))))
 
 (defn get-available-instruments
@@ -111,7 +111,7 @@
 
   returns: list of available instruments. If the synthesizer
    has no instruments coming with it, an array of length 0 is returned. - `javax.sound.midi.Instrument[]`"
-  ([this]
+  ([^. this]
     (-> this (.getAvailableInstruments))))
 
 (defn get-voice-status
@@ -124,7 +124,7 @@
 
   returns: an array of VoiceStatus objects that supply
    information about the corresponding synthesizer voices - `javax.sound.midi.VoiceStatus[]`"
-  ([this]
+  ([^. this]
     (-> this (.getVoiceStatus))))
 
 (defn soundbank-supported?
@@ -136,7 +136,7 @@
   soundbank - soundbank for which support is queried - `javax.sound.midi.Soundbank`
 
   returns: true if the soundbank is supported, otherwise false - `boolean`"
-  ([this soundbank]
+  ([^. this ^javax.sound.midi.Soundbank soundbank]
     (-> this (.isSoundbankSupported soundbank))))
 
 (defn unload-instrument
@@ -145,7 +145,7 @@
   instrument - instrument to unload - `javax.sound.midi.Instrument`
 
   throws: java.lang.IllegalArgumentException - if this Synthesizer doesn't support the specified instrument's soundbank"
-  ([this instrument]
+  ([^. this ^javax.sound.midi.Instrument instrument]
     (-> this (.unloadInstrument instrument))))
 
 (defn get-channels
@@ -161,7 +161,7 @@
 
   returns: an array of the MidiChannel objects managed by this
    Synthesizer.  Some of the array elements may be null. - `javax.sound.midi.MidiChannel[]`"
-  ([this]
+  ([^. this]
     (-> this (.getChannels))))
 
 (defn load-instrument
@@ -186,7 +186,7 @@
    memory to load it) - `boolean`
 
   throws: java.lang.IllegalArgumentException - if this Synthesizer doesn't support the specified instrument's soundbank"
-  ([this instrument]
+  ([^. this ^javax.sound.midi.Instrument instrument]
     (-> this (.loadInstrument instrument))))
 
 (defn remap-instrument
@@ -207,7 +207,7 @@
    false if feature is not implemented by synthesizer - `boolean`
 
   throws: java.lang.IllegalArgumentException - if instrument from or instrument to aren't supported by synthesizer or if instrument to is not loaded"
-  ([this from to]
+  ([^. this ^javax.sound.midi.Instrument from ^javax.sound.midi.Instrument to]
     (-> this (.remapInstrument from to))))
 
 (defn get-latency
@@ -221,7 +221,7 @@
    a synthesizer might have a worst-case delay of a few milliseconds or more.
 
   returns: the worst-case delay, in microseconds - `long`"
-  ([this]
+  ([^. this]
     (-> this (.getLatency))))
 
 (defn get-loaded-instruments
@@ -229,7 +229,7 @@
    Synthesizer.
 
   returns: a list of currently loaded instruments - `javax.sound.midi.Instrument[]`"
-  ([this]
+  ([^. this]
     (-> this (.getLoadedInstruments))))
 
 (defn unload-instruments
@@ -239,6 +239,6 @@
   patch-list - list of patches for which instruments should be unloaded - `javax.sound.midi.Patch[]`
 
   throws: java.lang.IllegalArgumentException - thrown if the soundbank is not supported."
-  ([this soundbank patch-list]
+  ([^. this ^javax.sound.midi.Soundbank soundbank ^javax.sound.midi.Patch[] patch-list]
     (-> this (.unloadInstruments soundbank patch-list))))
 

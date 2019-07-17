@@ -13,6 +13,6 @@
   value - the function argument - `ToDoubleFunction.T`
 
   returns: the function result - `double`"
-  ([this value]
+  ([^. this ^ToDoubleFunction.T value]
     (-> this (.applyAsDouble value))))
 

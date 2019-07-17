@@ -122,7 +122,7 @@
   returns: the factory implementation - `javax.xml.stream.XMLInputFactory`
 
   throws: javax.xml.stream.FactoryConfigurationError - if an instance of this factory cannot be loaded"
-  ([factory-id class-loader]
+  ([^java.lang.String factory-id ^java.lang.ClassLoader class-loader]
     (XMLInputFactory/newInstance factory-id class-loader))
   ([]
     (XMLInputFactory/newInstance )))
@@ -171,7 +171,7 @@
   returns: the factory implementation - `javax.xml.stream.XMLInputFactory`
 
   throws: javax.xml.stream.FactoryConfigurationError - if an instance of this factory cannot be loaded"
-  ([factory-id class-loader]
+  ([^java.lang.String factory-id ^java.lang.ClassLoader class-loader]
     (XMLInputFactory/newFactory factory-id class-loader))
   ([]
     (XMLInputFactory/newFactory )))
@@ -185,9 +185,9 @@
   returns: `javax.xml.stream.XMLStreamReader`
 
   throws: javax.xml.stream.XMLStreamException"
-  ([this stream encoding]
+  ([^javax.xml.stream.XMLInputFactory this ^java.io.InputStream stream ^java.lang.String encoding]
     (-> this (.createXMLStreamReader stream encoding)))
-  ([this reader]
+  ([^javax.xml.stream.XMLInputFactory this ^java.io.Reader reader]
     (-> this (.createXMLStreamReader reader))))
 
 (defn property-supported?
@@ -196,7 +196,7 @@
   name - The name of the property (may not be null) - `java.lang.String`
 
   returns: true if the property is supported and false otherwise - `boolean`"
-  ([this name]
+  ([^javax.xml.stream.XMLInputFactory this ^java.lang.String name]
     (-> this (.isPropertySupported name))))
 
 (defn create-filtered-reader
@@ -208,14 +208,14 @@
   returns: `javax.xml.stream.XMLStreamReader`
 
   throws: javax.xml.stream.XMLStreamException"
-  ([this reader filter]
+  ([^javax.xml.stream.XMLInputFactory this ^javax.xml.stream.XMLStreamReader reader ^javax.xml.stream.StreamFilter filter]
     (-> this (.createFilteredReader reader filter))))
 
 (defn set-event-allocator
   "Set a user defined event allocator for events
 
   allocator - the user defined allocator - `javax.xml.stream.util.XMLEventAllocator`"
-  ([this allocator]
+  ([^javax.xml.stream.XMLInputFactory this ^javax.xml.stream.util.XMLEventAllocator allocator]
     (-> this (.setEventAllocator allocator))))
 
 (defn set-xml-reporter
@@ -223,7 +223,7 @@
    by this factory instance.
 
   reporter - the resolver to use to report non fatal errors - `javax.xml.stream.XMLReporter`"
-  ([this reporter]
+  ([^javax.xml.stream.XMLInputFactory this ^javax.xml.stream.XMLReporter reporter]
     (-> this (.setXMLReporter reporter))))
 
 (defn get-property
@@ -234,7 +234,7 @@
   returns: The value of the property - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if the property is not supported"
-  ([this name]
+  ([^javax.xml.stream.XMLInputFactory this ^java.lang.String name]
     (-> this (.getProperty name))))
 
 (defn set-xml-resolver
@@ -242,14 +242,14 @@
    by this factory instance.
 
   resolver - the resolver to use to resolve references - `javax.xml.stream.XMLResolver`"
-  ([this resolver]
+  ([^javax.xml.stream.XMLInputFactory this ^javax.xml.stream.XMLResolver resolver]
     (-> this (.setXMLResolver resolver))))
 
 (defn get-event-allocator
   "Gets the allocator used by streams created with this factory
 
   returns: `javax.xml.stream.util.XMLEventAllocator`"
-  ([this]
+  ([^javax.xml.stream.XMLInputFactory this]
     (-> this (.getEventAllocator))))
 
 (defn set-property
@@ -275,7 +275,7 @@
   value - The value of the property - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if the property is not supported"
-  ([this name value]
+  ([^javax.xml.stream.XMLInputFactory this ^java.lang.String name ^java.lang.Object value]
     (-> this (.setProperty name value))))
 
 (defn create-xml-event-reader
@@ -287,9 +287,9 @@
   returns: `javax.xml.stream.XMLEventReader`
 
   throws: javax.xml.stream.XMLStreamException"
-  ([this system-id reader]
+  ([^javax.xml.stream.XMLInputFactory this ^java.lang.String system-id ^java.io.Reader reader]
     (-> this (.createXMLEventReader system-id reader)))
-  ([this reader]
+  ([^javax.xml.stream.XMLInputFactory this ^java.io.Reader reader]
     (-> this (.createXMLEventReader reader))))
 
 (defn get-xml-resolver
@@ -297,7 +297,7 @@
    by this factory instance.
 
   returns: `javax.xml.stream.XMLResolver`"
-  ([this]
+  ([^javax.xml.stream.XMLInputFactory this]
     (-> this (.getXMLResolver))))
 
 (defn get-xml-reporter
@@ -305,6 +305,6 @@
    by this factory instance.
 
   returns: `javax.xml.stream.XMLReporter`"
-  ([this]
+  ([^javax.xml.stream.XMLInputFactory this]
     (-> this (.getXMLReporter))))
 

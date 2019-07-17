@@ -30,9 +30,9 @@
 
   filename - the name of the file containing the image - `java.lang.String`
   description - a brief textual description of the image - `java.lang.String`"
-  ([filename description]
+  ([^java.lang.String filename ^java.lang.String description]
     (new ImageIcon filename description))
-  ([filename]
+  ([^java.lang.String filename]
     (new ImageIcon filename))
   ([]
     (new ImageIcon )))
@@ -41,14 +41,14 @@
   "Returns this icon's Image.
 
   returns: the Image object for this ImageIcon - `java.awt.Image`"
-  ([this]
+  ([^javax.swing.ImageIcon this]
     (-> this (.getImage))))
 
 (defn get-icon-height
   "Gets the height of the icon.
 
   returns: the height in pixels of this icon - `int`"
-  ([this]
+  ([^javax.swing.ImageIcon this]
     (-> this (.getIconHeight))))
 
 (defn set-description
@@ -58,7 +58,7 @@
    of the image.
 
   description - a brief textual description of the image - `java.lang.String`"
-  ([this description]
+  ([^javax.swing.ImageIcon this ^java.lang.String description]
     (-> this (.setDescription description))))
 
 (defn set-image-observer
@@ -73,21 +73,21 @@
        icon.setImageObserver(button);
 
   observer - the image observer - `java.awt.image.ImageObserver`"
-  ([this observer]
+  ([^javax.swing.ImageIcon this ^java.awt.image.ImageObserver observer]
     (-> this (.setImageObserver observer))))
 
 (defn set-image
   "Sets the image displayed by this icon.
 
   image - the image - `java.awt.Image`"
-  ([this image]
+  ([^javax.swing.ImageIcon this ^java.awt.Image image]
     (-> this (.setImage image))))
 
 (defn to-string
   "Returns a string representation of this image.
 
   returns: a string representing this image - `java.lang.String`"
-  ([this]
+  ([^javax.swing.ImageIcon this]
     (-> this (.toString))))
 
 (defn get-description
@@ -98,14 +98,14 @@
    The description may be null.
 
   returns: a brief textual description of the image - `java.lang.String`"
-  ([this]
+  ([^javax.swing.ImageIcon this]
     (-> this (.getDescription))))
 
 (defn get-icon-width
   "Gets the width of the icon.
 
   returns: the width in pixels of this icon - `int`"
-  ([this]
+  ([^javax.swing.ImageIcon this]
     (-> this (.getIconWidth))))
 
 (defn paint-icon
@@ -121,7 +121,7 @@
   g - the graphics context - `java.awt.Graphics`
   x - the X coordinate of the icon's top-left corner - `int`
   y - the Y coordinate of the icon's top-left corner - `int`"
-  ([this c g x y]
+  ([^javax.swing.ImageIcon this ^java.awt.Component c ^java.awt.Graphics g ^Integer x ^Integer y]
     (-> this (.paintIcon c g x y))))
 
 (defn get-accessible-context
@@ -132,20 +132,20 @@
 
   returns: an AccessibleImageIcon that serves as the
            AccessibleContext of this ImageIcon - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^javax.swing.ImageIcon this]
     (-> this (.getAccessibleContext))))
 
 (defn get-image-load-status
   "Returns the status of the image loading operation.
 
   returns: the loading status as defined by java.awt.MediaTracker - `int`"
-  ([this]
+  ([^javax.swing.ImageIcon this]
     (-> this (.getImageLoadStatus))))
 
 (defn get-image-observer
   "Returns the image observer for the image.
 
   returns: the image observer, which may be null - `java.awt.image.ImageObserver`"
-  ([this]
+  ([^javax.swing.ImageIcon this]
     (-> this (.getImageObserver))))
 

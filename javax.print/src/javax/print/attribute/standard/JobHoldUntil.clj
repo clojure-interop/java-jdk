@@ -55,7 +55,7 @@
   date-time - Date value. - `java.util.Date`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if dateTime is null."
-  ([date-time]
+  ([^java.util.Date date-time]
     (new JobHoldUntil date-time)))
 
 (defn equals
@@ -75,7 +75,7 @@
 
   returns: True if object is equivalent to this job hold
             until attribute, false otherwise. - `boolean`"
-  ([this object]
+  ([^javax.print.attribute.standard.JobHoldUntil this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -86,7 +86,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([this]
+  ([^javax.print.attribute.standard.JobHoldUntil this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -96,6 +96,6 @@
    For class JobHoldUntil, the category name is `job-hold-until`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([this]
+  ([^javax.print.attribute.standard.JobHoldUntil this]
     (-> this (.getName))))
 

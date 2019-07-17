@@ -63,14 +63,14 @@
   c - the cipher used to seal the object. - `javax.crypto.Cipher`
 
   throws: java.lang.NullPointerException - if the given cipher is null."
-  ([object c]
+  ([^java.io.Serializable object ^javax.crypto.Cipher c]
     (new SealedObject object c)))
 
 (defn get-algorithm
   "Returns the algorithm that was used to seal this object.
 
   returns: the algorithm that was used to seal this object. - `java.lang.String`"
-  ([this]
+  ([^javax.crypto.SealedObject this]
     (-> this (.getAlgorithm))))
 
 (defn get-object
@@ -92,8 +92,8 @@
   returns: the original object. - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if the given provider is null or empty."
-  ([this key provider]
+  ([^javax.crypto.SealedObject this ^java.security.Key key ^java.lang.String provider]
     (-> this (.getObject key provider)))
-  ([this key]
+  ([^javax.crypto.SealedObject this ^java.security.Key key]
     (-> this (.getObject key))))
 

@@ -106,7 +106,7 @@
   returns: method handle which incorporates the specified argument subsequence filtering logic - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NullPointerException - if either argument is null"
-  ([target pos filter]
+  ([^java.lang.invoke.MethodHandle target ^Integer pos ^java.lang.invoke.MethodHandle filter]
     (MethodHandles/collectArguments target pos filter)))
 
 (defn *reflect-as
@@ -128,7 +128,7 @@
   returns: a reference to the method, constructor, or field object - `<T extends java.lang.reflect.Member> T`
 
   throws: java.lang.SecurityException - if the caller is not privileged to call setAccessible"
-  ([expected target]
+  ([^java.lang.Class expected ^java.lang.invoke.MethodHandle target]
     (MethodHandles/reflectAs expected target)))
 
 (defn *permute-arguments
@@ -187,7 +187,7 @@
              drops unused arguments and moves and/or duplicates the other arguments - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NullPointerException - if any argument is null"
-  ([target new-type reorder]
+  ([^java.lang.invoke.MethodHandle target ^java.lang.invoke.MethodType new-type ^Integer reorder]
     (MethodHandles/permuteArguments target new-type reorder)))
 
 (defn *guard-with-test
@@ -221,7 +221,7 @@
   returns: method handle which incorporates the specified if/then/else logic - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NullPointerException - if any argument is null"
-  ([test target fallback]
+  ([^java.lang.invoke.MethodHandle test ^java.lang.invoke.MethodHandle target ^java.lang.invoke.MethodHandle fallback]
     (MethodHandles/guardWithTest test target fallback)))
 
 (defn *catch-exception
@@ -265,7 +265,7 @@
   returns: method handle which incorporates the specified try/catch logic - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NullPointerException - if any argument is null"
-  ([target ex-type handler]
+  ([^java.lang.invoke.MethodHandle target ^java.lang.Throwable> ex-type ^java.lang.invoke.MethodHandle handler]
     (MethodHandles/catchException target ex-type handler)))
 
 (defn *constant
@@ -283,7 +283,7 @@
   returns: a method handle of the given return type and no arguments, which always returns the given value - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NullPointerException - if the type argument is null"
-  ([type value]
+  ([^java.lang.Class type ^java.lang.Object value]
     (MethodHandles/constant type value)))
 
 (defn *array-element-setter
@@ -297,7 +297,7 @@
   returns: a method handle which can store values into the array type - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NullPointerException - if the argument is null"
-  ([array-class]
+  ([^java.lang.Class array-class]
     (MethodHandles/arrayElementSetter array-class)))
 
 (defn *spread-invoker
@@ -344,7 +344,7 @@
   returns: a method handle suitable for invoking any method handle of the given type - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NullPointerException - if type is null"
-  ([type leading-arg-count]
+  ([^java.lang.invoke.MethodType type ^Integer leading-arg-count]
     (MethodHandles/spreadInvoker type leading-arg-count)))
 
 (defn *array-element-getter
@@ -358,7 +358,7 @@
   returns: a method handle which can load values from the given array type - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NullPointerException - if the argument is null"
-  ([array-class]
+  ([^java.lang.Class array-class]
     (MethodHandles/arrayElementGetter array-class)))
 
 (defn *filter-return-value
@@ -418,7 +418,7 @@
   returns: method handle which incorporates the specified return value filtering logic - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NullPointerException - if either argument is null"
-  ([target filter]
+  ([^java.lang.invoke.MethodHandle target ^java.lang.invoke.MethodHandle filter]
     (MethodHandles/filterReturnValue target filter)))
 
 (defn *lookup
@@ -503,7 +503,7 @@
   returns: a method handle suitable for invoking any method handle convertible to the given type - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.IllegalArgumentException - if the resulting method handle's type would have too many parameters"
-  ([type]
+  ([^java.lang.invoke.MethodType type]
     (MethodHandles/invoker type)))
 
 (defn *drop-arguments
@@ -546,7 +546,7 @@
            before calling the original method handle - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NullPointerException - if the target is null, or if the valueTypes list or any of its elements is null"
-  ([target pos value-types]
+  ([^java.lang.invoke.MethodHandle target ^Integer pos ^java.util.List> value-types]
     (MethodHandles/dropArguments target pos value-types)))
 
 (defn *identity
@@ -557,7 +557,7 @@
   returns: a unary method handle which accepts and returns the given type - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NullPointerException - if the argument is null"
-  ([type]
+  ([^java.lang.Class type]
     (MethodHandles/identity type)))
 
 (defn *fold-arguments
@@ -632,7 +632,7 @@
   returns: method handle which incorporates the specified argument folding logic - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NullPointerException - if either argument is null"
-  ([target combiner]
+  ([^java.lang.invoke.MethodHandle target ^java.lang.invoke.MethodHandle combiner]
     (MethodHandles/foldArguments target combiner)))
 
 (defn *throw-exception
@@ -649,7 +649,7 @@
   returns: method handle which can throw the given exceptions - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NullPointerException - if either argument is null"
-  ([return-type ex-type]
+  ([^java.lang.Class return-type ^java.lang.Throwable> ex-type]
     (MethodHandles/throwException return-type ex-type)))
 
 (defn *exact-invoker
@@ -688,7 +688,7 @@
   returns: a method handle suitable for invoking any method handle of the given type - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.IllegalArgumentException - if the resulting method handle's type would have too many parameters"
-  ([type]
+  ([^java.lang.invoke.MethodType type]
     (MethodHandles/exactInvoker type)))
 
 (defn *explicit-cast-arguments
@@ -734,7 +734,7 @@
              necessary return value conversions - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NullPointerException - if either argument is null"
-  ([target new-type]
+  ([^java.lang.invoke.MethodHandle target ^java.lang.invoke.MethodType new-type]
     (MethodHandles/explicitCastArguments target new-type)))
 
 (defn *insert-arguments
@@ -768,7 +768,7 @@
            before calling the original method handle - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NullPointerException - if the target or the values array is null"
-  ([target pos values]
+  ([^java.lang.invoke.MethodHandle target ^Integer pos ^java.lang.Object values]
     (MethodHandles/insertArguments target pos values)))
 
 (defn *filter-arguments
@@ -831,6 +831,6 @@
   returns: method handle which incorporates the specified argument filtering logic - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NullPointerException - if the target is null or if the filters array is null"
-  ([target pos filters]
+  ([^java.lang.invoke.MethodHandle target ^Integer pos ^java.lang.invoke.MethodHandle filters]
     (MethodHandles/filterArguments target pos filters)))
 

@@ -26,7 +26,7 @@
 
   source - the JInternalFrame object that originated the event - `javax.swing.JInternalFrame`
   id - an integer indicating the type of event - `int`"
-  ([source id]
+  ([^javax.swing.JInternalFrame source ^Integer id]
     (new InternalFrameEvent source id)))
 
 (def *-internal-frame-first
@@ -119,13 +119,13 @@
    This method is useful for event logging and for debugging.
 
   returns: a string identifying the event and its attributes - `java.lang.String`"
-  ([this]
+  ([^javax.swing.event.InternalFrameEvent this]
     (-> this (.paramString))))
 
 (defn get-internal-frame
   "Returns the originator of the event.
 
   returns: the JInternalFrame object that originated the event - `javax.swing.JInternalFrame`"
-  ([this]
+  ([^javax.swing.event.InternalFrameEvent this]
     (-> this (.getInternalFrame))))
 

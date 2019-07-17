@@ -13,8 +13,8 @@
 
   event - a TreeExpansionEvent object - `javax.swing.event.TreeExpansionEvent`
   message - a String containing the message - `java.lang.String`"
-  ([event message]
+  ([^javax.swing.event.TreeExpansionEvent event ^java.lang.String message]
     (new ExpandVetoException event message))
-  ([event]
+  ([^javax.swing.event.TreeExpansionEvent event]
     (new ExpandVetoException event)))
 

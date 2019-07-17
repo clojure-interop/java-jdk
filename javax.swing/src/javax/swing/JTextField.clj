@@ -123,11 +123,11 @@
   columns - the number of columns to use to calculate the preferred width >= 0; if columns is set to zero, the preferred width will be whatever naturally results from the component implementation - `int`
 
   throws: java.lang.IllegalArgumentException - if columns < 0"
-  ([doc text columns]
+  ([^javax.swing.text.Document doc ^java.lang.String text ^Integer columns]
     (new JTextField doc text columns))
-  ([text columns]
+  ([^java.lang.String text ^Integer columns]
     (new JTextField text columns))
-  ([text]
+  ([^java.lang.String text]
     (new JTextField text))
   ([]
     (new JTextField )))
@@ -146,7 +146,7 @@
   "Gets the scroll offset, in pixels.
 
   returns: the offset >= 0 - `int`"
-  ([this]
+  ([^javax.swing.JTextField this]
     (-> this (.getScrollOffset))))
 
 (defn set-columns
@@ -156,7 +156,7 @@
   columns - the number of columns >= 0 - `int`
 
   throws: java.lang.IllegalArgumentException - if columns is less than 0"
-  ([this columns]
+  ([^javax.swing.JTextField this ^Integer columns]
     (-> this (.setColumns columns))))
 
 (defn post-action-event
@@ -164,7 +164,7 @@
    dispatching them to any registered ActionListener objects.
    This is normally called by the controller registered with
    textfield."
-  ([this]
+  ([^javax.swing.JTextField this]
     (-> this (.postActionEvent))))
 
 (defn set-document
@@ -174,21 +174,21 @@
    A PropertyChange event (`document`) is propagated to each listener.
 
   doc - the document to display/edit - `javax.swing.text.Document`"
-  ([this doc]
+  ([^javax.swing.JTextField this ^javax.swing.text.Document doc]
     (-> this (.setDocument doc))))
 
 (defn scroll-rect-to-visible
   "Scrolls the field left or right.
 
   r - the region to scroll - `java.awt.Rectangle`"
-  ([this r]
+  ([^javax.swing.JTextField this ^java.awt.Rectangle r]
     (-> this (.scrollRectToVisible r))))
 
 (defn get-columns
   "Returns the number of columns in this TextField.
 
   returns: the number of columns >= 0 - `int`"
-  ([this]
+  ([^javax.swing.JTextField this]
     (-> this (.getColumns))))
 
 (defn get-action
@@ -198,7 +198,7 @@
 
   returns: the Action for this ActionEvent source,
             or null - `javax.swing.Action`"
-  ([this]
+  ([^javax.swing.JTextField this]
     (-> this (.getAction))))
 
 (defn add-action-listener
@@ -206,7 +206,7 @@
    action events from this textfield.
 
   l - the action listener to be added - `java.awt.event.ActionListener`"
-  ([this l]
+  ([^javax.swing.JTextField this ^java.awt.event.ActionListener l]
     (-> this (.addActionListener l))))
 
 (defn get-actions
@@ -217,14 +217,14 @@
    to events, such as in a keymap.
 
   returns: the command list - `javax.swing.Action[]`"
-  ([this]
+  ([^javax.swing.JTextField this]
     (-> this (.getActions))))
 
 (defn get-ui-class-id
   "Gets the class ID for a UI.
 
   returns: the string `TextFieldUI` - `java.lang.String`"
-  ([this]
+  ([^javax.swing.JTextField this]
     (-> this (.getUIClassID))))
 
 (defn get-horizontal-visibility
@@ -239,7 +239,7 @@
    properties on the BoundedRangeModel.
 
   returns: the visibility - `javax.swing.BoundedRangeModel`"
-  ([this]
+  ([^javax.swing.JTextField this]
     (-> this (.getHorizontalVisibility))))
 
 (defn validate-root?
@@ -251,14 +251,14 @@
 
   returns: if the parent of this textfield is a JViewPort
             return false, otherwise return true - `boolean`"
-  ([this]
+  ([^javax.swing.JTextField this]
     (-> this (.isValidateRoot))))
 
 (defn set-scroll-offset
   "Sets the scroll offset, in pixels.
 
   scroll-offset - the offset >= 0 - `int`"
-  ([this scroll-offset]
+  ([^javax.swing.JTextField this ^Integer scroll-offset]
     (-> this (.setScrollOffset scroll-offset))))
 
 (defn get-action-listeners
@@ -267,7 +267,7 @@
 
   returns: all of the ActionListeners added or an empty
            array if no listeners have been added - `java.awt.event.ActionListener[]`"
-  ([this]
+  ([^javax.swing.JTextField this]
     (-> this (.getActionListeners))))
 
 (defn set-font
@@ -276,7 +276,7 @@
    revalidate is called after setting the font.
 
   f - the new font - `java.awt.Font`"
-  ([this f]
+  ([^javax.swing.JTextField this ^java.awt.Font f]
     (-> this (.setFont f))))
 
 (defn get-accessible-context
@@ -289,7 +289,7 @@
 
   returns: an AccessibleJTextField that serves as the
            AccessibleContext of this JTextField - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^javax.swing.JTextField this]
     (-> this (.getAccessibleContext))))
 
 (defn get-horizontal-alignment
@@ -303,7 +303,7 @@
    JTextField.TRAILING
 
   returns: the horizontal alignment - `int`"
-  ([this]
+  ([^javax.swing.JTextField this]
     (-> this (.getHorizontalAlignment))))
 
 (defn remove-action-listener
@@ -311,7 +311,7 @@
    receives action events from this textfield.
 
   l - the action listener to be removed - `java.awt.event.ActionListener`"
-  ([this l]
+  ([^javax.swing.JTextField this ^java.awt.event.ActionListener l]
     (-> this (.removeActionListener l))))
 
 (defn set-action
@@ -342,7 +342,7 @@
    Action changes.
 
   a - the Action for the JTextField, or null - `javax.swing.Action`"
-  ([this a]
+  ([^javax.swing.JTextField this ^javax.swing.Action a]
     (-> this (.setAction a))))
 
 (defn set-horizontal-alignment
@@ -362,14 +362,14 @@
   alignment - the alignment - `int`
 
   throws: java.lang.IllegalArgumentException - if alignment is not a valid key"
-  ([this alignment]
+  ([^javax.swing.JTextField this ^Integer alignment]
     (-> this (.setHorizontalAlignment alignment))))
 
 (defn set-action-command
   "Sets the command string used for action events.
 
   command - the command string - `java.lang.String`"
-  ([this command]
+  ([^javax.swing.JTextField this ^java.lang.String command]
     (-> this (.setActionCommand command))))
 
 (defn get-preferred-size
@@ -379,6 +379,6 @@
    the column width.
 
   returns: the dimension of this textfield - `java.awt.Dimension`"
-  ([this]
+  ([^javax.swing.JTextField this]
     (-> this (.getPreferredSize))))
 

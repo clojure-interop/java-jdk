@@ -18,7 +18,7 @@
   label - a non-null string specifying the popup menu's label - `java.lang.String`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true."
-  ([label]
+  ([^java.lang.String label]
     (new PopupMenu label))
   ([]
     (new PopupMenu )))
@@ -29,14 +29,14 @@
   returns: the menu component containing this menu component,
                    or null if this menu component
                    is the outermost component, the menu bar itself - `java.awt.MenuContainer`"
-  ([this]
+  ([^java.awt.PopupMenu this]
     (-> this (.getParent))))
 
 (defn add-notify
   "Creates the popup menu's peer.
    The peer allows us to change the appearance of the popup menu without
    changing any of the popup menu's functionality."
-  ([this]
+  ([^java.awt.PopupMenu this]
     (-> this (.addNotify))))
 
 (defn show
@@ -55,7 +55,7 @@
   y - the y coordinate position to popup the menu - `int`
 
   throws: java.lang.NullPointerException - if the parent is null"
-  ([this origin x y]
+  ([^java.awt.PopupMenu this ^java.awt.Component origin ^Integer x ^Integer y]
     (-> this (.show origin x y))))
 
 (defn get-accessible-context
@@ -64,6 +64,6 @@
 
   returns: the AccessibleContext of this
                   PopupMenu - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^java.awt.PopupMenu this]
     (-> this (.getAccessibleContext))))
 

@@ -19,7 +19,7 @@
    thread becomes disabled for thread scheduling purposes and
    lies dormant until the write lock has been acquired, at which
    time the write lock hold count is set to one."
-  ([this]
+  ([^java.util.concurrent.locks.ReentrantReadWriteLock$WriteLock this]
     (-> this (.lock))))
 
 (defn lock-interruptibly
@@ -72,7 +72,7 @@
    lock.
 
   throws: java.lang.InterruptedException - if the current thread is interrupted"
-  ([this]
+  ([^java.util.concurrent.locks.ReentrantReadWriteLock$WriteLock this]
     (-> this (.lockInterruptibly))))
 
 (defn try-lock
@@ -152,9 +152,9 @@
    elapsed before the lock could be acquired. - `boolean`
 
   throws: java.lang.InterruptedException - if the current thread is interrupted"
-  ([this timeout unit]
+  ([^java.util.concurrent.locks.ReentrantReadWriteLock$WriteLock this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.tryLock timeout unit)))
-  ([this]
+  ([^java.util.concurrent.locks.ReentrantReadWriteLock$WriteLock this]
     (-> this (.tryLock))))
 
 (defn unlock
@@ -166,7 +166,7 @@
    not the holder of this lock then IllegalMonitorStateException is thrown.
 
   throws: java.lang.IllegalMonitorStateException - if the current thread does not hold this lock"
-  ([this]
+  ([^java.util.concurrent.locks.ReentrantReadWriteLock$WriteLock this]
     (-> this (.unlock))))
 
 (defn new-condition
@@ -204,7 +204,7 @@
    waiting the longest.
 
   returns: the Condition object - `java.util.concurrent.locks.Condition`"
-  ([this]
+  ([^java.util.concurrent.locks.ReentrantReadWriteLock$WriteLock this]
     (-> this (.newCondition))))
 
 (defn to-string
@@ -214,7 +214,7 @@
    followed by the name of the owning thread.
 
   returns: a string identifying this lock, as well as its lock state - `java.lang.String`"
-  ([this]
+  ([^java.util.concurrent.locks.ReentrantReadWriteLock$WriteLock this]
     (-> this (.toString))))
 
 (defn held-by-current-thread?
@@ -223,7 +223,7 @@
 
   returns: true if the current thread holds this lock and
            false otherwise - `boolean`"
-  ([this]
+  ([^java.util.concurrent.locks.ReentrantReadWriteLock$WriteLock this]
     (-> this (.isHeldByCurrentThread))))
 
 (defn get-hold-count
@@ -234,6 +234,6 @@
 
   returns: the number of holds on this lock by the current thread,
            or zero if this lock is not held by the current thread - `int`"
-  ([this]
+  ([^java.util.concurrent.locks.ReentrantReadWriteLock$WriteLock this]
     (-> this (.getHoldCount))))
 

@@ -17,9 +17,9 @@
   sample-model - a SampleModel. - `java.awt.image.SampleModel`
 
   throws: java.lang.IllegalArgumentException - if sampleModel is not compatible with colorModel."
-  ([color-model sample-model]
+  ([^java.awt.image.ColorModel color-model ^java.awt.image.SampleModel sample-model]
     (new ImageTypeSpecifier color-model sample-model))
-  ([image]
+  ([^java.awt.image.RenderedImage image]
     (new ImageTypeSpecifier image)))
 
 (defn *create-packed
@@ -40,7 +40,7 @@
    characteristics. - `javax.imageio.ImageTypeSpecifier`
 
   throws: java.lang.IllegalArgumentException - if transferType if not one of DataBuffer.TYPE_BYTE, DataBuffer.TYPE_USHORT, or DataBuffer.TYPE_INT."
-  ([color-space red-mask green-mask blue-mask alpha-mask transfer-type is-alpha-premultiplied]
+  ([^java.awt.color.ColorSpace color-space ^Integer red-mask ^Integer green-mask ^Integer blue-mask ^Integer alpha-mask ^Integer transfer-type ^Boolean is-alpha-premultiplied]
     (ImageTypeSpecifier/createPacked color-space red-mask green-mask blue-mask alpha-mask transfer-type is-alpha-premultiplied)))
 
 (defn *create-interleaved
@@ -59,7 +59,7 @@
    characteristics. - `javax.imageio.ImageTypeSpecifier`
 
   throws: java.lang.IllegalArgumentException - if bandOffsets.length does not equal the number of color space components, plus 1 if hasAlpha is true."
-  ([color-space band-offsets data-type has-alpha is-alpha-premultiplied]
+  ([^java.awt.color.ColorSpace color-space band-offsets ^Integer data-type ^Boolean has-alpha ^Boolean is-alpha-premultiplied]
     (ImageTypeSpecifier/createInterleaved color-space band-offsets data-type has-alpha is-alpha-premultiplied)))
 
 (defn *create-banded
@@ -79,7 +79,7 @@
    characteristics. - `javax.imageio.ImageTypeSpecifier`
 
   throws: java.lang.IllegalArgumentException - if dataType is not one of the legal DataBuffer.TYPE_* constants."
-  ([color-space bank-indices band-offsets data-type has-alpha is-alpha-premultiplied]
+  ([^java.awt.color.ColorSpace color-space bank-indices band-offsets ^Integer data-type ^Boolean has-alpha ^Boolean is-alpha-premultiplied]
     (ImageTypeSpecifier/createBanded color-space bank-indices band-offsets data-type has-alpha is-alpha-premultiplied)))
 
 (defn *create-grayscale
@@ -96,9 +96,9 @@
    characteristics. - `javax.imageio.ImageTypeSpecifier`
 
   throws: java.lang.IllegalArgumentException - if bits is larger than the bit size of the given dataType."
-  ([bits data-type is-signed is-alpha-premultiplied]
+  ([^Integer bits ^Integer data-type ^Boolean is-signed ^Boolean is-alpha-premultiplied]
     (ImageTypeSpecifier/createGrayscale bits data-type is-signed is-alpha-premultiplied))
-  ([bits data-type is-signed]
+  ([^Integer bits ^Integer data-type ^Boolean is-signed]
     (ImageTypeSpecifier/createGrayscale bits data-type is-signed)))
 
 (defn *create-indexed
@@ -117,7 +117,7 @@
    characteristics. - `javax.imageio.ImageTypeSpecifier`
 
   throws: java.lang.IllegalArgumentException - if bits is larger than the bit size of the given dataType."
-  ([red-lut green-lut blue-lut alpha-lut bits data-type]
+  ([red-lut green-lut blue-lut alpha-lut ^Integer bits ^Integer data-type]
     (ImageTypeSpecifier/createIndexed red-lut green-lut blue-lut alpha-lut bits data-type)))
 
 (defn *create-from-buffered-image-type
@@ -131,7 +131,7 @@
    characteristics. - `javax.imageio.ImageTypeSpecifier`
 
   throws: java.lang.IllegalArgumentException - if bufferedImageType is not one of the standard types, or is equal to TYPE_CUSTOM."
-  ([buffered-image-type]
+  ([^Integer buffered-image-type]
     (ImageTypeSpecifier/createFromBufferedImageType buffered-image-type)))
 
 (defn *create-from-rendered-image
@@ -145,7 +145,7 @@
    characteristics. - `javax.imageio.ImageTypeSpecifier`
 
   throws: java.lang.IllegalArgumentException - if image is null."
-  ([image]
+  ([^java.awt.image.RenderedImage image]
     (ImageTypeSpecifier/createFromRenderedImage image)))
 
 (defn get-num-bands
@@ -154,7 +154,7 @@
    SampleModel.getNumBands
 
   returns: the number of bands in the image. - `int`"
-  ([this]
+  ([^javax.imageio.ImageTypeSpecifier this]
     (-> this (.getNumBands))))
 
 (defn get-sample-model
@@ -168,9 +168,9 @@
   returns: a SampleModel with the given dimensions. - `java.awt.image.SampleModel`
 
   throws: java.lang.IllegalArgumentException - if the product of width and height is greater than Integer.MAX_VALUE"
-  ([this width height]
+  ([^javax.imageio.ImageTypeSpecifier this ^Integer width ^Integer height]
     (-> this (.getSampleModel width height)))
-  ([this]
+  ([^javax.imageio.ImageTypeSpecifier this]
     (-> this (.getSampleModel))))
 
 (defn create-buffered-image
@@ -183,7 +183,7 @@
   returns: a new BufferedImage - `java.awt.image.BufferedImage`
 
   throws: java.lang.IllegalArgumentException - if the product of width and height is greater than Integer.MAX_VALUE, or if the number of array elements needed to store the image is greater than Integer.MAX_VALUE."
-  ([this width height]
+  ([^javax.imageio.ImageTypeSpecifier this ^Integer width ^Integer height]
     (-> this (.createBufferedImage width height))))
 
 (defn get-num-components
@@ -192,14 +192,14 @@
    ColorModel.getNumComponents
 
   returns: the number of components in the image. - `int`"
-  ([this]
+  ([^javax.imageio.ImageTypeSpecifier this]
     (-> this (.getNumComponents))))
 
 (defn hash-code
   "Returns the hash code for this ImageTypeSpecifier.
 
   returns: a hash code for this ImageTypeSpecifier - `int`"
-  ([this]
+  ([^javax.imageio.ImageTypeSpecifier this]
     (-> this (.hashCode))))
 
 (defn get-bits-per-band
@@ -210,14 +210,14 @@
   returns: an int specifying a number of bits. - `int`
 
   throws: java.lang.IllegalArgumentException - if band is negative or greater than the largest band index."
-  ([this band]
+  ([^javax.imageio.ImageTypeSpecifier this ^Integer band]
     (-> this (.getBitsPerBand band))))
 
 (defn get-color-model
   "Returns the ColorModel specified by this object.
 
   returns: a ColorModel. - `java.awt.image.ColorModel`"
-  ([this]
+  ([^javax.imageio.ImageTypeSpecifier this]
     (-> this (.getColorModel))))
 
 (defn equals
@@ -230,7 +230,7 @@
 
   returns: true if the given object is an equivalent
    ImageTypeSpecifier. - `boolean`"
-  ([this o]
+  ([^javax.imageio.ImageTypeSpecifier this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn get-buffered-image-type
@@ -239,6 +239,6 @@
 
   returns: an int representing a
    BufferedImage type. - `int`"
-  ([this]
+  ([^javax.imageio.ImageTypeSpecifier this]
     (-> this (.getBufferedImageType))))
 

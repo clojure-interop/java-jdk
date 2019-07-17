@@ -58,7 +58,7 @@
   "Returns true if tables are currently set.
 
   returns: true if tables are present. - `boolean`"
-  ([this]
+  ([^javax.imageio.plugins.jpeg.JPEGImageReadParam this]
     (-> this (.areTablesSet))))
 
 (defn set-decode-tables
@@ -77,13 +77,13 @@
   ac-huffman-tables - an array of Huffman table objects. - `javax.imageio.plugins.jpeg.JPEGHuffmanTable[]`
 
   throws: java.lang.IllegalArgumentException - if any of the arguments is null, has more than 4 elements, or if the numbers of DC and AC tables differ."
-  ([this q-tables dc-huffman-tables ac-huffman-tables]
+  ([^javax.imageio.plugins.jpeg.JPEGImageReadParam this ^javax.imageio.plugins.jpeg.JPEGQTable[] q-tables ^javax.imageio.plugins.jpeg.JPEGHuffmanTable[] dc-huffman-tables ^javax.imageio.plugins.jpeg.JPEGHuffmanTable[] ac-huffman-tables]
     (-> this (.setDecodeTables q-tables dc-huffman-tables ac-huffman-tables))))
 
 (defn unset-decode-tables
   "Removes any quantization and Huffman tables that are currently
    set."
-  ([this]
+  ([^javax.imageio.plugins.jpeg.JPEGImageReadParam this]
     (-> this (.unsetDecodeTables))))
 
 (defn get-q-tables
@@ -93,7 +93,7 @@
 
   returns: an array of JPEGQTable objects, or
    null. - `javax.imageio.plugins.jpeg.JPEGQTable[]`"
-  ([this]
+  ([^javax.imageio.plugins.jpeg.JPEGImageReadParam this]
     (-> this (.getQTables))))
 
 (defn get-dc-huffman-tables
@@ -103,7 +103,7 @@
 
   returns: an array of JPEGHuffmanTable objects, or
    null. - `javax.imageio.plugins.jpeg.JPEGHuffmanTable[]`"
-  ([this]
+  ([^javax.imageio.plugins.jpeg.JPEGImageReadParam this]
     (-> this (.getDCHuffmanTables))))
 
 (defn get-ac-huffman-tables
@@ -113,6 +113,6 @@
 
   returns: an array of JPEGHuffmanTable objects, or
    null. - `javax.imageio.plugins.jpeg.JPEGHuffmanTable[]`"
-  ([this]
+  ([^javax.imageio.plugins.jpeg.JPEGImageReadParam this]
     (-> this (.getACHuffmanTables))))
 

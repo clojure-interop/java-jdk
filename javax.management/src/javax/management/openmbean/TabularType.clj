@@ -20,7 +20,7 @@
   index-names - The names of the items the values of which are used to uniquely index each row element in the tabular data values described by this tabular type instance; cannot be null or empty. Each element should be an item name defined in rowType (no null or empty string allowed). It is important to note that the order of the item names in indexNames is used by the methods get and remove of class TabularData to match their array of values parameter to items. - `java.lang.String[]`
 
   throws: java.lang.IllegalArgumentException - if rowType is null, or indexNames is a null or empty array, or an element in indexNames is a null or empty string, or typeName or description is a null or empty string."
-  ([type-name description row-type index-names]
+  ([^java.lang.String type-name ^java.lang.String description ^javax.management.openmbean.CompositeType row-type ^java.lang.String[] index-names]
     (new TabularType type-name description row-type index-names)))
 
 (defn get-row-type
@@ -28,7 +28,7 @@
    described by this TabularType instance.
 
   returns: the type of each row. - `javax.management.openmbean.CompositeType`"
-  ([this]
+  ([^javax.management.openmbean.TabularType this]
     (-> this (.getRowType))))
 
 (defn get-index-names
@@ -40,7 +40,7 @@
 
   returns: a List of String representing the names of the index
    items. - `java.util.List<java.lang.String>`"
-  ([this]
+  ([^javax.management.openmbean.TabularType this]
     (-> this (.getIndexNames))))
 
 (defn value?
@@ -59,7 +59,7 @@
 
   returns: true if obj is a value for this
    tabular type, false otherwise. - `boolean`"
-  ([this obj]
+  ([^javax.management.openmbean.TabularType this ^java.lang.Object obj]
     (-> this (.isValue obj))))
 
 (defn equals
@@ -74,7 +74,7 @@
   obj - the object to be compared for equality with this TabularType instance; if obj is null, equals returns false. - `java.lang.Object`
 
   returns: true if the specified object is equal to this TabularType instance. - `boolean`"
-  ([this obj]
+  ([^javax.management.openmbean.TabularType this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -92,7 +92,7 @@
    on the first call to hashCode, and then the same value is returned for subsequent calls.
 
   returns: the hash code value for this TabularType instance - `int`"
-  ([this]
+  ([^javax.management.openmbean.TabularType this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -106,6 +106,6 @@
    on the first call to toString, and then the same value is returned for subsequent calls.
 
   returns: a string representation of this TabularType instance - `java.lang.String`"
-  ([this]
+  ([^javax.management.openmbean.TabularType this]
     (-> this (.toString))))
 

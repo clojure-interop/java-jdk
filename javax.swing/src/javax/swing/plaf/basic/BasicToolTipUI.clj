@@ -12,21 +12,21 @@
   "c - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([c]
+  ([^javax.swing.JComponent c]
     (BasicToolTipUI/createUI c)))
 
 (defn install-ui
   "Description copied from class: ComponentUI
 
   c - the component where this UI delegate is being installed - `javax.swing.JComponent`"
-  ([this c]
+  ([^javax.swing.plaf.basic.BasicToolTipUI this ^javax.swing.JComponent c]
     (-> this (.installUI c))))
 
 (defn uninstall-ui
   "Description copied from class: ComponentUI
 
   c - the component from which this UI delegate is being removed; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([this c]
+  ([^javax.swing.plaf.basic.BasicToolTipUI this ^javax.swing.JComponent c]
     (-> this (.uninstallUI c))))
 
 (defn paint
@@ -34,7 +34,7 @@
 
   g - the Graphics context in which to paint - `java.awt.Graphics`
   c - the component being painted; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([this g c]
+  ([^javax.swing.plaf.basic.BasicToolTipUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.paint g c))))
 
 (defn get-preferred-size
@@ -43,7 +43,7 @@
   c - the component whose preferred size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: `java.awt.Dimension`"
-  ([this c]
+  ([^javax.swing.plaf.basic.BasicToolTipUI this ^javax.swing.JComponent c]
     (-> this (.getPreferredSize c))))
 
 (defn get-minimum-size
@@ -52,7 +52,7 @@
   c - the component whose minimum size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: a Dimension object or null - `java.awt.Dimension`"
-  ([this c]
+  ([^javax.swing.plaf.basic.BasicToolTipUI this ^javax.swing.JComponent c]
     (-> this (.getMinimumSize c))))
 
 (defn get-maximum-size
@@ -61,6 +61,6 @@
   c - the component whose maximum size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: a Dimension object or null - `java.awt.Dimension`"
-  ([this c]
+  ([^javax.swing.plaf.basic.BasicToolTipUI this ^javax.swing.JComponent c]
     (-> this (.getMaximumSize c))))
 

@@ -34,32 +34,32 @@
   offset - the offset in iv where the IV starts. - `int`
 
   throws: java.lang.IllegalArgumentException - if iv is null or (iv.length - offset < 2 * (wordSize / 8))"
-  ([version rounds word-size iv offset]
+  ([^Integer version ^Integer rounds ^Integer word-size iv ^Integer offset]
     (new RC5ParameterSpec version rounds word-size iv offset))
-  ([version rounds word-size iv]
+  ([^Integer version ^Integer rounds ^Integer word-size iv]
     (new RC5ParameterSpec version rounds word-size iv))
-  ([version rounds word-size]
+  ([^Integer version ^Integer rounds ^Integer word-size]
     (new RC5ParameterSpec version rounds word-size)))
 
 (defn get-version
   "Returns the version.
 
   returns: the version. - `int`"
-  ([this]
+  ([^javax.crypto.spec.RC5ParameterSpec this]
     (-> this (.getVersion))))
 
 (defn get-rounds
   "Returns the number of rounds.
 
   returns: the number of rounds. - `int`"
-  ([this]
+  ([^javax.crypto.spec.RC5ParameterSpec this]
     (-> this (.getRounds))))
 
 (defn get-word-size
   "Returns the word size in bits.
 
   returns: the word size in bits. - `int`"
-  ([this]
+  ([^javax.crypto.spec.RC5ParameterSpec this]
     (-> this (.getWordSize))))
 
 (defn get-iv
@@ -67,7 +67,7 @@
 
   returns: the IV or null if this parameter set does not contain an IV.
    Returns a new array each time this method is called. - `byte[]`"
-  ([this]
+  ([^javax.crypto.spec.RC5ParameterSpec this]
     (-> this (.getIV))))
 
 (defn equals
@@ -80,7 +80,7 @@
 
   returns: true if the objects are considered equal, false if
    obj is null or otherwise. - `boolean`"
-  ([this obj]
+  ([^javax.crypto.spec.RC5ParameterSpec this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -88,6 +88,6 @@
    Objects that are equal will also have the same hashcode.
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^javax.crypto.spec.RC5ParameterSpec this]
     (-> this (.hashCode))))
 

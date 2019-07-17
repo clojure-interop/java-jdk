@@ -36,7 +36,7 @@
   attributes - a DocAttributeSet, which can be null - `javax.print.attribute.DocAttributeSet`
 
   throws: java.lang.IllegalArgumentException - if flavor or printData is null, or the printData does not correspond to the specified doc flavor--for example, the data is not of the type specified as the representation in the DocFlavor."
-  ([print-data flavor attributes]
+  ([^java.lang.Object print-data ^javax.print.DocFlavor flavor ^javax.print.attribute.DocAttributeSet attributes]
     (new SimpleDoc print-data flavor attributes)))
 
 (defn get-doc-flavor
@@ -44,7 +44,7 @@
    piece of print data.
 
   returns: Doc flavor. - `javax.print.DocFlavor`"
-  ([this]
+  ([^javax.print.SimpleDoc this]
     (-> this (.getDocFlavor))))
 
 (defn get-attributes
@@ -62,7 +62,7 @@
   returns: Unmodifiable set of printing attributes for this doc, or null
             to obtain all attribute values from the job's attribute
             set. - `javax.print.attribute.DocAttributeSet`"
-  ([this]
+  ([^javax.print.SimpleDoc this]
     (-> this (.getAttributes))))
 
 (defn get-print-data
@@ -71,7 +71,7 @@
   returns: Print data representation object. - `java.lang.Object`
 
   throws: java.io.IOException - Thrown if the representation class is a stream and there was an I/O error while constructing the stream."
-  ([this]
+  ([^javax.print.SimpleDoc this]
     (-> this (.getPrintData))))
 
 (defn get-reader-for-text
@@ -98,7 +98,7 @@
             the criteria stated above, null is returned. - `java.io.Reader`
 
   throws: java.io.IOException - if there was an I/O error while creating the reader."
-  ([this]
+  ([^javax.print.SimpleDoc this]
     (-> this (.getReaderForText))))
 
 (defn get-stream-for-bytes
@@ -126,6 +126,6 @@
             the criteria stated above, null is returned. - `java.io.InputStream`
 
   throws: java.io.IOException - if there was an I/O error while creating the input stream."
-  ([this]
+  ([^javax.print.SimpleDoc this]
     (-> this (.getStreamForBytes))))
 

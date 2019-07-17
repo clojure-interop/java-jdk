@@ -266,15 +266,15 @@
   hour-of-day - the value used to set the HOUR_OF_DAY calendar field in the calendar. - `int`
   minute - the value used to set the MINUTE calendar field in the calendar. - `int`
   second - the value used to set the SECOND calendar field in the calendar. - `int`"
-  ([year month day-of-month hour-of-day minute second]
+  ([^Integer year ^Integer month ^Integer day-of-month ^Integer hour-of-day ^Integer minute ^Integer second]
     (new GregorianCalendar year month day-of-month hour-of-day minute second))
-  ([year month day-of-month hour-of-day minute]
+  ([^Integer year ^Integer month ^Integer day-of-month ^Integer hour-of-day ^Integer minute]
     (new GregorianCalendar year month day-of-month hour-of-day minute))
-  ([year month day-of-month]
+  ([^Integer year ^Integer month ^Integer day-of-month]
     (new GregorianCalendar year month day-of-month))
-  ([zone a-locale]
+  ([^java.util.TimeZone zone ^java.util.Locale a-locale]
     (new GregorianCalendar zone a-locale))
-  ([zone]
+  ([^java.util.TimeZone zone]
     (new GregorianCalendar zone))
   ([]
     (new GregorianCalendar )))
@@ -322,14 +322,14 @@
     time-line as the zoned date-time provided - `java.util.GregorianCalendar`
 
   throws: java.lang.NullPointerException - if zdt is null"
-  ([zdt]
+  ([^java.time.ZonedDateTime zdt]
     (GregorianCalendar/from zdt)))
 
 (defn set-time-zone
   "Description copied from class: Calendar
 
   zone - the given time zone. - `java.util.TimeZone`"
-  ([this zone]
+  ([^java.util.GregorianCalendar this ^java.util.TimeZone zone]
     (-> this (.setTimeZone zone))))
 
 (defn get-minimum
@@ -345,7 +345,7 @@
   field - the calendar field. - `int`
 
   returns: the minimum value for the given calendar field. - `int`"
-  ([this field]
+  ([^java.util.GregorianCalendar this ^Integer field]
     (-> this (.getMinimum field))))
 
 (defn get-actual-minimum
@@ -369,7 +369,7 @@
 
   returns: the minimum of the given field for the time value of
    this GregorianCalendar - `int`"
-  ([this field]
+  ([^java.util.GregorianCalendar this ^Integer field]
     (-> this (.getActualMinimum field))))
 
 (defn leap-year?
@@ -381,7 +381,7 @@
   year - the given year. - `int`
 
   returns: true if the given year is a leap year; false otherwise. - `boolean`"
-  ([this year]
+  ([^java.util.GregorianCalendar this ^Integer year]
     (-> this (.isLeapYear year))))
 
 (defn get-least-maximum
@@ -398,7 +398,7 @@
   field - the calendar field - `int`
 
   returns: the lowest maximum value for the given calendar field. - `int`"
-  ([this field]
+  ([^java.util.GregorianCalendar this ^Integer field]
     (-> this (.getLeastMaximum field))))
 
 (defn set-week-date
@@ -427,7 +427,7 @@
   day-of-week - the day of week value: one of the constants for the DAY_OF_WEEK field: SUNDAY, ..., SATURDAY. - `int`
 
   throws: java.lang.IllegalArgumentException - if any of the given date specifiers is invalid, or if any of the calendar fields are inconsistent with the given date specifiers in non-lenient mode"
-  ([this week-year week-of-year day-of-week]
+  ([^java.util.GregorianCalendar this ^Integer week-year ^Integer week-of-year ^Integer day-of-week]
     (-> this (.setWeekDate week-year week-of-year day-of-week))))
 
 (defn get-greatest-minimum
@@ -444,7 +444,7 @@
   field - the calendar field. - `int`
 
   returns: the highest minimum value for the given calendar field. - `int`"
-  ([this field]
+  ([^java.util.GregorianCalendar this ^Integer field]
     (-> this (.getGreatestMinimum field))))
 
 (defn to-zoned-date-time
@@ -459,7 +459,7 @@
 
   returns: a zoned date-time representing the same point on the time-line
     as this gregorian calendar - `java.time.ZonedDateTime`"
-  ([this]
+  ([^java.util.GregorianCalendar this]
     (-> this (.toZonedDateTime))))
 
 (defn set-gregorian-change
@@ -472,21 +472,21 @@
    set the change date to Date(Long.MIN_VALUE).
 
   date - the given Gregorian cutover date. - `java.util.Date`"
-  ([this date]
+  ([^java.util.GregorianCalendar this ^java.util.Date date]
     (-> this (.setGregorianChange date))))
 
 (defn get-time-zone
   "Description copied from class: Calendar
 
   returns: the time zone object associated with this calendar. - `java.util.TimeZone`"
-  ([this]
+  ([^java.util.GregorianCalendar this]
     (-> this (.getTimeZone))))
 
 (defn get-calendar-type
   "Returns `gregory` as the calendar type.
 
   returns: `gregory` - `java.lang.String`"
-  ([this]
+  ([^java.util.GregorianCalendar this]
     (-> this (.getCalendarType))))
 
 (defn get-actual-maximum
@@ -508,7 +508,7 @@
 
   returns: the maximum of the given field for the time value of
    this GregorianCalendar - `int`"
-  ([this field]
+  ([^java.util.GregorianCalendar this ^Integer field]
     (-> this (.getActualMaximum field))))
 
 (defn get-week-year
@@ -527,7 +527,7 @@
            is -1, BC 3 is -2, and so on. - `int`
 
   throws: java.lang.IllegalArgumentException - if any of the calendar fields is invalid in non-lenient mode."
-  ([this]
+  ([^java.util.GregorianCalendar this]
     (-> this (.getWeekYear))))
 
 (defn get-weeks-in-week-year
@@ -541,7 +541,7 @@
    52 for the period: December 31, 2007 to December 28, 2008.
 
   returns: the number of weeks in the week year. - `int`"
-  ([this]
+  ([^java.util.GregorianCalendar this]
     (-> this (.getWeeksInWeekYear))))
 
 (defn get-gregorian-change
@@ -551,14 +551,14 @@
    calendar.
 
   returns: the Gregorian cutover date for this GregorianCalendar object. - `java.util.Date`"
-  ([this]
+  ([^java.util.GregorianCalendar this]
     (-> this (.getGregorianChange))))
 
 (defn clone
   "Description copied from class: Calendar
 
   returns: a copy of this object. - `java.lang.Object`"
-  ([this]
+  ([^java.util.GregorianCalendar this]
     (-> this (.clone))))
 
 (defn roll
@@ -574,14 +574,14 @@
   up - indicates if the value of the specified calendar field is to be rolled up or rolled down. Use true if rolling up, false otherwise. - `boolean`
 
   throws: java.lang.IllegalArgumentException - if field is ZONE_OFFSET, DST_OFFSET, or unknown, or if any calendar fields have out-of-range values in non-lenient mode."
-  ([this field up]
+  ([^java.util.GregorianCalendar this ^Integer field ^Boolean up]
     (-> this (.roll field up))))
 
 (defn hash-code
   "Generates the hash code for this GregorianCalendar object.
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^java.util.GregorianCalendar this]
     (-> this (.hashCode))))
 
 (defn add
@@ -609,7 +609,7 @@
   amount - the amount of date or time to be added to the field. - `int`
 
   throws: java.lang.IllegalArgumentException - if field is ZONE_OFFSET, DST_OFFSET, or unknown, or if any calendar fields have out-of-range values in non-lenient mode."
-  ([this field amount]
+  ([^java.util.GregorianCalendar this ^Integer field ^Integer amount]
     (-> this (.add field amount))))
 
 (defn week-date-supported?
@@ -617,7 +617,7 @@
    supports week dates.
 
   returns: true (always) - `boolean`"
-  ([this]
+  ([^java.util.GregorianCalendar this]
     (-> this (.isWeekDateSupported))))
 
 (defn get-maximum
@@ -633,7 +633,7 @@
   field - the calendar field. - `int`
 
   returns: the maximum value for the given calendar field. - `int`"
-  ([this field]
+  ([^java.util.GregorianCalendar this ^Integer field]
     (-> this (.getMaximum field))))
 
 (defn equals
@@ -649,6 +649,6 @@
 
   returns: true if this object is equal to obj;
    false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.util.GregorianCalendar this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

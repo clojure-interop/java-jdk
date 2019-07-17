@@ -31,7 +31,7 @@
 
   returns: the algorithm-specific input parameters (may be null
       if not specified) - `java.security.spec.AlgorithmParameterSpec`"
-  ([this]
+  ([^. this]
     (-> this (.getParameterSpec))))
 
 (defn transform
@@ -50,8 +50,8 @@
       written to the OutputStream parameter) - `javax.xml.crypto.Data`
 
   throws: java.lang.NullPointerException - if data or os is null"
-  ([this data context os]
+  ([^. this ^javax.xml.crypto.Data data ^javax.xml.crypto.XMLCryptoContext context ^java.io.OutputStream os]
     (-> this (.transform data context os)))
-  ([this data context]
+  ([^. this ^javax.xml.crypto.Data data ^javax.xml.crypto.XMLCryptoContext context]
     (-> this (.transform data context))))
 

@@ -62,9 +62,9 @@
   align - the alignment value - `int`
   hgap - the horizontal gap between components and between the components and the borders of the Container - `int`
   vgap - the vertical gap between components and between the components and the borders of the Container - `int`"
-  ([align hgap vgap]
+  ([^Integer align ^Integer hgap ^Integer vgap]
     (new FlowLayout align hgap vgap))
-  ([align]
+  ([^Integer align]
     (new FlowLayout align))
   ([]
     (new FlowLayout )))
@@ -127,7 +127,7 @@
    FlowLayout.TRAILING
 
   align - one of the alignment values shown above - `int`"
-  ([this align]
+  ([^java.awt.FlowLayout this ^Integer align]
     (-> this (.setAlignment align))))
 
 (defn get-vgap
@@ -138,7 +138,7 @@
   returns: the vertical gap between components
                and between the components and the borders
                of the Container - `int`"
-  ([this]
+  ([^java.awt.FlowLayout this]
     (-> this (.getVgap))))
 
 (defn set-hgap
@@ -147,7 +147,7 @@
    Container.
 
   hgap - the horizontal gap between components and between the components and the borders of the Container - `int`"
-  ([this hgap]
+  ([^java.awt.FlowLayout this ^Integer hgap]
     (-> this (.setHgap hgap))))
 
 (defn set-vgap
@@ -155,7 +155,7 @@
    the components and the borders of the Container.
 
   vgap - the vertical gap between components and between the components and the borders of the Container - `int`"
-  ([this vgap]
+  ([^java.awt.FlowLayout this ^Integer vgap]
     (-> this (.setVgap vgap))))
 
 (defn preferred-layout-size
@@ -166,7 +166,7 @@
 
   returns: the preferred dimensions to lay out the
               subcomponents of the specified container - `java.awt.Dimension`"
-  ([this target]
+  ([^java.awt.FlowLayout this ^java.awt.Container target]
     (-> this (.preferredLayoutSize target))))
 
 (defn to-string
@@ -174,7 +174,7 @@
    object and its values.
 
   returns: a string representation of this layout - `java.lang.String`"
-  ([this]
+  ([^java.awt.FlowLayout this]
     (-> this (.toString))))
 
 (defn get-hgap
@@ -185,7 +185,7 @@
   returns: the horizontal gap between components
                and between the components and the borders
                of the Container - `int`"
-  ([this]
+  ([^java.awt.FlowLayout this]
     (-> this (.getHgap))))
 
 (defn get-align-on-baseline?
@@ -194,7 +194,7 @@
 
   returns: true if components are to be vertically aligned along
                 their baseline - `boolean`"
-  ([this]
+  ([^java.awt.FlowLayout this]
     (-> this (.getAlignOnBaseline))))
 
 (defn minimum-layout-size
@@ -205,7 +205,7 @@
 
   returns: the minimum dimensions to lay out the
               subcomponents of the specified container - `java.awt.Dimension`"
-  ([this target]
+  ([^java.awt.FlowLayout this ^java.awt.Container target]
     (-> this (.minimumLayoutSize target))))
 
 (defn get-alignment
@@ -216,7 +216,7 @@
    or FlowLayout.TRAILING.
 
   returns: the alignment value for this layout - `int`"
-  ([this]
+  ([^java.awt.FlowLayout this]
     (-> this (.getAlignment))))
 
 (defn set-align-on-baseline
@@ -225,7 +225,7 @@
    The default is false.
 
   align-on-baseline - whether or not components should be vertically aligned on their baseline - `boolean`"
-  ([this align-on-baseline]
+  ([^java.awt.FlowLayout this ^Boolean align-on-baseline]
     (-> this (.setAlignOnBaseline align-on-baseline))))
 
 (defn add-layout-component
@@ -234,7 +234,7 @@
 
   name - the name of the component - `java.lang.String`
   comp - the component to be added - `java.awt.Component`"
-  ([this name comp]
+  ([^java.awt.FlowLayout this ^java.lang.String name ^java.awt.Component comp]
     (-> this (.addLayoutComponent name comp))))
 
 (defn remove-layout-component
@@ -242,7 +242,7 @@
    Not used by this class.
 
   comp - the component to remove - `java.awt.Component`"
-  ([this comp]
+  ([^java.awt.FlowLayout this ^java.awt.Component comp]
     (-> this (.removeLayoutComponent comp))))
 
 (defn layout-container
@@ -253,6 +253,6 @@
    this FlowLayout object.
 
   target - the specified component being laid out - `java.awt.Container`"
-  ([this target]
+  ([^java.awt.FlowLayout this ^java.awt.Container target]
     (-> this (.layoutContainer target))))
 

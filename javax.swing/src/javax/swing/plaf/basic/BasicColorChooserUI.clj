@@ -12,20 +12,20 @@
   "c - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([c]
+  ([^javax.swing.JComponent c]
     (BasicColorChooserUI/createUI c)))
 
 (defn install-ui
   "Description copied from class: ComponentUI
 
   c - the component where this UI delegate is being installed - `javax.swing.JComponent`"
-  ([this c]
+  ([^javax.swing.plaf.basic.BasicColorChooserUI this ^javax.swing.JComponent c]
     (-> this (.installUI c))))
 
 (defn uninstall-ui
   "Description copied from class: ComponentUI
 
   c - the component from which this UI delegate is being removed; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([this c]
+  ([^javax.swing.plaf.basic.BasicColorChooserUI this ^javax.swing.JComponent c]
     (-> this (.uninstallUI c))))
 

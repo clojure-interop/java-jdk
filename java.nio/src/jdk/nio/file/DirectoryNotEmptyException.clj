@@ -10,6 +10,6 @@
   Constructs an instance of this class.
 
   dir - a string identifying the directory or null if not known - `java.lang.String`"
-  ([dir]
+  ([^java.lang.String dir]
     (new DirectoryNotEmptyException dir)))
 

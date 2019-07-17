@@ -10,7 +10,7 @@
   Constructor that allows a specific error message to be specified.
 
   msg - the detail message. - `java.lang.String`"
-  ([msg]
+  ([^java.lang.String msg]
     (new JMException msg))
   ([]
     (new JMException )))

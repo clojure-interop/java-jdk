@@ -24,7 +24,7 @@
    actions.
 
   returns: the attribute set - `javax.swing.text.MutableAttributeSet`"
-  ([this]
+  ([^javax.swing.text.StyledEditorKit this]
     (-> this (.getInputAttributes))))
 
 (defn get-character-attribute-run
@@ -32,7 +32,7 @@
    run of character attributes for the caret.
 
   returns: the element - `javax.swing.text.Element`"
-  ([this]
+  ([^javax.swing.text.StyledEditorKit this]
     (-> this (.getCharacterAttributeRun))))
 
 (defn get-actions
@@ -42,7 +42,7 @@
    locally for style operations.
 
   returns: the command list - `javax.swing.Action[]`"
-  ([this]
+  ([^javax.swing.text.StyledEditorKit this]
     (-> this (.getActions))))
 
 (defn create-default-document
@@ -50,7 +50,7 @@
    that is appropriate for this type of editor.
 
   returns: the model - `javax.swing.text.Document`"
-  ([this]
+  ([^javax.swing.text.StyledEditorKit this]
     (-> this (.createDefaultDocument))))
 
 (defn install
@@ -58,7 +58,7 @@
    a JEditorPane.
 
   c - the JEditorPane - `javax.swing.JEditorPane`"
-  ([this c]
+  ([^javax.swing.text.StyledEditorKit this ^javax.swing.JEditorPane c]
     (-> this (.install c))))
 
 (defn deinstall
@@ -67,7 +67,7 @@
    listeners that were attached.
 
   c - the JEditorPane - `javax.swing.JEditorPane`"
-  ([this c]
+  ([^javax.swing.text.StyledEditorKit this ^javax.swing.JEditorPane c]
     (-> this (.deinstall c))))
 
 (defn get-view-factory
@@ -83,13 +83,13 @@
    StyleConstants.IconElementName
 
   returns: the factory - `javax.swing.text.ViewFactory`"
-  ([this]
+  ([^javax.swing.text.StyledEditorKit this]
     (-> this (.getViewFactory))))
 
 (defn clone
   "Creates a copy of the editor kit.
 
   returns: the copy - `java.lang.Object`"
-  ([this]
+  ([^javax.swing.text.StyledEditorKit this]
     (-> this (.clone))))
 

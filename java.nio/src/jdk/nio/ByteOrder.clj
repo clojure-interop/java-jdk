@@ -41,6 +41,6 @@
     This method returns the string `BIG_ENDIAN` for BIG_ENDIAN and `LITTLE_ENDIAN` for LITTLE_ENDIAN.
 
   returns: The specified string - `java.lang.String`"
-  ([this]
+  ([^java.nio.ByteOrder this]
     (-> this (.toString))))
 

@@ -8,6 +8,6 @@
   "Called when the caret position is updated.
 
   e - the caret event - `javax.swing.event.CaretEvent`"
-  ([this e]
+  ([^. this ^javax.swing.event.CaretEvent e]
     (-> this (.caretUpdate e))))
 

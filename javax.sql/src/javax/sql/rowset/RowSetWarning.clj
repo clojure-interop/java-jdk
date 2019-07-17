@@ -37,11 +37,11 @@
   reason - a String giving a description of the warning; - `java.lang.String`
   sql-state - an XOPEN code identifying the warning; if a non standard XOPEN SQLState is supplied, no exception is thrown. - `java.lang.String`
   vendor-code - a database vendor-specific warning code - `int`"
-  ([reason sql-state vendor-code]
+  ([^java.lang.String reason ^java.lang.String sql-state ^Integer vendor-code]
     (new RowSetWarning reason sql-state vendor-code))
-  ([reason sql-state]
+  ([^java.lang.String reason ^java.lang.String sql-state]
     (new RowSetWarning reason sql-state))
-  ([reason]
+  ([^java.lang.String reason]
     (new RowSetWarning reason))
   ([]
     (new RowSetWarning )))
@@ -53,7 +53,7 @@
   returns: the RowSetWarning object chained to this one; if no
            RowSetWarning object is chained to this one,
            null is returned (default value) - `javax.sql.rowset.RowSetWarning`"
-  ([this]
+  ([^javax.sql.rowset.RowSetWarning this]
     (-> this (.getNextWarning))))
 
 (defn set-next-warning
@@ -61,6 +61,6 @@
    to this RowSetWarning object.
 
   warning - the RowSetWarning object to be set as the next warning; if the RowSetWarning is null, this represents the finish point in the warning chain - `javax.sql.rowset.RowSetWarning`"
-  ([this warning]
+  ([^javax.sql.rowset.RowSetWarning this ^javax.sql.rowset.RowSetWarning warning]
     (-> this (.setNextWarning warning))))
 

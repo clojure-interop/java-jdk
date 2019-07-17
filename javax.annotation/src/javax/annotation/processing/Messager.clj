@@ -25,12 +25,12 @@
   e - the annotated element - `javax.lang.model.element.Element`
   a - the annotation containing the annotation value - `javax.lang.model.element.AnnotationMirror`
   v - the annotation value to use as a position hint - `javax.lang.model.element.AnnotationValue`"
-  ([this kind msg e a v]
+  ([^. this ^javax.tools.Diagnostic.Kind kind ^java.lang.CharSequence msg ^javax.lang.model.element.Element e ^javax.lang.model.element.AnnotationMirror a ^javax.lang.model.element.AnnotationValue v]
     (-> this (.printMessage kind msg e a v)))
-  ([this kind msg e a]
+  ([^. this ^javax.tools.Diagnostic.Kind kind ^java.lang.CharSequence msg ^javax.lang.model.element.Element e ^javax.lang.model.element.AnnotationMirror a]
     (-> this (.printMessage kind msg e a)))
-  ([this kind msg e]
+  ([^. this ^javax.tools.Diagnostic.Kind kind ^java.lang.CharSequence msg ^javax.lang.model.element.Element e]
     (-> this (.printMessage kind msg e)))
-  ([this kind msg]
+  ([^. this ^javax.tools.Diagnostic.Kind kind ^java.lang.CharSequence msg]
     (-> this (.printMessage kind msg))))
 

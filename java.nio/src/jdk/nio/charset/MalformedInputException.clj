@@ -12,20 +12,20 @@
    length.
 
   input-length - the length of the input - `int`"
-  ([input-length]
+  ([^Integer input-length]
     (new MalformedInputException input-length)))
 
 (defn get-input-length
   "Returns the length of the input.
 
   returns: the length of the input - `int`"
-  ([this]
+  ([^java.nio.charset.MalformedInputException this]
     (-> this (.getInputLength))))
 
 (defn get-message
   "Returns the message.
 
   returns: the message - `java.lang.String`"
-  ([this]
+  ([^java.nio.charset.MalformedInputException this]
     (-> this (.getMessage))))
 

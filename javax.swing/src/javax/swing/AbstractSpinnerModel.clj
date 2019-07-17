@@ -17,14 +17,14 @@
    ChangeListeners must be notified when the models value changes.
 
   l - the ChangeListener to add - `javax.swing.event.ChangeListener`"
-  ([this l]
+  ([^javax.swing.AbstractSpinnerModel this ^javax.swing.event.ChangeListener l]
     (-> this (.addChangeListener l))))
 
 (defn remove-change-listener
   "Removes a ChangeListener from the model's listener list.
 
   l - the ChangeListener to remove - `javax.swing.event.ChangeListener`"
-  ([this l]
+  ([^javax.swing.AbstractSpinnerModel this ^javax.swing.event.ChangeListener l]
     (-> this (.removeChangeListener l))))
 
 (defn get-change-listeners
@@ -33,7 +33,7 @@
 
   returns: all of the ChangeListeners added or an empty
            array if no listeners have been added - `javax.swing.event.ChangeListener[]`"
-  ([this]
+  ([^javax.swing.AbstractSpinnerModel this]
     (-> this (.getChangeListeners))))
 
 (defn get-listeners
@@ -48,6 +48,6 @@
 
   returns: all of the objects receiving listenerType notifications
            from this model - `<T extends java.util.EventListener> T[]`"
-  ([this listener-type]
+  ([^javax.swing.AbstractSpinnerModel this ^java.lang.Class listener-type]
     (-> this (.getListeners listener-type))))
 

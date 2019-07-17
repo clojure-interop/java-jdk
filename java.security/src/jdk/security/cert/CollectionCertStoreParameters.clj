@@ -44,7 +44,7 @@
   collection - a Collection of Certificates and CRLs - `java.util.Collection<?>`
 
   throws: java.lang.NullPointerException - if collection is null"
-  ([collection]
+  ([^java.util.Collection collection]
     (new CollectionCertStoreParameters collection))
   ([]
     (new CollectionCertStoreParameters )))
@@ -57,7 +57,7 @@
    CRLs from the Collection.
 
   returns: the Collection (never null) - `java.util.Collection<?>`"
-  ([this]
+  ([^java.security.cert.CollectionCertStoreParameters this]
     (-> this (.getCollection))))
 
 (defn clone
@@ -65,13 +65,13 @@
    Collection is copied, and not the contents.
 
   returns: the copy - `java.lang.Object`"
-  ([this]
+  ([^java.security.cert.CollectionCertStoreParameters this]
     (-> this (.clone))))
 
 (defn to-string
   "Returns a formatted string describing the parameters.
 
   returns: a formatted string describing the parameters - `java.lang.String`"
-  ([this]
+  ([^java.security.cert.CollectionCertStoreParameters this]
     (-> this (.toString))))
 

@@ -22,9 +22,9 @@
   decimal-format-pattern - the initial pattern for the DecimalFormat object that's used to display and parse the value of the text field. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if the spinners model is not an instance of SpinnerNumberModel or if decimalFormatPattern is not a legal argument to DecimalFormat"
-  ([spinner decimal-format-pattern]
+  ([^javax.swing.JSpinner spinner ^java.lang.String decimal-format-pattern]
     (new JSpinner$NumberEditor spinner decimal-format-pattern))
-  ([spinner]
+  ([^javax.swing.JSpinner spinner]
     (new JSpinner$NumberEditor spinner)))
 
 (defn get-format
@@ -33,13 +33,13 @@
    numbers.
 
   returns: the value of getTextField().getFormatter().getFormat(). - `java.text.DecimalFormat`"
-  ([this]
+  ([^javax.swing.JSpinner$NumberEditor this]
     (-> this (.getFormat))))
 
 (defn get-model
   "Return our spinner ancestor's SpinnerNumberModel.
 
   returns: getSpinner().getModel() - `javax.swing.SpinnerNumberModel`"
-  ([this]
+  ([^javax.swing.JSpinner$NumberEditor this]
     (-> this (.getModel))))
 

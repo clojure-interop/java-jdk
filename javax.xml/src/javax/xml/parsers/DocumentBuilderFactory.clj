@@ -30,7 +30,7 @@
   returns: New instance of a DocumentBuilderFactory - `javax.xml.parsers.DocumentBuilderFactory`
 
   throws: javax.xml.parsers.FactoryConfigurationError - if factoryClassName is null, or the factory class cannot be loaded, instantiated."
-  ([factory-class-name class-loader]
+  ([^java.lang.String factory-class-name ^java.lang.ClassLoader class-loader]
     (DocumentBuilderFactory/newInstance factory-class-name class-loader))
   ([]
     (DocumentBuilderFactory/newInstance )))
@@ -41,7 +41,7 @@
    to false
 
   awareness - true if the parser produced will provide support for XML namespaces; false otherwise. - `boolean`"
-  ([this awareness]
+  ([^javax.xml.parsers.DocumentBuilderFactory this ^Boolean awareness]
     (-> this (.setNamespaceAware awareness))))
 
 (defn coalescing?
@@ -52,7 +52,7 @@
   returns: true if the factory is configured to produce parsers
             which converts CDATA nodes to Text nodes and appends it to
             the adjacent (if any) Text node; false otherwise. - `boolean`"
-  ([this]
+  ([^javax.xml.parsers.DocumentBuilderFactory this]
     (-> this (.isCoalescing))))
 
 (defn get-feature?
@@ -70,7 +70,7 @@
   returns: State of the named feature. - `boolean`
 
   throws: javax.xml.parsers.ParserConfigurationException - if this DocumentBuilderFactory or the DocumentBuilders it creates cannot support this feature."
-  ([this name]
+  ([^javax.xml.parsers.DocumentBuilderFactory this ^java.lang.String name]
     (-> this (.getFeature name))))
 
 (defn set-validating
@@ -94,7 +94,7 @@
    method to associate a schema to a parser.
 
   validating - true if the parser produced will validate documents as they are parsed; false otherwise. - `boolean`"
-  ([this validating]
+  ([^javax.xml.parsers.DocumentBuilderFactory this ^Boolean validating]
     (-> this (.setValidating validating))))
 
 (defn set-coalescing
@@ -104,7 +104,7 @@
    false
 
   coalescing - true if the parser produced will convert CDATA nodes to Text nodes and append it to the adjacent (if any) text node; false otherwise. - `boolean`"
-  ([this coalescing]
+  ([^javax.xml.parsers.DocumentBuilderFactory this ^Boolean coalescing]
     (-> this (.setCoalescing coalescing))))
 
 (defn get-attribute
@@ -116,7 +116,7 @@
   returns: value The value of the attribute. - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - thrown if the underlying implementation doesn't recognize the attribute."
-  ([this name]
+  ([^javax.xml.parsers.DocumentBuilderFactory this ^java.lang.String name]
     (-> this (.getAttribute name))))
 
 (defn set-schema
@@ -169,7 +169,7 @@
   schema - Schema to use or null to remove a schema. - `javax.xml.validation.Schema`
 
   throws: java.lang.UnsupportedOperationException - When implementation does not override this method."
-  ([this schema]
+  ([^javax.xml.parsers.DocumentBuilderFactory this ^javax.xml.validation.Schema schema]
     (-> this (.setSchema schema))))
 
 (defn set-attribute
@@ -202,7 +202,7 @@
   value - The value of the attribute. - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - thrown if the underlying implementation doesn't recognize the attribute."
-  ([this name value]
+  ([^javax.xml.parsers.DocumentBuilderFactory this ^java.lang.String name ^java.lang.Object value]
     (-> this (.setAttribute name value))))
 
 (defn ignoring-element-content-whitespace?
@@ -212,7 +212,7 @@
   returns: true if the factory is configured to produce parsers
             which ignore ignorable whitespace in element content;
             false otherwise. - `boolean`"
-  ([this]
+  ([^javax.xml.parsers.DocumentBuilderFactory this]
     (-> this (.isIgnoringElementContentWhitespace))))
 
 (defn set-ignoring-comments
@@ -221,7 +221,7 @@
    .
 
   ignore-comments - boolean value to ignore comments during processing - `boolean`"
-  ([this ignore-comments]
+  ([^javax.xml.parsers.DocumentBuilderFactory this ^Boolean ignore-comments]
     (-> this (.setIgnoringComments ignore-comments))))
 
 (defn set-x-include-aware
@@ -236,7 +236,7 @@
   state - Set XInclude processing to true or false - `boolean`
 
   throws: java.lang.UnsupportedOperationException - When implementation does not override this method."
-  ([this state]
+  ([^javax.xml.parsers.DocumentBuilderFactory this ^Boolean state]
     (-> this (.setXIncludeAware state))))
 
 (defn get-schema
@@ -249,7 +249,7 @@
         is created. - `javax.xml.validation.Schema`
 
   throws: java.lang.UnsupportedOperationException - When implementation does not override this method."
-  ([this]
+  ([^javax.xml.parsers.DocumentBuilderFactory this]
     (-> this (.getSchema))))
 
 (defn new-document-builder
@@ -259,7 +259,7 @@
   returns: A new instance of a DocumentBuilder. - `javax.xml.parsers.DocumentBuilder`
 
   throws: javax.xml.parsers.ParserConfigurationException - if a DocumentBuilder cannot be created which satisfies the configuration requested."
-  ([this]
+  ([^javax.xml.parsers.DocumentBuilderFactory this]
     (-> this (.newDocumentBuilder))))
 
 (defn set-expand-entity-references
@@ -268,7 +268,7 @@
    true
 
   expand-entity-ref - true if the parser produced will expand entity reference nodes; false otherwise. - `boolean`"
-  ([this expand-entity-ref]
+  ([^javax.xml.parsers.DocumentBuilderFactory this ^Boolean expand-entity-ref]
     (-> this (.setExpandEntityReferences expand-entity-ref))))
 
 (defn set-feature
@@ -301,7 +301,7 @@
   value - Is feature state true or false. - `boolean`
 
   throws: javax.xml.parsers.ParserConfigurationException - if this DocumentBuilderFactory or the DocumentBuilders it creates cannot support this feature."
-  ([this name value]
+  ([^javax.xml.parsers.DocumentBuilderFactory this ^java.lang.String name ^Boolean value]
     (-> this (.setFeature name value))))
 
 (defn set-ignoring-element-content-whitespace
@@ -315,7 +315,7 @@
    the value of this is set to false.
 
   whitespace - true if the parser created must eliminate whitespace in the element content when parsing XML documents; false otherwise. - `boolean`"
-  ([this whitespace]
+  ([^javax.xml.parsers.DocumentBuilderFactory this ^Boolean whitespace]
     (-> this (.setIgnoringElementContentWhitespace whitespace))))
 
 (defn namespace-aware?
@@ -324,7 +324,7 @@
 
   returns: true if the factory is configured to produce parsers which
             are namespace aware; false otherwise. - `boolean`"
-  ([this]
+  ([^javax.xml.parsers.DocumentBuilderFactory this]
     (-> this (.isNamespaceAware))))
 
 (defn ignoring-comments?
@@ -333,7 +333,7 @@
 
   returns: true if the factory is configured to produce parsers
             which ignores comments; false otherwise. - `boolean`"
-  ([this]
+  ([^javax.xml.parsers.DocumentBuilderFactory this]
     (-> this (.isIgnoringComments))))
 
 (defn validating?
@@ -342,7 +342,7 @@
 
   returns: true if the factory is configured to produce parsers
             which validate the XML content during parse; false otherwise. - `boolean`"
-  ([this]
+  ([^javax.xml.parsers.DocumentBuilderFactory this]
     (-> this (.isValidating))))
 
 (defn x-include-aware?
@@ -351,7 +351,7 @@
   returns: current state of XInclude processing - `boolean`
 
   throws: java.lang.UnsupportedOperationException - When implementation does not override this method."
-  ([this]
+  ([^javax.xml.parsers.DocumentBuilderFactory this]
     (-> this (.isXIncludeAware))))
 
 (defn expand-entity-references?
@@ -360,6 +360,6 @@
 
   returns: true if the factory is configured to produce parsers
             which expand entity reference nodes; false otherwise. - `boolean`"
-  ([this]
+  ([^javax.xml.parsers.DocumentBuilderFactory this]
     (-> this (.isExpandEntityReferences))))
 

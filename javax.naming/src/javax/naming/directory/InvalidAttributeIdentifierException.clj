@@ -15,7 +15,7 @@
    explanation supplied. All other fields set to null.
 
   explanation - Possibly null string containing additional detail about this exception. - `java.lang.String`"
-  ([explanation]
+  ([^java.lang.String explanation]
     (new InvalidAttributeIdentifierException explanation))
   ([]
     (new InvalidAttributeIdentifierException )))

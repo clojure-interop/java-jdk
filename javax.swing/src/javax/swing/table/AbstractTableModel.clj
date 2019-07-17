@@ -39,7 +39,7 @@
    default columns in the order they appear in the model. This is the
    same as calling setModel(TableModel) on the
    JTable."
-  ([this]
+  ([^javax.swing.table.AbstractTableModel this]
     (-> this (.fireTableStructureChanged))))
 
 (defn get-column-class
@@ -48,7 +48,7 @@
   column-index - the column being queried - `int`
 
   returns: the Object.class - `java.lang.Class<?>`"
-  ([this column-index]
+  ([^javax.swing.table.AbstractTableModel this ^Integer column-index]
     (-> this (.getColumnClass column-index))))
 
 (defn fire-table-data-changed
@@ -57,7 +57,7 @@
    and the JTable should redraw the
    table from scratch. The structure of the table (as in the order of the
    columns) is assumed to be the same."
-  ([this]
+  ([^javax.swing.table.AbstractTableModel this]
     (-> this (.fireTableDataChanged))))
 
 (defn add-table-model-listener
@@ -65,7 +65,7 @@
    to the data model occurs.
 
   l - the TableModelListener - `javax.swing.event.TableModelListener`"
-  ([this l]
+  ([^javax.swing.table.AbstractTableModel this ^javax.swing.event.TableModelListener l]
     (-> this (.addTableModelListener l))))
 
 (defn remove-table-model-listener
@@ -73,7 +73,7 @@
    change to the data model occurs.
 
   l - the TableModelListener - `javax.swing.event.TableModelListener`"
-  ([this l]
+  ([^javax.swing.table.AbstractTableModel this ^javax.swing.event.TableModelListener l]
     (-> this (.removeTableModelListener l))))
 
 (defn cell-editable?
@@ -83,7 +83,7 @@
   column-index - the column being queried - `int`
 
   returns: false - `boolean`"
-  ([this row-index column-index]
+  ([^javax.swing.table.AbstractTableModel this ^Integer row-index ^Integer column-index]
     (-> this (.isCellEditable row-index column-index))))
 
 (defn fire-table-rows-updated
@@ -92,7 +92,7 @@
 
   first-row - the first row - `int`
   last-row - the last row - `int`"
-  ([this first-row last-row]
+  ([^javax.swing.table.AbstractTableModel this ^Integer first-row ^Integer last-row]
     (-> this (.fireTableRowsUpdated first-row last-row))))
 
 (defn get-column-name
@@ -103,7 +103,7 @@
   column - the column being queried - `int`
 
   returns: a string containing the default name of column - `java.lang.String`"
-  ([this column]
+  ([^javax.swing.table.AbstractTableModel this ^Integer column]
     (-> this (.getColumnName column))))
 
 (defn fire-table-rows-deleted
@@ -112,7 +112,7 @@
 
   first-row - the first row - `int`
   last-row - the last row - `int`"
-  ([this first-row last-row]
+  ([^javax.swing.table.AbstractTableModel this ^Integer first-row ^Integer last-row]
     (-> this (.fireTableRowsDeleted first-row last-row))))
 
 (defn fire-table-rows-inserted
@@ -121,7 +121,7 @@
 
   first-row - the first row - `int`
   last-row - the last row - `int`"
-  ([this first-row last-row]
+  ([^javax.swing.table.AbstractTableModel this ^Integer first-row ^Integer last-row]
     (-> this (.fireTableRowsInserted first-row last-row))))
 
 (defn find-column
@@ -134,7 +134,7 @@
   column-name - string containing name of column to be located - `java.lang.String`
 
   returns: the column with columnName, or -1 if not found - `int`"
-  ([this column-name]
+  ([^javax.swing.table.AbstractTableModel this ^java.lang.String column-name]
     (-> this (.findColumn column-name))))
 
 (defn set-value-at
@@ -144,7 +144,7 @@
   a-value - value to assign to cell - `java.lang.Object`
   row-index - row of cell - `int`
   column-index - column of cell - `int`"
-  ([this a-value row-index column-index]
+  ([^javax.swing.table.AbstractTableModel this ^java.lang.Object a-value ^Integer row-index ^Integer column-index]
     (-> this (.setValueAt a-value row-index column-index))))
 
 (defn fire-table-cell-updated
@@ -153,7 +153,7 @@
 
   row - row of cell which has been updated - `int`
   column - column of cell which has been updated - `int`"
-  ([this row column]
+  ([^javax.swing.table.AbstractTableModel this ^Integer row ^Integer column]
     (-> this (.fireTableCellUpdated row column))))
 
 (defn get-table-model-listeners
@@ -163,7 +163,7 @@
   returns: all of this model's TableModelListeners
            or an empty
            array if no table model listeners are currently registered - `javax.swing.event.TableModelListener[]`"
-  ([this]
+  ([^javax.swing.table.AbstractTableModel this]
     (-> this (.getTableModelListeners))))
 
 (defn fire-table-changed
@@ -172,7 +172,7 @@
    themselves as listeners for this table model.
 
   e - the event to be forwarded - `javax.swing.event.TableModelEvent`"
-  ([this e]
+  ([^javax.swing.table.AbstractTableModel this ^javax.swing.event.TableModelEvent e]
     (-> this (.fireTableChanged e))))
 
 (defn get-listeners
@@ -206,6 +206,6 @@
             listeners have been added - `<T extends java.util.EventListener> T[]`
 
   throws: java.lang.ClassCastException - if listenerType doesn't specify a class or interface that implements java.util.EventListener"
-  ([this listener-type]
+  ([^javax.swing.table.AbstractTableModel this ^java.lang.Class listener-type]
     (-> this (.getListeners listener-type))))
 

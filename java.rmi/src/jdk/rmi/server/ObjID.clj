@@ -38,7 +38,7 @@
    constructor.
 
   obj-num - object number for well-known object identifier - `int`"
-  ([obj-num]
+  ([^Integer obj-num]
     (new ObjID obj-num))
   ([]
     (new ObjID )))
@@ -86,7 +86,7 @@
   returns: unmarshalled ObjID instance - `java.rmi.server.ObjID`
 
   throws: java.io.IOException - if an I/O error occurs while performing this operation"
-  ([in]
+  ([^java.io.ObjectInput in]
     (ObjID/read in)))
 
 (defn write
@@ -102,7 +102,7 @@
   out - the ObjectOutput instance to write this ObjID to - `java.io.ObjectOutput`
 
   throws: java.io.IOException - if an I/O error occurs while performing this operation"
-  ([this out]
+  ([^java.rmi.server.ObjID this ^java.io.ObjectOutput out]
     (-> this (.write out))))
 
 (defn hash-code
@@ -110,7 +110,7 @@
    object number.
 
   returns: the hash code value for this object identifier - `int`"
-  ([this]
+  ([^java.rmi.server.ObjID this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -125,13 +125,13 @@
 
   returns: true if the given object is equivalent to
    this one, and false otherwise - `boolean`"
-  ([this obj]
+  ([^java.rmi.server.ObjID this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn to-string
   "Returns a string representation of this object identifier.
 
   returns: a string representation of this object identifier - `java.lang.String`"
-  ([this]
+  ([^java.rmi.server.ObjID this]
     (-> this (.toString))))
 

@@ -31,7 +31,7 @@
   name - the system-dependent file name. - `java.lang.String`
 
   throws: java.io.FileNotFoundException - if the file does not exist, is a directory rather than a regular file, or for some other reason cannot be opened for reading."
-  ([name]
+  ([^java.lang.String name]
     (new FileInputStream name)))
 
 (defn read
@@ -49,11 +49,11 @@
                the file has been reached. - `int`
 
   throws: java.lang.NullPointerException - If b is null."
-  ([this b off len]
+  ([^java.io.FileInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  ([this b]
+  ([^java.io.FileInputStream this b]
     (-> this (.read b)))
-  ([this]
+  ([^java.io.FileInputStream this]
     (-> this (.read))))
 
 (defn skip
@@ -80,7 +80,7 @@
   returns: the actual number of bytes skipped. - `long`
 
   throws: java.io.IOException - if n is negative, if the stream does not support seek, or if an I/O error occurs."
-  ([this n]
+  ([^java.io.FileInputStream this ^Long n]
     (-> this (.skip n))))
 
 (defn available
@@ -99,7 +99,7 @@
                (or skipped over) from this input stream without blocking. - `int`
 
   throws: java.io.IOException - if this file input stream has been closed by calling close or an I/O error occurs."
-  ([this]
+  ([^java.io.FileInputStream this]
     (-> this (.available))))
 
 (defn close
@@ -110,7 +110,7 @@
    as well.
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this]
+  ([^java.io.FileInputStream this]
     (-> this (.close))))
 
 (defn get-fd
@@ -122,7 +122,7 @@
   returns: the file descriptor object associated with this stream. - `java.io.FileDescriptor`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this]
+  ([^java.io.FileInputStream this]
     (-> this (.getFD))))
 
 (defn get-channel
@@ -136,6 +136,6 @@
    file position.
 
   returns: the file channel associated with this file input stream - `java.nio.channels.FileChannel`"
-  ([this]
+  ([^java.io.FileInputStream this]
     (-> this (.getChannel))))
 

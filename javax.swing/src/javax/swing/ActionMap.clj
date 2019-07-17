@@ -30,14 +30,14 @@
   "Sets this ActionMap's parent.
 
   map - the ActionMap that is the parent of this one - `javax.swing.ActionMap`"
-  ([this map]
+  ([^javax.swing.ActionMap this ^javax.swing.ActionMap map]
     (-> this (.setParent map))))
 
 (defn keys
   "Returns the Action names that are bound in this ActionMap.
 
   returns: `java.lang.Object[]`"
-  ([this]
+  ([^javax.swing.ActionMap this]
     (-> this (.keys))))
 
 (defn all-keys
@@ -46,7 +46,7 @@
    this method includes the keys defined in the parent.
 
   returns: `java.lang.Object[]`"
-  ([this]
+  ([^javax.swing.ActionMap this]
     (-> this (.allKeys))))
 
 (defn put
@@ -58,7 +58,7 @@
 
   key - `java.lang.Object`
   action - `javax.swing.Action`"
-  ([this key action]
+  ([^javax.swing.ActionMap this ^java.lang.Object key ^javax.swing.Action action]
     (-> this (.put key action))))
 
 (defn get-parent
@@ -66,26 +66,26 @@
 
   returns: the ActionMap that is the parent of this one,
            or null if this ActionMap has no parent - `javax.swing.ActionMap`"
-  ([this]
+  ([^javax.swing.ActionMap this]
     (-> this (.getParent))))
 
 (defn remove
   "Removes the binding for key from this ActionMap.
 
   key - `java.lang.Object`"
-  ([this key]
+  ([^javax.swing.ActionMap this ^java.lang.Object key]
     (-> this (.remove key))))
 
 (defn size
   "Returns the number of bindings in this ActionMap.
 
   returns: the number of bindings in this ActionMap - `int`"
-  ([this]
+  ([^javax.swing.ActionMap this]
     (-> this (.size))))
 
 (defn clear
   "Removes all the mappings from this ActionMap."
-  ([this]
+  ([^javax.swing.ActionMap this]
     (-> this (.clear))))
 
 (defn get
@@ -95,6 +95,6 @@
   key - `java.lang.Object`
 
   returns: `javax.swing.Action`"
-  ([this key]
+  ([^javax.swing.ActionMap this ^java.lang.Object key]
     (-> this (.get key))))
 

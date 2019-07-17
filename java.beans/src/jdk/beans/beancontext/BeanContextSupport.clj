@@ -17,13 +17,13 @@
   lcle - The current Locale for this BeanContext. If lcle is null, the default locale is assigned to the BeanContext instance. - `java.util.Locale`
   d-time - The initial state, true if in design mode, false if runtime. - `boolean`
   visible - The initial visibility. - `boolean`"
-  ([peer lcle d-time visible]
+  ([^java.beans.beancontext.BeanContext peer ^java.util.Locale lcle ^Boolean d-time ^Boolean visible]
     (new BeanContextSupport peer lcle d-time visible))
-  ([peer lcle dtime]
+  ([^java.beans.beancontext.BeanContext peer ^java.util.Locale lcle ^Boolean dtime]
     (new BeanContextSupport peer lcle dtime))
-  ([peer lcle]
+  ([^java.beans.beancontext.BeanContext peer ^java.util.Locale lcle]
     (new BeanContextSupport peer lcle))
-  ([peer]
+  ([^java.beans.beancontext.BeanContext peer]
     (new BeanContextSupport peer))
   ([]
     (new BeanContextSupport )))
@@ -37,7 +37,7 @@
   returns: this implementation unconditionally throws UnsupportedOperationException - `boolean`
 
   throws: java.lang.UnsupportedOperationException - thrown unconditionally by this implementation"
-  ([this c]
+  ([^java.beans.beancontext.BeanContextSupport this ^java.util.Collection c]
     (-> this (.addAll c))))
 
 (defn get-bean-context-peer
@@ -45,7 +45,7 @@
    this object is providing the implementation for.
 
   returns: the BeanContext instance - `java.beans.beancontext.BeanContext`"
-  ([this]
+  ([^java.beans.beancontext.BeanContextSupport this]
     (-> this (.getBeanContextPeer))))
 
 (defn needs-gui
@@ -58,7 +58,7 @@
    Visibility and return needsGui() == true.
 
   returns: true if the implementor needs a GUI - `boolean`"
-  ([this]
+  ([^java.beans.beancontext.BeanContextSupport this]
     (-> this (.needsGui))))
 
 (defn write-children
@@ -68,7 +68,7 @@
   oos - the ObjectOutputStream to use during serialization - `java.io.ObjectOutputStream`
 
   throws: java.io.IOException - if serialization failed"
-  ([this oos]
+  ([^java.beans.beancontext.BeanContextSupport this ^java.io.ObjectOutputStream oos]
     (-> this (.writeChildren oos))))
 
 (defn get-resource
@@ -78,7 +78,7 @@
   bcc - the child object making the request. - `java.beans.beancontext.BeanContextChild`
 
   returns: the requested resource as an InputStream - `java.net.URL`"
-  ([this name bcc]
+  ([^java.beans.beancontext.BeanContextSupport this ^java.lang.String name ^java.beans.beancontext.BeanContextChild bcc]
     (-> this (.getResource name bcc))))
 
 (defn avoiding-gui
@@ -86,7 +86,7 @@
    child is avoiding using its GUI.
 
   returns: is this instance avoiding using its GUI? - `boolean`"
-  ([this]
+  ([^java.beans.beancontext.BeanContextSupport this]
     (-> this (.avoidingGui))))
 
 (defn get-resource-as-stream
@@ -98,7 +98,7 @@
   returns: the requested resource as an InputStream - `java.io.InputStream`
 
   throws: java.lang.NullPointerException - if the argument is null"
-  ([this name bcc]
+  ([^java.beans.beancontext.BeanContextSupport this ^java.lang.String name ^java.beans.beancontext.BeanContextChild bcc]
     (-> this (.getResourceAsStream name bcc))))
 
 (defn add-bean-context-membership-listener
@@ -107,7 +107,7 @@
   bcml - the BeanContextMembershipListener to add - `java.beans.beancontext.BeanContextMembershipListener`
 
   throws: java.lang.NullPointerException - if the argument is null"
-  ([this bcml]
+  ([^java.beans.beancontext.BeanContextSupport this ^java.beans.beancontext.BeanContextMembershipListener bcml]
     (-> this (.addBeanContextMembershipListener bcml))))
 
 (defn contains
@@ -117,26 +117,26 @@
   o - the Object in question - `java.lang.Object`
 
   returns: if this object is a child - `boolean`"
-  ([this o]
+  ([^java.beans.beancontext.BeanContextSupport this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn set-design-time
   "Sets the new design time value for this BeanContext.
 
   d-time - the new designTime value - `boolean`"
-  ([this d-time]
+  ([^java.beans.beancontext.BeanContextSupport this ^Boolean d-time]
     (-> this (.setDesignTime d-time))))
 
 (defn ok-to-use-gui
   "Notify this instance that it may now render a GUI"
-  ([this]
+  ([^java.beans.beancontext.BeanContextSupport this]
     (-> this (.okToUseGui))))
 
 (defn get-locale
   "Gets the locale for this BeanContext.
 
   returns: the current Locale of the BeanContext - `java.util.Locale`"
-  ([this]
+  ([^java.beans.beancontext.BeanContextSupport this]
     (-> this (.getLocale))))
 
 (defn instantiate-child
@@ -153,7 +153,7 @@
   returns: the new object - `java.lang.Object`
 
   throws: java.io.IOException - if there is an I/O error when the bean is being deserialized"
-  ([this bean-name]
+  ([^java.beans.beancontext.BeanContextSupport this ^java.lang.String bean-name]
     (-> this (.instantiateChild bean-name))))
 
 (defn iterator
@@ -161,19 +161,19 @@
    currently nested in this BeanContext.
 
   returns: an Iterator of the nested children - `java.util.Iterator`"
-  ([this]
+  ([^java.beans.beancontext.BeanContextSupport this]
     (-> this (.iterator))))
 
 (defn dont-use-gui
   "notify this instance that it may no longer render a GUI."
-  ([this]
+  ([^java.beans.beancontext.BeanContextSupport this]
     (-> this (.dontUseGui))))
 
 (defn property-change
   "subclasses may envelope to monitor child property changes.
 
   pce - A PropertyChangeEvent object describing the event source and the property that has changed. - `java.beans.PropertyChangeEvent`"
-  ([this pce]
+  ([^java.beans.beancontext.BeanContextSupport this ^java.beans.PropertyChangeEvent pce]
     (-> this (.propertyChange pce))))
 
 (defn remove
@@ -183,7 +183,7 @@
   target-child - The child objects to remove - `java.lang.Object`
 
   returns: true if an element was removed as a result of this call - `boolean`"
-  ([this target-child]
+  ([^java.beans.beancontext.BeanContextSupport this ^java.lang.Object target-child]
     (-> this (.remove target-child))))
 
 (defn set-locale
@@ -192,7 +192,7 @@
   new-locale - the new locale. This method call will have no effect if newLocale is null. - `java.util.Locale`
 
   throws: java.beans.PropertyVetoException - if the new value is rejected"
-  ([this new-locale]
+  ([^java.beans.beancontext.BeanContextSupport this ^java.util.Locale new-locale]
     (-> this (.setLocale new-locale))))
 
 (defn serializing?
@@ -201,7 +201,7 @@
 
   returns: if this BeanContext is
    currently being serialized - `boolean`"
-  ([this]
+  ([^java.beans.beancontext.BeanContextSupport this]
     (-> this (.isSerializing))))
 
 (defn remove-bean-context-membership-listener
@@ -210,7 +210,7 @@
   bcml - the BeanContextMembershipListener to remove - `java.beans.beancontext.BeanContextMembershipListener`
 
   throws: java.lang.NullPointerException - if the argument is null"
-  ([this bcml]
+  ([^java.beans.beancontext.BeanContextSupport this ^java.beans.beancontext.BeanContextMembershipListener bcml]
     (-> this (.removeBeanContextMembershipListener bcml))))
 
 (defn add
@@ -223,7 +223,7 @@
   target-child - The child objects to nest within this BeanContext - `java.lang.Object`
 
   returns: true if the child was added successfully. - `boolean`"
-  ([this target-child]
+  ([^java.beans.beancontext.BeanContextSupport this ^java.lang.Object target-child]
     (-> this (.add target-child))))
 
 (defn empty?
@@ -234,7 +234,7 @@
    nested children.
 
   returns: if there are not children - `boolean`"
-  ([this]
+  ([^java.beans.beancontext.BeanContextSupport this]
     (-> this (.isEmpty))))
 
 (defn size
@@ -242,7 +242,7 @@
    this BeanContext.
 
   returns: number of children - `int`"
-  ([this]
+  ([^java.beans.beancontext.BeanContextSupport this]
     (-> this (.size))))
 
 (defn retain-all
@@ -254,7 +254,7 @@
   returns: this implementation unconditionally throws UnsupportedOperationException - `boolean`
 
   throws: java.lang.UnsupportedOperationException - thrown unconditionally by this implementation"
-  ([this c]
+  ([^java.beans.beancontext.BeanContextSupport this ^java.util.Collection c]
     (-> this (.retainAll c))))
 
 (defn clear
@@ -262,7 +262,7 @@
    implementations must synchronized on the hierarchy lock and `children` protected field
 
   throws: java.lang.UnsupportedOperationException - thrown unconditionally by this implementation"
-  ([this]
+  ([^java.beans.beancontext.BeanContextSupport this]
     (-> this (.clear))))
 
 (defn to-array
@@ -273,9 +273,9 @@
   arry - The array of object types that are of interest. - `java.lang.Object[]`
 
   returns: an array of children - `java.lang.Object[]`"
-  ([this arry]
+  ([^java.beans.beancontext.BeanContextSupport this ^java.lang.Object[] arry]
     (-> this (.toArray arry)))
-  ([this]
+  ([^java.beans.beancontext.BeanContextSupport this]
     (-> this (.toArray))))
 
 (defn contains-key
@@ -285,7 +285,7 @@
   o - the Object in question - `java.lang.Object`
 
   returns: if this object is a child - `boolean`"
-  ([this o]
+  ([^java.beans.beancontext.BeanContextSupport this ^java.lang.Object o]
     (-> this (.containsKey o))))
 
 (defn remove-all
@@ -297,7 +297,7 @@
   returns: this implementation unconditionally throws UnsupportedOperationException - `boolean`
 
   throws: java.lang.UnsupportedOperationException - thrown unconditionally by this implementation"
-  ([this c]
+  ([^java.beans.beancontext.BeanContextSupport this ^java.util.Collection c]
     (-> this (.removeAll c))))
 
 (defn read-children
@@ -308,7 +308,7 @@
   ois - the ObjectInputStream to use - `java.io.ObjectInputStream`
 
   throws: java.io.IOException - if deserialization failed"
-  ([this ois]
+  ([^java.beans.beancontext.BeanContextSupport this ^java.io.ObjectInputStream ois]
     (-> this (.readChildren ois))))
 
 (defn contains-all
@@ -321,7 +321,7 @@
   returns: true if all objects
    in the collection are children of
    this BeanContext, false if not. - `boolean`"
-  ([this c]
+  ([^java.beans.beancontext.BeanContextSupport this ^java.util.Collection c]
     (-> this (.containsAll c))))
 
 (defn vetoable-change
@@ -330,7 +330,7 @@
   pce - a PropertyChangeEvent object describing the event source and the property that has changed. - `java.beans.PropertyChangeEvent`
 
   throws: java.beans.PropertyVetoException - if the recipient wishes the property change to be rolled back."
-  ([this pce]
+  ([^java.beans.beancontext.BeanContextSupport this ^java.beans.PropertyChangeEvent pce]
     (-> this (.vetoableChange pce))))
 
 (defn design-time?
@@ -339,6 +339,6 @@
 
   returns: true if in design time mode,
    false if not - `boolean`"
-  ([this]
+  ([^java.beans.beancontext.BeanContextSupport this]
     (-> this (.isDesignTime))))
 

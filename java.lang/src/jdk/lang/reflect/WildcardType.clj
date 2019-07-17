@@ -20,7 +20,7 @@
        type variable - `java.lang.reflect.Type[]`
 
   throws: java.lang.TypeNotPresentException - if any of the bounds refers to a non-existent type declaration"
-  ([this]
+  ([^. this]
     (-> this (.getUpperBounds))))
 
 (defn get-lower-bounds
@@ -40,6 +40,6 @@
        type variable - `java.lang.reflect.Type[]`
 
   throws: java.lang.TypeNotPresentException - if any of the bounds refers to a non-existent type declaration"
-  ([this]
+  ([^. this]
     (-> this (.getLowerBounds))))
 

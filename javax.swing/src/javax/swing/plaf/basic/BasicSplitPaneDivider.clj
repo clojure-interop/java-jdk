@@ -24,7 +24,7 @@
    instance for mouse events and mouse dragged events.
 
   ui - `javax.swing.plaf.basic.BasicSplitPaneUI`"
-  ([ui]
+  ([^javax.swing.plaf.basic.BasicSplitPaneUI ui]
     (new BasicSplitPaneDivider ui)))
 
 (defn get-minimum-size
@@ -32,7 +32,7 @@
 
   returns: an instance of Dimension that represents
                   the minimum size of this container. - `java.awt.Dimension`"
-  ([this]
+  ([^javax.swing.plaf.basic.BasicSplitPaneDivider this]
     (-> this (.getMinimumSize))))
 
 (defn set-divider-size
@@ -41,7 +41,7 @@
    the height of VERTICAL_SPLIT.
 
   new-size - `int`"
-  ([this new-size]
+  ([^javax.swing.plaf.basic.BasicSplitPaneDivider this ^Integer new-size]
     (-> this (.setDividerSize new-size))))
 
 (defn get-insets
@@ -49,14 +49,14 @@
    border's insets, else calls super.getInsets.
 
   returns: the value of the insets property. - `java.awt.Insets`"
-  ([this]
+  ([^javax.swing.plaf.basic.BasicSplitPaneDivider this]
     (-> this (.getInsets))))
 
 (defn set-basic-split-pane-ui
   "Sets the SplitPaneUI that is using the receiver.
 
   new-ui - `javax.swing.plaf.basic.BasicSplitPaneUI`"
-  ([this new-ui]
+  ([^javax.swing.plaf.basic.BasicSplitPaneDivider this ^javax.swing.plaf.basic.BasicSplitPaneUI new-ui]
     (-> this (.setBasicSplitPaneUI new-ui))))
 
 (defn get-border
@@ -64,7 +64,7 @@
    currently set.
 
   returns: the border object for this component - `javax.swing.border.Border`"
-  ([this]
+  ([^javax.swing.plaf.basic.BasicSplitPaneDivider this]
     (-> this (.getBorder))))
 
 (defn property-change
@@ -72,7 +72,7 @@
    updateOrientation if necessary.
 
   e - A PropertyChangeEvent object describing the event source and the property that has changed. - `java.beans.PropertyChangeEvent`"
-  ([this e]
+  ([^javax.swing.plaf.basic.BasicSplitPaneDivider this ^java.beans.PropertyChangeEvent e]
     (-> this (.propertyChange e))))
 
 (defn get-divider-size
@@ -80,21 +80,21 @@
    is HORIZONTAL_SPLIT, or the height of VERTICAL_SPLIT.
 
   returns: `int`"
-  ([this]
+  ([^javax.swing.plaf.basic.BasicSplitPaneDivider this]
     (-> this (.getDividerSize))))
 
 (defn mouse-over?
   "Returns whether or not the mouse is currently over the divider
 
   returns: whether or not the mouse is currently over the divider - `boolean`"
-  ([this]
+  ([^javax.swing.plaf.basic.BasicSplitPaneDivider this]
     (-> this (.isMouseOver))))
 
 (defn paint
   "Paints the divider.
 
   g - the specified Graphics window - `java.awt.Graphics`"
-  ([this g]
+  ([^javax.swing.plaf.basic.BasicSplitPaneDivider this ^java.awt.Graphics g]
     (-> this (.paint g))))
 
 (defn get-basic-split-pane-ui
@@ -102,14 +102,14 @@
    in.
 
   returns: `javax.swing.plaf.basic.BasicSplitPaneUI`"
-  ([this]
+  ([^javax.swing.plaf.basic.BasicSplitPaneDivider this]
     (-> this (.getBasicSplitPaneUI))))
 
 (defn set-border
   "Sets the border of this component.
 
   border - `javax.swing.border.Border`"
-  ([this border]
+  ([^javax.swing.plaf.basic.BasicSplitPaneDivider this ^javax.swing.border.Border border]
     (-> this (.setBorder border))))
 
 (defn get-preferred-size
@@ -117,6 +117,6 @@
 
   returns: an instance of Dimension that represents
                   the preferred size of this container. - `java.awt.Dimension`"
-  ([this]
+  ([^javax.swing.plaf.basic.BasicSplitPaneDivider this]
     (-> this (.getPreferredSize))))
 

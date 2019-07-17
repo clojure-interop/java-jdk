@@ -22,7 +22,7 @@
 
   elem - the element that this view is responsible for - `javax.swing.text.Element`
   axis - may be either View.X_AXIS or View.Y_AXIS - `int`"
-  ([elem axis]
+  ([^javax.swing.text.Element elem ^Integer axis]
     (new FlowView elem axis)))
 
 (defn get-flow-axis
@@ -34,7 +34,7 @@
    by the FlowStrategy.
 
   returns: `int`"
-  ([this]
+  ([^javax.swing.text.FlowView this]
     (-> this (.getFlowAxis))))
 
 (defn get-flow-span
@@ -49,7 +49,7 @@
   index - the index of the row being updated. This should be a value >= 0 and < getViewCount(). - `int`
 
   returns: `int`"
-  ([this index]
+  ([^javax.swing.text.FlowView this ^Integer index]
     (-> this (.getFlowSpan index))))
 
 (defn get-flow-start
@@ -62,7 +62,7 @@
   index - the index of the row being updated. This should be a value >= 0 and < getViewCount(). - `int`
 
   returns: `int`"
-  ([this index]
+  ([^javax.swing.text.FlowView this ^Integer index]
     (-> this (.getFlowStart index))))
 
 (defn insert-update
@@ -72,7 +72,7 @@
   changes - the change information from the associated document - `javax.swing.event.DocumentEvent`
   a - the current allocation of the view - `java.awt.Shape`
   f - the factory to use to rebuild if the view has children - `javax.swing.text.ViewFactory`"
-  ([this changes a f]
+  ([^javax.swing.text.FlowView this ^javax.swing.event.DocumentEvent changes ^java.awt.Shape a ^javax.swing.text.ViewFactory f]
     (-> this (.insertUpdate changes a f))))
 
 (defn remove-update
@@ -82,7 +82,7 @@
   changes - the change information from the associated document - `javax.swing.event.DocumentEvent`
   a - the current allocation of the view - `java.awt.Shape`
   f - the factory to use to rebuild if the view has children - `javax.swing.text.ViewFactory`"
-  ([this changes a f]
+  ([^javax.swing.text.FlowView this ^javax.swing.event.DocumentEvent changes ^java.awt.Shape a ^javax.swing.text.ViewFactory f]
     (-> this (.removeUpdate changes a f))))
 
 (defn changed-update
@@ -92,7 +92,7 @@
   changes - the change information from the associated document - `javax.swing.event.DocumentEvent`
   a - the current allocation of the view - `java.awt.Shape`
   f - the factory to use to rebuild if the view has children - `javax.swing.text.ViewFactory`"
-  ([this changes a f]
+  ([^javax.swing.text.FlowView this ^javax.swing.event.DocumentEvent changes ^java.awt.Shape a ^javax.swing.text.ViewFactory f]
     (-> this (.changedUpdate changes a f))))
 
 (defn set-parent
@@ -109,6 +109,6 @@
    the loadChildren method will not be called.
 
   parent - the parent of the view, null if none - `javax.swing.text.View`"
-  ([this parent]
+  ([^javax.swing.text.FlowView this ^javax.swing.text.View parent]
     (-> this (.setParent parent))))
 

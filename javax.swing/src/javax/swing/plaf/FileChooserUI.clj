@@ -12,39 +12,39 @@
   "fc - `javax.swing.JFileChooser`
 
   returns: `javax.swing.filechooser.FileFilter`"
-  ([this fc]
+  ([^javax.swing.plaf.FileChooserUI this ^javax.swing.JFileChooser fc]
     (-> this (.getAcceptAllFileFilter fc))))
 
 (defn get-file-view
   "fc - `javax.swing.JFileChooser`
 
   returns: `javax.swing.filechooser.FileView`"
-  ([this fc]
+  ([^javax.swing.plaf.FileChooserUI this ^javax.swing.JFileChooser fc]
     (-> this (.getFileView fc))))
 
 (defn get-approve-button-text
   "fc - `javax.swing.JFileChooser`
 
   returns: `java.lang.String`"
-  ([this fc]
+  ([^javax.swing.plaf.FileChooserUI this ^javax.swing.JFileChooser fc]
     (-> this (.getApproveButtonText fc))))
 
 (defn get-dialog-title
   "fc - `javax.swing.JFileChooser`
 
   returns: `java.lang.String`"
-  ([this fc]
+  ([^javax.swing.plaf.FileChooserUI this ^javax.swing.JFileChooser fc]
     (-> this (.getDialogTitle fc))))
 
 (defn rescan-current-directory
   "fc - `javax.swing.JFileChooser`"
-  ([this fc]
+  ([^javax.swing.plaf.FileChooserUI this ^javax.swing.JFileChooser fc]
     (-> this (.rescanCurrentDirectory fc))))
 
 (defn ensure-file-is-visible
   "fc - `javax.swing.JFileChooser`
   f - `java.io.File`"
-  ([this fc f]
+  ([^javax.swing.plaf.FileChooserUI this ^javax.swing.JFileChooser fc ^java.io.File f]
     (-> this (.ensureFileIsVisible fc f))))
 
 (defn get-default-button
@@ -55,6 +55,6 @@
   fc - `javax.swing.JFileChooser`
 
   returns: `javax.swing.JButton`"
-  ([this fc]
+  ([^javax.swing.plaf.FileChooserUI this ^javax.swing.JFileChooser fc]
     (-> this (.getDefaultButton fc))))
 

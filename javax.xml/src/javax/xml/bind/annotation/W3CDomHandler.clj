@@ -10,19 +10,19 @@
    to be used.
 
   builder - must not be null. JAXB uses this DocumentBuilder to create a new element. - `javax.xml.parsers.DocumentBuilder`"
-  ([builder]
+  ([^javax.xml.parsers.DocumentBuilder builder]
     (new W3CDomHandler builder))
   ([]
     (new W3CDomHandler )))
 
 (defn get-builder
   "returns: `javax.xml.parsers.DocumentBuilder`"
-  ([this]
+  ([^javax.xml.bind.annotation.W3CDomHandler this]
     (-> this (.getBuilder))))
 
 (defn set-builder
   "builder - `javax.xml.parsers.DocumentBuilder`"
-  ([this builder]
+  ([^javax.xml.bind.annotation.W3CDomHandler this ^javax.xml.parsers.DocumentBuilder builder]
     (-> this (.setBuilder builder))))
 
 (defn create-unmarshaller
@@ -32,7 +32,7 @@
 
   returns: null if the operation fails. The error must have been reported
         to the error handler. - `javax.xml.transform.dom.DOMResult`"
-  ([this error-handler]
+  ([^javax.xml.bind.annotation.W3CDomHandler this ^javax.xml.bind.ValidationEventHandler error-handler]
     (-> this (.createUnmarshaller error-handler))))
 
 (defn get-element
@@ -42,7 +42,7 @@
 
   returns: null if the operation fails. The error must have been reported
         to the error handler. - `org.w3c.dom.Element`"
-  ([this r]
+  ([^javax.xml.bind.annotation.W3CDomHandler this ^javax.xml.transform.dom.DOMResult r]
     (-> this (.getElement r))))
 
 (defn marshal
@@ -53,6 +53,6 @@
 
   returns: null if there was an error. The error should have been reported
         to the handler. - `javax.xml.transform.Source`"
-  ([this element error-handler]
+  ([^javax.xml.bind.annotation.W3CDomHandler this ^org.w3c.dom.Element element ^javax.xml.bind.ValidationEventHandler error-handler]
     (-> this (.marshal element error-handler))))
 

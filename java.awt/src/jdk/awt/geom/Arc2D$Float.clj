@@ -16,11 +16,11 @@
   start - The starting angle of the arc in degrees. - `float`
   extent - The angular extent of the arc in degrees. - `float`
   type - The closure type for the arc: Arc2D.OPEN, Arc2D.CHORD, or Arc2D.PIE. - `int`"
-  ([x y w h start extent type]
+  ([^Float x ^Float y ^Float w ^Float h ^Float start ^Float extent ^Integer type]
     (new Arc2D$Float x y w h start extent type))
-  ([ellipse-bounds start extent type]
+  ([^java.awt.geom.Rectangle2D ellipse-bounds ^Float start ^Float extent ^Integer type]
     (new Arc2D$Float ellipse-bounds start extent type))
-  ([type]
+  ([^Integer type]
     (new Arc2D$Float type))
   ([]
     (new Arc2D$Float )))
@@ -90,7 +90,7 @@
 
   returns: A double value that represents the starting angle
    of the arc in degrees. - `double`"
-  ([this]
+  ([^java.awt.geom.Arc2D$Float this]
     (-> this (.getAngleStart))))
 
 (defn get-width
@@ -101,7 +101,7 @@
    the framing rectangle of this RectangularShape.
 
   returns: the width of the framing rectangle. - `double`"
-  ([this]
+  ([^java.awt.geom.Arc2D$Float this]
     (-> this (.getWidth))))
 
 (defn set-arc
@@ -115,7 +115,7 @@
   ang-st - The starting angle of the arc in degrees. - `double`
   ang-ext - The angular extent of the arc in degrees. - `double`
   closure - The closure type for the arc: Arc2D.OPEN, Arc2D.CHORD, or Arc2D.PIE. - `int`"
-  ([this x y w h ang-st ang-ext closure]
+  ([^java.awt.geom.Arc2D$Float this ^Double x ^Double y ^Double w ^Double h ^Double ang-st ^Double ang-ext ^Integer closure]
     (-> this (.setArc x y w h ang-st ang-ext closure))))
 
 (defn set-angle-extent
@@ -123,7 +123,7 @@
    value.
 
   ang-ext - The angular extent of the arc in degrees. - `double`"
-  ([this ang-ext]
+  ([^java.awt.geom.Arc2D$Float this ^Double ang-ext]
     (-> this (.setAngleExtent ang-ext))))
 
 (defn set-angle-start
@@ -131,7 +131,7 @@
    value.
 
   ang-st - The starting angle of the arc in degrees. - `double`"
-  ([this ang-st]
+  ([^java.awt.geom.Arc2D$Float this ^Double ang-st]
     (-> this (.setAngleStart ang-st))))
 
 (defn get-y
@@ -143,7 +143,7 @@
 
   returns: the Y coordinate of the upper-left corner of
    the framing rectangle. - `double`"
-  ([this]
+  ([^java.awt.geom.Arc2D$Float this]
     (-> this (.getY))))
 
 (defn get-x
@@ -155,7 +155,7 @@
 
   returns: the X coordinate of the upper-left corner of
    the framing rectangle. - `double`"
-  ([this]
+  ([^java.awt.geom.Arc2D$Float this]
     (-> this (.getX))))
 
 (defn get-height
@@ -166,7 +166,7 @@
    the framing rectangle of this RectangularShape.
 
   returns: the height of the framing rectangle. - `double`"
-  ([this]
+  ([^java.awt.geom.Arc2D$Float this]
     (-> this (.getHeight))))
 
 (defn empty?
@@ -176,7 +176,7 @@
 
   returns: true if the RectangularShape is empty;
             false otherwise. - `boolean`"
-  ([this]
+  ([^java.awt.geom.Arc2D$Float this]
     (-> this (.isEmpty))))
 
 (defn get-angle-extent
@@ -184,6 +184,6 @@
 
   returns: A double value that represents the angular extent
    of the arc in degrees. - `double`"
-  ([this]
+  ([^java.awt.geom.Arc2D$Float this]
     (-> this (.getAngleExtent))))
 

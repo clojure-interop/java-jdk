@@ -10,6 +10,6 @@
   "Create a job which can print a multiDoc.
 
   returns: a MultiDocPrintJob - `javax.print.MultiDocPrintJob`"
-  ([this]
+  ([^. this]
     (-> this (.createMultiDocPrintJob))))
 

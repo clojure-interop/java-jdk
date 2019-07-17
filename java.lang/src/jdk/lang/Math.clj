@@ -102,7 +102,7 @@
   returns: the largest (closest to positive infinity)
             floating-point value that less than or equal to the argument
             and is equal to a mathematical integer. - `double`"
-  ([a]
+  ([^Double a]
     (Math/floor a)))
 
 (defn *log-1p
@@ -137,7 +137,7 @@
 
   returns: the value ln(x  1), the natural
    log of x  1 - `double`"
-  ([x]
+  ([^Double x]
     (Math/log1p x)))
 
 (defn *ceil
@@ -158,7 +158,7 @@
   returns: the smallest (closest to negative infinity)
             floating-point value that is greater than or equal to
             the argument and is equal to a mathematical integer. - `double`"
-  ([a]
+  ([^Double a]
     (Math/ceil a)))
 
 (defn *ulp
@@ -180,7 +180,7 @@
   d - the floating-point value whose ulp is to be returned - `double`
 
   returns: the size of an ulp of the argument - `double`"
-  ([d]
+  ([^Double d]
     (Math/ulp d)))
 
 (defn *multiply-exact
@@ -193,7 +193,7 @@
   returns: the result - `int`
 
   throws: java.lang.ArithmeticException - if the result overflows an int"
-  ([x y]
+  ([^Integer x ^Integer y]
     (Math/multiplyExact x y)))
 
 (defn *next-down
@@ -218,7 +218,7 @@
 
   returns: The adjacent floating-point value closer to negative
    infinity. - `double`"
-  ([d]
+  ([^Double d]
     (Math/nextDown d)))
 
 (defn *random
@@ -268,7 +268,7 @@
   x - The number whose hyperbolic cosine is to be returned. - `double`
 
   returns: The hyperbolic cosine of x. - `double`"
-  ([x]
+  ([^Double x]
     (Math/cosh x)))
 
 (defn *min
@@ -281,7 +281,7 @@
   b - another argument. - `int`
 
   returns: the smaller of a and b. - `int`"
-  ([a b]
+  ([^Integer a ^Integer b]
     (Math/min a b)))
 
 (defn *atan-2
@@ -336,7 +336,7 @@
             (r, theta)
             in polar coordinates that corresponds to the point
             (x, y) in Cartesian coordinates. - `double`"
-  ([y x]
+  ([^Double y ^Double x]
     (Math/atan2 y x)))
 
 (defn *add-exact
@@ -349,7 +349,7 @@
   returns: the result - `int`
 
   throws: java.lang.ArithmeticException - if the result overflows an int"
-  ([x y]
+  ([^Integer x ^Integer y]
     (Math/addExact x y)))
 
 (defn *cbrt
@@ -377,7 +377,7 @@
   a - a value. - `double`
 
   returns: the cube root of a. - `double`"
-  ([a]
+  ([^Double a]
     (Math/cbrt a)))
 
 (defn *get-exponent
@@ -393,7 +393,7 @@
   f - a float value - `float`
 
   returns: the unbiased exponent of the argument - `int`"
-  ([f]
+  ([^Float f]
     (Math/getExponent f)))
 
 (defn *max
@@ -406,7 +406,7 @@
   b - another argument. - `int`
 
   returns: the larger of a and b. - `int`"
-  ([a b]
+  ([^Integer a ^Integer b]
     (Math/max a b)))
 
 (defn *floor-div
@@ -439,7 +439,7 @@
    int value that is less than or equal to the algebraic quotient. - `int`
 
   throws: java.lang.ArithmeticException - if the divisor y is zero"
-  ([x y]
+  ([^Integer x ^Integer y]
     (Math/floorDiv x y)))
 
 (defn *pow
@@ -564,7 +564,7 @@
   b - the exponent. - `double`
 
   returns: the value ab. - `double`"
-  ([a b]
+  ([^Double a ^Double b]
     (Math/pow a b)))
 
 (defn *copy-sign
@@ -580,7 +580,7 @@
 
   returns: a value with the magnitude of magnitude
    and the sign of sign. - `double`"
-  ([magnitude sign]
+  ([^Double magnitude ^Double sign]
     (Math/copySign magnitude sign)))
 
 (defn *atan
@@ -596,7 +596,7 @@
   a - the value whose arc tangent is to be returned. - `double`
 
   returns: the arc tangent of the argument. - `double`"
-  ([a]
+  ([^Double a]
     (Math/atan a)))
 
 (defn *next-up
@@ -621,7 +621,7 @@
 
   returns: The adjacent floating-point value closer to positive
    infinity. - `double`"
-  ([d]
+  ([^Double d]
     (Math/nextUp d)))
 
 (defn *log
@@ -641,7 +641,7 @@
 
   returns: the value ln a, the natural logarithm of
             a. - `double`"
-  ([a]
+  ([^Double a]
     (Math/log a)))
 
 (defn *to-degrees
@@ -655,7 +655,7 @@
 
   returns: the measurement of the angle angrad
             in degrees. - `double`"
-  ([angrad]
+  ([^Double angrad]
     (Math/toDegrees angrad)))
 
 (defn *sin
@@ -671,7 +671,7 @@
   a - an angle, in radians. - `double`
 
   returns: the sine of the argument. - `double`"
-  ([a]
+  ([^Double a]
     (Math/sin a)))
 
 (defn *scalb
@@ -701,7 +701,7 @@
   scale-factor - power of 2 used to scale d - `int`
 
   returns: d × 2scaleFactor - `double`"
-  ([d scale-factor]
+  ([^Double d ^Integer scale-factor]
     (Math/scalb d scale-factor)))
 
 (defn *hypot
@@ -728,7 +728,7 @@
 
   returns: sqrt(x2 y2)
    without intermediate overflow or underflow - `double`"
-  ([x y]
+  ([^Double x ^Double y]
     (Math/hypot x y)))
 
 (defn *exp
@@ -747,7 +747,7 @@
 
   returns: the value ea,
             where e is the base of the natural logarithms. - `double`"
-  ([a]
+  ([^Double a]
     (Math/exp a)))
 
 (defn *decrement-exact
@@ -759,7 +759,7 @@
   returns: the result - `int`
 
   throws: java.lang.ArithmeticException - if the result overflows an int"
-  ([a]
+  ([^Integer a]
     (Math/decrementExact a)))
 
 (defn *log-10
@@ -782,7 +782,7 @@
   a - a value - `double`
 
   returns: the base 10 logarithm of  a. - `double`"
-  ([a]
+  ([^Double a]
     (Math/log10 a)))
 
 (defn *sqrt
@@ -802,7 +802,7 @@
 
   returns: the positive square root of a.
             If the argument is NaN or less than zero, the result is NaN. - `double`"
-  ([a]
+  ([^Double a]
     (Math/sqrt a)))
 
 (defn *floor-mod
@@ -848,7 +848,7 @@
   returns: the floor modulus x - (floorDiv(x, y) * y) - `int`
 
   throws: java.lang.ArithmeticException - if the divisor y is zero"
-  ([x y]
+  ([^Integer x ^Integer y]
     (Math/floorMod x y)))
 
 (defn *tan
@@ -864,7 +864,7 @@
   a - an angle, in radians. - `double`
 
   returns: the tangent of the argument. - `double`"
-  ([a]
+  ([^Double a]
     (Math/tan a)))
 
 (defn *cos
@@ -878,7 +878,7 @@
   a - an angle, in radians. - `double`
 
   returns: the cosine of the argument. - `double`"
-  ([a]
+  ([^Double a]
     (Math/cos a)))
 
 (defn *subtract-exact
@@ -891,7 +891,7 @@
   returns: the result - `int`
 
   throws: java.lang.ArithmeticException - if the result overflows an int"
-  ([x y]
+  ([^Integer x ^Integer y]
     (Math/subtractExact x y)))
 
 (defn *abs
@@ -907,7 +907,7 @@
   a - the argument whose absolute value is to be determined - `int`
 
   returns: the absolute value of the argument. - `int`"
-  ([a]
+  ([^Integer a]
     (Math/abs a)))
 
 (defn *expm-1
@@ -942,7 +942,7 @@
   x - the exponent to raise e to in the computation of ex -1. - `double`
 
   returns: the value ex - 1. - `double`"
-  ([x]
+  ([^Double x]
     (Math/expm1 x)))
 
 (defn *next-after
@@ -981,7 +981,7 @@
 
   returns: The floating-point number adjacent to start in the
    direction of direction. - `double`"
-  ([start direction]
+  ([^Double start ^Double direction]
     (Math/nextAfter start direction)))
 
 (defn *to-int-exact
@@ -993,7 +993,7 @@
   returns: the argument as an int - `int`
 
   throws: java.lang.ArithmeticException - if the argument overflows an int"
-  ([value]
+  ([^Long value]
     (Math/toIntExact value)))
 
 (defn *increment-exact
@@ -1005,7 +1005,7 @@
   returns: the result - `int`
 
   throws: java.lang.ArithmeticException - if the result overflows an int"
-  ([a]
+  ([^Integer a]
     (Math/incrementExact a)))
 
 (defn *negate-exact
@@ -1017,7 +1017,7 @@
   returns: the result - `int`
 
   throws: java.lang.ArithmeticException - if the result overflows an int"
-  ([a]
+  ([^Integer a]
     (Math/negateExact a)))
 
 (defn *iee-eremainder
@@ -1042,7 +1042,7 @@
 
   returns: the remainder when f1 is divided by
             f2. - `double`"
-  ([f-1 f-2]
+  ([^Double f-1 ^Double f-2]
     (Math/IEEEremainder f-1 f-2)))
 
 (defn *sinh
@@ -1069,7 +1069,7 @@
   x - The number whose hyperbolic sine is to be returned. - `double`
 
   returns: The hyperbolic sine of x. - `double`"
-  ([x]
+  ([^Double x]
     (Math/sinh x)))
 
 (defn *round
@@ -1090,7 +1090,7 @@
 
   returns: the value of the argument rounded to the nearest
             int value. - `int`"
-  ([a]
+  ([^Float a]
     (Math/round a)))
 
 (defn *asin
@@ -1107,7 +1107,7 @@
   a - the value whose arc sine is to be returned. - `double`
 
   returns: the arc sine of the argument. - `double`"
-  ([a]
+  ([^Double a]
     (Math/asin a)))
 
 (defn *tanh
@@ -1144,7 +1144,7 @@
   x - The number whose hyperbolic tangent is to be returned. - `double`
 
   returns: The hyperbolic tangent of x. - `double`"
-  ([x]
+  ([^Double x]
     (Math/tanh x)))
 
 (defn *to-radians
@@ -1156,7 +1156,7 @@
 
   returns: the measurement of the angle angdeg
             in radians. - `double`"
-  ([angdeg]
+  ([^Double angdeg]
     (Math/toRadians angdeg)))
 
 (defn *rint
@@ -1174,7 +1174,7 @@
 
   returns: the closest floating-point value to a that is
             equal to a mathematical integer. - `double`"
-  ([a]
+  ([^Double a]
     (Math/rint a)))
 
 (defn *signum
@@ -1191,7 +1191,7 @@
   d - the floating-point value whose signum is to be returned - `double`
 
   returns: the signum function of the argument - `double`"
-  ([d]
+  ([^Double d]
     (Math/signum d)))
 
 (defn *acos
@@ -1206,6 +1206,6 @@
   a - the value whose arc cosine is to be returned. - `double`
 
   returns: the arc cosine of the argument. - `double`"
-  ([a]
+  ([^Double a]
     (Math/acos a)))
 

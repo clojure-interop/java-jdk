@@ -47,7 +47,7 @@
   axis - can be BoxLayout.X_AXIS, BoxLayout.Y_AXIS, BoxLayout.LINE_AXIS or BoxLayout.PAGE_AXIS. - `int`
 
   throws: java.awt.AWTError - if the axis is invalid"
-  ([axis]
+  ([^Integer axis]
     (new Box axis)))
 
 (defn *create-horizontal-box
@@ -85,7 +85,7 @@
   d - the dimensions of the invisible component - `java.awt.Dimension`
 
   returns: the component - `java.awt.Component`"
-  ([d]
+  ([^java.awt.Dimension d]
     (Box/createRigidArea d)))
 
 (defn *create-horizontal-strut
@@ -104,7 +104,7 @@
   width - the width of the invisible component, in pixels >= 0 - `int`
 
   returns: the component - `java.awt.Component`"
-  ([width]
+  ([^Integer width]
     (Box/createHorizontalStrut width)))
 
 (defn *create-vertical-strut
@@ -123,7 +123,7 @@
   height - the height of the invisible component, in pixels >= 0 - `int`
 
   returns: the component - `java.awt.Component`"
-  ([height]
+  ([^Integer height]
     (Box/createVerticalStrut height)))
 
 (defn *create-glue
@@ -190,7 +190,7 @@
   "Throws an AWTError, since a Box can use only a BoxLayout.
 
   l - the layout manager to use - `java.awt.LayoutManager`"
-  ([this l]
+  ([^javax.swing.Box this ^java.awt.LayoutManager l]
     (-> this (.setLayout l))))
 
 (defn get-accessible-context
@@ -201,6 +201,6 @@
 
   returns: an AccessibleBox that serves as the
            AccessibleContext of this Box - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^javax.swing.Box this]
     (-> this (.getAccessibleContext))))
 

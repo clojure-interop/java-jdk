@@ -23,7 +23,7 @@
    to the data model occurs.
 
   l - the ListDataListener to be added - `javax.swing.event.ListDataListener`"
-  ([this l]
+  ([^javax.swing.AbstractListModel this ^javax.swing.event.ListDataListener l]
     (-> this (.addListDataListener l))))
 
 (defn remove-list-data-listener
@@ -31,7 +31,7 @@
    change to the data model occurs.
 
   l - the ListDataListener to be removed - `javax.swing.event.ListDataListener`"
-  ([this l]
+  ([^javax.swing.AbstractListModel this ^javax.swing.event.ListDataListener l]
     (-> this (.removeListDataListener l))))
 
 (defn get-list-data-listeners
@@ -41,7 +41,7 @@
   returns: all of this model's ListDataListeners,
            or an empty array if no list data listeners
            are currently registered - `javax.swing.event.ListDataListener[]`"
-  ([this]
+  ([^javax.swing.AbstractListModel this]
     (-> this (.getListDataListeners))))
 
 (defn get-listeners
@@ -74,6 +74,6 @@
             listeners have been added - `<T extends java.util.EventListener> T[]`
 
   throws: java.lang.ClassCastException - if listenerType doesn't specify a class or interface that implements java.util.EventListener"
-  ([this listener-type]
+  ([^javax.swing.AbstractListModel this ^java.lang.Class listener-type]
     (-> this (.getListeners listener-type))))
 

@@ -12,7 +12,7 @@
   m - The Map backing this SimpleBindings. - `java.util.Map<java.lang.String,java.lang.Object>`
 
   throws: java.lang.NullPointerException - if m is null"
-  ([m]
+  ([^java.util.Map m]
     (new SimpleBindings m))
   ([]
     (new SimpleBindings )))
@@ -31,7 +31,7 @@
    support the add or addAll operations.
 
   returns: a collection view of the values contained in this map - `java.util.Collection<java.lang.Object>`"
-  ([this]
+  ([^javax.script.SimpleBindings this]
     (-> this (.values))))
 
 (defn put-all
@@ -40,7 +40,7 @@
   to-merge - The Map of values to add. - `java.lang.Object>`
 
   throws: java.lang.NullPointerException - if toMerge map is null or if some key in the map is null."
-  ([this to-merge]
+  ([^javax.script.SimpleBindings this ^java.lang.Object> to-merge]
     (-> this (.putAll to-merge))))
 
 (defn put
@@ -53,7 +53,7 @@
    unset. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if the name is null."
-  ([this name value]
+  ([^javax.script.SimpleBindings this ^java.lang.String name ^java.lang.Object value]
     (-> this (.put name value))))
 
 (defn entry-set
@@ -71,7 +71,7 @@
    add or addAll operations.
 
   returns: a set view of the mappings contained in this map - `java.util.Set<java.util.Map.Entry<java.lang.String,java.lang.Object>>`"
-  ([this]
+  ([^javax.script.SimpleBindings this]
     (-> this (.entrySet))))
 
 (defn contains-value
@@ -86,7 +86,7 @@
 
   returns: true if this map maps one or more keys to the
            specified value - `boolean`"
-  ([this value]
+  ([^javax.script.SimpleBindings this ^java.lang.Object value]
     (-> this (.containsValue value))))
 
 (defn remove
@@ -109,7 +109,7 @@
            if there was no mapping for key. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([this key]
+  ([^javax.script.SimpleBindings this ^java.lang.Object key]
     (-> this (.remove key))))
 
 (defn key-set
@@ -126,14 +126,14 @@
    operations.
 
   returns: a set view of the keys contained in this map - `java.util.Set<java.lang.String>`"
-  ([this]
+  ([^javax.script.SimpleBindings this]
     (-> this (.keySet))))
 
 (defn empty?
   "Returns true if this map contains no key-value mappings.
 
   returns: true if this map contains no key-value mappings - `boolean`"
-  ([this]
+  ([^javax.script.SimpleBindings this]
     (-> this (.isEmpty))))
 
 (defn size
@@ -142,13 +142,13 @@
    Integer.MAX_VALUE.
 
   returns: the number of key-value mappings in this map - `int`"
-  ([this]
+  ([^javax.script.SimpleBindings this]
     (-> this (.size))))
 
 (defn clear
   "Removes all of the mappings from this map (optional operation).
    The map will be empty after this call returns."
-  ([this]
+  ([^javax.script.SimpleBindings this]
     (-> this (.clear))))
 
 (defn contains-key
@@ -164,7 +164,7 @@
            key. - `boolean`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([this key]
+  ([^javax.script.SimpleBindings this ^java.lang.Object key]
     (-> this (.containsKey key))))
 
 (defn get
@@ -186,6 +186,6 @@
            null if the map contains no mapping for this key. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([this key]
+  ([^javax.script.SimpleBindings this ^java.lang.Object key]
     (-> this (.get key))))
 

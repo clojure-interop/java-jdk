@@ -81,7 +81,7 @@
   returns: A new datagram channel - `java.nio.channels.DatagramChannel`
 
   throws: java.lang.UnsupportedOperationException - If the specified protocol family is not supported. For example, suppose the parameter is specified as StandardProtocolFamily.INET6 but IPv6 is not enabled on the platform."
-  ([family]
+  ([^java.net.ProtocolFamily family]
     (DatagramChannel/open family))
   ([]
     (DatagramChannel/open )))
@@ -103,7 +103,7 @@
   returns: This datagram channel - `java.nio.channels.DatagramChannel`
 
   throws: java.io.IOException - If some other I/O error occurs"
-  ([this]
+  ([^java.nio.channels.DatagramChannel this]
     (-> this (.disconnect))))
 
 (defn send
@@ -143,7 +143,7 @@
              underlying output buffer - `int`
 
   throws: java.nio.channels.ClosedChannelException - If this channel is closed"
-  ([this src target]
+  ([^java.nio.channels.DatagramChannel this ^java.nio.ByteBuffer src ^java.net.SocketAddress target]
     (-> this (.send src target))))
 
 (defn bind
@@ -154,7 +154,7 @@
   returns: This channel - `java.nio.channels.DatagramChannel`
 
   throws: java.nio.channels.AlreadyBoundException - If the socket is already bound"
-  ([this local]
+  ([^java.nio.channels.DatagramChannel this ^java.net.SocketAddress local]
     (-> this (.bind local))))
 
 (defn get-remote-address
@@ -164,7 +164,7 @@
             connected - `java.net.SocketAddress`
 
   throws: java.nio.channels.ClosedChannelException - If the channel is closed"
-  ([this]
+  ([^java.nio.channels.DatagramChannel this]
     (-> this (.getRemoteAddress))))
 
 (defn connected?
@@ -172,7 +172,7 @@
 
   returns: true if, and only if, this channel's socket
             is open and connected - `boolean`"
-  ([this]
+  ([^java.nio.channels.DatagramChannel this]
     (-> this (.isConnected))))
 
 (defn read
@@ -192,9 +192,9 @@
            or -1 if the channel has reached end-of-stream - `long`
 
   throws: java.nio.channels.NotYetConnectedException - If this channel's socket is not connected"
-  ([this dsts offset length]
+  ([^java.nio.channels.DatagramChannel this ^java.nio.ByteBuffer[] dsts ^Integer offset ^Integer length]
     (-> this (.read dsts offset length)))
-  ([this dst]
+  ([^java.nio.channels.DatagramChannel this ^java.nio.ByteBuffer dst]
     (-> this (.read dst))))
 
 (defn connect
@@ -223,7 +223,7 @@
   returns: This datagram channel - `java.nio.channels.DatagramChannel`
 
   throws: java.nio.channels.ClosedChannelException - If this channel is closed"
-  ([this remote]
+  ([^java.nio.channels.DatagramChannel this ^java.net.SocketAddress remote]
     (-> this (.connect remote))))
 
 (defn get-local-address
@@ -245,7 +245,7 @@
             channel's socket is not bound - `java.net.SocketAddress`
 
   throws: java.nio.channels.ClosedChannelException - If the channel is closed"
-  ([this]
+  ([^java.nio.channels.DatagramChannel this]
     (-> this (.getLocalAddress))))
 
 (defn valid-ops
@@ -256,7 +256,7 @@
    returns (SelectionKey.OP_READ | SelectionKey.OP_WRITE).
 
   returns: The valid-operation set - `int`"
-  ([this]
+  ([^java.nio.channels.DatagramChannel this]
     (-> this (.validOps))))
 
 (defn set-option
@@ -268,7 +268,7 @@
   returns: This channel - `<T> java.nio.channels.DatagramChannel`
 
   throws: java.lang.UnsupportedOperationException - If the socket option is not supported by this channel"
-  ([this name value]
+  ([^java.nio.channels.DatagramChannel this ^java.net.SocketOption name value]
     (-> this (.setOption name value))))
 
 (defn socket
@@ -278,7 +278,7 @@
    declared in the DatagramSocket class.
 
   returns: A datagram socket associated with this channel - `java.net.DatagramSocket`"
-  ([this]
+  ([^java.nio.channels.DatagramChannel this]
     (-> this (.socket))))
 
 (defn write
@@ -299,9 +299,9 @@
              underlying output buffer - `long`
 
   throws: java.nio.channels.NotYetConnectedException - If this channel's socket is not connected"
-  ([this srcs offset length]
+  ([^java.nio.channels.DatagramChannel this ^java.nio.ByteBuffer[] srcs ^Integer offset ^Integer length]
     (-> this (.write srcs offset length)))
-  ([this src]
+  ([^java.nio.channels.DatagramChannel this ^java.nio.ByteBuffer src]
     (-> this (.write src))))
 
 (defn receive
@@ -341,6 +341,6 @@
             and no datagram was immediately available - `java.net.SocketAddress`
 
   throws: java.nio.channels.ClosedChannelException - If this channel is closed"
-  ([this dst]
+  ([^java.nio.channels.DatagramChannel this ^java.nio.ByteBuffer dst]
     (-> this (.receive dst))))
 

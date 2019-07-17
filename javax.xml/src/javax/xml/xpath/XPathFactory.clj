@@ -58,9 +58,9 @@
   returns: New instance of a XPathFactory - `javax.xml.xpath.XPathFactory`
 
   throws: javax.xml.xpath.XPathFactoryConfigurationException - if factoryClassName is null, or the factory class cannot be loaded, instantiated or the factory class does not support the object model specified in the uri parameter."
-  ([uri factory-class-name class-loader]
+  ([^java.lang.String uri ^java.lang.String factory-class-name ^java.lang.ClassLoader class-loader]
     (XPathFactory/newInstance uri factory-class-name class-loader))
-  ([uri]
+  ([^java.lang.String uri]
     (XPathFactory/newInstance uri))
   ([]
     (XPathFactory/newInstance )))
@@ -73,7 +73,7 @@
   returns: true if XPathFactory supports objectModel, else false. - `boolean`
 
   throws: java.lang.NullPointerException - If objectModel is null."
-  ([this object-model]
+  ([^javax.xml.xpath.XPathFactory this ^java.lang.String object-model]
     (-> this (.isObjectModelSupported object-model))))
 
 (defn set-feature
@@ -100,7 +100,7 @@
   value - Is feature state true or false. - `boolean`
 
   throws: javax.xml.xpath.XPathFactoryConfigurationException - if this XPathFactory or the XPaths it creates cannot support this feature."
-  ([this name value]
+  ([^javax.xml.xpath.XPathFactory this ^java.lang.String name ^Boolean value]
     (-> this (.setFeature name value))))
 
 (defn get-feature?
@@ -120,7 +120,7 @@
   returns: State of the named feature. - `boolean`
 
   throws: javax.xml.xpath.XPathFactoryConfigurationException - if this XPathFactory or the XPaths it creates cannot support this feature."
-  ([this name]
+  ([^javax.xml.xpath.XPathFactory this ^java.lang.String name]
     (-> this (.getFeature name))))
 
 (defn set-x-path-variable-resolver
@@ -135,7 +135,7 @@
   resolver - Variable resolver. - `javax.xml.xpath.XPathVariableResolver`
 
   throws: java.lang.NullPointerException - If resolver is null."
-  ([this resolver]
+  ([^javax.xml.xpath.XPathFactory this ^javax.xml.xpath.XPathVariableResolver resolver]
     (-> this (.setXPathVariableResolver resolver))))
 
 (defn set-x-path-function-resolver
@@ -150,7 +150,7 @@
   resolver - XPath function resolver. - `javax.xml.xpath.XPathFunctionResolver`
 
   throws: java.lang.NullPointerException - If resolver is null."
-  ([this resolver]
+  ([^javax.xml.xpath.XPathFactory this ^javax.xml.xpath.XPathFunctionResolver resolver]
     (-> this (.setXPathFunctionResolver resolver))))
 
 (defn new-x-path
@@ -158,6 +158,6 @@
    model determined when the XPathFactory was instantiated.
 
   returns: New instance of an XPath. - `javax.xml.xpath.XPath`"
-  ([this]
+  ([^javax.xml.xpath.XPathFactory this]
     (-> this (.newXPath))))
 

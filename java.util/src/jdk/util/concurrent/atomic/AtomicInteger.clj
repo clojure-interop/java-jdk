@@ -16,7 +16,7 @@
   Creates a new AtomicInteger with the given initial value.
 
   initial-value - the initial value - `int`"
-  ([initial-value]
+  ([^Integer initial-value]
     (new AtomicInteger initial-value))
   ([]
     (new AtomicInteger )))
@@ -27,7 +27,7 @@
   delta - the value to add - `int`
 
   returns: the previous value - `int`"
-  ([this delta]
+  ([^java.util.concurrent.atomic.AtomicInteger this ^Integer delta]
     (-> this (.getAndAdd delta))))
 
 (defn get-and-set
@@ -36,7 +36,7 @@
   new-value - the new value - `int`
 
   returns: the previous value - `int`"
-  ([this new-value]
+  ([^java.util.concurrent.atomic.AtomicInteger this ^Integer new-value]
     (-> this (.getAndSet new-value))))
 
 (defn update-and-get
@@ -48,7 +48,7 @@
   update-function - a side-effect-free function - `java.util.function.IntUnaryOperator`
 
   returns: the updated value - `int`"
-  ([this update-function]
+  ([^java.util.concurrent.atomic.AtomicInteger this ^java.util.function.IntUnaryOperator update-function]
     (-> this (.updateAndGet update-function))))
 
 (defn double-value
@@ -57,7 +57,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type double. - `double`"
-  ([this]
+  ([^java.util.concurrent.atomic.AtomicInteger this]
     (-> this (.doubleValue))))
 
 (defn add-and-get
@@ -66,7 +66,7 @@
   delta - the value to add - `int`
 
   returns: the updated value - `int`"
-  ([this delta]
+  ([^java.util.concurrent.atomic.AtomicInteger this ^Integer delta]
     (-> this (.addAndGet delta))))
 
 (defn long-value
@@ -75,7 +75,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type long. - `long`"
-  ([this]
+  ([^java.util.concurrent.atomic.AtomicInteger this]
     (-> this (.longValue))))
 
 (defn get-and-update
@@ -87,14 +87,14 @@
   update-function - a side-effect-free function - `java.util.function.IntUnaryOperator`
 
   returns: the previous value - `int`"
-  ([this update-function]
+  ([^java.util.concurrent.atomic.AtomicInteger this ^java.util.function.IntUnaryOperator update-function]
     (-> this (.getAndUpdate update-function))))
 
 (defn to-string
   "Returns the String representation of the current value.
 
   returns: the String representation of the current value - `java.lang.String`"
-  ([this]
+  ([^java.util.concurrent.atomic.AtomicInteger this]
     (-> this (.toString))))
 
 (defn float-value
@@ -103,7 +103,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type float. - `float`"
-  ([this]
+  ([^java.util.concurrent.atomic.AtomicInteger this]
     (-> this (.floatValue))))
 
 (defn accumulate-and-get
@@ -119,21 +119,21 @@
   accumulator-function - a side-effect-free function of two arguments - `java.util.function.IntBinaryOperator`
 
   returns: the updated value - `int`"
-  ([this x accumulator-function]
+  ([^java.util.concurrent.atomic.AtomicInteger this ^Integer x ^java.util.function.IntBinaryOperator accumulator-function]
     (-> this (.accumulateAndGet x accumulator-function))))
 
 (defn get-and-decrement
   "Atomically decrements by one the current value.
 
   returns: the previous value - `int`"
-  ([this]
+  ([^java.util.concurrent.atomic.AtomicInteger this]
     (-> this (.getAndDecrement))))
 
 (defn decrement-and-get
   "Atomically decrements by one the current value.
 
   returns: the updated value - `int`"
-  ([this]
+  ([^java.util.concurrent.atomic.AtomicInteger this]
     (-> this (.decrementAndGet))))
 
 (defn weak-compare-and-set
@@ -148,7 +148,7 @@
   update - the new value - `int`
 
   returns: true if successful - `boolean`"
-  ([this expect update]
+  ([^java.util.concurrent.atomic.AtomicInteger this ^Integer expect ^Integer update]
     (-> this (.weakCompareAndSet expect update))))
 
 (defn int-value
@@ -156,28 +156,28 @@
 
   returns: the numeric value represented by this object after conversion
             to type int. - `int`"
-  ([this]
+  ([^java.util.concurrent.atomic.AtomicInteger this]
     (-> this (.intValue))))
 
 (defn get-and-increment
   "Atomically increments by one the current value.
 
   returns: the previous value - `int`"
-  ([this]
+  ([^java.util.concurrent.atomic.AtomicInteger this]
     (-> this (.getAndIncrement))))
 
 (defn lazy-set
   "Eventually sets to the given value.
 
   new-value - the new value - `int`"
-  ([this new-value]
+  ([^java.util.concurrent.atomic.AtomicInteger this ^Integer new-value]
     (-> this (.lazySet new-value))))
 
 (defn set
   "Sets to the given value.
 
   new-value - the new value - `int`"
-  ([this new-value]
+  ([^java.util.concurrent.atomic.AtomicInteger this ^Integer new-value]
     (-> this (.set new-value))))
 
 (defn get-and-accumulate
@@ -193,7 +193,7 @@
   accumulator-function - a side-effect-free function of two arguments - `java.util.function.IntBinaryOperator`
 
   returns: the previous value - `int`"
-  ([this x accumulator-function]
+  ([^java.util.concurrent.atomic.AtomicInteger this ^Integer x ^java.util.function.IntBinaryOperator accumulator-function]
     (-> this (.getAndAccumulate x accumulator-function))))
 
 (defn compare-and-set
@@ -205,20 +205,20 @@
 
   returns: true if successful. False return indicates that
    the actual value was not equal to the expected value. - `boolean`"
-  ([this expect update]
+  ([^java.util.concurrent.atomic.AtomicInteger this ^Integer expect ^Integer update]
     (-> this (.compareAndSet expect update))))
 
 (defn get
   "Gets the current value.
 
   returns: the current value - `int`"
-  ([this]
+  ([^java.util.concurrent.atomic.AtomicInteger this]
     (-> this (.get))))
 
 (defn increment-and-get
   "Atomically increments by one the current value.
 
   returns: the updated value - `int`"
-  ([this]
+  ([^java.util.concurrent.atomic.AtomicInteger this]
     (-> this (.incrementAndGet))))
 

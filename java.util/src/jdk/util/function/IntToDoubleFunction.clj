@@ -14,6 +14,6 @@
   value - the function argument - `int`
 
   returns: the function result - `double`"
-  ([this value]
+  ([^. this ^Integer value]
     (-> this (.applyAsDouble value))))
 

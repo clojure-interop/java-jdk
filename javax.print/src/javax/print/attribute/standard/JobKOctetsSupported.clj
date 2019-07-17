@@ -25,7 +25,7 @@
   upper-bound - Upper bound of the range. - `int`
 
   throws: java.lang.IllegalArgumentException - (Unchecked exception) Thrown if a null range is specified or if a non-null range is specified with lowerBound less than 0."
-  ([lower-bound upper-bound]
+  ([^Integer lower-bound ^Integer upper-bound]
     (new JobKOctetsSupported lower-bound upper-bound)))
 
 (defn equals
@@ -45,7 +45,7 @@
 
   returns: True if object is equivalent to this job K
             octets supported attribute, false otherwise. - `boolean`"
-  ([this object]
+  ([^javax.print.attribute.standard.JobKOctetsSupported this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -57,7 +57,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([this]
+  ([^javax.print.attribute.standard.JobKOctetsSupported this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -68,6 +68,6 @@
    `job-k-octets-supported`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([this]
+  ([^javax.print.attribute.standard.JobKOctetsSupported this]
     (-> this (.getName))))
 

@@ -13,6 +13,6 @@
   returns: the Collator for the desired locale. - `java.text.Collator`
 
   throws: java.lang.NullPointerException - if locale is null"
-  ([this locale]
+  ([^java.text.spi.CollatorProvider this ^java.util.Locale locale]
     (-> this (.getInstance locale))))
 

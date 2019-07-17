@@ -19,9 +19,9 @@
 
   target - the target exception - `java.lang.Throwable`
   s - the detail message - `java.lang.String`"
-  ([target s]
+  ([^java.lang.Throwable target ^java.lang.String s]
     (new InvocationTargetException target s))
-  ([target]
+  ([^java.lang.Throwable target]
     (new InvocationTargetException target)))
 
 (defn get-target-exception
@@ -32,7 +32,7 @@
    obtaining this information.
 
   returns: the thrown target exception (cause of this exception). - `java.lang.Throwable`"
-  ([this]
+  ([^java.lang.reflect.InvocationTargetException this]
     (-> this (.getTargetException))))
 
 (defn get-cause
@@ -40,6 +40,6 @@
    which may be null).
 
   returns: the cause of this exception. - `java.lang.Throwable`"
-  ([this]
+  ([^java.lang.reflect.InvocationTargetException this]
     (-> this (.getCause))))
 

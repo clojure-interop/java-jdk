@@ -122,13 +122,13 @@
   cycle-method - either NO_CYCLE, REFLECT, or REPEAT - `java.awt.MultipleGradientPaint.CycleMethod`
 
   throws: java.lang.NullPointerException - if fractions array is null, or colors array is null, or cycleMethod is null"
-  ([cx cy radius fx fy fractions colors cycle-method]
+  ([^Float cx ^Float cy ^Float radius ^Float fx ^Float fy fractions ^java.awt.Color[] colors ^java.awt.MultipleGradientPaint.CycleMethod cycle-method]
     (new RadialGradientPaint cx cy radius fx fy fractions colors cycle-method))
-  ([cx cy radius fractions colors cycle-method]
+  ([^Float cx ^Float cy ^Float radius fractions ^java.awt.Color[] colors ^java.awt.MultipleGradientPaint.CycleMethod cycle-method]
     (new RadialGradientPaint cx cy radius fractions colors cycle-method))
-  ([cx cy radius fractions colors]
+  ([^Float cx ^Float cy ^Float radius fractions ^java.awt.Color[] colors]
     (new RadialGradientPaint cx cy radius fractions colors))
-  ([center radius fractions colors]
+  ([^java.awt.geom.Point2D center ^Float radius fractions ^java.awt.Color[] colors]
     (new RadialGradientPaint center radius fractions colors)))
 
 (defn create-context
@@ -145,14 +145,14 @@
 
   returns: the PaintContext for
            generating color patterns. - `java.awt.PaintContext`"
-  ([this cm device-bounds user-bounds transform hints]
+  ([^java.awt.RadialGradientPaint this ^java.awt.image.ColorModel cm ^java.awt.Rectangle device-bounds ^java.awt.geom.Rectangle2D user-bounds ^java.awt.geom.AffineTransform transform ^java.awt.RenderingHints hints]
     (-> this (.createContext cm device-bounds user-bounds transform hints))))
 
 (defn get-center-point
   "Returns a copy of the center point of the radial gradient.
 
   returns: a Point2D object that is a copy of the center point - `java.awt.geom.Point2D`"
-  ([this]
+  ([^java.awt.RadialGradientPaint this]
     (-> this (.getCenterPoint))))
 
 (defn get-focus-point
@@ -164,13 +164,13 @@
    point that lies inside the radius.
 
   returns: a Point2D object that is a copy of the focus point - `java.awt.geom.Point2D`"
-  ([this]
+  ([^java.awt.RadialGradientPaint this]
     (-> this (.getFocusPoint))))
 
 (defn get-radius
   "Returns the radius of the circle defining the radial gradient.
 
   returns: the radius of the circle defining the radial gradient - `float`"
-  ([this]
+  ([^java.awt.RadialGradientPaint this]
     (-> this (.getRadius))))
 

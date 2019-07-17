@@ -24,7 +24,7 @@
   source - the ImageReader object calling this method. - `javax.imageio.ImageReader`
   image-index - the index of the image being read within its containing input file or stream. - `int`
   thumbnail-index - the index of the thumbnail being read. - `int`"
-  ([this source image-index thumbnail-index]
+  ([^. this ^javax.imageio.ImageReader source ^Integer image-index ^Integer thumbnail-index]
     (-> this (.thumbnailStarted source image-index thumbnail-index))))
 
 (defn thumbnail-complete
@@ -34,7 +34,7 @@
    operation.
 
   source - the ImageReader object calling this method. - `javax.imageio.ImageReader`"
-  ([this source]
+  ([^. this ^javax.imageio.ImageReader source]
     (-> this (.thumbnailComplete source))))
 
 (defn sequence-started
@@ -45,7 +45,7 @@
 
   source - the ImageReader object calling this method. - `javax.imageio.ImageReader`
   min-index - the index of the first image to be read. - `int`"
-  ([this source min-index]
+  ([^. this ^javax.imageio.ImageReader source ^Integer min-index]
     (-> this (.sequenceStarted source min-index))))
 
 (defn image-progress
@@ -71,7 +71,7 @@
 
   source - the ImageReader object calling this method. - `javax.imageio.ImageReader`
   percentage-done - the approximate percentage of decoding that has been completed. - `float`"
-  ([this source percentage-done]
+  ([^. this ^javax.imageio.ImageReader source ^Float percentage-done]
     (-> this (.imageProgress source percentage-done))))
 
 (defn thumbnail-progress
@@ -82,7 +82,7 @@
 
   source - the ImageReader object calling this method. - `javax.imageio.ImageReader`
   percentage-done - the approximate percentage of decoding that has been completed. - `float`"
-  ([this source percentage-done]
+  ([^. this ^javax.imageio.ImageReader source ^Float percentage-done]
     (-> this (.thumbnailProgress source percentage-done))))
 
 (defn image-started
@@ -93,7 +93,7 @@
 
   source - the ImageReader object calling this method. - `javax.imageio.ImageReader`
   image-index - the index of the image being read within its containing input file or stream. - `int`"
-  ([this source image-index]
+  ([^. this ^javax.imageio.ImageReader source ^Integer image-index]
     (-> this (.imageStarted source image-index))))
 
 (defn read-aborted
@@ -102,7 +102,7 @@
    given.
 
   source - the ImageReader object calling this method. - `javax.imageio.ImageReader`"
-  ([this source]
+  ([^. this ^javax.imageio.ImageReader source]
     (-> this (.readAborted source))))
 
 (defn sequence-complete
@@ -112,7 +112,7 @@
    readAll(Iterator) method.
 
   source - the ImageReader object calling this method. - `javax.imageio.ImageReader`"
-  ([this source]
+  ([^. this ^javax.imageio.ImageReader source]
     (-> this (.sequenceComplete source))))
 
 (defn image-complete
@@ -122,6 +122,6 @@
    read operation.
 
   source - the ImageReader object calling this method. - `javax.imageio.ImageReader`"
-  ([this source]
+  ([^. this ^javax.imageio.ImageReader source]
     (-> this (.imageComplete source))))
 

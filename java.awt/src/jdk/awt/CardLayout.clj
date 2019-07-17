@@ -26,7 +26,7 @@
 
   hgap - the horizontal gap. - `int`
   vgap - the vertical gap. - `int`"
-  ([hgap vgap]
+  ([^Integer hgap ^Integer vgap]
     (new CardLayout hgap vgap))
   ([]
     (new CardLayout )))
@@ -35,7 +35,7 @@
   "Gets the vertical gap between components.
 
   returns: the vertical gap between components. - `int`"
-  ([this]
+  ([^java.awt.CardLayout this]
     (-> this (.getVgap))))
 
 (defn invalidate-layout
@@ -43,7 +43,7 @@
    has cached information it should be discarded.
 
   target - `java.awt.Container`"
-  ([this target]
+  ([^java.awt.CardLayout this ^java.awt.Container target]
     (-> this (.invalidateLayout target))))
 
 (defn next
@@ -52,7 +52,7 @@
    first card in the layout.
 
   parent - the parent container in which to do the layout - `java.awt.Container`"
-  ([this parent]
+  ([^java.awt.CardLayout this ^java.awt.Container parent]
     (-> this (.next parent))))
 
 (defn get-layout-alignment-y
@@ -65,21 +65,21 @@
   parent - `java.awt.Container`
 
   returns: `float`"
-  ([this parent]
+  ([^java.awt.CardLayout this ^java.awt.Container parent]
     (-> this (.getLayoutAlignmentY parent))))
 
 (defn set-hgap
   "Sets the horizontal gap between components.
 
   hgap - the horizontal gap between components. - `int`"
-  ([this hgap]
+  ([^java.awt.CardLayout this ^Integer hgap]
     (-> this (.setHgap hgap))))
 
 (defn set-vgap
   "Sets the vertical gap between components.
 
   vgap - the vertical gap between components. - `int`"
-  ([this vgap]
+  ([^java.awt.CardLayout this ^Integer vgap]
     (-> this (.setVgap vgap))))
 
 (defn preferred-layout-size
@@ -90,21 +90,21 @@
 
   returns: the preferred dimensions to lay out the subcomponents
                   of the specified container - `java.awt.Dimension`"
-  ([this parent]
+  ([^java.awt.CardLayout this ^java.awt.Container parent]
     (-> this (.preferredLayoutSize parent))))
 
 (defn to-string
   "Returns a string representation of the state of this card layout.
 
   returns: a string representation of this card layout. - `java.lang.String`"
-  ([this]
+  ([^java.awt.CardLayout this]
     (-> this (.toString))))
 
 (defn get-hgap
   "Gets the horizontal gap between components.
 
   returns: the horizontal gap between components. - `int`"
-  ([this]
+  ([^java.awt.CardLayout this]
     (-> this (.getHgap))))
 
 (defn show
@@ -114,7 +114,7 @@
 
   parent - the parent container in which to do the layout - `java.awt.Container`
   name - the component name - `java.lang.String`"
-  ([this parent name]
+  ([^java.awt.CardLayout this ^java.awt.Container parent ^java.lang.String name]
     (-> this (.show parent name))))
 
 (defn get-layout-alignment-x
@@ -127,7 +127,7 @@
   parent - `java.awt.Container`
 
   returns: `float`"
-  ([this parent]
+  ([^java.awt.CardLayout this ^java.awt.Container parent]
     (-> this (.getLayoutAlignmentX parent))))
 
 (defn previous
@@ -136,7 +136,7 @@
    last card in the layout.
 
   parent - the parent container in which to do the layout - `java.awt.Container`"
-  ([this parent]
+  ([^java.awt.CardLayout this ^java.awt.Container parent]
     (-> this (.previous parent))))
 
 (defn minimum-layout-size
@@ -146,14 +146,14 @@
 
   returns: the minimum dimensions required to lay out the
                   subcomponents of the specified container - `java.awt.Dimension`"
-  ([this parent]
+  ([^java.awt.CardLayout this ^java.awt.Container parent]
     (-> this (.minimumLayoutSize parent))))
 
 (defn last
   "Flips to the last card of the container.
 
   parent - the parent container in which to do the layout - `java.awt.Container`"
-  ([this parent]
+  ([^java.awt.CardLayout this ^java.awt.Container parent]
     (-> this (.last parent))))
 
 (defn maximum-layout-size
@@ -163,7 +163,7 @@
   target - the component which needs to be laid out - `java.awt.Container`
 
   returns: `java.awt.Dimension`"
-  ([this target]
+  ([^java.awt.CardLayout this ^java.awt.Container target]
     (-> this (.maximumLayoutSize target))))
 
 (defn add-layout-component
@@ -178,7 +178,7 @@
   constraints - a tag that identifies a particular card in the layout. - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if the constraint is not a string."
-  ([this comp constraints]
+  ([^java.awt.CardLayout this ^java.awt.Component comp ^java.lang.Object constraints]
     (-> this (.addLayoutComponent comp constraints))))
 
 (defn remove-layout-component
@@ -186,7 +186,7 @@
    If the card was visible on top, the next card underneath it is shown.
 
   comp - the component to be removed. - `java.awt.Component`"
-  ([this comp]
+  ([^java.awt.CardLayout this ^java.awt.Component comp]
     (-> this (.removeLayoutComponent comp))))
 
 (defn layout-container
@@ -197,13 +197,13 @@
    insets, horizontal gaps, and vertical gaps.
 
   parent - the parent container in which to do the layout - `java.awt.Container`"
-  ([this parent]
+  ([^java.awt.CardLayout this ^java.awt.Container parent]
     (-> this (.layoutContainer parent))))
 
 (defn first
   "Flips to the first card of the container.
 
   parent - the parent container in which to do the layout - `java.awt.Container`"
-  ([this parent]
+  ([^java.awt.CardLayout this ^java.awt.Container parent]
     (-> this (.first parent))))
 

@@ -38,19 +38,19 @@
   "Returns the L&F object that renders this component.
 
   returns: the ToolTipUI object that renders this component - `javax.swing.plaf.ToolTipUI`"
-  ([this]
+  ([^javax.swing.JToolTip this]
     (-> this (.getUI))))
 
 (defn update-ui
   "Resets the UI property to a value from the current look and feel."
-  ([this]
+  ([^javax.swing.JToolTip this]
     (-> this (.updateUI))))
 
 (defn get-ui-class-id
   "Returns the name of the L&F class that renders this component.
 
   returns: the string `ToolTipUI` - `java.lang.String`"
-  ([this]
+  ([^javax.swing.JToolTip this]
     (-> this (.getUIClassID))))
 
 (defn set-tip-text
@@ -58,7 +58,7 @@
    The string tipText may be null.
 
   tip-text - the String to display - `java.lang.String`"
-  ([this tip-text]
+  ([^javax.swing.JToolTip this ^java.lang.String tip-text]
     (-> this (.setTipText tip-text))))
 
 (defn get-tip-text
@@ -66,7 +66,7 @@
    The returned value may be null.
 
   returns: the String that is displayed - `java.lang.String`"
-  ([this]
+  ([^javax.swing.JToolTip this]
     (-> this (.getTipText))))
 
 (defn set-component
@@ -77,7 +77,7 @@
    This is a bound property.
 
   c - the JComponent being described - `javax.swing.JComponent`"
-  ([this c]
+  ([^javax.swing.JToolTip this ^javax.swing.JComponent c]
     (-> this (.setComponent c))))
 
 (defn get-component
@@ -85,7 +85,7 @@
    The returned value may be null.
 
   returns: the component that the tooltip describes - `javax.swing.JComponent`"
-  ([this]
+  ([^javax.swing.JToolTip this]
     (-> this (.getComponent))))
 
 (defn get-accessible-context
@@ -96,6 +96,6 @@
 
   returns: an AccessibleJToolTip that serves as the
            AccessibleContext of this JToolTip - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^javax.swing.JToolTip this]
     (-> this (.getAccessibleContext))))
 

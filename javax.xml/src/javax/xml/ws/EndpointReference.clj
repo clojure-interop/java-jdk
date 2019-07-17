@@ -57,7 +57,7 @@
       never null - `javax.xml.ws.EndpointReference`
 
   throws: javax.xml.ws.WebServiceException - if an error occurs while creating the EndpointReference from the eprInfoset"
-  ([epr-infoset]
+  ([^javax.xml.transform.Source epr-infoset]
     (EndpointReference/readFrom epr-infoset)))
 
 (defn write-to
@@ -66,7 +66,7 @@
   result - for writing infoset - `javax.xml.transform.Result`
 
   throws: javax.xml.ws.WebServiceException - if there is an error writing the EndpointReference to the specified result."
-  ([this result]
+  ([^javax.xml.ws.EndpointReference this ^javax.xml.transform.Result result]
     (-> this (.writeTo result))))
 
 (defn get-port
@@ -102,13 +102,13 @@
                     specified service endpoint interface - `<T> T`
 
   throws: javax.xml.ws.WebServiceException - If there is an error during creation of the proxy If there is any missing WSDL metadata as required by this method If this endpointReference is invalid If an illegal serviceEndpointInterface is specified If a feature is enabled that is not compatible with this port or is unsupported."
-  ([this service-endpoint-interface features]
+  ([^javax.xml.ws.EndpointReference this ^java.lang.Class service-endpoint-interface ^javax.xml.ws.WebServiceFeature features]
     (-> this (.getPort service-endpoint-interface features))))
 
 (defn to-string
   "Displays EPR infoset for debugging convenience.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^javax.xml.ws.EndpointReference this]
     (-> this (.toString))))
 

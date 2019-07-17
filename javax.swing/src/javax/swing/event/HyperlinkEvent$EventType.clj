@@ -32,6 +32,6 @@
   "Converts the type to a string.
 
   returns: the string - `java.lang.String`"
-  ([this]
+  ([^javax.swing.event.HyperlinkEvent$EventType this]
     (-> this (.toString))))
 

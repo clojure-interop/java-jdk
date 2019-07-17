@@ -13,15 +13,15 @@
 
   callback - the unrecognized Callback. - `javax.security.auth.callback.Callback`
   msg - the detail message. - `java.lang.String`"
-  ([callback msg]
+  ([^javax.security.auth.callback.Callback callback ^java.lang.String msg]
     (new UnsupportedCallbackException callback msg))
-  ([callback]
+  ([^javax.security.auth.callback.Callback callback]
     (new UnsupportedCallbackException callback)))
 
 (defn get-callback
   "Get the unrecognized Callback.
 
   returns: the unrecognized Callback. - `javax.security.auth.callback.Callback`"
-  ([this]
+  ([^javax.security.auth.callback.UnsupportedCallbackException this]
     (-> this (.getCallback))))
 

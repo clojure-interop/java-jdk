@@ -24,14 +24,14 @@
   bytes-produced - the number of bytes placed into the destination ByteBuffer - `int`
 
   throws: java.lang.IllegalArgumentException - if the status or handshakeStatus arguments are null, or if bytesConsumed or bytesProduced is negative."
-  ([status handshake-status bytes-consumed bytes-produced]
+  ([^javax.net.ssl.SSLEngineResult.Status status ^javax.net.ssl.SSLEngineResult.HandshakeStatus handshake-status ^Integer bytes-consumed ^Integer bytes-produced]
     (new SSLEngineResult status handshake-status bytes-consumed bytes-produced)))
 
 (defn get-status
   "Gets the return value of this SSLEngine operation.
 
   returns: the return value - `javax.net.ssl.SSLEngineResult.Status`"
-  ([this]
+  ([^javax.net.ssl.SSLEngineResult this]
     (-> this (.getStatus))))
 
 (defn get-handshake-status
@@ -39,27 +39,27 @@
    operation.
 
   returns: the handshake status - `javax.net.ssl.SSLEngineResult.HandshakeStatus`"
-  ([this]
+  ([^javax.net.ssl.SSLEngineResult this]
     (-> this (.getHandshakeStatus))))
 
 (defn bytes-consumed
   "Returns the number of bytes consumed from the input buffer.
 
   returns: the number of bytes consumed. - `int`"
-  ([this]
+  ([^javax.net.ssl.SSLEngineResult this]
     (-> this (.bytesConsumed))))
 
 (defn bytes-produced
   "Returns the number of bytes written to the output buffer.
 
   returns: the number of bytes produced - `int`"
-  ([this]
+  ([^javax.net.ssl.SSLEngineResult this]
     (-> this (.bytesProduced))))
 
 (defn to-string
   "Returns a String representation of this object.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^javax.net.ssl.SSLEngineResult this]
     (-> this (.toString))))
 

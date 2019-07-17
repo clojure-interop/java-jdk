@@ -17,9 +17,9 @@
 
   node - The DOM node that will contain the Source tree. - `org.w3c.dom.Node`
   system-id - Specifies the base URI associated with node. - `java.lang.String`"
-  ([node system-id]
+  ([^org.w3c.dom.Node node ^java.lang.String system-id]
     (new DOMSource node system-id))
-  ([n]
+  ([^org.w3c.dom.Node n]
     (new DOMSource n))
   ([]
     (new DOMSource )))
@@ -38,14 +38,14 @@
   "Set the node that will represents a Source DOM tree.
 
   node - The node that is to be transformed. - `org.w3c.dom.Node`"
-  ([this node]
+  ([^javax.xml.transform.dom.DOMSource this ^org.w3c.dom.Node node]
     (-> this (.setNode node))))
 
 (defn get-node
   "Get the node that represents a Source DOM tree.
 
   returns: The node that is to be transformed. - `org.w3c.dom.Node`"
-  ([this]
+  ([^javax.xml.transform.dom.DOMSource this]
     (-> this (.getNode))))
 
 (defn set-system-id
@@ -53,7 +53,7 @@
    will be resolved.
 
   system-id - Base URL for this DOM tree. - `java.lang.String`"
-  ([this system-id]
+  ([^javax.xml.transform.dom.DOMSource this ^java.lang.String system-id]
     (-> this (.setSystemId system-id))))
 
 (defn get-system-id
@@ -61,6 +61,6 @@
    will be resolved.
 
   returns: Base URL for this DOM tree. - `java.lang.String`"
-  ([this]
+  ([^javax.xml.transform.dom.DOMSource this]
     (-> this (.getSystemId))))
 

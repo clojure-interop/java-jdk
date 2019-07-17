@@ -43,7 +43,7 @@
   returns: Unmodifiable view of attributeSet. - `javax.print.attribute.AttributeSet`
 
   throws: java.lang.NullPointerException - Thrown if attributeSet is null. Null is never a"
-  ([attribute-set]
+  ([^javax.print.attribute.AttributeSet attribute-set]
     (AttributeSetUtilities/unmodifiableView attribute-set)))
 
 (defn *synchronized-view
@@ -54,7 +54,7 @@
   returns: Synchronized view of attributeSet. - `javax.print.attribute.AttributeSet`
 
   throws: java.lang.NullPointerException - Thrown if attributeSet is null."
-  ([attribute-set]
+  ([^javax.print.attribute.AttributeSet attribute-set]
     (AttributeSetUtilities/synchronizedView attribute-set)))
 
 (defn *verify-attribute-category
@@ -69,7 +69,7 @@
             object is returned downcast to type Class; otherwise an exception is thrown. - `java.lang.Class<?>`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if object is null."
-  ([object interface-name]
+  ([^java.lang.Object object ^java.lang.Class interface-name]
     (AttributeSetUtilities/verifyAttributeCategory object interface-name)))
 
 (defn *verify-attribute-value
@@ -86,7 +86,7 @@
             exception is thrown. - `javax.print.attribute.Attribute`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if object is null."
-  ([object interface-name]
+  ([^java.lang.Object object ^java.lang.Class interface-name]
     (AttributeSetUtilities/verifyAttributeValue object interface-name)))
 
 (defn *verify-category-for-value
@@ -98,6 +98,6 @@
   attribute - Attribute value to test. - `javax.print.attribute.Attribute`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if the category is null or if the attribute is null."
-  ([category attribute]
+  ([^java.lang.Class category ^javax.print.attribute.Attribute attribute]
     (AttributeSetUtilities/verifyCategoryForValue category attribute)))
 

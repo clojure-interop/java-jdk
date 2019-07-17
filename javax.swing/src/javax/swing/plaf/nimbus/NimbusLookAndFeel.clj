@@ -19,19 +19,19 @@
   r - a non-null reference to the region of the component c - `javax.swing.plaf.synth.Region`
 
   returns: a non-null reference to a NimbusStyle. - `javax.swing.plaf.nimbus.NimbusStyle`"
-  ([c r]
+  ([^javax.swing.JComponent c ^javax.swing.plaf.synth.Region r]
     (NimbusLookAndFeel/getStyle c r)))
 
 (defn uninitialize
   "Called by UIManager when this look and feel is uninstalled."
-  ([this]
+  ([^javax.swing.plaf.nimbus.NimbusLookAndFeel this]
     (-> this (.uninitialize))))
 
 (defn get-defaults
   "Returns the defaults for this SynthLookAndFeel.
 
   returns: Defaults table. - `javax.swing.UIDefaults`"
-  ([this]
+  ([^javax.swing.plaf.nimbus.NimbusLookAndFeel this]
     (-> this (.getDefaults))))
 
 (defn get-derived-color
@@ -46,7 +46,7 @@
   ui-resource - True if the derived color should be a UIResource, false if it should not be - `boolean`
 
   returns: The stored derived color - `java.awt.Color`"
-  ([this ui-default-parent-name h-offset s-offset b-offset a-offset ui-resource]
+  ([^javax.swing.plaf.nimbus.NimbusLookAndFeel this ^java.lang.String ui-default-parent-name ^Float h-offset ^Float s-offset ^Float b-offset ^Integer a-offset ^Boolean ui-resource]
     (-> this (.getDerivedColor ui-default-parent-name h-offset s-offset b-offset a-offset ui-resource))))
 
 (defn get-name
@@ -54,14 +54,14 @@
    String will be the unquoted String `Nimbus`.
 
   returns: a short string identifying this look and feel. - `java.lang.String`"
-  ([this]
+  ([^javax.swing.plaf.nimbus.NimbusLookAndFeel this]
     (-> this (.getName))))
 
 (defn get-description
   "Returns a textual description of this look and feel.
 
   returns: textual description of this look and feel. - `java.lang.String`"
-  ([this]
+  ([^javax.swing.plaf.nimbus.NimbusLookAndFeel this]
     (-> this (.getDescription))))
 
 (defn register
@@ -104,7 +104,7 @@
 
   region - The Synth Region that is being registered. Such as Button, or ScrollBarThumb, or NimbusFooUI.FOO_REGION. - `javax.swing.plaf.synth.Region`
   prefix - The UIDefault prefix. For example, could be ComboBox, or if a named components, `MyComboBox`, or even something like ToolBar.`MyComboBox`.`ComboBox.arrowButton` - `java.lang.String`"
-  ([this region prefix]
+  ([^javax.swing.plaf.nimbus.NimbusLookAndFeel this ^javax.swing.plaf.synth.Region region ^java.lang.String prefix]
     (-> this (.register region prefix))))
 
 (defn should-update-style-on-ancestor-changed?
@@ -116,12 +116,12 @@
    would override this method to return true.
 
   returns: true - `boolean`"
-  ([this]
+  ([^javax.swing.plaf.nimbus.NimbusLookAndFeel this]
     (-> this (.shouldUpdateStyleOnAncestorChanged))))
 
 (defn initialize
   "Called by UIManager when this look and feel is installed."
-  ([this]
+  ([^javax.swing.plaf.nimbus.NimbusLookAndFeel this]
     (-> this (.initialize))))
 
 (defn get-id
@@ -129,7 +129,7 @@
    be the unquoted String `Nimbus`.
 
   returns: a short string identifying this look and feel. - `java.lang.String`"
-  ([this]
+  ([^javax.swing.plaf.nimbus.NimbusLookAndFeel this]
     (-> this (.getID))))
 
 (defn get-disabled-icon
@@ -140,6 +140,6 @@
 
   returns: disabled Icon, or null if a suitable
            Icon can not be generated - `javax.swing.Icon`"
-  ([this component icon]
+  ([^javax.swing.plaf.nimbus.NimbusLookAndFeel this ^javax.swing.JComponent component ^javax.swing.Icon icon]
     (-> this (.getDisabledIcon component icon))))
 

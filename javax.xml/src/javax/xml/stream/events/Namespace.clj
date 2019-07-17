@@ -9,20 +9,20 @@
    namespace declaration.
 
   returns: `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getPrefix))))
 
 (defn get-namespace-uri
   "Gets the uri bound to the prefix of this namespace
 
   returns: `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getNamespaceURI))))
 
 (defn default-namespace-declaration?
   "returns true if this attribute declares the default namespace
 
   returns: `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.isDefaultNamespaceDeclaration))))
 

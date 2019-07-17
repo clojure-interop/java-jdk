@@ -28,7 +28,7 @@
    Drag&Drop operation.
 
   e - `java.awt.event.MouseEvent`"
-  ([this e]
+  ([^. this ^java.awt.event.MouseEvent e]
     (-> this (.mouseDragged e))))
 
 (defn mouse-moved
@@ -36,6 +36,6 @@
    but no buttons have been pushed.
 
   e - `java.awt.event.MouseEvent`"
-  ([this e]
+  ([^. this ^java.awt.event.MouseEvent e]
     (-> this (.mouseMoved e))))
 

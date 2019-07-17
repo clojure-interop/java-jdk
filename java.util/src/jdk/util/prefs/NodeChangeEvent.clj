@@ -15,20 +15,20 @@
 
   parent - The parent of the node that was added or removed. - `java.util.prefs.Preferences`
   child - The node that was added or removed. - `java.util.prefs.Preferences`"
-  ([parent child]
+  ([^java.util.prefs.Preferences parent ^java.util.prefs.Preferences child]
     (new NodeChangeEvent parent child)))
 
 (defn get-parent
   "Returns the parent of the node that was added or removed.
 
   returns: The parent Preferences node whose child was added or removed - `java.util.prefs.Preferences`"
-  ([this]
+  ([^java.util.prefs.NodeChangeEvent this]
     (-> this (.getParent))))
 
 (defn get-child
   "Returns the node that was added or removed.
 
   returns: The node that was added or removed. - `java.util.prefs.Preferences`"
-  ([this]
+  ([^java.util.prefs.NodeChangeEvent this]
     (-> this (.getChild))))
 

@@ -269,7 +269,7 @@
   name - the name of the context to be destroyed; may not be empty - `javax.naming.Name`
 
   throws: javax.naming.NameNotFoundException - if an intermediate context does not exist"
-  ([this name]
+  ([^. this ^javax.naming.Name name]
     (-> this (.destroySubcontext name))))
 
 (defn unbind
@@ -290,7 +290,7 @@
   name - the name to unbind; may not be empty - `javax.naming.Name`
 
   throws: javax.naming.NameNotFoundException - if an intermediate context does not exist"
-  ([this name]
+  ([^. this ^javax.naming.Name name]
     (-> this (.unbind name))))
 
 (defn compose-name
@@ -327,7 +327,7 @@
   returns: the composition of prefix and name - `javax.naming.Name`
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  ([this name prefix]
+  ([^. this ^javax.naming.Name name ^javax.naming.Name prefix]
     (-> this (.composeName name prefix))))
 
 (defn rename
@@ -341,7 +341,7 @@
   new-name - the name of the new binding; may not be empty - `javax.naming.Name`
 
   throws: javax.naming.NameAlreadyBoundException - if newName is already bound"
-  ([this old-name new-name]
+  ([^. this ^javax.naming.Name old-name ^javax.naming.Name new-name]
     (-> this (.rename old-name new-name))))
 
 (defn list
@@ -359,7 +359,7 @@
             enumeration is of type NameClassPair. - `javax.naming.NamingEnumeration<javax.naming.NameClassPair>`
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  ([this name]
+  ([^. this ^javax.naming.Name name]
     (-> this (.list name))))
 
 (defn add-to-environment
@@ -374,7 +374,7 @@
             not in the environment before - `java.lang.Object`
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  ([this prop-name prop-val]
+  ([^. this ^java.lang.String prop-name ^java.lang.Object prop-val]
     (-> this (.addToEnvironment prop-name prop-val))))
 
 (defn bind
@@ -386,7 +386,7 @@
   obj - the object to bind; possibly null - `java.lang.Object`
 
   throws: javax.naming.NameAlreadyBoundException - if name is already bound"
-  ([this name obj]
+  ([^. this ^javax.naming.Name name ^java.lang.Object obj]
     (-> this (.bind name obj))))
 
 (defn list-bindings
@@ -404,7 +404,7 @@
             Binding. - `javax.naming.NamingEnumeration<javax.naming.Binding>`
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  ([this name]
+  ([^. this ^javax.naming.Name name]
     (-> this (.listBindings name))))
 
 (defn lookup
@@ -419,7 +419,7 @@
   returns: the object bound to name - `java.lang.Object`
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  ([this name]
+  ([^. this ^javax.naming.Name name]
     (-> this (.lookup name))))
 
 (defn remove-from-environment
@@ -433,7 +433,7 @@
             not in the environment - `java.lang.Object`
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  ([this prop-name]
+  ([^. this ^java.lang.String prop-name]
     (-> this (.removeFromEnvironment prop-name))))
 
 (defn create-subcontext
@@ -448,7 +448,7 @@
   returns: the newly created context - `javax.naming.Context`
 
   throws: javax.naming.NameAlreadyBoundException - if name is already bound"
-  ([this name]
+  ([^. this ^javax.naming.Name name]
     (-> this (.createSubcontext name))))
 
 (defn get-name-parser
@@ -467,7 +467,7 @@
             components - `javax.naming.NameParser`
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  ([this name]
+  ([^. this ^javax.naming.Name name]
     (-> this (.getNameParser name))))
 
 (defn get-environment
@@ -482,7 +482,7 @@
   returns: the environment of this context; never null - `java.util.Hashtable<?,?>`
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  ([this]
+  ([^. this]
     (-> this (.getEnvironment))))
 
 (defn rebind
@@ -499,7 +499,7 @@
   obj - the object to bind; possibly null - `java.lang.Object`
 
   throws: javax.naming.directory.InvalidAttributesException - if object did not supply all mandatory attributes"
-  ([this name obj]
+  ([^. this ^javax.naming.Name name ^java.lang.Object obj]
     (-> this (.rebind name obj))))
 
 (defn close
@@ -512,7 +512,7 @@
    on a closed context is not allowed, and results in undefined behaviour.
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  ([this]
+  ([^. this]
     (-> this (.close))))
 
 (defn get-name-in-namespace
@@ -530,7 +530,7 @@
   returns: this context's name in its own namespace; never null - `java.lang.String`
 
   throws: javax.naming.OperationNotSupportedException - if the naming system does not have the notion of a full name"
-  ([this]
+  ([^. this]
     (-> this (.getNameInNamespace))))
 
 (defn lookup-link
@@ -545,6 +545,6 @@
             terminal link (if any). - `java.lang.Object`
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  ([this name]
+  ([^. this ^javax.naming.Name name]
     (-> this (.lookupLink name))))
 

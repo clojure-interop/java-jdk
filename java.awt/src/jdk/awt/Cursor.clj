@@ -11,7 +11,7 @@
   type - the type of cursor - `int`
 
   throws: java.lang.IllegalArgumentException - if the specified cursor type is invalid"
-  ([type]
+  ([^Integer type]
     (new Cursor type)))
 
 (def *-default-cursor
@@ -142,7 +142,7 @@
   returns: the specified predefined cursor - `java.awt.Cursor`
 
   throws: java.lang.IllegalArgumentException - if the specified cursor type is invalid"
-  ([type]
+  ([^Integer type]
     (Cursor/getPredefinedCursor type)))
 
 (defn *get-system-custom-cursor
@@ -154,7 +154,7 @@
   returns: the system specific custom cursor named - `java.awt.Cursor`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless returns true"
-  ([name]
+  ([^java.lang.String name]
     (Cursor/getSystemCustomCursor name)))
 
 (defn *get-default-cursor
@@ -168,20 +168,20 @@
   "Returns the type for this cursor.
 
   returns: `int`"
-  ([this]
+  ([^java.awt.Cursor this]
     (-> this (.getType))))
 
 (defn get-name
   "Returns the name of this cursor.
 
   returns: a localized description of this cursor. - `java.lang.String`"
-  ([this]
+  ([^java.awt.Cursor this]
     (-> this (.getName))))
 
 (defn to-string
   "Returns a string representation of this cursor.
 
   returns: a string representation of this cursor. - `java.lang.String`"
-  ([this]
+  ([^java.awt.Cursor this]
     (-> this (.toString))))
 

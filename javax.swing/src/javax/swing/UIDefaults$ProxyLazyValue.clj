@@ -20,11 +20,11 @@
   c - a String specifying the classname of the class containing a static method to be called for instance creation. - `java.lang.String`
   m - a String specifying the static method to be called on class c - `java.lang.String`
   o - an array of Objects to be passed as paramaters to the static method in class c - `java.lang.Object[]`"
-  ([c m o]
+  ([^java.lang.String c ^java.lang.String m ^java.lang.Object[] o]
     (new UIDefaults$ProxyLazyValue c m o))
-  ([c m]
+  ([^java.lang.String c ^java.lang.String m]
     (new UIDefaults$ProxyLazyValue c m))
-  ([c]
+  ([^java.lang.String c]
     (new UIDefaults$ProxyLazyValue c)))
 
 (defn create-value
@@ -34,6 +34,6 @@
   table - a UIDefaults table - `javax.swing.UIDefaults`
 
   returns: the created Object - `java.lang.Object`"
-  ([this table]
+  ([^javax.swing.UIDefaults$ProxyLazyValue this ^javax.swing.UIDefaults table]
     (-> this (.createValue table))))
 

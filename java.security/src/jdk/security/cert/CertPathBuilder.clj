@@ -73,9 +73,9 @@
             specified algorithm. - `java.security.cert.CertPathBuilder`
 
   throws: java.security.NoSuchAlgorithmException - if a CertPathBuilderSpi implementation for the specified algorithm is not available from the specified provider."
-  ([algorithm provider]
+  ([^java.lang.String algorithm ^java.lang.String provider]
     (CertPathBuilder/getInstance algorithm provider))
-  ([algorithm]
+  ([^java.lang.String algorithm]
     (CertPathBuilder/getInstance algorithm)))
 
 (defn *get-default-type
@@ -102,14 +102,14 @@
   "Returns the provider of this CertPathBuilder.
 
   returns: the provider of this CertPathBuilder - `java.security.Provider`"
-  ([this]
+  ([^java.security.cert.CertPathBuilder this]
     (-> this (.getProvider))))
 
 (defn get-algorithm
   "Returns the name of the algorithm of this CertPathBuilder.
 
   returns: the name of the algorithm of this CertPathBuilder - `java.lang.String`"
-  ([this]
+  ([^java.security.cert.CertPathBuilder this]
     (-> this (.getAlgorithm))))
 
 (defn build
@@ -121,7 +121,7 @@
   returns: the result of the build algorithm - `java.security.cert.CertPathBuilderResult`
 
   throws: java.security.cert.CertPathBuilderException - if the builder is unable to construct a certification path that satisfies the specified parameters"
-  ([this params]
+  ([^java.security.cert.CertPathBuilder this ^java.security.cert.CertPathParameters params]
     (-> this (.build params))))
 
 (defn get-revocation-checker
@@ -138,6 +138,6 @@
   returns: a CertPathChecker - `java.security.cert.CertPathChecker`
 
   throws: java.lang.UnsupportedOperationException - if the service provider does not support this method"
-  ([this]
+  ([^java.security.cert.CertPathBuilder this]
     (-> this (.getRevocationChecker))))
 

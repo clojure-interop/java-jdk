@@ -16,7 +16,7 @@
   ctrly - the Y coordinate of the control point - `double`
   x-2 - the X coordinate of the end point - `double`
   y-2 - the Y coordinate of the end point - `double`"
-  ([x-1 y-1 ctrlx ctrly x-2 y-2]
+  ([^Double x-1 ^Double y-1 ^Double ctrlx ^Double ctrly ^Double x-2 ^Double y-2]
     (new QuadCurve2D$Double x-1 y-1 ctrlx ctrly x-2 y-2))
   ([]
     (new QuadCurve2D$Double )))
@@ -86,7 +86,7 @@
    double in precision.
 
   returns: the X coordinate of the start point. - `double`"
-  ([this]
+  ([^java.awt.geom.QuadCurve2D$Double this]
     (-> this (.getX1))))
 
 (defn get-p-1
@@ -94,7 +94,7 @@
 
   returns: a Point2D that is the start point of this
             QuadCurve2D. - `java.awt.geom.Point2D`"
-  ([this]
+  ([^java.awt.geom.QuadCurve2D$Double this]
     (-> this (.getP1))))
 
 (defn get-ctrl-pt
@@ -102,7 +102,7 @@
 
   returns: a Point2D that is the control point of this
             Point2D. - `java.awt.geom.Point2D`"
-  ([this]
+  ([^java.awt.geom.QuadCurve2D$Double this]
     (-> this (.getCtrlPt))))
 
 (defn get-ctrl-y
@@ -110,7 +110,7 @@
    double precision.
 
   returns: the Y coordinate of the control point. - `double`"
-  ([this]
+  ([^java.awt.geom.QuadCurve2D$Double this]
     (-> this (.getCtrlY))))
 
 (defn get-bounds-2-d
@@ -153,7 +153,7 @@
 
   returns: an instance of Rectangle2D that is a
                    high-precision bounding box of the Shape. - `java.awt.geom.Rectangle2D`"
-  ([this]
+  ([^java.awt.geom.QuadCurve2D$Double this]
     (-> this (.getBounds2D))))
 
 (defn get-ctrl-x
@@ -161,7 +161,7 @@
    double precision.
 
   returns: X coordinate the control point - `double`"
-  ([this]
+  ([^java.awt.geom.QuadCurve2D$Double this]
     (-> this (.getCtrlX))))
 
 (defn get-y-2
@@ -169,7 +169,7 @@
    double precision.
 
   returns: the Y coordinate of the end point. - `double`"
-  ([this]
+  ([^java.awt.geom.QuadCurve2D$Double this]
     (-> this (.getY2))))
 
 (defn get-x-2
@@ -177,7 +177,7 @@
    double precision.
 
   returns: the x coordinate of the end point. - `double`"
-  ([this]
+  ([^java.awt.geom.QuadCurve2D$Double this]
     (-> this (.getX2))))
 
 (defn get-y-1
@@ -185,7 +185,7 @@
    double precision.
 
   returns: the Y coordinate of the start point. - `double`"
-  ([this]
+  ([^java.awt.geom.QuadCurve2D$Double this]
     (-> this (.getY1))))
 
 (defn get-p-2
@@ -193,7 +193,7 @@
 
   returns: a Point object that is the end point
             of this Point2D. - `java.awt.geom.Point2D`"
-  ([this]
+  ([^java.awt.geom.QuadCurve2D$Double this]
     (-> this (.getP2))))
 
 (defn set-curve
@@ -206,6 +206,6 @@
   ctrly - the Y coordinate of the control point - `double`
   x-2 - the X coordinate of the end point - `double`
   y-2 - the Y coordinate of the end point - `double`"
-  ([this x-1 y-1 ctrlx ctrly x-2 y-2]
+  ([^java.awt.geom.QuadCurve2D$Double this ^Double x-1 ^Double y-1 ^Double ctrlx ^Double ctrly ^Double x-2 ^Double y-2]
     (-> this (.setCurve x-1 y-1 ctrlx ctrly x-2 y-2))))
 

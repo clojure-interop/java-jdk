@@ -158,7 +158,7 @@
 
   returns: the head of the queue represented by this deque, or
            null if this deque is empty - `Deque.E`"
-  ([this]
+  ([^. this]
     (-> this (.peek))))
 
 (defn offer-first
@@ -173,7 +173,7 @@
            false - `boolean`
 
   throws: java.lang.ClassCastException - if the class of the specified element prevents it from being added to this deque"
-  ([this e]
+  ([^. this ^Deque.E e]
     (-> this (.offerFirst e))))
 
 (defn get-first
@@ -185,7 +185,7 @@
   returns: the head of this deque - `Deque.E`
 
   throws: java.util.NoSuchElementException - if this deque is empty"
-  ([this]
+  ([^. this]
     (-> this (.getFirst))))
 
 (defn peek-first
@@ -193,7 +193,7 @@
    or returns null if this deque is empty.
 
   returns: the head of this deque, or null if this deque is empty - `Deque.E`"
-  ([this]
+  ([^. this]
     (-> this (.peekFirst))))
 
 (defn remove-first-occurrence
@@ -210,7 +210,7 @@
   returns: true if an element was removed as a result of this call - `boolean`
 
   throws: java.lang.ClassCastException - if the class of the specified element is incompatible with this deque (optional)"
-  ([this o]
+  ([^. this ^java.lang.Object o]
     (-> this (.removeFirstOccurrence o))))
 
 (defn offer
@@ -230,7 +230,7 @@
            false - `boolean`
 
   throws: java.lang.ClassCastException - if the class of the specified element prevents it from being added to this deque"
-  ([this e]
+  ([^. this ^Deque.E e]
     (-> this (.offer e))))
 
 (defn peek-last
@@ -238,7 +238,7 @@
    or returns null if this deque is empty.
 
   returns: the tail of this deque, or null if this deque is empty - `Deque.E`"
-  ([this]
+  ([^. this]
     (-> this (.peekLast))))
 
 (defn pop
@@ -251,7 +251,7 @@
            of the stack represented by this deque) - `Deque.E`
 
   throws: java.util.NoSuchElementException - if this deque is empty"
-  ([this]
+  ([^. this]
     (-> this (.pop))))
 
 (defn contains
@@ -265,7 +265,7 @@
   returns: true if this deque contains the specified element - `boolean`
 
   throws: java.lang.ClassCastException - if the type of the specified element is incompatible with this deque (optional)"
-  ([this o]
+  ([^. this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn push
@@ -279,7 +279,7 @@
   e - the element to push - `Deque.E`
 
   throws: java.lang.IllegalStateException - if the element cannot be added at this time due to capacity restrictions"
-  ([this e]
+  ([^. this ^Deque.E e]
     (-> this (.push e))))
 
 (defn get-last
@@ -290,7 +290,7 @@
   returns: the tail of this deque - `Deque.E`
 
   throws: java.util.NoSuchElementException - if this deque is empty"
-  ([this]
+  ([^. this]
     (-> this (.getLast))))
 
 (defn iterator
@@ -298,7 +298,7 @@
    The elements will be returned in order from first (head) to last (tail).
 
   returns: an iterator over the elements in this deque in proper sequence - `java.util.Iterator<Deque.E>`"
-  ([this]
+  ([^. this]
     (-> this (.iterator))))
 
 (defn element
@@ -312,7 +312,7 @@
   returns: the head of the queue represented by this deque - `Deque.E`
 
   throws: java.util.NoSuchElementException - if this deque is empty"
-  ([this]
+  ([^. this]
     (-> this (.element))))
 
 (defn remove-first
@@ -323,7 +323,7 @@
   returns: the head of this deque - `Deque.E`
 
   throws: java.util.NoSuchElementException - if this deque is empty"
-  ([this]
+  ([^. this]
     (-> this (.removeFirst))))
 
 (defn remove
@@ -342,9 +342,9 @@
   returns: true if an element was removed as a result of this call - `boolean`
 
   throws: java.lang.ClassCastException - if the class of the specified element is incompatible with this deque (optional)"
-  ([this o]
+  ([^. this ^java.lang.Object o]
     (-> this (.remove o)))
-  ([this]
+  ([^. this]
     (-> this (.remove))))
 
 (defn poll-last
@@ -352,7 +352,7 @@
    or returns null if this deque is empty.
 
   returns: the tail of this deque, or null if this deque is empty - `Deque.E`"
-  ([this]
+  ([^. this]
     (-> this (.pollLast))))
 
 (defn poll
@@ -364,7 +364,7 @@
 
   returns: the first element of this deque, or null if
            this deque is empty - `Deque.E`"
-  ([this]
+  ([^. this]
     (-> this (.poll))))
 
 (defn offer-last
@@ -379,7 +379,7 @@
            false - `boolean`
 
   throws: java.lang.ClassCastException - if the class of the specified element prevents it from being added to this deque"
-  ([this e]
+  ([^. this ^Deque.E e]
     (-> this (.offerLast e))))
 
 (defn poll-first
@@ -387,7 +387,7 @@
    or returns null if this deque is empty.
 
   returns: the head of this deque, or null if this deque is empty - `Deque.E`"
-  ([this]
+  ([^. this]
     (-> this (.pollFirst))))
 
 (defn add-last
@@ -402,7 +402,7 @@
   e - the element to add - `Deque.E`
 
   throws: java.lang.IllegalStateException - if the element cannot be added at this time due to capacity restrictions"
-  ([this e]
+  ([^. this ^Deque.E e]
     (-> this (.addLast e))))
 
 (defn remove-last-occurrence
@@ -419,7 +419,7 @@
   returns: true if an element was removed as a result of this call - `boolean`
 
   throws: java.lang.ClassCastException - if the class of the specified element is incompatible with this deque (optional)"
-  ([this o]
+  ([^. this ^java.lang.Object o]
     (-> this (.removeLastOccurrence o))))
 
 (defn add
@@ -438,7 +438,7 @@
   returns: true (as specified by Collection.add(E)) - `boolean`
 
   throws: java.lang.IllegalStateException - if the element cannot be added at this time due to capacity restrictions"
-  ([this e]
+  ([^. this ^Deque.E e]
     (-> this (.add e))))
 
 (defn descending-iterator
@@ -448,14 +448,14 @@
 
   returns: an iterator over the elements in this deque in reverse
    sequence - `java.util.Iterator<Deque.E>`"
-  ([this]
+  ([^. this]
     (-> this (.descendingIterator))))
 
 (defn size
   "Returns the number of elements in this deque.
 
   returns: the number of elements in this deque - `int`"
-  ([this]
+  ([^. this]
     (-> this (.size))))
 
 (defn remove-last
@@ -466,7 +466,7 @@
   returns: the tail of this deque - `Deque.E`
 
   throws: java.util.NoSuchElementException - if this deque is empty"
-  ([this]
+  ([^. this]
     (-> this (.removeLast))))
 
 (defn add-first
@@ -479,6 +479,6 @@
   e - the element to add - `Deque.E`
 
   throws: java.lang.IllegalStateException - if the element cannot be added at this time due to capacity restrictions"
-  ([this e]
+  ([^. this ^Deque.E e]
     (-> this (.addFirst e))))
 

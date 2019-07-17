@@ -52,7 +52,7 @@
   key-type - the class object of the key type for this enum map - `java.lang.Class<EnumMap.K>`
 
   throws: java.lang.NullPointerException - if keyType is null"
-  ([key-type]
+  ([^java.lang.Class key-type]
     (new EnumMap,V> key-type)))
 
 (defn values
@@ -64,7 +64,7 @@
    are declared).
 
   returns: a collection view of the values contained in this map - `java.util.Collection<EnumMap.V>`"
-  ([this]
+  ([^java.util.EnumMap,V> this]
     (-> this (.values))))
 
 (defn put-all
@@ -75,7 +75,7 @@
   m - the mappings to be stored in this map - `EnumMap.V>`
 
   throws: java.lang.NullPointerException - the specified map is null, or if one or more keys in the specified map are null"
-  ([this m]
+  ([^java.util.EnumMap,V> this ^EnumMap.V> m]
     (-> this (.putAll m))))
 
 (defn put
@@ -92,7 +92,7 @@
        null with the specified key.) - `EnumMap.V`
 
   throws: java.lang.NullPointerException - if the specified key is null"
-  ([this key value]
+  ([^java.util.EnumMap,V> this ^EnumMap.K key ^EnumMap.V value]
     (-> this (.put key value))))
 
 (defn entry-set
@@ -103,7 +103,7 @@
    natural order (the order in which the enum constants are declared).
 
   returns: a set view of the mappings contained in this enum map - `java.util.Set<java.util.Map.Entry<EnumMap.K,EnumMap.V>>`"
-  ([this]
+  ([^java.util.EnumMap,V> this]
     (-> this (.entrySet))))
 
 (defn contains-value
@@ -113,7 +113,7 @@
   value - the value whose presence in this map is to be tested - `java.lang.Object`
 
   returns: true if this map maps one or more keys to this value - `boolean`"
-  ([this value]
+  ([^java.util.EnumMap,V> this ^java.lang.Object value]
     (-> this (.containsValue value))))
 
 (defn remove
@@ -125,7 +125,7 @@
        null if there was no entry for key.  (A null
        return can also indicate that the map previously associated
        null with the specified key.) - `EnumMap.V`"
-  ([this key]
+  ([^java.util.EnumMap,V> this ^java.lang.Object key]
     (-> this (.remove key))))
 
 (defn key-set
@@ -136,7 +136,7 @@
    are declared).
 
   returns: a set view of the keys contained in this enum map - `java.util.Set<EnumMap.K>`"
-  ([this]
+  ([^java.util.EnumMap,V> this]
     (-> this (.keySet))))
 
 (defn clone
@@ -144,7 +144,7 @@
    are not cloned.
 
   returns: a shallow copy of this enum map - `java.util.EnumMap<EnumMap.K,EnumMap.V>`"
-  ([this]
+  ([^java.util.EnumMap,V> this]
     (-> this (.clone))))
 
 (defn hash-code
@@ -152,19 +152,19 @@
    defined to be the sum of the hash codes of each entry in the map.
 
   returns: the hash code value for this map - `int`"
-  ([this]
+  ([^java.util.EnumMap,V> this]
     (-> this (.hashCode))))
 
 (defn size
   "Returns the number of key-value mappings in this map.
 
   returns: the number of key-value mappings in this map - `int`"
-  ([this]
+  ([^java.util.EnumMap,V> this]
     (-> this (.size))))
 
 (defn clear
   "Removes all mappings from this map."
-  ([this]
+  ([^java.util.EnumMap,V> this]
     (-> this (.clear))))
 
 (defn contains-key
@@ -175,7 +175,7 @@
 
   returns: true if this map contains a mapping for the specified
               key - `boolean`"
-  ([this key]
+  ([^java.util.EnumMap,V> this ^java.lang.Object key]
     (-> this (.containsKey key))))
 
 (defn get
@@ -197,7 +197,7 @@
 
   returns: the value to which the specified key is mapped, or
            null if this map contains no mapping for the key - `EnumMap.V`"
-  ([this key]
+  ([^java.util.EnumMap,V> this ^java.lang.Object key]
     (-> this (.get key))))
 
 (defn equals
@@ -208,6 +208,6 @@
   o - the object to be compared for equality with this map - `java.lang.Object`
 
   returns: true if the specified object is equal to this map - `boolean`"
-  ([this o]
+  ([^java.util.EnumMap,V> this ^java.lang.Object o]
     (-> this (.equals o))))
 

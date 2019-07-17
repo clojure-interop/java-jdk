@@ -18,7 +18,7 @@
    2 for GIOP 1.3 and higher.
 
   returns: `byte`"
-  ([this]
+  ([^. this]
     (-> this (.getMaximumStreamFormatVersion))))
 
 (defn write-value
@@ -41,6 +41,6 @@
   out - `org.omg.CORBA.portable.OutputStream`
   value - `java.io.Serializable`
   stream-format-version - `byte`"
-  ([this out value stream-format-version]
+  ([^. this ^org.omg.CORBA.portable.OutputStream out ^java.io.Serializable value ^Byte stream-format-version]
     (-> this (.writeValue out value stream-format-version))))
 

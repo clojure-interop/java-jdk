@@ -11,6 +11,6 @@
   "Gets the parameter used to protect keystore data.
 
   returns: the parameter used to protect keystore data, or null - `java.security.KeyStore.ProtectionParameter`"
-  ([this]
+  ([^. this]
     (-> this (.getProtectionParameter))))
 

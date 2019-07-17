@@ -31,7 +31,7 @@
   c - the collection of elements to initially contain - `DelayQueue.E>`
 
   throws: java.lang.NullPointerException - if the specified collection or any of its elements are null"
-  ([c]
+  ([^DelayQueue.E> c]
     (new DelayQueue c))
   ([]
     (new DelayQueue )))
@@ -45,7 +45,7 @@
 
   returns: the head of this queue, or null if this
            queue is empty - `DelayQueue.E`"
-  ([this]
+  ([^java.util.concurrent.DelayQueue this]
     (-> this (.peek))))
 
 (defn offer
@@ -59,9 +59,9 @@
   returns: true - `boolean`
 
   throws: java.lang.NullPointerException - if the specified element is null"
-  ([this e timeout unit]
+  ([^java.util.concurrent.DelayQueue this ^DelayQueue.E e ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.offer e timeout unit)))
-  ([this e]
+  ([^java.util.concurrent.DelayQueue this ^DelayQueue.E e]
     (-> this (.offer e))))
 
 (defn put
@@ -71,7 +71,7 @@
   e - the element to add - `DelayQueue.E`
 
   throws: java.lang.NullPointerException - if the specified element is null"
-  ([this e]
+  ([^java.util.concurrent.DelayQueue this ^DelayQueue.E e]
     (-> this (.put e))))
 
 (defn take
@@ -81,7 +81,7 @@
   returns: the head of this queue - `DelayQueue.E`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([this]
+  ([^java.util.concurrent.DelayQueue this]
     (-> this (.take))))
 
 (defn iterator
@@ -93,7 +93,7 @@
    weakly consistent.
 
   returns: an iterator over the elements in this queue - `java.util.Iterator<DelayQueue.E>`"
-  ([this]
+  ([^java.util.concurrent.DelayQueue this]
     (-> this (.iterator))))
 
 (defn remove
@@ -103,7 +103,7 @@
   o - element to be removed from this collection, if present - `java.lang.Object`
 
   returns: true if an element was removed as a result of this call - `boolean`"
-  ([this o]
+  ([^java.util.concurrent.DelayQueue this ^java.lang.Object o]
     (-> this (.remove o))))
 
 (defn drain-to
@@ -115,9 +115,9 @@
   returns: the number of elements transferred - `int`
 
   throws: java.lang.UnsupportedOperationException - if addition of elements is not supported by the specified collection"
-  ([this c max-elements]
+  ([^java.util.concurrent.DelayQueue this ^DelayQueue.E> c ^Integer max-elements]
     (-> this (.drainTo c max-elements)))
-  ([this c]
+  ([^java.util.concurrent.DelayQueue this ^DelayQueue.E> c]
     (-> this (.drainTo c))))
 
 (defn poll
@@ -133,9 +133,9 @@
            an expired delay becomes available - `DelayQueue.E`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([this timeout unit]
+  ([^java.util.concurrent.DelayQueue this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.poll timeout unit)))
-  ([this]
+  ([^java.util.concurrent.DelayQueue this]
     (-> this (.poll))))
 
 (defn remaining-capacity
@@ -143,7 +143,7 @@
    a DelayQueue is not capacity constrained.
 
   returns: Integer.MAX_VALUE - `int`"
-  ([this]
+  ([^java.util.concurrent.DelayQueue this]
     (-> this (.remainingCapacity))))
 
 (defn add
@@ -154,14 +154,14 @@
   returns: true (as specified by Collection.add(E)) - `boolean`
 
   throws: java.lang.NullPointerException - if the specified element is null"
-  ([this e]
+  ([^java.util.concurrent.DelayQueue this ^DelayQueue.E e]
     (-> this (.add e))))
 
 (defn size
   "Description copied from interface: Collection
 
   returns: the number of elements in this collection - `int`"
-  ([this]
+  ([^java.util.concurrent.DelayQueue this]
     (-> this (.size))))
 
 (defn clear
@@ -169,7 +169,7 @@
    The queue will be empty after this call returns.
    Elements with an unexpired delay are not waited for; they are
    simply discarded from the queue."
-  ([this]
+  ([^java.util.concurrent.DelayQueue this]
     (-> this (.clear))))
 
 (defn to-array
@@ -205,8 +205,8 @@
   returns: an array containing all of the elements in this queue - `<T> T[]`
 
   throws: java.lang.ArrayStoreException - if the runtime type of the specified array is not a supertype of the runtime type of every element in this queue"
-  ([this a]
+  ([^java.util.concurrent.DelayQueue this a]
     (-> this (.toArray a)))
-  ([this]
+  ([^java.util.concurrent.DelayQueue this]
     (-> this (.toArray))))
 

@@ -10,6 +10,6 @@
    For characteristic 2 finite field ECFieldF2m, m is returned.
 
   returns: the field size in bits. - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getFieldSize))))
 

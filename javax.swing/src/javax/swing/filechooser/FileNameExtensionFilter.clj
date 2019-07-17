@@ -26,7 +26,7 @@
   extensions - the accepted file name extensions - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if extensions is null, empty, contains null, or contains an empty string"
-  ([description extensions]
+  ([^java.lang.String description ^java.lang.String extensions]
     (new FileNameExtensionFilter description extensions)))
 
 (defn accept
@@ -37,21 +37,21 @@
   f - the File to test - `java.io.File`
 
   returns: true if the file is to be accepted, false otherwise - `boolean`"
-  ([this f]
+  ([^javax.swing.filechooser.FileNameExtensionFilter this ^java.io.File f]
     (-> this (.accept f))))
 
 (defn get-description
   "The description of this filter. For example: `JPG and GIF Images.`
 
   returns: the description of this filter - `java.lang.String`"
-  ([this]
+  ([^javax.swing.filechooser.FileNameExtensionFilter this]
     (-> this (.getDescription))))
 
 (defn get-extensions
   "Returns the set of file name extensions files are tested against.
 
   returns: the set of file name extensions files are tested against - `java.lang.String[]`"
-  ([this]
+  ([^javax.swing.filechooser.FileNameExtensionFilter this]
     (-> this (.getExtensions))))
 
 (defn to-string
@@ -61,6 +61,6 @@
    between implementations.
 
   returns: a string representation of this FileNameExtensionFilter - `java.lang.String`"
-  ([this]
+  ([^javax.swing.filechooser.FileNameExtensionFilter this]
     (-> this (.toString))))
 

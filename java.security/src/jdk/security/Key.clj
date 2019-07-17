@@ -69,7 +69,7 @@
    for information about standard algorithm names.
 
   returns: the name of the algorithm associated with this key. - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getAlgorithm))))
 
 (defn get-format
@@ -88,7 +88,7 @@
    `PKCS#8`.
 
   returns: the primary encoding format of the key. - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getFormat))))
 
 (defn get-encoded
@@ -97,6 +97,6 @@
 
   returns: the encoded key, or null if the key does not support
    encoding. - `byte[]`"
-  ([this]
+  ([^. this]
     (-> this (.getEncoded))))
 

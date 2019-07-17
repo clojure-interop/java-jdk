@@ -20,7 +20,7 @@
 (defn disable-all-object-names
   "Disables any MBeanServerNotification (all ObjectNames are
    deselected)."
-  ([this]
+  ([^javax.management.relation.MBeanServerNotificationFilter this]
     (-> this (.disableAllObjectNames))))
 
 (defn disable-object-name
@@ -29,12 +29,12 @@
   object-name - ObjectName no longer of interest - `javax.management.ObjectName`
 
   throws: java.lang.IllegalArgumentException - if the given ObjectName is null"
-  ([this object-name]
+  ([^javax.management.relation.MBeanServerNotificationFilter this ^javax.management.ObjectName object-name]
     (-> this (.disableObjectName object-name))))
 
 (defn enable-all-object-names
   "Enables all MBeanServerNotifications (all ObjectNames are selected)."
-  ([this]
+  ([^javax.management.relation.MBeanServerNotificationFilter this]
     (-> this (.enableAllObjectNames))))
 
 (defn enable-object-name
@@ -43,7 +43,7 @@
   object-name - ObjectName of interest - `javax.management.ObjectName`
 
   throws: java.lang.IllegalArgumentException - if the given ObjectName is null"
-  ([this object-name]
+  ([^javax.management.relation.MBeanServerNotificationFilter this ^javax.management.ObjectName object-name]
     (-> this (.enableObjectName object-name))))
 
 (defn get-enabled-object-names
@@ -54,7 +54,7 @@
    ObjectNames explicitly deselected
    - empty means all ObjectNames are deselected, i.e. no ObjectName
    selected. - `java.util.Vector<javax.management.ObjectName>`"
-  ([this]
+  ([^javax.management.relation.MBeanServerNotificationFilter this]
     (-> this (.getEnabledObjectNames))))
 
 (defn get-disabled-object-names
@@ -65,7 +65,7 @@
    ObjectNames explicitly selected
    - empty means all ObjectNames are selected, i.e. no ObjectName
    deselected. - `java.util.Vector<javax.management.ObjectName>`"
-  ([this]
+  ([^javax.management.relation.MBeanServerNotificationFilter this]
     (-> this (.getDisabledObjectNames))))
 
 (defn notification-enabled?
@@ -84,6 +84,6 @@
    otherwise. - `boolean`
 
   throws: java.lang.IllegalArgumentException - if null parameter"
-  ([this notif]
+  ([^javax.management.relation.MBeanServerNotificationFilter this ^javax.management.Notification notif]
     (-> this (.isNotificationEnabled notif))))
 

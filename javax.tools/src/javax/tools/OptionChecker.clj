@@ -11,6 +11,6 @@
 
   returns: the number of arguments the given option takes or -1 if
    the option is not supported - `int`"
-  ([this option]
+  ([^. this ^java.lang.String option]
     (-> this (.isSupportedOption option))))
 

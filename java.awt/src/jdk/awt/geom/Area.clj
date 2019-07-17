@@ -71,7 +71,7 @@
   s - the Shape from which the area is constructed - `java.awt.Shape`
 
   throws: java.lang.NullPointerException - if s is null"
-  ([s]
+  ([^java.awt.Shape s]
     (new Area s))
   ([]
     (new Area )))
@@ -89,9 +89,9 @@
   returns: the PathIterator object that returns the
    geometry of the outline of this Area, one segment
    at a time. - `java.awt.geom.PathIterator`"
-  ([this at flatness]
+  ([^java.awt.geom.Area this ^java.awt.geom.AffineTransform at ^Double flatness]
     (-> this (.getPathIterator at flatness)))
-  ([this at]
+  ([^java.awt.geom.Area this ^java.awt.geom.AffineTransform at]
     (-> this (.getPathIterator at))))
 
 (defn singular?
@@ -104,7 +104,7 @@
 
   returns: true if the Area is comprised
    of a single basic geometry; false otherwise. - `boolean`"
-  ([this]
+  ([^java.awt.geom.Area this]
     (-> this (.isSingular))))
 
 (defn intersect
@@ -134,7 +134,7 @@
   rhs - the Area to be intersected with this Area - `java.awt.geom.Area`
 
   throws: java.lang.NullPointerException - if rhs is null"
-  ([this rhs]
+  ([^java.awt.geom.Area this ^java.awt.geom.Area rhs]
     (-> this (.intersect rhs))))
 
 (defn contains
@@ -174,11 +174,11 @@
             intersects method returns true
             and the containment calculations would be too expensive to
             perform. - `boolean`"
-  ([this x y w h]
+  ([^java.awt.geom.Area this ^Double x ^Double y ^Double w ^Double h]
     (-> this (.contains x y w h)))
-  ([this x y]
+  ([^java.awt.geom.Area this ^Double x ^Double y]
     (-> this (.contains x y)))
-  ([this p]
+  ([^java.awt.geom.Area this ^java.awt.geom.Point2D p]
     (-> this (.contains p))))
 
 (defn polygonal?
@@ -188,7 +188,7 @@
   returns: true if the geometry of this
    Area consists entirely of line segments;
    false otherwise. - `boolean`"
-  ([this]
+  ([^java.awt.geom.Area this]
     (-> this (.isPolygonal))))
 
 (defn transform
@@ -199,13 +199,13 @@
   t - the transformation used to transform the area - `java.awt.geom.AffineTransform`
 
   throws: java.lang.NullPointerException - if t is null"
-  ([this t]
+  ([^java.awt.geom.Area this ^java.awt.geom.AffineTransform t]
     (-> this (.transform t))))
 
 (defn reset
   "Removes all of the geometry from this Area and
    restores it to an empty area."
-  ([this]
+  ([^java.awt.geom.Area this]
     (-> this (.reset))))
 
 (defn subtract
@@ -235,7 +235,7 @@
   rhs - the Area to be subtracted from the current shape - `java.awt.geom.Area`
 
   throws: java.lang.NullPointerException - if rhs is null"
-  ([this rhs]
+  ([^java.awt.geom.Area this ^java.awt.geom.Area rhs]
     (-> this (.subtract rhs))))
 
 (defn get-bounds-2-d
@@ -250,7 +250,7 @@
 
   returns: the bounding Rectangle2D for the
    Area. - `java.awt.geom.Rectangle2D`"
-  ([this]
+  ([^java.awt.geom.Area this]
     (-> this (.getBounds2D))))
 
 (defn exclusive-or
@@ -281,14 +281,14 @@
   rhs - the Area to be exclusive ORed with this Area. - `java.awt.geom.Area`
 
   throws: java.lang.NullPointerException - if rhs is null"
-  ([this rhs]
+  ([^java.awt.geom.Area this ^java.awt.geom.Area rhs]
     (-> this (.exclusiveOr rhs))))
 
 (defn clone
   "Returns an exact copy of this Area object.
 
   returns: Created clone object - `java.lang.Object`"
-  ([this]
+  ([^java.awt.geom.Area this]
     (-> this (.clone))))
 
 (defn get-bounds
@@ -306,7 +306,7 @@
 
   returns: the bounding Rectangle for the
    Area. - `java.awt.Rectangle`"
-  ([this]
+  ([^java.awt.geom.Area this]
     (-> this (.getBounds))))
 
 (defn create-transformed-area
@@ -321,7 +321,7 @@
              geometry. - `java.awt.geom.Area`
 
   throws: java.lang.NullPointerException - if t is null"
-  ([this t]
+  ([^java.awt.geom.Area this ^java.awt.geom.AffineTransform t]
     (-> this (.createTransformedArea t))))
 
 (defn add
@@ -351,7 +351,7 @@
   rhs - the Area to be added to the current shape - `java.awt.geom.Area`
 
   throws: java.lang.NullPointerException - if rhs is null"
-  ([this rhs]
+  ([^java.awt.geom.Area this ^java.awt.geom.Area rhs]
     (-> this (.add rhs))))
 
 (defn empty?
@@ -359,7 +359,7 @@
 
   returns: true if this Area object
    represents an empty area; false otherwise. - `boolean`"
-  ([this]
+  ([^java.awt.geom.Area this]
     (-> this (.isEmpty))))
 
 (defn equals
@@ -371,7 +371,7 @@
 
   returns: true if the two geometries are equal;
             false otherwise. - `boolean`"
-  ([this other]
+  ([^java.awt.geom.Area this ^java.awt.geom.Area other]
     (-> this (.equals other))))
 
 (defn intersects
@@ -408,9 +408,9 @@
             the interior of the rectangular area intersect, or are
             both highly likely to intersect and intersection calculations
             would be too expensive to perform; false otherwise. - `boolean`"
-  ([this x y w h]
+  ([^java.awt.geom.Area this ^Double x ^Double y ^Double w ^Double h]
     (-> this (.intersects x y w h)))
-  ([this r]
+  ([^java.awt.geom.Area this ^java.awt.geom.Rectangle2D r]
     (-> this (.intersects r))))
 
 (defn rectangular?
@@ -419,6 +419,6 @@
   returns: true if the geometry of this
    Area is rectangular in shape; false
    otherwise. - `boolean`"
-  ([this]
+  ([^java.awt.geom.Area this]
     (-> this (.isRectangular))))
 

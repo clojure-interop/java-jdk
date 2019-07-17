@@ -57,9 +57,9 @@
   keyword-map - an attribute type keyword map, where each key is a keyword String that maps to a corresponding object identifier in String form (a sequence of nonnegative integers separated by periods). The map may be empty but never null. - `java.util.Map<java.lang.String,java.lang.String>`
 
   throws: java.lang.NullPointerException - if name or keywordMap is null"
-  ([name keyword-map]
+  ([^java.lang.String name ^java.util.Map keyword-map]
     (new X500Principal name keyword-map))
-  ([name]
+  ([^java.lang.String name]
     (new X500Principal name)))
 
 (def *-rfc-1779
@@ -115,11 +115,11 @@
             using the specified format - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if the specified format is invalid, null, or an OID in the name maps to an improperly specified keyword"
-  ([this format oid-map]
+  ([^javax.security.auth.x500.X500Principal this ^java.lang.String format ^java.util.Map oid-map]
     (-> this (.getName format oid-map)))
-  ([this format]
+  ([^javax.security.auth.x500.X500Principal this ^java.lang.String format]
     (-> this (.getName format)))
-  ([this]
+  ([^javax.security.auth.x500.X500Principal this]
     (-> this (.getName))))
 
 (defn get-encoded
@@ -132,7 +132,7 @@
 
   returns: a byte array containing the distinguished name in ASN.1 DER
    encoded form - `byte[]`"
-  ([this]
+  ([^javax.security.auth.x500.X500Principal this]
     (-> this (.getEncoded))))
 
 (defn to-string
@@ -140,7 +140,7 @@
    X500Principal.
 
   returns: a string representation of this X500Principal - `java.lang.String`"
-  ([this]
+  ([^javax.security.auth.x500.X500Principal this]
     (-> this (.toString))))
 
 (defn equals
@@ -159,7 +159,7 @@
 
   returns: true if the specified Object is equal
             to this X500Principal, false otherwise - `boolean`"
-  ([this o]
+  ([^javax.security.auth.x500.X500Principal this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn hash-code
@@ -169,6 +169,6 @@
    getName(X500Principal.CANONICAL).hashCode()
 
   returns: a hash code for this X500Principal - `int`"
-  ([this]
+  ([^javax.security.auth.x500.X500Principal this]
     (-> this (.hashCode))))
 

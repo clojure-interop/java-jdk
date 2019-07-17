@@ -177,7 +177,7 @@
   returns: all of this DragSource's
            DragSourceMotionListeners or an empty array if no
            such listeners are currently registered - `java.awt.dnd.DragSourceMotionListener[]`"
-  ([this]
+  ([^java.awt.dnd.DragSource this]
     (-> this (.getDragSourceMotionListeners))))
 
 (defn get-flavor-map
@@ -185,7 +185,7 @@
    FlavorMap for this DragSource.
 
   returns: the FlavorMap for this DragSource - `java.awt.datatransfer.FlavorMap`"
-  ([this]
+  ([^java.awt.dnd.DragSource this]
     (-> this (.getFlavorMap))))
 
 (defn get-drag-source-listeners
@@ -195,7 +195,7 @@
   returns: all of this DragSource's
            DragSourceListeners or an empty array if no
            such listeners are currently registered - `java.awt.dnd.DragSourceListener[]`"
-  ([this]
+  ([^java.awt.dnd.DragSource this]
     (-> this (.getDragSourceListeners))))
 
 (defn create-drag-gesture-recognizer
@@ -217,7 +217,7 @@
       has no implementation available for
       the requested DragGestureRecognizer
       subclass and returns null - `<T extends java.awt.dnd.DragGestureRecognizer> T`"
-  ([this recognizer-abstract-class c actions dgl]
+  ([^java.awt.dnd.DragSource this ^java.lang.Class recognizer-abstract-class ^java.awt.Component c ^Integer actions ^java.awt.dnd.DragGestureListener dgl]
     (-> this (.createDragGestureRecognizer recognizer-abstract-class c actions dgl))))
 
 (defn remove-drag-source-motion-listener
@@ -230,7 +230,7 @@
    is thrown.
 
   dsml - the DragSourceMotionListener to remove - `java.awt.dnd.DragSourceMotionListener`"
-  ([this dsml]
+  ([^java.awt.dnd.DragSource this ^java.awt.dnd.DragSourceMotionListener dsml]
     (-> this (.removeDragSourceMotionListener dsml))))
 
 (defn remove-drag-source-listener
@@ -243,7 +243,7 @@
    is thrown.
 
   dsl - the DragSourceListener to remove - `java.awt.dnd.DragSourceListener`"
-  ([this dsl]
+  ([^java.awt.dnd.DragSource this ^java.awt.dnd.DragSourceListener dsl]
     (-> this (.removeDragSourceListener dsl))))
 
 (defn start-drag
@@ -267,13 +267,13 @@
   flavor-map - the FlavorMap to use, or null - `java.awt.datatransfer.FlavorMap`
 
   throws: java.awt.dnd.InvalidDnDOperationException - if the Drag and Drop system is unable to initiate a drag operation, or if the user attempts to start a drag while an existing drag operation is still executing"
-  ([this trigger drag-cursor drag-image image-offset transferable dsl flavor-map]
+  ([^java.awt.dnd.DragSource this ^java.awt.dnd.DragGestureEvent trigger ^java.awt.Cursor drag-cursor ^java.awt.Image drag-image ^java.awt.Point image-offset ^java.awt.datatransfer.Transferable transferable ^java.awt.dnd.DragSourceListener dsl ^java.awt.datatransfer.FlavorMap flavor-map]
     (-> this (.startDrag trigger drag-cursor drag-image image-offset transferable dsl flavor-map)))
-  ([this trigger drag-cursor drag-image drag-offset transferable dsl]
+  ([^java.awt.dnd.DragSource this ^java.awt.dnd.DragGestureEvent trigger ^java.awt.Cursor drag-cursor ^java.awt.Image drag-image ^java.awt.Point drag-offset ^java.awt.datatransfer.Transferable transferable ^java.awt.dnd.DragSourceListener dsl]
     (-> this (.startDrag trigger drag-cursor drag-image drag-offset transferable dsl)))
-  ([this trigger drag-cursor transferable dsl flavor-map]
+  ([^java.awt.dnd.DragSource this ^java.awt.dnd.DragGestureEvent trigger ^java.awt.Cursor drag-cursor ^java.awt.datatransfer.Transferable transferable ^java.awt.dnd.DragSourceListener dsl ^java.awt.datatransfer.FlavorMap flavor-map]
     (-> this (.startDrag trigger drag-cursor transferable dsl flavor-map)))
-  ([this trigger drag-cursor transferable dsl]
+  ([^java.awt.dnd.DragSource this ^java.awt.dnd.DragGestureEvent trigger ^java.awt.Cursor drag-cursor ^java.awt.datatransfer.Transferable transferable ^java.awt.dnd.DragSourceListener dsl]
     (-> this (.startDrag trigger drag-cursor transferable dsl))))
 
 (defn add-drag-source-motion-listener
@@ -284,7 +284,7 @@
    exception is thrown.
 
   dsml - the DragSourceMotionListener to add - `java.awt.dnd.DragSourceMotionListener`"
-  ([this dsml]
+  ([^java.awt.dnd.DragSource this ^java.awt.dnd.DragSourceMotionListener dsml]
     (-> this (.addDragSourceMotionListener dsml))))
 
 (defn create-default-drag-gesture-recognizer
@@ -308,7 +308,7 @@
       has no implementation available for
       the requested DragGestureRecognizer
       subclass and returns null - `java.awt.dnd.DragGestureRecognizer`"
-  ([this c actions dgl]
+  ([^java.awt.dnd.DragSource this ^java.awt.Component c ^Integer actions ^java.awt.dnd.DragGestureListener dgl]
     (-> this (.createDefaultDragGestureRecognizer c actions dgl))))
 
 (defn get-listeners
@@ -325,7 +325,7 @@
             have been added - `<T extends java.util.EventListener> T[]`
 
   throws: java.lang.ClassCastException - if listenerType doesn't specify a class or interface that implements java.util.EventListener"
-  ([this listener-type]
+  ([^java.awt.dnd.DragSource this ^java.lang.Class listener-type]
     (-> this (.getListeners listener-type))))
 
 (defn add-drag-source-listener
@@ -336,6 +336,6 @@
    exception is thrown.
 
   dsl - the DragSourceListener to add - `java.awt.dnd.DragSourceListener`"
-  ([this dsl]
+  ([^java.awt.dnd.DragSource this ^java.awt.dnd.DragSourceListener dsl]
     (-> this (.addDragSourceListener dsl))))
 

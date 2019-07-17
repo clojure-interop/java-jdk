@@ -97,7 +97,7 @@
    support the add or addAll operations.
 
   returns: a collection view of the values contained in this map - `java.util.Collection<Map.V>`"
-  ([this]
+  ([^. this]
     (-> this (.values))))
 
 (defn for-each
@@ -112,7 +112,7 @@
   returns: `default void`
 
   throws: java.lang.NullPointerException - if the specified action is null"
-  ([this action]
+  ([^. this ^Map.V> action]
     (-> this (.forEach action))))
 
 (defn replace-all
@@ -126,7 +126,7 @@
   returns: `default void`
 
   throws: java.lang.UnsupportedOperationException - if the set operation is not supported by this map's entry set iterator."
-  ([this function]
+  ([^. this ^Map.V> function]
     (-> this (.replaceAll function))))
 
 (defn put-all
@@ -140,7 +140,7 @@
   m - mappings to be stored in this map - `Map.V>`
 
   throws: java.lang.UnsupportedOperationException - if the putAll operation is not supported by this map"
-  ([this m]
+  ([^. this ^Map.V> m]
     (-> this (.putAll m))))
 
 (defn put-if-absent
@@ -158,7 +158,7 @@
            if the implementation supports null values.) - `default Map.V`
 
   throws: java.lang.UnsupportedOperationException - if the put operation is not supported by this map (optional)"
-  ([this key value]
+  ([^. this ^Map.K key ^Map.V value]
     (-> this (.putIfAbsent key value))))
 
 (defn put
@@ -179,7 +179,7 @@
            if the implementation supports null values.) - `Map.V`
 
   throws: java.lang.UnsupportedOperationException - if the put operation is not supported by this map"
-  ([this key value]
+  ([^. this ^Map.K key ^Map.V value]
     (-> this (.put key value))))
 
 (defn entry-set
@@ -197,7 +197,7 @@
    add or addAll operations.
 
   returns: a set view of the mappings contained in this map - `java.util.Set<java.util.Map.Entry<Map.K,Map.V>>`"
-  ([this]
+  ([^. this]
     (-> this (.entrySet))))
 
 (defn contains-value
@@ -214,7 +214,7 @@
            specified value - `boolean`
 
   throws: java.lang.ClassCastException - if the value is of an inappropriate type for this map (optional)"
-  ([this value]
+  ([^. this ^java.lang.Object value]
     (-> this (.containsValue value))))
 
 (defn get-or-default
@@ -228,7 +228,7 @@
    defaultValue if this map contains no mapping for the key - `default Map.V`
 
   throws: java.lang.ClassCastException - if the key is of an inappropriate type for this map (optional)"
-  ([this key default-value]
+  ([^. this ^java.lang.Object key ^Map.V default-value]
     (-> this (.getOrDefault key default-value))))
 
 (defn replace
@@ -242,9 +242,9 @@
   returns: true if the value was replaced - `default boolean`
 
   throws: java.lang.UnsupportedOperationException - if the put operation is not supported by this map (optional)"
-  ([this key old-value new-value]
+  ([^. this ^Map.K key ^Map.V old-value ^Map.V new-value]
     (-> this (.replace key old-value new-value)))
-  ([this key value]
+  ([^. this ^Map.K key ^Map.V value]
     (-> this (.replace key value))))
 
 (defn remove
@@ -257,9 +257,9 @@
   returns: true if the value was removed - `default boolean`
 
   throws: java.lang.UnsupportedOperationException - if the remove operation is not supported by this map (optional)"
-  ([this key value]
+  ([^. this ^java.lang.Object key ^java.lang.Object value]
     (-> this (.remove key value)))
-  ([this key]
+  ([^. this ^java.lang.Object key]
     (-> this (.remove key))))
 
 (defn key-set
@@ -276,7 +276,7 @@
    operations.
 
   returns: a set view of the keys contained in this map - `java.util.Set<Map.K>`"
-  ([this]
+  ([^. this]
     (-> this (.keySet))))
 
 (defn compute-if-present
@@ -293,7 +293,7 @@
   returns: the new value associated with the specified key, or null if none - `default Map.V`
 
   throws: java.lang.NullPointerException - if the specified key is null and this map does not support null keys, or the remappingFunction is null"
-  ([this key remapping-function]
+  ([^. this ^Map.K key ^Map.V> remapping-function]
     (-> this (.computeIfPresent key remapping-function))))
 
 (defn hash-code
@@ -305,14 +305,14 @@
    Object.hashCode().
 
   returns: the hash code value for this map - `int`"
-  ([this]
+  ([^. this]
     (-> this (.hashCode))))
 
 (defn empty?
   "Returns true if this map contains no key-value mappings.
 
   returns: true if this map contains no key-value mappings - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.isEmpty))))
 
 (defn size
@@ -321,7 +321,7 @@
    Integer.MAX_VALUE.
 
   returns: the number of key-value mappings in this map - `int`"
-  ([this]
+  ([^. this]
     (-> this (.size))))
 
 (defn clear
@@ -329,7 +329,7 @@
    The map will be empty after this call returns.
 
   throws: java.lang.UnsupportedOperationException - if the clear operation is not supported by this map"
-  ([this]
+  ([^. this]
     (-> this (.clear))))
 
 (defn contains-key
@@ -345,7 +345,7 @@
            key - `boolean`
 
   throws: java.lang.ClassCastException - if the key is of an inappropriate type for this map (optional)"
-  ([this key]
+  ([^. this ^java.lang.Object key]
     (-> this (.containsKey key))))
 
 (defn get
@@ -368,7 +368,7 @@
            null if this map contains no mapping for the key - `Map.V`
 
   throws: java.lang.ClassCastException - if the key is of an inappropriate type for this map (optional)"
-  ([this key]
+  ([^. this ^java.lang.Object key]
     (-> this (.get key))))
 
 (defn merge
@@ -396,7 +396,7 @@
            value is associated with the key - `default Map.V`
 
   throws: java.lang.UnsupportedOperationException - if the put operation is not supported by this map (optional)"
-  ([this key value remapping-function]
+  ([^. this ^Map.K key ^Map.V value ^Map.V> remapping-function]
     (-> this (.merge key value remapping-function))))
 
 (defn equals
@@ -411,7 +411,7 @@
   o - object to be compared for equality with this map - `java.lang.Object`
 
   returns: true if the specified object is equal to this map - `boolean`"
-  ([this o]
+  ([^. this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn compute
@@ -436,7 +436,7 @@
   returns: the new value associated with the specified key, or null if none - `default Map.V`
 
   throws: java.lang.NullPointerException - if the specified key is null and this map does not support null keys, or the remappingFunction is null"
-  ([this key remapping-function]
+  ([^. this ^Map.K key ^Map.V> remapping-function]
     (-> this (.compute key remapping-function))))
 
 (defn compute-if-absent
@@ -468,6 +468,6 @@
            the specified key, or null if the computed value is null - `default Map.V`
 
   throws: java.lang.NullPointerException - if the specified key is null and this map does not support null keys, or the mappingFunction is null"
-  ([this key mapping-function]
+  ([^. this ^Map.K key ^Map.V> mapping-function]
     (-> this (.computeIfAbsent key mapping-function))))
 

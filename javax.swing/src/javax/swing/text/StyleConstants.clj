@@ -325,7 +325,7 @@
 
   a - the attribute set - `javax.swing.text.MutableAttributeSet`
   i - the value - `float`"
-  ([a i]
+  ([^javax.swing.text.MutableAttributeSet a ^Float i]
     (StyleConstants/setFirstLineIndent a i)))
 
 (defn *get-first-line-indent
@@ -334,7 +334,7 @@
   a - the attribute set - `javax.swing.text.AttributeSet`
 
   returns: the value, 0 if not set - `float`"
-  ([a]
+  ([^javax.swing.text.AttributeSet a]
     (StyleConstants/getFirstLineIndent a)))
 
 (defn *set-alignment
@@ -342,7 +342,7 @@
 
   a - the attribute set - `javax.swing.text.MutableAttributeSet`
   align - the alignment value - `int`"
-  ([a align]
+  ([^javax.swing.text.MutableAttributeSet a ^Integer align]
     (StyleConstants/setAlignment a align)))
 
 (defn *get-component
@@ -351,7 +351,7 @@
   a - the attribute set - `javax.swing.text.AttributeSet`
 
   returns: the component, null if none - `java.awt.Component`"
-  ([a]
+  ([^javax.swing.text.AttributeSet a]
     (StyleConstants/getComponent a)))
 
 (defn *get-font-family
@@ -360,7 +360,7 @@
   a - the attribute set - `javax.swing.text.AttributeSet`
 
   returns: the font family, `Monospaced` as the default - `java.lang.String`"
-  ([a]
+  ([^javax.swing.text.AttributeSet a]
     (StyleConstants/getFontFamily a)))
 
 (defn *set-tab-set
@@ -368,7 +368,7 @@
 
   a - the attribute set. - `javax.swing.text.MutableAttributeSet`
   tabs - the TabSet - `javax.swing.text.TabSet`"
-  ([a tabs]
+  ([^javax.swing.text.MutableAttributeSet a ^javax.swing.text.TabSet tabs]
     (StyleConstants/setTabSet a tabs)))
 
 (defn *set-foreground
@@ -376,7 +376,7 @@
 
   a - the attribute set - `javax.swing.text.MutableAttributeSet`
   fg - the color - `java.awt.Color`"
-  ([a fg]
+  ([^javax.swing.text.MutableAttributeSet a ^java.awt.Color fg]
     (StyleConstants/setForeground a fg)))
 
 (defn *strike-through?
@@ -385,7 +385,7 @@
   a - the attribute set - `javax.swing.text.AttributeSet`
 
   returns: true if set else false - `boolean`"
-  ([a]
+  ([^javax.swing.text.AttributeSet a]
     (StyleConstants/isStrikeThrough a)))
 
 (defn *set-right-indent
@@ -393,7 +393,7 @@
 
   a - the attribute set - `javax.swing.text.MutableAttributeSet`
   i - the value - `float`"
-  ([a i]
+  ([^javax.swing.text.MutableAttributeSet a ^Float i]
     (StyleConstants/setRightIndent a i)))
 
 (defn *set-icon
@@ -401,7 +401,7 @@
 
   a - the attribute set - `javax.swing.text.MutableAttributeSet`
   c - the icon - `javax.swing.Icon`"
-  ([a c]
+  ([^javax.swing.text.MutableAttributeSet a ^javax.swing.Icon c]
     (StyleConstants/setIcon a c)))
 
 (defn *get-foreground
@@ -410,7 +410,7 @@
   a - the attribute set - `javax.swing.text.AttributeSet`
 
   returns: the color, Color.black as the default - `java.awt.Color`"
-  ([a]
+  ([^javax.swing.text.AttributeSet a]
     (StyleConstants/getForeground a)))
 
 (defn *set-bidi-level
@@ -418,7 +418,7 @@
 
   a - the attribute set - `javax.swing.text.MutableAttributeSet`
   o - the bidi level value - `int`"
-  ([a o]
+  ([^javax.swing.text.MutableAttributeSet a ^Integer o]
     (StyleConstants/setBidiLevel a o)))
 
 (defn *set-italic
@@ -426,7 +426,7 @@
 
   a - the attribute set - `javax.swing.text.MutableAttributeSet`
   b - specifies true/false for setting the attribute - `boolean`"
-  ([a b]
+  ([^javax.swing.text.MutableAttributeSet a ^Boolean b]
     (StyleConstants/setItalic a b)))
 
 (defn *set-left-indent
@@ -434,7 +434,7 @@
 
   a - the attribute set - `javax.swing.text.MutableAttributeSet`
   i - the value - `float`"
-  ([a i]
+  ([^javax.swing.text.MutableAttributeSet a ^Float i]
     (StyleConstants/setLeftIndent a i)))
 
 (defn *get-bidi-level
@@ -443,7 +443,7 @@
   a - the attribute set - `javax.swing.text.AttributeSet`
 
   returns: the value - `int`"
-  ([a]
+  ([^javax.swing.text.AttributeSet a]
     (StyleConstants/getBidiLevel a)))
 
 (defn *get-icon
@@ -452,7 +452,7 @@
   a - the attribute set - `javax.swing.text.AttributeSet`
 
   returns: the icon, null if none - `javax.swing.Icon`"
-  ([a]
+  ([^javax.swing.text.AttributeSet a]
     (StyleConstants/getIcon a)))
 
 (defn *subscript?
@@ -461,7 +461,7 @@
   a - the attribute set - `javax.swing.text.AttributeSet`
 
   returns: true if set else false - `boolean`"
-  ([a]
+  ([^javax.swing.text.AttributeSet a]
     (StyleConstants/isSubscript a)))
 
 (defn *bold?
@@ -470,7 +470,7 @@
   a - the attribute set - `javax.swing.text.AttributeSet`
 
   returns: true if set else false - `boolean`"
-  ([a]
+  ([^javax.swing.text.AttributeSet a]
     (StyleConstants/isBold a)))
 
 (defn *get-font-size
@@ -479,7 +479,7 @@
   a - the attribute set - `javax.swing.text.AttributeSet`
 
   returns: the font size, 12 as the default - `int`"
-  ([a]
+  ([^javax.swing.text.AttributeSet a]
     (StyleConstants/getFontSize a)))
 
 (defn *set-subscript
@@ -487,7 +487,7 @@
 
   a - the attribute set - `javax.swing.text.MutableAttributeSet`
   b - specifies true/false for setting the attribute - `boolean`"
-  ([a b]
+  ([^javax.swing.text.MutableAttributeSet a ^Boolean b]
     (StyleConstants/setSubscript a b)))
 
 (defn *set-font-size
@@ -495,7 +495,7 @@
 
   a - the attribute set - `javax.swing.text.MutableAttributeSet`
   s - the font size - `int`"
-  ([a s]
+  ([^javax.swing.text.MutableAttributeSet a ^Integer s]
     (StyleConstants/setFontSize a s)))
 
 (defn *set-background
@@ -503,7 +503,7 @@
 
   a - the attribute set - `javax.swing.text.MutableAttributeSet`
   fg - the color - `java.awt.Color`"
-  ([a fg]
+  ([^javax.swing.text.MutableAttributeSet a ^java.awt.Color fg]
     (StyleConstants/setBackground a fg)))
 
 (defn *get-left-indent
@@ -512,7 +512,7 @@
   a - the attribute set - `javax.swing.text.AttributeSet`
 
   returns: the value, 0 if not set - `float`"
-  ([a]
+  ([^javax.swing.text.AttributeSet a]
     (StyleConstants/getLeftIndent a)))
 
 (defn *set-bold
@@ -520,7 +520,7 @@
 
   a - the attribute set - `javax.swing.text.MutableAttributeSet`
   b - specifies true/false for setting the attribute - `boolean`"
-  ([a b]
+  ([^javax.swing.text.MutableAttributeSet a ^Boolean b]
     (StyleConstants/setBold a b)))
 
 (defn *set-font-family
@@ -528,7 +528,7 @@
 
   a - the attribute set - `javax.swing.text.MutableAttributeSet`
   fam - the font - `java.lang.String`"
-  ([a fam]
+  ([^javax.swing.text.MutableAttributeSet a ^java.lang.String fam]
     (StyleConstants/setFontFamily a fam)))
 
 (defn *set-space-below
@@ -536,7 +536,7 @@
 
   a - the attribute set - `javax.swing.text.MutableAttributeSet`
   i - the value - `float`"
-  ([a i]
+  ([^javax.swing.text.MutableAttributeSet a ^Float i]
     (StyleConstants/setSpaceBelow a i)))
 
 (defn *superscript?
@@ -545,7 +545,7 @@
   a - the attribute set - `javax.swing.text.AttributeSet`
 
   returns: true if set else false - `boolean`"
-  ([a]
+  ([^javax.swing.text.AttributeSet a]
     (StyleConstants/isSuperscript a)))
 
 (defn *get-line-spacing
@@ -554,7 +554,7 @@
   a - the attribute set - `javax.swing.text.AttributeSet`
 
   returns: the value, 0 if not set - `float`"
-  ([a]
+  ([^javax.swing.text.AttributeSet a]
     (StyleConstants/getLineSpacing a)))
 
 (defn *set-component
@@ -562,7 +562,7 @@
 
   a - the attribute set - `javax.swing.text.MutableAttributeSet`
   c - the component - `java.awt.Component`"
-  ([a c]
+  ([^javax.swing.text.MutableAttributeSet a ^java.awt.Component c]
     (StyleConstants/setComponent a c)))
 
 (defn *get-alignment
@@ -571,7 +571,7 @@
   a - the attribute set - `javax.swing.text.AttributeSet`
 
   returns: the value StyleConstants.ALIGN_LEFT if not set - `int`"
-  ([a]
+  ([^javax.swing.text.AttributeSet a]
     (StyleConstants/getAlignment a)))
 
 (defn *get-space-below
@@ -580,7 +580,7 @@
   a - the attribute set - `javax.swing.text.AttributeSet`
 
   returns: the value, 0 if not set - `float`"
-  ([a]
+  ([^javax.swing.text.AttributeSet a]
     (StyleConstants/getSpaceBelow a)))
 
 (defn *set-strike-through
@@ -588,7 +588,7 @@
 
   a - the attribute set - `javax.swing.text.MutableAttributeSet`
   b - specifies true/false for setting the attribute - `boolean`"
-  ([a b]
+  ([^javax.swing.text.MutableAttributeSet a ^Boolean b]
     (StyleConstants/setStrikeThrough a b)))
 
 (defn *get-tab-set
@@ -597,7 +597,7 @@
   a - the attribute set - `javax.swing.text.AttributeSet`
 
   returns: the TabSet - `javax.swing.text.TabSet`"
-  ([a]
+  ([^javax.swing.text.AttributeSet a]
     (StyleConstants/getTabSet a)))
 
 (defn *get-background
@@ -606,7 +606,7 @@
   a - the attribute set - `javax.swing.text.AttributeSet`
 
   returns: the color, Color.black as the default - `java.awt.Color`"
-  ([a]
+  ([^javax.swing.text.AttributeSet a]
     (StyleConstants/getBackground a)))
 
 (defn *underline?
@@ -615,7 +615,7 @@
   a - the attribute set - `javax.swing.text.AttributeSet`
 
   returns: true if set else false - `boolean`"
-  ([a]
+  ([^javax.swing.text.AttributeSet a]
     (StyleConstants/isUnderline a)))
 
 (defn *set-space-above
@@ -623,7 +623,7 @@
 
   a - the attribute set - `javax.swing.text.MutableAttributeSet`
   i - the value - `float`"
-  ([a i]
+  ([^javax.swing.text.MutableAttributeSet a ^Float i]
     (StyleConstants/setSpaceAbove a i)))
 
 (defn *get-right-indent
@@ -632,7 +632,7 @@
   a - the attribute set - `javax.swing.text.AttributeSet`
 
   returns: the value, 0 if not set - `float`"
-  ([a]
+  ([^javax.swing.text.AttributeSet a]
     (StyleConstants/getRightIndent a)))
 
 (defn *italic?
@@ -641,7 +641,7 @@
   a - the attribute set - `javax.swing.text.AttributeSet`
 
   returns: true if set else false - `boolean`"
-  ([a]
+  ([^javax.swing.text.AttributeSet a]
     (StyleConstants/isItalic a)))
 
 (defn *set-underline
@@ -649,7 +649,7 @@
 
   a - the attribute set - `javax.swing.text.MutableAttributeSet`
   b - specifies true/false for setting the attribute - `boolean`"
-  ([a b]
+  ([^javax.swing.text.MutableAttributeSet a ^Boolean b]
     (StyleConstants/setUnderline a b)))
 
 (defn *get-space-above
@@ -658,7 +658,7 @@
   a - the attribute set - `javax.swing.text.AttributeSet`
 
   returns: the value, 0 if not set - `float`"
-  ([a]
+  ([^javax.swing.text.AttributeSet a]
     (StyleConstants/getSpaceAbove a)))
 
 (defn *set-superscript
@@ -666,7 +666,7 @@
 
   a - the attribute set - `javax.swing.text.MutableAttributeSet`
   b - specifies true/false for setting the attribute - `boolean`"
-  ([a b]
+  ([^javax.swing.text.MutableAttributeSet a ^Boolean b]
     (StyleConstants/setSuperscript a b)))
 
 (defn *set-line-spacing
@@ -674,13 +674,13 @@
 
   a - the attribute set - `javax.swing.text.MutableAttributeSet`
   i - the value - `float`"
-  ([a i]
+  ([^javax.swing.text.MutableAttributeSet a ^Float i]
     (StyleConstants/setLineSpacing a i)))
 
 (defn to-string
   "Returns the string representation.
 
   returns: the string - `java.lang.String`"
-  ([this]
+  ([^javax.swing.text.StyleConstants this]
     (-> this (.toString))))
 

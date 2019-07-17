@@ -18,16 +18,16 @@
   attributes - the attributes - `java.util.Set<java.security.KeyStore.Entry.Attribute>`
 
   throws: java.lang.NullPointerException - if privateKey, chain or attributes is null"
-  ([private-key chain attributes]
+  ([^java.security.PrivateKey private-key ^java.security.cert.Certificate[] chain ^java.util.Set attributes]
     (new KeyStore$PrivateKeyEntry private-key chain attributes))
-  ([private-key chain]
+  ([^java.security.PrivateKey private-key ^java.security.cert.Certificate[] chain]
     (new KeyStore$PrivateKeyEntry private-key chain)))
 
 (defn get-private-key
   "Gets the PrivateKey from this entry.
 
   returns: the PrivateKey from this entry - `java.security.PrivateKey`"
-  ([this]
+  ([^java.security.KeyStore$PrivateKeyEntry this]
     (-> this (.getPrivateKey))))
 
 (defn get-certificate-chain
@@ -40,7 +40,7 @@
         If the certificates are of type X.509,
         the runtime type of the returned array is
         X509Certificate[]. - `java.security.cert.Certificate[]`"
-  ([this]
+  ([^java.security.KeyStore$PrivateKeyEntry this]
     (-> this (.getCertificateChain))))
 
 (defn get-certificate
@@ -52,20 +52,20 @@
         If the certificate is of type X.509,
         the runtime type of the returned certificate is
         X509Certificate. - `java.security.cert.Certificate`"
-  ([this]
+  ([^java.security.KeyStore$PrivateKeyEntry this]
     (-> this (.getCertificate))))
 
 (defn get-attributes
   "Retrieves the attributes associated with an entry.
 
   returns: an unmodifiable Set of attributes, possibly empty - `java.util.Set<java.security.KeyStore.Entry.Attribute>`"
-  ([this]
+  ([^java.security.KeyStore$PrivateKeyEntry this]
     (-> this (.getAttributes))))
 
 (defn to-string
   "Returns a string representation of this PrivateKeyEntry.
 
   returns: a string representation of this PrivateKeyEntry. - `java.lang.String`"
-  ([this]
+  ([^java.security.KeyStore$PrivateKeyEntry this]
     (-> this (.toString))))
 

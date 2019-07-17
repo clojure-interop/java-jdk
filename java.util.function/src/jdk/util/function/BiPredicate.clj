@@ -15,7 +15,7 @@
 
   returns: true if the input arguments match the predicate,
    otherwise false - `boolean`"
-  ([this t u]
+  ([^. this ^BiPredicate.T t ^BiPredicate.U u]
     (-> this (.test t u))))
 
 (defn and
@@ -34,7 +34,7 @@
    AND of this predicate and the other predicate - `default java.util.function.BiPredicate<BiPredicate.T,BiPredicate.U>`
 
   throws: java.lang.NullPointerException - if other is null"
-  ([this other]
+  ([^. this ^BiPredicate.U> other]
     (-> this (.and other))))
 
 (defn negate
@@ -43,7 +43,7 @@
 
   returns: a predicate that represents the logical negation of this
    predicate - `default java.util.function.BiPredicate<BiPredicate.T,BiPredicate.U>`"
-  ([this]
+  ([^. this]
     (-> this (.negate))))
 
 (defn or
@@ -62,6 +62,6 @@
    OR of this predicate and the other predicate - `default java.util.function.BiPredicate<BiPredicate.T,BiPredicate.U>`
 
   throws: java.lang.NullPointerException - if other is null"
-  ([this other]
+  ([^. this ^BiPredicate.U> other]
     (-> this (.or other))))
 

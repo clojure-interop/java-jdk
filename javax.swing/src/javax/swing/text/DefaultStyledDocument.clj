@@ -25,9 +25,9 @@
 
   c - the container for the content - `javax.swing.text.AbstractDocument.Content`
   styles - resources and style definitions which may be shared across documents - `javax.swing.text.StyleContext`"
-  ([c styles]
+  ([^javax.swing.text.AbstractDocument.Content c ^javax.swing.text.StyleContext styles]
     (new DefaultStyledDocument c styles))
-  ([styles]
+  ([^javax.swing.text.StyleContext styles]
     (new DefaultStyledDocument styles))
   ([]
     (new DefaultStyledDocument )))
@@ -46,7 +46,7 @@
   attr - the attribute set - `javax.swing.text.AttributeSet`
 
   returns: the color - `java.awt.Color`"
-  ([this attr]
+  ([^javax.swing.text.DefaultStyledDocument this ^javax.swing.text.AttributeSet attr]
     (-> this (.getForeground attr))))
 
 (defn set-paragraph-attributes
@@ -61,14 +61,14 @@
   length - the number of characters affected >= 0 - `int`
   s - the attributes - `javax.swing.text.AttributeSet`
   replace - whether to replace existing attributes, or merge them - `boolean`"
-  ([this offset length s replace]
+  ([^javax.swing.text.DefaultStyledDocument this ^Integer offset ^Integer length ^javax.swing.text.AttributeSet s ^Boolean replace]
     (-> this (.setParagraphAttributes offset length s replace))))
 
 (defn remove-document-listener
   "Removes a document listener.
 
   listener - the listener - `javax.swing.event.DocumentListener`"
-  ([this listener]
+  ([^javax.swing.text.DefaultStyledDocument this ^javax.swing.event.DocumentListener listener]
     (-> this (.removeDocumentListener listener))))
 
 (defn get-logical-style
@@ -78,7 +78,7 @@
   p - the location to translate to a paragraph and determine the logical style assigned >= 0. This is an offset from the start of the document. - `int`
 
   returns: the style, null if none - `javax.swing.text.Style`"
-  ([this p]
+  ([^javax.swing.text.DefaultStyledDocument this ^Integer p]
     (-> this (.getLogicalStyle p))))
 
 (defn set-character-attributes
@@ -96,7 +96,7 @@
   length - the length >= 0 - `int`
   s - the attributes - `javax.swing.text.AttributeSet`
   replace - true if the previous attributes should be replaced before setting the new attributes - `boolean`"
-  ([this offset length s replace]
+  ([^javax.swing.text.DefaultStyledDocument this ^Integer offset ^Integer length ^javax.swing.text.AttributeSet s ^Boolean replace]
     (-> this (.setCharacterAttributes offset length s replace))))
 
 (defn set-logical-style
@@ -114,7 +114,7 @@
 
   pos - the offset from the start of the document >= 0 - `int`
   s - the logical style to assign to the paragraph, null if none - `javax.swing.text.Style`"
-  ([this pos s]
+  ([^javax.swing.text.DefaultStyledDocument this ^Integer pos ^javax.swing.text.Style s]
     (-> this (.setLogicalStyle pos s))))
 
 (defn add-style
@@ -126,7 +126,7 @@
   parent - the parent style. This may be null if unspecified attributes need not be resolved in some other style. - `javax.swing.text.Style`
 
   returns: the style - `javax.swing.text.Style`"
-  ([this nm parent]
+  ([^javax.swing.text.DefaultStyledDocument this ^java.lang.String nm ^javax.swing.text.Style parent]
     (-> this (.addStyle nm parent))))
 
 (defn remove-element
@@ -158,14 +158,14 @@
   elem - the element to remove - `javax.swing.text.Element`
 
   throws: java.lang.NullPointerException - if the element is null"
-  ([this elem]
+  ([^javax.swing.text.DefaultStyledDocument this ^javax.swing.text.Element elem]
     (-> this (.removeElement elem))))
 
 (defn get-style-names
   "Fetches the list of of style names.
 
   returns: all the style names - `java.util.Enumeration<?>`"
-  ([this]
+  ([^javax.swing.text.DefaultStyledDocument this]
     (-> this (.getStyleNames))))
 
 (defn get-character-element
@@ -174,14 +174,14 @@
   pos - the position in the document >= 0 - `int`
 
   returns: the element - `javax.swing.text.Element`"
-  ([this pos]
+  ([^javax.swing.text.DefaultStyledDocument this ^Integer pos]
     (-> this (.getCharacterElement pos))))
 
 (defn add-document-listener
   "Adds a document listener for notification of any changes.
 
   listener - the listener - `javax.swing.event.DocumentListener`"
-  ([this listener]
+  ([^javax.swing.text.DefaultStyledDocument this ^javax.swing.event.DocumentListener listener]
     (-> this (.addDocumentListener listener))))
 
 (defn get-font
@@ -190,7 +190,7 @@
   attr - the attribute set - `javax.swing.text.AttributeSet`
 
   returns: the font - `java.awt.Font`"
-  ([this attr]
+  ([^javax.swing.text.DefaultStyledDocument this ^javax.swing.text.AttributeSet attr]
     (-> this (.getFont attr))))
 
 (defn get-background
@@ -199,21 +199,21 @@
   attr - the attribute set - `javax.swing.text.AttributeSet`
 
   returns: the color - `java.awt.Color`"
-  ([this attr]
+  ([^javax.swing.text.DefaultStyledDocument this ^javax.swing.text.AttributeSet attr]
     (-> this (.getBackground attr))))
 
 (defn get-default-root-element
   "Gets the default root element.
 
   returns: the root - `javax.swing.text.Element`"
-  ([this]
+  ([^javax.swing.text.DefaultStyledDocument this]
     (-> this (.getDefaultRootElement))))
 
 (defn remove-style
   "Removes a named style previously added to the document.
 
   nm - the name of the style to remove - `java.lang.String`"
-  ([this nm]
+  ([^javax.swing.text.DefaultStyledDocument this ^java.lang.String nm]
     (-> this (.removeStyle nm))))
 
 (defn get-paragraph-element
@@ -224,7 +224,7 @@
   pos - the starting offset >= 0 - `int`
 
   returns: the element - `javax.swing.text.Element`"
-  ([this pos]
+  ([^javax.swing.text.DefaultStyledDocument this ^Integer pos]
     (-> this (.getParagraphElement pos))))
 
 (defn get-style
@@ -233,6 +233,6 @@
   nm - the name of the style - `java.lang.String`
 
   returns: the style - `javax.swing.text.Style`"
-  ([this nm]
+  ([^javax.swing.text.DefaultStyledDocument this ^java.lang.String nm]
     (-> this (.getStyle nm))))
 

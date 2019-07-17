@@ -45,14 +45,14 @@
   profile - the specified ICC_Profile object - `java.awt.color.ICC_Profile`
 
   throws: java.lang.IllegalArgumentException - if profile is inappropriate for representing a ColorSpace."
-  ([profile]
+  ([^java.awt.color.ICC_Profile profile]
     (new ICC_ColorSpace profile)))
 
 (defn get-profile
   "Returns the ICC_Profile for this ICC_ColorSpace.
 
   returns: the ICC_Profile for this ICC_ColorSpace. - `java.awt.color.ICC_Profile`"
-  ([this]
+  ([^java.awt.color.ICC_ColorSpace this]
     (-> this (.getProfile))))
 
 (defn to-rgb
@@ -75,7 +75,7 @@
   returns: a float array of length 3. - `float[]`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if array length is not at least the number of components in this ColorSpace."
-  ([this colorvalue]
+  ([^java.awt.color.ICC_ColorSpace this colorvalue]
     (-> this (.toRGB colorvalue))))
 
 (defn from-rgb
@@ -99,7 +99,7 @@
          components in this ColorSpace. - `float[]`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if array length is not at least 3."
-  ([this rgbvalue]
+  ([^java.awt.color.ICC_ColorSpace this rgbvalue]
     (-> this (.fromRGB rgbvalue))))
 
 (defn to-ciexyz
@@ -200,7 +200,7 @@
   returns: a float array of length 3. - `float[]`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if array length is not at least the number of components in this ColorSpace."
-  ([this colorvalue]
+  ([^java.awt.color.ICC_ColorSpace this colorvalue]
     (-> this (.toCIEXYZ colorvalue))))
 
 (defn from-ciexyz
@@ -303,7 +303,7 @@
            components in this ColorSpace. - `float[]`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if array length is not at least 3."
-  ([this colorvalue]
+  ([^java.awt.color.ICC_ColorSpace this colorvalue]
     (-> this (.fromCIEXYZ colorvalue))))
 
 (defn get-min-value
@@ -322,7 +322,7 @@
   returns: The minimum normalized component value. - `float`
 
   throws: java.lang.IllegalArgumentException - if component is less than 0 or greater than numComponents - 1."
-  ([this component]
+  ([^java.awt.color.ICC_ColorSpace this ^Integer component]
     (-> this (.getMinValue component))))
 
 (defn get-max-value
@@ -342,6 +342,6 @@
   returns: The maximum normalized component value. - `float`
 
   throws: java.lang.IllegalArgumentException - if component is less than 0 or greater than numComponents - 1."
-  ([this component]
+  ([^java.awt.color.ICC_ColorSpace this ^Integer component]
     (-> this (.getMaxValue component))))
 

@@ -27,7 +27,7 @@
    using the parameters supplied. - `javax.security.sasl.SaslClient`
 
   throws: javax.security.sasl.SaslException - If cannot create a SaslClient because of an error."
-  ([this mechanisms authorization-id protocol server-name props cbh]
+  ([^. this ^java.lang.String[] mechanisms ^java.lang.String authorization-id ^java.lang.String protocol ^java.lang.String server-name ^java.util.Map props ^javax.security.auth.callback.CallbackHandler cbh]
     (-> this (.createSaslClient mechanisms authorization-id protocol server-name props cbh))))
 
 (defn get-mechanism-names
@@ -37,6 +37,6 @@
   props - The possibly null set of properties used to specify the security policy of the SASL mechanisms. For example, if props contains the Sasl.POLICY_NOPLAINTEXT property with the value `true`, then the factory must not return any SASL mechanisms that are susceptible to simple plain passive attacks. See the Sasl class for a complete list of policy properties. Non-policy related properties, if present in props, are ignored, including any map entries with non-String keys. - `java.util.Map<java.lang.String,?>`
 
   returns: A non-null array containing a IANA-registered SASL mechanism names. - `java.lang.String[]`"
-  ([this props]
+  ([^. this ^java.util.Map props]
     (-> this (.getMechanismNames props))))
 

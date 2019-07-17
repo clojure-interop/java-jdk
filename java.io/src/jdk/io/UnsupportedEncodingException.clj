@@ -9,7 +9,7 @@
   Constructs an UnsupportedEncodingException with a detail message.
 
   s - Describes the reason for the exception. - `java.lang.String`"
-  ([s]
+  ([^java.lang.String s]
     (new UnsupportedEncodingException s))
   ([]
     (new UnsupportedEncodingException )))

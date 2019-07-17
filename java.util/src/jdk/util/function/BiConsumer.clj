@@ -14,7 +14,7 @@
 
   t - the first input argument - `BiConsumer.T`
   u - the second input argument - `BiConsumer.U`"
-  ([this t u]
+  ([^. this ^BiConsumer.T t ^BiConsumer.U u]
     (-> this (.accept t u))))
 
 (defn and-then
@@ -30,6 +30,6 @@
    operation followed by the after operation - `default java.util.function.BiConsumer<BiConsumer.T,BiConsumer.U>`
 
   throws: java.lang.NullPointerException - if after is null"
-  ([this after]
+  ([^. this ^BiConsumer.U> after]
     (-> this (.andThen after))))
 

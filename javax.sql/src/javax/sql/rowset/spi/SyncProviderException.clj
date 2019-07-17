@@ -36,7 +36,7 @@
    detail message.
 
   msg - the detail message - `java.lang.String`"
-  ([msg]
+  ([^java.lang.String msg]
     (new SyncProviderException msg))
   ([]
     (new SyncProviderException )))
@@ -59,7 +59,7 @@
        implementation is also returned if the SyncResolver() or
        SyncResolver(String) constructors are used to instantiate
        the SyncResolver instance. - `javax.sql.rowset.spi.SyncResolver`"
-  ([this]
+  ([^javax.sql.rowset.spi.SyncProviderException this]
     (-> this (.getSyncResolver))))
 
 (defn set-sync-resolver
@@ -72,6 +72,6 @@
   sync-resolver - the SyncResolver object to be set; cannot be null - `javax.sql.rowset.spi.SyncResolver`
 
   throws: java.lang.IllegalArgumentException - if the SyncResolver object is null."
-  ([this sync-resolver]
+  ([^javax.sql.rowset.spi.SyncProviderException this ^javax.sql.rowset.spi.SyncResolver sync-resolver]
     (-> this (.setSyncResolver sync-resolver))))
 

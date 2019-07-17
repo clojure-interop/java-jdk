@@ -55,11 +55,11 @@
   descriptor - An instance of Descriptor containing the appropriate metadata for this instance of the MBeanNotificationInfo. If it is null a default descriptor will be created. If the descriptor does not contain the fields `displayName` or `severity`, the missing ones are added with their default values. - `javax.management.Descriptor`
 
   throws: javax.management.RuntimeOperationsException - Wraps an IllegalArgumentException. The descriptor is invalid, or descriptor field `name` is not equal to parameter name, or descriptor field `descriptorType` is not equal to `notification`."
-  ([notif-types name description descriptor]
+  ([^java.lang.String[] notif-types ^java.lang.String name ^java.lang.String description ^javax.management.Descriptor descriptor]
     (new ModelMBeanNotificationInfo notif-types name description descriptor))
-  ([notif-types name description]
+  ([^java.lang.String[] notif-types ^java.lang.String name ^java.lang.String description]
     (new ModelMBeanNotificationInfo notif-types name description))
-  ([in-info]
+  ([^javax.management.modelmbean.ModelMBeanNotificationInfo in-info]
     (new ModelMBeanNotificationInfo in-info)))
 
 (defn clone
@@ -67,7 +67,7 @@
    duplicate of this ModelMBeanNotificationInfo.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([this]
+  ([^javax.management.modelmbean.ModelMBeanNotificationInfo this]
     (-> this (.clone))))
 
 (defn get-descriptor
@@ -76,7 +76,7 @@
 
   returns: Descriptor associated with the
    ModelMBeanNotificationInfo object. - `javax.management.Descriptor`"
-  ([this]
+  ([^javax.management.modelmbean.ModelMBeanNotificationInfo this]
     (-> this (.getDescriptor))))
 
 (defn set-descriptor
@@ -91,7 +91,7 @@
   in-descriptor - replaces the Descriptor associated with the ModelMBeanNotification interface - `javax.management.Descriptor`
 
   throws: javax.management.RuntimeOperationsException - Wraps an IllegalArgumentException for invalid Descriptor."
-  ([this in-descriptor]
+  ([^javax.management.modelmbean.ModelMBeanNotificationInfo this ^javax.management.Descriptor in-descriptor]
     (-> this (.setDescriptor in-descriptor))))
 
 (defn to-string
@@ -99,6 +99,6 @@
    ModelMBeanNotificationInfo.
 
   returns: a string describing this object. - `java.lang.String`"
-  ([this]
+  ([^javax.management.modelmbean.ModelMBeanNotificationInfo this]
     (-> this (.toString))))
 

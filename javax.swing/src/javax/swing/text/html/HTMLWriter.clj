@@ -12,9 +12,9 @@
   doc - an HTMLDocument - `javax.swing.text.html.HTMLDocument`
   pos - the document location from which to fetch the content - `int`
   len - the amount to write out - `int`"
-  ([w doc pos len]
+  ([^java.io.Writer w ^javax.swing.text.html.HTMLDocument doc ^Integer pos ^Integer len]
     (new HTMLWriter w doc pos len))
-  ([w doc]
+  ([^java.io.Writer w ^javax.swing.text.html.HTMLDocument doc]
     (new HTMLWriter w doc)))
 
 (defn write
@@ -23,6 +23,6 @@
    all the tags and its attributes.
 
   throws: java.io.IOException - on any I/O error"
-  ([this]
+  ([^javax.swing.text.html.HTMLWriter this]
     (-> this (.write))))
 

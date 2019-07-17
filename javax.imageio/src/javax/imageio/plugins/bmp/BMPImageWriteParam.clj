@@ -38,7 +38,7 @@
    Locale and with default values for all parameters.
 
   locale - a Locale to be used to localize compression type names and quality descriptions, or null. - `java.util.Locale`"
-  ([locale]
+  ([^java.util.Locale locale]
     (new BMPImageWriteParam locale))
   ([]
     (new BMPImageWriteParam )))
@@ -48,7 +48,7 @@
    scanline being written first.
 
   top-down - whether the data are written in top-down order. - `boolean`"
-  ([this top-down]
+  ([^javax.imageio.plugins.bmp.BMPImageWriteParam this ^Boolean top-down]
     (-> this (.setTopDown top-down))))
 
 (defn top-down?
@@ -56,6 +56,6 @@
    The default is false.
 
   returns: whether the data are written in top-down order. - `boolean`"
-  ([this]
+  ([^javax.imageio.plugins.bmp.BMPImageWriteParam this]
     (-> this (.isTopDown))))
 

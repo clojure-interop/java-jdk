@@ -49,18 +49,18 @@
   text - the string displayed on the radio button - `java.lang.String`
   icon - the image that the button should display - `javax.swing.Icon`
   selected - `boolean`"
-  ([text icon selected]
+  ([^java.lang.String text ^javax.swing.Icon icon ^Boolean selected]
     (new JRadioButton text icon selected))
-  ([icon selected]
+  ([^javax.swing.Icon icon ^Boolean selected]
     (new JRadioButton icon selected))
-  ([icon]
+  ([^javax.swing.Icon icon]
     (new JRadioButton icon))
   ([]
     (new JRadioButton )))
 
 (defn update-ui
   "Resets the UI property to a value from the current look and feel."
-  ([this]
+  ([^javax.swing.JRadioButton this]
     (-> this (.updateUI))))
 
 (defn get-ui-class-id
@@ -68,7 +68,7 @@
    that renders this component.
 
   returns: String `RadioButtonUI` - `java.lang.String`"
-  ([this]
+  ([^javax.swing.JRadioButton this]
     (-> this (.getUIClassID))))
 
 (defn get-accessible-context
@@ -79,6 +79,6 @@
 
   returns: an AccessibleJRadioButton that serves as the
            AccessibleContext of this JRadioButton - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^javax.swing.JRadioButton this]
     (-> this (.getAccessibleContext))))
 

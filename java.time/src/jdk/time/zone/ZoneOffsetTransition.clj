@@ -28,7 +28,7 @@
   returns: the transition, not null - `java.time.zone.ZoneOffsetTransition`
 
   throws: java.lang.IllegalArgumentException - if offsetBefore and offsetAfter are equal, or transition.getNano() returns non-zero value"
-  ([transition offset-before offset-after]
+  ([^java.time.LocalDateTime transition ^java.time.ZoneOffset offset-before ^java.time.ZoneOffset offset-after]
     (ZoneOffsetTransition/of transition offset-before offset-after)))
 
 (defn get-offset-before
@@ -37,7 +37,7 @@
    This is the offset in use before the instant of the transition.
 
   returns: the offset before the transition, not null - `java.time.ZoneOffset`"
-  ([this]
+  ([^java.time.zone.ZoneOffsetTransition this]
     (-> this (.getOffsetBefore))))
 
 (defn gap?
@@ -48,14 +48,14 @@
    This might be described as 'the clocks will move forward one hour tonight at 1am'.
 
   returns: true if this transition is a gap, false if it is an overlap - `boolean`"
-  ([this]
+  ([^java.time.zone.ZoneOffsetTransition this]
     (-> this (.isGap))))
 
 (defn to-string
   "Returns a string describing this object.
 
   returns: a string for debugging, not null - `java.lang.String`"
-  ([this]
+  ([^java.time.zone.ZoneOffsetTransition this]
     (-> this (.toString))))
 
 (defn get-date-time-after
@@ -67,7 +67,7 @@
    as the 'after' date-time and offset.
 
   returns: the transition date-time expressed with the after offset, not null - `java.time.LocalDateTime`"
-  ([this]
+  ([^java.time.zone.ZoneOffsetTransition this]
     (-> this (.getDateTimeAfter))))
 
 (defn get-instant
@@ -80,14 +80,14 @@
    all represent the same instant.
 
   returns: the transition instant, not null - `java.time.Instant`"
-  ([this]
+  ([^java.time.zone.ZoneOffsetTransition this]
     (-> this (.getInstant))))
 
 (defn to-epoch-second
   "Gets the transition instant as an epoch second.
 
   returns: the transition epoch second - `long`"
-  ([this]
+  ([^java.time.zone.ZoneOffsetTransition this]
     (-> this (.toEpochSecond))))
 
 (defn overlap?
@@ -98,7 +98,7 @@
    This might be described as 'the clocks will move back one hour tonight at 2am'.
 
   returns: true if this transition is an overlap, false if it is a gap - `boolean`"
-  ([this]
+  ([^java.time.zone.ZoneOffsetTransition this]
     (-> this (.isOverlap))))
 
 (defn get-offset-after
@@ -107,7 +107,7 @@
    This is the offset in use on and after the instant of the transition.
 
   returns: the offset after the transition, not null - `java.time.ZoneOffset`"
-  ([this]
+  ([^java.time.zone.ZoneOffsetTransition this]
     (-> this (.getOffsetAfter))))
 
 (defn get-date-time-before
@@ -121,14 +121,14 @@
    as the 'after' date-time and offset.
 
   returns: the transition date-time expressed with the before offset, not null - `java.time.LocalDateTime`"
-  ([this]
+  ([^java.time.zone.ZoneOffsetTransition this]
     (-> this (.getDateTimeBefore))))
 
 (defn hash-code
   "Returns a suitable hash code.
 
   returns: the hash code - `int`"
-  ([this]
+  ([^java.time.zone.ZoneOffsetTransition this]
     (-> this (.hashCode))))
 
 (defn compare-to
@@ -140,7 +140,7 @@
   transition - the transition to compare to, not null - `java.time.zone.ZoneOffsetTransition`
 
   returns: the comparator value, negative if less, positive if greater - `int`"
-  ([this transition]
+  ([^java.time.zone.ZoneOffsetTransition this ^java.time.zone.ZoneOffsetTransition transition]
     (-> this (.compareTo transition))))
 
 (defn valid-offset?
@@ -153,7 +153,7 @@
   offset - the offset to check, null returns false - `java.time.ZoneOffset`
 
   returns: true if the offset is valid during the transition - `boolean`"
-  ([this offset]
+  ([^java.time.zone.ZoneOffsetTransition this ^java.time.ZoneOffset offset]
     (-> this (.isValidOffset offset))))
 
 (defn get-duration
@@ -164,7 +164,7 @@
    Time-zones are second-based, so the nanosecond part of the duration will be zero.
 
   returns: the duration of the transition, positive for gaps, negative for overlaps - `java.time.Duration`"
-  ([this]
+  ([^java.time.zone.ZoneOffsetTransition this]
     (-> this (.getDuration))))
 
 (defn equals
@@ -175,6 +175,6 @@
   other - the other object to compare to, null returns false - `java.lang.Object`
 
   returns: true if equal - `boolean`"
-  ([this other]
+  ([^java.time.zone.ZoneOffsetTransition this ^java.lang.Object other]
     (-> this (.equals other))))
 

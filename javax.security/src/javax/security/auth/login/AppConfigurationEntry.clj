@@ -26,7 +26,7 @@
   options - the options configured for this LoginModule. - `java.util.Map<java.lang.String,?>`
 
   throws: java.lang.IllegalArgumentException - if loginModuleName is null, if LoginModuleName has a length of 0, if controlFlag is not either REQUIRED, REQUISITE, SUFFICIENT or OPTIONAL, or if options is null."
-  ([login-module-name control-flag options]
+  ([^java.lang.String login-module-name ^javax.security.auth.login.AppConfigurationEntry.LoginModuleControlFlag control-flag ^java.util.Map options]
     (new AppConfigurationEntry login-module-name control-flag options)))
 
 (defn get-login-module-name
@@ -34,7 +34,7 @@
 
   returns: the class name of the configured LoginModule as
             a String. - `java.lang.String`"
-  ([this]
+  ([^javax.security.auth.login.AppConfigurationEntry this]
     (-> this (.getLoginModuleName))))
 
 (defn get-control-flag
@@ -45,7 +45,7 @@
   returns: the controlFlag
             (either REQUIRED, REQUISITE, SUFFICIENT, or OPTIONAL)
             for this LoginModule. - `javax.security.auth.login.AppConfigurationEntry.LoginModuleControlFlag`"
-  ([this]
+  ([^javax.security.auth.login.AppConfigurationEntry this]
     (-> this (.getControlFlag))))
 
 (defn get-options
@@ -53,6 +53,6 @@
 
   returns: the options configured for this LoginModule
             as an unmodifiable Map. - `java.util.Map<java.lang.String,?>`"
-  ([this]
+  ([^javax.security.auth.login.AppConfigurationEntry this]
     (-> this (.getOptions))))
 

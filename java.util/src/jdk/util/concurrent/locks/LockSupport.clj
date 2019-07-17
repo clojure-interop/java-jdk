@@ -91,7 +91,7 @@
    thread has not been started.
 
   thread - the thread to unpark, or null, in which case this operation has no effect - `java.lang.Thread`"
-  ([thread]
+  ([^java.lang.Thread thread]
     (LockSupport/unpark thread)))
 
 (defn *park
@@ -119,7 +119,7 @@
    for example, the interrupt status of the thread upon return.
 
   blocker - the synchronization object responsible for this thread parking - `java.lang.Object`"
-  ([blocker]
+  ([^java.lang.Object blocker]
     (LockSupport/park blocker))
   ([]
     (LockSupport/park )))
@@ -153,9 +153,9 @@
 
   blocker - the synchronization object responsible for this thread parking - `java.lang.Object`
   nanos - the maximum number of nanoseconds to wait - `long`"
-  ([blocker nanos]
+  ([^java.lang.Object blocker ^Long nanos]
     (LockSupport/parkNanos blocker nanos))
-  ([nanos]
+  ([^Long nanos]
     (LockSupport/parkNanos nanos)))
 
 (defn *park-until
@@ -187,9 +187,9 @@
 
   blocker - the synchronization object responsible for this thread parking - `java.lang.Object`
   deadline - the absolute time, in milliseconds from the Epoch, to wait until - `long`"
-  ([blocker deadline]
+  ([^java.lang.Object blocker ^Long deadline]
     (LockSupport/parkUntil blocker deadline))
-  ([deadline]
+  ([^Long deadline]
     (LockSupport/parkUntil deadline)))
 
 (defn *get-blocker
@@ -204,6 +204,6 @@
   returns: the blocker - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if argument is null"
-  ([t]
+  ([^java.lang.Thread t]
     (LockSupport/getBlocker t)))
 

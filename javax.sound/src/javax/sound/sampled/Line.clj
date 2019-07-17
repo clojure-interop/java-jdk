@@ -46,7 +46,7 @@
    that describes the change.
 
   listener - the object to add as a listener to this line - `javax.sound.sampled.LineListener`"
-  ([this listener]
+  ([^. this ^javax.sound.sampled.LineListener listener]
     (-> this (.addLineListener listener))))
 
 (defn get-controls
@@ -55,7 +55,7 @@
    If there are no controls, this method returns an array of length 0.
 
   returns: the array of controls - `javax.sound.sampled.Control[]`"
-  ([this]
+  ([^. this]
     (-> this (.getControls))))
 
 (defn get-control
@@ -68,7 +68,7 @@
   returns: a control of the specified type - `javax.sound.sampled.Control`
 
   throws: java.lang.IllegalArgumentException - if a control of the specified type is not supported"
-  ([this control]
+  ([^. this ^javax.sound.sampled.Control.Type control]
     (-> this (.getControl control))))
 
 (defn control-supported?
@@ -79,7 +79,7 @@
 
   returns: true if at least one control of the specified type is
    supported, otherwise false. - `boolean`"
-  ([this control]
+  ([^. this ^javax.sound.sampled.Control.Type control]
     (-> this (.isControlSupported control))))
 
 (defn close
@@ -89,14 +89,14 @@
    to the line's listeners.
 
   throws: java.lang.SecurityException - if the line cannot be closed due to security restrictions."
-  ([this]
+  ([^. this]
     (-> this (.close))))
 
 (defn remove-line-listener
   "Removes the specified listener from this line's list of listeners.
 
   listener - listener to remove - `javax.sound.sampled.LineListener`"
-  ([this listener]
+  ([^. this ^javax.sound.sampled.LineListener listener]
     (-> this (.removeLineListener listener))))
 
 (defn open?
@@ -105,7 +105,7 @@
    playing or capturing sound.
 
   returns: true if the line is open, otherwise false - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.isOpen))))
 
 (defn open
@@ -140,7 +140,7 @@
    as the default format.
 
   throws: java.lang.IllegalArgumentException - if this method is called on a Clip instance."
-  ([this]
+  ([^. this]
     (-> this (.open))))
 
 (defn get-line-info
@@ -148,6 +148,6 @@
    line.
 
   returns: description of the line - `javax.sound.sampled.Line.Info`"
-  ([this]
+  ([^. this]
     (-> this (.getLineInfo))))
 

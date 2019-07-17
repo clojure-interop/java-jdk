@@ -25,7 +25,7 @@
   ta - a text area - `javax.swing.JComponent`
 
   returns: the UI object - `javax.swing.plaf.ComponentUI`"
-  ([ta]
+  ([^javax.swing.JComponent ta]
     (SynthTextAreaUI/createUI ta)))
 
 (defn get-context
@@ -34,7 +34,7 @@
   c - Component requesting SynthContext. - `javax.swing.JComponent`
 
   returns: SynthContext describing component. - `javax.swing.plaf.synth.SynthContext`"
-  ([this c]
+  ([^javax.swing.plaf.synth.SynthTextAreaUI this ^javax.swing.JComponent c]
     (-> this (.getContext c))))
 
 (defn update
@@ -47,7 +47,7 @@
 
   g - the Graphics object used for painting - `java.awt.Graphics`
   c - the component being painted - `javax.swing.JComponent`"
-  ([this g c]
+  ([^javax.swing.plaf.synth.SynthTextAreaUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.update g c))))
 
 (defn paint-border
@@ -59,6 +59,6 @@
   y - the Y coordinate - `int`
   w - width of the border - `int`
   h - height of the border - `int`"
-  ([this context g x y w h]
+  ([^javax.swing.plaf.synth.SynthTextAreaUI this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintBorder context g x y w h))))
 

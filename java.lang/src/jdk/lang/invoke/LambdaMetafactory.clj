@@ -212,7 +212,7 @@
            instances of the interface named by invokedType - `java.lang.invoke.CallSite`
 
   throws: java.lang.invoke.LambdaConversionException - If any of the linkage invariants described above are violated"
-  ([caller invoked-name invoked-type sam-method-type impl-method instantiated-method-type]
+  ([^java.lang.invoke.MethodHandles.Lookup caller ^java.lang.String invoked-name ^java.lang.invoke.MethodType invoked-type ^java.lang.invoke.MethodType sam-method-type ^java.lang.invoke.MethodHandle impl-method ^java.lang.invoke.MethodType instantiated-method-type]
     (LambdaMetafactory/metafactory caller invoked-name invoked-type sam-method-type impl-method instantiated-method-type)))
 
 (defn *alt-metafactory
@@ -314,6 +314,6 @@
            instances of the interface named by invokedType - `java.lang.invoke.CallSite`
 
   throws: java.lang.invoke.LambdaConversionException - If any of the linkage invariants described above are violated"
-  ([caller invoked-name invoked-type args]
+  ([^java.lang.invoke.MethodHandles.Lookup caller ^java.lang.String invoked-name ^java.lang.invoke.MethodType invoked-type ^java.lang.Object args]
     (LambdaMetafactory/altMetafactory caller invoked-name invoked-type args)))
 

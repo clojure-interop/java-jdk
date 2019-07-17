@@ -16,13 +16,13 @@
   "Constructor.
 
   f - `javax.swing.JInternalFrame`"
-  ([f]
+  ([^javax.swing.JInternalFrame f]
     (new BasicInternalFrameTitlePane f)))
 
 (defn paint-component
   "Description copied from class: JComponent
 
   g - the Graphics object to protect - `java.awt.Graphics`"
-  ([this g]
+  ([^javax.swing.plaf.basic.BasicInternalFrameTitlePane this ^java.awt.Graphics g]
     (-> this (.paintComponent g))))
 

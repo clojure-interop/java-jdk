@@ -75,11 +75,11 @@
   off - the offset into the array of where to store the first pixel - `int`
   scan - the distance from one row of pixels to the next in the array - `int`
   props - a list of properties that the ImageProducer uses to process an image - `java.util.Hashtable<?,?>`"
-  ([w h cm pix off scan props]
+  ([^Integer w ^Integer h ^java.awt.image.ColorModel cm pix ^Integer off ^Integer scan ^java.util.Hashtable props]
     (new MemoryImageSource w h cm pix off scan props))
-  ([w h cm pix off scan]
+  ([^Integer w ^Integer h ^java.awt.image.ColorModel cm pix ^Integer off ^Integer scan]
     (new MemoryImageSource w h cm pix off scan))
-  ([w h pix off scan]
+  ([^Integer w ^Integer h pix ^Integer off ^Integer scan]
     (new MemoryImageSource w h pix off scan)))
 
 (defn add-consumer
@@ -89,7 +89,7 @@
   ic - the specified ImageConsumer - `java.awt.image.ImageConsumer`
 
   throws: java.lang.NullPointerException - if the specified ImageConsumer is null"
-  ([this ic]
+  ([^java.awt.image.MemoryImageSource this ^java.awt.image.ImageConsumer ic]
     (-> this (.addConsumer ic))))
 
 (defn consumer?
@@ -100,7 +100,7 @@
 
   returns: true if the ImageConsumer
    is on the list; false otherwise. - `boolean`"
-  ([this ic]
+  ([^java.awt.image.MemoryImageSource this ^java.awt.image.ImageConsumer ic]
     (-> this (.isConsumer ic))))
 
 (defn remove-consumer
@@ -108,7 +108,7 @@
    data for this image.
 
   ic - the specified ImageConsumer - `java.awt.image.ImageConsumer`"
-  ([this ic]
+  ([^java.awt.image.MemoryImageSource this ^java.awt.image.ImageConsumer ic]
     (-> this (.removeConsumer ic))))
 
 (defn start-production
@@ -117,7 +117,7 @@
    image data through the ImageConsumer interface.
 
   ic - the specified ImageConsumer image data through the ImageConsumer interface. - `java.awt.image.ImageConsumer`"
-  ([this ic]
+  ([^java.awt.image.MemoryImageSource this ^java.awt.image.ImageConsumer ic]
     (-> this (.startProduction ic))))
 
 (defn request-top-down-left-right-resend
@@ -125,7 +125,7 @@
    one more time in top-down, left-right order.
 
   ic - the specified ImageConsumer - `java.awt.image.ImageConsumer`"
-  ([this ic]
+  ([^java.awt.image.MemoryImageSource this ^java.awt.image.ImageConsumer ic]
     (-> this (.requestTopDownLeftRightResend ic))))
 
 (defn set-animated
@@ -140,7 +140,7 @@
    data that was available when it connected.
 
   animated - true if the image is a multi-frame animation - `boolean`"
-  ([this animated]
+  ([^java.awt.image.MemoryImageSource this ^Boolean animated]
     (-> this (.setAnimated animated))))
 
 (defn set-full-buffer-updates
@@ -155,7 +155,7 @@
    receive the correct pixel delivery hints.
 
   fullbuffers - true if the complete pixel buffer should always be sent - `boolean`"
-  ([this fullbuffers]
+  ([^java.awt.image.MemoryImageSource this ^Boolean fullbuffers]
     (-> this (.setFullBufferUpdates fullbuffers))))
 
 (defn new-pixels
@@ -175,10 +175,10 @@
   w - the width of the rectangle of pixels to be sent - `int`
   h - the height of the rectangle of pixels to be sent - `int`
   framenotify - true if the consumers should be sent a SINGLEFRAMEDONE notification - `boolean`"
-  ([this x y w h framenotify]
+  ([^java.awt.image.MemoryImageSource this ^Integer x ^Integer y ^Integer w ^Integer h ^Boolean framenotify]
     (-> this (.newPixels x y w h framenotify)))
-  ([this x y w h]
+  ([^java.awt.image.MemoryImageSource this ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.newPixels x y w h)))
-  ([this]
+  ([^java.awt.image.MemoryImageSource this]
     (-> this (.newPixels))))
 

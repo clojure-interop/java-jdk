@@ -22,20 +22,20 @@
   source - the TableColumnModel that originated the event - `javax.swing.table.TableColumnModel`
   from - an int specifying the index from where the column was moved or removed - `int`
   to - an int specifying the index to where the column was moved or added - `int`"
-  ([source from to]
+  ([^javax.swing.table.TableColumnModel source ^Integer from ^Integer to]
     (new TableColumnModelEvent source from to)))
 
 (defn get-from-index
   "Returns the fromIndex.  Valid for removed or moved events
 
   returns: `int`"
-  ([this]
+  ([^javax.swing.event.TableColumnModelEvent this]
     (-> this (.getFromIndex))))
 
 (defn get-to-index
   "Returns the toIndex.  Valid for add and moved events
 
   returns: `int`"
-  ([this]
+  ([^javax.swing.event.TableColumnModelEvent this]
     (-> this (.getToIndex))))
 

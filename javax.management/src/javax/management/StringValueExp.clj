@@ -11,7 +11,7 @@
    given string.
 
   val - the string that will be the value of this expression - `java.lang.String`"
-  ([val]
+  ([^java.lang.String val]
     (new StringValueExp val))
   ([]
     (new StringValueExp )))
@@ -21,14 +21,14 @@
    StringValueExp instance.
 
   returns: the string. - `java.lang.String`"
-  ([this]
+  ([^javax.management.StringValueExp this]
     (-> this (.getValue))))
 
 (defn to-string
   "Returns the string representing the object.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^javax.management.StringValueExp this]
     (-> this (.toString))))
 
 (defn set-m-bean-server
@@ -37,7 +37,7 @@
   s - The MBean server on which the query is to be performed. - `javax.management.MBeanServer`
 
   returns: `java.lang.  void`"
-  ([this s]
+  ([^javax.management.StringValueExp this ^javax.management.MBeanServer s]
     (-> this (.setMBeanServer s))))
 
 (defn apply
@@ -48,6 +48,6 @@
   returns: The ValueExp. - `javax.management.ValueExp`
 
   throws: javax.management.BadStringOperationException"
-  ([this name]
+  ([^javax.management.StringValueExp this ^javax.management.ObjectName name]
     (-> this (.apply name))))
 

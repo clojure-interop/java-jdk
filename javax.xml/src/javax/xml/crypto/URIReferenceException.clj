@@ -21,11 +21,11 @@
   uri-reference - the URIReference that was being dereferenced when the error was encountered - `javax.xml.crypto.URIReference`
 
   throws: java.lang.NullPointerException - if uriReference is null"
-  ([message cause uri-reference]
+  ([^java.lang.String message ^java.lang.Throwable cause ^javax.xml.crypto.URIReference uri-reference]
     (new URIReferenceException message cause uri-reference))
-  ([message cause]
+  ([^java.lang.String message ^java.lang.Throwable cause]
     (new URIReferenceException message cause))
-  ([message]
+  ([^java.lang.String message]
     (new URIReferenceException message))
   ([]
     (new URIReferenceException )))
@@ -36,7 +36,7 @@
 
   returns: the URIReference that was being dereferenced
    when the exception was thrown, or null if not specified - `javax.xml.crypto.URIReference`"
-  ([this]
+  ([^javax.xml.crypto.URIReferenceException this]
     (-> this (.getURIReference))))
 
 (defn get-cause
@@ -47,7 +47,7 @@
 
   returns: the cause of this URIReferenceException or
       null if the cause is nonexistent or unknown. - `java.lang.Throwable`"
-  ([this]
+  ([^javax.xml.crypto.URIReferenceException this]
     (-> this (.getCause))))
 
 (defn print-stack-trace
@@ -55,8 +55,8 @@
    the cause's backtrace to the specified print stream.
 
   s - PrintStream to use for output - `java.io.PrintStream`"
-  ([this s]
+  ([^javax.xml.crypto.URIReferenceException this ^java.io.PrintStream s]
     (-> this (.printStackTrace s)))
-  ([this]
+  ([^javax.xml.crypto.URIReferenceException this]
     (-> this (.printStackTrace))))
 

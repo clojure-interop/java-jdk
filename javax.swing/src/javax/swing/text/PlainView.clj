@@ -11,7 +11,7 @@
   Constructs a new PlainView wrapped on an element.
 
   elem - the element - `javax.swing.text.Element`"
-  ([elem]
+  ([^javax.swing.text.Element elem]
     (new PlainView elem)))
 
 (defn changed-update
@@ -21,7 +21,7 @@
   changes - the change information from the associated document - `javax.swing.event.DocumentEvent`
   a - the current allocation of the view - `java.awt.Shape`
   f - the factory to use to rebuild if the view has children - `javax.swing.text.ViewFactory`"
-  ([this changes a f]
+  ([^javax.swing.text.PlainView this ^javax.swing.event.DocumentEvent changes ^java.awt.Shape a ^javax.swing.text.ViewFactory f]
     (-> this (.changedUpdate changes a f))))
 
 (defn get-preferred-span
@@ -36,7 +36,7 @@
              The parent may choose to resize or break the view. - `float`
 
   throws: java.lang.IllegalArgumentException - for an invalid axis"
-  ([this axis]
+  ([^javax.swing.text.PlainView this ^Integer axis]
     (-> this (.getPreferredSpan axis))))
 
 (defn remove-update
@@ -46,7 +46,7 @@
   changes - the change information from the associated document - `javax.swing.event.DocumentEvent`
   a - the current allocation of the view - `java.awt.Shape`
   f - the factory to use to rebuild if the view has children - `javax.swing.text.ViewFactory`"
-  ([this changes a f]
+  ([^javax.swing.text.PlainView this ^javax.swing.event.DocumentEvent changes ^java.awt.Shape a ^javax.swing.text.ViewFactory f]
     (-> this (.removeUpdate changes a f))))
 
 (defn insert-update
@@ -56,7 +56,7 @@
   changes - the change information from the associated document - `javax.swing.event.DocumentEvent`
   a - the current allocation of the view - `java.awt.Shape`
   f - the factory to use to rebuild if the view has children - `javax.swing.text.ViewFactory`"
-  ([this changes a f]
+  ([^javax.swing.text.PlainView this ^javax.swing.event.DocumentEvent changes ^java.awt.Shape a ^javax.swing.text.ViewFactory f]
     (-> this (.insertUpdate changes a f))))
 
 (defn paint
@@ -66,7 +66,7 @@
 
   g - the rendering surface to use - `java.awt.Graphics`
   a - the allocated region to render into - `java.awt.Shape`"
-  ([this g a]
+  ([^javax.swing.text.PlainView this ^java.awt.Graphics g ^java.awt.Shape a]
     (-> this (.paint g a))))
 
 (defn next-tab-stop
@@ -78,7 +78,7 @@
   tab-offset - the position within the text stream that the tab occurred at >= 0. - `int`
 
   returns: the tab stop, measured in points >= 0 - `float`"
-  ([this x tab-offset]
+  ([^javax.swing.text.PlainView this ^Float x ^Integer tab-offset]
     (-> this (.nextTabStop x tab-offset))))
 
 (defn set-size
@@ -88,7 +88,7 @@
 
   width - the width >= 0 - `float`
   height - the height >= 0 - `float`"
-  ([this width height]
+  ([^javax.swing.text.PlainView this ^Float width ^Float height]
     (-> this (.setSize width height))))
 
 (defn view-to-model
@@ -102,7 +102,7 @@
 
   returns: the location within the model that best represents the
     given point in the view >= 0 - `int`"
-  ([this fx fy a bias]
+  ([^javax.swing.text.PlainView this ^Float fx ^Float fy ^java.awt.Shape a ^javax.swing.text.Position.Bias[] bias]
     (-> this (.viewToModel fx fy a bias))))
 
 (defn model-to-view
@@ -116,6 +116,6 @@
   returns: the bounding box of the given position - `java.awt.Shape`
 
   throws: javax.swing.text.BadLocationException - if the given position does not represent a valid location in the associated document"
-  ([this pos a b]
+  ([^javax.swing.text.PlainView this ^Integer pos ^java.awt.Shape a ^javax.swing.text.Position.Bias b]
     (-> this (.modelToView pos a b))))
 

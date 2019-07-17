@@ -22,7 +22,7 @@
   cache-dir - a File indicating where the cache file should be created, or null to use the system directory. - `java.io.File`
 
   throws: java.lang.IllegalArgumentException - if cacheDir is non-null but is not a directory."
-  ([stream cache-dir]
+  ([^java.io.OutputStream stream ^java.io.File cache-dir]
     (new FileCacheImageOutputStream stream cache-dir)))
 
 (defn flush-before
@@ -31,7 +31,7 @@
   pos - a long containing the length of the stream prefix that may be flushed. - `long`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this pos]
+  ([^javax.imageio.stream.FileCacheImageOutputStream this ^Long pos]
     (-> this (.flushBefore pos))))
 
 (defn read
@@ -45,9 +45,9 @@
    to indicate EOF. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this b off len]
+  ([^javax.imageio.stream.FileCacheImageOutputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  ([this]
+  ([^javax.imageio.stream.FileCacheImageOutputStream this]
     (-> this (.read))))
 
 (defn seek
@@ -60,7 +60,7 @@
   pos - a long containing the desired file pointer position. - `long`
 
   throws: java.lang.IndexOutOfBoundsException - if pos is smaller than the flushed position."
-  ([this pos]
+  ([^javax.imageio.stream.FileCacheImageOutputStream this ^Long pos]
     (-> this (.seek pos))))
 
 (defn cached-memory?
@@ -69,14 +69,14 @@
    cache.
 
   returns: false. - `boolean`"
-  ([this]
+  ([^javax.imageio.stream.FileCacheImageOutputStream this]
     (-> this (.isCachedMemory))))
 
 (defn length
   "Description copied from class: ImageInputStreamImpl
 
   returns: -1L to indicate unknown length. - `long`"
-  ([this]
+  ([^javax.imageio.stream.FileCacheImageOutputStream this]
     (-> this (.length))))
 
 (defn close
@@ -86,7 +86,7 @@
    is not closed.
 
   throws: java.io.IOException - if an error occurs."
-  ([this]
+  ([^javax.imageio.stream.FileCacheImageOutputStream this]
     (-> this (.close))))
 
 (defn cached-file?
@@ -94,7 +94,7 @@
    ImageOutputStream maintains a file cache.
 
   returns: true. - `boolean`"
-  ([this]
+  ([^javax.imageio.stream.FileCacheImageOutputStream this]
     (-> this (.isCachedFile))))
 
 (defn write
@@ -105,9 +105,9 @@
   len - the number of bytes to write. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this b off len]
+  ([^javax.imageio.stream.FileCacheImageOutputStream this b ^Integer off ^Integer len]
     (-> this (.write b off len)))
-  ([this b]
+  ([^javax.imageio.stream.FileCacheImageOutputStream this ^Integer b]
     (-> this (.write b))))
 
 (defn cached?
@@ -116,6 +116,6 @@
    seeking backwards.
 
   returns: true. - `boolean`"
-  ([this]
+  ([^javax.imageio.stream.FileCacheImageOutputStream this]
     (-> this (.isCached))))
 

@@ -53,14 +53,14 @@
   "size - `int`
 
   returns: `javax.swing.Icon`"
-  ([size]
+  ([^Integer size]
     (MetalIconFactory/getInternalFrameAltMaximizeIcon size)))
 
 (defn *get-internal-frame-close-icon
   "size - `int`
 
   returns: `javax.swing.Icon`"
-  ([size]
+  ([^Integer size]
     (MetalIconFactory/getInternalFrameCloseIcon size)))
 
 (defn *get-horizontal-slider-thumb-icon
@@ -97,7 +97,7 @@
   "is-collapsed - `boolean`
 
   returns: `javax.swing.Icon`"
-  ([is-collapsed]
+  ([^Boolean is-collapsed]
     (MetalIconFactory/getTreeControlIcon is-collapsed)))
 
 (defn *get-menu-arrow-icon
@@ -122,7 +122,7 @@
   "size - `int`
 
   returns: `javax.swing.Icon`"
-  ([size]
+  ([^Integer size]
     (MetalIconFactory/getInternalFrameMinimizeIcon size)))
 
 (defn *get-menu-item-arrow-icon
@@ -134,7 +134,7 @@
   "size - `int`
 
   returns: `javax.swing.Icon`"
-  ([size]
+  ([^Integer size]
     (MetalIconFactory/getInternalFrameMaximizeIcon size)))
 
 (defn *get-file-chooser-up-folder-icon

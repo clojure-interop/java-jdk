@@ -15,7 +15,7 @@
   c - component to create UI object for - `javax.swing.JComponent`
 
   returns: the UI object - `javax.swing.plaf.ComponentUI`"
-  ([c]
+  ([^javax.swing.JComponent c]
     (SynthLabelUI/createUI c)))
 
 (defn get-minimum-size
@@ -29,7 +29,7 @@
   c - the component whose minimum size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: getPreferredSize(c) - `java.awt.Dimension`"
-  ([this c]
+  ([^javax.swing.plaf.synth.SynthLabelUI this ^javax.swing.JComponent c]
     (-> this (.getMinimumSize c))))
 
 (defn get-maximum-size
@@ -43,7 +43,7 @@
   c - the component whose maximum size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: getPreferredSize(c) - `java.awt.Dimension`"
-  ([this c]
+  ([^javax.swing.plaf.synth.SynthLabelUI this ^javax.swing.JComponent c]
     (-> this (.getMaximumSize c))))
 
 (defn paint-border
@@ -55,7 +55,7 @@
   y - the Y coordinate - `int`
   w - width of the border - `int`
   h - height of the border - `int`"
-  ([this context g x y w h]
+  ([^javax.swing.plaf.synth.SynthLabelUI this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintBorder context g x y w h))))
 
 (defn update
@@ -68,14 +68,14 @@
 
   g - the Graphics object used for painting - `java.awt.Graphics`
   c - the component being painted - `javax.swing.JComponent`"
-  ([this g c]
+  ([^javax.swing.plaf.synth.SynthLabelUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.update g c))))
 
 (defn property-change
   "This method gets called when a bound property is changed.
 
   e - A PropertyChangeEvent object describing the event source and the property that has changed. - `java.beans.PropertyChangeEvent`"
-  ([this e]
+  ([^javax.swing.plaf.synth.SynthLabelUI this ^java.beans.PropertyChangeEvent e]
     (-> this (.propertyChange e))))
 
 (defn paint
@@ -85,7 +85,7 @@
 
   g - the Graphics object used for painting - `java.awt.Graphics`
   c - the component being painted - `javax.swing.JComponent`"
-  ([this g c]
+  ([^javax.swing.plaf.synth.SynthLabelUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.paint g c))))
 
 (defn get-context
@@ -94,7 +94,7 @@
   c - Component requesting SynthContext. - `javax.swing.JComponent`
 
   returns: SynthContext describing component. - `javax.swing.plaf.synth.SynthContext`"
-  ([this c]
+  ([^javax.swing.plaf.synth.SynthLabelUI this ^javax.swing.JComponent c]
     (-> this (.getContext c))))
 
 (defn get-baseline
@@ -106,7 +106,7 @@
 
   returns: baseline or a value < 0 indicating there is no reasonable
                     baseline - `int`"
-  ([this c width height]
+  ([^javax.swing.plaf.synth.SynthLabelUI this ^javax.swing.JComponent c ^Integer width ^Integer height]
     (-> this (.getBaseline c width height))))
 
 (defn get-preferred-size
@@ -120,6 +120,6 @@
   c - the component whose preferred size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: `java.awt.Dimension`"
-  ([this c]
+  ([^javax.swing.plaf.synth.SynthLabelUI this ^javax.swing.JComponent c]
     (-> this (.getPreferredSize c))))
 

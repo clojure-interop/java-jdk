@@ -14,6 +14,6 @@
   insets - the object to be reinitialized - `java.awt.Insets`
 
   returns: the insets object - `java.awt.Insets`"
-  ([this c insets]
+  ([^javax.swing.plaf.basic.BasicBorders$MarginBorder this ^java.awt.Component c ^java.awt.Insets insets]
     (-> this (.getBorderInsets c insets))))
 

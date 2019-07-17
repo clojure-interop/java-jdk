@@ -49,7 +49,7 @@
              SOAPPart object - `javax.xml.soap.SOAPEnvelope`
 
   throws: javax.xml.soap.SOAPException - if there is a SOAP error"
-  ([this]
+  ([^javax.xml.soap.SOAPPart this]
     (-> this (.getEnvelope))))
 
 (defn add-mime-header
@@ -65,7 +65,7 @@
   value - a String giving the value to be set or added - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if there was a problem with the specified mime header name or value"
-  ([this name value]
+  ([^javax.xml.soap.SOAPPart this ^java.lang.String name ^java.lang.String value]
     (-> this (.addMimeHeader name value))))
 
 (defn set-content-id
@@ -75,7 +75,7 @@
   content-id - a String giving the value of the MIME header `Content-Id` - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if there is a problem in setting the content id"
-  ([this content-id]
+  ([^javax.xml.soap.SOAPPart this ^java.lang.String content-id]
     (-> this (.setContentId content-id))))
 
 (defn get-content-location
@@ -83,13 +83,13 @@
 
   returns: a String giving the value of the MIME header whose
             name is `Content-Location` - `java.lang.String`"
-  ([this]
+  ([^javax.xml.soap.SOAPPart this]
     (-> this (.getContentLocation))))
 
 (defn remove-all-mime-headers
   "Removes all the MimeHeader objects for this
    SOAPEnvelope object."
-  ([this]
+  ([^javax.xml.soap.SOAPPart this]
     (-> this (.removeAllMimeHeaders))))
 
 (defn get-non-matching-mime-headers
@@ -102,14 +102,14 @@
             except those that match one of the names in the
              given array.  The nonmatching MIME headers are returned as an
              Iterator object. - `java.util.Iterator`"
-  ([this names]
+  ([^javax.xml.soap.SOAPPart this ^java.lang.String[] names]
     (-> this (.getNonMatchingMimeHeaders names))))
 
 (defn remove-mime-header
   "Removes all MIME headers that match the given name.
 
   header - a String giving the name of the MIME header(s) to be removed - `java.lang.String`"
-  ([this header]
+  ([^javax.xml.soap.SOAPPart this ^java.lang.String header]
     (-> this (.removeMimeHeader header))))
 
 (defn set-content-location
@@ -119,7 +119,7 @@
   content-location - a String giving the value of the MIME header `Content-Location` - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if there is a problem in setting the content location."
-  ([this content-location]
+  ([^javax.xml.soap.SOAPPart this ^java.lang.String content-location]
     (-> this (.setContentLocation content-location))))
 
 (defn get-mime-header
@@ -131,7 +131,7 @@
 
   returns: a String array giving all the values for the
            specified header - `java.lang.String[]`"
-  ([this name]
+  ([^javax.xml.soap.SOAPPart this ^java.lang.String name]
     (-> this (.getMimeHeader name))))
 
 (defn get-matching-mime-headers
@@ -142,7 +142,7 @@
 
   returns: all of the MIME headers that match one of the names in the
              given array, returned as an Iterator object - `java.util.Iterator`"
-  ([this names]
+  ([^javax.xml.soap.SOAPPart this ^java.lang.String[] names]
     (-> this (.getMatchingMimeHeaders names))))
 
 (defn get-all-mime-headers
@@ -151,7 +151,7 @@
 
   returns: an Iterator object with all of the Mime
             headers for this SOAPPart object - `java.util.Iterator`"
-  ([this]
+  ([^javax.xml.soap.SOAPPart this]
     (-> this (.getAllMimeHeaders))))
 
 (defn set-content
@@ -162,7 +162,7 @@
   source - the javax.xml.transform.Source object with the data to be set - `javax.xml.transform.Source`
 
   throws: javax.xml.soap.SOAPException - if there is a problem in setting the source"
-  ([this source]
+  ([^javax.xml.soap.SOAPPart this ^javax.xml.transform.Source source]
     (-> this (.setContent source))))
 
 (defn set-mime-header
@@ -181,7 +181,7 @@
   value - a String giving the value to be set. This value will be substituted for the current value(s) of the first header that is a match if there is one. If there is no match, this value will be the value for a new MimeHeader object. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if there was a problem with the specified mime header name or value"
-  ([this name value]
+  ([^javax.xml.soap.SOAPPart this ^java.lang.String name ^java.lang.String value]
     (-> this (.setMimeHeader name value))))
 
 (defn get-content
@@ -191,7 +191,7 @@
   returns: the content as a javax.xml.transform.Source object - `javax.xml.transform.Source`
 
   throws: javax.xml.soap.SOAPException - if the implementation cannot convert the specified Source object"
-  ([this]
+  ([^javax.xml.soap.SOAPPart this]
     (-> this (.getContent))))
 
 (defn get-content-id
@@ -199,6 +199,6 @@
 
   returns: a String giving the value of the MIME header
            named `Content-Id` - `java.lang.String`"
-  ([this]
+  ([^javax.xml.soap.SOAPPart this]
     (-> this (.getContentId))))
 

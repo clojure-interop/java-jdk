@@ -14,14 +14,14 @@
   x - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([x]
+  ([^javax.swing.JComponent x]
     (BasicSplitPaneUI/createUI x)))
 
 (defn install-ui
   "Installs the UI.
 
   c - the component where this UI delegate is being installed - `javax.swing.JComponent`"
-  ([this c]
+  ([^javax.swing.plaf.basic.BasicSplitPaneUI this ^javax.swing.JComponent c]
     (-> this (.installUI c))))
 
 (defn get-minimum-size
@@ -31,14 +31,14 @@
   jc - the component whose minimum size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: a Dimension object or null - `java.awt.Dimension`"
-  ([this jc]
+  ([^javax.swing.plaf.basic.BasicSplitPaneUI this ^javax.swing.JComponent jc]
     (-> this (.getMinimumSize jc))))
 
 (defn get-orientation
   "Returns the orientation for the JSplitPane.
 
   returns: `int`"
-  ([this]
+  ([^javax.swing.plaf.basic.BasicSplitPaneUI this]
     (-> this (.getOrientation))))
 
 (defn get-divider-location
@@ -48,7 +48,7 @@
   jc - `javax.swing.JSplitPane`
 
   returns: `int`"
-  ([this jc]
+  ([^javax.swing.plaf.basic.BasicSplitPaneUI this ^javax.swing.JSplitPane jc]
     (-> this (.getDividerLocation jc))))
 
 (defn get-maximum-size
@@ -58,7 +58,7 @@
   jc - the component whose maximum size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: a Dimension object or null - `java.awt.Dimension`"
-  ([this jc]
+  ([^javax.swing.plaf.basic.BasicSplitPaneUI this ^javax.swing.JComponent jc]
     (-> this (.getMaximumSize jc))))
 
 (defn get-maximum-divider-location
@@ -67,7 +67,7 @@
   jc - `javax.swing.JSplitPane`
 
   returns: `int`"
-  ([this jc]
+  ([^javax.swing.plaf.basic.BasicSplitPaneUI this ^javax.swing.JSplitPane jc]
     (-> this (.getMaximumDividerLocation jc))))
 
 (defn set-divider-location
@@ -75,7 +75,7 @@
 
   jc - `javax.swing.JSplitPane`
   location - `int`"
-  ([this jc location]
+  ([^javax.swing.plaf.basic.BasicSplitPaneUI this ^javax.swing.JSplitPane jc ^Integer location]
     (-> this (.setDividerLocation jc location))))
 
 (defn get-insets
@@ -85,21 +85,21 @@
   jc - `javax.swing.JComponent`
 
   returns: `java.awt.Insets`"
-  ([this jc]
+  ([^javax.swing.plaf.basic.BasicSplitPaneUI this ^javax.swing.JComponent jc]
     (-> this (.getInsets jc))))
 
 (defn set-last-drag-location
   "Set the last drag location of the JSplitPane.
 
   l - `int`"
-  ([this l]
+  ([^javax.swing.plaf.basic.BasicSplitPaneUI this ^Integer l]
     (-> this (.setLastDragLocation l))))
 
 (defn uninstall-ui
   "Uninstalls the UI.
 
   c - the component from which this UI delegate is being removed; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([this c]
+  ([^javax.swing.plaf.basic.BasicSplitPaneUI this ^javax.swing.JComponent c]
     (-> this (.uninstallUI c))))
 
 (defn get-split-pane
@@ -107,14 +107,14 @@
    in.
 
   returns: `javax.swing.JSplitPane`"
-  ([this]
+  ([^javax.swing.plaf.basic.BasicSplitPaneUI this]
     (-> this (.getSplitPane))))
 
 (defn reset-to-preferred-sizes
   "Messaged to reset the preferred sizes.
 
   jc - `javax.swing.JSplitPane`"
-  ([this jc]
+  ([^javax.swing.plaf.basic.BasicSplitPaneUI this ^javax.swing.JSplitPane jc]
     (-> this (.resetToPreferredSizes jc))))
 
 (defn finished-painting-children
@@ -123,14 +123,14 @@
 
   sp - `javax.swing.JSplitPane`
   g - `java.awt.Graphics`"
-  ([this sp g]
+  ([^javax.swing.plaf.basic.BasicSplitPaneUI this ^javax.swing.JSplitPane sp ^java.awt.Graphics g]
     (-> this (.finishedPaintingChildren sp g))))
 
 (defn get-divider
   "Returns the divider between the top Components.
 
   returns: `javax.swing.plaf.basic.BasicSplitPaneDivider`"
-  ([this]
+  ([^javax.swing.plaf.basic.BasicSplitPaneUI this]
     (-> this (.getDivider))))
 
 (defn get-minimum-divider-location
@@ -139,7 +139,7 @@
   jc - `javax.swing.JSplitPane`
 
   returns: `int`"
-  ([this jc]
+  ([^javax.swing.plaf.basic.BasicSplitPaneUI this ^javax.swing.JSplitPane jc]
     (-> this (.getMinimumDividerLocation jc))))
 
 (defn paint
@@ -151,42 +151,42 @@
 
   g - the Graphics context in which to paint - `java.awt.Graphics`
   jc - the component being painted; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([this g jc]
+  ([^javax.swing.plaf.basic.BasicSplitPaneUI this ^java.awt.Graphics g ^javax.swing.JComponent jc]
     (-> this (.paint g jc))))
 
 (defn set-orientation
   "Set the orientation for the JSplitPane.
 
   orientation - `int`"
-  ([this orientation]
+  ([^javax.swing.plaf.basic.BasicSplitPaneUI this ^Integer orientation]
     (-> this (.setOrientation orientation))))
 
 (defn get-last-drag-location
   "Returns the last drag location of the JSplitPane.
 
   returns: `int`"
-  ([this]
+  ([^javax.swing.plaf.basic.BasicSplitPaneUI this]
     (-> this (.getLastDragLocation))))
 
 (defn set-continuous-layout
   "Turn continuous layout on/off.
 
   b - `boolean`"
-  ([this b]
+  ([^javax.swing.plaf.basic.BasicSplitPaneUI this ^Boolean b]
     (-> this (.setContinuousLayout b))))
 
 (defn continuous-layout?
   "Determines whether the JSplitPane is set to use a continuous layout.
 
   returns: `boolean`"
-  ([this]
+  ([^javax.swing.plaf.basic.BasicSplitPaneUI this]
     (-> this (.isContinuousLayout))))
 
 (defn create-default-divider
   "Creates the default divider.
 
   returns: `javax.swing.plaf.basic.BasicSplitPaneDivider`"
-  ([this]
+  ([^javax.swing.plaf.basic.BasicSplitPaneUI this]
     (-> this (.createDefaultDivider))))
 
 (defn get-preferred-size
@@ -196,7 +196,7 @@
   jc - the component whose preferred size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: `java.awt.Dimension`"
-  ([this jc]
+  ([^javax.swing.plaf.basic.BasicSplitPaneUI this ^javax.swing.JComponent jc]
     (-> this (.getPreferredSize jc))))
 
 (defn get-non-continuous-layout-divider
@@ -205,6 +205,6 @@
    dragging session.
 
   returns: `java.awt.Component`"
-  ([this]
+  ([^javax.swing.plaf.basic.BasicSplitPaneUI this]
     (-> this (.getNonContinuousLayoutDivider))))
 

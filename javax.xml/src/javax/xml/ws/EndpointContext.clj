@@ -25,6 +25,6 @@
    server.
 
   returns: list of all endpoints in an application - `java.util.Set<javax.xml.ws.Endpoint>`"
-  ([this]
+  ([^javax.xml.ws.EndpointContext this]
     (-> this (.getEndpoints))))
 

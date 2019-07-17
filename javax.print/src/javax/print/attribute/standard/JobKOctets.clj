@@ -97,7 +97,7 @@
   value - Integer value. - `int`
 
   throws: java.lang.IllegalArgumentException - (Unchecked exception) Thrown if value is less than 0."
-  ([value]
+  ([^Integer value]
     (new JobKOctets value)))
 
 (defn equals
@@ -117,7 +117,7 @@
 
   returns: True if object is equivalent to this job K
             octets attribute, false otherwise. - `boolean`"
-  ([this object]
+  ([^javax.print.attribute.standard.JobKOctets this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -128,7 +128,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([this]
+  ([^javax.print.attribute.standard.JobKOctets this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -138,6 +138,6 @@
    For class JobKOctets, the category name is `job-k-octets`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([this]
+  ([^javax.print.attribute.standard.JobKOctets this]
     (-> this (.getName))))
 

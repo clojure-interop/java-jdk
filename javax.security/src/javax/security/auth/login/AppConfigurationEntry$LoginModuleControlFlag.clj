@@ -44,6 +44,6 @@
    sufficient, or optional.
 
   returns: a String representation of this controlFlag. - `java.lang.String`"
-  ([this]
+  ([^javax.security.auth.login.AppConfigurationEntry$LoginModuleControlFlag this]
     (-> this (.toString))))
 

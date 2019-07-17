@@ -98,7 +98,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([this]
+  ([^javax.print.attribute.standard.PresentationDirection this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -109,6 +109,6 @@
    the category name is `presentation-direction`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([this]
+  ([^javax.print.attribute.standard.PresentationDirection this]
     (-> this (.getName))))
 

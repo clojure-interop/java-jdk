@@ -37,8 +37,8 @@
   returns: A reference to this Appendable - `java.lang.Appendable`
 
   throws: java.lang.IndexOutOfBoundsException - If start or end are negative, start is greater than end, or end is greater than csq.length()"
-  ([this csq start end]
+  ([^. this ^java.lang.CharSequence csq ^Integer start ^Integer end]
     (-> this (.append csq start end)))
-  ([this csq]
+  ([^. this ^java.lang.CharSequence csq]
     (-> this (.append csq))))
 

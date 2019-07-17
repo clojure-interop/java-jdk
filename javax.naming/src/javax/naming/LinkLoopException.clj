@@ -15,7 +15,7 @@
    All the other fields are initialized to null.
 
   explanation - A possibly null string containing additional detail about this exception. - `java.lang.String`"
-  ([explanation]
+  ([^java.lang.String explanation]
     (new LinkLoopException explanation))
   ([]
     (new LinkLoopException )))

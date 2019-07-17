@@ -58,6 +58,6 @@
   returns: the enum constant with the specified name - `java.sql.PseudoColumnUsage`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([name]
+  ([^java.lang.String name]
     (PseudoColumnUsage/valueOf name)))
 

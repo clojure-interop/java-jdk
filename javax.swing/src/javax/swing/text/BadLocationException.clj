@@ -20,13 +20,13 @@
 
   s - a string indicating what was wrong with the arguments - `java.lang.String`
   offs - offset within the document that was requested >= 0 - `int`"
-  ([s offs]
+  ([^java.lang.String s ^Integer offs]
     (new BadLocationException s offs)))
 
 (defn offset-requested
   "Returns the offset into the document that was not legal.
 
   returns: the offset >= 0 - `int`"
-  ([this]
+  ([^javax.swing.text.BadLocationException this]
     (-> this (.offsetRequested))))
 

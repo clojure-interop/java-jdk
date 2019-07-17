@@ -20,7 +20,7 @@
   environment - environment used to create the initial DirContext. Null indicates an empty environment. - `java.util.Hashtable<?,?>`
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  ([environment]
+  ([^java.util.Hashtable environment]
     (new InitialDirContext environment))
   ([]
     (new InitialDirContext )))
@@ -34,9 +34,9 @@
   returns: the requested attributes; never null - `javax.naming.directory.Attributes`
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  ([this name attr-ids]
+  ([^javax.naming.directory.InitialDirContext this ^java.lang.String name ^java.lang.String[] attr-ids]
     (-> this (.getAttributes name attr-ids)))
-  ([this name]
+  ([^javax.naming.directory.InitialDirContext this ^java.lang.String name]
     (-> this (.getAttributes name))))
 
 (defn modify-attributes
@@ -47,9 +47,9 @@
   attrs - the attributes to be used for the modification; may not be null - `javax.naming.directory.Attributes`
 
   throws: javax.naming.directory.AttributeModificationException - if the modification cannot be completed successfully"
-  ([this name mod-op attrs]
+  ([^javax.naming.directory.InitialDirContext this ^java.lang.String name ^Integer mod-op ^javax.naming.directory.Attributes attrs]
     (-> this (.modifyAttributes name mod-op attrs)))
-  ([this name mods]
+  ([^javax.naming.directory.InitialDirContext this ^java.lang.String name ^javax.naming.directory.ModificationItem[] mods]
     (-> this (.modifyAttributes name mods))))
 
 (defn bind
@@ -60,7 +60,7 @@
   attrs - the attributes to associate with the binding - `javax.naming.directory.Attributes`
 
   throws: javax.naming.NameAlreadyBoundException - if name is already bound"
-  ([this name obj attrs]
+  ([^javax.naming.directory.InitialDirContext this ^java.lang.String name ^java.lang.Object obj ^javax.naming.directory.Attributes attrs]
     (-> this (.bind name obj attrs))))
 
 (defn rebind
@@ -71,7 +71,7 @@
   attrs - the attributes to associate with the binding - `javax.naming.directory.Attributes`
 
   throws: javax.naming.directory.InvalidAttributesException - if some `mandatory` attributes of the binding are not supplied"
-  ([this name obj attrs]
+  ([^javax.naming.directory.InitialDirContext this ^java.lang.String name ^java.lang.Object obj ^javax.naming.directory.Attributes attrs]
     (-> this (.rebind name obj attrs))))
 
 (defn create-subcontext
@@ -83,7 +83,7 @@
   returns: the newly created context - `javax.naming.directory.DirContext`
 
   throws: javax.naming.NameAlreadyBoundException - if the name is already bound"
-  ([this name attrs]
+  ([^javax.naming.directory.InitialDirContext this ^java.lang.String name ^javax.naming.directory.Attributes attrs]
     (-> this (.createSubcontext name attrs))))
 
 (defn get-schema
@@ -94,7 +94,7 @@
   returns: the schema associated with the context; never null - `javax.naming.directory.DirContext`
 
   throws: javax.naming.OperationNotSupportedException - if schema not supported"
-  ([this name]
+  ([^javax.naming.directory.InitialDirContext this ^java.lang.String name]
     (-> this (.getSchema name))))
 
 (defn get-schema-class-definition
@@ -106,7 +106,7 @@
             object's class definitions; never null - `javax.naming.directory.DirContext`
 
   throws: javax.naming.OperationNotSupportedException - if schema not supported"
-  ([this name]
+  ([^javax.naming.directory.InitialDirContext this ^java.lang.String name]
     (-> this (.getSchemaClassDefinition name))))
 
 (defn search
@@ -121,10 +121,10 @@
             that satisfy the filter; never null - `javax.naming.NamingEnumeration<javax.naming.directory.SearchResult>`
 
   throws: javax.naming.directory.InvalidSearchControlsException - if cons contains invalid settings"
-  ([this name filter-expr filter-args cons]
+  ([^javax.naming.directory.InitialDirContext this ^java.lang.String name ^java.lang.String filter-expr ^java.lang.Object[] filter-args ^javax.naming.directory.SearchControls cons]
     (-> this (.search name filter-expr filter-args cons)))
-  ([this name matching-attributes attributes-to-return]
+  ([^javax.naming.directory.InitialDirContext this ^java.lang.String name ^javax.naming.directory.Attributes matching-attributes ^java.lang.String[] attributes-to-return]
     (-> this (.search name matching-attributes attributes-to-return)))
-  ([this name matching-attributes]
+  ([^javax.naming.directory.InitialDirContext this ^java.lang.String name ^javax.naming.directory.Attributes matching-attributes]
     (-> this (.search name matching-attributes))))
 

@@ -14,16 +14,16 @@
   detail - the detail message. - `java.lang.String`
   code - the HTTP response code from server. - `int`
   location - the URL to be redirected to - `java.lang.String`"
-  ([detail code location]
+  ([^java.lang.String detail ^Integer code ^java.lang.String location]
     (new HttpRetryException detail code location))
-  ([detail code]
+  ([^java.lang.String detail ^Integer code]
     (new HttpRetryException detail code)))
 
 (defn response-code
   "Returns the http response code
 
   returns: The http response code. - `int`"
-  ([this]
+  ([^java.net.HttpRetryException this]
     (-> this (.responseCode))))
 
 (defn get-reason
@@ -31,7 +31,7 @@
    not be retried.
 
   returns: The reason string - `java.lang.String`"
-  ([this]
+  ([^java.net.HttpRetryException this]
     (-> this (.getReason))))
 
 (defn get-location
@@ -39,6 +39,6 @@
    error resulted from redirection.
 
   returns: The location string - `java.lang.String`"
-  ([this]
+  ([^java.net.HttpRetryException this]
     (-> this (.getLocation))))
 

@@ -52,9 +52,9 @@
 
   key - the key of the particular hint property - `java.awt.RenderingHints.Key`
   value - the value of the hint property specified with key - `java.lang.Object`"
-  ([key value]
+  ([^java.awt.RenderingHints.Key key ^java.lang.Object value]
     (new RenderingHints key value))
-  ([init]
+  ([^java.util.Map init]
     (new RenderingHints init)))
 
 (def *-key-antialiasing
@@ -854,7 +854,7 @@
 
   returns: a Collection view of the values
             contained in this RenderingHints. - `java.util.Collection<java.lang.Object>`"
-  ([this]
+  ([^java.awt.RenderingHints this]
     (-> this (.values))))
 
 (defn put-all
@@ -866,7 +866,7 @@
   m - the specified Map - `java.util.Map<?,?>`
 
   throws: java.lang.ClassCastException - class of a key or value in the specified Map prevents it from being stored in this RenderingHints."
-  ([this m]
+  ([^java.awt.RenderingHints this ^java.util.Map m]
     (-> this (.putAll m))))
 
 (defn put
@@ -883,7 +883,7 @@
                or null if it did not have one. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if the key is null."
-  ([this key value]
+  ([^java.awt.RenderingHints this ^java.lang.Object key ^java.lang.Object value]
     (-> this (.put key value))))
 
 (defn entry-set
@@ -902,7 +902,7 @@
 
   returns: a Set view of the mappings contained in
    this RenderingHints. - `java.util.Set<java.util.Map.Entry<java.lang.Object,java.lang.Object>>`"
-  ([this]
+  ([^java.awt.RenderingHints this]
     (-> this (.entrySet))))
 
 (defn to-string
@@ -911,7 +911,7 @@
    RenderingHints object.
 
   returns: a string representation of this object. - `java.lang.String`"
-  ([this]
+  ([^java.awt.RenderingHints this]
     (-> this (.toString))))
 
 (defn contains-value
@@ -931,7 +931,7 @@
 
   returns: true if this RenderingHints
              maps one or more keys to the specified value. - `boolean`"
-  ([this value]
+  ([^java.awt.RenderingHints this ^java.lang.Object value]
     (-> this (.containsValue value))))
 
 (defn remove
@@ -946,7 +946,7 @@
             if the key did not have a mapping. - `java.lang.Object`
 
   throws: java.lang.ClassCastException - if the key can not be cast to RenderingHints.Key"
-  ([this key]
+  ([^java.awt.RenderingHints this ^java.lang.Object key]
     (-> this (.remove key))))
 
 (defn key-set
@@ -966,7 +966,7 @@
 
   returns: a Set view of the keys contained
    in this RenderingHints. - `java.util.Set<java.lang.Object>`"
-  ([this]
+  ([^java.awt.RenderingHints this]
     (-> this (.keySet))))
 
 (defn clone
@@ -975,7 +975,7 @@
    object.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([this]
+  ([^java.awt.RenderingHints this]
     (-> this (.clone))))
 
 (defn hash-code
@@ -989,7 +989,7 @@
    contract of Object.hashCode.
 
   returns: the hash code value for this RenderingHints. - `int`"
-  ([this]
+  ([^java.awt.RenderingHints this]
     (-> this (.hashCode))))
 
 (defn add
@@ -1000,7 +1000,7 @@
    RenderingHints object are not affected.
 
   hints - the set of key/value pairs to be added to this RenderingHints object - `java.awt.RenderingHints`"
-  ([this hints]
+  ([^java.awt.RenderingHints this ^java.awt.RenderingHints hints]
     (-> this (.add hints))))
 
 (defn empty?
@@ -1009,7 +1009,7 @@
 
   returns: true if this
    RenderingHints contains no key-value mappings. - `boolean`"
-  ([this]
+  ([^java.awt.RenderingHints this]
     (-> this (.isEmpty))))
 
 (defn size
@@ -1018,13 +1018,13 @@
 
   returns: the number of key-value mappings in this
    RenderingHints. - `int`"
-  ([this]
+  ([^java.awt.RenderingHints this]
     (-> this (.size))))
 
 (defn clear
   "Clears this RenderingHints object of all key/value
    pairs."
-  ([this]
+  ([^java.awt.RenderingHints this]
     (-> this (.clear))))
 
 (defn contains-key
@@ -1037,7 +1037,7 @@
             contains a mapping for the specified key. - `boolean`
 
   throws: java.lang.ClassCastException - if the key can not be cast to RenderingHints.Key"
-  ([this key]
+  ([^java.awt.RenderingHints this ^java.lang.Object key]
     (-> this (.containsKey key))))
 
 (defn get
@@ -1050,7 +1050,7 @@
             this object. - `java.lang.Object`
 
   throws: java.lang.ClassCastException - if the key can not be cast to RenderingHints.Key"
-  ([this key]
+  ([^java.awt.RenderingHints this ^java.lang.Object key]
     (-> this (.get key))))
 
 (defn equals
@@ -1072,6 +1072,6 @@
 
   returns: true if the specified Object
    is equal to this RenderingHints. - `boolean`"
-  ([this o]
+  ([^java.awt.RenderingHints this ^java.lang.Object o]
     (-> this (.equals o))))
 

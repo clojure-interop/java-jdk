@@ -122,13 +122,13 @@
   returns: the enum constant with the specified name - `javax.lang.model.element.Modifier`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([name]
+  ([^java.lang.String name]
     (Modifier/valueOf name)))
 
 (defn to-string
   "Returns this modifier's name in lowercase.
 
   returns: the name of this enum constant - `java.lang.String`"
-  ([this]
+  ([^javax.lang.model.element.Modifier this]
     (-> this (.toString))))
 

@@ -10,6 +10,6 @@
 
   returns: the java.awt.Container associated
    with this BeanContext. - `java.awt.Container`"
-  ([this]
+  ([^. this]
     (-> this (.getContainer))))
 

@@ -16,22 +16,22 @@
   len - Number of characters to be written - `int`
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([this cbuf off len]
+  ([^java.io.FilterWriter this cbuf ^Integer off ^Integer len]
     (-> this (.write cbuf off len)))
-  ([this c]
+  ([^java.io.FilterWriter this ^Integer c]
     (-> this (.write c))))
 
 (defn flush
   "Flushes the stream.
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([this]
+  ([^java.io.FilterWriter this]
     (-> this (.flush))))
 
 (defn close
   "Description copied from class: Writer
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([this]
+  ([^java.io.FilterWriter this]
     (-> this (.close))))
 

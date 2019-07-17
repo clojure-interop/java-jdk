@@ -61,6 +61,6 @@
 
   returns: a new array consisting of the updated ProtectionDomains,
             or null. - `java.security.ProtectionDomain[]`"
-  ([this current-domains assigned-domains]
+  ([^. this ^java.security.ProtectionDomain[] current-domains ^java.security.ProtectionDomain[] assigned-domains]
     (-> this (.combine current-domains assigned-domains))))
 

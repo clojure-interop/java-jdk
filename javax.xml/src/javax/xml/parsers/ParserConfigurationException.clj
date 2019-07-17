@@ -10,7 +10,7 @@
    the String specified as an error message.
 
   msg - The error message for the exception. - `java.lang.String`"
-  ([msg]
+  ([^java.lang.String msg]
     (new ParserConfigurationException msg))
   ([]
     (new ParserConfigurationException )))

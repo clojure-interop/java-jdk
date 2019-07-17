@@ -25,9 +25,9 @@
 
   reason - a description of what caused the exception - `java.lang.String`
   cause - a Throwable object that is to be embedded in this SOAPException object - `java.lang.Throwable`"
-  ([reason cause]
+  ([^java.lang.String reason ^java.lang.Throwable cause]
     (new SOAPException reason cause))
-  ([reason]
+  ([^java.lang.String reason]
     (new SOAPException reason))
   ([]
     (new SOAPException )))
@@ -45,7 +45,7 @@
            SOAPException or, if it has none, the
            message of the embedded Throwable object,
            if there is one - `java.lang.String`"
-  ([this]
+  ([^javax.xml.soap.SOAPException this]
     (-> this (.getMessage))))
 
 (defn get-cause
@@ -55,7 +55,7 @@
 
   returns: the embedded Throwable object or null
            if there is none - `java.lang.Throwable`"
-  ([this]
+  ([^javax.xml.soap.SOAPException this]
     (-> this (.getCause))))
 
 (defn init-cause
@@ -76,6 +76,6 @@
   returns: a reference to this SOAPException instance - `java.lang.Throwable`
 
   throws: java.lang.IllegalArgumentException - if cause is this Throwable object. (A Throwable object cannot be its own cause.)"
-  ([this cause]
+  ([^javax.xml.soap.SOAPException this ^java.lang.Throwable cause]
     (-> this (.initCause cause))))
 

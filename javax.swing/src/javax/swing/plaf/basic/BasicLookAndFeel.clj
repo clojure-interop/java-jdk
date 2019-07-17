@@ -34,7 +34,7 @@
    look and feel and after initialize has been invoked.
 
   returns: the look and feel defaults - `javax.swing.UIDefaults`"
-  ([this]
+  ([^javax.swing.plaf.basic.BasicLookAndFeel this]
     (-> this (.getDefaults))))
 
 (defn initialize
@@ -48,7 +48,7 @@
    in a static initializer, because look and feel class objects
    may be loaded just to discover that isSupportedLookAndFeel()
    returns false."
-  ([this]
+  ([^javax.swing.plaf.basic.BasicLookAndFeel this]
     (-> this (.initialize))))
 
 (defn uninitialize
@@ -59,6 +59,6 @@
    feel is changed.
 
    Subclasses may choose to free up some resources here."
-  ([this]
+  ([^javax.swing.plaf.basic.BasicLookAndFeel this]
     (-> this (.uninitialize))))
 

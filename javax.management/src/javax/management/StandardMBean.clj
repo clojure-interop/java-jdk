@@ -88,9 +88,9 @@
   is-mx-bean - If true, the mbeanInterface parameter names an MXBean interface and the resultant MBean is an MXBean. - `boolean`
 
   throws: java.lang.IllegalArgumentException - if the given implementation is null, or if the mbeanInterface does not follow JMX design patterns for Management Interfaces, or if the given implementation does not implement the specified interface."
-  ([implementation mbean-interface is-mx-bean]
+  ([implementation ^java.lang.Class mbean-interface ^Boolean is-mx-bean]
     (new StandardMBean implementation mbean-interface is-mx-bean))
-  ([implementation mbean-interface]
+  ([implementation ^java.lang.Class mbean-interface]
     (new StandardMBean implementation mbean-interface)))
 
 (defn invoke
@@ -104,7 +104,7 @@
    invoking the action on the MBean specified. - `java.lang.Object`
 
   throws: javax.management.MBeanException - Wraps a java.lang.Exception thrown by the MBean's invoked method."
-  ([this action-name params signature]
+  ([^javax.management.StandardMBean this ^java.lang.String action-name ^java.lang.Object[] params ^java.lang.String[] signature]
     (-> this (.invoke action-name params signature))))
 
 (defn set-implementation
@@ -113,7 +113,7 @@
   implementation - The new implementation of this Standard MBean (or MXBean). The implementation object must implement the Standard MBean (or MXBean) interface that was supplied when this StandardMBean was constructed. - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if the given implementation is null."
-  ([this implementation]
+  ([^javax.management.StandardMBean this ^java.lang.Object implementation]
     (-> this (.setImplementation implementation))))
 
 (defn post-deregister
@@ -128,7 +128,7 @@
    to call the overridden method via super.postRegister(...).
    This is necessary if this object is an MXBean that is referenced
    by attributes or operations in other MXBeans."
-  ([this]
+  ([^javax.management.StandardMBean this]
     (-> this (.postDeregister))))
 
 (defn pre-deregister
@@ -141,7 +141,7 @@
    to call the overridden method via super.preDeregister(...).
 
   throws: java.lang.Exception - no checked exceptions are throw by this method but Exception is declared so that subclasses can override this method and throw their own exceptions."
-  ([this]
+  ([^javax.management.StandardMBean this]
     (-> this (.preDeregister))))
 
 (defn get-attribute
@@ -152,14 +152,14 @@
   returns: The value of the attribute retrieved. - `java.lang.Object`
 
   throws: javax.management.AttributeNotFoundException"
-  ([this attribute]
+  ([^javax.management.StandardMBean this ^java.lang.String attribute]
     (-> this (.getAttribute attribute))))
 
 (defn get-implementation
   "Get the implementation of this Standard MBean (or MXBean).
 
   returns: The implementation of this Standard MBean (or MXBean). - `java.lang.Object`"
-  ([this]
+  ([^javax.management.StandardMBean this]
     (-> this (.getImplementation))))
 
 (defn get-m-bean-info
@@ -182,7 +182,7 @@
 
   returns: The cached MBeanInfo for that MBean, if not null, or a
            newly built MBeanInfo if none was cached. - `javax.management.MBeanInfo`"
-  ([this]
+  ([^javax.management.StandardMBean this]
     (-> this (.getMBeanInfo))))
 
 (defn post-register
@@ -199,7 +199,7 @@
    by attributes or operations in other MXBeans.
 
   registration-done - Indicates whether or not the MBean has been successfully registered in the MBean server. The value false means that the registration phase has failed. - `java.lang.Boolean`"
-  ([this registration-done]
+  ([^javax.management.StandardMBean this ^java.lang.Boolean registration-done]
     (-> this (.postRegister registration-done))))
 
 (defn set-attribute
@@ -208,21 +208,21 @@
   attribute - The identification of the attribute to be set and the value it is to be set to. - `javax.management.Attribute`
 
   throws: javax.management.AttributeNotFoundException"
-  ([this attribute]
+  ([^javax.management.StandardMBean this ^javax.management.Attribute attribute]
     (-> this (.setAttribute attribute))))
 
 (defn get-implementation-class
   "Get the class of the implementation of this Standard MBean (or MXBean).
 
   returns: The class of the implementation of this Standard MBean (or MXBean). - `java.lang.Class<?>`"
-  ([this]
+  ([^javax.management.StandardMBean this]
     (-> this (.getImplementationClass))))
 
 (defn get-m-bean-interface
   "Get the Management Interface of this Standard MBean (or MXBean).
 
   returns: The management interface of this Standard MBean (or MXBean). - `java.lang.Class<?>`"
-  ([this]
+  ([^javax.management.StandardMBean this]
     (-> this (.getMBeanInterface))))
 
 (defn set-attributes
@@ -231,7 +231,7 @@
   attributes - A list of attributes: The identification of the attributes to be set and the values they are to be set to. - `javax.management.AttributeList`
 
   returns: The list of attributes that were set, with their new values. - `javax.management.AttributeList`"
-  ([this attributes]
+  ([^javax.management.StandardMBean this ^javax.management.AttributeList attributes]
     (-> this (.setAttributes attributes))))
 
 (defn pre-register
@@ -261,7 +261,7 @@
    the returned value. - `javax.management.ObjectName`
 
   throws: java.lang.IllegalArgumentException - if this is an MXBean and name is null."
-  ([this server name]
+  ([^javax.management.StandardMBean this ^javax.management.MBeanServer server ^javax.management.ObjectName name]
     (-> this (.preRegister server name))))
 
 (defn get-attributes
@@ -270,6 +270,6 @@
   attributes - A list of the attributes to be retrieved. - `java.lang.String[]`
 
   returns: The list of attributes retrieved. - `javax.management.AttributeList`"
-  ([this attributes]
+  ([^javax.management.StandardMBean this ^java.lang.String[] attributes]
     (-> this (.getAttributes attributes))))
 

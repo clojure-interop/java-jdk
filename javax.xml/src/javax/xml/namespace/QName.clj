@@ -55,11 +55,11 @@
   prefix - prefix of the QName - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - When localPart or prefix is null"
-  ([namespace-uri local-part prefix]
+  ([^java.lang.String namespace-uri ^java.lang.String local-part ^java.lang.String prefix]
     (new QName namespace-uri local-part prefix))
-  ([namespace-uri local-part]
+  ([^java.lang.String namespace-uri ^java.lang.String local-part]
     (new QName namespace-uri local-part))
-  ([local-part]
+  ([^java.lang.String local-part]
     (new QName local-part)))
 
 (defn *value-of
@@ -101,21 +101,21 @@
   returns: QName corresponding to the given String - `javax.xml.namespace.QName`
 
   throws: java.lang.IllegalArgumentException - When qNameAsString is null or malformed"
-  ([q-name-as-string]
+  ([^java.lang.String q-name-as-string]
     (QName/valueOf q-name-as-string)))
 
 (defn get-namespace-uri
   "Get the Namespace URI of this QName.
 
   returns: Namespace URI of this QName - `java.lang.String`"
-  ([this]
+  ([^javax.xml.namespace.QName this]
     (-> this (.getNamespaceURI))))
 
 (defn get-local-part
   "Get the local part of this QName.
 
   returns: local part of this QName - `java.lang.String`"
-  ([this]
+  ([^javax.xml.namespace.QName this]
     (-> this (.getLocalPart))))
 
 (defn get-prefix
@@ -128,7 +128,7 @@
    be invalid in the context of a different document.
 
   returns: prefix of this QName - `java.lang.String`"
-  ([this]
+  ([^javax.xml.namespace.QName this]
     (-> this (.getPrefix))))
 
 (defn equals
@@ -151,7 +151,7 @@
 
   returns: true if the given Object is
    equal to this QName else false - `boolean`"
-  ([this object-to-test]
+  ([^javax.xml.namespace.QName this ^java.lang.Object object-to-test]
     (-> this (.equals object-to-test))))
 
 (defn hash-code
@@ -165,7 +165,7 @@
    This method satisfies the general contract of Object.hashCode().
 
   returns: hash code for this QName Object - `int`"
-  ([this]
+  ([^javax.xml.namespace.QName this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -189,6 +189,6 @@
    This method satisfies the general contract of Object.toString().
 
   returns: String representation of this QName - `java.lang.String`"
-  ([this]
+  ([^javax.xml.namespace.QName this]
     (-> this (.toString))))
 

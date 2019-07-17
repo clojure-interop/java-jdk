@@ -134,7 +134,7 @@
   returns: the enum constant with the specified name - `java.time.Month`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([name]
+  ([^java.lang.String name]
     (Month/valueOf name)))
 
 (defn *of
@@ -149,7 +149,7 @@
   returns: the month-of-year, not null - `java.time.Month`
 
   throws: java.time.DateTimeException - if the month-of-year is invalid"
-  ([month]
+  ([^Integer month]
     (Month/of month)))
 
 (defn *from
@@ -171,7 +171,7 @@
   returns: the month-of-year, not null - `java.time.Month`
 
   throws: java.time.DateTimeException - if unable to convert to a Month"
-  ([temporal]
+  ([^java.time.temporal.TemporalAccessor temporal]
     (Month/from temporal)))
 
 (defn range
@@ -196,7 +196,7 @@
   returns: the range of valid values for the field, not null - `java.time.temporal.ValueRange`
 
   throws: java.time.DateTimeException - if the range for the field cannot be obtained"
-  ([this field]
+  ([^java.time.Month this ^java.time.temporal.TemporalField field]
     (-> this (.range field))))
 
 (defn first-month-of-quarter
@@ -210,7 +210,7 @@
    October, November and December return October.
 
   returns: the first month of the quarter corresponding to this month, not null - `java.time.Month`"
-  ([this]
+  ([^java.time.Month this]
     (-> this (.firstMonthOfQuarter))))
 
 (defn min-length
@@ -221,7 +221,7 @@
    All other months have 31 days.
 
   returns: the minimum length of this month in days, from 28 to 31 - `int`"
-  ([this]
+  ([^java.time.Month this]
     (-> this (.minLength))))
 
 (defn plus
@@ -235,7 +235,7 @@
   months - the months to add, positive or negative - `long`
 
   returns: the resulting month, not null - `java.time.Month`"
-  ([this months]
+  ([^java.time.Month this ^Long months]
     (-> this (.plus months))))
 
 (defn query
@@ -255,7 +255,7 @@
   returns: the query result, null may be returned (defined by the query) - `<R> R`
 
   throws: java.time.DateTimeException - if unable to query (defined by the query)"
-  ([this query]
+  ([^java.time.Month this ^java.time.temporal.TemporalQuery query]
     (-> this (.query query))))
 
 (defn first-day-of-year
@@ -267,7 +267,7 @@
   leap-year - true if the length is required for a leap year - `boolean`
 
   returns: the day of year corresponding to the first day of this month, from 1 to 336 - `int`"
-  ([this leap-year]
+  ([^java.time.Month this ^Boolean leap-year]
     (-> this (.firstDayOfYear leap-year))))
 
 (defn minus
@@ -281,7 +281,7 @@
   months - the months to subtract, positive or negative - `long`
 
   returns: the resulting month, not null - `java.time.Month`"
-  ([this months]
+  ([^java.time.Month this ^Long months]
     (-> this (.minus months))))
 
 (defn get-display-name
@@ -297,7 +297,7 @@
   locale - the locale to use, not null - `java.util.Locale`
 
   returns: the text value of the month-of-year, not null - `java.lang.String`"
-  ([this style locale]
+  ([^java.time.Month this ^java.time.format.TextStyle style ^java.util.Locale locale]
     (-> this (.getDisplayName style locale))))
 
 (defn get-value
@@ -307,7 +307,7 @@
    from 1 (January) to 12 (December).
 
   returns: the month-of-year, from 1 (January) to 12 (December) - `int`"
-  ([this]
+  ([^java.time.Month this]
     (-> this (.getValue))))
 
 (defn max-length
@@ -318,7 +318,7 @@
    All other months have 31 days.
 
   returns: the maximum length of this month in days, from 29 to 31 - `int`"
-  ([this]
+  ([^java.time.Month this]
     (-> this (.maxLength))))
 
 (defn get-long
@@ -342,7 +342,7 @@
   returns: the value for the field - `long`
 
   throws: java.time.DateTimeException - if a value for the field cannot be obtained"
-  ([this field]
+  ([^java.time.Month this ^java.time.temporal.TemporalField field]
     (-> this (.getLong field))))
 
 (defn length
@@ -357,7 +357,7 @@
   leap-year - true if the length is required for a leap year - `boolean`
 
   returns: the length of this month in days, from 28 to 31 - `int`"
-  ([this leap-year]
+  ([^java.time.Month this ^Boolean leap-year]
     (-> this (.length leap-year))))
 
 (defn supported?
@@ -379,7 +379,7 @@
   field - the field to check, null returns false - `java.time.temporal.TemporalField`
 
   returns: true if the field is supported on this month-of-year, false if not - `boolean`"
-  ([this field]
+  ([^java.time.Month this ^java.time.temporal.TemporalField field]
     (-> this (.isSupported field))))
 
 (defn adjust-into
@@ -417,7 +417,7 @@
   returns: the adjusted object, not null - `java.time.temporal.Temporal`
 
   throws: java.time.DateTimeException - if unable to make the adjustment"
-  ([this temporal]
+  ([^java.time.Month this ^java.time.temporal.Temporal temporal]
     (-> this (.adjustInto temporal))))
 
 (defn get
@@ -442,6 +442,6 @@
   returns: the value for the field, within the valid range of values - `int`
 
   throws: java.time.DateTimeException - if a value for the field cannot be obtained or the value is outside the range of valid values for the field"
-  ([this field]
+  ([^java.time.Month this ^java.time.temporal.TemporalField field]
     (-> this (.get field))))
 

@@ -53,13 +53,13 @@
    which initialized the LogRecord and forwarded it here.
 
   record - description of the log event. A null record is silently ignored and is not published - `java.util.logging.LogRecord`"
-  ([this record]
+  ([^java.util.logging.ConsoleHandler this ^java.util.logging.LogRecord record]
     (-> this (.publish record))))
 
 (defn close
   "Override StreamHandler.close to do a flush but not
    to close the output stream.  That is, we do not
    close System.err."
-  ([this]
+  ([^java.util.logging.ConsoleHandler this]
     (-> this (.close))))
 

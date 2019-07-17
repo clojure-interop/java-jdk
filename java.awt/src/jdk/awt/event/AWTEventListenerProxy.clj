@@ -19,20 +19,20 @@
 
   event-mask - the bitmap of event types to receive - `long`
   listener - the listener object - `java.awt.event.AWTEventListener`"
-  ([event-mask listener]
+  ([^Long event-mask ^java.awt.event.AWTEventListener listener]
     (new AWTEventListenerProxy event-mask listener)))
 
 (defn event-dispatched
   "Forwards the AWT event to the listener delegate.
 
   event - the AWT event - `java.awt.AWTEvent`"
-  ([this event]
+  ([^java.awt.event.AWTEventListenerProxy this ^java.awt.AWTEvent event]
     (-> this (.eventDispatched event))))
 
 (defn get-event-mask
   "Returns the event mask associated with the listener.
 
   returns: the event mask associated with the listener - `long`"
-  ([this]
+  ([^java.awt.event.AWTEventListenerProxy this]
     (-> this (.getEventMask))))
 

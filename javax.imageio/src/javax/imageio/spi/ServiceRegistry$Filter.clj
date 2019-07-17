@@ -16,6 +16,6 @@
   provider - a service provider Object. - `java.lang.Object`
 
   returns: true if the provider matches the criterion. - `boolean`"
-  ([this provider]
+  ([^. this ^java.lang.Object provider]
     (-> this (.filter provider))))
 

@@ -37,9 +37,9 @@
   returns: the new KeyManagerFactory object. - `javax.net.ssl.KeyManagerFactory`
 
   throws: java.security.NoSuchAlgorithmException - if a KeyManagerFactorySpi implementation for the specified algorithm is not available from the specified provider."
-  ([algorithm provider]
+  ([^java.lang.String algorithm ^java.lang.String provider]
     (KeyManagerFactory/getInstance algorithm provider))
-  ([algorithm]
+  ([^java.lang.String algorithm]
     (KeyManagerFactory/getInstance algorithm)))
 
 (defn get-algorithm
@@ -50,14 +50,14 @@
    KeyManagerFactory object.
 
   returns: the algorithm name of this KeyManagerFactory object. - `java.lang.String`"
-  ([this]
+  ([^javax.net.ssl.KeyManagerFactory this]
     (-> this (.getAlgorithm))))
 
 (defn get-provider
   "Returns the provider of this KeyManagerFactory object.
 
   returns: the provider of this KeyManagerFactory object - `java.security.Provider`"
-  ([this]
+  ([^javax.net.ssl.KeyManagerFactory this]
     (-> this (.getProvider))))
 
 (defn init
@@ -74,9 +74,9 @@
   password - the password for recovering keys in the KeyStore - `char[]`
 
   throws: java.security.KeyStoreException - if this operation fails"
-  ([this ks password]
+  ([^javax.net.ssl.KeyManagerFactory this ^java.security.KeyStore ks password]
     (-> this (.init ks password)))
-  ([this spec]
+  ([^javax.net.ssl.KeyManagerFactory this ^javax.net.ssl.ManagerFactoryParameters spec]
     (-> this (.init spec))))
 
 (defn get-key-managers
@@ -85,6 +85,6 @@
   returns: the key managers - `javax.net.ssl.KeyManager[]`
 
   throws: java.lang.IllegalStateException - if the KeyManagerFactory is not initialized"
-  ([this]
+  ([^javax.net.ssl.KeyManagerFactory this]
     (-> this (.getKeyManagers))))
 

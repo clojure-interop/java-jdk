@@ -18,6 +18,6 @@
   attributes - The job attributes to be applied to this print job. If this parameter is null then the default attributes are used. - `javax.print.attribute.PrintRequestAttributeSet`
 
   throws: javax.print.PrintException - The exception additionally may implement an interfaces which more precisely describes the cause of the exception FlavorException. If the document has a flavor not supported by this print job. AttributeException. If one or more of the attributes are not valid for this print job."
-  ([this multi-doc attributes]
+  ([^. this ^javax.print.MultiDoc multi-doc ^javax.print.attribute.PrintRequestAttributeSet attributes]
     (-> this (.print multi-doc attributes))))
 

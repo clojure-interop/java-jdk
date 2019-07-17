@@ -23,6 +23,6 @@
   table - a UIDefaults table - `javax.swing.UIDefaults`
 
   returns: the created Object - `java.lang.Object`"
-  ([this table]
+  ([^. this ^javax.swing.UIDefaults table]
     (-> this (.createValue table))))
 

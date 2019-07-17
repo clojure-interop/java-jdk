@@ -53,16 +53,16 @@
   is-local - True if the source is in the same JVM as the target - `boolean`
 
   throws: java.lang.NullPointerException - if cursorLocn is null"
-  ([dtc cursor-locn drop-action src-actions is-local]
+  ([^java.awt.dnd.DropTargetContext dtc ^java.awt.Point cursor-locn ^Integer drop-action ^Integer src-actions ^Boolean is-local]
     (new DropTargetDropEvent dtc cursor-locn drop-action src-actions is-local))
-  ([dtc cursor-locn drop-action src-actions]
+  ([^java.awt.dnd.DropTargetContext dtc ^java.awt.Point cursor-locn ^Integer drop-action ^Integer src-actions]
     (new DropTargetDropEvent dtc cursor-locn drop-action src-actions)))
 
 (defn accept-drop
   "accept the drop, using the specified action.
 
   drop-action - the specified action - `int`"
-  ([this drop-action]
+  ([^java.awt.dnd.DropTargetDropEvent this ^Integer drop-action]
     (-> this (.acceptDrop drop-action))))
 
 (defn get-location
@@ -71,7 +71,7 @@
    location in the Component's coordinates.
 
   returns: the current Cursor location in Component's coords. - `java.awt.Point`"
-  ([this]
+  ([^java.awt.dnd.DropTargetDropEvent this]
     (-> this (.getLocation))))
 
 (defn drop-complete
@@ -79,14 +79,14 @@
    that the drop transfer(s) are completed.
 
   success - a boolean indicating that the drop transfer(s) are completed. - `boolean`"
-  ([this success]
+  ([^java.awt.dnd.DropTargetDropEvent this ^Boolean success]
     (-> this (.dropComplete success))))
 
 (defn get-drop-action
   "This method returns the user drop action.
 
   returns: the user drop actions. - `int`"
-  ([this]
+  ([^java.awt.dnd.DropTargetDropEvent this]
     (-> this (.getDropAction))))
 
 (defn get-current-data-flavors-as-list
@@ -94,14 +94,14 @@
    DataFlavors as a java.util.List.
 
   returns: the currently available DataFlavors as a java.util.List - `java.util.List<java.awt.datatransfer.DataFlavor>`"
-  ([this]
+  ([^java.awt.dnd.DropTargetDropEvent this]
     (-> this (.getCurrentDataFlavorsAsList))))
 
 (defn get-source-actions
   "This method returns the source drop actions.
 
   returns: the source drop actions. - `int`"
-  ([this]
+  ([^java.awt.dnd.DropTargetDropEvent this]
     (-> this (.getSourceActions))))
 
 (defn get-transferable
@@ -109,19 +109,19 @@
    associated with the drop.
 
   returns: the Transferable associated with the drop - `java.awt.datatransfer.Transferable`"
-  ([this]
+  ([^java.awt.dnd.DropTargetDropEvent this]
     (-> this (.getTransferable))))
 
 (defn get-current-data-flavors
   "This method returns the current DataFlavors.
 
   returns: current DataFlavors - `java.awt.datatransfer.DataFlavor[]`"
-  ([this]
+  ([^java.awt.dnd.DropTargetDropEvent this]
     (-> this (.getCurrentDataFlavors))))
 
 (defn reject-drop
   "reject the Drop."
-  ([this]
+  ([^java.awt.dnd.DropTargetDropEvent this]
     (-> this (.rejectDrop))))
 
 (defn local-transfer?
@@ -129,7 +129,7 @@
    the source is in the same JVM as the target.
 
   returns: if the Source is in the same JVM - `boolean`"
-  ([this]
+  ([^java.awt.dnd.DropTargetDropEvent this]
     (-> this (.isLocalTransfer))))
 
 (defn data-flavor-supported?
@@ -140,6 +140,6 @@
   df - the DataFlavor to test - `java.awt.datatransfer.DataFlavor`
 
   returns: if the DataFlavor specified is available from the source - `boolean`"
-  ([this df]
+  ([^java.awt.dnd.DropTargetDropEvent this ^java.awt.datatransfer.DataFlavor df]
     (-> this (.isDataFlavorSupported df))))
 

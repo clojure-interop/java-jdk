@@ -30,7 +30,7 @@
   value - the value to be present - `int`
 
   returns: an OptionalInt with the value present - `java.util.OptionalInt`"
-  ([value]
+  ([^Integer value]
     (OptionalInt/of value)))
 
 (defn or-else-throw
@@ -42,14 +42,14 @@
   returns: the present value - `<X extends java.lang.Throwable> int`
 
   throws: X - if there is no value present"
-  ([this exception-supplier]
+  ([^java.util.OptionalInt this ^java.util.function.Supplier exception-supplier]
     (-> this (.orElseThrow exception-supplier))))
 
 (defn present?
   "Return true if there is a value present, otherwise false.
 
   returns: true if there is a value present, otherwise false - `boolean`"
-  ([this]
+  ([^java.util.OptionalInt this]
     (-> this (.isPresent))))
 
 (defn to-string
@@ -76,7 +76,7 @@
    between implementations and versions.
 
   returns: the string representation of this instance - `java.lang.String`"
-  ([this]
+  ([^java.util.OptionalInt this]
     (-> this (.toString))))
 
 (defn or-else-get
@@ -88,7 +88,7 @@
   returns: the value if present otherwise the result of other.getAsInt() - `int`
 
   throws: java.lang.NullPointerException - if value is not present and other is null"
-  ([this other]
+  ([^java.util.OptionalInt this ^java.util.function.IntSupplier other]
     (-> this (.orElseGet other))))
 
 (defn if-present
@@ -98,7 +98,7 @@
   consumer - block to be executed if a value is present - `java.util.function.IntConsumer`
 
   throws: java.lang.NullPointerException - if value is present and consumer is null"
-  ([this consumer]
+  ([^java.util.OptionalInt this ^java.util.function.IntConsumer consumer]
     (-> this (.ifPresent consumer))))
 
 (defn hash-code
@@ -106,7 +106,7 @@
    no value is present.
 
   returns: hash code value of the present value or 0 if no value is present - `int`"
-  ([this]
+  ([^java.util.OptionalInt this]
     (-> this (.hashCode))))
 
 (defn or-else
@@ -115,7 +115,7 @@
   other - the value to be returned if there is no value present - `int`
 
   returns: the value, if present, otherwise other - `int`"
-  ([this other]
+  ([^java.util.OptionalInt this ^Integer other]
     (-> this (.orElse other))))
 
 (defn get-as-int
@@ -125,7 +125,7 @@
   returns: the value held by this OptionalInt - `int`
 
   throws: java.util.NoSuchElementException - if there is no value present"
-  ([this]
+  ([^java.util.OptionalInt this]
     (-> this (.getAsInt))))
 
 (defn equals
@@ -140,6 +140,6 @@
 
   returns: {code true} if the other object is `equal to` this object
    otherwise false - `boolean`"
-  ([this obj]
+  ([^java.util.OptionalInt this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

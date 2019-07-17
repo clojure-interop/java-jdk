@@ -28,7 +28,7 @@
    kit.
 
   returns: the factory - `javax.swing.text.ViewFactory`"
-  ([this]
+  ([^javax.swing.text.EditorKit this]
     (-> this (.getViewFactory))))
 
 (defn create-default-document
@@ -36,7 +36,7 @@
    that is appropriate for this type of editor.
 
   returns: the model - `javax.swing.text.Document`"
-  ([this]
+  ([^javax.swing.text.EditorKit this]
     (-> this (.createDefaultDocument))))
 
 (defn read
@@ -49,7 +49,7 @@
   pos - The location in the document to place the content >= 0. - `int`
 
   throws: java.io.IOException - on any I/O error"
-  ([this in doc pos]
+  ([^javax.swing.text.EditorKit this ^java.io.InputStream in ^javax.swing.text.Document doc ^Integer pos]
     (-> this (.read in doc pos))))
 
 (defn get-actions
@@ -58,7 +58,7 @@
    view produced by this kit.
 
   returns: the set of actions - `javax.swing.Action[]`"
-  ([this]
+  ([^javax.swing.text.EditorKit this]
     (-> this (.getActions))))
 
 (defn get-content-type
@@ -66,7 +66,7 @@
    kit represents support for.
 
   returns: the type - `java.lang.String`"
-  ([this]
+  ([^javax.swing.text.EditorKit this]
     (-> this (.getContentType))))
 
 (defn install
@@ -74,7 +74,7 @@
    a JEditorPane.
 
   c - the JEditorPane - `javax.swing.JEditorPane`"
-  ([this c]
+  ([^javax.swing.text.EditorKit this ^javax.swing.JEditorPane c]
     (-> this (.install c))))
 
 (defn deinstall
@@ -83,7 +83,7 @@
    listeners that were attached.
 
   c - the JEditorPane - `javax.swing.JEditorPane`"
-  ([this c]
+  ([^javax.swing.text.EditorKit this ^javax.swing.JEditorPane c]
     (-> this (.deinstall c))))
 
 (defn clone
@@ -92,7 +92,7 @@
    null is returned.
 
   returns: the copy - `java.lang.Object`"
-  ([this]
+  ([^javax.swing.text.EditorKit this]
     (-> this (.clone))))
 
 (defn write
@@ -105,7 +105,7 @@
   len - The amount to write out >= 0. - `int`
 
   throws: java.io.IOException - on any I/O error"
-  ([this out doc pos len]
+  ([^javax.swing.text.EditorKit this ^java.io.OutputStream out ^javax.swing.text.Document doc ^Integer pos ^Integer len]
     (-> this (.write out doc pos len))))
 
 (defn create-caret
@@ -113,6 +113,6 @@
    produced by the associated ViewFactory.
 
   returns: the caret - `javax.swing.text.Caret`"
-  ([this]
+  ([^javax.swing.text.EditorKit this]
     (-> this (.createCaret))))
 

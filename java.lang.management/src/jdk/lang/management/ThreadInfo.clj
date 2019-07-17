@@ -181,7 +181,7 @@
            null otherwise. - `java.lang.management.ThreadInfo`
 
   throws: java.lang.IllegalArgumentException - if cd does not represent a ThreadInfo with the attributes described above."
-  ([cd]
+  ([^javax.management.openmbean.CompositeData cd]
     (ThreadInfo/from cd)))
 
 (defn get-lock-owner-id
@@ -195,7 +195,7 @@
    this thread is blocked on;
    -1 if this thread is not blocked
    or if the object is not owned by any thread. - `long`"
-  ([this]
+  ([^java.lang.management.ThreadInfo this]
     (-> this (.getLockOwnerId))))
 
 (defn get-stack-trace
@@ -216,7 +216,7 @@
    is permitted to return a zero-length array from this method.
 
   returns: an array of StackTraceElement objects of the thread. - `java.lang.StackTraceElement[]`"
-  ([this]
+  ([^java.lang.management.ThreadInfo this]
     (-> this (.getStackTrace))))
 
 (defn in-native?
@@ -228,14 +228,14 @@
 
   returns: true if the thread is executing native code;
            false otherwise. - `boolean`"
-  ([this]
+  ([^java.lang.management.ThreadInfo this]
     (-> this (.isInNative))))
 
 (defn get-thread-name
   "Returns the name of the thread associated with this ThreadInfo.
 
   returns: the name of the associated thread. - `java.lang.String`"
-  ([this]
+  ([^java.lang.management.ThreadInfo this]
     (-> this (.getThreadName))))
 
 (defn get-blocked-count
@@ -247,7 +247,7 @@
 
   returns: the total number of times that the thread
    entered the BLOCKED state. - `long`"
-  ([this]
+  ([^java.lang.management.ThreadInfo this]
     (-> this (.getBlockedCount))))
 
 (defn get-lock-info
@@ -283,7 +283,7 @@
 
   returns: LockInfo of an object for which the thread
            is blocked waiting if any; null otherwise. - `java.lang.management.LockInfo`"
-  ([this]
+  ([^java.lang.management.ThreadInfo this]
     (-> this (.getLockInfo))))
 
 (defn get-lock-owner-name
@@ -297,14 +297,14 @@
    this thread is blocked on;
    null if this thread is not blocked
    or if the object is not owned by any thread. - `java.lang.String`"
-  ([this]
+  ([^java.lang.management.ThreadInfo this]
     (-> this (.getLockOwnerName))))
 
 (defn get-thread-id
   "Returns the ID of the thread associated with this ThreadInfo.
 
   returns: the ID of the associated thread. - `long`"
-  ([this]
+  ([^java.lang.management.ThreadInfo this]
     (-> this (.getThreadId))))
 
 (defn get-waited-count
@@ -317,7 +317,7 @@
 
   returns: the total number of times that the thread
    was in the WAITING or TIMED_WAITING state. - `long`"
-  ([this]
+  ([^java.lang.management.ThreadInfo this]
     (-> this (.getWaitedCount))))
 
 (defn to-string
@@ -330,7 +330,7 @@
    and a stack trace if any.
 
   returns: a string representation of this thread info. - `java.lang.String`"
-  ([this]
+  ([^java.lang.management.ThreadInfo this]
     (-> this (.toString))))
 
 (defn get-blocked-time
@@ -353,7 +353,7 @@
    -1 if thread contention monitoring is disabled. - `long`
 
   throws: java.lang.UnsupportedOperationException - if the Java virtual machine does not support this operation."
-  ([this]
+  ([^java.lang.management.ThreadInfo this]
     (-> this (.getBlockedTime))))
 
 (defn get-lock-name
@@ -372,7 +372,7 @@
   returns: the string representation of the object on which
    the thread is blocked if any;
    null otherwise. - `java.lang.String`"
-  ([this]
+  ([^java.lang.management.ThreadInfo this]
     (-> this (.getLockName))))
 
 (defn get-locked-monitors
@@ -385,14 +385,14 @@
 
   returns: an array of MonitorInfo objects representing
            the object monitors locked by the thread. - `java.lang.management.MonitorInfo[]`"
-  ([this]
+  ([^java.lang.management.ThreadInfo this]
     (-> this (.getLockedMonitors))))
 
 (defn get-thread-state
   "Returns the state of the thread associated with this ThreadInfo.
 
   returns: Thread.State of the associated thread. - `java.lang.Thread.State`"
-  ([this]
+  ([^java.lang.management.ThreadInfo this]
     (-> this (.getThreadState))))
 
 (defn suspended?
@@ -402,7 +402,7 @@
 
   returns: true if the thread is suspended;
            false otherwise. - `boolean`"
-  ([this]
+  ([^java.lang.management.ThreadInfo this]
     (-> this (.isSuspended))))
 
 (defn get-locked-synchronizers
@@ -415,7 +415,7 @@
 
   returns: an array of LockInfo objects representing
            the ownable synchronizers locked by the thread. - `java.lang.management.LockInfo[]`"
-  ([this]
+  ([^java.lang.management.ThreadInfo this]
     (-> this (.getLockedSynchronizers))))
 
 (defn get-waited-time
@@ -440,6 +440,6 @@
    -1 if thread contention monitoring is disabled. - `long`
 
   throws: java.lang.UnsupportedOperationException - if the Java virtual machine does not support this operation."
-  ([this]
+  ([^java.lang.management.ThreadInfo this]
     (-> this (.getWaitedTime))))
 

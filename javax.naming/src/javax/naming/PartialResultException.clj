@@ -17,7 +17,7 @@
    message specified. All other fields default to null.
 
   explanation - Possibly null detail explaining the exception. - `java.lang.String`"
-  ([explanation]
+  ([^java.lang.String explanation]
     (new PartialResultException explanation))
   ([]
     (new PartialResultException )))

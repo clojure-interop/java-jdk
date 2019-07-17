@@ -43,9 +43,9 @@
   buffer-size - the number of bytes of data to load into the clip from the array. - `int`
 
   throws: javax.sound.sampled.LineUnavailableException - if the line cannot be opened due to resource restrictions"
-  ([this format data offset buffer-size]
+  ([^. this ^javax.sound.sampled.AudioFormat format data ^Integer offset ^Integer buffer-size]
     (-> this (.open format data offset buffer-size)))
-  ([this stream]
+  ([^. this ^javax.sound.sampled.AudioInputStream stream]
     (-> this (.open stream))))
 
 (defn get-frame-length
@@ -53,7 +53,7 @@
 
   returns: the media length, expressed in sample frames,
    or AudioSystem.NOT_SPECIFIED if the line is not open. - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getFrameLength))))
 
 (defn get-microsecond-length
@@ -61,7 +61,7 @@
 
   returns: the media duration, expressed in microseconds,
    or AudioSystem.NOT_SPECIFIED if the line is not open. - `long`"
-  ([this]
+  ([^. this]
     (-> this (.getMicrosecondLength))))
 
 (defn set-frame-position
@@ -74,7 +74,7 @@
    method of DataLine.
 
   frames - the desired new media position, expressed in sample frames - `int`"
-  ([this frames]
+  ([^. this ^Integer frames]
     (-> this (.setFramePosition frames))))
 
 (defn set-microsecond-position
@@ -90,7 +90,7 @@
    method of DataLine.
 
   microseconds - the desired new media position, expressed in microseconds - `long`"
-  ([this microseconds]
+  ([^. this ^Long microseconds]
     (-> this (.setMicrosecondPosition microseconds))))
 
 (defn set-loop-points
@@ -105,7 +105,7 @@
   end - the loop's ending position, in sample frames (zero-based), or -1 to indicate the final frame - `int`
 
   throws: java.lang.IllegalArgumentException - if the requested loop points cannot be set, usually because one or both falls outside the media's duration or because the ending point is before the starting point"
-  ([this start end]
+  ([^. this ^Integer start ^Integer end]
     (-> this (.setLoopPoints start end))))
 
 (defn loop
@@ -128,6 +128,6 @@
    affected by an interrupted loop operation.
 
   count - the number of times playback should loop back from the loop's end position to the loop's start position, or LOOP_CONTINUOUSLY to indicate that looping should continue until interrupted - `int`"
-  ([this count]
+  ([^. this ^Integer count]
     (-> this (.loop count))))
 

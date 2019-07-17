@@ -16,7 +16,7 @@
    with an explanation. All other fields set to null.
 
   msg - Detail about this exception. Can be null. - `java.lang.String`"
-  ([msg]
+  ([^java.lang.String msg]
     (new InvalidSearchControlsException msg))
   ([]
     (new InvalidSearchControlsException )))

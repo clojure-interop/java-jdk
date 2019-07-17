@@ -17,7 +17,7 @@
   "Set the retrieved Locale.
 
   locale - the retrieved Locale. - `java.util.Locale`"
-  ([this locale]
+  ([^javax.security.auth.callback.LanguageCallback this ^java.util.Locale locale]
     (-> this (.setLocale locale))))
 
 (defn get-locale
@@ -25,6 +25,6 @@
 
   returns: the retrieved Locale, or null
             if no Locale could be retrieved. - `java.util.Locale`"
-  ([this]
+  ([^javax.security.auth.callback.LanguageCallback this]
     (-> this (.getLocale))))
 

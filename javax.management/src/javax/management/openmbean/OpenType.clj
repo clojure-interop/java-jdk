@@ -68,21 +68,21 @@
    `[[[I` (without the quotes)
 
   returns: the class name. - `java.lang.String`"
-  ([this]
+  ([^javax.management.openmbean.OpenType this]
     (-> this (.getClassName))))
 
 (defn get-type-name
   "Returns the name of this OpenType instance.
 
   returns: the type name. - `java.lang.String`"
-  ([this]
+  ([^javax.management.openmbean.OpenType this]
     (-> this (.getTypeName))))
 
 (defn get-description
   "Returns the text description of this OpenType instance.
 
   returns: the description. - `java.lang.String`"
-  ([this]
+  ([^javax.management.openmbean.OpenType this]
     (-> this (.getDescription))))
 
 (defn array?
@@ -90,7 +90,7 @@
    type describes are arrays, false otherwise.
 
   returns: true if this is an array type. - `boolean`"
-  ([this]
+  ([^javax.management.openmbean.OpenType this]
     (-> this (.isArray))))
 
 (defn value?
@@ -100,7 +100,7 @@
 
   returns: true if obj is a value for this
    open type, false otherwise. - `boolean`"
-  ([this obj]
+  ([^javax.management.openmbean.OpenType this ^java.lang.Object obj]
     (-> this (.isValue obj))))
 
 (defn equals
@@ -110,20 +110,20 @@
   obj - the object to compare to. - `java.lang.Object`
 
   returns: true if this object and obj are equal. - `boolean`"
-  ([this obj]
+  ([^javax.management.openmbean.OpenType this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^javax.management.openmbean.OpenType this]
     (-> this (.hashCode))))
 
 (defn to-string
   "Returns a string representation of this open type instance.
 
   returns: the string representation. - `java.lang.String`"
-  ([this]
+  ([^javax.management.openmbean.OpenType this]
     (-> this (.toString))))
 

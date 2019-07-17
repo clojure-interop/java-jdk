@@ -54,7 +54,7 @@
   locale - the desired locale - `java.util.Locale`
 
   throws: java.util.MissingResourceException - if the resources for the specified locale cannot be found or cannot be loaded."
-  ([locale]
+  ([^java.util.Locale locale]
     (new DateFormatSymbols locale))
   ([]
     (new DateFormatSymbols )))
@@ -87,7 +87,7 @@
   returns: a DateFormatSymbols instance. - `java.text.DateFormatSymbols`
 
   throws: java.lang.NullPointerException - if locale is null"
-  ([locale]
+  ([^java.util.Locale locale]
     (DateFormatSymbols/getInstance locale))
   ([]
     (DateFormatSymbols/getInstance )))
@@ -96,7 +96,7 @@
   "Sets short weekday strings. For example: `Sun`, `Mon`, etc.
 
   new-short-weekdays - the new short weekday strings. The array should be indexed by Calendar.SUNDAY, Calendar.MONDAY, etc. - `java.lang.String[]`"
-  ([this new-short-weekdays]
+  ([^java.text.DateFormatSymbols this ^java.lang.String[] new-short-weekdays]
     (-> this (.setShortWeekdays new-short-weekdays))))
 
 (defn get-months
@@ -113,28 +113,28 @@
    (LDML) specification for more details.
 
   returns: the month strings. - `java.lang.String[]`"
-  ([this]
+  ([^java.text.DateFormatSymbols this]
     (-> this (.getMonths))))
 
 (defn set-short-months
   "Sets short month strings. For example: `Jan`, `Feb`, etc.
 
   new-short-months - the new short month strings. - `java.lang.String[]`"
-  ([this new-short-months]
+  ([^java.text.DateFormatSymbols this ^java.lang.String[] new-short-months]
     (-> this (.setShortMonths new-short-months))))
 
 (defn set-months
   "Sets month strings. For example: `January`, `February`, etc.
 
   new-months - the new month strings. - `java.lang.String[]`"
-  ([this new-months]
+  ([^java.text.DateFormatSymbols this ^java.lang.String[] new-months]
     (-> this (.setMonths new-months))))
 
 (defn set-am-pm-strings
   "Sets ampm strings. For example: `AM` and `PM`.
 
   new-ampms - the new ampm strings. - `java.lang.String[]`"
-  ([this new-ampms]
+  ([^java.text.DateFormatSymbols this ^java.lang.String[] new-ampms]
     (-> this (.setAmPmStrings new-ampms))))
 
 (defn get-weekdays
@@ -142,28 +142,28 @@
 
   returns: the weekday strings. Use Calendar.SUNDAY,
    Calendar.MONDAY, etc. to index the result array. - `java.lang.String[]`"
-  ([this]
+  ([^java.text.DateFormatSymbols this]
     (-> this (.getWeekdays))))
 
 (defn set-eras
   "Sets era strings. For example: `AD` and `BC`.
 
   new-eras - the new era strings. - `java.lang.String[]`"
-  ([this new-eras]
+  ([^java.text.DateFormatSymbols this ^java.lang.String[] new-eras]
     (-> this (.setEras new-eras))))
 
 (defn get-am-pm-strings
   "Gets ampm strings. For example: `AM` and `PM`.
 
   returns: the ampm strings. - `java.lang.String[]`"
-  ([this]
+  ([^java.text.DateFormatSymbols this]
     (-> this (.getAmPmStrings))))
 
 (defn set-weekdays
   "Sets weekday strings. For example: `Sunday`, `Monday`, etc.
 
   new-weekdays - the new weekday strings. The array should be indexed by Calendar.SUNDAY, Calendar.MONDAY, etc. - `java.lang.String[]`"
-  ([this new-weekdays]
+  ([^java.text.DateFormatSymbols this ^java.lang.String[] new-weekdays]
     (-> this (.setWeekdays new-weekdays))))
 
 (defn get-short-months
@@ -180,7 +180,7 @@
    (LDML) specification for more details.
 
   returns: the short month strings. - `java.lang.String[]`"
-  ([this]
+  ([^java.text.DateFormatSymbols this]
     (-> this (.getShortMonths))))
 
 (defn set-zone-strings
@@ -209,14 +209,14 @@
   new-zone-strings - the new time zone strings. - `java.lang.String[][]`
 
   throws: java.lang.IllegalArgumentException - if the length of any row in newZoneStrings is less than 5"
-  ([this new-zone-strings]
+  ([^java.text.DateFormatSymbols this ^java.lang.String[][] new-zone-strings]
     (-> this (.setZoneStrings new-zone-strings))))
 
 (defn get-local-pattern-chars
   "Gets localized date-time pattern characters. For example: 'u', 't', etc.
 
   returns: the localized date-time pattern characters. - `java.lang.String`"
-  ([this]
+  ([^java.text.DateFormatSymbols this]
     (-> this (.getLocalPatternChars))))
 
 (defn get-short-weekdays
@@ -224,21 +224,21 @@
 
   returns: the short weekday strings. Use Calendar.SUNDAY,
    Calendar.MONDAY, etc. to index the result array. - `java.lang.String[]`"
-  ([this]
+  ([^java.text.DateFormatSymbols this]
     (-> this (.getShortWeekdays))))
 
 (defn get-eras
   "Gets era strings. For example: `AD` and `BC`.
 
   returns: the era strings. - `java.lang.String[]`"
-  ([this]
+  ([^java.text.DateFormatSymbols this]
     (-> this (.getEras))))
 
 (defn clone
   "Overrides Cloneable
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([this]
+  ([^java.text.DateFormatSymbols this]
     (-> this (.clone))))
 
 (defn hash-code
@@ -246,14 +246,14 @@
    Generates a hash code for the DateFormatSymbols object.
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^java.text.DateFormatSymbols this]
     (-> this (.hashCode))))
 
 (defn set-local-pattern-chars
   "Sets localized date-time pattern characters. For example: 'u', 't', etc.
 
   new-local-pattern-chars - the new localized date-time pattern characters. - `java.lang.String`"
-  ([this new-local-pattern-chars]
+  ([^java.text.DateFormatSymbols this ^java.lang.String new-local-pattern-chars]
     (-> this (.setLocalPatternChars new-local-pattern-chars))))
 
 (defn get-zone-strings
@@ -292,7 +292,7 @@
    implementations.
 
   returns: the time zone strings. - `java.lang.String[][]`"
-  ([this]
+  ([^java.text.DateFormatSymbols this]
     (-> this (.getZoneStrings))))
 
 (defn equals
@@ -302,6 +302,6 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.text.DateFormatSymbols this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

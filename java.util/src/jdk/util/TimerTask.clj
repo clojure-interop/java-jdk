@@ -5,7 +5,7 @@
 
 (defn run
   "The action to be performed by this timer task."
-  ([this]
+  ([^java.util.TimerTask this]
     (-> this (.run))))
 
 (defn cancel
@@ -29,7 +29,7 @@
            the task was already cancelled.  (Loosely speaking, this method
            returns true if it prevents one or more scheduled
            executions from taking place.) - `boolean`"
-  ([this]
+  ([^java.util.TimerTask this]
     (-> this (.cancel))))
 
 (defn scheduled-execution-time
@@ -58,6 +58,6 @@
            scheduled to occur, in the format returned by Date.getTime().
            The return value is undefined if the task has yet to commence
            its first execution. - `long`"
-  ([this]
+  ([^java.util.TimerTask this]
     (-> this (.scheduledExecutionTime))))
 

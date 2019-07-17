@@ -40,9 +40,9 @@
   doc - StyledDocument - `javax.swing.text.StyledDocument`
   pos - The location in the document to fetch the content. - `int`
   len - The amount to write out. - `int`"
-  ([w doc pos len]
+  ([^java.io.Writer w ^javax.swing.text.StyledDocument doc ^Integer pos ^Integer len]
     (new MinimalHTMLWriter w doc pos len))
-  ([w doc]
+  ([^java.io.Writer w ^javax.swing.text.StyledDocument doc]
     (new MinimalHTMLWriter w doc)))
 
 (defn write
@@ -50,6 +50,6 @@
    from a StyledDocument.
 
   throws: java.io.IOException - on any I/O error"
-  ([this]
+  ([^javax.swing.text.html.MinimalHTMLWriter this]
     (-> this (.write))))
 

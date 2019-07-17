@@ -13,6 +13,6 @@
    from this ServiceProvider.
 
   returns: the BeanInfo array - `java.beans.BeanInfo[]`"
-  ([this]
+  ([^. this]
     (-> this (.getServicesBeanInfo))))
 

@@ -32,7 +32,7 @@
   Constructs a JPopupMenu with the specified title.
 
   label - the string that a UI may use to display as a title for the popup menu. - `java.lang.String`"
-  ([label]
+  ([^java.lang.String label]
     (new JPopupMenu label))
   ([]
     (new JPopupMenu )))
@@ -42,7 +42,7 @@
     property.
 
   a-flag - true if popups can be lightweight, otherwise false - `boolean`"
-  ([a-flag]
+  ([^Boolean a-flag]
     (JPopupMenu/setDefaultLightWeightPopupEnabled a-flag)))
 
 (defn *get-default-light-weight-popup-enabled?
@@ -61,23 +61,23 @@
 
   width - the new width of the Popup in pixels - `int`
   height - the new height of the Popup in pixels - `int`"
-  ([this width height]
+  ([^javax.swing.JPopupMenu this ^Integer width ^Integer height]
     (-> this (.setPopupSize width height)))
-  ([this d]
+  ([^javax.swing.JPopupMenu this ^java.awt.Dimension d]
     (-> this (.setPopupSize d))))
 
 (defn light-weight-popup-enabled?
   "Gets the lightWeightPopupEnabled property.
 
   returns: the value of the lightWeightPopupEnabled property - `boolean`"
-  ([this]
+  ([^javax.swing.JPopupMenu this]
     (-> this (.isLightWeightPopupEnabled))))
 
 (defn get-component
   "Returns this JPopupMenu component.
 
   returns: this JPopupMenu object - `java.awt.Component`"
-  ([this]
+  ([^javax.swing.JPopupMenu this]
     (-> this (.getComponent))))
 
 (defn set-location
@@ -91,7 +91,7 @@
 
   x - the x coordinate of the popup's new position in the screen's coordinate space - `int`
   y - the y coordinate of the popup's new position in the screen's coordinate space - `int`"
-  ([this x y]
+  ([^javax.swing.JPopupMenu this ^Integer x ^Integer y]
     (-> this (.setLocation x y))))
 
 (defn get-component-index
@@ -101,13 +101,13 @@
 
   returns: the index of the component, where 0 is the first;
            or -1 if the component is not found - `int`"
-  ([this c]
+  ([^javax.swing.JPopupMenu this ^java.awt.Component c]
     (-> this (.getComponentIndex c))))
 
 (defn pack
   "Lays out the container so that it uses the minimum space
    needed to display its contents."
-  ([this]
+  ([^javax.swing.JPopupMenu this]
     (-> this (.pack))))
 
 (defn get-component-at-index
@@ -116,7 +116,7 @@
   i - the index of the component, where 0 is the first - `int`
 
   returns: the Component at that index - `java.lang.  java.awt.Component`"
-  ([this i]
+  ([^javax.swing.JPopupMenu this ^Integer i]
     (-> this (.getComponentAtIndex i))))
 
 (defn set-selected
@@ -124,7 +124,7 @@
    in a change to the selection model.
 
   sel - the Component to select - `java.awt.Component`"
-  ([this sel]
+  ([^javax.swing.JPopupMenu this ^java.awt.Component sel]
     (-> this (.setSelected sel))))
 
 (defn get-invoker
@@ -132,28 +132,28 @@
    popup menu.
 
   returns: the Component in which the popup menu is displayed - `java.awt.Component`"
-  ([this]
+  ([^javax.swing.JPopupMenu this]
     (-> this (.getInvoker))))
 
 (defn add-popup-menu-listener
   "Adds a PopupMenu listener.
 
   l - the PopupMenuListener to add - `javax.swing.event.PopupMenuListener`"
-  ([this l]
+  ([^javax.swing.JPopupMenu this ^javax.swing.event.PopupMenuListener l]
     (-> this (.addPopupMenuListener l))))
 
 (defn remove-popup-menu-listener
   "Removes a PopupMenu listener.
 
   l - the PopupMenuListener to remove - `javax.swing.event.PopupMenuListener`"
-  ([this l]
+  ([^javax.swing.JPopupMenu this ^javax.swing.event.PopupMenuListener l]
     (-> this (.removePopupMenuListener l))))
 
 (defn get-ui-class-id
   "Returns the name of the L&F class that renders this component.
 
   returns: the string `PopupMenuUI` - `java.lang.String`"
-  ([this]
+  ([^javax.swing.JPopupMenu this]
     (-> this (.getUIClassID))))
 
 (defn popup-trigger?
@@ -163,14 +163,14 @@
   e - `java.awt.event.MouseEvent`
 
   returns: true if the mouse event is a popup trigger - `boolean`"
-  ([this e]
+  ([^javax.swing.JPopupMenu this ^java.awt.event.MouseEvent e]
     (-> this (.isPopupTrigger e))))
 
 (defn set-selection-model
   "Sets the model object to handle single selections.
 
   model - the new SingleSelectionModel - `javax.swing.SingleSelectionModel`"
-  ([this model]
+  ([^javax.swing.JPopupMenu this ^javax.swing.SingleSelectionModel model]
     (-> this (.setSelectionModel model))))
 
 (defn menu-selection-changed
@@ -180,19 +180,19 @@
    Overrides MenuElement.menuSelectionChanged.
 
   is-included - true if this menu is active, false if it is not - `boolean`"
-  ([this is-included]
+  ([^javax.swing.JPopupMenu this ^Boolean is-included]
     (-> this (.menuSelectionChanged is-included))))
 
 (defn add-separator
   "Appends a new separator at the end of the menu."
-  ([this]
+  ([^javax.swing.JPopupMenu this]
     (-> this (.addSeparator))))
 
 (defn set-border-painted
   "Sets whether the border should be painted.
 
   b - if true, the border is painted. - `boolean`"
-  ([this b]
+  ([^javax.swing.JPopupMenu this ^Boolean b]
     (-> this (.setBorderPainted b))))
 
 (defn get-menu-key-listeners
@@ -201,21 +201,21 @@
 
   returns: all of the MenuKeyListeners added or an empty
            array if no listeners have been added - `javax.swing.event.MenuKeyListener[]`"
-  ([this]
+  ([^javax.swing.JPopupMenu this]
     (-> this (.getMenuKeyListeners))))
 
 (defn add-menu-key-listener
   "Adds a MenuKeyListener to the popup menu.
 
   l - the MenuKeyListener to be added - `javax.swing.event.MenuKeyListener`"
-  ([this l]
+  ([^javax.swing.JPopupMenu this ^javax.swing.event.MenuKeyListener l]
     (-> this (.addMenuKeyListener l))))
 
 (defn get-selection-model
   "Returns the model object that handles single selections.
 
   returns: the selectionModel property - `javax.swing.SingleSelectionModel`"
-  ([this]
+  ([^javax.swing.JPopupMenu this]
     (-> this (.getSelectionModel))))
 
 (defn show
@@ -225,14 +225,14 @@
   invoker - the component in whose space the popup menu is to appear - `java.awt.Component`
   x - the x coordinate in invoker's coordinate space at which the popup menu is to be displayed - `int`
   y - the y coordinate in invoker's coordinate space at which the popup menu is to be displayed - `int`"
-  ([this invoker x y]
+  ([^javax.swing.JPopupMenu this ^java.awt.Component invoker ^Integer x ^Integer y]
     (-> this (.show invoker x y))))
 
 (defn set-ui
   "Sets the L&F object that renders this component.
 
   ui - the new PopupMenuUI L&F object - `javax.swing.plaf.PopupMenuUI`"
-  ([this ui]
+  ([^javax.swing.JPopupMenu this ^javax.swing.plaf.PopupMenuUI ui]
     (-> this (.setUI ui))))
 
 (defn remove
@@ -241,21 +241,21 @@
   pos - the position of the item to be removed - `int`
 
   throws: java.lang.IllegalArgumentException - if the value of pos < 0, or if the value of pos is greater than the number of items"
-  ([this pos]
+  ([^javax.swing.JPopupMenu this ^Integer pos]
     (-> this (.remove pos))))
 
 (defn get-ui
   "Returns the look and feel (L&F) object that renders this component.
 
   returns: the PopupMenuUI object that renders this component - `javax.swing.plaf.PopupMenuUI`"
-  ([this]
+  ([^javax.swing.JPopupMenu this]
     (-> this (.getUI))))
 
 (defn get-label
   "Returns the popup menu's label
 
   returns: a string containing the popup menu's label - `java.lang.String`"
-  ([this]
+  ([^javax.swing.JPopupMenu this]
     (-> this (.getLabel))))
 
 (defn get-accessible-context
@@ -266,14 +266,14 @@
 
   returns: an AccessibleJPopupMenu that serves as the
            AccessibleContext of this JPopupMenu - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^javax.swing.JPopupMenu this]
     (-> this (.getAccessibleContext))))
 
 (defn remove-menu-key-listener
   "Removes a MenuKeyListener from the popup menu.
 
   l - the MenuKeyListener to be removed - `javax.swing.event.MenuKeyListener`"
-  ([this l]
+  ([^javax.swing.JPopupMenu this ^javax.swing.event.MenuKeyListener l]
     (-> this (.removeMenuKeyListener l))))
 
 (defn get-sub-elements
@@ -285,14 +285,14 @@
    MenuElement interface.
 
   returns: an array of MenuElement objects - `javax.swing.MenuElement[]`"
-  ([this]
+  ([^javax.swing.JPopupMenu this]
     (-> this (.getSubElements))))
 
 (defn set-visible
   "Sets the visibility of the popup menu.
 
   b - true to make the popup visible, or false to hide it - `boolean`"
-  ([this b]
+  ([^javax.swing.JPopupMenu this ^Boolean b]
     (-> this (.setVisible b))))
 
 (defn set-invoker
@@ -300,7 +300,7 @@
    the popup menu menu is to be displayed.
 
   invoker - the Component in which the popup menu is displayed - `java.awt.Component`"
-  ([this invoker]
+  ([^javax.swing.JPopupMenu this ^java.awt.Component invoker]
     (-> this (.setInvoker invoker))))
 
 (defn process-key-event
@@ -314,7 +314,7 @@
   e - a KeyEvent - `java.awt.event.KeyEvent`
   path - the MenuElement path array - `javax.swing.MenuElement[]`
   manager - the MenuSelectionManager - `javax.swing.MenuSelectionManager`"
-  ([this e path manager]
+  ([^javax.swing.JPopupMenu this ^java.awt.event.KeyEvent e ^javax.swing.MenuElement[] path ^javax.swing.MenuSelectionManager manager]
     (-> this (.processKeyEvent e path manager))))
 
 (defn visible?
@@ -323,7 +323,7 @@
 
   returns: true if the component is visible,
    false otherwise - `boolean`"
-  ([this]
+  ([^javax.swing.JPopupMenu this]
     (-> this (.isVisible))))
 
 (defn insert
@@ -334,7 +334,7 @@
   index - specifies the position at which to insert the Action, where 0 is the first - `int`
 
   throws: java.lang.IllegalArgumentException - if index < 0"
-  ([this a index]
+  ([^javax.swing.JPopupMenu this ^javax.swing.Action a ^Integer index]
     (-> this (.insert a index))))
 
 (defn process-mouse-event
@@ -344,7 +344,7 @@
   event - `java.awt.event.MouseEvent`
   path - `javax.swing.MenuElement[]`
   manager - `javax.swing.MenuSelectionManager`"
-  ([this event path manager]
+  ([^javax.swing.JPopupMenu this ^java.awt.event.MouseEvent event ^javax.swing.MenuElement[] path ^javax.swing.MenuSelectionManager manager]
     (-> this (.processMouseEvent event path manager))))
 
 (defn add
@@ -353,7 +353,7 @@
   menu-item - the JMenuItem to add - `javax.swing.JMenuItem`
 
   returns: the JMenuItem added - `javax.swing.JMenuItem`"
-  ([this menu-item]
+  ([^javax.swing.JPopupMenu this ^javax.swing.JMenuItem menu-item]
     (-> this (.add menu-item))))
 
 (defn set-light-weight-popup-enabled
@@ -371,19 +371,19 @@
    no matter what the value of this property.
 
   a-flag - false to disable lightweight popups - `boolean`"
-  ([this a-flag]
+  ([^javax.swing.JPopupMenu this ^Boolean a-flag]
     (-> this (.setLightWeightPopupEnabled a-flag))))
 
 (defn border-painted?
   "Checks whether the border should be painted.
 
   returns: true if the border is painted, false otherwise - `boolean`"
-  ([this]
+  ([^javax.swing.JPopupMenu this]
     (-> this (.isBorderPainted))))
 
 (defn update-ui
   "Resets the UI property to a value from the current look and feel."
-  ([this]
+  ([^javax.swing.JPopupMenu this]
     (-> this (.updateUI))))
 
 (defn get-popup-menu-listeners
@@ -392,7 +392,7 @@
 
   returns: all of the PopupMenuListeners added or an empty
            array if no listeners have been added - `javax.swing.event.PopupMenuListener[]`"
-  ([this]
+  ([^javax.swing.JPopupMenu this]
     (-> this (.getPopupMenuListeners))))
 
 (defn set-label
@@ -400,7 +400,7 @@
    to display or not display this.
 
   label - a string specifying the label for the popup menu - `java.lang.String`"
-  ([this label]
+  ([^javax.swing.JPopupMenu this ^java.lang.String label]
     (-> this (.setLabel label))))
 
 (defn get-margin
@@ -408,6 +408,6 @@
    its containers.
 
   returns: an Insets object containing the margin values. - `java.awt.Insets`"
-  ([this]
+  ([^javax.swing.JPopupMenu this]
     (-> this (.getMargin))))
 

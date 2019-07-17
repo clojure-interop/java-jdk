@@ -19,13 +19,13 @@
   descr - description of the role (can be null) - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if null parameter"
-  ([role-name mbean-class-name read write min max descr]
+  ([^java.lang.String role-name ^java.lang.String mbean-class-name ^Boolean read ^Boolean write ^Integer min ^Integer max ^java.lang.String descr]
     (new RoleInfo role-name mbean-class-name read write min max descr))
-  ([role-name mbean-class-name read write]
+  ([^java.lang.String role-name ^java.lang.String mbean-class-name ^Boolean read ^Boolean write]
     (new RoleInfo role-name mbean-class-name read write))
-  ([role-name mbean-class-name]
+  ([^java.lang.String role-name ^java.lang.String mbean-class-name]
     (new RoleInfo role-name mbean-class-name))
-  ([role-info]
+  ([^javax.management.relation.RoleInfo role-info]
     (new RoleInfo role-info)))
 
 (def *-role-cardinality-infinity
@@ -40,7 +40,7 @@
   "Returns read access mode for the role (true if it is readable).
 
   returns: true if the role is readable. - `boolean`"
-  ([this]
+  ([^javax.management.relation.RoleInfo this]
     (-> this (.isReadable))))
 
 (defn get-ref-m-bean-class-name
@@ -48,14 +48,14 @@
    corresponding role.
 
   returns: the name of the referenced type. - `java.lang.String`"
-  ([this]
+  ([^javax.management.relation.RoleInfo this]
     (-> this (.getRefMBeanClassName))))
 
 (defn to-string
   "Returns a string describing the role info.
 
   returns: a description of the role info. - `java.lang.String`"
-  ([this]
+  ([^javax.management.relation.RoleInfo this]
     (-> this (.toString))))
 
 (defn check-max-degree
@@ -65,35 +65,35 @@
   value - the value to be checked - `int`
 
   returns: true if lower than or equal to maximum degree, false otherwise. - `boolean`"
-  ([this value]
+  ([^javax.management.relation.RoleInfo this ^Integer value]
     (-> this (.checkMaxDegree value))))
 
 (defn get-name
   "Returns the name of the role.
 
   returns: the name of the role. - `java.lang.String`"
-  ([this]
+  ([^javax.management.relation.RoleInfo this]
     (-> this (.getName))))
 
 (defn get-description
   "Returns description text for the role.
 
   returns: the description of the role. - `java.lang.String`"
-  ([this]
+  ([^javax.management.relation.RoleInfo this]
     (-> this (.getDescription))))
 
 (defn get-max-degree
   "Returns maximum degree for corresponding role reference.
 
   returns: the maximum degree. - `int`"
-  ([this]
+  ([^javax.management.relation.RoleInfo this]
     (-> this (.getMaxDegree))))
 
 (defn get-min-degree
   "Returns minimum degree for corresponding role reference.
 
   returns: the minimum degree. - `int`"
-  ([this]
+  ([^javax.management.relation.RoleInfo this]
     (-> this (.getMinDegree))))
 
 (defn check-min-degree
@@ -103,13 +103,13 @@
   value - the value to be checked - `int`
 
   returns: true if greater than or equal to minimum degree, false otherwise. - `boolean`"
-  ([this value]
+  ([^javax.management.relation.RoleInfo this ^Integer value]
     (-> this (.checkMinDegree value))))
 
 (defn writable?
   "Returns write access mode for the role (true if it is writable).
 
   returns: true if the role is writable. - `boolean`"
-  ([this]
+  ([^javax.management.relation.RoleInfo this]
     (-> this (.isWritable))))
 

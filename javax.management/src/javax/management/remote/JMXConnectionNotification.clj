@@ -69,7 +69,7 @@
   user-data - an object whose type and meaning is defined by the connector server. Can be null. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if type, source, or connectionId is null."
-  ([type source connection-id sequence-number message user-data]
+  ([^java.lang.String type ^java.lang.Object source ^java.lang.String connection-id ^Long sequence-number ^java.lang.String message ^java.lang.Object user-data]
     (new JMXConnectionNotification type source connection-id sequence-number message user-data)))
 
 (def *-opened
@@ -109,6 +109,6 @@
   "The connection ID to which this notification pertains.
 
   returns: the connection ID. - `java.lang.String`"
-  ([this]
+  ([^javax.management.remote.JMXConnectionNotification this]
     (-> this (.getConnectionId))))
 

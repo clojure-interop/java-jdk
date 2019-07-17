@@ -15,7 +15,7 @@
   Construct an filter with the specified parent.
 
   reader - the parent - `javax.xml.stream.XMLEventReader`"
-  ([reader]
+  ([^javax.xml.stream.XMLEventReader reader]
     (new EventReaderDelegate reader))
   ([]
     (new EventReaderDelegate )))
@@ -26,21 +26,21 @@
   returns: `javax.xml.stream.events.XMLEvent`
 
   throws: javax.xml.stream.XMLStreamException"
-  ([this]
+  ([^javax.xml.stream.util.EventReaderDelegate this]
     (-> this (.peek))))
 
 (defn set-parent
   "Set the parent of this instance.
 
   reader - the new parent - `javax.xml.stream.XMLEventReader`"
-  ([this reader]
+  ([^javax.xml.stream.util.EventReaderDelegate this ^javax.xml.stream.XMLEventReader reader]
     (-> this (.setParent reader))))
 
 (defn next
   "Description copied from interface: Iterator
 
   returns: the next element in the iteration - `java.lang.Object`"
-  ([this]
+  ([^javax.xml.stream.util.EventReaderDelegate this]
     (-> this (.next))))
 
 (defn next-event
@@ -49,7 +49,7 @@
   returns: `javax.xml.stream.events.XMLEvent`
 
   throws: javax.xml.stream.XMLStreamException - if there is an error with the underlying XML."
-  ([this]
+  ([^javax.xml.stream.util.EventReaderDelegate this]
     (-> this (.nextEvent))))
 
 (defn get-element-text
@@ -58,33 +58,33 @@
   returns: `java.lang.String`
 
   throws: javax.xml.stream.XMLStreamException - if the current event is not a START_ELEMENT or if a non text element is encountered"
-  ([this]
+  ([^javax.xml.stream.util.EventReaderDelegate this]
     (-> this (.getElementText))))
 
 (defn get-parent
   "Get the parent of this instance.
 
   returns: the parent or null if none is set - `javax.xml.stream.XMLEventReader`"
-  ([this]
+  ([^javax.xml.stream.util.EventReaderDelegate this]
     (-> this (.getParent))))
 
 (defn remove
   "Description copied from interface: Iterator"
-  ([this]
+  ([^javax.xml.stream.util.EventReaderDelegate this]
     (-> this (.remove))))
 
 (defn has-next?
   "Description copied from interface: XMLEventReader
 
   returns: true if the event reader has more events, false otherwise - `boolean`"
-  ([this]
+  ([^javax.xml.stream.util.EventReaderDelegate this]
     (-> this (.hasNext))))
 
 (defn close
   "Description copied from interface: XMLEventReader
 
   throws: javax.xml.stream.XMLStreamException - if there are errors freeing associated resources"
-  ([this]
+  ([^javax.xml.stream.util.EventReaderDelegate this]
     (-> this (.close))))
 
 (defn get-property
@@ -95,7 +95,7 @@
   returns: The value of the property - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if the property is not supported"
-  ([this name]
+  ([^javax.xml.stream.util.EventReaderDelegate this ^java.lang.String name]
     (-> this (.getProperty name))))
 
 (defn next-tag
@@ -104,6 +104,6 @@
   returns: `javax.xml.stream.events.XMLEvent`
 
   throws: javax.xml.stream.XMLStreamException - if anything other than space characters are encountered"
-  ([this]
+  ([^javax.xml.stream.util.EventReaderDelegate this]
     (-> this (.nextTag))))
 

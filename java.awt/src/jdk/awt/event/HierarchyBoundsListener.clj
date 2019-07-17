@@ -21,13 +21,13 @@
   "Called when an ancestor of the source is moved.
 
   e - `java.awt.event.HierarchyEvent`"
-  ([this e]
+  ([^. this ^java.awt.event.HierarchyEvent e]
     (-> this (.ancestorMoved e))))
 
 (defn ancestor-resized
   "Called when an ancestor of the source is resized.
 
   e - `java.awt.event.HierarchyEvent`"
-  ([this e]
+  ([^. this ^java.awt.event.HierarchyEvent e]
     (-> this (.ancestorResized e))))
 

@@ -71,6 +71,6 @@
   object - an optional configuration parameter. This may be null. - `Painter.T`
   width - width of the area to paint. - `int`
   height - height of the area to paint. - `int`"
-  ([this g object width height]
+  ([^. this ^java.awt.Graphics2D g ^Painter.T object ^Integer width ^Integer height]
     (-> this (.paint g object width height))))
 

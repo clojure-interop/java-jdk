@@ -106,7 +106,7 @@
   returns: A new asynchronous channel group - `java.nio.channels.AsynchronousChannelGroup`
 
   throws: java.lang.IllegalArgumentException - If nThreads <= 0"
-  ([n-threads thread-factory]
+  ([^Integer n-threads ^java.util.concurrent.ThreadFactory thread-factory]
     (AsynchronousChannelGroup/withFixedThreadPool n-threads thread-factory)))
 
 (defn *with-cached-thread-pool
@@ -139,7 +139,7 @@
   returns: A new asynchronous channel group - `java.nio.channels.AsynchronousChannelGroup`
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([executor initial-size]
+  ([^java.util.concurrent.ExecutorService executor ^Integer initial-size]
     (AsynchronousChannelGroup/withCachedThreadPool executor initial-size)))
 
 (defn *with-thread-pool
@@ -168,14 +168,14 @@
   returns: A new asynchronous channel group - `java.nio.channels.AsynchronousChannelGroup`
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([executor]
+  ([^java.util.concurrent.ExecutorService executor]
     (AsynchronousChannelGroup/withThreadPool executor)))
 
 (defn provider
   "Returns the provider that created this channel group.
 
   returns: The provider that created this channel group - `java.nio.channels.spi.AsynchronousChannelProvider`"
-  ([this]
+  ([^java.nio.channels.AsynchronousChannelGroup this]
     (-> this (.provider))))
 
 (defn shutdown?
@@ -183,7 +183,7 @@
 
   returns: true if this asynchronous channel group is shutdown or
             has been marked for shutdown. - `boolean`"
-  ([this]
+  ([^java.nio.channels.AsynchronousChannelGroup this]
     (-> this (.isShutdown))))
 
 (defn terminated?
@@ -193,7 +193,7 @@
    pool has also terminated.
 
   returns: true if this group has terminated - `boolean`"
-  ([this]
+  ([^java.nio.channels.AsynchronousChannelGroup this]
     (-> this (.isTerminated))))
 
 (defn shutdown
@@ -205,7 +205,7 @@
    closed, all actively executing completion handlers have run to completion,
    and all resources have been released. This method has no effect if the
    group is already shutdown."
-  ([this]
+  ([^java.nio.channels.AsynchronousChannelGroup this]
     (-> this (.shutdown))))
 
 (defn shutdown-now
@@ -222,7 +222,7 @@
    after which it will return without effect.
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([this]
+  ([^java.nio.channels.AsynchronousChannelGroup this]
     (-> this (.shutdownNow))))
 
 (defn await-termination
@@ -238,6 +238,6 @@
             timeout elapsed before termination - `boolean`
 
   throws: java.lang.InterruptedException - If interrupted while waiting"
-  ([this timeout unit]
+  ([^java.nio.channels.AsynchronousChannelGroup this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.awaitTermination timeout unit))))
 

@@ -30,7 +30,7 @@
   input-class - a Class object indicating the legal object type for use by the createInputStreamInstance method. - `java.lang.Class<?>`
 
   throws: java.lang.IllegalArgumentException - if version is null."
-  ([vendor-name version input-class]
+  ([^java.lang.String vendor-name ^java.lang.String version ^java.lang.Class input-class]
     (new ImageInputStreamSpi vendor-name version input-class)))
 
 (defn get-input-class
@@ -44,7 +44,7 @@
    any class may be used.
 
   returns: a Class variable. - `java.lang.Class<?>`"
-  ([this]
+  ([^javax.imageio.spi.ImageInputStreamSpi this]
     (-> this (.getInputClass))))
 
 (defn can-use-cache-file?
@@ -59,7 +59,7 @@
 
   returns: true if a cache file can be used by the
    input streams created by this service provider. - `boolean`"
-  ([this]
+  ([^javax.imageio.spi.ImageInputStreamSpi this]
     (-> this (.canUseCacheFile))))
 
 (defn needs-cache-file
@@ -73,7 +73,7 @@
 
   returns: true if a cache file is needed by the
    input streams created by this service provider. - `boolean`"
-  ([this]
+  ([^javax.imageio.spi.ImageInputStreamSpi this]
     (-> this (.needsCacheFile))))
 
 (defn create-input-stream-instance
@@ -90,8 +90,8 @@
   returns: an ImageInputStream instance. - `javax.imageio.stream.ImageInputStream`
 
   throws: java.lang.IllegalArgumentException - if a cache file is needed but cacheDir is non-null and is not a directory."
-  ([this input use-cache cache-dir]
+  ([^javax.imageio.spi.ImageInputStreamSpi this ^java.lang.Object input ^Boolean use-cache ^java.io.File cache-dir]
     (-> this (.createInputStreamInstance input use-cache cache-dir)))
-  ([this input]
+  ([^javax.imageio.spi.ImageInputStreamSpi this ^java.lang.Object input]
     (-> this (.createInputStreamInstance input))))
 

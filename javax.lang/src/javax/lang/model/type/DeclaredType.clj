@@ -19,7 +19,7 @@
   "Returns the element corresponding to this type.
 
   returns: the element corresponding to this type - `javax.lang.model.element.Element`"
-  ([this]
+  ([^. this]
     (-> this (.asElement))))
 
 (defn get-enclosing-type
@@ -29,7 +29,7 @@
    enclosing instance.
 
   returns: a type mirror for the enclosing type - `javax.lang.model.type.TypeMirror`"
-  ([this]
+  ([^. this]
     (-> this (.getEnclosingType))))
 
 (defn get-type-arguments
@@ -40,6 +40,6 @@
 
   returns: the actual type arguments of this type, or an empty list
              if none - `java.util.List<? extends javax.lang.model.type.TypeMirror>`"
-  ([this]
+  ([^. this]
     (-> this (.getTypeArguments))))
 

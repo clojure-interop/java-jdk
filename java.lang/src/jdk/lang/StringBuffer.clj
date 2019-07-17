@@ -71,7 +71,7 @@
   capacity - the initial capacity. - `int`
 
   throws: java.lang.NegativeArraySizeException - if the capacity argument is less than 0."
-  ([capacity]
+  ([^Integer capacity]
     (new StringBuffer capacity))
   ([]
     (new StringBuffer )))
@@ -94,7 +94,7 @@
   dst-begin - offset into dst. - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if any of the following is true: srcBegin is negative dstBegin is negative the srcBegin argument is greater than the srcEnd argument. srcEnd is greater than this.length(). dstBegin+srcEnd-srcBegin is greater than dst.length"
-  ([this src-begin src-end dst dst-begin]
+  ([^java.lang.StringBuffer this ^Integer src-begin ^Integer src-end dst ^Integer dst-begin]
     (-> this (.getChars src-begin src-end dst dst-begin))))
 
 (defn append-code-point
@@ -114,7 +114,7 @@
   code-point - a Unicode code point - `int`
 
   returns: a reference to this object. - `java.lang.StringBuffer`"
-  ([this code-point]
+  ([^java.lang.StringBuffer this ^Integer code-point]
     (-> this (.appendCodePoint code-point))))
 
 (defn delete
@@ -130,7 +130,7 @@
   returns: This object. - `java.lang.StringBuffer`
 
   throws: java.lang.StringIndexOutOfBoundsException - if start is negative, greater than length(), or greater than end."
-  ([this start end]
+  ([^java.lang.StringBuffer this ^Integer start ^Integer end]
     (-> this (.delete start end))))
 
 (defn reverse
@@ -154,7 +154,7 @@
    a valid surrogate pair.
 
   returns: a reference to this object. - `java.lang.StringBuffer`"
-  ([this]
+  ([^java.lang.StringBuffer this]
     (-> this (.reverse))))
 
 (defn to-string
@@ -166,7 +166,7 @@
    String.
 
   returns: a string representation of this sequence of characters. - `java.lang.String`"
-  ([this]
+  ([^java.lang.StringBuffer this]
     (-> this (.toString))))
 
 (defn set-length
@@ -193,7 +193,7 @@
   new-length - the new length - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if the newLength argument is negative."
-  ([this new-length]
+  ([^java.lang.StringBuffer this ^Integer new-length]
     (-> this (.setLength new-length))))
 
 (defn sub-sequence
@@ -220,7 +220,7 @@
   returns: the specified subsequence. - `java.lang.CharSequence`
 
   throws: java.lang.IndexOutOfBoundsException - if start or end are negative, if end is greater than length(), or if start is greater than end"
-  ([this start end]
+  ([^java.lang.StringBuffer this ^Integer start ^Integer end]
     (-> this (.subSequence start end))))
 
 (defn substring
@@ -235,9 +235,9 @@
   returns: The new string. - `java.lang.String`
 
   throws: java.lang.StringIndexOutOfBoundsException - if start or end are negative or greater than length(), or start is greater than end."
-  ([this start end]
+  ([^java.lang.StringBuffer this ^Integer start ^Integer end]
     (-> this (.substring start end)))
-  ([this start]
+  ([^java.lang.StringBuffer this ^Integer start]
     (-> this (.substring start))))
 
 (defn replace
@@ -258,7 +258,7 @@
   returns: This object. - `java.lang.StringBuffer`
 
   throws: java.lang.StringIndexOutOfBoundsException - if start is negative, greater than length(), or greater than end."
-  ([this start end str]
+  ([^java.lang.StringBuffer this ^Integer start ^Integer end ^java.lang.String str]
     (-> this (.replace start end str))))
 
 (defn delete-char-at
@@ -277,7 +277,7 @@
   returns: This object. - `java.lang.StringBuffer`
 
   throws: java.lang.StringIndexOutOfBoundsException - if the index is negative or greater than or equal to length()."
-  ([this index]
+  ([^java.lang.StringBuffer this ^Integer index]
     (-> this (.deleteCharAt index))))
 
 (defn last-index-of
@@ -295,9 +295,9 @@
 
   returns: the index within this sequence of the last occurrence of the
             specified substring. - `int`"
-  ([this str from-index]
+  ([^java.lang.StringBuffer this ^java.lang.String str ^Integer from-index]
     (-> this (.lastIndexOf str from-index)))
-  ([this str]
+  ([^java.lang.StringBuffer this ^java.lang.String str]
     (-> this (.lastIndexOf str))))
 
 (defn char-at
@@ -317,7 +317,7 @@
   returns: the char value at the specified index. - `char`
 
   throws: java.lang.IndexOutOfBoundsException - if index is negative or greater than or equal to length()."
-  ([this index]
+  ([^java.lang.StringBuffer this ^Integer index]
     (-> this (.charAt index))))
 
 (defn offset-by-code-points
@@ -331,7 +331,7 @@
   code-point-offset - the offset in code points - `int`
 
   returns: the index within this sequence - `int`"
-  ([this index code-point-offset]
+  ([^java.lang.StringBuffer this ^Integer index ^Integer code-point-offset]
     (-> this (.offsetByCodePoints index code-point-offset))))
 
 (defn length
@@ -339,7 +339,7 @@
 
   returns: the length of the sequence of characters currently
             represented by this object - `int`"
-  ([this]
+  ([^java.lang.StringBuffer this]
     (-> this (.length))))
 
 (defn ensure-capacity
@@ -357,7 +357,7 @@
    actual capacity below that requested here.
 
   minimum-capacity - the minimum desired capacity. - `int`"
-  ([this minimum-capacity]
+  ([^java.lang.StringBuffer this ^Integer minimum-capacity]
     (-> this (.ensureCapacity minimum-capacity))))
 
 (defn append
@@ -387,9 +387,9 @@
   returns: a reference to this object. - `java.lang.StringBuffer`
 
   throws: java.lang.IndexOutOfBoundsException - if start is negative, or start is greater than end or end is greater than s.length()"
-  ([this s start end]
+  ([^java.lang.StringBuffer this ^java.lang.CharSequence s ^Integer start ^Integer end]
     (-> this (.append s start end)))
-  ([this obj]
+  ([^java.lang.StringBuffer this ^java.lang.Object obj]
     (-> this (.append obj))))
 
 (defn set-char-at
@@ -405,7 +405,7 @@
   ch - the new character. - `char`
 
   throws: java.lang.IndexOutOfBoundsException - if index is negative or greater than or equal to length()."
-  ([this index ch]
+  ([^java.lang.StringBuffer this ^Integer index ^Character ch]
     (-> this (.setCharAt index ch))))
 
 (defn insert
@@ -424,9 +424,9 @@
   returns: This object - `java.lang.StringBuffer`
 
   throws: java.lang.StringIndexOutOfBoundsException - if index is negative or greater than length(), or offset or len are negative, or (offset+len) is greater than str.length."
-  ([this index str offset len]
+  ([^java.lang.StringBuffer this ^Integer index str ^Integer offset ^Integer len]
     (-> this (.insert index str offset len)))
-  ([this offset obj]
+  ([^java.lang.StringBuffer this ^Integer offset ^java.lang.Object obj]
     (-> this (.insert offset obj))))
 
 (defn code-point-count
@@ -443,7 +443,7 @@
 
   returns: the number of Unicode code points in the specified text
    range - `int`"
-  ([this begin-index end-index]
+  ([^java.lang.StringBuffer this ^Integer begin-index ^Integer end-index]
     (-> this (.codePointCount begin-index end-index))))
 
 (defn code-point-before
@@ -463,7 +463,7 @@
   index - the index following the code point that should be returned - `int`
 
   returns: the Unicode code point value before the given index. - `int`"
-  ([this index]
+  ([^java.lang.StringBuffer this ^Integer index]
     (-> this (.codePointBefore index))))
 
 (defn index-of
@@ -481,9 +481,9 @@
 
   returns: the index within this string of the first occurrence of the
             specified substring, starting at the specified index. - `int`"
-  ([this str from-index]
+  ([^java.lang.StringBuffer this ^java.lang.String str ^Integer from-index]
     (-> this (.indexOf str from-index)))
-  ([this str]
+  ([^java.lang.StringBuffer this ^java.lang.String str]
     (-> this (.indexOf str))))
 
 (defn capacity
@@ -492,7 +492,7 @@
    will occur.
 
   returns: the current capacity - `int`"
-  ([this]
+  ([^java.lang.StringBuffer this]
     (-> this (.capacity))))
 
 (defn trim-to-size
@@ -501,7 +501,7 @@
    characters, then it may be resized to become more space efficient.
    Calling this method may, but is not required to, affect the value
    returned by a subsequent call to the capacity() method."
-  ([this]
+  ([^java.lang.StringBuffer this]
     (-> this (.trimToSize))))
 
 (defn code-point-at
@@ -522,6 +522,6 @@
 
   returns: the code point value of the character at the
                index - `int`"
-  ([this index]
+  ([^java.lang.StringBuffer this ^Integer index]
     (-> this (.codePointAt index))))
 

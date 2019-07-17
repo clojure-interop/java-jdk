@@ -54,6 +54,6 @@
            ValidationException, or MarshalException. - `boolean`
 
   throws: java.lang.IllegalArgumentException - if the event object is null."
-  ([this event]
+  ([^. this ^javax.xml.bind.ValidationEvent event]
     (-> this (.handleEvent event))))
 

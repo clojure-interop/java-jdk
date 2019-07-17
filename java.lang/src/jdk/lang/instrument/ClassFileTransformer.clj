@@ -130,6 +130,6 @@
                   or null if no transform is performed. - `byte[]`
 
   throws: java.lang.instrument.IllegalClassFormatException - if the input does not represent a well-formed class file"
-  ([this loader class-name class-being-redefined protection-domain classfile-buffer]
+  ([^. this ^java.lang.ClassLoader loader ^java.lang.String class-name ^java.lang.Class class-being-redefined ^java.security.ProtectionDomain protection-domain classfile-buffer]
     (-> this (.transform loader class-name class-being-redefined protection-domain classfile-buffer))))
 

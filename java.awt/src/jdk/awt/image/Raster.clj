@@ -102,9 +102,9 @@
            offsets. - `java.awt.image.WritableRaster`
 
   throws: java.awt.image.RasterFormatException - if w or h is less than or equal to zero, or computing either location.x w or location.y h results in integer overflow"
-  ([data-type w h scanline-stride pixel-stride band-offsets location]
+  ([^Integer data-type ^Integer w ^Integer h ^Integer scanline-stride ^Integer pixel-stride band-offsets ^java.awt.Point location]
     (Raster/createInterleavedRaster data-type w h scanline-stride pixel-stride band-offsets location))
-  ([data-type w h bands location]
+  ([^Integer data-type ^Integer w ^Integer h ^Integer bands ^java.awt.Point location]
     (Raster/createInterleavedRaster data-type w h bands location)))
 
 (defn *create-banded-raster
@@ -134,9 +134,9 @@
            offsets. - `java.awt.image.WritableRaster`
 
   throws: java.awt.image.RasterFormatException - if w or h is less than or equal to zero, or computing either location.x w or location.y h results in integer overflow"
-  ([data-type w h scanline-stride bank-indices band-offsets location]
+  ([^Integer data-type ^Integer w ^Integer h ^Integer scanline-stride bank-indices band-offsets ^java.awt.Point location]
     (Raster/createBandedRaster data-type w h scanline-stride bank-indices band-offsets location))
-  ([data-type w h bands location]
+  ([^Integer data-type ^Integer w ^Integer h ^Integer bands ^java.awt.Point location]
     (Raster/createBandedRaster data-type w h bands location)))
 
 (defn *create-packed-raster
@@ -170,9 +170,9 @@
            width, height, number of bands, and bits per band. - `java.awt.image.WritableRaster`
 
   throws: java.awt.image.RasterFormatException - if w or h is less than or equal to zero, or computing either location.x w or location.y h results in integer overflow"
-  ([data-type w h bands bits-per-band location]
+  ([^Integer data-type ^Integer w ^Integer h ^Integer bands ^Integer bits-per-band ^java.awt.Point location]
     (Raster/createPackedRaster data-type w h bands bits-per-band location))
-  ([data-type w h band-masks location]
+  ([^Integer data-type ^Integer w ^Integer h band-masks ^java.awt.Point location]
     (Raster/createPackedRaster data-type w h band-masks location)))
 
 (defn *create-raster
@@ -189,7 +189,7 @@
             location. - `java.awt.image.Raster`
 
   throws: java.awt.image.RasterFormatException - if db has more than one bank and sm is a PixelInterleavedSampleModel, SinglePixelPackedSampleModel, or MultiPixelPackedSampleModel."
-  ([sm db location]
+  ([^java.awt.image.SampleModel sm ^java.awt.image.DataBuffer db ^java.awt.Point location]
     (Raster/createRaster sm db location)))
 
 (defn *create-writable-raster
@@ -206,16 +206,16 @@
             location. - `java.awt.image.WritableRaster`
 
   throws: java.awt.image.RasterFormatException - if db has more than one bank and sm is a PixelInterleavedSampleModel, SinglePixelPackedSampleModel, or MultiPixelPackedSampleModel."
-  ([sm db location]
+  ([^java.awt.image.SampleModel sm ^java.awt.image.DataBuffer db ^java.awt.Point location]
     (Raster/createWritableRaster sm db location))
-  ([sm location]
+  ([^java.awt.image.SampleModel sm ^java.awt.Point location]
     (Raster/createWritableRaster sm location)))
 
 (defn get-width
   "Returns the width in pixels of the Raster.
 
   returns: the width of this Raster. - `int`"
-  ([this]
+  ([^java.awt.image.Raster this]
     (-> this (.getWidth))))
 
 (defn get-sample-float
@@ -233,7 +233,7 @@
            specified coordinate. - `float`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if the coordinates or the band index are not in bounds."
-  ([this x y b]
+  ([^java.awt.image.Raster this ^Integer x ^Integer y ^Integer b]
     (-> this (.getSampleFloat x y b))))
 
 (defn get-sample-model-translate-x
@@ -244,7 +244,7 @@
 
   returns: the X translation from the coordinate space of the
            Raster's SampleModel to that of the Raster. - `int`"
-  ([this]
+  ([^java.awt.image.Raster this]
     (-> this (.getSampleModelTranslateX))))
 
 (defn get-transfer-type
@@ -259,7 +259,7 @@
     be one of the types defined in DataBuffer.
 
   returns: this transfer type. - `int`"
-  ([this]
+  ([^java.awt.image.Raster this]
     (-> this (.getTransferType))))
 
 (defn get-data-elements
@@ -286,9 +286,9 @@
                    getTransferType() with the requested pixel data. - `java.lang.Object`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if the coordinates are not in bounds, or if outData is too small to hold the output."
-  ([this x y w h out-data]
+  ([^java.awt.image.Raster this ^Integer x ^Integer y ^Integer w ^Integer h ^java.lang.Object out-data]
     (-> this (.getDataElements x y w h out-data)))
-  ([this x y out-data]
+  ([^java.awt.image.Raster this ^Integer x ^Integer y ^java.lang.Object out-data]
     (-> this (.getDataElements x y out-data))))
 
 (defn create-child
@@ -332,14 +332,14 @@
   returns: a new Raster. - `java.awt.image.Raster`
 
   throws: java.awt.image.RasterFormatException - if width or height is less than or equal to zero, or computing any of parentX width, parentY height, childMinX width, or childMinY height results in integer overflow"
-  ([this parent-x parent-y width height child-min-x child-min-y band-list]
+  ([^java.awt.image.Raster this ^Integer parent-x ^Integer parent-y ^Integer width ^Integer height ^Integer child-min-x ^Integer child-min-y band-list]
     (-> this (.createChild parent-x parent-y width height child-min-x child-min-y band-list))))
 
 (defn get-num-bands
   "Returns the number of bands (samples per pixel) in this Raster.
 
   returns: the number of bands of this Raster. - `int`"
-  ([this]
+  ([^java.awt.image.Raster this]
     (-> this (.getNumBands))))
 
 (defn get-pixels
@@ -358,14 +358,14 @@
   returns: the samples for the specified rectangle of pixels. - `int[]`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if the coordinates are not in bounds, or if iArray is too small to hold the output."
-  ([this x y w h i-array]
+  ([^java.awt.image.Raster this ^Integer x ^Integer y ^Integer w ^Integer h i-array]
     (-> this (.getPixels x y w h i-array))))
 
 (defn get-min-y
   "Returns the minimum valid Y coordinate of the Raster.
 
   returns: the minimum y coordinate of this Raster. - `int`"
-  ([this]
+  ([^java.awt.image.Raster this]
     (-> this (.getMinY))))
 
 (defn get-sample-double
@@ -383,7 +383,7 @@
            specified coordinate. - `double`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if the coordinates or the band index are not in bounds."
-  ([this x y b]
+  ([^java.awt.image.Raster this ^Integer x ^Integer y ^Integer b]
     (-> this (.getSampleDouble x y b))))
 
 (defn get-num-data-elements
@@ -397,14 +397,14 @@
     as the storage data type of the DataBuffer.
 
   returns: the number of data elements. - `int`"
-  ([this]
+  ([^java.awt.image.Raster this]
     (-> this (.getNumDataElements))))
 
 (defn get-data-buffer
   "Returns the DataBuffer associated with this Raster.
 
   returns: the DataBuffer of this Raster. - `java.awt.image.DataBuffer`"
-  ([this]
+  ([^java.awt.image.Raster this]
     (-> this (.getDataBuffer))))
 
 (defn create-translated-child
@@ -421,14 +421,14 @@
            specified location. - `java.awt.image.Raster`
 
   throws: java.awt.image.RasterFormatException - if computing either childMinX this.getWidth() or childMinY this.getHeight() results in integer overflow"
-  ([this child-min-x child-min-y]
+  ([^java.awt.image.Raster this ^Integer child-min-x ^Integer child-min-y]
     (-> this (.createTranslatedChild child-min-x child-min-y))))
 
 (defn get-parent
   "Returns the parent Raster (if any) of this Raster or null.
 
   returns: the parent Raster or null. - `java.awt.image.Raster`"
-  ([this]
+  ([^java.awt.image.Raster this]
     (-> this (.getParent))))
 
 (defn get-sample
@@ -446,14 +446,14 @@
            specified coordinate. - `int`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if the coordinates or the band index are not in bounds."
-  ([this x y b]
+  ([^java.awt.image.Raster this ^Integer x ^Integer y ^Integer b]
     (-> this (.getSample x y b))))
 
 (defn get-sample-model
   "Returns the SampleModel that describes the layout of the image data.
 
   returns: the SampleModel of this Raster. - `java.awt.image.SampleModel`"
-  ([this]
+  ([^java.awt.image.Raster this]
     (-> this (.getSampleModel))))
 
 (defn get-sample-model-translate-y
@@ -464,14 +464,14 @@
 
   returns: the Y translation from the coordinate space of the
            Raster's SampleModel to that of the Raster. - `int`"
-  ([this]
+  ([^java.awt.image.Raster this]
     (-> this (.getSampleModelTranslateY))))
 
 (defn get-height
   "Returns the height in pixels of the Raster.
 
   returns: the height of this Raster. - `int`"
-  ([this]
+  ([^java.awt.image.Raster this]
     (-> this (.getHeight))))
 
 (defn get-pixel
@@ -487,7 +487,7 @@
   returns: the samples for the specified pixel. - `int[]`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if the coordinates are not in bounds, or if iArray is too small to hold the output."
-  ([this x y i-array]
+  ([^java.awt.image.Raster this ^Integer x ^Integer y i-array]
     (-> this (.getPixel x y i-array))))
 
 (defn create-compatible-writable-raster
@@ -504,13 +504,13 @@
            size and location and a new sample model and data buffer. - `java.awt.image.WritableRaster`
 
   throws: java.awt.image.RasterFormatException - if w or h is less than or equal to zero, or computing either x w or y h results in integer overflow"
-  ([this x y w h]
+  ([^java.awt.image.Raster this ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.createCompatibleWritableRaster x y w h)))
-  ([this w h]
+  ([^java.awt.image.Raster this ^Integer w ^Integer h]
     (-> this (.createCompatibleWritableRaster w h)))
-  ([this rect]
+  ([^java.awt.image.Raster this ^java.awt.Rectangle rect]
     (-> this (.createCompatibleWritableRaster rect)))
-  ([this]
+  ([^java.awt.image.Raster this]
     (-> this (.createCompatibleWritableRaster))))
 
 (defn get-bounds
@@ -518,14 +518,14 @@
    the same information as getMinX/MinY/Width/Height.
 
   returns: the bounding box of this Raster. - `java.awt.Rectangle`"
-  ([this]
+  ([^java.awt.image.Raster this]
     (-> this (.getBounds))))
 
 (defn get-min-x
   "Returns the minimum valid X coordinate of the Raster.
 
   returns: the minimum x coordinate of this Raster. - `int`"
-  ([this]
+  ([^java.awt.image.Raster this]
     (-> this (.getMinX))))
 
 (defn get-samples
@@ -546,6 +546,6 @@
            rectangle of pixels. - `int[]`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if the coordinates or the band index are not in bounds, or if iArray is too small to hold the output."
-  ([this x y w h b i-array]
+  ([^java.awt.image.Raster this ^Integer x ^Integer y ^Integer w ^Integer h ^Integer b i-array]
     (-> this (.getSamples x y w h b i-array))))
 

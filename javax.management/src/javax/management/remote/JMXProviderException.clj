@@ -13,9 +13,9 @@
 
   message - the detail message - `java.lang.String`
   cause - the nested exception - `java.lang.Throwable`"
-  ([message cause]
+  ([^java.lang.String message ^java.lang.Throwable cause]
     (new JMXProviderException message cause))
-  ([message]
+  ([^java.lang.String message]
     (new JMXProviderException message))
   ([]
     (new JMXProviderException )))
@@ -25,6 +25,6 @@
 
   returns: the cause of this throwable or null if the
             cause is nonexistent or unknown. - `java.lang.Throwable`"
-  ([this]
+  ([^javax.management.remote.JMXProviderException this]
     (-> this (.getCause))))
 

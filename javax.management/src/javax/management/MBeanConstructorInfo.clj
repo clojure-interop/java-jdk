@@ -14,11 +14,11 @@
   description - A human readable description of the constructor. - `java.lang.String`
   signature - MBeanParameterInfo objects describing the parameters(arguments) of the constructor. This may be null with the same effect as a zero-length array. - `javax.management.MBeanParameterInfo[]`
   descriptor - The descriptor for the constructor. This may be null which is equivalent to an empty descriptor. - `javax.management.Descriptor`"
-  ([name description signature descriptor]
+  ([^java.lang.String name ^java.lang.String description ^javax.management.MBeanParameterInfo[] signature ^javax.management.Descriptor descriptor]
     (new MBeanConstructorInfo name description signature descriptor))
-  ([name description signature]
+  ([^java.lang.String name ^java.lang.String description ^javax.management.MBeanParameterInfo[] signature]
     (new MBeanConstructorInfo name description signature))
-  ([description constructor]
+  ([^java.lang.String description ^java.lang.reflect.Constructor constructor]
     (new MBeanConstructorInfo description constructor)))
 
 (defn clone
@@ -32,7 +32,7 @@
    interest to subclasses.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([this]
+  ([^javax.management.MBeanConstructorInfo this]
     (-> this (.clone))))
 
 (defn get-signature
@@ -47,14 +47,14 @@
    not copied.
 
   returns: An array of MBeanParameterInfo objects. - `javax.management.MBeanParameterInfo[]`"
-  ([this]
+  ([^javax.management.MBeanConstructorInfo this]
     (-> this (.getSignature))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^javax.management.MBeanConstructorInfo this]
     (-> this (.toString))))
 
 (defn equals
@@ -69,13 +69,13 @@
    identical) to those of this MBeanConstructorInfo.  Two
    signature arrays are equal if their elements are pairwise
    equal. - `boolean`"
-  ([this o]
+  ([^javax.management.MBeanConstructorInfo this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^javax.management.MBeanConstructorInfo this]
     (-> this (.hashCode))))
 

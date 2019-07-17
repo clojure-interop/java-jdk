@@ -13,6 +13,6 @@
   Constructs an InvalidApplicationException with the specified Object.
 
   val - the detail message of this exception. - `java.lang.Object`"
-  ([val]
+  ([^java.lang.Object val]
     (new InvalidApplicationException val)))
 

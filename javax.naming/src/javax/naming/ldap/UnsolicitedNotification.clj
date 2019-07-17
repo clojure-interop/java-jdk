@@ -12,7 +12,7 @@
 
   returns: A possibly null array of referrals, each of which is represented
    by a URL string. If null, no referral was sent by the server. - `java.lang.String[]`"
-  ([this]
+  ([^. this]
     (-> this (.getReferrals))))
 
 (defn get-exception
@@ -22,6 +22,6 @@
   returns: A possibly null exception as constructed using information
    sent by the server. If null, a `success` status was indicated by
    the server. - `javax.naming.NamingException`"
-  ([this]
+  ([^. this]
     (-> this (.getException))))
 

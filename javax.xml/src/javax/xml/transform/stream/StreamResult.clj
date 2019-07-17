@@ -13,7 +13,7 @@
    transformation instructions to control the encoding.
 
   output-stream - A valid OutputStream reference. - `java.io.OutputStream`"
-  ([output-stream]
+  ([^java.io.OutputStream output-stream]
     (new StreamResult output-stream))
   ([]
     (new StreamResult )))
@@ -35,7 +35,7 @@
    transformation instructions to control the encoding.
 
   output-stream - A valid OutputStream reference. - `java.io.OutputStream`"
-  ([this output-stream]
+  ([^javax.xml.transform.stream.StreamResult this ^java.io.OutputStream output-stream]
     (-> this (.setOutputStream output-stream))))
 
 (defn get-output-stream
@@ -43,7 +43,7 @@
 
   returns: The byte stream that was set with setOutputStream, or null
    if setOutputStream or the ByteStream constructor was not called. - `java.io.OutputStream`"
-  ([this]
+  ([^javax.xml.transform.stream.StreamResult this]
     (-> this (.getOutputStream))))
 
 (defn set-writer
@@ -55,7 +55,7 @@
    such as when using a StringWriter.
 
   writer - A valid Writer reference. - `java.io.Writer`"
-  ([this writer]
+  ([^javax.xml.transform.stream.StreamResult this ^java.io.Writer writer]
     (-> this (.setWriter writer))))
 
 (defn get-writer
@@ -63,7 +63,7 @@
 
   returns: The character stream that was set with setWriter, or null
    if setWriter or the Writer constructor was not called. - `java.io.Writer`"
-  ([this]
+  ([^javax.xml.transform.stream.StreamResult this]
     (-> this (.getWriter))))
 
 (defn set-system-id
@@ -72,7 +72,7 @@
    this value as a writeable URI (probably a file name).
 
   system-id - The system identifier as a URI string. - `java.lang.String`"
-  ([this system-id]
+  ([^javax.xml.transform.stream.StreamResult this ^java.lang.String system-id]
     (-> this (.setSystemId system-id))))
 
 (defn get-system-id
@@ -80,6 +80,6 @@
 
   returns: The system identifier that was set with setSystemId, or null
    if setSystemId was not called. - `java.lang.String`"
-  ([this]
+  ([^javax.xml.transform.stream.StreamResult this]
     (-> this (.getSystemId))))
 

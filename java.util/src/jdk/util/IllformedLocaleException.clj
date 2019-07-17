@@ -15,9 +15,9 @@
 
   message - the message - `java.lang.String`
   error-index - the index - `int`"
-  ([message error-index]
+  ([^java.lang.String message ^Integer error-index]
     (new IllformedLocaleException message error-index))
-  ([message]
+  ([^java.lang.String message]
     (new IllformedLocaleException message))
   ([]
     (new IllformedLocaleException )))
@@ -27,6 +27,6 @@
    either the error index is not applicable or unknown.
 
   returns: the error index - `int`"
-  ([this]
+  ([^java.util.IllformedLocaleException this]
     (-> this (.getErrorIndex))))
 

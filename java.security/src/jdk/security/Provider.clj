@@ -51,21 +51,21 @@
    contained in this provider.
 
   returns: a collection view of the values contained in this map - `java.util.Collection<java.lang.Object>`"
-  ([this]
+  ([^java.security.Provider this]
     (-> this (.values))))
 
 (defn for-each
   "Description copied from interface: Map
 
   action - The action to be performed for each entry - `java.lang.Object>`"
-  ([this action]
+  ([^java.security.Provider this ^java.lang.Object> action]
     (-> this (.forEach action))))
 
 (defn keys
   "Description copied from class: Hashtable
 
   returns: an enumeration of the keys in this hashtable. - `java.util.Enumeration<java.lang.Object>`"
-  ([this]
+  ([^java.security.Provider this]
     (-> this (.keys))))
 
 (defn replace-all
@@ -82,7 +82,7 @@
   function - the function to apply to each entry - `java.lang.Object>`
 
   throws: java.lang.SecurityException - if a security manager exists and its SecurityManager.checkSecurityAccess(java.lang.String) method denies access to set property values."
-  ([this function]
+  ([^java.security.Provider this ^java.lang.Object> function]
     (-> this (.replaceAll function))))
 
 (defn put-all
@@ -91,7 +91,7 @@
    for any of the keys currently in the specified Map.
 
   t - mappings to be stored in this map - `java.util.Map<?,?>`"
-  ([this t]
+  ([^java.security.Provider this ^java.util.Map t]
     (-> this (.putAll t))))
 
 (defn put-if-absent
@@ -114,7 +114,7 @@
            if the implementation supports null values.) - `java.lang.Object`
 
   throws: java.lang.SecurityException - if a security manager exists and its SecurityManager.checkSecurityAccess(java.lang.String) method denies access to set property values."
-  ([this key value]
+  ([^java.security.Provider this ^java.lang.Object key ^java.lang.Object value]
     (-> this (.putIfAbsent key value))))
 
 (defn put
@@ -133,7 +133,7 @@
                or null if it did not have one - `java.lang.Object`
 
   throws: java.lang.SecurityException - if a security manager exists and its SecurityManager.checkSecurityAccess(java.lang.String) method denies access to set property values."
-  ([this key value]
+  ([^java.security.Provider this ^java.lang.Object key ^java.lang.Object value]
     (-> this (.put key value))))
 
 (defn load
@@ -142,7 +142,7 @@
   in-stream - the input stream. - `java.io.InputStream`
 
   throws: java.io.IOException - if an error occurred when reading from the input stream."
-  ([this in-stream]
+  ([^java.security.Provider this ^java.io.InputStream in-stream]
     (-> this (.load in-stream))))
 
 (defn entry-set
@@ -150,7 +150,7 @@
    in this Provider.
 
   returns: a set view of the mappings contained in this map - `java.util.Set<java.util.Map.Entry<java.lang.Object,java.lang.Object>>`"
-  ([this]
+  ([^java.security.Provider this]
     (-> this (.entrySet))))
 
 (defn get-services
@@ -159,7 +159,7 @@
 
   returns: an unmodifiable Set of all services supported by
    this Provider - `java.util.Set<java.security.Provider.Service>`"
-  ([this]
+  ([^java.security.Provider this]
     (-> this (.getServices))))
 
 (defn to-string
@@ -168,14 +168,14 @@
 
   returns: the string with the name and the version number
    for this provider. - `java.lang.String`"
-  ([this]
+  ([^java.security.Provider this]
     (-> this (.toString))))
 
 (defn get-name
   "Returns the name of this provider.
 
   returns: the name of this provider. - `java.lang.String`"
-  ([this]
+  ([^java.security.Provider this]
     (-> this (.getName))))
 
 (defn get-service
@@ -193,7 +193,7 @@
    or null if no such service exists - `java.security.Provider.Service`
 
   throws: java.lang.NullPointerException - if type or algorithm is null"
-  ([this type algorithm]
+  ([^java.security.Provider this ^java.lang.String type ^java.lang.String algorithm]
     (-> this (.getService type algorithm))))
 
 (defn get-or-default
@@ -204,7 +204,7 @@
 
   returns: the value to which the specified key is mapped, or
    defaultValue if this map contains no mapping for the key - `java.lang.Object`"
-  ([this key default-value]
+  ([^java.security.Provider this ^java.lang.Object key ^java.lang.Object default-value]
     (-> this (.getOrDefault key default-value))))
 
 (defn replace
@@ -223,9 +223,9 @@
   returns: true if the value was replaced - `boolean`
 
   throws: java.lang.SecurityException - if a security manager exists and its SecurityManager.checkSecurityAccess(java.lang.String) method denies access to set property values."
-  ([this key old-value new-value]
+  ([^java.security.Provider this ^java.lang.Object key ^java.lang.Object old-value ^java.lang.Object new-value]
     (-> this (.replace key old-value new-value)))
-  ([this key value]
+  ([^java.security.Provider this ^java.lang.Object key ^java.lang.Object value]
     (-> this (.replace key value))))
 
 (defn get-info
@@ -233,14 +233,14 @@
    services.  This may return an HTML page, with relevant links.
 
   returns: a description of the provider and its services. - `java.lang.String`"
-  ([this]
+  ([^java.security.Provider this]
     (-> this (.getInfo))))
 
 (defn get-version
   "Returns the version number for this provider.
 
   returns: the version number for this provider. - `double`"
-  ([this]
+  ([^java.security.Provider this]
     (-> this (.getVersion))))
 
 (defn remove
@@ -258,9 +258,9 @@
   returns: true if the value was removed - `boolean`
 
   throws: java.lang.SecurityException - if a security manager exists and its SecurityManager.checkSecurityAccess(java.lang.String) method denies access to remove this provider's properties."
-  ([this key value]
+  ([^java.security.Provider this ^java.lang.Object key ^java.lang.Object value]
     (-> this (.remove key value)))
-  ([this key]
+  ([^java.security.Provider this ^java.lang.Object key]
     (-> this (.remove key))))
 
 (defn key-set
@@ -268,7 +268,7 @@
    this provider.
 
   returns: a set view of the keys contained in this map - `java.util.Set<java.lang.Object>`"
-  ([this]
+  ([^java.security.Provider this]
     (-> this (.keySet))))
 
 (defn get-property
@@ -277,7 +277,7 @@
   key - the property key. - `java.lang.String`
 
   returns: the value in this property list with the specified key value. - `java.lang.String`"
-  ([this key]
+  ([^java.security.Provider this ^java.lang.String key]
     (-> this (.getProperty key))))
 
 (defn compute-if-present
@@ -296,7 +296,7 @@
   returns: the new value associated with the specified key, or null if none - `java.lang.Object`
 
   throws: java.lang.SecurityException - if a security manager exists and its SecurityManager.checkSecurityAccess(java.lang.String) method denies access to set property values or remove properties."
-  ([this key remapping-function]
+  ([^java.security.Provider this ^java.lang.Object key ^java.lang.Object> remapping-function]
     (-> this (.computeIfPresent key remapping-function))))
 
 (defn clear
@@ -309,7 +309,7 @@
    this provider.
 
   throws: java.lang.SecurityException - if a security manager exists and its SecurityManager.checkSecurityAccess(java.lang.String) method denies access to clear this provider"
-  ([this]
+  ([^java.security.Provider this]
     (-> this (.clear))))
 
 (defn get
@@ -319,7 +319,7 @@
 
   returns: the value to which the specified key is mapped, or
            null if this map contains no mapping for the key - `java.lang.Object`"
-  ([this key]
+  ([^java.security.Provider this ^java.lang.Object key]
     (-> this (.get key))))
 
 (defn merge
@@ -343,7 +343,7 @@
            value is associated with the key - `java.lang.Object`
 
   throws: java.lang.SecurityException - if a security manager exists and its SecurityManager.checkSecurityAccess(java.lang.String) method denies access to set property values or remove properties."
-  ([this key value remapping-function]
+  ([^java.security.Provider this ^java.lang.Object key ^java.lang.Object value ^java.lang.Object> remapping-function]
     (-> this (.merge key value remapping-function))))
 
 (defn compute
@@ -363,14 +363,14 @@
   returns: the new value associated with the specified key, or null if none - `java.lang.Object`
 
   throws: java.lang.SecurityException - if a security manager exists and its SecurityManager.checkSecurityAccess(java.lang.String) method denies access to set property values or remove properties."
-  ([this key remapping-function]
+  ([^java.security.Provider this ^java.lang.Object key ^java.lang.Object> remapping-function]
     (-> this (.compute key remapping-function))))
 
 (defn elements
   "Description copied from class: Hashtable
 
   returns: an enumeration of the values in this hashtable. - `java.util.Enumeration<java.lang.Object>`"
-  ([this]
+  ([^java.security.Provider this]
     (-> this (.elements))))
 
 (defn compute-if-absent
@@ -392,6 +392,6 @@
            the specified key, or null if the computed value is null - `java.lang.Object`
 
   throws: java.lang.SecurityException - if a security manager exists and its SecurityManager.checkSecurityAccess(java.lang.String) method denies access to set property values and remove properties."
-  ([this key mapping-function]
+  ([^java.security.Provider this ^java.lang.Object key ^java.lang.Object> mapping-function]
     (-> this (.computeIfAbsent key mapping-function))))
 

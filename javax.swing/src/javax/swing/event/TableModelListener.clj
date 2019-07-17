@@ -9,6 +9,6 @@
    of cells, rows, or columns that changed.
 
   e - `javax.swing.event.TableModelEvent`"
-  ([this e]
+  ([^. this ^javax.swing.event.TableModelEvent e]
     (-> this (.tableChanged e))))
 

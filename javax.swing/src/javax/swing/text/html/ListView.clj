@@ -9,7 +9,7 @@
   Creates a new view that represents a list element.
 
   elem - the element to create a view for - `javax.swing.text.Element`"
-  ([elem]
+  ([^javax.swing.text.Element elem]
     (new ListView elem)))
 
 (defn get-alignment
@@ -18,7 +18,7 @@
   axis - may be either X_AXIS or Y_AXIS - `int`
 
   returns: the desired span - `float`"
-  ([this axis]
+  ([^javax.swing.text.html.ListView this ^Integer axis]
     (-> this (.getAlignment axis))))
 
 (defn paint
@@ -27,6 +27,6 @@
 
   g - the rendering surface to use - `java.awt.Graphics`
   allocation - the allocated region to render into - `java.awt.Shape`"
-  ([this g allocation]
+  ([^javax.swing.text.html.ListView this ^java.awt.Graphics g ^java.awt.Shape allocation]
     (-> this (.paint g allocation))))
 

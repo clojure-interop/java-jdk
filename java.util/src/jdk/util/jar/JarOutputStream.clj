@@ -19,9 +19,9 @@
   man - the optional Manifest - `java.util.jar.Manifest`
 
   throws: java.io.IOException - if an I/O error has occurred"
-  ([out man]
+  ([^java.io.OutputStream out ^java.util.jar.Manifest man]
     (new JarOutputStream out man))
-  ([out]
+  ([^java.io.OutputStream out]
     (new JarOutputStream out)))
 
 (def *-locsig
@@ -275,6 +275,6 @@
   ze - the ZIP/JAR entry to be written - `java.util.zip.ZipEntry`
 
   throws: java.util.zip.ZipException - if a ZIP error has occurred"
-  ([this ze]
+  ([^java.util.jar.JarOutputStream this ^java.util.zip.ZipEntry ze]
     (-> this (.putNextEntry ze))))
 

@@ -13,7 +13,7 @@
   Deprecated.
 
   in - the underlying input stream. - `java.io.InputStream`"
-  ([in]
+  ([^java.io.InputStream in]
     (new LineNumberInputStream in)))
 
 (defn read
@@ -28,9 +28,9 @@
                this stream has been reached. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this b off len]
+  ([^java.io.LineNumberInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  ([this]
+  ([^java.io.LineNumberInputStream this]
     (-> this (.read))))
 
 (defn skip
@@ -41,21 +41,21 @@
   returns: the actual number of bytes skipped. - `long`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this n]
+  ([^java.io.LineNumberInputStream this ^Long n]
     (-> this (.skip n))))
 
 (defn set-line-number
   "Deprecated.
 
   line-number - the new line number. - `int`"
-  ([this line-number]
+  ([^java.io.LineNumberInputStream this ^Integer line-number]
     (-> this (.setLineNumber line-number))))
 
 (defn get-line-number
   "Deprecated.
 
   returns: the current line number. - `int`"
-  ([this]
+  ([^java.io.LineNumberInputStream this]
     (-> this (.getLineNumber))))
 
 (defn available
@@ -65,20 +65,20 @@
                without blocking. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this]
+  ([^java.io.LineNumberInputStream this]
     (-> this (.available))))
 
 (defn mark
   "Deprecated.
 
   readlimit - the maximum limit of bytes that can be read before the mark position becomes invalid. - `int`"
-  ([this readlimit]
+  ([^java.io.LineNumberInputStream this ^Integer readlimit]
     (-> this (.mark readlimit))))
 
 (defn reset
   "Deprecated.
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this]
+  ([^java.io.LineNumberInputStream this]
     (-> this (.reset))))
 

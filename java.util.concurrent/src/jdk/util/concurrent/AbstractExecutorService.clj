@@ -44,9 +44,9 @@
   returns: a Future representing pending completion of the task - `<T> java.util.concurrent.Future<T>`
 
   throws: java.util.concurrent.RejectedExecutionException - if the task cannot be scheduled for execution"
-  ([this task result]
+  ([^java.util.concurrent.AbstractExecutorService this ^java.lang.Runnable task result]
     (-> this (.submit task result)))
-  ([this task]
+  ([^java.util.concurrent.AbstractExecutorService this ^java.lang.Runnable task]
     (-> this (.submit task))))
 
 (defn invoke-any
@@ -59,9 +59,9 @@
   returns: the result returned by one of the tasks - `<T> T`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([this tasks timeout unit]
+  ([^java.util.concurrent.AbstractExecutorService this ^java.util.concurrent.Callable> tasks ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.invokeAny tasks timeout unit)))
-  ([this tasks]
+  ([^java.util.concurrent.AbstractExecutorService this ^java.util.concurrent.Callable> tasks]
     (-> this (.invokeAny tasks))))
 
 (defn invoke-all
@@ -78,8 +78,8 @@
            of these tasks will not have completed. - `<T> java.util.List<java.util.concurrent.Future<T>>`
 
   throws: java.lang.InterruptedException - if interrupted while waiting, in which case unfinished tasks are cancelled"
-  ([this tasks timeout unit]
+  ([^java.util.concurrent.AbstractExecutorService this ^java.util.concurrent.Callable> tasks ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.invokeAll tasks timeout unit)))
-  ([this tasks]
+  ([^java.util.concurrent.AbstractExecutorService this ^java.util.concurrent.Callable> tasks]
     (-> this (.invokeAll tasks))))
 

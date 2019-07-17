@@ -43,11 +43,11 @@
   visible-position - the position that's most important to be visible; null if there's no recommendation for a visible position within current composed text - `java.awt.font.TextHitInfo`
 
   throws: java.lang.IllegalArgumentException - if source is null"
-  ([source id when text committed-character-count caret visible-position]
+  ([^java.awt.Component source ^Integer id ^Long when ^java.text.AttributedCharacterIterator text ^Integer committed-character-count ^java.awt.font.TextHitInfo caret ^java.awt.font.TextHitInfo visible-position]
     (new InputMethodEvent source id when text committed-character-count caret visible-position))
-  ([source id text committed-character-count caret visible-position]
+  ([^java.awt.Component source ^Integer id ^java.text.AttributedCharacterIterator text ^Integer committed-character-count ^java.awt.font.TextHitInfo caret ^java.awt.font.TextHitInfo visible-position]
     (new InputMethodEvent source id text committed-character-count caret visible-position))
-  ([source id caret visible-position]
+  ([^java.awt.Component source ^Integer id ^java.awt.font.TextHitInfo caret ^java.awt.font.TextHitInfo visible-position]
     (new InputMethodEvent source id caret visible-position)))
 
 (def *-input-method-first
@@ -93,14 +93,14 @@
   returns: the text.
    Always null for CARET_POSITION_CHANGED;
    may be null for INPUT_METHOD_TEXT_CHANGED if there's no composed or committed text. - `java.text.AttributedCharacterIterator`"
-  ([this]
+  ([^java.awt.event.InputMethodEvent this]
     (-> this (.getText))))
 
 (defn get-committed-character-count
   "Gets the number of committed characters in the text.
 
   returns: `int`"
-  ([this]
+  ([^java.awt.event.InputMethodEvent this]
     (-> this (.getCommittedCharacterCount))))
 
 (defn get-caret
@@ -114,7 +114,7 @@
 
   returns: the caret (a.k.a. insertion point).
    Null if there's no caret within current composed text. - `java.awt.font.TextHitInfo`"
-  ([this]
+  ([^java.awt.event.InputMethodEvent this]
     (-> this (.getCaret))))
 
 (defn get-visible-position
@@ -128,27 +128,27 @@
 
   returns: the position that's most important to be visible.
    Null if there's no recommendation for a visible position within current composed text. - `java.awt.font.TextHitInfo`"
-  ([this]
+  ([^java.awt.event.InputMethodEvent this]
     (-> this (.getVisiblePosition))))
 
 (defn consume
   "Consumes this event so that it will not be processed
    in the default manner by the source which originated it."
-  ([this]
+  ([^java.awt.event.InputMethodEvent this]
     (-> this (.consume))))
 
 (defn consumed?
   "Returns whether or not this event has been consumed.
 
   returns: `boolean`"
-  ([this]
+  ([^java.awt.event.InputMethodEvent this]
     (-> this (.isConsumed))))
 
 (defn get-when
   "Returns the time stamp of when this event occurred.
 
   returns: this event's timestamp - `long`"
-  ([this]
+  ([^java.awt.event.InputMethodEvent this]
     (-> this (.getWhen))))
 
 (defn param-string
@@ -160,6 +160,6 @@
    the caret, and the visible position.
 
   returns: a string identifying the event and its attributes - `java.lang.String`"
-  ([this]
+  ([^java.awt.event.InputMethodEvent this]
     (-> this (.paramString))))
 

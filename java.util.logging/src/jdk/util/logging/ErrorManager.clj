@@ -73,6 +73,6 @@
   msg - a descriptive string (may be null) - `java.lang.String`
   ex - an exception (may be null) - `java.lang.Exception`
   code - an error code defined in ErrorManager - `int`"
-  ([this msg ex code]
+  ([^java.util.logging.ErrorManager this ^java.lang.String msg ^java.lang.Exception ex ^Integer code]
     (-> this (.error msg ex code))))
 

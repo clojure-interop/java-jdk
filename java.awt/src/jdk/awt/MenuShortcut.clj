@@ -34,16 +34,16 @@
 
   key - the raw keycode for this MenuShortcut, as would be returned in the keyCode field of a KeyEvent if this key were pressed. - `int`
   use-shift-modifier - indicates whether this MenuShortcut is invoked with the SHIFT key down. - `boolean`"
-  ([key use-shift-modifier]
+  ([^Integer key ^Boolean use-shift-modifier]
     (new MenuShortcut key use-shift-modifier))
-  ([key]
+  ([^Integer key]
     (new MenuShortcut key)))
 
 (defn get-key
   "Returns the raw keycode of this MenuShortcut.
 
   returns: the raw keycode of this MenuShortcut. - `int`"
-  ([this]
+  ([^java.awt.MenuShortcut this]
     (-> this (.getKey))))
 
 (defn uses-shift-modifier
@@ -51,7 +51,7 @@
 
   returns: true if this MenuShortcut must be invoked using the
    SHIFT key, false otherwise. - `boolean`"
-  ([this]
+  ([^java.awt.MenuShortcut this]
     (-> this (.usesShiftModifier))))
 
 (defn equals
@@ -63,20 +63,20 @@
 
   returns: true if this MenuShortcut is the same as another,
    false otherwise. - `boolean`"
-  ([this s]
+  ([^java.awt.MenuShortcut this ^java.awt.MenuShortcut s]
     (-> this (.equals s))))
 
 (defn hash-code
   "Returns the hashcode for this MenuShortcut.
 
   returns: the hashcode for this MenuShortcut. - `int`"
-  ([this]
+  ([^java.awt.MenuShortcut this]
     (-> this (.hashCode))))
 
 (defn to-string
   "Returns an internationalized description of the MenuShortcut.
 
   returns: a string representation of this MenuShortcut. - `java.lang.String`"
-  ([this]
+  ([^java.awt.MenuShortcut this]
     (-> this (.toString))))
 

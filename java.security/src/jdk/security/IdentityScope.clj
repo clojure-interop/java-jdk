@@ -16,9 +16,9 @@
   scope - the scope for the new identity scope. - `java.security.IdentityScope`
 
   throws: java.security.KeyManagementException - if there is already an identity with the same name in the scope."
-  ([name scope]
+  ([^java.lang.String name ^java.security.IdentityScope scope]
     (new IdentityScope name scope))
-  ([name]
+  ([^java.lang.String name]
     (new IdentityScope name)))
 
 (defn *get-system-scope
@@ -33,7 +33,7 @@
   "Deprecated.
 
   returns: the number of identities within this identity scope. - `int`"
-  ([this]
+  ([^java.security.IdentityScope this]
     (-> this (.size))))
 
 (defn get-identity
@@ -43,7 +43,7 @@
 
   returns: the identity named name, or null if there are
    no identities named name in this scope. - `java.security.Identity`"
-  ([this name]
+  ([^java.security.IdentityScope this ^java.lang.String name]
     (-> this (.getIdentity name))))
 
 (defn add-identity
@@ -52,7 +52,7 @@
   identity - the identity to be added. - `java.security.Identity`
 
   throws: java.security.KeyManagementException - if the identity is not valid, a name conflict occurs, another identity has the same public key as the identity being added, or another exception occurs."
-  ([this identity]
+  ([^java.security.IdentityScope this ^java.security.Identity identity]
     (-> this (.addIdentity identity))))
 
 (defn remove-identity
@@ -61,20 +61,20 @@
   identity - the identity to be removed. - `java.security.Identity`
 
   throws: java.security.KeyManagementException - if the identity is missing, or another exception occurs."
-  ([this identity]
+  ([^java.security.IdentityScope this ^java.security.Identity identity]
     (-> this (.removeIdentity identity))))
 
 (defn identities
   "Deprecated.
 
   returns: an enumeration of all identities in this identity scope. - `java.util.Enumeration<java.security.Identity>`"
-  ([this]
+  ([^java.security.IdentityScope this]
     (-> this (.identities))))
 
 (defn to-string
   "Deprecated.
 
   returns: a string representation of this identity scope. - `java.lang.String`"
-  ([this]
+  ([^java.security.IdentityScope this]
     (-> this (.toString))))
 

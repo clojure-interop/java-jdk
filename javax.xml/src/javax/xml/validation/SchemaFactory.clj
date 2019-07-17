@@ -87,9 +87,9 @@
   returns: New instance of a SchemaFactory - `javax.xml.validation.SchemaFactory`
 
   throws: java.lang.IllegalArgumentException - if factoryClassName is null, or the factory class cannot be loaded, instantiated or doesn't support the schema language specified in schemLanguage parameter."
-  ([schema-language factory-class-name class-loader]
+  ([^java.lang.String schema-language ^java.lang.String factory-class-name ^java.lang.ClassLoader class-loader]
     (SchemaFactory/newInstance schema-language factory-class-name class-loader))
-  ([schema-language]
+  ([^java.lang.String schema-language]
     (SchemaFactory/newInstance schema-language)))
 
 (defn get-feature?
@@ -107,7 +107,7 @@
   returns: The current value of the feature (true or false). - `boolean`
 
   throws: org.xml.sax.SAXNotRecognizedException - If the feature value can't be assigned or retrieved."
-  ([this name]
+  ([^javax.xml.validation.SchemaFactory this ^java.lang.String name]
     (-> this (.getFeature name))))
 
 (defn get-resource-resolver
@@ -117,7 +117,7 @@
         the setResourceResolver(LSResourceResolver) method, or null
         if that method has never been called since this SchemaFactory
         has created. - `org.w3c.dom.ls.LSResourceResolver`"
-  ([this]
+  ([^javax.xml.validation.SchemaFactory this]
     (-> this (.getResourceResolver))))
 
 (defn set-resource-resolver
@@ -163,7 +163,7 @@
    ValidatorHandlers that are created from this SchemaFactory.
 
   resource-resolver - A new resource resolver to be set. This parameter can be null. - `org.w3c.dom.ls.LSResourceResolver`"
-  ([this resource-resolver]
+  ([^javax.xml.validation.SchemaFactory this ^org.w3c.dom.ls.LSResourceResolver resource-resolver]
     (-> this (.setResourceResolver resource-resolver))))
 
 (defn get-error-handler
@@ -173,7 +173,7 @@
         the setErrorHandler(ErrorHandler) method, or null
         if that method has never been called since this SchemaFactory
         has created. - `org.xml.sax.ErrorHandler`"
-  ([this]
+  ([^javax.xml.validation.SchemaFactory this]
     (-> this (.getErrorHandler))))
 
 (defn schema-language-supported?
@@ -184,7 +184,7 @@
   returns: true if SchemaFactory supports schemaLanguage, else false. - `boolean`
 
   throws: java.lang.NullPointerException - If schemaLanguage is null."
-  ([this schema-language]
+  ([^javax.xml.validation.SchemaFactory this ^java.lang.String schema-language]
     (-> this (.isSchemaLanguageSupported schema-language))))
 
 (defn set-error-handler
@@ -242,7 +242,7 @@
    ValidatorHandlers that are created from this SchemaFactory.
 
   error-handler - A new error handler to be set. This parameter can be null. - `org.xml.sax.ErrorHandler`"
-  ([this error-handler]
+  ([^javax.xml.validation.SchemaFactory this ^org.xml.sax.ErrorHandler error-handler]
     (-> this (.setErrorHandler error-handler))))
 
 (defn get-property
@@ -263,7 +263,7 @@
   returns: The current value of the property. - `java.lang.Object`
 
   throws: org.xml.sax.SAXNotRecognizedException - If the property value can't be assigned or retrieved."
-  ([this name]
+  ([^javax.xml.validation.SchemaFactory this ^java.lang.String name]
     (-> this (.getProperty name))))
 
 (defn new-schema
@@ -276,9 +276,9 @@
   returns: New Schema from parsing schema. - `javax.xml.validation.Schema`
 
   throws: org.xml.sax.SAXException - If a SAX error occurs during parsing."
-  ([this schema]
+  ([^javax.xml.validation.SchemaFactory this ^javax.xml.transform.Source schema]
     (-> this (.newSchema schema)))
-  ([this]
+  ([^javax.xml.validation.SchemaFactory this]
     (-> this (.newSchema))))
 
 (defn set-feature
@@ -319,7 +319,7 @@
   value - The requested value of the feature (true or false). - `boolean`
 
   throws: org.xml.sax.SAXNotRecognizedException - If the feature value can't be assigned or retrieved."
-  ([this name value]
+  ([^javax.xml.validation.SchemaFactory this ^java.lang.String name ^Boolean value]
     (-> this (.setFeature name value))))
 
 (defn set-property
@@ -370,6 +370,6 @@
   object - The requested value for the property. - `java.lang.Object`
 
   throws: org.xml.sax.SAXNotRecognizedException - If the property value can't be assigned or retrieved."
-  ([this name object]
+  ([^javax.xml.validation.SchemaFactory this ^java.lang.String name ^java.lang.Object object]
     (-> this (.setProperty name object))))
 

@@ -22,7 +22,7 @@
   returns: a BeanDescriptor object,
             or null if the information is to
             be obtained through the automatic analysis - `java.beans.BeanDescriptor`"
-  ([this]
+  ([^java.beans.SimpleBeanInfo this]
     (-> this (.getBeanDescriptor))))
 
 (defn get-property-descriptors
@@ -32,7 +32,7 @@
   returns: an array of PropertyDescriptor objects,
             or null if the information is to
             be obtained through the automatic analysis - `java.beans.PropertyDescriptor[]`"
-  ([this]
+  ([^java.beans.SimpleBeanInfo this]
     (-> this (.getPropertyDescriptors))))
 
 (defn get-default-property-index
@@ -42,7 +42,7 @@
   returns: index of the default property in the PropertyDescriptor array
             returned by the getPropertyDescriptors method,
             or -1 if there is no default property - `int`"
-  ([this]
+  ([^java.beans.SimpleBeanInfo this]
     (-> this (.getDefaultPropertyIndex))))
 
 (defn get-event-set-descriptors
@@ -52,7 +52,7 @@
   returns: an array of EventSetDescriptor objects,
             or null if the information is to
             be obtained through the automatic analysis - `java.beans.EventSetDescriptor[]`"
-  ([this]
+  ([^java.beans.SimpleBeanInfo this]
     (-> this (.getEventSetDescriptors))))
 
 (defn get-icon
@@ -63,7 +63,7 @@
 
   returns: an image object representing the requested icon,
                      or null if no suitable icon is available - `java.awt.Image`"
-  ([this icon-kind]
+  ([^java.beans.SimpleBeanInfo this ^Integer icon-kind]
     (-> this (.getIcon icon-kind))))
 
 (defn get-additional-bean-info
@@ -73,7 +73,7 @@
 
   returns: an array of BeanInfo objects,
             or null if there are no additional BeanInfo objects - `java.beans.BeanInfo[]`"
-  ([this]
+  ([^java.beans.SimpleBeanInfo this]
     (-> this (.getAdditionalBeanInfo))))
 
 (defn load-image
@@ -85,7 +85,7 @@
   resource-name - A pathname relative to the directory holding the class file of the current class. For example, `wombat.gif`. - `java.lang.String`
 
   returns: an image object.  May be null if the load failed. - `java.awt.Image`"
-  ([this resource-name]
+  ([^java.beans.SimpleBeanInfo this ^java.lang.String resource-name]
     (-> this (.loadImage resource-name))))
 
 (defn get-default-event-index
@@ -95,7 +95,7 @@
   returns: index of the default event in the EventSetDescriptor array
             returned by the getEventSetDescriptors method,
             or -1 if there is no default event - `int`"
-  ([this]
+  ([^java.beans.SimpleBeanInfo this]
     (-> this (.getDefaultEventIndex))))
 
 (defn get-method-descriptors
@@ -105,6 +105,6 @@
   returns: an array of MethodDescriptor objects,
             or null if the information is to
             be obtained through the automatic analysis - `java.beans.MethodDescriptor[]`"
-  ([this]
+  ([^java.beans.SimpleBeanInfo this]
     (-> this (.getMethodDescriptors))))
 

@@ -21,16 +21,16 @@
   "b - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([b]
+  ([^javax.swing.JComponent b]
     (MetalCheckBoxUI/createUI b)))
 
 (defn get-property-prefix
   "returns: `java.lang.String`"
-  ([this]
+  ([^javax.swing.plaf.metal.MetalCheckBoxUI this]
     (-> this (.getPropertyPrefix))))
 
 (defn install-defaults
   "b - `javax.swing.AbstractButton`"
-  ([this b]
+  ([^javax.swing.plaf.metal.MetalCheckBoxUI this ^javax.swing.AbstractButton b]
     (-> this (.installDefaults b))))
 

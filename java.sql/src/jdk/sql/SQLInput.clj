@@ -53,9 +53,9 @@
    Java programming language;null if the attribute is SQL NULL - `default <T> T`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this type]
+  ([^. this ^java.lang.Class type]
     (-> this (.readObject type)))
-  ([this]
+  ([^. this]
     (-> this (.readObject))))
 
 (defn read-blob
@@ -67,7 +67,7 @@
    SQL NULL - `java.sql.Blob`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.readBlob))))
 
 (defn read-bytes
@@ -77,7 +77,7 @@
   returns: the attribute; if the value is SQL NULL, returns null - `byte[]`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.readBytes))))
 
 (defn read-ascii-stream
@@ -86,7 +86,7 @@
   returns: the attribute; if the value is SQL NULL, returns null - `java.io.InputStream`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.readAsciiStream))))
 
 (defn read-timestamp
@@ -95,7 +95,7 @@
   returns: the attribute; if the value is SQL NULL, returns null - `java.sql.Timestamp`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.readTimestamp))))
 
 (defn read-byte
@@ -105,7 +105,7 @@
   returns: the attribute; if the value is SQL NULL, returns 0 - `byte`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.readByte))))
 
 (defn read-float
@@ -115,7 +115,7 @@
   returns: the attribute; if the value is SQL NULL, returns 0 - `float`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.readFloat))))
 
 (defn read-character-stream
@@ -124,7 +124,7 @@
   returns: the attribute; if the value is SQL NULL, returns null - `java.io.Reader`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.readCharacterStream))))
 
 (defn read-sqlxml
@@ -136,7 +136,7 @@
    SQL NULL - `java.sql.SQLXML`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.readSQLXML))))
 
 (defn read-n-clob
@@ -148,7 +148,7 @@
    SQL NULL - `java.sql.NClob`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.readNClob))))
 
 (defn read-boolean
@@ -158,7 +158,7 @@
   returns: the attribute; if the value is SQL NULL, returns false - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.readBoolean))))
 
 (defn read-int
@@ -168,7 +168,7 @@
   returns: the attribute; if the value is SQL NULL, returns 0 - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.readInt))))
 
 (defn read-string
@@ -178,7 +178,7 @@
   returns: the attribute; if the value is SQL NULL, returns null - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.readString))))
 
 (defn read-long
@@ -188,7 +188,7 @@
   returns: the attribute; if the value is SQL NULL, returns 0 - `long`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.readLong))))
 
 (defn read-clob
@@ -200,7 +200,7 @@
    SQL NULL - `java.sql.Clob`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.readClob))))
 
 (defn read-url
@@ -210,7 +210,7 @@
   returns: a java.net.URL object. - `java.net.URL`
 
   throws: java.sql.SQLException - if a database access error occurs, or if a URL is malformed"
-  ([this]
+  ([^. this]
     (-> this (.readURL))))
 
 (defn read-binary-stream
@@ -220,7 +220,7 @@
   returns: the attribute; if the value is SQL NULL, returns null - `java.io.InputStream`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.readBinaryStream))))
 
 (defn was-null
@@ -230,7 +230,7 @@
    NULL; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.wasNull))))
 
 (defn read-big-decimal
@@ -240,7 +240,7 @@
   returns: the attribute; if the value is SQL NULL, returns null - `java.math.BigDecimal`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.readBigDecimal))))
 
 (defn read-ref
@@ -252,7 +252,7 @@
    SQL NULL - `java.sql.Ref`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.readRef))))
 
 (defn read-row-id
@@ -264,7 +264,7 @@
    SQL NULL - `java.sql.RowId`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.readRowId))))
 
 (defn read-n-string
@@ -276,7 +276,7 @@
   returns: the attribute; if the value is SQL NULL, returns null - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.readNString))))
 
 (defn read-short
@@ -286,7 +286,7 @@
   returns: the attribute; if the value is SQL NULL, returns 0 - `short`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.readShort))))
 
 (defn read-array
@@ -298,7 +298,7 @@
    if the value read is SQL NULL - `java.sql.Array`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.readArray))))
 
 (defn read-time
@@ -307,7 +307,7 @@
   returns: the attribute; if the value is SQL NULL, returns null - `java.sql.Time`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.readTime))))
 
 (defn read-double
@@ -317,7 +317,7 @@
   returns: the attribute; if the value is SQL NULL, returns 0 - `double`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.readDouble))))
 
 (defn read-date
@@ -326,6 +326,6 @@
   returns: the attribute; if the value is SQL NULL, returns null - `java.sql.Date`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.readDate))))
 

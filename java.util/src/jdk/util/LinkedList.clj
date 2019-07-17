@@ -56,7 +56,7 @@
   c - the collection whose elements are to be placed into this list - `LinkedList.E>`
 
   throws: java.lang.NullPointerException - if the specified collection is null"
-  ([c]
+  ([^LinkedList.E> c]
     (new LinkedList c))
   ([]
     (new LinkedList )))
@@ -75,16 +75,16 @@
   returns: true if this list changed as a result of the call - `boolean`
 
   throws: java.lang.IndexOutOfBoundsException - if the index is out of range (index < 0 || index > size())"
-  ([this index c]
+  ([^java.util.LinkedList this ^Integer index ^LinkedList.E> c]
     (-> this (.addAll index c)))
-  ([this c]
+  ([^java.util.LinkedList this ^LinkedList.E> c]
     (-> this (.addAll c))))
 
 (defn peek
   "Retrieves, but does not remove, the head (first element) of this list.
 
   returns: the head of this list, or null if this list is empty - `LinkedList.E`"
-  ([this]
+  ([^java.util.LinkedList this]
     (-> this (.peek))))
 
 (defn offer-first
@@ -93,7 +93,7 @@
   e - the element to insert - `LinkedList.E`
 
   returns: true (as specified by Deque.offerFirst(E)) - `boolean`"
-  ([this e]
+  ([^java.util.LinkedList this ^LinkedList.E e]
     (-> this (.offerFirst e))))
 
 (defn get-first
@@ -102,7 +102,7 @@
   returns: the first element in this list - `LinkedList.E`
 
   throws: java.util.NoSuchElementException - if this list is empty"
-  ([this]
+  ([^java.util.LinkedList this]
     (-> this (.getFirst))))
 
 (defn spliterator
@@ -115,7 +115,7 @@
    the reporting of additional characteristic values.
 
   returns: a Spliterator over the elements in this list - `java.util.Spliterator<LinkedList.E>`"
-  ([this]
+  ([^java.util.LinkedList this]
     (-> this (.spliterator))))
 
 (defn peek-first
@@ -124,7 +124,7 @@
 
   returns: the first element of this list, or null
            if this list is empty - `LinkedList.E`"
-  ([this]
+  ([^java.util.LinkedList this]
     (-> this (.peekFirst))))
 
 (defn remove-first-occurrence
@@ -135,7 +135,7 @@
   o - element to be removed from this list, if present - `java.lang.Object`
 
   returns: true if the list contained the specified element - `boolean`"
-  ([this o]
+  ([^java.util.LinkedList this ^java.lang.Object o]
     (-> this (.removeFirstOccurrence o))))
 
 (defn offer
@@ -144,7 +144,7 @@
   e - the element to add - `LinkedList.E`
 
   returns: true (as specified by Queue.offer(E)) - `boolean`"
-  ([this e]
+  ([^java.util.LinkedList this ^LinkedList.E e]
     (-> this (.offer e))))
 
 (defn peek-last
@@ -153,7 +153,7 @@
 
   returns: the last element of this list, or null
            if this list is empty - `LinkedList.E`"
-  ([this]
+  ([^java.util.LinkedList this]
     (-> this (.peekLast))))
 
 (defn pop
@@ -166,7 +166,7 @@
            of the stack represented by this list) - `LinkedList.E`
 
   throws: java.util.NoSuchElementException - if this list is empty"
-  ([this]
+  ([^java.util.LinkedList this]
     (-> this (.pop))))
 
 (defn contains
@@ -178,7 +178,7 @@
   o - element whose presence in this list is to be tested - `java.lang.Object`
 
   returns: true if this list contains the specified element - `boolean`"
-  ([this o]
+  ([^java.util.LinkedList this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn push
@@ -188,7 +188,7 @@
    This method is equivalent to addFirst(E).
 
   e - the element to push - `LinkedList.E`"
-  ([this e]
+  ([^java.util.LinkedList this ^LinkedList.E e]
     (-> this (.push e))))
 
 (defn get-last
@@ -197,7 +197,7 @@
   returns: the last element in this list - `LinkedList.E`
 
   throws: java.util.NoSuchElementException - if this list is empty"
-  ([this]
+  ([^java.util.LinkedList this]
     (-> this (.getLast))))
 
 (defn list-iterator
@@ -220,7 +220,7 @@
            sequence), starting at the specified position in the list - `java.util.ListIterator<LinkedList.E>`
 
   throws: java.lang.IndexOutOfBoundsException - if the index is out of range (index < 0 || index > size())"
-  ([this index]
+  ([^java.util.LinkedList this ^Integer index]
     (-> this (.listIterator index))))
 
 (defn element
@@ -229,7 +229,7 @@
   returns: the head of this list - `LinkedList.E`
 
   throws: java.util.NoSuchElementException - if this list is empty"
-  ([this]
+  ([^java.util.LinkedList this]
     (-> this (.element))))
 
 (defn remove-first
@@ -238,7 +238,7 @@
   returns: the first element from this list - `LinkedList.E`
 
   throws: java.util.NoSuchElementException - if this list is empty"
-  ([this]
+  ([^java.util.LinkedList this]
     (-> this (.removeFirst))))
 
 (defn last-index-of
@@ -252,7 +252,7 @@
 
   returns: the index of the last occurrence of the specified element in
            this list, or -1 if this list does not contain the element - `int`"
-  ([this o]
+  ([^java.util.LinkedList this ^java.lang.Object o]
     (-> this (.lastIndexOf o))))
 
 (defn remove
@@ -268,9 +268,9 @@
   o - element to be removed from this list, if present - `java.lang.Object`
 
   returns: true if this list contained the specified element - `boolean`"
-  ([this o]
+  ([^java.util.LinkedList this ^java.lang.Object o]
     (-> this (.remove o)))
-  ([this]
+  ([^java.util.LinkedList this]
     (-> this (.remove))))
 
 (defn poll-last
@@ -279,14 +279,14 @@
 
   returns: the last element of this list, or null if
        this list is empty - `LinkedList.E`"
-  ([this]
+  ([^java.util.LinkedList this]
     (-> this (.pollLast))))
 
 (defn poll
   "Retrieves and removes the head (first element) of this list.
 
   returns: the head of this list, or null if this list is empty - `LinkedList.E`"
-  ([this]
+  ([^java.util.LinkedList this]
     (-> this (.poll))))
 
 (defn offer-last
@@ -295,7 +295,7 @@
   e - the element to insert - `LinkedList.E`
 
   returns: true (as specified by Deque.offerLast(E)) - `boolean`"
-  ([this e]
+  ([^java.util.LinkedList this ^LinkedList.E e]
     (-> this (.offerLast e))))
 
 (defn poll-first
@@ -304,7 +304,7 @@
 
   returns: the first element of this list, or null if
        this list is empty - `LinkedList.E`"
-  ([this]
+  ([^java.util.LinkedList this]
     (-> this (.pollFirst))))
 
 (defn add-last
@@ -313,7 +313,7 @@
    This method is equivalent to add(E).
 
   e - the element to add - `LinkedList.E`"
-  ([this e]
+  ([^java.util.LinkedList this ^LinkedList.E e]
     (-> this (.addLast e))))
 
 (defn clone
@@ -321,7 +321,7 @@
    themselves are not cloned.)
 
   returns: a shallow copy of this LinkedList instance - `java.lang.Object`"
-  ([this]
+  ([^java.util.LinkedList this]
     (-> this (.clone))))
 
 (defn remove-last-occurrence
@@ -332,7 +332,7 @@
   o - element to be removed from this list, if present - `java.lang.Object`
 
   returns: true if the list contained the specified element - `boolean`"
-  ([this o]
+  ([^java.util.LinkedList this ^java.lang.Object o]
     (-> this (.removeLastOccurrence o))))
 
 (defn add
@@ -344,9 +344,9 @@
   element - element to be inserted - `LinkedList.E`
 
   throws: java.lang.IndexOutOfBoundsException - if the index is out of range (index < 0 || index > size())"
-  ([this index element]
+  ([^java.util.LinkedList this ^Integer index ^LinkedList.E element]
     (-> this (.add index element)))
-  ([this e]
+  ([^java.util.LinkedList this ^LinkedList.E e]
     (-> this (.add e))))
 
 (defn descending-iterator
@@ -354,7 +354,7 @@
 
   returns: an iterator over the elements in this deque in reverse
    sequence - `java.util.Iterator<LinkedList.E>`"
-  ([this]
+  ([^java.util.LinkedList this]
     (-> this (.descendingIterator))))
 
 (defn set
@@ -367,20 +367,20 @@
   returns: the element previously at the specified position - `LinkedList.E`
 
   throws: java.lang.IndexOutOfBoundsException - if the index is out of range (index < 0 || index >= size())"
-  ([this index element]
+  ([^java.util.LinkedList this ^Integer index ^LinkedList.E element]
     (-> this (.set index element))))
 
 (defn size
   "Returns the number of elements in this list.
 
   returns: the number of elements in this list - `int`"
-  ([this]
+  ([^java.util.LinkedList this]
     (-> this (.size))))
 
 (defn clear
   "Removes all of the elements from this list.
    The list will be empty after this call returns."
-  ([this]
+  ([^java.util.LinkedList this]
     (-> this (.clear))))
 
 (defn remove-last
@@ -389,14 +389,14 @@
   returns: the last element from this list - `LinkedList.E`
 
   throws: java.util.NoSuchElementException - if this list is empty"
-  ([this]
+  ([^java.util.LinkedList this]
     (-> this (.removeLast))))
 
 (defn add-first
   "Inserts the specified element at the beginning of this list.
 
   e - the element to add - `LinkedList.E`"
-  ([this e]
+  ([^java.util.LinkedList this ^LinkedList.E e]
     (-> this (.addFirst e))))
 
 (defn index-of
@@ -410,7 +410,7 @@
 
   returns: the index of the first occurrence of the specified element in
            this list, or -1 if this list does not contain the element - `int`"
-  ([this o]
+  ([^java.util.LinkedList this ^java.lang.Object o]
     (-> this (.indexOf o))))
 
 (defn to-array
@@ -448,9 +448,9 @@
   returns: an array containing the elements of the list - `<T> T[]`
 
   throws: java.lang.ArrayStoreException - if the runtime type of the specified array is not a supertype of the runtime type of every element in this list"
-  ([this a]
+  ([^java.util.LinkedList this a]
     (-> this (.toArray a)))
-  ([this]
+  ([^java.util.LinkedList this]
     (-> this (.toArray))))
 
 (defn get
@@ -461,6 +461,6 @@
   returns: the element at the specified position in this list - `LinkedList.E`
 
   throws: java.lang.IndexOutOfBoundsException - if the index is out of range (index < 0 || index >= size())"
-  ([this index]
+  ([^java.util.LinkedList this ^Integer index]
     (-> this (.get index))))
 

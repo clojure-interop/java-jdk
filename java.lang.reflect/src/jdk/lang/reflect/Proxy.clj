@@ -248,7 +248,7 @@
             and that implements the specified interfaces - `java.lang.Class<?>`
 
   throws: java.lang.IllegalArgumentException - if any of the restrictions on the parameters that may be passed to getProxyClass are violated"
-  ([loader interfaces]
+  ([^java.lang.ClassLoader loader ^java.lang.Class interfaces]
     (Proxy/getProxyClass loader interfaces)))
 
 (defn *new-proxy-instance
@@ -269,7 +269,7 @@
             and that implements the specified interfaces - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if any of the restrictions on the parameters that may be passed to getProxyClass are violated"
-  ([loader interfaces h]
+  ([^java.lang.ClassLoader loader ^java.lang.Class[] interfaces ^java.lang.reflect.InvocationHandler h]
     (Proxy/newProxyInstance loader interfaces h)))
 
 (defn *proxy-class?
@@ -287,7 +287,7 @@
             false otherwise - `boolean`
 
   throws: java.lang.NullPointerException - if cl is null"
-  ([cl]
+  ([^java.lang.Class cl]
     (Proxy/isProxyClass cl)))
 
 (defn *get-invocation-handler
@@ -298,6 +298,6 @@
   returns: the invocation handler for the proxy instance - `java.lang.reflect.InvocationHandler`
 
   throws: java.lang.IllegalArgumentException - if the argument is not a proxy instance"
-  ([proxy]
+  ([^java.lang.Object proxy]
     (Proxy/getInvocationHandler proxy)))
 

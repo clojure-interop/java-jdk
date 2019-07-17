@@ -21,12 +21,12 @@
   "c - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([c]
+  ([^javax.swing.JComponent c]
     (MetalRadioButtonUI/createUI c)))
 
 (defn install-defaults
   "b - `javax.swing.AbstractButton`"
-  ([this b]
+  ([^javax.swing.plaf.metal.MetalRadioButtonUI this ^javax.swing.AbstractButton b]
     (-> this (.installDefaults b))))
 
 (defn paint
@@ -34,6 +34,6 @@
 
   g - the Graphics context in which to paint - `java.awt.Graphics`
   c - the component being painted; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([this g c]
+  ([^javax.swing.plaf.metal.MetalRadioButtonUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.paint g c))))
 

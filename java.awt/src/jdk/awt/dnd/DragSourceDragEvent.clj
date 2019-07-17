@@ -62,16 +62,16 @@
   y - the vertical coordinate for the cursor location - `int`
 
   throws: java.lang.IllegalArgumentException - if dsc is null."
-  ([dsc drop-action action modifiers x y]
+  ([^java.awt.dnd.DragSourceContext dsc ^Integer drop-action ^Integer action ^Integer modifiers ^Integer x ^Integer y]
     (new DragSourceDragEvent dsc drop-action action modifiers x y))
-  ([dsc drop-action action modifiers]
+  ([^java.awt.dnd.DragSourceContext dsc ^Integer drop-action ^Integer action ^Integer modifiers]
     (new DragSourceDragEvent dsc drop-action action modifiers)))
 
 (defn get-target-actions
   "This method returns the target drop action.
 
   returns: the target drop action. - `int`"
-  ([this]
+  ([^java.awt.dnd.DragSourceDragEvent this]
     (-> this (.getTargetActions))))
 
 (defn get-gesture-modifiers
@@ -84,7 +84,7 @@
    are invalid, this method returns them unchanged.
 
   returns: the current state of the input device modifiers - `int`"
-  ([this]
+  ([^java.awt.dnd.DragSourceDragEvent this]
     (-> this (.getGestureModifiers))))
 
 (defn get-gesture-modifiers-ex
@@ -97,14 +97,14 @@
    are invalid, this method returns them unchanged.
 
   returns: the current state of the input device extended modifiers - `int`"
-  ([this]
+  ([^java.awt.dnd.DragSourceDragEvent this]
     (-> this (.getGestureModifiersEx))))
 
 (defn get-user-action
   "This method returns the user drop action.
 
   returns: the user drop action. - `int`"
-  ([this]
+  ([^java.awt.dnd.DragSourceDragEvent this]
     (-> this (.getUserAction))))
 
 (defn get-drop-action
@@ -114,6 +114,6 @@
 
   returns: the logical intersection of the target drop action and
            the set of drop actions supported by the drag source. - `int`"
-  ([this]
+  ([^java.awt.dnd.DragSourceDragEvent this]
     (-> this (.getDropAction))))
 

@@ -46,7 +46,7 @@
   returns: the locale and Chronology specific formatting pattern - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if both dateStyle and timeStyle are null"
-  ([date-style time-style chrono locale]
+  ([^java.time.format.FormatStyle date-style ^java.time.format.FormatStyle time-style ^java.time.chrono.Chronology chrono ^java.util.Locale locale]
     (DateTimeFormatterBuilder/getLocalizedDateTimePattern date-style time-style chrono locale)))
 
 (defn to-formatter
@@ -66,9 +66,9 @@
   locale - the locale to use for formatting, not null - `java.util.Locale`
 
   returns: the created formatter, not null - `java.time.format.DateTimeFormatter`"
-  ([this locale]
+  ([^java.time.format.DateTimeFormatterBuilder this ^java.util.Locale locale]
     (-> this (.toFormatter locale)))
-  ([this]
+  ([^java.time.format.DateTimeFormatterBuilder this]
     (-> this (.toFormatter))))
 
 (defn append-pattern
@@ -292,7 +292,7 @@
   returns: this, for chaining, not null - `java.time.format.DateTimeFormatterBuilder`
 
   throws: java.lang.IllegalArgumentException - if the pattern is invalid"
-  ([this pattern]
+  ([^java.time.format.DateTimeFormatterBuilder this ^java.lang.String pattern]
     (-> this (.appendPattern pattern))))
 
 (defn append-value
@@ -327,11 +327,11 @@
   returns: this, for chaining, not null - `java.time.format.DateTimeFormatterBuilder`
 
   throws: java.lang.IllegalArgumentException - if the widths are invalid"
-  ([this field min-width max-width sign-style]
+  ([^java.time.format.DateTimeFormatterBuilder this ^java.time.temporal.TemporalField field ^Integer min-width ^Integer max-width ^java.time.format.SignStyle sign-style]
     (-> this (.appendValue field min-width max-width sign-style)))
-  ([this field width]
+  ([^java.time.format.DateTimeFormatterBuilder this ^java.time.temporal.TemporalField field ^Integer width]
     (-> this (.appendValue field width)))
-  ([this field]
+  ([^java.time.format.DateTimeFormatterBuilder this ^java.time.temporal.TemporalField field]
     (-> this (.appendValue field))))
 
 (defn append-instant
@@ -368,9 +368,9 @@
   fractional-digits - the number of fractional second digits to format with, from 0 to 9, or -1 to use as many digits as necessary - `int`
 
   returns: this, for chaining, not null - `java.time.format.DateTimeFormatterBuilder`"
-  ([this fractional-digits]
+  ([^java.time.format.DateTimeFormatterBuilder this ^Integer fractional-digits]
     (-> this (.appendInstant fractional-digits)))
-  ([this]
+  ([^java.time.format.DateTimeFormatterBuilder this]
     (-> this (.appendInstant))))
 
 (defn append-literal
@@ -381,7 +381,7 @@
   literal - the literal to append, not null - `char`
 
   returns: this, for chaining, not null - `java.time.format.DateTimeFormatterBuilder`"
-  ([this literal]
+  ([^java.time.format.DateTimeFormatterBuilder this ^Character literal]
     (-> this (.appendLiteral literal))))
 
 (defn optional-start
@@ -403,7 +403,7 @@
    During parsing, the input will be successfully parsed whether the minute is present or not.
 
   returns: this, for chaining, not null - `java.time.format.DateTimeFormatterBuilder`"
-  ([this]
+  ([^java.time.format.DateTimeFormatterBuilder this]
     (-> this (.optionalStart))))
 
 (defn append-fraction
@@ -438,7 +438,7 @@
   returns: this, for chaining, not null - `java.time.format.DateTimeFormatterBuilder`
 
   throws: java.lang.IllegalArgumentException - if the field has a variable set of valid values or either width is invalid"
-  ([this field min-width max-width decimal-point]
+  ([^java.time.format.DateTimeFormatterBuilder this ^java.time.temporal.TemporalField field ^Integer min-width ^Integer max-width ^Boolean decimal-point]
     (-> this (.appendFraction field min-width max-width decimal-point))))
 
 (defn append-optional
@@ -454,7 +454,7 @@
   formatter - the formatter to add, not null - `java.time.format.DateTimeFormatter`
 
   returns: this, for chaining, not null - `java.time.format.DateTimeFormatterBuilder`"
-  ([this formatter]
+  ([^java.time.format.DateTimeFormatterBuilder this ^java.time.format.DateTimeFormatter formatter]
     (-> this (.appendOptional formatter))))
 
 (defn optional-end
@@ -482,7 +482,7 @@
   returns: this, for chaining, not null - `java.time.format.DateTimeFormatterBuilder`
 
   throws: java.lang.IllegalStateException - if there was no previous call to optionalStart"
-  ([this]
+  ([^java.time.format.DateTimeFormatterBuilder this]
     (-> this (.optionalEnd))))
 
 (defn parse-lenient
@@ -498,7 +498,7 @@
    constructed or until parseStrict is called.
 
   returns: this, for chaining, not null - `java.time.format.DateTimeFormatterBuilder`"
-  ([this]
+  ([^java.time.format.DateTimeFormatterBuilder this]
     (-> this (.parseLenient))))
 
 (defn pad-next
@@ -523,9 +523,9 @@
   returns: this, for chaining, not null - `java.time.format.DateTimeFormatterBuilder`
 
   throws: java.lang.IllegalArgumentException - if pad width is too small"
-  ([this pad-width pad-char]
+  ([^java.time.format.DateTimeFormatterBuilder this ^Integer pad-width ^Character pad-char]
     (-> this (.padNext pad-width pad-char)))
-  ([this pad-width]
+  ([^java.time.format.DateTimeFormatterBuilder this ^Integer pad-width]
     (-> this (.padNext pad-width))))
 
 (defn append-chronology-id
@@ -546,7 +546,7 @@
    The parser uses the case sensitive setting.
 
   returns: this, for chaining, not null - `java.time.format.DateTimeFormatterBuilder`"
-  ([this]
+  ([^java.time.format.DateTimeFormatterBuilder this]
     (-> this (.appendChronologyId))))
 
 (defn append-zone-or-offset-id
@@ -598,7 +598,7 @@
    in the mechanism used to obtain the zone.
 
   returns: this, for chaining, not null - `java.time.format.DateTimeFormatterBuilder`"
-  ([this]
+  ([^java.time.format.DateTimeFormatterBuilder this]
     (-> this (.appendZoneOrOffsetId))))
 
 (defn parse-case-sensitive
@@ -618,7 +618,7 @@
    a previous call to #parseCaseInsensitive.
 
   returns: this, for chaining, not null - `java.time.format.DateTimeFormatterBuilder`"
-  ([this]
+  ([^java.time.format.DateTimeFormatterBuilder this]
     (-> this (.parseCaseSensitive))))
 
 (defn parse-strict
@@ -633,7 +633,7 @@
    constructed or until parseLenient is called.
 
   returns: this, for chaining, not null - `java.time.format.DateTimeFormatterBuilder`"
-  ([this]
+  ([^java.time.format.DateTimeFormatterBuilder this]
     (-> this (.parseStrict))))
 
 (defn append-chronology-text
@@ -645,7 +645,7 @@
   text-style - the text style to use, not null - `java.time.format.TextStyle`
 
   returns: this, for chaining, not null - `java.time.format.DateTimeFormatterBuilder`"
-  ([this text-style]
+  ([^java.time.format.DateTimeFormatterBuilder this ^java.time.format.TextStyle text-style]
     (-> this (.appendChronologyText text-style))))
 
 (defn append-offset-id
@@ -655,7 +655,7 @@
    This is equivalent to calling appendOffset(`+HH:MM:ss`, `Z`).
 
   returns: this, for chaining, not null - `java.time.format.DateTimeFormatterBuilder`"
-  ([this]
+  ([^java.time.format.DateTimeFormatterBuilder this]
     (-> this (.appendOffsetId))))
 
 (defn append-zone-region-id
@@ -707,7 +707,7 @@
    produce one.
 
   returns: this, for chaining, not null - `java.time.format.DateTimeFormatterBuilder`"
-  ([this]
+  ([^java.time.format.DateTimeFormatterBuilder this]
     (-> this (.appendZoneRegionId))))
 
 (defn parse-defaulting
@@ -737,7 +737,7 @@
   value - the value to default the field to - `long`
 
   returns: this, for chaining, not null - `java.time.format.DateTimeFormatterBuilder`"
-  ([this field value]
+  ([^java.time.format.DateTimeFormatterBuilder this ^java.time.temporal.TemporalField field ^Long value]
     (-> this (.parseDefaulting field value))))
 
 (defn append-zone-id
@@ -784,7 +784,7 @@
      `GMT+01:30`               -- ZoneOffset.of(`+01:30`)
 
   returns: this, for chaining, not null - `java.time.format.DateTimeFormatterBuilder`"
-  ([this]
+  ([^java.time.format.DateTimeFormatterBuilder this]
     (-> this (.appendZoneId))))
 
 (defn parse-case-insensitive
@@ -801,7 +801,7 @@
    multiple times during the parse.
 
   returns: this, for chaining, not null - `java.time.format.DateTimeFormatterBuilder`"
-  ([this]
+  ([^java.time.format.DateTimeFormatterBuilder this]
     (-> this (.parseCaseInsensitive))))
 
 (defn append-localized-offset
@@ -833,7 +833,7 @@
   returns: this, for chaining, not null - `java.time.format.DateTimeFormatterBuilder`
 
   throws: java.lang.IllegalArgumentException - if style is neither full nor short"
-  ([this style]
+  ([^java.time.format.DateTimeFormatterBuilder this ^java.time.format.TextStyle style]
     (-> this (.appendLocalizedOffset style))))
 
 (defn append
@@ -845,7 +845,7 @@
   formatter - the formatter to add, not null - `java.time.format.DateTimeFormatter`
 
   returns: this, for chaining, not null - `java.time.format.DateTimeFormatterBuilder`"
-  ([this formatter]
+  ([^java.time.format.DateTimeFormatterBuilder this ^java.time.format.DateTimeFormatter formatter]
     (-> this (.append formatter))))
 
 (defn append-text
@@ -863,9 +863,9 @@
   text-style - the text style to use, not null - `java.time.format.TextStyle`
 
   returns: this, for chaining, not null - `java.time.format.DateTimeFormatterBuilder`"
-  ([this field text-style]
+  ([^java.time.format.DateTimeFormatterBuilder this ^java.time.temporal.TemporalField field ^java.time.format.TextStyle text-style]
     (-> this (.appendText field text-style)))
-  ([this field]
+  ([^java.time.format.DateTimeFormatterBuilder this ^java.time.temporal.TemporalField field]
     (-> this (.appendText field))))
 
 (defn append-localized
@@ -897,7 +897,7 @@
   returns: this, for chaining, not null - `java.time.format.DateTimeFormatterBuilder`
 
   throws: java.lang.IllegalArgumentException - if both the date and time styles are null"
-  ([this date-style time-style]
+  ([^java.time.format.DateTimeFormatterBuilder this ^java.time.format.FormatStyle date-style ^java.time.format.FormatStyle time-style]
     (-> this (.appendLocalized date-style time-style))))
 
 (defn append-offset
@@ -938,7 +938,7 @@
   no-offset-text - the text to use when the offset is zero, not null - `java.lang.String`
 
   returns: this, for chaining, not null - `java.time.format.DateTimeFormatterBuilder`"
-  ([this pattern no-offset-text]
+  ([^java.time.format.DateTimeFormatterBuilder this ^java.lang.String pattern ^java.lang.String no-offset-text]
     (-> this (.appendOffset pattern no-offset-text))))
 
 (defn append-value-reduced
@@ -980,7 +980,7 @@
   returns: this, for chaining, not null - `java.time.format.DateTimeFormatterBuilder`
 
   throws: java.lang.IllegalArgumentException - if the width or base value is invalid"
-  ([this field width max-width base-value]
+  ([^java.time.format.DateTimeFormatterBuilder this ^java.time.temporal.TemporalField field ^Integer width ^Integer max-width ^Integer base-value]
     (-> this (.appendValueReduced field width max-width base-value))))
 
 (defn append-zone-text
@@ -1019,8 +1019,8 @@
   preferred-zones - the set of preferred zone ids, not null - `java.util.Set<java.time.ZoneId>`
 
   returns: this, for chaining, not null - `java.time.format.DateTimeFormatterBuilder`"
-  ([this text-style preferred-zones]
+  ([^java.time.format.DateTimeFormatterBuilder this ^java.time.format.TextStyle text-style ^java.util.Set preferred-zones]
     (-> this (.appendZoneText text-style preferred-zones)))
-  ([this text-style]
+  ([^java.time.format.DateTimeFormatterBuilder this ^java.time.format.TextStyle text-style]
     (-> this (.appendZoneText text-style))))
 

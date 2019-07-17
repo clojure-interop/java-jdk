@@ -44,16 +44,16 @@
   key-length - the to-be-derived key length. - `int`
 
   throws: java.lang.NullPointerException - if salt is null."
-  ([password salt iteration-count key-length]
+  ([password salt ^Integer iteration-count ^Integer key-length]
     (new PBEKeySpec password salt iteration-count key-length))
-  ([password salt iteration-count]
+  ([password salt ^Integer iteration-count]
     (new PBEKeySpec password salt iteration-count))
   ([password]
     (new PBEKeySpec password)))
 
 (defn clear-password
   "Clears the internal copy of the password."
-  ([this]
+  ([^javax.crypto.spec.PBEKeySpec this]
     (-> this (.clearPassword))))
 
 (defn get-password
@@ -66,7 +66,7 @@
   returns: the password. - `char[]`
 
   throws: java.lang.IllegalStateException - if password has been cleared by calling clearPassword method."
-  ([this]
+  ([^javax.crypto.spec.PBEKeySpec this]
     (-> this (.getPassword))))
 
 (defn get-salt
@@ -77,14 +77,14 @@
    it is no longer needed.
 
   returns: the salt. - `byte[]`"
-  ([this]
+  ([^javax.crypto.spec.PBEKeySpec this]
     (-> this (.getSalt))))
 
 (defn get-iteration-count
   "Returns the iteration count or 0 if not specified.
 
   returns: the iteration count. - `int`"
-  ([this]
+  ([^javax.crypto.spec.PBEKeySpec this]
     (-> this (.getIterationCount))))
 
 (defn get-key-length
@@ -95,6 +95,6 @@
    each provider's implementation.
 
   returns: the to-be-derived key length. - `int`"
-  ([this]
+  ([^javax.crypto.spec.PBEKeySpec this]
     (-> this (.getKeyLength))))
 

@@ -82,9 +82,9 @@
   rnd - source of random bits used to select candidates to be tested for primality. - `java.util.Random`
 
   throws: java.lang.ArithmeticException - bitLength < 2 or bitLength is too large."
-  ([bit-length certainty rnd]
+  ([^Integer bit-length ^Integer certainty ^java.util.Random rnd]
     (new BigInteger bit-length certainty rnd))
-  ([signum magnitude]
+  ([^Integer signum magnitude]
     (new BigInteger signum magnitude))
   ([val]
     (new BigInteger val)))
@@ -124,7 +124,7 @@
   returns: a BigInteger of bitLength bits that is probably prime - `java.math.BigInteger`
 
   throws: java.lang.ArithmeticException - bitLength < 2 or bitLength is too large."
-  ([bit-length rnd]
+  ([^Integer bit-length ^java.util.Random rnd]
     (BigInteger/probablePrime bit-length rnd)))
 
 (defn *value-of
@@ -136,7 +136,7 @@
   val - value of the BigInteger to return. - `long`
 
   returns: a BigInteger with the specified value. - `java.math.BigInteger`"
-  ([val]
+  ([^Long val]
     (BigInteger/valueOf val)))
 
 (defn bit-length
@@ -148,7 +148,7 @@
 
   returns: number of bits in the minimal two's-complement
            representation of this BigInteger, excluding a sign bit. - `int`"
-  ([this]
+  ([^java.math.BigInteger this]
     (-> this (.bitLength))))
 
 (defn min
@@ -158,7 +158,7 @@
 
   returns: the BigInteger whose value is the lesser of this BigInteger and
            val.  If they are equal, either may be returned. - `java.math.BigInteger`"
-  ([this val]
+  ([^java.math.BigInteger this ^java.math.BigInteger val]
     (-> this (.min val))))
 
 (defn test-bit
@@ -170,7 +170,7 @@
   returns: true if and only if the designated bit is set. - `boolean`
 
   throws: java.lang.ArithmeticException - n is negative."
-  ([this n]
+  ([^java.math.BigInteger this ^Integer n]
     (-> this (.testBit n))))
 
 (defn double-value
@@ -186,7 +186,7 @@
    information about the precision of the BigInteger value.
 
   returns: this BigInteger converted to a double. - `double`"
-  ([this]
+  ([^java.math.BigInteger this]
     (-> this (.doubleValue))))
 
 (defn long-value
@@ -202,7 +202,7 @@
    result with the opposite sign.
 
   returns: this BigInteger converted to a long. - `long`"
-  ([this]
+  ([^java.math.BigInteger this]
     (-> this (.longValue))))
 
 (defn multiply
@@ -211,7 +211,7 @@
   val - value to be multiplied by this BigInteger. - `java.math.BigInteger`
 
   returns: this * val - `java.math.BigInteger`"
-  ([this val]
+  ([^java.math.BigInteger this ^java.math.BigInteger val]
     (-> this (.multiply val))))
 
 (defn not
@@ -220,7 +220,7 @@
    non-negative.)
 
   returns: ~this - `java.math.BigInteger`"
-  ([this]
+  ([^java.math.BigInteger this]
     (-> this (.not))))
 
 (defn shift-left
@@ -232,14 +232,14 @@
   n - shift distance, in bits. - `int`
 
   returns: this << n - `java.math.BigInteger`"
-  ([this n]
+  ([^java.math.BigInteger this ^Integer n]
     (-> this (.shiftLeft n))))
 
 (defn negate
   "Returns a BigInteger whose value is (-this).
 
   returns: -this - `java.math.BigInteger`"
-  ([this]
+  ([^java.math.BigInteger this]
     (-> this (.negate))))
 
 (defn long-value-exact
@@ -251,7 +251,7 @@
   returns: this BigInteger converted to a long. - `long`
 
   throws: java.lang.ArithmeticException - if the value of this will not exactly fit in a long."
-  ([this]
+  ([^java.math.BigInteger this]
     (-> this (.longValueExact))))
 
 (defn next-probable-prime
@@ -265,7 +265,7 @@
            is probably prime. - `java.math.BigInteger`
 
   throws: java.lang.ArithmeticException - this < 0 or this is too large."
-  ([this]
+  ([^java.math.BigInteger this]
     (-> this (.nextProbablePrime))))
 
 (defn and-not
@@ -278,7 +278,7 @@
   val - value to be complemented and AND'ed with this BigInteger. - `java.math.BigInteger`
 
   returns: this & ~val - `java.math.BigInteger`"
-  ([this val]
+  ([^java.math.BigInteger this ^java.math.BigInteger val]
     (-> this (.andNot val))))
 
 (defn set-bit
@@ -290,7 +290,7 @@
   returns: this | (1<<n) - `java.math.BigInteger`
 
   throws: java.lang.ArithmeticException - n is negative."
-  ([this n]
+  ([^java.math.BigInteger this ^Integer n]
     (-> this (.setBit n))))
 
 (defn max
@@ -300,7 +300,7 @@
 
   returns: the BigInteger whose value is the greater of this and
            val.  If they are equal, either may be returned. - `java.math.BigInteger`"
-  ([this val]
+  ([^java.math.BigInteger this ^java.math.BigInteger val]
     (-> this (.max val))))
 
 (defn divide-and-remainder
@@ -314,7 +314,7 @@
            is the final element. - `java.math.BigInteger[]`
 
   throws: java.lang.ArithmeticException - if val is zero."
-  ([this val]
+  ([^java.math.BigInteger this ^java.math.BigInteger val]
     (-> this (.divideAndRemainder val))))
 
 (defn pow
@@ -326,7 +326,7 @@
   returns: thisexponent - `java.math.BigInteger`
 
   throws: java.lang.ArithmeticException - exponent is negative. (This would cause the operation to yield a non-integer value.)"
-  ([this exponent]
+  ([^java.math.BigInteger this ^Integer exponent]
     (-> this (.pow exponent))))
 
 (defn to-string
@@ -342,9 +342,9 @@
   radix - radix of the String representation. - `int`
 
   returns: String representation of this BigInteger in the given radix. - `java.lang.String`"
-  ([this radix]
+  ([^java.math.BigInteger this ^Integer radix]
     (-> this (.toString radix)))
-  ([this]
+  ([^java.math.BigInteger this]
     (-> this (.toString))))
 
 (defn mod-inverse
@@ -355,7 +355,7 @@
   returns: this-1 mod m. - `java.math.BigInteger`
 
   throws: java.lang.ArithmeticException - m ≤ 0, or this BigInteger has no multiplicative inverse mod m (that is, this BigInteger is not relatively prime to m)."
-  ([this m]
+  ([^java.math.BigInteger this ^java.math.BigInteger m]
     (-> this (.modInverse m))))
 
 (defn flip-bit
@@ -368,7 +368,7 @@
   returns: this ^ (1<<n) - `java.math.BigInteger`
 
   throws: java.lang.ArithmeticException - n is negative."
-  ([this n]
+  ([^java.math.BigInteger this ^Integer n]
     (-> this (.flipBit n))))
 
 (defn gcd
@@ -379,7 +379,7 @@
   val - value with which the GCD is to be computed. - `java.math.BigInteger`
 
   returns: GCD(abs(this), abs(val)) - `java.math.BigInteger`"
-  ([this val]
+  ([^java.math.BigInteger this ^java.math.BigInteger val]
     (-> this (.gcd val))))
 
 (defn float-value
@@ -395,7 +395,7 @@
    information about the precision of the BigInteger value.
 
   returns: this BigInteger converted to a float. - `float`"
-  ([this]
+  ([^java.math.BigInteger this]
     (-> this (.floatValue))))
 
 (defn remainder
@@ -406,7 +406,7 @@
   returns: this % val - `java.math.BigInteger`
 
   throws: java.lang.ArithmeticException - if val is zero."
-  ([this val]
+  ([^java.math.BigInteger this ^java.math.BigInteger val]
     (-> this (.remainder val))))
 
 (defn subtract
@@ -415,7 +415,7 @@
   val - value to be subtracted from this BigInteger. - `java.math.BigInteger`
 
   returns: this - val - `java.math.BigInteger`"
-  ([this val]
+  ([^java.math.BigInteger this ^java.math.BigInteger val]
     (-> this (.subtract val))))
 
 (defn or
@@ -426,7 +426,7 @@
   val - value to be OR'ed with this BigInteger. - `java.math.BigInteger`
 
   returns: this | val - `java.math.BigInteger`"
-  ([this val]
+  ([^java.math.BigInteger this ^java.math.BigInteger val]
     (-> this (.or val))))
 
 (defn byte-value-exact
@@ -438,7 +438,7 @@
   returns: this BigInteger converted to a byte. - `byte`
 
   throws: java.lang.ArithmeticException - if the value of this will not exactly fit in a byte."
-  ([this]
+  ([^java.math.BigInteger this]
     (-> this (.byteValueExact))))
 
 (defn short-value-exact
@@ -450,7 +450,7 @@
   returns: this BigInteger converted to a short. - `short`
 
   throws: java.lang.ArithmeticException - if the value of this will not exactly fit in a short."
-  ([this]
+  ([^java.math.BigInteger this]
     (-> this (.shortValueExact))))
 
 (defn bit-count
@@ -460,7 +460,7 @@
 
   returns: number of bits in the two's complement representation
            of this BigInteger that differ from its sign bit. - `int`"
-  ([this]
+  ([^java.math.BigInteger this]
     (-> this (.bitCount))))
 
 (defn and
@@ -471,7 +471,7 @@
   val - value to be AND'ed with this BigInteger. - `java.math.BigInteger`
 
   returns: this & val - `java.math.BigInteger`"
-  ([this val]
+  ([^java.math.BigInteger this ^java.math.BigInteger val]
     (-> this (.and val))))
 
 (defn mod
@@ -484,7 +484,7 @@
   returns: this mod m - `java.math.BigInteger`
 
   throws: java.lang.ArithmeticException - m ≤ 0"
-  ([this m]
+  ([^java.math.BigInteger this ^java.math.BigInteger m]
     (-> this (.mod m))))
 
 (defn abs
@@ -492,7 +492,7 @@
    BigInteger.
 
   returns: abs(this) - `java.math.BigInteger`"
-  ([this]
+  ([^java.math.BigInteger this]
     (-> this (.abs))))
 
 (defn int-value
@@ -508,7 +508,7 @@
    result with the opposite sign.
 
   returns: this BigInteger converted to an int. - `int`"
-  ([this]
+  ([^java.math.BigInteger this]
     (-> this (.intValue))))
 
 (defn clear-bit
@@ -521,7 +521,7 @@
   returns: this & ~(1<<n) - `java.math.BigInteger`
 
   throws: java.lang.ArithmeticException - n is negative."
-  ([this n]
+  ([^java.math.BigInteger this ^Integer n]
     (-> this (.clearBit n))))
 
 (defn divide
@@ -532,14 +532,14 @@
   returns: this / val - `java.math.BigInteger`
 
   throws: java.lang.ArithmeticException - if val is zero."
-  ([this val]
+  ([^java.math.BigInteger this ^java.math.BigInteger val]
     (-> this (.divide val))))
 
 (defn hash-code
   "Returns the hash code for this BigInteger.
 
   returns: hash code for this BigInteger. - `int`"
-  ([this]
+  ([^java.math.BigInteger this]
     (-> this (.hashCode))))
 
 (defn mod-pow
@@ -553,7 +553,7 @@
   returns: thisexponent mod m - `java.math.BigInteger`
 
   throws: java.lang.ArithmeticException - m ≤ 0 or the exponent is negative and this BigInteger is not relatively prime to m."
-  ([this exponent m]
+  ([^java.math.BigInteger this ^java.math.BigInteger exponent ^java.math.BigInteger m]
     (-> this (.modPow exponent m))))
 
 (defn add
@@ -562,7 +562,7 @@
   val - value to be added to this BigInteger. - `java.math.BigInteger`
 
   returns: this  val - `java.math.BigInteger`"
-  ([this val]
+  ([^java.math.BigInteger this ^java.math.BigInteger val]
     (-> this (.add val))))
 
 (defn get-lowest-set-bit
@@ -572,7 +572,7 @@
    (Computes (this == 0? -1 : log2(this & -this)).)
 
   returns: index of the rightmost one bit in this BigInteger. - `int`"
-  ([this]
+  ([^java.math.BigInteger this]
     (-> this (.getLowestSetBit))))
 
 (defn int-value-exact
@@ -584,7 +584,7 @@
   returns: this BigInteger converted to an int. - `int`
 
   throws: java.lang.ArithmeticException - if the value of this will not exactly fit in a int."
-  ([this]
+  ([^java.math.BigInteger this]
     (-> this (.intValueExact))))
 
 (defn compare-to
@@ -599,7 +599,7 @@
 
   returns: -1, 0 or 1 as this BigInteger is numerically less than, equal
            to, or greater than val. - `int`"
-  ([this val]
+  ([^java.math.BigInteger this ^java.math.BigInteger val]
     (-> this (.compareTo val))))
 
 (defn shift-right
@@ -611,7 +611,7 @@
   n - shift distance, in bits. - `int`
 
   returns: this >> n - `java.math.BigInteger`"
-  ([this n]
+  ([^java.math.BigInteger this ^Integer n]
     (-> this (.shiftRight n))))
 
 (defn to-byte-array
@@ -626,7 +626,7 @@
 
   returns: a byte array containing the two's-complement representation of
            this BigInteger. - `byte[]`"
-  ([this]
+  ([^java.math.BigInteger this]
     (-> this (.toByteArray))))
 
 (defn equals
@@ -636,7 +636,7 @@
 
   returns: true if and only if the specified Object is a
            BigInteger whose value is numerically equal to this BigInteger. - `boolean`"
-  ([this x]
+  ([^java.math.BigInteger this ^java.lang.Object x]
     (-> this (.equals x))))
 
 (defn xor
@@ -647,7 +647,7 @@
   val - value to be XOR'ed with this BigInteger. - `java.math.BigInteger`
 
   returns: this ^ val - `java.math.BigInteger`"
-  ([this val]
+  ([^java.math.BigInteger this ^java.math.BigInteger val]
     (-> this (.xor val))))
 
 (defn probable-prime?
@@ -660,7 +660,7 @@
 
   returns: true if this BigInteger is probably prime,
            false if it's definitely composite. - `boolean`"
-  ([this certainty]
+  ([^java.math.BigInteger this ^Integer certainty]
     (-> this (.isProbablePrime certainty))))
 
 (defn signum
@@ -668,6 +668,6 @@
 
   returns: -1, 0 or 1 as the value of this BigInteger is negative, zero or
            positive. - `int`"
-  ([this]
+  ([^java.math.BigInteger this]
     (-> this (.signum))))
 

@@ -11,6 +11,6 @@
 
   returns: a String indicating the MIME
    type for the specified file name. - `java.lang.String`"
-  ([this file-name]
+  ([^. this ^java.lang.String file-name]
     (-> this (.getContentTypeFor file-name))))
 

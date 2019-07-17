@@ -67,9 +67,9 @@
   map - a java.util.Map object in which each entry consists of 1) a String object giving the fully qualified name of a UDT (an SQL structured type or distinct type) and 2) the Class object for the SQLData implementation that defines how the UDT is to be mapped. The map parameter does not have any effect for Blob, Clob, DATALINK, or JAVA_OBJECT types. - `java.util.Map<java.lang.String,java.lang.Class<?>>`
 
   throws: javax.sql.rowset.serial.SerialException - if an error occurs serializing the Array object"
-  ([array map]
+  ([^java.sql.Array array ^java.util.Map> map]
     (new SerialArray array map))
-  ([array]
+  ([^java.sql.Array array]
     (new SerialArray array)))
 
 (defn free
@@ -79,7 +79,7 @@
    subsequent calls to free are treated as a no-op.
 
   throws: java.sql.SQLException - if an error occurs releasing the SerialArray's resources"
-  ([this]
+  ([^javax.sql.rowset.serial.SerialArray this]
     (-> this (.free))))
 
 (defn get-array
@@ -104,13 +104,13 @@
            object as an Object in the Java programming language - `java.lang.Object`
 
   throws: javax.sql.rowset.serial.SerialException - if an error occurs; if free had previously been called on this object"
-  ([this index count map]
+  ([^javax.sql.rowset.serial.SerialArray this ^Long index ^Integer count ^java.util.Map> map]
     (-> this (.getArray index count map)))
-  ([this index count]
+  ([^javax.sql.rowset.serial.SerialArray this ^Long index ^Integer count]
     (-> this (.getArray index count)))
-  ([this map]
+  ([^javax.sql.rowset.serial.SerialArray this ^java.util.Map> map]
     (-> this (.getArray map)))
-  ([this]
+  ([^javax.sql.rowset.serial.SerialArray this]
     (-> this (.getArray))))
 
 (defn get-base-type
@@ -122,7 +122,7 @@
            the SQL type of the elements in this SerialArray object - `int`
 
   throws: javax.sql.rowset.serial.SerialException - if an error occurs; if free had previously been called on this object"
-  ([this]
+  ([^javax.sql.rowset.serial.SerialArray this]
     (-> this (.getBaseType))))
 
 (defn get-base-type-name
@@ -133,7 +133,7 @@
            SerialArray object - `java.lang.String`
 
   throws: javax.sql.rowset.serial.SerialException - if an error occurs; if free had previously been called on this object"
-  ([this]
+  ([^javax.sql.rowset.serial.SerialArray this]
     (-> this (.getBaseTypeName))))
 
 (defn get-result-set
@@ -158,13 +158,13 @@
            separate row for each element - `java.sql.ResultSet`
 
   throws: javax.sql.rowset.serial.SerialException - if called with the cause set to UnsupportedOperationException"
-  ([this index count map]
+  ([^javax.sql.rowset.serial.SerialArray this ^Long index ^Integer count ^java.util.Map> map]
     (-> this (.getResultSet index count map)))
-  ([this index count]
+  ([^javax.sql.rowset.serial.SerialArray this ^Long index ^Integer count]
     (-> this (.getResultSet index count)))
-  ([this map]
+  ([^javax.sql.rowset.serial.SerialArray this ^java.util.Map> map]
     (-> this (.getResultSet map)))
-  ([this]
+  ([^javax.sql.rowset.serial.SerialArray this]
     (-> this (.getResultSet))))
 
 (defn equals
@@ -174,7 +174,7 @@
 
   returns: true if the given object represents a SerialArray
             equivalent to this SerialArray, false otherwise - `boolean`"
-  ([this obj]
+  ([^javax.sql.rowset.serial.SerialArray this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -183,7 +183,7 @@
    of the elements of the  SerialArray object
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^javax.sql.rowset.serial.SerialArray this]
     (-> this (.hashCode))))
 
 (defn clone
@@ -192,6 +192,6 @@
    to the original underlying object array of this SerialArray object.
 
   returns: a clone of this SerialArray - `java.lang.Object`"
-  ([this]
+  ([^javax.sql.rowset.serial.SerialArray this]
     (-> this (.clone))))
 

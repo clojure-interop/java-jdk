@@ -20,7 +20,7 @@
    use this handler to process the requests.
 
   handler - the handler to set for this context - `javax.xml.ws.spi.http.HttpHandler`"
-  ([this handler]
+  ([^javax.xml.ws.spi.http.HttpContext this ^javax.xml.ws.spi.http.HttpHandler handler]
     (-> this (.setHandler handler))))
 
 (defn get-path
@@ -44,7 +44,7 @@
          exch.getContextPath()  getPath();
 
   returns: this context's path - `java.lang.String`"
-  ([this]
+  ([^javax.xml.ws.spi.http.HttpContext this]
     (-> this (.getPath))))
 
 (defn get-attribute
@@ -54,7 +54,7 @@
   name - attribute name - `java.lang.String`
 
   returns: attribute value - `java.lang.Object`"
-  ([this name]
+  ([^javax.xml.ws.spi.http.HttpContext this ^java.lang.String name]
     (-> this (.getAttribute name))))
 
 (defn get-attribute-names
@@ -62,6 +62,6 @@
    and other data that can be used by jax-ws runtime.
 
   returns: set of all attribute names - `java.util.Set<java.lang.String>`"
-  ([this]
+  ([^javax.xml.ws.spi.http.HttpContext this]
     (-> this (.getAttributeNames))))
 

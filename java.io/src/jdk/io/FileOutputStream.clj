@@ -33,9 +33,9 @@
   append - if true, then bytes will be written to the end of the file rather than the beginning - `boolean`
 
   throws: java.io.FileNotFoundException - if the file exists but is a directory rather than a regular file, does not exist but cannot be created, or cannot be opened for any other reason."
-  ([name append]
+  ([^java.lang.String name ^Boolean append]
     (new FileOutputStream name append))
-  ([name]
+  ([^java.lang.String name]
     (new FileOutputStream name)))
 
 (defn write
@@ -47,9 +47,9 @@
   len - the number of bytes to write. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this b off len]
+  ([^java.io.FileOutputStream this b ^Integer off ^Integer len]
     (-> this (.write b off len)))
-  ([this b]
+  ([^java.io.FileOutputStream this ^Integer b]
     (-> this (.write b))))
 
 (defn close
@@ -61,7 +61,7 @@
    as well.
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this]
+  ([^java.io.FileOutputStream this]
     (-> this (.close))))
 
 (defn get-fd
@@ -72,7 +72,7 @@
             by this FileOutputStream object. - `java.io.FileDescriptor`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this]
+  ([^java.io.FileOutputStream this]
     (-> this (.getFD))))
 
 (defn get-channel
@@ -87,6 +87,6 @@
    writing, will change this stream's file position.
 
   returns: the file channel associated with this file output stream - `java.nio.channels.FileChannel`"
-  ([this]
+  ([^java.io.FileOutputStream this]
     (-> this (.getChannel))))
 

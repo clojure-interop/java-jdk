@@ -22,7 +22,7 @@
   precision - the total number of decimal digits - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this column-index precision]
+  ([^. this ^Integer column-index ^Integer precision]
     (-> this (.setPrecision column-index precision))))
 
 (defn set-column-type-name
@@ -33,7 +33,7 @@
   type-name - data source specific type name. - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this column-index type-name]
+  ([^. this ^Integer column-index ^java.lang.String type-name]
     (-> this (.setColumnTypeName column-index type-name))))
 
 (defn set-case-sensitive
@@ -44,7 +44,7 @@
   property - true if the column is case sensitive; false if it is not - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this column-index property]
+  ([^. this ^Integer column-index ^Boolean property]
     (-> this (.setCaseSensitive column-index property))))
 
 (defn set-signed
@@ -55,7 +55,7 @@
   property - true if the column is a signed number; false if it is not - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this column-index property]
+  ([^. this ^Integer column-index ^Boolean property]
     (-> this (.setSigned column-index property))))
 
 (defn set-auto-increment
@@ -67,7 +67,7 @@
   property - true if the column is automatically numbered; false if it is not - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this column-index property]
+  ([^. this ^Integer column-index ^Boolean property]
     (-> this (.setAutoIncrement column-index property))))
 
 (defn set-currency
@@ -78,7 +78,7 @@
   property - true if the column is a cash value; false if it is not - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this column-index property]
+  ([^. this ^Integer column-index ^Boolean property]
     (-> this (.setCurrency column-index property))))
 
 (defn set-column-label
@@ -89,7 +89,7 @@
   label - the column title - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this column-index label]
+  ([^. this ^Integer column-index ^java.lang.String label]
     (-> this (.setColumnLabel column-index label))))
 
 (defn set-schema-name
@@ -100,7 +100,7 @@
   schema-name - the schema name - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this column-index schema-name]
+  ([^. this ^Integer column-index ^java.lang.String schema-name]
     (-> this (.setSchemaName column-index schema-name))))
 
 (defn set-searchable
@@ -111,7 +111,7 @@
   property - true if the column can be used in a WHERE clause; false if it cannot - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this column-index property]
+  ([^. this ^Integer column-index ^Boolean property]
     (-> this (.setSearchable column-index property))))
 
 (defn set-nullable
@@ -123,7 +123,7 @@
   property - one of the following constants: ResultSetMetaData.columnNoNulls, ResultSetMetaData.columnNullable, or ResultSetMetaData.columnNullableUnknown - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this column-index property]
+  ([^. this ^Integer column-index ^Integer property]
     (-> this (.setNullable column-index property))))
 
 (defn set-catalog-name
@@ -134,7 +134,7 @@
   catalog-name - the column's catalog name - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this column-index catalog-name]
+  ([^. this ^Integer column-index ^java.lang.String catalog-name]
     (-> this (.setCatalogName column-index catalog-name))))
 
 (defn set-table-name
@@ -145,7 +145,7 @@
   table-name - the column's table name - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this column-index table-name]
+  ([^. this ^Integer column-index ^java.lang.String table-name]
     (-> this (.setTableName column-index table-name))))
 
 (defn set-column-display-size
@@ -156,7 +156,7 @@
   size - the normal maximum number of characters for the designated column - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this column-index size]
+  ([^. this ^Integer column-index ^Integer size]
     (-> this (.setColumnDisplaySize column-index size))))
 
 (defn set-column-count
@@ -166,7 +166,7 @@
   column-count - the number of columns in the RowSet object - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this column-count]
+  ([^. this ^Integer column-count]
     (-> this (.setColumnCount column-count))))
 
 (defn set-column-type
@@ -176,7 +176,7 @@
   sql-type - the column's SQL type - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this column-index sql-type]
+  ([^. this ^Integer column-index ^Integer sql-type]
     (-> this (.setColumnType column-index sql-type))))
 
 (defn set-scale
@@ -187,7 +187,7 @@
   scale - the number of digits to right of decimal point - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this column-index scale]
+  ([^. this ^Integer column-index ^Integer scale]
     (-> this (.setScale column-index scale))))
 
 (defn set-column-name
@@ -197,6 +197,6 @@
   column-name - the designated column's name - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this column-index column-name]
+  ([^. this ^Integer column-index ^java.lang.String column-name]
     (-> this (.setColumnName column-index column-name))))
 

@@ -12,7 +12,7 @@
   "Performs this operation on the given argument.
 
   t - the input argument - `Consumer.T`"
-  ([this t]
+  ([^. this ^Consumer.T t]
     (-> this (.accept t))))
 
 (defn and-then
@@ -28,6 +28,6 @@
    operation followed by the after operation - `default java.util.function.Consumer<Consumer.T>`
 
   throws: java.lang.NullPointerException - if after is null"
-  ([this after]
+  ([^. this ^Consumer.T> after]
     (-> this (.andThen after))))
 

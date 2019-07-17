@@ -22,7 +22,7 @@
   "Fetches the current position of the caret.
 
   returns: the position >=0 - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getDot))))
 
 (defn move-dot
@@ -31,7 +31,7 @@
    making selections.
 
   dot - the new position to move the caret to >=0 - `int`"
-  ([this dot]
+  ([^. this ^Integer dot]
     (-> this (.moveDot dot))))
 
 (defn add-change-listener
@@ -39,14 +39,14 @@
    has been changed.
 
   l - the change listener - `javax.swing.event.ChangeListener`"
-  ([this l]
+  ([^. this ^javax.swing.event.ChangeListener l]
     (-> this (.addChangeListener l))))
 
 (defn get-magic-caret-position
   "Gets the current caret visual location.
 
   returns: the visual position. - `java.awt.Point`"
-  ([this]
+  ([^. this]
     (-> this (.getMagicCaretPosition))))
 
 (defn set-blink-rate
@@ -55,7 +55,7 @@
    way to attract attention to the caret.
 
   rate - the delay in milliseconds >=0. If this is zero the caret will not blink. - `int`"
-  ([this rate]
+  ([^. this ^Integer rate]
     (-> this (.setBlinkRate rate))))
 
 (defn set-magic-caret-position
@@ -68,14 +68,14 @@
    the desired navigation location for horizontal movement.
 
   p - the Point to use for the saved position. This can be null to indicate there is no visual location. - `java.awt.Point`"
-  ([this p]
+  ([^. this ^java.awt.Point p]
     (-> this (.setMagicCaretPosition p))))
 
 (defn remove-change-listener
   "Removes a listener that was tracking caret position changes.
 
   l - the change listener - `javax.swing.event.ChangeListener`"
-  ([this l]
+  ([^. this ^javax.swing.event.ChangeListener l]
     (-> this (.removeChangeListener l))))
 
 (defn install
@@ -85,7 +85,7 @@
    by the implementation of this interface.
 
   c - the JTextComponent - `javax.swing.text.JTextComponent`"
-  ([this c]
+  ([^. this ^javax.swing.text.JTextComponent c]
     (-> this (.install c))))
 
 (defn get-blink-rate
@@ -95,7 +95,7 @@
 
   returns: the delay in milliseconds >=0.  If this is
     zero the caret will not blink. - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getBlinkRate))))
 
 (defn get-mark
@@ -104,28 +104,28 @@
    the dot.
 
   returns: the position >=0 - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getMark))))
 
 (defn paint
   "Renders the caret. This method is called by UI classes.
 
   g - the graphics context - `java.awt.Graphics`"
-  ([this g]
+  ([^. this ^java.awt.Graphics g]
     (-> this (.paint g))))
 
 (defn selection-visible?
   "Determines if the selection is currently visible.
 
   returns: true if the caret is visible else false - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.isSelectionVisible))))
 
 (defn set-visible
   "Sets the visibility of the caret.
 
   v - true if the caret should be shown, and false if the caret should be hidden - `boolean`"
-  ([this v]
+  ([^. this ^Boolean v]
     (-> this (.setVisible v))))
 
 (defn deinstall
@@ -134,21 +134,21 @@
    unregister any listeners that were attached.
 
   c - the JTextComponent - `javax.swing.text.JTextComponent`"
-  ([this c]
+  ([^. this ^javax.swing.text.JTextComponent c]
     (-> this (.deinstall c))))
 
 (defn visible?
   "Determines if the caret is currently visible.
 
   returns: true if the caret is visible else false - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.isVisible))))
 
 (defn set-selection-visible
   "Sets the visibility of the selection
 
   v - true if the caret should be shown, and false if the caret should be hidden - `boolean`"
-  ([this v]
+  ([^. this ^Boolean v]
     (-> this (.setSelectionVisible v))))
 
 (defn set-dot
@@ -160,6 +160,6 @@
    the caret is placed at the beginning or at the end, respectively.
 
   dot - the new position to set the caret to - `int`"
-  ([this dot]
+  ([^. this ^Integer dot]
     (-> this (.setDot dot))))
 

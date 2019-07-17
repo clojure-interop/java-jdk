@@ -123,7 +123,7 @@
    will throw an IIOException.
 
   destination - the BufferedImage to be written to, or null. - `java.awt.image.BufferedImage`"
-  ([this destination]
+  ([^javax.imageio.ImageReadParam this ^java.awt.image.BufferedImage destination]
     (-> this (.setDestination destination))))
 
 (defn get-source-min-progressive-pass
@@ -132,7 +132,7 @@
    the correct value).
 
   returns: the index of the first pass that will be decoded. - `int`"
-  ([this]
+  ([^javax.imageio.ImageReadParam this]
     (-> this (.getSourceMinProgressivePass))))
 
 (defn get-source-max-progressive-pass
@@ -144,14 +144,14 @@
 
   returns: the index of the last pass to be read, or
    Integer.MAX_VALUE. - `int`"
-  ([this]
+  ([^javax.imageio.ImageReadParam this]
     (-> this (.getSourceMaxProgressivePass))))
 
 (defn set-destination-type
   "Description copied from class: IIOParam
 
   destination-type - the ImageTypeSpecifier to be used to determine the destination layout and color type. - `javax.imageio.ImageTypeSpecifier`"
-  ([this destination-type]
+  ([^javax.imageio.ImageReadParam this ^javax.imageio.ImageTypeSpecifier destination-type]
     (-> this (.setDestinationType destination-type))))
 
 (defn get-destination
@@ -160,7 +160,7 @@
    if none is set.
 
   returns: the BufferedImage to be written to. - `java.awt.image.BufferedImage`"
-  ([this]
+  ([^javax.imageio.ImageReadParam this]
     (-> this (.getDestination))))
 
 (defn can-set-source-render-size?
@@ -174,7 +174,7 @@
 
   returns: true if setting source rendering size is
    supported. - `boolean`"
-  ([this]
+  ([^javax.imageio.ImageReadParam this]
     (-> this (.canSetSourceRenderSize))))
 
 (defn get-source-num-progressive-passes
@@ -184,7 +184,7 @@
    correct value).
 
   returns: the number of the passes that will be decoded. - `int`"
-  ([this]
+  ([^javax.imageio.ImageReadParam this]
     (-> this (.getSourceNumProgressivePasses))))
 
 (defn get-source-render-size
@@ -195,7 +195,7 @@
 
   returns: the rendered width and height of the source image
    as a Dimension. - `java.awt.Dimension`"
-  ([this]
+  ([^javax.imageio.ImageReadParam this]
     (-> this (.getSourceRenderSize))))
 
 (defn set-source-render-size
@@ -223,7 +223,7 @@
   size - a Dimension indicating the desired width and height. - `java.awt.Dimension`
 
   throws: java.lang.IllegalArgumentException - if either the width or the height is negative or 0."
-  ([this size]
+  ([^javax.imageio.ImageReadParam this ^java.awt.Dimension size]
     (-> this (.setSourceRenderSize size))))
 
 (defn get-destination-bands
@@ -233,7 +233,7 @@
 
   returns: the indices of the destination bands to be used,
    or null. - `int[]`"
-  ([this]
+  ([^javax.imageio.ImageReadParam this]
     (-> this (.getDestinationBands))))
 
 (defn set-destination-bands
@@ -262,7 +262,7 @@
   destination-bands - an array of integer band indices to be used. - `int[]`
 
   throws: java.lang.IllegalArgumentException - if destinationBands contains a negative or duplicate value."
-  ([this destination-bands]
+  ([^javax.imageio.ImageReadParam this destination-bands]
     (-> this (.setDestinationBands destination-bands))))
 
 (defn set-source-progressive-passes
@@ -296,6 +296,6 @@
   num-passes - the maximum number of passes to be decoded. - `int`
 
   throws: java.lang.IllegalArgumentException - if minPass is negative, numPasses is negative or 0, or numPasses is smaller than Integer.MAX_VALUE but minPass numPasses - 1 is greater than INTEGER.MAX_VALUE."
-  ([this min-pass num-passes]
+  ([^javax.imageio.ImageReadParam this ^Integer min-pass ^Integer num-passes]
     (-> this (.setSourceProgressivePasses min-pass num-passes))))
 

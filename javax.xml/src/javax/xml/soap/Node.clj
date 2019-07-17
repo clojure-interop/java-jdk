@@ -20,7 +20,7 @@
             immediate child of this Node object that is a
             Text object if such a child exists;
             null otherwise. - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getValue))))
 
 (defn set-value
@@ -34,7 +34,7 @@
   value - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if the node is not a Text node and either has more than one child node or has a child node that is not a Text node."
-  ([this value]
+  ([^. this ^java.lang.String value]
     (-> this (.setValue value))))
 
 (defn set-parent-element
@@ -44,7 +44,7 @@
   parent - the SOAPElement object to be set as the parent of this Node object - `javax.xml.soap.SOAPElement`
 
   throws: javax.xml.soap.SOAPException - if there is a problem in setting the parent to the given element"
-  ([this parent]
+  ([^. this ^javax.xml.soap.SOAPElement parent]
     (-> this (.setParentElement parent))))
 
 (defn get-parent-element
@@ -57,12 +57,12 @@
            Node object is root - `javax.xml.soap.SOAPElement`
 
   throws: java.lang.UnsupportedOperationException - if the whole tree is not kept in memory"
-  ([this]
+  ([^. this]
     (-> this (.getParentElement))))
 
 (defn detach-node
   "Removes this Node object from the tree."
-  ([this]
+  ([^. this]
     (-> this (.detachNode))))
 
 (defn recycle-node
@@ -73,6 +73,6 @@
 
    Calling the method recycleNode implies that the method
    detachNode has been called previously."
-  ([this]
+  ([^. this]
     (-> this (.recycleNode))))
 

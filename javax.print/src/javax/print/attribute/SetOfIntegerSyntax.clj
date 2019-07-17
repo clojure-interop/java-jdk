@@ -53,7 +53,7 @@
    this set-of-integer attribute.
 
   returns: This set-of-integer attribute's members in canonical array form. - `int[][]`"
-  ([this]
+  ([^javax.print.attribute.SetOfIntegerSyntax this]
     (-> this (.getMembers))))
 
 (defn contains
@@ -63,7 +63,7 @@
 
   returns: True if this set-of-integer attribute contains the value
             x, false otherwise. - `boolean`"
-  ([this x]
+  ([^javax.print.attribute.SetOfIntegerSyntax this ^Integer x]
     (-> this (.contains x))))
 
 (defn next
@@ -88,7 +88,7 @@
   returns: The smallest integer in this set-of-integer attribute that is
             greater than x, or -1 if no integer in
             this set-of-integer attribute is greater than x. - `int`"
-  ([this x]
+  ([^javax.print.attribute.SetOfIntegerSyntax this ^Integer x]
     (-> this (.next x))))
 
 (defn equals
@@ -108,7 +108,7 @@
 
   returns: True if object is equivalent to this
             set-of-integer attribute, false otherwise. - `boolean`"
-  ([this object]
+  ([^javax.print.attribute.SetOfIntegerSyntax this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn hash-code
@@ -117,7 +117,7 @@
    canonical array form, or 0 for an empty set.
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^javax.print.attribute.SetOfIntegerSyntax this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -129,6 +129,6 @@
    `i-j` otherwise.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^javax.print.attribute.SetOfIntegerSyntax this]
     (-> this (.toString))))
 

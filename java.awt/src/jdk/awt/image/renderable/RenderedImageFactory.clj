@@ -33,6 +33,6 @@
   hints - a RenderingHints object containing hints. - `java.awt.RenderingHints`
 
   returns: A RenderedImage containing the desired output. - `java.awt.image.RenderedImage`"
-  ([this param-block hints]
+  ([^. this ^java.awt.image.renderable.ParameterBlock param-block ^java.awt.RenderingHints hints]
     (-> this (.create param-block hints))))
 

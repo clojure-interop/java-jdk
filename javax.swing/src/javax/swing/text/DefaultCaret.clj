@@ -108,7 +108,7 @@
   "Fetches the current position of the caret.
 
   returns: the position >= 0 - `int`"
-  ([this]
+  ([^javax.swing.text.DefaultCaret this]
     (-> this (.getDot))))
 
 (defn move-dot
@@ -119,9 +119,9 @@
   dot-bias - the bias for this position, not null - `javax.swing.text.Position.Bias`
 
   throws: java.lang.IllegalArgumentException - if the bias is null"
-  ([this dot dot-bias]
+  ([^javax.swing.text.DefaultCaret this ^Integer dot ^javax.swing.text.Position.Bias dot-bias]
     (-> this (.moveDot dot dot-bias)))
-  ([this dot]
+  ([^javax.swing.text.DefaultCaret this ^Integer dot]
     (-> this (.moveDot dot))))
 
 (defn add-change-listener
@@ -129,7 +129,7 @@
    been changed.
 
   l - the listener - `javax.swing.event.ChangeListener`"
-  ([this l]
+  ([^javax.swing.text.DefaultCaret this ^javax.swing.event.ChangeListener l]
     (-> this (.addChangeListener l))))
 
 (defn active?
@@ -142,14 +142,14 @@
    isVisible method.
 
   returns: true if active else false - `boolean`"
-  ([this]
+  ([^javax.swing.text.DefaultCaret this]
     (-> this (.isActive))))
 
 (defn mouse-moved
   "Called when the mouse is moved.
 
   e - the mouse event - `java.awt.event.MouseEvent`"
-  ([this e]
+  ([^javax.swing.text.DefaultCaret this ^java.awt.event.MouseEvent e]
     (-> this (.mouseMoved e))))
 
 (defn get-magic-caret-position
@@ -157,7 +157,7 @@
 
   returns: the position
    see #setMagicCaretPosition - `java.awt.Point`"
-  ([this]
+  ([^javax.swing.text.DefaultCaret this]
     (-> this (.getMagicCaretPosition))))
 
 (defn focus-gained
@@ -166,14 +166,14 @@
    if the component is editable.
 
   e - the focus event - `java.awt.event.FocusEvent`"
-  ([this e]
+  ([^javax.swing.text.DefaultCaret this ^java.awt.event.FocusEvent e]
     (-> this (.focusGained e))))
 
 (defn set-blink-rate
   "Sets the caret blink rate.
 
   rate - the rate in milliseconds, 0 to stop blinking - `int`"
-  ([this rate]
+  ([^javax.swing.text.DefaultCaret this ^Integer rate]
     (-> this (.setBlinkRate rate))))
 
 (defn set-update-policy
@@ -219,7 +219,7 @@
   policy - one of the following values : UPDATE_WHEN_ON_EDT, NEVER_UPDATE, ALWAYS_UPDATE - `int`
 
   throws: java.lang.IllegalArgumentException - if invalid value is passed"
-  ([this policy]
+  ([^javax.swing.text.DefaultCaret this ^Integer policy]
     (-> this (.setUpdatePolicy policy))))
 
 (defn to-string
@@ -227,14 +227,14 @@
 
   returns: a String representing this
                  Rectangle object's coordinate and size values. - `java.lang.String`"
-  ([this]
+  ([^javax.swing.text.DefaultCaret this]
     (-> this (.toString))))
 
 (defn get-mark-bias
   "Returns the bias of the mark.
 
   returns: the bias of the mark - `javax.swing.text.Position.Bias`"
-  ([this]
+  ([^javax.swing.text.DefaultCaret this]
     (-> this (.getMarkBias))))
 
 (defn mouse-pressed
@@ -247,14 +247,14 @@
    is not enabled, there will be no request for focus.
 
   e - the mouse event - `java.awt.event.MouseEvent`"
-  ([this e]
+  ([^javax.swing.text.DefaultCaret this ^java.awt.event.MouseEvent e]
     (-> this (.mousePressed e))))
 
 (defn mouse-released
   "Called when the mouse is released.
 
   e - the mouse event - `java.awt.event.MouseEvent`"
-  ([this e]
+  ([^javax.swing.text.DefaultCaret this ^java.awt.event.MouseEvent e]
     (-> this (.mouseReleased e))))
 
 (defn set-magic-caret-position
@@ -263,14 +263,14 @@
    that have uneven end positions.
 
   p - the position - `java.awt.Point`"
-  ([this p]
+  ([^javax.swing.text.DefaultCaret this ^java.awt.Point p]
     (-> this (.setMagicCaretPosition p))))
 
 (defn remove-change-listener
   "Removes a listener that was tracking caret position changes.
 
   l - the listener - `javax.swing.event.ChangeListener`"
-  ([this l]
+  ([^javax.swing.text.DefaultCaret this ^javax.swing.event.ChangeListener l]
     (-> this (.removeChangeListener l))))
 
 (defn get-change-listeners
@@ -280,7 +280,7 @@
   returns: all of this caret's ChangeListeners
            or an empty
            array if no change listeners are currently registered - `javax.swing.event.ChangeListener[]`"
-  ([this]
+  ([^javax.swing.text.DefaultCaret this]
     (-> this (.getChangeListeners))))
 
 (defn focus-lost
@@ -289,7 +289,7 @@
    to false.
 
   e - the focus event - `java.awt.event.FocusEvent`"
-  ([this e]
+  ([^javax.swing.text.DefaultCaret this ^java.awt.event.FocusEvent e]
     (-> this (.focusLost e))))
 
 (defn install
@@ -301,7 +301,7 @@
    focus, mouse, and mouse motion listeners.
 
   c - the component - `javax.swing.text.JTextComponent`"
-  ([this c]
+  ([^javax.swing.text.DefaultCaret this ^javax.swing.text.JTextComponent c]
     (-> this (.install c))))
 
 (defn get-blink-rate
@@ -309,14 +309,14 @@
 
   returns: the delay in milliseconds.  If this is
     zero the caret will not blink. - `int`"
-  ([this]
+  ([^javax.swing.text.DefaultCaret this]
     (-> this (.getBlinkRate))))
 
 (defn mouse-exited
   "Called when the mouse exits a region.
 
   e - the mouse event - `java.awt.event.MouseEvent`"
-  ([this e]
+  ([^javax.swing.text.DefaultCaret this ^java.awt.event.MouseEvent e]
     (-> this (.mouseExited e))))
 
 (defn get-mark
@@ -324,7 +324,7 @@
    the dot and mark will not be the same.
 
   returns: the position >= 0 - `int`"
-  ([this]
+  ([^javax.swing.text.DefaultCaret this]
     (-> this (.getMark))))
 
 (defn paint
@@ -341,14 +341,14 @@
    directions associated with it).
 
   g - the graphics context - `java.awt.Graphics`"
-  ([this g]
+  ([^javax.swing.text.DefaultCaret this ^java.awt.Graphics g]
     (-> this (.paint g))))
 
 (defn selection-visible?
   "Checks whether the current selection is visible.
 
   returns: true if the selection is visible - `boolean`"
-  ([this]
+  ([^javax.swing.text.DefaultCaret this]
     (-> this (.isSelectionVisible))))
 
 (defn set-visible
@@ -381,7 +381,7 @@
        isVisible(): false
 
   e - the visibility specifier - `boolean`"
-  ([this e]
+  ([^javax.swing.text.DefaultCaret this ^Boolean e]
     (-> this (.setVisible e))))
 
 (defn deinstall
@@ -390,14 +390,14 @@
    unregister any listeners that were attached.
 
   c - the component - `javax.swing.text.JTextComponent`"
-  ([this c]
+  ([^javax.swing.text.DefaultCaret this ^javax.swing.text.JTextComponent c]
     (-> this (.deinstall c))))
 
 (defn mouse-entered
   "Called when the mouse enters a region.
 
   e - the mouse event - `java.awt.event.MouseEvent`"
-  ([this e]
+  ([^javax.swing.text.DefaultCaret this ^java.awt.event.MouseEvent e]
     (-> this (.mouseEntered e))))
 
 (defn visible?
@@ -414,14 +414,14 @@
    returns true.
 
   returns: true if visible else false - `boolean`"
-  ([this]
+  ([^javax.swing.text.DefaultCaret this]
     (-> this (.isVisible))))
 
 (defn set-selection-visible
   "Changes the selection visibility.
 
   vis - the new visibility - `boolean`"
-  ([this vis]
+  ([^javax.swing.text.DefaultCaret this ^Boolean vis]
     (-> this (.setSelectionVisible vis))))
 
 (defn get-listeners
@@ -455,7 +455,7 @@
             listeners have been added - `<T extends java.util.EventListener> T[]`
 
   throws: java.lang.ClassCastException - if listenerType doesn't specify a class or interface that implements java.util.EventListener"
-  ([this listener-type]
+  ([^javax.swing.text.DefaultCaret this ^java.lang.Class listener-type]
     (-> this (.getListeners listener-type))))
 
 (defn get-update-policy
@@ -463,7 +463,7 @@
 
   returns: one of the following values : UPDATE_WHEN_ON_EDT,
    NEVER_UPDATE, ALWAYS_UPDATE - `int`"
-  ([this]
+  ([^javax.swing.text.DefaultCaret this]
     (-> this (.getUpdatePolicy))))
 
 (defn mouse-dragged
@@ -474,14 +474,14 @@
    for mouse button 1.
 
   e - the mouse event - `java.awt.event.MouseEvent`"
-  ([this e]
+  ([^javax.swing.text.DefaultCaret this ^java.awt.event.MouseEvent e]
     (-> this (.mouseDragged e))))
 
 (defn get-dot-bias
   "Returns the bias of the caret position.
 
   returns: the bias of the caret position - `javax.swing.text.Position.Bias`"
-  ([this]
+  ([^javax.swing.text.DefaultCaret this]
     (-> this (.getDotBias))))
 
 (defn equals
@@ -494,7 +494,7 @@
 
   returns: true if the objects are equal;
               false otherwise - `boolean`"
-  ([this obj]
+  ([^javax.swing.text.DefaultCaret this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn mouse-clicked
@@ -503,7 +503,7 @@
    and a triple click the current line.
 
   e - the mouse event - `java.awt.event.MouseEvent`"
-  ([this e]
+  ([^javax.swing.text.DefaultCaret this ^java.awt.event.MouseEvent e]
     (-> this (.mouseClicked e))))
 
 (defn set-dot
@@ -515,8 +515,8 @@
   dot-bias - the bias for this position, not null - `javax.swing.text.Position.Bias`
 
   throws: java.lang.IllegalArgumentException - if the bias is null"
-  ([this dot dot-bias]
+  ([^javax.swing.text.DefaultCaret this ^Integer dot ^javax.swing.text.Position.Bias dot-bias]
     (-> this (.setDot dot dot-bias)))
-  ([this dot]
+  ([^javax.swing.text.DefaultCaret this ^Integer dot]
     (-> this (.setDot dot))))
 

@@ -17,7 +17,7 @@
   scope - Desired scope of the property - `javax.xml.ws.handler.MessageContext.Scope`
 
   throws: java.lang.IllegalArgumentException - if an illegal property name is specified"
-  ([this name scope]
+  ([^. this ^java.lang.String name ^javax.xml.ws.handler.MessageContext.Scope scope]
     (-> this (.setScope name scope))))
 
 (defn get-scope
@@ -28,6 +28,6 @@
   returns: Scope of the property - `javax.xml.ws.handler.MessageContext.Scope`
 
   throws: java.lang.IllegalArgumentException - if a non-existant property name is specified"
-  ([this name]
+  ([^. this ^java.lang.String name]
     (-> this (.getScope name))))
 

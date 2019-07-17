@@ -18,7 +18,7 @@
   returns: `default void`
 
   throws: javax.security.auth.DestroyFailedException - if the destroy operation fails."
-  ([this]
+  ([^. this]
     (-> this (.destroy))))
 
 (defn is-destroyed
@@ -29,6 +29,6 @@
 
   returns: true if this Object has been destroyed,
             false otherwise. - `default boolean`"
-  ([this]
+  ([^. this]
     (-> this (.isDestroyed))))
 

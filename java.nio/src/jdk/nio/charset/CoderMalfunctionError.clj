@@ -11,6 +11,6 @@
   Initializes an instance of this class.
 
   cause - The unexpected exception that was thrown - `java.lang.Exception`"
-  ([cause]
+  ([^java.lang.Exception cause]
     (new CoderMalfunctionError cause)))
 

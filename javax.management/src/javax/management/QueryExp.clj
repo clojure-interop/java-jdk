@@ -18,13 +18,13 @@
   returns: True if the query was successfully applied to the MBean, false otherwise - `boolean`
 
   throws: javax.management.BadStringOperationException"
-  ([this name]
+  ([^. this ^javax.management.ObjectName name]
     (-> this (.apply name))))
 
 (defn set-m-bean-server
   "Sets the MBean server on which the query is to be performed.
 
   s - The MBean server on which the query is to be performed. - `javax.management.MBeanServer`"
-  ([this s]
+  ([^. this ^javax.management.MBeanServer s]
     (-> this (.setMBeanServer s))))
 

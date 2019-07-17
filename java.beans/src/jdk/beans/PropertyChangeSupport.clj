@@ -50,7 +50,7 @@
   Constructs a PropertyChangeSupport object.
 
   source-bean - The bean to be given as the source for any events. - `java.lang.Object`"
-  ([source-bean]
+  ([^java.lang.Object source-bean]
     (new PropertyChangeSupport source-bean)))
 
 (defn add-property-change-listener
@@ -65,9 +65,9 @@
 
   property-name - The name of the property to listen on. - `java.lang.String`
   listener - The PropertyChangeListener to be added - `java.beans.PropertyChangeListener`"
-  ([this property-name listener]
+  ([^java.beans.PropertyChangeSupport this ^java.lang.String property-name ^java.beans.PropertyChangeListener listener]
     (-> this (.addPropertyChangeListener property-name listener)))
-  ([this listener]
+  ([^java.beans.PropertyChangeSupport this ^java.beans.PropertyChangeListener listener]
     (-> this (.addPropertyChangeListener listener))))
 
 (defn remove-property-change-listener
@@ -82,9 +82,9 @@
 
   property-name - The name of the property that was listened on. - `java.lang.String`
   listener - The PropertyChangeListener to be removed - `java.beans.PropertyChangeListener`"
-  ([this property-name listener]
+  ([^java.beans.PropertyChangeSupport this ^java.lang.String property-name ^java.beans.PropertyChangeListener listener]
     (-> this (.removePropertyChangeListener property-name listener)))
-  ([this listener]
+  ([^java.beans.PropertyChangeSupport this ^java.beans.PropertyChangeListener listener]
     (-> this (.removePropertyChangeListener listener))))
 
 (defn get-property-change-listeners
@@ -97,9 +97,9 @@
            the named property.  If no such listeners have been added,
            or if propertyName is null, an empty array is
            returned. - `java.beans.PropertyChangeListener[]`"
-  ([this property-name]
+  ([^java.beans.PropertyChangeSupport this ^java.lang.String property-name]
     (-> this (.getPropertyChangeListeners property-name)))
-  ([this]
+  ([^java.beans.PropertyChangeSupport this]
     (-> this (.getPropertyChangeListeners))))
 
 (defn fire-property-change
@@ -115,9 +115,9 @@
   property-name - the programmatic name of the property that was changed - `java.lang.String`
   old-value - the old value of the property - `java.lang.Object`
   new-value - the new value of the property - `java.lang.Object`"
-  ([this property-name old-value new-value]
+  ([^java.beans.PropertyChangeSupport this ^java.lang.String property-name ^java.lang.Object old-value ^java.lang.Object new-value]
     (-> this (.firePropertyChange property-name old-value new-value)))
-  ([this event]
+  ([^java.beans.PropertyChangeSupport this ^java.beans.PropertyChangeEvent event]
     (-> this (.firePropertyChange event))))
 
 (defn fire-indexed-property-change
@@ -134,7 +134,7 @@
   index - the index of the property element that was changed - `int`
   old-value - the old value of the property - `java.lang.Object`
   new-value - the new value of the property - `java.lang.Object`"
-  ([this property-name index old-value new-value]
+  ([^java.beans.PropertyChangeSupport this ^java.lang.String property-name ^Integer index ^java.lang.Object old-value ^java.lang.Object new-value]
     (-> this (.fireIndexedPropertyChange property-name index old-value new-value))))
 
 (defn has-listeners?
@@ -145,6 +145,6 @@
   property-name - the property name. - `java.lang.String`
 
   returns: true if there are one or more listeners for the given property - `boolean`"
-  ([this property-name]
+  ([^java.beans.PropertyChangeSupport this ^java.lang.String property-name]
     (-> this (.hasListeners property-name))))
 

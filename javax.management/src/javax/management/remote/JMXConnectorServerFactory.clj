@@ -158,6 +158,6 @@
    a different object. - `javax.management.remote.JMXConnectorServer`
 
   throws: java.lang.NullPointerException - if serviceURL is null."
-  ([service-url environment mbean-server]
+  ([^javax.management.remote.JMXServiceURL service-url ^java.util.Map environment ^javax.management.MBeanServer mbean-server]
     (JMXConnectorServerFactory/newJMXConnectorServer service-url environment mbean-server)))
 

@@ -61,7 +61,7 @@
            after the web service path but before the query string in the
            request URI
            null if there is no extra path in the request URI - `java.lang.String`"
-  ([this]
+  ([^javax.xml.ws.spi.http.HttpExchange this]
     (-> this (.getPathInfo))))
 
 (defn get-request-header
@@ -76,7 +76,7 @@
 
   returns: returns the value of the requested header,
            or null if the request does not have a header of that name - `java.lang.String`"
-  ([this name]
+  ([^javax.xml.ws.spi.http.HttpExchange this ^java.lang.String name]
     (-> this (.getRequestHeader name))))
 
 (defn get-remote-address
@@ -84,7 +84,7 @@
    this request.
 
   returns: the InetSocketAddress of the caller - `java.net.InetSocketAddress`"
-  ([this]
+  ([^javax.xml.ws.spi.http.HttpExchange this]
     (-> this (.getRemoteAddress))))
 
 (defn add-response-header
@@ -95,7 +95,7 @@
 
   name - the name of the header - `java.lang.String`
   value - the additional header value. If it contains octet string, it should be encoded according to RFC 2047 (http://www.ietf.org/rfc/rfc2047.txt) - `java.lang.String`"
-  ([this name value]
+  ([^javax.xml.ws.spi.http.HttpExchange this ^java.lang.String name ^java.lang.String value]
     (-> this (.addResponseHeader name value))))
 
 (defn get-attribute
@@ -118,7 +118,7 @@
 
   returns: the attribute value, or null if the attribute doesn't
            exist - `java.lang.Object`"
-  ([this name]
+  ([^javax.xml.ws.spi.http.HttpExchange this ^java.lang.String name]
     (-> this (.getAttribute name))))
 
 (defn get-context-path
@@ -134,7 +134,7 @@
    HttpContext.getPath()
 
   returns: context path of all the endpoints in an application - `java.lang.String`"
-  ([this]
+  ([^javax.xml.ws.spi.http.HttpExchange this]
     (-> this (.getContextPath))))
 
 (defn user-in-role?
@@ -145,7 +145,7 @@
 
   returns: true if the user making this request belongs to a
            given role - `boolean`"
-  ([this role]
+  ([^javax.xml.ws.spi.http.HttpExchange this ^java.lang.String role]
     (-> this (.isUserInRole role))))
 
 (defn get-request-body
@@ -155,7 +155,7 @@
   returns: the stream from which the request body can be read. - `java.io.InputStream`
 
   throws: java.io.IOException - if any i/o error during request processing"
-  ([this]
+  ([^javax.xml.ws.spi.http.HttpExchange this]
     (-> this (.getRequestBody))))
 
 (defn get-scheme
@@ -163,7 +163,7 @@
    for example: http, or https.
 
   returns: name of the scheme used to make this request - `java.lang.String`"
-  ([this]
+  ([^javax.xml.ws.spi.http.HttpExchange this]
     (-> this (.getScheme))))
 
 (defn get-query-string
@@ -175,14 +175,14 @@
 
   returns: undecoded query string of request URI, or
            null if the request URI doesn't have one - `java.lang.String`"
-  ([this]
+  ([^javax.xml.ws.spi.http.HttpExchange this]
     (-> this (.getQueryString))))
 
 (defn get-local-address
   "Returns the unresolved local address on which the request was received.
 
   returns: the InetSocketAddress of the local interface - `java.net.InetSocketAddress`"
-  ([this]
+  ([^javax.xml.ws.spi.http.HttpExchange this]
     (-> this (.getLocalAddress))))
 
 (defn get-response-headers
@@ -195,7 +195,7 @@
    The keys in Map are case-insensitive.
 
   returns: a mutable Map which can be used to set response headers. - `java.util.Map<java.lang.String,java.util.List<java.lang.String>>`"
-  ([this]
+  ([^javax.xml.ws.spi.http.HttpExchange this]
     (-> this (.getResponseHeaders))))
 
 (defn get-request-uri
@@ -204,7 +204,7 @@
    Container doesn't decode this string.
 
   returns: the request URI - `java.lang.String`"
-  ([this]
+  ([^javax.xml.ws.spi.http.HttpExchange this]
     (-> this (.getRequestURI))))
 
 (defn close
@@ -213,7 +213,7 @@
    the container can free or reuse underlying resources.
 
   throws: java.io.IOException - if any i/o error"
-  ([this]
+  ([^javax.xml.ws.spi.http.HttpExchange this]
     (-> this (.close))))
 
 (defn get-request-headers
@@ -228,7 +228,7 @@
    The keys in Map are case-insensitive.
 
   returns: an immutable Map which can be used to access request headers - `java.util.Map<java.lang.String,java.util.List<java.lang.String>>`"
-  ([this]
+  ([^javax.xml.ws.spi.http.HttpExchange this]
     (-> this (.getRequestHeaders))))
 
 (defn get-user-principal
@@ -237,7 +237,7 @@
 
   returns: Principal for an authenticated user, or
            null if not authenticated - `java.security.Principal`"
-  ([this]
+  ([^javax.xml.ws.spi.http.HttpExchange this]
     (-> this (.getUserPrincipal))))
 
 (defn get-http-context
@@ -245,7 +245,7 @@
    Container matches the request with the associated Endpoint's HttpContext
 
   returns: the HttpContext for this exchange - `javax.xml.ws.spi.http.HttpContext`"
-  ([this]
+  ([^javax.xml.ws.spi.http.HttpExchange this]
     (-> this (.getHttpContext))))
 
 (defn get-protocol
@@ -254,14 +254,14 @@
    `HTTP/1.1`
 
   returns: the protocol string from the request - `java.lang.String`"
-  ([this]
+  ([^javax.xml.ws.spi.http.HttpExchange this]
     (-> this (.getProtocol))))
 
 (defn get-request-method
   "Get the HTTP request method
 
   returns: the request method - `java.lang.String`"
-  ([this]
+  ([^javax.xml.ws.spi.http.HttpExchange this]
     (-> this (.getRequestMethod))))
 
 (defn get-response-body
@@ -273,7 +273,7 @@
   returns: the stream to which the response body is written - `java.io.OutputStream`
 
   throws: java.io.IOException - if any i/o error during response processing"
-  ([this]
+  ([^javax.xml.ws.spi.http.HttpExchange this]
     (-> this (.getResponseBody))))
 
 (defn get-attribute-names
@@ -281,7 +281,7 @@
    this HttpExchange.
 
   returns: set of all attribute names - `java.util.Set<java.lang.String>`"
-  ([this]
+  ([^javax.xml.ws.spi.http.HttpExchange this]
     (-> this (.getAttributeNames))))
 
 (defn set-status
@@ -291,6 +291,6 @@
    This method must be called prior to calling getResponseBody().
 
   status - the response code to send - `int`"
-  ([this status]
+  ([^javax.xml.ws.spi.http.HttpExchange this ^Integer status]
     (-> this (.setStatus status))))
 

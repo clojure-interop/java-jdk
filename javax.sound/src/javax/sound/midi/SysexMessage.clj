@@ -55,9 +55,9 @@
   length - the length of the valid message data in the array; it should be non-negative and less than or equal to data.length - `int`
 
   throws: javax.sound.midi.InvalidMidiDataException - if the parameter values do not specify a valid MIDI meta message."
-  ([status data length]
+  ([^Integer status data ^Integer length]
     (new SysexMessage status data length))
-  ([data length]
+  ([data ^Integer length]
     (new SysexMessage data length))
   ([]
     (new SysexMessage )))
@@ -88,9 +88,9 @@
   length - the length of the valid message data in the array - `int`
 
   throws: javax.sound.midi.InvalidMidiDataException - if the status byte is invalid for a sysex message"
-  ([this status data length]
+  ([^javax.sound.midi.SysexMessage this ^Integer status data ^Integer length]
     (-> this (.setMessage status data length)))
-  ([this data length]
+  ([^javax.sound.midi.SysexMessage this data ^Integer length]
     (-> this (.setMessage data length))))
 
 (defn get-data
@@ -98,7 +98,7 @@
    The returned array of bytes does not include the status byte.
 
   returns: array containing the system exclusive message data. - `byte[]`"
-  ([this]
+  ([^javax.sound.midi.SysexMessage this]
     (-> this (.getData))))
 
 (defn clone
@@ -106,6 +106,6 @@
    as this object.
 
   returns: a clone of this instance - `java.lang.Object`"
-  ([this]
+  ([^javax.sound.midi.SysexMessage this]
     (-> this (.clone))))
 

@@ -56,7 +56,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([this]
+  ([^javax.print.attribute.standard.PrinterState this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -66,6 +66,6 @@
    For class PrinterState, the category name is `printer-state`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([this]
+  ([^javax.print.attribute.standard.PrinterState this]
     (-> this (.getName))))
 

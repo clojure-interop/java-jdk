@@ -51,6 +51,6 @@
   content-object - An instance of a JAXB-generated class, which will be used as a Source (by marshalling it into XML). It must not be null. - `java.lang.Object`
 
   throws: javax.xml.bind.JAXBException - if an error is encountered while creating the JAXBSource or if either of the parameters are null."
-  ([context content-object]
+  ([^javax.xml.bind.JAXBContext context ^java.lang.Object content-object]
     (new JAXBSource context content-object)))
 

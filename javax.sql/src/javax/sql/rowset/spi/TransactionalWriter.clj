@@ -20,7 +20,7 @@
    This method should be used only when auto-commit mode has been disabled.
 
   throws: java.sql.SQLException - if a database access error occurs or the Connection object within this CachedRowSet object is in auto-commit mode"
-  ([this]
+  ([^. this]
     (-> this (.commit))))
 
 (defn rollback
@@ -31,8 +31,8 @@
   s - a Savepoint object marking a savepoint in the current transaction. All changes made before s was set will be undone. All changes made after s was set will be made permanent. - `java.sql.Savepoint`
 
   throws: java.sql.SQLException - if a database access error occurs or the Connection object within this CachedRowSet object is in auto-commit mode"
-  ([this s]
+  ([^. this ^java.sql.Savepoint s]
     (-> this (.rollback s)))
-  ([this]
+  ([^. this]
     (-> this (.rollback))))
 

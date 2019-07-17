@@ -30,9 +30,9 @@
   last-rules - the recurring last rules, size 16 or less, not null - `java.util.List<java.time.zone.ZoneOffsetTransitionRule>`
 
   returns: the zone rules, not null - `java.time.zone.ZoneRules`"
-  ([base-standard-offset base-wall-offset standard-offset-transition-list transition-list last-rules]
+  ([^java.time.ZoneOffset base-standard-offset ^java.time.ZoneOffset base-wall-offset ^java.util.List standard-offset-transition-list ^java.util.List transition-list ^java.util.List last-rules]
     (ZoneRules/of base-standard-offset base-wall-offset standard-offset-transition-list transition-list last-rules))
-  ([offset]
+  ([^java.time.ZoneOffset offset]
     (ZoneRules/of offset)))
 
 (defn get-standard-offset
@@ -46,7 +46,7 @@
   instant - the instant to find the offset information for, not null, but null may be ignored if the rules have a single offset for all instants - `java.time.Instant`
 
   returns: the standard offset, not null - `java.time.ZoneOffset`"
-  ([this instant]
+  ([^java.time.zone.ZoneRules this ^java.time.Instant instant]
     (-> this (.getStandardOffset instant))))
 
 (defn get-transition-rules
@@ -69,7 +69,7 @@
    daylight saving time. The list will also be empty if the transition rules are unknown.
 
   returns: an immutable list of transition rules, not null - `java.util.List<java.time.zone.ZoneOffsetTransitionRule>`"
-  ([this]
+  ([^java.time.zone.ZoneRules this]
     (-> this (.getTransitionRules))))
 
 (defn get-daylight-savings
@@ -88,7 +88,7 @@
   instant - the instant to find the daylight savings for, not null, but null may be ignored if the rules have a single offset for all instants - `java.time.Instant`
 
   returns: the difference between the standard and actual offset, not null - `java.time.Duration`"
-  ([this instant]
+  ([^java.time.zone.ZoneRules this ^java.time.Instant instant]
     (-> this (.getDaylightSavings instant))))
 
 (defn get-transitions
@@ -102,7 +102,7 @@
    only ever been a single offset. The list will also be empty if the transition rules are unknown.
 
   returns: an immutable list of fully defined transitions, not null - `java.util.List<java.time.zone.ZoneOffsetTransition>`"
-  ([this]
+  ([^java.time.zone.ZoneRules this]
     (-> this (.getTransitions))))
 
 (defn next-transition
@@ -115,7 +115,7 @@
   instant - the instant to get the next transition after, not null, but null may be ignored if the rules have a single offset for all instants - `java.time.Instant`
 
   returns: the next transition after the specified instant, null if this is after the last transition - `java.time.zone.ZoneOffsetTransition`"
-  ([this instant]
+  ([^java.time.zone.ZoneRules this ^java.time.Instant instant]
     (-> this (.nextTransition instant))))
 
 (defn get-transition
@@ -151,14 +151,14 @@
   local-date-time - the local date-time to query for offset transition, not null, but null may be ignored if the rules have a single offset for all instants - `java.time.LocalDateTime`
 
   returns: the offset transition, null if the local date-time is not in transition - `java.time.zone.ZoneOffsetTransition`"
-  ([this local-date-time]
+  ([^java.time.zone.ZoneRules this ^java.time.LocalDateTime local-date-time]
     (-> this (.getTransition local-date-time))))
 
 (defn to-string
   "Returns a string describing this object.
 
   returns: a string for debugging, not null - `java.lang.String`"
-  ([this]
+  ([^java.time.zone.ZoneRules this]
     (-> this (.toString))))
 
 (defn get-valid-offsets
@@ -202,7 +202,7 @@
   local-date-time - the local date-time to query for valid offsets, not null, but null may be ignored if the rules have a single offset for all instants - `java.time.LocalDateTime`
 
   returns: the list of valid offsets, may be immutable, not null - `java.util.List<java.time.ZoneOffset>`"
-  ([this local-date-time]
+  ([^java.time.zone.ZoneRules this ^java.time.LocalDateTime local-date-time]
     (-> this (.getValidOffsets local-date-time))))
 
 (defn get-offset
@@ -215,7 +215,7 @@
   instant - the instant to find the offset for, not null, but null may be ignored if the rules have a single offset for all instants - `java.time.Instant`
 
   returns: the offset, not null - `java.time.ZoneOffset`"
-  ([this instant]
+  ([^java.time.zone.ZoneRules this ^java.time.Instant instant]
     (-> this (.getOffset instant))))
 
 (defn daylight-savings?
@@ -231,7 +231,7 @@
   instant - the instant to find the offset information for, not null, but null may be ignored if the rules have a single offset for all instants - `java.time.Instant`
 
   returns: the standard offset, not null - `boolean`"
-  ([this instant]
+  ([^java.time.zone.ZoneRules this ^java.time.Instant instant]
     (-> this (.isDaylightSavings instant))))
 
 (defn previous-transition
@@ -244,14 +244,14 @@
   instant - the instant to get the previous transition after, not null, but null may be ignored if the rules have a single offset for all instants - `java.time.Instant`
 
   returns: the previous transition after the specified instant, null if this is before the first transition - `java.time.zone.ZoneOffsetTransition`"
-  ([this instant]
+  ([^java.time.zone.ZoneRules this ^java.time.Instant instant]
     (-> this (.previousTransition instant))))
 
 (defn hash-code
   "Returns a suitable hash code given the definition of #equals.
 
   returns: the hash code - `int`"
-  ([this]
+  ([^java.time.zone.ZoneRules this]
     (-> this (.hashCode))))
 
 (defn valid-offset?
@@ -267,14 +267,14 @@
   offset - the offset to check, null returns false - `java.time.ZoneOffset`
 
   returns: true if the offset date-time is valid for these rules - `boolean`"
-  ([this local-date-time offset]
+  ([^java.time.zone.ZoneRules this ^java.time.LocalDateTime local-date-time ^java.time.ZoneOffset offset]
     (-> this (.isValidOffset local-date-time offset))))
 
 (defn fixed-offset?
   "Checks of the zone rules are fixed, such that the offset never varies.
 
   returns: true if the time-zone is fixed and the offset never changes - `boolean`"
-  ([this]
+  ([^java.time.zone.ZoneRules this]
     (-> this (.isFixedOffset))))
 
 (defn equals
@@ -289,6 +289,6 @@
   other-rules - the other rules, null returns false - `java.lang.Object`
 
   returns: true if this rules is the same as that specified - `boolean`"
-  ([this other-rules]
+  ([^java.time.zone.ZoneRules this ^java.lang.Object other-rules]
     (-> this (.equals other-rules))))
 

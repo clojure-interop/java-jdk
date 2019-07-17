@@ -29,7 +29,7 @@
   Constructs a new view wrapped on an element.
 
   elem - the element - `javax.swing.text.Element`"
-  ([elem]
+  ([^javax.swing.text.Element elem]
     (new GlyphView elem)))
 
 (defn get-break-weight
@@ -66,7 +66,7 @@
 
   returns: the weight, which should be a value between
      View.ForcedBreakWeight and View.BadBreakWeight. - `int`"
-  ([this axis pos len]
+  ([^javax.swing.text.GlyphView this ^Integer axis ^Float pos ^Float len]
     (-> this (.getBreakWeight axis pos len))))
 
 (defn changed-update
@@ -78,7 +78,7 @@
   e - the change information from the associated document - `javax.swing.event.DocumentEvent`
   a - the current allocation of the view - `java.awt.Shape`
   f - the factory to use to rebuild if the view has children - `javax.swing.text.ViewFactory`"
-  ([this e a f]
+  ([^javax.swing.text.GlyphView this ^javax.swing.event.DocumentEvent e ^java.awt.Shape a ^javax.swing.text.ViewFactory f]
     (-> this (.changedUpdate e a f))))
 
 (defn get-preferred-span
@@ -91,7 +91,7 @@
              Typically the view is told to render into the span
              that is returned, although there is no guarantee.
              The parent may choose to resize or break the view. - `float`"
-  ([this axis]
+  ([^javax.swing.text.GlyphView this ^Integer axis]
     (-> this (.getPreferredSpan axis))))
 
 (defn remove-update
@@ -103,7 +103,7 @@
   e - the change information from the associated document - `javax.swing.event.DocumentEvent`
   a - the current allocation of the view - `java.awt.Shape`
   f - the factory to use to rebuild if the view has children - `javax.swing.text.ViewFactory`"
-  ([this e a f]
+  ([^javax.swing.text.GlyphView this ^javax.swing.event.DocumentEvent e ^java.awt.Shape a ^javax.swing.text.ViewFactory f]
     (-> this (.removeUpdate e a f))))
 
 (defn strike-through?
@@ -112,7 +112,7 @@
    of the glyphs.
 
   returns: `boolean`"
-  ([this]
+  ([^javax.swing.text.GlyphView this]
     (-> this (.isStrikeThrough))))
 
 (defn get-foreground
@@ -126,7 +126,7 @@
    is returned.
 
   returns: `java.awt.Color`"
-  ([this]
+  ([^javax.swing.text.GlyphView this]
     (-> this (.getForeground))))
 
 (defn create-fragment
@@ -145,14 +145,14 @@
 
   returns: the view fragment, or itself if the view doesn't
      support breaking into fragments - `javax.swing.text.View`"
-  ([this p-0 p-1]
+  ([^javax.swing.text.GlyphView this ^Integer p-0 ^Integer p-1]
     (-> this (.createFragment p-0 p-1))))
 
 (defn get-end-offset
   "Fetches the portion of the model that this view is responsible for.
 
   returns: the ending offset into the model - `int`"
-  ([this]
+  ([^javax.swing.text.GlyphView this]
     (-> this (.getEndOffset))))
 
 (defn get-text
@@ -165,14 +165,14 @@
   p-1 - the ending document offset >= p0 - `int`
 
   returns: the Segment containing the text - `javax.swing.text.Segment`"
-  ([this p-0 p-1]
+  ([^javax.swing.text.GlyphView this ^Integer p-0 ^Integer p-1]
     (-> this (.getText p-0 p-1))))
 
 (defn subscript?
   "Determine if the glyphs should be rendered as superscript.
 
   returns: `boolean`"
-  ([this]
+  ([^javax.swing.text.GlyphView this]
     (-> this (.isSubscript))))
 
 (defn get-tabbed-span
@@ -183,21 +183,21 @@
   e - how to expand the tabs when encountered. - `javax.swing.text.TabExpander`
 
   returns: the desired span >= 0 - `float`"
-  ([this x e]
+  ([^javax.swing.text.GlyphView this ^Float x ^javax.swing.text.TabExpander e]
     (-> this (.getTabbedSpan x e))))
 
 (defn get-tab-expander
   "Fetch the TabExpander to use if tabs are present in this view.
 
   returns: `javax.swing.text.TabExpander`"
-  ([this]
+  ([^javax.swing.text.GlyphView this]
     (-> this (.getTabExpander))))
 
 (defn superscript?
   "Determine if the glyphs should be rendered as subscript.
 
   returns: `boolean`"
-  ([this]
+  ([^javax.swing.text.GlyphView this]
     (-> this (.isSuperscript))))
 
 (defn get-minimum-span
@@ -211,7 +211,7 @@
   returns: the minimum span the view can be rendered into - `float`
 
   throws: java.lang.IllegalArgumentException - if the axis parameter is invalid"
-  ([this axis]
+  ([^javax.swing.text.GlyphView this ^Integer axis]
     (-> this (.getMinimumSpan axis))))
 
 (defn insert-update
@@ -223,7 +223,7 @@
   e - the change information from the associated document - `javax.swing.event.DocumentEvent`
   a - the current allocation of the view - `java.awt.Shape`
   f - the factory to use to rebuild if the view has children - `javax.swing.text.ViewFactory`"
-  ([this e a f]
+  ([^javax.swing.text.GlyphView this ^javax.swing.event.DocumentEvent e ^java.awt.Shape a ^javax.swing.text.ViewFactory f]
     (-> this (.insertUpdate e a f))))
 
 (defn paint
@@ -231,7 +231,7 @@
 
   g - the rendering surface to use - `java.awt.Graphics`
   a - the allocated region to render into - `java.awt.Shape`"
-  ([this g a]
+  ([^javax.swing.text.GlyphView this ^java.awt.Graphics g ^java.awt.Shape a]
     (-> this (.paint g a))))
 
 (defn get-alignment
@@ -247,14 +247,14 @@
      origin and 1.0 indicates alignment to the full span
      away from the origin.  An alignment of 0.5 would be the
      center of the view. - `float`"
-  ([this axis]
+  ([^javax.swing.text.GlyphView this ^Integer axis]
     (-> this (.getAlignment axis))))
 
 (defn get-start-offset
   "Fetches the portion of the model that this view is responsible for.
 
   returns: the starting offset into the model - `int`"
-  ([this]
+  ([^javax.swing.text.GlyphView this]
     (-> this (.getStartOffset))))
 
 (defn get-partial-span
@@ -276,14 +276,14 @@
   p-1 - the ending document offset >= p0 - `int`
 
   returns: the span >= 0 - `float`"
-  ([this p-0 p-1]
+  ([^javax.swing.text.GlyphView this ^Integer p-0 ^Integer p-1]
     (-> this (.getPartialSpan p-0 p-1))))
 
 (defn set-glyph-painter
   "Sets the painter to use for rendering glyphs.
 
   p - `javax.swing.text.GlyphView.GlyphPainter`"
-  ([this p]
+  ([^javax.swing.text.GlyphView this ^javax.swing.text.GlyphView.GlyphPainter p]
     (-> this (.setGlyphPainter p))))
 
 (defn view-to-model
@@ -297,7 +297,7 @@
 
   returns: the location within the model that best represents the
     given point of view >= 0 - `int`"
-  ([this x y a bias-return]
+  ([^javax.swing.text.GlyphView this ^Float x ^Float y ^java.awt.Shape a ^javax.swing.text.Position.Bias[] bias-return]
     (-> this (.viewToModel x y a bias-return))))
 
 (defn get-font
@@ -310,7 +310,7 @@
    is returned.
 
   returns: `java.awt.Font`"
-  ([this]
+  ([^javax.swing.text.GlyphView this]
     (-> this (.getFont))))
 
 (defn get-background
@@ -321,7 +321,7 @@
    document is a styled document, otherwise it returns null.
 
   returns: `java.awt.Color`"
-  ([this]
+  ([^javax.swing.text.GlyphView this]
     (-> this (.getBackground))))
 
 (defn underline?
@@ -329,7 +329,7 @@
    an underline should be drawn through the baseline.
 
   returns: `boolean`"
-  ([this]
+  ([^javax.swing.text.GlyphView this]
     (-> this (.isUnderline))))
 
 (defn break-view
@@ -348,7 +348,7 @@
     given span, if the view can be broken.  If the view
     doesn't support breaking behavior, the view itself is
     returned. - `javax.swing.text.View`"
-  ([this axis p-0 pos len]
+  ([^javax.swing.text.GlyphView this ^Integer axis ^Integer p-0 ^Float pos ^Float len]
     (-> this (.breakView axis p-0 pos len))))
 
 (defn get-glyph-painter
@@ -357,7 +357,7 @@
    a default was not yet needed, null is returned.
 
   returns: `javax.swing.text.GlyphView.GlyphPainter`"
-  ([this]
+  ([^javax.swing.text.GlyphView this]
     (-> this (.getGlyphPainter))))
 
 (defn model-to-view
@@ -371,7 +371,7 @@
   returns: the bounding box of the given position - `java.awt.Shape`
 
   throws: javax.swing.text.BadLocationException - if the given position does not represent a valid location in the associated document"
-  ([this pos a b]
+  ([^javax.swing.text.GlyphView this ^Integer pos ^java.awt.Shape a ^javax.swing.text.Position.Bias b]
     (-> this (.modelToView pos a b))))
 
 (defn get-next-visual-position-from
@@ -395,6 +395,6 @@
     location visual position. - `int`
 
   throws: javax.swing.text.BadLocationException - the given position is not a valid position within the document"
-  ([this pos b a direction bias-ret]
+  ([^javax.swing.text.GlyphView this ^Integer pos ^javax.swing.text.Position.Bias b ^java.awt.Shape a ^Integer direction ^javax.swing.text.Position.Bias[] bias-ret]
     (-> this (.getNextVisualPositionFrom pos b a direction bias-ret))))
 

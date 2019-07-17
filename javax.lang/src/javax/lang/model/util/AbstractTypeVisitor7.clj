@@ -37,6 +37,6 @@
   p - a visitor-specified parameter - `AbstractTypeVisitor7.P`
 
   returns: the result of the visit as defined by a subclass - `AbstractTypeVisitor7.R`"
-  ([this t p]
+  ([^javax.lang.model.util.AbstractTypeVisitor7 this ^javax.lang.model.type.UnionType t ^AbstractTypeVisitor7.P p]
     (-> this (.visitUnion t p))))
 

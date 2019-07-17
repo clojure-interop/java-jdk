@@ -94,9 +94,9 @@
   gc - the GraphicsConfiguration of the target screen device. If gc is null, the system default GraphicsConfiguration is assumed. - `java.awt.GraphicsConfiguration`
 
   throws: java.lang.IllegalArgumentException - if gc is not from a screen device."
-  ([title gc]
+  ([^java.lang.String title ^java.awt.GraphicsConfiguration gc]
     (new Frame title gc))
-  ([gc]
+  ([^java.awt.GraphicsConfiguration gc]
     (new Frame gc))
   ([]
     (new Frame )))
@@ -307,7 +307,7 @@
    maximized state.
 
   bounds - bounds for the maximized state - `java.awt.Rectangle`"
-  ([this bounds]
+  ([^java.awt.Frame this ^java.awt.Rectangle bounds]
     (-> this (.setMaximizedBounds bounds))))
 
 (defn get-maximized-bounds
@@ -316,7 +316,7 @@
    that system supplied values for this field must be used.
 
   returns: maximized bounds for this frame;  may be null - `java.awt.Rectangle`"
-  ([this]
+  ([^java.awt.Frame this]
     (-> this (.getMaximizedBounds))))
 
 (defn set-shape
@@ -345,7 +345,7 @@
    opacity value (see Window.setOpacity(float)). See GraphicsDevice.WindowTranslucency for more details.
 
   shape - the shape to set to the window - `java.awt.Shape`"
-  ([this shape]
+  ([^java.awt.Frame this ^java.awt.Shape shape]
     (-> this (.setShape shape))))
 
 (defn set-opacity
@@ -374,7 +374,7 @@
    current shape of this window (see Window.setShape(Shape)).
 
   opacity - the opacity level to set to the window - `float`"
-  ([this opacity]
+  ([^java.awt.Frame this ^Float opacity]
     (-> this (.setOpacity opacity))))
 
 (defn get-cursor-type
@@ -382,7 +382,7 @@
    replaced by Component.getCursor().
 
   returns: `java.lang.  int`"
-  ([this]
+  ([^java.awt.Frame this]
     (-> this (.getCursorType))))
 
 (defn set-state
@@ -423,7 +423,7 @@
    events is not guaranteed in this case also.
 
   state - either Frame.NORMAL or Frame.ICONIFIED. - `int`"
-  ([this state]
+  ([^java.awt.Frame this ^Integer state]
     (-> this (.setState state))))
 
 (defn set-background
@@ -476,7 +476,7 @@
    configuration of this window due to the native platform requirements.
 
   bg-color - the color to become this window's background color. - `java.awt.Color`"
-  ([this bg-color]
+  ([^java.awt.Frame this ^java.awt.Color bg-color]
     (-> this (.setBackground bg-color))))
 
 (defn undecorated?
@@ -485,7 +485,7 @@
 
   returns: true if frame is undecorated;
                           false otherwise. - `boolean`"
-  ([this]
+  ([^java.awt.Frame this]
     (-> this (.isUndecorated))))
 
 (defn get-state
@@ -501,7 +501,7 @@
    frame state are not reported by this method.
 
   returns: Frame.NORMAL or Frame.ICONIFIED. - `int`"
-  ([this]
+  ([^java.awt.Frame this]
     (-> this (.getState))))
 
 (defn get-icon-image
@@ -515,7 +515,7 @@
 
   returns: the icon image for this frame, or null
                       if this frame doesn't have an icon image. - `java.awt.Image`"
-  ([this]
+  ([^java.awt.Frame this]
     (-> this (.getIconImage))))
 
 (defn add-notify
@@ -524,14 +524,14 @@
    cause any of its children to be made displayable.
    This method is called internally by the toolkit and should
    not be called directly by programs."
-  ([this]
+  ([^java.awt.Frame this]
     (-> this (.addNotify))))
 
 (defn set-menu-bar
   "Sets the menu bar for this frame to the specified menu bar.
 
   mb - the menu bar being set. If this parameter is null then any existing menu bar on this frame is removed. - `java.awt.MenuBar`"
-  ([this mb]
+  ([^java.awt.Frame this ^java.awt.MenuBar mb]
     (-> this (.setMenuBar mb))))
 
 (defn get-extended-state
@@ -548,7 +548,7 @@
    and MAXIMIZED_VERT.
 
   returns: a bitwise mask of frame state constants - `int`"
-  ([this]
+  ([^java.awt.Frame this]
     (-> this (.getExtendedState))))
 
 (defn remove-notify
@@ -557,7 +557,7 @@
    will cause any of its children to be made undisplayable.
    This method is called by the toolkit internally and should
    not be called directly by programs."
-  ([this]
+  ([^java.awt.Frame this]
     (-> this (.removeNotify))))
 
 (defn resizable?
@@ -566,14 +566,14 @@
 
   returns: true if the user can resize this frame;
                           false otherwise. - `boolean`"
-  ([this]
+  ([^java.awt.Frame this]
     (-> this (.isResizable))))
 
 (defn remove
   "Removes the specified menu bar from this frame.
 
   m - the menu component to remove. If m is null, then no action is taken - `java.awt.MenuComponent`"
-  ([this m]
+  ([^java.awt.Frame this ^java.awt.MenuComponent m]
     (-> this (.remove m))))
 
 (defn get-accessible-context
@@ -584,7 +584,7 @@
 
   returns: an AccessibleAWTFrame that serves as the
            AccessibleContext of this Frame - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^java.awt.Frame this]
     (-> this (.getAccessibleContext))))
 
 (defn set-undecorated
@@ -598,7 +598,7 @@
   undecorated - true if no frame decorations are to be enabled; false if frame decorations are to be enabled - `boolean`
 
   throws: java.awt.IllegalComponentStateException - if undecorated is false, and the alpha value of this frame background color is less than 1.0f"
-  ([this undecorated]
+  ([^java.awt.Frame this ^Boolean undecorated]
     (-> this (.setUndecorated undecorated))))
 
 (defn set-icon-image
@@ -624,7 +624,7 @@
    just a single image for all contexts or no image at all.
 
   image - the icon image to be displayed. - `java.awt.Image`"
-  ([this image]
+  ([^java.awt.Frame this ^java.awt.Image image]
     (-> this (.setIconImage image))))
 
 (defn get-menu-bar
@@ -632,7 +632,7 @@
 
   returns: the menu bar for this frame, or null
                      if this frame doesn't have a menu bar. - `java.awt.MenuBar`"
-  ([this]
+  ([^java.awt.Frame this]
     (-> this (.getMenuBar))))
 
 (defn set-cursor
@@ -642,7 +642,7 @@
   cursor-type - `int`
 
   returns: `java.lang.  void`"
-  ([this cursor-type]
+  ([^java.awt.Frame this ^Integer cursor-type]
     (-> this (.setCursor cursor-type))))
 
 (defn set-extended-state
@@ -681,14 +681,14 @@
    events is not guaranteed in this case also.
 
   state - a bitwise mask of frame state constants - `int`"
-  ([this state]
+  ([^java.awt.Frame this ^Integer state]
     (-> this (.setExtendedState state))))
 
 (defn set-resizable
   "Sets whether this frame is resizable by the user.
 
   resizable - true if this frame is resizable; false otherwise. - `boolean`"
-  ([this resizable]
+  ([^java.awt.Frame this ^Boolean resizable]
     (-> this (.setResizable resizable))))
 
 (defn get-title
@@ -697,13 +697,13 @@
 
   returns: the title of this frame, or an empty string (``)
                   if this frame doesn't have a title. - `java.lang.String`"
-  ([this]
+  ([^java.awt.Frame this]
     (-> this (.getTitle))))
 
 (defn set-title
   "Sets the title for this frame to the specified string.
 
   title - the title to be displayed in the frame's border. A null value is treated as an empty string, ``. - `java.lang.String`"
-  ([this title]
+  ([^java.awt.Frame this ^java.lang.String title]
     (-> this (.setTitle title))))
 

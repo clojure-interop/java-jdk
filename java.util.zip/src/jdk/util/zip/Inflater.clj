@@ -53,7 +53,7 @@
    library in order to support certain optimizations.
 
   nowrap - if true then support GZIP compatible compression - `boolean`"
-  ([nowrap]
+  ([^Boolean nowrap]
     (new Inflater nowrap))
   ([]
     (new Inflater )))
@@ -66,9 +66,9 @@
   b - the input data bytes - `byte[]`
   off - the start offset of the input data - `int`
   len - the length of the input data - `int`"
-  ([this b off len]
+  ([^java.util.zip.Inflater this b ^Integer off ^Integer len]
     (-> this (.setInput b off len)))
-  ([this b]
+  ([^java.util.zip.Inflater this b]
     (-> this (.setInput b))))
 
 (defn get-total-out
@@ -79,7 +79,7 @@
    the preferred means of obtaining this information.
 
   returns: the total number of uncompressed bytes output so far - `int`"
-  ([this]
+  ([^java.util.zip.Inflater this]
     (-> this (.getTotalOut))))
 
 (defn inflate
@@ -97,16 +97,16 @@
   returns: the actual number of uncompressed bytes - `int`
 
   throws: java.util.zip.DataFormatException - if the compressed data format is invalid"
-  ([this b off len]
+  ([^java.util.zip.Inflater this b ^Integer off ^Integer len]
     (-> this (.inflate b off len)))
-  ([this b]
+  ([^java.util.zip.Inflater this b]
     (-> this (.inflate b))))
 
 (defn get-bytes-written
   "Returns the total number of uncompressed bytes output so far.
 
   returns: the total (non-negative) number of uncompressed bytes output so far - `long`"
-  ([this]
+  ([^java.util.zip.Inflater this]
     (-> this (.getBytesWritten))))
 
 (defn needs-input
@@ -115,19 +115,19 @@
    to provide more input.
 
   returns: true if no data remains in the input buffer - `boolean`"
-  ([this]
+  ([^java.util.zip.Inflater this]
     (-> this (.needsInput))))
 
 (defn reset
   "Resets inflater so that a new set of input data can be processed."
-  ([this]
+  ([^java.util.zip.Inflater this]
     (-> this (.reset))))
 
 (defn needs-dictionary
   "Returns true if a preset dictionary is needed for decompression.
 
   returns: true if a preset dictionary is needed for decompression - `boolean`"
-  ([this]
+  ([^java.util.zip.Inflater this]
     (-> this (.needsDictionary))))
 
 (defn get-remaining
@@ -136,21 +136,21 @@
    buffer after decompression has finished.
 
   returns: the total number of bytes remaining in the input buffer - `int`"
-  ([this]
+  ([^java.util.zip.Inflater this]
     (-> this (.getRemaining))))
 
 (defn get-bytes-read
   "Returns the total number of compressed bytes input so far.
 
   returns: the total (non-negative) number of compressed bytes input so far - `long`"
-  ([this]
+  ([^java.util.zip.Inflater this]
     (-> this (.getBytesRead))))
 
 (defn get-adler
   "Returns the ADLER-32 value of the uncompressed data.
 
   returns: the ADLER-32 value of the uncompressed data - `int`"
-  ([this]
+  ([^java.util.zip.Inflater this]
     (-> this (.getAdler))))
 
 (defn get-total-in
@@ -161,7 +161,7 @@
    the preferred means of obtaining this information.
 
   returns: the total number of compressed bytes input so far - `int`"
-  ([this]
+  ([^java.util.zip.Inflater this]
     (-> this (.getTotalIn))))
 
 (defn set-dictionary
@@ -173,9 +173,9 @@
   b - the dictionary data bytes - `byte[]`
   off - the start offset of the data - `int`
   len - the length of the data - `int`"
-  ([this b off len]
+  ([^java.util.zip.Inflater this b ^Integer off ^Integer len]
     (-> this (.setDictionary b off len)))
-  ([this b]
+  ([^java.util.zip.Inflater this b]
     (-> this (.setDictionary b))))
 
 (defn end
@@ -184,7 +184,7 @@
    being used, but will also be called automatically by the finalize()
    method. Once this method is called, the behavior of the Inflater
    object is undefined."
-  ([this]
+  ([^java.util.zip.Inflater this]
     (-> this (.end))))
 
 (defn finished
@@ -193,6 +193,6 @@
 
   returns: true if the end of the compressed data stream has been
    reached - `boolean`"
-  ([this]
+  ([^java.util.zip.Inflater this]
     (-> this (.finished))))
 

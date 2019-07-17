@@ -12,34 +12,34 @@
   p - the prime. - `java.math.BigInteger`
   q - the sub-prime. - `java.math.BigInteger`
   g - the base. - `java.math.BigInteger`"
-  ([y p q g]
+  ([^java.math.BigInteger y ^java.math.BigInteger p ^java.math.BigInteger q ^java.math.BigInteger g]
     (new DSAPublicKeySpec y p q g)))
 
 (defn get-y
   "Returns the public key y.
 
   returns: the public key y. - `java.math.BigInteger`"
-  ([this]
+  ([^java.security.spec.DSAPublicKeySpec this]
     (-> this (.getY))))
 
 (defn get-p
   "Returns the prime p.
 
   returns: the prime p. - `java.math.BigInteger`"
-  ([this]
+  ([^java.security.spec.DSAPublicKeySpec this]
     (-> this (.getP))))
 
 (defn get-q
   "Returns the sub-prime q.
 
   returns: the sub-prime q. - `java.math.BigInteger`"
-  ([this]
+  ([^java.security.spec.DSAPublicKeySpec this]
     (-> this (.getQ))))
 
 (defn get-g
   "Returns the base g.
 
   returns: the base g. - `java.math.BigInteger`"
-  ([this]
+  ([^java.security.spec.DSAPublicKeySpec this]
     (-> this (.getG))))
 

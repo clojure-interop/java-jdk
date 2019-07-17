@@ -95,9 +95,9 @@
   returns: the new proxy instance. - `<T> T`
 
   throws: java.lang.IllegalArgumentException - if interfaceClass is not a compliant MBean interface"
-  ([connection object-name interface-class notification-emitter]
+  ([^javax.management.MBeanServerConnection connection ^javax.management.ObjectName object-name ^java.lang.Class interface-class ^Boolean notification-emitter]
     (JMX/newMBeanProxy connection object-name interface-class notification-emitter))
-  ([connection object-name interface-class]
+  ([^javax.management.MBeanServerConnection connection ^javax.management.ObjectName object-name ^java.lang.Class interface-class]
     (JMX/newMBeanProxy connection object-name interface-class)))
 
 (defn *new-mx-bean-proxy
@@ -120,9 +120,9 @@
   returns: the new proxy instance. - `<T> T`
 
   throws: java.lang.IllegalArgumentException - if interfaceClass is not a compliant MXBean interface"
-  ([connection object-name interface-class notification-emitter]
+  ([^javax.management.MBeanServerConnection connection ^javax.management.ObjectName object-name ^java.lang.Class interface-class ^Boolean notification-emitter]
     (JMX/newMXBeanProxy connection object-name interface-class notification-emitter))
-  ([connection object-name interface-class]
+  ([^javax.management.MBeanServerConnection connection ^javax.management.ObjectName object-name ^java.lang.Class interface-class]
     (JMX/newMXBeanProxy connection object-name interface-class)))
 
 (defn *mx-bean-interface?
@@ -138,6 +138,6 @@
    compliant MXBean interface - `boolean`
 
   throws: java.lang.NullPointerException - if interfaceClass is null."
-  ([interface-class]
+  ([^java.lang.Class interface-class]
     (JMX/isMXBeanInterface interface-class)))
 

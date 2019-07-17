@@ -15,7 +15,7 @@
 
   returns: true if the input argument matches the predicate,
    otherwise false - `boolean`"
-  ([this value]
+  ([^. this ^Integer value]
     (-> this (.test value))))
 
 (defn and
@@ -34,7 +34,7 @@
    AND of this predicate and the other predicate - `default java.util.function.IntPredicate`
 
   throws: java.lang.NullPointerException - if other is null"
-  ([this other]
+  ([^. this ^java.util.function.IntPredicate other]
     (-> this (.and other))))
 
 (defn negate
@@ -43,7 +43,7 @@
 
   returns: a predicate that represents the logical negation of this
    predicate - `default java.util.function.IntPredicate`"
-  ([this]
+  ([^. this]
     (-> this (.negate))))
 
 (defn or
@@ -62,6 +62,6 @@
    OR of this predicate and the other predicate - `default java.util.function.IntPredicate`
 
   throws: java.lang.NullPointerException - if other is null"
-  ([this other]
+  ([^. this ^java.util.function.IntPredicate other]
     (-> this (.or other))))
 

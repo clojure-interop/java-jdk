@@ -14,9 +14,9 @@
 
   e - The exception to be encapsulated in a FactoryConfigurationError - `java.lang.Exception`
   msg - The detail message. - `java.lang.String`"
-  ([e msg]
+  ([^java.lang.Exception e ^java.lang.String msg]
     (new FactoryConfigurationError e msg))
-  ([msg]
+  ([^java.lang.String msg]
     (new FactoryConfigurationError msg))
   ([]
     (new FactoryConfigurationError )))
@@ -29,7 +29,7 @@
    returned.
 
   returns: The error message. - `java.lang.String`"
-  ([this]
+  ([^javax.xml.parsers.FactoryConfigurationError this]
     (-> this (.getMessage))))
 
 (defn get-exception
@@ -37,7 +37,7 @@
    be raised.
 
   returns: The encapsulated exception, or null if there is none. - `java.lang.Exception`"
-  ([this]
+  ([^javax.xml.parsers.FactoryConfigurationError this]
     (-> this (.getException))))
 
 (defn get-cause
@@ -45,6 +45,6 @@
 
   returns: the cause of this throwable or null if the
             cause is nonexistent or unknown. - `java.lang.Throwable`"
-  ([this]
+  ([^javax.xml.parsers.FactoryConfigurationError this]
     (-> this (.getCause))))
 

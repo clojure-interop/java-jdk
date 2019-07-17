@@ -50,11 +50,11 @@
   opposite - The other Component involved in the focus change, or null - `java.awt.Component`
 
   throws: java.lang.IllegalArgumentException - if source equals null"
-  ([source id temporary opposite]
+  ([^java.awt.Component source ^Integer id ^Boolean temporary ^java.awt.Component opposite]
     (new FocusEvent source id temporary opposite))
-  ([source id temporary]
+  ([^java.awt.Component source ^Integer id ^Boolean temporary]
     (new FocusEvent source id temporary))
-  ([source id]
+  ([^java.awt.Component source ^Integer id]
     (new FocusEvent source id)))
 
 (def *-focus-first
@@ -94,7 +94,7 @@
 
   returns: true if the focus change is temporary;
            false otherwise - `boolean`"
-  ([this]
+  ([^java.awt.event.FocusEvent this]
     (-> this (.isTemporary))))
 
 (defn get-opposite-component
@@ -106,7 +106,7 @@
    returned.
 
   returns: the other Component involved in the focus change, or null - `java.awt.Component`"
-  ([this]
+  ([^java.awt.event.FocusEvent this]
     (-> this (.getOppositeComponent))))
 
 (defn param-string
@@ -114,6 +114,6 @@
    This method is useful for event-logging and for debugging.
 
   returns: a string identifying the event and its attributes - `java.lang.String`"
-  ([this]
+  ([^java.awt.event.FocusEvent this]
     (-> this (.paramString))))
 

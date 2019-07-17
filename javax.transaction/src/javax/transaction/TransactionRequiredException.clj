@@ -8,7 +8,7 @@
   "Constructor.
 
   msg - `java.lang.String`"
-  ([msg]
+  ([^java.lang.String msg]
     (new TransactionRequiredException msg))
   ([]
     (new TransactionRequiredException )))

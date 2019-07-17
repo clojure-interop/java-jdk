@@ -47,9 +47,9 @@
   returns: the keytab instance - `javax.security.auth.kerberos.KeyTab`
 
   throws: java.lang.NullPointerException - if either of the arguments is null"
-  ([princ file]
+  ([^javax.security.auth.kerberos.KerberosPrincipal princ ^java.io.File file]
     (KeyTab/getInstance princ file))
-  ([file]
+  ([^java.io.File file]
     (KeyTab/getInstance file))
   ([]
     (KeyTab/getInstance )))
@@ -66,7 +66,7 @@
   returns: the keytab instance - `javax.security.auth.kerberos.KeyTab`
 
   throws: java.lang.NullPointerException - if the file argument is null"
-  ([file]
+  ([^java.io.File file]
     (KeyTab/getUnboundInstance file))
   ([]
     (KeyTab/getUnboundInstance )))
@@ -110,7 +110,7 @@
   returns: the keys (never null, may be empty) - `javax.security.auth.kerberos.KerberosKey[]`
 
   throws: java.lang.NullPointerException - if the principal argument is null"
-  ([this principal]
+  ([^javax.security.auth.kerberos.KeyTab this ^javax.security.auth.kerberos.KerberosPrincipal principal]
     (-> this (.getKeys principal))))
 
 (defn exists?
@@ -124,21 +124,21 @@
   returns: true if the keytab file exists; false otherwise. - `boolean`
 
   throws: java.lang.SecurityException - if a security manager exists and the read access to the keytab file is not permitted"
-  ([this]
+  ([^javax.security.auth.kerberos.KeyTab this]
     (-> this (.exists))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^javax.security.auth.kerberos.KeyTab this]
     (-> this (.toString))))
 
 (defn hash-code
   "Returns a hashcode for this KeyTab.
 
   returns: a hashCode() for the KeyTab - `int`"
-  ([this]
+  ([^javax.security.auth.kerberos.KeyTab this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -150,7 +150,7 @@
   other - the Object to compare to - `java.lang.Object`
 
   returns: true if the specified object is equal to this KeyTab - `boolean`"
-  ([this other]
+  ([^javax.security.auth.kerberos.KeyTab this ^java.lang.Object other]
     (-> this (.equals other))))
 
 (defn get-principal
@@ -162,13 +162,13 @@
    User can call isBound() to verify this case.
 
   returns: the service principal - `javax.security.auth.kerberos.KerberosPrincipal`"
-  ([this]
+  ([^javax.security.auth.kerberos.KeyTab this]
     (-> this (.getPrincipal))))
 
 (defn bound?
   "Returns if the keytab is bound to a principal
 
   returns: if the keytab is bound to a principal - `boolean`"
-  ([this]
+  ([^javax.security.auth.kerberos.KeyTab this]
     (-> this (.isBound))))
 

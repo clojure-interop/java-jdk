@@ -15,7 +15,7 @@
   c - component to create UI object for - `javax.swing.JComponent`
 
   returns: the UI object - `javax.swing.plaf.ComponentUI`"
-  ([c]
+  ([^javax.swing.JComponent c]
     (SynthSeparatorUI/createUI c)))
 
 (defn install-ui
@@ -38,7 +38,7 @@
    Initialize any appropriate instance data.
 
   c - the component where this UI delegate is being installed - `javax.swing.JComponent`"
-  ([this c]
+  ([^javax.swing.plaf.synth.SynthSeparatorUI this ^javax.swing.JComponent c]
     (-> this (.installUI c))))
 
 (defn get-minimum-size
@@ -52,7 +52,7 @@
   c - the component whose minimum size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: a Dimension object or null - `java.awt.Dimension`"
-  ([this c]
+  ([^javax.swing.plaf.synth.SynthSeparatorUI this ^javax.swing.JComponent c]
     (-> this (.getMinimumSize c))))
 
 (defn get-maximum-size
@@ -66,7 +66,7 @@
   c - the component whose maximum size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: a Dimension object or null - `java.awt.Dimension`"
-  ([this c]
+  ([^javax.swing.plaf.synth.SynthSeparatorUI this ^javax.swing.JComponent c]
     (-> this (.getMaximumSize c))))
 
 (defn uninstall-listeners
@@ -74,7 +74,7 @@
    LookAndFeel is uninstalled.
 
   c - `javax.swing.JSeparator`"
-  ([this c]
+  ([^javax.swing.plaf.synth.SynthSeparatorUI this ^javax.swing.JSeparator c]
     (-> this (.uninstallListeners c))))
 
 (defn uninstall-ui
@@ -95,7 +95,7 @@
    Nullify any allocated instance data objects to allow for GC.
 
   c - the component from which this UI delegate is being removed; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([this c]
+  ([^javax.swing.plaf.synth.SynthSeparatorUI this ^javax.swing.JComponent c]
     (-> this (.uninstallUI c))))
 
 (defn paint-border
@@ -107,7 +107,7 @@
   y - the Y coordinate - `int`
   w - width of the border - `int`
   h - height of the border - `int`"
-  ([this context g x y w h]
+  ([^javax.swing.plaf.synth.SynthSeparatorUI this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintBorder context g x y w h))))
 
 (defn update
@@ -120,14 +120,14 @@
 
   g - the Graphics object used for painting - `java.awt.Graphics`
   c - the component being painted - `javax.swing.JComponent`"
-  ([this g c]
+  ([^javax.swing.plaf.synth.SynthSeparatorUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.update g c))))
 
 (defn property-change
   "Description copied from interface: PropertyChangeListener
 
   evt - A PropertyChangeEvent object describing the event source and the property that has changed. - `java.beans.PropertyChangeEvent`"
-  ([this evt]
+  ([^javax.swing.plaf.synth.SynthSeparatorUI this ^java.beans.PropertyChangeEvent evt]
     (-> this (.propertyChange evt))))
 
 (defn install-listeners
@@ -135,7 +135,7 @@
    LookAndFeel is installed.
 
   c - `javax.swing.JSeparator`"
-  ([this c]
+  ([^javax.swing.plaf.synth.SynthSeparatorUI this ^javax.swing.JSeparator c]
     (-> this (.installListeners c))))
 
 (defn uninstall-defaults
@@ -143,7 +143,7 @@
    LookAndFeel is uninstalled.
 
   c - `javax.swing.JSeparator`"
-  ([this c]
+  ([^javax.swing.plaf.synth.SynthSeparatorUI this ^javax.swing.JSeparator c]
     (-> this (.uninstallDefaults c))))
 
 (defn paint
@@ -153,7 +153,7 @@
 
   g - the Graphics object used for painting - `java.awt.Graphics`
   c - the component being painted - `javax.swing.JComponent`"
-  ([this g c]
+  ([^javax.swing.plaf.synth.SynthSeparatorUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.paint g c))))
 
 (defn get-context
@@ -162,7 +162,7 @@
   c - Component requesting SynthContext. - `javax.swing.JComponent`
 
   returns: SynthContext describing component. - `javax.swing.plaf.synth.SynthContext`"
-  ([this c]
+  ([^javax.swing.plaf.synth.SynthSeparatorUI this ^javax.swing.JComponent c]
     (-> this (.getContext c))))
 
 (defn install-defaults
@@ -170,7 +170,7 @@
    LookAndFeel is installed.
 
   c - `javax.swing.JSeparator`"
-  ([this c]
+  ([^javax.swing.plaf.synth.SynthSeparatorUI this ^javax.swing.JSeparator c]
     (-> this (.installDefaults c))))
 
 (defn get-preferred-size
@@ -184,6 +184,6 @@
   c - the component whose preferred size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: `java.awt.Dimension`"
-  ([this c]
+  ([^javax.swing.plaf.synth.SynthSeparatorUI this ^javax.swing.JComponent c]
     (-> this (.getPreferredSize c))))
 

@@ -22,30 +22,30 @@
   g - `java.awt.Graphics`
   x - `int`
   y - `int`"
-  ([this c g x y]
+  ([^javax.swing.plaf.metal.MetalIconFactory$FileIcon16 this ^java.awt.Component c ^java.awt.Graphics g ^Integer x ^Integer y]
     (-> this (.paintIcon c g x y))))
 
 (defn get-shift
   "returns: `int`"
-  ([this]
+  ([^javax.swing.plaf.metal.MetalIconFactory$FileIcon16 this]
     (-> this (.getShift))))
 
 (defn get-additional-height
   "returns: `int`"
-  ([this]
+  ([^javax.swing.plaf.metal.MetalIconFactory$FileIcon16 this]
     (-> this (.getAdditionalHeight))))
 
 (defn get-icon-width
   "Description copied from interface: Icon
 
   returns: an int specifying the fixed width of the icon. - `int`"
-  ([this]
+  ([^javax.swing.plaf.metal.MetalIconFactory$FileIcon16 this]
     (-> this (.getIconWidth))))
 
 (defn get-icon-height
   "Description copied from interface: Icon
 
   returns: an int specifying the fixed height of the icon. - `int`"
-  ([this]
+  ([^javax.swing.plaf.metal.MetalIconFactory$FileIcon16 this]
     (-> this (.getIconHeight))))
 

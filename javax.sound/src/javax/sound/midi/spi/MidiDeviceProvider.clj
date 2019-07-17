@@ -18,7 +18,7 @@
 
   returns: true if the specified device is supported, otherwise
            false - `boolean`"
-  ([this info]
+  ([^javax.sound.midi.spi.MidiDeviceProvider this ^javax.sound.midi.MidiDevice.Info info]
     (-> this (.isDeviceSupported info))))
 
 (defn get-device-info
@@ -26,7 +26,7 @@
    provided by this MidiDeviceProvider.
 
   returns: set of device info objects - `javax.sound.midi.MidiDevice.Info[]`"
-  ([this]
+  ([^javax.sound.midi.spi.MidiDeviceProvider this]
     (-> this (.getDeviceInfo))))
 
 (defn get-device
@@ -37,6 +37,6 @@
   returns: device instance - `javax.sound.midi.MidiDevice`
 
   throws: java.lang.IllegalArgumentException - if the info object specified does not match the info object for a device supported by this MidiDeviceProvider"
-  ([this info]
+  ([^javax.sound.midi.spi.MidiDeviceProvider this ^javax.sound.midi.MidiDevice.Info info]
     (-> this (.getDevice info))))
 

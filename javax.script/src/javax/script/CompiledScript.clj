@@ -25,9 +25,9 @@
    if no value is returned by the script execution. - `java.lang.Object`
 
   throws: javax.script.ScriptException - if an error occurs."
-  ([this context]
+  ([^javax.script.CompiledScript this ^javax.script.ScriptContext context]
     (-> this (.eval context)))
-  ([this]
+  ([^javax.script.CompiledScript this]
     (-> this (.eval))))
 
 (defn get-engine
@@ -35,6 +35,6 @@
    The CompiledScript will execute in this engine.
 
   returns: The ScriptEngine that created this CompiledScript - `javax.script.ScriptEngine`"
-  ([this]
+  ([^javax.script.CompiledScript this]
     (-> this (.getEngine))))
 

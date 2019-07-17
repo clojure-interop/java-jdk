@@ -25,7 +25,7 @@
 
   returns: The Class object that represents the runtime
            class of this object. - `java.lang.Class<?>`"
-  ([this]
+  ([^java.lang.Object this]
     (-> this (.getClass))))
 
 (defn hash-code
@@ -60,7 +60,7 @@
    Java™ programming language.)
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^java.lang.Object this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -107,7 +107,7 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.lang.Object this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn to-string
@@ -130,7 +130,7 @@
    getClass().getName()  '@'  Integer.toHexString(hashCode())
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^java.lang.Object this]
     (-> this (.toString))))
 
 (defn notify
@@ -161,7 +161,7 @@
    Only one thread at a time can own an object's monitor.
 
   throws: java.lang.IllegalMonitorStateException - if the current thread is not the owner of this object's monitor."
-  ([this]
+  ([^java.lang.Object this]
     (-> this (.notify))))
 
 (defn notify-all
@@ -182,7 +182,7 @@
    a monitor.
 
   throws: java.lang.IllegalMonitorStateException - if the current thread is not the owner of this object's monitor."
-  ([this]
+  ([^java.lang.Object this]
     (-> this (.notifyAll))))
 
 (defn wait
@@ -238,10 +238,10 @@
   nanos - additional time, in nanoseconds range 0-999999. - `int`
 
   throws: java.lang.IllegalArgumentException - if the value of timeout is negative or the value of nanos is not in the range 0-999999."
-  ([this timeout nanos]
+  ([^java.lang.Object this ^Long timeout ^Integer nanos]
     (-> this (.wait timeout nanos)))
-  ([this timeout]
+  ([^java.lang.Object this ^Long timeout]
     (-> this (.wait timeout)))
-  ([this]
+  ([^java.lang.Object this]
     (-> this (.wait))))
 

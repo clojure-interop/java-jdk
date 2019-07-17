@@ -93,9 +93,9 @@
   gc - the GraphicsConfiguration of the target screen device; if gc is null, the system default GraphicsConfiguration is assumed - `java.awt.GraphicsConfiguration`
 
   throws: java.lang.IllegalArgumentException - if gc is not from a screen device"
-  ([owner gc]
+  ([^java.awt.Window owner ^java.awt.GraphicsConfiguration gc]
     (new Window owner gc))
-  ([owner]
+  ([^java.awt.Frame owner]
     (new Window owner)))
 
 (defn *get-windows
@@ -139,7 +139,7 @@
    1.0f. The method returns true otherwise.
 
   returns: true if the window is opaque, false otherwise - `boolean`"
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.isOpaque))))
 
 (defn active?
@@ -150,7 +150,7 @@
    Dialog that is an owner of the focused Window.
 
   returns: whether this is the active Window. - `boolean`"
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.isActive))))
 
 (defn get-buffer-strategy
@@ -159,7 +159,7 @@
    been created or has been disposed.
 
   returns: the buffer strategy used by this component - `java.awt.image.BufferStrategy`"
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.getBufferStrategy))))
 
 (defn remove-window-listener
@@ -169,7 +169,7 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   l - the window listener - `java.awt.event.WindowListener`"
-  ([this l]
+  ([^java.awt.Window this ^java.awt.event.WindowListener l]
     (-> this (.removeWindowListener l))))
 
 (defn set-auto-request-focus
@@ -186,7 +186,7 @@
    The value of the property is not inherited by owned windows.
 
   auto-request-focus - whether this window should be focused on subsequently being shown or being moved to the front - `boolean`"
-  ([this auto-request-focus]
+  ([^java.awt.Window this ^Boolean auto-request-focus]
     (-> this (.setAutoRequestFocus auto-request-focus))))
 
 (defn set-location
@@ -204,9 +204,9 @@
 
   x - the x-coordinate of the new location's top-left corner in the parent's coordinate space - `int`
   y - the y-coordinate of the new location's top-left corner in the parent's coordinate space - `int`"
-  ([this x y]
+  ([^java.awt.Window this ^Integer x ^Integer y]
     (-> this (.setLocation x y)))
-  ([this p]
+  ([^java.awt.Window this ^java.awt.Point p]
     (-> this (.setLocation p))))
 
 (defn hide
@@ -214,7 +214,7 @@
    setVisible(boolean).
 
   returns: `java.lang.  void`"
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.hide))))
 
 (defn set-icon-images
@@ -241,7 +241,7 @@
    just a single image for all contexts or no image at all.
 
   icons - the list of icon images to be displayed. - `java.awt.Image>`"
-  ([this icons]
+  ([^java.awt.Window this ^java.awt.Image> icons]
     (-> this (.setIconImages icons))))
 
 (defn auto-request-focus?
@@ -252,14 +252,14 @@
    By default, the window has autoRequestFocus value of true.
 
   returns: autoRequestFocus value - `boolean`"
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.isAutoRequestFocus))))
 
 (defn get-type
   "Returns the type of the window.
 
   returns: `java.awt.Window.Type`"
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.getType))))
 
 (defn set-location-relative-to
@@ -310,7 +310,7 @@
    in a way that corresponds closely to the desktop settings.
 
   c - the component in relation to which the window's location is determined - `java.awt.Component`"
-  ([this c]
+  ([^java.awt.Window this ^java.awt.Component c]
     (-> this (.setLocationRelativeTo c))))
 
 (defn remove-window-state-listener
@@ -321,7 +321,7 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   l - the window state listener - `java.awt.event.WindowStateListener`"
-  ([this l]
+  ([^java.awt.Window this ^java.awt.event.WindowStateListener l]
     (-> this (.removeWindowStateListener l))))
 
 (defn pack
@@ -335,7 +335,7 @@
    both of them are made displayable before calculating
    the preferred size. The Window is validated after its
    size is being calculated."
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.pack))))
 
 (defn get-focus-traversal-keys
@@ -352,7 +352,7 @@
   returns: the AWTKeyStroke for the specified key - `java.util.Set<java.awt.AWTKeyStroke>`
 
   throws: java.lang.IllegalArgumentException - if id is not one of KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, KeyboardFocusManager.UP_CYCLE_TRAVERSAL_KEYS, or KeyboardFocusManager.DOWN_CYCLE_TRAVERSAL_KEYS"
-  ([this id]
+  ([^java.awt.Window this ^Integer id]
     (-> this (.getFocusTraversalKeys id))))
 
 (defn get-most-recent-focus-owner
@@ -367,7 +367,7 @@
 
   returns: the child Component that will receive focus when this Window is
            focused - `java.awt.Component`"
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.getMostRecentFocusOwner))))
 
 (defn set-type
@@ -378,7 +378,7 @@
   type - `java.awt.Window.Type`
 
   throws: java.awt.IllegalComponentStateException - if the window is displayable."
-  ([this type]
+  ([^java.awt.Window this ^java.awt.Window.Type type]
     (-> this (.setType type))))
 
 (defn set-focus-cycle-root
@@ -386,7 +386,7 @@
    cycle. The passed-in value is ignored.
 
   focus-cycle-root - this value is ignored - `boolean`"
-  ([this focus-cycle-root]
+  ([^java.awt.Window this ^Boolean focus-cycle-root]
     (-> this (.setFocusCycleRoot focus-cycle-root))))
 
 (defn set-shape
@@ -417,7 +417,7 @@
   shape - the shape to set to the window - `java.awt.Shape`
 
   throws: java.awt.IllegalComponentStateException - if the shape is not null and the window is in full-screen mode"
-  ([this shape]
+  ([^java.awt.Window this ^java.awt.Shape shape]
     (-> this (.setShape shape))))
 
 (defn post-event
@@ -427,7 +427,7 @@
   e - `java.awt.Event`
 
   returns: `java.lang.  boolean`"
-  ([this e]
+  ([^java.awt.Window this ^java.awt.Event e]
     (-> this (.postEvent e))))
 
 (defn set-opacity
@@ -458,7 +458,7 @@
   opacity - the opacity level to set to the window - `float`
 
   throws: java.lang.IllegalArgumentException - if the opacity is out of the range [0..1]"
-  ([this opacity]
+  ([^java.awt.Window this ^Float opacity]
     (-> this (.setOpacity opacity))))
 
 (defn dispose
@@ -480,14 +480,14 @@
    within the Java virtual machine (VM) is disposed of, the VM may
    terminate.  See
    AWT Threading Issues for more information."
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.dispose))))
 
 (defn get-opacity
   "Returns the opacity of the window.
 
   returns: the opacity of the window - `float`"
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.getOpacity))))
 
 (defn set-focusable-window-state
@@ -513,7 +513,7 @@
    when the Window is invisible and then show it.
 
   focusable-window-state - whether this Window can be the focused Window - `boolean`"
-  ([this focusable-window-state]
+  ([^java.awt.Window this ^Boolean focusable-window-state]
     (-> this (.setFocusableWindowState focusable-window-state))))
 
 (defn get-locale
@@ -523,7 +523,7 @@
    is returned.
 
   returns: the locale that is set for this window. - `java.util.Locale`"
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.getLocale))))
 
 (defn get-focus-owner
@@ -532,7 +532,7 @@
 
   returns: the child Component with focus, or null if this Window is not
            focused - `java.awt.Component`"
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.getFocusOwner))))
 
 (defn set-always-on-top
@@ -582,7 +582,7 @@
   always-on-top - true if the window should always be above other windows - `boolean`
 
   throws: java.lang.SecurityException - if the calling thread does not have permission to set the value of always-on-top property"
-  ([this always-on-top]
+  ([^java.awt.Window this ^Boolean always-on-top]
     (-> this (.setAlwaysOnTop always-on-top))))
 
 (defn validate-root?
@@ -592,7 +592,7 @@
    override this method to return true.
 
   returns: true - `boolean`"
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.isValidateRoot))))
 
 (defn add-window-listener
@@ -602,7 +602,7 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   l - the window listener - `java.awt.event.WindowListener`"
-  ([this l]
+  ([^java.awt.Window this ^java.awt.event.WindowListener l]
     (-> this (.addWindowListener l))))
 
 (defn set-background
@@ -657,7 +657,7 @@
   bg-color - the color to become this window's background color. - `java.awt.Color`
 
   throws: java.awt.IllegalComponentStateException - if the alpha value of the given background color is less than 1.0f and the window is in full-screen mode"
-  ([this bg-color]
+  ([^java.awt.Window this ^java.awt.Color bg-color]
     (-> this (.setBackground bg-color))))
 
 (defn get-window-listeners
@@ -667,7 +667,7 @@
   returns: all of this window's WindowListeners
            or an empty array if no window
            listeners are currently registered - `java.awt.event.WindowListener[]`"
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.getWindowListeners))))
 
 (defn reshape
@@ -680,7 +680,7 @@
   height - `int`
 
   returns: `java.lang.  void`"
-  ([this x y width height]
+  ([^java.awt.Window this ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.reshape x y width height))))
 
 (defn get-owned-windows
@@ -688,7 +688,7 @@
    window currently owns.
 
   returns: `java.awt.Window[]`"
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.getOwnedWindows))))
 
 (defn get-focusable-window-state?
@@ -705,7 +705,7 @@
    true.
 
   returns: whether this Window can be the focused Window - `boolean`"
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.getFocusableWindowState))))
 
 (defn add-notify
@@ -713,7 +713,7 @@
    native screen resource.
    This method is called internally by the toolkit and should
    not be called directly by programs."
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.addNotify))))
 
 (defn get-window-focus-listeners
@@ -723,7 +723,7 @@
   returns: all of this window's WindowFocusListeners
            or an empty array if no window focus
            listeners are currently registered - `java.awt.event.WindowFocusListener[]`"
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.getWindowFocusListeners))))
 
 (defn show
@@ -731,7 +731,7 @@
    setVisible(boolean).
 
   returns: `java.lang.  void`"
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.show))))
 
 (defn apply-resource-bundle
@@ -741,7 +741,7 @@
   rb - `java.util.ResourceBundle`
 
   returns: `java.lang.  void`"
-  ([this rb]
+  ([^java.awt.Window this ^java.util.ResourceBundle rb]
     (-> this (.applyResourceBundle rb))))
 
 (defn add-window-focus-listener
@@ -751,7 +751,7 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   l - the window focus listener - `java.awt.event.WindowFocusListener`"
-  ([this l]
+  ([^java.awt.Window this ^java.awt.event.WindowFocusListener l]
     (-> this (.addWindowFocusListener l))))
 
 (defn remove-notify
@@ -760,14 +760,14 @@
    will cause all of its children to be made undisplayable.
    This method is called by the toolkit internally and should
    not be called directly by programs."
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.removeNotify))))
 
 (defn get-owner
   "Returns the owner of this window.
 
   returns: `java.awt.Window`"
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.getOwner))))
 
 (defn focusable-window?
@@ -784,7 +784,7 @@
 
   returns: true if this Window can be the focused Window;
            false otherwise - `boolean`"
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.isFocusableWindow))))
 
 (defn always-on-top?
@@ -792,7 +792,7 @@
 
   returns: true, if the window is in always-on-top state,
            false otherwise - `boolean`"
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.isAlwaysOnTop))))
 
 (defn get-icon-images
@@ -803,7 +803,7 @@
 
   returns: the copy of icon images' list for this window, or
               empty list if this window doesn't have icon images. - `java.util.List<java.awt.Image>`"
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.getIconImages))))
 
 (defn set-location-by-platform
@@ -845,7 +845,7 @@
   location-by-platform - true if this Window should appear at the default location, false if at the current location - `boolean`
 
   throws: java.awt.IllegalComponentStateException - if the window is showing on screen and locationByPlatform is true."
-  ([this location-by-platform]
+  ([^java.awt.Window this ^Boolean location-by-platform]
     (-> this (.setLocationByPlatform location-by-platform))))
 
 (defn to-back
@@ -870,7 +870,7 @@
    focus. On platforms where the stacking order does not typically affect
    the focused window, this method will probably leave the focused
    and active Windows unchanged."
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.toBack))))
 
 (defn paint
@@ -882,7 +882,7 @@
    forwarded to that child.
 
   g - the specified Graphics window - `java.awt.Graphics`"
-  ([this g]
+  ([^java.awt.Window this ^java.awt.Graphics g]
     (-> this (.paint g))))
 
 (defn get-accessible-context
@@ -893,7 +893,7 @@
 
   returns: an AccessibleAWTWindow that serves as the
            AccessibleContext of this Window - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.getAccessibleContext))))
 
 (defn get-window-state-listeners
@@ -903,7 +903,7 @@
   returns: all of this window's WindowStateListeners
            or an empty array if no window state
            listeners are currently registered - `java.awt.event.WindowStateListener[]`"
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.getWindowStateListeners))))
 
 (defn set-minimum-size
@@ -928,7 +928,7 @@
    This behaviour is platform-dependent.
 
   minimum-size - the new minimum size of this window - `java.awt.Dimension`"
-  ([this minimum-size]
+  ([^java.awt.Window this ^java.awt.Dimension minimum-size]
     (-> this (.setMinimumSize minimum-size))))
 
 (defn set-visible
@@ -951,7 +951,7 @@
    until it receives a WINDOW_GAINED_FOCUS or WINDOW_ACTIVATED event.
 
   b - if true, makes the Window visible, otherwise hides the Window. If the Window and/or its owner are not yet displayable, both are made displayable. The Window will be validated prior to being made visible. If the Window is already visible, this will bring the Window to the front. If false, hides this Window, its subcomponents, and all of its owned children. The Window and its subcomponents can be made visible again with a call to #setVisible(true). - `boolean`"
-  ([this b]
+  ([^java.awt.Window this ^Boolean b]
     (-> this (.setVisible b))))
 
 (defn get-shape
@@ -963,14 +963,14 @@
 
   returns: the shape of the window or null if no
        shape is specified for the window - `java.awt.Shape`"
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.getShape))))
 
 (defn get-modal-exclusion-type
   "Returns the modal exclusion type of this window.
 
   returns: the modal exclusion type of this window - `java.awt.Dialog.ModalExclusionType`"
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.getModalExclusionType))))
 
 (defn get-input-context
@@ -979,7 +979,7 @@
 
   returns: the input context used by this component;
             null if no context can be determined - `java.awt.im.InputContext`"
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.getInputContext))))
 
 (defn set-size
@@ -1001,9 +1001,9 @@
 
   width - the new width of this component in pixels - `int`
   height - the new height of this component in pixels - `int`"
-  ([this width height]
+  ([^java.awt.Window this ^Integer width ^Integer height]
     (-> this (.setSize width height)))
-  ([this d]
+  ([^java.awt.Window this ^java.awt.Dimension d]
     (-> this (.setSize d))))
 
 (defn get-focus-cycle-root-ancestor
@@ -1011,7 +1011,7 @@
    represent the top of the Component hierarchy.
 
   returns: null - `java.awt.Container`"
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.getFocusCycleRootAncestor))))
 
 (defn set-icon-image
@@ -1037,7 +1037,7 @@
    just a single image for all contexts or no image at all.
 
   image - the icon image to be displayed. - `java.awt.Image`"
-  ([this image]
+  ([^java.awt.Window this ^java.awt.Image image]
     (-> this (.setIconImage image))))
 
 (defn set-modal-exclusion-type
@@ -1053,7 +1053,7 @@
   exclusion-type - the modal exclusion type for this window; a null value is equivalent to NO_EXCLUDE - `java.awt.Dialog.ModalExclusionType`
 
   throws: java.lang.SecurityException - if the calling thread does not have permission to set the modal exclusion property to the window with the given exclusionType"
-  ([this exclusion-type]
+  ([^java.awt.Window this ^java.awt.Dialog.ModalExclusionType exclusion-type]
     (-> this (.setModalExclusionType exclusion-type))))
 
 (defn set-bounds
@@ -1078,16 +1078,16 @@
   y - the new y-coordinate of this component - `int`
   width - the new width of this component - `int`
   height - the new height of this component - `int`"
-  ([this x y width height]
+  ([^java.awt.Window this ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.setBounds x y width height)))
-  ([this r]
+  ([^java.awt.Window this ^java.awt.Rectangle r]
     (-> this (.setBounds r))))
 
 (defn get-toolkit
   "Returns the toolkit of this frame.
 
   returns: the toolkit of this window. - `java.awt.Toolkit`"
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.getToolkit))))
 
 (defn get-listeners
@@ -1120,7 +1120,7 @@
             listeners have been added - `<T extends java.util.EventListener> T[]`
 
   throws: java.lang.ClassCastException - if listenerType doesn't specify a class or interface that implements java.util.EventListener"
-  ([this listener-type]
+  ([^java.awt.Window this ^java.lang.Class listener-type]
     (-> this (.getListeners listener-type))))
 
 (defn always-on-top-supported?
@@ -1132,7 +1132,7 @@
   returns: true, if the always-on-top mode is supported for
            this window and this window's toolkit supports always-on-top windows,
            false otherwise - `boolean`"
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.isAlwaysOnTopSupported))))
 
 (defn location-by-platform?
@@ -1142,7 +1142,7 @@
    screen.
 
   returns: whether this Window will appear at the default location - `boolean`"
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.isLocationByPlatform))))
 
 (defn set-cursor
@@ -1153,7 +1153,7 @@
    changing the mouse cursor shape.
 
   cursor - One of the constants defined by the Cursor class. If this parameter is null then the cursor for this window will be set to the type Cursor.DEFAULT_CURSOR. - `java.awt.Cursor`"
-  ([this cursor]
+  ([^java.awt.Window this ^java.awt.Cursor cursor]
     (-> this (.setCursor cursor))))
 
 (defn get-background
@@ -1163,7 +1163,7 @@
    the window is in the non-opaque (per-pixel translucent) mode.
 
   returns: this component's background color - `java.awt.Color`"
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.getBackground))))
 
 (defn to-front
@@ -1204,7 +1204,7 @@
 
    If this window is blocked by modal dialog, then the blocking dialog
    is brought to the front and remains above the blocked window."
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.toFront))))
 
 (defn remove-window-focus-listener
@@ -1214,7 +1214,7 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   l - the window focus listener - `java.awt.event.WindowFocusListener`"
-  ([this l]
+  ([^java.awt.Window this ^java.awt.event.WindowFocusListener l]
     (-> this (.removeWindowFocusListener l))))
 
 (defn create-buffer-strategy
@@ -1230,9 +1230,9 @@
   caps - the required capabilities for creating the buffer strategy; cannot be null - `java.awt.BufferCapabilities`
 
   throws: java.awt.AWTException - if the capabilities supplied could not be supported or met; this may happen, for example, if there is not enough accelerated memory currently available, or if page flipping is specified but not possible."
-  ([this num-buffers caps]
+  ([^java.awt.Window this ^Integer num-buffers ^java.awt.BufferCapabilities caps]
     (-> this (.createBufferStrategy num-buffers caps)))
-  ([this num-buffers]
+  ([^java.awt.Window this ^Integer num-buffers]
     (-> this (.createBufferStrategy num-buffers))))
 
 (defn add-property-change-listener
@@ -1267,9 +1267,9 @@
 
   property-name - one of the property names listed above - `java.lang.String`
   listener - the PropertyChangeListener to be added - `java.beans.PropertyChangeListener`"
-  ([this property-name listener]
+  ([^java.awt.Window this ^java.lang.String property-name ^java.beans.PropertyChangeListener listener]
     (-> this (.addPropertyChangeListener property-name listener)))
-  ([this listener]
+  ([^java.awt.Window this ^java.beans.PropertyChangeListener listener]
     (-> this (.addPropertyChangeListener listener))))
 
 (defn showing?
@@ -1277,7 +1277,7 @@
 
   returns: true if the component is showing,
             false otherwise - `boolean`"
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.isShowing))))
 
 (defn get-warning-string
@@ -1295,7 +1295,7 @@
    and returns the string value of that property.
 
   returns: the warning string for this window. - `java.lang.String`"
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.getWarningString))))
 
 (defn focus-cycle-root?
@@ -1303,7 +1303,7 @@
    focus traversal cycle.
 
   returns: true - `boolean`"
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.isFocusCycleRoot))))
 
 (defn add-window-state-listener
@@ -1313,7 +1313,7 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   l - the window state listener - `java.awt.event.WindowStateListener`"
-  ([this l]
+  ([^java.awt.Window this ^java.awt.event.WindowStateListener l]
     (-> this (.addWindowStateListener l))))
 
 (defn focused?
@@ -1326,6 +1326,6 @@
    is an owner of the focused Window.
 
   returns: whether this is the focused Window. - `boolean`"
-  ([this]
+  ([^java.awt.Window this]
     (-> this (.isFocused))))
 

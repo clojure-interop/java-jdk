@@ -15,6 +15,6 @@
   c - the formatted text field - `javax.swing.JComponent`
 
   returns: the UI - `javax.swing.plaf.ComponentUI`"
-  ([c]
+  ([^javax.swing.JComponent c]
     (BasicFormattedTextFieldUI/createUI c)))
 

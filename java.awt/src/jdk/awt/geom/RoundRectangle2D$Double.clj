@@ -16,7 +16,7 @@
   h - the height to which to set the newly constructed RoundRectangle2D - `double`
   arcw - the width of the arc to use to round off the corners of the newly constructed RoundRectangle2D - `double`
   arch - the height of the arc to use to round off the corners of the newly constructed RoundRectangle2D - `double`"
-  ([x y w h arcw arch]
+  ([^Double x ^Double y ^Double w ^Double h ^Double arcw ^Double arch]
     (new RoundRectangle2D$Double x y w h arcw arch))
   ([]
     (new RoundRectangle2D$Double )))
@@ -80,7 +80,7 @@
    double precision.
 
   returns: the width of the framing rectangle. - `double`"
-  ([this]
+  ([^java.awt.geom.RoundRectangle2D$Double this]
     (-> this (.getWidth))))
 
 (defn set-round-rect
@@ -94,9 +94,9 @@
   h - the height to which to set this RoundRectangle2D - `double`
   arcw - the width to which to set the arc of this RoundRectangle2D - `double`
   arch - the height to which to set the arc of this RoundRectangle2D - `double`"
-  ([this x y w h arcw arch]
+  ([^java.awt.geom.RoundRectangle2D$Double this ^Double x ^Double y ^Double w ^Double h ^Double arcw ^Double arch]
     (-> this (.setRoundRect x y w h arcw arch)))
-  ([this rr]
+  ([^java.awt.geom.RoundRectangle2D$Double this ^java.awt.geom.RoundRectangle2D rr]
     (-> this (.setRoundRect rr))))
 
 (defn get-arc-width
@@ -104,7 +104,7 @@
 
   returns: the width of the arc that rounds off the corners
    of this RoundRectangle2D. - `double`"
-  ([this]
+  ([^java.awt.geom.RoundRectangle2D$Double this]
     (-> this (.getArcWidth))))
 
 (defn get-y
@@ -113,7 +113,7 @@
 
   returns: the Y coordinate of the upper-left corner of
    the framing rectangle. - `double`"
-  ([this]
+  ([^java.awt.geom.RoundRectangle2D$Double this]
     (-> this (.getY))))
 
 (defn get-x
@@ -122,7 +122,7 @@
 
   returns: the X coordinate of the upper-left corner of
    the framing rectangle. - `double`"
-  ([this]
+  ([^java.awt.geom.RoundRectangle2D$Double this]
     (-> this (.getX))))
 
 (defn get-height
@@ -130,7 +130,7 @@
    in double precision.
 
   returns: the height of the framing rectangle. - `double`"
-  ([this]
+  ([^java.awt.geom.RoundRectangle2D$Double this]
     (-> this (.getHeight))))
 
 (defn get-bounds-2-d
@@ -173,7 +173,7 @@
 
   returns: an instance of Rectangle2D that is a
                    high-precision bounding box of the Shape. - `java.awt.geom.Rectangle2D`"
-  ([this]
+  ([^java.awt.geom.RoundRectangle2D$Double this]
     (-> this (.getBounds2D))))
 
 (defn get-arc-height
@@ -181,7 +181,7 @@
 
   returns: the height of the arc that rounds off the corners
    of this RoundRectangle2D. - `double`"
-  ([this]
+  ([^java.awt.geom.RoundRectangle2D$Double this]
     (-> this (.getArcHeight))))
 
 (defn empty?
@@ -191,6 +191,6 @@
 
   returns: true if the RectangularShape is empty;
             false otherwise. - `boolean`"
-  ([this]
+  ([^java.awt.geom.RoundRectangle2D$Double this]
     (-> this (.isEmpty))))
 

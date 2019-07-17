@@ -42,14 +42,14 @@
 
   returns: an unmodifiable list of Transforms
       (may be empty but never null) - `java.util.List`"
-  ([this]
+  ([^. this]
     (-> this (.getTransforms))))
 
 (defn get-digest-method
   "Returns the digest method of this Reference.
 
   returns: the digest method - `javax.xml.crypto.dsig.DigestMethod`"
-  ([this]
+  ([^. this]
     (-> this (.getDigestMethod))))
 
 (defn get-id
@@ -59,7 +59,7 @@
 
   returns: the Id attribute (may be null if not
       specified) - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getId))))
 
 (defn get-digest-value
@@ -68,7 +68,7 @@
   returns: the raw digest value, or null if this reference has
       not been digested yet. Each invocation of this method returns a new
       clone to protect against subsequent modification. - `byte[]`"
-  ([this]
+  ([^. this]
     (-> this (.getDigestValue))))
 
 (defn get-calculated-digest-value
@@ -79,7 +79,7 @@
   returns: the calculated digest value, or null if this
       reference has not been validated yet. Each invocation of this method
       returns a new clone to protect against subsequent modification. - `byte[]`"
-  ([this]
+  ([^. this]
     (-> this (.getCalculatedDigestValue))))
 
 (defn validate
@@ -95,7 +95,7 @@
       false otherwise - `boolean`
 
   throws: java.lang.NullPointerException - if validateContext is null"
-  ([this validate-context]
+  ([^. this ^javax.xml.crypto.dsig.XMLValidateContext validate-context]
     (-> this (.validate validate-context))))
 
 (defn get-dereferenced-data
@@ -107,7 +107,7 @@
   returns: the dereferenced data, or null if reference
       caching is not enabled or this reference has not been generated or
       validated - `javax.xml.crypto.Data`"
-  ([this]
+  ([^. this]
     (-> this (.getDereferencedData))))
 
 (defn get-digest-input-stream
@@ -119,6 +119,6 @@
   returns: an input stream containing the pre-digested input, or
       null if reference caching is not enabled or this
       reference has not been generated or validated - `java.io.InputStream`"
-  ([this]
+  ([^. this]
     (-> this (.getDigestInputStream))))
 

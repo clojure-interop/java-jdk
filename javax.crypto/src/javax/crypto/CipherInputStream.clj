@@ -45,7 +45,7 @@
 
   is - the to-be-processed input stream - `java.io.InputStream`
   c - an initialized Cipher object - `javax.crypto.Cipher`"
-  ([is c]
+  ([^java.io.InputStream is ^javax.crypto.Cipher c]
     (new CipherInputStream is c)))
 
 (defn read
@@ -63,11 +63,11 @@
                the stream has been reached. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this b off len]
+  ([^javax.crypto.CipherInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  ([this b]
+  ([^javax.crypto.CipherInputStream this b]
     (-> this (.read b)))
-  ([this]
+  ([^javax.crypto.CipherInputStream this]
     (-> this (.read))))
 
 (defn skip
@@ -88,7 +88,7 @@
   returns: the actual number of bytes skipped. - `long`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this n]
+  ([^javax.crypto.CipherInputStream this ^Long n]
     (-> this (.skip n))))
 
 (defn available
@@ -101,7 +101,7 @@
                without blocking. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this]
+  ([^javax.crypto.CipherInputStream this]
     (-> this (.available))))
 
 (defn close
@@ -113,7 +113,7 @@
    stream.
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this]
+  ([^javax.crypto.CipherInputStream this]
     (-> this (.close))))
 
 (defn mark-supported
@@ -122,6 +122,6 @@
 
   returns: false, since this class does not support the
             mark and reset methods. - `boolean`"
-  ([this]
+  ([^javax.crypto.CipherInputStream this]
     (-> this (.markSupported))))
 

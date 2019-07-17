@@ -71,7 +71,7 @@
   push-level - message level to push on - `java.util.logging.Level`
 
   throws: java.lang.IllegalArgumentException - if size is <= 0"
-  ([target size push-level]
+  ([^java.util.logging.Handler target ^Integer size ^java.util.logging.Level push-level]
     (new MemoryHandler target size push-level))
   ([]
     (new MemoryHandler )))
@@ -89,14 +89,14 @@
    Handler.
 
   record - description of the log event. A null record is silently ignored and is not published - `java.util.logging.LogRecord`"
-  ([this record]
+  ([^java.util.logging.MemoryHandler this ^java.util.logging.LogRecord record]
     (-> this (.publish record))))
 
 (defn push
   "Push any buffered output to the target Handler.
 
    The buffer is then cleared."
-  ([this]
+  ([^java.util.logging.MemoryHandler this]
     (-> this (.push))))
 
 (defn flush
@@ -104,7 +104,7 @@
 
    Note that the current contents of the MemoryHandler
    buffer are not written out.  That requires a `push`."
-  ([this]
+  ([^java.util.logging.MemoryHandler this]
     (-> this (.flush))))
 
 (defn close
@@ -112,7 +112,7 @@
    This will also close the target Handler.
 
   throws: java.lang.SecurityException - if a security manager exists and if the caller does not have LoggingPermission(`control`)."
-  ([this]
+  ([^java.util.logging.MemoryHandler this]
     (-> this (.close))))
 
 (defn set-push-level
@@ -123,14 +123,14 @@
   new-level - the new value of the pushLevel - `java.util.logging.Level`
 
   throws: java.lang.SecurityException - if a security manager exists and if the caller does not have LoggingPermission(`control`)."
-  ([this new-level]
+  ([^java.util.logging.MemoryHandler this ^java.util.logging.Level new-level]
     (-> this (.setPushLevel new-level))))
 
 (defn get-push-level
   "Get the pushLevel.
 
   returns: the value of the pushLevel - `java.util.logging.Level`"
-  ([this]
+  ([^java.util.logging.MemoryHandler this]
     (-> this (.getPushLevel))))
 
 (defn loggable?
@@ -145,6 +145,6 @@
   record - a LogRecord - `java.util.logging.LogRecord`
 
   returns: true if the LogRecord would be logged. - `boolean`"
-  ([this record]
+  ([^java.util.logging.MemoryHandler this ^java.util.logging.LogRecord record]
     (-> this (.isLoggable record))))
 

@@ -19,6 +19,6 @@
   "Called whenever the mouse is moved during a drag operation.
 
   dsde - the DragSourceDragEvent - `java.awt.dnd.DragSourceDragEvent`"
-  ([this dsde]
+  ([^. this ^java.awt.dnd.DragSourceDragEvent dsde]
     (-> this (.dragMouseMoved dsde))))
 

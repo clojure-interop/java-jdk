@@ -103,7 +103,7 @@
    This will happen after all pending events are processed.
 
   runnable - the Runnable whose run method should be executed asynchronously in the event dispatch thread of the system EventQueue - `java.lang.Runnable`"
-  ([runnable]
+  ([^java.lang.Runnable runnable]
     (EventQueue/invokeLater runnable)))
 
 (defn *invoke-and-wait
@@ -118,7 +118,7 @@
   runnable - the Runnable whose run method should be executed synchronously in the event dispatch thread of the system EventQueue - `java.lang.Runnable`
 
   throws: java.lang.InterruptedException - if any thread has interrupted this thread"
-  ([runnable]
+  ([^java.lang.Runnable runnable]
     (EventQueue/invokeAndWait runnable)))
 
 (defn post-event
@@ -130,7 +130,7 @@
   the-event - an instance of java.awt.AWTEvent, or a subclass of it - `java.awt.AWTEvent`
 
   throws: java.lang.NullPointerException - if theEvent is null"
-  ([this the-event]
+  ([^java.awt.EventQueue this ^java.awt.AWTEvent the-event]
     (-> this (.postEvent the-event))))
 
 (defn get-next-event
@@ -141,7 +141,7 @@
   returns: the next AWTEvent - `java.awt.AWTEvent`
 
   throws: java.lang.InterruptedException - if any thread has interrupted this thread"
-  ([this]
+  ([^java.awt.EventQueue this]
     (-> this (.getNextEvent))))
 
 (defn peek-event
@@ -151,9 +151,9 @@
 
   returns: the first event of the specified id or null
       if there is no such event - `java.awt.AWTEvent`"
-  ([this id]
+  ([^java.awt.EventQueue this ^Integer id]
     (-> this (.peekEvent id)))
-  ([this]
+  ([^java.awt.EventQueue this]
     (-> this (.peekEvent))))
 
 (defn push
@@ -164,7 +164,7 @@
   new-event-queue - an EventQueue (or subclass thereof) instance to be use - `java.awt.EventQueue`
 
   throws: java.lang.NullPointerException - if newEventQueue is null"
-  ([this new-event-queue]
+  ([^java.awt.EventQueue this ^java.awt.EventQueue new-event-queue]
     (-> this (.push new-event-queue))))
 
 (defn create-secondary-loop
@@ -176,6 +176,6 @@
   returns: secondaryLoop A new secondary loop object, which can
                          be used to launch a new nested event
                          loop and dispatch events from this queue - `java.awt.SecondaryLoop`"
-  ([this]
+  ([^java.awt.EventQueue this]
     (-> this (.createSecondaryLoop))))
 

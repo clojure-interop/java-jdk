@@ -120,9 +120,9 @@
 
   permits - the initial number of permits available. This value may be negative, in which case releases must occur before any acquires will be granted. - `int`
   fair - true if this semaphore will guarantee first-in first-out granting of permits under contention, else false - `boolean`"
-  ([permits fair]
+  ([^Integer permits ^Boolean fair]
     (new Semaphore permits fair))
-  ([permits]
+  ([^Integer permits]
     (new Semaphore permits)))
 
 (defn release
@@ -147,23 +147,23 @@
   permits - the number of permits to release - `int`
 
   throws: java.lang.IllegalArgumentException - if permits is negative"
-  ([this permits]
+  ([^java.util.concurrent.Semaphore this ^Integer permits]
     (-> this (.release permits)))
-  ([this]
+  ([^java.util.concurrent.Semaphore this]
     (-> this (.release))))
 
 (defn drain-permits
   "Acquires and returns all permits that are immediately available.
 
   returns: the number of permits acquired - `int`"
-  ([this]
+  ([^java.util.concurrent.Semaphore this]
     (-> this (.drainPermits))))
 
 (defn fair?
   "Returns true if this semaphore has fairness set true.
 
   returns: true if this semaphore has fairness set true - `boolean`"
-  ([this]
+  ([^java.util.concurrent.Semaphore this]
     (-> this (.isFair))))
 
 (defn get-queue-length
@@ -174,7 +174,7 @@
    system state, not for synchronization control.
 
   returns: the estimated number of threads waiting for this lock - `int`"
-  ([this]
+  ([^java.util.concurrent.Semaphore this]
     (-> this (.getQueueLength))))
 
 (defn acquire-uninterruptibly
@@ -199,9 +199,9 @@
   permits - the number of permits to acquire - `int`
 
   throws: java.lang.IllegalArgumentException - if permits is negative"
-  ([this permits]
+  ([^java.util.concurrent.Semaphore this ^Integer permits]
     (-> this (.acquireUninterruptibly permits)))
-  ([this]
+  ([^java.util.concurrent.Semaphore this]
     (-> this (.acquireUninterruptibly))))
 
 (defn to-string
@@ -210,7 +210,7 @@
    followed by the number of permits.
 
   returns: a string identifying this semaphore, as well as its state - `java.lang.String`"
-  ([this]
+  ([^java.util.concurrent.Semaphore this]
     (-> this (.toString))))
 
 (defn has-queued-threads?
@@ -222,7 +222,7 @@
 
   returns: true if there may be other threads waiting to
            acquire the lock - `boolean`"
-  ([this]
+  ([^java.util.concurrent.Semaphore this]
     (-> this (.hasQueuedThreads))))
 
 (defn try-acquire
@@ -275,13 +275,13 @@
            if the waiting time elapsed before all permits were acquired - `boolean`
 
   throws: java.lang.InterruptedException - if the current thread is interrupted"
-  ([this permits timeout unit]
+  ([^java.util.concurrent.Semaphore this ^Integer permits ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.tryAcquire permits timeout unit)))
-  ([this timeout unit]
+  ([^java.util.concurrent.Semaphore this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.tryAcquire timeout unit)))
-  ([this permits]
+  ([^java.util.concurrent.Semaphore this ^Integer permits]
     (-> this (.tryAcquire permits)))
-  ([this]
+  ([^java.util.concurrent.Semaphore this]
     (-> this (.tryAcquire))))
 
 (defn available-permits
@@ -290,7 +290,7 @@
    This method is typically used for debugging and testing purposes.
 
   returns: the number of permits available in this semaphore - `int`"
-  ([this]
+  ([^java.util.concurrent.Semaphore this]
     (-> this (.availablePermits))))
 
 (defn acquire
@@ -328,8 +328,8 @@
   permits - the number of permits to acquire - `int`
 
   throws: java.lang.InterruptedException - if the current thread is interrupted"
-  ([this permits]
+  ([^java.util.concurrent.Semaphore this ^Integer permits]
     (-> this (.acquire permits)))
-  ([this]
+  ([^java.util.concurrent.Semaphore this]
     (-> this (.acquire))))
 

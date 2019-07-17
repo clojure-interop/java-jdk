@@ -15,9 +15,9 @@
   Constructs a Time object using a milliseconds time value.
 
   time - milliseconds since January 1, 1970, 00:00:00 GMT; a negative number is milliseconds before January 1, 1970, 00:00:00 GMT - `long`"
-  ([time]
+  ([^Long time]
     (new Time time))
-  ([hour minute second]
+  ([^Integer hour ^Integer minute ^Integer second]
     (new Time hour minute second)))
 
 (defn *value-of
@@ -26,7 +26,7 @@
   s - time in format `hh:mm:ss` - `java.lang.String`
 
   returns: a corresponding Time object - `java.sql.Time`"
-  ([s]
+  ([^java.lang.String s]
     (Time/valueOf s)))
 
 (defn to-instant
@@ -38,7 +38,7 @@
     this Date object - `java.time.Instant`
 
   throws: java.lang.UnsupportedOperationException - if this method is invoked"
-  ([this]
+  ([^java.sql.Time this]
     (-> this (.toInstant))))
 
 (defn set-month
@@ -49,14 +49,14 @@
   returns: `java.lang.  void`
 
   throws: java.lang.IllegalArgumentException - if this method is invoked"
-  ([this i]
+  ([^java.sql.Time this ^Integer i]
     (-> this (.setMonth i))))
 
 (defn set-time
   "Sets a Time object using a milliseconds time value.
 
   time - milliseconds since January 1, 1970, 00:00:00 GMT; a negative number is milliseconds before January 1, 1970, 00:00:00 GMT - `long`"
-  ([this time]
+  ([^java.sql.Time this ^Long time]
     (-> this (.setTime time))))
 
 (defn set-date
@@ -67,7 +67,7 @@
   returns: `java.lang.  void`
 
   throws: java.lang.IllegalArgumentException - if this method is invoked"
-  ([this i]
+  ([^java.sql.Time this ^Integer i]
     (-> this (.setDate i))))
 
 (defn get-year
@@ -76,14 +76,14 @@
   returns: the year represented by this date, minus 1900. - `java.lang.  int`
 
   throws: java.lang.IllegalArgumentException - if this method is invoked"
-  ([this]
+  ([^java.sql.Time this]
     (-> this (.getYear))))
 
 (defn to-string
   "Formats a time in JDBC time escape format.
 
   returns: a String in hh:mm:ss format - `java.lang.String`"
-  ([this]
+  ([^java.sql.Time this]
     (-> this (.toString))))
 
 (defn get-date
@@ -92,7 +92,7 @@
   returns: the day of the month represented by this date. - `java.lang.  int`
 
   throws: java.lang.IllegalArgumentException - if this method is invoked"
-  ([this]
+  ([^java.sql.Time this]
     (-> this (.getDate))))
 
 (defn to-local-time
@@ -102,7 +102,7 @@
    hour, minute, and second time value as this Time.
 
   returns: a LocalTime object representing the same time value - `java.time.LocalTime`"
-  ([this]
+  ([^java.sql.Time this]
     (-> this (.toLocalTime))))
 
 (defn get-day
@@ -111,7 +111,7 @@
   returns: the day of the week represented by this date. - `java.lang.  int`
 
   throws: java.lang.IllegalArgumentException - if this method is invoked"
-  ([this]
+  ([^java.sql.Time this]
     (-> this (.getDay))))
 
 (defn get-month
@@ -120,7 +120,7 @@
   returns: the month represented by this date. - `java.lang.  int`
 
   throws: java.lang.IllegalArgumentException - if this method is invoked"
-  ([this]
+  ([^java.sql.Time this]
     (-> this (.getMonth))))
 
 (defn set-year
@@ -131,6 +131,6 @@
   returns: `java.lang.  void`
 
   throws: java.lang.IllegalArgumentException - if this method is invoked"
-  ([this i]
+  ([^java.sql.Time this ^Integer i]
     (-> this (.setYear i))))
 

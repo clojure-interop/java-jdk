@@ -103,9 +103,9 @@
   returns: the new SecureRandom object. - `java.security.SecureRandom`
 
   throws: java.security.NoSuchAlgorithmException - if a SecureRandomSpi implementation for the specified algorithm is not available from the specified provider."
-  ([algorithm provider]
+  ([^java.lang.String algorithm ^java.lang.String provider]
     (SecureRandom/getInstance algorithm provider))
-  ([algorithm]
+  ([^java.lang.String algorithm]
     (SecureRandom/getInstance algorithm)))
 
 (defn *get-seed
@@ -122,7 +122,7 @@
   num-bytes - the number of seed bytes to generate. - `int`
 
   returns: the seed bytes. - `byte[]`"
-  ([num-bytes]
+  ([^Integer num-bytes]
     (SecureRandom/getSeed num-bytes)))
 
 (defn *get-instance-strong
@@ -151,7 +151,7 @@
   "Returns the provider of this SecureRandom object.
 
   returns: the provider of this SecureRandom object. - `java.security.Provider`"
-  ([this]
+  ([^java.security.SecureRandom this]
     (-> this (.getProvider))))
 
 (defn get-algorithm
@@ -160,7 +160,7 @@
 
   returns: the name of the algorithm or unknown
             if the algorithm name cannot be determined. - `java.lang.String`"
-  ([this]
+  ([^java.security.SecureRandom this]
     (-> this (.getAlgorithm))))
 
 (defn set-seed
@@ -169,7 +169,7 @@
    never to reduce randomness.
 
   seed - the seed. - `byte[]`"
-  ([this seed]
+  ([^java.security.SecureRandom this seed]
     (-> this (.setSeed seed))))
 
 (defn next-bytes
@@ -181,7 +181,7 @@
    setSeed was previously called.
 
   bytes - the array to be filled in with random bytes. - `byte[]`"
-  ([this bytes]
+  ([^java.security.SecureRandom this bytes]
     (-> this (.nextBytes bytes))))
 
 (defn generate-seed
@@ -192,6 +192,6 @@
   num-bytes - the number of seed bytes to generate. - `int`
 
   returns: the seed bytes. - `byte[]`"
-  ([this num-bytes]
+  ([^java.security.SecureRandom this ^Integer num-bytes]
     (-> this (.generateSeed num-bytes))))
 

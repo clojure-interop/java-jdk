@@ -27,45 +27,45 @@
 
 (defn flush
   "throws: javax.swing.text.BadLocationException"
-  ([this]
+  ([^javax.swing.text.html.HTMLEditorKit$ParserCallback this]
     (-> this (.flush))))
 
 (defn handle-text
   "data - `char[]`
   pos - `int`"
-  ([this data pos]
+  ([^javax.swing.text.html.HTMLEditorKit$ParserCallback this data ^Integer pos]
     (-> this (.handleText data pos))))
 
 (defn handle-comment
   "data - `char[]`
   pos - `int`"
-  ([this data pos]
+  ([^javax.swing.text.html.HTMLEditorKit$ParserCallback this data ^Integer pos]
     (-> this (.handleComment data pos))))
 
 (defn handle-start-tag
   "t - `javax.swing.text.html.HTML.Tag`
   a - `javax.swing.text.MutableAttributeSet`
   pos - `int`"
-  ([this t a pos]
+  ([^javax.swing.text.html.HTMLEditorKit$ParserCallback this ^javax.swing.text.html.HTML.Tag t ^javax.swing.text.MutableAttributeSet a ^Integer pos]
     (-> this (.handleStartTag t a pos))))
 
 (defn handle-end-tag
   "t - `javax.swing.text.html.HTML.Tag`
   pos - `int`"
-  ([this t pos]
+  ([^javax.swing.text.html.HTMLEditorKit$ParserCallback this ^javax.swing.text.html.HTML.Tag t ^Integer pos]
     (-> this (.handleEndTag t pos))))
 
 (defn handle-simple-tag
   "t - `javax.swing.text.html.HTML.Tag`
   a - `javax.swing.text.MutableAttributeSet`
   pos - `int`"
-  ([this t a pos]
+  ([^javax.swing.text.html.HTMLEditorKit$ParserCallback this ^javax.swing.text.html.HTML.Tag t ^javax.swing.text.MutableAttributeSet a ^Integer pos]
     (-> this (.handleSimpleTag t a pos))))
 
 (defn handle-error
   "error-msg - `java.lang.String`
   pos - `int`"
-  ([this error-msg pos]
+  ([^javax.swing.text.html.HTMLEditorKit$ParserCallback this ^java.lang.String error-msg ^Integer pos]
     (-> this (.handleError error-msg pos))))
 
 (defn handle-end-of-line-string
@@ -75,6 +75,6 @@
    stream.
 
   eol - `java.lang.String`"
-  ([this eol]
+  ([^javax.swing.text.html.HTMLEditorKit$ParserCallback this ^java.lang.String eol]
     (-> this (.handleEndOfLineString eol))))
 

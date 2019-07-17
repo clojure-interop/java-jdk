@@ -23,7 +23,7 @@
    returns the index(es) of the changed node(s).
 
   e - `javax.swing.event.TreeModelEvent`"
-  ([this e]
+  ([^. this ^javax.swing.event.TreeModelEvent e]
     (-> this (.treeNodesChanged e))))
 
 (defn tree-nodes-inserted
@@ -36,7 +36,7 @@
    in ascending order.
 
   e - `javax.swing.event.TreeModelEvent`"
-  ([this e]
+  ([^. this ^javax.swing.event.TreeModelEvent e]
     (-> this (.treeNodesInserted e))))
 
 (defn tree-nodes-removed
@@ -52,7 +52,7 @@
    the node(s) had before being deleted.
 
   e - `javax.swing.event.TreeModelEvent`"
-  ([this e]
+  ([^. this ^javax.swing.event.TreeModelEvent e]
     (-> this (.treeNodesRemoved e))))
 
 (defn tree-structure-changed
@@ -67,6 +67,6 @@
    returns null.
 
   e - `javax.swing.event.TreeModelEvent`"
-  ([this e]
+  ([^. this ^javax.swing.event.TreeModelEvent e]
     (-> this (.treeStructureChanged e))))
 

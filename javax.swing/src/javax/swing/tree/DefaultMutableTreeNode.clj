@@ -58,9 +58,9 @@
 
   user-object - an Object provided by the user that constitutes the node's data - `java.lang.Object`
   allows-children - if true, the node is allowed to have child nodes -- otherwise, it is always a leaf node - `boolean`"
-  ([user-object allows-children]
+  ([^java.lang.Object user-object ^Boolean allows-children]
     (new DefaultMutableTreeNode user-object allows-children))
-  ([user-object]
+  ([^java.lang.Object user-object]
     (new DefaultMutableTreeNode user-object))
   ([]
     (new DefaultMutableTreeNode )))
@@ -78,7 +78,7 @@
   "Returns true if this node is allowed to have children.
 
   returns: true if this node allows children, else false - `boolean`"
-  ([this]
+  ([^javax.swing.tree.DefaultMutableTreeNode this]
     (-> this (.getAllowsChildren))))
 
 (defn get-user-object-path
@@ -87,14 +87,14 @@
    returned path will contain nulls.
 
   returns: `java.lang.Object[]`"
-  ([this]
+  ([^javax.swing.tree.DefaultMutableTreeNode this]
     (-> this (.getUserObjectPath))))
 
 (defn set-user-object
   "Sets the user object for this node to userObject.
 
   user-object - the Object that constitutes this node's user-specified data - `java.lang.Object`"
-  ([this user-object]
+  ([^javax.swing.tree.DefaultMutableTreeNode this ^java.lang.Object user-object]
     (-> this (.setUserObject user-object))))
 
 (defn depth-first-enumeration
@@ -107,7 +107,7 @@
    any enumerations created before the modification.
 
   returns: an enumeration for traversing the tree in depth-first order - `java.util.Enumeration`"
-  ([this]
+  ([^javax.swing.tree.DefaultMutableTreeNode this]
     (-> this (.depthFirstEnumeration))))
 
 (defn set-parent
@@ -118,14 +118,14 @@
    else.
 
   new-parent - this node's new parent - `javax.swing.tree.MutableTreeNode`"
-  ([this new-parent]
+  ([^javax.swing.tree.DefaultMutableTreeNode this ^javax.swing.tree.MutableTreeNode new-parent]
     (-> this (.setParent new-parent))))
 
 (defn get-child-count
   "Returns the number of children of this node.
 
   returns: an int giving the number of children of this node - `int`"
-  ([this]
+  ([^javax.swing.tree.DefaultMutableTreeNode this]
     (-> this (.getChildCount))))
 
 (defn node-ancestor?
@@ -139,7 +139,7 @@
   another-node - node to test as an ancestor of this node - `javax.swing.tree.TreeNode`
 
   returns: true if this node is a descendant of anotherNode - `boolean`"
-  ([this another-node]
+  ([^javax.swing.tree.DefaultMutableTreeNode this ^javax.swing.tree.TreeNode another-node]
     (-> this (.isNodeAncestor another-node))))
 
 (defn get-previous-node
@@ -151,7 +151,7 @@
 
   returns: the node that precedes this node in a preorder traversal, or
             null if this node is the first - `javax.swing.tree.DefaultMutableTreeNode`"
-  ([this]
+  ([^javax.swing.tree.DefaultMutableTreeNode this]
     (-> this (.getPreviousNode))))
 
 (defn get-last-leaf
@@ -160,7 +160,7 @@
    Returns this node if it is a leaf.
 
   returns: the last leaf in the subtree rooted at this node - `javax.swing.tree.DefaultMutableTreeNode`"
-  ([this]
+  ([^javax.swing.tree.DefaultMutableTreeNode this]
     (-> this (.getLastLeaf))))
 
 (defn get-index
@@ -176,7 +176,7 @@
             a child of this node - `int`
 
   throws: java.lang.IllegalArgumentException - if aChild is null"
-  ([this a-child]
+  ([^javax.swing.tree.DefaultMutableTreeNode this ^javax.swing.tree.TreeNode a-child]
     (-> this (.getIndex a-child))))
 
 (defn get-next-node
@@ -187,13 +187,13 @@
 
   returns: the node that follows this node in a preorder traversal, or
             null if this node is last - `javax.swing.tree.DefaultMutableTreeNode`"
-  ([this]
+  ([^javax.swing.tree.DefaultMutableTreeNode this]
     (-> this (.getNextNode))))
 
 (defn remove-all-children
   "Removes all of this node's children, setting their parents to null.
    If this node has no children, this method does nothing."
-  ([this]
+  ([^javax.swing.tree.DefaultMutableTreeNode this]
     (-> this (.removeAllChildren))))
 
 (defn children
@@ -202,7 +202,7 @@
    enumerations created before the modification.
 
   returns: an Enumeration of this node's children - `java.util.Enumeration`"
-  ([this]
+  ([^javax.swing.tree.DefaultMutableTreeNode this]
     (-> this (.children))))
 
 (defn postorder-enumeration
@@ -215,7 +215,7 @@
    any enumerations created before the modification.
 
   returns: an enumeration for traversing the tree in postorder - `java.util.Enumeration`"
-  ([this]
+  ([^javax.swing.tree.DefaultMutableTreeNode this]
     (-> this (.postorderEnumeration))))
 
 (defn get-next-sibling
@@ -226,7 +226,7 @@
    enumeration instead.
 
   returns: the sibling of this node that immediately follows this node - `javax.swing.tree.DefaultMutableTreeNode`"
-  ([this]
+  ([^javax.swing.tree.DefaultMutableTreeNode this]
     (-> this (.getNextSibling))))
 
 (defn get-leaf-count
@@ -235,7 +235,7 @@
    where n is the number of descendants of this node.
 
   returns: the number of leaves beneath this node - `int`"
-  ([this]
+  ([^javax.swing.tree.DefaultMutableTreeNode this]
     (-> this (.getLeafCount))))
 
 (defn to-string
@@ -243,7 +243,7 @@
    user object, or the empty string if the node has no user object.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^javax.swing.tree.DefaultMutableTreeNode this]
     (-> this (.toString))))
 
 (defn get-first-leaf
@@ -252,7 +252,7 @@
    Returns this node if it is a leaf.
 
   returns: the first leaf in the subtree rooted at this node - `javax.swing.tree.DefaultMutableTreeNode`"
-  ([this]
+  ([^javax.swing.tree.DefaultMutableTreeNode this]
     (-> this (.getFirstLeaf))))
 
 (defn node-descendant?
@@ -266,7 +266,7 @@
   another-node - node to test as descendant of this node - `javax.swing.tree.DefaultMutableTreeNode`
 
   returns: true if this node is an ancestor of anotherNode - `boolean`"
-  ([this another-node]
+  ([^javax.swing.tree.DefaultMutableTreeNode this ^javax.swing.tree.DefaultMutableTreeNode another-node]
     (-> this (.isNodeDescendant another-node))))
 
 (defn get-child-after
@@ -283,7 +283,7 @@
             aChild - `javax.swing.tree.TreeNode`
 
   throws: java.lang.IllegalArgumentException - if aChild is null or is not a child of this node"
-  ([this a-child]
+  ([^javax.swing.tree.DefaultMutableTreeNode this ^javax.swing.tree.TreeNode a-child]
     (-> this (.getChildAfter a-child))))
 
 (defn get-path
@@ -293,7 +293,7 @@
   returns: an array of TreeNode objects giving the path, where the
            first element in the path is the root and the last
            element is this node. - `javax.swing.tree.TreeNode[]`"
-  ([this]
+  ([^javax.swing.tree.DefaultMutableTreeNode this]
     (-> this (.getPath))))
 
 (defn get-last-child
@@ -303,7 +303,7 @@
   returns: the last child of this node - `javax.swing.tree.TreeNode`
 
   throws: java.util.NoSuchElementException - if this node has no children"
-  ([this]
+  ([^javax.swing.tree.DefaultMutableTreeNode this]
     (-> this (.getLastChild))))
 
 (defn node-child?
@@ -314,7 +314,7 @@
 
   returns: true if aNode is a child of this node; false if
                     aNode is null - `boolean`"
-  ([this a-node]
+  ([^javax.swing.tree.DefaultMutableTreeNode this ^javax.swing.tree.TreeNode a-node]
     (-> this (.isNodeChild a-node))))
 
 (defn preorder-enumeration
@@ -326,7 +326,7 @@
    any enumerations created before the modification.
 
   returns: an enumeration for traversing the tree in preorder - `java.util.Enumeration`"
-  ([this]
+  ([^javax.swing.tree.DefaultMutableTreeNode this]
     (-> this (.preorderEnumeration))))
 
 (defn leaf?
@@ -336,7 +336,7 @@
    method in conjunction with getAllowsChildren
 
   returns: true if this node has no children - `boolean`"
-  ([this]
+  ([^javax.swing.tree.DefaultMutableTreeNode this]
     (-> this (.isLeaf))))
 
 (defn get-next-leaf
@@ -355,7 +355,7 @@
    on each node to determine which are leaves.
 
   returns: returns the next leaf past this node - `javax.swing.tree.DefaultMutableTreeNode`"
-  ([this]
+  ([^javax.swing.tree.DefaultMutableTreeNode this]
     (-> this (.getNextLeaf))))
 
 (defn breadth-first-enumeration
@@ -367,7 +367,7 @@
    any enumerations created before the modification.
 
   returns: an enumeration for traversing the tree in breadth-first order - `java.util.Enumeration`"
-  ([this]
+  ([^javax.swing.tree.DefaultMutableTreeNode this]
     (-> this (.breadthFirstEnumeration))))
 
 (defn get-previous-leaf
@@ -386,7 +386,7 @@
    on each node to determine which are leaves.
 
   returns: returns the leaf before this node - `javax.swing.tree.DefaultMutableTreeNode`"
-  ([this]
+  ([^javax.swing.tree.DefaultMutableTreeNode this]
     (-> this (.getPreviousLeaf))))
 
 (defn get-child-before
@@ -402,7 +402,7 @@
             aChild - `javax.swing.tree.TreeNode`
 
   throws: java.lang.IllegalArgumentException - if aChild is null or is not a child of this node"
-  ([this a-child]
+  ([^javax.swing.tree.DefaultMutableTreeNode this ^javax.swing.tree.TreeNode a-child]
     (-> this (.getChildBefore a-child))))
 
 (defn set-allows-children
@@ -413,14 +413,14 @@
    Note: By default, a node allows children.
 
   allows - true if this node is allowed to have children - `boolean`"
-  ([this allows]
+  ([^javax.swing.tree.DefaultMutableTreeNode this ^Boolean allows]
     (-> this (.setAllowsChildren allows))))
 
 (defn get-parent
   "Returns this node's parent or null if this node has no parent.
 
   returns: this node's parent TreeNode, or null if this node has no parent - `javax.swing.tree.TreeNode`"
-  ([this]
+  ([^javax.swing.tree.DefaultMutableTreeNode this]
     (-> this (.getParent))))
 
 (defn remove
@@ -431,7 +431,7 @@
   child-index - the index in this node's child array of the child to remove - `int`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if childIndex is out of bounds"
-  ([this child-index]
+  ([^javax.swing.tree.DefaultMutableTreeNode this ^Integer child-index]
     (-> this (.remove child-index))))
 
 (defn get-root
@@ -439,7 +439,7 @@
    the ancestor with a null parent.
 
   returns: the root of the tree that contains this node - `javax.swing.tree.TreeNode`"
-  ([this]
+  ([^javax.swing.tree.DefaultMutableTreeNode this]
     (-> this (.getRoot))))
 
 (defn get-level
@@ -447,7 +447,7 @@
    the root to this node.  If this node is the root, returns 0.
 
   returns: the number of levels above this node - `int`"
-  ([this]
+  ([^javax.swing.tree.DefaultMutableTreeNode this]
     (-> this (.getLevel))))
 
 (defn get-child-at
@@ -458,7 +458,7 @@
   returns: the TreeNode in this node's child array at  the specified index - `javax.swing.tree.TreeNode`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if index is out of bounds"
-  ([this index]
+  ([^javax.swing.tree.DefaultMutableTreeNode this ^Integer index]
     (-> this (.getChildAt index))))
 
 (defn get-previous-sibling
@@ -468,7 +468,7 @@
    is the number of children.
 
   returns: the sibling of this node that immediately precedes this node - `javax.swing.tree.DefaultMutableTreeNode`"
-  ([this]
+  ([^javax.swing.tree.DefaultMutableTreeNode this]
     (-> this (.getPreviousSibling))))
 
 (defn insert
@@ -482,7 +482,7 @@
   child-index - the index in this node's child array where this node is to be inserted - `int`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if childIndex is out of bounds"
-  ([this new-child child-index]
+  ([^javax.swing.tree.DefaultMutableTreeNode this ^javax.swing.tree.MutableTreeNode new-child ^Integer child-index]
     (-> this (.insert new-child child-index))))
 
 (defn clone
@@ -491,7 +491,7 @@
    user object, if any.
 
   returns: a copy of this node - `java.lang.Object`"
-  ([this]
+  ([^javax.swing.tree.DefaultMutableTreeNode this]
     (-> this (.clone))))
 
 (defn get-sibling-count
@@ -500,7 +500,7 @@
    1).
 
   returns: the number of siblings of this node - `int`"
-  ([this]
+  ([^javax.swing.tree.DefaultMutableTreeNode this]
     (-> this (.getSiblingCount))))
 
 (defn add
@@ -510,7 +510,7 @@
   new-child - node to add as a child of this node - `javax.swing.tree.MutableTreeNode`
 
   throws: java.lang.IllegalArgumentException - if newChild is null"
-  ([this new-child]
+  ([^javax.swing.tree.DefaultMutableTreeNode this ^javax.swing.tree.MutableTreeNode new-child]
     (-> this (.add new-child))))
 
 (defn path-from-ancestor-enumeration
@@ -532,7 +532,7 @@
             this node to this one - `java.util.Enumeration`
 
   throws: java.lang.IllegalArgumentException - if ancestor is not an ancestor of this node"
-  ([this ancestor]
+  ([^javax.swing.tree.DefaultMutableTreeNode this ^javax.swing.tree.TreeNode ancestor]
     (-> this (.pathFromAncestorEnumeration ancestor))))
 
 (defn node-sibling?
@@ -543,7 +543,7 @@
   another-node - node to test as sibling of this node - `javax.swing.tree.TreeNode`
 
   returns: true if anotherNode is a sibling of this node - `boolean`"
-  ([this another-node]
+  ([^javax.swing.tree.DefaultMutableTreeNode this ^javax.swing.tree.TreeNode another-node]
     (-> this (.isNodeSibling another-node))))
 
 (defn get-shared-ancestor
@@ -556,7 +556,7 @@
 
   returns: nearest ancestor common to this node and aNode,
             or null if none - `javax.swing.tree.TreeNode`"
-  ([this a-node]
+  ([^javax.swing.tree.DefaultMutableTreeNode this ^javax.swing.tree.DefaultMutableTreeNode a-node]
     (-> this (.getSharedAncestor a-node))))
 
 (defn get-first-child
@@ -566,7 +566,7 @@
   returns: the first child of this node - `javax.swing.tree.TreeNode`
 
   throws: java.util.NoSuchElementException - if this node has no children"
-  ([this]
+  ([^javax.swing.tree.DefaultMutableTreeNode this]
     (-> this (.getFirstChild))))
 
 (defn node-related?
@@ -577,7 +577,7 @@
 
   returns: true if aNode is in the same tree as this node;
             false if aNode is null - `boolean`"
-  ([this a-node]
+  ([^javax.swing.tree.DefaultMutableTreeNode this ^javax.swing.tree.DefaultMutableTreeNode a-node]
     (-> this (.isNodeRelated a-node))))
 
 (defn root?
@@ -586,7 +586,7 @@
    one root.
 
   returns: true if this node is the root of its tree - `boolean`"
-  ([this]
+  ([^javax.swing.tree.DefaultMutableTreeNode this]
     (-> this (.isRoot))))
 
 (defn get-depth
@@ -597,20 +597,20 @@
    tree rooted at this node.
 
   returns: the depth of the tree whose root is this node - `int`"
-  ([this]
+  ([^javax.swing.tree.DefaultMutableTreeNode this]
     (-> this (.getDepth))))
 
 (defn get-user-object
   "Returns this node's user object.
 
   returns: the Object stored at this node by the user - `java.lang.Object`"
-  ([this]
+  ([^javax.swing.tree.DefaultMutableTreeNode this]
     (-> this (.getUserObject))))
 
 (defn remove-from-parent
   "Removes the subtree rooted at this node from the tree, giving this
    node a null parent.  Does nothing if this node is the root of its
    tree."
-  ([this]
+  ([^javax.swing.tree.DefaultMutableTreeNode this]
     (-> this (.removeFromParent))))
 

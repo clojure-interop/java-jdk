@@ -10,7 +10,7 @@
   returns: A new instance of a CachedRowSet. - `javax.sql.rowset.CachedRowSet`
 
   throws: java.sql.SQLException - if a CachedRowSet cannot be created."
-  ([this]
+  ([^. this]
     (-> this (.createCachedRowSet))))
 
 (defn create-filtered-row-set
@@ -19,7 +19,7 @@
   returns: A new instance of a FilteredRowSet. - `javax.sql.rowset.FilteredRowSet`
 
   throws: java.sql.SQLException - if a FilteredRowSet cannot be created."
-  ([this]
+  ([^. this]
     (-> this (.createFilteredRowSet))))
 
 (defn create-jdbc-row-set
@@ -28,7 +28,7 @@
   returns: A new instance of a JdbcRowSet. - `javax.sql.rowset.JdbcRowSet`
 
   throws: java.sql.SQLException - if a JdbcRowSet cannot be created."
-  ([this]
+  ([^. this]
     (-> this (.createJdbcRowSet))))
 
 (defn create-join-row-set
@@ -37,7 +37,7 @@
   returns: A new instance of a JoinRowSet. - `javax.sql.rowset.JoinRowSet`
 
   throws: java.sql.SQLException - if a JoinRowSet cannot be created."
-  ([this]
+  ([^. this]
     (-> this (.createJoinRowSet))))
 
 (defn create-web-row-set
@@ -46,6 +46,6 @@
   returns: A new instance of a WebRowSet. - `javax.sql.rowset.WebRowSet`
 
   throws: java.sql.SQLException - if a WebRowSet cannot be created."
-  ([this]
+  ([^. this]
     (-> this (.createWebRowSet))))
 

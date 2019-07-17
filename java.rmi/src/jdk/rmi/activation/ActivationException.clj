@@ -22,9 +22,9 @@
 
   s - the detail message - `java.lang.String`
   cause - the cause - `java.lang.Throwable`"
-  ([s cause]
+  ([^java.lang.String s ^java.lang.Throwable cause]
     (new ActivationException s cause))
-  ([s]
+  ([^java.lang.String s]
     (new ActivationException s))
   ([]
     (new ActivationException )))
@@ -47,7 +47,7 @@
    any, of this exception.
 
   returns: the detail message - `java.lang.String`"
-  ([this]
+  ([^java.rmi.activation.ActivationException this]
     (-> this (.getMessage))))
 
 (defn get-cause
@@ -55,6 +55,6 @@
    of the detail field.
 
   returns: the cause, which may be null. - `java.lang.Throwable`"
-  ([this]
+  ([^java.rmi.activation.ActivationException this]
     (-> this (.getCause))))
 

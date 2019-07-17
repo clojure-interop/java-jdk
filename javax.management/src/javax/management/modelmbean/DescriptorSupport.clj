@@ -29,9 +29,9 @@
   field-values - Object array of the corresponding field values. Elements of the array can be null. The fieldValue must be valid for the fieldName (as defined in method isValid) Note: array sizes of parameters should match. If both arrays are empty, then an empty descriptor is created. - `java.lang.Object[]`
 
   throws: javax.management.RuntimeOperationsException - for illegal value for field Names or field Values. The array lengths must be equal. If the descriptor construction fails for any reason, this exception will be thrown."
-  ([field-names field-values]
+  ([^java.lang.String[] field-names ^java.lang.Object[] field-values]
     (new DescriptorSupport field-names field-values))
-  ([init-num-fields]
+  ([^Integer init-num-fields]
     (new DescriptorSupport init-num-fields))
   ([]
     (new DescriptorSupport )))
@@ -43,14 +43,14 @@
   field-values - Object array of the corresponding field values. The array cannot be null. Elements of the array can be null. - `java.lang.Object[]`
 
   throws: javax.management.RuntimeOperationsException - if the change fails for any reason. Wrapped exception is IllegalArgumentException if fieldNames or fieldValues is null, or if the arrays are of different lengths, or if there is an illegal value in one of them. Wrapped exception is UnsupportedOperationException if the descriptor is immutable, and the call would change its contents."
-  ([this field-names field-values]
+  ([^javax.management.modelmbean.DescriptorSupport this ^java.lang.String[] field-names ^java.lang.Object[] field-values]
     (-> this (.setFields field-names field-values))))
 
 (defn remove-field
   "Description copied from interface: Descriptor
 
   field-name - String name of the field to be removed. If the field name is illegal or the field is not found, no exception is thrown. - `java.lang.String`"
-  ([this field-name]
+  ([^javax.management.modelmbean.DescriptorSupport this ^java.lang.String field-name]
     (-> this (.removeField field-name))))
 
 (defn get-field-names
@@ -58,7 +58,7 @@
 
   returns: String array of field names. If the descriptor is empty,
    you will get an empty array. - `java.lang.String[]`"
-  ([this]
+  ([^javax.management.modelmbean.DescriptorSupport this]
     (-> this (.getFieldNames))))
 
 (defn to-string
@@ -76,7 +76,7 @@
   returns: a string representation of the object. - `java.lang.String`
 
   throws: javax.management.RuntimeOperationsException - for illegal value for field Names or field Values. If the descriptor string fails for any reason, this exception will be thrown."
-  ([this]
+  ([^javax.management.modelmbean.DescriptorSupport this]
     (-> this (.toString))))
 
 (defn get-field-value
@@ -87,7 +87,7 @@
   returns: the corresponding value, or null if the field is not present. - `java.lang.Object`
 
   throws: javax.management.RuntimeOperationsException - if the field name is illegal."
-  ([this field-name]
+  ([^javax.management.modelmbean.DescriptorSupport this ^java.lang.String field-name]
     (-> this (.getFieldValue field-name))))
 
 (defn get-field-values
@@ -97,7 +97,7 @@
 
   returns: Object array of field values. If the list of fieldNames
    is empty, you will get an empty array. - `java.lang.Object[]`"
-  ([this field-names]
+  ([^javax.management.modelmbean.DescriptorSupport this ^java.lang.String field-names]
     (-> this (.getFieldValues field-names))))
 
 (defn set-field
@@ -107,7 +107,7 @@
   field-value - The field value to be set for the field name. Can be null if that is a valid value for the field. - `java.lang.Object`
 
   throws: javax.management.RuntimeOperationsException - if the field name or field value is illegal (wrapped exception is IllegalArgumentException); or if the descriptor is immutable (wrapped exception is UnsupportedOperationException)."
-  ([this field-name field-value]
+  ([^javax.management.modelmbean.DescriptorSupport this ^java.lang.String field-name ^java.lang.Object field-value]
     (-> this (.setField field-name field-value))))
 
 (defn valid?
@@ -142,7 +142,7 @@
   returns: true if the values are legal. - `boolean`
 
   throws: javax.management.RuntimeOperationsException - If the validity checking fails for any reason, this exception will be thrown."
-  ([this]
+  ([^javax.management.modelmbean.DescriptorSupport this]
     (-> this (.isValid))))
 
 (defn clone
@@ -151,7 +151,7 @@
   returns: a clone of this instance. - `java.lang.Object`
 
   throws: javax.management.RuntimeOperationsException - for illegal value for field Names or field Values. If the descriptor construction fails for any reason, this exception will be thrown."
-  ([this]
+  ([^javax.management.modelmbean.DescriptorSupport this]
     (-> this (.clone))))
 
 (defn hash-code
@@ -171,7 +171,7 @@
    Otherwise h is v.hashCode().
 
   returns: A hash code value for this object. - `int`"
-  ([this]
+  ([^javax.management.modelmbean.DescriptorSupport this]
     (-> this (.hashCode))))
 
 (defn get-fields
@@ -184,7 +184,7 @@
    of a field is null, then the value of the field in the returned array
    will be empty.  If the descriptor is empty, you will get
    an empty array. - `java.lang.String[]`"
-  ([this]
+  ([^javax.management.modelmbean.DescriptorSupport this]
     (-> this (.getFields))))
 
 (defn to-xml-string
@@ -209,7 +209,7 @@
   returns: the XML string. - `java.lang.String`
 
   throws: javax.management.RuntimeOperationsException - for illegal value for field Names or field Values. If the XML formatted string construction fails for any reason, this exception will be thrown."
-  ([this]
+  ([^javax.management.modelmbean.DescriptorSupport this]
     (-> this (.toXMLString))))
 
 (defn equals
@@ -232,6 +232,6 @@
 
   returns: true if the objects are the same; false
    otherwise. - `boolean`"
-  ([this o]
+  ([^javax.management.modelmbean.DescriptorSupport this ^java.lang.Object o]
     (-> this (.equals o))))
 

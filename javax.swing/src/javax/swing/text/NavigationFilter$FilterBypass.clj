@@ -15,7 +15,7 @@
   "Returns the Caret that is changing.
 
   returns: Caret that is changing - `javax.swing.text.Caret`"
-  ([this]
+  ([^javax.swing.text.NavigationFilter$FilterBypass this]
     (-> this (.getCaret))))
 
 (defn set-dot
@@ -23,7 +23,7 @@
 
   dot - the position >= 0 - `int`
   bias - Bias to place the dot at - `javax.swing.text.Position.Bias`"
-  ([this dot bias]
+  ([^javax.swing.text.NavigationFilter$FilterBypass this ^Integer dot ^javax.swing.text.Position.Bias bias]
     (-> this (.setDot dot bias))))
 
 (defn move-dot
@@ -31,6 +31,6 @@
 
   dot - the position >= 0 - `int`
   bias - Bias for new location - `javax.swing.text.Position.Bias`"
-  ([this dot bias]
+  ([^javax.swing.text.NavigationFilter$FilterBypass this ^Integer dot ^javax.swing.text.Position.Bias bias]
     (-> this (.moveDot dot bias))))
 

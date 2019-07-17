@@ -47,7 +47,7 @@
   returns: true if this collection changed as a result of the call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the addAll operation is not supported by this collection"
-  ([this c]
+  ([^java.util.AbstractCollection this ^AbstractCollection.E> c]
     (-> this (.addAll c))))
 
 (defn contains
@@ -65,7 +65,7 @@
            element - `boolean`
 
   throws: java.lang.ClassCastException - if the type of the specified element is incompatible with this collection (optional)"
-  ([this o]
+  ([^java.util.AbstractCollection this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn to-string
@@ -77,14 +77,14 @@
    by String.valueOf(Object).
 
   returns: a string representation of this collection - `java.lang.String`"
-  ([this]
+  ([^java.util.AbstractCollection this]
     (-> this (.toString))))
 
 (defn iterator
   "Returns an iterator over the elements contained in this collection.
 
   returns: an iterator over the elements contained in this collection - `java.util.Iterator<AbstractCollection.E>`"
-  ([this]
+  ([^java.util.AbstractCollection this]
     (-> this (.iterator))))
 
 (defn remove
@@ -110,7 +110,7 @@
   returns: true if an element was removed as a result of this call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the remove operation is not supported by this collection"
-  ([this o]
+  ([^java.util.AbstractCollection this ^java.lang.Object o]
     (-> this (.remove o))))
 
 (defn add
@@ -141,7 +141,7 @@
            call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the add operation is not supported by this collection"
-  ([this e]
+  ([^java.util.AbstractCollection this ^AbstractCollection.E e]
     (-> this (.add e))))
 
 (defn empty?
@@ -150,14 +150,14 @@
    This implementation returns size() == 0.
 
   returns: true if this collection contains no elements - `boolean`"
-  ([this]
+  ([^java.util.AbstractCollection this]
     (-> this (.isEmpty))))
 
 (defn size
   "Description copied from interface: Collection
 
   returns: the number of elements in this collection - `int`"
-  ([this]
+  ([^java.util.AbstractCollection this]
     (-> this (.size))))
 
 (defn retain-all
@@ -182,7 +182,7 @@
   returns: true if this collection changed as a result of the call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the retainAll operation is not supported by this collection"
-  ([this c]
+  ([^java.util.AbstractCollection this ^java.util.Collection c]
     (-> this (.retainAll c))))
 
 (defn clear
@@ -200,7 +200,7 @@
    remove method and this collection is non-empty.
 
   throws: java.lang.UnsupportedOperationException - if the clear operation is not supported by this collection"
-  ([this]
+  ([^java.util.AbstractCollection this]
     (-> this (.clear))))
 
 (defn to-array
@@ -263,9 +263,9 @@
   returns: an array containing all of the elements in this collection - `<T> T[]`
 
   throws: java.lang.ArrayStoreException - if the runtime type of the specified array is not a supertype of the runtime type of every element in this collection"
-  ([this a]
+  ([^java.util.AbstractCollection this a]
     (-> this (.toArray a)))
-  ([this]
+  ([^java.util.AbstractCollection this]
     (-> this (.toArray))))
 
 (defn remove-all
@@ -291,7 +291,7 @@
            call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the removeAll method is not supported by this collection"
-  ([this c]
+  ([^java.util.AbstractCollection this ^java.util.Collection c]
     (-> this (.removeAll c))))
 
 (defn contains-all
@@ -309,6 +309,6 @@
            in the specified collection - `boolean`
 
   throws: java.lang.ClassCastException - if the types of one or more elements in the specified collection are incompatible with this collection (optional)"
-  ([this c]
+  ([^java.util.AbstractCollection this ^java.util.Collection c]
     (-> this (.containsAll c))))
 

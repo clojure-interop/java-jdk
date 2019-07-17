@@ -19,7 +19,7 @@
   value - Integer value. - `int`
 
   throws: java.lang.IllegalArgumentException - (Unchecked exception) Thrown if value is less than 0."
-  ([value]
+  ([^Integer value]
     (new NumberOfDocuments value)))
 
 (defn equals
@@ -39,7 +39,7 @@
 
   returns: True if object is equivalent to this number of
             documents attribute, false otherwise. - `boolean`"
-  ([this object]
+  ([^javax.print.attribute.standard.NumberOfDocuments this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -51,7 +51,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([this]
+  ([^javax.print.attribute.standard.NumberOfDocuments this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -62,6 +62,6 @@
    category name is `number-of-documents`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([this]
+  ([^javax.print.attribute.standard.NumberOfDocuments this]
     (-> this (.getName))))
 

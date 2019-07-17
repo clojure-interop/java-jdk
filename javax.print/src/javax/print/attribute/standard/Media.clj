@@ -38,7 +38,7 @@
 
   returns: True if object is equivalent to this media
             attribute, false otherwise. - `boolean`"
-  ([this object]
+  ([^javax.print.attribute.standard.Media this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -50,7 +50,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([this]
+  ([^javax.print.attribute.standard.Media this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -61,6 +61,6 @@
    `media`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([this]
+  ([^javax.print.attribute.standard.Media this]
     (-> this (.getName))))
 

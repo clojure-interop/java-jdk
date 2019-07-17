@@ -18,7 +18,7 @@
    arguments supplied.
 
   explanation - Additional detail about this exception. - `java.lang.String`"
-  ([explanation]
+  ([^java.lang.String explanation]
     (new CommunicationException explanation))
   ([]
     (new CommunicationException )))

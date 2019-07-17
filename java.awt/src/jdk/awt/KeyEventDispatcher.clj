@@ -50,6 +50,6 @@
   returns: true if the KeyboardFocusManager should take no
            further action with regard to the KeyEvent; false
            otherwise - `boolean`"
-  ([this e]
+  ([^. this ^java.awt.event.KeyEvent e]
     (-> this (.dispatchKeyEvent e))))
 

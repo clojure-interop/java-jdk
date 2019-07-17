@@ -44,7 +44,7 @@
   mbi - The ModelMBeanInfo object to be used by the RequiredModelMBean. The given ModelMBeanInfo is cloned and modified as specified by setModelMBeanInfo(javax.management.modelmbean.ModelMBeanInfo) - `javax.management.modelmbean.ModelMBeanInfo`
 
   throws: javax.management.MBeanException - Wraps a distributed communication Exception."
-  ([mbi]
+  ([^javax.management.modelmbean.ModelMBeanInfo mbi]
     (new RequiredModelMBean mbi))
   ([]
     (new RequiredModelMBean )))
@@ -100,7 +100,7 @@
        result of invoking the method on the specified managed resource. - `java.lang.Object`
 
   throws: javax.management.MBeanException - Wraps one of the following Exceptions: An Exception thrown by the managed object's invoked method. ServiceNotFoundException: No ModelMBeanOperationInfo or no descriptor defined for the specified operation or the managed resource is null. InvalidTargetObjectTypeException: The 'targetType' field value is not 'objectReference'."
-  ([this op-name op-args sig]
+  ([^javax.management.modelmbean.RequiredModelMBean this ^java.lang.String op-name ^java.lang.Object[] op-args ^java.lang.String[] sig]
     (-> this (.invoke op-name op-args sig))))
 
 (defn load
@@ -116,7 +116,7 @@
    persistence, an MBeanException wrapping a ServiceNotFoundException is thrown.
 
   throws: javax.management.MBeanException - Wraps another exception, or persistence is not supported"
-  ([this]
+  ([^javax.management.modelmbean.RequiredModelMBean this]
     (-> this (.load))))
 
 (defn get-notification-info
@@ -134,7 +134,7 @@
    by the application.
 
   returns: MBeanNotificationInfo[] - `javax.management.MBeanNotificationInfo[]`"
-  ([this]
+  ([^javax.management.modelmbean.RequiredModelMBean this]
     (-> this (.getNotificationInfo))))
 
 (defn post-deregister
@@ -145,7 +145,7 @@
    Any subclass of RequiredModelMBean overloading or overriding this
    method should call super.postDeregister() in its own
    postDeregister implementation."
-  ([this]
+  ([^javax.management.modelmbean.RequiredModelMBean this]
     (-> this (.postDeregister))))
 
 (defn set-managed-resource
@@ -157,7 +157,7 @@
   mr-type - The type of reference for the managed resource. Can be: `ObjectReference`, `Handle`, `IOR`, `EJBHandle`, or `RMIReference`. In this implementation only `ObjectReference` is supported. - `java.lang.String`
 
   throws: javax.management.MBeanException - The initializer of the object has thrown an exception."
-  ([this mr mr-type]
+  ([^javax.management.modelmbean.RequiredModelMBean this ^java.lang.Object mr ^java.lang.String mr-type]
     (-> this (.setManagedResource mr mr-type))))
 
 (defn remove-notification-listener
@@ -168,9 +168,9 @@
   handback - The handback that was specified when the listener was added. - `java.lang.Object`
 
   throws: javax.management.ListenerNotFoundException - The listener is not registered with the MBean, or it is not registered with the given filter and handback."
-  ([this listener filter handback]
+  ([^javax.management.modelmbean.RequiredModelMBean this ^javax.management.NotificationListener listener ^javax.management.NotificationFilter filter ^java.lang.Object handback]
     (-> this (.removeNotificationListener listener filter handback)))
-  ([this listener]
+  ([^javax.management.modelmbean.RequiredModelMBean this ^javax.management.NotificationListener listener]
     (-> this (.removeNotificationListener listener))))
 
 (defn pre-deregister
@@ -183,7 +183,7 @@
    preDeregister implementation.
 
   throws: java.lang.Exception - This exception will be caught by the MBean server and re-thrown as an MBeanRegistrationException."
-  ([this]
+  ([^javax.management.modelmbean.RequiredModelMBean this]
     (-> this (.preDeregister))))
 
 (defn get-attribute
@@ -258,7 +258,7 @@
    operation in the 'getMethod' field of the descriptor. - `java.lang.Object`
 
   throws: javax.management.AttributeNotFoundException - The specified attribute is not accessible in the MBean. The following cases may result in an AttributeNotFoundException: No ModelMBeanInfo was found for the Model MBean. No ModelMBeanAttributeInfo was found for the specified attribute name. The ModelMBeanAttributeInfo isReadable method returns 'false'."
-  ([this attr-name]
+  ([^javax.management.modelmbean.RequiredModelMBean this ^java.lang.String attr-name]
     (-> this (.getAttribute attr-name))))
 
 (defn get-m-bean-info
@@ -267,7 +267,7 @@
 
   returns: An instance of ModelMBeanInfo allowing retrieval all
             attributes, operations, and Notifications of this MBean. - `javax.management.MBeanInfo`"
-  ([this]
+  ([^javax.management.modelmbean.RequiredModelMBean this]
     (-> this (.getMBeanInfo))))
 
 (defn add-attribute-change-notification-listener
@@ -278,7 +278,7 @@
   inhandback - The context to be sent to the listener with the notification when a notification is emitted. - `java.lang.Object`
 
   throws: javax.management.MBeanException - Wraps a distributed communication Exception."
-  ([this inlistener in-attribute-name inhandback]
+  ([^javax.management.modelmbean.RequiredModelMBean this ^javax.management.NotificationListener inlistener ^java.lang.String in-attribute-name ^java.lang.Object inhandback]
     (-> this (.addAttributeChangeNotificationListener inlistener in-attribute-name inhandback))))
 
 (defn remove-attribute-change-notification-listener
@@ -288,7 +288,7 @@
   in-attribute-name - The attribute for which the listener no longer wants to receive attributeChangeNotifications. If null the listener will be removed for all attributeChangeNotifications. - `java.lang.String`
 
   throws: javax.management.MBeanException - Wraps a distributed communication Exception."
-  ([this inlistener in-attribute-name]
+  ([^javax.management.modelmbean.RequiredModelMBean this ^javax.management.NotificationListener inlistener ^java.lang.String in-attribute-name]
     (-> this (.removeAttributeChangeNotificationListener inlistener in-attribute-name))))
 
 (defn post-register
@@ -301,7 +301,7 @@
    in its own postRegister implementation.
 
   registration-done - Indicates whether or not the MBean has been successfully registered in the MBean server. The value false means that the registration phase has failed. - `java.lang.Boolean`"
-  ([this registration-done]
+  ([^javax.management.modelmbean.RequiredModelMBean this ^java.lang.Boolean registration-done]
     (-> this (.postRegister registration-done))))
 
 (defn set-attribute
@@ -347,7 +347,7 @@
   attribute - The Attribute instance containing the name of the attribute to be set and the value it is to be set to. - `javax.management.Attribute`
 
   throws: javax.management.AttributeNotFoundException - The specified attribute is not accessible in the MBean. The following cases may result in an AttributeNotFoundException: No ModelMBeanAttributeInfo is found for the specified attribute. The ModelMBeanAttributeInfo's isWritable method returns 'false'."
-  ([this attribute]
+  ([^javax.management.modelmbean.RequiredModelMBean this ^javax.management.Attribute attribute]
     (-> this (.setAttribute attribute))))
 
 (defn set-attributes
@@ -360,7 +360,7 @@
       values in Attribute instances. - `javax.management.AttributeList`
 
   throws: javax.management.RuntimeOperationsException - Wraps an IllegalArgumentException: The object name in parameter is null or attributes in parameter is null."
-  ([this attributes]
+  ([^javax.management.modelmbean.RequiredModelMBean this ^javax.management.AttributeList attributes]
     (-> this (.setAttributes attributes))))
 
 (defn set-model-m-bean-info
@@ -386,7 +386,7 @@
   mbi - The ModelMBeanInfo object to be used by the ModelMBean. - `javax.management.modelmbean.ModelMBeanInfo`
 
   throws: javax.management.MBeanException - Wraps a distributed communication Exception."
-  ([this mbi]
+  ([^javax.management.modelmbean.RequiredModelMBean this ^javax.management.modelmbean.ModelMBeanInfo mbi]
     (-> this (.setModelMBeanInfo mbi))))
 
 (defn add-notification-listener
@@ -402,7 +402,7 @@
   handback - The context to be sent to the listener with the notification when a notification is emitted. - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - The listener cannot be null."
-  ([this listener filter handback]
+  ([^javax.management.modelmbean.RequiredModelMBean this ^javax.management.NotificationListener listener ^javax.management.NotificationFilter filter ^java.lang.Object handback]
     (-> this (.addNotificationListener listener filter handback))))
 
 (defn send-notification
@@ -411,7 +411,7 @@
   ntfy-obj - The notification which is to be passed to the 'handleNotification' method of the listener object. - `javax.management.Notification`
 
   throws: javax.management.MBeanException - Wraps a distributed communication Exception."
-  ([this ntfy-obj]
+  ([^javax.management.modelmbean.RequiredModelMBean this ^javax.management.Notification ntfy-obj]
     (-> this (.sendNotification ntfy-obj))))
 
 (defn pre-register
@@ -435,7 +435,7 @@
    the returned value. - `javax.management.ObjectName`
 
   throws: java.lang.Exception - This exception will be caught by the MBean server and re-thrown as an MBeanRegistrationException."
-  ([this server name]
+  ([^javax.management.modelmbean.RequiredModelMBean this ^javax.management.MBeanServer server ^javax.management.ObjectName name]
     (-> this (.preRegister server name))))
 
 (defn send-attribute-change-notification
@@ -445,9 +445,9 @@
   in-new-val - The current value for the Attribute The constructed attributeChangeNotification will be: type `jmx.attribute.change` source this ModelMBean instance sequence 1 attributeName oldValue.getName() attributeType oldValue's class attributeOldValue oldValue.getValue() attributeNewValue newValue.getValue() - `javax.management.Attribute`
 
   throws: javax.management.MBeanException - Wraps a distributed communication Exception."
-  ([this in-old-val in-new-val]
+  ([^javax.management.modelmbean.RequiredModelMBean this ^javax.management.Attribute in-old-val ^javax.management.Attribute in-new-val]
     (-> this (.sendAttributeChangeNotification in-old-val in-new-val)))
-  ([this ntfy-obj]
+  ([^javax.management.modelmbean.RequiredModelMBean this ^javax.management.AttributeChangeNotification ntfy-obj]
     (-> this (.sendAttributeChangeNotification ntfy-obj))))
 
 (defn store
@@ -478,7 +478,7 @@
       = `onTimer` && now < 'lastPersistTime'  'persistPeriod'
 
   throws: javax.management.MBeanException - Wraps another exception, or persistence is not supported"
-  ([this]
+  ([^javax.management.modelmbean.RequiredModelMBean this]
     (-> this (.store))))
 
 (defn get-attributes
@@ -491,6 +491,6 @@
   returns: The array of the retrieved attributes. - `javax.management.AttributeList`
 
   throws: javax.management.RuntimeOperationsException - Wraps an IllegalArgumentException: The object name in parameter is null or attributes in parameter is null."
-  ([this attr-names]
+  ([^javax.management.modelmbean.RequiredModelMBean this ^java.lang.String[] attr-names]
     (-> this (.getAttributes attr-names))))
 

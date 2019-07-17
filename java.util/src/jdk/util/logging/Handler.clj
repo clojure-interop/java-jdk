@@ -19,7 +19,7 @@
 
   returns: The encoding name.  May be null, which indicates the
             default encoding should be used. - `java.lang.String`"
-  ([this]
+  ([^java.util.logging.Handler this]
     (-> this (.getEncoding))))
 
 (defn set-encoding
@@ -31,12 +31,12 @@
   encoding - The name of a supported character encoding. May be null, to indicate the default platform encoding. - `java.lang.String`
 
   throws: java.lang.SecurityException - if a security manager exists and if the caller does not have LoggingPermission(`control`)."
-  ([this encoding]
+  ([^java.util.logging.Handler this ^java.lang.String encoding]
     (-> this (.setEncoding encoding))))
 
 (defn flush
   "Flush any buffered output."
-  ([this]
+  ([^java.util.logging.Handler this]
     (-> this (.flush))))
 
 (defn set-error-manager
@@ -48,7 +48,7 @@
   em - the new ErrorManager - `java.util.logging.ErrorManager`
 
   throws: java.lang.SecurityException - if a security manager exists and if the caller does not have LoggingPermission(`control`)."
-  ([this em]
+  ([^java.util.logging.Handler this ^java.util.logging.ErrorManager em]
     (-> this (.setErrorManager em))))
 
 (defn loggable?
@@ -63,21 +63,21 @@
   record - a LogRecord - `java.util.logging.LogRecord`
 
   returns: true if the LogRecord would be logged. - `boolean`"
-  ([this record]
+  ([^java.util.logging.Handler this ^java.util.logging.LogRecord record]
     (-> this (.isLoggable record))))
 
 (defn get-formatter
   "Return the Formatter for this Handler.
 
   returns: the Formatter (may be null). - `java.util.logging.Formatter`"
-  ([this]
+  ([^java.util.logging.Handler this]
     (-> this (.getFormatter))))
 
 (defn get-filter
   "Get the current Filter for this Handler.
 
   returns: a Filter object (may be null) - `java.util.logging.Filter`"
-  ([this]
+  ([^java.util.logging.Handler this]
     (-> this (.getFilter))))
 
 (defn publish
@@ -90,7 +90,7 @@
    if necessary.  The formatting should include localization.
 
   record - description of the log event. A null record is silently ignored and is not published - `java.util.logging.LogRecord`"
-  ([this record]
+  ([^java.util.logging.Handler this ^java.util.logging.LogRecord record]
     (-> this (.publish record))))
 
 (defn set-formatter
@@ -103,7 +103,7 @@
   new-formatter - the Formatter to use (may not be null) - `java.util.logging.Formatter`
 
   throws: java.lang.SecurityException - if a security manager exists and if the caller does not have LoggingPermission(`control`)."
-  ([this new-formatter]
+  ([^java.util.logging.Handler this ^java.util.logging.Formatter new-formatter]
     (-> this (.setFormatter new-formatter))))
 
 (defn get-level
@@ -112,7 +112,7 @@
    than this level will be discarded.
 
   returns: the level of messages being logged. - `java.util.logging.Level`"
-  ([this]
+  ([^java.util.logging.Handler this]
     (-> this (.getLevel))))
 
 (defn close
@@ -124,7 +124,7 @@
    ignored or may throw runtime exceptions.
 
   throws: java.lang.SecurityException - if a security manager exists and if the caller does not have LoggingPermission(`control`)."
-  ([this]
+  ([^java.util.logging.Handler this]
     (-> this (.close))))
 
 (defn set-filter
@@ -137,7 +137,7 @@
   new-filter - a Filter object (may be null) - `java.util.logging.Filter`
 
   throws: java.lang.SecurityException - if a security manager exists and if the caller does not have LoggingPermission(`control`)."
-  ([this new-filter]
+  ([^java.util.logging.Handler this ^java.util.logging.Filter new-filter]
     (-> this (.setFilter new-filter))))
 
 (defn set-level
@@ -152,7 +152,7 @@
   new-level - the new value for the log level - `java.util.logging.Level`
 
   throws: java.lang.SecurityException - if a security manager exists and if the caller does not have LoggingPermission(`control`)."
-  ([this new-level]
+  ([^java.util.logging.Handler this ^java.util.logging.Level new-level]
     (-> this (.setLevel new-level))))
 
 (defn get-error-manager
@@ -161,6 +161,6 @@
   returns: the ErrorManager for this Handler - `java.util.logging.ErrorManager`
 
   throws: java.lang.SecurityException - if a security manager exists and if the caller does not have LoggingPermission(`control`)."
-  ([this]
+  ([^java.util.logging.Handler this]
     (-> this (.getErrorManager))))
 

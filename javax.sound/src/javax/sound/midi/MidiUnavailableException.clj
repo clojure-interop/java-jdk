@@ -17,7 +17,7 @@
    specified detail message.
 
   message - the string to display as an error detail message - `java.lang.String`"
-  ([message]
+  ([^java.lang.String message]
     (new MidiUnavailableException message))
   ([]
     (new MidiUnavailableException )))

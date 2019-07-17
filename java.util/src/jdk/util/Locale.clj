@@ -431,11 +431,11 @@
   variant - Any arbitrary value used to indicate a variation of a Locale. See the Locale class description for the details. - `java.lang.String`
 
   throws: java.lang.NullPointerException - thrown if any argument is null."
-  ([language country variant]
+  ([^java.lang.String language ^java.lang.String country ^java.lang.String variant]
     (new Locale language country variant))
-  ([language country]
+  ([^java.lang.String language ^java.lang.String country]
     (new Locale language country))
-  ([language]
+  ([^java.lang.String language]
     (new Locale language)))
 
 (def *-english
@@ -654,9 +654,9 @@
   new-locale - - the new default locale - `java.util.Locale`
 
   throws: java.lang.SecurityException - - if a security manager exists and its checkPermission method doesn't allow the operation."
-  ([category new-locale]
+  ([^java.util.Locale.Category category ^java.util.Locale new-locale]
     (Locale/setDefault category new-locale))
-  ([new-locale]
+  ([^java.util.Locale new-locale]
     (Locale/setDefault new-locale)))
 
 (defn *for-language-tag
@@ -777,7 +777,7 @@
   returns: The locale that best represents the language tag. - `java.util.Locale`
 
   throws: java.lang.NullPointerException - if languageTag is null"
-  ([language-tag]
+  ([^java.lang.String language-tag]
     (Locale/forLanguageTag language-tag)))
 
 (defn *lookup-tag
@@ -791,7 +791,7 @@
        weight, or null if nothing matches. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if priorityList or tags is null"
-  ([priority-list tags]
+  ([^java.util.List priority-list ^java.util.Collection tags]
     (Locale/lookupTag priority-list tags)))
 
 (defn *lookup
@@ -805,7 +805,7 @@
        priority or weight, or null if nothing matches. - `java.util.Locale`
 
   throws: java.lang.NullPointerException - if priorityList or tags is null"
-  ([priority-list locales]
+  ([^java.util.List priority-list ^java.util.Collection locales]
     (Locale/lookup priority-list locales)))
 
 (defn *get-default
@@ -823,7 +823,7 @@
        of the Java Virtual Machine - `java.util.Locale`
 
   throws: java.lang.NullPointerException - - if category is null"
-  ([category]
+  ([^java.util.Locale.Category category]
     (Locale/getDefault category))
   ([]
     (Locale/getDefault )))
@@ -841,9 +841,9 @@
        list if nothing matches. The list is modifiable. - `java.util.List<java.util.Locale>`
 
   throws: java.lang.NullPointerException - if priorityList or locales is null"
-  ([priority-list locales mode]
+  ([^java.util.List priority-list ^java.util.Collection locales ^java.util.Locale.FilteringMode mode]
     (Locale/filter priority-list locales mode))
-  ([priority-list locales]
+  ([^java.util.List priority-list ^java.util.Collection locales]
     (Locale/filter priority-list locales)))
 
 (defn *get-available-locales
@@ -901,9 +901,9 @@
        The list is modifiable. - `java.util.List<java.lang.String>`
 
   throws: java.lang.NullPointerException - if priorityList or tags is null"
-  ([priority-list tags mode]
+  ([^java.util.List priority-list ^java.util.Collection tags ^java.util.Locale.FilteringMode mode]
     (Locale/filterTags priority-list tags mode))
-  ([priority-list tags]
+  ([^java.util.List priority-list ^java.util.Collection tags]
     (Locale/filterTags priority-list tags)))
 
 (defn get-script
@@ -913,7 +913,7 @@
    lowercase, for example, 'Latn', 'Cyrl'.
 
   returns: The script code, or the empty string if none is defined. - `java.lang.String`"
-  ([this]
+  ([^java.util.Locale this]
     (-> this (.getScript))))
 
 (defn get-unicode-locale-keys
@@ -922,7 +922,7 @@
 
   returns: The set of Unicode locale keys, or the empty set if this locale has
    no Unicode locale keywords. - `java.util.Set<java.lang.String>`"
-  ([this]
+  ([^java.util.Locale this]
     (-> this (.getUnicodeLocaleKeys))))
 
 (defn get-language
@@ -943,7 +943,7 @@
       ...
 
   returns: The language code, or the empty string if none is defined. - `java.lang.String`"
-  ([this]
+  ([^java.util.Locale this]
     (-> this (.getLanguage))))
 
 (defn get-display-variant
@@ -956,16 +956,16 @@
   returns: The name of the display variant code appropriate to the given locale. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if inLocale is null"
-  ([this in-locale]
+  ([^java.util.Locale this ^java.util.Locale in-locale]
     (-> this (.getDisplayVariant in-locale)))
-  ([this]
+  ([^java.util.Locale this]
     (-> this (.getDisplayVariant))))
 
 (defn get-variant
   "Returns the variant code for this locale.
 
   returns: The variant code, or the empty string if none is defined. - `java.lang.String`"
-  ([this]
+  ([^java.util.Locale this]
     (-> this (.getVariant))))
 
 (defn to-language-tag
@@ -1030,7 +1030,7 @@
    in the IANA Language Subtag Registry.
 
   returns: a BCP47 language tag representing the locale - `java.lang.String`"
-  ([this]
+  ([^java.util.Locale this]
     (-> this (.toLanguageTag))))
 
 (defn strip-extensions
@@ -1040,7 +1040,7 @@
 
   returns: a copy of this Locale with no extensions, or this
            if this has no extensions - `java.util.Locale`"
-  ([this]
+  ([^java.util.Locale this]
     (-> this (.stripExtensions))))
 
 (defn get-extension
@@ -1056,7 +1056,7 @@
    extension for the specified key. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if key is not well-formed"
-  ([this key]
+  ([^java.util.Locale this ^Character key]
     (-> this (.getExtension key))))
 
 (defn to-string
@@ -1098,7 +1098,7 @@
    th_TH_TH_#u-nu-thai
 
   returns: A string representation of the Locale, for debugging. - `java.lang.String`"
-  ([this]
+  ([^java.util.Locale this]
     (-> this (.toString))))
 
 (defn get-display-name
@@ -1124,9 +1124,9 @@
   returns: The name of the locale appropriate to display. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if inLocale is null"
-  ([this in-locale]
+  ([^java.util.Locale this ^java.util.Locale in-locale]
     (-> this (.getDisplayName in-locale)))
-  ([this]
+  ([^java.util.Locale this]
     (-> this (.getDisplayName))))
 
 (defn get-unicode-locale-type
@@ -1142,7 +1142,7 @@
    locale does not define the key. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if the key is not well-formed"
-  ([this key]
+  ([^java.util.Locale this ^java.lang.String key]
     (-> this (.getUnicodeLocaleType key))))
 
 (defn get-country
@@ -1151,7 +1151,7 @@
    or a UN M.49 3-digit code.
 
   returns: The country/region code, or the empty string if none is defined. - `java.lang.String`"
-  ([this]
+  ([^java.util.Locale this]
     (-> this (.getCountry))))
 
 (defn get-display-script
@@ -1166,9 +1166,9 @@
    DISPLAY locale - `java.lang.String`
 
   throws: java.lang.NullPointerException - if inLocale is null"
-  ([this in-locale]
+  ([^java.util.Locale this ^java.util.Locale in-locale]
     (-> this (.getDisplayScript in-locale)))
-  ([this]
+  ([^java.util.Locale this]
     (-> this (.getDisplayScript))))
 
 (defn has-extensions?
@@ -1176,7 +1176,7 @@
    extensions.
 
   returns: true if this Locale has any extensions - `boolean`"
-  ([this]
+  ([^java.util.Locale this]
     (-> this (.hasExtensions))))
 
 (defn get-iso-3-language
@@ -1192,7 +1192,7 @@
   returns: A three-letter abbreviation of this locale's language. - `java.lang.String`
 
   throws: java.util.MissingResourceException - Throws MissingResourceException if three-letter language abbreviation is not available for this locale."
-  ([this]
+  ([^java.util.Locale this]
     (-> this (.getISO3Language))))
 
 (defn get-extension-keys
@@ -1202,7 +1202,7 @@
 
   returns: The set of extension keys, or the empty set if this locale has
    no extensions. - `java.util.Set<java.lang.Character>`"
-  ([this]
+  ([^java.util.Locale this]
     (-> this (.getExtensionKeys))))
 
 (defn get-iso-3-country
@@ -1217,7 +1217,7 @@
   returns: A three-letter abbreviation of this locale's country. - `java.lang.String`
 
   throws: java.util.MissingResourceException - Throws MissingResourceException if the three-letter country abbreviation is not available for this locale."
-  ([this]
+  ([^java.util.Locale this]
     (-> this (.getISO3Country))))
 
 (defn get-unicode-locale-attributes
@@ -1226,14 +1226,14 @@
    returned set is unmodifiable.
 
   returns: The set of attributes. - `java.util.Set<java.lang.String>`"
-  ([this]
+  ([^java.util.Locale this]
     (-> this (.getUnicodeLocaleAttributes))))
 
 (defn clone
   "Overrides Cloneable.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([this]
+  ([^java.util.Locale this]
     (-> this (.clone))))
 
 (defn hash-code
@@ -1242,7 +1242,7 @@
    for speed.
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^java.util.Locale this]
     (-> this (.hashCode))))
 
 (defn get-display-language
@@ -1263,9 +1263,9 @@
   returns: The name of the display language appropriate to the given locale. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if inLocale is null"
-  ([this in-locale]
+  ([^java.util.Locale this ^java.util.Locale in-locale]
     (-> this (.getDisplayLanguage in-locale)))
-  ([this]
+  ([^java.util.Locale this]
     (-> this (.getDisplayLanguage))))
 
 (defn get-display-country
@@ -1286,9 +1286,9 @@
   returns: The name of the country appropriate to the given locale. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if inLocale is null"
-  ([this in-locale]
+  ([^java.util.Locale this ^java.util.Locale in-locale]
     (-> this (.getDisplayCountry in-locale)))
-  ([this]
+  ([^java.util.Locale this]
     (-> this (.getDisplayCountry))))
 
 (defn equals
@@ -1299,6 +1299,6 @@
   obj - the reference object with which to compare. - `java.lang.Object`
 
   returns: true if this Locale is equal to the specified object. - `boolean`"
-  ([this obj]
+  ([^java.util.Locale this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

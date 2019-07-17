@@ -37,23 +37,23 @@
   algorithm - the name of the secret-key algorithm to be associated with the given key material. See Appendix A in the Java Cryptography Architecture Reference Guide for information about standard algorithm names. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if algorithm is null or key is null, empty, or too short, i.e. key.length-offset<len."
-  ([key offset len algorithm]
+  ([key ^Integer offset ^Integer len ^java.lang.String algorithm]
     (new SecretKeySpec key offset len algorithm))
-  ([key algorithm]
+  ([key ^java.lang.String algorithm]
     (new SecretKeySpec key algorithm)))
 
 (defn get-algorithm
   "Returns the name of the algorithm associated with this secret key.
 
   returns: the secret key algorithm. - `java.lang.String`"
-  ([this]
+  ([^javax.crypto.spec.SecretKeySpec this]
     (-> this (.getAlgorithm))))
 
 (defn get-format
   "Returns the name of the encoding format for this secret key.
 
   returns: the string `RAW`. - `java.lang.String`"
-  ([this]
+  ([^javax.crypto.spec.SecretKeySpec this]
     (-> this (.getFormat))))
 
 (defn get-encoded
@@ -61,7 +61,7 @@
 
   returns: the key material. Returns a new array
    each time this method is called. - `byte[]`"
-  ([this]
+  ([^javax.crypto.spec.SecretKeySpec this]
     (-> this (.getEncoded))))
 
 (defn hash-code
@@ -69,7 +69,7 @@
    Objects that are equal will also have the same hashcode.
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^javax.crypto.spec.SecretKeySpec this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -82,6 +82,6 @@
 
   returns: true if the objects are considered equal, false if
    obj is null or otherwise. - `boolean`"
-  ([this obj]
+  ([^javax.crypto.spec.SecretKeySpec this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

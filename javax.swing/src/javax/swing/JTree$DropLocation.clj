@@ -26,7 +26,7 @@
    the drop occurred over the path itself.
 
   returns: the child index - `int`"
-  ([this]
+  ([^javax.swing.JTree$DropLocation this]
     (-> this (.getChildIndex))))
 
 (defn get-path
@@ -62,7 +62,7 @@
    -1).
 
   returns: the drop path - `javax.swing.tree.TreePath`"
-  ([this]
+  ([^javax.swing.JTree$DropLocation this]
     (-> this (.getPath))))
 
 (defn to-string
@@ -72,6 +72,6 @@
    between implementations.
 
   returns: a string representation of this drop location - `java.lang.String`"
-  ([this]
+  ([^javax.swing.JTree$DropLocation this]
     (-> this (.toString))))
 

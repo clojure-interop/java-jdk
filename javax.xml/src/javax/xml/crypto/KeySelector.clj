@@ -18,7 +18,7 @@
   returns: a key selector that always selects the specified key - `javax.xml.crypto.KeySelector`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([key]
+  ([^java.security.Key key]
     (KeySelector/singletonKeySelector key)))
 
 (defn select
@@ -32,6 +32,6 @@
   returns: the result of the key selector - `javax.xml.crypto.KeySelectorResult`
 
   throws: javax.xml.crypto.KeySelectorException - if an exceptional condition occurs while attempting to find a key. Note that an inability to find a key is not considered an exception (null should be returned in that case). However, an error condition (ex: network communications failure) that prevented the KeySelector from finding a potential key should be considered an exception."
-  ([this key-info purpose method context]
+  ([^javax.xml.crypto.KeySelector this ^javax.xml.crypto.dsig.keyinfo.KeyInfo key-info ^javax.xml.crypto.KeySelector.Purpose purpose ^javax.xml.crypto.AlgorithmMethod method ^javax.xml.crypto.XMLCryptoContext context]
     (-> this (.select key-info purpose method context))))
 

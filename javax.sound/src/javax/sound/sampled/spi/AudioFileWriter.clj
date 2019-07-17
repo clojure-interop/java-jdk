@@ -18,9 +18,9 @@
 
   returns: array of file types.  If no file types are supported,
    an array of length 0 is returned. - `javax.sound.sampled.AudioFileFormat.Type[]`"
-  ([this stream]
+  ([^javax.sound.sampled.spi.AudioFileWriter this ^javax.sound.sampled.AudioInputStream stream]
     (-> this (.getAudioFileTypes stream)))
-  ([this]
+  ([^javax.sound.sampled.spi.AudioFileWriter this]
     (-> this (.getAudioFileTypes))))
 
 (defn file-type-supported?
@@ -32,9 +32,9 @@
 
   returns: true if the file type is supported for this audio input stream,
    otherwise false - `boolean`"
-  ([this file-type stream]
+  ([^javax.sound.sampled.spi.AudioFileWriter this ^javax.sound.sampled.AudioFileFormat.Type file-type ^javax.sound.sampled.AudioInputStream stream]
     (-> this (.isFileTypeSupported file-type stream)))
-  ([this file-type]
+  ([^javax.sound.sampled.spi.AudioFileWriter this ^javax.sound.sampled.AudioFileFormat.Type file-type]
     (-> this (.isFileTypeSupported file-type))))
 
 (defn write
@@ -53,6 +53,6 @@
   returns: the number of bytes written to the output stream - `int`
 
   throws: java.io.IOException - if an I/O exception occurs"
-  ([this stream file-type out]
+  ([^javax.sound.sampled.spi.AudioFileWriter this ^javax.sound.sampled.AudioInputStream stream ^javax.sound.sampled.AudioFileFormat.Type file-type ^java.io.OutputStream out]
     (-> this (.write stream file-type out))))
 

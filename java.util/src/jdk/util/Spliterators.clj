@@ -73,11 +73,11 @@
   returns: A spliterator for an array - `<T> java.util.Spliterator<T>`
 
   throws: java.lang.NullPointerException - if the given array is null"
-  ([array from-index to-index additional-characteristics]
+  ([^java.lang.Object[] array ^Integer from-index ^Integer to-index ^Integer additional-characteristics]
     (Spliterators/spliterator array from-index to-index additional-characteristics))
-  ([iterator size characteristics]
+  ([iterator ^Long size ^Integer characteristics]
     (Spliterators/spliterator iterator size characteristics))
-  ([array additional-characteristics]
+  ([^java.lang.Object[] array ^Integer additional-characteristics]
     (Spliterators/spliterator array additional-characteristics)))
 
 (defn *spliterator-unknown-size
@@ -99,7 +99,7 @@
   returns: A spliterator from an iterator - `<T> java.util.Spliterator<T>`
 
   throws: java.lang.NullPointerException - if the given iterator is null"
-  ([iterator characteristics]
+  ([iterator ^Integer characteristics]
     (Spliterators/spliteratorUnknownSize iterator characteristics)))
 
 (defn *iterator

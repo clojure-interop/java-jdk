@@ -29,7 +29,7 @@
   jaxb-element - object that #isElement(Object) returns true. - `java.lang.Object`
 
   returns: The element value of the jaxbElement. - `java.lang.Object`"
-  ([jaxb-element]
+  ([^java.lang.Object jaxb-element]
     (JAXBIntrospector/getValue jaxb-element)))
 
 (defn element?
@@ -43,7 +43,7 @@
   object - `java.lang.Object`
 
   returns: `boolean`"
-  ([this object]
+  ([^javax.xml.bind.JAXBIntrospector this ^java.lang.Object object]
     (-> this (.isElement object))))
 
 (defn get-element-name
@@ -53,6 +53,6 @@
 
   returns: xml element qname associated with jaxbElement;
            null if jaxbElement is not a JAXB Element. - `javax.xml.namespace.QName`"
-  ([this jaxb-element]
+  ([^javax.xml.bind.JAXBIntrospector this ^java.lang.Object jaxb-element]
     (-> this (.getElementName jaxb-element))))
 

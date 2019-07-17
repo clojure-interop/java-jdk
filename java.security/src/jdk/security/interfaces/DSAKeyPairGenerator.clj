@@ -56,8 +56,8 @@
   random - the random bit source to use to generate key bits; can be null. - `java.security.SecureRandom`
 
   throws: java.security.InvalidParameterException - if modlen is invalid, or unsupported, or if genParams is false and there are no precomputed parameters for the requested modulus length."
-  ([this modlen gen-params random]
+  ([^. this ^Integer modlen ^Boolean gen-params ^java.security.SecureRandom random]
     (-> this (.initialize modlen gen-params random)))
-  ([this params random]
+  ([^. this ^java.security.interfaces.DSAParams params ^java.security.SecureRandom random]
     (-> this (.initialize params random))))
 

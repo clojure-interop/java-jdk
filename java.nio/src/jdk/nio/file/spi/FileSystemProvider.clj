@@ -57,7 +57,7 @@
   attrs - the array of attributes to set atomically when creating the symbolic link - `java.nio.file.attribute.FileAttribute<?>`
 
   throws: java.lang.UnsupportedOperationException - if the implementation does not support symbolic links or the array contains an attribute that cannot be set atomically when creating the symbolic link"
-  ([this link target attrs]
+  ([^java.nio.file.spi.FileSystemProvider this ^java.nio.file.Path link ^java.nio.file.Path target ^java.nio.file.attribute.FileAttribute attrs]
     (-> this (.createSymbolicLink link target attrs))))
 
 (defn copy
@@ -71,7 +71,7 @@
   options - options specifying how the copy should be done - `java.nio.file.CopyOption`
 
   throws: java.lang.UnsupportedOperationException - if the array contains a copy option that is not supported"
-  ([this source target options]
+  ([^java.nio.file.spi.FileSystemProvider this ^java.nio.file.Path source ^java.nio.file.Path target ^java.nio.file.CopyOption options]
     (-> this (.copy source target options))))
 
 (defn get-file-system
@@ -100,7 +100,7 @@
   returns: The file system - `java.nio.file.FileSystem`
 
   throws: java.lang.IllegalArgumentException - If the pre-conditions for the uri parameter aren't met"
-  ([this uri]
+  ([^java.nio.file.spi.FileSystemProvider this ^java.net.URI uri]
     (-> this (.getFileSystem uri))))
 
 (defn delete
@@ -110,7 +110,7 @@
   path - the path to the file to delete - `java.nio.file.Path`
 
   throws: java.nio.file.NoSuchFileException - if the file does not exist (optional specific exception)"
-  ([this path]
+  ([^java.nio.file.spi.FileSystemProvider this ^java.nio.file.Path path]
     (-> this (.delete path))))
 
 (defn read-attributes
@@ -124,7 +124,7 @@
   returns: the file attributes - `<A extends java.nio.file.attribute.BasicFileAttributes> A`
 
   throws: java.lang.UnsupportedOperationException - if an attributes of the given type are not supported"
-  ([this path type options]
+  ([^java.nio.file.spi.FileSystemProvider this ^java.nio.file.Path path ^java.lang.Class type ^java.nio.file.LinkOption options]
     (-> this (.readAttributes path type options))))
 
 (defn new-file-system
@@ -150,7 +150,7 @@
   returns: A new file system - `java.nio.file.FileSystem`
 
   throws: java.lang.IllegalArgumentException - If the pre-conditions for the uri parameter aren't met, or the env parameter does not contain properties required by the provider, or a property value is invalid"
-  ([this uri env]
+  ([^java.nio.file.spi.FileSystemProvider this ^java.net.URI uri ^java.util.Map env]
     (-> this (.newFileSystem uri env))))
 
 (defn get-file-attribute-view
@@ -164,7 +164,7 @@
 
   returns: a file attribute view of the specified type, or null if
             the attribute view type is not available - `<V extends java.nio.file.attribute.FileAttributeView> V`"
-  ([this path type options]
+  ([^java.nio.file.spi.FileSystemProvider this ^java.nio.file.Path path ^java.lang.Class type ^java.nio.file.LinkOption options]
     (-> this (.getFileAttributeView path type options))))
 
 (defn create-link
@@ -178,7 +178,7 @@
   existing - a path to an existing file - `java.nio.file.Path`
 
   throws: java.lang.UnsupportedOperationException - if the implementation does not support adding an existing file to a directory"
-  ([this link existing]
+  ([^java.nio.file.spi.FileSystemProvider this ^java.nio.file.Path link ^java.nio.file.Path existing]
     (-> this (.createLink link existing))))
 
 (defn same-file?
@@ -191,7 +191,7 @@
   returns: true if, and only if, the two paths locate the same file - `boolean`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([this path path-2]
+  ([^java.nio.file.spi.FileSystemProvider this ^java.nio.file.Path path ^java.nio.file.Path path-2]
     (-> this (.isSameFile path path-2))))
 
 (defn get-path
@@ -214,7 +214,7 @@
   returns: The resulting Path - `java.nio.file.Path`
 
   throws: java.lang.IllegalArgumentException - If the URI scheme does not identify this provider or other preconditions on the uri parameter do not hold"
-  ([this uri]
+  ([^java.nio.file.spi.FileSystemProvider this ^java.net.URI uri]
     (-> this (.getPath uri))))
 
 (defn check-access
@@ -266,7 +266,7 @@
   modes - The access modes to check; may have zero elements - `java.nio.file.AccessMode`
 
   throws: java.lang.UnsupportedOperationException - an implementation is required to support checking for READ, WRITE, and EXECUTE access. This exception is specified to allow for the Access enum to be extended in future releases."
-  ([this path modes]
+  ([^java.nio.file.spi.FileSystemProvider this ^java.nio.file.Path path ^java.nio.file.AccessMode modes]
     (-> this (.checkAccess path modes))))
 
 (defn new-input-stream
@@ -284,7 +284,7 @@
   returns: a new input stream - `java.io.InputStream`
 
   throws: java.lang.IllegalArgumentException - if an invalid combination of options is specified"
-  ([this path options]
+  ([^java.nio.file.spi.FileSystemProvider this ^java.nio.file.Path path ^java.nio.file.OpenOption options]
     (-> this (.newInputStream path options))))
 
 (defn new-file-channel
@@ -302,7 +302,7 @@
   returns: a new file channel - `java.nio.channels.FileChannel`
 
   throws: java.lang.IllegalArgumentException - If the set contains an invalid combination of options"
-  ([this path options attrs]
+  ([^java.nio.file.spi.FileSystemProvider this ^java.nio.file.Path path ^java.nio.file.OpenOption> options ^java.nio.file.attribute.FileAttribute attrs]
     (-> this (.newFileChannel path options attrs))))
 
 (defn delete-if-exists
@@ -318,14 +318,14 @@
             exist - `boolean`
 
   throws: java.nio.file.DirectoryNotEmptyException - if the file is a directory and could not otherwise be deleted because the directory is not empty (optional specific exception)"
-  ([this path]
+  ([^java.nio.file.spi.FileSystemProvider this ^java.nio.file.Path path]
     (-> this (.deleteIfExists path))))
 
 (defn get-scheme
   "Returns the URI scheme that identifies this provider.
 
   returns: The URI scheme - `java.lang.String`"
-  ([this]
+  ([^java.nio.file.spi.FileSystemProvider this]
     (-> this (.getScheme))))
 
 (defn get-file-store
@@ -338,7 +338,7 @@
   returns: the file store where the file is stored - `java.nio.file.FileStore`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([this path]
+  ([^java.nio.file.spi.FileSystemProvider this ^java.nio.file.Path path]
     (-> this (.getFileStore path))))
 
 (defn read-symbolic-link
@@ -352,7 +352,7 @@
   returns: The target of the symbolic link - `java.nio.file.Path`
 
   throws: java.lang.UnsupportedOperationException - if the implementation does not support symbolic links"
-  ([this link]
+  ([^java.nio.file.spi.FileSystemProvider this ^java.nio.file.Path link]
     (-> this (.readSymbolicLink link))))
 
 (defn hidden?
@@ -367,7 +367,7 @@
   returns: true if the file is considered hidden - `boolean`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([this path]
+  ([^java.nio.file.spi.FileSystemProvider this ^java.nio.file.Path path]
     (-> this (.isHidden path))))
 
 (defn set-attribute
@@ -380,7 +380,7 @@
   options - options indicating how symbolic links are handled - `java.nio.file.LinkOption`
 
   throws: java.lang.UnsupportedOperationException - if the attribute view is not available"
-  ([this path attribute value options]
+  ([^java.nio.file.spi.FileSystemProvider this ^java.nio.file.Path path ^java.lang.String attribute ^java.lang.Object value ^java.nio.file.LinkOption options]
     (-> this (.setAttribute path attribute value options))))
 
 (defn new-byte-channel
@@ -394,7 +394,7 @@
   returns: a new seekable byte channel - `java.nio.channels.SeekableByteChannel`
 
   throws: java.lang.IllegalArgumentException - if the set contains an invalid combination of options"
-  ([this path options attrs]
+  ([^java.nio.file.spi.FileSystemProvider this ^java.nio.file.Path path ^java.nio.file.OpenOption> options ^java.nio.file.attribute.FileAttribute attrs]
     (-> this (.newByteChannel path options attrs))))
 
 (defn move
@@ -407,7 +407,7 @@
   options - options specifying how the move should be done - `java.nio.file.CopyOption`
 
   throws: java.lang.UnsupportedOperationException - if the array contains a copy option that is not supported"
-  ([this source target options]
+  ([^java.nio.file.spi.FileSystemProvider this ^java.nio.file.Path source ^java.nio.file.Path target ^java.nio.file.CopyOption options]
     (-> this (.move source target options))))
 
 (defn new-asynchronous-file-channel
@@ -428,7 +428,7 @@
   returns: a new asynchronous file channel - `java.nio.channels.AsynchronousFileChannel`
 
   throws: java.lang.IllegalArgumentException - If the set contains an invalid combination of options"
-  ([this path options executor attrs]
+  ([^java.nio.file.spi.FileSystemProvider this ^java.nio.file.Path path ^java.nio.file.OpenOption> options ^java.util.concurrent.ExecutorService executor ^java.nio.file.attribute.FileAttribute attrs]
     (-> this (.newAsynchronousFileChannel path options executor attrs))))
 
 (defn new-directory-stream
@@ -443,7 +443,7 @@
   returns: a new and open DirectoryStream object - `java.nio.file.DirectoryStream<java.nio.file.Path>`
 
   throws: java.nio.file.NotDirectoryException - if the file could not otherwise be opened because it is not a directory (optional specific exception)"
-  ([this dir filter]
+  ([^java.nio.file.spi.FileSystemProvider this ^java.nio.file.Path dir ^java.nio.file.Path> filter]
     (-> this (.newDirectoryStream dir filter))))
 
 (defn create-directory
@@ -454,7 +454,7 @@
   attrs - an optional list of file attributes to set atomically when creating the directory - `java.nio.file.attribute.FileAttribute<?>`
 
   throws: java.lang.UnsupportedOperationException - if the array contains an attribute that cannot be set atomically when creating the directory"
-  ([this dir attrs]
+  ([^java.nio.file.spi.FileSystemProvider this ^java.nio.file.Path dir ^java.nio.file.attribute.FileAttribute attrs]
     (-> this (.createDirectory dir attrs))))
 
 (defn new-output-stream
@@ -473,6 +473,6 @@
   returns: a new output stream - `java.io.OutputStream`
 
   throws: java.lang.IllegalArgumentException - if options contains an invalid combination of options"
-  ([this path options]
+  ([^java.nio.file.spi.FileSystemProvider this ^java.nio.file.Path path ^java.nio.file.OpenOption options]
     (-> this (.newOutputStream path options))))
 

@@ -23,7 +23,7 @@
             compilation failed or no compiler is available - `boolean`
 
   throws: java.lang.NullPointerException - If clazz is null"
-  ([clazz]
+  ([^java.lang.Class clazz]
     (Compiler/compileClass clazz)))
 
 (defn *compile-classes
@@ -35,7 +35,7 @@
             compilation failed or no compiler is available - `boolean`
 
   throws: java.lang.NullPointerException - If string is null"
-  ([string]
+  ([^java.lang.String string]
     (Compiler/compileClasses string)))
 
 (defn *command
@@ -48,7 +48,7 @@
             available - `java.lang.Object`
 
   throws: java.lang.NullPointerException - If any is null"
-  ([any]
+  ([^java.lang.Object any]
     (Compiler/command any)))
 
 (defn *enable

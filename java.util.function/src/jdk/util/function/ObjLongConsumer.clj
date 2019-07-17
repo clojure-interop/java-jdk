@@ -15,6 +15,6 @@
 
   t - the first input argument - `ObjLongConsumer.T`
   value - the second input argument - `long`"
-  ([this t value]
+  ([^. this ^ObjLongConsumer.T t ^Long value]
     (-> this (.accept t value))))
 

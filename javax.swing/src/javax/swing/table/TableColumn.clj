@@ -66,11 +66,11 @@
   width - this column's preferred width and initial width - `int`
   cell-renderer - the object used to render values in this column - `javax.swing.table.TableCellRenderer`
   cell-editor - the object used to edit values in this column - `javax.swing.table.TableCellEditor`"
-  ([model-index width cell-renderer cell-editor]
+  ([^Integer model-index ^Integer width ^javax.swing.table.TableCellRenderer cell-renderer ^javax.swing.table.TableCellEditor cell-editor]
     (new TableColumn model-index width cell-renderer cell-editor))
-  ([model-index width]
+  ([^Integer model-index ^Integer width]
     (new TableColumn model-index width))
-  ([model-index]
+  ([^Integer model-index]
     (new TableColumn model-index))
   ([]
     (new TableColumn )))
@@ -117,7 +117,7 @@
    by the user or programmatically.
 
   returns: the minWidth property - `int`"
-  ([this]
+  ([^javax.swing.table.TableColumn this]
     (-> this (.getMinWidth))))
 
 (defn set-header-renderer
@@ -129,7 +129,7 @@
    renderer must render the sorting indication.
 
   header-renderer - the new headerRenderer - `javax.swing.table.TableCellRenderer`"
-  ([this header-renderer]
+  ([^javax.swing.table.TableColumn this ^javax.swing.table.TableCellRenderer header-renderer]
     (-> this (.setHeaderRenderer header-renderer))))
 
 (defn get-max-width
@@ -139,7 +139,7 @@
    is Integer.MAX_VALUE.
 
   returns: the maxWidth property - `int`"
-  ([this]
+  ([^javax.swing.table.TableColumn this]
     (-> this (.getMaxWidth))))
 
 (defn get-width
@@ -147,7 +147,7 @@
    75.
 
   returns: the width property - `int`"
-  ([this]
+  ([^javax.swing.table.TableColumn this]
     (-> this (.getWidth))))
 
 (defn set-cell-renderer
@@ -155,7 +155,7 @@
    to draw individual values for this column.
 
   cell-renderer - the new cellRenderer - `javax.swing.table.TableCellRenderer`"
-  ([this cell-renderer]
+  ([^javax.swing.table.TableColumn this ^javax.swing.table.TableCellRenderer cell-renderer]
     (-> this (.setCellRenderer cell-renderer))))
 
 (defn set-width
@@ -172,7 +172,7 @@
    it is adjusted to the appropriate limiting value.
 
   width - the new width - `int`"
-  ([this width]
+  ([^javax.swing.table.TableColumn this ^Integer width]
     (-> this (.setWidth width))))
 
 (defn set-model-index
@@ -182,7 +182,7 @@
    is moved around in the view the model index remains constant.
 
   model-index - the new modelIndex - `int`"
-  ([this model-index]
+  ([^javax.swing.table.TableColumn this ^Integer model-index]
     (-> this (.setModelIndex model-index))))
 
 (defn get-resizable?
@@ -192,14 +192,14 @@
    regardless of this setting.  The default is true.
 
   returns: the isResizable property - `boolean`"
-  ([this]
+  ([^javax.swing.table.TableColumn this]
     (-> this (.getResizable))))
 
 (defn enable-resized-posting
   "Deprecated. as of Java 2 platform v1.3
 
   returns: `java.lang.  void`"
-  ([this]
+  ([^javax.swing.table.TableColumn this]
     (-> this (.enableResizedPosting))))
 
 (defn get-cell-editor
@@ -211,7 +211,7 @@
    cellEditor is null.
 
   returns: the cellEditor property - `javax.swing.table.TableCellEditor`"
-  ([this]
+  ([^javax.swing.table.TableColumn this]
     (-> this (.getCellEditor))))
 
 (defn remove-property-change-listener
@@ -220,7 +220,7 @@
    for all properties.
 
   listener - the listener to be removed - `java.beans.PropertyChangeListener`"
-  ([this listener]
+  ([^javax.swing.table.TableColumn this ^java.beans.PropertyChangeListener listener]
     (-> this (.removePropertyChangeListener listener))))
 
 (defn get-cell-renderer
@@ -235,7 +235,7 @@
    cellRenderer is null.
 
   returns: the cellRenderer property - `javax.swing.table.TableCellRenderer`"
-  ([this]
+  ([^javax.swing.table.TableColumn this]
     (-> this (.getCellRenderer))))
 
 (defn get-identifier
@@ -247,7 +247,7 @@
     as a default.
 
   returns: the identifier property - `java.lang.Object`"
-  ([this]
+  ([^javax.swing.table.TableColumn this]
     (-> this (.getIdentifier))))
 
 (defn get-header-value
@@ -255,7 +255,7 @@
    renderer.
 
   returns: the headerValue property - `java.lang.Object`"
-  ([this]
+  ([^javax.swing.table.TableColumn this]
     (-> this (.getHeaderValue))))
 
 (defn set-preferred-width
@@ -269,7 +269,7 @@
    see the doLayout method in JTable.
 
   preferred-width - the new preferred width - `int`"
-  ([this preferred-width]
+  ([^javax.swing.table.TableColumn this ^Integer preferred-width]
     (-> this (.setPreferredWidth preferred-width))))
 
 (defn set-min-width
@@ -287,7 +287,7 @@
    this method sets that property to the new minimum width.
 
   min-width - the new minimum width - `int`"
-  ([this min-width]
+  ([^javax.swing.table.TableColumn this ^Integer min-width]
     (-> this (.setMinWidth min-width))))
 
 (defn set-max-width
@@ -303,7 +303,7 @@
    this method sets that property to the new maximum width.
 
   max-width - the new maximum width - `int`"
-  ([this max-width]
+  ([^javax.swing.table.TableColumn this ^Integer max-width]
     (-> this (.setMaxWidth max-width))))
 
 (defn get-header-renderer
@@ -314,7 +314,7 @@
    headerRenderer is null.
 
   returns: the headerRenderer property - `javax.swing.table.TableCellRenderer`"
-  ([this]
+  ([^javax.swing.table.TableColumn this]
     (-> this (.getHeaderRenderer))))
 
 (defn size-width-to-fit
@@ -326,7 +326,7 @@
    The transient `width` property of this TableColumn is also set to the
    preferred width. Note this method is not used internally by the table
    package."
-  ([this]
+  ([^javax.swing.table.TableColumn this]
     (-> this (.sizeWidthToFit))))
 
 (defn get-property-change-listeners
@@ -335,7 +335,7 @@
 
   returns: all of the PropertyChangeListeners added or an empty
            array if no listeners have been added - `java.beans.PropertyChangeListener[]`"
-  ([this]
+  ([^javax.swing.table.TableColumn this]
     (-> this (.getPropertyChangeListeners))))
 
 (defn set-header-value
@@ -345,7 +345,7 @@
    is null.
 
   header-value - the new headerValue - `java.lang.Object`"
-  ([this header-value]
+  ([^javax.swing.table.TableColumn this ^java.lang.Object header-value]
     (-> this (.setHeaderValue header-value))))
 
 (defn set-identifier
@@ -356,14 +356,14 @@
    convenience for the external tagging and location of columns.
 
   identifier - an identifier for this column - `java.lang.Object`"
-  ([this identifier]
+  ([^javax.swing.table.TableColumn this ^java.lang.Object identifier]
     (-> this (.setIdentifier identifier))))
 
 (defn get-model-index
   "Returns the model index for this column.
 
   returns: the modelIndex property - `int`"
-  ([this]
+  ([^javax.swing.table.TableColumn this]
     (-> this (.getModelIndex))))
 
 (defn add-property-change-listener
@@ -379,28 +379,28 @@
    change in the inherited property.
 
   listener - the listener to be added - `java.beans.PropertyChangeListener`"
-  ([this listener]
+  ([^javax.swing.table.TableColumn this ^java.beans.PropertyChangeListener listener]
     (-> this (.addPropertyChangeListener listener))))
 
 (defn set-cell-editor
   "Sets the editor to used by when a cell in this column is edited.
 
   cell-editor - the new cellEditor - `javax.swing.table.TableCellEditor`"
-  ([this cell-editor]
+  ([^javax.swing.table.TableColumn this ^javax.swing.table.TableCellEditor cell-editor]
     (-> this (.setCellEditor cell-editor))))
 
 (defn set-resizable
   "Sets whether this column can be resized.
 
   is-resizable - if true, resizing is allowed; otherwise false - `boolean`"
-  ([this is-resizable]
+  ([^javax.swing.table.TableColumn this ^Boolean is-resizable]
     (-> this (.setResizable is-resizable))))
 
 (defn disable-resized-posting
   "Deprecated. as of Java 2 platform v1.3
 
   returns: `java.lang.  void`"
-  ([this]
+  ([^javax.swing.table.TableColumn this]
     (-> this (.disableResizedPosting))))
 
 (defn get-preferred-width
@@ -408,6 +408,6 @@
    The default preferred width is 75.
 
   returns: the preferredWidth property - `int`"
-  ([this]
+  ([^javax.swing.table.TableColumn this]
     (-> this (.getPreferredWidth))))
 

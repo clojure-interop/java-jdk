@@ -14,20 +14,20 @@
 
   enum-type - the type of the missing enum constant - `java.lang.Enum>`
   constant-name - the name of the missing enum constant - `java.lang.String`"
-  ([enum-type constant-name]
+  ([^java.lang.Enum> enum-type ^java.lang.String constant-name]
     (new EnumConstantNotPresentException enum-type constant-name)))
 
 (defn enum-type
   "Returns the type of the missing enum constant.
 
   returns: the type of the missing enum constant - `java.lang.Class<? extends java.lang.Enum>`"
-  ([this]
+  ([^java.lang.EnumConstantNotPresentException this]
     (-> this (.enumType))))
 
 (defn constant-name
   "Returns the name of the missing enum constant.
 
   returns: the name of the missing enum constant - `java.lang.String`"
-  ([this]
+  ([^java.lang.EnumConstantNotPresentException this]
     (-> this (.constantName))))
 

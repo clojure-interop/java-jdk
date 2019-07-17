@@ -24,6 +24,6 @@
 
   returns: a Rectangle containing the node dimensions,
                 or null if node has no dimension - `java.awt.Rectangle`"
-  ([this value row depth expanded bounds]
+  ([^javax.swing.tree.AbstractLayoutCache$NodeDimensions this ^java.lang.Object value ^Integer row ^Integer depth ^Boolean expanded ^java.awt.Rectangle bounds]
     (-> this (.getNodeDimensions value row depth expanded bounds))))
 

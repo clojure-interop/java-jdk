@@ -30,7 +30,7 @@
   prefix-list - the inclusive namespace prefix list. Each entry in the list is a String that represents a namespace prefix. - `java.util.List`
 
   throws: java.lang.NullPointerException - if prefixList is null"
-  ([prefix-list]
+  ([^java.util.List prefix-list]
     (new ExcC14NParameterSpec prefix-list))
   ([]
     (new ExcC14NParameterSpec )))
@@ -51,6 +51,6 @@
 
   returns: the inclusive namespace prefix list (may be empty but never
       null) - `java.util.List`"
-  ([this]
+  ([^javax.xml.crypto.dsig.spec.ExcC14NParameterSpec this]
     (-> this (.getPrefixList))))
 

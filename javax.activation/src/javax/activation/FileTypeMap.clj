@@ -25,7 +25,7 @@
   file-type-map - The FileTypeMap. - `javax.activation.FileTypeMap`
 
   throws: java.lang.SecurityException - if the caller doesn't have permission to change the default"
-  ([file-type-map]
+  ([^javax.activation.FileTypeMap file-type-map]
     (FileTypeMap/setDefaultFileTypeMap file-type-map)))
 
 (defn *get-default-file-type-map
@@ -45,6 +45,6 @@
   file - A file to be typed. - `java.io.File`
 
   returns: The content type. - `java.lang.String`"
-  ([this file]
+  ([^javax.activation.FileTypeMap this ^java.io.File file]
     (-> this (.getContentType file))))
 

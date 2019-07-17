@@ -51,7 +51,7 @@
   value - the parameter of the socket option - `java.lang.Object`
 
   throws: java.net.SocketException - if the option is unrecognized, the socket is closed, or some low-level error occurred"
-  ([this opt-id value]
+  ([^. this ^Integer opt-id ^java.lang.Object value]
     (-> this (.setOption opt-id value))))
 
 (defn get-option
@@ -85,6 +85,6 @@
   returns: the value of the option - `java.lang.Object`
 
   throws: java.net.SocketException - if optID is unknown along the protocol stack (including the SocketImpl)"
-  ([this opt-id]
+  ([^. this ^Integer opt-id]
     (-> this (.getOption opt-id))))
 

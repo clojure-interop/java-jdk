@@ -70,9 +70,9 @@
   value - The non-null and non-empty attribute value. - `java.lang.Object`
 
   throws: javax.naming.InvalidNameException - If type/value cannot be used to construct a valid RDN."
-  ([type value]
+  ([^java.lang.String type ^java.lang.Object value]
     (new Rdn type value))
-  ([attr-set]
+  ([^javax.naming.directory.Attributes attr-set]
     (new Rdn attr-set)))
 
 (defn *escape-value
@@ -91,7 +91,7 @@
   returns: Escaped string value. - `java.lang.String`
 
   throws: java.lang.ClassCastException - if val is is not a String or byte array."
-  ([val]
+  ([^java.lang.Object val]
     (Rdn/escapeValue val)))
 
 (defn *unescape-value
@@ -114,7 +114,7 @@
   returns: Unescaped value. - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - When an Illegal value is provided."
-  ([val]
+  ([^java.lang.String val]
     (Rdn/unescapeValue val)))
 
 (defn get-value
@@ -127,7 +127,7 @@
    to the type returned by getType() method.
 
   returns: The non-null attribute value. - `java.lang.Object`"
-  ([this]
+  ([^javax.naming.ldap.Rdn this]
     (-> this (.getValue))))
 
 (defn get-type
@@ -143,7 +143,7 @@
    value corresponding to the type returned by this method.
 
   returns: The non-null attribute type. - `java.lang.String`"
-  ([this]
+  ([^javax.naming.ldap.Rdn this]
     (-> this (.getType))))
 
 (defn to-string
@@ -152,7 +152,7 @@
    in the class description for LdapName.
 
   returns: The string representation of the Rdn. - `java.lang.String`"
-  ([this]
+  ([^javax.naming.ldap.Rdn this]
     (-> this (.toString))))
 
 (defn compare-to
@@ -174,7 +174,7 @@
             is less than, equal to, or greater than the given Object. - `int`
 
   throws: java.lang.ClassCastException - if obj is null or not a Rdn."
-  ([this obj]
+  ([^javax.naming.ldap.Rdn this ^java.lang.Object obj]
     (-> this (.compareTo obj))))
 
 (defn equals
@@ -197,7 +197,7 @@
   obj - object to be compared for equality with this Rdn. - `java.lang.Object`
 
   returns: true if the specified object is equal to this Rdn. - `boolean`"
-  ([this obj]
+  ([^javax.naming.ldap.Rdn this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -206,7 +206,7 @@
    hash code.
 
   returns: An int representing the hash code of this Rdn. - `int`"
-  ([this]
+  ([^javax.naming.ldap.Rdn this]
     (-> this (.hashCode))))
 
 (defn to-attributes
@@ -215,13 +215,13 @@
 
   returns: The non-null attributes containing the type/value
             mappings of this Rdn. - `javax.naming.directory.Attributes`"
-  ([this]
+  ([^javax.naming.ldap.Rdn this]
     (-> this (.toAttributes))))
 
 (defn size
   "Retrieves the number of attribute type/value pairs in this Rdn.
 
   returns: The non-negative number of type/value pairs in this Rdn. - `int`"
-  ([this]
+  ([^javax.naming.ldap.Rdn this]
     (-> this (.size))))
 

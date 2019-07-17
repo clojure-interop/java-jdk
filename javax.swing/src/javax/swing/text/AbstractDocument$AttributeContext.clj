@@ -26,7 +26,7 @@
   value - the attribute value - `java.lang.Object`
 
   returns: the updated attribute set - `javax.swing.text.AttributeSet`"
-  ([this old name value]
+  ([^. this ^javax.swing.text.AttributeSet old ^java.lang.Object name ^java.lang.Object value]
     (-> this (.addAttribute old name value))))
 
 (defn add-attributes
@@ -36,7 +36,7 @@
   attr - the attributes to add - `javax.swing.text.AttributeSet`
 
   returns: the updated attribute set - `javax.swing.text.AttributeSet`"
-  ([this old attr]
+  ([^. this ^javax.swing.text.AttributeSet old ^javax.swing.text.AttributeSet attr]
     (-> this (.addAttributes old attr))))
 
 (defn remove-attribute
@@ -46,7 +46,7 @@
   name - the non-null attribute name - `java.lang.Object`
 
   returns: the updated attribute set - `javax.swing.text.AttributeSet`"
-  ([this old name]
+  ([^. this ^javax.swing.text.AttributeSet old ^java.lang.Object name]
     (-> this (.removeAttribute old name))))
 
 (defn remove-attributes
@@ -56,14 +56,14 @@
   names - the attribute names - `java.util.Enumeration<?>`
 
   returns: the updated attribute set - `javax.swing.text.AttributeSet`"
-  ([this old names]
+  ([^. this ^javax.swing.text.AttributeSet old ^java.util.Enumeration names]
     (-> this (.removeAttributes old names))))
 
 (defn get-empty-set
   "Fetches an empty AttributeSet.
 
   returns: the attribute set - `javax.swing.text.AttributeSet`"
-  ([this]
+  ([^. this]
     (-> this (.getEmptySet))))
 
 (defn reclaim
@@ -74,6 +74,6 @@
    would call this in its finalize method.
 
   a - the attribute set to reclaim - `javax.swing.text.AttributeSet`"
-  ([this a]
+  ([^. this ^javax.swing.text.AttributeSet a]
     (-> this (.reclaim a))))
 

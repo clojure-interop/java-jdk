@@ -31,13 +31,13 @@
 
   nm - the action name - `java.lang.String`
   a - the alignment >= 0 - `int`"
-  ([nm a]
+  ([^java.lang.String nm ^Integer a]
     (new StyledEditorKit$AlignmentAction nm a)))
 
 (defn action-performed
   "Sets the alignment.
 
   e - the action event - `java.awt.event.ActionEvent`"
-  ([this e]
+  ([^javax.swing.text.StyledEditorKit$AlignmentAction this ^java.awt.event.ActionEvent e]
     (-> this (.actionPerformed e))))
 

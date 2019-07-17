@@ -24,35 +24,35 @@
   evt - the event which is to take place - `java.awt.Event`
 
   returns: `java.lang.  boolean`"
-  ([this evt]
+  ([^java.awt.MenuComponent this ^java.awt.Event evt]
     (-> this (.postEvent evt))))
 
 (defn set-name
   "Sets the name of the component to the specified string.
 
   name - the name of the menu component - `java.lang.String`"
-  ([this name]
+  ([^java.awt.MenuComponent this ^java.lang.String name]
     (-> this (.setName name))))
 
 (defn to-string
   "Returns a representation of this menu component as a string.
 
   returns: a string representation of this menu component - `java.lang.String`"
-  ([this]
+  ([^java.awt.MenuComponent this]
     (-> this (.toString))))
 
 (defn get-name
   "Gets the name of the menu component.
 
   returns: the name of the menu component - `java.lang.String`"
-  ([this]
+  ([^java.awt.MenuComponent this]
     (-> this (.getName))))
 
 (defn remove-notify
   "Removes the menu component's peer.  The peer allows us to modify the
    appearance of the menu component without changing the functionality of
    the menu component."
-  ([this]
+  ([^java.awt.MenuComponent this]
     (-> this (.removeNotify))))
 
 (defn get-parent
@@ -61,7 +61,7 @@
   returns: the menu component containing this menu component,
                    or null if this menu component
                    is the outermost component, the menu bar itself - `java.awt.MenuContainer`"
-  ([this]
+  ([^java.awt.MenuComponent this]
     (-> this (.getParent))))
 
 (defn set-font
@@ -77,7 +77,7 @@
    subcomponents if supported by the underlying platform.
 
   f - the font to be set - `java.awt.Font`"
-  ([this f]
+  ([^java.awt.MenuComponent this ^java.awt.Font f]
     (-> this (.setFont f))))
 
 (defn get-accessible-context
@@ -91,14 +91,14 @@
 
   returns: the AccessibleContext of this
        MenuComponent - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^java.awt.MenuComponent this]
     (-> this (.getAccessibleContext))))
 
 (defn dispatch-event
   "Delivers an event to this component or one of its sub components.
 
   e - the event - `java.awt.AWTEvent`"
-  ([this e]
+  ([^java.awt.MenuComponent this ^java.awt.AWTEvent e]
     (-> this (.dispatchEvent e))))
 
 (defn get-font
@@ -106,7 +106,7 @@
 
   returns: the font used in this menu component, if there is one;
                     null otherwise - `java.awt.Font`"
-  ([this]
+  ([^java.awt.MenuComponent this]
     (-> this (.getFont))))
 
 (defn get-peer
@@ -114,6 +114,6 @@
    programs should not directly manipulate peers.
 
   returns: `java.lang.  java.awt.peer.MenuComponentPeer`"
-  ([this]
+  ([^java.awt.MenuComponent this]
     (-> this (.getPeer))))
 

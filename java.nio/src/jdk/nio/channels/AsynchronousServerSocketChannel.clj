@@ -69,7 +69,7 @@
   returns: A new asynchronous server socket channel - `java.nio.channels.AsynchronousServerSocketChannel`
 
   throws: java.nio.channels.ShutdownChannelGroupException - If the channel group is shutdown"
-  ([group]
+  ([^java.nio.channels.AsynchronousChannelGroup group]
     (AsynchronousServerSocketChannel/open group))
   ([]
     (AsynchronousServerSocketChannel/open )))
@@ -78,7 +78,7 @@
   "Returns the provider that created this channel.
 
   returns: The provider that created this channel - `java.nio.channels.spi.AsynchronousChannelProvider`"
-  ([this]
+  ([^java.nio.channels.AsynchronousServerSocketChannel this]
     (-> this (.provider))))
 
 (defn bind
@@ -102,9 +102,9 @@
   returns: This channel - `java.nio.channels.AsynchronousServerSocketChannel`
 
   throws: java.nio.channels.AlreadyBoundException - If the socket is already bound"
-  ([this local backlog]
+  ([^java.nio.channels.AsynchronousServerSocketChannel this ^java.net.SocketAddress local ^Integer backlog]
     (-> this (.bind local backlog)))
-  ([this local]
+  ([^java.nio.channels.AsynchronousServerSocketChannel this ^java.net.SocketAddress local]
     (-> this (.bind local))))
 
 (defn set-option
@@ -116,7 +116,7 @@
   returns: This channel - `<T> java.nio.channels.AsynchronousServerSocketChannel`
 
   throws: java.lang.IllegalArgumentException - If the value is not a valid value for this socket option"
-  ([this name value]
+  ([^java.nio.channels.AsynchronousServerSocketChannel this ^java.net.SocketOption name value]
     (-> this (.setOption name value))))
 
 (defn accept
@@ -148,9 +148,9 @@
   returns: `<A> void`
 
   throws: java.nio.channels.AcceptPendingException - If an accept operation is already in progress on this channel"
-  ([this attachment handler]
+  ([^java.nio.channels.AsynchronousServerSocketChannel this attachment handler]
     (-> this (.accept attachment handler)))
-  ([this]
+  ([^java.nio.channels.AsynchronousServerSocketChannel this]
     (-> this (.accept))))
 
 (defn get-local-address
@@ -172,6 +172,6 @@
             channel's socket is not bound - `java.net.SocketAddress`
 
   throws: java.nio.channels.ClosedChannelException - If the channel is closed"
-  ([this]
+  ([^java.nio.channels.AsynchronousServerSocketChannel this]
     (-> this (.getLocalAddress))))
 

@@ -12,7 +12,7 @@
    SubjectDomainCombiner.
 
   subject - the Subject to be associated with with this SubjectDomainCombiner. - `javax.security.auth.Subject`"
-  ([subject]
+  ([^javax.security.auth.Subject subject]
     (new SubjectDomainCombiner subject)))
 
 (defn get-subject
@@ -25,7 +25,7 @@
             SubjectDomainCombiner. - `javax.security.auth.Subject`
 
   throws: java.lang.SecurityException - if the caller does not have permission to get the Subject associated with this SubjectDomainCombiner."
-  ([this]
+  ([^javax.security.auth.SubjectDomainCombiner this]
     (-> this (.getSubject))))
 
 (defn combine
@@ -57,6 +57,6 @@
 
   returns: a new array consisting of the updated ProtectionDomains,
             or null. - `java.security.ProtectionDomain[]`"
-  ([this current-domains assigned-domains]
+  ([^javax.security.auth.SubjectDomainCombiner this ^java.security.ProtectionDomain[] current-domains ^java.security.ProtectionDomain[] assigned-domains]
     (-> this (.combine current-domains assigned-domains))))
 

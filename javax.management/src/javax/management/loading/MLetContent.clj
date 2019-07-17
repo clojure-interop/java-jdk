@@ -15,14 +15,14 @@
   attributes - A map of the attributes of the MLET tag. The keys in this map are the attribute names in lowercase, for example codebase. The values are the associated attribute values. - `java.util.Map<java.lang.String,java.lang.String>`
   types - A list of the TYPE attributes that appeared in nested <PARAM> tags. - `java.util.List<java.lang.String>`
   values - A list of the VALUE attributes that appeared in nested <PARAM> tags. - `java.util.List<java.lang.String>`"
-  ([url attributes types values]
+  ([^java.net.URL url ^java.util.Map attributes ^java.util.List types ^java.util.List values]
     (new MLetContent url attributes types values)))
 
 (defn get-code-base
   "Gets the code base URL.
 
   returns: The code base URL. - `java.net.URL`"
-  ([this]
+  ([^javax.management.loading.MLetContent this]
     (-> this (.getCodeBase))))
 
 (defn get-jar-files
@@ -30,7 +30,7 @@
    attribute of the MLET tag.
 
   returns: A comma-separated list of .jar file names. - `java.lang.String`"
-  ([this]
+  ([^javax.management.loading.MLetContent this]
     (-> this (.getJarFiles))))
 
 (defn get-code
@@ -39,7 +39,7 @@
 
   returns: The value of the CODE
    attribute of the MLET tag. - `java.lang.String`"
-  ([this]
+  ([^javax.management.loading.MLetContent this]
     (-> this (.getCode))))
 
 (defn get-name
@@ -48,7 +48,7 @@
 
   returns: The value of the NAME
    attribute of the MLET tag. - `java.lang.String`"
-  ([this]
+  ([^javax.management.loading.MLetContent this]
     (-> this (.getName))))
 
 (defn get-version
@@ -57,7 +57,7 @@
 
   returns: The value of the VERSION
    attribute of the MLET tag. - `java.lang.String`"
-  ([this]
+  ([^javax.management.loading.MLetContent this]
     (-> this (.getVersion))))
 
 (defn get-parameter-types
@@ -66,14 +66,14 @@
    tag.
 
   returns: the list of types. - `java.util.List<java.lang.String>`"
-  ([this]
+  ([^javax.management.loading.MLetContent this]
     (-> this (.getParameterTypes))))
 
 (defn get-document-base
   "Gets the MLet text file's base URL.
 
   returns: The MLet text file's base URL. - `java.net.URL`"
-  ([this]
+  ([^javax.management.loading.MLetContent this]
     (-> this (.getDocumentBase))))
 
 (defn get-serialized-object
@@ -82,7 +82,7 @@
 
   returns: The value of the OBJECT
    attribute of the MLET tag. - `java.lang.String`"
-  ([this]
+  ([^javax.management.loading.MLetContent this]
     (-> this (.getSerializedObject))))
 
 (defn get-parameter-values
@@ -91,7 +91,7 @@
    tag.
 
   returns: the list of values. - `java.util.List<java.lang.String>`"
-  ([this]
+  ([^javax.management.loading.MLetContent this]
     (-> this (.getParameterValues))))
 
 (defn get-attributes
@@ -102,6 +102,6 @@
 
   returns: A map of the attributes of the MLET tag
    and their values. - `java.util.Map<java.lang.String,java.lang.String>`"
-  ([this]
+  ([^javax.management.loading.MLetContent this]
     (-> this (.getAttributes))))
 

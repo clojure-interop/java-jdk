@@ -488,6 +488,6 @@
   "Returns the string representation of this attribute.
 
   returns: the string representation of this attribute - `java.lang.String`"
-  ([this]
+  ([^javax.swing.text.html.HTML$Attribute this]
     (-> this (.toString))))
 

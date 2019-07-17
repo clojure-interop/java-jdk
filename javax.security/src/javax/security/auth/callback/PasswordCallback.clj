@@ -16,14 +16,14 @@
   echo-on - true if the password should be displayed as it is being typed. - `boolean`
 
   throws: java.lang.IllegalArgumentException - if prompt is null or if prompt has a length of 0."
-  ([prompt echo-on]
+  ([^java.lang.String prompt ^Boolean echo-on]
     (new PasswordCallback prompt echo-on)))
 
 (defn get-prompt
   "Get the prompt.
 
   returns: the prompt. - `java.lang.String`"
-  ([this]
+  ([^javax.security.auth.callback.PasswordCallback this]
     (-> this (.getPrompt))))
 
 (defn echo-on?
@@ -32,7 +32,7 @@
 
   returns: the whether the password
             should be displayed as it is being typed. - `boolean`"
-  ([this]
+  ([^javax.security.auth.callback.PasswordCallback this]
     (-> this (.isEchoOn))))
 
 (defn set-password
@@ -42,7 +42,7 @@
    before storing it.
 
   password - the retrieved password, which may be null. - `char[]`"
-  ([this password]
+  ([^javax.security.auth.callback.PasswordCallback this password]
     (-> this (.setPassword password))))
 
 (defn get-password
@@ -51,11 +51,11 @@
     This method returns a copy of the retrieved password.
 
   returns: the retrieved password, which may be null. - `char[]`"
-  ([this]
+  ([^javax.security.auth.callback.PasswordCallback this]
     (-> this (.getPassword))))
 
 (defn clear-password
   "Clear the retrieved password."
-  ([this]
+  ([^javax.security.auth.callback.PasswordCallback this]
     (-> this (.clearPassword))))
 

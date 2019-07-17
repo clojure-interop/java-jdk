@@ -35,7 +35,7 @@
   metadata - an IIOMetadata object, or null. - `javax.imageio.metadata.IIOMetadata`
 
   throws: java.lang.IllegalArgumentException - if image is null."
-  ([image thumbnails metadata]
+  ([^java.awt.image.RenderedImage image ^java.awt.image.BufferedImage> thumbnails ^javax.imageio.metadata.IIOMetadata metadata]
     (new IIOImage image thumbnails metadata)))
 
 (defn get-thumbnail
@@ -46,7 +46,7 @@
   returns: a thumbnail image, as a BufferedImage. - `java.awt.image.BufferedImage`
 
   throws: java.lang.IndexOutOfBoundsException - if the supplied index is negative or larger than the largest valid index."
-  ([this index]
+  ([^javax.imageio.IIOImage this ^Integer index]
     (-> this (.getThumbnail index))))
 
 (defn has-raster?
@@ -55,7 +55,7 @@
 
   returns: true if a Raster is
    available. - `boolean`"
-  ([this]
+  ([^javax.imageio.IIOImage this]
     (-> this (.hasRaster))))
 
 (defn get-thumbnails
@@ -65,7 +65,7 @@
 
   returns: the current List of
    BufferedImage thumbnails, or null. - `java.util.List<? extends java.awt.image.BufferedImage>`"
-  ([this]
+  ([^javax.imageio.IIOImage this]
     (-> this (.getThumbnails))))
 
 (defn get-rendered-image
@@ -73,7 +73,7 @@
    null if only a Raster is available.
 
   returns: a RenderedImage, or null. - `java.awt.image.RenderedImage`"
-  ([this]
+  ([^javax.imageio.IIOImage this]
     (-> this (.getRenderedImage))))
 
 (defn get-num-thumbnails
@@ -81,7 +81,7 @@
    IIOImage.
 
   returns: the number of thumbnails, as an int. - `int`"
-  ([this]
+  ([^javax.imageio.IIOImage this]
     (-> this (.getNumThumbnails))))
 
 (defn set-thumbnails
@@ -94,7 +94,7 @@
    objects.
 
   thumbnails - a List of BufferedImage thumbnails, or null. - `java.awt.image.BufferedImage>`"
-  ([this thumbnails]
+  ([^javax.imageio.IIOImage this ^java.awt.image.BufferedImage> thumbnails]
     (-> this (.setThumbnails thumbnails))))
 
 (defn set-rendered-image
@@ -105,7 +105,7 @@
   image - a RenderedImage. - `java.awt.image.RenderedImage`
 
   throws: java.lang.IllegalArgumentException - if image is null."
-  ([this image]
+  ([^javax.imageio.IIOImage this ^java.awt.image.RenderedImage image]
     (-> this (.setRenderedImage image))))
 
 (defn get-raster
@@ -114,7 +114,7 @@
    available.
 
   returns: a Raster, or null. - `java.awt.image.Raster`"
-  ([this]
+  ([^javax.imageio.IIOImage this]
     (-> this (.getRaster))))
 
 (defn get-metadata
@@ -122,7 +122,7 @@
    object, or null is none is set.
 
   returns: an IIOMetadata object, or null. - `javax.imageio.metadata.IIOMetadata`"
-  ([this]
+  ([^javax.imageio.IIOImage this]
     (-> this (.getMetadata))))
 
 (defn set-raster
@@ -133,7 +133,7 @@
   raster - a Raster. - `java.awt.image.Raster`
 
   throws: java.lang.IllegalArgumentException - if raster is null."
-  ([this raster]
+  ([^javax.imageio.IIOImage this ^java.awt.image.Raster raster]
     (-> this (.setRaster raster))))
 
 (defn set-metadata
@@ -141,6 +141,6 @@
    null.
 
   metadata - an IIOMetadata object, or null. - `javax.imageio.metadata.IIOMetadata`"
-  ([this metadata]
+  ([^javax.imageio.IIOImage this ^javax.imageio.metadata.IIOMetadata metadata]
     (-> this (.setMetadata metadata))))
 

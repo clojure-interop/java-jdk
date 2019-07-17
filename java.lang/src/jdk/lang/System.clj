@@ -75,7 +75,7 @@
   s - the security manager. - `java.lang.SecurityManager`
 
   throws: java.lang.SecurityException - if the security manager has already been set and its checkPermission method doesn't allow it to be replaced."
-  ([s]
+  ([^java.lang.SecurityManager s]
     (System/setSecurityManager s)))
 
 (defn *map-library-name
@@ -87,7 +87,7 @@
   returns: a platform-dependent native library name. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if libname is null"
-  ([libname]
+  ([^java.lang.String libname]
     (System/mapLibraryName libname)))
 
 (defn *arraycopy
@@ -176,7 +176,7 @@
   length - the number of array elements to be copied. - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if copying would cause access of data outside array bounds."
-  ([src src-pos dest dest-pos length]
+  ([^java.lang.Object src ^Integer src-pos ^java.lang.Object dest ^Integer dest-pos ^Integer length]
     (System/arraycopy src src-pos dest dest-pos length)))
 
 (defn *inherited-channel
@@ -223,7 +223,7 @@
   filename - the file to load. - `java.lang.String`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkLink method doesn't allow loading of the specified dynamic library"
-  ([filename]
+  ([^java.lang.String filename]
     (System/load filename)))
 
 (defn *run-finalizers-on-exit
@@ -237,7 +237,7 @@
   returns: `java.lang.   void`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkExit method doesn't allow the exit."
-  ([value]
+  ([^Boolean value]
     (System/runFinalizersOnExit value)))
 
 (defn *clear-property
@@ -255,7 +255,7 @@
                or null if there was no property with that key. - `java.lang.String`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPropertyAccess method doesn't allow access to the specified system property."
-  ([key]
+  ([^java.lang.String key]
     (System/clearProperty key)))
 
 (defn *current-time-millis
@@ -294,7 +294,7 @@
   in - the new standard input stream. - `java.io.InputStream`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPermission method doesn't allow reassigning of the standard input stream."
-  ([in]
+  ([^java.io.InputStream in]
     (System/setIn in)))
 
 (defn *console
@@ -345,7 +345,7 @@
            if the variable is not defined in the system environment - `java.lang.String`
 
   throws: java.lang.NullPointerException - if name is null"
-  ([name]
+  ([^java.lang.String name]
     (System/getenv name))
   ([]
     (System/getenv )))
@@ -508,7 +508,7 @@
   libname - the name of the library. - `java.lang.String`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkLink method doesn't allow loading of the specified dynamic library"
-  ([libname]
+  ([^java.lang.String libname]
     (System/loadLibrary libname)))
 
 (defn *set-err
@@ -521,7 +521,7 @@
   err - the new standard error output stream. - `java.io.PrintStream`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPermission method doesn't allow reassigning of the standard error output stream."
-  ([err]
+  ([^java.io.PrintStream err]
     (System/setErr err)))
 
 (defn *set-properties
@@ -540,7 +540,7 @@
   props - the new system properties. - `java.util.Properties`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPropertiesAccess method doesn't allow access to the system properties."
-  ([props]
+  ([^java.util.Properties props]
     (System/setProperties props)))
 
 (defn *identity-hash-code
@@ -553,7 +553,7 @@
   x - object for which the hashCode is to be calculated - `java.lang.Object`
 
   returns: the hashCode - `int`"
-  ([x]
+  ([^java.lang.Object x]
     (System/identityHashCode x)))
 
 (defn *get-property
@@ -574,9 +574,9 @@
                or the default value if there is no property with that key. - `java.lang.String`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPropertyAccess method doesn't allow access to the specified system property."
-  ([key def]
+  ([^java.lang.String key ^java.lang.String def]
     (System/getProperty key def))
-  ([key]
+  ([^java.lang.String key]
     (System/getProperty key)))
 
 (defn *line-separator
@@ -607,7 +607,7 @@
   status - exit status. - `int`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkExit method doesn't allow exit with the specified status."
-  ([status]
+  ([^Integer status]
     (System/exit status)))
 
 (defn *set-property
@@ -627,7 +627,7 @@
                or null if it did not have one. - `java.lang.String`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPermission method doesn't allow setting of the specified property."
-  ([key value]
+  ([^java.lang.String key ^java.lang.String value]
     (System/setProperty key value)))
 
 (defn *run-finalization
@@ -676,6 +676,6 @@
   out - the new standard output stream - `java.io.PrintStream`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPermission method doesn't allow reassigning of the standard output stream."
-  ([out]
+  ([^java.io.PrintStream out]
     (System/setOut out)))
 

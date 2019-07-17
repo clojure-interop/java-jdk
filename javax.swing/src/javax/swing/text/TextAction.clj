@@ -29,7 +29,7 @@
   Creates a new JTextAction object.
 
   name - the name of the action - `java.lang.String`"
-  ([name]
+  ([^java.lang.String name]
     (new TextAction name)))
 
 (defn *augment-list
@@ -44,6 +44,6 @@
   list-2 - the second list, may be empty but not null - `javax.swing.Action[]`
 
   returns: the augmented list - `javax.swing.Action[]`"
-  ([list-1 list-2]
+  ([^javax.swing.Action[] list-1 ^javax.swing.Action[] list-2]
     (TextAction/augmentList list-1 list-2)))
 

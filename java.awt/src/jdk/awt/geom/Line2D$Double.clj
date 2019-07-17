@@ -13,9 +13,9 @@
   y-1 - the Y coordinate of the start point - `double`
   x-2 - the X coordinate of the end point - `double`
   y-2 - the Y coordinate of the end point - `double`"
-  ([x-1 y-1 x-2 y-2]
+  ([^Double x-1 ^Double y-1 ^Double x-2 ^Double y-2]
     (new Line2D$Double x-1 y-1 x-2 y-2))
-  ([p-1 p-2]
+  ([^java.awt.geom.Point2D p-1 ^java.awt.geom.Point2D p-2]
     (new Line2D$Double p-1 p-2))
   ([]
     (new Line2D$Double )))
@@ -61,7 +61,7 @@
 
   returns: the X coordinate of the start point of this
            Line2D object. - `double`"
-  ([this]
+  ([^java.awt.geom.Line2D$Double this]
     (-> this (.getX1))))
 
 (defn get-y-1
@@ -69,14 +69,14 @@
 
   returns: the Y coordinate of the start point of this
            Line2D object. - `double`"
-  ([this]
+  ([^java.awt.geom.Line2D$Double this]
     (-> this (.getY1))))
 
 (defn get-p-1
   "Returns the start Point2D of this Line2D.
 
   returns: the start Point2D of this Line2D. - `java.awt.geom.Point2D`"
-  ([this]
+  ([^java.awt.geom.Line2D$Double this]
     (-> this (.getP1))))
 
 (defn get-x-2
@@ -84,7 +84,7 @@
 
   returns: the X coordinate of the end point of this
            Line2D object. - `double`"
-  ([this]
+  ([^java.awt.geom.Line2D$Double this]
     (-> this (.getX2))))
 
 (defn get-y-2
@@ -92,14 +92,14 @@
 
   returns: the Y coordinate of the end point of this
            Line2D object. - `double`"
-  ([this]
+  ([^java.awt.geom.Line2D$Double this]
     (-> this (.getY2))))
 
 (defn get-p-2
   "Returns the end Point2D of this Line2D.
 
   returns: the end Point2D of this Line2D. - `java.awt.geom.Point2D`"
-  ([this]
+  ([^java.awt.geom.Line2D$Double this]
     (-> this (.getP2))))
 
 (defn set-line
@@ -110,7 +110,7 @@
   y-1 - the Y coordinate of the start point - `double`
   x-2 - the X coordinate of the end point - `double`
   y-2 - the Y coordinate of the end point - `double`"
-  ([this x-1 y-1 x-2 y-2]
+  ([^java.awt.geom.Line2D$Double this ^Double x-1 ^Double y-1 ^Double x-2 ^Double y-2]
     (-> this (.setLine x-1 y-1 x-2 y-2))))
 
 (defn get-bounds-2-d
@@ -153,6 +153,6 @@
 
   returns: an instance of Rectangle2D that is a
                    high-precision bounding box of the Shape. - `java.awt.geom.Rectangle2D`"
-  ([this]
+  ([^java.awt.geom.Line2D$Double this]
     (-> this (.getBounds2D))))
 

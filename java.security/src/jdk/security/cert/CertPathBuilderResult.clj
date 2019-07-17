@@ -22,7 +22,7 @@
   "Returns the built certification path.
 
   returns: the certification path (never null) - `java.security.cert.CertPath`"
-  ([this]
+  ([^. this]
     (-> this (.getCertPath))))
 
 (defn clone
@@ -30,6 +30,6 @@
    copy will not affect the original and vice versa.
 
   returns: a copy of this CertPathBuilderResult - `java.lang.Object`"
-  ([this]
+  ([^. this]
     (-> this (.clone))))
 

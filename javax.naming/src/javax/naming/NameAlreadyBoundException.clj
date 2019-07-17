@@ -15,7 +15,7 @@
    explanation supplied. All other fields default to null.
 
   explanation - Possibly null additional detail about this exception. - `java.lang.String`"
-  ([explanation]
+  ([^java.lang.String explanation]
     (new NameAlreadyBoundException explanation))
   ([]
     (new NameAlreadyBoundException )))

@@ -18,6 +18,6 @@
   executor - the executor attempting to execute this task - `java.util.concurrent.ThreadPoolExecutor`
 
   throws: java.util.concurrent.RejectedExecutionException - if there is no remedy"
-  ([this r executor]
+  ([^. this ^java.lang.Runnable r ^java.util.concurrent.ThreadPoolExecutor executor]
     (-> this (.rejectedExecution r executor))))
 

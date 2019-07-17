@@ -20,7 +20,7 @@
 
   av - the unknown annotation value, may be null - `javax.lang.model.element.AnnotationValue`
   p - an additional parameter, may be null - `java.lang.Object`"
-  ([av p]
+  ([^javax.lang.model.element.AnnotationValue av ^java.lang.Object p]
     (new UnknownAnnotationValueException av p)))
 
 (defn get-unknown-annotation-value
@@ -29,13 +29,13 @@
    serialized and then read back in.
 
   returns: the unknown element, or null if unavailable - `javax.lang.model.element.AnnotationValue`"
-  ([this]
+  ([^javax.lang.model.element.UnknownAnnotationValueException this]
     (-> this (.getUnknownAnnotationValue))))
 
 (defn get-argument
   "Returns the additional argument.
 
   returns: the additional argument - `java.lang.Object`"
-  ([this]
+  ([^javax.lang.model.element.UnknownAnnotationValueException this]
     (-> this (.getArgument))))
 

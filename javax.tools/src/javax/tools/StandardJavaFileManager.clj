@@ -117,7 +117,7 @@
    canonical file or zip file entry; false otherwise - `boolean`
 
   throws: java.lang.IllegalArgumentException - if either of the arguments were created with another file manager implementation"
-  ([this a b]
+  ([^. this ^javax.tools.FileObject a ^javax.tools.FileObject b]
     (-> this (.isSameFile a b))))
 
 (defn get-java-file-objects-from-files
@@ -128,7 +128,7 @@
   returns: a list of file objects - `java.lang.Iterable<? extends javax.tools.JavaFileObject>`
 
   throws: java.lang.IllegalArgumentException - if the list of files includes a directory"
-  ([this files]
+  ([^. this ^java.io.File> files]
     (-> this (.getJavaFileObjectsFromFiles files))))
 
 (defn get-java-file-objects
@@ -144,7 +144,7 @@
   returns: a list of file objects - `java.lang.Iterable<? extends javax.tools.JavaFileObject>`
 
   throws: java.lang.IllegalArgumentException - if the array of files includes a directory"
-  ([this files]
+  ([^. this ^java.io.File files]
     (-> this (.getJavaFileObjects files))))
 
 (defn get-java-file-objects-from-strings
@@ -155,7 +155,7 @@
   returns: a list of file objects - `java.lang.Iterable<? extends javax.tools.JavaFileObject>`
 
   throws: java.lang.IllegalArgumentException - if the list of file names includes a directory"
-  ([this names]
+  ([^. this ^java.lang.Iterable names]
     (-> this (.getJavaFileObjectsFromStrings names))))
 
 (defn set-location
@@ -166,7 +166,7 @@
   path - a list of files, if null use the default path for this location - `java.io.File>`
 
   throws: java.lang.IllegalArgumentException - if location is an output location and path does not contain exactly one element"
-  ([this location path]
+  ([^. this ^javax.tools.JavaFileManager.Location location ^java.io.File> path]
     (-> this (.setLocation location path))))
 
 (defn get-location
@@ -176,6 +176,6 @@
 
   returns: a list of files or null if this location has no
    associated path - `java.lang.Iterable<? extends java.io.File>`"
-  ([this location]
+  ([^. this ^javax.tools.JavaFileManager.Location location]
     (-> this (.getLocation location))))
 

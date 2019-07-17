@@ -89,15 +89,15 @@
    1970, 00:00:00 GMT.
 
   date - the milliseconds since January 1, 1970, 00:00:00 GMT. - `long`"
-  ([date]
+  ([^Long date]
     (new Date date))
   ([]
     (new Date ))
-  ([year month date]
+  ([^Integer year ^Integer month ^Integer date]
     (new Date year month date))
-  ([year month date hrs min]
+  ([^Integer year ^Integer month ^Integer date ^Integer hrs ^Integer min]
     (new Date year month date hrs min))
-  ([year month date hrs min sec]
+  ([^Integer year ^Integer month ^Integer date ^Integer hrs ^Integer min ^Integer sec]
     (new Date year month date hrs min sec)))
 
 (defn *utc
@@ -116,7 +116,7 @@
 
   returns: the number of milliseconds since January 1, 1970, 00:00:00 GMT for
             the date and time specified by the arguments. - `java.lang.   long`"
-  ([year month date hrs min sec]
+  ([^Integer year ^Integer month ^Integer date ^Integer hrs ^Integer min ^Integer sec]
     (Date/UTC year month date hrs min sec)))
 
 (defn *parse
@@ -127,7 +127,7 @@
 
   returns: the number of milliseconds since January 1, 1970, 00:00:00 GMT
             represented by the string argument. - `java.lang.   long`"
-  ([s]
+  ([^java.lang.String s]
     (Date/parse s)))
 
 (defn *from
@@ -148,7 +148,7 @@
     the provided instant - `java.util.Date`
 
   throws: java.lang.NullPointerException - if instant is null."
-  ([instant]
+  ([^java.time.Instant instant]
     (Date/from instant)))
 
 (defn to-instant
@@ -159,7 +159,7 @@
 
   returns: an instant representing the same point on the time-line as
     this Date object - `java.time.Instant`"
-  ([this]
+  ([^java.util.Date this]
     (-> this (.toInstant))))
 
 (defn get-timezone-offset
@@ -168,7 +168,7 @@
    Calendar.get(Calendar.DST_OFFSET)) / (60 * 1000).
 
   returns: the time-zone offset, in minutes, for the current time zone. - `java.lang.  int`"
-  ([this]
+  ([^java.util.Date this]
     (-> this (.getTimezoneOffset))))
 
 (defn set-month
@@ -178,7 +178,7 @@
   month - the month value between 0-11. - `int`
 
   returns: `java.lang.  void`"
-  ([this month]
+  ([^java.util.Date this ^Integer month]
     (-> this (.setMonth month))))
 
 (defn set-seconds
@@ -188,7 +188,7 @@
   seconds - the seconds value. - `int`
 
   returns: `java.lang.  void`"
-  ([this seconds]
+  ([^java.util.Date this ^Integer seconds]
     (-> this (.setSeconds seconds))))
 
 (defn set-time
@@ -196,7 +196,7 @@
    time milliseconds after January 1, 1970 00:00:00 GMT.
 
   time - the number of milliseconds. - `long`"
-  ([this time]
+  ([^java.util.Date this ^Long time]
     (-> this (.setTime time))))
 
 (defn to-locale-string
@@ -205,7 +205,7 @@
 
   returns: a string representation of this date, using the locale
             conventions. - `java.lang.  java.lang.String`"
-  ([this]
+  ([^java.util.Date this]
     (-> this (.toLocaleString))))
 
 (defn set-date
@@ -215,7 +215,7 @@
   date - the day of the month value between 1-31. - `int`
 
   returns: `java.lang.  void`"
-  ([this date]
+  ([^java.util.Date this ^Integer date]
     (-> this (.setDate date))))
 
 (defn after
@@ -229,7 +229,7 @@
             false otherwise. - `boolean`
 
   throws: java.lang.NullPointerException - if when is null."
-  ([this when]
+  ([^java.util.Date this ^java.util.Date when]
     (-> this (.after when))))
 
 (defn to-gmt-string
@@ -239,7 +239,7 @@
 
   returns: a string representation of this date, using the Internet GMT
             conventions. - `java.lang.  java.lang.String`"
-  ([this]
+  ([^java.util.Date this]
     (-> this (.toGMTString))))
 
 (defn get-year
@@ -247,7 +247,7 @@
    replaced by Calendar.get(Calendar.YEAR) - 1900.
 
   returns: the year represented by this date, minus 1900. - `java.lang.  int`"
-  ([this]
+  ([^java.util.Date this]
     (-> this (.getYear))))
 
 (defn get-hours
@@ -255,7 +255,7 @@
    replaced by Calendar.get(Calendar.HOUR_OF_DAY).
 
   returns: the hour represented by this date. - `java.lang.  int`"
-  ([this]
+  ([^java.util.Date this]
     (-> this (.getHours))))
 
 (defn set-hours
@@ -265,7 +265,7 @@
   hours - the hour value. - `int`
 
   returns: `java.lang.  void`"
-  ([this hours]
+  ([^java.util.Date this ^Integer hours]
     (-> this (.setHours hours))))
 
 (defn to-string
@@ -295,7 +295,7 @@
    yyyy is the year, as four decimal digits.
 
   returns: a string representation of this date. - `java.lang.String`"
-  ([this]
+  ([^java.util.Date this]
     (-> this (.toString))))
 
 (defn get-date
@@ -303,7 +303,7 @@
    replaced by Calendar.get(Calendar.DAY_OF_MONTH).
 
   returns: the day of the month represented by this date. - `java.lang.  int`"
-  ([this]
+  ([^java.util.Date this]
     (-> this (.getDate))))
 
 (defn set-minutes
@@ -313,7 +313,7 @@
   minutes - the value of the minutes. - `int`
 
   returns: `java.lang.  void`"
-  ([this minutes]
+  ([^java.util.Date this ^Integer minutes]
     (-> this (.setMinutes minutes))))
 
 (defn get-day
@@ -321,7 +321,7 @@
    replaced by Calendar.get(Calendar.DAY_OF_WEEK).
 
   returns: the day of the week represented by this date. - `java.lang.  int`"
-  ([this]
+  ([^java.util.Date this]
     (-> this (.getDay))))
 
 (defn get-seconds
@@ -329,14 +329,14 @@
    replaced by Calendar.get(Calendar.SECOND).
 
   returns: the number of seconds past the minute represented by this date. - `java.lang.  int`"
-  ([this]
+  ([^java.util.Date this]
     (-> this (.getSeconds))))
 
 (defn clone
   "Return a copy of this object.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([this]
+  ([^java.util.Date this]
     (-> this (.clone))))
 
 (defn hash-code
@@ -349,7 +349,7 @@
    (int)(this.getTime()^(this.getTime() >>> 32))
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^java.util.Date this]
     (-> this (.hashCode))))
 
 (defn compare-to
@@ -363,7 +363,7 @@
         0 if this Date is after the Date argument. - `int`
 
   throws: java.lang.NullPointerException - if anotherDate is null."
-  ([this another-date]
+  ([^java.util.Date this ^java.util.Date another-date]
     (-> this (.compareTo another-date))))
 
 (defn get-month
@@ -371,7 +371,7 @@
    replaced by Calendar.get(Calendar.MONTH).
 
   returns: the month represented by this date. - `java.lang.  int`"
-  ([this]
+  ([^java.util.Date this]
     (-> this (.getMonth))))
 
 (defn set-year
@@ -381,7 +381,7 @@
   year - the year value. - `int`
 
   returns: `java.lang.  void`"
-  ([this year]
+  ([^java.util.Date this ^Integer year]
     (-> this (.setYear year))))
 
 (defn before
@@ -395,7 +395,7 @@
             false otherwise. - `boolean`
 
   throws: java.lang.NullPointerException - if when is null."
-  ([this when]
+  ([^java.util.Date this ^java.util.Date when]
     (-> this (.before when))))
 
 (defn get-time
@@ -404,7 +404,7 @@
 
   returns: the number of milliseconds since January 1, 1970, 00:00:00 GMT
             represented by this date. - `long`"
-  ([this]
+  ([^java.util.Date this]
     (-> this (.getTime))))
 
 (defn get-minutes
@@ -412,7 +412,7 @@
    replaced by Calendar.get(Calendar.MINUTE).
 
   returns: the number of minutes past the hour represented by this date. - `java.lang.  int`"
-  ([this]
+  ([^java.util.Date this]
     (-> this (.getMinutes))))
 
 (defn equals
@@ -429,6 +429,6 @@
 
   returns: true if the objects are the same;
             false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.util.Date this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

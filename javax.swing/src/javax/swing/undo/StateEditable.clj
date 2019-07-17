@@ -9,7 +9,7 @@
    state into state.
 
   state - `java.util.Hashtable<java.lang.Object,java.lang.Object>`"
-  ([this state]
+  ([^. this ^java.util.Hashtable state]
     (-> this (.storeState state))))
 
 (defn restore-state
@@ -17,6 +17,6 @@
    state out of state.
 
   state - `java.util.Hashtable<?,?>`"
-  ([this state]
+  ([^. this ^java.util.Hashtable state]
     (-> this (.restoreState state))))
 

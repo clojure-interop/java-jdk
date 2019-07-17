@@ -26,7 +26,7 @@
   extent - `int`
   min - `int`
   max - `int`"
-  ([value extent min max]
+  ([^Integer value ^Integer extent ^Integer min ^Integer max]
     (new DefaultBoundedRangeModel value extent min max))
   ([]
     (new DefaultBoundedRangeModel )))
@@ -36,7 +36,7 @@
    time any one of the Bounded Range model properties changes.
 
   l - the ChangeListener to add - `javax.swing.event.ChangeListener`"
-  ([this l]
+  ([^javax.swing.DefaultBoundedRangeModel this ^javax.swing.event.ChangeListener l]
     (-> this (.addChangeListener l))))
 
 (defn get-value-is-adjusting?
@@ -44,21 +44,21 @@
    as a result of actions being taken by the user.
 
   returns: the value of the valueIsAdjusting property - `boolean`"
-  ([this]
+  ([^javax.swing.DefaultBoundedRangeModel this]
     (-> this (.getValueIsAdjusting))))
 
 (defn get-minimum
   "Returns the model's minimum.
 
   returns: the model's minimum - `int`"
-  ([this]
+  ([^javax.swing.DefaultBoundedRangeModel this]
     (-> this (.getMinimum))))
 
 (defn get-extent
   "Returns the model's extent.
 
   returns: the model's extent - `int`"
-  ([this]
+  ([^javax.swing.DefaultBoundedRangeModel this]
     (-> this (.getExtent))))
 
 (defn set-extent
@@ -70,7 +70,7 @@
        minimum <= value <= value+extent <= maximum
 
   n - the model's new extent - `int`"
-  ([this n]
+  ([^javax.swing.DefaultBoundedRangeModel this ^Integer n]
     (-> this (.setExtent n))))
 
 (defn to-string
@@ -78,21 +78,21 @@
    BoundedRangeModel properties.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^javax.swing.DefaultBoundedRangeModel this]
     (-> this (.toString))))
 
 (defn get-value
   "Returns the model's current value.
 
   returns: the model's current value - `int`"
-  ([this]
+  ([^javax.swing.DefaultBoundedRangeModel this]
     (-> this (.getValue))))
 
 (defn remove-change-listener
   "Removes a ChangeListener.
 
   l - the ChangeListener to remove - `javax.swing.event.ChangeListener`"
-  ([this l]
+  ([^javax.swing.DefaultBoundedRangeModel this ^javax.swing.event.ChangeListener l]
     (-> this (.removeChangeListener l))))
 
 (defn get-change-listeners
@@ -102,7 +102,7 @@
   returns: all of this model's ChangeListeners
            or an empty
            array if no change listeners are currently registered - `javax.swing.event.ChangeListener[]`"
-  ([this]
+  ([^javax.swing.DefaultBoundedRangeModel this]
     (-> this (.getChangeListeners))))
 
 (defn set-maximum
@@ -113,7 +113,7 @@
        minimum <= value <= value+extent <= maximum
 
   n - the model's new maximum - `int`"
-  ([this n]
+  ([^javax.swing.DefaultBoundedRangeModel this ^Integer n]
     (-> this (.setMaximum n))))
 
 (defn set-range-properties
@@ -130,14 +130,14 @@
   new-min - an int giving the minimum value - `int`
   new-max - an int giving the maximum value - `int`
   adjusting - a boolean, true if a series of changes are in progress - `boolean`"
-  ([this new-value new-extent new-min new-max adjusting]
+  ([^javax.swing.DefaultBoundedRangeModel this ^Integer new-value ^Integer new-extent ^Integer new-min ^Integer new-max ^Boolean adjusting]
     (-> this (.setRangeProperties new-value new-extent new-min new-max adjusting))))
 
 (defn set-value-is-adjusting
   "Sets the valueIsAdjusting property.
 
   b - true if the upcoming changes to the value property are part of a series - `boolean`"
-  ([this b]
+  ([^javax.swing.DefaultBoundedRangeModel this ^Boolean b]
     (-> this (.setValueIsAdjusting b))))
 
 (defn set-value
@@ -149,7 +149,7 @@
        minimum <= value <= value+extent <= maximum
 
   n - the model's new value - `int`"
-  ([this n]
+  ([^javax.swing.DefaultBoundedRangeModel this ^Integer n]
     (-> this (.setValue n))))
 
 (defn get-listeners
@@ -182,7 +182,7 @@
             listeners have been added - `<T extends java.util.EventListener> T[]`
 
   throws: java.lang.ClassCastException - if listenerType doesn't specify a class or interface that implements java.util.EventListener"
-  ([this listener-type]
+  ([^javax.swing.DefaultBoundedRangeModel this ^java.lang.Class listener-type]
     (-> this (.getListeners listener-type))))
 
 (defn set-minimum
@@ -193,13 +193,13 @@
        minimum <= value <= value+extent <= maximum
 
   n - the model's new minimum - `int`"
-  ([this n]
+  ([^javax.swing.DefaultBoundedRangeModel this ^Integer n]
     (-> this (.setMinimum n))))
 
 (defn get-maximum
   "Returns the model's maximum.
 
   returns: the model's maximum - `int`"
-  ([this]
+  ([^javax.swing.DefaultBoundedRangeModel this]
     (-> this (.getMaximum))))
 

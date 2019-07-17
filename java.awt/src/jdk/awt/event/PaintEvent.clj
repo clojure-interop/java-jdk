@@ -27,7 +27,7 @@
   update-rect - The rectangle area which needs to be repainted - `java.awt.Rectangle`
 
   throws: java.lang.IllegalArgumentException - if source is null"
-  ([source id update-rect]
+  ([^java.awt.Component source ^Integer id ^java.awt.Rectangle update-rect]
     (new PaintEvent source id update-rect)))
 
 (def *-paint-first
@@ -67,7 +67,7 @@
    repainted in response to this event.
 
   returns: `java.awt.Rectangle`"
-  ([this]
+  ([^java.awt.event.PaintEvent this]
     (-> this (.getUpdateRect))))
 
 (defn set-update-rect
@@ -75,13 +75,13 @@
    repainted in response to this event.
 
   update-rect - the rectangle area which needs to be repainted - `java.awt.Rectangle`"
-  ([this update-rect]
+  ([^java.awt.event.PaintEvent this ^java.awt.Rectangle update-rect]
     (-> this (.setUpdateRect update-rect))))
 
 (defn param-string
   "Description copied from class: ComponentEvent
 
   returns: a string identifying the event and its attributes - `java.lang.String`"
-  ([this]
+  ([^java.awt.event.PaintEvent this]
     (-> this (.paramString))))
 

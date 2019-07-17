@@ -23,15 +23,15 @@
   locale - the locale for which to obtain a localized string - `java.util.Locale`
 
   returns: a localized String for the key. - `java.lang.String`"
-  ([this locale]
+  ([^javax.accessibility.AccessibleBundle this ^java.util.Locale locale]
     (-> this (.toDisplayString locale)))
-  ([this]
+  ([^javax.accessibility.AccessibleBundle this]
     (-> this (.toDisplayString))))
 
 (defn to-string
   "Gets localized string describing the key using the default locale.
 
   returns: a localized String describing the key using the default locale - `java.lang.String`"
-  ([this]
+  ([^javax.accessibility.AccessibleBundle this]
     (-> this (.toString))))
 

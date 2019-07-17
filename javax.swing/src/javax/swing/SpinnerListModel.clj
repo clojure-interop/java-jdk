@@ -31,7 +31,7 @@
   values - the sequence this model represents - `java.util.List<?>`
 
   throws: java.lang.IllegalArgumentException - if values is null or zero size"
-  ([values]
+  ([^java.util.List values]
     (new SpinnerListModel values))
   ([]
     (new SpinnerListModel )))
@@ -40,7 +40,7 @@
   "Returns the List that defines the sequence for this model.
 
   returns: the value of the list property - `java.util.List<?>`"
-  ([this]
+  ([^javax.swing.SpinnerListModel this]
     (-> this (.getList))))
 
 (defn set-list
@@ -54,14 +54,14 @@
   list - the sequence that this model represents - `java.util.List<?>`
 
   throws: java.lang.IllegalArgumentException - if list is null or zero length"
-  ([this list]
+  ([^javax.swing.SpinnerListModel this ^java.util.List list]
     (-> this (.setList list))))
 
 (defn get-value
   "Returns the current element of the sequence.
 
   returns: the value property - `java.lang.Object`"
-  ([this]
+  ([^javax.swing.SpinnerListModel this]
     (-> this (.getValue))))
 
 (defn set-value
@@ -80,7 +80,7 @@
   elt - the sequence element that will be model's current value - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if the specified value isn't allowed"
-  ([this elt]
+  ([^javax.swing.SpinnerListModel this ^java.lang.Object elt]
     (-> this (.setValue elt))))
 
 (defn get-next-value
@@ -89,7 +89,7 @@
 
   returns: the next legal value of the underlying sequence or
        null if value is already the last element - `java.lang.Object`"
-  ([this]
+  ([^javax.swing.SpinnerListModel this]
     (-> this (.getNextValue))))
 
 (defn get-previous-value
@@ -98,6 +98,6 @@
 
   returns: the previous element of the underlying sequence or
        null if value is already the first element - `java.lang.Object`"
-  ([this]
+  ([^javax.swing.SpinnerListModel this]
     (-> this (.getPreviousValue))))
 

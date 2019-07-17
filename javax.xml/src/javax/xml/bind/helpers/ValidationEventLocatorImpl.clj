@@ -21,7 +21,7 @@
   loc - the SAX Locator object that will be used to populate this event locator. - `org.xml.sax.Locator`
 
   throws: java.lang.IllegalArgumentException - if the Locator is null"
-  ([loc]
+  ([^org.xml.sax.Locator loc]
     (new ValidationEventLocatorImpl loc))
   ([]
     (new ValidationEventLocatorImpl )))
@@ -30,21 +30,21 @@
   "Set the lineNumber field on this event locator.
 
   line-number - the line number - `int`"
-  ([this line-number]
+  ([^javax.xml.bind.helpers.ValidationEventLocatorImpl this ^Integer line-number]
     (-> this (.setLineNumber line-number))))
 
 (defn set-column-number
   "Set the columnNumber field on this event locator.
 
   column-number - the column number - `int`"
-  ([this column-number]
+  ([^javax.xml.bind.helpers.ValidationEventLocatorImpl this ^Integer column-number]
     (-> this (.setColumnNumber column-number))))
 
 (defn set-object
   "Set the Object field on this event locator.  Null values are allowed.
 
   object - the java content object - `java.lang.Object`"
-  ([this object]
+  ([^javax.xml.bind.helpers.ValidationEventLocatorImpl this ^java.lang.Object object]
     (-> this (.setObject object))))
 
 (defn to-string
@@ -52,14 +52,14 @@
    helpful to debugging.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^javax.xml.bind.helpers.ValidationEventLocatorImpl this]
     (-> this (.toString))))
 
 (defn set-node
   "Set the Node field on this event locator.  Null values are allowed.
 
   node - the Node - `org.w3c.dom.Node`"
-  ([this node]
+  ([^javax.xml.bind.helpers.ValidationEventLocatorImpl this ^org.w3c.dom.Node node]
     (-> this (.setNode node))))
 
 (defn get-object
@@ -67,55 +67,55 @@
 
   returns: a reference to the object in the Java content tree or null if
            unavailable - `java.lang.Object`"
-  ([this]
+  ([^javax.xml.bind.helpers.ValidationEventLocatorImpl this]
     (-> this (.getObject))))
 
 (defn get-node
   "Description copied from interface: ValidationEventLocator
 
   returns: a reference to the DOM Node or null if unavailable - `org.w3c.dom.Node`"
-  ([this]
+  ([^javax.xml.bind.helpers.ValidationEventLocatorImpl this]
     (-> this (.getNode))))
 
 (defn get-column-number
   "Description copied from interface: ValidationEventLocator
 
   returns: the column number or -1 if unavailable - `int`"
-  ([this]
+  ([^javax.xml.bind.helpers.ValidationEventLocatorImpl this]
     (-> this (.getColumnNumber))))
 
 (defn get-offset
   "Description copied from interface: ValidationEventLocator
 
   returns: the byte offset into the input source or -1 if unavailable - `int`"
-  ([this]
+  ([^javax.xml.bind.helpers.ValidationEventLocatorImpl this]
     (-> this (.getOffset))))
 
 (defn get-url
   "Description copied from interface: ValidationEventLocator
 
   returns: the name of the XML source as a URL or null if unavailable - `java.net.URL`"
-  ([this]
+  ([^javax.xml.bind.helpers.ValidationEventLocatorImpl this]
     (-> this (.getURL))))
 
 (defn set-url
   "Set the URL field on this event locator.  Null values are allowed.
 
   url - the url - `java.net.URL`"
-  ([this url]
+  ([^javax.xml.bind.helpers.ValidationEventLocatorImpl this ^java.net.URL url]
     (-> this (.setURL url))))
 
 (defn set-offset
   "Set the offset field on this event locator.
 
   offset - the offset - `int`"
-  ([this offset]
+  ([^javax.xml.bind.helpers.ValidationEventLocatorImpl this ^Integer offset]
     (-> this (.setOffset offset))))
 
 (defn get-line-number
   "Description copied from interface: ValidationEventLocator
 
   returns: the line number or -1 if unavailable - `int`"
-  ([this]
+  ([^javax.xml.bind.helpers.ValidationEventLocatorImpl this]
     (-> this (.getLineNumber))))
 

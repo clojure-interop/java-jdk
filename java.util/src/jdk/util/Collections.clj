@@ -107,7 +107,7 @@
   value-type - the type of value that m is permitted to hold - `java.lang.Class<V>`
 
   returns: a dynamically typesafe view of the specified map - `<K,V> java.util.SortedMap<K,V>`"
-  ([m key-type value-type]
+  ([^java.util.SortedMap m ^java.lang.Class key-type ^java.lang.Class value-type]
     (Collections/checkedSortedMap m key-type value-type)))
 
 (defn *synchronized-sorted-set
@@ -147,7 +147,7 @@
   s - the sorted set to be `wrapped` in a synchronized sorted set. - `java.util.SortedSet<T>`
 
   returns: a synchronized view of the specified sorted set. - `<T> java.util.SortedSet<T>`"
-  ([s]
+  ([^java.util.SortedSet s]
     (Collections/synchronizedSortedSet s)))
 
 (defn *singleton
@@ -183,7 +183,7 @@
   type - the type of element that s is permitted to hold - `java.lang.Class<E>`
 
   returns: a dynamically typesafe view of the specified set - `<E> java.util.Set<E>`"
-  ([s type]
+  ([^java.util.Set s ^java.lang.Class type]
     (Collections/checkedSet s type)))
 
 (defn *min
@@ -220,7 +220,7 @@
 
   returns: an array list containing the elements returned
            by the specified enumeration. - `<T> java.util.ArrayList<T>`"
-  ([e]
+  ([^java.util.Enumeration e]
     (Collections/list e)))
 
 (defn *unmodifiable-navigable-map
@@ -257,7 +257,7 @@
            (oldVal==null ?  e==null : oldVal.equals(e)). - `<T> boolean`
 
   throws: java.lang.UnsupportedOperationException - if the specified list or its list-iterator does not support the set operation."
-  ([list old-val new-val]
+  ([^java.util.List list old-val new-val]
     (Collections/replaceAll list old-val new-val)))
 
 (defn *copy
@@ -294,7 +294,7 @@
   deque - the deque - `java.util.Deque<T>`
 
   returns: the queue - `<T> java.util.Queue<T>`"
-  ([deque]
+  ([^java.util.Deque deque]
     (Collections/asLifoQueue deque)))
 
 (defn *unmodifiable-collection
@@ -343,7 +343,7 @@
   type - the type of element that list is permitted to hold - `java.lang.Class<E>`
 
   returns: a dynamically typesafe view of the specified list - `<E> java.util.List<E>`"
-  ([list type]
+  ([^java.util.List list ^java.lang.Class type]
     (Collections/checkedList list type)))
 
 (defn *reverse
@@ -354,7 +354,7 @@
   list - the list whose elements are to be reversed. - `java.util.List<?>`
 
   throws: java.lang.UnsupportedOperationException - if the specified list or its list-iterator does not support the set operation."
-  ([list]
+  ([^java.util.List list]
     (Collections/reverse list)))
 
 (defn *synchronized-navigable-set
@@ -394,7 +394,7 @@
   s - the navigable set to be `wrapped` in a synchronized navigable set - `java.util.NavigableSet<T>`
 
   returns: a synchronized view of the specified navigable set - `<T> java.util.NavigableSet<T>`"
-  ([s]
+  ([^java.util.NavigableSet s]
     (Collections/synchronizedNavigableSet s)))
 
 (defn *synchronized-sorted-map
@@ -439,7 +439,7 @@
   m - the sorted map to be `wrapped` in a synchronized sorted map. - `java.util.SortedMap<K,V>`
 
   returns: a synchronized view of the specified sorted map. - `<K,V> java.util.SortedMap<K,V>`"
-  ([m]
+  ([^java.util.SortedMap m]
     (Collections/synchronizedSortedMap m)))
 
 (defn *max
@@ -483,7 +483,7 @@
   returns: the starting position of the first occurrence of the specified
            target list within the specified source list, or -1 if there
            is no such occurrence. - `int`"
-  ([source target]
+  ([^java.util.List source ^java.util.List target]
     (Collections/indexOfSubList source target)))
 
 (defn *unmodifiable-sorted-set
@@ -501,7 +501,7 @@
   s - the sorted set for which an unmodifiable view is to be returned. - `java.util.SortedSet<T>`
 
   returns: an unmodifiable view of the specified sorted set. - `<T> java.util.SortedSet<T>`"
-  ([s]
+  ([^java.util.SortedSet s]
     (Collections/unmodifiableSortedSet s)))
 
 (defn *empty-sorted-map
@@ -553,7 +553,7 @@
   s - the set to be `wrapped` in a synchronized set. - `java.util.Set<T>`
 
   returns: a synchronized view of the specified set. - `<T> java.util.Set<T>`"
-  ([s]
+  ([^java.util.Set s]
     (Collections/synchronizedSet s)))
 
 (defn *shuffle
@@ -578,9 +578,9 @@
   rnd - the source of randomness to use to shuffle the list. - `java.util.Random`
 
   throws: java.lang.UnsupportedOperationException - if the specified list or its list-iterator does not support the set operation."
-  ([list rnd]
+  ([^java.util.List list ^java.util.Random rnd]
     (Collections/shuffle list rnd))
-  ([list]
+  ([^java.util.List list]
     (Collections/shuffle list)))
 
 (defn *empty-navigable-set
@@ -614,9 +614,9 @@
   returns: `<T> void`
 
   throws: java.lang.ClassCastException - if the list contains elements that are not mutually comparable using the specified comparator."
-  ([list c]
+  ([^java.util.List list c]
     (Collections/sort list c))
-  ([list]
+  ([^java.util.List list]
     (Collections/sort list)))
 
 (defn *empty-map
@@ -690,7 +690,7 @@
   type - the type of element that s is permitted to hold - `java.lang.Class<E>`
 
   returns: a dynamically typesafe view of the specified navigable set - `<E> java.util.NavigableSet<E>`"
-  ([s type]
+  ([^java.util.NavigableSet s ^java.lang.Class type]
     (Collections/checkedNavigableSet s type)))
 
 (defn *synchronized-navigable-map
@@ -735,7 +735,7 @@
   m - the navigable map to be `wrapped` in a synchronized navigable map - `java.util.NavigableMap<K,V>`
 
   returns: a synchronized view of the specified navigable map. - `<K,V> java.util.NavigableMap<K,V>`"
-  ([m]
+  ([^java.util.NavigableMap m]
     (Collections/synchronizedNavigableMap m)))
 
 (defn *n-copies
@@ -752,7 +752,7 @@
            specified object. - `<T> java.util.List<T>`
 
   throws: java.lang.IllegalArgumentException - if n < 0"
-  ([n o]
+  ([^Integer n o]
     (Collections/nCopies n o)))
 
 (defn *unmodifiable-list
@@ -814,7 +814,7 @@
   value-type - the type of value that m is permitted to hold - `java.lang.Class<V>`
 
   returns: a dynamically typesafe view of the specified map - `<K,V> java.util.NavigableMap<K,V>`"
-  ([m key-type value-type]
+  ([^java.util.NavigableMap m ^java.lang.Class key-type ^java.lang.Class value-type]
     (Collections/checkedNavigableMap m key-type value-type)))
 
 (defn *empty-set
@@ -844,7 +844,7 @@
 
   returns: A comparator that imposes the reverse ordering of the
            specified comparator. - `<T> java.util.Comparator<T>`"
-  ([cmp]
+  ([^java.util.Comparator cmp]
     (Collections/reverseOrder cmp))
   ([]
     (Collections/reverseOrder )))
@@ -872,7 +872,7 @@
   c - the collection for which an enumeration is to be returned. - `java.util.Collection<T>`
 
   returns: an enumeration over the specified collection. - `<T> java.util.Enumeration<T>`"
-  ([c]
+  ([^java.util.Collection c]
     (Collections/enumeration c)))
 
 (defn *empty-list-iterator
@@ -944,7 +944,7 @@
   value-type - the type of value that m is permitted to hold - `java.lang.Class<V>`
 
   returns: a dynamically typesafe view of the specified map - `<K,V> java.util.Map<K,V>`"
-  ([m key-type value-type]
+  ([^java.util.Map m ^java.lang.Class key-type ^java.lang.Class value-type]
     (Collections/checkedMap m key-type value-type)))
 
 (defn *checked-sorted-set
@@ -971,7 +971,7 @@
   type - the type of element that s is permitted to hold - `java.lang.Class<E>`
 
   returns: a dynamically typesafe view of the specified sorted set - `<E> java.util.SortedSet<E>`"
-  ([s type]
+  ([^java.util.SortedSet s ^java.lang.Class type]
     (Collections/checkedSortedSet s type)))
 
 (defn *disjoint
@@ -1006,7 +1006,7 @@
    elements in common. - `boolean`
 
   throws: java.lang.NullPointerException - if one collection contains a null element and null is not an eligible element for the other collection. (optional)"
-  ([c-1 c-2]
+  ([^java.util.Collection c-1 ^java.util.Collection c-2]
     (Collections/disjoint c-1 c-2)))
 
 (defn *last-index-of-sub-list
@@ -1027,7 +1027,7 @@
   returns: the starting position of the last occurrence of the specified
            target list within the specified source list, or -1 if there
            is no such occurrence. - `int`"
-  ([source target]
+  ([^java.util.List source ^java.util.List target]
     (Collections/lastIndexOfSubList source target)))
 
 (defn *synchronized-list
@@ -1055,7 +1055,7 @@
   list - the list to be `wrapped` in a synchronized list. - `java.util.List<T>`
 
   returns: a synchronized view of the specified list. - `<T> java.util.List<T>`"
-  ([list]
+  ([^java.util.List list]
     (Collections/synchronizedList list)))
 
 (defn *empty-iterator
@@ -1114,7 +1114,7 @@
   returns: the set backed by the map - `<E> java.util.Set<E>`
 
   throws: java.lang.IllegalArgumentException - if map is not empty"
-  ([map]
+  ([^java.util.Map map]
     (Collections/newSetFromMap map)))
 
 (defn *synchronized-collection
@@ -1149,7 +1149,7 @@
   c - the collection to be `wrapped` in a synchronized collection. - `java.util.Collection<T>`
 
   returns: a synchronized view of the specified collection. - `<T> java.util.Collection<T>`"
-  ([c]
+  ([^java.util.Collection c]
     (Collections/synchronizedCollection c)))
 
 (defn *checked-collection
@@ -1210,7 +1210,7 @@
   type - the type of element that c is permitted to hold - `java.lang.Class<E>`
 
   returns: a dynamically typesafe view of the specified collection - `<E> java.util.Collection<E>`"
-  ([c type]
+  ([^java.util.Collection c ^java.lang.Class type]
     (Collections/checkedCollection c type)))
 
 (defn *unmodifiable-sorted-map
@@ -1246,7 +1246,7 @@
   s - the navigable set for which an unmodifiable view is to be returned - `java.util.NavigableSet<T>`
 
   returns: an unmodifiable view of the specified navigable set - `<T> java.util.NavigableSet<T>`"
-  ([s]
+  ([^java.util.NavigableSet s]
     (Collections/unmodifiableNavigableSet s)))
 
 (defn *empty-enumeration
@@ -1316,7 +1316,7 @@
   distance - the distance to rotate the list. There are no constraints on this value; it may be zero, negative, or greater than list.size(). - `int`
 
   throws: java.lang.UnsupportedOperationException - if the specified list or its list-iterator does not support the set operation."
-  ([list distance]
+  ([^java.util.List list ^Integer distance]
     (Collections/rotate list distance)))
 
 (defn *empty-list
@@ -1358,7 +1358,7 @@
   m - the map to be `wrapped` in a synchronized map. - `java.util.Map<K,V>`
 
   returns: a synchronized view of the specified map. - `<K,V> java.util.Map<K,V>`"
-  ([m]
+  ([^java.util.Map m]
     (Collections/synchronizedMap m)))
 
 (defn *empty-sorted-set
@@ -1397,7 +1397,7 @@
   type - the type of element that queue is permitted to hold - `java.lang.Class<E>`
 
   returns: a dynamically typesafe view of the specified queue - `<E> java.util.Queue<E>`"
-  ([queue type]
+  ([^java.util.Queue queue ^java.lang.Class type]
     (Collections/checkedQueue queue type)))
 
 (defn *unmodifiable-set
@@ -1426,7 +1426,7 @@
   j - the index of the other element to be swapped. - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if either i or j is out of range (i < 0 || i >= list.size() || j < 0 || j >= list.size())."
-  ([list i j]
+  ([^java.util.List list ^Integer i ^Integer j]
     (Collections/swap list i j)))
 
 (defn *frequency
@@ -1441,6 +1441,6 @@
   returns: the number of elements in c equal to o - `int`
 
   throws: java.lang.NullPointerException - if c is null"
-  ([c o]
+  ([^java.util.Collection c ^java.lang.Object o]
     (Collections/frequency c o)))
 

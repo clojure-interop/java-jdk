@@ -120,9 +120,9 @@
   returns: the Insets object - `java.awt.Insets`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([key l]
+  ([^java.lang.Object key ^java.util.Locale l]
     (UIManager/getInsets key l))
-  ([key]
+  ([^java.lang.Object key]
     (UIManager/getInsets key)))
 
 (defn *install-look-and-feel
@@ -132,9 +132,9 @@
 
   name - descriptive name of the look and feel - `java.lang.String`
   class-name - name of the class that implements the look and feel - `java.lang.String`"
-  ([name class-name]
+  ([^java.lang.String name ^java.lang.String class-name]
     (UIManager/installLookAndFeel name class-name))
-  ([info]
+  ([^javax.swing.UIManager.LookAndFeelInfo info]
     (UIManager/installLookAndFeel info)))
 
 (defn *put
@@ -148,7 +148,7 @@
   returns: the Object returned by UIDefaults.put(java.lang.Object, java.lang.Object) - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([key value]
+  ([^java.lang.Object key ^java.lang.Object value]
     (UIManager/put key value)))
 
 (defn *get-string
@@ -162,9 +162,9 @@
   returns: the String - `java.lang.String`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([key l]
+  ([^java.lang.Object key ^java.util.Locale l]
     (UIManager/getString key l))
-  ([key]
+  ([^java.lang.Object key]
     (UIManager/getString key)))
 
 (defn *get-defaults
@@ -186,9 +186,9 @@
   returns: the Border object - `javax.swing.border.Border`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([key l]
+  ([^java.lang.Object key ^java.util.Locale l]
     (UIManager/getBorder key l))
-  ([key]
+  ([^java.lang.Object key]
     (UIManager/getBorder key)))
 
 (defn *remove-auxiliary-look-and-feel
@@ -204,7 +204,7 @@
   laf - `javax.swing.LookAndFeel`
 
   returns: true if the LookAndFeel was removed from the list - `boolean`"
-  ([laf]
+  ([^javax.swing.LookAndFeel laf]
     (UIManager/removeAuxiliaryLookAndFeel laf)))
 
 (defn *get-icon
@@ -218,9 +218,9 @@
   returns: the Icon object - `javax.swing.Icon`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([key l]
+  ([^java.lang.Object key ^java.util.Locale l]
     (UIManager/getIcon key l))
-  ([key]
+  ([^java.lang.Object key]
     (UIManager/getIcon key)))
 
 (defn *get-auxiliary-look-and-feels
@@ -246,9 +246,9 @@
   returns: the Dimension object - `java.awt.Dimension`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([key l]
+  ([^java.lang.Object key ^java.util.Locale l]
     (UIManager/getDimension key l))
-  ([key]
+  ([^java.lang.Object key]
     (UIManager/getDimension key)))
 
 (defn *get-installed-look-and-feels
@@ -290,7 +290,7 @@
    for all properties.
 
   listener - the PropertyChangeListener to be removed - `java.beans.PropertyChangeListener`"
-  ([listener]
+  ([^java.beans.PropertyChangeListener listener]
     (UIManager/removePropertyChangeListener listener)))
 
 (defn *get-cross-platform-look-and-feel-class-name
@@ -321,7 +321,7 @@
   new-look-and-feel - LookAndFeel to install - `javax.swing.LookAndFeel`
 
   throws: javax.swing.UnsupportedLookAndFeelException - if newLookAndFeel is non-null and newLookAndFeel.isSupportedLookAndFeel() returns false"
-  ([new-look-and-feel]
+  ([^javax.swing.LookAndFeel new-look-and-feel]
     (UIManager/setLookAndFeel new-look-and-feel)))
 
 (defn *get-int
@@ -336,9 +336,9 @@
   returns: the int - `int`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([key l]
+  ([^java.lang.Object key ^java.util.Locale l]
     (UIManager/getInt key l))
-  ([key]
+  ([^java.lang.Object key]
     (UIManager/getInt key)))
 
 (defn *get-system-look-and-feel-class-name
@@ -366,7 +366,7 @@
   returns: the ComponentUI object for target - `javax.swing.plaf.ComponentUI`
 
   throws: java.lang.NullPointerException - if target is null"
-  ([target]
+  ([^javax.swing.JComponent target]
     (UIManager/getUI target)))
 
 (defn *get-property-change-listeners
@@ -389,7 +389,7 @@
    Note these are not the same as the installed look and feels.
 
   laf - the LookAndFeel object - `javax.swing.LookAndFeel`"
-  ([laf]
+  ([^javax.swing.LookAndFeel laf]
     (UIManager/addAuxiliaryLookAndFeel laf)))
 
 (defn *get-font
@@ -403,9 +403,9 @@
   returns: the Font object - `java.awt.Font`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([key l]
+  ([^java.lang.Object key ^java.util.Locale l]
     (UIManager/getFont key l))
-  ([key]
+  ([^java.lang.Object key]
     (UIManager/getFont key)))
 
 (defn *get-look-and-feel
@@ -427,9 +427,9 @@
   returns: the boolean value corresponding to the key - `boolean`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([key l]
+  ([^java.lang.Object key ^java.util.Locale l]
     (UIManager/getBoolean key l))
-  ([key]
+  ([^java.lang.Object key]
     (UIManager/getBoolean key)))
 
 (defn *get-color
@@ -443,9 +443,9 @@
   returns: the Color object - `java.awt.Color`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([key l]
+  ([^java.lang.Object key ^java.util.Locale l]
     (UIManager/getColor key l))
-  ([key]
+  ([^java.lang.Object key]
     (UIManager/getColor key)))
 
 (defn *add-property-change-listener
@@ -453,7 +453,7 @@
    The listener is registered for all properties.
 
   listener - the PropertyChangeListener to be added - `java.beans.PropertyChangeListener`"
-  ([listener]
+  ([^java.beans.PropertyChangeListener listener]
     (UIManager/addPropertyChangeListener listener)))
 
 (defn *get
@@ -466,9 +466,9 @@
   returns: the Object - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([key l]
+  ([^java.lang.Object key ^java.util.Locale l]
     (UIManager/get key l))
-  ([key]
+  ([^java.lang.Object key]
     (UIManager/get key)))
 
 (defn *set-installed-look-and-feels
@@ -480,6 +480,6 @@
   infos - set of LookAndFeelInfo objects specifying the available look and feels - `javax.swing.UIManager.LookAndFeelInfo[]`
 
   throws: java.lang.NullPointerException - if infos is null"
-  ([infos]
+  ([^javax.swing.UIManager.LookAndFeelInfo[] infos]
     (UIManager/setInstalledLookAndFeels infos)))
 

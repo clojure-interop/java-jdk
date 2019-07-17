@@ -67,21 +67,21 @@
    more information.
 
   manager - the LayoutManager - `java.awt.LayoutManager`"
-  ([this manager]
+  ([^javax.swing.JApplet this ^java.awt.LayoutManager manager]
     (-> this (.setLayout manager))))
 
 (defn set-layered-pane
   "Sets the layeredPane property.  This method is called by the constructor.
 
   layered-pane - the layeredPane object for this applet - `javax.swing.JLayeredPane`"
-  ([this layered-pane]
+  ([^javax.swing.JApplet this ^javax.swing.JLayeredPane layered-pane]
     (-> this (.setLayeredPane layered-pane))))
 
 (defn get-content-pane
   "Returns the contentPane object for this applet.
 
   returns: the value of the contentPane property. - `java.awt.Container`"
-  ([this]
+  ([^javax.swing.JApplet this]
     (-> this (.getContentPane))))
 
 (defn get-graphics
@@ -91,7 +91,7 @@
 
   returns: a graphics context for this component, or null
                if it has none - `java.awt.Graphics`"
-  ([this]
+  ([^javax.swing.JApplet this]
     (-> this (.getGraphics))))
 
 (defn update
@@ -99,14 +99,14 @@
    prevent an unnecessary call to clear the background.
 
   g - the specified Graphics window - `java.awt.Graphics`"
-  ([this g]
+  ([^javax.swing.JApplet this ^java.awt.Graphics g]
     (-> this (.update g))))
 
 (defn get-j-menu-bar
   "Returns the menubar set on this applet.
 
   returns: `javax.swing.JMenuBar`"
-  ([this]
+  ([^javax.swing.JApplet this]
     (-> this (.getJMenuBar))))
 
 (defn set-transfer-handler
@@ -131,7 +131,7 @@
    The Java Tutorial, for more information.
 
   new-handler - the new TransferHandler - `javax.swing.TransferHandler`"
-  ([this new-handler]
+  ([^javax.swing.JApplet this ^javax.swing.TransferHandler new-handler]
     (-> this (.setTransferHandler new-handler))))
 
 (defn remove
@@ -144,7 +144,7 @@
   comp - the component to be removed - `java.awt.Component`
 
   throws: java.lang.NullPointerException - if comp is null"
-  ([this comp]
+  ([^javax.swing.JApplet this ^java.awt.Component comp]
     (-> this (.remove comp))))
 
 (defn repaint
@@ -157,14 +157,14 @@
   y - the y coordinate - `int`
   width - the width - `int`
   height - the height - `int`"
-  ([this time x y width height]
+  ([^javax.swing.JApplet this ^Long time ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.repaint time x y width height))))
 
 (defn get-glass-pane
   "Returns the glassPane object for this applet.
 
   returns: the value of the glassPane property. - `java.awt.Component`"
-  ([this]
+  ([^javax.swing.JApplet this]
     (-> this (.getGlassPane))))
 
 (defn get-accessible-context
@@ -175,7 +175,7 @@
 
   returns: an AccessibleJApplet that serves as the
            AccessibleContext of this JApplet - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^javax.swing.JApplet this]
     (-> this (.getAccessibleContext))))
 
 (defn set-glass-pane
@@ -183,28 +183,28 @@
    This method is called by the constructor.
 
   glass-pane - the glassPane object for this applet - `java.awt.Component`"
-  ([this glass-pane]
+  ([^javax.swing.JApplet this ^java.awt.Component glass-pane]
     (-> this (.setGlassPane glass-pane))))
 
 (defn set-j-menu-bar
   "Sets the menubar for this applet.
 
   menu-bar - the menubar being placed in the applet - `javax.swing.JMenuBar`"
-  ([this menu-bar]
+  ([^javax.swing.JApplet this ^javax.swing.JMenuBar menu-bar]
     (-> this (.setJMenuBar menu-bar))))
 
 (defn get-transfer-handler
   "Gets the transferHandler property.
 
   returns: the value of the transferHandler property - `javax.swing.TransferHandler`"
-  ([this]
+  ([^javax.swing.JApplet this]
     (-> this (.getTransferHandler))))
 
 (defn get-root-pane
   "Returns the rootPane object for this applet.
 
   returns: this components single JRootPane child. - `javax.swing.JRootPane`"
-  ([this]
+  ([^javax.swing.JApplet this]
     (-> this (.getRootPane))))
 
 (defn set-content-pane
@@ -213,7 +213,7 @@
   content-pane - the contentPane object for this applet - `java.awt.Container`
 
   throws: java.awt.IllegalComponentStateException - (a runtime exception) if the content pane parameter is null"
-  ([this content-pane]
+  ([^javax.swing.JApplet this ^java.awt.Container content-pane]
     (-> this (.setContentPane content-pane))))
 
 (defn get-layered-pane
@@ -222,6 +222,6 @@
   returns: the value of the layeredPane property. - `javax.swing.JLayeredPane`
 
   throws: java.awt.IllegalComponentStateException - (a runtime exception) if the layered pane parameter is null"
-  ([this]
+  ([^javax.swing.JApplet this]
     (-> this (.getLayeredPane))))
 

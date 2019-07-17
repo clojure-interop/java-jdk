@@ -21,7 +21,7 @@
   "c - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([c]
+  ([^javax.swing.JComponent c]
     (MetalTextFieldUI/createUI c)))
 
 (defn property-change
@@ -31,6 +31,6 @@
    UI displays bound properties of JTextComponent subclasses.
 
   evt - the property change event - `java.beans.PropertyChangeEvent`"
-  ([this evt]
+  ([^javax.swing.plaf.metal.MetalTextFieldUI this ^java.beans.PropertyChangeEvent evt]
     (-> this (.propertyChange evt))))
 

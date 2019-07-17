@@ -58,7 +58,7 @@
   returns: the enum constant with the specified name - `javax.lang.model.element.NestingKind`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([name]
+  ([^java.lang.String name]
     (NestingKind/valueOf name)))
 
 (defn nested?
@@ -68,6 +68,6 @@
    is not static.
 
   returns: whether or not the constant is nested - `boolean`"
-  ([this]
+  ([^javax.lang.model.element.NestingKind this]
     (-> this (.isNested))))
 

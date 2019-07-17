@@ -113,7 +113,7 @@
    are heard and when the first late reflections are heard.
 
   returns: late reflection delay time for this reverb type, in microseconds - `int`"
-  ([this]
+  ([^javax.sound.sampled.ReverbType this]
     (-> this (.getLateReflectionDelay))))
 
 (defn to-string
@@ -123,14 +123,14 @@
    Java Sound.
 
   returns: reverberation type name and description - `java.lang.String`"
-  ([this]
+  ([^javax.sound.sampled.ReverbType this]
     (-> this (.toString))))
 
 (defn get-name
   "Obtains the name of this reverb type.
 
   returns: the name of this reverb type - `java.lang.String`"
-  ([this]
+  ([^javax.sound.sampled.ReverbType this]
     (-> this (.getName))))
 
 (defn get-early-reflection-intensity
@@ -139,7 +139,7 @@
    relative to the direct signal.
 
   returns: early reflection intensity for this reverb type, in dB - `float`"
-  ([this]
+  ([^javax.sound.sampled.ReverbType this]
     (-> this (.getEarlyReflectionIntensity))))
 
 (defn get-late-reflection-intensity
@@ -148,7 +148,7 @@
    relative to the direct signal.
 
   returns: late reflection intensity for this reverb type, in dB - `float`"
-  ([this]
+  ([^javax.sound.sampled.ReverbType this]
     (-> this (.getLateReflectionIntensity))))
 
 (defn get-early-reflection-delay
@@ -157,14 +157,14 @@
    heard and when the first early reflections are heard.
 
   returns: early reflection delay time for this reverb type, in microseconds - `int`"
-  ([this]
+  ([^javax.sound.sampled.ReverbType this]
     (-> this (.getEarlyReflectionDelay))))
 
 (defn hash-code
   "Finalizes the hashcode method.
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^javax.sound.sampled.ReverbType this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -175,7 +175,7 @@
 
   returns: true if this reverb type is the same as
    obj; false otherwise - `boolean`"
-  ([this obj]
+  ([^javax.sound.sampled.ReverbType this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn get-decay-time
@@ -184,6 +184,6 @@
    value is implementation-dependent.
 
   returns: the decay time of the late reflections, in microseconds - `int`"
-  ([this]
+  ([^javax.sound.sampled.ReverbType this]
     (-> this (.getDecayTime))))
 

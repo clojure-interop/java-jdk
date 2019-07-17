@@ -77,7 +77,7 @@
    are done when the iterator is obtained or during iteration.
 
   returns: An object to iterate over the root directories - `java.lang.Iterable<java.nio.file.Path>`"
-  ([this]
+  ([^java.nio.file.FileSystem this]
     (-> this (.getRootDirectories))))
 
 (defn get-path-matcher
@@ -200,7 +200,7 @@
   returns: A path matcher that may be used to match paths against the pattern - `java.nio.file.PathMatcher`
 
   throws: java.lang.IllegalArgumentException - If the parameter does not take the form: syntax:pattern"
-  ([this syntax-and-pattern]
+  ([^java.nio.file.FileSystem this ^java.lang.String syntax-and-pattern]
     (-> this (.getPathMatcher syntax-and-pattern))))
 
 (defn get-file-stores
@@ -232,7 +232,7 @@
        }
 
   returns: An object to iterate over the backing file stores - `java.lang.Iterable<java.nio.file.FileStore>`"
-  ([this]
+  ([^java.nio.file.FileSystem this]
     (-> this (.getFileStores))))
 
 (defn get-path
@@ -279,14 +279,14 @@
   returns: the resulting Path - `java.nio.file.Path`
 
   throws: java.nio.file.InvalidPathException - If the path string cannot be converted"
-  ([this first more]
+  ([^java.nio.file.FileSystem this ^java.lang.String first ^java.lang.String more]
     (-> this (.getPath first more))))
 
 (defn provider
   "Returns the provider that created this file system.
 
   returns: The provider that created this file system. - `java.nio.file.spi.FileSystemProvider`"
-  ([this]
+  ([^java.nio.file.FileSystem this]
     (-> this (.provider))))
 
 (defn close
@@ -303,7 +303,7 @@
    system cannot be closed.
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([this]
+  ([^java.nio.file.FileSystem this]
     (-> this (.close))))
 
 (defn get-separator
@@ -318,7 +318,7 @@
    separator as File.separator.
 
   returns: The name separator - `java.lang.String`"
-  ([this]
+  ([^java.nio.file.FileSystem this]
     (-> this (.getSeparator))))
 
 (defn get-user-principal-lookup-service
@@ -336,7 +336,7 @@
   returns: The UserPrincipalLookupService for this file system - `java.nio.file.attribute.UserPrincipalLookupService`
 
   throws: java.lang.UnsupportedOperationException - If this FileSystem does not does have a lookup service"
-  ([this]
+  ([^java.nio.file.FileSystem this]
     (-> this (.getUserPrincipalLookupService))))
 
 (defn open?
@@ -345,7 +345,7 @@
     File systems created by the default provider are always open.
 
   returns: true if, and only if, this file system is open - `boolean`"
-  ([this]
+  ([^java.nio.file.FileSystem this]
     (-> this (.isOpen))))
 
 (defn new-watch-service
@@ -357,7 +357,7 @@
   returns: a new watch service - `java.nio.file.WatchService`
 
   throws: java.lang.UnsupportedOperationException - If this FileSystem does not support watching file system objects for changes and events. This exception is not thrown by FileSystems created by the default provider."
-  ([this]
+  ([^java.nio.file.FileSystem this]
     (-> this (.newWatchService))))
 
 (defn read-only?
@@ -366,7 +366,7 @@
 
   returns: true if, and only if, this file system provides
             read-only access - `boolean`"
-  ([this]
+  ([^java.nio.file.FileSystem this]
     (-> this (.isReadOnly))))
 
 (defn supported-file-attribute-views
@@ -382,6 +382,6 @@
 
   returns: An unmodifiable set of the names of the supported file attribute
             views - `java.util.Set<java.lang.String>`"
-  ([this]
+  ([^java.nio.file.FileSystem this]
     (-> this (.supportedFileAttributeViews))))
 

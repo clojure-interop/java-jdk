@@ -31,6 +31,6 @@
   returns: A non-null new instance of an ObjectFactory. - `javax.naming.spi.ObjectFactory`
 
   throws: javax.naming.NamingException - If an object factory cannot be created."
-  ([this obj environment]
+  ([^. this ^java.lang.Object obj ^java.util.Hashtable environment]
     (-> this (.createObjectFactory obj environment))))
 

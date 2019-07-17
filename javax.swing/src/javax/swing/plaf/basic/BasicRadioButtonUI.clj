@@ -14,14 +14,14 @@
   b - a component - `javax.swing.JComponent`
 
   returns: an instance of BasicRadioButtonUI - `javax.swing.plaf.ComponentUI`"
-  ([b]
+  ([^javax.swing.JComponent b]
     (BasicRadioButtonUI/createUI b)))
 
 (defn get-default-icon
   "Returns the default icon.
 
   returns: the default icon - `javax.swing.Icon`"
-  ([this]
+  ([^javax.swing.plaf.basic.BasicRadioButtonUI this]
     (-> this (.getDefaultIcon))))
 
 (defn paint
@@ -29,7 +29,7 @@
 
   g - the Graphics context in which to paint - `java.awt.Graphics`
   c - the component being painted; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([this g c]
+  ([^javax.swing.plaf.basic.BasicRadioButtonUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.paint g c))))
 
 (defn get-preferred-size
@@ -38,6 +38,6 @@
   c - the component whose preferred size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: `java.awt.Dimension`"
-  ([this c]
+  ([^javax.swing.plaf.basic.BasicRadioButtonUI this ^javax.swing.JComponent c]
     (-> this (.getPreferredSize c))))
 

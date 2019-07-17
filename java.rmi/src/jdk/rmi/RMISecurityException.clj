@@ -13,8 +13,8 @@
   Deprecated. no replacement
 
   name - the detail message - `java.lang.String`"
-  ([name]
+  ([^java.lang.String name]
     (new RMISecurityException name))
-  ([name arg]
+  ([^java.lang.String name ^java.lang.String arg]
     (new RMISecurityException name arg)))
 

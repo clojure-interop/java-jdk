@@ -12,13 +12,13 @@
   "Invoked when the text entered through an input method has changed.
 
   event - `java.awt.event.InputMethodEvent`"
-  ([this event]
+  ([^. this ^java.awt.event.InputMethodEvent event]
     (-> this (.inputMethodTextChanged event))))
 
 (defn caret-position-changed
   "Invoked when the caret within composed text has changed.
 
   event - `java.awt.event.InputMethodEvent`"
-  ([this event]
+  ([^. this ^java.awt.event.InputMethodEvent event]
     (-> this (.caretPositionChanged event))))
 

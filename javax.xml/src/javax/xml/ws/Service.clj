@@ -39,11 +39,11 @@
   returns: `javax.xml.ws.Service`
 
   throws: javax.xml.ws.WebServiceException - If any error in creation of the specified service."
-  ([wsdl-document-location service-name features]
+  ([^java.net.URL wsdl-document-location ^javax.xml.namespace.QName service-name ^javax.xml.ws.WebServiceFeature features]
     (Service/create wsdl-document-location service-name features))
-  ([wsdl-document-location service-name]
+  ([^java.net.URL wsdl-document-location ^javax.xml.namespace.QName service-name]
     (Service/create wsdl-document-location service-name))
-  ([service-name]
+  ([^javax.xml.namespace.QName service-name]
     (Service/create service-name)))
 
 (defn create-dispatch
@@ -58,9 +58,9 @@
   returns: Dispatch instance. - `<T> javax.xml.ws.Dispatch<T>`
 
   throws: javax.xml.ws.WebServiceException - If any error in the creation of the Dispatch object or if a feature is enabled that is not compatible with this port or is unsupported."
-  ([this port-name type mode features]
+  ([^javax.xml.ws.Service this ^javax.xml.namespace.QName port-name ^java.lang.Class type ^javax.xml.ws.Service.Mode mode ^javax.xml.ws.WebServiceFeature features]
     (-> this (.createDispatch port-name type mode features)))
-  ([this port-name type mode]
+  ([^javax.xml.ws.Service this ^javax.xml.namespace.QName port-name ^java.lang.Class type ^javax.xml.ws.Service.Mode mode]
     (-> this (.createDispatch port-name type mode))))
 
 (defn set-handler-resolver
@@ -72,7 +72,7 @@
    returned by the resolver will be set on the instance.
 
   handler-resolver - The HandlerResolver to use for all subsequently created proxy/dispatch objects. - `javax.xml.ws.handler.HandlerResolver`"
-  ([this handler-resolver]
+  ([^javax.xml.ws.Service this ^javax.xml.ws.handler.HandlerResolver handler-resolver]
     (-> this (.setHandlerResolver handler-resolver))))
 
 (defn get-executor
@@ -83,7 +83,7 @@
 
   returns: The java.util.concurrent.Executor to be
            used to invoke a callback. - `java.util.concurrent.Executor`"
-  ([this]
+  ([^javax.xml.ws.Service this]
     (-> this (.getExecutor))))
 
 (defn set-executor
@@ -95,7 +95,7 @@
   executor - The java.util.concurrent.Executor to be used to invoke a callback. - `java.util.concurrent.Executor`
 
   throws: java.lang.SecurityException - If the instance does not support setting an executor for security reasons (e.g. the necessary permissions are missing)."
-  ([this executor]
+  ([^javax.xml.ws.Service this ^java.util.concurrent.Executor executor]
     (-> this (.setExecutor executor))))
 
 (defn get-handler-resolver
@@ -104,14 +104,14 @@
   returns: HandlerResolver The HandlerResolver being
            used by this Service instance, or null
            if there isn't one. - `javax.xml.ws.handler.HandlerResolver`"
-  ([this]
+  ([^javax.xml.ws.Service this]
     (-> this (.getHandlerResolver))))
 
 (defn get-service-name
   "Gets the name of this service.
 
   returns: Qualified name of this service - `javax.xml.namespace.QName`"
-  ([this]
+  ([^javax.xml.ws.Service this]
     (-> this (.getServiceName))))
 
 (defn get-port
@@ -130,11 +130,11 @@
                   interface. - `<T> T`
 
   throws: javax.xml.ws.WebServiceException - This exception is thrown in the following cases: If there is an error in creation of the proxy. If there is any missing WSDL metadata as required by this method. If an illegal serviceEndpointInterface or portName is specified. If a feature is enabled that is not compatible with this port or is unsupported."
-  ([this port-name service-endpoint-interface features]
+  ([^javax.xml.ws.Service this ^javax.xml.namespace.QName port-name ^java.lang.Class service-endpoint-interface ^javax.xml.ws.WebServiceFeature features]
     (-> this (.getPort port-name service-endpoint-interface features)))
-  ([this port-name service-endpoint-interface]
+  ([^javax.xml.ws.Service this ^javax.xml.namespace.QName port-name ^java.lang.Class service-endpoint-interface]
     (-> this (.getPort port-name service-endpoint-interface)))
-  ([this service-endpoint-interface]
+  ([^javax.xml.ws.Service this ^java.lang.Class service-endpoint-interface]
     (-> this (.getPort service-endpoint-interface))))
 
 (defn get-wsdl-document-location
@@ -142,7 +142,7 @@
 
   returns: URL for the location of the WSDL document for
            this service. - `java.net.URL`"
-  ([this]
+  ([^javax.xml.ws.Service this]
     (-> this (.getWSDLDocumentLocation))))
 
 (defn get-ports
@@ -154,7 +154,7 @@
            of type javax.xml.namespace.QName. - `java.util.Iterator<javax.xml.namespace.QName>`
 
   throws: javax.xml.ws.WebServiceException - If this Service class does not have access to the required WSDL metadata."
-  ([this]
+  ([^javax.xml.ws.Service this]
     (-> this (.getPorts))))
 
 (defn add-port
@@ -167,6 +167,6 @@
   endpoint-address - Address of the target service endpoint as a URI. - `java.lang.String`
 
   throws: javax.xml.ws.WebServiceException - If any error in the creation of the port."
-  ([this port-name binding-id endpoint-address]
+  ([^javax.xml.ws.Service this ^javax.xml.namespace.QName port-name ^java.lang.String binding-id ^java.lang.String endpoint-address]
     (-> this (.addPort port-name binding-id endpoint-address))))
 

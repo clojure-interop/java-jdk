@@ -20,6 +20,6 @@
   Constructs a MenuEvent object.
 
   source - the Object that originated the event (typically this) - `java.lang.Object`"
-  ([source]
+  ([^java.lang.Object source]
     (new MenuEvent source)))
 

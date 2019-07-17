@@ -29,7 +29,7 @@
    returned object.
 
   returns: A new MBeanServerDelegate. - `javax.management.MBeanServerDelegate`"
-  ([this]
+  ([^javax.management.MBeanServerBuilder this]
     (-> this (.newMBeanServerDelegate))))
 
 (defn new-m-bean-server
@@ -62,6 +62,6 @@
   delegate - A pointer to the MBeanServerDelegate associated with the new MBeanServer. The new MBeanServer must register this MBean in its MBean repository. - `javax.management.MBeanServerDelegate`
 
   returns: A new private implementation of an MBeanServer. - `javax.management.MBeanServer`"
-  ([this default-domain outer delegate]
+  ([^javax.management.MBeanServerBuilder this ^java.lang.String default-domain ^javax.management.MBeanServer outer ^javax.management.MBeanServerDelegate delegate]
     (-> this (.newMBeanServer default-domain outer delegate))))
 

@@ -13,14 +13,14 @@
 
   url - the location (URL). - `java.net.URL`
   certs - the certificate(s). It may be null. The contents of the array are copied to protect against subsequent modification. - `java.security.cert.Certificate[]`"
-  ([url certs]
+  ([^java.net.URL url ^java.security.cert.Certificate[] certs]
     (new CodeSource url certs)))
 
 (defn hash-code
   "Returns the hash code value for this object.
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^java.security.CodeSource this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -33,14 +33,14 @@
   obj - the object to test for equality with this object. - `java.lang.Object`
 
   returns: true if the objects are considered equal, false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.security.CodeSource this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn get-location
   "Returns the location associated with this CodeSource.
 
   returns: the location (URL). - `java.net.URL`"
-  ([this]
+  ([^java.security.CodeSource this]
     (-> this (.getLocation))))
 
 (defn get-certificates
@@ -56,7 +56,7 @@
    certificate authority last).
 
   returns: A copy of the certificates array, or null if there is none. - `java.security.cert.Certificate[]`"
-  ([this]
+  ([^java.security.CodeSource this]
     (-> this (.getCertificates))))
 
 (defn get-code-signers
@@ -69,7 +69,7 @@
    are examined - all other certificate types are ignored.
 
   returns: A copy of the code signer array, or null if there is none. - `java.security.CodeSigner[]`"
-  ([this]
+  ([^java.security.CodeSource this]
     (-> this (.getCodeSigners))))
 
 (defn implies
@@ -140,7 +140,7 @@
 
   returns: true if the specified codesource is implied by this codesource,
    false if not. - `boolean`"
-  ([this codesource]
+  ([^java.security.CodeSource this ^java.security.CodeSource codesource]
     (-> this (.implies codesource))))
 
 (defn to-string
@@ -148,6 +148,6 @@
    URL and certificates.
 
   returns: information about this CodeSource. - `java.lang.String`"
-  ([this]
+  ([^java.security.CodeSource this]
     (-> this (.toString))))
 

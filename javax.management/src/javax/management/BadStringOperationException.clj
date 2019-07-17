@@ -11,13 +11,13 @@
    message.
 
   message - the detail message. - `java.lang.String`"
-  ([message]
+  ([^java.lang.String message]
     (new BadStringOperationException message)))
 
 (defn to-string
   "Returns the string representing the object.
 
   returns: a string representation of this throwable. - `java.lang.String`"
-  ([this]
+  ([^javax.management.BadStringOperationException this]
     (-> this (.toString))))
 

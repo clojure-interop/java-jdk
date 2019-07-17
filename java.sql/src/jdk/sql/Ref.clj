@@ -30,7 +30,7 @@
   returns: the fully-qualified SQL name of the referenced SQL structured type - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.getBaseTypeName))))
 
 (defn get-object
@@ -44,9 +44,9 @@
             object refers - `java.lang.Object`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this map]
+  ([^. this ^java.util.Map> map]
     (-> this (.getObject map)))
-  ([this]
+  ([^. this]
     (-> this (.getObject))))
 
 (defn set-object
@@ -58,6 +58,6 @@
   value - an Object representing the SQL structured type instance that this Ref object will reference - `java.lang.Object`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this value]
+  ([^. this ^java.lang.Object value]
     (-> this (.setObject value))))
 

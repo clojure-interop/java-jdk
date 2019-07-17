@@ -52,8 +52,8 @@
   returns: a connection to the data source - `java.sql.Connection`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this username password]
+  ([^. this ^java.lang.String username ^java.lang.String password]
     (-> this (.getConnection username password)))
-  ([this]
+  ([^. this]
     (-> this (.getConnection))))
 

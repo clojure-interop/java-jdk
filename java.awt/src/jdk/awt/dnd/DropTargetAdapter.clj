@@ -50,7 +50,7 @@
    registered with this listener.
 
   dtde - the DropTargetDragEvent - `java.awt.dnd.DropTargetDragEvent`"
-  ([this dtde]
+  ([^java.awt.dnd.DropTargetAdapter this ^java.awt.dnd.DropTargetDragEvent dtde]
     (-> this (.dragEnter dtde))))
 
 (defn drag-over
@@ -59,7 +59,7 @@
    registered with this listener.
 
   dtde - the DropTargetDragEvent - `java.awt.dnd.DropTargetDragEvent`"
-  ([this dtde]
+  ([^java.awt.dnd.DropTargetAdapter this ^java.awt.dnd.DropTargetDragEvent dtde]
     (-> this (.dragOver dtde))))
 
 (defn drop-action-changed
@@ -67,7 +67,7 @@
    the current drop gesture.
 
   dtde - the DropTargetDragEvent - `java.awt.dnd.DropTargetDragEvent`"
-  ([this dtde]
+  ([^java.awt.dnd.DropTargetAdapter this ^java.awt.dnd.DropTargetDragEvent dtde]
     (-> this (.dropActionChanged dtde))))
 
 (defn drag-exit
@@ -76,6 +76,6 @@
    DropTarget registered with this listener.
 
   dte - the DropTargetEvent - `java.awt.dnd.DropTargetEvent`"
-  ([this dte]
+  ([^java.awt.dnd.DropTargetAdapter this ^java.awt.dnd.DropTargetEvent dte]
     (-> this (.dragExit dte))))
 

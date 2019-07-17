@@ -13,48 +13,48 @@
 
   returns: true if this object is the same as the
    obj argument; false otherwise - `boolean`"
-  ([this obj]
+  ([^javax.sound.midi.MidiDevice$Info this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Finalizes the hashcode method.
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^javax.sound.midi.MidiDevice$Info this]
     (-> this (.hashCode))))
 
 (defn get-name
   "Obtains the name of the device.
 
   returns: a string containing the device's name - `java.lang.String`"
-  ([this]
+  ([^javax.sound.midi.MidiDevice$Info this]
     (-> this (.getName))))
 
 (defn get-vendor
   "Obtains the name of the company who supplies the device.
 
   returns: device the vendor's name - `java.lang.String`"
-  ([this]
+  ([^javax.sound.midi.MidiDevice$Info this]
     (-> this (.getVendor))))
 
 (defn get-description
   "Obtains the description of the device.
 
   returns: a description of the device - `java.lang.String`"
-  ([this]
+  ([^javax.sound.midi.MidiDevice$Info this]
     (-> this (.getDescription))))
 
 (defn get-version
   "Obtains the version of the device.
 
   returns: textual version information for the device. - `java.lang.String`"
-  ([this]
+  ([^javax.sound.midi.MidiDevice$Info this]
     (-> this (.getVersion))))
 
 (defn to-string
   "Provides a string representation of the device information.
 
   returns: a description of the info object - `java.lang.String`"
-  ([this]
+  ([^javax.sound.midi.MidiDevice$Info this]
     (-> this (.toString))))
 

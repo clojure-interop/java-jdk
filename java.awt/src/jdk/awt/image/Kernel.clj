@@ -23,35 +23,35 @@
   data - kernel data in row major order - `float[]`
 
   throws: java.lang.IllegalArgumentException - if the length of data is less than the product of width and height"
-  ([width height data]
+  ([^Integer width ^Integer height data]
     (new Kernel width height data)))
 
 (defn get-x-origin
   "Returns the X origin of this Kernel.
 
   returns: the X origin. - `int`"
-  ([this]
+  ([^java.awt.image.Kernel this]
     (-> this (.getXOrigin))))
 
 (defn get-y-origin
   "Returns the Y origin of this Kernel.
 
   returns: the Y origin. - `int`"
-  ([this]
+  ([^java.awt.image.Kernel this]
     (-> this (.getYOrigin))))
 
 (defn get-width
   "Returns the width of this Kernel.
 
   returns: the width of this Kernel. - `int`"
-  ([this]
+  ([^java.awt.image.Kernel this]
     (-> this (.getWidth))))
 
 (defn get-height
   "Returns the height of this Kernel.
 
   returns: the height of this Kernel. - `int`"
-  ([this]
+  ([^java.awt.image.Kernel this]
     (-> this (.getHeight))))
 
 (defn get-kernel-data
@@ -67,13 +67,13 @@
            the kernel data in row major order - `float[]`
 
   throws: java.lang.IllegalArgumentException - if data is less than the size of this Kernel"
-  ([this data]
+  ([^java.awt.image.Kernel this data]
     (-> this (.getKernelData data))))
 
 (defn clone
   "Clones this object.
 
   returns: a clone of this object. - `java.lang.Object`"
-  ([this]
+  ([^java.awt.image.Kernel this]
     (-> this (.clone))))
 

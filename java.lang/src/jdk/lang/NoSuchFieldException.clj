@@ -9,7 +9,7 @@
   Constructor with a detail message.
 
   s - the detail message - `java.lang.String`"
-  ([s]
+  ([^java.lang.String s]
     (new NoSuchFieldException s))
   ([]
     (new NoSuchFieldException )))

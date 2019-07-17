@@ -17,6 +17,6 @@
    the DragGestureEvent has to be invoked.
 
   dge - the DragGestureEvent describing the gesture that has just occurred - `java.awt.dnd.DragGestureEvent`"
-  ([this dge]
+  ([^. this ^java.awt.dnd.DragGestureEvent dge]
     (-> this (.dragGestureRecognized dge))))
 

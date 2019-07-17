@@ -11,7 +11,7 @@
 
   target - `java.awt.Container`
   axis - `int`"
-  ([target axis]
+  ([^java.awt.Container target ^Integer axis]
     (new DefaultMenuLayout target axis)))
 
 (defn preferred-layout-size
@@ -20,6 +20,6 @@
   target - the container that needs to be laid out - `java.awt.Container`
 
   returns: the dimensions >= 0 && <= Integer.MAX_VALUE - `java.awt.Dimension`"
-  ([this target]
+  ([^javax.swing.plaf.basic.DefaultMenuLayout this ^java.awt.Container target]
     (-> this (.preferredLayoutSize target))))
 

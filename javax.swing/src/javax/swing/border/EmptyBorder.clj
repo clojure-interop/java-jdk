@@ -22,9 +22,9 @@
   left - the left inset of the border - `int`
   bottom - the bottom inset of the border - `int`
   right - the right inset of the border - `int`"
-  ([top left bottom right]
+  ([^Integer top ^Integer left ^Integer bottom ^Integer right]
     (new EmptyBorder top left bottom right))
-  ([border-insets]
+  ([^java.awt.Insets border-insets]
     (new EmptyBorder border-insets)))
 
 (defn paint-border
@@ -36,7 +36,7 @@
   y - the y position of the painted border - `int`
   width - the width of the painted border - `int`
   height - the height of the painted border - `int`"
-  ([this c g x y width height]
+  ([^javax.swing.border.EmptyBorder this ^java.awt.Component c ^java.awt.Graphics g ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.paintBorder c g x y width height))))
 
 (defn get-border-insets
@@ -46,9 +46,9 @@
   insets - the object to be reinitialized - `java.awt.Insets`
 
   returns: the insets object - `java.awt.Insets`"
-  ([this c insets]
+  ([^javax.swing.border.EmptyBorder this ^java.awt.Component c ^java.awt.Insets insets]
     (-> this (.getBorderInsets c insets)))
-  ([this]
+  ([^javax.swing.border.EmptyBorder this]
     (-> this (.getBorderInsets))))
 
 (defn border-opaque?
@@ -56,6 +56,6 @@
    Returns false by default.
 
   returns: false - `boolean`"
-  ([this]
+  ([^javax.swing.border.EmptyBorder this]
     (-> this (.isBorderOpaque))))
 

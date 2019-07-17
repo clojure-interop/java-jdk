@@ -147,7 +147,7 @@
   returns: the default sequencer - `javax.sound.midi.Sequencer`
 
   throws: javax.sound.midi.MidiUnavailableException - if the sequencer is not available due to resource restrictions, or no sequencer is installed in the system, or if connected is true, and there is no Receiver available by any installed MidiDevice"
-  ([connected]
+  ([^Boolean connected]
     (MidiSystem/getSequencer connected))
   ([]
     (MidiSystem/getSequencer )))
@@ -161,9 +161,9 @@
 
   returns: true if the file type is supported for this
    sequence, otherwise false - `boolean`"
-  ([file-type sequence]
+  ([^Integer file-type ^javax.sound.midi.Sequence sequence]
     (MidiSystem/isFileTypeSupported file-type sequence))
-  ([file-type]
+  ([^Integer file-type]
     (MidiSystem/isFileTypeSupported file-type)))
 
 (defn *get-transmitter
@@ -276,7 +276,7 @@
    format - `javax.sound.midi.MidiFileFormat`
 
   throws: javax.sound.midi.InvalidMidiDataException - if the stream does not point to valid MIDI file data recognized by the system"
-  ([stream]
+  ([^java.io.InputStream stream]
     (MidiSystem/getMidiFileFormat stream)))
 
 (defn *get-sequence
@@ -305,7 +305,7 @@
    contained in the input stream - `javax.sound.midi.Sequence`
 
   throws: javax.sound.midi.InvalidMidiDataException - if the stream does not point to valid MIDI file data recognized by the system"
-  ([stream]
+  ([^java.io.InputStream stream]
     (MidiSystem/getSequence stream)))
 
 (defn *get-midi-device
@@ -316,7 +316,7 @@
   returns: the requested device - `javax.sound.midi.MidiDevice`
 
   throws: javax.sound.midi.MidiUnavailableException - if the requested device is not available due to resource restrictions"
-  ([info]
+  ([^javax.sound.midi.MidiDevice.Info info]
     (MidiSystem/getMidiDevice info)))
 
 (defn *get-soundbank
@@ -335,7 +335,7 @@
   returns: the sound bank - `javax.sound.midi.Soundbank`
 
   throws: javax.sound.midi.InvalidMidiDataException - if the stream does not point to valid MIDI soundbank data recognized by the system"
-  ([stream]
+  ([^java.io.InputStream stream]
     (MidiSystem/getSoundbank stream)))
 
 (defn *get-midi-device-info
@@ -362,7 +362,7 @@
   returns: the number of bytes written to the output stream - `int`
 
   throws: java.io.IOException - if an I/O exception occurs"
-  ([in file-type out]
+  ([^javax.sound.midi.Sequence in ^Integer file-type ^java.io.OutputStream out]
     (MidiSystem/write in file-type out)))
 
 (defn *get-midi-file-types
@@ -373,7 +373,7 @@
 
   returns: the set of unique supported file types.  If no file types are supported,
    returns an array of length 0. - `int[]`"
-  ([sequence]
+  ([^javax.sound.midi.Sequence sequence]
     (MidiSystem/getMidiFileTypes sequence))
   ([]
     (MidiSystem/getMidiFileTypes )))

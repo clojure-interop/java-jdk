@@ -10,9 +10,9 @@
 
   returns: The derived gauge for the specified MBean if this MBean is in the
            set of observed MBeans, or null otherwise. - `java.lang.String`"
-  ([this object]
+  ([^. this ^javax.management.ObjectName object]
     (-> this (.getDerivedGauge object)))
-  ([this]
+  ([^. this]
     (-> this (.getDerivedGauge))))
 
 (defn get-derived-gauge-time-stamp
@@ -22,16 +22,16 @@
 
   returns: The derived gauge timestamp for the specified MBean if this MBean
            is in the set of observed MBeans, or null otherwise. - `long`"
-  ([this object]
+  ([^. this ^javax.management.ObjectName object]
     (-> this (.getDerivedGaugeTimeStamp object)))
-  ([this]
+  ([^. this]
     (-> this (.getDerivedGaugeTimeStamp))))
 
 (defn get-string-to-compare
   "Gets the string to compare with the observed attribute.
 
   returns: The string value. - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getStringToCompare))))
 
 (defn set-string-to-compare
@@ -40,7 +40,7 @@
   value - The string value. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - The specified string to compare is null."
-  ([this value]
+  ([^. this ^java.lang.String value]
     (-> this (.setStringToCompare value))))
 
 (defn get-notify-match?
@@ -48,14 +48,14 @@
 
   returns: true if the string monitor notifies when
    matching, false otherwise. - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.getNotifyMatch))))
 
 (defn set-notify-match
   "Sets the matching notification's on/off switch value.
 
   value - The matching notification's on/off switch value. - `boolean`"
-  ([this value]
+  ([^. this ^Boolean value]
     (-> this (.setNotifyMatch value))))
 
 (defn get-notify-differ?
@@ -63,13 +63,13 @@
 
   returns: true if the string monitor notifies when
    differing, false otherwise. - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.getNotifyDiffer))))
 
 (defn set-notify-differ
   "Sets the differing notification's on/off switch value.
 
   value - The differing notification's on/off switch value. - `boolean`"
-  ([this value]
+  ([^. this ^Boolean value]
     (-> this (.setNotifyDiffer value))))
 

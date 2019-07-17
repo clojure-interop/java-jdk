@@ -13,7 +13,7 @@
   attribute - Attribute value to add to the set. - `javax.print.attribute.DocAttribute`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if attribute is null."
-  ([attribute]
+  ([^javax.print.attribute.DocAttribute attribute]
     (new HashDocAttributeSet attribute))
   ([]
     (new HashDocAttributeSet )))

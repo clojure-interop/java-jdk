@@ -27,7 +27,7 @@
   web-service-context - a holder for MessageContext - `javax.xml.ws.WebServiceContext`
 
   throws: java.lang.IllegalAccessException - if the injection done by reflection API throws this exception"
-  ([this web-service-context]
+  ([^javax.xml.ws.spi.Invoker this ^javax.xml.ws.WebServiceContext web-service-context]
     (-> this (.inject web-service-context))))
 
 (defn invoke
@@ -42,6 +42,6 @@
   returns: return value of the method - `java.lang.Object`
 
   throws: java.lang.IllegalAccessException - if the invocation done by reflection API throws this exception"
-  ([this m args]
+  ([^javax.xml.ws.spi.Invoker this ^java.lang.reflect.Method m ^java.lang.Object args]
     (-> this (.invoke m args))))
 

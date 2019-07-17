@@ -28,7 +28,7 @@
   "Compute hash code for this VMID.
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^java.rmi.dgc.VMID this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -39,13 +39,13 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.rmi.dgc.VMID this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn to-string
   "Return string representation of this VMID.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^java.rmi.dgc.VMID this]
     (-> this (.toString))))
 

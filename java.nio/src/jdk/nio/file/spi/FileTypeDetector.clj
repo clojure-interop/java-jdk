@@ -34,6 +34,6 @@
             recognized - `java.lang.String`
 
   throws: java.io.IOException - An I/O error occurs"
-  ([this path]
+  ([^java.nio.file.spi.FileTypeDetector this ^java.nio.file.Path path]
     (-> this (.probeContentType path))))
 

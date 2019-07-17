@@ -43,7 +43,7 @@
    support the add or addAll operations.
 
   returns: a collection view of the values contained in this map - `java.util.Collection<AbstractMap.V>`"
-  ([this]
+  ([^java.util.AbstractMap this]
     (-> this (.values))))
 
 (defn put-all
@@ -57,7 +57,7 @@
   m - mappings to be stored in this map - `AbstractMap.V>`
 
   throws: java.lang.UnsupportedOperationException - if the putAll operation is not supported by this map"
-  ([this m]
+  ([^java.util.AbstractMap this ^AbstractMap.V> m]
     (-> this (.putAll m))))
 
 (defn put
@@ -78,14 +78,14 @@
            if the implementation supports null values.) - `AbstractMap.V`
 
   throws: java.lang.UnsupportedOperationException - if the put operation is not supported by this map"
-  ([this key value]
+  ([^java.util.AbstractMap this ^AbstractMap.K key ^AbstractMap.V value]
     (-> this (.put key value))))
 
 (defn entry-set
   "Description copied from interface: Map
 
   returns: a set view of the mappings contained in this map - `java.util.Set<java.util.Map.Entry<AbstractMap.K,AbstractMap.V>>`"
-  ([this]
+  ([^java.util.AbstractMap this]
     (-> this (.entrySet))))
 
 (defn to-string
@@ -99,7 +99,7 @@
    String.valueOf(Object).
 
   returns: a string representation of this map - `java.lang.String`"
-  ([this]
+  ([^java.util.AbstractMap this]
     (-> this (.toString))))
 
 (defn contains-value
@@ -116,7 +116,7 @@
            specified value - `boolean`
 
   throws: java.lang.ClassCastException - if the value is of an inappropriate type for this map (optional)"
-  ([this value]
+  ([^java.util.AbstractMap this ^java.lang.Object value]
     (-> this (.containsValue value))))
 
 (defn remove
@@ -143,7 +143,7 @@
            null if there was no mapping for key. - `AbstractMap.V`
 
   throws: java.lang.UnsupportedOperationException - if the remove operation is not supported by this map"
-  ([this key]
+  ([^java.util.AbstractMap this ^java.lang.Object key]
     (-> this (.remove key))))
 
 (defn key-set
@@ -160,7 +160,7 @@
    operations.
 
   returns: a set view of the keys contained in this map - `java.util.Set<AbstractMap.K>`"
-  ([this]
+  ([^java.util.AbstractMap this]
     (-> this (.keySet))))
 
 (defn hash-code
@@ -172,14 +172,14 @@
    Object.hashCode().
 
   returns: the hash code value for this map - `int`"
-  ([this]
+  ([^java.util.AbstractMap this]
     (-> this (.hashCode))))
 
 (defn empty?
   "Returns true if this map contains no key-value mappings.
 
   returns: true if this map contains no key-value mappings - `boolean`"
-  ([this]
+  ([^java.util.AbstractMap this]
     (-> this (.isEmpty))))
 
 (defn size
@@ -188,7 +188,7 @@
    Integer.MAX_VALUE.
 
   returns: the number of key-value mappings in this map - `int`"
-  ([this]
+  ([^java.util.AbstractMap this]
     (-> this (.size))))
 
 (defn clear
@@ -196,7 +196,7 @@
    The map will be empty after this call returns.
 
   throws: java.lang.UnsupportedOperationException - if the clear operation is not supported by this map"
-  ([this]
+  ([^java.util.AbstractMap this]
     (-> this (.clear))))
 
 (defn contains-key
@@ -212,7 +212,7 @@
            key - `boolean`
 
   throws: java.lang.ClassCastException - if the key is of an inappropriate type for this map (optional)"
-  ([this key]
+  ([^java.util.AbstractMap this ^java.lang.Object key]
     (-> this (.containsKey key))))
 
 (defn get
@@ -235,7 +235,7 @@
            null if this map contains no mapping for the key - `AbstractMap.V`
 
   throws: java.lang.ClassCastException - if the key is of an inappropriate type for this map (optional)"
-  ([this key]
+  ([^java.util.AbstractMap this ^java.lang.Object key]
     (-> this (.get key))))
 
 (defn equals
@@ -250,6 +250,6 @@
   o - object to be compared for equality with this map - `java.lang.Object`
 
   returns: true if the specified object is equal to this map - `boolean`"
-  ([this o]
+  ([^java.util.AbstractMap this ^java.lang.Object o]
     (-> this (.equals o))))
 

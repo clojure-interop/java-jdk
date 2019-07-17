@@ -13,8 +13,8 @@
 
   message - `java.lang.String`
   cause - `java.lang.Throwable`"
-  ([message cause]
+  ([^java.lang.String message ^java.lang.Throwable cause]
     (new DataBindingException message cause))
-  ([cause]
+  ([^java.lang.Throwable cause]
     (new DataBindingException cause)))
 

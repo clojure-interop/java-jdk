@@ -35,7 +35,7 @@
    operation.
 
   property - the name of the property to transfer; this can be null if there is no property associated with the transfer handler (a subclass that performs some other kind of transfer, for example) - `java.lang.String`"
-  ([property]
+  ([^java.lang.String property]
     (new TransferHandler property)))
 
 (def *-none
@@ -131,9 +131,9 @@
   transfer-flavors - the data formats available - `java.awt.datatransfer.DataFlavor[]`
 
   returns: true if the data can be inserted into the component, false otherwise - `boolean`"
-  ([this comp transfer-flavors]
+  ([^javax.swing.TransferHandler this ^javax.swing.JComponent comp ^java.awt.datatransfer.DataFlavor[] transfer-flavors]
     (-> this (.canImport comp transfer-flavors)))
-  ([this support]
+  ([^javax.swing.TransferHandler this ^javax.swing.TransferHandler.TransferSupport support]
     (-> this (.canImport support))))
 
 (defn set-drag-image-offset
@@ -141,7 +141,7 @@
    It can not be null.
 
   p - a Point object that corresponds to coordinates of an anchor offset of the image relative to the upper left corner of the image - `java.awt.Point`"
-  ([this p]
+  ([^javax.swing.TransferHandler this ^java.awt.Point p]
     (-> this (.setDragImageOffset p))))
 
 (defn export-as-drag
@@ -163,7 +163,7 @@
   comp - the component holding the data to be transferred; provided to enable sharing of TransferHandlers - `javax.swing.JComponent`
   e - the event that triggered the transfer - `java.awt.event.InputEvent`
   action - the transfer action initially requested; either COPY, MOVE or LINK; the DnD system may change the action used during the course of the drag operation - `int`"
-  ([this comp e action]
+  ([^javax.swing.TransferHandler this ^javax.swing.JComponent comp ^java.awt.event.InputEvent e ^Integer action]
     (-> this (.exportAsDrag comp e action))))
 
 (defn import-data
@@ -183,9 +183,9 @@
   t - the data to import - `java.awt.datatransfer.Transferable`
 
   returns: true if the data was inserted into the component, false otherwise - `boolean`"
-  ([this comp t]
+  ([^javax.swing.TransferHandler this ^javax.swing.JComponent comp ^java.awt.datatransfer.Transferable t]
     (-> this (.importData comp t)))
-  ([this support]
+  ([^javax.swing.TransferHandler this ^javax.swing.TransferHandler.TransferSupport support]
     (-> this (.importData support))))
 
 (defn get-source-actions
@@ -201,7 +201,7 @@
 
   returns: COPY if the transfer property can be found,
             otherwise returns NONE - `int`"
-  ([this c]
+  ([^javax.swing.TransferHandler this ^javax.swing.JComponent c]
     (-> this (.getSourceActions c))))
 
 (defn get-visual-representation
@@ -224,7 +224,7 @@
 
   returns: null, indicating
       there is no default visual representation - `javax.swing.Icon`"
-  ([this t]
+  ([^javax.swing.TransferHandler this ^java.awt.datatransfer.Transferable t]
     (-> this (.getVisualRepresentation t))))
 
 (defn get-drag-image
@@ -232,7 +232,7 @@
    the returned value is null.
 
   returns: the reference to the drag image - `java.awt.Image`"
-  ([this]
+  ([^javax.swing.TransferHandler this]
     (-> this (.getDragImage))))
 
 (defn export-to-clipboard
@@ -256,7 +256,7 @@
   action - the transfer action requested; this should be a value of either COPY or MOVE; the operation performed is the intersection of the transfer capabilities given by getSourceActions and the requested action; the intersection may result in an action of NONE if the requested action isn't supported - `int`
 
   throws: java.lang.IllegalStateException - if the clipboard is currently unavailable"
-  ([this comp clip action]
+  ([^javax.swing.TransferHandler this ^javax.swing.JComponent comp ^java.awt.datatransfer.Clipboard clip ^Integer action]
     (-> this (.exportToClipboard comp clip action))))
 
 (defn set-drag-image
@@ -265,7 +265,7 @@
    by reference because of some performance reasons.
 
   img - an image to drag - `java.awt.Image`"
-  ([this img]
+  ([^javax.swing.TransferHandler this ^java.awt.Image img]
     (-> this (.setDragImage img))))
 
 (defn get-drag-image-offset
@@ -275,6 +275,6 @@
    to coordinates of an anchor offset of the image
    relative to the upper left corner of the image.
    The point (0,0) returns by default. - `java.awt.Point`"
-  ([this]
+  ([^javax.swing.TransferHandler this]
     (-> this (.getDragImageOffset))))
 

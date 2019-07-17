@@ -15,7 +15,7 @@
   c - the JSpinner (not used) - `javax.swing.JComponent`
 
   returns: a new BasicSpinnerUI object - `javax.swing.plaf.ComponentUI`"
-  ([c]
+  ([^javax.swing.JComponent c]
     (BasicSpinnerUI/createUI c)))
 
 (defn install-ui
@@ -24,7 +24,7 @@
    createPreviousButton, and createEditor.
 
   c - the JSpinner - `javax.swing.JComponent`"
-  ([this c]
+  ([^javax.swing.plaf.basic.BasicSpinnerUI this ^javax.swing.JComponent c]
     (-> this (.installUI c))))
 
 (defn uninstall-ui
@@ -32,7 +32,7 @@
    and then removes all of the spinners children.
 
   c - the JSpinner (not used) - `javax.swing.JComponent`"
-  ([this c]
+  ([^javax.swing.plaf.basic.BasicSpinnerUI this ^javax.swing.JComponent c]
     (-> this (.uninstallUI c))))
 
 (defn get-baseline
@@ -46,7 +46,7 @@
                     baseline - `int`
 
   throws: java.lang.NullPointerException - if c is null"
-  ([this c width height]
+  ([^javax.swing.plaf.basic.BasicSpinnerUI this ^javax.swing.JComponent c ^Integer width ^Integer height]
     (-> this (.getBaseline c width height))))
 
 (defn get-baseline-resize-behavior
@@ -59,6 +59,6 @@
            size changes - `java.awt.Component.BaselineResizeBehavior`
 
   throws: java.lang.NullPointerException - if c is null"
-  ([this c]
+  ([^javax.swing.plaf.basic.BasicSpinnerUI this ^javax.swing.JComponent c]
     (-> this (.getBaselineResizeBehavior c))))
 

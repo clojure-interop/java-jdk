@@ -13,6 +13,6 @@
    PROCESSING to PROCESSING_STOPPED.
 
   pjae - the event. - `javax.print.event.PrintJobAttributeEvent`"
-  ([this pjae]
+  ([^. this ^javax.print.event.PrintJobAttributeEvent pjae]
     (-> this (.attributeUpdate pjae))))
 

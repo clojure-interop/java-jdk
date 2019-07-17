@@ -28,7 +28,7 @@
    All the other fields are initialized to null.
 
   explanation - A possibly null string containing additional detail about this exception. - `java.lang.String`"
-  ([explanation]
+  ([^java.lang.String explanation]
     (new LinkException explanation))
   ([]
     (new LinkException )))
@@ -39,7 +39,7 @@
   returns: The part of the link name that has not been resolved.
             It is a composite name. It can be null, which means
             the link remaining name field has not been set. - `javax.naming.Name`"
-  ([this]
+  ([^javax.naming.LinkException this]
     (-> this (.getLinkRemainingName))))
 
 (defn get-link-resolved-name
@@ -49,7 +49,7 @@
   returns: The part of the link name that was resolved successfully.
             It is a composite name. It can be null, which means
             the link resolved name field has not been set. - `javax.naming.Name`"
-  ([this]
+  ([^javax.naming.LinkException this]
     (-> this (.getLinkResolvedName))))
 
 (defn set-link-explanation
@@ -57,7 +57,7 @@
    when resolving a link.
 
   msg - The possibly null detail string explaining more about the problem with resolving a link. If null, it means no detail will be recorded. - `java.lang.String`"
-  ([this msg]
+  ([^javax.naming.LinkException this ^java.lang.String msg]
     (-> this (.setLinkExplanation msg))))
 
 (defn set-link-resolved-name
@@ -74,7 +74,7 @@
    affect the copy in this NamingException and vice versa.
 
   name - The name to set resolved link name to. This can be null. If null, it sets the link resolved name field to null. - `javax.naming.Name`"
-  ([this name]
+  ([^javax.naming.LinkException this ^javax.naming.Name name]
     (-> this (.setLinkResolvedName name))))
 
 (defn to-string
@@ -90,9 +90,9 @@
   detail - If true, add information about the link resolved object. - `boolean`
 
   returns: The non-null string representation of this link exception. - `java.lang.String`"
-  ([this detail]
+  ([^javax.naming.LinkException this ^Boolean detail]
     (-> this (.toString detail)))
-  ([this]
+  ([^javax.naming.LinkException this]
     (-> this (.toString))))
 
 (defn get-link-explanation
@@ -103,7 +103,7 @@
    with resolving a link.
            If null, it means there is no
            link detail message for this exception. - `java.lang.String`"
-  ([this]
+  ([^javax.naming.LinkException this]
     (-> this (.getLinkExplanation))))
 
 (defn set-link-remaining-name
@@ -120,7 +120,7 @@
    affect the copy in this NamingException and vice versa.
 
   name - The name to set remaining link name to. This can be null. If null, it sets the remaining name field to null. - `javax.naming.Name`"
-  ([this name]
+  ([^javax.naming.LinkException this ^javax.naming.Name name]
     (-> this (.setLinkRemainingName name))))
 
 (defn set-link-resolved-obj
@@ -128,7 +128,7 @@
    This indicates the last successfully resolved object of link name.
 
   obj - The object to set link resolved object to. This can be null. If null, the link resolved object field is set to null. - `java.lang.Object`"
-  ([this obj]
+  ([^javax.naming.LinkException this ^java.lang.Object obj]
     (-> this (.setLinkResolvedObj obj))))
 
 (defn get-link-resolved-obj
@@ -137,6 +137,6 @@
 
   returns: The possibly null object that was resolved so far.
    If null, it means the link resolved object field has not been set. - `java.lang.Object`"
-  ([this]
+  ([^javax.naming.LinkException this]
     (-> this (.getLinkResolvedObj))))
 

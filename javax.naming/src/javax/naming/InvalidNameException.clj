@@ -17,7 +17,7 @@
    All other fields are initialized to null.
 
   explanation - A possibly null message explaining the problem. - `java.lang.String`"
-  ([explanation]
+  ([^java.lang.String explanation]
     (new InvalidNameException explanation))
   ([]
     (new InvalidNameException )))

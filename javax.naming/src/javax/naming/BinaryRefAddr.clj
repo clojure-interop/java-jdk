@@ -32,9 +32,9 @@
   src - The non-null contents of the address as a byte array. The contents of src is copied into the new BinaryRefAddr. - `byte[]`
   offset - The starting index in src to get the bytes. 0 <= offset <= src.length. - `int`
   count - The number of bytes to extract from src. 0 <= count <= src.length-offset. - `int`"
-  ([addr-type src offset count]
+  ([^java.lang.String addr-type src ^Integer offset ^Integer count]
     (new BinaryRefAddr addr-type src offset count))
-  ([addr-type src]
+  ([^java.lang.String addr-type src]
     (new BinaryRefAddr addr-type src)))
 
 (defn get-content
@@ -45,7 +45,7 @@
    and to lock the buffer if they need to change it.
 
   returns: The non-null buffer containing this address's contents. - `java.lang.Object`"
-  ([this]
+  ([^javax.naming.BinaryRefAddr this]
     (-> this (.getContent))))
 
 (defn equals
@@ -56,7 +56,7 @@
   obj - The possibly null object to check. - `java.lang.Object`
 
   returns: true if the object is equal; false otherwise. - `boolean`"
-  ([this obj]
+  ([^javax.naming.BinaryRefAddr this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -67,7 +67,7 @@
    the same hash code.
 
   returns: The hash code of this address as an int. - `int`"
-  ([this]
+  ([^javax.naming.BinaryRefAddr this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -79,6 +79,6 @@
    meant to be interpreted programmatically.
 
   returns: The non-null string representation of this address. - `java.lang.String`"
-  ([this]
+  ([^javax.naming.BinaryRefAddr this]
     (-> this (.toString))))
 

@@ -15,9 +15,9 @@
   pipe-size - the size of the pipe's buffer. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([src pipe-size]
+  ([^java.io.PipedWriter src ^Integer pipe-size]
     (new PipedReader src pipe-size))
-  ([src]
+  ([^java.io.PipedWriter src]
     (new PipedReader src))
   ([]
     (new PipedReader )))
@@ -49,7 +49,7 @@
   src - The piped writer to connect to. - `java.io.PipedWriter`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this src]
+  ([^java.io.PipedReader this ^java.io.PipedWriter src]
     (-> this (.connect src))))
 
 (defn read
@@ -68,9 +68,9 @@
                the stream has been reached. - `int`
 
   throws: java.io.IOException - if the pipe is broken, unconnected, closed, or an I/O error occurs."
-  ([this cbuf off len]
+  ([^java.io.PipedReader this cbuf ^Integer off ^Integer len]
     (-> this (.read cbuf off len)))
-  ([this]
+  ([^java.io.PipedReader this]
     (-> this (.read))))
 
 (defn ready
@@ -82,7 +82,7 @@
    next read will block. - `boolean`
 
   throws: java.io.IOException - if the pipe is broken, unconnected, or closed."
-  ([this]
+  ([^java.io.PipedReader this]
     (-> this (.ready))))
 
 (defn close
@@ -90,6 +90,6 @@
    associated with the stream.
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this]
+  ([^java.io.PipedReader this]
     (-> this (.close))))
 

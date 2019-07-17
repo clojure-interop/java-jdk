@@ -10,7 +10,7 @@
   Create a StreamCorruptedException and list a reason why thrown.
 
   reason - String describing the reason for the exception. - `java.lang.String`"
-  ([reason]
+  ([^java.lang.String reason]
     (new StreamCorruptedException reason))
   ([]
     (new StreamCorruptedException )))

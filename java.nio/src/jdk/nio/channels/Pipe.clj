@@ -30,13 +30,13 @@
   "Returns this pipe's source channel.
 
   returns: This pipe's source channel - `java.nio.channels.Pipe.SourceChannel`"
-  ([this]
+  ([^java.nio.channels.Pipe this]
     (-> this (.source))))
 
 (defn sink
   "Returns this pipe's sink channel.
 
   returns: This pipe's sink channel - `java.nio.channels.Pipe.SinkChannel`"
-  ([this]
+  ([^java.nio.channels.Pipe this]
     (-> this (.sink))))
 

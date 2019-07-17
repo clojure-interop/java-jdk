@@ -18,6 +18,6 @@
   ignore-char-set - `boolean`
 
   throws: java.io.IOException"
-  ([this r cb ignore-char-set]
+  ([^javax.swing.text.html.parser.ParserDelegator this ^java.io.Reader r ^javax.swing.text.html.HTMLEditorKit.ParserCallback cb ^Boolean ignore-char-set]
     (-> this (.parse r cb ignore-char-set))))
 

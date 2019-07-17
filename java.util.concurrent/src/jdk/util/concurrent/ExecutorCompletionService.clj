@@ -82,9 +82,9 @@
   completion-queue - the queue to use as the completion queue normally one dedicated for use by this service. This queue is treated as unbounded -- failed attempted Queue.add operations for completed tasks cause them not to be retrievable. - `java.util.concurrent.BlockingQueue<java.util.concurrent.Future<ExecutorCompletionService.V>>`
 
   throws: java.lang.NullPointerException - if executor or completionQueue are null"
-  ([executor completion-queue]
+  ([^java.util.concurrent.Executor executor ^java.util.concurrent.BlockingQueue> completion-queue]
     (new ExecutorCompletionService executor completion-queue))
-  ([executor]
+  ([^java.util.concurrent.Executor executor]
     (new ExecutorCompletionService executor)))
 
 (defn submit
@@ -96,9 +96,9 @@
   returns: a Future representing pending completion of the task,
            and whose get() method will return the given
            result value upon completion - `java.util.concurrent.Future<ExecutorCompletionService.V>`"
-  ([this task result]
+  ([^java.util.concurrent.ExecutorCompletionService this ^java.lang.Runnable task ^ExecutorCompletionService.V result]
     (-> this (.submit task result)))
-  ([this task]
+  ([^java.util.concurrent.ExecutorCompletionService this ^java.util.concurrent.Callable task]
     (-> this (.submit task))))
 
 (defn take
@@ -107,7 +107,7 @@
   returns: the Future representing the next completed task - `java.util.concurrent.Future<ExecutorCompletionService.V>`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([this]
+  ([^java.util.concurrent.ExecutorCompletionService this]
     (-> this (.take))))
 
 (defn poll
@@ -121,8 +121,8 @@
            before one is present - `java.util.concurrent.Future<ExecutorCompletionService.V>`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([this timeout unit]
+  ([^java.util.concurrent.ExecutorCompletionService this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.poll timeout unit)))
-  ([this]
+  ([^java.util.concurrent.ExecutorCompletionService this]
     (-> this (.poll))))
 

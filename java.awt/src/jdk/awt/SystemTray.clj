@@ -129,7 +129,7 @@
   tray-icon - the TrayIcon to be added - `java.awt.TrayIcon`
 
   throws: java.lang.NullPointerException - if trayIcon is null"
-  ([this tray-icon]
+  ([^java.awt.SystemTray this ^java.awt.TrayIcon tray-icon]
     (-> this (.add tray-icon))))
 
 (defn remove
@@ -145,7 +145,7 @@
    is performed.
 
   tray-icon - the TrayIcon to be removed - `java.awt.TrayIcon`"
-  ([this tray-icon]
+  ([^java.awt.SystemTray this ^java.awt.TrayIcon tray-icon]
     (-> this (.remove tray-icon))))
 
 (defn get-tray-icons
@@ -163,7 +163,7 @@
 
   returns: an array of all tray icons added to this tray, or an
    empty array if none has been added - `java.awt.TrayIcon[]`"
-  ([this]
+  ([^java.awt.SystemTray this]
     (-> this (.getTrayIcons))))
 
 (defn get-tray-icon-size
@@ -174,7 +174,7 @@
    method TrayIcon.getSize() in the TrayIcon class.
 
   returns: the default size of a tray icon, in pixels - `java.awt.Dimension`"
-  ([this]
+  ([^java.awt.SystemTray this]
     (-> this (.getTrayIconSize))))
 
 (defn add-property-change-listener
@@ -211,7 +211,7 @@
 
   property-name - the specified property - `java.lang.String`
   listener - the property change listener to be added - `java.beans.PropertyChangeListener`"
-  ([this property-name listener]
+  ([^java.awt.SystemTray this ^java.lang.String property-name ^java.beans.PropertyChangeListener listener]
     (-> this (.addPropertyChangeListener property-name listener))))
 
 (defn remove-property-change-listener
@@ -225,7 +225,7 @@
 
   property-name - the specified property - `java.lang.String`
   listener - the PropertyChangeListener to be removed - `java.beans.PropertyChangeListener`"
-  ([this property-name listener]
+  ([^java.awt.SystemTray this ^java.lang.String property-name ^java.beans.PropertyChangeListener listener]
     (-> this (.removePropertyChangeListener property-name listener))))
 
 (defn get-property-change-listeners
@@ -240,6 +240,6 @@
            the named property; if no such listeners have been added or
            if propertyName is null or invalid, an empty
            array is returned - `java.beans.PropertyChangeListener[]`"
-  ([this property-name]
+  ([^java.awt.SystemTray this ^java.lang.String property-name]
     (-> this (.getPropertyChangeListeners property-name))))
 

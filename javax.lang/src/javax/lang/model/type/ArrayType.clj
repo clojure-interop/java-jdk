@@ -9,6 +9,6 @@
   "Returns the component type of this array type.
 
   returns: the component type of this array type - `javax.lang.model.type.TypeMirror`"
-  ([this]
+  ([^. this]
     (-> this (.getComponentType))))
 

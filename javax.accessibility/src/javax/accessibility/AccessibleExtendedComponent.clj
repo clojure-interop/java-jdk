@@ -17,7 +17,7 @@
 
   returns: the tool tip text, if supported, of the object;
    otherwise, null - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getToolTipText))))
 
 (defn get-titled-border-text
@@ -25,7 +25,7 @@
 
   returns: the titled border text, if supported, of the object;
    otherwise, null - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getTitledBorderText))))
 
 (defn get-accessible-key-binding
@@ -33,6 +33,6 @@
 
   returns: the key bindings, if supported, of the object;
    otherwise, null - `javax.accessibility.AccessibleKeyBinding`"
-  ([this]
+  ([^. this]
     (-> this (.getAccessibleKeyBinding))))
 

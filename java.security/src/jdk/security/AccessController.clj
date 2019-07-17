@@ -252,11 +252,11 @@
   returns: the value returned by the action's run method. - `<T> T`
 
   throws: java.lang.NullPointerException - if action or perms or any element of perms is null"
-  ([action context perms]
+  ([^java.security.PrivilegedAction action ^java.security.AccessControlContext context ^java.security.Permission perms]
     (AccessController/doPrivileged action context perms))
-  ([action context]
+  ([^java.security.PrivilegedAction action ^java.security.AccessControlContext context]
     (AccessController/doPrivileged action context))
-  ([action]
+  ([^java.security.PrivilegedAction action]
     (AccessController/doPrivileged action)))
 
 (defn *do-privileged-with-combiner
@@ -290,9 +290,9 @@
   returns: the value returned by the action's run method. - `<T> T`
 
   throws: java.lang.NullPointerException - if action or perms or any element of perms is null"
-  ([action context perms]
+  ([^java.security.PrivilegedAction action ^java.security.AccessControlContext context ^java.security.Permission perms]
     (AccessController/doPrivilegedWithCombiner action context perms))
-  ([action]
+  ([^java.security.PrivilegedAction action]
     (AccessController/doPrivilegedWithCombiner action)))
 
 (defn *get-context
@@ -317,6 +317,6 @@
   perm - the requested permission. - `java.security.Permission`
 
   throws: java.security.AccessControlException - if the specified permission is not permitted, based on the current security policy."
-  ([perm]
+  ([^java.security.Permission perm]
     (AccessController/checkPermission perm)))
 

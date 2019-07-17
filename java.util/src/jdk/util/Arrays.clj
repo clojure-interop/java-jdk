@@ -31,7 +31,7 @@
   returns: a Stream for the array range - `<T> java.util..Stream<T>`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if startInclusive is negative, endExclusive is less than startInclusive, or endExclusive is greater than the array size"
-  ([array start-inclusive end-exclusive]
+  ([array ^Integer start-inclusive ^Integer end-exclusive]
     (Arrays/stream array start-inclusive end-exclusive))
   ([array]
     (Arrays/stream array)))
@@ -51,7 +51,7 @@
   returns: a spliterator for the array elements - `<T> java.util.Spliterator<T>`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if startInclusive is negative, endExclusive is less than startInclusive, or endExclusive is greater than the array size"
-  ([array start-inclusive end-exclusive]
+  ([array ^Integer start-inclusive ^Integer end-exclusive]
     (Arrays/spliterator array start-inclusive end-exclusive))
   ([array]
     (Arrays/spliterator array)))
@@ -140,7 +140,7 @@
   a-2 - the other array to be tested for equality - `java.lang.Object[]`
 
   returns: true if the two arrays are equal - `boolean`"
-  ([a-1 a-2]
+  ([^java.lang.Object[] a-1 ^java.lang.Object[] a-2]
     (Arrays/deepEquals a-1 a-2)))
 
 (defn *to-string
@@ -185,7 +185,7 @@
   a - the array whose deep-content-based hash code to compute - `java.lang.Object[]`
 
   returns: a deep-content-based hash code for a - `int`"
-  ([a]
+  ([^java.lang.Object[] a]
     (Arrays/deepHashCode a)))
 
 (defn *sort
@@ -232,9 +232,9 @@
   returns: `<T> void`
 
   throws: java.lang.ClassCastException - if the array contains elements that are not mutually comparable using the specified comparator."
-  ([a from-index to-index c]
+  ([a ^Integer from-index ^Integer to-index c]
     (Arrays/sort a from-index to-index c))
-  ([a from-index to-index]
+  ([a ^Integer from-index ^Integer to-index]
     (Arrays/sort a from-index to-index))
   ([a c]
     (Arrays/sort a c))
@@ -271,13 +271,13 @@
            and only if the key is found. - `<T> int`
 
   throws: java.lang.ClassCastException - if the range contains elements that are not mutually comparable using the specified comparator, or the search key is not comparable to the elements in the range using this comparator."
-  ([a from-index to-index key c]
+  ([a ^Integer from-index ^Integer to-index key c]
     (Arrays/binarySearch a from-index to-index key c))
-  ([a from-index to-index key]
+  ([a ^Integer from-index ^Integer to-index ^Long key]
     (Arrays/binarySearch a from-index to-index key))
   ([a key c]
     (Arrays/binarySearch a key c))
-  ([a key]
+  ([a ^Long key]
     (Arrays/binarySearch a key)))
 
 (defn *parallel-prefix
@@ -292,9 +292,9 @@
   returns: `<T> void`
 
   throws: java.lang.IllegalArgumentException - if fromIndex > toIndex"
-  ([array from-index to-index op]
+  ([array ^Integer from-index ^Integer to-index ^java.util.function.BinaryOperator op]
     (Arrays/parallelPrefix array from-index to-index op))
-  ([array op]
+  ([array ^java.util.function.BinaryOperator op]
     (Arrays/parallelPrefix array op)))
 
 (defn *fill
@@ -310,9 +310,9 @@
   val - the value to be stored in all elements of the array - `long`
 
   throws: java.lang.IllegalArgumentException - if fromIndex > toIndex"
-  ([a from-index to-index val]
+  ([a ^Integer from-index ^Integer to-index ^Long val]
     (Arrays/fill a from-index to-index val))
-  ([a val]
+  ([a ^Long val]
     (Arrays/fill a val)))
 
 (defn *hash-code
@@ -351,9 +351,9 @@
        to obtain the specified length - `<T,U> T[]`
 
   throws: java.lang.NegativeArraySizeException - if newLength is negative"
-  ([original new-length new-type]
+  ([original ^Integer new-length new-type]
     (Arrays/copyOf original new-length new-type))
-  ([original new-length]
+  ([original ^Integer new-length]
     (Arrays/copyOf original new-length)))
 
 (defn *deep-to-string
@@ -387,7 +387,7 @@
   a - the array whose string representation to return - `java.lang.Object[]`
 
   returns: a string representation of a - `java.lang.String`"
-  ([a]
+  ([^java.lang.Object[] a]
     (Arrays/deepToString a)))
 
 (defn *parallel-sort
@@ -411,9 +411,9 @@
   returns: `<T> void`
 
   throws: java.lang.IllegalArgumentException - if fromIndex > toIndex or (optional) if the natural ordering of the array elements is found to violate the Comparable contract"
-  ([a from-index to-index cmp]
+  ([a ^Integer from-index ^Integer to-index cmp]
     (Arrays/parallelSort a from-index to-index cmp))
-  ([a from-index to-index]
+  ([a ^Integer from-index ^Integer to-index]
     (Arrays/parallelSort a from-index to-index))
   ([a cmp]
     (Arrays/parallelSort a cmp))
@@ -444,9 +444,9 @@
        truncated or padded with nulls to obtain the required length - `<T,U> T[]`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if from < 0 or from > original.length"
-  ([original from to new-type]
+  ([original ^Integer from ^Integer to new-type]
     (Arrays/copyOfRange original from to new-type))
-  ([original from to]
+  ([original ^Integer from ^Integer to]
     (Arrays/copyOfRange original from to)))
 
 (defn *equals

@@ -16,6 +16,6 @@
    identity has not been verified.
 
   reason - describes the problem. - `java.lang.String`"
-  ([reason]
+  ([^java.lang.String reason]
     (new SSLPeerUnverifiedException reason)))
 

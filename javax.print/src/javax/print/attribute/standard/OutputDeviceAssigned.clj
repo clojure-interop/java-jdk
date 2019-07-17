@@ -24,7 +24,7 @@
   locale - Natural language of the text string. null is interpreted to mean the default locale as returned by Locale.getDefault() - `java.util.Locale`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if deviceName is null."
-  ([device-name locale]
+  ([^java.lang.String device-name ^java.util.Locale locale]
     (new OutputDeviceAssigned device-name locale)))
 
 (defn equals
@@ -47,7 +47,7 @@
 
   returns: True if object is equivalent to this output
             device assigned attribute, false otherwise. - `boolean`"
-  ([this object]
+  ([^javax.print.attribute.standard.OutputDeviceAssigned this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -59,7 +59,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([this]
+  ([^javax.print.attribute.standard.OutputDeviceAssigned this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -70,6 +70,6 @@
    category name is `output-device-assigned`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([this]
+  ([^javax.print.attribute.standard.OutputDeviceAssigned this]
     (-> this (.getName))))
 

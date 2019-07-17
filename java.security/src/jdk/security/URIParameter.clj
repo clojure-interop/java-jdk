@@ -13,13 +13,13 @@
   uri - the URI pointing to the data. - `java.net.URI`
 
   throws: java.lang.NullPointerException - if the specified URI is null."
-  ([uri]
+  ([^java.net.URI uri]
     (new URIParameter uri)))
 
 (defn get-uri
   "Returns the URI.
 
   returns: uri the URI. - `java.net.URI`"
-  ([this]
+  ([^java.security.URIParameter this]
     (-> this (.getURI))))
 

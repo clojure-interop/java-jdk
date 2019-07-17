@@ -21,6 +21,6 @@
   "Invoked when an event is dispatched in the AWT.
 
   event - `java.awt.AWTEvent`"
-  ([this event]
+  ([^. this ^java.awt.AWTEvent event]
     (-> this (.eventDispatched event))))
 

@@ -32,13 +32,13 @@
 
   nm - the action name - `java.lang.String`
   fg - the foreground color - `java.awt.Color`"
-  ([nm fg]
+  ([^java.lang.String nm ^java.awt.Color fg]
     (new StyledEditorKit$ForegroundAction nm fg)))
 
 (defn action-performed
   "Sets the foreground color.
 
   e - the action event - `java.awt.event.ActionEvent`"
-  ([this e]
+  ([^javax.swing.text.StyledEditorKit$ForegroundAction this ^java.awt.event.ActionEvent e]
     (-> this (.actionPerformed e))))
 

@@ -36,8 +36,8 @@
   actions - the actions for the permission; must be the empty string or null - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if name is empty or invalid, or actions is a non-empty string"
-  ([name actions]
+  ([^java.lang.String name ^java.lang.String actions]
     (new LinkPermission name actions))
-  ([name]
+  ([^java.lang.String name]
     (new LinkPermission name)))
 

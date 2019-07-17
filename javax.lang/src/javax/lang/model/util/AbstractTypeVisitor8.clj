@@ -37,6 +37,6 @@
   p - a visitor-specified parameter - `AbstractTypeVisitor8.P`
 
   returns: the result of the visit as defined by a subclass - `AbstractTypeVisitor8.R`"
-  ([this t p]
+  ([^javax.lang.model.util.AbstractTypeVisitor8 this ^javax.lang.model.type.IntersectionType t ^AbstractTypeVisitor8.P p]
     (-> this (.visitIntersection t p))))
 

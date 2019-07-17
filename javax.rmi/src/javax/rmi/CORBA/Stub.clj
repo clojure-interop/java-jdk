@@ -13,7 +13,7 @@
    that represent the same remote object.
 
   returns: the hash code value. - `int`"
-  ([this]
+  ([^javax.rmi.CORBA.Stub this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -24,7 +24,7 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([this obj]
+  ([^javax.rmi.CORBA.Stub this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn to-string
@@ -32,7 +32,7 @@
    for all stubs that represent the same remote object.
 
   returns: a string representation of this stub. - `java.lang.String`"
-  ([this]
+  ([^javax.rmi.CORBA.Stub this]
     (-> this (.toString))))
 
 (defn connect
@@ -46,6 +46,6 @@
   orb - the ORB to connect to. - `org.omg.CORBA.ORB`
 
   throws: java.rmi.RemoteException - if the stub is already connected to a different ORB, or if the stub does not represent an exported remote or local object."
-  ([this orb]
+  ([^javax.rmi.CORBA.Stub this ^org.omg.CORBA.ORB orb]
     (-> this (.connect orb))))
 

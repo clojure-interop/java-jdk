@@ -12,6 +12,6 @@
   event - the event to test - `javax.xml.stream.events.XMLEvent`
 
   returns: true if this filter accepts this event, false otherwise - `boolean`"
-  ([this event]
+  ([^. this ^javax.xml.stream.events.XMLEvent event]
     (-> this (.accept event))))
 

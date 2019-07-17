@@ -13,7 +13,7 @@
    the array of states passed in.  Duplicate entries are ignored.
 
   states - an array of AccessibleState describing the state set. - `javax.accessibility.AccessibleState[]`"
-  ([states]
+  ([^javax.accessibility.AccessibleState[] states]
     (new AccessibleStateSet states))
   ([]
     (new AccessibleStateSet )))
@@ -29,7 +29,7 @@
 
   returns: true if state is added to the state set; false if the state set
    is unchanged - `boolean`"
-  ([this state]
+  ([^javax.accessibility.AccessibleStateSet this ^javax.accessibility.AccessibleState state]
     (-> this (.add state))))
 
 (defn add-all
@@ -37,7 +37,7 @@
    are ignored.
 
   states - AccessibleState array describing the state set. - `javax.accessibility.AccessibleState[]`"
-  ([this states]
+  ([^javax.accessibility.AccessibleStateSet this ^javax.accessibility.AccessibleState[] states]
     (-> this (.addAll states))))
 
 (defn remove
@@ -50,12 +50,12 @@
 
   returns: true if the state is in the state set; false if the state set
    will be unchanged - `boolean`"
-  ([this state]
+  ([^javax.accessibility.AccessibleStateSet this ^javax.accessibility.AccessibleState state]
     (-> this (.remove state))))
 
 (defn clear
   "Removes all the states from the current state set."
-  ([this]
+  ([^javax.accessibility.AccessibleStateSet this]
     (-> this (.clear))))
 
 (defn contains
@@ -64,14 +64,14 @@
   state - the state - `javax.accessibility.AccessibleState`
 
   returns: true if the state is in the state set; otherwise false - `boolean`"
-  ([this state]
+  ([^javax.accessibility.AccessibleStateSet this ^javax.accessibility.AccessibleState state]
     (-> this (.contains state))))
 
 (defn to-array
   "Returns the current state set as an array of AccessibleState
 
   returns: AccessibleState array containing the current state. - `javax.accessibility.AccessibleState[]`"
-  ([this]
+  ([^javax.accessibility.AccessibleStateSet this]
     (-> this (.toArray))))
 
 (defn to-string
@@ -79,6 +79,6 @@
    using the default locale.
 
   returns: comma separated localized String - `java.lang.String`"
-  ([this]
+  ([^javax.accessibility.AccessibleStateSet this]
     (-> this (.toString))))
 

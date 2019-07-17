@@ -17,7 +17,7 @@
    action of the object.
 
   returns: the zero-based number of Actions in this object - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getAccessibleActionCount))))
 
 (defn get-accessible-action-description
@@ -26,7 +26,7 @@
   i - zero-based index of the actions - `int`
 
   returns: a String description of the action - `java.lang.String`"
-  ([this i]
+  ([^. this ^Integer i]
     (-> this (.getAccessibleActionDescription i))))
 
 (defn do-accessible-action
@@ -35,6 +35,6 @@
   i - zero-based index of actions - `int`
 
   returns: true if the action was performed; otherwise false. - `boolean`"
-  ([this i]
+  ([^. this ^Integer i]
     (-> this (.doAccessibleAction i))))
 

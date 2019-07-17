@@ -20,7 +20,7 @@
    underlying output stream.
 
   out - the underlying output stream to be assigned to the field this.out for later use, or null if this instance is to be created without an underlying stream. - `java.io.OutputStream`"
-  ([out]
+  ([^java.io.OutputStream out]
     (new FilterOutputStream out)))
 
 (defn write
@@ -42,9 +42,9 @@
   len - the number of bytes to write. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this b off len]
+  ([^java.io.FilterOutputStream this b ^Integer off ^Integer len]
     (-> this (.write b off len)))
-  ([this b]
+  ([^java.io.FilterOutputStream this ^Integer b]
     (-> this (.write b))))
 
 (defn flush
@@ -55,7 +55,7 @@
    calls the flush method of its underlying output stream.
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this]
+  ([^java.io.FilterOutputStream this]
     (-> this (.flush))))
 
 (defn close
@@ -67,6 +67,6 @@
    close method of its underlying output stream.
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this]
+  ([^java.io.FilterOutputStream this]
     (-> this (.close))))
 

@@ -23,11 +23,11 @@
   highlight-inner-color - the color to use for the bevel inner highlight - `java.awt.Color`
   shadow-outer-color - the color to use for the bevel outer shadow - `java.awt.Color`
   shadow-inner-color - the color to use for the bevel inner shadow - `java.awt.Color`"
-  ([bevel-type highlight-outer-color highlight-inner-color shadow-outer-color shadow-inner-color]
+  ([^Integer bevel-type ^java.awt.Color highlight-outer-color ^java.awt.Color highlight-inner-color ^java.awt.Color shadow-outer-color ^java.awt.Color shadow-inner-color]
     (new BevelBorder bevel-type highlight-outer-color highlight-inner-color shadow-outer-color shadow-inner-color))
-  ([bevel-type highlight shadow]
+  ([^Integer bevel-type ^java.awt.Color highlight ^java.awt.Color shadow]
     (new BevelBorder bevel-type highlight shadow))
-  ([bevel-type]
+  ([^Integer bevel-type]
     (new BevelBorder bevel-type)))
 
 (def *-raised
@@ -56,7 +56,7 @@
   y - the y position of the painted border - `int`
   width - the width of the painted border - `int`
   height - the height of the painted border - `int`"
-  ([this c g x y width height]
+  ([^javax.swing.border.BevelBorder this ^java.awt.Component c ^java.awt.Graphics g ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.paintBorder c g x y width height))))
 
 (defn get-border-insets
@@ -66,7 +66,7 @@
   insets - the object to be reinitialized - `java.awt.Insets`
 
   returns: the insets object - `java.awt.Insets`"
-  ([this c insets]
+  ([^javax.swing.border.BevelBorder this ^java.awt.Component c ^java.awt.Insets insets]
     (-> this (.getBorderInsets c insets))))
 
 (defn get-highlight-outer-color
@@ -78,9 +78,9 @@
   c - the component for which the highlight may be derived - `java.awt.Component`
 
   returns: `java.awt.Color`"
-  ([this c]
+  ([^javax.swing.border.BevelBorder this ^java.awt.Component c]
     (-> this (.getHighlightOuterColor c)))
-  ([this]
+  ([^javax.swing.border.BevelBorder this]
     (-> this (.getHighlightOuterColor))))
 
 (defn get-highlight-inner-color
@@ -92,9 +92,9 @@
   c - the component for which the highlight may be derived - `java.awt.Component`
 
   returns: `java.awt.Color`"
-  ([this c]
+  ([^javax.swing.border.BevelBorder this ^java.awt.Component c]
     (-> this (.getHighlightInnerColor c)))
-  ([this]
+  ([^javax.swing.border.BevelBorder this]
     (-> this (.getHighlightInnerColor))))
 
 (defn get-shadow-inner-color
@@ -106,9 +106,9 @@
   c - the component for which the shadow may be derived - `java.awt.Component`
 
   returns: `java.awt.Color`"
-  ([this c]
+  ([^javax.swing.border.BevelBorder this ^java.awt.Component c]
     (-> this (.getShadowInnerColor c)))
-  ([this]
+  ([^javax.swing.border.BevelBorder this]
     (-> this (.getShadowInnerColor))))
 
 (defn get-shadow-outer-color
@@ -120,22 +120,22 @@
   c - the component for which the shadow may be derived - `java.awt.Component`
 
   returns: `java.awt.Color`"
-  ([this c]
+  ([^javax.swing.border.BevelBorder this ^java.awt.Component c]
     (-> this (.getShadowOuterColor c)))
-  ([this]
+  ([^javax.swing.border.BevelBorder this]
     (-> this (.getShadowOuterColor))))
 
 (defn get-bevel-type
   "Returns the type of the bevel border.
 
   returns: `int`"
-  ([this]
+  ([^javax.swing.border.BevelBorder this]
     (-> this (.getBevelType))))
 
 (defn border-opaque?
   "Returns whether or not the border is opaque.
 
   returns: false - `boolean`"
-  ([this]
+  ([^javax.swing.border.BevelBorder this]
     (-> this (.isBorderOpaque))))
 

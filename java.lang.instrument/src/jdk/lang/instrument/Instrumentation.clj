@@ -72,7 +72,7 @@
   jarfile - The JAR file to be searched when the system class loader unsuccessfully searches for a class. - `java.util.jar.JarFile`
 
   throws: java.lang.UnsupportedOperationException - If the system class loader does not support appending a a JAR file to be searched."
-  ([this jarfile]
+  ([^. this ^java.util.jar.JarFile jarfile]
     (-> this (.appendToSystemClassLoaderSearch jarfile))))
 
 (defn retransform-classes-supported?
@@ -90,7 +90,7 @@
 
   returns: true if the current JVM configuration supports retransformation of
             classes, false if not. - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.isRetransformClassesSupported))))
 
 (defn modifiable-class?
@@ -115,7 +115,7 @@
   returns: whether or not the argument class is modifiable - `boolean`
 
   throws: java.lang.NullPointerException - if the specified class is null."
-  ([this the-class]
+  ([^. this ^java.lang.Class the-class]
     (-> this (.isModifiableClass the-class))))
 
 (defn redefine-classes-supported?
@@ -133,7 +133,7 @@
 
   returns: true if the current JVM configuration supports redefinition of classes,
    false if not. - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.isRedefineClassesSupported))))
 
 (defn get-initiated-classes
@@ -145,7 +145,7 @@
 
   returns: an array containing all the classes for which loader is an initiating loader,
             zero-length if there are none - `java.lang.Class[]`"
-  ([this loader]
+  ([^. this ^java.lang.ClassLoader loader]
     (-> this (.getInitiatedClasses loader))))
 
 (defn native-method-prefix-supported?
@@ -163,14 +163,14 @@
 
   returns: true if the current JVM configuration supports
    setting a native method prefix, false if not. - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.isNativeMethodPrefixSupported))))
 
 (defn get-all-loaded-classes
   "Returns an array of all classes currently loaded by the JVM.
 
   returns: an array containing all the classes loaded by the JVM, zero-length if there are none - `java.lang.Class[]`"
-  ([this]
+  ([^. this]
     (-> this (.getAllLoadedClasses))))
 
 (defn append-to-bootstrap-class-loader-search
@@ -210,7 +210,7 @@
   jarfile - The JAR file to be searched when the bootstrap class loader unsuccessfully searches for a class. - `java.util.jar.JarFile`
 
   throws: java.lang.NullPointerException - If jarfile is null."
-  ([this jarfile]
+  ([^. this ^java.util.jar.JarFile jarfile]
     (-> this (.appendToBootstrapClassLoaderSearch jarfile))))
 
 (defn remove-transformer
@@ -227,7 +227,7 @@
              transformer was not found - `boolean`
 
   throws: java.lang.NullPointerException - if passed a null transformer"
-  ([this transformer]
+  ([^. this ^java.lang.instrument.ClassFileTransformer transformer]
     (-> this (.removeTransformer transformer))))
 
 (defn get-object-size
@@ -242,7 +242,7 @@
   returns: an implementation-specific approximation of the amount of storage consumed by the specified object - `long`
 
   throws: java.lang.NullPointerException - if the supplied Object is null."
-  ([this object-to-size]
+  ([^. this ^java.lang.Object object-to-size]
     (-> this (.getObjectSize object-to-size))))
 
 (defn add-transformer
@@ -267,9 +267,9 @@
   can-retransform - can this transformer's transformations be retransformed - `boolean`
 
   throws: java.lang.NullPointerException - if passed a null transformer"
-  ([this transformer can-retransform]
+  ([^. this ^java.lang.instrument.ClassFileTransformer transformer ^Boolean can-retransform]
     (-> this (.addTransformer transformer can-retransform)))
-  ([this transformer]
+  ([^. this ^java.lang.instrument.ClassFileTransformer transformer]
     (-> this (.addTransformer transformer))))
 
 (defn redefine-classes
@@ -320,7 +320,7 @@
   definitions - array of classes to redefine with corresponding definitions; a zero-length array is allowed, in this case, this method does nothing - `java.lang.instrument.ClassDefinition`
 
   throws: java.lang.NullPointerException - if the supplied definitions array or any of its components is null"
-  ([this definitions]
+  ([^. this ^java.lang.instrument.ClassDefinition definitions]
     (-> this (.redefineClasses definitions))))
 
 (defn set-native-method-prefix
@@ -428,7 +428,7 @@
   prefix - The prefix to apply to wrapped native methods when retrying a failed native method resolution. If prefix is either null or the empty string, then failed native method resolutions are not retried for this transformer. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if passed a null transformer."
-  ([this transformer prefix]
+  ([^. this ^java.lang.instrument.ClassFileTransformer transformer ^java.lang.String prefix]
     (-> this (.setNativeMethodPrefix transformer prefix))))
 
 (defn retransform-classes
@@ -523,6 +523,6 @@
   classes - array of classes to retransform; a zero-length array is allowed, in this case, this method does nothing - `java.lang.Class<?>`
 
   throws: java.lang.instrument.UnmodifiableClassException - if a specified class cannot be modified (isModifiableClass(java.lang.Class<?>) would return false)"
-  ([this classes]
+  ([^. this ^java.lang.Class classes]
     (-> this (.retransformClasses classes))))
 

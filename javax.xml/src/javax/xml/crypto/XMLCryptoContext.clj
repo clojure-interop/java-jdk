@@ -19,14 +19,14 @@
 
   returns: the URIDereferencer, or null if not
       specified - `javax.xml.crypto.URIDereferencer`"
-  ([this]
+  ([^. this]
     (-> this (.getURIDereferencer))))
 
 (defn set-key-selector
   "Sets the key selector for finding a key.
 
   ks - the key selector, or null to remove the current setting - `javax.xml.crypto.KeySelector`"
-  ([this ks]
+  ([^. this ^javax.xml.crypto.KeySelector ks]
     (-> this (.setKeySelector ks))))
 
 (defn put
@@ -44,7 +44,7 @@
       if there was no mapping for the key - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if some aspect of this key or value prevents it from being stored in this context"
-  ([this key value]
+  ([^. this ^java.lang.Object key ^java.lang.Object value]
     (-> this (.put key value))))
 
 (defn set-base-uri
@@ -53,7 +53,7 @@
   base-uri - the base URI, or null to remove current value - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if baseURI is not RFC 2396 compliant"
-  ([this base-uri]
+  ([^. this ^java.lang.String base-uri]
     (-> this (.setBaseURI base-uri))))
 
 (defn get-default-namespace-prefix
@@ -63,7 +63,7 @@
 
   returns: the default namespace prefix, or null if none has
       been set. - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getDefaultNamespacePrefix))))
 
 (defn set-default-namespace-prefix
@@ -71,14 +71,14 @@
    all namespace URIs not explicitly set by the putNamespacePrefix method.
 
   default-prefix - the default namespace prefix, or null to remove the current setting. Specify the empty string (``) to bind no prefix. - `java.lang.String`"
-  ([this default-prefix]
+  ([^. this ^java.lang.String default-prefix]
     (-> this (.setDefaultNamespacePrefix default-prefix))))
 
 (defn get-key-selector
   "Returns the key selector for finding a key.
 
   returns: the key selector, or null if not specified - `javax.xml.crypto.KeySelector`"
-  ([this]
+  ([^. this]
     (-> this (.getKeySelector))))
 
 (defn set-uri-dereferencer
@@ -88,14 +88,14 @@
    URIDereferencer.
 
   dereferencer - the URIDereferencer, or null to remove any current setting - `javax.xml.crypto.URIDereferencer`"
-  ([this dereferencer]
+  ([^. this ^javax.xml.crypto.URIDereferencer dereferencer]
     (-> this (.setURIDereferencer dereferencer))))
 
 (defn get-base-uri
   "Returns the base URI.
 
   returns: the base URI, or null if not specified - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getBaseURI))))
 
 (defn get-property
@@ -107,7 +107,7 @@
       null if it does not have a value - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if name is null"
-  ([this name]
+  ([^. this ^java.lang.String name]
     (-> this (.getProperty name))))
 
 (defn get-namespace-prefix
@@ -126,7 +126,7 @@
       (``) is returned. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if namespaceURI is null"
-  ([this namespace-uri default-prefix]
+  ([^. this ^java.lang.String namespace-uri ^java.lang.String default-prefix]
     (-> this (.getNamespacePrefix namespace-uri default-prefix))))
 
 (defn set-property
@@ -139,7 +139,7 @@
       null if it did not have a value - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if name is null"
-  ([this name value]
+  ([^. this ^java.lang.String name ^java.lang.Object value]
     (-> this (.setProperty name value))))
 
 (defn get
@@ -158,7 +158,7 @@
 
   returns: the value to which this context maps the specified key, or
       null if there is no mapping for the key - `java.lang.Object`"
-  ([this key]
+  ([^. this ^java.lang.Object key]
     (-> this (.get key))))
 
 (defn put-namespace-prefix
@@ -173,6 +173,6 @@
       URI, or null if there was none - `java.lang.String`
 
   throws: java.lang.NullPointerException - if namespaceURI is null"
-  ([this namespace-uri prefix]
+  ([^. this ^java.lang.String namespace-uri ^java.lang.String prefix]
     (-> this (.putNamespacePrefix namespace-uri prefix))))
 

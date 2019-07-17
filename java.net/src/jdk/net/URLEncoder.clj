@@ -53,8 +53,8 @@
   returns: the translated String. - `java.lang.String`
 
   throws: java.io.UnsupportedEncodingException - If the named encoding is not supported"
-  ([s enc]
+  ([^java.lang.String s ^java.lang.String enc]
     (URLEncoder/encode s enc))
-  ([s]
+  ([^java.lang.String s]
     (URLEncoder/encode s)))
 

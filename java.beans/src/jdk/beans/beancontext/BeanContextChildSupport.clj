@@ -15,7 +15,7 @@
    that interface to this implementation
 
   bcc - the underlying bean context child - `java.beans.beancontext.BeanContextChild`"
-  ([bcc]
+  ([^java.beans.beancontext.BeanContextChild bcc]
     (new BeanContextChildSupport bcc))
   ([]
     (new BeanContextChildSupport )))
@@ -37,7 +37,7 @@
   name - The programmatic name of the property that was changed - `java.lang.String`
   old-value - The old value of the property - `java.lang.Object`
   new-value - The new value of the property - `java.lang.Object`"
-  ([this name old-value new-value]
+  ([^java.beans.beancontext.BeanContextChildSupport this ^java.lang.String name ^java.lang.Object old-value ^java.lang.Object new-value]
     (-> this (.firePropertyChange name old-value new-value))))
 
 (defn fire-vetoable-change
@@ -53,7 +53,7 @@
   new-value - - The new value of the property - `java.lang.Object`
 
   throws: java.beans.PropertyVetoException - if the recipient wishes the property change to be rolled back."
-  ([this name old-value new-value]
+  ([^java.beans.beancontext.BeanContextChildSupport this ^java.lang.String name ^java.lang.Object old-value ^java.lang.Object new-value]
     (-> this (.fireVetoableChange name old-value new-value))))
 
 (defn validate-pending-set-bean-context
@@ -65,7 +65,7 @@
   new-value - the new value that has been requested for the BeanContext property - `java.beans.beancontext.BeanContext`
 
   returns: true if the change operation is to be vetoed - `boolean`"
-  ([this new-value]
+  ([^java.beans.beancontext.BeanContextChildSupport this ^java.beans.beancontext.BeanContext new-value]
     (-> this (.validatePendingSetBeanContext new-value))))
 
 (defn remove-property-change-listener
@@ -80,14 +80,14 @@
 
   name - The name of the property that was listened on - `java.lang.String`
   pcl - The PropertyChangeListener to be removed - `java.beans.PropertyChangeListener`"
-  ([this name pcl]
+  ([^java.beans.beancontext.BeanContextChildSupport this ^java.lang.String name ^java.beans.PropertyChangeListener pcl]
     (-> this (.removePropertyChangeListener name pcl))))
 
 (defn delegated?
   "Reports whether or not this class is a delegate of another.
 
   returns: true if this class is a delegate of another - `boolean`"
-  ([this]
+  ([^java.beans.beancontext.BeanContextChildSupport this]
     (-> this (.isDelegated))))
 
 (defn set-bean-context
@@ -97,7 +97,7 @@
   bc - the new value to be assigned to the BeanContext property - `java.beans.beancontext.BeanContext`
 
   throws: java.beans.PropertyVetoException - if the change is rejected"
-  ([this bc]
+  ([^java.beans.beancontext.BeanContextChildSupport this ^java.beans.beancontext.BeanContext bc]
     (-> this (.setBeanContext bc))))
 
 (defn get-bean-context
@@ -106,7 +106,7 @@
 
   returns: the nesting BeanContext for
    this BeanContextChildSupport. - `java.beans.beancontext.BeanContext`"
-  ([this]
+  ([^java.beans.beancontext.BeanContextChildSupport this]
     (-> this (.getBeanContext))))
 
 (defn remove-vetoable-change-listener
@@ -121,7 +121,7 @@
 
   name - The name of the property that was listened on - `java.lang.String`
   vcl - The VetoableChangeListener to be removed - `java.beans.VetoableChangeListener`"
-  ([this name vcl]
+  ([^java.beans.beancontext.BeanContextChildSupport this ^java.lang.String name ^java.beans.VetoableChangeListener vcl]
     (-> this (.removeVetoableChangeListener name vcl))))
 
 (defn add-property-change-listener
@@ -134,7 +134,7 @@
 
   name - The name of the property to listen on - `java.lang.String`
   pcl - The PropertyChangeListener to be added - `java.beans.PropertyChangeListener`"
-  ([this name pcl]
+  ([^java.beans.beancontext.BeanContextChildSupport this ^java.lang.String name ^java.beans.PropertyChangeListener pcl]
     (-> this (.addPropertyChangeListener name pcl))))
 
 (defn get-bean-context-child-peer
@@ -142,7 +142,7 @@
    BeanContextChildSupport.
 
   returns: the BeanContextChild peer of this class - `java.beans.beancontext.BeanContextChild`"
-  ([this]
+  ([^java.beans.beancontext.BeanContextChildSupport this]
     (-> this (.getBeanContextChildPeer))))
 
 (defn service-available
@@ -152,7 +152,7 @@
    behaviors
 
   bcsae - The BeanContextServiceAvailableEvent fired as a result of a service becoming available - `java.beans.beancontext.BeanContextServiceAvailableEvent`"
-  ([this bcsae]
+  ([^java.beans.beancontext.BeanContextChildSupport this ^java.beans.beancontext.BeanContextServiceAvailableEvent bcsae]
     (-> this (.serviceAvailable bcsae))))
 
 (defn service-revoked
@@ -162,7 +162,7 @@
    behaviors.
 
   bcsre - The BeanContextServiceRevokedEvent fired as a result of a service being revoked - `java.beans.beancontext.BeanContextServiceRevokedEvent`"
-  ([this bcsre]
+  ([^java.beans.beancontext.BeanContextChildSupport this ^java.beans.beancontext.BeanContextServiceRevokedEvent bcsre]
     (-> this (.serviceRevoked bcsre))))
 
 (defn add-vetoable-change-listener
@@ -175,6 +175,6 @@
 
   name - The name of the property to listen on - `java.lang.String`
   vcl - The VetoableChangeListener to be added - `java.beans.VetoableChangeListener`"
-  ([this name vcl]
+  ([^java.beans.beancontext.BeanContextChildSupport this ^java.lang.String name ^java.beans.VetoableChangeListener vcl]
     (-> this (.addVetoableChangeListener name vcl))))
 

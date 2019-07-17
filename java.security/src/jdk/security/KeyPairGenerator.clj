@@ -101,9 +101,9 @@
   returns: the new KeyPairGenerator object. - `java.security.KeyPairGenerator`
 
   throws: java.security.NoSuchAlgorithmException - if a KeyPairGeneratorSpi implementation for the specified algorithm is not available from the specified provider."
-  ([algorithm provider]
+  ([^java.lang.String algorithm ^java.lang.String provider]
     (KeyPairGenerator/getInstance algorithm provider))
-  ([algorithm]
+  ([^java.lang.String algorithm]
     (KeyPairGenerator/getInstance algorithm)))
 
 (defn get-algorithm
@@ -113,14 +113,14 @@
    for information about standard algorithm names.
 
   returns: the standard string name of the algorithm. - `java.lang.String`"
-  ([this]
+  ([^java.security.KeyPairGenerator this]
     (-> this (.getAlgorithm))))
 
 (defn get-provider
   "Returns the provider of this key pair generator object.
 
   returns: the provider of this key pair generator object - `java.security.Provider`"
-  ([this]
+  ([^java.security.KeyPairGenerator this]
     (-> this (.getProvider))))
 
 (defn initialize
@@ -131,9 +131,9 @@
   random - the source of randomness. - `java.security.SecureRandom`
 
   throws: java.security.InvalidParameterException - if the keysize is not supported by this KeyPairGenerator object."
-  ([this keysize random]
+  ([^java.security.KeyPairGenerator this ^Integer keysize ^java.security.SecureRandom random]
     (-> this (.initialize keysize random)))
-  ([this keysize]
+  ([^java.security.KeyPairGenerator this ^Integer keysize]
     (-> this (.initialize keysize))))
 
 (defn gen-key-pair
@@ -149,7 +149,7 @@
    generateKeyPair.
 
   returns: the generated key pair - `java.security.KeyPair`"
-  ([this]
+  ([^java.security.KeyPairGenerator this]
     (-> this (.genKeyPair))))
 
 (defn generate-key-pair
@@ -165,6 +165,6 @@
    genKeyPair.
 
   returns: the generated key pair - `java.security.KeyPair`"
-  ([this]
+  ([^java.security.KeyPairGenerator this]
     (-> this (.generateKeyPair))))
 

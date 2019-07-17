@@ -25,13 +25,13 @@
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^java.awt.JobAttributes$DestinationType this]
     (-> this (.hashCode))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^java.awt.JobAttributes$DestinationType this]
     (-> this (.toString))))
 

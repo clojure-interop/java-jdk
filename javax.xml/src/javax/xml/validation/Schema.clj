@@ -44,7 +44,7 @@
    set on the Validator constructed.
 
   returns: Always return a non-null valid object. - `javax.xml.validation.Validator`"
-  ([this]
+  ([^javax.xml.validation.Schema this]
     (-> this (.newValidator))))
 
 (defn new-validator-handler
@@ -55,6 +55,6 @@
    set on the ValidatorHandler constructed.
 
   returns: Always return a non-null valid object. - `javax.xml.validation.ValidatorHandler`"
-  ([this]
+  ([^javax.xml.validation.Schema this]
     (-> this (.newValidatorHandler))))
 

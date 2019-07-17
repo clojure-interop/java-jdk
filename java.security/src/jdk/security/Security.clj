@@ -60,7 +60,7 @@
    criterion, or null if no such providers have been installed. - `java.security.Provider[]`
 
   throws: java.security.InvalidParameterException - if the filter is not in the required format"
-  ([filter]
+  ([^java.lang.String filter]
     (Security/getProviders filter))
   ([]
     (Security/getProviders )))
@@ -89,7 +89,7 @@
   name - the name of the provider to remove. - `java.lang.String`
 
   throws: java.lang.SecurityException - if a security manager exists and its SecurityManager.checkSecurityAccess(java.lang.String) method denies access to remove the provider"
-  ([name]
+  ([^java.lang.String name]
     (Security/removeProvider name)))
 
 (defn *get-algorithm-property
@@ -104,7 +104,7 @@
   prop-name - the name of the property to get. - `java.lang.String`
 
   returns: the value of the specified property. - `java.lang.   java.lang.String`"
-  ([alg-name prop-name]
+  ([^java.lang.String alg-name ^java.lang.String prop-name]
     (Security/getAlgorithmProperty alg-name prop-name)))
 
 (defn *get-provider
@@ -115,7 +115,7 @@
   name - the name of the provider to get. - `java.lang.String`
 
   returns: the provider of the specified name. - `java.security.Provider`"
-  ([name]
+  ([^java.lang.String name]
     (Security/getProvider name)))
 
 (defn *get-property
@@ -132,7 +132,7 @@
   returns: the value of the security property corresponding to key. - `java.lang.String`
 
   throws: java.lang.SecurityException - if a security manager exists and its SecurityManager.checkPermission(java.security.Permission) method denies access to retrieve the specified security property value"
-  ([key]
+  ([^java.lang.String key]
     (Security/getProperty key)))
 
 (defn *add-provider
@@ -153,7 +153,7 @@
    already installed. - `int`
 
   throws: java.lang.NullPointerException - if provider is null"
-  ([provider]
+  ([^java.security.Provider provider]
     (Security/addProvider provider)))
 
 (defn *set-property
@@ -169,7 +169,7 @@
   datum - the value of the property to be set. - `java.lang.String`
 
   throws: java.lang.SecurityException - if a security manager exists and its SecurityManager.checkPermission(java.security.Permission) method denies access to set the specified security property value"
-  ([key datum]
+  ([^java.lang.String key ^java.lang.String datum]
     (Security/setProperty key datum)))
 
 (defn *insert-provider-at
@@ -201,7 +201,7 @@
    already installed. - `int`
 
   throws: java.lang.NullPointerException - if provider is null"
-  ([provider position]
+  ([^java.security.Provider provider ^Integer position]
     (Security/insertProviderAt provider position)))
 
 (defn *get-algorithms
@@ -220,6 +220,6 @@
   returns: a Set of Strings containing the names of all available
    algorithms or types for the specified Java cryptographic service
    or an empty set if no provider supports the specified service. - `java.util.Set<java.lang.String>`"
-  ([service-name]
+  ([^java.lang.String service-name]
     (Security/getAlgorithms service-name)))
 

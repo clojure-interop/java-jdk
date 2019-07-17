@@ -12,7 +12,7 @@
   Constructs a new view wrapped on an element.
 
   elem - the element - `javax.swing.text.Element`"
-  ([elem]
+  ([^javax.swing.text.Element elem]
     (new LabelView elem)))
 
 (defn get-background
@@ -21,7 +21,7 @@
    which defaults to null.
 
   returns: the cached background color - `java.awt.Color`"
-  ([this]
+  ([^javax.swing.text.LabelView this]
     (-> this (.getBackground))))
 
 (defn get-foreground
@@ -30,7 +30,7 @@
    which defaults to null.
 
   returns: the cached foreground color - `java.awt.Color`"
-  ([this]
+  ([^javax.swing.text.LabelView this]
     (-> this (.getForeground))))
 
 (defn get-font
@@ -38,7 +38,7 @@
    This is implemented to return a cached font.
 
   returns: the cached font - `java.awt.Font`"
-  ([this]
+  ([^javax.swing.text.LabelView this]
     (-> this (.getFont))))
 
 (defn underline?
@@ -54,7 +54,7 @@
 
   returns: the value of the cached
        underline property - `boolean`"
-  ([this]
+  ([^javax.swing.text.LabelView this]
     (-> this (.isUnderline))))
 
 (defn strike-through?
@@ -71,7 +71,7 @@
 
   returns: the value of the cached
        strikeThrough property - `boolean`"
-  ([this]
+  ([^javax.swing.text.LabelView this]
     (-> this (.isStrikeThrough))))
 
 (defn subscript?
@@ -84,7 +84,7 @@
    Element's AttributeSet.
    If Element's AttributeSet
    does not have this property set, it will revert to false. - `boolean`"
-  ([this]
+  ([^javax.swing.text.LabelView this]
     (-> this (.isSubscript))))
 
 (defn superscript?
@@ -98,7 +98,7 @@
 
   returns: the value of the cached
        superscript property - `boolean`"
-  ([this]
+  ([^javax.swing.text.LabelView this]
     (-> this (.isSuperscript))))
 
 (defn changed-update
@@ -108,6 +108,6 @@
   e - the change information from the associated document - `javax.swing.event.DocumentEvent`
   a - the current allocation of the view - `java.awt.Shape`
   f - the factory to use to rebuild if the view has children - `javax.swing.text.ViewFactory`"
-  ([this e a f]
+  ([^javax.swing.text.LabelView this ^javax.swing.event.DocumentEvent e ^java.awt.Shape a ^javax.swing.text.ViewFactory f]
     (-> this (.changedUpdate e a f))))
 

@@ -99,7 +99,7 @@
   value - a String giving the value of the header to be added - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if there was a problem with the specified mime header name or value"
-  ([this name value]
+  ([^javax.xml.soap.AttachmentPart this ^java.lang.String name ^java.lang.String value]
     (-> this (.addMimeHeader name value))))
 
 (defn set-content-type
@@ -108,7 +108,7 @@
   content-type - a String giving the value of the `Content-Type` header - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if there was a problem with the specified content type"
-  ([this content-type]
+  ([^javax.xml.soap.AttachmentPart this ^java.lang.String content-type]
     (-> this (.setContentType content-type))))
 
 (defn get-data-handler
@@ -119,7 +119,7 @@
            AttachmentPart object - `javax.activation.DataHandler`
 
   throws: javax.xml.soap.SOAPException - if there is no data in this AttachmentPart object"
-  ([this]
+  ([^javax.xml.soap.AttachmentPart this]
     (-> this (.getDataHandler))))
 
 (defn set-base-64-content
@@ -136,7 +136,7 @@
   content-type - the value to set into the Content-Type header - `java.lang.String`
 
   throws: javax.xml.soap.SOAPException - if an there is an error in setting the content"
-  ([this content content-type]
+  ([^javax.xml.soap.AttachmentPart this ^java.io.InputStream content ^java.lang.String content-type]
     (-> this (.setBase64Content content content-type))))
 
 (defn set-content-id
@@ -145,7 +145,7 @@
   content-id - a String giving the value of the `Content-ID` header - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if there was a problem with the specified contentId value"
-  ([this content-id]
+  ([^javax.xml.soap.AttachmentPart this ^java.lang.String content-id]
     (-> this (.setContentId content-id))))
 
 (defn get-raw-content
@@ -164,7 +164,7 @@
         the AttachmentPart can be accessed. - `java.io.InputStream`
 
   throws: javax.xml.soap.SOAPException - if there is no content set into this AttachmentPart object or if there was a data transformation error."
-  ([this]
+  ([^javax.xml.soap.AttachmentPart this]
     (-> this (.getRawContent))))
 
 (defn get-content-location
@@ -173,12 +173,12 @@
   returns: a String giving the value of the
             `Content-Location` header or null if there
             is none - `java.lang.String`"
-  ([this]
+  ([^javax.xml.soap.AttachmentPart this]
     (-> this (.getContentLocation))))
 
 (defn remove-all-mime-headers
   "Removes all the MIME header entries."
-  ([this]
+  ([^javax.xml.soap.AttachmentPart this]
     (-> this (.removeAllMimeHeaders))))
 
 (defn get-non-matching-mime-headers
@@ -191,7 +191,7 @@
             except those that match one of the names in the
              given array.  The nonmatching MIME headers are returned as an
              Iterator object. - `java.util.Iterator`"
-  ([this names]
+  ([^javax.xml.soap.AttachmentPart this ^java.lang.String[] names]
     (-> this (.getNonMatchingMimeHeaders names))))
 
 (defn get-content-type
@@ -200,7 +200,7 @@
   returns: a String giving the value of the
             `Content-Type` header or null if there
             is none - `java.lang.String`"
-  ([this]
+  ([^javax.xml.soap.AttachmentPart this]
     (-> this (.getContentType))))
 
 (defn set-raw-content-bytes
@@ -215,13 +215,13 @@
   content-type - the value to set into the Content-Type header - `java.lang.String`
 
   throws: javax.xml.soap.SOAPException - if an there is an error in setting the content or content is null"
-  ([this content offset len content-type]
+  ([^javax.xml.soap.AttachmentPart this content ^Integer offset ^Integer len ^java.lang.String content-type]
     (-> this (.setRawContentBytes content offset len content-type))))
 
 (defn clear-content
   "Clears out the content of this AttachmentPart object.
    The MIME header portion is left untouched."
-  ([this]
+  ([^javax.xml.soap.AttachmentPart this]
     (-> this (.clearContent))))
 
 (defn get-base-64-content
@@ -234,7 +234,7 @@
          AttachmentPart can be read. - `java.io.InputStream`
 
   throws: javax.xml.soap.SOAPException - if there is no content set into this AttachmentPart object or if there was a data transformation error."
-  ([this]
+  ([^javax.xml.soap.AttachmentPart this]
     (-> this (.getBase64Content))))
 
 (defn set-raw-content
@@ -250,7 +250,7 @@
   content-type - the value to set into the Content-Type header - `java.lang.String`
 
   throws: javax.xml.soap.SOAPException - if an there is an error in setting the content"
-  ([this content content-type]
+  ([^javax.xml.soap.AttachmentPart this ^java.io.InputStream content ^java.lang.String content-type]
     (-> this (.setRawContent content content-type))))
 
 (defn get-raw-content-bytes
@@ -263,7 +263,7 @@
         AttachmentPart. - `byte[]`
 
   throws: javax.xml.soap.SOAPException - if there is no content set into this AttachmentPart object or if there was a data transformation error."
-  ([this]
+  ([^javax.xml.soap.AttachmentPart this]
     (-> this (.getRawContentBytes))))
 
 (defn set-data-handler
@@ -277,14 +277,14 @@
   data-handler - the DataHandler object to be set - `javax.activation.DataHandler`
 
   throws: java.lang.IllegalArgumentException - if there was a problem with the specified DataHandler object"
-  ([this data-handler]
+  ([^javax.xml.soap.AttachmentPart this ^javax.activation.DataHandler data-handler]
     (-> this (.setDataHandler data-handler))))
 
 (defn remove-mime-header
   "Removes all MIME headers that match the given name.
 
   header - the string name of the MIME header/s to be removed - `java.lang.String`"
-  ([this header]
+  ([^javax.xml.soap.AttachmentPart this ^java.lang.String header]
     (-> this (.removeMimeHeader header))))
 
 (defn set-content-location
@@ -293,7 +293,7 @@
   content-location - a String giving the value of the `Content-Location` header - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if there was a problem with the specified content location"
-  ([this content-location]
+  ([^javax.xml.soap.AttachmentPart this ^java.lang.String content-location]
     (-> this (.setContentLocation content-location))))
 
 (defn get-mime-header
@@ -304,7 +304,7 @@
 
   returns: a String array giving the value for the
            specified header - `java.lang.String[]`"
-  ([this name]
+  ([^javax.xml.soap.AttachmentPart this ^java.lang.String name]
     (-> this (.getMimeHeader name))))
 
 (defn get-matching-mime-headers
@@ -315,7 +315,7 @@
 
   returns: all of the MIME headers that match one of the names in the
              given array as an Iterator object - `java.util.Iterator`"
-  ([this names]
+  ([^javax.xml.soap.AttachmentPart this ^java.lang.String[] names]
     (-> this (.getMatchingMimeHeaders names))))
 
 (defn get-all-mime-headers
@@ -324,7 +324,7 @@
 
   returns: an Iterator object with all of the Mime
             headers for this AttachmentPart object - `java.util.Iterator`"
-  ([this]
+  ([^javax.xml.soap.AttachmentPart this]
     (-> this (.getAllMimeHeaders))))
 
 (defn get-size
@@ -335,7 +335,7 @@
            or -1 if the size cannot be determined - `int`
 
   throws: javax.xml.soap.SOAPException - if the content of this attachment is corrupted of if there was an exception while trying to determine the size."
-  ([this]
+  ([^javax.xml.soap.AttachmentPart this]
     (-> this (.getSize))))
 
 (defn set-content
@@ -350,7 +350,7 @@
   content-type - the MIME string that specifies the type of the content - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - may be thrown if the contentType does not match the type of the content object, or if there was no DataContentHandler object for this content object"
-  ([this object content-type]
+  ([^javax.xml.soap.AttachmentPart this ^java.lang.Object object ^java.lang.String content-type]
     (-> this (.setContent object content-type))))
 
 (defn set-mime-header
@@ -364,7 +364,7 @@
   value - a String giving the value to be set for the header whose name matches the given name - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if there was a problem with the specified mime header name or value"
-  ([this name value]
+  ([^javax.xml.soap.AttachmentPart this ^java.lang.String name ^java.lang.String value]
     (-> this (.setMimeHeader name value))))
 
 (defn get-content
@@ -398,7 +398,7 @@
            object - `java.lang.Object`
 
   throws: javax.xml.soap.SOAPException - if there is no content set into this AttachmentPart object or if there was a data transformation error"
-  ([this]
+  ([^javax.xml.soap.AttachmentPart this]
     (-> this (.getContent))))
 
 (defn get-content-id
@@ -407,6 +407,6 @@
   returns: a String giving the value of the
             `Content-ID` header or null if there
             is none - `java.lang.String`"
-  ([this]
+  ([^javax.xml.soap.AttachmentPart this]
     (-> this (.getContentId))))
 

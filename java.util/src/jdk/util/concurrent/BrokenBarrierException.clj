@@ -12,7 +12,7 @@
    detail message.
 
   message - the detail message - `java.lang.String`"
-  ([message]
+  ([^java.lang.String message]
     (new BrokenBarrierException message))
   ([]
     (new BrokenBarrierException )))

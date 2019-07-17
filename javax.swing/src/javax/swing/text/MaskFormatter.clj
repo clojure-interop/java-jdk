@@ -127,7 +127,7 @@
   mask - `java.lang.String`
 
   throws: java.text.ParseException - if mask does not contain valid mask characters"
-  ([mask]
+  ([^java.lang.String mask]
     (new MaskFormatter mask))
   ([]
     (new MaskFormatter )))
@@ -138,7 +138,7 @@
 
   returns: True if literal characters in mask should be returned in
            stringToValue - `boolean`"
-  ([this]
+  ([^javax.swing.text.MaskFormatter this]
     (-> this (.getValueContainsLiteralCharacters))))
 
 (defn string-to-value
@@ -156,7 +156,7 @@
   returns: Object representation of text - `java.lang.Object`
 
   throws: java.text.ParseException - if there is an error in the conversion"
-  ([this value]
+  ([^javax.swing.text.MaskFormatter this ^java.lang.String value]
     (-> this (.stringToValue value))))
 
 (defn set-placeholder
@@ -164,7 +164,7 @@
    the mask. A null value implies the placeholder char should be used.
 
   placeholder - String used when formatting if the value does not completely fill the mask - `java.lang.String`"
-  ([this placeholder]
+  ([^javax.swing.text.MaskFormatter this ^java.lang.String placeholder]
     (-> this (.setPlaceholder placeholder))))
 
 (defn set-value-contains-literal-characters
@@ -180,21 +180,21 @@
    stringToValue will return '4155551212'.
 
   contains-literal-chars - Used to indicate if literal characters in mask should be returned in stringToValue - `boolean`"
-  ([this contains-literal-chars]
+  ([^javax.swing.text.MaskFormatter this ^Boolean contains-literal-chars]
     (-> this (.setValueContainsLiteralCharacters contains-literal-chars))))
 
 (defn get-invalid-characters
   "Returns the characters that are not valid for input.
 
   returns: illegal characters. - `java.lang.String`"
-  ([this]
+  ([^javax.swing.text.MaskFormatter this]
     (-> this (.getInvalidCharacters))))
 
 (defn get-mask
   "Returns the formatting mask.
 
   returns: Mask dictating legal character values. - `java.lang.String`"
-  ([this]
+  ([^javax.swing.text.MaskFormatter this]
     (-> this (.getMask))))
 
 (defn set-mask
@@ -205,7 +205,7 @@
   mask - `java.lang.String`
 
   throws: java.text.ParseException - if mask does not contain valid mask characters"
-  ([this mask]
+  ([^javax.swing.text.MaskFormatter this ^java.lang.String mask]
     (-> this (.setMask mask))))
 
 (defn install
@@ -236,7 +236,7 @@
    state changes.
 
   ftf - JFormattedTextField to format for, may be null indicating uninstall from current JFormattedTextField. - `javax.swing.JFormattedTextField`"
-  ([this ftf]
+  ([^javax.swing.text.MaskFormatter this ^javax.swing.JFormattedTextField ftf]
     (-> this (.install ftf))))
 
 (defn set-placeholder-character
@@ -248,7 +248,7 @@
    specified, or does not completely fill in the mask.
 
   placeholder - Character used when formatting if the value does not completely fill the mask - `char`"
-  ([this placeholder]
+  ([^javax.swing.text.MaskFormatter this ^Character placeholder]
     (-> this (.setPlaceholderCharacter placeholder))))
 
 (defn set-valid-characters
@@ -260,7 +260,7 @@
    by the mask and the invalid characters.
 
   valid-characters - If non-null, specifies legal characters. - `java.lang.String`"
-  ([this valid-characters]
+  ([^javax.swing.text.MaskFormatter this ^java.lang.String valid-characters]
     (-> this (.setValidCharacters valid-characters))))
 
 (defn get-placeholder-character
@@ -269,7 +269,7 @@
 
   returns: Character used when formatting if the value does not
           completely fill the mask - `char`"
-  ([this]
+  ([^javax.swing.text.MaskFormatter this]
     (-> this (.getPlaceholderCharacter))))
 
 (defn get-placeholder
@@ -278,14 +278,14 @@
 
   returns: String used when formatting if the value does not
           completely fill the mask - `java.lang.String`"
-  ([this]
+  ([^javax.swing.text.MaskFormatter this]
     (-> this (.getPlaceholder))))
 
 (defn get-valid-characters
   "Returns the valid characters that can be input.
 
   returns: Legal characters - `java.lang.String`"
-  ([this]
+  ([^javax.swing.text.MaskFormatter this]
     (-> this (.getValidCharacters))))
 
 (defn value-to-string
@@ -299,7 +299,7 @@
   returns: String representation of value - `java.lang.String`
 
   throws: java.text.ParseException - if there is an error in the conversion"
-  ([this value]
+  ([^javax.swing.text.MaskFormatter this ^java.lang.Object value]
     (-> this (.valueToString value))))
 
 (defn set-invalid-characters
@@ -311,6 +311,6 @@
    by the mask and the valid characters.
 
   invalid-characters - If non-null, specifies illegal characters. - `java.lang.String`"
-  ([this invalid-characters]
+  ([^javax.swing.text.MaskFormatter this ^java.lang.String invalid-characters]
     (-> this (.setInvalidCharacters invalid-characters))))
 

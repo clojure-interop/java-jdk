@@ -10,8 +10,8 @@
   bottom - `int`
   right - `int`
   color - `java.awt.Color`"
-  ([top left bottom right color]
+  ([^Integer top ^Integer left ^Integer bottom ^Integer right ^java.awt.Color color]
     (new BorderUIResource$MatteBorderUIResource top left bottom right color))
-  ([tile-icon]
+  ([^javax.swing.Icon tile-icon]
     (new BorderUIResource$MatteBorderUIResource tile-icon)))
 

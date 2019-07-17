@@ -25,27 +25,27 @@
   crt-coefficient - the Chinese Remainder Theorem coefficient. - `java.math.BigInteger`
 
   throws: java.lang.NullPointerException - if any of the parameters, i.e. prime, primeExponent, crtCoefficient, is null."
-  ([prime prime-exponent crt-coefficient]
+  ([^java.math.BigInteger prime ^java.math.BigInteger prime-exponent ^java.math.BigInteger crt-coefficient]
     (new RSAOtherPrimeInfo prime prime-exponent crt-coefficient)))
 
 (defn get-prime
   "Returns the prime.
 
   returns: the prime. - `java.math.BigInteger`"
-  ([this]
+  ([^java.security.spec.RSAOtherPrimeInfo this]
     (-> this (.getPrime))))
 
 (defn get-exponent
   "Returns the prime's exponent.
 
   returns: the primeExponent. - `java.math.BigInteger`"
-  ([this]
+  ([^java.security.spec.RSAOtherPrimeInfo this]
     (-> this (.getExponent))))
 
 (defn get-crt-coefficient
   "Returns the prime's crtCoefficient.
 
   returns: the crtCoefficient. - `java.math.BigInteger`"
-  ([this]
+  ([^java.security.spec.RSAOtherPrimeInfo this]
     (-> this (.getCrtCoefficient))))
 

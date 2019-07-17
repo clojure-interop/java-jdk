@@ -46,7 +46,7 @@
    constructor.
 
   num - number for well-known UID - `short`"
-  ([num]
+  ([^Short num]
     (new UID num))
   ([]
     (new UID )))
@@ -71,14 +71,14 @@
   returns: unmarshalled UID instance - `java.rmi.server.UID`
 
   throws: java.io.IOException - if an I/O error occurs while performing this operation"
-  ([in]
+  ([^java.io.DataInput in]
     (UID/read in)))
 
 (defn hash-code
   "Returns the hash code value for this UID.
 
   returns: the hash code value for this UID - `int`"
-  ([this]
+  ([^java.rmi.server.UID this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -94,14 +94,14 @@
 
   returns: true if the given object is equivalent to
    this one, and false otherwise - `boolean`"
-  ([this obj]
+  ([^java.rmi.server.UID this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn to-string
   "Returns a string representation of this UID.
 
   returns: a string representation of this UID - `java.lang.String`"
-  ([this]
+  ([^java.rmi.server.UID this]
     (-> this (.toString))))
 
 (defn write
@@ -119,6 +119,6 @@
   out - the DataOutput instance to write this UID to - `java.io.DataOutput`
 
   throws: java.io.IOException - if an I/O error occurs while performing this operation"
-  ([this out]
+  ([^java.rmi.server.UID this ^java.io.DataOutput out]
     (-> this (.write out))))
 

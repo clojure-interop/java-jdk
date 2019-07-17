@@ -40,7 +40,7 @@
   field - the field to check, null returns false - `java.time.temporal.TemporalField`
 
   returns: true if this date-time can be queried for the field, false if not - `boolean`"
-  ([this field]
+  ([^. this ^java.time.temporal.TemporalField field]
     (-> this (.isSupported field))))
 
 (defn range
@@ -61,7 +61,7 @@
   returns: the range of valid values for the field, not null - `default java.time.temporal.ValueRange`
 
   throws: java.time.DateTimeException - if the range for the field cannot be obtained"
-  ([this field]
+  ([^. this ^java.time.temporal.TemporalField field]
     (-> this (.range field))))
 
 (defn get
@@ -77,7 +77,7 @@
   returns: the value for the field, within the valid range of values - `default int`
 
   throws: java.time.DateTimeException - if a value for the field cannot be obtained or the value is outside the range of valid values for the field"
-  ([this field]
+  ([^. this ^java.time.temporal.TemporalField field]
     (-> this (.get field))))
 
 (defn get-long
@@ -93,7 +93,7 @@
   returns: the value for the field - `long`
 
   throws: java.time.DateTimeException - if a value for the field cannot be obtained"
-  ([this field]
+  ([^. this ^java.time.temporal.TemporalField field]
     (-> this (.getLong field))))
 
 (defn query
@@ -116,6 +116,6 @@
   returns: the query result, null may be returned (defined by the query) - `default <R> R`
 
   throws: java.time.DateTimeException - if unable to query"
-  ([this query]
+  ([^. this ^java.time.temporal.TemporalQuery query]
     (-> this (.query query))))
 

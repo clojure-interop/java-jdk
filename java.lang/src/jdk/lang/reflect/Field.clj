@@ -15,7 +15,7 @@
 
   returns: true if and only if this field represents an element of
    an enumerated type. - `boolean`"
-  ([this]
+  ([^java.lang.reflect.Field this]
     (-> this (.isEnumConstant))))
 
 (defn get-byte
@@ -26,7 +26,7 @@
   returns: the value of the byte field - `byte`
 
   throws: java.lang.IllegalAccessException - if this Field object is enforcing Java language access control and the underlying field is inaccessible."
-  ([this obj]
+  ([^java.lang.reflect.Field this ^java.lang.Object obj]
     (-> this (.getByte obj))))
 
 (defn set-boolean
@@ -40,7 +40,7 @@
   z - the new value for the field of obj being modified - `boolean`
 
   throws: java.lang.IllegalAccessException - if this Field object is enforcing Java language access control and the underlying field is either inaccessible or final."
-  ([this obj z]
+  ([^java.lang.reflect.Field this ^java.lang.Object obj ^Boolean z]
     (-> this (.setBoolean obj z))))
 
 (defn get-type
@@ -50,7 +50,7 @@
 
   returns: a Class object identifying the declared
    type of the field represented by this object - `java.lang.Class<?>`"
-  ([this]
+  ([^java.lang.reflect.Field this]
     (-> this (.getType))))
 
 (defn to-generic-string
@@ -69,7 +69,7 @@
 
   returns: a string describing this Field, including
    its generic type - `java.lang.String`"
-  ([this]
+  ([^java.lang.reflect.Field this]
     (-> this (.toGenericString))))
 
 (defn get-modifiers
@@ -78,7 +78,7 @@
    be used to decode the modifiers.
 
   returns: the Java language modifiers for the underlying member - `int`"
-  ([this]
+  ([^java.lang.reflect.Field this]
     (-> this (.getModifiers))))
 
 (defn get-short
@@ -91,7 +91,7 @@
   returns: the value of the field converted to type short - `short`
 
   throws: java.lang.IllegalAccessException - if this Field object is enforcing Java language access control and the underlying field is inaccessible."
-  ([this obj]
+  ([^java.lang.reflect.Field this ^java.lang.Object obj]
     (-> this (.getShort obj))))
 
 (defn synthetic?
@@ -100,7 +100,7 @@
 
   returns: true if and only if this field is a synthetic
    field as defined by the Java Language Specification. - `boolean`"
-  ([this]
+  ([^java.lang.reflect.Field this]
     (-> this (.isSynthetic))))
 
 (defn to-string
@@ -122,7 +122,7 @@
    transient, volatile.
 
   returns: a string describing this Field - `java.lang.String`"
-  ([this]
+  ([^java.lang.reflect.Field this]
     (-> this (.toString))))
 
 (defn get-annotation
@@ -134,7 +134,7 @@
        present on this element, else null - `<T extends java.lang.annotation.Annotation> T`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  ([this annotation-class]
+  ([^java.lang.reflect.Field this ^java.lang.Class annotation-class]
     (-> this (.getAnnotation annotation-class))))
 
 (defn get-declared-annotations
@@ -148,14 +148,14 @@
    have no effect on the arrays returned to other callers.
 
   returns: annotations directly present on this element - `java.lang.annotation.Annotation[]`"
-  ([this]
+  ([^java.lang.reflect.Field this]
     (-> this (.getDeclaredAnnotations))))
 
 (defn get-name
   "Returns the name of the field represented by this Field object.
 
   returns: the simple name of the underlying member - `java.lang.String`"
-  ([this]
+  ([^java.lang.reflect.Field this]
     (-> this (.getName))))
 
 (defn get-long
@@ -168,7 +168,7 @@
   returns: the value of the field converted to type long - `long`
 
   throws: java.lang.IllegalAccessException - if this Field object is enforcing Java language access control and the underlying field is inaccessible."
-  ([this obj]
+  ([^java.lang.reflect.Field this ^java.lang.Object obj]
     (-> this (.getLong obj))))
 
 (defn set-double
@@ -182,7 +182,7 @@
   d - the new value for the field of obj being modified - `double`
 
   throws: java.lang.IllegalAccessException - if this Field object is enforcing Java language access control and the underlying field is either inaccessible or final."
-  ([this obj d]
+  ([^java.lang.reflect.Field this ^java.lang.Object obj ^Double d]
     (-> this (.setDouble obj d))))
 
 (defn get-int
@@ -195,7 +195,7 @@
   returns: the value of the field converted to type int - `int`
 
   throws: java.lang.IllegalAccessException - if this Field object is enforcing Java language access control and the underlying field is inaccessible."
-  ([this obj]
+  ([^java.lang.reflect.Field this ^java.lang.Object obj]
     (-> this (.getInt obj))))
 
 (defn get-annotated-type
@@ -204,7 +204,7 @@
 
   returns: an object representing the declared type of the field
    represented by this Field - `java.lang.reflect.AnnotatedType`"
-  ([this]
+  ([^java.lang.reflect.Field this]
     (-> this (.getAnnotatedType))))
 
 (defn set-long
@@ -218,7 +218,7 @@
   l - the new value for the field of obj being modified - `long`
 
   throws: java.lang.IllegalAccessException - if this Field object is enforcing Java language access control and the underlying field is either inaccessible or final."
-  ([this obj l]
+  ([^java.lang.reflect.Field this ^java.lang.Object obj ^Long l]
     (-> this (.setLong obj l))))
 
 (defn get-char
@@ -231,7 +231,7 @@
   returns: the value of the field converted to type char - `char`
 
   throws: java.lang.IllegalAccessException - if this Field object is enforcing Java language access control and the underlying field is inaccessible."
-  ([this obj]
+  ([^java.lang.reflect.Field this ^java.lang.Object obj]
     (-> this (.getChar obj))))
 
 (defn get-annotations-by-type
@@ -255,7 +255,7 @@
        associated with this element, else an array of length zero - `<T extends java.lang.annotation.Annotation> T[]`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  ([this annotation-class]
+  ([^java.lang.reflect.Field this ^java.lang.Class annotation-class]
     (-> this (.getAnnotationsByType annotation-class))))
 
 (defn set-byte
@@ -269,7 +269,7 @@
   b - the new value for the field of obj being modified - `byte`
 
   throws: java.lang.IllegalAccessException - if this Field object is enforcing Java language access control and the underlying field is either inaccessible or final."
-  ([this obj b]
+  ([^java.lang.reflect.Field this ^java.lang.Object obj ^Byte b]
     (-> this (.setByte obj b))))
 
 (defn get-declaring-class
@@ -278,7 +278,7 @@
 
   returns: an object representing the declaring class of the
    underlying member - `java.lang.Class<?>`"
-  ([this]
+  ([^java.lang.reflect.Field this]
     (-> this (.getDeclaringClass))))
 
 (defn set-short
@@ -292,7 +292,7 @@
   s - the new value for the field of obj being modified - `short`
 
   throws: java.lang.IllegalAccessException - if this Field object is enforcing Java language access control and the underlying field is either inaccessible or final."
-  ([this obj s]
+  ([^java.lang.reflect.Field this ^java.lang.Object obj ^Short s]
     (-> this (.setShort obj s))))
 
 (defn set-int
@@ -306,7 +306,7 @@
   i - the new value for the field of obj being modified - `int`
 
   throws: java.lang.IllegalAccessException - if this Field object is enforcing Java language access control and the underlying field is either inaccessible or final."
-  ([this obj i]
+  ([^java.lang.reflect.Field this ^java.lang.Object obj ^Integer i]
     (-> this (.setInt obj i))))
 
 (defn get-generic-type
@@ -324,7 +324,7 @@
        the field represented by this Field object - `java.lang.reflect.Type`
 
   throws: java.lang.reflect.GenericSignatureFormatError - if the generic field signature does not conform to the format specified in The Java™ Virtual Machine Specification"
-  ([this]
+  ([^java.lang.reflect.Field this]
     (-> this (.getGenericType))))
 
 (defn hash-code
@@ -333,7 +333,7 @@
    declaring class name and its name.
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^java.lang.reflect.Field this]
     (-> this (.hashCode))))
 
 (defn set
@@ -390,7 +390,7 @@
   value - the new value for the field of obj being modified - `java.lang.Object`
 
   throws: java.lang.IllegalAccessException - if this Field object is enforcing Java language access control and the underlying field is either inaccessible or final."
-  ([this obj value]
+  ([^java.lang.reflect.Field this ^java.lang.Object obj ^java.lang.Object value]
     (-> this (.set obj value))))
 
 (defn get-boolean?
@@ -401,7 +401,7 @@
   returns: the value of the boolean field - `boolean`
 
   throws: java.lang.IllegalAccessException - if this Field object is enforcing Java language access control and the underlying field is inaccessible."
-  ([this obj]
+  ([^java.lang.reflect.Field this ^java.lang.Object obj]
     (-> this (.getBoolean obj))))
 
 (defn get-float
@@ -414,7 +414,7 @@
   returns: the value of the field converted to type float - `float`
 
   throws: java.lang.IllegalAccessException - if this Field object is enforcing Java language access control and the underlying field is inaccessible."
-  ([this obj]
+  ([^java.lang.reflect.Field this ^java.lang.Object obj]
     (-> this (.getFloat obj))))
 
 (defn get-double
@@ -427,7 +427,7 @@
   returns: the value of the field converted to type double - `double`
 
   throws: java.lang.IllegalAccessException - if this Field object is enforcing Java language access control and the underlying field is inaccessible."
-  ([this obj]
+  ([^java.lang.reflect.Field this ^java.lang.Object obj]
     (-> this (.getDouble obj))))
 
 (defn get
@@ -467,7 +467,7 @@
    object before being returned - `java.lang.Object`
 
   throws: java.lang.IllegalAccessException - if this Field object is enforcing Java language access control and the underlying field is inaccessible."
-  ([this obj]
+  ([^java.lang.reflect.Field this ^java.lang.Object obj]
     (-> this (.get obj))))
 
 (defn equals
@@ -480,7 +480,7 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.lang.reflect.Field this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn set-float
@@ -494,7 +494,7 @@
   f - the new value for the field of obj being modified - `float`
 
   throws: java.lang.IllegalAccessException - if this Field object is enforcing Java language access control and the underlying field is either inaccessible or final."
-  ([this obj f]
+  ([^java.lang.reflect.Field this ^java.lang.Object obj ^Float f]
     (-> this (.setFloat obj f))))
 
 (defn set-char
@@ -508,6 +508,6 @@
   c - the new value for the field of obj being modified - `char`
 
   throws: java.lang.IllegalAccessException - if this Field object is enforcing Java language access control and the underlying field is either inaccessible or final."
-  ([this obj c]
+  ([^java.lang.reflect.Field this ^java.lang.Object obj ^Character c]
     (-> this (.setChar obj c))))
 

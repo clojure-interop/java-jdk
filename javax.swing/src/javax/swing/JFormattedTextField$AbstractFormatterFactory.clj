@@ -25,6 +25,6 @@
   returns: AbstractFormatter to handle formatting duties, a null
            return value implies the JFormattedTextField should behave
            like a normal JTextField - `javax.swing.JFormattedTextField.AbstractFormatter`"
-  ([this tf]
+  ([^javax.swing.JFormattedTextField$AbstractFormatterFactory this ^javax.swing.JFormattedTextField tf]
     (-> this (.getFormatter tf))))
 

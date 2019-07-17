@@ -39,9 +39,9 @@
 
   referent - object the new soft reference will refer to - `SoftReference.T`
   q - the queue with which the reference is to be registered, or null if registration is not required - `SoftReference.T>`"
-  ([referent q]
+  ([^SoftReference.T referent ^SoftReference.T> q]
     (new SoftReference referent q))
-  ([referent]
+  ([^SoftReference.T referent]
     (new SoftReference referent)))
 
 (defn get
@@ -51,6 +51,6 @@
 
   returns: The object to which this reference refers, or
              null if this reference object has been cleared - `SoftReference.T`"
-  ([this]
+  ([^java.lang.ref.SoftReference this]
     (-> this (.get))))
 

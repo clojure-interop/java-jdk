@@ -7,6 +7,6 @@
   "Invoked when the value of the adjustable has changed.
 
   e - `java.awt.event.AdjustmentEvent`"
-  ([this e]
+  ([^. this ^java.awt.event.AdjustmentEvent e]
     (-> this (.adjustmentValueChanged e))))
 

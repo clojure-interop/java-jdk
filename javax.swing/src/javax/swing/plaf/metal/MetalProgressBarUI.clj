@@ -21,7 +21,7 @@
   "c - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([c]
+  ([^javax.swing.JComponent c]
     (MetalProgressBarUI/createUI c)))
 
 (defn paint-determinate
@@ -31,7 +31,7 @@
 
   g - `java.awt.Graphics`
   c - `javax.swing.JComponent`"
-  ([this g c]
+  ([^javax.swing.plaf.metal.MetalProgressBarUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.paintDeterminate g c))))
 
 (defn paint-indeterminate
@@ -42,6 +42,6 @@
 
   g - `java.awt.Graphics`
   c - `javax.swing.JComponent`"
-  ([this g c]
+  ([^javax.swing.plaf.metal.MetalProgressBarUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.paintIndeterminate g c))))
 

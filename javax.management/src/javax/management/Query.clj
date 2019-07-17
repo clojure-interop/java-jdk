@@ -124,7 +124,7 @@
 
    javax.management.BinaryRelQueryExp with a relOp equal
    to LT. - `javax.management.QueryExp`"
-  ([v-1 v-2]
+  ([^javax.management.ValueExp v-1 ^javax.management.ValueExp v-2]
     (Query/lt v-1 v-2)))
 
 (defn *final-sub-string
@@ -140,7 +140,7 @@
 
 
    javax.management.MatchQueryExp. - `javax.management.QueryExp`"
-  ([a s]
+  ([^javax.management.AttributeValueExp a ^javax.management.StringValueExp s]
     (Query/finalSubString a s)))
 
 (defn *not
@@ -152,7 +152,7 @@
    serialized as an instance of the non-public class
 
    javax.management.NotQueryExp. - `javax.management.QueryExp`"
-  ([query-exp]
+  ([^javax.management.QueryExp query-exp]
     (Query/not query-exp)))
 
 (defn *eq
@@ -168,7 +168,7 @@
 
    javax.management.BinaryRelQueryExp with a relOp equal
    to EQ. - `javax.management.QueryExp`"
-  ([v-1 v-2]
+  ([^javax.management.ValueExp v-1 ^javax.management.ValueExp v-2]
     (Query/eq v-1 v-2)))
 
 (defn *plus
@@ -184,7 +184,7 @@
 
    javax.management.BinaryOpValueExp with an op equal to
    PLUS. - `javax.management.ValueExp`"
-  ([value-1 value-2]
+  ([^javax.management.ValueExp value-1 ^javax.management.ValueExp value-2]
     (Query/plus value-1 value-2)))
 
 (defn *leq
@@ -200,7 +200,7 @@
 
    javax.management.BinaryRelQueryExp with a relOp equal
    to LE. - `javax.management.QueryExp`"
-  ([v-1 v-2]
+  ([^javax.management.ValueExp v-1 ^javax.management.ValueExp v-2]
     (Query/leq v-1 v-2)))
 
 (defn *attr
@@ -218,9 +218,9 @@
    non-public class
 
    javax.management.QualifiedAttributeValueExp. - `javax.management.AttributeValueExp`"
-  ([class-name name]
+  ([^java.lang.String class-name ^java.lang.String name]
     (Query/attr class-name name))
-  ([name]
+  ([^java.lang.String name]
     (Query/attr name)))
 
 (defn *classattr
@@ -250,7 +250,7 @@
 
    javax.management.BinaryOpValueExp with an op equal to
    MINUS. - `javax.management.ValueExp`"
-  ([value-1 value-2]
+  ([^javax.management.ValueExp value-1 ^javax.management.ValueExp value-2]
     (Query/minus value-1 value-2)))
 
 (defn *initial-sub-string
@@ -266,7 +266,7 @@
 
 
    javax.management.MatchQueryExp. - `javax.management.QueryExp`"
-  ([a s]
+  ([^javax.management.AttributeValueExp a ^javax.management.StringValueExp s]
     (Query/initialSubString a s)))
 
 (defn *gt
@@ -282,7 +282,7 @@
 
    javax.management.BinaryRelQueryExp with a relOp equal
    to GT. - `javax.management.QueryExp`"
-  ([v-1 v-2]
+  ([^javax.management.ValueExp v-1 ^javax.management.ValueExp v-2]
     (Query/gt v-1 v-2)))
 
 (defn *times
@@ -297,7 +297,7 @@
 
    javax.management.BinaryOpValueExp with an op equal to
    TIMES. - `javax.management.ValueExp`"
-  ([value-1 value-2]
+  ([^javax.management.ValueExp value-1 ^javax.management.ValueExp value-2]
     (Query/times value-1 value-2)))
 
 (defn *value
@@ -306,7 +306,7 @@
   val - The string value. - `java.lang.String`
 
   returns: A ValueExp object containing the string argument. - `javax.management.StringValueExp`"
-  ([val]
+  ([^java.lang.String val]
     (Query/value val)))
 
 (defn *or
@@ -320,7 +320,7 @@
    will be serialized as an instance of the non-public class
 
    javax.management.OrQueryExp. - `javax.management.QueryExp`"
-  ([q-1 q-2]
+  ([^javax.management.QueryExp q-1 ^javax.management.QueryExp q-2]
     (Query/or q-1 q-2)))
 
 (defn *and
@@ -334,7 +334,7 @@
    will be serialized as an instance of the non-public class
 
    javax.management.AndQueryExp. - `javax.management.QueryExp`"
-  ([q-1 q-2]
+  ([^javax.management.QueryExp q-1 ^javax.management.QueryExp q-2]
     (Query/and q-1 q-2)))
 
 (defn *any-sub-string
@@ -350,7 +350,7 @@
 
 
    javax.management.MatchQueryExp. - `javax.management.QueryExp`"
-  ([a s]
+  ([^javax.management.AttributeValueExp a ^javax.management.StringValueExp s]
     (Query/anySubString a s)))
 
 (defn *div
@@ -366,7 +366,7 @@
 
    javax.management.BinaryOpValueExp with an op equal to
    DIV. - `javax.management.ValueExp`"
-  ([value-1 value-2]
+  ([^javax.management.ValueExp value-1 ^javax.management.ValueExp value-2]
     (Query/div value-1 value-2)))
 
 (defn *between
@@ -382,7 +382,7 @@
    non-public class
 
    javax.management.BetweenQueryExp. - `javax.management.QueryExp`"
-  ([v-1 v-2 v-3]
+  ([^javax.management.ValueExp v-1 ^javax.management.ValueExp v-2 ^javax.management.ValueExp v-3]
     (Query/between v-1 v-2 v-3)))
 
 (defn *match
@@ -408,7 +408,7 @@
    be serialized as an instance of the non-public class
 
    javax.management.MatchQueryExp. - `javax.management.QueryExp`"
-  ([a s]
+  ([^javax.management.AttributeValueExp a ^javax.management.StringValueExp s]
     (Query/match a s)))
 
 (defn *is-instance-of
@@ -429,7 +429,7 @@
    serialized as an instance of the non-public class
 
    javax.management.InstanceOfQueryExp. - `javax.management.QueryExp`"
-  ([class-name-value]
+  ([^javax.management.StringValueExp class-name-value]
     (Query/isInstanceOf class-name-value)))
 
 (defn *in
@@ -443,7 +443,7 @@
    non-public class
 
    javax.management.InQueryExp. - `javax.management.QueryExp`"
-  ([val value-list]
+  ([^javax.management.ValueExp val ^javax.management.ValueExp[] value-list]
     (Query/in val value-list)))
 
 (defn *geq
@@ -459,6 +459,6 @@
 
    javax.management.BinaryRelQueryExp with a relOp equal
    to GE. - `javax.management.QueryExp`"
-  ([v-1 v-2]
+  ([^javax.management.ValueExp v-1 ^javax.management.ValueExp v-2]
     (Query/geq v-1 v-2)))
 

@@ -33,9 +33,9 @@
   actions - ignored. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if name is null."
-  ([name actions]
+  ([^java.lang.String name ^java.lang.String actions]
     (new BasicPermission name actions))
-  ([name]
+  ([^java.lang.String name]
     (new BasicPermission name)))
 
 (defn implies
@@ -53,7 +53,7 @@
 
   returns: true if the passed permission is equal to or
    implied by this permission, false otherwise. - `boolean`"
-  ([this p]
+  ([^java.security.BasicPermission this ^java.security.Permission p]
     (-> this (.implies p))))
 
 (defn equals
@@ -65,7 +65,7 @@
 
   returns: true if obj's class is the same as this object's class
     and has the same name as this BasicPermission object, false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.security.BasicPermission this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -75,7 +75,7 @@
    from the Permission superclass.
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^java.security.BasicPermission this]
     (-> this (.hashCode))))
 
 (defn get-actions
@@ -84,7 +84,7 @@
    a BasicPermission.
 
   returns: the empty string ``. - `java.lang.String`"
-  ([this]
+  ([^java.security.BasicPermission this]
     (-> this (.getActions))))
 
 (defn new-permission-collection
@@ -98,6 +98,6 @@
 
   returns: a new PermissionCollection object suitable for
    storing BasicPermissions. - `java.security.PermissionCollection`"
-  ([this]
+  ([^java.security.BasicPermission this]
     (-> this (.newPermissionCollection))))
 

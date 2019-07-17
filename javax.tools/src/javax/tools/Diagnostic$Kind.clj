@@ -70,6 +70,6 @@
   returns: the enum constant with the specified name - `javax.tools.Diagnostic.Kind`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([name]
+  ([^java.lang.String name]
     (Diagnostic$Kind/valueOf name)))
 

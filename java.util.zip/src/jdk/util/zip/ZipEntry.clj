@@ -11,7 +11,7 @@
   name - The entry name - `java.lang.String`
 
   throws: java.lang.NullPointerException - if the entry name is null"
-  ([name]
+  ([^java.lang.String name]
     (new ZipEntry name)))
 
 (def *-stored
@@ -276,7 +276,7 @@
   crc - the CRC-32 value - `long`
 
   throws: java.lang.IllegalArgumentException - if the specified CRC-32 value is less than 0 or greater than 0xFFFFFFFF"
-  ([this crc]
+  ([^java.util.zip.ZipEntry this ^Long crc]
     (-> this (.setCrc crc))))
 
 (defn set-time
@@ -290,14 +290,14 @@
    used to convert the epoch time to the MS-DOS data and time.
 
   time - The last modification time of the entry in milliseconds since the epoch - `long`"
-  ([this time]
+  ([^java.util.zip.ZipEntry this ^Long time]
     (-> this (.setTime time))))
 
 (defn set-compressed-size
   "Sets the size of the compressed entry data.
 
   csize - the compressed size to set to - `long`"
-  ([this csize]
+  ([^java.util.zip.ZipEntry this ^Long csize]
     (-> this (.setCompressedSize csize))))
 
 (defn set-method
@@ -306,7 +306,7 @@
   method - the compression method, either STORED or DEFLATED - `int`
 
   throws: java.lang.IllegalArgumentException - if the specified compression method is invalid"
-  ([this method]
+  ([^java.util.zip.ZipEntry this ^Integer method]
     (-> this (.setMethod method))))
 
 (defn set-comment
@@ -317,7 +317,7 @@
    the first 0xFFFF bytes are output to the ZIP file entry.
 
   comment - the comment string - `java.lang.String`"
-  ([this comment]
+  ([^java.util.zip.ZipEntry this ^java.lang.String comment]
     (-> this (.setComment comment))))
 
 (defn set-extra
@@ -333,7 +333,7 @@
   extra - The extra field data bytes - `byte[]`
 
   throws: java.lang.IllegalArgumentException - if the length of the specified extra field data is greater than 0xFFFF bytes"
-  ([this extra]
+  ([^java.util.zip.ZipEntry this extra]
     (-> this (.setExtra extra))))
 
 (defn get-compressed-size
@@ -343,7 +343,7 @@
    as the uncompressed size of the entry.
 
   returns: the size of the compressed entry data, or -1 if not known - `long`"
-  ([this]
+  ([^java.util.zip.ZipEntry this]
     (-> this (.getCompressedSize))))
 
 (defn set-creation-time
@@ -358,7 +358,7 @@
   returns: This zip entry - `java.util.zip.ZipEntry`
 
   throws: java.lang.NullPointerException - if the time is null"
-  ([this time]
+  ([^java.util.zip.ZipEntry this ^java.nio.file.attribute.FileTime time]
     (-> this (.setCreationTime time))))
 
 (defn get-crc
@@ -366,21 +366,21 @@
 
   returns: the CRC-32 checksum of the uncompressed entry data, or -1 if
    not known - `long`"
-  ([this]
+  ([^java.util.zip.ZipEntry this]
     (-> this (.getCrc))))
 
 (defn to-string
   "Returns a string representation of the ZIP entry.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^java.util.zip.ZipEntry this]
     (-> this (.toString))))
 
 (defn get-name
   "Returns the name of the entry.
 
   returns: the name of the entry - `java.lang.String`"
-  ([this]
+  ([^java.util.zip.ZipEntry this]
     (-> this (.getName))))
 
 (defn directory?
@@ -388,21 +388,21 @@
    defined to be one whose name ends with a '/'.
 
   returns: true if this is a directory entry - `boolean`"
-  ([this]
+  ([^java.util.zip.ZipEntry this]
     (-> this (.isDirectory))))
 
 (defn get-extra
   "Returns the extra field data for the entry.
 
   returns: the extra field data for the entry, or null if none - `byte[]`"
-  ([this]
+  ([^java.util.zip.ZipEntry this]
     (-> this (.getExtra))))
 
 (defn get-comment
   "Returns the comment string for the entry.
 
   returns: the comment string for the entry, or null if none - `java.lang.String`"
-  ([this]
+  ([^java.util.zip.ZipEntry this]
     (-> this (.getComment))))
 
 (defn set-last-modified-time
@@ -419,7 +419,7 @@
   returns: This zip entry - `java.util.zip.ZipEntry`
 
   throws: java.lang.NullPointerException - if the time is null"
-  ([this time]
+  ([^java.util.zip.ZipEntry this ^java.nio.file.attribute.FileTime time]
     (-> this (.setLastModifiedTime time))))
 
 (defn set-last-access-time
@@ -434,7 +434,7 @@
   returns: This zip entry - `java.util.zip.ZipEntry`
 
   throws: java.lang.NullPointerException - if the time is null"
-  ([this time]
+  ([^java.util.zip.ZipEntry this ^java.nio.file.attribute.FileTime time]
     (-> this (.setLastAccessTime time))))
 
 (defn get-last-modified-time
@@ -448,7 +448,7 @@
    the standard MS-DOS formatted date and time to the epoch time.
 
   returns: The last modification time of the entry, null if not specified - `java.nio.file.attribute.FileTime`"
-  ([this]
+  ([^java.util.zip.ZipEntry this]
     (-> this (.getLastModifiedTime))))
 
 (defn set-size
@@ -457,28 +457,28 @@
   size - the uncompressed size in bytes - `long`
 
   throws: java.lang.IllegalArgumentException - if the specified size is less than 0, is greater than 0xFFFFFFFF when ZIP64 format is not supported, or is less than 0 when ZIP64 is supported"
-  ([this size]
+  ([^java.util.zip.ZipEntry this ^Long size]
     (-> this (.setSize size))))
 
 (defn clone
   "Returns a copy of this entry.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([this]
+  ([^java.util.zip.ZipEntry this]
     (-> this (.clone))))
 
 (defn hash-code
   "Returns the hash code value for this entry.
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^java.util.zip.ZipEntry this]
     (-> this (.hashCode))))
 
 (defn get-method
   "Returns the compression method of the entry.
 
   returns: the compression method of the entry, or -1 if not specified - `int`"
-  ([this]
+  ([^java.util.zip.ZipEntry this]
     (-> this (.getMethod))))
 
 (defn get-last-access-time
@@ -489,7 +489,7 @@
    or ZIP file formatted stream.
 
   returns: The last access time of the entry, null if not specified - `java.nio.file.attribute.FileTime`"
-  ([this]
+  ([^java.util.zip.ZipEntry this]
     (-> this (.getLastAccessTime))))
 
 (defn get-time
@@ -503,14 +503,14 @@
 
   returns: The last modification time of the entry in milliseconds
             since the epoch, or -1 if not specified - `long`"
-  ([this]
+  ([^java.util.zip.ZipEntry this]
     (-> this (.getTime))))
 
 (defn get-size
   "Returns the uncompressed size of the entry data.
 
   returns: the uncompressed size of the entry data, or -1 if not known - `long`"
-  ([this]
+  ([^java.util.zip.ZipEntry this]
     (-> this (.getSize))))
 
 (defn get-creation-time
@@ -521,6 +521,6 @@
    or ZIP file formatted stream.
 
   returns: the creation time of the entry, null if not specified - `java.nio.file.attribute.FileTime`"
-  ([this]
+  ([^java.util.zip.ZipEntry this]
     (-> this (.getCreationTime))))
 

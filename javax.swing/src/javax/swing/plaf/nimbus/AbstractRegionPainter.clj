@@ -45,6 +45,6 @@
   c - an optional configuration parameter. This may be null. - `javax.swing.JComponent`
   w - width of the area to paint. - `int`
   h - height of the area to paint. - `int`"
-  ([this g c w h]
+  ([^javax.swing.plaf.nimbus.AbstractRegionPainter this ^java.awt.Graphics2D g ^javax.swing.JComponent c ^Integer w ^Integer h]
     (-> this (.paint g c w h))))
 

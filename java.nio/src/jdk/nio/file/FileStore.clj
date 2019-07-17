@@ -38,7 +38,7 @@
             attributes - `java.lang.Object`
 
   throws: java.lang.UnsupportedOperationException - if the attribute view is not available or it does not support reading the attribute"
-  ([this attribute]
+  ([^java.nio.file.FileStore this ^java.lang.String attribute]
     (-> this (.getAttribute attribute))))
 
 (defn get-total-space
@@ -47,7 +47,7 @@
   returns: the size of the file store, in bytes - `long`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([this]
+  ([^java.nio.file.FileStore this]
     (-> this (.getTotalSpace))))
 
 (defn name
@@ -59,7 +59,7 @@
    returned by the toString method.
 
   returns: the name of this file store - `java.lang.String`"
-  ([this]
+  ([^java.nio.file.FileStore this]
     (-> this (.name))))
 
 (defn supports-file-attribute-view
@@ -75,7 +75,7 @@
 
   returns: true if, and only if, the file attribute view is
             supported - `boolean`"
-  ([this type]
+  ([^java.nio.file.FileStore this ^java.nio.file.attribute.FileAttributeView> type]
     (-> this (.supportsFileAttributeView type))))
 
 (defn get-usable-space
@@ -92,7 +92,7 @@
   returns: the number of bytes available - `long`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([this]
+  ([^java.nio.file.FileStore this]
     (-> this (.getUsableSpace))))
 
 (defn get-file-store-attribute-view
@@ -107,7 +107,7 @@
 
   returns: a file store attribute view of the specified type or
             null if the attribute view is not available - `<V extends java.nio.file.attribute.FileStoreAttributeView> V`"
-  ([this type]
+  ([^java.nio.file.FileStore this ^java.lang.Class type]
     (-> this (.getFileStoreAttributeView type))))
 
 (defn type
@@ -117,7 +117,7 @@
    or remote.
 
   returns: a string representing the type of this file store - `java.lang.String`"
-  ([this]
+  ([^java.nio.file.FileStore this]
     (-> this (.type))))
 
 (defn get-unallocated-space
@@ -133,7 +133,7 @@
   returns: the number of unallocated bytes - `long`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([this]
+  ([^java.nio.file.FileStore this]
     (-> this (.getUnallocatedSpace))))
 
 (defn read-only?
@@ -143,6 +143,6 @@
    an IOException to be thrown.
 
   returns: true if, and only if, this file store is read-only - `boolean`"
-  ([this]
+  ([^java.nio.file.FileStore this]
     (-> this (.isReadOnly))))
 

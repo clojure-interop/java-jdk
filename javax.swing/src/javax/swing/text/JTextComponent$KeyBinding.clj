@@ -19,7 +19,7 @@
 
   key - the key - `javax.swing.KeyStroke`
   action-name - the name of the action for the key - `java.lang.String`"
-  ([key action-name]
+  ([^javax.swing.KeyStroke key ^java.lang.String action-name]
     (new JTextComponent$KeyBinding key action-name)))
 
 (defn -key

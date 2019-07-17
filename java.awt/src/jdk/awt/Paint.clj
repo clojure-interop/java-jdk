@@ -38,6 +38,6 @@
 
   returns: the PaintContext for
            generating color patterns. - `java.awt.PaintContext`"
-  ([this cm device-bounds user-bounds xform hints]
+  ([^. this ^java.awt.image.ColorModel cm ^java.awt.Rectangle device-bounds ^java.awt.geom.Rectangle2D user-bounds ^java.awt.geom.AffineTransform xform ^java.awt.RenderingHints hints]
     (-> this (.createContext cm device-bounds user-bounds xform hints))))
 

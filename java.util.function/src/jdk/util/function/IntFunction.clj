@@ -14,6 +14,6 @@
   value - the function argument - `int`
 
   returns: the function result - `IntFunction.R`"
-  ([this value]
+  ([^. this ^Integer value]
     (-> this (.apply value))))
 

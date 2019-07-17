@@ -12,6 +12,6 @@
    contains the class and detail message of cause).
 
   cause - The cause of this error, or null if the cause is not known - `java.lang.Throwable`"
-  ([cause]
+  ([^java.lang.Throwable cause]
     (new IOError cause)))
 

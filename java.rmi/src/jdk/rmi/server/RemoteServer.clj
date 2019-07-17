@@ -30,7 +30,7 @@
   out - the output stream to which RMI calls should be logged - `java.io.OutputStream`
 
   throws: java.lang.SecurityException - if there is a security manager and the invocation of its checkPermission method fails"
-  ([out]
+  ([^java.io.OutputStream out]
     (RemoteServer/setLog out)))
 
 (defn *get-log

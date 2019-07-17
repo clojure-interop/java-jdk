@@ -19,9 +19,9 @@
   linked-exception - An optional linked exception that may provide additional information about the event - may be null. - `java.lang.Throwable`
 
   throws: java.lang.IllegalArgumentException - if an illegal severity field is supplied"
-  ([severity message locator linked-exception]
+  ([^Integer severity ^java.lang.String message ^javax.xml.bind.ValidationEventLocator locator ^java.lang.Throwable linked-exception]
     (new ValidationEventImpl severity message locator linked-exception))
-  ([severity message locator]
+  ([^Integer severity ^java.lang.String message ^javax.xml.bind.ValidationEventLocator locator]
     (new ValidationEventImpl severity message locator)))
 
 (defn get-linked-exception
@@ -29,21 +29,21 @@
 
   returns: the linked exception for this warning/error or null if one
            wasn't set - `java.lang.Throwable`"
-  ([this]
+  ([^javax.xml.bind.helpers.ValidationEventImpl this]
     (-> this (.getLinkedException))))
 
 (defn set-locator
   "Set the locator object for this event.
 
   locator - The locator - may be null. - `javax.xml.bind.ValidationEventLocator`"
-  ([this locator]
+  ([^javax.xml.bind.helpers.ValidationEventImpl this ^javax.xml.bind.ValidationEventLocator locator]
     (-> this (.setLocator locator))))
 
 (defn get-severity
   "Description copied from interface: ValidationEvent
 
   returns: the severity code for this warning/error - `int`"
-  ([this]
+  ([^javax.xml.bind.helpers.ValidationEventImpl this]
     (-> this (.getSeverity))))
 
 (defn to-string
@@ -51,7 +51,7 @@
    helpful to debugging.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^javax.xml.bind.helpers.ValidationEventImpl this]
     (-> this (.toString))))
 
 (defn set-severity
@@ -60,34 +60,34 @@
   severity - Must be one of ValidationEvent.WARNING, ValidationEvent.ERROR, or ValidationEvent.FATAL_ERROR. - `int`
 
   throws: java.lang.IllegalArgumentException - if an illegal severity field is supplied"
-  ([this severity]
+  ([^javax.xml.bind.helpers.ValidationEventImpl this ^Integer severity]
     (-> this (.setSeverity severity))))
 
 (defn set-linked-exception
   "Set the linked exception field of this event.
 
   linked-exception - Optional linked exception - may be null. - `java.lang.Throwable`"
-  ([this linked-exception]
+  ([^javax.xml.bind.helpers.ValidationEventImpl this ^java.lang.Throwable linked-exception]
     (-> this (.setLinkedException linked-exception))))
 
 (defn get-locator
   "Description copied from interface: ValidationEvent
 
   returns: the locator that indicates where the warning/error occurred - `javax.xml.bind.ValidationEventLocator`"
-  ([this]
+  ([^javax.xml.bind.helpers.ValidationEventImpl this]
     (-> this (.getLocator))))
 
 (defn get-message
   "Description copied from interface: ValidationEvent
 
   returns: the text message for this warning/error or null if one wasn't set - `java.lang.String`"
-  ([this]
+  ([^javax.xml.bind.helpers.ValidationEventImpl this]
     (-> this (.getMessage))))
 
 (defn set-message
   "Set the message field of this event.
 
   message - String message - may be null. - `java.lang.String`"
-  ([this message]
+  ([^javax.xml.bind.helpers.ValidationEventImpl this ^java.lang.String message]
     (-> this (.setMessage message))))
 

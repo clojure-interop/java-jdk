@@ -30,7 +30,7 @@
   factory - Shared PopupFactory - `javax.swing.PopupFactory`
 
   throws: java.lang.IllegalArgumentException - if factory is null"
-  ([factory]
+  ([^javax.swing.PopupFactory factory]
     (PopupFactory/setSharedInstance factory)))
 
 (defn *get-shared-instance
@@ -61,6 +61,6 @@
   returns: Popup containing Contents - `javax.swing.Popup`
 
   throws: java.lang.IllegalArgumentException - if contents is null"
-  ([this owner contents x y]
+  ([^javax.swing.PopupFactory this ^java.awt.Component owner ^java.awt.Component contents ^Integer x ^Integer y]
     (-> this (.getPopup owner contents x y))))
 

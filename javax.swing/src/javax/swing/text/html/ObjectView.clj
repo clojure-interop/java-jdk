@@ -40,6 +40,6 @@
   Creates a new ObjectView object.
 
   elem - the element to decorate - `javax.swing.text.Element`"
-  ([elem]
+  ([^javax.swing.text.Element elem]
     (new ObjectView elem)))
 

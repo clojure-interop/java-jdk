@@ -44,7 +44,7 @@
         an earlier error.) - `org.w3c.dom.TypeInfo`
 
   throws: java.lang.IllegalStateException - If this method is called from other ContentHandler methods."
-  ([this]
+  ([^javax.xml.validation.TypeInfoProvider this]
     (-> this (.getElementTypeInfo))))
 
 (defn get-attribute-type-info
@@ -68,7 +68,7 @@
         determine the type. - `org.w3c.dom.TypeInfo`
 
   throws: java.lang.IndexOutOfBoundsException - If the index is invalid."
-  ([this index]
+  ([^javax.xml.validation.TypeInfoProvider this ^Integer index]
     (-> this (.getAttributeTypeInfo index))))
 
 (defn id-attribute?
@@ -96,7 +96,7 @@
         if the type of the specified attribute is ID. - `boolean`
 
   throws: java.lang.IndexOutOfBoundsException - If the index is invalid."
-  ([this index]
+  ([^javax.xml.validation.TypeInfoProvider this ^Integer index]
     (-> this (.isIdAttribute index))))
 
 (defn specified?
@@ -124,6 +124,6 @@
         by the validator. - `boolean`
 
   throws: java.lang.IndexOutOfBoundsException - If the index is invalid."
-  ([this index]
+  ([^javax.xml.validation.TypeInfoProvider this ^Integer index]
     (-> this (.isSpecified index))))
 

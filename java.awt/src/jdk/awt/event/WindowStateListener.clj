@@ -19,6 +19,6 @@
   "Invoked when window state is changed.
 
   e - `java.awt.event.WindowEvent`"
-  ([this e]
+  ([^. this ^java.awt.event.WindowEvent e]
     (-> this (.windowStateChanged e))))
 

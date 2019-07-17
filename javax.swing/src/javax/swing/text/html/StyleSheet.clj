@@ -95,14 +95,14 @@
   "pt - `float`
 
   returns: `int`"
-  ([pt]
+  ([^Float pt]
     (StyleSheet/getIndexOfSize pt)))
 
 (defn remove-style-sheet
   "Removes the StyleSheet ss from those of the receiver.
 
   ss - `javax.swing.text.html.StyleSheet`"
-  ([this ss]
+  ([^javax.swing.text.html.StyleSheet this ^javax.swing.text.html.StyleSheet ss]
     (-> this (.removeStyleSheet ss))))
 
 (defn get-rule
@@ -117,9 +117,9 @@
 
   returns: the set of CSS attributes to use to render
     the tag - `javax.swing.text.Style`"
-  ([this t e]
+  ([^javax.swing.text.html.StyleSheet this ^javax.swing.text.html.HTML.Tag t ^javax.swing.text.Element e]
     (-> this (.getRule t e)))
-  ([this selector]
+  ([^javax.swing.text.html.StyleSheet this ^java.lang.String selector]
     (-> this (.getRule selector))))
 
 (defn add-rule
@@ -128,7 +128,7 @@
    a result of parsing a <style> tag.
 
   rule - `java.lang.String`"
-  ([this rule]
+  ([^javax.swing.text.html.StyleSheet this ^java.lang.String rule]
     (-> this (.addRule rule))))
 
 (defn set-base
@@ -136,7 +136,7 @@
    relative to base.
 
   base - `java.net.URL`"
-  ([this base]
+  ([^javax.swing.text.html.StyleSheet this ^java.net.URL base]
     (-> this (.setBase base))))
 
 (defn get-foreground
@@ -147,7 +147,7 @@
   a - the set of attributes - `javax.swing.text.AttributeSet`
 
   returns: the color - `java.awt.Color`"
-  ([this a]
+  ([^javax.swing.text.html.StyleSheet this ^javax.swing.text.AttributeSet a]
     (-> this (.getForeground a))))
 
 (defn get-style-sheets
@@ -155,7 +155,7 @@
    if there are no linked StyleSheets.
 
   returns: `javax.swing.text.html.StyleSheet[]`"
-  ([this]
+  ([^javax.swing.text.html.StyleSheet this]
     (-> this (.getStyleSheets))))
 
 (defn import-style-sheet
@@ -165,7 +165,7 @@
    addStyleSheet to link it in.
 
   url - `java.net.URL`"
-  ([this url]
+  ([^javax.swing.text.html.StyleSheet this ^java.net.URL url]
     (-> this (.importStyleSheet url))))
 
 (defn string-to-color
@@ -177,7 +177,7 @@
   string - `java.lang.String`
 
   returns: `java.awt.Color`"
-  ([this string]
+  ([^javax.swing.text.html.StyleSheet this ^java.lang.String string]
     (-> this (.stringToColor string))))
 
 (defn add-css-attribute
@@ -186,7 +186,7 @@
   attr - `javax.swing.text.MutableAttributeSet`
   key - `javax.swing.text.html.CSS.Attribute`
   value - `java.lang.String`"
-  ([this attr key value]
+  ([^javax.swing.text.html.StyleSheet this ^javax.swing.text.MutableAttributeSet attr ^javax.swing.text.html.CSS.Attribute key ^java.lang.String value]
     (-> this (.addCSSAttribute attr key value))))
 
 (defn add-css-attribute-from-html
@@ -197,7 +197,7 @@
   value - `java.lang.String`
 
   returns: `boolean`"
-  ([this attr key value]
+  ([^javax.swing.text.html.StyleSheet this ^javax.swing.text.MutableAttributeSet attr ^javax.swing.text.html.CSS.Attribute key ^java.lang.String value]
     (-> this (.addCSSAttributeFromHTML attr key value))))
 
 (defn get-view-attributes
@@ -208,7 +208,7 @@
   v - `javax.swing.text.View`
 
   returns: `javax.swing.text.AttributeSet`"
-  ([this v]
+  ([^javax.swing.text.html.StyleSheet this ^javax.swing.text.View v]
     (-> this (.getViewAttributes v))))
 
 (defn get-point-size
@@ -217,7 +217,7 @@
   index - `int`
 
   returns: `float`"
-  ([this index]
+  ([^javax.swing.text.html.StyleSheet this ^Integer index]
     (-> this (.getPointSize index))))
 
 (defn remove-attribute
@@ -229,7 +229,7 @@
   key - the non-null attribute name - `java.lang.Object`
 
   returns: the updated attribute set - `javax.swing.text.AttributeSet`"
-  ([this old key]
+  ([^javax.swing.text.html.StyleSheet this ^javax.swing.text.AttributeSet old ^java.lang.Object key]
     (-> this (.removeAttribute old key))))
 
 (defn add-style-sheet
@@ -239,7 +239,7 @@
    override the rules of the receiving style sheet.
 
   ss - `javax.swing.text.html.StyleSheet`"
-  ([this ss]
+  ([^javax.swing.text.html.StyleSheet this ^javax.swing.text.html.StyleSheet ss]
     (-> this (.addStyleSheet ss))))
 
 (defn add-attributes
@@ -251,14 +251,14 @@
   attr - the attributes to add - `javax.swing.text.AttributeSet`
 
   returns: the updated attribute set - `javax.swing.text.AttributeSet`"
-  ([this old attr]
+  ([^javax.swing.text.html.StyleSheet this ^javax.swing.text.AttributeSet old ^javax.swing.text.AttributeSet attr]
     (-> this (.addAttributes old attr))))
 
 (defn get-base
   "Returns the base.
 
   returns: `java.net.URL`"
-  ([this]
+  ([^javax.swing.text.html.StyleSheet this]
     (-> this (.getBase))))
 
 (defn remove-attributes
@@ -270,7 +270,7 @@
   names - the attribute names - `java.util.Enumeration<?>`
 
   returns: the updated attribute set - `javax.swing.text.AttributeSet`"
-  ([this old names]
+  ([^javax.swing.text.html.StyleSheet this ^javax.swing.text.AttributeSet old ^java.util.Enumeration names]
     (-> this (.removeAttributes old names))))
 
 (defn get-font
@@ -279,7 +279,7 @@
   a - the attribute set - `javax.swing.text.AttributeSet`
 
   returns: the font - `java.awt.Font`"
-  ([this a]
+  ([^javax.swing.text.html.StyleSheet this ^javax.swing.text.AttributeSet a]
     (-> this (.getFont a))))
 
 (defn add-attribute
@@ -295,7 +295,7 @@
   value - the attribute value - `java.lang.Object`
 
   returns: the updated attribute set - `javax.swing.text.AttributeSet`"
-  ([this old key value]
+  ([^javax.swing.text.html.StyleSheet this ^javax.swing.text.AttributeSet old ^java.lang.Object key ^java.lang.Object value]
     (-> this (.addAttribute old key value))))
 
 (defn translate-html-to-css
@@ -305,7 +305,7 @@
   html-attr-set - AttributeSet containing the HTML attributes. - `javax.swing.text.AttributeSet`
 
   returns: `javax.swing.text.AttributeSet`"
-  ([this html-attr-set]
+  ([^javax.swing.text.html.StyleSheet this ^javax.swing.text.AttributeSet html-attr-set]
     (-> this (.translateHTMLToCSS html-attr-set))))
 
 (defn get-background
@@ -316,14 +316,14 @@
   a - the set of attributes - `javax.swing.text.AttributeSet`
 
   returns: the color - `java.awt.Color`"
-  ([this a]
+  ([^javax.swing.text.html.StyleSheet this ^javax.swing.text.AttributeSet a]
     (-> this (.getBackground a))))
 
 (defn set-base-font-size
   "Sets the base font size, with valid values between 1 and 7.
 
   sz - `int`"
-  ([this sz]
+  ([^javax.swing.text.html.StyleSheet this ^Integer sz]
     (-> this (.setBaseFontSize sz))))
 
 (defn load-rules
@@ -335,7 +335,7 @@
   ref - the reference URL. This value represents the location of the stream and may be null. All relative URLs specified in the stream will be based upon this parameter. - `java.net.URL`
 
   throws: java.io.IOException"
-  ([this in ref]
+  ([^javax.swing.text.html.StyleSheet this ^java.io.Reader in ^java.net.URL ref]
     (-> this (.loadRules in ref))))
 
 (defn get-declaration
@@ -346,7 +346,7 @@
   decl - `java.lang.String`
 
   returns: `javax.swing.text.AttributeSet`"
-  ([this decl]
+  ([^javax.swing.text.html.StyleSheet this ^java.lang.String decl]
     (-> this (.getDeclaration decl))))
 
 (defn get-list-painter
@@ -356,14 +356,14 @@
   a - `javax.swing.text.AttributeSet`
 
   returns: `javax.swing.text.html.StyleSheet.ListPainter`"
-  ([this a]
+  ([^javax.swing.text.html.StyleSheet this ^javax.swing.text.AttributeSet a]
     (-> this (.getListPainter a))))
 
 (defn remove-style
   "Removes a named style previously added to the document.
 
   nm - the name of the style to remove - `java.lang.String`"
-  ([this nm]
+  ([^javax.swing.text.html.StyleSheet this ^java.lang.String nm]
     (-> this (.removeStyle nm))))
 
 (defn get-box-painter
@@ -373,6 +373,6 @@
   a - `javax.swing.text.AttributeSet`
 
   returns: `javax.swing.text.html.StyleSheet.BoxPainter`"
-  ([this a]
+  ([^javax.swing.text.html.StyleSheet this ^javax.swing.text.AttributeSet a]
     (-> this (.getBoxPainter a))))
 

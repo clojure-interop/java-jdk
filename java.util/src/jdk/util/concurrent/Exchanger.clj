@@ -106,8 +106,8 @@
   returns: the object provided by the other thread - `Exchanger.V`
 
   throws: java.lang.InterruptedException - if the current thread was interrupted while waiting"
-  ([this x timeout unit]
+  ([^java.util.concurrent.Exchanger this ^Exchanger.V x ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.exchange x timeout unit)))
-  ([this x]
+  ([^java.util.concurrent.Exchanger this ^Exchanger.V x]
     (-> this (.exchange x))))
 

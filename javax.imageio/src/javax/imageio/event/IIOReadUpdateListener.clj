@@ -30,7 +30,7 @@
   period-x - the horizontal spacing between updated pixels; a value of 1 means no gaps. - `int`
   period-y - the vertical spacing between updated pixels; a value of 1 means no gaps. - `int`
   bands - an array of ints indicating the the set bands that may be updated. - `int[]`"
-  ([this source the-image pass min-pass max-pass min-x min-y period-x period-y bands]
+  ([^. this ^javax.imageio.ImageReader source ^java.awt.image.BufferedImage the-image ^Integer pass ^Integer min-pass ^Integer max-pass ^Integer min-x ^Integer min-y ^Integer period-x ^Integer period-y bands]
     (-> this (.passStarted source the-image pass min-pass max-pass min-x min-y period-x period-y bands))))
 
 (defn image-update
@@ -88,7 +88,7 @@
   period-x - the horizontal spacing between updated pixels; a value of 1 means no gaps. - `int`
   period-y - the vertical spacing between updated pixels; a value of 1 means no gaps. - `int`
   bands - an array of ints indicating which bands are being updated. - `int[]`"
-  ([this source the-image min-x min-y width height period-x period-y bands]
+  ([^. this ^javax.imageio.ImageReader source ^java.awt.image.BufferedImage the-image ^Integer min-x ^Integer min-y ^Integer width ^Integer height ^Integer period-x ^Integer period-y bands]
     (-> this (.imageUpdate source the-image min-x min-y width height period-x period-y bands))))
 
 (defn pass-complete
@@ -100,7 +100,7 @@
 
   source - the ImageReader object calling this method. - `javax.imageio.ImageReader`
   the-image - the BufferedImage being updated. - `java.awt.image.BufferedImage`"
-  ([this source the-image]
+  ([^. this ^javax.imageio.ImageReader source ^java.awt.image.BufferedImage the-image]
     (-> this (.passComplete source the-image))))
 
 (defn thumbnail-pass-started
@@ -120,7 +120,7 @@
   period-x - the horizontal spacing between updated pixels; a value of 1 means no gaps. - `int`
   period-y - the vertical spacing between updated pixels; a value of 1 means no gaps. - `int`
   bands - an array of ints indicating the the set bands that may be updated. - `int[]`"
-  ([this source the-thumbnail pass min-pass max-pass min-x min-y period-x period-y bands]
+  ([^. this ^javax.imageio.ImageReader source ^java.awt.image.BufferedImage the-thumbnail ^Integer pass ^Integer min-pass ^Integer max-pass ^Integer min-x ^Integer min-y ^Integer period-x ^Integer period-y bands]
     (-> this (.thumbnailPassStarted source the-thumbnail pass min-pass max-pass min-x min-y period-x period-y bands))))
 
 (defn thumbnail-update
@@ -138,7 +138,7 @@
   period-x - the horizontal spacing between updated pixels; a value of 1 means no gaps. - `int`
   period-y - the vertical spacing between updated pixels; a value of 1 means no gaps. - `int`
   bands - an array of ints indicating which bands are being updated. - `int[]`"
-  ([this source the-thumbnail min-x min-y width height period-x period-y bands]
+  ([^. this ^javax.imageio.ImageReader source ^java.awt.image.BufferedImage the-thumbnail ^Integer min-x ^Integer min-y ^Integer width ^Integer height ^Integer period-x ^Integer period-y bands]
     (-> this (.thumbnailUpdate source the-thumbnail min-x min-y width height period-x period-y bands))))
 
 (defn thumbnail-pass-complete
@@ -150,6 +150,6 @@
 
   source - the ImageReader object calling this method. - `javax.imageio.ImageReader`
   the-thumbnail - the BufferedImage thumbnail being updated. - `java.awt.image.BufferedImage`"
-  ([this source the-thumbnail]
+  ([^. this ^javax.imageio.ImageReader source ^java.awt.image.BufferedImage the-thumbnail]
     (-> this (.thumbnailPassComplete source the-thumbnail))))
 

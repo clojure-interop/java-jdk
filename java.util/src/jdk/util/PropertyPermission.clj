@@ -49,7 +49,7 @@
   actions - the actions string. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if name is null."
-  ([name actions]
+  ([^java.lang.String name ^java.lang.String actions]
     (new PropertyPermission name actions)))
 
 (defn implies
@@ -68,7 +68,7 @@
 
   returns: true if the specified permission is implied by this object,
    false if not. - `boolean`"
-  ([this p]
+  ([^java.util.PropertyPermission this ^java.security.Permission p]
     (-> this (.implies p))))
 
 (defn equals
@@ -79,7 +79,7 @@
 
   returns: true if obj is a PropertyPermission, and has the same name and
    actions as this PropertyPermission object. - `boolean`"
-  ([this obj]
+  ([^java.util.PropertyPermission this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -89,7 +89,7 @@
    from the Permission superclass.
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^java.util.PropertyPermission this]
     (-> this (.hashCode))))
 
 (defn get-actions
@@ -100,7 +100,7 @@
    will return the string `read,write`.
 
   returns: the canonical string representation of the actions. - `java.lang.String`"
-  ([this]
+  ([^java.util.PropertyPermission this]
     (-> this (.getActions))))
 
 (defn new-permission-collection
@@ -109,6 +109,6 @@
 
   returns: a new PermissionCollection object suitable for storing
    PropertyPermissions. - `java.security.PermissionCollection`"
-  ([this]
+  ([^java.util.PropertyPermission this]
     (-> this (.newPermissionCollection))))
 

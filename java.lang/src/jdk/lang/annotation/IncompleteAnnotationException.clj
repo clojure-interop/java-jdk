@@ -18,7 +18,7 @@
   element-name - the name of the missing element - `java.lang.String`
 
   throws: java.lang.NullPointerException - if either parameter is null"
-  ([annotation-type element-name]
+  ([^java.lang.annotation.Annotation> annotation-type ^java.lang.String element-name]
     (new IncompleteAnnotationException annotation-type element-name)))
 
 (defn annotation-type
@@ -27,13 +27,13 @@
 
   returns: the Class object for the annotation type with the
        missing element - `java.lang.Class<? extends java.lang.annotation.Annotation>`"
-  ([this]
+  ([^java.lang.annotation.IncompleteAnnotationException this]
     (-> this (.annotationType))))
 
 (defn element-name
   "Returns the name of the missing element.
 
   returns: the name of the missing element - `java.lang.String`"
-  ([this]
+  ([^java.lang.annotation.IncompleteAnnotationException this]
     (-> this (.elementName))))
 

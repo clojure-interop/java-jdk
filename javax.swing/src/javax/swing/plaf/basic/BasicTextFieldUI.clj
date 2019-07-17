@@ -25,7 +25,7 @@
   c - the text field - `javax.swing.JComponent`
 
   returns: the UI - `javax.swing.plaf.ComponentUI`"
-  ([c]
+  ([^javax.swing.JComponent c]
     (BasicTextFieldUI/createUI c)))
 
 (defn create
@@ -34,7 +34,7 @@
   elem - the element - `javax.swing.text.Element`
 
   returns: the view - `javax.swing.text.View`"
-  ([this elem]
+  ([^javax.swing.plaf.basic.BasicTextFieldUI this ^javax.swing.text.Element elem]
     (-> this (.create elem))))
 
 (defn get-baseline
@@ -48,7 +48,7 @@
                     baseline - `int`
 
   throws: java.lang.NullPointerException - if c is null"
-  ([this c width height]
+  ([^javax.swing.plaf.basic.BasicTextFieldUI this ^javax.swing.JComponent c ^Integer width ^Integer height]
     (-> this (.getBaseline c width height))))
 
 (defn get-baseline-resize-behavior
@@ -61,6 +61,6 @@
            size changes - `java.awt.Component.BaselineResizeBehavior`
 
   throws: java.lang.NullPointerException - if c is null"
-  ([this c]
+  ([^javax.swing.plaf.basic.BasicTextFieldUI this ^javax.swing.JComponent c]
     (-> this (.getBaselineResizeBehavior c))))
 

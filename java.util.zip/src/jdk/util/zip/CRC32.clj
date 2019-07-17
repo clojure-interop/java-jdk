@@ -21,20 +21,20 @@
   len - the number of bytes to use for the update - `int`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if off is negative, or len is negative, or off+len is greater than the length of the array b"
-  ([this b off len]
+  ([^java.util.zip.CRC32 this b ^Integer off ^Integer len]
     (-> this (.update b off len)))
-  ([this b]
+  ([^java.util.zip.CRC32 this ^Integer b]
     (-> this (.update b))))
 
 (defn reset
   "Resets CRC-32 to initial value."
-  ([this]
+  ([^java.util.zip.CRC32 this]
     (-> this (.reset))))
 
 (defn get-value
   "Returns CRC-32 value.
 
   returns: the current checksum value - `long`"
-  ([this]
+  ([^java.util.zip.CRC32 this]
     (-> this (.getValue))))
 

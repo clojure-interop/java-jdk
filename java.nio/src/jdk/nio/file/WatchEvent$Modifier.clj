@@ -10,6 +10,6 @@
   "Returns the name of the modifier.
 
   returns: the name of the modifier - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.name))))
 

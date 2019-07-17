@@ -22,7 +22,7 @@
   snk - The piped input stream to connect to. - `java.io.PipedInputStream`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([snk]
+  ([^java.io.PipedInputStream snk]
     (new PipedOutputStream snk))
   ([]
     (new PipedOutputStream )))
@@ -47,7 +47,7 @@
   snk - the piped input stream to connect to. - `java.io.PipedInputStream`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this snk]
+  ([^java.io.PipedOutputStream this ^java.io.PipedInputStream snk]
     (-> this (.connect snk))))
 
 (defn write
@@ -61,9 +61,9 @@
   len - the number of bytes to write. - `int`
 
   throws: java.io.IOException - if the pipe is broken, unconnected, closed, or if an I/O error occurs."
-  ([this b off len]
+  ([^java.io.PipedOutputStream this b ^Integer off ^Integer len]
     (-> this (.write b off len)))
-  ([this b]
+  ([^java.io.PipedOutputStream this ^Integer b]
     (-> this (.write b))))
 
 (defn flush
@@ -72,7 +72,7 @@
    This will notify any readers that bytes are waiting in the pipe.
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this]
+  ([^java.io.PipedOutputStream this]
     (-> this (.flush))))
 
 (defn close
@@ -81,6 +81,6 @@
    writing bytes.
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this]
+  ([^java.io.PipedOutputStream this]
     (-> this (.close))))
 

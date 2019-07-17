@@ -90,13 +90,13 @@
   columns - the number of columns >= 0 - `int`
 
   throws: java.lang.IllegalArgumentException - if the rows or columns arguments are negative."
-  ([doc text rows columns]
+  ([^javax.swing.text.Document doc ^java.lang.String text ^Integer rows ^Integer columns]
     (new JTextArea doc text rows columns))
-  ([text rows columns]
+  ([^java.lang.String text ^Integer rows ^Integer columns]
     (new JTextArea text rows columns))
-  ([rows columns]
+  ([^Integer rows ^Integer columns]
     (new JTextArea rows columns))
-  ([text]
+  ([^java.lang.String text]
     (new JTextArea text))
   ([]
     (new JTextArea )))
@@ -106,7 +106,7 @@
    null or doesn't have a tab setting, return a default of 8.
 
   returns: the number of characters - `int`"
-  ([this]
+  ([^javax.swing.JTextArea this]
     (-> this (.getTabSize))))
 
 (defn set-columns
@@ -116,7 +116,7 @@
   columns - the number of columns >= 0 - `int`
 
   throws: java.lang.IllegalArgumentException - if columns is less than 0"
-  ([this columns]
+  ([^javax.swing.JTextArea this ^Integer columns]
     (-> this (.setColumns columns))))
 
 (defn get-line-of-offset
@@ -128,21 +128,21 @@
   returns: the line number >= 0 - `int`
 
   throws: javax.swing.text.BadLocationException - thrown if the offset is less than zero or greater than the document length."
-  ([this offset]
+  ([^javax.swing.JTextArea this ^Integer offset]
     (-> this (.getLineOfOffset offset))))
 
 (defn get-line-count
   "Determines the number of lines contained in the area.
 
   returns: the number of lines > 0 - `int`"
-  ([this]
+  ([^javax.swing.JTextArea this]
     (-> this (.getLineCount))))
 
 (defn get-columns
   "Returns the number of columns in the TextArea.
 
   returns: number of columns >= 0 - `int`"
-  ([this]
+  ([^javax.swing.JTextArea this]
     (-> this (.getColumns))))
 
 (defn set-wrap-style-word
@@ -154,14 +154,14 @@
    By default this property is false.
 
   word - indicates if word boundaries should be used for line wrapping - `boolean`"
-  ([this word]
+  ([^javax.swing.JTextArea this ^Boolean word]
     (-> this (.setWrapStyleWord word))))
 
 (defn get-ui-class-id
   "Returns the class ID for the UI.
 
   returns: the ID (`TextAreaUI`) - `java.lang.String`"
-  ([this]
+  ([^javax.swing.JTextArea this]
     (-> this (.getUIClassID))))
 
 (defn get-scrollable-unit-increment
@@ -181,7 +181,7 @@
   returns: The `unit` increment for scrolling in the specified direction - `int`
 
   throws: java.lang.IllegalArgumentException - for an invalid orientation"
-  ([this visible-rect orientation direction]
+  ([^javax.swing.JTextArea this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
     (-> this (.getScrollableUnitIncrement visible-rect orientation direction))))
 
 (defn set-line-wrap
@@ -193,7 +193,7 @@
    By default this property is false.
 
   wrap - indicates if lines should be wrapped - `boolean`"
-  ([this wrap]
+  ([^javax.swing.JTextArea this ^Boolean wrap]
     (-> this (.setLineWrap wrap))))
 
 (defn get-line-end-offset
@@ -204,7 +204,7 @@
   returns: the offset >= 0 - `int`
 
   throws: javax.swing.text.BadLocationException - Thrown if the line is less than zero or greater or equal to the number of lines contained in the document (as reported by getLineCount)."
-  ([this line]
+  ([^javax.swing.JTextArea this ^Integer line]
     (-> this (.getLineEndOffset line))))
 
 (defn get-preferred-scrollable-viewport-size
@@ -214,7 +214,7 @@
    behavior is used.
 
   returns: The preferredSize of a JViewport whose view is this Scrollable. - `java.awt.Dimension`"
-  ([this]
+  ([^javax.swing.JTextArea this]
     (-> this (.getPreferredScrollableViewportSize))))
 
 (defn get-wrap-style-word?
@@ -226,7 +226,7 @@
 
   returns: if the wrap style should be word boundaries
     instead of character boundaries - `boolean`"
-  ([this]
+  ([^javax.swing.JTextArea this]
     (-> this (.getWrapStyleWord))))
 
 (defn set-tab-size
@@ -236,7 +236,7 @@
    when the tab size changes.
 
   size - number of characters to expand to - `int`"
-  ([this size]
+  ([^javax.swing.JTextArea this ^Integer size]
     (-> this (.setTabSize size))))
 
 (defn set-font
@@ -244,7 +244,7 @@
    width so the new font will be reflected, and calls revalidate().
 
   f - the font to use as the current font - `java.awt.Font`"
-  ([this f]
+  ([^javax.swing.JTextArea this ^java.awt.Font f]
     (-> this (.setFont f))))
 
 (defn get-scrollable-tracks-viewport-width?
@@ -255,14 +255,14 @@
 
   returns: true if a viewport should force the Scrollables width
    to match its own. - `boolean`"
-  ([this]
+  ([^javax.swing.JTextArea this]
     (-> this (.getScrollableTracksViewportWidth))))
 
 (defn get-rows
   "Returns the number of rows in the TextArea.
 
   returns: the number of rows >= 0 - `int`"
-  ([this]
+  ([^javax.swing.JTextArea this]
     (-> this (.getRows))))
 
 (defn get-accessible-context
@@ -273,7 +273,7 @@
 
   returns: an AccessibleJTextArea that serves as the
            AccessibleContext of this JTextArea - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^javax.swing.JTextArea this]
     (-> this (.getAccessibleContext))))
 
 (defn get-line-wrap?
@@ -283,7 +283,7 @@
    the lines will always be unwrapped.
 
   returns: if lines will be wrapped - `boolean`"
-  ([this]
+  ([^javax.swing.JTextArea this]
     (-> this (.getLineWrap))))
 
 (defn get-line-start-offset
@@ -294,7 +294,7 @@
   returns: the offset >= 0 - `int`
 
   throws: javax.swing.text.BadLocationException - thrown if the line is less than zero or greater or equal to the number of lines contained in the document (as reported by getLineCount)."
-  ([this line]
+  ([^javax.swing.JTextArea this ^Integer line]
     (-> this (.getLineStartOffset line))))
 
 (defn append
@@ -302,7 +302,7 @@
    the model is null or the string is null or empty.
 
   str - the text to insert - `java.lang.String`"
-  ([this str]
+  ([^javax.swing.JTextArea this ^java.lang.String str]
     (-> this (.append str))))
 
 (defn insert
@@ -313,7 +313,7 @@
   pos - the position at which to insert >= 0 - `int`
 
   throws: java.lang.IllegalArgumentException - if pos is an invalid position in the model"
-  ([this str pos]
+  ([^javax.swing.JTextArea this ^java.lang.String str ^Integer pos]
     (-> this (.insert str pos))))
 
 (defn replace-range
@@ -326,7 +326,7 @@
   end - the end position >= start - `int`
 
   throws: java.lang.IllegalArgumentException - if part of the range is an invalid position in the model"
-  ([this str start end]
+  ([^javax.swing.JTextArea this ^java.lang.String str ^Integer start ^Integer end]
     (-> this (.replaceRange str start end))))
 
 (defn set-rows
@@ -336,7 +336,7 @@
   rows - the number of rows >= 0 - `int`
 
   throws: java.lang.IllegalArgumentException - if rows is less than 0"
-  ([this rows]
+  ([^javax.swing.JTextArea this ^Integer rows]
     (-> this (.setRows rows))))
 
 (defn get-preferred-size
@@ -345,6 +345,6 @@
    size requested for the viewport.
 
   returns: the size - `java.awt.Dimension`"
-  ([this]
+  ([^javax.swing.JTextArea this]
     (-> this (.getPreferredSize))))
 

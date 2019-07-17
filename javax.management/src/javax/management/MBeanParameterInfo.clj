@@ -14,9 +14,9 @@
   type - The type or class name of the data - `java.lang.String`
   description - A human readable description of the data. Optional. - `java.lang.String`
   descriptor - The descriptor for the operation. This may be null which is equivalent to an empty descriptor. - `javax.management.Descriptor`"
-  ([name type description descriptor]
+  ([^java.lang.String name ^java.lang.String type ^java.lang.String description ^javax.management.Descriptor descriptor]
     (new MBeanParameterInfo name type description descriptor))
-  ([name type description]
+  ([^java.lang.String name ^java.lang.String type ^java.lang.String description]
     (new MBeanParameterInfo name type description)))
 
 (defn clone
@@ -30,21 +30,21 @@
    interest to subclasses.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([this]
+  ([^javax.management.MBeanParameterInfo this]
     (-> this (.clone))))
 
 (defn get-type
   "Returns the type or class name of the data.
 
   returns: the type string. - `java.lang.String`"
-  ([this]
+  ([^javax.management.MBeanParameterInfo this]
     (-> this (.getType))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^javax.management.MBeanParameterInfo this]
     (-> this (.toString))))
 
 (defn equals
@@ -56,13 +56,13 @@
    that its MBeanFeatureInfo.getName(), getType(),
    MBeanFeatureInfo.getDescriptor(), and MBeanFeatureInfo.getDescription() values are equal (not necessarily identical)
    to those of this MBeanParameterInfo. - `boolean`"
-  ([this o]
+  ([^javax.management.MBeanParameterInfo this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^javax.management.MBeanParameterInfo this]
     (-> this (.hashCode))))
 

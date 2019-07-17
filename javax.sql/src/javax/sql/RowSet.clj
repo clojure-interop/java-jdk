@@ -62,7 +62,7 @@
   x - the parameter value - `byte[]`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this parameter-index x]
+  ([^. this ^Integer parameter-index x]
     (-> this (.setBytes parameter-index x))))
 
 (defn set-string
@@ -76,7 +76,7 @@
   x - the parameter value - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this parameter-index x]
+  ([^. this ^Integer parameter-index ^java.lang.String x]
     (-> this (.setString parameter-index x))))
 
 (defn remove-row-set-listener
@@ -84,7 +84,7 @@
    notified when an event occurs on this RowSet object.
 
   listener - a component that has been registered as a listener for this RowSet object - `javax.sql.RowSetListener`"
-  ([this listener]
+  ([^. this ^javax.sql.RowSetListener listener]
     (-> this (.removeRowSetListener listener))))
 
 (defn set-array
@@ -97,7 +97,7 @@
   x - an object representing an SQL array - `java.sql.Array`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this i x]
+  ([^. this ^Integer i ^java.sql.Array x]
     (-> this (.setArray i x))))
 
 (defn set-type-map
@@ -108,7 +108,7 @@
   map - a java.util.Map object containing the names of SQL user-defined types and the Java classes to which they are to be mapped - `java.util.Map<java.lang.String,java.lang.Class<?>>`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this map]
+  ([^. this ^java.util.Map> map]
     (-> this (.setTypeMap map))))
 
 (defn set-read-only
@@ -118,7 +118,7 @@
   value - true if read-only; false if updatable - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this value]
+  ([^. this ^Boolean value]
     (-> this (.setReadOnly value))))
 
 (defn set-time
@@ -132,9 +132,9 @@
   cal - the java.util.Calendar object to use for calculating the time - `java.util.Calendar`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this parameter-index x cal]
+  ([^. this ^Integer parameter-index ^java.sql.Time x ^java.util.Calendar cal]
     (-> this (.setTime parameter-index x cal)))
-  ([this parameter-index x]
+  ([^. this ^Integer parameter-index ^java.sql.Time x]
     (-> this (.setTime parameter-index x))))
 
 (defn set-timestamp
@@ -149,9 +149,9 @@
   cal - the java.util.Calendar object to use for calculating the timestamp - `java.util.Calendar`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this parameter-index x cal]
+  ([^. this ^Integer parameter-index ^java.sql.Timestamp x ^java.util.Calendar cal]
     (-> this (.setTimestamp parameter-index x cal)))
-  ([this parameter-index x]
+  ([^. this ^Integer parameter-index ^java.sql.Timestamp x]
     (-> this (.setTimestamp parameter-index x))))
 
 (defn set-date
@@ -165,9 +165,9 @@
   cal - the java.util.Calendar object to use for calculating the date - `java.util.Calendar`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this parameter-index x cal]
+  ([^. this ^Integer parameter-index ^java.sql.Date x ^java.util.Calendar cal]
     (-> this (.setDate parameter-index x cal)))
-  ([this parameter-index x]
+  ([^. this ^Integer parameter-index ^java.sql.Date x]
     (-> this (.setDate parameter-index x))))
 
 (defn set-boolean
@@ -179,7 +179,7 @@
   x - the parameter value - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this parameter-index x]
+  ([^. this ^Integer parameter-index ^Boolean x]
     (-> this (.setBoolean parameter-index x))))
 
 (defn get-url
@@ -191,7 +191,7 @@
   returns: a string url - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.getUrl))))
 
 (defn set-command
@@ -205,7 +205,7 @@
   cmd - the SQL query that will be used to get the data for this RowSet object; may be null - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this cmd]
+  ([^. this ^java.lang.String cmd]
     (-> this (.setCommand cmd))))
 
 (defn set-n-character-stream
@@ -219,9 +219,9 @@
   length - the number of characters in the parameter data. - `long`
 
   throws: java.sql.SQLException - if the driver does not support national character sets; if the driver can detect that a data conversion error could occur ; or if a database access error occurs"
-  ([this parameter-index value length]
+  ([^. this ^Integer parameter-index ^java.io.Reader value ^Long length]
     (-> this (.setNCharacterStream parameter-index value length)))
-  ([this parameter-index value]
+  ([^. this ^Integer parameter-index ^java.io.Reader value]
     (-> this (.setNCharacterStream parameter-index value))))
 
 (defn set-null
@@ -249,9 +249,9 @@
   type-name - the fully qualified name of an SQL UDT or the type name of the SQL structured type being referenced by a REF type; ignored if the parameter is not a UDT or REF type - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this param-index sql-type type-name]
+  ([^. this ^Integer param-index ^Integer sql-type ^java.lang.String type-name]
     (-> this (.setNull param-index sql-type type-name)))
-  ([this parameter-index sql-type]
+  ([^. this ^Integer parameter-index ^Integer sql-type]
     (-> this (.setNull parameter-index sql-type))))
 
 (defn set-query-timeout
@@ -262,7 +262,7 @@
   seconds - the new query timeout limit in seconds; zero means that there is no limit - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this seconds]
+  ([^. this ^Integer seconds]
     (-> this (.setQueryTimeout seconds))))
 
 (defn get-transaction-isolation
@@ -274,7 +274,7 @@
         Connection.TRANSACTION_READ_COMMITTED,
         Connection.TRANSACTION_REPEATABLE_READ, or
         Connection.TRANSACTION_SERIALIZABLE - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getTransactionIsolation))))
 
 (defn set-password
@@ -284,7 +284,7 @@
   password - the password string - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this password]
+  ([^. this ^java.lang.String password]
     (-> this (.setPassword password))))
 
 (defn set-binary-stream
@@ -304,9 +304,9 @@
   length - the number of bytes in the stream - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this parameter-index x length]
+  ([^. this ^Integer parameter-index ^java.io.InputStream x ^Integer length]
     (-> this (.setBinaryStream parameter-index x length)))
-  ([this parameter-index x]
+  ([^. this ^Integer parameter-index ^java.io.InputStream x]
     (-> this (.setBinaryStream parameter-index x))))
 
 (defn set-type
@@ -317,7 +317,7 @@
   type - one of the ResultSet constants specifying a type: ResultSet.TYPE_FORWARD_ONLY, ResultSet.TYPE_SCROLL_INSENSITIVE, or ResultSet.TYPE_SCROLL_SENSITIVE - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this type]
+  ([^. this ^Integer type]
     (-> this (.setType type))))
 
 (defn add-row-set-listener
@@ -325,7 +325,7 @@
    that occur on this RowSet object.
 
   listener - a component that has implemented the RowSetListener interface and wants to be notified when events occur on this RowSet object - `javax.sql.RowSetListener`"
-  ([this listener]
+  ([^. this ^javax.sql.RowSetListener listener]
     (-> this (.addRowSetListener listener))))
 
 (defn get-command
@@ -336,7 +336,7 @@
    The default value is null.
 
   returns: the command string; may be null - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getCommand))))
 
 (defn set-blob
@@ -354,9 +354,9 @@
   length - the number of bytes in the parameter data. - `long`
 
   throws: java.sql.SQLException - if a database access error occurs, this method is called on a closed PreparedStatement, if parameterIndex does not correspond to a parameter marker in the SQL statement, if the length specified is less than zero or if the number of bytes in the inputstream does not match the specified length."
-  ([this parameter-index input-stream length]
+  ([^. this ^Integer parameter-index ^java.io.InputStream input-stream ^Long length]
     (-> this (.setBlob parameter-index input-stream length)))
-  ([this i x]
+  ([^. this ^Integer i ^java.sql.Blob x]
     (-> this (.setBlob i x))))
 
 (defn set-url
@@ -373,7 +373,7 @@
   url - a string value; may be null - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this url]
+  ([^. this ^java.lang.String url]
     (-> this (.setUrl url))))
 
 (defn set-object
@@ -409,11 +409,11 @@
   scale-or-length - for java.sql.Types.DECIMAL or java.sql.Types.NUMERIC types, this is the number of digits after the decimal point. For Java Object types InputStream and Reader, this is the length of the data in the stream or reader. For all other types, this value will be ignored. - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this parameter-index x target-sql-type scale-or-length]
+  ([^. this ^Integer parameter-index ^java.lang.Object x ^Integer target-sql-type ^Integer scale-or-length]
     (-> this (.setObject parameter-index x target-sql-type scale-or-length)))
-  ([this parameter-index x target-sql-type]
+  ([^. this ^Integer parameter-index ^java.lang.Object x ^Integer target-sql-type]
     (-> this (.setObject parameter-index x target-sql-type)))
-  ([this parameter-name x]
+  ([^. this ^java.lang.String parameter-name ^java.lang.Object x]
     (-> this (.setObject parameter-name x))))
 
 (defn set-escape-processing
@@ -424,7 +424,7 @@
   enable - true to enable escape processing; false to disable it - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this enable]
+  ([^. this ^Boolean enable]
     (-> this (.setEscapeProcessing enable))))
 
 (defn set-max-rows
@@ -435,7 +435,7 @@
   max - the new maximum number of rows; zero means unlimited - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this max]
+  ([^. this ^Integer max]
     (-> this (.setMaxRows max))))
 
 (defn get-username
@@ -446,7 +446,7 @@
    not usually part of the serialized state of a RowSet object.
 
   returns: the username property - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getUsername))))
 
 (defn clear-parameters
@@ -458,7 +458,7 @@
    be done by calling the method clearParameters.
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.clearParameters))))
 
 (defn set-n-clob
@@ -476,9 +476,9 @@
   length - the number of characters in the parameter data. - `long`
 
   throws: java.sql.SQLException - if parameterIndex does not correspond to a parameter marker in the SQL statement; if the length specified is less than zero; if the driver does not support national character sets; if the driver can detect that a data conversion error could occur; if a database access error occurs or this method is called on a closed CallableStatement"
-  ([this parameter-name reader length]
+  ([^. this ^java.lang.String parameter-name ^java.io.Reader reader ^Long length]
     (-> this (.setNClob parameter-name reader length)))
-  ([this parameter-name value]
+  ([^. this ^java.lang.String parameter-name ^java.sql.NClob value]
     (-> this (.setNClob parameter-name value))))
 
 (defn get-max-field-size
@@ -494,7 +494,7 @@
             is no limit - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.getMaxFieldSize))))
 
 (defn set-clob
@@ -512,9 +512,9 @@
   length - the number of characters in the parameter data. - `long`
 
   throws: java.sql.SQLException - if a database access error occurs, this method is called on a closed PreparedStatement, if parameterIndex does not correspond to a parameter marker in the SQL statement, or if the length specified is less than zero."
-  ([this parameter-index reader length]
+  ([^. this ^Integer parameter-index ^java.io.Reader reader ^Long length]
     (-> this (.setClob parameter-index reader length)))
-  ([this i x]
+  ([^. this ^Integer i ^java.sql.Clob x]
     (-> this (.setClob i x))))
 
 (defn set-transaction-isolation
@@ -523,7 +523,7 @@
   level - the transaction isolation level; one of Connection.TRANSACTION_READ_UNCOMMITTED, Connection.TRANSACTION_READ_COMMITTED, Connection.TRANSACTION_REPEATABLE_READ, or Connection.TRANSACTION_SERIALIZABLE - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this level]
+  ([^. this ^Integer level]
     (-> this (.setTransactionIsolation level))))
 
 (defn set-double
@@ -535,7 +535,7 @@
   x - the parameter value - `double`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this parameter-index x]
+  ([^. this ^Integer parameter-index ^Double x]
     (-> this (.setDouble parameter-index x))))
 
 (defn set-ref
@@ -547,7 +547,7 @@
   x - an object representing data of an SQL REF type - `java.sql.Ref`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this i x]
+  ([^. this ^Integer i ^java.sql.Ref x]
     (-> this (.setRef i x))))
 
 (defn set-long
@@ -559,7 +559,7 @@
   x - the parameter value - `long`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this parameter-index x]
+  ([^. this ^Integer parameter-index ^Long x]
     (-> this (.setLong parameter-index x))))
 
 (defn set-max-field-size
@@ -575,7 +575,7 @@
   max - the new max column size limit in bytes; zero means unlimited - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this max]
+  ([^. this ^Integer max]
     (-> this (.setMaxFieldSize max))))
 
 (defn set-username
@@ -585,7 +585,7 @@
   name - a user name - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this name]
+  ([^. this ^java.lang.String name]
     (-> this (.setUsername name))))
 
 (defn set-byte
@@ -597,7 +597,7 @@
   x - the parameter value - `byte`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this parameter-index x]
+  ([^. this ^Integer parameter-index ^Byte x]
     (-> this (.setByte parameter-index x))))
 
 (defn set-n-string
@@ -612,7 +612,7 @@
   value - the parameter value - `java.lang.String`
 
   throws: java.sql.SQLException - if the driver does not support national character sets; if the driver can detect that a data conversion error could occur ; or if a database access error occurs"
-  ([this parameter-index value]
+  ([^. this ^Integer parameter-index ^java.lang.String value]
     (-> this (.setNString parameter-index value))))
 
 (defn set-short
@@ -624,7 +624,7 @@
   x - the parameter value - `short`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this parameter-index x]
+  ([^. this ^Integer parameter-index ^Short x]
     (-> this (.setShort parameter-index x))))
 
 (defn set-concurrency
@@ -635,7 +635,7 @@
   concurrency - one of the ResultSet constants specifying a concurrency level: ResultSet.CONCUR_READ_ONLY or ResultSet.CONCUR_UPDATABLE - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this concurrency]
+  ([^. this ^Integer concurrency]
     (-> this (.setConcurrency concurrency))))
 
 (defn set-ascii-stream
@@ -655,9 +655,9 @@
   length - the number of bytes in the stream - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this parameter-index x length]
+  ([^. this ^Integer parameter-index ^java.io.InputStream x ^Integer length]
     (-> this (.setAsciiStream parameter-index x length)))
-  ([this parameter-index x]
+  ([^. this ^Integer parameter-index ^java.io.InputStream x]
     (-> this (.setAsciiStream parameter-index x))))
 
 (defn set-big-decimal
@@ -670,7 +670,7 @@
   x - the parameter value - `java.math.BigDecimal`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this parameter-index x]
+  ([^. this ^Integer parameter-index ^java.math.BigDecimal x]
     (-> this (.setBigDecimal parameter-index x))))
 
 (defn get-max-rows
@@ -682,7 +682,7 @@
            object can contain; zero means unlimited - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.getMaxRows))))
 
 (defn set-int
@@ -694,7 +694,7 @@
   x - the parameter value - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this parameter-index x]
+  ([^. this ^Integer parameter-index ^Integer x]
     (-> this (.setInt parameter-index x))))
 
 (defn get-query-timeout
@@ -706,7 +706,7 @@
             unlimited - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.getQueryTimeout))))
 
 (defn execute
@@ -734,7 +734,7 @@
    method as part of its implementation.
 
   throws: java.sql.SQLException - if a database access error occurs or any of the properties necessary for making a connection and creating a statement have not been set"
-  ([this]
+  ([^. this]
     (-> this (.execute))))
 
 (defn set-character-stream
@@ -754,9 +754,9 @@
   length - the number of characters in the stream - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this parameter-index reader length]
+  ([^. this ^Integer parameter-index ^java.io.Reader reader ^Integer length]
     (-> this (.setCharacterStream parameter-index reader length)))
-  ([this parameter-index reader]
+  ([^. this ^Integer parameter-index ^java.io.Reader reader]
     (-> this (.setCharacterStream parameter-index reader))))
 
 (defn get-type-map
@@ -770,7 +770,7 @@
            to be mapped - `java.util.Map<java.lang.String,java.lang.Class<?>>`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.getTypeMap))))
 
 (defn get-data-source-name
@@ -778,7 +778,7 @@
    RowSet object.
 
   returns: a data source name - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getDataSourceName))))
 
 (defn set-data-source-name
@@ -793,7 +793,7 @@
   name - the logical name of the data source for this RowSet object; may be null - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this name]
+  ([^. this ^java.lang.String name]
     (-> this (.setDataSourceName name))))
 
 (defn read-only?
@@ -806,7 +806,7 @@
 
   returns: true if this RowSet object is
            read-only; false if it is updatable - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.isReadOnly))))
 
 (defn set-url
@@ -818,7 +818,7 @@
   x - the java.net.URL object to be set - `java.net.URL`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed PreparedStatement"
-  ([this parameter-index x]
+  ([^. this ^Integer parameter-index ^java.net.URL x]
     (-> this (.setURL parameter-index x))))
 
 (defn get-escape-processing?
@@ -831,7 +831,7 @@
            false if it is disabled - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this]
+  ([^. this]
     (-> this (.getEscapeProcessing))))
 
 (defn set-sqlxml
@@ -842,7 +842,7 @@
   xml-object - a SQLXML object that maps an SQL XML value - `java.sql.SQLXML`
 
   throws: java.sql.SQLException - if a database access error occurs, this method is called on a closed result set, the java.xml.transform.Result, Writer or OutputStream has not been closed for the SQLXML object or if there is an error processing the XML value. The getCause method of the exception may provide a more detailed exception, for example, if the stream does not contain valid XML."
-  ([this parameter-index xml-object]
+  ([^. this ^Integer parameter-index ^java.sql.SQLXML xml-object]
     (-> this (.setSQLXML parameter-index xml-object))))
 
 (defn set-float
@@ -854,7 +854,7 @@
   x - the parameter value - `float`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this parameter-index x]
+  ([^. this ^Integer parameter-index ^Float x]
     (-> this (.setFloat parameter-index x))))
 
 (defn set-row-id
@@ -866,7 +866,7 @@
   x - the parameter value - `java.sql.RowId`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this parameter-index x]
+  ([^. this ^Integer parameter-index ^java.sql.RowId x]
     (-> this (.setRowId parameter-index x))))
 
 (defn get-password
@@ -876,6 +876,6 @@
    of a RowSet object.
 
   returns: the password for making a database connection - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getPassword))))
 

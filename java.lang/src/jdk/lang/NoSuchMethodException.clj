@@ -9,7 +9,7 @@
   Constructs a NoSuchMethodException with a detail message.
 
   s - the detail message. - `java.lang.String`"
-  ([s]
+  ([^java.lang.String s]
     (new NoSuchMethodException s))
   ([]
     (new NoSuchMethodException )))

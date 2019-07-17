@@ -63,7 +63,7 @@
    Format instance.
 
   format - Format instance used for converting from/to Strings - `java.text.Format`"
-  ([format]
+  ([^java.text.Format format]
     (new InternationalFormatter format))
   ([]
     (new InternationalFormatter )))
@@ -77,14 +77,14 @@
   returns: Object representation of text - `java.lang.Object`
 
   throws: java.text.ParseException - if there is an error in the conversion"
-  ([this text]
+  ([^javax.swing.text.InternationalFormatter this ^java.lang.String text]
     (-> this (.stringToValue text))))
 
 (defn get-minimum
   "Returns the minimum permissible value.
 
   returns: Minimum legal value that can be input - `java.lang.Comparable`"
-  ([this]
+  ([^javax.swing.text.InternationalFormatter this]
     (-> this (.getMinimum))))
 
 (defn set-format
@@ -92,7 +92,7 @@
    and displayed.
 
   format - Format instance used for converting from/to Strings - `java.text.Format`"
-  ([this format]
+  ([^javax.swing.text.InternationalFormatter this ^java.text.Format format]
     (-> this (.setFormat format))))
 
 (defn set-maximum
@@ -102,7 +102,7 @@
    max.
 
   max - Maximum legal value that can be input - `java.lang.Comparable`"
-  ([this max]
+  ([^javax.swing.text.InternationalFormatter this ^java.lang.Comparable max]
     (-> this (.setMaximum max))))
 
 (defn install
@@ -133,7 +133,7 @@
    state changes.
 
   ftf - JFormattedTextField to format for, may be null indicating uninstall from current JFormattedTextField. - `javax.swing.JFormattedTextField`"
-  ([this ftf]
+  ([^javax.swing.text.InternationalFormatter this ^javax.swing.JFormattedTextField ftf]
     (-> this (.install ftf))))
 
 (defn get-format
@@ -141,7 +141,7 @@
    and displayed.
 
   returns: Format instance used for converting from/to Strings - `java.text.Format`"
-  ([this]
+  ([^javax.swing.text.InternationalFormatter this]
     (-> this (.getFormat))))
 
 (defn clone
@@ -150,7 +150,7 @@
   returns: copy of the DefaultFormatter - `java.lang.Object`
 
   throws: java.lang.CloneNotSupportedException - if the object's class does not support the Cloneable interface. Subclasses that override the clone method can also throw this exception to indicate that an instance cannot be cloned."
-  ([this]
+  ([^javax.swing.text.InternationalFormatter this]
     (-> this (.clone))))
 
 (defn value-to-string
@@ -162,7 +162,7 @@
   returns: String representation of value - `java.lang.String`
 
   throws: java.text.ParseException - if there is an error in the conversion"
-  ([this value]
+  ([^javax.swing.text.InternationalFormatter this ^java.lang.Object value]
     (-> this (.valueToString value))))
 
 (defn get-fields
@@ -175,7 +175,7 @@
 
   returns: Format.Field constants associated with the text at the
            given position. - `java.text.Format.Field[]`"
-  ([this offset]
+  ([^javax.swing.text.InternationalFormatter this ^Integer offset]
     (-> this (.getFields offset))))
 
 (defn set-minimum
@@ -185,13 +185,13 @@
    minimum.
 
   minimum - Minimum legal value that can be input - `java.lang.Comparable`"
-  ([this minimum]
+  ([^javax.swing.text.InternationalFormatter this ^java.lang.Comparable minimum]
     (-> this (.setMinimum minimum))))
 
 (defn get-maximum
   "Returns the maximum permissible value.
 
   returns: Maximum legal value that can be input - `java.lang.Comparable`"
-  ([this]
+  ([^javax.swing.text.InternationalFormatter this]
     (-> this (.getMaximum))))
 

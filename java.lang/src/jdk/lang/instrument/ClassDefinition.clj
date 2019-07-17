@@ -14,20 +14,20 @@
   the-class-file - the new class file bytes - `byte[]`
 
   throws: java.lang.NullPointerException - if the supplied class or array is null."
-  ([the-class the-class-file]
+  ([^java.lang.Class the-class the-class-file]
     (new ClassDefinition the-class the-class-file)))
 
 (defn get-definition-class
   "Returns the class.
 
   returns: the Class object referred to. - `java.lang.Class<?>`"
-  ([this]
+  ([^java.lang.instrument.ClassDefinition this]
     (-> this (.getDefinitionClass))))
 
 (defn get-definition-class-file
   "Returns the array of bytes that contains the new class file.
 
   returns: the class file bytes. - `byte[]`"
-  ([this]
+  ([^java.lang.instrument.ClassDefinition this]
     (-> this (.getDefinitionClassFile))))
 

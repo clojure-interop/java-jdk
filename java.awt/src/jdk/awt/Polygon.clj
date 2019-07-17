@@ -30,7 +30,7 @@
   npoints - the total number of points in the Polygon - `int`
 
   throws: java.lang.NegativeArraySizeException - if the value of npoints is negative."
-  ([xpoints ypoints npoints]
+  ([xpoints ypoints ^Integer npoints]
     (new Polygon xpoints ypoints npoints))
   ([]
     (new Polygon )))
@@ -91,9 +91,9 @@
 
   returns: a PathIterator object that provides access to the
             Shape object's geometry. - `java.awt.geom.PathIterator`"
-  ([this at flatness]
+  ([^java.awt.Polygon this ^java.awt.geom.AffineTransform at ^Double flatness]
     (-> this (.getPathIterator at flatness)))
-  ([this at]
+  ([^java.awt.Polygon this ^java.awt.geom.AffineTransform at]
     (-> this (.getPathIterator at))))
 
 (defn translate
@@ -103,7 +103,7 @@
 
   delta-x - the amount to translate along the X axis - `int`
   delta-y - the amount to translate along the Y axis - `int`"
-  ([this delta-x delta-y]
+  ([^java.awt.Polygon this ^Integer delta-x ^Integer delta-y]
     (-> this (.translate delta-x delta-y))))
 
 (defn contains
@@ -143,11 +143,11 @@
             intersects method returns true
             and the containment calculations would be too expensive to
             perform. - `boolean`"
-  ([this x y w h]
+  ([^java.awt.Polygon this ^Double x ^Double y ^Double w ^Double h]
     (-> this (.contains x y w h)))
-  ([this x y]
+  ([^java.awt.Polygon this ^Integer x ^Integer y]
     (-> this (.contains x y)))
-  ([this p]
+  ([^java.awt.Polygon this ^java.awt.Point p]
     (-> this (.contains p))))
 
 (defn reset
@@ -164,7 +164,7 @@
    the number of vertices in the new polygon data is significantly
    smaller than the number of vertices in the data from before the
    reset."
-  ([this]
+  ([^java.awt.Polygon this]
     (-> this (.reset))))
 
 (defn add-point
@@ -177,7 +177,7 @@
 
   x - the specified X coordinate - `int`
   y - the specified Y coordinate - `int`"
-  ([this x y]
+  ([^java.awt.Polygon this ^Integer x ^Integer y]
     (-> this (.addPoint x y))))
 
 (defn invalidate
@@ -189,7 +189,7 @@
    from methods such as getBounds or contains
    that might cache data from earlier computations relating to
    the vertex coordinates."
-  ([this]
+  ([^java.awt.Polygon this]
     (-> this (.invalidate))))
 
 (defn get-bounds-2-d
@@ -232,7 +232,7 @@
 
   returns: an instance of Rectangle2D that is a
                    high-precision bounding box of the Shape. - `java.awt.geom.Rectangle2D`"
-  ([this]
+  ([^java.awt.Polygon this]
     (-> this (.getBounds2D))))
 
 (defn inside
@@ -245,7 +245,7 @@
   returns: true if this Polygon contains
            the specified coordinates (x,y);
            false otherwise. - `java.lang.  boolean`"
-  ([this x y]
+  ([^java.awt.Polygon this ^Integer x ^Integer y]
     (-> this (.inside x y))))
 
 (defn get-bounds
@@ -256,7 +256,7 @@
 
   returns: a Rectangle that defines the bounds of this
    Polygon. - `java.awt.Rectangle`"
-  ([this]
+  ([^java.awt.Polygon this]
     (-> this (.getBounds))))
 
 (defn get-bounding-box
@@ -264,7 +264,7 @@
    replaced by getBounds().
 
   returns: the bounds of this Polygon. - `java.lang.  java.awt.Rectangle`"
-  ([this]
+  ([^java.awt.Polygon this]
     (-> this (.getBoundingBox))))
 
 (defn intersects
@@ -301,8 +301,8 @@
             the interior of the rectangular area intersect, or are
             both highly likely to intersect and intersection calculations
             would be too expensive to perform; false otherwise. - `boolean`"
-  ([this x y w h]
+  ([^java.awt.Polygon this ^Double x ^Double y ^Double w ^Double h]
     (-> this (.intersects x y w h)))
-  ([this r]
+  ([^java.awt.Polygon this ^java.awt.geom.Rectangle2D r]
     (-> this (.intersects r))))
 

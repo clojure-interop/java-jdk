@@ -17,9 +17,9 @@
   seed - the bytes used during curve generation for later validation. Contents of this array are copied to protect against subsequent modification. - `byte[]`
 
   throws: java.lang.NullPointerException - if field, a, or b is null."
-  ([field a b seed]
+  ([^java.security.spec.ECField field ^java.math.BigInteger a ^java.math.BigInteger b seed]
     (new EllipticCurve field a b seed))
-  ([field a b]
+  ([^java.security.spec.ECField field ^java.math.BigInteger a ^java.math.BigInteger b]
     (new EllipticCurve field a b)))
 
 (defn get-field
@@ -28,7 +28,7 @@
 
   returns: the field field that this curve
    is over. - `java.security.spec.ECField`"
-  ([this]
+  ([^java.security.spec.EllipticCurve this]
     (-> this (.getField))))
 
 (defn get-a
@@ -36,7 +36,7 @@
    elliptic curve.
 
   returns: the first coefficient a. - `java.math.BigInteger`"
-  ([this]
+  ([^java.security.spec.EllipticCurve this]
     (-> this (.getA))))
 
 (defn get-b
@@ -44,7 +44,7 @@
    elliptic curve.
 
   returns: the second coefficient b. - `java.math.BigInteger`"
-  ([this]
+  ([^java.security.spec.EllipticCurve this]
     (-> this (.getB))))
 
 (defn get-seed
@@ -53,7 +53,7 @@
 
   returns: the seeding bytes seed. A new
    array is returned each time this method is called. - `byte[]`"
-  ([this]
+  ([^java.security.spec.EllipticCurve this]
     (-> this (.getSeed))))
 
 (defn equals
@@ -64,7 +64,7 @@
 
   returns: true if obj is an instance of
    EllipticCurve and the field, A, and B match, false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.security.spec.EllipticCurve this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -75,6 +75,6 @@
 
 
        (field.hashCode() << 6)  (a.hashCode() << 4)  (b.hashCode() << 2) - `int`"
-  ([this]
+  ([^java.security.spec.EllipticCurve this]
     (-> this (.hashCode))))
 

@@ -19,7 +19,7 @@
   t - the input argument - `Stream.Builder.T`
 
   throws: java.lang.IllegalStateException - if the builder has already transitioned to the built state"
-  ([this t]
+  ([^. this ^Stream.Builder.T t]
     (-> this (.accept t))))
 
 (defn add
@@ -30,7 +30,7 @@
   returns: this builder - `default java.util.stream.Stream.Builder<Stream.Builder.T>`
 
   throws: java.lang.IllegalStateException - if the builder has already transitioned to the built state"
-  ([this t]
+  ([^. this ^Stream.Builder.T t]
     (-> this (.add t))))
 
 (defn build
@@ -41,6 +41,6 @@
   returns: the built stream - `java.util.stream.Stream<Stream.Builder.T>`
 
   throws: java.lang.IllegalStateException - if the builder has already transitioned to the built state"
-  ([this]
+  ([^. this]
     (-> this (.build))))
 

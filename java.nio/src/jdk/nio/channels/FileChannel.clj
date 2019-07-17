@@ -185,9 +185,9 @@
   returns: A new file channel - `java.nio.channels.FileChannel`
 
   throws: java.lang.IllegalArgumentException - If the set contains an invalid combination of options"
-  ([path options attrs]
+  ([^java.nio.file.Path path ^java.nio.file.OpenOption> options ^java.nio.file.attribute.FileAttribute attrs]
     (FileChannel/open path options attrs))
-  ([path options]
+  ([^java.nio.file.Path path ^java.nio.file.OpenOption options]
     (FileChannel/open path options)))
 
 (defn map
@@ -248,7 +248,7 @@
   returns: The mapped byte buffer - `java.nio.MappedByteBuffer`
 
   throws: java.nio.channels.NonReadableChannelException - If the mode is READ_ONLY but this channel was not opened for reading"
-  ([this mode position size]
+  ([^java.nio.channels.FileChannel this ^java.nio.channels.FileChannel.MapMode mode ^Long position ^Long size]
     (-> this (.map mode position size))))
 
 (defn try-lock
@@ -289,9 +289,9 @@
             because another program holds an overlapping lock - `java.nio.channels.FileLock`
 
   throws: java.lang.IllegalArgumentException - If the preconditions on the parameters do not hold"
-  ([this position size shared]
+  ([^java.nio.channels.FileChannel this ^Long position ^Long size ^Boolean shared]
     (-> this (.tryLock position size shared)))
-  ([this]
+  ([^java.nio.channels.FileChannel this]
     (-> this (.tryLock))))
 
 (defn force
@@ -332,7 +332,7 @@
   meta-data - If true then this method is required to force changes to both the file's content and metadata to be written to storage; otherwise, it need only force content changes to be written - `boolean`
 
   throws: java.nio.channels.ClosedChannelException - If this channel is closed"
-  ([this meta-data]
+  ([^java.nio.channels.FileChannel this ^Boolean meta-data]
     (-> this (.force meta-data))))
 
 (defn transfer-to
@@ -368,7 +368,7 @@
             that were actually transferred - `long`
 
   throws: java.lang.IllegalArgumentException - If the preconditions on the parameters do not hold"
-  ([this position count target]
+  ([^java.nio.channels.FileChannel this ^Long position ^Long count ^java.nio.channels.WritableByteChannel target]
     (-> this (.transferTo position count target))))
 
 (defn read
@@ -387,11 +387,11 @@
            or -1 if the channel has reached end-of-stream - `long`
 
   throws: java.nio.channels.ClosedChannelException - If this channel is closed"
-  ([this dsts offset length]
+  ([^java.nio.channels.FileChannel this ^java.nio.ByteBuffer[] dsts ^Integer offset ^Integer length]
     (-> this (.read dsts offset length)))
-  ([this dst position]
+  ([^java.nio.channels.FileChannel this ^java.nio.ByteBuffer dst ^Long position]
     (-> this (.read dst position)))
-  ([this dst]
+  ([^java.nio.channels.FileChannel this ^java.nio.ByteBuffer dst]
     (-> this (.read dst))))
 
 (defn transfer-from
@@ -427,7 +427,7 @@
             that were actually transferred - `long`
 
   throws: java.lang.IllegalArgumentException - If the preconditions on the parameters do not hold"
-  ([this src position count]
+  ([^java.nio.channels.FileChannel this ^java.nio.channels.ReadableByteChannel src ^Long position ^Long count]
     (-> this (.transferFrom src position count))))
 
 (defn position
@@ -446,9 +446,9 @@
   returns: This file channel - `java.nio.channels.FileChannel`
 
   throws: java.nio.channels.ClosedChannelException - If this channel is closed"
-  ([this new-position]
+  ([^java.nio.channels.FileChannel this ^Long new-position]
     (-> this (.position new-position)))
-  ([this]
+  ([^java.nio.channels.FileChannel this]
     (-> this (.position))))
 
 (defn truncate
@@ -465,7 +465,7 @@
   returns: This file channel - `java.nio.channels.FileChannel`
 
   throws: java.nio.channels.NonWritableChannelException - If this channel was not opened for writing"
-  ([this size]
+  ([^java.nio.channels.FileChannel this ^Long size]
     (-> this (.truncate size))))
 
 (defn lock
@@ -510,9 +510,9 @@
   returns: A lock object representing the newly-acquired lock - `java.nio.channels.FileLock`
 
   throws: java.lang.IllegalArgumentException - If the preconditions on the parameters do not hold"
-  ([this position size shared]
+  ([^java.nio.channels.FileChannel this ^Long position ^Long size ^Boolean shared]
     (-> this (.lock position size shared)))
-  ([this]
+  ([^java.nio.channels.FileChannel this]
     (-> this (.lock))))
 
 (defn size
@@ -522,7 +522,7 @@
             measured in bytes - `long`
 
   throws: java.nio.channels.ClosedChannelException - If this channel is closed"
-  ([this]
+  ([^java.nio.channels.FileChannel this]
     (-> this (.size))))
 
 (defn write
@@ -544,10 +544,10 @@
   returns: The number of bytes written, possibly zero - `long`
 
   throws: java.nio.channels.ClosedChannelException - If this channel is closed"
-  ([this srcs offset length]
+  ([^java.nio.channels.FileChannel this ^java.nio.ByteBuffer[] srcs ^Integer offset ^Integer length]
     (-> this (.write srcs offset length)))
-  ([this src position]
+  ([^java.nio.channels.FileChannel this ^java.nio.ByteBuffer src ^Long position]
     (-> this (.write src position)))
-  ([this src]
+  ([^java.nio.channels.FileChannel this ^java.nio.ByteBuffer src]
     (-> this (.write src))))
 

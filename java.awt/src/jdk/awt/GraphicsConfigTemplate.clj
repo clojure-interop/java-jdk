@@ -61,7 +61,7 @@
 
   returns: a GraphicsConfiguration object that is
    the best configuration possible. - `java.awt.GraphicsConfiguration`"
-  ([this gc]
+  ([^java.awt.GraphicsConfigTemplate this ^java.awt.GraphicsConfiguration[] gc]
     (-> this (.getBestConfiguration gc))))
 
 (defn graphics-config-supported?
@@ -78,6 +78,6 @@
    false if the GraphicsConfiguration can
    not be used to create a drawing surface usable by this Java(tm)
    API. - `boolean`"
-  ([this gc]
+  ([^java.awt.GraphicsConfigTemplate this ^java.awt.GraphicsConfiguration gc]
     (-> this (.isGraphicsConfigSupported gc))))
 

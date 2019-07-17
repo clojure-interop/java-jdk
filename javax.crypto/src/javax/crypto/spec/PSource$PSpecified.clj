@@ -30,6 +30,6 @@
 
   returns: the value of encoding input P. A new array is
    returned each time this method is called. - `byte[]`"
-  ([this]
+  ([^javax.crypto.spec.PSource$PSpecified this]
     (-> this (.getValue))))
 

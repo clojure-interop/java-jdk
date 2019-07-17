@@ -15,7 +15,7 @@
 
   s - the detail message. - `java.lang.String`
   err - the nested error. An instance of this class can be constructed where this parameter is null, but the standard connectors will never do so. - `java.lang.Error`"
-  ([s err]
+  ([^java.lang.String s ^java.lang.Error err]
     (new JMXServerErrorException s err)))
 
 (defn get-cause
@@ -23,6 +23,6 @@
 
   returns: the cause of this throwable or null if the
             cause is nonexistent or unknown. - `java.lang.Throwable`"
-  ([this]
+  ([^javax.management.remote.JMXServerErrorException this]
     (-> this (.getCause))))
 

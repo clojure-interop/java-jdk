@@ -37,9 +37,9 @@
   catch-throwables - Specifies whether dispatch should catch Throwable when executing the Runnable's run method, or should instead propagate those Throwables to the EventDispatchThread's dispatch loop - `boolean`
 
   throws: java.lang.IllegalArgumentException - if source is null"
-  ([source runnable notifier catch-throwables]
+  ([^java.lang.Object source ^java.lang.Runnable runnable ^java.lang.Object notifier ^Boolean catch-throwables]
     (new InvocationEvent source runnable notifier catch-throwables))
-  ([source runnable]
+  ([^java.lang.Object source ^java.lang.Runnable runnable]
     (new InvocationEvent source runnable)))
 
 (def *-invocation-first
@@ -69,7 +69,7 @@
 (defn dispatch
   "Executes the Runnable's run() method and notifies the
    notifier (if any) when run() has returned or thrown an exception."
-  ([this]
+  ([^java.awt.event.InvocationEvent this]
     (-> this (.dispatch))))
 
 (defn get-exception
@@ -79,7 +79,7 @@
   returns: A reference to the Exception if one was thrown; null if no
             Exception was thrown or if this InvocationEvent does not
             catch exceptions - `java.lang.Exception`"
-  ([this]
+  ([^java.awt.event.InvocationEvent this]
     (-> this (.getException))))
 
 (defn get-throwable
@@ -89,14 +89,14 @@
   returns: A reference to the Throwable if one was thrown; null if no
             Throwable was thrown or if this InvocationEvent does not
             catch Throwables - `java.lang.Throwable`"
-  ([this]
+  ([^java.awt.event.InvocationEvent this]
     (-> this (.getThrowable))))
 
 (defn get-when
   "Returns the timestamp of when this event occurred.
 
   returns: this event's timestamp - `long`"
-  ([this]
+  ([^java.awt.event.InvocationEvent this]
     (-> this (.getWhen))))
 
 (defn dispatched?
@@ -124,7 +124,7 @@
 
   returns: true if the event has been dispatched, or any exception
    has been thrown while dispatching, false otherwise - `boolean`"
-  ([this]
+  ([^java.awt.event.InvocationEvent this]
     (-> this (.isDispatched))))
 
 (defn param-string
@@ -132,6 +132,6 @@
    This method is useful for event-logging and for debugging.
 
   returns: A string identifying the event and its attributes - `java.lang.String`"
-  ([this]
+  ([^java.awt.event.InvocationEvent this]
     (-> this (.paramString))))
 

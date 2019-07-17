@@ -48,7 +48,7 @@
   returns: a reference to a remote object - `java.rmi.Remote`
 
   throws: java.rmi.NotBoundException - if name is not currently bound"
-  ([this name]
+  ([^. this ^java.lang.String name]
     (-> this (.lookup name))))
 
 (defn bind
@@ -59,7 +59,7 @@
   obj - a reference to a remote object (usually a stub) - `java.rmi.Remote`
 
   throws: java.rmi.AlreadyBoundException - if name is already bound"
-  ([this name obj]
+  ([^. this ^java.lang.String name ^java.rmi.Remote obj]
     (-> this (.bind name obj))))
 
 (defn unbind
@@ -69,7 +69,7 @@
   name - the name of the binding to remove - `java.lang.String`
 
   throws: java.rmi.NotBoundException - if name is not currently bound"
-  ([this name]
+  ([^. this ^java.lang.String name]
     (-> this (.unbind name))))
 
 (defn rebind
@@ -82,7 +82,7 @@
   obj - a reference to a remote object (usually a stub) - `java.rmi.Remote`
 
   throws: java.rmi.RemoteException - if remote communication with the registry failed; if exception is a ServerException containing an AccessException, then the registry denies the caller access to perform this operation (if originating from a non-local host, for example)"
-  ([this name obj]
+  ([^. this ^java.lang.String name ^java.rmi.Remote obj]
     (-> this (.rebind name obj))))
 
 (defn list
@@ -93,6 +93,6 @@
   returns: an array of the names bound in this registry - `java.lang.String[]`
 
   throws: java.rmi.RemoteException - if remote communication with the registry failed; if exception is a ServerException containing an AccessException, then the registry denies the caller access to perform this operation"
-  ([this]
+  ([^. this]
     (-> this (.list))))
 

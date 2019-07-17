@@ -18,7 +18,7 @@
 
   returns: A reference object, if one was immediately available,
             otherwise null - `java.lang.ref.Reference<? extends ReferenceQueue.T>`"
-  ([this]
+  ([^java.lang.ref.ReferenceQueue this]
     (-> this (.poll))))
 
 (defn remove
@@ -34,8 +34,8 @@
             timeout period, otherwise null - `java.lang.ref.Reference<? extends ReferenceQueue.T>`
 
   throws: java.lang.IllegalArgumentException - If the value of the timeout argument is negative"
-  ([this timeout]
+  ([^java.lang.ref.ReferenceQueue this ^Long timeout]
     (-> this (.remove timeout)))
-  ([this]
+  ([^java.lang.ref.ReferenceQueue this]
     (-> this (.remove))))
 

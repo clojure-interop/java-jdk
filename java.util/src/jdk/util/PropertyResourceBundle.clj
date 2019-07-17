@@ -79,7 +79,7 @@
   stream - an InputStream that represents a property file to read from. - `java.io.InputStream`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([stream]
+  ([^java.io.InputStream stream]
     (new PropertyResourceBundle stream)))
 
 (defn handle-get-object
@@ -88,7 +88,7 @@
   key - the key for the desired object - `java.lang.String`
 
   returns: the object for the given key, or null - `java.lang.Object`"
-  ([this key]
+  ([^java.util.PropertyResourceBundle this ^java.lang.String key]
     (-> this (.handleGetObject key))))
 
 (defn get-keys
@@ -97,6 +97,6 @@
 
   returns: an Enumeration of the keys contained in
            this ResourceBundle and its parent bundles. - `java.util.Enumeration<java.lang.String>`"
-  ([this]
+  ([^java.util.PropertyResourceBundle this]
     (-> this (.getKeys))))
 

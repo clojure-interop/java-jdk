@@ -25,7 +25,7 @@
    the current LookAndFeel.
 
   style - the LayoutStyle, or null - `javax.swing.LayoutStyle`"
-  ([style]
+  ([^javax.swing.LayoutStyle style]
     (LayoutStyle/setInstance style)))
 
 (defn *get-instance
@@ -75,7 +75,7 @@
   returns: the amount of space to place between the two components - `int`
 
   throws: java.lang.NullPointerException - if component1, component2 or type is null"
-  ([this component-1 component-2 type position parent]
+  ([^javax.swing.LayoutStyle this ^javax.swing.JComponent component-1 ^javax.swing.JComponent component-2 ^javax.swing.LayoutStyle.ComponentPlacement type ^Integer position ^java.awt.Container parent]
     (-> this (.getPreferredGap component-1 component-2 type position parent))))
 
 (defn get-container-gap
@@ -90,6 +90,6 @@
            edge - `int`
 
   throws: java.lang.IllegalArgumentException - if position is not one of SwingConstants.NORTH, SwingConstants.SOUTH, SwingConstants.EAST or SwingConstants.WEST"
-  ([this component position parent]
+  ([^javax.swing.LayoutStyle this ^javax.swing.JComponent component ^Integer position ^java.awt.Container parent]
     (-> this (.getContainerGap component position parent))))
 

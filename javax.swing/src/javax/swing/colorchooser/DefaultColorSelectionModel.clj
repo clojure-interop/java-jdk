@@ -13,7 +13,7 @@
    results.
 
   color - the new Color - `java.awt.Color`"
-  ([color]
+  ([^java.awt.Color color]
     (new DefaultColorSelectionModel color))
   ([]
     (new DefaultColorSelectionModel )))
@@ -23,7 +23,7 @@
    non-null.
 
   returns: the selected Color - `java.awt.Color`"
-  ([this]
+  ([^javax.swing.colorchooser.DefaultColorSelectionModel this]
     (-> this (.getSelectedColor))))
 
 (defn set-selected-color
@@ -36,21 +36,21 @@
    no event is fired.
 
   color - the new Color - `java.awt.Color`"
-  ([this color]
+  ([^javax.swing.colorchooser.DefaultColorSelectionModel this ^java.awt.Color color]
     (-> this (.setSelectedColor color))))
 
 (defn add-change-listener
   "Adds a ChangeListener to the model.
 
   l - the ChangeListener to be added - `javax.swing.event.ChangeListener`"
-  ([this l]
+  ([^javax.swing.colorchooser.DefaultColorSelectionModel this ^javax.swing.event.ChangeListener l]
     (-> this (.addChangeListener l))))
 
 (defn remove-change-listener
   "Removes a ChangeListener from the model.
 
   l - the ChangeListener to be removed - `javax.swing.event.ChangeListener`"
-  ([this l]
+  ([^javax.swing.colorchooser.DefaultColorSelectionModel this ^javax.swing.event.ChangeListener l]
     (-> this (.removeChangeListener l))))
 
 (defn get-change-listeners
@@ -60,6 +60,6 @@
 
   returns: all of the ChangeListeners added, or an empty
            array if no listeners have been added - `javax.swing.event.ChangeListener[]`"
-  ([this]
+  ([^javax.swing.colorchooser.DefaultColorSelectionModel this]
     (-> this (.getChangeListeners))))
 

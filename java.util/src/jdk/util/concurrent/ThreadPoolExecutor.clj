@@ -280,18 +280,18 @@
   handler - the handler to use when execution is blocked because the thread bounds and queue capacities are reached - `java.util.concurrent.RejectedExecutionHandler`
 
   throws: java.lang.IllegalArgumentException - if one of the following holds: corePoolSize < 0 keepAliveTime < 0 maximumPoolSize <= 0 maximumPoolSize < corePoolSize"
-  ([core-pool-size maximum-pool-size keep-alive-time unit work-queue thread-factory handler]
+  ([^Integer core-pool-size ^Integer maximum-pool-size ^Long keep-alive-time ^java.util.concurrent.TimeUnit unit ^java.util.concurrent.BlockingQueue work-queue ^java.util.concurrent.ThreadFactory thread-factory ^java.util.concurrent.RejectedExecutionHandler handler]
     (new ThreadPoolExecutor core-pool-size maximum-pool-size keep-alive-time unit work-queue thread-factory handler))
-  ([core-pool-size maximum-pool-size keep-alive-time unit work-queue thread-factory]
+  ([^Integer core-pool-size ^Integer maximum-pool-size ^Long keep-alive-time ^java.util.concurrent.TimeUnit unit ^java.util.concurrent.BlockingQueue work-queue ^java.util.concurrent.ThreadFactory thread-factory]
     (new ThreadPoolExecutor core-pool-size maximum-pool-size keep-alive-time unit work-queue thread-factory))
-  ([core-pool-size maximum-pool-size keep-alive-time unit work-queue]
+  ([^Integer core-pool-size ^Integer maximum-pool-size ^Long keep-alive-time ^java.util.concurrent.TimeUnit unit ^java.util.concurrent.BlockingQueue work-queue]
     (new ThreadPoolExecutor core-pool-size maximum-pool-size keep-alive-time unit work-queue)))
 
 (defn get-maximum-pool-size
   "Returns the maximum allowed number of threads.
 
   returns: the maximum allowed number of threads - `int`"
-  ([this]
+  ([^java.util.concurrent.ThreadPoolExecutor this]
     (-> this (.getMaximumPoolSize))))
 
 (defn set-maximum-pool-size
@@ -303,7 +303,7 @@
   maximum-pool-size - the new maximum - `int`
 
   throws: java.lang.IllegalArgumentException - if the new maximum is less than or equal to zero, or less than the core pool size"
-  ([this maximum-pool-size]
+  ([^java.util.concurrent.ThreadPoolExecutor this ^Integer maximum-pool-size]
     (-> this (.setMaximumPoolSize maximum-pool-size))))
 
 (defn allows-core-thread-time-out
@@ -316,7 +316,7 @@
 
   returns: true if core threads are allowed to time out,
            else false - `boolean`"
-  ([this]
+  ([^java.util.concurrent.ThreadPoolExecutor this]
     (-> this (.allowsCoreThreadTimeOut))))
 
 (defn set-rejected-execution-handler
@@ -325,14 +325,14 @@
   handler - the new handler - `java.util.concurrent.RejectedExecutionHandler`
 
   throws: java.lang.NullPointerException - if handler is null"
-  ([this handler]
+  ([^java.util.concurrent.ThreadPoolExecutor this ^java.util.concurrent.RejectedExecutionHandler handler]
     (-> this (.setRejectedExecutionHandler handler))))
 
 (defn get-core-pool-size
   "Returns the core number of threads.
 
   returns: the core number of threads - `int`"
-  ([this]
+  ([^java.util.concurrent.ThreadPoolExecutor this]
     (-> this (.getCorePoolSize))))
 
 (defn purge
@@ -344,7 +344,7 @@
    remove them. Invoking this method instead tries to remove them now.
    However, this method may fail to remove tasks in
    the presence of interference by other threads."
-  ([this]
+  ([^java.util.concurrent.ThreadPoolExecutor this]
     (-> this (.purge))))
 
 (defn get-keep-alive-time
@@ -355,7 +355,7 @@
   unit - the desired time unit of the result - `java.util.concurrent.TimeUnit`
 
   returns: the time limit - `long`"
-  ([this unit]
+  ([^java.util.concurrent.ThreadPoolExecutor this ^java.util.concurrent.TimeUnit unit]
     (-> this (.getKeepAliveTime unit))))
 
 (defn to-string
@@ -364,7 +364,7 @@
    task counts.
 
   returns: a string identifying this pool, as well as its state - `java.lang.String`"
-  ([this]
+  ([^java.util.concurrent.ThreadPoolExecutor this]
     (-> this (.toString))))
 
 (defn get-task-count
@@ -374,7 +374,7 @@
    value is only an approximation.
 
   returns: the number of tasks - `long`"
-  ([this]
+  ([^java.util.concurrent.ThreadPoolExecutor this]
     (-> this (.getTaskCount))))
 
 (defn get-active-count
@@ -382,7 +382,7 @@
    executing tasks.
 
   returns: the number of threads - `int`"
-  ([this]
+  ([^java.util.concurrent.ThreadPoolExecutor this]
     (-> this (.getActiveCount))))
 
 (defn prestart-core-thread
@@ -392,7 +392,7 @@
    if all core threads have already been started.
 
   returns: true if a thread was started - `boolean`"
-  ([this]
+  ([^java.util.concurrent.ThreadPoolExecutor this]
     (-> this (.prestartCoreThread))))
 
 (defn allow-core-thread-time-out
@@ -409,28 +409,28 @@
   value - true if should time out, else false - `boolean`
 
   throws: java.lang.IllegalArgumentException - if value is true and the current keep-alive time is not greater than zero"
-  ([this value]
+  ([^java.util.concurrent.ThreadPoolExecutor this ^Boolean value]
     (-> this (.allowCoreThreadTimeOut value))))
 
 (defn get-thread-factory
   "Returns the thread factory used to create new threads.
 
   returns: the current thread factory - `java.util.concurrent.ThreadFactory`"
-  ([this]
+  ([^java.util.concurrent.ThreadPoolExecutor this]
     (-> this (.getThreadFactory))))
 
 (defn shutdown?
   "Description copied from interface: ExecutorService
 
   returns: true if this executor has been shut down - `boolean`"
-  ([this]
+  ([^java.util.concurrent.ThreadPoolExecutor this]
     (-> this (.isShutdown))))
 
 (defn get-rejected-execution-handler
   "Returns the current handler for unexecutable tasks.
 
   returns: the current handler - `java.util.concurrent.RejectedExecutionHandler`"
-  ([this]
+  ([^java.util.concurrent.ThreadPoolExecutor this]
     (-> this (.getRejectedExecutionHandler))))
 
 (defn await-termination
@@ -443,7 +443,7 @@
            false if the timeout elapsed before termination - `boolean`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([this timeout unit]
+  ([^java.util.concurrent.ThreadPoolExecutor this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.awaitTermination timeout unit))))
 
 (defn shutdown
@@ -456,7 +456,7 @@
    to do that.
 
   throws: java.lang.SecurityException - if a security manager exists and shutting down this ExecutorService may manipulate threads that the caller is not permitted to modify because it does not hold RuntimePermission(`modifyThread`), or the security manager's checkAccess method denies access."
-  ([this]
+  ([^java.util.concurrent.ThreadPoolExecutor this]
     (-> this (.shutdown))))
 
 (defn remove
@@ -475,7 +475,7 @@
   task - the task to remove - `java.lang.Runnable`
 
   returns: true if the task was removed - `boolean`"
-  ([this task]
+  ([^java.util.concurrent.ThreadPoolExecutor this ^java.lang.Runnable task]
     (-> this (.remove task))))
 
 (defn get-largest-pool-size
@@ -483,7 +483,7 @@
    simultaneously been in the pool.
 
   returns: the number of threads - `int`"
-  ([this]
+  ([^java.util.concurrent.ThreadPoolExecutor this]
     (-> this (.getLargestPoolSize))))
 
 (defn execute
@@ -497,7 +497,7 @@
   command - the task to execute - `java.lang.Runnable`
 
   throws: java.util.concurrent.RejectedExecutionException - at discretion of RejectedExecutionHandler, if the task cannot be accepted for execution"
-  ([this command]
+  ([^java.util.concurrent.ThreadPoolExecutor this ^java.lang.Runnable command]
     (-> this (.execute command))))
 
 (defn terminating?
@@ -510,14 +510,14 @@
    to properly terminate.
 
   returns: true if terminating but not yet terminated - `boolean`"
-  ([this]
+  ([^java.util.concurrent.ThreadPoolExecutor this]
     (-> this (.isTerminating))))
 
 (defn terminated?
   "Description copied from interface: ExecutorService
 
   returns: true if all tasks have completed following shut down - `boolean`"
-  ([this]
+  ([^java.util.concurrent.ThreadPoolExecutor this]
     (-> this (.isTerminated))))
 
 (defn get-queue
@@ -527,7 +527,7 @@
    does not prevent queued tasks from executing.
 
   returns: the task queue - `java.util.concurrent.BlockingQueue<java.lang.Runnable>`"
-  ([this]
+  ([^java.util.concurrent.ThreadPoolExecutor this]
     (-> this (.getQueue))))
 
 (defn prestart-all-core-threads
@@ -536,14 +536,14 @@
    new tasks are executed.
 
   returns: the number of threads started - `int`"
-  ([this]
+  ([^java.util.concurrent.ThreadPoolExecutor this]
     (-> this (.prestartAllCoreThreads))))
 
 (defn get-pool-size
   "Returns the current number of threads in the pool.
 
   returns: the number of threads - `int`"
-  ([this]
+  ([^java.util.concurrent.ThreadPoolExecutor this]
     (-> this (.getPoolSize))))
 
 (defn set-keep-alive-time
@@ -557,7 +557,7 @@
   unit - the time unit of the time argument - `java.util.concurrent.TimeUnit`
 
   throws: java.lang.IllegalArgumentException - if time less than zero or if time is zero and allowsCoreThreadTimeOut"
-  ([this time unit]
+  ([^java.util.concurrent.ThreadPoolExecutor this ^Long time ^java.util.concurrent.TimeUnit unit]
     (-> this (.setKeepAliveTime time unit))))
 
 (defn set-thread-factory
@@ -566,7 +566,7 @@
   thread-factory - the new thread factory - `java.util.concurrent.ThreadFactory`
 
   throws: java.lang.NullPointerException - if threadFactory is null"
-  ([this thread-factory]
+  ([^java.util.concurrent.ThreadPoolExecutor this ^java.util.concurrent.ThreadFactory thread-factory]
     (-> this (.setThreadFactory thread-factory))))
 
 (defn set-core-pool-size
@@ -579,7 +579,7 @@
   core-pool-size - the new core size - `int`
 
   throws: java.lang.IllegalArgumentException - if corePoolSize < 0"
-  ([this core-pool-size]
+  ([^java.util.concurrent.ThreadPoolExecutor this ^Integer core-pool-size]
     (-> this (.setCorePoolSize core-pool-size))))
 
 (defn get-completed-task-count
@@ -590,7 +590,7 @@
    across successive calls.
 
   returns: the number of tasks - `long`"
-  ([this]
+  ([^java.util.concurrent.ThreadPoolExecutor this]
     (-> this (.getCompletedTaskCount))))
 
 (defn shutdown-now
@@ -611,6 +611,6 @@
   returns: list of tasks that never commenced execution - `java.util.List<java.lang.Runnable>`
 
   throws: java.lang.SecurityException - if a security manager exists and shutting down this ExecutorService may manipulate threads that the caller is not permitted to modify because it does not hold RuntimePermission(`modifyThread`), or the security manager's checkAccess method denies access."
-  ([this]
+  ([^java.util.concurrent.ThreadPoolExecutor this]
     (-> this (.shutdownNow))))
 

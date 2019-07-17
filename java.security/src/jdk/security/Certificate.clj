@@ -12,14 +12,14 @@
 
   returns: the guarantor which guaranteed the principal-key
    binding. - `java.security.Principal`"
-  ([this]
+  ([^. this]
     (-> this (.getGuarantor))))
 
 (defn get-principal
   "Deprecated.
 
   returns: the principal to which this certificate is bound. - `java.security.Principal`"
-  ([this]
+  ([^. this]
     (-> this (.getPrincipal))))
 
 (defn get-public-key
@@ -27,7 +27,7 @@
 
   returns: the public key that this certificate certifies belongs
    to a particular principal. - `java.security.PublicKey`"
-  ([this]
+  ([^. this]
     (-> this (.getPublicKey))))
 
 (defn encode
@@ -36,7 +36,7 @@
   stream - the output stream to which to encode the certificate. - `java.io.OutputStream`
 
   throws: java.security.KeyException - if the certificate is not properly initialized, or data is missing, etc."
-  ([this stream]
+  ([^. this ^java.io.OutputStream stream]
     (-> this (.encode stream))))
 
 (defn decode
@@ -45,14 +45,14 @@
   stream - the input stream from which to fetch the data being decoded. - `java.io.InputStream`
 
   throws: java.security.KeyException - if the certificate is not properly initialized, or data is missing, etc."
-  ([this stream]
+  ([^. this ^java.io.InputStream stream]
     (-> this (.decode stream))))
 
 (defn get-format
   "Deprecated.
 
   returns: the name of the coding format. - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getFormat))))
 
 (defn to-string
@@ -61,6 +61,6 @@
   detailed - whether or not to give detailed information about the certificate - `boolean`
 
   returns: a string representing the contents of the certificate - `java.lang.String`"
-  ([this detailed]
+  ([^. this ^Boolean detailed]
     (-> this (.toString detailed))))
 

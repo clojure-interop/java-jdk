@@ -12,7 +12,7 @@
   "c - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([c]
+  ([^javax.swing.JComponent c]
     (BasicCheckBoxMenuItemUI/createUI c)))
 
 (defn process-mouse-event
@@ -20,6 +20,6 @@
   e - `java.awt.event.MouseEvent`
   path - `javax.swing.MenuElement[]`
   manager - `javax.swing.MenuSelectionManager`"
-  ([this item e path manager]
+  ([^javax.swing.plaf.basic.BasicCheckBoxMenuItemUI this ^javax.swing.JMenuItem item ^java.awt.event.MouseEvent e ^javax.swing.MenuElement[] path ^javax.swing.MenuSelectionManager manager]
     (-> this (.processMouseEvent item e path manager))))
 

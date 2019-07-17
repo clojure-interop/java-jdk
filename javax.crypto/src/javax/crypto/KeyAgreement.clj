@@ -48,9 +48,9 @@
   returns: the new KeyAgreement object. - `javax.crypto.KeyAgreement`
 
   throws: java.lang.NullPointerException - if the specified algorithm is null."
-  ([algorithm provider]
+  ([^java.lang.String algorithm ^java.lang.String provider]
     (KeyAgreement/getInstance algorithm provider))
-  ([algorithm]
+  ([^java.lang.String algorithm]
     (KeyAgreement/getInstance algorithm)))
 
 (defn get-algorithm
@@ -61,14 +61,14 @@
    KeyAgreement object.
 
   returns: the algorithm name of this KeyAgreement object. - `java.lang.String`"
-  ([this]
+  ([^javax.crypto.KeyAgreement this]
     (-> this (.getAlgorithm))))
 
 (defn get-provider
   "Returns the provider of this KeyAgreement object.
 
   returns: the provider of this KeyAgreement object - `java.security.Provider`"
-  ([this]
+  ([^javax.crypto.KeyAgreement this]
     (-> this (.getProvider))))
 
 (defn init
@@ -80,11 +80,11 @@
   random - the source of randomness - `java.security.SecureRandom`
 
   throws: java.security.InvalidKeyException - if the given key is inappropriate for this key agreement, e.g., is of the wrong type or has an incompatible algorithm type."
-  ([this key params random]
+  ([^javax.crypto.KeyAgreement this ^java.security.Key key ^java.security.spec.AlgorithmParameterSpec params ^java.security.SecureRandom random]
     (-> this (.init key params random)))
-  ([this key random]
+  ([^javax.crypto.KeyAgreement this ^java.security.Key key ^java.security.SecureRandom random]
     (-> this (.init key random)))
-  ([this key]
+  ([^javax.crypto.KeyAgreement this ^java.security.Key key]
     (-> this (.init key))))
 
 (defn do-phase
@@ -99,7 +99,7 @@
    if this phase does not yield a key - `java.security.Key`
 
   throws: java.security.InvalidKeyException - if the given key is inappropriate for this phase."
-  ([this key last-phase]
+  ([^javax.crypto.KeyAgreement this ^java.security.Key key ^Boolean last-phase]
     (-> this (.doPhase key last-phase))))
 
 (defn generate-secret
@@ -122,10 +122,10 @@
   returns: the number of bytes placed into sharedSecret - `int`
 
   throws: java.lang.IllegalStateException - if this key agreement has not been completed yet"
-  ([this shared-secret offset]
+  ([^javax.crypto.KeyAgreement this shared-secret ^Integer offset]
     (-> this (.generateSecret shared-secret offset)))
-  ([this algorithm]
+  ([^javax.crypto.KeyAgreement this ^java.lang.String algorithm]
     (-> this (.generateSecret algorithm)))
-  ([this]
+  ([^javax.crypto.KeyAgreement this]
     (-> this (.generateSecret))))
 

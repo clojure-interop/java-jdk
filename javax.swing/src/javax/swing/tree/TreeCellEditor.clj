@@ -21,6 +21,6 @@
   row - the row index of the node being edited - `int`
 
   returns: the component for editing - `java.awt.Component`"
-  ([this tree value is-selected expanded leaf row]
+  ([^. this ^javax.swing.JTree tree ^java.lang.Object value ^Boolean is-selected ^Boolean expanded ^Boolean leaf ^Integer row]
     (-> this (.getTreeCellEditorComponent tree value is-selected expanded leaf row))))
 

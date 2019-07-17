@@ -30,6 +30,6 @@
            can be found - `java.awt.Component`
 
   throws: java.lang.IllegalArgumentException - if window is null"
-  ([this frame]
+  ([^javax.swing.InternalFrameFocusTraversalPolicy this ^javax.swing.JInternalFrame frame]
     (-> this (.getInitialComponent frame))))
 

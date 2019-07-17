@@ -15,6 +15,6 @@
    and the processor should try to resolve the URI itself. - `javax.xml.transform.Source`
 
   throws: javax.xml.transform.TransformerException - if an error occurs when trying to resolve the URI."
-  ([this href base]
+  ([^. this ^java.lang.String href ^java.lang.String base]
     (-> this (.resolve href base))))
 

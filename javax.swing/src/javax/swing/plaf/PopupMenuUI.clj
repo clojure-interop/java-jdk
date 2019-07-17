@@ -12,7 +12,7 @@
   "e - `java.awt.event.MouseEvent`
 
   returns: `boolean`"
-  ([this e]
+  ([^javax.swing.plaf.PopupMenuUI this ^java.awt.event.MouseEvent e]
     (-> this (.isPopupTrigger e))))
 
 (defn get-popup
@@ -24,6 +24,6 @@
   y - Screen y location Popup is to be shown at. - `int`
 
   returns: Popup that will show the JPopupMenu - `javax.swing.Popup`"
-  ([this popup x y]
+  ([^javax.swing.plaf.PopupMenuUI this ^javax.swing.JPopupMenu popup ^Integer x ^Integer y]
     (-> this (.getPopup popup x y))))
 

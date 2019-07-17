@@ -31,7 +31,7 @@
    in any MBean server.
 
   mbean-server - the MBean server that this connector server is attached to. Null if this connector server will be attached to an MBean server by being registered in it. - `javax.management.MBeanServer`"
-  ([mbean-server]
+  ([^javax.management.MBeanServer mbean-server]
     (new JMXConnectorServer mbean-server))
   ([]
     (new JMXConnectorServer )))
@@ -52,14 +52,14 @@
 
   returns: the MBean server that this connector server is attached
    to, or null if it is not yet attached to an MBean server. - `javax.management.MBeanServer`"
-  ([this]
+  ([^javax.management.remote.JMXConnectorServer this]
     (-> this (.getMBeanServer))))
 
 (defn set-m-bean-server-forwarder
   "Description copied from interface: JMXConnectorServerMBean
 
   mbsf - the new MBeanServerForwarder. - `javax.management.remote.MBeanServerForwarder`"
-  ([this mbsf]
+  ([^javax.management.remote.JMXConnectorServer this ^javax.management.remote.MBeanServerForwarder mbsf]
     (-> this (.setMBeanServerForwarder mbsf))))
 
 (defn get-notification-info
@@ -72,12 +72,12 @@
    plus descriptions of the other notifications.
 
   returns: the array of possible notifications. - `javax.management.MBeanNotificationInfo[]`"
-  ([this]
+  ([^javax.management.remote.JMXConnectorServer this]
     (-> this (.getNotificationInfo))))
 
 (defn post-deregister
   "Description copied from interface: MBeanRegistration"
-  ([this]
+  ([^javax.management.remote.JMXConnectorServer this]
     (-> this (.postDeregister))))
 
 (defn pre-deregister
@@ -92,7 +92,7 @@
    the MBean.
 
   throws: java.io.IOException - if thrown by the stop method."
-  ([this]
+  ([^javax.management.remote.JMXConnectorServer this]
     (-> this (.preDeregister))))
 
 (defn get-connection-ids
@@ -101,7 +101,7 @@
   returns: a new string array containing the list of IDs.  If
    there are no currently-open connections, this array will be
    empty. - `java.lang.String[]`"
-  ([this]
+  ([^javax.management.remote.JMXConnectorServer this]
     (-> this (.getConnectionIds))))
 
 (defn to-jmx-connector
@@ -131,14 +131,14 @@
    to this connector server. - `javax.management.remote.JMXConnector`
 
   throws: java.lang.UnsupportedOperationException - if this connector server does not support the generation of client stubs."
-  ([this env]
+  ([^javax.management.remote.JMXConnectorServer this ^java.util.Map env]
     (-> this (.toJMXConnector env))))
 
 (defn post-register
   "Description copied from interface: MBeanRegistration
 
   registration-done - Indicates whether or not the MBean has been successfully registered in the MBean server. The value false means that the registration phase has failed. - `java.lang.Boolean`"
-  ([this registration-done]
+  ([^javax.management.remote.JMXConnectorServer this ^java.lang.Boolean registration-done]
     (-> this (.postRegister registration-done))))
 
 (defn pre-register
@@ -158,6 +158,6 @@
   returns: The name under which the MBean is to be registered. - `javax.management.ObjectName`
 
   throws: java.lang.NullPointerException - if mbs or name is null."
-  ([this mbs name]
+  ([^javax.management.remote.JMXConnectorServer this ^javax.management.MBeanServer mbs ^javax.management.ObjectName name]
     (-> this (.preRegister mbs name))))
 

@@ -14,6 +14,6 @@
   returns: the new worker thread - `java.util.concurrent.ForkJoinWorkerThread`
 
   throws: java.lang.NullPointerException - if the pool is null"
-  ([this pool]
+  ([^. this ^java.util.concurrent.ForkJoinPool pool]
     (-> this (.newThread pool))))
 

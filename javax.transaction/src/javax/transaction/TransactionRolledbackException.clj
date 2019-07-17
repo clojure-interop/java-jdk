@@ -11,7 +11,7 @@
   "Constructor.
 
   msg - `java.lang.String`"
-  ([msg]
+  ([^java.lang.String msg]
     (new TransactionRolledbackException msg))
   ([]
     (new TransactionRolledbackException )))

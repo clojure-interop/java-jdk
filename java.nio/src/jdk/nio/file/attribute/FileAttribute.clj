@@ -8,13 +8,13 @@
   "Returns the attribute name.
 
   returns: The attribute name - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.name))))
 
 (defn value
   "Returns the attribute value.
 
   returns: The attribute value - `FileAttribute.T`"
-  ([this]
+  ([^. this]
     (-> this (.value))))
 

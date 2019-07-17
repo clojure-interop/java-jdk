@@ -17,6 +17,6 @@
    the IOException.
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([this]
+  ([^. this]
     (-> this (.close))))
 

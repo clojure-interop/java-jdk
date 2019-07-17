@@ -19,11 +19,11 @@
   mbean-server - the MBean server to which the new connector server is attached, or null if it will be attached by being registered as an MBean in the MBean server. - `javax.management.MBeanServer`
 
   throws: java.lang.IllegalArgumentException - if url is null."
-  ([url environment rmi-server-impl mbean-server]
+  ([^javax.management.remote.JMXServiceURL url ^java.util.Map environment ^javax.management.remote.rmi.RMIServerImpl rmi-server-impl ^javax.management.MBeanServer mbean-server]
     (new RMIConnectorServer url environment rmi-server-impl mbean-server))
-  ([url environment mbean-server]
+  ([^javax.management.remote.JMXServiceURL url ^java.util.Map environment ^javax.management.MBeanServer mbean-server]
     (new RMIConnectorServer url environment mbean-server))
-  ([url environment]
+  ([^javax.management.remote.JMXServiceURL url ^java.util.Map environment]
     (new RMIConnectorServer url environment)))
 
 (def *-jndi-rebind-attribute
@@ -73,7 +73,7 @@
    to this connector server. - `javax.management.remote.JMXConnector`
 
   throws: java.lang.UnsupportedOperationException - if this connector server does not support the generation of client stubs."
-  ([this env]
+  ([^javax.management.remote.rmi.RMIConnectorServer this ^java.util.Map env]
     (-> this (.toJMXConnector env))))
 
 (defn start
@@ -130,7 +130,7 @@
    connector server is created or when it is started.
 
   throws: java.lang.IllegalStateException - if the connector server has not been attached to an MBean server."
-  ([this]
+  ([^javax.management.remote.rmi.RMIConnectorServer this]
     (-> this (.start))))
 
 (defn stop
@@ -167,14 +167,14 @@
    from the directory by this method.
 
   throws: java.io.IOException - if the server cannot be closed cleanly, or if the RMIServerImpl cannot be unbound from the directory. When this exception is thrown, the server has already attempted to close all client connections, if appropriate; to call RMIServerImpl.close(); and to unbind the RMIServerImpl from its directory, if appropriate. All client connections are closed except possibly those that generated exceptions when the server attempted to close them."
-  ([this]
+  ([^javax.management.remote.rmi.RMIConnectorServer this]
     (-> this (.stop))))
 
 (defn active?
   "Description copied from interface: JMXConnectorServerMBean
 
   returns: true if the connector server is active. - `boolean`"
-  ([this]
+  ([^javax.management.remote.rmi.RMIConnectorServer this]
     (-> this (.isActive))))
 
 (defn get-address
@@ -182,7 +182,7 @@
 
   returns: the address of this connector server, or null if it
    does not have one. - `javax.management.remote.JMXServiceURL`"
-  ([this]
+  ([^javax.management.remote.rmi.RMIConnectorServer this]
     (-> this (.getAddress))))
 
 (defn get-attributes
@@ -192,13 +192,13 @@
    connector server.  Attributes whose values are not serializable
    are omitted from this map.  If there are no serializable
    attributes, the returned map is empty. - `java.util.Map<java.lang.String,?>`"
-  ([this]
+  ([^javax.management.remote.rmi.RMIConnectorServer this]
     (-> this (.getAttributes))))
 
 (defn set-m-bean-server-forwarder
   "Description copied from interface: JMXConnectorServerMBean
 
   mbsf - the new MBeanServerForwarder. - `javax.management.remote.MBeanServerForwarder`"
-  ([this mbsf]
+  ([^javax.management.remote.rmi.RMIConnectorServer this ^javax.management.remote.MBeanServerForwarder mbsf]
     (-> this (.setMBeanServerForwarder mbsf))))
 

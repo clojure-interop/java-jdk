@@ -194,7 +194,7 @@
 
   c - the JComponent to move - `javax.swing.JComponent`
   layer - an int specifying the layer to move it to - `int`"
-  ([c layer]
+  ([^javax.swing.JComponent c ^Integer layer]
     (JLayeredPane/putLayer c layer)))
 
 (defn *get-layer
@@ -205,7 +205,7 @@
   c - the JComponent to check - `javax.swing.JComponent`
 
   returns: an int specifying the component's layer - `int`"
-  ([c]
+  ([^javax.swing.JComponent c]
     (JLayeredPane/getLayer c)))
 
 (defn *get-layered-pane-above
@@ -219,7 +219,7 @@
   returns: the JLayeredPane that contains the component, or
            null if no JLayeredPane is found in the component
            hierarchy - `javax.swing.JLayeredPane`"
-  ([c]
+  ([^java.awt.Component c]
     (JLayeredPane/getLayeredPaneAbove c)))
 
 (defn get-index-of
@@ -231,7 +231,7 @@
   c - the Component to check - `java.awt.Component`
 
   returns: an int specifying the component's index - `int`"
-  ([this c]
+  ([^javax.swing.JLayeredPane this ^java.awt.Component c]
     (-> this (.getIndexOf c))))
 
 (defn set-position
@@ -246,7 +246,7 @@
 
   c - the Component to move - `java.awt.Component`
   position - an int in the range -1..N-1, where N is the number of components in the component's current layer - `int`"
-  ([this c position]
+  ([^javax.swing.JLayeredPane this ^java.awt.Component c ^Integer position]
     (-> this (.setPosition c position))))
 
 (defn set-layer
@@ -256,9 +256,9 @@
   c - the Component to set the layer for - `java.awt.Component`
   layer - an int specifying the layer to set, where lower numbers are closer to the bottom - `int`
   position - an int specifying the position within the layer, where 0 is the topmost position and -1 is the bottommost position - `int`"
-  ([this c layer position]
+  ([^javax.swing.JLayeredPane this ^java.awt.Component c ^Integer layer ^Integer position]
     (-> this (.setLayer c layer position)))
-  ([this c layer]
+  ([^javax.swing.JLayeredPane this ^java.awt.Component c ^Integer layer]
     (-> this (.setLayer c layer))))
 
 (defn get-position
@@ -269,7 +269,7 @@
   returns: an int giving the component's position, where 0 is the
            topmost position and the highest index value = the count
            count of components at that layer, minus 1 - `int`"
-  ([this c]
+  ([^javax.swing.JLayeredPane this ^java.awt.Component c]
     (-> this (.getPosition c))))
 
 (defn move-to-front
@@ -277,7 +277,7 @@
    (position 0).
 
   c - the Component to move - `java.awt.Component`"
-  ([this c]
+  ([^javax.swing.JLayeredPane this ^java.awt.Component c]
     (-> this (.moveToFront c))))
 
 (defn get-layer
@@ -286,7 +286,7 @@
   c - the Component to check - `java.awt.Component`
 
   returns: an int specifying the component's current layer - `int`"
-  ([this c]
+  ([^javax.swing.JLayeredPane this ^java.awt.Component c]
     (-> this (.getLayer c))))
 
 (defn get-components-in-layer
@@ -295,7 +295,7 @@
   layer - an int specifying the layer to check - `int`
 
   returns: an array of Components contained in that layer - `java.awt.Component[]`"
-  ([this layer]
+  ([^javax.swing.JLayeredPane this ^Integer layer]
     (-> this (.getComponentsInLayer layer))))
 
 (defn remove
@@ -303,7 +303,7 @@
    This is the absolute index, ignoring layers.
 
   index - an int specifying the component to remove - `int`"
-  ([this index]
+  ([^javax.swing.JLayeredPane this ^Integer index]
     (-> this (.remove index))))
 
 (defn lowest-layer
@@ -312,14 +312,14 @@
 
   returns: an int indicating the layer of the bottommost component in the
            pane, or zero if there are no children - `int`"
-  ([this]
+  ([^javax.swing.JLayeredPane this]
     (-> this (.lowestLayer))))
 
 (defn paint
   "Paints this JLayeredPane within the specified graphics context.
 
   g - the Graphics context within which to paint - `java.awt.Graphics`"
-  ([this g]
+  ([^javax.swing.JLayeredPane this ^java.awt.Graphics g]
     (-> this (.paint g))))
 
 (defn get-accessible-context
@@ -330,7 +330,7 @@
 
   returns: an AccessibleJLayeredPane that serves as the
            AccessibleContext of this JLayeredPane - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^javax.swing.JLayeredPane this]
     (-> this (.getAccessibleContext))))
 
 (defn highest-layer
@@ -339,7 +339,7 @@
 
   returns: an int indicating the layer of the topmost component in the
            pane, or zero if there are no children - `int`"
-  ([this]
+  ([^javax.swing.JLayeredPane this]
     (-> this (.highestLayer))))
 
 (defn move-to-back
@@ -347,7 +347,7 @@
    (position -1).
 
   c - the Component to move - `java.awt.Component`"
-  ([this c]
+  ([^javax.swing.JLayeredPane this ^java.awt.Component c]
     (-> this (.moveToBack c))))
 
 (defn get-component-count-in-layer
@@ -356,12 +356,12 @@
   layer - an int specifying the layer to check - `int`
 
   returns: an int specifying the number of components in that layer - `int`"
-  ([this layer]
+  ([^javax.swing.JLayeredPane this ^Integer layer]
     (-> this (.getComponentCountInLayer layer))))
 
 (defn remove-all
   "Removes all the components from this container."
-  ([this]
+  ([^javax.swing.JLayeredPane this]
     (-> this (.removeAll))))
 
 (defn optimized-drawing-enabled?
@@ -369,6 +369,6 @@
    optimized drawing impossible. Otherwise, returns true.
 
   returns: false if components can overlap, else true - `boolean`"
-  ([this]
+  ([^javax.swing.JLayeredPane this]
     (-> this (.isOptimizedDrawingEnabled))))
 

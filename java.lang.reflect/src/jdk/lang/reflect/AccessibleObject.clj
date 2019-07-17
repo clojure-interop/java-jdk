@@ -38,7 +38,7 @@
   flag - the new value for the accessible flag in each object - `boolean`
 
   throws: java.lang.SecurityException - if the request is denied."
-  ([array flag]
+  ([^java.lang.reflect.AccessibleObject[] array ^Boolean flag]
     (AccessibleObject/setAccessible array flag)))
 
 (defn get-declared-annotation
@@ -50,7 +50,7 @@
        directly present on this element, else null - `<T extends java.lang.annotation.Annotation> T`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  ([this annotation-class]
+  ([^java.lang.reflect.AccessibleObject this ^java.lang.Class annotation-class]
     (-> this (.getDeclaredAnnotation annotation-class))))
 
 (defn get-declared-annotations-by-type
@@ -62,7 +62,7 @@
        directly or indirectly present on this element, else an array of length zero - `<T extends java.lang.annotation.Annotation> T[]`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  ([this annotation-class]
+  ([^java.lang.reflect.AccessibleObject this ^java.lang.Class annotation-class]
     (-> this (.getDeclaredAnnotationsByType annotation-class))))
 
 (defn get-annotation
@@ -74,14 +74,14 @@
        present on this element, else null - `<T extends java.lang.annotation.Annotation> T`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  ([this annotation-class]
+  ([^java.lang.reflect.AccessibleObject this ^java.lang.Class annotation-class]
     (-> this (.getAnnotation annotation-class))))
 
 (defn get-declared-annotations
   "Description copied from interface: AnnotatedElement
 
   returns: annotations directly present on this element - `java.lang.annotation.Annotation[]`"
-  ([this]
+  ([^java.lang.reflect.AccessibleObject this]
     (-> this (.getDeclaredAnnotations))))
 
 (defn set-accessible
@@ -106,14 +106,14 @@
   flag - the new value for the accessible flag - `boolean`
 
   throws: java.lang.SecurityException - if the request is denied."
-  ([this flag]
+  ([^java.lang.reflect.AccessibleObject this ^Boolean flag]
     (-> this (.setAccessible flag))))
 
 (defn get-annotations
   "Description copied from interface: AnnotatedElement
 
   returns: annotations present on this element - `java.lang.annotation.Annotation[]`"
-  ([this]
+  ([^java.lang.reflect.AccessibleObject this]
     (-> this (.getAnnotations))))
 
 (defn get-annotations-by-type
@@ -125,14 +125,14 @@
        associated with this element, else an array of length zero - `<T extends java.lang.annotation.Annotation> T[]`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  ([this annotation-class]
+  ([^java.lang.reflect.AccessibleObject this ^java.lang.Class annotation-class]
     (-> this (.getAnnotationsByType annotation-class))))
 
 (defn accessible?
   "Get the value of the accessible flag for this object.
 
   returns: the value of the object's accessible flag - `boolean`"
-  ([this]
+  ([^java.lang.reflect.AccessibleObject this]
     (-> this (.isAccessible))))
 
 (defn annotation-present?
@@ -152,6 +152,6 @@
        type is present on this element, else false - `boolean`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  ([this annotation-class]
+  ([^java.lang.reflect.AccessibleObject this ^java.lang.annotation.Annotation> annotation-class]
     (-> this (.isAnnotationPresent annotation-class))))
 

@@ -15,6 +15,6 @@
    detailed message.
 
   mess - Descriptive message - `java.lang.String`"
-  ([mess]
+  ([^java.lang.String mess]
     (new IntrospectionException mess)))
 

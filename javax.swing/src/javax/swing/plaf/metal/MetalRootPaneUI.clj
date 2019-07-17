@@ -34,7 +34,7 @@
   c - the JRootPane the RootPaneUI will be created for - `javax.swing.JComponent`
 
   returns: the RootPaneUI implementation for the passed in JRootPane - `javax.swing.plaf.ComponentUI`"
-  ([c]
+  ([^javax.swing.JComponent c]
     (MetalRootPaneUI/createUI c)))
 
 (defn install-ui
@@ -50,7 +50,7 @@
    JRootPane.
 
   c - the JRootPane to install state onto - `javax.swing.JComponent`"
-  ([this c]
+  ([^javax.swing.plaf.metal.MetalRootPaneUI this ^javax.swing.JComponent c]
     (-> this (.installUI c))))
 
 (defn uninstall-ui
@@ -63,7 +63,7 @@
    was invoked.
 
   c - the JRootPane to uninstall state from - `javax.swing.JComponent`"
-  ([this c]
+  ([^javax.swing.plaf.metal.MetalRootPaneUI this ^javax.swing.JComponent c]
     (-> this (.uninstallUI c))))
 
 (defn property-change
@@ -82,6 +82,6 @@
    installUI was invoked.
 
   e - A PropertyChangeEvent object describing the event source and the property that has changed. - `java.beans.PropertyChangeEvent`"
-  ([this e]
+  ([^javax.swing.plaf.metal.MetalRootPaneUI this ^java.beans.PropertyChangeEvent e]
     (-> this (.propertyChange e))))
 

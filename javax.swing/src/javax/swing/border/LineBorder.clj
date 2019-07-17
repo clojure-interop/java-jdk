@@ -22,11 +22,11 @@
   color - the color of the border - `java.awt.Color`
   thickness - the thickness of the border - `int`
   rounded-corners - whether or not border corners should be round - `boolean`"
-  ([color thickness rounded-corners]
+  ([^java.awt.Color color ^Integer thickness ^Boolean rounded-corners]
     (new LineBorder color thickness rounded-corners))
-  ([color thickness]
+  ([^java.awt.Color color ^Integer thickness]
     (new LineBorder color thickness))
-  ([color]
+  ([^java.awt.Color color]
     (new LineBorder color)))
 
 (defn *create-black-line-border
@@ -53,7 +53,7 @@
   y - the y position of the painted border - `int`
   width - the width of the painted border - `int`
   height - the height of the painted border - `int`"
-  ([this c g x y width height]
+  ([^javax.swing.border.LineBorder this ^java.awt.Component c ^java.awt.Graphics g ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.paintBorder c g x y width height))))
 
 (defn get-border-insets
@@ -63,34 +63,34 @@
   insets - the object to be reinitialized - `java.awt.Insets`
 
   returns: the insets object - `java.awt.Insets`"
-  ([this c insets]
+  ([^javax.swing.border.LineBorder this ^java.awt.Component c ^java.awt.Insets insets]
     (-> this (.getBorderInsets c insets))))
 
 (defn get-line-color
   "Returns the color of the border.
 
   returns: `java.awt.Color`"
-  ([this]
+  ([^javax.swing.border.LineBorder this]
     (-> this (.getLineColor))))
 
 (defn get-thickness
   "Returns the thickness of the border.
 
   returns: `int`"
-  ([this]
+  ([^javax.swing.border.LineBorder this]
     (-> this (.getThickness))))
 
 (defn get-rounded-corners?
   "Returns whether this border will be drawn with rounded corners.
 
   returns: `boolean`"
-  ([this]
+  ([^javax.swing.border.LineBorder this]
     (-> this (.getRoundedCorners))))
 
 (defn border-opaque?
   "Returns whether or not the border is opaque.
 
   returns: false - `boolean`"
-  ([this]
+  ([^javax.swing.border.LineBorder this]
     (-> this (.isBorderOpaque))))
 

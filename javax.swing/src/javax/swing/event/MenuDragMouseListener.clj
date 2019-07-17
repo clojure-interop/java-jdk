@@ -8,7 +8,7 @@
    display area.
 
   e - a MenuDragMouseEvent object - `javax.swing.event.MenuDragMouseEvent`"
-  ([this e]
+  ([^. this ^javax.swing.event.MenuDragMouseEvent e]
     (-> this (.menuDragMouseEntered e))))
 
 (defn menu-drag-mouse-exited
@@ -16,7 +16,7 @@
    display area.
 
   e - a MenuDragMouseEvent object - `javax.swing.event.MenuDragMouseEvent`"
-  ([this e]
+  ([^. this ^javax.swing.event.MenuDragMouseEvent e]
     (-> this (.menuDragMouseExited e))))
 
 (defn menu-drag-mouse-dragged
@@ -24,7 +24,7 @@
    display area.
 
   e - a MenuDragMouseEvent object - `javax.swing.event.MenuDragMouseEvent`"
-  ([this e]
+  ([^. this ^javax.swing.event.MenuDragMouseEvent e]
     (-> this (.menuDragMouseDragged e))))
 
 (defn menu-drag-mouse-released
@@ -32,6 +32,6 @@
    display area.
 
   e - a MenuDragMouseEvent object - `javax.swing.event.MenuDragMouseEvent`"
-  ([this e]
+  ([^. this ^javax.swing.event.MenuDragMouseEvent e]
     (-> this (.menuDragMouseReleased e))))
 

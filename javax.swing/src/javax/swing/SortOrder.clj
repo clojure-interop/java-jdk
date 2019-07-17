@@ -56,6 +56,6 @@
   returns: the enum constant with the specified name - `javax.swing.SortOrder`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([name]
+  ([^java.lang.String name]
     (SortOrder/valueOf name)))
 

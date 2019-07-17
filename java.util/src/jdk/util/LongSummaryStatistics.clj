@@ -38,7 +38,7 @@
   "Records a new int value into the summary information.
 
   value - the input value - `int`"
-  ([this value]
+  ([^java.util.LongSummaryStatistics this ^Integer value]
     (-> this (.accept value))))
 
 (defn combine
@@ -48,14 +48,14 @@
   other - another LongSummaryStatistics - `java.util.LongSummaryStatistics`
 
   throws: java.lang.NullPointerException - if other is null"
-  ([this other]
+  ([^java.util.LongSummaryStatistics this ^java.util.LongSummaryStatistics other]
     (-> this (.combine other))))
 
 (defn get-count
   "Returns the count of values recorded.
 
   returns: the count of values - `long`"
-  ([this]
+  ([^java.util.LongSummaryStatistics this]
     (-> this (.getCount))))
 
 (defn get-sum
@@ -63,7 +63,7 @@
    recorded.
 
   returns: the sum of values, or zero if none - `long`"
-  ([this]
+  ([^java.util.LongSummaryStatistics this]
     (-> this (.getSum))))
 
 (defn get-min
@@ -71,7 +71,7 @@
    values have been recorded.
 
   returns: the minimum value, or Long.MAX_VALUE if none - `long`"
-  ([this]
+  ([^java.util.LongSummaryStatistics this]
     (-> this (.getMin))))
 
 (defn get-max
@@ -79,7 +79,7 @@
    values have been recorded
 
   returns: the maximum value, or Long.MIN_VALUE if none - `long`"
-  ([this]
+  ([^java.util.LongSummaryStatistics this]
     (-> this (.getMax))))
 
 (defn get-average
@@ -87,13 +87,13 @@
    recorded.
 
   returns: The arithmetic mean of values, or zero if none - `double`"
-  ([this]
+  ([^java.util.LongSummaryStatistics this]
     (-> this (.getAverage))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^java.util.LongSummaryStatistics this]
     (-> this (.toString))))
 

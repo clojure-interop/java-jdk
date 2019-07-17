@@ -26,7 +26,7 @@
    size specified.  If the length is < 1, a size of 1 is used.
 
   initial-length - the initial size - `int`"
-  ([initial-length]
+  ([^Integer initial-length]
     (new StringContent initial-length))
   ([]
     (new StringContent )))
@@ -35,7 +35,7 @@
   "Returns the length of the content.
 
   returns: the length >= 1 - `int`"
-  ([this]
+  ([^javax.swing.text.StringContent this]
     (-> this (.length))))
 
 (defn insert-string
@@ -47,7 +47,7 @@
   returns: an UndoableEdit object for undoing - `javax.swing.undo.UndoableEdit`
 
   throws: javax.swing.text.BadLocationException - if the specified position is invalid"
-  ([this where str]
+  ([^javax.swing.text.StringContent this ^Integer where ^java.lang.String str]
     (-> this (.insertString where str))))
 
 (defn remove
@@ -59,7 +59,7 @@
   returns: an UndoableEdit object for undoing - `javax.swing.undo.UndoableEdit`
 
   throws: javax.swing.text.BadLocationException - if the specified position is invalid"
-  ([this where nitems]
+  ([^javax.swing.text.StringContent this ^Integer where ^Integer nitems]
     (-> this (.remove where nitems))))
 
 (defn get-string
@@ -71,7 +71,7 @@
   returns: a string representing the content; may be empty - `java.lang.String`
 
   throws: javax.swing.text.BadLocationException - if the specified position is invalid"
-  ([this where len]
+  ([^javax.swing.text.StringContent this ^Integer where ^Integer len]
     (-> this (.getString where len))))
 
 (defn get-chars
@@ -82,7 +82,7 @@
   chars - the Segment object to return the characters in - `javax.swing.text.Segment`
 
   throws: javax.swing.text.BadLocationException - if the specified position is invalid"
-  ([this where len chars]
+  ([^javax.swing.text.StringContent this ^Integer where ^Integer len ^javax.swing.text.Segment chars]
     (-> this (.getChars where len chars))))
 
 (defn create-position
@@ -94,6 +94,6 @@
   returns: the position - `javax.swing.text.Position`
 
   throws: javax.swing.text.BadLocationException - if the specified position is invalid"
-  ([this offset]
+  ([^javax.swing.text.StringContent this ^Integer offset]
     (-> this (.createPosition offset))))
 

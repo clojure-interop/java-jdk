@@ -19,7 +19,7 @@
    from being updated is implementation specific.
 
   returns: the value of the read-only attribute - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.isReadOnly))))
 
 (defn hidden?
@@ -29,7 +29,7 @@
    users.
 
   returns: the value of the hidden attribute - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.isHidden))))
 
 (defn archive?
@@ -38,7 +38,7 @@
     This attribute is typically used by backup programs.
 
   returns: the value of the archive attribute - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.isArchive))))
 
 (defn system?
@@ -48,6 +48,6 @@
    of the operating system.
 
   returns: the value of the system attribute - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.isSystem))))
 

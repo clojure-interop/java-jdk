@@ -22,7 +22,7 @@
   "Description copied from interface: Marshaller
 
   am - `javax.xml.bind.attachment.AttachmentMarshaller`"
-  ([this am]
+  ([^javax.xml.bind.helpers.AbstractMarshallerImpl this ^javax.xml.bind.attachment.AttachmentMarshaller am]
     (-> this (.setAttachmentMarshaller am))))
 
 (defn marshal
@@ -32,7 +32,7 @@
   os - XML will be added to this stream. - `java.io.OutputStream`
 
   throws: javax.xml.bind.JAXBException - If any unexpected problem occurs during the marshalling."
-  ([this obj os]
+  ([^javax.xml.bind.helpers.AbstractMarshallerImpl this ^java.lang.Object obj ^java.io.OutputStream os]
     (-> this (.marshal obj os))))
 
 (defn set-event-handler
@@ -41,7 +41,7 @@
   handler - the validation event handler - `javax.xml.bind.ValidationEventHandler`
 
   throws: javax.xml.bind.JAXBException - if an error was encountered while setting the event handler"
-  ([this handler]
+  ([^javax.xml.bind.helpers.AbstractMarshallerImpl this ^javax.xml.bind.ValidationEventHandler handler]
     (-> this (.setEventHandler handler))))
 
 (defn get-event-handler
@@ -51,7 +51,7 @@
            if it hasn't been set - `javax.xml.bind.ValidationEventHandler`
 
   throws: javax.xml.bind.JAXBException - if an error was encountered while getting the current event handler"
-  ([this]
+  ([^javax.xml.bind.helpers.AbstractMarshallerImpl this]
     (-> this (.getEventHandler))))
 
 (defn get-node
@@ -66,14 +66,14 @@
   returns: the DOM tree view of the contentTree - `org.w3c.dom.Node`
 
   throws: javax.xml.bind.JAXBException - If any unexpected problem occurs"
-  ([this obj]
+  ([^javax.xml.bind.helpers.AbstractMarshallerImpl this ^java.lang.Object obj]
     (-> this (.getNode obj))))
 
 (defn set-listener
   "Description copied from interface: Marshaller
 
   listener - an instance of a class that implements Marshaller.Listener - `javax.xml.bind.Marshaller.Listener`"
-  ([this listener]
+  ([^javax.xml.bind.helpers.AbstractMarshallerImpl this ^javax.xml.bind.Marshaller.Listener listener]
     (-> this (.setListener listener))))
 
 (defn get-adapter
@@ -82,19 +82,19 @@
   type - `java.lang.Class<A>`
 
   returns: `<A extends javax.xml.bind.annotation.adapters.XmlAdapter> A`"
-  ([this type]
+  ([^javax.xml.bind.helpers.AbstractMarshallerImpl this ^java.lang.Class type]
     (-> this (.getAdapter type))))
 
 (defn get-attachment-marshaller
   "returns: `javax.xml.bind.attachment.AttachmentMarshaller`"
-  ([this]
+  ([^javax.xml.bind.helpers.AbstractMarshallerImpl this]
     (-> this (.getAttachmentMarshaller))))
 
 (defn set-schema
   "Description copied from interface: Marshaller
 
   schema - Schema object to validate marshal operations against or null to disable validation - `javax.xml.validation.Schema`"
-  ([this schema]
+  ([^javax.xml.bind.helpers.AbstractMarshallerImpl this ^javax.xml.validation.Schema schema]
     (-> this (.setSchema schema))))
 
 (defn get-property
@@ -108,14 +108,14 @@
   returns: the value of the requested property - `java.lang.Object`
 
   throws: javax.xml.bind.PropertyException - when there is an error retrieving the given property or value property name"
-  ([this name]
+  ([^javax.xml.bind.helpers.AbstractMarshallerImpl this ^java.lang.String name]
     (-> this (.getProperty name))))
 
 (defn get-listener
   "Description copied from interface: Marshaller
 
   returns: registered Marshaller.Listener or null if no Listener is registered with this Marshaller. - `javax.xml.bind.Marshaller.Listener`"
-  ([this]
+  ([^javax.xml.bind.helpers.AbstractMarshallerImpl this]
     (-> this (.getListener))))
 
 (defn get-schema
@@ -123,7 +123,7 @@
 
   returns: the Schema object being used to perform marshal-time
         validation or null if not present. - `javax.xml.validation.Schema`"
-  ([this]
+  ([^javax.xml.bind.helpers.AbstractMarshallerImpl this]
     (-> this (.getSchema))))
 
 (defn set-property
@@ -136,7 +136,7 @@
   value - the value of the property to be set - `java.lang.Object`
 
   throws: javax.xml.bind.PropertyException - when there is an error processing the given property or value"
-  ([this name value]
+  ([^javax.xml.bind.helpers.AbstractMarshallerImpl this ^java.lang.String name ^java.lang.Object value]
     (-> this (.setProperty name value))))
 
 (defn set-adapter
@@ -146,8 +146,8 @@
   adapter - The instance of the adapter to be used. If null, it will un-register the current adapter set for this type. - `A`
 
   returns: `<A extends javax.xml.bind.annotation.adapters.XmlAdapter> void`"
-  ([this type adapter]
+  ([^javax.xml.bind.helpers.AbstractMarshallerImpl this ^java.lang.Class type adapter]
     (-> this (.setAdapter type adapter)))
-  ([this adapter]
+  ([^javax.xml.bind.helpers.AbstractMarshallerImpl this ^javax.xml.bind.annotation.adapters.XmlAdapter adapter]
     (-> this (.setAdapter adapter))))
 

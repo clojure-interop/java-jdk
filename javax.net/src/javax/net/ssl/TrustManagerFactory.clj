@@ -37,9 +37,9 @@
   returns: the new TrustManagerFactory object - `javax.net.ssl.TrustManagerFactory`
 
   throws: java.security.NoSuchAlgorithmException - if a TrustManagerFactorySpi implementation for the specified algorithm is not available from the specified provider."
-  ([algorithm provider]
+  ([^java.lang.String algorithm ^java.lang.String provider]
     (TrustManagerFactory/getInstance algorithm provider))
-  ([algorithm]
+  ([^java.lang.String algorithm]
     (TrustManagerFactory/getInstance algorithm)))
 
 (defn get-algorithm
@@ -52,14 +52,14 @@
 
   returns: the algorithm name of this TrustManagerFactory
             object - `java.lang.String`"
-  ([this]
+  ([^javax.net.ssl.TrustManagerFactory this]
     (-> this (.getAlgorithm))))
 
 (defn get-provider
   "Returns the provider of this TrustManagerFactory object.
 
   returns: the provider of this TrustManagerFactory object - `java.security.Provider`"
-  ([this]
+  ([^javax.net.ssl.TrustManagerFactory this]
     (-> this (.getProvider))))
 
 (defn init
@@ -75,7 +75,7 @@
   ks - the key store, or null - `java.security.KeyStore`
 
   throws: java.security.KeyStoreException - if this operation fails"
-  ([this ks]
+  ([^javax.net.ssl.TrustManagerFactory this ^java.security.KeyStore ks]
     (-> this (.init ks))))
 
 (defn get-trust-managers
@@ -84,6 +84,6 @@
   returns: the trust managers - `javax.net.ssl.TrustManager[]`
 
   throws: java.lang.IllegalStateException - if the factory is not initialized."
-  ([this]
+  ([^javax.net.ssl.TrustManagerFactory this]
     (-> this (.getTrustManagers))))
 

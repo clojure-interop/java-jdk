@@ -77,7 +77,7 @@
   pool-name - The name of the memory pool which triggers this notification. - `java.lang.String`
   usage - Memory usage of the memory pool. - `java.lang.management.MemoryUsage`
   count - The threshold crossing count. - `long`"
-  ([pool-name usage count]
+  ([^java.lang.String pool-name ^java.lang.management.MemoryUsage usage ^Long count]
     (new MemoryNotificationInfo pool-name usage count)))
 
 (def *-memory-threshold-exceeded
@@ -143,7 +143,7 @@
            null otherwise. - `java.lang.management.MemoryNotificationInfo`
 
   throws: java.lang.IllegalArgumentException - if cd does not represent a MemoryNotificationInfo object."
-  ([cd]
+  ([^javax.management.openmbean.CompositeData cd]
     (MemoryNotificationInfo/from cd)))
 
 (defn get-pool-name
@@ -151,7 +151,7 @@
    The memory pool usage has crossed a threshold.
 
   returns: the name of the memory pool that triggers this notification. - `java.lang.String`"
-  ([this]
+  ([^java.lang.management.MemoryNotificationInfo this]
     (-> this (.getPoolName))))
 
 (defn get-usage
@@ -160,7 +160,7 @@
 
   returns: the memory usage of the memory pool
    when this notification was constructed. - `java.lang.management.MemoryUsage`"
-  ([this]
+  ([^java.lang.management.MemoryNotificationInfo this]
     (-> this (.getUsage))))
 
 (defn get-count
@@ -174,6 +174,6 @@
 
   returns: the number of times that the memory usage has crossed
    a threshold when the notification was constructed. - `long`"
-  ([this]
+  ([^java.lang.management.MemoryNotificationInfo this]
     (-> this (.getCount))))
 

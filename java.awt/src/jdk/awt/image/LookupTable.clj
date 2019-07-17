@@ -17,14 +17,14 @@
   "Returns the number of components in the lookup table.
 
   returns: the number of components in this LookupTable. - `int`"
-  ([this]
+  ([^java.awt.image.LookupTable this]
     (-> this (.getNumComponents))))
 
 (defn get-offset
   "Returns the offset.
 
   returns: the offset of this LookupTable. - `int`"
-  ([this]
+  ([^java.awt.image.LookupTable this]
     (-> this (.getOffset))))
 
 (defn lookup-pixel
@@ -39,6 +39,6 @@
 
   returns: an int array of components for one
            pixel. - `int[]`"
-  ([this src dest]
+  ([^java.awt.image.LookupTable this src dest]
     (-> this (.lookupPixel src dest))))
 

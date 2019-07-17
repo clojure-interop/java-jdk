@@ -30,9 +30,9 @@
   data - the group's initialization data contained in marshalled form (could contain properties, for example) - `java.rmi.MarshalledObject<?>`
   overrides - a properties map which will override those set by default in the subprocess environment (will be translated into -D options), or null. - `java.util.Properties`
   cmd - the controlling options for executing the VM in another process (or null). - `java.rmi.activation.ActivationGroupDesc.CommandEnvironment`"
-  ([class-name location data overrides cmd]
+  ([^java.lang.String class-name ^java.lang.String location ^java.rmi.MarshalledObject data ^java.util.Properties overrides ^java.rmi.activation.ActivationGroupDesc.CommandEnvironment cmd]
     (new ActivationGroupDesc class-name location data overrides cmd))
-  ([overrides cmd]
+  ([^java.util.Properties overrides ^java.rmi.activation.ActivationGroupDesc.CommandEnvironment cmd]
     (new ActivationGroupDesc overrides cmd)))
 
 (defn get-class-name
@@ -41,35 +41,35 @@
    ActivationGroup implementation.
 
   returns: the group's class name - `java.lang.String`"
-  ([this]
+  ([^java.rmi.activation.ActivationGroupDesc this]
     (-> this (.getClassName))))
 
 (defn get-location
   "Returns the group's code location.
 
   returns: the group's code location - `java.lang.String`"
-  ([this]
+  ([^java.rmi.activation.ActivationGroupDesc this]
     (-> this (.getLocation))))
 
 (defn get-data
   "Returns the group's initialization data.
 
   returns: the group's initialization data - `java.rmi.MarshalledObject<?>`"
-  ([this]
+  ([^java.rmi.activation.ActivationGroupDesc this]
     (-> this (.getData))))
 
 (defn get-property-overrides
   "Returns the group's property-override list.
 
   returns: the property-override list, or null - `java.util.Properties`"
-  ([this]
+  ([^java.rmi.activation.ActivationGroupDesc this]
     (-> this (.getPropertyOverrides))))
 
 (defn get-command-environment
   "Returns the group's command-environment control object.
 
   returns: the command-environment object, or null - `java.rmi.activation.ActivationGroupDesc.CommandEnvironment`"
-  ([this]
+  ([^java.rmi.activation.ActivationGroupDesc this]
     (-> this (.getCommandEnvironment))))
 
 (defn equals
@@ -78,13 +78,13 @@
   obj - the Object to compare with - `java.lang.Object`
 
   returns: true if these Objects are equal; false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.rmi.activation.ActivationGroupDesc this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Produce identical numbers for similar ActivationGroupDescs.
 
   returns: an integer - `int`"
-  ([this]
+  ([^java.rmi.activation.ActivationGroupDesc this]
     (-> this (.hashCode))))
 

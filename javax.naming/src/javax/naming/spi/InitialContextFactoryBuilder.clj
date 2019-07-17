@@ -25,6 +25,6 @@
   returns: A non-null initial context factory. - `javax.naming.spi.InitialContextFactory`
 
   throws: javax.naming.NamingException - If an initial context factory could not be created."
-  ([this environment]
+  ([^. this ^java.util.Hashtable environment]
     (-> this (.createInitialContextFactory environment))))
 

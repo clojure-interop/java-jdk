@@ -17,7 +17,7 @@
 
   robj - The non-null object resolved to. - `java.lang.Object`
   rcomp - The single remaining name component that has yet to be resolved. Cannot be null (but can be empty). - `java.lang.String`"
-  ([robj rcomp]
+  ([^java.lang.Object robj ^java.lang.String rcomp]
     (new ResolveResult robj rcomp)))
 
 (defn get-remaining-name
@@ -25,14 +25,14 @@
 
   returns: The remaining unresolved portion of the name.
             Cannot be null but empty OK. - `javax.naming.Name`"
-  ([this]
+  ([^javax.naming.spi.ResolveResult this]
     (-> this (.getRemainingName))))
 
 (defn get-resolved-obj
   "Retrieves the Object to which resolution was successful.
 
   returns: The Object to which resolution was successful. Cannot be null. - `java.lang.Object`"
-  ([this]
+  ([^javax.naming.spi.ResolveResult this]
     (-> this (.getResolvedObj))))
 
 (defn set-remaining-name
@@ -42,27 +42,27 @@
    vice versa.
 
   name - The name to set remaining name to. Cannot be null. - `javax.naming.Name`"
-  ([this name]
+  ([^javax.naming.spi.ResolveResult this ^javax.naming.Name name]
     (-> this (.setRemainingName name))))
 
 (defn append-remaining-name
   "Adds components to the end of remaining name.
 
   name - The components to add. Can be null. - `javax.naming.Name`"
-  ([this name]
+  ([^javax.naming.spi.ResolveResult this ^javax.naming.Name name]
     (-> this (.appendRemainingName name))))
 
 (defn append-remaining-component
   "Adds a single component to the end of remaining name.
 
   name - The component to add. Can be null. - `java.lang.String`"
-  ([this name]
+  ([^javax.naming.spi.ResolveResult this ^java.lang.String name]
     (-> this (.appendRemainingComponent name))))
 
 (defn set-resolved-obj
   "Sets the resolved Object field of this result to obj.
 
   obj - The object to use for setting the resolved obj field. Cannot be null. - `java.lang.Object`"
-  ([this obj]
+  ([^javax.naming.spi.ResolveResult this ^java.lang.Object obj]
     (-> this (.setResolvedObj obj))))
 

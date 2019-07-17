@@ -58,7 +58,7 @@
    given Locale.
 
   locale - a Locale to be used to localize compression type names and quality descriptions, or null. - `java.util.Locale`"
-  ([locale]
+  ([^java.util.Locale locale]
     (new ImageWriteParam locale)))
 
 (def *-mode-disabled
@@ -142,7 +142,7 @@
    or null if no type is set. - `java.lang.String`
 
   throws: java.lang.UnsupportedOperationException - if the writer does not support compression."
-  ([this]
+  ([^javax.imageio.ImageWriteParam this]
     (-> this (.getCompressionType))))
 
 (defn compression-lossless?
@@ -165,7 +165,7 @@
    lossless. - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the writer does not support compression."
-  ([this]
+  ([^javax.imageio.ImageWriteParam this]
     (-> this (.isCompressionLossless))))
 
 (defn set-compression-quality
@@ -200,7 +200,7 @@
   quality - a float between 0and 1 indicating the desired quality level. - `float`
 
   throws: java.lang.UnsupportedOperationException - if the writer does not support compression."
-  ([this quality]
+  ([^javax.imageio.ImageWriteParam this ^Float quality]
     (-> this (.setCompressionQuality quality))))
 
 (defn get-tiling-mode
@@ -210,7 +210,7 @@
   returns: the current tiling mode. - `int`
 
   throws: java.lang.UnsupportedOperationException - if canWriteTiles returns false."
-  ([this]
+  ([^javax.imageio.ImageWriteParam this]
     (-> this (.getTilingMode))))
 
 (defn set-tiling-mode
@@ -240,7 +240,7 @@
   mode - The mode to use for tiling. - `int`
 
   throws: java.lang.UnsupportedOperationException - if canWriteTiles returns false."
-  ([this mode]
+  ([^javax.imageio.ImageWriteParam this ^Integer mode]
     (-> this (.setTilingMode mode))))
 
 (defn can-offset-tiles?
@@ -254,7 +254,7 @@
 
   returns: true if the writer supports non-zero tile
    offsets. - `boolean`"
-  ([this]
+  ([^javax.imageio.ImageWriteParam this]
     (-> this (.canOffsetTiles))))
 
 (defn get-tile-grid-x-offset
@@ -265,7 +265,7 @@
   returns: the tile grid X offset to be used for encoding. - `int`
 
   throws: java.lang.UnsupportedOperationException - if the plug-in does not support tiling."
-  ([this]
+  ([^javax.imageio.ImageWriteParam this]
     (-> this (.getTileGridXOffset))))
 
 (defn get-locale
@@ -274,7 +274,7 @@
    supported.
 
   returns: the current Locale, or null. - `java.util.Locale`"
-  ([this]
+  ([^javax.imageio.ImageWriteParam this]
     (-> this (.getLocale))))
 
 (defn set-compression-type
@@ -295,7 +295,7 @@
   compression-type - one of the Strings returned by getCompressionTypes, or null to remove any previous setting. - `java.lang.String`
 
   throws: java.lang.UnsupportedOperationException - if there are no settable compression types."
-  ([this compression-type]
+  ([^javax.imageio.ImageWriteParam this ^java.lang.String compression-type]
     (-> this (.setCompressionType compression-type))))
 
 (defn get-compression-quality
@@ -315,7 +315,7 @@
   returns: the current compression quality setting. - `float`
 
   throws: java.lang.UnsupportedOperationException - if the writer does not support compression."
-  ([this]
+  ([^javax.imageio.ImageWriteParam this]
     (-> this (.getCompressionQuality))))
 
 (defn unset-compression
@@ -327,7 +327,7 @@
    1.0F.
 
   throws: java.lang.UnsupportedOperationException - if the plug-in does not support compression."
-  ([this]
+  ([^javax.imageio.ImageWriteParam this]
     (-> this (.unsetCompression))))
 
 (defn set-progressive-mode
@@ -363,7 +363,7 @@
   mode - The mode for setting progression in the output stream. - `int`
 
   throws: java.lang.UnsupportedOperationException - if the writer does not support progressive encoding."
-  ([this mode]
+  ([^javax.imageio.ImageWriteParam this ^Integer mode]
     (-> this (.setProgressiveMode mode))))
 
 (defn get-tile-grid-y-offset
@@ -374,7 +374,7 @@
   returns: the tile grid Y offset to be used for encoding. - `int`
 
   throws: java.lang.UnsupportedOperationException - if the plug-in does not support tiling."
-  ([this]
+  ([^javax.imageio.ImageWriteParam this]
     (-> this (.getTileGridYOffset))))
 
 (defn get-compression-quality-descriptions
@@ -421,7 +421,7 @@
    descriptions of the compression quality levels. - `java.lang.String[]`
 
   throws: java.lang.UnsupportedOperationException - if the writer does not support compression."
-  ([this]
+  ([^javax.imageio.ImageWriteParam this]
     (-> this (.getCompressionQualityDescriptions))))
 
 (defn get-tile-height
@@ -432,14 +432,14 @@
   returns: the tile height to be used for encoding. - `int`
 
   throws: java.lang.UnsupportedOperationException - if the plug-in does not support tiling."
-  ([this]
+  ([^javax.imageio.ImageWriteParam this]
     (-> this (.getTileHeight))))
 
 (defn can-write-compressed?
   "Returns true if this writer supports compression.
 
   returns: true if the writer supports compression. - `boolean`"
-  ([this]
+  ([^javax.imageio.ImageWriteParam this]
     (-> this (.canWriteCompressed))))
 
 (defn get-progressive-mode
@@ -449,7 +449,7 @@
   returns: the current mode for progressive encoding. - `int`
 
   throws: java.lang.UnsupportedOperationException - if the writer does not support progressive encoding."
-  ([this]
+  ([^javax.imageio.ImageWriteParam this]
     (-> this (.getProgressiveMode))))
 
 (defn get-bit-rate
@@ -478,7 +478,7 @@
    -1.0F if no estimate is available. - `float`
 
   throws: java.lang.UnsupportedOperationException - if the writer does not support compression."
-  ([this quality]
+  ([^javax.imageio.ImageWriteParam this ^Float quality]
     (-> this (.getBitRate quality))))
 
 (defn unset-tiling
@@ -491,7 +491,7 @@
    tileGridYOffset to 0.
 
   throws: java.lang.UnsupportedOperationException - if the plug-in does not support tiling."
-  ([this]
+  ([^javax.imageio.ImageWriteParam this]
     (-> this (.unsetTiling))))
 
 (defn get-tile-width
@@ -502,7 +502,7 @@
   returns: the tile width to be used for encoding. - `int`
 
   throws: java.lang.UnsupportedOperationException - if the plug-in does not support tiling."
-  ([this]
+  ([^javax.imageio.ImageWriteParam this]
     (-> this (.getTileWidth))))
 
 (defn get-compression-mode
@@ -512,7 +512,7 @@
   returns: the current compression mode. - `int`
 
   throws: java.lang.UnsupportedOperationException - if the writer does not support compression."
-  ([this]
+  ([^javax.imageio.ImageWriteParam this]
     (-> this (.getCompressionMode))))
 
 (defn can-write-tiles?
@@ -522,7 +522,7 @@
    UnsupportedOperationException.
 
   returns: true if the writer supports tiling. - `boolean`"
-  ([this]
+  ([^javax.imageio.ImageWriteParam this]
     (-> this (.canWriteTiles))))
 
 (defn get-localized-compression-type-name
@@ -541,7 +541,7 @@
    the name of the current compression type. - `java.lang.String`
 
   throws: java.lang.UnsupportedOperationException - if the writer does not support compression."
-  ([this]
+  ([^javax.imageio.ImageWriteParam this]
     (-> this (.getLocalizedCompressionTypeName))))
 
 (defn set-compression-mode
@@ -578,7 +578,7 @@
   mode - The mode for setting compression in the output stream. - `int`
 
   throws: java.lang.UnsupportedOperationException - if the writer does not support compression, or does not support the requested mode."
-  ([this mode]
+  ([^javax.imageio.ImageWriteParam this ^Integer mode]
     (-> this (.setCompressionMode mode))))
 
 (defn set-tiling
@@ -598,7 +598,7 @@
   tile-grid-y-offset - the vertical offset of the tile grid. - `int`
 
   throws: java.lang.UnsupportedOperationException - if the plug-in does not support grid offsets, and the grid offsets are not both zero."
-  ([this tile-width tile-height tile-grid-x-offset tile-grid-y-offset]
+  ([^javax.imageio.ImageWriteParam this ^Integer tile-width ^Integer tile-height ^Integer tile-grid-x-offset ^Integer tile-grid-y-offset]
     (-> this (.setTiling tile-width tile-height tile-grid-x-offset tile-grid-y-offset))))
 
 (defn get-preferred-tile-sizes
@@ -622,7 +622,7 @@
    of at least two, or null. - `java.awt.Dimension[]`
 
   throws: java.lang.UnsupportedOperationException - if the plug-in does not support tiling."
-  ([this]
+  ([^javax.imageio.ImageWriteParam this]
     (-> this (.getPreferredTileSizes))))
 
 (defn get-compression-quality-values
@@ -652,7 +652,7 @@
    getCompressionQualityDescriptions. - `float[]`
 
   throws: java.lang.UnsupportedOperationException - if the writer does not support compression."
-  ([this]
+  ([^javax.imageio.ImageWriteParam this]
     (-> this (.getCompressionQualityValues))))
 
 (defn can-write-progressive?
@@ -661,7 +661,7 @@
 
   returns: true if the writer supports progressive
    encoding. - `boolean`"
-  ([this]
+  ([^javax.imageio.ImageWriteParam this]
     (-> this (.canWriteProgressive))))
 
 (defn get-compression-types
@@ -688,6 +688,6 @@
    null. - `java.lang.String[]`
 
   throws: java.lang.UnsupportedOperationException - if the writer does not support compression."
-  ([this]
+  ([^javax.imageio.ImageWriteParam this]
     (-> this (.getCompressionTypes))))
 

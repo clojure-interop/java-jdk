@@ -15,11 +15,11 @@
   type - `int`
   content - `java.lang.Object`
   next - `javax.swing.text.html.parser.ContentModel`"
-  ([type content next]
+  ([^Integer type ^java.lang.Object content ^javax.swing.text.html.parser.ContentModel next]
     (new ContentModel type content next))
-  ([type content]
+  ([^Integer type ^javax.swing.text.html.parser.ContentModel content]
     (new ContentModel type content))
-  ([content]
+  ([^javax.swing.text.html.parser.Element content]
     (new ContentModel content))
   ([]
     (new ContentModel )))
@@ -56,7 +56,7 @@
    match an empty input stream.
 
   returns: `boolean`"
-  ([this]
+  ([^javax.swing.text.html.parser.ContentModel this]
     (-> this (.empty))))
 
 (defn get-elements
@@ -64,7 +64,7 @@
    part of the this contentModel.
 
   elem-vec - `java.util.Vector<javax.swing.text.html.parser.Element>`"
-  ([this elem-vec]
+  ([^javax.swing.text.html.parser.ContentModel this ^java.util.Vector elem-vec]
     (-> this (.getElements elem-vec))))
 
 (defn first
@@ -74,15 +74,15 @@
   token - `java.lang.Object`
 
   returns: `boolean`"
-  ([this token]
+  ([^javax.swing.text.html.parser.ContentModel this ^java.lang.Object token]
     (-> this (.first token)))
-  ([this]
+  ([^javax.swing.text.html.parser.ContentModel this]
     (-> this (.first))))
 
 (defn to-string
   "Convert to a string.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^javax.swing.text.html.parser.ContentModel this]
     (-> this (.toString))))
 

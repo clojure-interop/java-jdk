@@ -44,7 +44,7 @@
    was successful, use getOmni.
 
   on - true to turn omni mode on, false to turn it off. - `boolean`"
-  ([this on]
+  ([^. this ^Boolean on]
     (-> this (.setOmni on))))
 
 (defn set-mono
@@ -65,7 +65,7 @@
    was successful, use getMono.
 
   on - true to turn mono mode on, false to turn it off (which means turning poly mode on). - `boolean`"
-  ([this on]
+  ([^. this ^Boolean on]
     (-> this (.setMono on))))
 
 (defn note-on
@@ -76,7 +76,7 @@
 
   note-number - the MIDI note number, from 0 to 127 (60 = Middle C) - `int`
   velocity - the speed with which the key was depressed - `int`"
-  ([this note-number velocity]
+  ([^. this ^Integer note-number ^Integer velocity]
     (-> this (.noteOn note-number velocity))))
 
 (defn get-poly-pressure
@@ -86,7 +86,7 @@
 
   returns: the amount of pressure for that note, from 0 to 127
    (127 = maximum pressure) - `int`"
-  ([this note-number]
+  ([^. this ^Integer note-number]
     (-> this (.getPolyPressure note-number))))
 
 (defn get-omni?
@@ -97,7 +97,7 @@
 
   returns: true if omni mode is on, otherwise
    false (meaning omni mode is off). - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.getOmni))))
 
 (defn set-mute
@@ -116,7 +116,7 @@
    was successful, use getMute.
 
   mute - the new mute state - `boolean`"
-  ([this mute]
+  ([^. this ^Boolean mute]
     (-> this (.setMute mute))))
 
 (defn set-channel-pressure
@@ -135,7 +135,7 @@
    was successful, use getChannelPressure.
 
   pressure - the pressure with which the keyboard is being depressed, from 0 to 127 (127 = maximum pressure) - `int`"
-  ([this pressure]
+  ([^. this ^Integer pressure]
     (-> this (.setChannelPressure pressure))))
 
 (defn get-pitch-bend
@@ -145,14 +145,14 @@
    setPitchBend will have no effect then.
 
   returns: bend amount, as a nonnegative 14-bit value (8192 = no bend) - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getPitchBend))))
 
 (defn all-sound-off
   "Immediately turns off all sounding notes on this channel, ignoring the
    state of the Hold Pedal and the internal decay rate of the current
    Instrument."
-  ([this]
+  ([^. this]
     (-> this (.allSoundOff))))
 
 (defn set-solo
@@ -169,7 +169,7 @@
    was successful, use getSolo.
 
   solo-state - new solo state for the channel - `boolean`"
-  ([this solo-state]
+  ([^. this ^Boolean solo-state]
     (-> this (.setSolo solo-state))))
 
 (defn control-change
@@ -215,14 +215,14 @@
 
   controller - the controller number (0 to 127; see the MIDI 1.0 Specification for the interpretation) - `int`
   value - the value to which the specified controller is changed (0 to 127) - `int`"
-  ([this controller value]
+  ([^. this ^Integer controller ^Integer value]
     (-> this (.controlChange controller value))))
 
 (defn get-program
   "Obtains the current program number for this channel.
 
   returns: the program number of the currently selected patch - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getProgram))))
 
 (defn get-mute?
@@ -233,7 +233,7 @@
 
   returns: true the channel is muted,
            or false if not - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.getMute))))
 
 (defn get-channel-pressure
@@ -244,7 +244,7 @@
 
   returns: the amount of pressure for that note,
            from 0 to 127 (127 = maximum pressure) - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getChannelPressure))))
 
 (defn note-off
@@ -259,9 +259,9 @@
 
   note-number - the MIDI note number, from 0 to 127 (60 = Middle C) - `int`
   velocity - the speed with which the key was released - `int`"
-  ([this note-number velocity]
+  ([^. this ^Integer note-number ^Integer velocity]
     (-> this (.noteOff note-number velocity)))
-  ([this note-number]
+  ([^. this ^Integer note-number]
     (-> this (.noteOff note-number))))
 
 (defn get-mono?
@@ -272,12 +272,12 @@
 
   returns: true if mono mode is on, otherwise
    false (meaning poly mode is on). - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.getMono))))
 
 (defn reset-all-controllers
   "Resets all the implemented controllers to their default values."
-  ([this]
+  ([^. this]
     (-> this (.resetAllControllers))))
 
 (defn get-solo?
@@ -288,7 +288,7 @@
 
   returns: true the channel is solo,
            or false if not - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.getSolo))))
 
 (defn program-change
@@ -309,9 +309,9 @@
 
   bank - the bank number to switch to (0 to 16383) - `int`
   program - the program (patch) to use in the specified bank (0 to 127) - `int`"
-  ([this bank program]
+  ([^. this ^Integer bank ^Integer program]
     (-> this (.programChange bank program)))
-  ([this program]
+  ([^. this ^Integer program]
     (-> this (.programChange program))))
 
 (defn all-notes-off
@@ -322,7 +322,7 @@
    controlChange)
    is down, the effect of this method is deferred until the pedal is
    released."
-  ([this]
+  ([^. this]
     (-> this (.allNotesOff))))
 
 (defn set-pitch-bend
@@ -345,7 +345,7 @@
    was successful, use getPitchBend.
 
   bend - the amount of pitch change, as a nonnegative 14-bit value (8192 = no bend) - `int`"
-  ([this bend]
+  ([^. this ^Integer bend]
     (-> this (.setPitchBend bend))))
 
 (defn get-controller
@@ -364,7 +364,7 @@
   controller - the number of the controller whose value is desired. The allowed range is 0-127; see the MIDI 1.0 Specification for the interpretation. - `int`
 
   returns: the current value of the specified controller (0 to 127) - `int`"
-  ([this controller]
+  ([^. this ^Integer controller]
     (-> this (.getController controller))))
 
 (defn local-control
@@ -386,7 +386,7 @@
 
   returns: the new local-control value, or false
            if local control is not supported - `boolean`"
-  ([this on]
+  ([^. this ^Boolean on]
     (-> this (.localControl on))))
 
 (defn set-poly-pressure
@@ -404,6 +404,6 @@
 
   note-number - the MIDI note number, from 0 to 127 (60 = Middle C) - `int`
   pressure - value for the specified key, from 0 to 127 (127 = maximum pressure) - `int`"
-  ([this note-number pressure]
+  ([^. this ^Integer note-number ^Integer pressure]
     (-> this (.setPolyPressure note-number pressure))))
 

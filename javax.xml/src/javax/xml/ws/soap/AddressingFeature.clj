@@ -94,11 +94,11 @@
   enabled - true enables ws-addressing i.e.ws-addressing is supported but doesn't require its use - `boolean`
   required - true means requires the use of ws-addressing . - `boolean`
   responses - specifies what type of responses are required - `javax.xml.ws.soap.AddressingFeature.Responses`"
-  ([enabled required responses]
+  ([^Boolean enabled ^Boolean required ^javax.xml.ws.soap.AddressingFeature.Responses responses]
     (new AddressingFeature enabled required responses))
-  ([enabled required]
+  ([^Boolean enabled ^Boolean required]
     (new AddressingFeature enabled required))
-  ([enabled]
+  ([^Boolean enabled]
     (new AddressingFeature enabled))
   ([]
     (new AddressingFeature )))
@@ -115,7 +115,7 @@
   "Get the unique identifier for this WebServiceFeature.
 
   returns: the unique identifier for this feature. - `java.lang.String`"
-  ([this]
+  ([^javax.xml.ws.soap.AddressingFeature this]
     (-> this (.getID))))
 
 (defn required?
@@ -124,7 +124,7 @@
    be present on incoming and outgoing messages.
 
   returns: the current required value - `boolean`"
-  ([this]
+  ([^javax.xml.ws.soap.AddressingFeature this]
     (-> this (.isRequired))))
 
 (defn get-responses
@@ -138,6 +138,6 @@
    only anonymous responses,
            AddressingFeature.Responses.NON_ANONYMOUS when endpoint requires the use
    of only non-anonymous responses - `javax.xml.ws.soap.AddressingFeature.Responses`"
-  ([this]
+  ([^javax.xml.ws.soap.AddressingFeature this]
     (-> this (.getResponses))))
 

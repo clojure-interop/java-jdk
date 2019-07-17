@@ -16,6 +16,6 @@
   "Returns the PSource algorithm name.
 
   returns: the PSource algorithm name. - `java.lang.String`"
-  ([this]
+  ([^javax.crypto.spec.PSource this]
     (-> this (.getAlgorithm))))
 

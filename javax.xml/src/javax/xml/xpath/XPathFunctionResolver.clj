@@ -28,6 +28,6 @@
   returns: The function or null if no function named functionName with arity arguments exists. - `javax.xml.xpath.XPathFunction`
 
   throws: java.lang.NullPointerException - If functionName or arity is null."
-  ([this function-name arity]
+  ([^. this ^javax.xml.namespace.QName function-name ^Integer arity]
     (-> this (.resolveFunction function-name arity))))
 

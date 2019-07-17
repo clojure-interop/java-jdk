@@ -9,6 +9,6 @@
   "Returns the potentially annotated actual type arguments of this parameterized type.
 
   returns: the potentially annotated actual type arguments of this parameterized type - `java.lang.reflect.AnnotatedType[]`"
-  ([this]
+  ([^. this]
     (-> this (.getAnnotatedActualTypeArguments))))
 

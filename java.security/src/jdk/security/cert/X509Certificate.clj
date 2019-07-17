@@ -68,7 +68,7 @@
    signature     BIT STRING
 
   returns: the signature. - `byte[]`"
-  ([this]
+  ([^java.security.cert.X509Certificate this]
     (-> this (.getSignature))))
 
 (defn get-serial-number
@@ -85,7 +85,7 @@
    CertificateSerialNumber  ::=  INTEGER
 
   returns: the serial number. - `java.math.BigInteger`"
-  ([this]
+  ([^java.security.cert.X509Certificate this]
     (-> this (.getSerialNumber))))
 
 (defn get-subject-alternative-names
@@ -149,7 +149,7 @@
    names (or null) - `java.util.Collection<java.util.List<?>>`
 
   throws: java.security.cert.CertificateParsingException - if the extension cannot be decoded"
-  ([this]
+  ([^java.security.cert.X509Certificate this]
     (-> this (.getSubjectAlternativeNames))))
 
 (defn get-issuer-unique-id
@@ -170,7 +170,7 @@
 
   returns: the issuer unique identifier or null if it is not
    present in the certificate. - `boolean[]`"
-  ([this]
+  ([^java.security.cert.X509Certificate this]
     (-> this (.getIssuerUniqueID))))
 
 (defn get-not-before
@@ -190,7 +190,7 @@
        generalTime    GeneralizedTime }
 
   returns: the start date of the validity period. - `java.util.Date`"
-  ([this]
+  ([^java.security.cert.X509Certificate this]
     (-> this (.getNotBefore))))
 
 (defn get-not-after
@@ -199,7 +199,7 @@
    for relevant ASN.1 definitions.
 
   returns: the end date of the validity period. - `java.util.Date`"
-  ([this]
+  ([^java.security.cert.X509Certificate this]
     (-> this (.getNotAfter))))
 
 (defn get-key-usage
@@ -231,7 +231,7 @@
    in the certificate is longer than the above list, it will not be
    truncated. Returns null if this certificate does not
    contain a KeyUsage extension. - `boolean[]`"
-  ([this]
+  ([^java.security.cert.X509Certificate this]
     (-> this (.getKeyUsage))))
 
 (defn get-basic-constraints
@@ -261,7 +261,7 @@
    pathLenConstraint does not appear,
    Integer.MAX_VALUE is returned to indicate that there is no
    limit to the allowed length of the certification path. - `int`"
-  ([this]
+  ([^java.security.cert.X509Certificate this]
     (-> this (.getBasicConstraints))))
 
 (defn get-subject-unique-id
@@ -276,7 +276,7 @@
 
   returns: the subject unique identifier or null if it is not
    present in the certificate. - `boolean[]`"
-  ([this]
+  ([^java.security.cert.X509Certificate this]
     (-> this (.getSubjectUniqueID))))
 
 (defn get-issuer-alternative-names
@@ -315,7 +315,7 @@
    names (or null) - `java.util.Collection<java.util.List<?>>`
 
   throws: java.security.cert.CertificateParsingException - if the extension cannot be decoded"
-  ([this]
+  ([^java.security.cert.X509Certificate this]
     (-> this (.getIssuerAlternativeNames))))
 
 (defn check-validity
@@ -326,9 +326,9 @@
   date - the Date to check against to see if this certificate is valid at that date/time. - `java.util.Date`
 
   throws: java.security.cert.CertificateExpiredException - if the certificate has expired with respect to the date supplied."
-  ([this date]
+  ([^java.security.cert.X509Certificate this ^java.util.Date date]
     (-> this (.checkValidity date)))
-  ([this]
+  ([^java.security.cert.X509Certificate this]
     (-> this (.checkValidity))))
 
 (defn get-issuer-x-500-principal
@@ -339,7 +339,7 @@
 
   returns: an X500Principal representing the issuer
             distinguished name - `javax.security.auth.x500.X500Principal`"
-  ([this]
+  ([^java.security.cert.X509Certificate this]
     (-> this (.getIssuerX500Principal))))
 
 (defn verify
@@ -358,7 +358,7 @@
   sig-provider - the signature provider. - `java.security.Provider`
 
   throws: java.security.NoSuchAlgorithmException - on unsupported signature algorithms."
-  ([this key sig-provider]
+  ([^java.security.cert.X509Certificate this ^java.security.PublicKey key ^java.security.Provider sig-provider]
     (-> this (.verify key sig-provider))))
 
 (defn get-version
@@ -372,7 +372,7 @@
    Version ::=  INTEGER  {  v1(0), v2(1), v3(2)  }
 
   returns: the version number, i.e. 1, 2 or 3. - `int`"
-  ([this]
+  ([^java.security.cert.X509Certificate this]
     (-> this (.getVersion))))
 
 (defn get-subject-dn
@@ -395,7 +395,7 @@
    and other relevant definitions.
 
   returns: a Principal whose name is the subject name. - `java.security.Principal`"
-  ([this]
+  ([^java.security.cert.X509Certificate this]
     (-> this (.getSubjectDN))))
 
 (defn get-issuer-dn
@@ -435,7 +435,7 @@
    TeletexString or UniversalString.
 
   returns: a Principal whose name is the issuer distinguished name. - `java.security.Principal`"
-  ([this]
+  ([^java.security.cert.X509Certificate this]
     (-> this (.getIssuerDN))))
 
 (defn get-sig-alg-params
@@ -453,7 +453,7 @@
 
   returns: the DER-encoded signature algorithm parameters, or
            null if no parameters are present. - `byte[]`"
-  ([this]
+  ([^java.security.cert.X509Certificate this]
     (-> this (.getSigAlgParams))))
 
 (defn get-extended-key-usage
@@ -487,7 +487,7 @@
            contain an ExtendedKeyUsage extension. - `java.util.List<java.lang.String>`
 
   throws: java.security.cert.CertificateParsingException - if the extension cannot be decoded"
-  ([this]
+  ([^java.security.cert.X509Certificate this]
     (-> this (.getExtendedKeyUsage))))
 
 (defn get-sig-alg-name
@@ -509,7 +509,7 @@
    OID string.
 
   returns: the signature algorithm name. - `java.lang.String`"
-  ([this]
+  ([^java.security.cert.X509Certificate this]
     (-> this (.getSigAlgName))))
 
 (defn get-subject-x-500-principal
@@ -522,7 +522,7 @@
 
   returns: an X500Principal representing the subject
             distinguished name - `javax.security.auth.x500.X500Principal`"
-  ([this]
+  ([^java.security.cert.X509Certificate this]
     (-> this (.getSubjectX500Principal))))
 
 (defn get-sig-alg-oid
@@ -539,7 +539,7 @@
    relevant ASN.1 definitions.
 
   returns: the signature algorithm OID string. - `java.lang.String`"
-  ([this]
+  ([^java.security.cert.X509Certificate this]
     (-> this (.getSigAlgOID))))
 
 (defn get-tbs-certificate
@@ -550,6 +550,6 @@
   returns: the DER-encoded certificate information. - `byte[]`
 
   throws: java.security.cert.CertificateEncodingException - if an encoding error occurs."
-  ([this]
+  ([^java.security.cert.X509Certificate this]
     (-> this (.getTBSCertificate))))
 

@@ -11,7 +11,7 @@
    detail message.
 
   message - the detail message - `java.lang.String`"
-  ([message]
+  ([^java.lang.String message]
     (new UnmodifiableSetException message))
   ([]
     (new UnmodifiableSetException )))

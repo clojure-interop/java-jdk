@@ -22,7 +22,7 @@
   cache-dir - a File indicating where the cache file should be created, or null to use the system directory. - `java.io.File`
 
   throws: java.lang.IllegalArgumentException - if cacheDir is non-null but is not a directory."
-  ([stream cache-dir]
+  ([^java.io.InputStream stream ^java.io.File cache-dir]
     (new FileCacheImageInputStream stream cache-dir)))
 
 (defn read
@@ -36,9 +36,9 @@
    to indicate EOF. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this b off len]
+  ([^javax.imageio.stream.FileCacheImageInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  ([this]
+  ([^javax.imageio.stream.FileCacheImageInputStream this]
     (-> this (.read))))
 
 (defn cached?
@@ -47,7 +47,7 @@
    seeking backwards.
 
   returns: true. - `boolean`"
-  ([this]
+  ([^javax.imageio.stream.FileCacheImageInputStream this]
     (-> this (.isCached))))
 
 (defn cached-file?
@@ -55,7 +55,7 @@
    ImageInputStream maintains a file cache.
 
   returns: true. - `boolean`"
-  ([this]
+  ([^javax.imageio.stream.FileCacheImageInputStream this]
     (-> this (.isCachedFile))))
 
 (defn cached-memory?
@@ -64,7 +64,7 @@
    cache.
 
   returns: false. - `boolean`"
-  ([this]
+  ([^javax.imageio.stream.FileCacheImageInputStream this]
     (-> this (.isCachedMemory))))
 
 (defn close
@@ -73,6 +73,6 @@
    is not closed.
 
   throws: java.io.IOException - if an error occurs."
-  ([this]
+  ([^javax.imageio.stream.FileCacheImageInputStream this]
     (-> this (.close))))
 

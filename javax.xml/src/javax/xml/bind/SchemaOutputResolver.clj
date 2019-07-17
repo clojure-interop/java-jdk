@@ -44,6 +44,6 @@
         namespace URI will be skipped. - `javax.xml.transform.Result`
 
   throws: java.io.IOException"
-  ([this namespace-uri suggested-file-name]
+  ([^javax.xml.bind.SchemaOutputResolver this ^java.lang.String namespace-uri ^java.lang.String suggested-file-name]
     (-> this (.createOutput namespace-uri suggested-file-name))))
 

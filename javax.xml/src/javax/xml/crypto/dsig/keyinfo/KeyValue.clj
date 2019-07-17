@@ -67,6 +67,6 @@
   returns: the public key of this KeyValue - `java.security.PublicKey`
 
   throws: java.security.KeyException - if this KeyValue cannot be converted to a PublicKey"
-  ([this]
+  ([^. this]
     (-> this (.getPublicKey))))
 

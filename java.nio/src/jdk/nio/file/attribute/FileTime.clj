@@ -17,9 +17,9 @@
   unit - the unit of granularity to interpret the value - `java.util.concurrent.TimeUnit`
 
   returns: a FileTime representing the given value - `java.nio.file.attribute.FileTime`"
-  ([value unit]
+  ([^Long value ^java.util.concurrent.TimeUnit unit]
     (FileTime/from value unit))
-  ([instant]
+  ([^java.time.Instant instant]
     (FileTime/from instant)))
 
 (defn *from-millis
@@ -28,7 +28,7 @@
   value - the value, in milliseconds, since the epoch (1970-01-01T00:00:00Z); can be negative - `long`
 
   returns: a FileTime representing the given value - `java.nio.file.attribute.FileTime`"
-  ([value]
+  ([^Long value]
     (FileTime/fromMillis value)))
 
 (defn to
@@ -42,7 +42,7 @@
 
   returns: value in the given unit of granularity, since the epoch
             since the epoch (1970-01-01T00:00:00Z); can be negative - `long`"
-  ([this unit]
+  ([^java.nio.file.attribute.FileTime this ^java.util.concurrent.TimeUnit unit]
     (-> this (.to unit))))
 
 (defn to-millis
@@ -53,7 +53,7 @@
    if positive.
 
   returns: the value in milliseconds, since the epoch (1970-01-01T00:00:00Z) - `long`"
-  ([this]
+  ([^java.nio.file.attribute.FileTime this]
     (-> this (.toMillis))))
 
 (defn to-instant
@@ -70,7 +70,7 @@
 
   returns: an instant representing the same point on the time-line as
             this FileTime object - `java.time.Instant`"
-  ([this]
+  ([^java.nio.file.attribute.FileTime this]
     (-> this (.toInstant))))
 
 (defn equals
@@ -82,7 +82,7 @@
   obj - the object to compare with - `java.lang.Object`
 
   returns: true if, and only if, the given object is a FileTime that represents the same time - `boolean`"
-  ([this obj]
+  ([^java.nio.file.attribute.FileTime this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -92,7 +92,7 @@
    general contract of the Object.hashCode() method.
 
   returns: the hash-code value - `int`"
-  ([this]
+  ([^java.nio.file.attribute.FileTime this]
     (-> this (.hashCode))))
 
 (defn compare-to
@@ -104,7 +104,7 @@
             value less than 0 if this FileTime represents a time
             that is before other, and a value greater than 0 if this
             FileTime represents a time that is after other - `int`"
-  ([this other]
+  ([^java.nio.file.attribute.FileTime this ^java.nio.file.attribute.FileTime other]
     (-> this (.compareTo other))))
 
 (defn to-string
@@ -128,6 +128,6 @@
    are not present. The year before `0001` is `-0001`.
 
   returns: the string representation of this file time - `java.lang.String`"
-  ([this]
+  ([^java.nio.file.attribute.FileTime this]
     (-> this (.toString))))
 

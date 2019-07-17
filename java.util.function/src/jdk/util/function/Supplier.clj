@@ -13,6 +13,6 @@
   "Gets a result.
 
   returns: a result - `Supplier.T`"
-  ([this]
+  ([^. this]
     (-> this (.get))))
 

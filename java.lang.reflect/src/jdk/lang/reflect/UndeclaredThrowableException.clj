@@ -33,9 +33,9 @@
 
   undeclared-throwable - the undeclared checked exception that was thrown - `java.lang.Throwable`
   s - the detail message - `java.lang.String`"
-  ([undeclared-throwable s]
+  ([^java.lang.Throwable undeclared-throwable ^java.lang.String s]
     (new UndeclaredThrowableException undeclared-throwable s))
-  ([undeclared-throwable]
+  ([^java.lang.Throwable undeclared-throwable]
     (new UndeclaredThrowableException undeclared-throwable)))
 
 (defn get-undeclared-throwable
@@ -47,7 +47,7 @@
    obtaining this information.
 
   returns: the undeclared checked exception that was thrown - `java.lang.Throwable`"
-  ([this]
+  ([^java.lang.reflect.UndeclaredThrowableException this]
     (-> this (.getUndeclaredThrowable))))
 
 (defn get-cause
@@ -56,6 +56,6 @@
    which may be null).
 
   returns: the cause of this exception. - `java.lang.Throwable`"
-  ([this]
+  ([^java.lang.reflect.UndeclaredThrowableException this]
     (-> this (.getCause))))
 

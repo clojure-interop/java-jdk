@@ -48,7 +48,7 @@
            null if no suitable Component can be found - `java.awt.Component`
 
   throws: java.lang.IllegalArgumentException - if aContainer is not a focus cycle root of aComponent or focus traversal policy provider, or if either aContainer or aComponent is null"
-  ([this a-container a-component]
+  ([^java.awt.ContainerOrderFocusTraversalPolicy this ^java.awt.Container a-container ^java.awt.Component a-component]
     (-> this (.getComponentAfter a-container a-component))))
 
 (defn get-component-before
@@ -63,7 +63,7 @@
            or null if no suitable Component can be found - `java.awt.Component`
 
   throws: java.lang.IllegalArgumentException - if aContainer is not a focus cycle root of aComponent or focus traversal policy provider, or if either aContainer or aComponent is null"
-  ([this a-container a-component]
+  ([^java.awt.ContainerOrderFocusTraversalPolicy this ^java.awt.Container a-container ^java.awt.Component a-component]
     (-> this (.getComponentBefore a-container a-component))))
 
 (defn get-first-component
@@ -77,7 +77,7 @@
            or null if no suitable Component can be found - `java.awt.Component`
 
   throws: java.lang.IllegalArgumentException - if aContainer is null"
-  ([this a-container]
+  ([^java.awt.ContainerOrderFocusTraversalPolicy this ^java.awt.Container a-container]
     (-> this (.getFirstComponent a-container))))
 
 (defn get-last-component
@@ -91,7 +91,7 @@
            or null if no suitable Component can be found - `java.awt.Component`
 
   throws: java.lang.IllegalArgumentException - if aContainer is null"
-  ([this a-container]
+  ([^java.awt.ContainerOrderFocusTraversalPolicy this ^java.awt.Container a-container]
     (-> this (.getLastComponent a-container))))
 
 (defn get-default-component
@@ -106,7 +106,7 @@
            or null if no suitable Component can be found - `java.awt.Component`
 
   throws: java.lang.IllegalArgumentException - if aContainer is null"
-  ([this a-container]
+  ([^java.awt.ContainerOrderFocusTraversalPolicy this ^java.awt.Container a-container]
     (-> this (.getDefaultComponent a-container))))
 
 (defn set-implicit-down-cycle-traversal
@@ -119,7 +119,7 @@
    property is true.
 
   implicit-down-cycle-traversal - whether this ContainerOrderFocusTraversalPolicy transfers focus down-cycle implicitly - `boolean`"
-  ([this implicit-down-cycle-traversal]
+  ([^java.awt.ContainerOrderFocusTraversalPolicy this ^Boolean implicit-down-cycle-traversal]
     (-> this (.setImplicitDownCycleTraversal implicit-down-cycle-traversal))))
 
 (defn get-implicit-down-cycle-traversal?
@@ -132,6 +132,6 @@
 
   returns: whether this ContainerOrderFocusTraversalPolicy transfers focus
            down-cycle implicitly - `boolean`"
-  ([this]
+  ([^java.awt.ContainerOrderFocusTraversalPolicy this]
     (-> this (.getImplicitDownCycleTraversal))))
 

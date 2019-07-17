@@ -83,7 +83,7 @@
   returns: Current doc object. - `javax.print.Doc`
 
   throws: java.io.IOException - Thrown if a error occurred reading the document."
-  ([this]
+  ([^. this]
     (-> this (.getDoc))))
 
 (defn next
@@ -94,6 +94,6 @@
    there are no further doc objects. - `javax.print.MultiDoc`
 
   throws: java.io.IOException - Thrown if an error occurred locating the next document"
-  ([this]
+  ([^. this]
     (-> this (.next))))
 

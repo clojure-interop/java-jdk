@@ -58,7 +58,7 @@
 
   returns: a boolean indicating if the InetAddress is
    a site local address; or false if address is not a site local unicast address. - `boolean`"
-  ([this]
+  ([^java.net.Inet4Address this]
     (-> this (.isSiteLocalAddress))))
 
 (defn loopback-address?
@@ -66,14 +66,14 @@
 
   returns: a boolean indicating if the InetAddress is
    a loopback address; or false otherwise. - `boolean`"
-  ([this]
+  ([^java.net.Inet4Address this]
     (-> this (.isLoopbackAddress))))
 
 (defn get-host-address
   "Returns the IP address string in textual presentation form.
 
   returns: the raw IP address in a string format. - `java.lang.String`"
-  ([this]
+  ([^java.net.Inet4Address this]
     (-> this (.getHostAddress))))
 
 (defn link-local-address?
@@ -81,7 +81,7 @@
 
   returns: a boolean indicating if the InetAddress is
    a link local address; or false if address is not a link local unicast address. - `boolean`"
-  ([this]
+  ([^java.net.Inet4Address this]
     (-> this (.isLinkLocalAddress))))
 
 (defn any-local-address?
@@ -89,7 +89,7 @@
 
   returns: a boolean indicating if the Inetaddress is
            a wildcard address. - `boolean`"
-  ([this]
+  ([^java.net.Inet4Address this]
     (-> this (.isAnyLocalAddress))))
 
 (defn mc-link-local?
@@ -98,7 +98,7 @@
   returns: a boolean indicating if the address has
            is a multicast address of link-local scope, false if it is not
            of link-local scope or it is not a multicast address - `boolean`"
-  ([this]
+  ([^java.net.Inet4Address this]
     (-> this (.isMCLinkLocal))))
 
 (defn mc-global?
@@ -107,7 +107,7 @@
   returns: a boolean indicating if the address has
            is a multicast address of global scope, false if it is not
            of global scope or it is not a multicast address - `boolean`"
-  ([this]
+  ([^java.net.Inet4Address this]
     (-> this (.isMCGlobal))))
 
 (defn multicast-address?
@@ -117,7 +117,7 @@
 
   returns: a boolean indicating if the InetAddress is
    an IP multicast address - `boolean`"
-  ([this]
+  ([^java.net.Inet4Address this]
     (-> this (.isMulticastAddress))))
 
 (defn mc-node-local?
@@ -126,7 +126,7 @@
   returns: a boolean indicating if the address has
            is a multicast address of node-local scope, false if it is not
            of node-local scope or it is not a multicast address - `boolean`"
-  ([this]
+  ([^java.net.Inet4Address this]
     (-> this (.isMCNodeLocal))))
 
 (defn get-address
@@ -135,7 +135,7 @@
    byte of the address is in getAddress()[0].
 
   returns: the raw IP address of this object. - `byte[]`"
-  ([this]
+  ([^java.net.Inet4Address this]
     (-> this (.getAddress))))
 
 (defn mc-org-local?
@@ -145,7 +145,7 @@
            is a multicast address of organization-local scope,
            false if it is not of organization-local scope
            or it is not a multicast address - `boolean`"
-  ([this]
+  ([^java.net.Inet4Address this]
     (-> this (.isMCOrgLocal))))
 
 (defn mc-site-local?
@@ -154,14 +154,14 @@
   returns: a boolean indicating if the address has
            is a multicast address of site-local scope, false if it is not
            of site-local scope or it is not a multicast address - `boolean`"
-  ([this]
+  ([^java.net.Inet4Address this]
     (-> this (.isMCSiteLocal))))
 
 (defn hash-code
   "Returns a hashcode for this IP address.
 
   returns: a hash code value for this IP address. - `int`"
-  ([this]
+  ([^java.net.Inet4Address this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -179,6 +179,6 @@
 
   returns: true if the objects are the same;
             false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.net.Inet4Address this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

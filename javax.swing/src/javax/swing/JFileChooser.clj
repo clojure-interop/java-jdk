@@ -35,9 +35,9 @@
 
   current-directory - `java.io.File`
   fsv - `javax.swing.filechooser.FileSystemView`"
-  ([current-directory fsv]
+  ([^java.io.File current-directory ^javax.swing.filechooser.FileSystemView fsv]
     (new JFileChooser current-directory fsv))
-  ([current-directory-path]
+  ([^java.lang.String current-directory-path]
     (new JFileChooser current-directory-path))
   ([]
     (new JFileChooser )))
@@ -290,7 +290,7 @@
    If null, the UI object will determine the button's text.
 
   tool-tip-text - the tooltip text for the approve button - `java.lang.String`"
-  ([this tool-tip-text]
+  ([^javax.swing.JFileChooser this ^java.lang.String tool-tip-text]
     (-> this (.setApproveButtonToolTipText tool-tip-text))))
 
 (defn get-type-description
@@ -300,14 +300,14 @@
 
   returns: the String containing the file type description for
             f - `java.lang.String`"
-  ([this f]
+  ([^javax.swing.JFileChooser this ^java.io.File f]
     (-> this (.getTypeDescription f))))
 
 (defn multi-selection-enabled?
   "Returns true if multiple files can be selected.
 
   returns: true if multiple files can be selected - `boolean`"
-  ([this]
+  ([^javax.swing.JFileChooser this]
     (-> this (.isMultiSelectionEnabled))))
 
 (defn set-dialog-title
@@ -315,7 +315,7 @@
    title bar.
 
   dialog-title - the new String for the title bar - `java.lang.String`"
-  ([this dialog-title]
+  ([^javax.swing.JFileChooser this ^java.lang.String dialog-title]
     (-> this (.setDialogTitle dialog-title))))
 
 (defn get-control-buttons-are-shown?
@@ -324,21 +324,21 @@
 
   returns: the value of the controlButtonsAreShown
        property - `boolean`"
-  ([this]
+  ([^javax.swing.JFileChooser this]
     (-> this (.getControlButtonsAreShown))))
 
 (defn get-file-system-view
   "Returns the file system view.
 
   returns: the FileSystemView object - `javax.swing.filechooser.FileSystemView`"
-  ([this]
+  ([^javax.swing.JFileChooser this]
     (-> this (.getFileSystemView))))
 
 (defn set-approve-button-mnemonic
   "Sets the approve button's mnemonic using a numeric keycode.
 
   mnemonic - an integer value for the mnemonic key - `int`"
-  ([this mnemonic]
+  ([^javax.swing.JFileChooser this ^Integer mnemonic]
     (-> this (.setApproveButtonMnemonic mnemonic))))
 
 (defn set-accept-all-file-filter-used
@@ -350,7 +350,7 @@
    the actively used file filter.
 
   b - `boolean`"
-  ([this b]
+  ([^javax.swing.JFileChooser this ^Boolean b]
     (-> this (.setAcceptAllFileFilterUsed b))))
 
 (defn get-approve-button-text
@@ -361,14 +361,14 @@
    Typically, this would be `Open` or `Save`.
 
   returns: the text used in the ApproveButton - `java.lang.String`"
-  ([this]
+  ([^javax.swing.JFileChooser this]
     (-> this (.getApproveButtonText))))
 
 (defn accept-all-file-filter-used?
   "Returns whether the AcceptAll FileFilter is used.
 
   returns: true if the AcceptAll FileFilter is used - `boolean`"
-  ([this]
+  ([^javax.swing.JFileChooser this]
     (-> this (.isAcceptAllFileFilterUsed))))
 
 (defn directory-selection-enabled?
@@ -376,7 +376,7 @@
    on the current file selection mode.
 
   returns: `boolean`"
-  ([this]
+  ([^javax.swing.JFileChooser this]
     (-> this (.isDirectorySelectionEnabled))))
 
 (defn get-icon
@@ -386,14 +386,14 @@
   f - the File - `java.io.File`
 
   returns: the Icon for this file, or type of file - `javax.swing.Icon`"
-  ([this f]
+  ([^javax.swing.JFileChooser this ^java.io.File f]
     (-> this (.getIcon f))))
 
 (defn get-file-filter
   "Returns the currently selected file filter.
 
   returns: the current file filter - `javax.swing.filechooser.FileFilter`"
-  ([this]
+  ([^javax.swing.JFileChooser this]
     (-> this (.getFileFilter))))
 
 (defn get-accept-all-file-filter
@@ -401,7 +401,7 @@
    For example, on Microsoft Windows this would be All Files (*.*).
 
   returns: `javax.swing.filechooser.FileFilter`"
-  ([this]
+  ([^javax.swing.JFileChooser this]
     (-> this (.getAcceptAllFileFilter))))
 
 (defn add-choosable-file-filter
@@ -410,14 +410,14 @@
    setFileSelectionMode.
 
   filter - the FileFilter to add to the choosable file filter list - `javax.swing.filechooser.FileFilter`"
-  ([this filter]
+  ([^javax.swing.JFileChooser this ^javax.swing.filechooser.FileFilter filter]
     (-> this (.addChoosableFileFilter filter))))
 
 (defn add-action-listener
   "Adds an ActionListener to the file chooser.
 
   l - the listener to be added - `java.awt.event.ActionListener`"
-  ([this l]
+  ([^javax.swing.JFileChooser this ^java.awt.event.ActionListener l]
     (-> this (.addActionListener l))))
 
 (defn get-ui-class-id
@@ -425,7 +425,7 @@
    that renders this component.
 
   returns: the string `FileChooserUI` - `java.lang.String`"
-  ([this]
+  ([^javax.swing.JFileChooser this]
     (-> this (.getUIClassID))))
 
 (defn set-file-filter
@@ -433,7 +433,7 @@
    file chooser to filter out files from the user's view.
 
   filter - the new current file filter to use - `javax.swing.filechooser.FileFilter`"
-  ([this filter]
+  ([^javax.swing.JFileChooser this ^javax.swing.filechooser.FileFilter filter]
     (-> this (.setFileFilter filter))))
 
 (defn get-approve-button-tool-tip-text
@@ -441,7 +441,7 @@
    If null, the UI object will determine the button's text.
 
   returns: the tooltip text used for the approve button - `java.lang.String`"
-  ([this]
+  ([^javax.swing.JFileChooser this]
     (-> this (.getApproveButtonToolTipText))))
 
 (defn set-file-selection-mode
@@ -453,7 +453,7 @@
   mode - the type of files to be displayed: JFileChooser.FILES_ONLY JFileChooser.DIRECTORIES_ONLY JFileChooser.FILES_AND_DIRECTORIES - `int`
 
   throws: java.lang.IllegalArgumentException - if mode is an illegal file selection mode"
-  ([this mode]
+  ([^javax.swing.JFileChooser this ^Integer mode]
     (-> this (.setFileSelectionMode mode))))
 
 (defn get-name
@@ -463,7 +463,7 @@
 
   returns: the String containing the filename for
             f - `java.lang.String`"
-  ([this f]
+  ([^javax.swing.JFileChooser this ^java.io.File f]
     (-> this (.getName f))))
 
 (defn set-file-hiding-enabled
@@ -472,7 +472,7 @@
    shown is done by the FileView.
 
   b - the boolean value that determines whether file hiding is turned on - `boolean`"
-  ([this b]
+  ([^javax.swing.JFileChooser this ^Boolean b]
     (-> this (.setFileHidingEnabled b))))
 
 (defn show-save-dialog
@@ -490,7 +490,7 @@
                     dialog is dismissed - `int`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true."
-  ([this parent]
+  ([^javax.swing.JFileChooser this ^java.awt.Component parent]
     (-> this (.showSaveDialog parent))))
 
 (defn show-dialog
@@ -544,7 +544,7 @@
                     dialog is dismissed - `int`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true."
-  ([this parent approve-button-text]
+  ([^javax.swing.JFileChooser this ^java.awt.Component parent ^java.lang.String approve-button-text]
     (-> this (.showDialog parent approve-button-text))))
 
 (defn set-file-view
@@ -552,7 +552,7 @@
    the icon that represents a file or the type description of a file.
 
   file-view - `javax.swing.filechooser.FileView`"
-  ([this file-view]
+  ([^javax.swing.JFileChooser this ^javax.swing.filechooser.FileView file-view]
     (-> this (.setFileView file-view))))
 
 (defn accept
@@ -561,7 +561,7 @@
   f - the File - `java.io.File`
 
   returns: true if the file should be displayed, otherwise false - `boolean`"
-  ([this f]
+  ([^javax.swing.JFileChooser this ^java.io.File f]
     (-> this (.accept f))))
 
 (defn traversable?
@@ -571,14 +571,14 @@
   f - the File - `java.io.File`
 
   returns: true if the file/directory can be traversed, otherwise false - `boolean`"
-  ([this f]
+  ([^javax.swing.JFileChooser this ^java.io.File f]
     (-> this (.isTraversable f))))
 
 (defn get-dialog-title
   "Gets the string that goes in the JFileChooser's titlebar.
 
   returns: `java.lang.String`"
-  ([this]
+  ([^javax.swing.JFileChooser this]
     (-> this (.getDialogTitle))))
 
 (defn ensure-file-is-visible
@@ -586,7 +586,7 @@
    not hidden.
 
   f - a File object - `java.io.File`"
-  ([this f]
+  ([^javax.swing.JFileChooser this ^java.io.File f]
     (-> this (.ensureFileIsVisible f))))
 
 (defn get-description
@@ -596,7 +596,7 @@
 
   returns: the String containing the file description for
             f - `java.lang.String`"
-  ([this f]
+  ([^javax.swing.JFileChooser this ^java.io.File f]
     (-> this (.getDescription f))))
 
 (defn file-selection-enabled?
@@ -604,7 +604,7 @@
    current file selection mode.
 
   returns: `boolean`"
-  ([this]
+  ([^javax.swing.JFileChooser this]
     (-> this (.isFileSelectionEnabled))))
 
 (defn get-choosable-file-filters
@@ -612,7 +612,7 @@
 
   returns: a FileFilter array containing all the choosable
            file filters - `javax.swing.filechooser.FileFilter[]`"
-  ([this]
+  ([^javax.swing.JFileChooser this]
     (-> this (.getChoosableFileFilters))))
 
 (defn set-drag-enabled
@@ -647,7 +647,7 @@
   b - the value to set the dragEnabled property to - `boolean`
 
   throws: java.awt.HeadlessException - if b is true and GraphicsEnvironment.isHeadless() returns true"
-  ([this b]
+  ([^javax.swing.JFileChooser this ^Boolean b]
     (-> this (.setDragEnabled b))))
 
 (defn get-dialog-type
@@ -659,21 +659,21 @@
    JFileChooser.OPEN_DIALOG
    JFileChooser.SAVE_DIALOG
    JFileChooser.CUSTOM_DIALOG - `int`"
-  ([this]
+  ([^javax.swing.JFileChooser this]
     (-> this (.getDialogType))))
 
 (defn set-multi-selection-enabled
   "Sets the file chooser to allow multiple file selections.
 
   b - true if multiple files may be selected - `boolean`"
-  ([this b]
+  ([^javax.swing.JFileChooser this ^Boolean b]
     (-> this (.setMultiSelectionEnabled b))))
 
 (defn get-ui
   "Gets the UI object which implements the L&F for this component.
 
   returns: the FileChooserUI object that implements the FileChooserUI L&F - `javax.swing.plaf.FileChooserUI`"
-  ([this]
+  ([^javax.swing.JFileChooser this]
     (-> this (.getUI))))
 
 (defn get-action-listeners
@@ -683,14 +683,14 @@
   returns: all of this file chooser's ActionListeners
            or an empty
            array if no action listeners are currently registered - `java.awt.event.ActionListener[]`"
-  ([this]
+  ([^javax.swing.JFileChooser this]
     (-> this (.getActionListeners))))
 
 (defn reset-choosable-file-filters
   "Resets the choosable file filter list to its starting state. Normally,
    this removes all added file filters while leaving the
    AcceptAll file filter."
-  ([this]
+  ([^javax.swing.JFileChooser this]
     (-> this (.resetChoosableFileFilters))))
 
 (defn set-selected-file
@@ -699,7 +699,7 @@
    to be the file's parent directory.
 
   file - the selected file - `java.io.File`"
-  ([this file]
+  ([^javax.swing.JFileChooser this ^java.io.File file]
     (-> this (.setSelectedFile file))))
 
 (defn set-control-buttons-are-shown
@@ -715,7 +715,7 @@
    as the name of the property.
 
   b - false if control buttons should not be shown; otherwise, true - `boolean`"
-  ([this b]
+  ([^javax.swing.JFileChooser this ^Boolean b]
     (-> this (.setControlButtonsAreShown b))))
 
 (defn get-selected-file
@@ -725,7 +725,7 @@
    file from a list in the UI.
 
   returns: the selected file - `java.io.File`"
-  ([this]
+  ([^javax.swing.JFileChooser this]
     (-> this (.getSelectedFile))))
 
 (defn get-file-selection-mode
@@ -737,12 +737,12 @@
    JFileChooser.FILES_ONLY
    JFileChooser.DIRECTORIES_ONLY
    JFileChooser.FILES_AND_DIRECTORIES - `int`"
-  ([this]
+  ([^javax.swing.JFileChooser this]
     (-> this (.getFileSelectionMode))))
 
 (defn rescan-current-directory
   "Tells the UI to rescan its files list from the current directory."
-  ([this]
+  ([^javax.swing.JFileChooser this]
     (-> this (.rescanCurrentDirectory))))
 
 (defn show-open-dialog
@@ -760,7 +760,7 @@
                     dialog is dismissed - `int`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true."
-  ([this parent]
+  ([^javax.swing.JFileChooser this ^java.awt.Component parent]
     (-> this (.showOpenDialog parent))))
 
 (defn get-accessible-context
@@ -771,7 +771,7 @@
 
   returns: an AccessibleJFileChooser that serves as the
            AccessibleContext of this JFileChooser - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^javax.swing.JFileChooser this]
     (-> this (.getAccessibleContext))))
 
 (defn remove-choosable-file-filter
@@ -781,7 +781,7 @@
   f - `javax.swing.filechooser.FileFilter`
 
   returns: `boolean`"
-  ([this f]
+  ([^javax.swing.JFileChooser this ^javax.swing.filechooser.FileFilter f]
     (-> this (.removeChoosableFileFilter f))))
 
 (defn set-file-system-view
@@ -790,7 +790,7 @@
    the floppy drive and getting a list of root drives.
 
   fsv - the new FileSystemView - `javax.swing.filechooser.FileSystemView`"
-  ([this fsv]
+  ([^javax.swing.JFileChooser this ^javax.swing.filechooser.FileSystemView fsv]
     (-> this (.setFileSystemView fsv))))
 
 (defn set-accessory
@@ -804,21 +804,21 @@
    file chooser.
 
   new-accessory - `javax.swing.JComponent`"
-  ([this new-accessory]
+  ([^javax.swing.JFileChooser this ^javax.swing.JComponent new-accessory]
     (-> this (.setAccessory new-accessory))))
 
 (defn get-drag-enabled?
   "Gets the value of the dragEnabled property.
 
   returns: the value of the dragEnabled property - `boolean`"
-  ([this]
+  ([^javax.swing.JFileChooser this]
     (-> this (.getDragEnabled))))
 
 (defn remove-action-listener
   "Removes an ActionListener from the file chooser.
 
   l - the listener to be removed - `java.awt.event.ActionListener`"
-  ([this l]
+  ([^javax.swing.JFileChooser this ^java.awt.event.ActionListener l]
     (-> this (.removeActionListener l))))
 
 (defn file-hiding-enabled?
@@ -826,7 +826,7 @@
    otherwise, returns false.
 
   returns: the status of the file hiding property - `boolean`"
-  ([this]
+  ([^javax.swing.JFileChooser this]
     (-> this (.isFileHidingEnabled))))
 
 (defn set-selected-files
@@ -834,28 +834,28 @@
    set to allow multiple selection.
 
   selected-files - `java.io.File[]`"
-  ([this selected-files]
+  ([^javax.swing.JFileChooser this ^java.io.File[] selected-files]
     (-> this (.setSelectedFiles selected-files))))
 
 (defn get-approve-button-mnemonic
   "Returns the approve button's mnemonic.
 
   returns: an integer value for the mnemonic key - `int`"
-  ([this]
+  ([^javax.swing.JFileChooser this]
     (-> this (.getApproveButtonMnemonic))))
 
 (defn get-accessory
   "Returns the accessory component.
 
   returns: this JFileChooser's accessory component, or null - `javax.swing.JComponent`"
-  ([this]
+  ([^javax.swing.JFileChooser this]
     (-> this (.getAccessory))))
 
 (defn get-current-directory
   "Returns the current directory.
 
   returns: the current directory - `java.io.File`"
-  ([this]
+  ([^javax.swing.JFileChooser this]
     (-> this (.getCurrentDirectory))))
 
 (defn get-selected-files
@@ -863,7 +863,7 @@
    set to allow multiple selection.
 
   returns: `java.io.File[]`"
-  ([this]
+  ([^javax.swing.JFileChooser this]
     (-> this (.getSelectedFiles))))
 
 (defn set-dialog-type
@@ -883,7 +883,7 @@
   dialog-type - the type of dialog to be displayed: JFileChooser.OPEN_DIALOG JFileChooser.SAVE_DIALOG JFileChooser.CUSTOM_DIALOG - `int`
 
   throws: java.lang.IllegalArgumentException - if dialogType is not legal"
-  ([this dialog-type]
+  ([^javax.swing.JFileChooser this ^Integer dialog-type]
     (-> this (.setDialogType dialog-type))))
 
 (defn approve-selection
@@ -893,7 +893,7 @@
    This method causes an action event to fire
    with the command string equal to
    APPROVE_SELECTION."
-  ([this]
+  ([^javax.swing.JFileChooser this]
     (-> this (.approveSelection))))
 
 (defn set-current-directory
@@ -910,19 +910,19 @@
    file system.
 
   dir - the current directory to point to - `java.io.File`"
-  ([this dir]
+  ([^javax.swing.JFileChooser this ^java.io.File dir]
     (-> this (.setCurrentDirectory dir))))
 
 (defn update-ui
   "Resets the UI property to a value from the current look and feel."
-  ([this]
+  ([^javax.swing.JFileChooser this]
     (-> this (.updateUI))))
 
 (defn get-file-view
   "Returns the current file view.
 
   returns: `javax.swing.filechooser.FileView`"
-  ([this]
+  ([^javax.swing.JFileChooser this]
     (-> this (.getFileView))))
 
 (defn cancel-selection
@@ -931,7 +931,7 @@
    This method causes an action event to fire
    with the command string equal to
    CANCEL_SELECTION."
-  ([this]
+  ([^javax.swing.JFileChooser this]
     (-> this (.cancelSelection))))
 
 (defn set-approve-button-text
@@ -939,12 +939,12 @@
    FileChooserUI.
 
   approve-button-text - the text used in the ApproveButton - `java.lang.String`"
-  ([this approve-button-text]
+  ([^javax.swing.JFileChooser this ^java.lang.String approve-button-text]
     (-> this (.setApproveButtonText approve-button-text))))
 
 (defn change-to-parent-directory
   "Changes the directory to be set to the parent of the
    current directory."
-  ([this]
+  ([^javax.swing.JFileChooser this]
     (-> this (.changeToParentDirectory))))
 

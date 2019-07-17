@@ -9,7 +9,7 @@
   "Get the name of this event
 
   returns: the qualified name of this event - `javax.xml.namespace.QName`"
-  ([this]
+  ([^. this]
     (-> this (.getName))))
 
 (defn get-attributes
@@ -22,7 +22,7 @@
 
   returns: a readonly Iterator over Attribute interfaces, or an
    empty iterator - `java.util.Iterator`"
-  ([this]
+  ([^. this]
     (-> this (.getAttributes))))
 
 (defn get-namespaces
@@ -46,7 +46,7 @@
 
   returns: a readonly Iterator over Namespace interfaces, or an
    empty iterator - `java.util.Iterator`"
-  ([this]
+  ([^. this]
     (-> this (.getNamespaces))))
 
 (defn get-attribute-by-name
@@ -55,7 +55,7 @@
   name - the qname of the desired name - `javax.xml.namespace.QName`
 
   returns: the attribute corresponding to the name value or null - `javax.xml.stream.events.Attribute`"
-  ([this name]
+  ([^. this ^javax.xml.namespace.QName name]
     (-> this (.getAttributeByName name))))
 
 (defn get-namespace-context
@@ -65,7 +65,7 @@
    in scope for this StartElement.
 
   returns: the current namespace context - `javax.xml.namespace.NamespaceContext`"
-  ([this]
+  ([^. this]
     (-> this (.getNamespaceContext))))
 
 (defn get-namespace-uri
@@ -76,6 +76,6 @@
   prefix - the prefix to lookup - `java.lang.String`
 
   returns: the uri bound to the prefix or null - `java.lang.String`"
-  ([this prefix]
+  ([^. this ^java.lang.String prefix]
     (-> this (.getNamespaceURI prefix))))
 

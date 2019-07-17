@@ -34,22 +34,22 @@
   popup-trigger - a boolean -- true if the event {should?/did?} trigger a popup - `boolean`
   p - an array of MenuElement objects specifying a path to a menu item affected by the drag - `javax.swing.MenuElement[]`
   m - a MenuSelectionManager object that handles selections - `javax.swing.MenuSelectionManager`"
-  ([source id when modifiers x y x-abs y-abs click-count popup-trigger p m]
+  ([^java.awt.Component source ^Integer id ^Long when ^Integer modifiers ^Integer x ^Integer y ^Integer x-abs ^Integer y-abs ^Integer click-count ^Boolean popup-trigger ^javax.swing.MenuElement[] p ^javax.swing.MenuSelectionManager m]
     (new MenuDragMouseEvent source id when modifiers x y x-abs y-abs click-count popup-trigger p m))
-  ([source id when modifiers x y click-count popup-trigger p m]
+  ([^java.awt.Component source ^Integer id ^Long when ^Integer modifiers ^Integer x ^Integer y ^Integer click-count ^Boolean popup-trigger ^javax.swing.MenuElement[] p ^javax.swing.MenuSelectionManager m]
     (new MenuDragMouseEvent source id when modifiers x y click-count popup-trigger p m)))
 
 (defn get-path
   "Returns the path to the selected menu item.
 
   returns: an array of MenuElement objects representing the path value - `javax.swing.MenuElement[]`"
-  ([this]
+  ([^javax.swing.event.MenuDragMouseEvent this]
     (-> this (.getPath))))
 
 (defn get-menu-selection-manager
   "Returns the current menu selection manager.
 
   returns: a MenuSelectionManager object - `javax.swing.MenuSelectionManager`"
-  ([this]
+  ([^javax.swing.event.MenuDragMouseEvent this]
     (-> this (.getMenuSelectionManager))))
 

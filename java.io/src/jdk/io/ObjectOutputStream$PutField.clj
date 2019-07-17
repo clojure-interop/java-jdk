@@ -16,7 +16,7 @@
   val - the value to assign to the field - `boolean`
 
   throws: java.lang.IllegalArgumentException - if name does not match the name of a serializable field for the class whose fields are being written, or if the type of the named field is not boolean"
-  ([this name val]
+  ([^java.io.ObjectOutputStream$PutField this ^java.lang.String name ^Boolean val]
     (-> this (.put name val))))
 
 (defn write
@@ -32,6 +32,6 @@
   returns: `java.lang.   void`
 
   throws: java.io.IOException - if I/O errors occur while writing to the underlying stream"
-  ([this out]
+  ([^java.io.ObjectOutputStream$PutField this ^java.io.ObjectOutput out]
     (-> this (.write out))))
 

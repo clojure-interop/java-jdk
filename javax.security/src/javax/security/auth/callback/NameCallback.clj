@@ -15,16 +15,16 @@
   default-name - the name to be used as the default name displayed with the prompt. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if prompt is null, if prompt has a length of 0, if defaultName is null, or if defaultName has a length of 0."
-  ([prompt default-name]
+  ([^java.lang.String prompt ^java.lang.String default-name]
     (new NameCallback prompt default-name))
-  ([prompt]
+  ([^java.lang.String prompt]
     (new NameCallback prompt)))
 
 (defn get-prompt
   "Get the prompt.
 
   returns: the prompt. - `java.lang.String`"
-  ([this]
+  ([^javax.security.auth.callback.NameCallback this]
     (-> this (.getPrompt))))
 
 (defn get-default-name
@@ -32,20 +32,20 @@
 
   returns: the default name, or null if this NameCallback
             was not instantiated with a defaultName. - `java.lang.String`"
-  ([this]
+  ([^javax.security.auth.callback.NameCallback this]
     (-> this (.getDefaultName))))
 
 (defn set-name
   "Set the retrieved name.
 
   name - the retrieved name (which may be null). - `java.lang.String`"
-  ([this name]
+  ([^javax.security.auth.callback.NameCallback this ^java.lang.String name]
     (-> this (.setName name))))
 
 (defn get-name
   "Get the retrieved name.
 
   returns: the retrieved name (which may be null) - `java.lang.String`"
-  ([this]
+  ([^javax.security.auth.callback.NameCallback this]
     (-> this (.getName))))
 

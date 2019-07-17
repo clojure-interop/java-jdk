@@ -23,7 +23,7 @@
    represents the specified int value.
 
   value - the value to be represented by the Integer object. - `int`"
-  ([value]
+  ([^Integer value]
     (new Integer value)))
 
 (def *-min-value
@@ -84,7 +84,7 @@
   returns: the value 0 if x == y;
            a value less than 0 if x < y; and
            a value greater than 0 if x > y - `int`"
-  ([x y]
+  ([^Integer x ^Integer y]
     (Integer/compare x y)))
 
 (defn *remainder-unsigned
@@ -97,7 +97,7 @@
 
   returns: the unsigned remainder of the first argument divided by
    the second argument - `int`"
-  ([dividend divisor]
+  ([^Integer dividend ^Integer divisor]
     (Integer/remainderUnsigned dividend divisor)))
 
 (defn *min
@@ -108,7 +108,7 @@
   b - the second operand - `int`
 
   returns: the smaller of a and b - `int`"
-  ([a b]
+  ([^Integer a ^Integer b]
     (Integer/min a b)))
 
 (defn *value-of
@@ -135,9 +135,9 @@
                radix. - `java.lang.Integer`
 
   throws: java.lang.NumberFormatException - if the String does not contain a parsable int."
-  ([s radix]
+  ([^java.lang.String s ^Integer radix]
     (Integer/valueOf s radix))
-  ([s]
+  ([^java.lang.String s]
     (Integer/valueOf s)))
 
 (defn *to-hex-string
@@ -176,7 +176,7 @@
 
   returns: the string representation of the unsigned integer value
             represented by the argument in hexadecimal (base 16). - `java.lang.String`"
-  ([i]
+  ([^Integer i]
     (Integer/toHexString i)))
 
 (defn *divide-unsigned
@@ -194,7 +194,7 @@
 
   returns: the unsigned quotient of the first argument divided by
    the second argument - `int`"
-  ([dividend divisor]
+  ([^Integer dividend ^Integer divisor]
     (Integer/divideUnsigned dividend divisor)))
 
 (defn *highest-one-bit
@@ -209,7 +209,7 @@
   returns: an int value with a single one-bit, in the position
        of the highest-order one-bit in the specified value, or zero if
        the specified value is itself equal to zero. - `int`"
-  ([i]
+  ([^Integer i]
     (Integer/highestOneBit i)))
 
 (defn *sum
@@ -219,7 +219,7 @@
   b - the second operand - `int`
 
   returns: the sum of a and b - `int`"
-  ([a b]
+  ([^Integer a ^Integer b]
     (Integer/sum a b)))
 
 (defn *reverse
@@ -231,7 +231,7 @@
 
   returns: the value obtained by reversing order of the bits in the
        specified int value. - `int`"
-  ([i]
+  ([^Integer i]
     (Integer/reverse i)))
 
 (defn *decode
@@ -273,7 +273,7 @@
                value represented by nm - `java.lang.Integer`
 
   throws: java.lang.NumberFormatException - if the String does not contain a parsable integer."
-  ([nm]
+  ([^java.lang.String nm]
     (Integer/decode nm)))
 
 (defn *max
@@ -284,7 +284,7 @@
   b - the second operand - `int`
 
   returns: the greater of a and b - `int`"
-  ([a b]
+  ([^Integer a ^Integer b]
     (Integer/max a b)))
 
 (defn *to-string
@@ -328,9 +328,9 @@
   radix - the radix to use in the string representation. - `int`
 
   returns: a string representation of the argument in the specified radix. - `java.lang.String`"
-  ([i radix]
+  ([^Integer i ^Integer radix]
     (Integer/toString i radix))
-  ([i]
+  ([^Integer i]
     (Integer/toString i)))
 
 (defn *rotate-right
@@ -352,7 +352,7 @@
   returns: the value obtained by rotating the two's complement binary
        representation of the specified int value right by the
        specified number of bits. - `int`"
-  ([i distance]
+  ([^Integer i ^Integer distance]
     (Integer/rotateRight i distance)))
 
 (defn *compare-unsigned
@@ -366,7 +366,7 @@
            than 0 if x < y as unsigned values; and
            a value greater than 0 if x > y as
            unsigned values - `int`"
-  ([x y]
+  ([^Integer x ^Integer y]
     (Integer/compareUnsigned x y)))
 
 (defn *to-octal-string
@@ -398,7 +398,7 @@
 
   returns: the string representation of the unsigned integer value
             represented by the argument in octal (base 8). - `java.lang.String`"
-  ([i]
+  ([^Integer i]
     (Integer/toOctalString i)))
 
 (defn *reverse-bytes
@@ -409,7 +409,7 @@
 
   returns: the value obtained by reversing the bytes in the specified
        int value. - `int`"
-  ([i]
+  ([^Integer i]
     (Integer/reverseBytes i)))
 
 (defn *bit-count
@@ -421,7 +421,7 @@
 
   returns: the number of one-bits in the two's complement binary
        representation of the specified int value. - `int`"
-  ([i]
+  ([^Integer i]
     (Integer/bitCount i)))
 
 (defn *rotate-left
@@ -443,7 +443,7 @@
   returns: the value obtained by rotating the two's complement binary
        representation of the specified int value left by the
        specified number of bits. - `int`"
-  ([i distance]
+  ([^Integer i ^Integer distance]
     (Integer/rotateLeft i distance)))
 
 (defn *get-integer
@@ -485,9 +485,9 @@
   returns: the Integer value of the property. - `java.lang.Integer`
 
   throws: java.lang.SecurityException - for the same reasons as System.getProperty"
-  ([nm val]
+  ([^java.lang.String nm ^Integer val]
     (Integer/getInteger nm val))
-  ([nm]
+  ([^java.lang.String nm]
     (Integer/getInteger nm)))
 
 (defn *hash-code
@@ -497,7 +497,7 @@
   value - the value to hash - `int`
 
   returns: a hash code value for a int value. - `int`"
-  ([value]
+  ([^Integer value]
     (Integer/hashCode value)))
 
 (defn *to-binary-string
@@ -522,7 +522,7 @@
 
   returns: the string representation of the unsigned integer value
             represented by the argument in binary (base 2). - `java.lang.String`"
-  ([i]
+  ([^Integer i]
     (Integer/toBinaryString i)))
 
 (defn *number-of-leading-zeros
@@ -544,7 +544,7 @@
        (`leftmost`) one-bit in the two's complement binary representation
        of the specified int value, or 32 if the value
        is equal to zero. - `int`"
-  ([i]
+  ([^Integer i]
     (Integer/numberOfLeadingZeros i)))
 
 (defn *to-unsigned-long
@@ -562,7 +562,7 @@
 
   returns: the argument converted to long by an unsigned
            conversion - `long`"
-  ([x]
+  ([^Integer x]
     (Integer/toUnsignedLong x)))
 
 (defn *lowest-one-bit
@@ -577,7 +577,7 @@
   returns: an int value with a single one-bit, in the position
        of the lowest-order one-bit in the specified value, or zero if
        the specified value is itself equal to zero. - `int`"
-  ([i]
+  ([^Integer i]
     (Integer/lowestOneBit i)))
 
 (defn *number-of-trailing-zeros
@@ -593,7 +593,7 @@
        one-bit in the two's complement binary representation of the
        specified int value, or 32 if the value is equal
        to zero. - `int`"
-  ([i]
+  ([^Integer i]
     (Integer/numberOfTrailingZeros i)))
 
 (defn *parse-unsigned-int
@@ -633,9 +633,9 @@
                specified radix. - `int`
 
   throws: java.lang.NumberFormatException - if the String does not contain a parsable int."
-  ([s radix]
+  ([^java.lang.String s ^Integer radix]
     (Integer/parseUnsignedInt s radix))
-  ([s]
+  ([^java.lang.String s]
     (Integer/parseUnsignedInt s)))
 
 (defn *signum
@@ -646,7 +646,7 @@
   i - the value whose signum is to be computed - `int`
 
   returns: the signum function of the specified int value. - `int`"
-  ([i]
+  ([^Integer i]
     (Integer/signum i)))
 
 (defn *to-unsigned-string
@@ -673,9 +673,9 @@
   radix - the radix to use in the string representation. - `int`
 
   returns: an unsigned string representation of the argument in the specified radix. - `java.lang.String`"
-  ([i radix]
+  ([^Integer i ^Integer radix]
     (Integer/toUnsignedString i radix))
-  ([i]
+  ([^Integer i]
     (Integer/toUnsignedString i)))
 
 (defn *parse-int
@@ -732,9 +732,9 @@
                specified radix. - `int`
 
   throws: java.lang.NumberFormatException - if the String does not contain a parsable int."
-  ([s radix]
+  ([^java.lang.String s ^Integer radix]
     (Integer/parseInt s radix))
-  ([s]
+  ([^java.lang.String s]
     (Integer/parseInt s)))
 
 (defn short-value
@@ -743,7 +743,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type short. - `short`"
-  ([this]
+  ([^java.lang.Integer this]
     (-> this (.shortValue))))
 
 (defn double-value
@@ -752,7 +752,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type double. - `double`"
-  ([this]
+  ([^java.lang.Integer this]
     (-> this (.doubleValue))))
 
 (defn long-value
@@ -761,7 +761,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type long. - `long`"
-  ([this]
+  ([^java.lang.Integer this]
     (-> this (.longValue))))
 
 (defn byte-value
@@ -770,7 +770,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type byte. - `byte`"
-  ([this]
+  ([^java.lang.Integer this]
     (-> this (.byteValue))))
 
 (defn to-string
@@ -781,7 +781,7 @@
 
   returns: a string representation of the value of this object in
             base 10. - `java.lang.String`"
-  ([this]
+  ([^java.lang.Integer this]
     (-> this (.toString))))
 
 (defn float-value
@@ -790,7 +790,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type float. - `float`"
-  ([this]
+  ([^java.lang.Integer this]
     (-> this (.floatValue))))
 
 (defn int-value
@@ -799,7 +799,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type int. - `int`"
-  ([this]
+  ([^java.lang.Integer this]
     (-> this (.intValue))))
 
 (defn hash-code
@@ -808,7 +808,7 @@
   returns: a hash code value for this object, equal to the
             primitive int value represented by this
             Integer object. - `int`"
-  ([this]
+  ([^java.lang.Integer this]
     (-> this (.hashCode))))
 
 (defn compare-to
@@ -823,7 +823,7 @@
             than 0 if this Integer is numerically
              greater than the argument Integer (signed
              comparison). - `int`"
-  ([this another-integer]
+  ([^java.lang.Integer this ^java.lang.Integer another-integer]
     (-> this (.compareTo another-integer))))
 
 (defn equals
@@ -836,6 +836,6 @@
 
   returns: true if the objects are the same;
             false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.lang.Integer this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

@@ -17,7 +17,7 @@
   name - the attribute string name - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if the attribute name was invalid"
-  ([name]
+  ([^java.lang.String name]
     (new Attributes$Name name)))
 
 (def *-manifest-version
@@ -185,20 +185,20 @@
 
   returns: true if this attribute name is equal to the
            specified attribute object - `boolean`"
-  ([this o]
+  ([^java.util.jar.Attributes$Name this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn hash-code
   "Computes the hash value for this attribute name.
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^java.util.jar.Attributes$Name this]
     (-> this (.hashCode))))
 
 (defn to-string
   "Returns the attribute name as a String.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^java.util.jar.Attributes$Name this]
     (-> this (.toString))))
 

@@ -55,7 +55,7 @@
   zone - the zone ID to use, not null - `java.time.ZoneId`
 
   returns: the current time using the system clock, not null - `java.time.OffsetTime`"
-  ([zone]
+  ([^java.time.ZoneId zone]
     (OffsetTime/now zone))
   ([]
     (OffsetTime/now )))
@@ -80,9 +80,9 @@
   returns: the offset time, not null - `java.time.OffsetTime`
 
   throws: java.time.DateTimeException - if the value of any field is out of range"
-  ([hour minute second nano-of-second offset]
+  ([^Integer hour ^Integer minute ^Integer second ^Integer nano-of-second ^java.time.ZoneOffset offset]
     (OffsetTime/of hour minute second nano-of-second offset))
-  ([time offset]
+  ([^java.time.LocalTime time ^java.time.ZoneOffset offset]
     (OffsetTime/of time offset)))
 
 (defn *of-instant
@@ -100,7 +100,7 @@
   zone - the time-zone, which may be an offset, not null - `java.time.ZoneId`
 
   returns: the offset time, not null - `java.time.OffsetTime`"
-  ([instant zone]
+  ([^java.time.Instant instant ^java.time.ZoneId zone]
     (OffsetTime/ofInstant instant zone)))
 
 (defn *from
@@ -123,7 +123,7 @@
   returns: the offset time, not null - `java.time.OffsetTime`
 
   throws: java.time.DateTimeException - if unable to convert to an OffsetTime"
-  ([temporal]
+  ([^java.time.temporal.TemporalAccessor temporal]
     (OffsetTime/from temporal)))
 
 (defn *parse
@@ -137,9 +137,9 @@
   returns: the parsed offset time, not null - `java.time.OffsetTime`
 
   throws: java.time.format.DateTimeParseException - if the text cannot be parsed"
-  ([text formatter]
+  ([^java.lang.CharSequence text ^java.time.format.DateTimeFormatter formatter]
     (OffsetTime/parse text formatter))
-  ([text]
+  ([^java.lang.CharSequence text]
     (OffsetTime/parse text)))
 
 (defn minus-minutes
@@ -153,7 +153,7 @@
   minutes - the minutes to subtract, may be negative - `long`
 
   returns: an OffsetTime based on this time with the minutes subtracted, not null - `java.time.OffsetTime`"
-  ([this minutes]
+  ([^java.time.OffsetTime this ^Long minutes]
     (-> this (.minusMinutes minutes))))
 
 (defn truncated-to
@@ -178,7 +178,7 @@
   returns: an OffsetTime based on this time with the time truncated, not null - `java.time.OffsetTime`
 
   throws: java.time.DateTimeException - if unable to truncate"
-  ([this unit]
+  ([^java.time.OffsetTime this ^java.time.temporal.TemporalUnit unit]
     (-> this (.truncatedTo unit))))
 
 (defn range
@@ -204,14 +204,14 @@
   returns: the range of valid values for the field, not null - `java.time.temporal.ValueRange`
 
   throws: java.time.DateTimeException - if the range for the field cannot be obtained"
-  ([this field]
+  ([^java.time.OffsetTime this ^java.time.temporal.TemporalField field]
     (-> this (.range field))))
 
 (defn get-hour
   "Gets the hour-of-day field.
 
   returns: the hour-of-day, from 0 to 23 - `int`"
-  ([this]
+  ([^java.time.OffsetTime this]
     (-> this (.getHour))))
 
 (defn minus-hours
@@ -225,7 +225,7 @@
   hours - the hours to subtract, may be negative - `long`
 
   returns: an OffsetTime based on this time with the hours subtracted, not null - `java.time.OffsetTime`"
-  ([this hours]
+  ([^java.time.OffsetTime this ^Long hours]
     (-> this (.minusHours hours))))
 
 (defn equal?
@@ -239,14 +239,14 @@
   other - the other time to compare to, not null - `java.time.OffsetTime`
 
   returns: true if this is equal to the instant of the specified time - `boolean`"
-  ([this other]
+  ([^java.time.OffsetTime this ^java.time.OffsetTime other]
     (-> this (.isEqual other))))
 
 (defn get-nano
   "Gets the nano-of-second field.
 
   returns: the nano-of-second, from 0 to 999,999,999 - `int`"
-  ([this]
+  ([^java.time.OffsetTime this]
     (-> this (.getNano))))
 
 (defn minus-seconds
@@ -260,14 +260,14 @@
   seconds - the seconds to subtract, may be negative - `long`
 
   returns: an OffsetTime based on this time with the seconds subtracted, not null - `java.time.OffsetTime`"
-  ([this seconds]
+  ([^java.time.OffsetTime this ^Long seconds]
     (-> this (.minusSeconds seconds))))
 
 (defn get-second
   "Gets the second-of-minute field.
 
   returns: the second-of-minute, from 0 to 59 - `int`"
-  ([this]
+  ([^java.time.OffsetTime this]
     (-> this (.getSecond))))
 
 (defn plus-nanos
@@ -281,7 +281,7 @@
   nanos - the nanos to add, may be negative - `long`
 
   returns: an OffsetTime based on this time with the nanoseconds added, not null - `java.time.OffsetTime`"
-  ([this nanos]
+  ([^java.time.OffsetTime this ^Long nanos]
     (-> this (.plusNanos nanos))))
 
 (defn plus
@@ -308,9 +308,9 @@
   returns: an OffsetTime based on this time with the specified amount added, not null - `java.time.OffsetTime`
 
   throws: java.time.DateTimeException - if the addition cannot be made"
-  ([this amount-to-add unit]
+  ([^java.time.OffsetTime this ^Long amount-to-add ^java.time.temporal.TemporalUnit unit]
     (-> this (.plus amount-to-add unit)))
-  ([this amount-to-add]
+  ([^java.time.OffsetTime this ^java.time.temporal.TemporalAmount amount-to-add]
     (-> this (.plus amount-to-add))))
 
 (defn with-hour
@@ -325,7 +325,7 @@
   returns: an OffsetTime based on this time with the requested hour, not null - `java.time.OffsetTime`
 
   throws: java.time.DateTimeException - if the hour value is invalid"
-  ([this hour]
+  ([^java.time.OffsetTime this ^Integer hour]
     (-> this (.withHour hour))))
 
 (defn with-minute
@@ -340,7 +340,7 @@
   returns: an OffsetTime based on this time with the requested minute, not null - `java.time.OffsetTime`
 
   throws: java.time.DateTimeException - if the minute value is invalid"
-  ([this minute]
+  ([^java.time.OffsetTime this ^Integer minute]
     (-> this (.withMinute minute))))
 
 (defn plus-minutes
@@ -354,7 +354,7 @@
   minutes - the minutes to add, may be negative - `long`
 
   returns: an OffsetTime based on this time with the minutes added, not null - `java.time.OffsetTime`"
-  ([this minutes]
+  ([^java.time.OffsetTime this ^Long minutes]
     (-> this (.plusMinutes minutes))))
 
 (defn query
@@ -374,7 +374,7 @@
   returns: the query result, null may be returned (defined by the query) - `<R> R`
 
   throws: java.time.DateTimeException - if unable to query (defined by the query)"
-  ([this query]
+  ([^java.time.OffsetTime this ^java.time.temporal.TemporalQuery query]
     (-> this (.query query))))
 
 (defn at-date
@@ -386,7 +386,7 @@
   date - the date to combine with, not null - `java.time.LocalDate`
 
   returns: the offset date-time formed from this time and the specified date, not null - `java.time.OffsetDateTime`"
-  ([this date]
+  ([^java.time.OffsetTime this ^java.time.LocalDate date]
     (-> this (.atDate date))))
 
 (defn with-offset-same-instant
@@ -407,7 +407,7 @@
   offset - the zone offset to change to, not null - `java.time.ZoneOffset`
 
   returns: an OffsetTime based on this time with the requested offset, not null - `java.time.OffsetTime`"
-  ([this offset]
+  ([^java.time.OffsetTime this ^java.time.ZoneOffset offset]
     (-> this (.withOffsetSameInstant offset))))
 
 (defn to-string
@@ -425,7 +425,7 @@
    the time where the omitted parts are implied to be zero.
 
   returns: a string representation of this time, not null - `java.lang.String`"
-  ([this]
+  ([^java.time.OffsetTime this]
     (-> this (.toString))))
 
 (defn before?
@@ -439,7 +439,7 @@
   other - the other time to compare to, not null - `java.time.OffsetTime`
 
   returns: true if this is before the instant of the specified time - `boolean`"
-  ([this other]
+  ([^java.time.OffsetTime this ^java.time.OffsetTime other]
     (-> this (.isBefore other))))
 
 (defn minus
@@ -460,9 +460,9 @@
   returns: an OffsetTime based on this time with the specified amount subtracted, not null - `java.time.OffsetTime`
 
   throws: java.time.DateTimeException - if the subtraction cannot be made"
-  ([this amount-to-subtract unit]
+  ([^java.time.OffsetTime this ^Long amount-to-subtract ^java.time.temporal.TemporalUnit unit]
     (-> this (.minus amount-to-subtract unit)))
-  ([this amount-to-subtract]
+  ([^java.time.OffsetTime this ^java.time.temporal.TemporalAmount amount-to-subtract]
     (-> this (.minus amount-to-subtract))))
 
 (defn plus-hours
@@ -476,7 +476,7 @@
   hours - the hours to add, may be negative - `long`
 
   returns: an OffsetTime based on this time with the hours added, not null - `java.time.OffsetTime`"
-  ([this hours]
+  ([^java.time.OffsetTime this ^Long hours]
     (-> this (.plusHours hours))))
 
 (defn to-local-time
@@ -486,7 +486,7 @@
    nanosecond as this date-time.
 
   returns: the time part of this date-time, not null - `java.time.LocalTime`"
-  ([this]
+  ([^java.time.OffsetTime this]
     (-> this (.toLocalTime))))
 
 (defn get-long
@@ -511,7 +511,7 @@
   returns: the value for the field - `long`
 
   throws: java.time.DateTimeException - if a value for the field cannot be obtained"
-  ([this field]
+  ([^java.time.OffsetTime this ^java.time.temporal.TemporalField field]
     (-> this (.getLong field))))
 
 (defn get-offset
@@ -520,7 +520,7 @@
    This is the offset of the local time from UTC/Greenwich.
 
   returns: the zone offset, not null - `java.time.ZoneOffset`"
-  ([this]
+  ([^java.time.OffsetTime this]
     (-> this (.getOffset))))
 
 (defn with-nano
@@ -535,7 +535,7 @@
   returns: an OffsetTime based on this time with the requested nanosecond, not null - `java.time.OffsetTime`
 
   throws: java.time.DateTimeException - if the nanos value is invalid"
-  ([this nano-of-second]
+  ([^java.time.OffsetTime this ^Integer nano-of-second]
     (-> this (.withNano nano-of-second))))
 
 (defn until
@@ -586,7 +586,7 @@
   returns: the amount of time between this time and the end time - `long`
 
   throws: java.time.DateTimeException - if the amount cannot be calculated, or the end temporal cannot be converted to an OffsetTime"
-  ([this end-exclusive unit]
+  ([^java.time.OffsetTime this ^java.time.temporal.Temporal end-exclusive ^java.time.temporal.TemporalUnit unit]
     (-> this (.until end-exclusive unit))))
 
 (defn with-offset-same-local
@@ -606,7 +606,7 @@
   offset - the zone offset to change to, not null - `java.time.ZoneOffset`
 
   returns: an OffsetTime based on this time with the requested offset, not null - `java.time.OffsetTime`"
-  ([this offset]
+  ([^java.time.OffsetTime this ^java.time.ZoneOffset offset]
     (-> this (.withOffsetSameLocal offset))))
 
 (defn after?
@@ -620,7 +620,7 @@
   other - the other time to compare to, not null - `java.time.OffsetTime`
 
   returns: true if this is after the instant of the specified time - `boolean`"
-  ([this other]
+  ([^java.time.OffsetTime this ^java.time.OffsetTime other]
     (-> this (.isAfter other))))
 
 (defn minus-nanos
@@ -634,7 +634,7 @@
   nanos - the nanos to subtract, may be negative - `long`
 
   returns: an OffsetTime based on this time with the nanoseconds subtracted, not null - `java.time.OffsetTime`"
-  ([this nanos]
+  ([^java.time.OffsetTime this ^Long nanos]
     (-> this (.minusNanos nanos))))
 
 (defn supported?
@@ -675,7 +675,7 @@
   field - the field to check, null returns false - `java.time.temporal.TemporalField`
 
   returns: true if the field is supported on this time, false if not - `boolean`"
-  ([this field]
+  ([^java.time.OffsetTime this ^java.time.temporal.TemporalField field]
     (-> this (.isSupported field))))
 
 (defn with-second
@@ -690,21 +690,21 @@
   returns: an OffsetTime based on this time with the requested second, not null - `java.time.OffsetTime`
 
   throws: java.time.DateTimeException - if the second value is invalid"
-  ([this second]
+  ([^java.time.OffsetTime this ^Integer second]
     (-> this (.withSecond second))))
 
 (defn get-minute
   "Gets the minute-of-hour field.
 
   returns: the minute-of-hour, from 0 to 59 - `int`"
-  ([this]
+  ([^java.time.OffsetTime this]
     (-> this (.getMinute))))
 
 (defn hash-code
   "A hash code for this time.
 
   returns: a suitable hash code - `int`"
-  ([this]
+  ([^java.time.OffsetTime this]
     (-> this (.hashCode))))
 
 (defn adjust-into
@@ -733,7 +733,7 @@
   returns: the adjusted object, not null - `java.time.temporal.Temporal`
 
   throws: java.time.DateTimeException - if unable to make the adjustment"
-  ([this temporal]
+  ([^java.time.OffsetTime this ^java.time.temporal.Temporal temporal]
     (-> this (.adjustInto temporal))))
 
 (defn with
@@ -770,9 +770,9 @@
   returns: an OffsetTime based on this with the specified field set, not null - `java.time.OffsetTime`
 
   throws: java.time.DateTimeException - if the field cannot be set"
-  ([this field new-value]
+  ([^java.time.OffsetTime this ^java.time.temporal.TemporalField field ^Long new-value]
     (-> this (.with field new-value)))
-  ([this adjuster]
+  ([^java.time.OffsetTime this ^java.time.temporal.TemporalAdjuster adjuster]
     (-> this (.with adjuster))))
 
 (defn compare-to
@@ -803,7 +803,7 @@
   returns: the comparator value, negative if less, positive if greater - `int`
 
   throws: java.lang.NullPointerException - if other is null"
-  ([this other]
+  ([^java.time.OffsetTime this ^java.time.OffsetTime other]
     (-> this (.compareTo other))))
 
 (defn plus-seconds
@@ -817,7 +817,7 @@
   seconds - the seconds to add, may be negative - `long`
 
   returns: an OffsetTime based on this time with the seconds added, not null - `java.time.OffsetTime`"
-  ([this seconds]
+  ([^java.time.OffsetTime this ^Long seconds]
     (-> this (.plusSeconds seconds))))
 
 (defn get
@@ -844,7 +844,7 @@
   returns: the value for the field - `int`
 
   throws: java.time.DateTimeException - if a value for the field cannot be obtained or the value is outside the range of valid values for the field"
-  ([this field]
+  ([^java.time.OffsetTime this ^java.time.temporal.TemporalField field]
     (-> this (.get field))))
 
 (defn equals
@@ -860,7 +860,7 @@
   obj - the object to check, null returns false - `java.lang.Object`
 
   returns: true if this is equal to the other time - `boolean`"
-  ([this obj]
+  ([^java.time.OffsetTime this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn format
@@ -873,6 +873,6 @@
   returns: the formatted time string, not null - `java.lang.String`
 
   throws: java.time.DateTimeException - if an error occurs during printing"
-  ([this formatter]
+  ([^java.time.OffsetTime this ^java.time.format.DateTimeFormatter formatter]
     (-> this (.format formatter))))
 

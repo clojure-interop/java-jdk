@@ -74,7 +74,7 @@
   "Returns this enumeration value's integer value.
 
   returns: the value - `int`"
-  ([this]
+  ([^javax.print.attribute.EnumSyntax this]
     (-> this (.getValue))))
 
 (defn clone
@@ -83,7 +83,7 @@
    value.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([this]
+  ([^javax.print.attribute.EnumSyntax this]
     (-> this (.clone))))
 
 (defn hash-code
@@ -91,13 +91,13 @@
    just this enumeration value's integer value.
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^javax.print.attribute.EnumSyntax this]
     (-> this (.hashCode))))
 
 (defn to-string
   "Returns a string value corresponding to this enumeration value.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^javax.print.attribute.EnumSyntax this]
     (-> this (.toString))))
 

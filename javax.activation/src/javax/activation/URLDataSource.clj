@@ -16,7 +16,7 @@
    to do so is called.
 
   url - The URL to be encapsulated in this object. - `java.net.URL`"
-  ([url]
+  ([^java.net.URL url]
     (new URLDataSource url)))
 
 (defn get-content-type
@@ -29,7 +29,7 @@
    `application/octet-stream` as the content type.
 
   returns: the content type. - `java.lang.String`"
-  ([this]
+  ([^javax.activation.URLDataSource this]
     (-> this (.getContentType))))
 
 (defn get-name
@@ -37,7 +37,7 @@
    instantiate the object.
 
   returns: the result of calling the URL's getFile method. - `java.lang.String`"
-  ([this]
+  ([^javax.activation.URLDataSource this]
     (-> this (.getName))))
 
 (defn get-input-stream
@@ -47,7 +47,7 @@
   returns: the InputStream. - `java.io.InputStream`
 
   throws: java.io.IOException"
-  ([this]
+  ([^javax.activation.URLDataSource this]
     (-> this (.getInputStream))))
 
 (defn get-output-stream
@@ -59,13 +59,13 @@
   returns: the OutputStream. - `java.io.OutputStream`
 
   throws: java.io.IOException"
-  ([this]
+  ([^javax.activation.URLDataSource this]
     (-> this (.getOutputStream))))
 
 (defn get-url
   "Return the URL used to create this DataSource.
 
   returns: The URL. - `java.net.URL`"
-  ([this]
+  ([^javax.activation.URLDataSource this]
     (-> this (.getURL))))
 

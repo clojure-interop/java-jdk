@@ -14,6 +14,6 @@
   path - `javax.swing.tree.TreePath[]`
 
   returns: `int[]`"
-  ([this path]
+  ([^. this ^javax.swing.tree.TreePath[] path]
     (-> this (.getRowsForPaths path))))
 

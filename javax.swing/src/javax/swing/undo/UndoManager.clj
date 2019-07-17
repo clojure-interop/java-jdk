@@ -114,7 +114,7 @@
    invokes redo, otherwise it invokes undo.
 
   throws: javax.swing.undo.CannotUndoException - if one of the edits throws CannotUndoException"
-  ([this]
+  ([^javax.swing.undo.UndoManager this]
     (-> this (.undoOrRedo))))
 
 (defn redo
@@ -125,13 +125,13 @@
    the index of the next edit appropriately.
 
   throws: javax.swing.undo.CannotRedoException - if one of the edits throws CannotRedoException or there are no edits to be redone"
-  ([this]
+  ([^javax.swing.undo.UndoManager this]
     (-> this (.redo))))
 
 (defn discard-all-edits
   "Empties the undo manager sending each edit a die message
    in the process."
-  ([this]
+  ([^javax.swing.undo.UndoManager this]
     (-> this (.discardAllEdits))))
 
 (defn undoable-edit-happened
@@ -139,7 +139,7 @@
    addEdit with e.getEdit().
 
   e - the UndoableEditEvent the UndoableEditEvent will be added from - `javax.swing.event.UndoableEditEvent`"
-  ([this e]
+  ([^javax.swing.undo.UndoManager this ^javax.swing.event.UndoableEditEvent e]
     (-> this (.undoableEditHappened e))))
 
 (defn add-edit
@@ -154,7 +154,7 @@
 
   returns: true if anEdit can be incorporated into this
                 edit - `boolean`"
-  ([this an-edit]
+  ([^javax.swing.undo.UndoManager this ^javax.swing.undo.UndoableEdit an-edit]
     (-> this (.addEdit an-edit))))
 
 (defn get-undo-or-redo-presentation-name
@@ -166,7 +166,7 @@
    getRedoPresentationName is returned.
 
   returns: undo or redo name - `java.lang.String`"
-  ([this]
+  ([^javax.swing.undo.UndoManager this]
     (-> this (.getUndoOrRedoPresentationName))))
 
 (defn to-string
@@ -174,7 +174,7 @@
    object's properties.
 
   returns: a String representation of this object - `java.lang.String`"
-  ([this]
+  ([^javax.swing.undo.UndoManager this]
     (-> this (.toString))))
 
 (defn get-undo-presentation-name
@@ -187,7 +187,7 @@
    property `AbstractUndoableEdit.undoText`.
 
   returns: a description of the undoable form of this edit - `java.lang.String`"
-  ([this]
+  ([^javax.swing.undo.UndoManager this]
     (-> this (.getUndoPresentationName))))
 
 (defn undo
@@ -198,7 +198,7 @@
    the index of the next edit appropriately.
 
   throws: javax.swing.undo.CannotUndoException - if one of the edits throws CannotUndoException or there are no edits to be undone"
-  ([this]
+  ([^javax.swing.undo.UndoManager this]
     (-> this (.undo))))
 
 (defn can-redo?
@@ -208,7 +208,7 @@
    (editToBeRedone returns non-null).
 
   returns: true if there are edits to be redone - `boolean`"
-  ([this]
+  ([^javax.swing.undo.UndoManager this]
     (-> this (.canRedo))))
 
 (defn set-limit
@@ -221,7 +221,7 @@
   l - the new limit - `int`
 
   throws: java.lang.RuntimeException - if this UndoManager is not in progress (end has been invoked)"
-  ([this l]
+  ([^javax.swing.undo.UndoManager this ^Integer l]
     (-> this (.setLimit l))))
 
 (defn get-limit
@@ -230,7 +230,7 @@
    limited.
 
   returns: the maximum number of edits this UndoManager holds - `int`"
-  ([this]
+  ([^javax.swing.undo.UndoManager this]
     (-> this (.getLimit))))
 
 (defn can-undo-or-redo?
@@ -238,14 +238,14 @@
    redo.
 
   returns: true if invoking canUndoOrRedo is valid - `boolean`"
-  ([this]
+  ([^javax.swing.undo.UndoManager this]
     (-> this (.canUndoOrRedo))))
 
 (defn end
   "Turns this UndoManager into a normal
    CompoundEdit.  This removes all edits that have
    been undone."
-  ([this]
+  ([^javax.swing.undo.UndoManager this]
     (-> this (.end))))
 
 (defn get-redo-presentation-name
@@ -258,7 +258,7 @@
    property `AbstractUndoableEdit.redoText`.
 
   returns: a description of the redoable form of this edit - `java.lang.String`"
-  ([this]
+  ([^javax.swing.undo.UndoManager this]
     (-> this (.getRedoPresentationName))))
 
 (defn can-undo?
@@ -268,6 +268,6 @@
    (editToBeUndone returns non-null).
 
   returns: true if there are edits to be undone - `boolean`"
-  ([this]
+  ([^javax.swing.undo.UndoManager this]
     (-> this (.canUndo))))
 

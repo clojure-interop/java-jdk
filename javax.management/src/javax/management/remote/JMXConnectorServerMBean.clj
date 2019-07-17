@@ -17,7 +17,7 @@
    IOException.
 
   throws: java.io.IOException - if it is not possible to start listening or if the connector server has been stopped."
-  ([this]
+  ([^. this]
     (-> this (.start))))
 
 (defn stop
@@ -48,7 +48,7 @@
    operation should do it in a separate thread.
 
   throws: java.io.IOException - if the server cannot be closed cleanly. When this exception is thrown, the server has already attempted to close all client connections. All client connections are closed except possibly those that generated exceptions when the server attempted to close them."
-  ([this]
+  ([^. this]
     (-> this (.stop))))
 
 (defn active?
@@ -59,7 +59,7 @@
    fails.
 
   returns: true if the connector server is active. - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.isActive))))
 
 (defn set-m-bean-server-forwarder
@@ -89,7 +89,7 @@
   mbsf - the new MBeanServerForwarder. - `javax.management.remote.MBeanServerForwarder`
 
   throws: java.lang.IllegalArgumentException - if the call to mbsf.setMBeanServer fails with IllegalArgumentException. This includes the case where mbsf is null."
-  ([this mbsf]
+  ([^. this ^javax.management.remote.MBeanServerForwarder mbsf]
     (-> this (.setMBeanServerForwarder mbsf))))
 
 (defn get-connection-ids
@@ -99,7 +99,7 @@
   returns: a new string array containing the list of IDs.  If
    there are no currently-open connections, this array will be
    empty. - `java.lang.String[]`"
-  ([this]
+  ([^. this]
     (-> this (.getConnectionIds))))
 
 (defn get-address
@@ -118,7 +118,7 @@
 
   returns: the address of this connector server, or null if it
    does not have one. - `javax.management.remote.JMXServiceURL`"
-  ([this]
+  ([^. this]
     (-> this (.getAddress))))
 
 (defn get-attributes
@@ -128,7 +128,7 @@
    connector server.  Attributes whose values are not serializable
    are omitted from this map.  If there are no serializable
    attributes, the returned map is empty. - `java.util.Map<java.lang.String,?>`"
-  ([this]
+  ([^. this]
     (-> this (.getAttributes))))
 
 (defn to-jmx-connector
@@ -146,6 +146,6 @@
    to this connector server. - `javax.management.remote.JMXConnector`
 
   throws: java.lang.UnsupportedOperationException - if this connector server does not support the generation of client stubs."
-  ([this env]
+  ([^. this ^java.util.Map env]
     (-> this (.toJMXConnector env))))
 

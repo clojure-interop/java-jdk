@@ -23,7 +23,7 @@
 
   offset - the value subtracted from the input values before indexing into the arrays - `int`
   data - an array of short arrays representing a lookup table for each band - `short[][]`"
-  ([offset data]
+  ([^Integer offset data]
     (new ShortLookupTable offset data)))
 
 (defn get-table
@@ -32,7 +32,7 @@
    array is one.
 
   returns: ShortLookupTable data array. - `short[][]`"
-  ([this]
+  ([^java.awt.image.ShortLookupTable this]
     (-> this (.getTable))))
 
 (defn lookup-pixel
@@ -47,6 +47,6 @@
            samples. - `int[]`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if src is longer than dst or if for any element i of src, (src[i]&0xffff)-offset is either less than zero or greater than or equal to the length of the lookup table for any band."
-  ([this src dst]
+  ([^java.awt.image.ShortLookupTable this src dst]
     (-> this (.lookupPixel src dst))))
 

@@ -83,14 +83,14 @@
 
   returns: true if this object is the same as the
    obj argument, false otherwise - `boolean`"
-  ([this obj]
+  ([^javax.sound.midi.Sequencer$SyncMode this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Finalizes the hashcode method.
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^javax.sound.midi.Sequencer$SyncMode this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -98,6 +98,6 @@
    representation of the mode.
 
   returns: the name of this synchronization mode - `java.lang.String`"
-  ([this]
+  ([^javax.sound.midi.Sequencer$SyncMode this]
     (-> this (.toString))))
 

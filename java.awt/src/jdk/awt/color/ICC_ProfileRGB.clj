@@ -72,7 +72,7 @@
 
   returns: A 3-element float array containing the x, y,
    and z components of the profile's mediaWhitePointTag. - `float[]`"
-  ([this]
+  ([^java.awt.color.ICC_ProfileRGB this]
     (-> this (.getMediaWhitePoint))))
 
 (defn get-matrix
@@ -87,7 +87,7 @@
   returns: A 3x3 float array that contains the x, y, and z
    components of the profile's redColorantTag,
    greenColorantTag, and blueColorantTag. - `float[][]`"
-  ([this]
+  ([^java.awt.color.ICC_ProfileRGB this]
     (-> this (.getMatrix))))
 
 (defn get-gamma
@@ -112,7 +112,7 @@
   returns: the gamma value as a float. - `float`
 
   throws: java.awt.color.ProfileDataException - if the profile does not specify the corresponding TRC as a single gamma value."
-  ([this component]
+  ([^java.awt.color.ICC_ProfileRGB this ^Integer component]
     (-> this (.getGamma component))))
 
 (defn get-trc
@@ -141,6 +141,6 @@
   returns: a short array representing the TRC. - `short[]`
 
   throws: java.awt.color.ProfileDataException - if the profile does not specify the corresponding TRC as a table."
-  ([this component]
+  ([^java.awt.color.ICC_ProfileRGB this ^Integer component]
     (-> this (.getTRC component))))
 

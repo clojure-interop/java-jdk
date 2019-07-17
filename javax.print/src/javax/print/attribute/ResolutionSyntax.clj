@@ -60,7 +60,7 @@
   units - Unit conversion factor, e.g. DPI or DPCM. - `int`
 
   throws: java.lang.IllegalArgumentException - (unchecked exception) Thrown if crossFeedResolution < 1 or feedResolution < 1 or units < 1."
-  ([cross-feed-resolution feed-resolution units]
+  ([^Integer cross-feed-resolution ^Integer feed-resolution ^Integer units]
     (new ResolutionSyntax cross-feed-resolution feed-resolution units)))
 
 (def *-dpi
@@ -91,7 +91,7 @@
             at index 0 and the feed direction resolution at index 1. - `int[]`
 
   throws: java.lang.IllegalArgumentException - (unchecked exception) Thrown if units < 1."
-  ([this units]
+  ([^javax.print.attribute.ResolutionSyntax this ^Integer units]
     (-> this (.getResolution units))))
 
 (defn get-cross-feed-resolution
@@ -103,7 +103,7 @@
   returns: Cross feed direction resolution. - `int`
 
   throws: java.lang.IllegalArgumentException - (unchecked exception) Thrown if units < 1."
-  ([this units]
+  ([^javax.print.attribute.ResolutionSyntax this ^Integer units]
     (-> this (.getCrossFeedResolution units))))
 
 (defn get-feed-resolution
@@ -115,7 +115,7 @@
   returns: Feed direction resolution. - `int`
 
   throws: java.lang.IllegalArgumentException - (unchecked exception) Thrown if units < 1."
-  ([this units]
+  ([^javax.print.attribute.ResolutionSyntax this ^Integer units]
     (-> this (.getFeedResolution units))))
 
 (defn to-string
@@ -131,9 +131,9 @@
   returns: String version of this resolution attribute. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - (unchecked exception) Thrown if units < 1."
-  ([this units units-name]
+  ([^javax.print.attribute.ResolutionSyntax this ^Integer units ^java.lang.String units-name]
     (-> this (.toString units units-name)))
-  ([this]
+  ([^javax.print.attribute.ResolutionSyntax this]
     (-> this (.toString))))
 
 (defn less-than-or-equals
@@ -154,7 +154,7 @@
             other resolution attribute, false otherwise. - `boolean`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if other is null."
-  ([this other]
+  ([^javax.print.attribute.ResolutionSyntax this ^javax.print.attribute.ResolutionSyntax other]
     (-> this (.lessThanOrEquals other))))
 
 (defn equals
@@ -176,13 +176,13 @@
 
   returns: True if object is equivalent to this resolution
             attribute, false otherwise. - `boolean`"
-  ([this object]
+  ([^javax.print.attribute.ResolutionSyntax this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn hash-code
   "Returns a hash code value for this resolution attribute.
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^javax.print.attribute.ResolutionSyntax this]
     (-> this (.hashCode))))
 

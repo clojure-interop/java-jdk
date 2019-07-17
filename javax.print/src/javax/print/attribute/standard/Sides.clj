@@ -139,7 +139,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([this]
+  ([^javax.print.attribute.standard.Sides this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -149,6 +149,6 @@
    For class Sides, the category name is `sides`.
 
   returns: Attribute category name. - `java.lang.String`"
-  ([this]
+  ([^javax.print.attribute.standard.Sides this]
     (-> this (.getName))))
 

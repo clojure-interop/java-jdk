@@ -382,7 +382,7 @@
   field-values - Object array of the corresponding field values. The array cannot be null. Elements of the array can be null. - `java.lang.Object[]`
 
   throws: javax.management.RuntimeOperationsException - if the change fails for any reason. Wrapped exception is IllegalArgumentException if fieldNames or fieldValues is null, or if the arrays are of different lengths, or if there is an illegal value in one of them. Wrapped exception is UnsupportedOperationException if the descriptor is immutable, and the call would change its contents."
-  ([this field-names field-values]
+  ([^. this ^java.lang.String[] field-names ^java.lang.Object[] field-values]
     (-> this (.setFields field-names field-values))))
 
 (defn remove-field
@@ -391,7 +391,7 @@
   field-name - String name of the field to be removed. If the field name is illegal or the field is not found, no exception is thrown. - `java.lang.String`
 
   throws: javax.management.RuntimeOperationsException - if a field of the given name exists and the descriptor is immutable. The wrapped exception will be an UnsupportedOperationException."
-  ([this field-name]
+  ([^. this ^java.lang.String field-name]
     (-> this (.removeField field-name))))
 
 (defn get-field-names
@@ -399,7 +399,7 @@
 
   returns: String array of field names. If the descriptor is empty,
    you will get an empty array. - `java.lang.String[]`"
-  ([this]
+  ([^. this]
     (-> this (.getFieldNames))))
 
 (defn get-field-value
@@ -411,7 +411,7 @@
   returns: the corresponding value, or null if the field is not present. - `java.lang.Object`
 
   throws: javax.management.RuntimeOperationsException - if the field name is illegal."
-  ([this field-name]
+  ([^. this ^java.lang.String field-name]
     (-> this (.getFieldValue field-name))))
 
 (defn get-field-values
@@ -422,7 +422,7 @@
 
   returns: Object array of field values. If the list of fieldNames
    is empty, you will get an empty array. - `java.lang.Object[]`"
-  ([this field-names]
+  ([^. this ^java.lang.String field-names]
     (-> this (.getFieldValues field-names))))
 
 (defn set-field
@@ -438,7 +438,7 @@
   field-value - The field value to be set for the field name. Can be null if that is a valid value for the field. - `java.lang.Object`
 
   throws: javax.management.RuntimeOperationsException - if the field name or field value is illegal (wrapped exception is IllegalArgumentException); or if the descriptor is immutable (wrapped exception is UnsupportedOperationException)."
-  ([this field-name field-value]
+  ([^. this ^java.lang.String field-name ^java.lang.Object field-value]
     (-> this (.setField field-name field-value))))
 
 (defn valid?
@@ -448,7 +448,7 @@
   returns: true if the values are legal. - `boolean`
 
   throws: javax.management.RuntimeOperationsException - If the validity checking fails for any reason, this exception will be thrown. The method returns false if the descriptor is not valid, but throws this exception if the attempt to determine validity fails."
-  ([this]
+  ([^. this]
     (-> this (.isValid))))
 
 (defn clone
@@ -460,7 +460,7 @@
   returns: A descriptor which is equal to this descriptor. - `java.lang.Object`
 
   throws: javax.management.RuntimeOperationsException - for illegal value for field names or field values. If the descriptor construction fails for any reason, this exception will be thrown."
-  ([this]
+  ([^. this]
     (-> this (.clone))))
 
 (defn hash-code
@@ -480,7 +480,7 @@
    Otherwise h is v.hashCode().
 
   returns: A hash code value for this object. - `int`"
-  ([this]
+  ([^. this]
     (-> this (.hashCode))))
 
 (defn get-fields
@@ -493,7 +493,7 @@
    of a field is null, then the value of the field in the returned array
    will be empty.  If the descriptor is empty, you will get
    an empty array. - `java.lang.String[]`"
-  ([this]
+  ([^. this]
     (-> this (.getFields))))
 
 (defn equals
@@ -515,6 +515,6 @@
 
   returns: true if the objects are the same; false
    otherwise. - `boolean`"
-  ([this obj]
+  ([^. this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

@@ -12,7 +12,7 @@
    message.
 
   message - the detail message - `java.lang.String`"
-  ([message]
+  ([^java.lang.String message]
     (new CancellationException message))
   ([]
     (new CancellationException )))

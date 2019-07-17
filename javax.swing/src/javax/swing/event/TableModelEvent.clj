@@ -48,15 +48,15 @@
   last-row - `int`
   column - `int`
   type - `int`"
-  ([source first-row last-row column type]
+  ([^javax.swing.table.TableModel source ^Integer first-row ^Integer last-row ^Integer column ^Integer type]
     (new TableModelEvent source first-row last-row column type))
-  ([source first-row last-row column]
+  ([^javax.swing.table.TableModel source ^Integer first-row ^Integer last-row ^Integer column]
     (new TableModelEvent source first-row last-row column))
-  ([source first-row last-row]
+  ([^javax.swing.table.TableModel source ^Integer first-row ^Integer last-row]
     (new TableModelEvent source first-row last-row))
-  ([source row]
+  ([^javax.swing.table.TableModel source ^Integer row]
     (new TableModelEvent source row))
-  ([source]
+  ([^javax.swing.table.TableModel source]
     (new TableModelEvent source)))
 
 (def *-insert
@@ -104,14 +104,14 @@
    ie. names, types and order of the columns.
 
   returns: `int`"
-  ([this]
+  ([^javax.swing.event.TableModelEvent this]
     (-> this (.getFirstRow))))
 
 (defn get-last-row
   "Returns the last row that changed.
 
   returns: `int`"
-  ([this]
+  ([^javax.swing.event.TableModelEvent this]
     (-> this (.getLastRow))))
 
 (defn get-column
@@ -120,13 +120,13 @@
     rows changed.
 
   returns: `int`"
-  ([this]
+  ([^javax.swing.event.TableModelEvent this]
     (-> this (.getColumn))))
 
 (defn get-type
   "Returns the type of event - one of: INSERT, UPDATE and DELETE.
 
   returns: `int`"
-  ([this]
+  ([^javax.swing.event.TableModelEvent this]
     (-> this (.getType))))
 

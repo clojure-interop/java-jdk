@@ -66,8 +66,8 @@
   returns: the newly decoded String - `java.lang.String`
 
   throws: java.io.UnsupportedEncodingException - If character encoding needs to be consulted, but named character encoding is not supported"
-  ([s enc]
+  ([^java.lang.String s ^java.lang.String enc]
     (URLDecoder/decode s enc))
-  ([s]
+  ([^java.lang.String s]
     (URLDecoder/decode s)))
 

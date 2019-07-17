@@ -19,6 +19,6 @@
   file-name - the name of the file to read from - `java.lang.String`
 
   throws: java.io.FileNotFoundException - if the named file does not exist, is a directory rather than a regular file, or for some other reason cannot be opened for reading."
-  ([file-name]
+  ([^java.lang.String file-name]
     (new FileReader file-name)))
 

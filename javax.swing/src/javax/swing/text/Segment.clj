@@ -20,7 +20,7 @@
   array - the array to refer to - `char[]`
   offset - the offset into the array - `int`
   count - the number of characters - `int`"
-  ([array offset count]
+  ([array ^Integer offset ^Integer count]
     (new Segment array offset count))
   ([]
     (new Segment )))
@@ -64,14 +64,14 @@
 
   returns: the character at the new position or DONE if the new
    position is off the end of the text range. - `char`"
-  ([this]
+  ([^javax.swing.text.Segment this]
     (-> this (.next))))
 
 (defn get-index
   "Returns the current index.
 
   returns: the current index. - `int`"
-  ([this]
+  ([^javax.swing.text.Segment this]
     (-> this (.getIndex))))
 
 (defn get-end-index
@@ -79,14 +79,14 @@
    character following the end of the text.
 
   returns: the index after the last character in the text - `int`"
-  ([this]
+  ([^javax.swing.text.Segment this]
     (-> this (.getEndIndex))))
 
 (defn to-string
   "Converts a segment into a String.
 
   returns: the string - `java.lang.String`"
-  ([this]
+  ([^javax.swing.text.Segment this]
     (-> this (.toString))))
 
 (defn set-partial-return
@@ -98,7 +98,7 @@
    make a copy of the text depending upon the request.
 
   p - whether or not partial returns are valid. - `boolean`"
-  ([this p]
+  ([^javax.swing.text.Segment this ^Boolean p]
     (-> this (.setPartialReturn p))))
 
 (defn sub-sequence
@@ -113,21 +113,21 @@
   end - the end index, exclusive - `int`
 
   returns: the specified subsequence - `java.lang.CharSequence`"
-  ([this start end]
+  ([^javax.swing.text.Segment this ^Integer start ^Integer end]
     (-> this (.subSequence start end))))
 
 (defn partial-return?
   "Flag to indicate that partial returns are valid.
 
   returns: whether or not partial returns are valid. - `boolean`"
-  ([this]
+  ([^javax.swing.text.Segment this]
     (-> this (.isPartialReturn))))
 
 (defn get-begin-index
   "Returns the start index of the text.
 
   returns: the index at which the text begins. - `int`"
-  ([this]
+  ([^javax.swing.text.Segment this]
     (-> this (.getBeginIndex))))
 
 (defn char-at
@@ -143,7 +143,7 @@
   index - the index of the char value to be returned - `int`
 
   returns: the specified char value - `char`"
-  ([this index]
+  ([^javax.swing.text.Segment this ^Integer index]
     (-> this (.charAt index))))
 
 (defn previous
@@ -153,7 +153,7 @@
 
   returns: the character at the new position or DONE if the current
    position is equal to getBeginIndex(). - `char`"
-  ([this]
+  ([^javax.swing.text.Segment this]
     (-> this (.previous))))
 
 (defn current
@@ -161,7 +161,7 @@
 
   returns: the character at the current position or DONE if the current
    position is off the end of the text. - `char`"
-  ([this]
+  ([^javax.swing.text.Segment this]
     (-> this (.current))))
 
 (defn length
@@ -169,7 +169,7 @@
    of 16-bit chars in the sequence.
 
   returns: the number of chars in this sequence - `int`"
-  ([this]
+  ([^javax.swing.text.Segment this]
     (-> this (.length))))
 
 (defn set-index
@@ -179,7 +179,7 @@
   position - the position within the text. Valid values range from getBeginIndex() to getEndIndex(). An IllegalArgumentException is thrown if an invalid value is supplied. - `int`
 
   returns: the character at the specified position or DONE if the specified position is equal to getEndIndex() - `char`"
-  ([this position]
+  ([^javax.swing.text.Segment this ^Integer position]
     (-> this (.setIndex position))))
 
 (defn last
@@ -187,14 +187,14 @@
    and returns the character at that position.
 
   returns: the last character in the text, or DONE if the text is empty - `char`"
-  ([this]
+  ([^javax.swing.text.Segment this]
     (-> this (.last))))
 
 (defn clone
   "Creates a shallow copy.
 
   returns: the copy - `java.lang.Object`"
-  ([this]
+  ([^javax.swing.text.Segment this]
     (-> this (.clone))))
 
 (defn first
@@ -202,6 +202,6 @@
    position.
 
   returns: the first character in the text, or DONE if the text is empty - `char`"
-  ([this]
+  ([^javax.swing.text.Segment this]
     (-> this (.first))))
 

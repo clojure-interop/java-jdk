@@ -27,7 +27,7 @@
   obj - the Java Object to be serialized - `java.lang.Object`
 
   throws: javax.sql.rowset.serial.SerialException - if the object is found not to be serializable"
-  ([obj]
+  ([^java.lang.Object obj]
     (new SerialJavaObject obj)))
 
 (defn get-object
@@ -38,7 +38,7 @@
            Object in the Java programming language - `java.lang.Object`
 
   throws: javax.sql.rowset.serial.SerialException - if the instance is corrupt"
-  ([this]
+  ([^javax.sql.rowset.serial.SerialJavaObject this]
     (-> this (.getObject))))
 
 (defn get-fields
@@ -48,7 +48,7 @@
   returns: an array of Field objects - `java.lang.reflect.Field[]`
 
   throws: javax.sql.rowset.serial.SerialException - if an error is encountered accessing the serialized object"
-  ([this]
+  ([^javax.sql.rowset.serial.SerialJavaObject this]
     (-> this (.getFields))))
 
 (defn equals
@@ -61,7 +61,7 @@
 
   returns: true if the given object represents a SerialJavaObject
             equivalent to this SerialJavaObject, false otherwise - `boolean`"
-  ([this o]
+  ([^javax.sql.rowset.serial.SerialJavaObject this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn hash-code
@@ -70,13 +70,13 @@
    the Object it stores
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^javax.sql.rowset.serial.SerialJavaObject this]
     (-> this (.hashCode))))
 
 (defn clone
   "Returns a clone of this SerialJavaObject.
 
   returns: a clone of this SerialJavaObject - `java.lang.Object`"
-  ([this]
+  ([^javax.sql.rowset.serial.SerialJavaObject this]
     (-> this (.clone))))
 

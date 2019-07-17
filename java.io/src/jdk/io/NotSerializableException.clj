@@ -11,7 +11,7 @@
   Constructs a NotSerializableException object with message string.
 
   classname - Class of the instance being serialized/deserialized. - `java.lang.String`"
-  ([classname]
+  ([^java.lang.String classname]
     (new NotSerializableException classname))
   ([]
     (new NotSerializableException )))

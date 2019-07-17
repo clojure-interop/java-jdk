@@ -13,7 +13,7 @@
    focus.
 
   op - `javax.swing.JOptionPane`"
-  ([this op]
+  ([^javax.swing.plaf.OptionPaneUI this ^javax.swing.JOptionPane op]
     (-> this (.selectInitialValue op))))
 
 (defn contains-custom-components
@@ -23,6 +23,6 @@
   op - `javax.swing.JOptionPane`
 
   returns: `boolean`"
-  ([this op]
+  ([^javax.swing.plaf.OptionPaneUI this ^javax.swing.JOptionPane op]
     (-> this (.containsCustomComponents op))))
 

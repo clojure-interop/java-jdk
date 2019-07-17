@@ -18,7 +18,7 @@
    the specified String.
 
   data - `java.lang.String`"
-  ([data]
+  ([^java.lang.String data]
     (new StringSelection data)))
 
 (defn get-transfer-data-flavors
@@ -30,7 +30,7 @@
 
   returns: an array of length two, whose elements are DataFlavor.
            stringFlavor and DataFlavor.plainTextFlavor - `java.awt.datatransfer.DataFlavor[]`"
-  ([this]
+  ([^java.awt.datatransfer.StringSelection this]
     (-> this (.getTransferDataFlavors))))
 
 (defn data-flavor-supported?
@@ -45,7 +45,7 @@
      is not one of the above flavors - `boolean`
 
   throws: java.lang.NullPointerException - if flavor is null"
-  ([this flavor]
+  ([^java.awt.datatransfer.StringSelection this ^java.awt.datatransfer.DataFlavor flavor]
     (-> this (.isDataFlavorSupported flavor))))
 
 (defn get-transfer-data
@@ -66,7 +66,7 @@
   returns: the data in the requested flavor, as outlined above - `java.lang.Object`
 
   throws: java.awt.datatransfer.UnsupportedFlavorException - if the requested data flavor is not equivalent to either DataFlavor.stringFlavor or DataFlavor.plainTextFlavor"
-  ([this flavor]
+  ([^java.awt.datatransfer.StringSelection this ^java.awt.datatransfer.DataFlavor flavor]
     (-> this (.getTransferData flavor))))
 
 (defn lost-ownership
@@ -74,6 +74,6 @@
 
   clipboard - the clipboard that is no longer owned - `java.awt.datatransfer.Clipboard`
   contents - the contents which this owner had placed on the clipboard - `java.awt.datatransfer.Transferable`"
-  ([this clipboard contents]
+  ([^java.awt.datatransfer.StringSelection this ^java.awt.datatransfer.Clipboard clipboard ^java.awt.datatransfer.Transferable contents]
     (-> this (.lostOwnership clipboard contents))))
 

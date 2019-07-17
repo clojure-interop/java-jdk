@@ -37,13 +37,13 @@
   reason - the reason the validation failed - `java.security.cert.CertPathValidatorException.Reason`
 
   throws: java.lang.IndexOutOfBoundsException - if the index is out of range (index < -1 || (certPath != null && index >= certPath.getCertificates().size())"
-  ([msg cause cert-path index reason]
+  ([^java.lang.String msg ^java.lang.Throwable cause ^java.security.cert.CertPath cert-path ^Integer index ^java.security.cert.CertPathValidatorException.Reason reason]
     (new CertPathValidatorException msg cause cert-path index reason))
-  ([msg cause cert-path index]
+  ([^java.lang.String msg ^java.lang.Throwable cause ^java.security.cert.CertPath cert-path ^Integer index]
     (new CertPathValidatorException msg cause cert-path index))
-  ([msg cause]
+  ([^java.lang.String msg ^java.lang.Throwable cause]
     (new CertPathValidatorException msg cause))
-  ([msg]
+  ([^java.lang.String msg]
     (new CertPathValidatorException msg))
   ([]
     (new CertPathValidatorException )))
@@ -54,7 +54,7 @@
 
   returns: the CertPath that was being validated when
    the exception was thrown (or null if not specified) - `java.security.cert.CertPath`"
-  ([this]
+  ([^java.security.cert.CertPathValidatorException this]
     (-> this (.getCertPath))))
 
 (defn get-index
@@ -64,7 +64,7 @@
    index has been set, -1 is returned.
 
   returns: the index that has been set, or -1 if none has been set - `int`"
-  ([this]
+  ([^java.security.cert.CertPathValidatorException this]
     (-> this (.getIndex))))
 
 (defn get-reason
@@ -75,6 +75,6 @@
   returns: the reason that the validation failed, or
       BasicReason.UNSPECIFIED if a reason has not been
       specified - `java.security.cert.CertPathValidatorException.Reason`"
-  ([this]
+  ([^java.security.cert.CertPathValidatorException this]
     (-> this (.getReason))))
 

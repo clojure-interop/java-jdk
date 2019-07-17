@@ -18,7 +18,7 @@
   c - the JPasswordField - `javax.swing.JComponent`
 
   returns: the UI - `javax.swing.plaf.ComponentUI`"
-  ([c]
+  ([^javax.swing.JComponent c]
     (BasicPasswordFieldUI/createUI c)))
 
 (defn create
@@ -27,6 +27,6 @@
   elem - the element - `javax.swing.text.Element`
 
   returns: the view - `javax.swing.text.View`"
-  ([this elem]
+  ([^javax.swing.plaf.basic.BasicPasswordFieldUI this ^javax.swing.text.Element elem]
     (-> this (.create elem))))
 

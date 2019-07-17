@@ -43,7 +43,7 @@
 
   os - the OutputStream object - `java.io.OutputStream`
   c - an initialized Cipher object - `javax.crypto.Cipher`"
-  ([os c]
+  ([^java.io.OutputStream os ^javax.crypto.Cipher c]
     (new CipherOutputStream os c)))
 
 (defn write
@@ -55,9 +55,9 @@
   len - the number of bytes to write. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this b off len]
+  ([^javax.crypto.CipherOutputStream this b ^Integer off ^Integer len]
     (-> this (.write b off len)))
-  ([this b]
+  ([^javax.crypto.CipherOutputStream this ^Integer b]
     (-> this (.write b))))
 
 (defn flush
@@ -72,7 +72,7 @@
    the cipher's block size, no bytes will be written out.
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this]
+  ([^javax.crypto.CipherOutputStream this]
     (-> this (.flush))))
 
 (defn close
@@ -89,6 +89,6 @@
    stream.
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this]
+  ([^javax.crypto.CipherOutputStream this]
     (-> this (.close))))
 

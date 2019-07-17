@@ -20,7 +20,7 @@
   Constructs a new RMIServerImpl.
 
   env - the environment containing attributes for the new RMIServerImpl. Can be null, which is equivalent to an empty Map. - `java.util.Map<java.lang.String,?>`"
-  ([env]
+  ([^java.util.Map env]
     (new RMIServerImpl env)))
 
 (defn to-stub
@@ -29,7 +29,7 @@
   returns: a remotable stub. - `java.rmi.Remote`
 
   throws: java.io.IOException - if the stub cannot be obtained - e.g the RMIServerImpl has not been exported yet."
-  ([this]
+  ([^javax.management.remote.rmi.RMIServerImpl this]
     (-> this (.toStub))))
 
 (defn set-default-class-loader
@@ -38,7 +38,7 @@
    Existing client connections are unaffected.
 
   cl - the new ClassLoader to be used by this connector server. - `java.lang.ClassLoader`"
-  ([this cl]
+  ([^javax.management.remote.rmi.RMIServerImpl this ^java.lang.ClassLoader cl]
     (-> this (.setDefaultClassLoader cl))))
 
 (defn get-default-class-loader
@@ -47,7 +47,7 @@
 
   returns: the default ClassLoader used by this
    connector server. - `java.lang.ClassLoader`"
-  ([this]
+  ([^javax.management.remote.rmi.RMIServerImpl this]
     (-> this (.getDefaultClassLoader))))
 
 (defn set-m-bean-server
@@ -57,7 +57,7 @@
    unaffected.
 
   mbs - the new MBeanServer. Can be null, but new client connections will be refused as long as it is. - `javax.management.MBeanServer`"
-  ([this mbs]
+  ([^javax.management.remote.rmi.RMIServerImpl this ^javax.management.MBeanServer mbs]
     (-> this (.setMBeanServer mbs))))
 
 (defn get-m-bean-server
@@ -67,14 +67,14 @@
 
   returns: the MBeanServer to which this connector
    is attached. - `javax.management.MBeanServer`"
-  ([this]
+  ([^javax.management.remote.rmi.RMIServerImpl this]
     (-> this (.getMBeanServer))))
 
 (defn get-version
   "Description copied from interface: RMIServer
 
   returns: a string with the format described here. - `java.lang.String`"
-  ([this]
+  ([^javax.management.remote.rmi.RMIServerImpl this]
     (-> this (.getVersion))))
 
 (defn new-client
@@ -94,7 +94,7 @@
    object implementing RMIConnection. - `javax.management.remote.rmi.RMIConnection`
 
   throws: java.io.IOException - if the new client object cannot be created or exported."
-  ([this credentials]
+  ([^javax.management.remote.rmi.RMIServerImpl this ^java.lang.Object credentials]
     (-> this (.newClient credentials))))
 
 (defn close
@@ -120,6 +120,6 @@
    from this method.
 
   throws: java.io.IOException - if closeServer() or one of the RMIConnection.close() calls threw IOException."
-  ([this]
+  ([^javax.management.remote.rmi.RMIServerImpl this]
     (-> this (.close))))
 

@@ -15,7 +15,7 @@
   "Returns the pool hosting this thread.
 
   returns: the pool - `java.util.concurrent.ForkJoinPool`"
-  ([this]
+  ([^java.util.concurrent.ForkJoinWorkerThread this]
     (-> this (.getPool))))
 
 (defn get-pool-index
@@ -27,13 +27,13 @@
    per-worker-thread rather than per-task.
 
   returns: the index number - `int`"
-  ([this]
+  ([^java.util.concurrent.ForkJoinWorkerThread this]
     (-> this (.getPoolIndex))))
 
 (defn run
   "This method is required to be public, but should never be
    called explicitly. It performs the main run loop to execute
    ForkJoinTasks."
-  ([this]
+  ([^java.util.concurrent.ForkJoinWorkerThread this]
     (-> this (.run))))
 

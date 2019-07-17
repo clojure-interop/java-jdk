@@ -40,9 +40,9 @@
   p - a visitor-specified parameter - `AbstractElementVisitor6.P`
 
   returns: a visitor-specified result - `AbstractElementVisitor6.R`"
-  ([this e p]
+  ([^javax.lang.model.util.AbstractElementVisitor6 this ^javax.lang.model.element.Element e ^AbstractElementVisitor6.P p]
     (-> this (.visit e p)))
-  ([this e]
+  ([^javax.lang.model.util.AbstractElementVisitor6 this ^javax.lang.model.element.Element e]
     (-> this (.visit e))))
 
 (defn visit-unknown
@@ -61,6 +61,6 @@
   returns: a visitor-specified result - `AbstractElementVisitor6.R`
 
   throws: javax.lang.model.element.UnknownElementException - a visitor implementation may optionally throw this exception"
-  ([this e p]
+  ([^javax.lang.model.util.AbstractElementVisitor6 this ^javax.lang.model.element.Element e ^AbstractElementVisitor6.P p]
     (-> this (.visitUnknown e p))))
 

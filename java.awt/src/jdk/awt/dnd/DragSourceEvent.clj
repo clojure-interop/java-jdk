@@ -37,9 +37,9 @@
   y - the vertical coordinate for the cursor location - `int`
 
   throws: java.lang.IllegalArgumentException - if dsc is null."
-  ([dsc x y]
+  ([^java.awt.dnd.DragSourceContext dsc ^Integer x ^Integer y]
     (new DragSourceEvent dsc x y))
-  ([dsc]
+  ([^java.awt.dnd.DragSourceContext dsc]
     (new DragSourceEvent dsc)))
 
 (defn get-drag-source-context
@@ -47,7 +47,7 @@
    originated the event.
 
   returns: the DragSourceContext that originated the event - `java.awt.dnd.DragSourceContext`"
-  ([this]
+  ([^java.awt.dnd.DragSourceEvent this]
     (-> this (.getDragSourceContext))))
 
 (defn get-location
@@ -58,7 +58,7 @@
 
   returns: the Point indicating the cursor location
            or null if the cursor location is not specified - `java.awt.Point`"
-  ([this]
+  ([^java.awt.dnd.DragSourceEvent this]
     (-> this (.getLocation))))
 
 (defn get-x
@@ -68,7 +68,7 @@
 
   returns: an integer indicating the horizontal coordinate of the cursor
            location or zero if the cursor location is not specified - `int`"
-  ([this]
+  ([^java.awt.dnd.DragSourceEvent this]
     (-> this (.getX))))
 
 (defn get-y
@@ -78,6 +78,6 @@
 
   returns: an integer indicating the vertical coordinate of the cursor
            location or zero if the cursor location is not specified - `int`"
-  ([this]
+  ([^java.awt.dnd.DragSourceEvent this]
     (-> this (.getY))))
 

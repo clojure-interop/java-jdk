@@ -14,7 +14,7 @@
   u - the second function argument - `BiFunction.U`
 
   returns: the function result - `BiFunction.R`"
-  ([this t u]
+  ([^. this ^BiFunction.T t ^BiFunction.U u]
     (-> this (.apply t u))))
 
 (defn and-then
@@ -29,6 +29,6 @@
    applies the after function - `default <V> java.util.function.BiFunction<BiFunction.T,BiFunction.U,V>`
 
   throws: java.lang.NullPointerException - if after is null"
-  ([this after]
+  ([^. this after]
     (-> this (.andThen after))))
 

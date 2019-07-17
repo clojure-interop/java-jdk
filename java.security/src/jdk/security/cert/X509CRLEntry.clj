@@ -37,7 +37,7 @@
    the userCertificate.
 
   returns: the serial number. - `java.math.BigInteger`"
-  ([this]
+  ([^java.security.cert.X509CRLEntry this]
     (-> this (.getSerialNumber))))
 
 (defn get-revocation-date
@@ -45,7 +45,7 @@
    the revocationDate.
 
   returns: the revocation date. - `java.util.Date`"
-  ([this]
+  ([^java.security.cert.X509CRLEntry this]
     (-> this (.getRevocationDate))))
 
 (defn get-certificate-issuer
@@ -59,21 +59,21 @@
 
   returns: the issuer of the X509Certificate described by this entry
    or null if it is issued by the CRL issuer. - `javax.security.auth.x500.X500Principal`"
-  ([this]
+  ([^java.security.cert.X509CRLEntry this]
     (-> this (.getCertificateIssuer))))
 
 (defn to-string
   "Returns a string representation of this CRL entry.
 
   returns: a string representation of this CRL entry. - `java.lang.String`"
-  ([this]
+  ([^java.security.cert.X509CRLEntry this]
     (-> this (.toString))))
 
 (defn has-extensions?
   "Returns true if this CRL entry has extensions.
 
   returns: true if this entry has extensions, false otherwise. - `boolean`"
-  ([this]
+  ([^java.security.cert.X509CRLEntry this]
     (-> this (.hasExtensions))))
 
 (defn get-revocation-reason
@@ -83,7 +83,7 @@
   returns: the reason the certificate has been revoked, or
       null if this CRL entry does not have
       a Reason Code extension - `java.security.cert.CRLReason`"
-  ([this]
+  ([^java.security.cert.X509CRLEntry this]
     (-> this (.getRevocationReason))))
 
 (defn get-encoded
@@ -93,7 +93,7 @@
   returns: the encoded form of this certificate - `byte[]`
 
   throws: java.security.cert.CRLException - if an encoding error occurs."
-  ([this]
+  ([^java.security.cert.X509CRLEntry this]
     (-> this (.getEncoded))))
 
 (defn hash-code
@@ -101,7 +101,7 @@
    encoded form.
 
   returns: the hashcode value. - `int`"
-  ([this]
+  ([^java.security.cert.X509CRLEntry this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -115,6 +115,6 @@
 
   returns: true iff the encoded forms of the two CRL entries
    match, false otherwise. - `boolean`"
-  ([this other]
+  ([^java.security.cert.X509CRLEntry this ^java.lang.Object other]
     (-> this (.equals other))))
 

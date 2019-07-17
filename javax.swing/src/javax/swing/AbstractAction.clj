@@ -23,9 +23,9 @@
 
   name - the name (Action.NAME) for the action; a value of null is ignored - `java.lang.String`
   icon - the small icon (Action.SMALL_ICON) for the action; a value of null is ignored - `javax.swing.Icon`"
-  ([name icon]
+  ([^java.lang.String name ^javax.swing.Icon icon]
     (new AbstractAction name icon))
-  ([name]
+  ([^java.lang.String name]
     (new AbstractAction name))
   ([]
     (new AbstractAction )))
@@ -37,7 +37,7 @@
 
   returns: the binding Object stored with this key; if there
             are no keys, it will return null - `java.lang.Object`"
-  ([this key]
+  ([^javax.swing.AbstractAction this ^java.lang.String key]
     (-> this (.getValue key))))
 
 (defn put-value
@@ -45,21 +45,21 @@
 
   key - the String that identifies the stored object - `java.lang.String`
   new-value - the Object to store using this key - `java.lang.Object`"
-  ([this key new-value]
+  ([^javax.swing.AbstractAction this ^java.lang.String key ^java.lang.Object new-value]
     (-> this (.putValue key new-value))))
 
 (defn enabled?
   "Returns true if the action is enabled.
 
   returns: true if the action is enabled, false otherwise - `boolean`"
-  ([this]
+  ([^javax.swing.AbstractAction this]
     (-> this (.isEnabled))))
 
 (defn set-enabled
   "Sets whether the Action is enabled. The default is true.
 
   new-value - true to enable the action, false to disable it - `boolean`"
-  ([this new-value]
+  ([^javax.swing.AbstractAction this ^Boolean new-value]
     (-> this (.setEnabled new-value))))
 
 (defn get-keys
@@ -69,7 +69,7 @@
 
   returns: an array of key objects, or null if no
                     keys have values set - `java.lang.Object[]`"
-  ([this]
+  ([^javax.swing.AbstractAction this]
     (-> this (.getKeys))))
 
 (defn add-property-change-listener
@@ -84,7 +84,7 @@
    fired in response to a change in the inherited property.
 
   listener - The PropertyChangeListener to be added - `java.beans.PropertyChangeListener`"
-  ([this listener]
+  ([^javax.swing.AbstractAction this ^java.beans.PropertyChangeListener listener]
     (-> this (.addPropertyChangeListener listener))))
 
 (defn remove-property-change-listener
@@ -93,7 +93,7 @@
    for all properties.
 
   listener - the PropertyChangeListener to be removed - `java.beans.PropertyChangeListener`"
-  ([this listener]
+  ([^javax.swing.AbstractAction this ^java.beans.PropertyChangeListener listener]
     (-> this (.removePropertyChangeListener listener))))
 
 (defn get-property-change-listeners
@@ -102,6 +102,6 @@
 
   returns: all of the PropertyChangeListeners added or an empty
            array if no listeners have been added - `java.beans.PropertyChangeListener[]`"
-  ([this]
+  ([^javax.swing.AbstractAction this]
     (-> this (.getPropertyChangeListeners))))
 

@@ -15,7 +15,7 @@
    message.
 
   message - the detail message - `java.lang.String`"
-  ([message]
+  ([^java.lang.String message]
     (new TimeoutException message))
   ([]
     (new TimeoutException )))

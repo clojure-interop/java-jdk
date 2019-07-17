@@ -16,29 +16,29 @@
   attributes - the attributes - `java.util.Set<java.security.KeyStore.Entry.Attribute>`
 
   throws: java.lang.NullPointerException - if secretKey or attributes is null"
-  ([secret-key attributes]
+  ([^javax.crypto.SecretKey secret-key ^java.util.Set attributes]
     (new KeyStore$SecretKeyEntry secret-key attributes))
-  ([secret-key]
+  ([^javax.crypto.SecretKey secret-key]
     (new KeyStore$SecretKeyEntry secret-key)))
 
 (defn get-secret-key
   "Gets the SecretKey from this entry.
 
   returns: the SecretKey from this entry - `javax.crypto.SecretKey`"
-  ([this]
+  ([^java.security.KeyStore$SecretKeyEntry this]
     (-> this (.getSecretKey))))
 
 (defn get-attributes
   "Retrieves the attributes associated with an entry.
 
   returns: an unmodifiable Set of attributes, possibly empty - `java.util.Set<java.security.KeyStore.Entry.Attribute>`"
-  ([this]
+  ([^java.security.KeyStore$SecretKeyEntry this]
     (-> this (.getAttributes))))
 
 (defn to-string
   "Returns a string representation of this SecretKeyEntry.
 
   returns: a string representation of this SecretKeyEntry. - `java.lang.String`"
-  ([this]
+  ([^java.security.KeyStore$SecretKeyEntry this]
     (-> this (.toString))))
 

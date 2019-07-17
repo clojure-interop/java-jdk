@@ -66,9 +66,9 @@
            (or equal to, if inclusive is true) toKey - `java.util.NavigableMap<NavigableMap.K,NavigableMap.V>`
 
   throws: java.lang.ClassCastException - if toKey is not compatible with this map's comparator (or, if the map has no comparator, if toKey does not implement Comparable). Implementations may, but are not required to, throw this exception if toKey cannot be compared to keys currently in the map."
-  ([this to-key inclusive]
+  ([^. this ^NavigableMap.K to-key ^Boolean inclusive]
     (-> this (.headMap to-key inclusive)))
-  ([this to-key]
+  ([^. this ^NavigableMap.K to-key]
     (-> this (.headMap to-key))))
 
 (defn floor-key
@@ -81,7 +81,7 @@
            or null if there is no such key - `NavigableMap.K`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  ([this key]
+  ([^. this ^NavigableMap.K key]
     (-> this (.floorKey key))))
 
 (defn lower-entry
@@ -95,7 +95,7 @@
            or null if there is no such key - `java.util.Map.Entry<NavigableMap.K,NavigableMap.V>`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  ([this key]
+  ([^. this ^NavigableMap.K key]
     (-> this (.lowerEntry key))))
 
 (defn floor-entry
@@ -109,7 +109,7 @@
            key, or null if there is no such key - `java.util.Map.Entry<NavigableMap.K,NavigableMap.V>`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  ([this key]
+  ([^. this ^NavigableMap.K key]
     (-> this (.floorEntry key))))
 
 (defn ceiling-entry
@@ -123,7 +123,7 @@
            key, or null if there is no such key - `java.util.Map.Entry<NavigableMap.K,NavigableMap.V>`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  ([this key]
+  ([^. this ^NavigableMap.K key]
     (-> this (.ceilingEntry key))))
 
 (defn descending-key-set
@@ -138,7 +138,7 @@
    It does not support the add or addAll operations.
 
   returns: a reverse order navigable set view of the keys in this map - `java.util.NavigableSet<NavigableMap.K>`"
-  ([this]
+  ([^. this]
     (-> this (.descendingKeySet))))
 
 (defn navigable-key-set
@@ -153,7 +153,7 @@
    It does not support the add or addAll operations.
 
   returns: a navigable set view of the keys in this map - `java.util.NavigableSet<NavigableMap.K>`"
-  ([this]
+  ([^. this]
     (-> this (.navigableKeySet))))
 
 (defn higher-key
@@ -166,7 +166,7 @@
            or null if there is no such key - `NavigableMap.K`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  ([this key]
+  ([^. this ^NavigableMap.K key]
     (-> this (.higherKey key))))
 
 (defn poll-last-entry
@@ -175,7 +175,7 @@
 
   returns: the removed last entry of this map,
            or null if this map is empty - `java.util.Map.Entry<NavigableMap.K,NavigableMap.V>`"
-  ([this]
+  ([^. this]
     (-> this (.pollLastEntry))))
 
 (defn first-entry
@@ -184,7 +184,7 @@
 
   returns: an entry with the least key,
            or null if this map is empty - `java.util.Map.Entry<NavigableMap.K,NavigableMap.V>`"
-  ([this]
+  ([^. this]
     (-> this (.firstEntry))))
 
 (defn poll-first-entry
@@ -193,7 +193,7 @@
 
   returns: the removed first entry of this map,
            or null if this map is empty - `java.util.Map.Entry<NavigableMap.K,NavigableMap.V>`"
-  ([this]
+  ([^. this]
     (-> this (.pollFirstEntry))))
 
 (defn lower-key
@@ -206,7 +206,7 @@
            or null if there is no such key - `NavigableMap.K`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  ([this key]
+  ([^. this ^NavigableMap.K key]
     (-> this (.lowerKey key))))
 
 (defn sub-map
@@ -231,9 +231,9 @@
            fromKey to toKey - `java.util.NavigableMap<NavigableMap.K,NavigableMap.V>`
 
   throws: java.lang.ClassCastException - if fromKey and toKey cannot be compared to one another using this map's comparator (or, if the map has no comparator, using natural ordering). Implementations may, but are not required to, throw this exception if fromKey or toKey cannot be compared to keys currently in the map."
-  ([this from-key from-inclusive to-key to-inclusive]
+  ([^. this ^NavigableMap.K from-key ^Boolean from-inclusive ^NavigableMap.K to-key ^Boolean to-inclusive]
     (-> this (.subMap from-key from-inclusive to-key to-inclusive)))
-  ([this from-key to-key]
+  ([^. this ^NavigableMap.K from-key ^NavigableMap.K to-key]
     (-> this (.subMap from-key to-key))))
 
 (defn tail-map
@@ -253,9 +253,9 @@
            (or equal to, if inclusive is true) fromKey - `java.util.NavigableMap<NavigableMap.K,NavigableMap.V>`
 
   throws: java.lang.ClassCastException - if fromKey is not compatible with this map's comparator (or, if the map has no comparator, if fromKey does not implement Comparable). Implementations may, but are not required to, throw this exception if fromKey cannot be compared to keys currently in the map."
-  ([this from-key inclusive]
+  ([^. this ^NavigableMap.K from-key ^Boolean inclusive]
     (-> this (.tailMap from-key inclusive)))
-  ([this from-key]
+  ([^. this ^NavigableMap.K from-key]
     (-> this (.tailMap from-key))))
 
 (defn descending-map
@@ -272,7 +272,7 @@
    view of m essentially equivalent to m.
 
   returns: a reverse order view of this map - `java.util.NavigableMap<NavigableMap.K,NavigableMap.V>`"
-  ([this]
+  ([^. this]
     (-> this (.descendingMap))))
 
 (defn higher-entry
@@ -286,7 +286,7 @@
            or null if there is no such key - `java.util.Map.Entry<NavigableMap.K,NavigableMap.V>`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  ([this key]
+  ([^. this ^NavigableMap.K key]
     (-> this (.higherEntry key))))
 
 (defn ceiling-key
@@ -299,7 +299,7 @@
            or null if there is no such key - `NavigableMap.K`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  ([this key]
+  ([^. this ^NavigableMap.K key]
     (-> this (.ceilingKey key))))
 
 (defn last-entry
@@ -308,6 +308,6 @@
 
   returns: an entry with the greatest key,
            or null if this map is empty - `java.util.Map.Entry<NavigableMap.K,NavigableMap.V>`"
-  ([this]
+  ([^. this]
     (-> this (.lastEntry))))
 

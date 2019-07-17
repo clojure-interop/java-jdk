@@ -16,6 +16,6 @@
        of this array - `java.lang.reflect.Type`
 
   throws: java.lang.TypeNotPresentException - if the underlying array type's component type refers to a non-existent type declaration"
-  ([this]
+  ([^. this]
     (-> this (.getGenericComponentType))))
 

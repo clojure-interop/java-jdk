@@ -22,7 +22,7 @@
    an explanation. All other fields are set to null.
 
   explanation - Possibly null additional detail about this exception. If null, this exception has no detail message. - `java.lang.String`"
-  ([explanation]
+  ([^java.lang.String explanation]
     (new AttributeModificationException explanation))
   ([]
     (new AttributeModificationException )))
@@ -36,7 +36,7 @@
    to modifyAttributes() were executed.
 
   e - The possibly null list of unexecuted modifications. - `javax.naming.directory.ModificationItem[]`"
-  ([this e]
+  ([^javax.naming.directory.AttributeModificationException this ^javax.naming.directory.ModificationItem[] e]
     (-> this (.setUnexecutedModifications e))))
 
 (defn get-unexecuted-modifications
@@ -48,7 +48,7 @@
    to modifyAttributes() were executed.
 
   returns: The possibly null unexecuted modification list. - `javax.naming.directory.ModificationItem[]`"
-  ([this]
+  ([^javax.naming.directory.AttributeModificationException this]
     (-> this (.getUnexecutedModifications))))
 
 (defn to-string
@@ -59,6 +59,6 @@
    programmatically.
 
   returns: The non-null string representation of this exception. - `java.lang.String`"
-  ([this]
+  ([^javax.naming.directory.AttributeModificationException this]
     (-> this (.toString))))
 

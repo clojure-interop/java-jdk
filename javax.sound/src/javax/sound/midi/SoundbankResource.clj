@@ -41,7 +41,7 @@
   "Obtains the sound bank that contains this SoundbankResource.
 
   returns: the sound bank in which this SoundbankResource is stored - `javax.sound.midi.Soundbank`"
-  ([this]
+  ([^javax.sound.midi.SoundbankResource this]
     (-> this (.getSoundbank))))
 
 (defn get-name
@@ -49,7 +49,7 @@
    descriptive of the resource.
 
   returns: the instrument's name - `java.lang.String`"
-  ([this]
+  ([^javax.sound.midi.SoundbankResource this]
     (-> this (.getName))))
 
 (defn get-data-class
@@ -60,7 +60,7 @@
 
   returns: the class used to represent the sample's data, or
    null if the data is not accessible - `java.lang.Class<?>`"
-  ([this]
+  ([^javax.sound.midi.SoundbankResource this]
     (-> this (.getDataClass))))
 
 (defn get-data
@@ -69,6 +69,6 @@
    concrete class, and may be queried using getDataClass.
 
   returns: an object containing the sampled audio data - `java.lang.Object`"
-  ([this]
+  ([^javax.sound.midi.SoundbankResource this]
     (-> this (.getData))))
 

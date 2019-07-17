@@ -93,7 +93,7 @@
 
   comp - the component to be moved - `java.awt.Component`
   index - the position in the container's list to insert the component, where getComponentCount() appends to the end - `int`"
-  ([this comp index]
+  ([^javax.swing.JDesktopPane this ^java.awt.Component comp ^Integer index]
     (-> this (.setComponentZOrder comp index))))
 
 (defn get-drag-mode
@@ -101,7 +101,7 @@
 
   returns: either Live_DRAG_MODE or
      OUTLINE_DRAG_MODE - `int`"
-  ([this]
+  ([^javax.swing.JDesktopPane this]
     (-> this (.getDragMode))))
 
 (defn get-selected-frame
@@ -111,7 +111,7 @@
 
   returns: the currently active JInternalFrame or
      null - `javax.swing.JInternalFrame`"
-  ([this]
+  ([^javax.swing.JDesktopPane this]
     (-> this (.getSelectedFrame))))
 
 (defn get-all-frames-in-layer
@@ -122,7 +122,7 @@
   layer - an int specifying the desktop layer - `int`
 
   returns: an array of JInternalFrame objects - `javax.swing.JInternalFrame[]`"
-  ([this layer]
+  ([^javax.swing.JDesktopPane this ^Integer layer]
     (-> this (.getAllFramesInLayer layer))))
 
 (defn get-all-frames
@@ -130,14 +130,14 @@
    desktop. Returns iconified frames as well as expanded frames.
 
   returns: an array of JInternalFrame objects - `javax.swing.JInternalFrame[]`"
-  ([this]
+  ([^javax.swing.JDesktopPane this]
     (-> this (.getAllFrames))))
 
 (defn get-ui-class-id
   "Returns the name of the L&F class that renders this component.
 
   returns: the string `DesktopPaneUI` - `java.lang.String`"
-  ([this]
+  ([^javax.swing.JDesktopPane this]
     (-> this (.getUIClassID))))
 
 (defn select-frame
@@ -147,7 +147,7 @@
 
   returns: the JInternalFrame that was selected or null
            if nothing was selected - `javax.swing.JInternalFrame`"
-  ([this forward]
+  ([^javax.swing.JDesktopPane this ^Boolean forward]
     (-> this (.selectFrame forward))))
 
 (defn get-desktop-manager
@@ -155,14 +155,14 @@
    desktop-specific UI actions.
 
   returns: `javax.swing.DesktopManager`"
-  ([this]
+  ([^javax.swing.JDesktopPane this]
     (-> this (.getDesktopManager))))
 
 (defn set-ui
   "Sets the L&F object that renders this component.
 
   ui - the DesktopPaneUI L&F object - `javax.swing.plaf.DesktopPaneUI`"
-  ([this ui]
+  ([^javax.swing.JDesktopPane this ^javax.swing.plaf.DesktopPaneUI ui]
     (-> this (.setUI ui))))
 
 (defn remove
@@ -177,7 +177,7 @@
    reflect the changes.
 
   comp - the component to be removed - `java.awt.Component`"
-  ([this comp]
+  ([^javax.swing.JDesktopPane this ^java.awt.Component comp]
     (-> this (.remove comp))))
 
 (defn get-ui
@@ -185,7 +185,7 @@
 
   returns: the DesktopPaneUI object that
      renders this component - `javax.swing.plaf.DesktopPaneUI`"
-  ([this]
+  ([^javax.swing.JDesktopPane this]
     (-> this (.getUI))))
 
 (defn set-desktop-manager
@@ -194,7 +194,7 @@
    LookAndFeel.
 
   d - the DesktopManager to use - `javax.swing.DesktopManager`"
-  ([this d]
+  ([^javax.swing.JDesktopPane this ^javax.swing.DesktopManager d]
     (-> this (.setDesktopManager d))))
 
 (defn get-accessible-context
@@ -206,7 +206,7 @@
 
   returns: an AccessibleJDesktopPane that serves as the
            AccessibleContext of this JDesktopPane - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^javax.swing.JDesktopPane this]
     (-> this (.getAccessibleContext))))
 
 (defn set-selected-frame
@@ -218,12 +218,12 @@
     the frame.
 
   f - the internal frame that's currently selected - `javax.swing.JInternalFrame`"
-  ([this f]
+  ([^javax.swing.JDesktopPane this ^javax.swing.JInternalFrame f]
     (-> this (.setSelectedFrame f))))
 
 (defn remove-all
   "Removes all the components from this container."
-  ([this]
+  ([^javax.swing.JDesktopPane this]
     (-> this (.removeAll))))
 
 (defn set-drag-mode
@@ -232,13 +232,13 @@
    performance or aesthetic reasons.
 
   drag-mode - the style of drag to use for items in the Desktop - `int`"
-  ([this drag-mode]
+  ([^javax.swing.JDesktopPane this ^Integer drag-mode]
     (-> this (.setDragMode drag-mode))))
 
 (defn update-ui
   "Notification from the UIManager that the L&F has changed.
    Replaces the current UI object with the latest version from the
    UIManager."
-  ([this]
+  ([^javax.swing.JDesktopPane this]
     (-> this (.updateUI))))
 

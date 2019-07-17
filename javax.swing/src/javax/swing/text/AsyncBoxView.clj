@@ -22,14 +22,14 @@
 
   elem - the element of the model to represent - `javax.swing.text.Element`
   axis - the axis to tile along. This can be either X_AXIS or Y_AXIS. - `int`"
-  ([elem axis]
+  ([^javax.swing.text.Element elem ^Integer axis]
     (new AsyncBoxView elem axis)))
 
 (defn get-bottom-inset
   "Get the bottom part of the margin around the view.
 
   returns: `float`"
-  ([this]
+  ([^javax.swing.text.AsyncBoxView this]
     (-> this (.getBottomInset))))
 
 (defn set-parent
@@ -46,7 +46,7 @@
    the loadChildren method will not be called.
 
   parent - the parent of the view, null if none - `javax.swing.text.View`"
-  ([this parent]
+  ([^javax.swing.text.AsyncBoxView this ^javax.swing.text.View parent]
     (-> this (.setParent parent))))
 
 (defn get-preferred-span
@@ -61,7 +61,7 @@
              The parent may choose to resize or break the view. - `float`
 
   throws: java.lang.IllegalArgumentException - for an invalid axis type"
-  ([this axis]
+  ([^javax.swing.text.AsyncBoxView this ^Integer axis]
     (-> this (.getPreferredSpan axis))))
 
 (defn get-view
@@ -71,7 +71,7 @@
   n - the number of the view to get, >= 0 && < getViewCount() - `int`
 
   returns: the view - `javax.swing.text.View`"
-  ([this n]
+  ([^javax.swing.text.AsyncBoxView this ^Integer n]
     (-> this (.getView n))))
 
 (defn get-child-allocation
@@ -85,14 +85,14 @@
   a - the allocation to this view. - `java.awt.Shape`
 
   returns: the allocation to the child - `java.awt.Shape`"
-  ([this index a]
+  ([^javax.swing.text.AsyncBoxView this ^Integer index ^java.awt.Shape a]
     (-> this (.getChildAllocation index a))))
 
 (defn set-right-inset
   "Set the right part of the margin around the view.
 
   i - the value of the inset - `float`"
-  ([this i]
+  ([^javax.swing.text.AsyncBoxView this ^Float i]
     (-> this (.setRightInset i))))
 
 (defn replace
@@ -106,7 +106,7 @@
   offset - the starting offset into the child views >= 0 - `int`
   length - the number of existing views to replace >= 0 - `int`
   views - the child views to insert - `javax.swing.text.View[]`"
-  ([this offset length views]
+  ([^javax.swing.text.AsyncBoxView this ^Integer offset ^Integer length ^javax.swing.text.View[] views]
     (-> this (.replace offset length views))))
 
 (defn get-major-axis
@@ -115,35 +115,35 @@
    either X_AXIS or Y_AXIS.
 
   returns: `int`"
-  ([this]
+  ([^javax.swing.text.AsyncBoxView this]
     (-> this (.getMajorAxis))))
 
 (defn get-right-inset
   "Get the right part of the margin around the view.
 
   returns: `float`"
-  ([this]
+  ([^javax.swing.text.AsyncBoxView this]
     (-> this (.getRightInset))))
 
 (defn get-top-inset
   "Get the top part of the margin around the view.
 
   returns: `float`"
-  ([this]
+  ([^javax.swing.text.AsyncBoxView this]
     (-> this (.getTopInset))))
 
 (defn set-top-inset
   "Set the top part of the margin around the view.
 
   i - the value of the inset - `float`"
-  ([this i]
+  ([^javax.swing.text.AsyncBoxView this ^Float i]
     (-> this (.setTopInset i))))
 
 (defn set-bottom-inset
   "Set the bottom part of the margin around the view.
 
   i - the value of the inset - `float`"
-  ([this i]
+  ([^javax.swing.text.AsyncBoxView this ^Float i]
     (-> this (.setBottomInset i))))
 
 (defn get-minimum-span
@@ -158,7 +158,7 @@
              The parent may choose to resize or break the view. - `float`
 
   throws: java.lang.IllegalArgumentException - for an invalid axis type"
-  ([this axis]
+  ([^javax.swing.text.AsyncBoxView this ^Integer axis]
     (-> this (.getMinimumSpan axis))))
 
 (defn get-maximum-span
@@ -173,7 +173,7 @@
              The parent may choose to resize or break the view. - `float`
 
   throws: java.lang.IllegalArgumentException - for an invalid axis type"
-  ([this axis]
+  ([^javax.swing.text.AsyncBoxView this ^Integer axis]
     (-> this (.getMaximumSpan axis))))
 
 (defn paint
@@ -192,7 +192,7 @@
 
   g - the rendering surface to use - `java.awt.Graphics`
   alloc - the allocated region to render into - `java.awt.Shape`"
-  ([this g alloc]
+  ([^javax.swing.text.AsyncBoxView this ^java.awt.Graphics g ^java.awt.Shape alloc]
     (-> this (.paint g alloc))))
 
 (defn set-size
@@ -207,7 +207,7 @@
 
   width - the width >= 0 - `float`
   height - the height >= 0 - `float`"
-  ([this width height]
+  ([^javax.swing.text.AsyncBoxView this ^Float width ^Float height]
     (-> this (.setSize width height))))
 
 (defn preference-changed
@@ -220,7 +220,7 @@
   child - the child view - `javax.swing.text.View`
   width - true if the width preference has changed - `boolean`
   height - true if the height preference has changed - `boolean`"
-  ([this child width height]
+  ([^javax.swing.text.AsyncBoxView this ^javax.swing.text.View child ^Boolean width ^Boolean height]
     (-> this (.preferenceChanged child width height))))
 
 (defn view-to-model
@@ -245,7 +245,7 @@
     given point in the view >= 0.  The biasReturn argument will be
    filled in to indicate that the point given is closer to the next
    character in the model or the previous character in the model. - `int`"
-  ([this x y a bias-return]
+  ([^javax.swing.text.AsyncBoxView this ^Float x ^Float y ^java.awt.Shape a ^javax.swing.text.Position.Bias[] bias-return]
     (-> this (.viewToModel x y a bias-return))))
 
 (defn get-minor-axis
@@ -254,14 +254,14 @@
    either X_AXIS or Y_AXIS.
 
   returns: `int`"
-  ([this]
+  ([^javax.swing.text.AsyncBoxView this]
     (-> this (.getMinorAxis))))
 
 (defn get-left-inset
   "Get the left part of the margin around the view.
 
   returns: `float`"
-  ([this]
+  ([^javax.swing.text.AsyncBoxView this]
     (-> this (.getLeftInset))))
 
 (defn get-view-index
@@ -275,7 +275,7 @@
 
   returns: index of the view representing the given position, or
      -1 if no view represents that position - `int`"
-  ([this pos b]
+  ([^javax.swing.text.AsyncBoxView this ^Integer pos ^javax.swing.text.Position.Bias b]
     (-> this (.getViewIndex pos b))))
 
 (defn get-view-count
@@ -284,7 +284,7 @@
    returns 0.
 
   returns: the number of views >= 0 - `int`"
-  ([this]
+  ([^javax.swing.text.AsyncBoxView this]
     (-> this (.getViewCount))))
 
 (defn model-to-view
@@ -298,14 +298,14 @@
   returns: the bounding box of the given position is returned - `java.awt.Shape`
 
   throws: javax.swing.text.BadLocationException - if the given position does not represent a valid location in the associated document"
-  ([this pos a b]
+  ([^javax.swing.text.AsyncBoxView this ^Integer pos ^java.awt.Shape a ^javax.swing.text.Position.Bias b]
     (-> this (.modelToView pos a b))))
 
 (defn set-left-inset
   "Set the left part of the margin around the view.
 
   i - the value of the inset - `float`"
-  ([this i]
+  ([^javax.swing.text.AsyncBoxView this ^Float i]
     (-> this (.setLeftInset i))))
 
 (defn get-next-visual-position-from
@@ -328,6 +328,6 @@
     location visual position - `int`
 
   throws: javax.swing.text.BadLocationException - the given position is not a valid position within the document"
-  ([this pos b a direction bias-ret]
+  ([^javax.swing.text.AsyncBoxView this ^Integer pos ^javax.swing.text.Position.Bias b ^java.awt.Shape a ^Integer direction ^javax.swing.text.Position.Bias[] bias-ret]
     (-> this (.getNextVisualPositionFrom pos b a direction bias-ret))))
 

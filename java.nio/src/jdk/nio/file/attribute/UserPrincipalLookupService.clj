@@ -24,7 +24,7 @@
   returns: a user principal - `java.nio.file.attribute.UserPrincipal`
 
   throws: java.nio.file.attribute.UserPrincipalNotFoundException - the principal does not exist"
-  ([this name]
+  ([^java.nio.file.attribute.UserPrincipalLookupService this ^java.lang.String name]
     (-> this (.lookupPrincipalByName name))))
 
 (defn lookup-principal-by-group-name
@@ -40,6 +40,6 @@
   returns: a group principal - `java.nio.file.attribute.GroupPrincipal`
 
   throws: java.nio.file.attribute.UserPrincipalNotFoundException - the principal does not exist or is not a group"
-  ([this group]
+  ([^java.nio.file.attribute.UserPrincipalLookupService this ^java.lang.String group]
     (-> this (.lookupPrincipalByGroupName group))))
 

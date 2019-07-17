@@ -12,7 +12,7 @@
 
   name - the string that names the file type - `java.lang.String`
   extension - the string that commonly marks the file type without leading dot. - `java.lang.String`"
-  ([name extension]
+  ([^java.lang.String name ^java.lang.String extension]
     (new AudioFileFormat$Type name extension)))
 
 (def *-wave
@@ -62,14 +62,14 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([this obj]
+  ([^javax.sound.sampled.AudioFileFormat$Type this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Finalizes the hashCode method
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^javax.sound.sampled.AudioFileFormat$Type this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -77,13 +77,13 @@
    of the file type.
 
   returns: the file type's name - `java.lang.String`"
-  ([this]
+  ([^javax.sound.sampled.AudioFileFormat$Type this]
     (-> this (.toString))))
 
 (defn get-extension
   "Obtains the common file name extension for this file type.
 
   returns: file type extension - `java.lang.String`"
-  ([this]
+  ([^javax.sound.sampled.AudioFileFormat$Type this]
     (-> this (.getExtension))))
 

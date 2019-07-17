@@ -21,29 +21,29 @@
   "c - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([c]
+  ([^javax.swing.JComponent c]
     (MetalSliderUI/createUI c)))
 
 (defn install-ui
   "Description copied from class: ComponentUI
 
   c - the component where this UI delegate is being installed - `javax.swing.JComponent`"
-  ([this c]
+  ([^javax.swing.plaf.metal.MetalSliderUI this ^javax.swing.JComponent c]
     (-> this (.installUI c))))
 
 (defn paint-thumb
   "g - `java.awt.Graphics`"
-  ([this g]
+  ([^javax.swing.plaf.metal.MetalSliderUI this ^java.awt.Graphics g]
     (-> this (.paintThumb g))))
 
 (defn paint-track
   "g - `java.awt.Graphics`"
-  ([this g]
+  ([^javax.swing.plaf.metal.MetalSliderUI this ^java.awt.Graphics g]
     (-> this (.paintTrack g))))
 
 (defn paint-focus
   "g - `java.awt.Graphics`"
-  ([this g]
+  ([^javax.swing.plaf.metal.MetalSliderUI this ^java.awt.Graphics g]
     (-> this (.paintFocus g))))
 
 (defn get-tick-length
@@ -52,6 +52,6 @@
    determine the tick area rectangle.
 
   returns: `int`"
-  ([this]
+  ([^javax.swing.plaf.metal.MetalSliderUI this]
     (-> this (.getTickLength))))
 

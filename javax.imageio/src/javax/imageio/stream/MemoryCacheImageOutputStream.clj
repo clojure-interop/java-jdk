@@ -19,7 +19,7 @@
   stream - an OutputStream to write to. - `java.io.OutputStream`
 
   throws: java.lang.IllegalArgumentException - if stream is null."
-  ([stream]
+  ([^java.io.OutputStream stream]
     (new MemoryCacheImageOutputStream stream)))
 
 (defn read
@@ -33,9 +33,9 @@
    to indicate EOF. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this b off len]
+  ([^javax.imageio.stream.MemoryCacheImageOutputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  ([this]
+  ([^javax.imageio.stream.MemoryCacheImageOutputStream this]
     (-> this (.read))))
 
 (defn write
@@ -46,16 +46,16 @@
   len - the number of bytes to write. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this b off len]
+  ([^javax.imageio.stream.MemoryCacheImageOutputStream this b ^Integer off ^Integer len]
     (-> this (.write b off len)))
-  ([this b]
+  ([^javax.imageio.stream.MemoryCacheImageOutputStream this ^Integer b]
     (-> this (.write b))))
 
 (defn length
   "Description copied from class: ImageInputStreamImpl
 
   returns: -1L to indicate unknown length. - `long`"
-  ([this]
+  ([^javax.imageio.stream.MemoryCacheImageOutputStream this]
     (-> this (.length))))
 
 (defn cached?
@@ -64,7 +64,7 @@
    seeking backwards.
 
   returns: true. - `boolean`"
-  ([this]
+  ([^javax.imageio.stream.MemoryCacheImageOutputStream this]
     (-> this (.isCached))))
 
 (defn cached-file?
@@ -72,7 +72,7 @@
    ImageOutputStream does not maintain a file cache.
 
   returns: false. - `boolean`"
-  ([this]
+  ([^javax.imageio.stream.MemoryCacheImageOutputStream this]
     (-> this (.isCachedFile))))
 
 (defn cached-memory?
@@ -80,7 +80,7 @@
    ImageOutputStream maintains a main memory cache.
 
   returns: true. - `boolean`"
-  ([this]
+  ([^javax.imageio.stream.MemoryCacheImageOutputStream this]
     (-> this (.isCachedMemory))))
 
 (defn close
@@ -90,7 +90,7 @@
    is not closed.
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this]
+  ([^javax.imageio.stream.MemoryCacheImageOutputStream this]
     (-> this (.close))))
 
 (defn flush-before
@@ -99,6 +99,6 @@
   pos - a long containing the length of the stream prefix that may be flushed. - `long`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this pos]
+  ([^javax.imageio.stream.MemoryCacheImageOutputStream this ^Long pos]
     (-> this (.flushBefore pos))))
 

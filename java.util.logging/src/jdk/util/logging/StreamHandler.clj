@@ -48,7 +48,7 @@
 
   out - the target output stream - `java.io.OutputStream`
   formatter - Formatter to be used to format output - `java.util.logging.Formatter`"
-  ([out formatter]
+  ([^java.io.OutputStream out ^java.util.logging.Formatter formatter]
     (new StreamHandler out formatter))
   ([]
     (new StreamHandler )))
@@ -62,7 +62,7 @@
   encoding - The name of a supported character encoding. May be null, to indicate the default platform encoding. - `java.lang.String`
 
   throws: java.lang.SecurityException - if a security manager exists and if the caller does not have LoggingPermission(`control`)."
-  ([this encoding]
+  ([^java.util.logging.StreamHandler this ^java.lang.String encoding]
     (-> this (.setEncoding encoding))))
 
 (defn publish
@@ -80,7 +80,7 @@
    written to the stream before the LogRecord is written.
 
   record - description of the log event. A null record is silently ignored and is not published - `java.util.logging.LogRecord`"
-  ([this record]
+  ([^java.util.logging.StreamHandler this ^java.util.logging.LogRecord record]
     (-> this (.publish record))))
 
 (defn loggable?
@@ -93,12 +93,12 @@
   record - a LogRecord - `java.util.logging.LogRecord`
 
   returns: true if the LogRecord would be logged. - `boolean`"
-  ([this record]
+  ([^java.util.logging.StreamHandler this ^java.util.logging.LogRecord record]
     (-> this (.isLoggable record))))
 
 (defn flush
   "Flush any buffered messages."
-  ([this]
+  ([^java.util.logging.StreamHandler this]
     (-> this (.flush))))
 
 (defn close
@@ -110,6 +110,6 @@
    `tail` string.
 
   throws: java.lang.SecurityException - if a security manager exists and if the caller does not have LoggingPermission(`control`)."
-  ([this]
+  ([^java.util.logging.StreamHandler this]
     (-> this (.close))))
 

@@ -31,7 +31,7 @@
   ntfy-obj - The notification which is to be passed to the 'handleNotification' method of the listener object. - `javax.management.Notification`
 
   throws: javax.management.MBeanException - Wraps a distributed communication Exception."
-  ([this ntfy-obj]
+  ([^. this ^javax.management.Notification ntfy-obj]
     (-> this (.sendNotification ntfy-obj))))
 
 (defn send-attribute-change-notification
@@ -42,9 +42,9 @@
   new-value - The current value for the Attribute The constructed attributeChangeNotification will be: type `jmx.attribute.change` source this ModelMBean instance sequence 1 attributeName oldValue.getName() attributeType oldValue's class attributeOldValue oldValue.getValue() attributeNewValue newValue.getValue() - `javax.management.Attribute`
 
   throws: javax.management.MBeanException - Wraps a distributed communication Exception."
-  ([this old-value new-value]
+  ([^. this ^javax.management.Attribute old-value ^javax.management.Attribute new-value]
     (-> this (.sendAttributeChangeNotification old-value new-value)))
-  ([this notification]
+  ([^. this ^javax.management.AttributeChangeNotification notification]
     (-> this (.sendAttributeChangeNotification notification))))
 
 (defn add-attribute-change-notification-listener
@@ -58,7 +58,7 @@
   handback - The context to be sent to the listener with the notification when a notification is emitted. - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - The listener cannot be null."
-  ([this listener attribute-name handback]
+  ([^. this ^javax.management.NotificationListener listener ^java.lang.String attribute-name ^java.lang.Object handback]
     (-> this (.addAttributeChangeNotificationListener listener attribute-name handback))))
 
 (defn remove-attribute-change-notification-listener
@@ -68,6 +68,6 @@
   attribute-name - The attribute for which the listener no longer wants to receive attributeChangeNotifications. If null the listener will be removed for all attributeChangeNotifications. - `java.lang.String`
 
   throws: javax.management.ListenerNotFoundException - The listener is not registered in the MBean or is null."
-  ([this listener attribute-name]
+  ([^. this ^javax.management.NotificationListener listener ^java.lang.String attribute-name]
     (-> this (.removeAttributeChangeNotificationListener listener attribute-name))))
 

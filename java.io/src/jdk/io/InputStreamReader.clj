@@ -29,9 +29,9 @@
   charset-name - The name of a supported charset - `java.lang.String`
 
   throws: java.io.UnsupportedEncodingException - If the named charset is not supported"
-  ([in charset-name]
+  ([^java.io.InputStream in ^java.lang.String charset-name]
     (new InputStreamReader in charset-name))
-  ([in]
+  ([^java.io.InputStream in]
     (new InputStreamReader in)))
 
 (defn get-encoding
@@ -47,7 +47,7 @@
 
   returns: The historical name of this encoding, or
            null if the stream has been closed - `java.lang.String`"
-  ([this]
+  ([^java.io.InputStreamReader this]
     (-> this (.getEncoding))))
 
 (defn read
@@ -61,9 +61,9 @@
                stream has been reached - `int`
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([this cbuf offset length]
+  ([^java.io.InputStreamReader this cbuf ^Integer offset ^Integer length]
     (-> this (.read cbuf offset length)))
-  ([this]
+  ([^java.io.InputStreamReader this]
     (-> this (.read))))
 
 (defn ready
@@ -76,13 +76,13 @@
    next read will block. - `boolean`
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([this]
+  ([^java.io.InputStreamReader this]
     (-> this (.ready))))
 
 (defn close
   "Description copied from class: Reader
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([this]
+  ([^java.io.InputStreamReader this]
     (-> this (.close))))
 

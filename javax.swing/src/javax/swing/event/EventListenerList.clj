@@ -87,7 +87,7 @@
    itself.
 
   returns: `java.lang.Object[]`"
-  ([this]
+  ([^javax.swing.event.EventListenerList this]
     (-> this (.getListenerList))))
 
 (defn get-listeners
@@ -98,7 +98,7 @@
   returns: all of the listeners of the specified type. - `<T extends java.util.EventListener> T[]`
 
   throws: java.lang.ClassCastException - if the supplied class is not assignable to EventListener"
-  ([this t]
+  ([^javax.swing.event.EventListenerList this ^java.lang.Class t]
     (-> this (.getListeners t))))
 
 (defn get-listener-count
@@ -108,9 +108,9 @@
   t - `java.lang.Class<?>`
 
   returns: `int`"
-  ([this t]
+  ([^javax.swing.event.EventListenerList this ^java.lang.Class t]
     (-> this (.getListenerCount t)))
-  ([this]
+  ([^javax.swing.event.EventListenerList this]
     (-> this (.getListenerCount))))
 
 (defn add
@@ -120,7 +120,7 @@
   l - the listener to be added - `T`
 
   returns: `<T extends java.util.EventListener> void`"
-  ([this t l]
+  ([^javax.swing.event.EventListenerList this ^java.lang.Class t l]
     (-> this (.add t l))))
 
 (defn remove
@@ -130,13 +130,13 @@
   l - the listener to be removed - `T`
 
   returns: `<T extends java.util.EventListener> void`"
-  ([this t l]
+  ([^javax.swing.event.EventListenerList this ^java.lang.Class t l]
     (-> this (.remove t l))))
 
 (defn to-string
   "Returns a string representation of the EventListenerList.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^javax.swing.event.EventListenerList this]
     (-> this (.toString))))
 

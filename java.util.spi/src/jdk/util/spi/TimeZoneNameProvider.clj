@@ -31,7 +31,7 @@
        given locale, or null if it's not available. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if style is invalid, or locale isn't one of the locales returned from getAvailableLocales()."
-  ([this id daylight style locale]
+  ([^java.util.spi.TimeZoneNameProvider this ^java.lang.String id ^Boolean daylight ^Integer style ^java.util.Locale locale]
     (-> this (.getDisplayName id daylight style locale))))
 
 (defn get-generic-display-name
@@ -53,6 +53,6 @@
        given locale, or null if it's not available. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if style is invalid, or locale isn't one of the locales returned from getAvailableLocales()."
-  ([this id style locale]
+  ([^java.util.spi.TimeZoneNameProvider this ^java.lang.String id ^Integer style ^java.util.Locale locale]
     (-> this (.getGenericDisplayName id style locale))))
 

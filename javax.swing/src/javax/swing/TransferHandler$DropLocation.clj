@@ -16,7 +16,7 @@
    current location within the component.
 
   returns: the drop point. - `java.awt.Point`"
-  ([this]
+  ([^javax.swing.TransferHandler$DropLocation this]
     (-> this (.getDropPoint))))
 
 (defn to-string
@@ -26,6 +26,6 @@
    between implementations.
 
   returns: a string representation of this drop location - `java.lang.String`"
-  ([this]
+  ([^javax.swing.TransferHandler$DropLocation this]
     (-> this (.toString))))
 

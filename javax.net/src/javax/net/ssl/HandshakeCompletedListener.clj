@@ -16,6 +16,6 @@
    when a SSL handshake is completed.
 
   event - the event identifying when the SSL Handshake completed on a given SSL connection - `javax.net.ssl.HandshakeCompletedEvent`"
-  ([this event]
+  ([^. this ^javax.net.ssl.HandshakeCompletedEvent event]
     (-> this (.handshakeCompleted event))))
 

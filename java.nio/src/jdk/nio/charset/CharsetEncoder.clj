@@ -89,7 +89,7 @@
   returns: This encoder - `java.nio.charset.CharsetEncoder`
 
   throws: java.lang.IllegalArgumentException - If the precondition on the parameter does not hold"
-  ([this new-action]
+  ([^java.nio.charset.CharsetEncoder this ^java.nio.charset.CodingErrorAction new-action]
     (-> this (.onUnmappableCharacter new-action))))
 
 (defn legal-replacement?
@@ -107,7 +107,7 @@
 
   returns: true if, and only if, the given byte array
             is a legal replacement value for this encoder - `boolean`"
-  ([this repl]
+  ([^java.nio.charset.CharsetEncoder this repl]
     (-> this (.isLegalReplacement repl))))
 
 (defn unmappable-character-action
@@ -115,7 +115,7 @@
 
   returns: The current unmappable-character action, which is never
            null - `java.nio.charset.CodingErrorAction`"
-  ([this]
+  ([^java.nio.charset.CharsetEncoder this]
     (-> this (.unmappableCharacterAction))))
 
 (defn can-encode?
@@ -140,14 +140,14 @@
             the given character - `boolean`
 
   throws: java.lang.IllegalStateException - If an encoding operation is already in progress"
-  ([this c]
+  ([^java.nio.charset.CharsetEncoder this ^Character c]
     (-> this (.canEncode c))))
 
 (defn malformed-input-action
   "Returns this encoder's current action for malformed-input errors.
 
   returns: The current malformed-input action, which is never null - `java.nio.charset.CodingErrorAction`"
-  ([this]
+  ([^java.nio.charset.CharsetEncoder this]
     (-> this (.malformedInputAction))))
 
 (defn average-bytes-per-char
@@ -157,7 +157,7 @@
 
   returns: The average number of bytes produced
             per character of input - `float`"
-  ([this]
+  ([^java.nio.charset.CharsetEncoder this]
     (-> this (.averageBytesPerChar))))
 
 (defn replacement
@@ -165,7 +165,7 @@
 
   returns: This encoder's current replacement,
             which is never null and is never empty - `byte[]`"
-  ([this]
+  ([^java.nio.charset.CharsetEncoder this]
     (-> this (.replacement))))
 
 (defn replace-with
@@ -180,7 +180,7 @@
   returns: This encoder - `java.nio.charset.CharsetEncoder`
 
   throws: java.lang.IllegalArgumentException - If the preconditions on the parameter do not hold"
-  ([this new-replacement]
+  ([^java.nio.charset.CharsetEncoder this new-replacement]
     (-> this (.replaceWith new-replacement))))
 
 (defn flush
@@ -213,7 +213,7 @@
             CoderResult.OVERFLOW - `java.nio.charset.CoderResult`
 
   throws: java.lang.IllegalStateException - If the previous step of the current encoding operation was an invocation neither of the flush method nor of the three-argument encode method with a value of true for the endOfInput parameter"
-  ([this out]
+  ([^java.nio.charset.CharsetEncoder this ^java.nio.ByteBuffer out]
     (-> this (.flush out))))
 
 (defn reset
@@ -224,7 +224,7 @@
    charset-specific reset actions.
 
   returns: This encoder - `java.nio.charset.CharsetEncoder`"
-  ([this]
+  ([^java.nio.charset.CharsetEncoder this]
     (-> this (.reset))))
 
 (defn on-malformed-input
@@ -237,7 +237,7 @@
   returns: This encoder - `java.nio.charset.CharsetEncoder`
 
   throws: java.lang.IllegalArgumentException - If the precondition on the parameter does not hold"
-  ([this new-action]
+  ([^java.nio.charset.CharsetEncoder this ^java.nio.charset.CodingErrorAction new-action]
     (-> this (.onMalformedInput new-action))))
 
 (defn max-bytes-per-char
@@ -247,7 +247,7 @@
 
   returns: The maximum number of bytes that will be produced per
             character of input - `float`"
-  ([this]
+  ([^java.nio.charset.CharsetEncoder this]
     (-> this (.maxBytesPerChar))))
 
 (defn encode
@@ -325,15 +325,15 @@
   returns: A coder-result object describing the reason for termination - `java.nio.charset.CoderResult`
 
   throws: java.lang.IllegalStateException - If an encoding operation is already in progress and the previous step was an invocation neither of the reset method, nor of this method with a value of false for the endOfInput parameter, nor of this method with a value of true for the endOfInput parameter but a return value indicating an incomplete encoding operation"
-  ([this in out end-of-input]
+  ([^java.nio.charset.CharsetEncoder this ^java.nio.CharBuffer in ^java.nio.ByteBuffer out ^Boolean end-of-input]
     (-> this (.encode in out end-of-input)))
-  ([this in]
+  ([^java.nio.charset.CharsetEncoder this ^java.nio.CharBuffer in]
     (-> this (.encode in))))
 
 (defn charset
   "Returns the charset that created this encoder.
 
   returns: This encoder's charset - `java.nio..Charset`"
-  ([this]
+  ([^java.nio.charset.CharsetEncoder this]
     (-> this (.charset))))
 

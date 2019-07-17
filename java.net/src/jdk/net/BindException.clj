@@ -14,7 +14,7 @@
    description of this error.
 
   msg - the detail message - `java.lang.String`"
-  ([msg]
+  ([^java.lang.String msg]
     (new BindException msg))
   ([]
     (new BindException )))

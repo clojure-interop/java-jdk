@@ -25,6 +25,6 @@
    to fire a NamingEvent.
 
   evt - The nonnull event. - `javax.naming.event.NamingExceptionEvent`"
-  ([this evt]
+  ([^. this ^javax.naming.event.NamingExceptionEvent evt]
     (-> this (.namingExceptionThrown evt))))
 

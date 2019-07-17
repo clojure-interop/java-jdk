@@ -14,9 +14,9 @@
 
   s - Detail message, or null if no detail message. - `java.lang.String`
   e - Chained exception. - `java.lang.Exception`"
-  ([s e]
+  ([^java.lang.String s ^java.lang.Exception e]
     (new PrintException s e))
-  ([s]
+  ([^java.lang.String s]
     (new PrintException s))
   ([]
     (new PrintException )))

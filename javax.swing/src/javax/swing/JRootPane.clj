@@ -253,7 +253,7 @@
   window-decoration-style - Constant identifying Window decorations to provide. - `int`
 
   throws: java.lang.IllegalArgumentException - if style is not one of: NONE, FRAME, PLAIN_DIALOG, INFORMATION_DIALOG, ERROR_DIALOG, COLOR_CHOOSER_DIALOG, FILE_CHOOSER_DIALOG, QUESTION_DIALOG, or WARNING_DIALOG."
-  ([this window-decoration-style]
+  ([^javax.swing.JRootPane this ^Integer window-decoration-style]
     (-> this (.setWindowDecorationStyle window-decoration-style))))
 
 (defn set-layered-pane
@@ -263,7 +263,7 @@
   layered - the JLayeredPane to use - `javax.swing.JLayeredPane`
 
   throws: java.awt.IllegalComponentStateException - (a runtime exception) if the layered pane parameter is null"
-  ([this layered]
+  ([^javax.swing.JRootPane this ^javax.swing.JLayeredPane layered]
     (-> this (.setLayeredPane layered))))
 
 (defn get-window-decoration-style
@@ -275,7 +275,7 @@
           ERROR_DIALOG, COLOR_CHOOSER_DIALOG,
           FILE_CHOOSER_DIALOG, QUESTION_DIALOG or
           WARNING_DIALOG. - `int`"
-  ([this]
+  ([^javax.swing.JRootPane this]
     (-> this (.getWindowDecorationStyle))))
 
 (defn get-content-pane
@@ -283,7 +283,7 @@
    parented by the root pane.
 
   returns: the Container that holds the component-contents - `java.awt.Container`"
-  ([this]
+  ([^javax.swing.JRootPane this]
     (-> this (.getContentPane))))
 
 (defn set-double-buffered
@@ -295,7 +295,7 @@
     is also buffered, the ancestor buffer will be used.
 
   a-flag - if true, set this component to be double buffered - `boolean`"
-  ([this a-flag]
+  ([^javax.swing.JRootPane this ^Boolean a-flag]
     (-> this (.setDoubleBuffered a-flag))))
 
 (defn get-ui-class-id
@@ -303,14 +303,14 @@
    that renders this component.
 
   returns: the string `RootPaneUI` - `java.lang.String`"
-  ([this]
+  ([^javax.swing.JRootPane this]
     (-> this (.getUIClassID))))
 
 (defn get-j-menu-bar
   "Returns the menu bar from the layered pane.
 
   returns: the JMenuBar used in the pane - `javax.swing.JMenuBar`"
-  ([this]
+  ([^javax.swing.JRootPane this]
     (-> this (.getJMenuBar))))
 
 (defn validate-root?
@@ -323,7 +323,7 @@
    because both classes override isValidateRoot to return true.
 
   returns: true - `boolean`"
-  ([this]
+  ([^javax.swing.JRootPane this]
     (-> this (.isValidateRoot))))
 
 (defn add-notify
@@ -332,7 +332,7 @@
    set up with KeyboardAction event listeners.
    This method is called by the toolkit internally and should
    not be called directly by programs."
-  ([this]
+  ([^javax.swing.JRootPane this]
     (-> this (.addNotify))))
 
 (defn set-menu-bar
@@ -342,14 +342,14 @@
   menu - the JMenuBar to add. - `javax.swing.JMenuBar`
 
   returns: `java.lang.  void`"
-  ([this menu]
+  ([^javax.swing.JRootPane this ^javax.swing.JMenuBar menu]
     (-> this (.setMenuBar menu))))
 
 (defn set-ui
   "Sets the L&F object that renders this component.
 
   ui - the LabelUI L&F object - `javax.swing.plaf.RootPaneUI`"
-  ([this ui]
+  ([^javax.swing.JRootPane this ^javax.swing.plaf.RootPaneUI ui]
     (-> this (.setUI ui))))
 
 (defn remove-notify
@@ -358,21 +358,21 @@
    set up in the the chain of parent components are removed.
    This method is called by the toolkit internally and should
    not be called directly by programs."
-  ([this]
+  ([^javax.swing.JRootPane this]
     (-> this (.removeNotify))))
 
 (defn get-ui
   "Returns the L&F object that renders this component.
 
   returns: LabelUI object - `javax.swing.plaf.RootPaneUI`"
-  ([this]
+  ([^javax.swing.JRootPane this]
     (-> this (.getUI))))
 
 (defn get-glass-pane
   "Returns the current glass pane for this JRootPane.
 
   returns: the current glass pane - `java.awt.Component`"
-  ([this]
+  ([^javax.swing.JRootPane this]
     (-> this (.getGlassPane))))
 
 (defn get-accessible-context
@@ -384,7 +384,7 @@
 
   returns: an AccessibleJRootPane that serves as the
            AccessibleContext of this JRootPane - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^javax.swing.JRootPane this]
     (-> this (.getAccessibleContext))))
 
 (defn set-glass-pane
@@ -410,21 +410,21 @@
   glass - the Component to use as the glass pane for this JRootPane - `java.awt.Component`
 
   throws: java.lang.NullPointerException - if the glass parameter is null"
-  ([this glass]
+  ([^javax.swing.JRootPane this ^java.awt.Component glass]
     (-> this (.setGlassPane glass))))
 
 (defn get-default-button
   "Returns the value of the defaultButton property.
 
   returns: the JButton which is currently the default button - `javax.swing.JButton`"
-  ([this]
+  ([^javax.swing.JRootPane this]
     (-> this (.getDefaultButton))))
 
 (defn set-j-menu-bar
   "Adds or changes the menu bar used in the layered pane.
 
   menu - the JMenuBar to add - `javax.swing.JMenuBar`"
-  ([this menu]
+  ([^javax.swing.JRootPane this ^javax.swing.JMenuBar menu]
     (-> this (.setJMenuBar menu))))
 
 (defn get-menu-bar
@@ -432,7 +432,7 @@
     replaced by getJMenuBar().
 
   returns: the JMenuBar used in the pane - `java.lang.  javax.swing.JMenuBar`"
-  ([this]
+  ([^javax.swing.JRootPane this]
     (-> this (.getMenuBar))))
 
 (defn set-content-pane
@@ -447,7 +447,7 @@
   content - the Container to use for component-contents - `java.awt.Container`
 
   throws: java.awt.IllegalComponentStateException - (a runtime exception) if the content pane parameter is null"
-  ([this content]
+  ([^javax.swing.JRootPane this ^java.awt.Container content]
     (-> this (.setContentPane content))))
 
 (defn get-layered-pane
@@ -455,7 +455,7 @@
    typically holds a content pane and an optional JMenuBar.
 
   returns: the JLayeredPane currently in use - `javax.swing.JLayeredPane`"
-  ([this]
+  ([^javax.swing.JRootPane this]
     (-> this (.getLayeredPane))))
 
 (defn set-default-button
@@ -473,12 +473,12 @@
    property to null.
 
   default-button - the JButton which is to be the default button - `javax.swing.JButton`"
-  ([this default-button]
+  ([^javax.swing.JRootPane this ^javax.swing.JButton default-button]
     (-> this (.setDefaultButton default-button))))
 
 (defn update-ui
   "Resets the UI property to a value from the current look and feel."
-  ([this]
+  ([^javax.swing.JRootPane this]
     (-> this (.updateUI))))
 
 (defn optimized-drawing-enabled?
@@ -492,6 +492,6 @@
    glassPane.
 
   returns: true if this component's children don't overlap - `boolean`"
-  ([this]
+  ([^javax.swing.JRootPane this]
     (-> this (.isOptimizedDrawingEnabled))))
 

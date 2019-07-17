@@ -49,7 +49,7 @@
   shrink-priority - the priority level of this glyph when it shrinks - `int`
   shrink-left-limit - the maximum amount by which the left side of this glyph can shrink. Must be non-negative. - `float`
   shrink-right-limit - the maximum amount by which the right side of this glyph can shrink. Must be non-negative. - `float`"
-  ([weight grow-absorb grow-priority grow-left-limit grow-right-limit shrink-absorb shrink-priority shrink-left-limit shrink-right-limit]
+  ([^Float weight ^Boolean grow-absorb ^Integer grow-priority ^Float grow-left-limit ^Float grow-right-limit ^Boolean shrink-absorb ^Integer shrink-priority ^Float shrink-left-limit ^Float shrink-right-limit]
     (new GlyphJustificationInfo weight grow-absorb grow-priority grow-left-limit grow-right-limit shrink-absorb shrink-priority shrink-left-limit shrink-right-limit)))
 
 (def *-priority-kashida

@@ -27,7 +27,7 @@
    evt.getNewBinding().
 
   evt - The nonnull event. - `javax.naming.event.NamingEvent`"
-  ([this evt]
+  ([^. this ^javax.naming.event.NamingEvent evt]
     (-> this (.objectAdded evt))))
 
 (defn object-removed
@@ -37,7 +37,7 @@
    evt.getOldBinding().
 
   evt - The nonnull event. - `javax.naming.event.NamingEvent`"
-  ([this evt]
+  ([^. this ^javax.naming.event.NamingEvent evt]
     (-> this (.objectRemoved evt))))
 
 (defn object-renamed
@@ -50,6 +50,6 @@
    scope in which the listener has registered interest.
 
   evt - The nonnull event. - `javax.naming.event.NamingEvent`"
-  ([this evt]
+  ([^. this ^javax.naming.event.NamingEvent evt]
     (-> this (.objectRenamed evt))))
 

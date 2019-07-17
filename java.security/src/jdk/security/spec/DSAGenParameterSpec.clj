@@ -17,9 +17,9 @@
   seed-len - the desired length of the domain parameter seed in bits, shall be equal to or greater than subprimeQLen. - `int`
 
   throws: java.lang.IllegalArgumentException - if primePLenLen, subprimeQLen, or seedLen is illegal per the specification of FIPS 186-3."
-  ([prime-p-len subprime-q-len seed-len]
+  ([^Integer prime-p-len ^Integer subprime-q-len ^Integer seed-len]
     (new DSAGenParameterSpec prime-p-len subprime-q-len seed-len))
-  ([prime-p-len subprime-q-len]
+  ([^Integer prime-p-len ^Integer subprime-q-len]
     (new DSAGenParameterSpec prime-p-len subprime-q-len)))
 
 (defn get-prime-p-length
@@ -27,7 +27,7 @@
    to-be-generated DSA domain parameters in bits.
 
   returns: the length of the prime P. - `int`"
-  ([this]
+  ([^java.security.spec.DSAGenParameterSpec this]
     (-> this (.getPrimePLength))))
 
 (defn get-subprime-q-length
@@ -35,13 +35,13 @@
    to-be-generated DSA domain parameters in bits.
 
   returns: the length of the sub-prime Q. - `int`"
-  ([this]
+  ([^java.security.spec.DSAGenParameterSpec this]
     (-> this (.getSubprimeQLength))))
 
 (defn get-seed-length
   "Returns the desired length of the domain parameter seed in bits.
 
   returns: the length of the domain parameter seed. - `int`"
-  ([this]
+  ([^java.security.spec.DSAGenParameterSpec this]
     (-> this (.getSeedLength))))
 

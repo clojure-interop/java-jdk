@@ -26,11 +26,11 @@
   sequence-number - The notification sequence number within the source object. - `long`
   time-stamp - The notification emission date. - `long`
   message - The detailed message. - `java.lang.String`"
-  ([type source sequence-number time-stamp message]
+  ([^java.lang.String type ^java.lang.Object source ^Long sequence-number ^Long time-stamp ^java.lang.String message]
     (new Notification type source sequence-number time-stamp message))
-  ([type source sequence-number message]
+  ([^java.lang.String type ^java.lang.Object source ^Long sequence-number ^java.lang.String message]
     (new Notification type source sequence-number message))
-  ([type source sequence-number]
+  ([^java.lang.String type ^java.lang.Object source ^Long sequence-number]
     (new Notification type source sequence-number)))
 
 (defn get-type
@@ -40,7 +40,7 @@
    similar to Java properties. It is recommended that the notification type
    should follow the reverse-domain-name convention used by Java package
    names.  An example of a notification type is com.example.alarm.router. - `java.lang.String`"
-  ([this]
+  ([^javax.management.Notification this]
     (-> this (.getType))))
 
 (defn get-user-data
@@ -48,56 +48,56 @@
 
   returns: The user data object. It is used for whatever data
    the notification source wishes to communicate to its consumers. - `java.lang.Object`"
-  ([this]
+  ([^javax.management.Notification this]
     (-> this (.getUserData))))
 
 (defn set-sequence-number
   "Set the notification sequence number.
 
   sequence-number - The notification sequence number within the source object. It is a serial number identifying a particular instance of notification in the context of the notification source. - `long`"
-  ([this sequence-number]
+  ([^javax.management.Notification this ^Long sequence-number]
     (-> this (.setSequenceNumber sequence-number))))
 
 (defn set-time-stamp
   "Set the notification timestamp.
 
   time-stamp - The notification timestamp. It indicates when the notification was generated. - `long`"
-  ([this time-stamp]
+  ([^javax.management.Notification this ^Long time-stamp]
     (-> this (.setTimeStamp time-stamp))))
 
 (defn to-string
   "Returns a String representation of this notification.
 
   returns: A String representation of this notification. - `java.lang.String`"
-  ([this]
+  ([^javax.management.Notification this]
     (-> this (.toString))))
 
 (defn get-time-stamp
   "Get the notification timestamp.
 
   returns: The notification timestamp. - `long`"
-  ([this]
+  ([^javax.management.Notification this]
     (-> this (.getTimeStamp))))
 
 (defn get-message
   "Get the notification message.
 
   returns: The message string of this notification object. - `java.lang.String`"
-  ([this]
+  ([^javax.management.Notification this]
     (-> this (.getMessage))))
 
 (defn set-user-data
   "Set the user data.
 
   user-data - The user data object. It is used for whatever data the notification source wishes to communicate to its consumers. - `java.lang.Object`"
-  ([this user-data]
+  ([^javax.management.Notification this ^java.lang.Object user-data]
     (-> this (.setUserData user-data))))
 
 (defn set-source
   "Sets the source.
 
   source - the new source for this object. - `java.lang.Object`"
-  ([this source]
+  ([^javax.management.Notification this ^java.lang.Object source]
     (-> this (.setSource source))))
 
 (defn get-sequence-number
@@ -107,6 +107,6 @@
    identifying a particular instance of notification in the context of the notification source.
    The notification model does not assume that notifications will be received in the same order
    that they are sent. The sequence number helps listeners to sort received notifications. - `long`"
-  ([this]
+  ([^javax.management.Notification this]
     (-> this (.getSequenceNumber))))
 

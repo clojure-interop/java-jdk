@@ -13,6 +13,6 @@
   "Invoked when an action occurs.
 
   e - `java.awt.event.ActionEvent`"
-  ([this e]
+  ([^. this ^java.awt.event.ActionEvent e]
     (-> this (.actionPerformed e))))
 

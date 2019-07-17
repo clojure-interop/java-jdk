@@ -36,7 +36,7 @@
   policy - the new system Policy object. - `javax.security.auth.Policy`
 
   throws: java.lang.SecurityException - if the current thread does not have permission to set the Policy."
-  ([policy]
+  ([^javax.security.auth.Policy policy]
     (Policy/setPolicy policy)))
 
 (defn get-permissions
@@ -49,13 +49,13 @@
                     Subject and code specified in
                     the provided subject and cs
                     parameters. - `java.security.PermissionCollection`"
-  ([this subject cs]
+  ([^javax.security.auth.Policy this ^javax.security.auth.Subject subject ^java.security.CodeSource cs]
     (-> this (.getPermissions subject cs))))
 
 (defn refresh
   "Deprecated.
 
   throws: java.lang.SecurityException - if the caller does not have permission to refresh the Policy."
-  ([this]
+  ([^javax.security.auth.Policy this]
     (-> this (.refresh))))
 

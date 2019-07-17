@@ -25,13 +25,13 @@
   sql-state - an XOPEN or SQL:2003 code identifying the warning - `java.lang.String`
   vendor-code - a database vendor-specific warning code - `int`
   cause - the underlying reason for this SQLWarning (which is saved for later retrieval by the getCause() method); may be null indicating the cause is non-existent or unknown. - `java.lang.Throwable`"
-  ([reason sql-state vendor-code cause]
+  ([^java.lang.String reason ^java.lang.String sql-state ^Integer vendor-code ^java.lang.Throwable cause]
     (new SQLWarning reason sql-state vendor-code cause))
-  ([reason sql-state vendor-code]
+  ([^java.lang.String reason ^java.lang.String sql-state ^Integer vendor-code]
     (new SQLWarning reason sql-state vendor-code))
-  ([reason sql-state]
+  ([^java.lang.String reason ^java.lang.String sql-state]
     (new SQLWarning reason sql-state))
-  ([reason]
+  ([^java.lang.String reason]
     (new SQLWarning reason))
   ([]
     (new SQLWarning )))
@@ -41,13 +41,13 @@
    setNextWarning.
 
   returns: the next SQLException in the chain; null if none - `java.sql.SQLWarning`"
-  ([this]
+  ([^java.sql.SQLWarning this]
     (-> this (.getNextWarning))))
 
 (defn set-next-warning
   "Adds a SQLWarning object to the end of the chain.
 
   w - the new end of the SQLException chain - `java.sql.SQLWarning`"
-  ([this w]
+  ([^java.sql.SQLWarning this ^java.sql.SQLWarning w]
     (-> this (.setNextWarning w))))
 

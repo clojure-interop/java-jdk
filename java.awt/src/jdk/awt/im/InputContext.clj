@@ -54,7 +54,7 @@
    for example, when the user moves the insertion point within the text
    (but outside the composed text), or when the component's text is
    saved to a file or copied to the clipboard."
-  ([this]
+  ([^java.awt.im.InputContext this]
     (-> this (.endComposition))))
 
 (defn reconvert
@@ -71,7 +71,7 @@
    text in an InputMethodEvent.
 
   throws: java.lang.UnsupportedOperationException - if there is no current input method available or the current input method does not support the reconversion operation."
-  ([this]
+  ([^java.awt.im.InputContext this]
     (-> this (.reconvert))))
 
 (defn dispose
@@ -79,7 +79,7 @@
    Called by AWT for the default input context of each Window.
    If no input methods are available, then this method
    has no effect."
-  ([this]
+  ([^java.awt.im.InputContext this]
     (-> this (.dispose))))
 
 (defn get-locale
@@ -98,7 +98,7 @@
    is the system's default locale.
 
   returns: the current locale of the current input method or keyboard layout - `java.util.Locale`"
-  ([this]
+  ([^java.awt.im.InputContext this]
     (-> this (.getLocale))))
 
 (defn select-input-method
@@ -151,7 +151,7 @@
            this call supports the desired locale. - `boolean`
 
   throws: java.lang.NullPointerException - if locale is null"
-  ([this locale]
+  ([^java.awt.im.InputContext this ^java.util.Locale locale]
     (-> this (.selectInputMethod locale))))
 
 (defn get-input-method-control-object
@@ -167,7 +167,7 @@
    not provide an input method control object, then null is returned.
 
   returns: A control object from the current input method, or null. - `java.lang.Object`"
-  ([this]
+  ([^java.awt.im.InputContext this]
     (-> this (.getInputMethodControlObject))))
 
 (defn remove-notify
@@ -183,7 +183,7 @@
   client - Client component - `java.awt.Component`
 
   throws: java.lang.NullPointerException - if client is null"
-  ([this client]
+  ([^java.awt.im.InputContext this ^java.awt.Component client]
     (-> this (.removeNotify client))))
 
 (defn composition-enabled?
@@ -196,7 +196,7 @@
    composition; false otherwise - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if there is no current input method available or the current input method does not support checking whether it is enabled for composition"
-  ([this]
+  ([^java.awt.im.InputContext this]
     (-> this (.isCompositionEnabled))))
 
 (defn dispatch-event
@@ -206,7 +206,7 @@
   event - The event - `java.awt.AWTEvent`
 
   throws: java.lang.NullPointerException - if event is null"
-  ([this event]
+  ([^java.awt.im.InputContext this ^java.awt.AWTEvent event]
     (-> this (.dispatchEvent event))))
 
 (defn set-character-subsets
@@ -221,7 +221,7 @@
    If no input methods are available, then this method has no effect.
 
   subsets - The subsets of the Unicode character set from which characters may be input - `java.lang.Character.Subset[]`"
-  ([this subsets]
+  ([^java.awt.im.InputContext this ^java.lang.Character.Subset[] subsets]
     (-> this (.setCharacterSubsets subsets))))
 
 (defn set-composition-enabled
@@ -246,6 +246,6 @@
   enable - whether to enable the current input method for composition - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if there is no current input method available or the current input method does not support the enabling/disabling operation"
-  ([this enable]
+  ([^java.awt.im.InputContext this ^Boolean enable]
     (-> this (.setCompositionEnabled enable))))
 

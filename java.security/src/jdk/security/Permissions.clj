@@ -47,7 +47,7 @@
   permission - the Permission object to add. - `java.security.Permission`
 
   throws: java.lang.SecurityException - if this Permissions object is marked as readonly."
-  ([this permission]
+  ([^java.security.Permissions this ^java.security.Permission permission]
     (-> this (.add permission))))
 
 (defn implies
@@ -76,7 +76,7 @@
   returns: true if `permission` is implied by the permissions in the
    PermissionCollection it
    belongs to, false if not. - `boolean`"
-  ([this permission]
+  ([^java.security.Permissions this ^java.security.Permission permission]
     (-> this (.implies permission))))
 
 (defn elements
@@ -84,6 +84,6 @@
    PermissionCollections in this Permissions object.
 
   returns: an enumeration of all the Permissions. - `java.util.Enumeration<java.security.Permission>`"
-  ([this]
+  ([^java.security.Permissions this]
     (-> this (.elements))))
 

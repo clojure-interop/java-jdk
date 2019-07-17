@@ -13,14 +13,14 @@
    specifier.
 
   s - The format specifier which does not have a width - `java.lang.String`"
-  ([s]
+  ([^java.lang.String s]
     (new MissingFormatWidthException s)))
 
 (defn get-format-specifier
   "Returns the format specifier which does not have a width.
 
   returns: The format specifier which does not have a width - `java.lang.String`"
-  ([this]
+  ([^java.util.MissingFormatWidthException this]
     (-> this (.getFormatSpecifier))))
 
 (defn get-message
@@ -28,6 +28,6 @@
 
   returns: the detail message string of this Throwable instance
             (which may be null). - `java.lang.String`"
-  ([this]
+  ([^java.util.MissingFormatWidthException this]
     (-> this (.getMessage))))
 

@@ -14,6 +14,6 @@
   "Gets a result.
 
   returns: a result - `long`"
-  ([this]
+  ([^. this]
     (-> this (.getAsLong))))
 

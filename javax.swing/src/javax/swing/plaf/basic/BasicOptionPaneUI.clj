@@ -52,7 +52,7 @@
   x - `javax.swing.JComponent`
 
   returns: `javax.swing.plaf.ComponentUI`"
-  ([x]
+  ([^javax.swing.JComponent x]
     (BasicOptionPaneUI/createUI x)))
 
 (defn install-ui
@@ -60,7 +60,7 @@
    JOptionPane.
 
   c - the component where this UI delegate is being installed - `javax.swing.JComponent`"
-  ([this c]
+  ([^javax.swing.plaf.basic.BasicOptionPaneUI this ^javax.swing.JComponent c]
     (-> this (.installUI c))))
 
 (defn uninstall-ui
@@ -68,7 +68,7 @@
    pane.
 
   c - the component from which this UI delegate is being removed; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([this c]
+  ([^javax.swing.plaf.basic.BasicOptionPaneUI this ^javax.swing.JComponent c]
     (-> this (.uninstallUI c))))
 
 (defn get-minimum-option-pane-size
@@ -76,7 +76,7 @@
    provided for subclassers wishing to offer a different minimum size.
 
   returns: `java.awt.Dimension`"
-  ([this]
+  ([^javax.swing.plaf.basic.BasicOptionPaneUI this]
     (-> this (.getMinimumOptionPaneSize))))
 
 (defn get-preferred-size
@@ -89,7 +89,7 @@
   c - the component whose preferred size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: `java.awt.Dimension`"
-  ([this c]
+  ([^javax.swing.plaf.basic.BasicOptionPaneUI this ^javax.swing.JComponent c]
     (-> this (.getPreferredSize c))))
 
 (defn select-initial-value
@@ -97,7 +97,7 @@
    otherwise request focus on the default value
 
   op - `javax.swing.JOptionPane`"
-  ([this op]
+  ([^javax.swing.plaf.basic.BasicOptionPaneUI this ^javax.swing.JOptionPane op]
     (-> this (.selectInitialValue op))))
 
 (defn contains-custom-components
@@ -107,6 +107,6 @@
   op - `javax.swing.JOptionPane`
 
   returns: `boolean`"
-  ([this op]
+  ([^javax.swing.plaf.basic.BasicOptionPaneUI this ^javax.swing.JOptionPane op]
     (-> this (.containsCustomComponents op))))
 

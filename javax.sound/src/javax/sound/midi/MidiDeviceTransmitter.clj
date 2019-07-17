@@ -9,6 +9,6 @@
   "Obtains a MidiDevice object which is an owner of this Transmitter.
 
   returns: a MidiDevice object which is an owner of this Transmitter - `javax.sound.midi.MidiDevice`"
-  ([this]
+  ([^. this]
     (-> this (.getMidiDevice))))
 

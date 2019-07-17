@@ -25,7 +25,7 @@
   record - the log record to be formatted. - `java.util.logging.LogRecord`
 
   returns: a formatted log record - `java.lang.String`"
-  ([this record]
+  ([^java.util.logging.XMLFormatter this ^java.util.logging.LogRecord record]
     (-> this (.format record))))
 
 (defn get-head
@@ -34,7 +34,7 @@
   h - The target handler (can be null) - `java.util.logging.Handler`
 
   returns: a valid XML string - `java.lang.String`"
-  ([this h]
+  ([^java.util.logging.XMLFormatter this ^java.util.logging.Handler h]
     (-> this (.getHead h))))
 
 (defn get-tail
@@ -43,6 +43,6 @@
   h - The target handler (can be null) - `java.util.logging.Handler`
 
   returns: a valid XML string - `java.lang.String`"
-  ([this h]
+  ([^java.util.logging.XMLFormatter this ^java.util.logging.Handler h]
     (-> this (.getTail h))))
 

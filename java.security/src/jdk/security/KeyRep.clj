@@ -22,6 +22,6 @@
   encoded - the encoded bytes returned from Key.getEncoded() - `byte[]`
 
   throws: java.lang.NullPointerException - if type is null, if algorithm is null, if format is null, or if encoded is null"
-  ([type algorithm format encoded]
+  ([^java.security.KeyRep.Type type ^java.lang.String algorithm ^java.lang.String format encoded]
     (new KeyRep type algorithm format encoded)))
 

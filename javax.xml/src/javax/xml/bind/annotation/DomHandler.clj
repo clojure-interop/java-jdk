@@ -33,7 +33,7 @@
 
   returns: null if the operation fails. The error must have been reported
         to the error handler. - `DomHandler.ResultT`"
-  ([this error-handler]
+  ([^. this ^javax.xml.bind.ValidationEventHandler error-handler]
     (-> this (.createUnmarshaller error-handler))))
 
 (defn get-element
@@ -49,7 +49,7 @@
 
   returns: null if the operation fails. The error must have been reported
         to the error handler. - `DomHandler.ElementT`"
-  ([this rt]
+  ([^. this ^DomHandler.ResultT rt]
     (-> this (.getElement rt))))
 
 (defn marshal
@@ -66,6 +66,6 @@
 
   returns: null if there was an error. The error should have been reported
         to the handler. - `javax.xml.transform.Source`"
-  ([this n error-handler]
+  ([^. this ^DomHandler.ElementT n ^javax.xml.bind.ValidationEventHandler error-handler]
     (-> this (.marshal n error-handler))))
 

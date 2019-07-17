@@ -16,6 +16,6 @@
    that need to occur when text changes.
 
   e - `java.awt.event.TextEvent`"
-  ([this e]
+  ([^. this ^java.awt.event.TextEvent e]
     (-> this (.textValueChanged e))))
 

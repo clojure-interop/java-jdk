@@ -31,15 +31,15 @@
   tree - a JTree object - `javax.swing.JTree`
   renderer - a DefaultTreeCellRenderer object - `javax.swing.tree.DefaultTreeCellRenderer`
   editor - a TreeCellEditor object - `javax.swing.tree.TreeCellEditor`"
-  ([tree renderer editor]
+  ([^javax.swing.JTree tree ^javax.swing.tree.DefaultTreeCellRenderer renderer ^javax.swing.tree.TreeCellEditor editor]
     (new DefaultTreeCellEditor tree renderer editor))
-  ([tree renderer]
+  ([^javax.swing.JTree tree ^javax.swing.tree.DefaultTreeCellRenderer renderer]
     (new DefaultTreeCellEditor tree renderer)))
 
 (defn cancel-cell-editing
   "Messages cancelCellEditing to the
    realEditor and removes it from this instance."
-  ([this]
+  ([^javax.swing.tree.DefaultTreeCellEditor this]
     (-> this (.cancelCellEditing))))
 
 (defn stop-cell-editing
@@ -48,14 +48,14 @@
    otherwise false is returned.
 
   returns: true if editing was stopped; false otherwise - `boolean`"
-  ([this]
+  ([^javax.swing.tree.DefaultTreeCellEditor this]
     (-> this (.stopCellEditing))))
 
 (defn get-cell-editor-value
   "Returns the value currently being edited.
 
   returns: the value currently being edited - `java.lang.Object`"
-  ([this]
+  ([^javax.swing.tree.DefaultTreeCellEditor this]
     (-> this (.getCellEditorValue))))
 
 (defn get-tree-cell-editor-component
@@ -69,7 +69,7 @@
   row - the row index of the node being edited - `int`
 
   returns: the component for editing - `java.awt.Component`"
-  ([this tree value is-selected expanded leaf row]
+  ([^javax.swing.tree.DefaultTreeCellEditor this ^javax.swing.JTree tree ^java.lang.Object value ^Boolean is-selected ^Boolean expanded ^Boolean leaf ^Integer row]
     (-> this (.getTreeCellEditorComponent tree value is-selected expanded leaf row))))
 
 (defn cell-editable?
@@ -80,7 +80,7 @@
   event - the event the editor should use to consider whether to begin editing or not - `java.util.EventObject`
 
   returns: true if editing can be started - `boolean`"
-  ([this event]
+  ([^javax.swing.tree.DefaultTreeCellEditor this ^java.util.EventObject event]
     (-> this (.isCellEditable event))))
 
 (defn should-select-cell?
@@ -90,21 +90,21 @@
 
   returns: true if the editor would like the editing cell to be selected;
       otherwise returns false - `boolean`"
-  ([this event]
+  ([^javax.swing.tree.DefaultTreeCellEditor this ^java.util.EventObject event]
     (-> this (.shouldSelectCell event))))
 
 (defn set-border-selection-color
   "Sets the color to use for the border.
 
   new-color - the new border color - `java.awt.Color`"
-  ([this new-color]
+  ([^javax.swing.tree.DefaultTreeCellEditor this ^java.awt.Color new-color]
     (-> this (.setBorderSelectionColor new-color))))
 
 (defn value-changed
   "Resets lastPath.
 
   e - the event that characterizes the change. - `javax.swing.event.TreeSelectionEvent`"
-  ([this e]
+  ([^javax.swing.tree.DefaultTreeCellEditor this ^javax.swing.event.TreeSelectionEvent e]
     (-> this (.valueChanged e))))
 
 (defn set-font
@@ -116,7 +116,7 @@
    created that will pick up this font.
 
   font - the editing Font - `java.awt.Font`"
-  ([this font]
+  ([^javax.swing.tree.DefaultTreeCellEditor this ^java.awt.Font font]
     (-> this (.setFont font))))
 
 (defn action-performed
@@ -124,14 +124,14 @@
    session.
 
   e - `java.awt.event.ActionEvent`"
-  ([this e]
+  ([^javax.swing.tree.DefaultTreeCellEditor this ^java.awt.event.ActionEvent e]
     (-> this (.actionPerformed e))))
 
 (defn add-cell-editor-listener
   "Adds the CellEditorListener.
 
   l - the listener to be added - `javax.swing.event.CellEditorListener`"
-  ([this l]
+  ([^javax.swing.tree.DefaultTreeCellEditor this ^javax.swing.event.CellEditorListener l]
     (-> this (.addCellEditorListener l))))
 
 (defn get-cell-editor-listeners
@@ -140,27 +140,27 @@
 
   returns: all of the CellEditorListeners added or an empty
            array if no listeners have been added - `javax.swing.event.CellEditorListener[]`"
-  ([this]
+  ([^javax.swing.tree.DefaultTreeCellEditor this]
     (-> this (.getCellEditorListeners))))
 
 (defn get-font
   "Gets the font used for editing.
 
   returns: the editing Font - `java.awt.Font`"
-  ([this]
+  ([^javax.swing.tree.DefaultTreeCellEditor this]
     (-> this (.getFont))))
 
 (defn remove-cell-editor-listener
   "Removes the previously added CellEditorListener.
 
   l - the listener to be removed - `javax.swing.event.CellEditorListener`"
-  ([this l]
+  ([^javax.swing.tree.DefaultTreeCellEditor this ^javax.swing.event.CellEditorListener l]
     (-> this (.removeCellEditorListener l))))
 
 (defn get-border-selection-color
   "Returns the color the border is drawn.
 
   returns: the border selection color - `java.awt.Color`"
-  ([this]
+  ([^javax.swing.tree.DefaultTreeCellEditor this]
     (-> this (.getBorderSelectionColor))))
 

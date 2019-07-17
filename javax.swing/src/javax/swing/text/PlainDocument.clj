@@ -33,7 +33,7 @@
    and the tab size set to 8.
 
   c - the container for the content - `javax.swing.text.AbstractDocument.Content`"
-  ([c]
+  ([^javax.swing.text.AbstractDocument.Content c]
     (new PlainDocument c))
   ([]
     (new PlainDocument )))
@@ -74,14 +74,14 @@
   a - the attributes for the inserted content - `javax.swing.text.AttributeSet`
 
   throws: javax.swing.text.BadLocationException - the given insert position is not a valid position within the document"
-  ([this offs str a]
+  ([^javax.swing.text.PlainDocument this ^Integer offs ^java.lang.String str ^javax.swing.text.AttributeSet a]
     (-> this (.insertString offs str a))))
 
 (defn get-default-root-element
   "Gets the default root element for the document model.
 
   returns: the root - `javax.swing.text.Element`"
-  ([this]
+  ([^javax.swing.text.PlainDocument this]
     (-> this (.getDefaultRootElement))))
 
 (defn get-paragraph-element
@@ -91,6 +91,6 @@
   pos - the starting offset >= 0 - `int`
 
   returns: the element - `javax.swing.text.Element`"
-  ([this pos]
+  ([^javax.swing.text.PlainDocument this ^Integer pos]
     (-> this (.getParagraphElement pos))))
 

@@ -9,7 +9,7 @@
    The new interval includes both index0 and index1.
 
   e - a ListDataEvent encapsulating the event information - `javax.swing.event.ListDataEvent`"
-  ([this e]
+  ([^. this ^javax.swing.event.ListDataEvent e]
     (-> this (.intervalAdded e))))
 
 (defn interval-removed
@@ -18,7 +18,7 @@
    includes both index0 and index1.
 
   e - a ListDataEvent encapsulating the event information - `javax.swing.event.ListDataEvent`"
-  ([this e]
+  ([^. this ^javax.swing.event.ListDataEvent e]
     (-> this (.intervalRemoved e))))
 
 (defn contents-changed
@@ -28,6 +28,6 @@
    replaced. Index0 and index1 bracket the change.
 
   e - a ListDataEvent encapsulating the event information - `javax.swing.event.ListDataEvent`"
-  ([this e]
+  ([^. this ^javax.swing.event.ListDataEvent e]
     (-> this (.contentsChanged e))))
 

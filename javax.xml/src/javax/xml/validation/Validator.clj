@@ -28,7 +28,7 @@
   returns: The current value of the feature (true or false). - `boolean`
 
   throws: org.xml.sax.SAXNotRecognizedException - If the feature value can't be assigned or retrieved."
-  ([this name]
+  ([^javax.xml.validation.Validator this ^java.lang.String name]
     (-> this (.getFeature name))))
 
 (defn get-resource-resolver
@@ -38,7 +38,7 @@
         the setResourceResolver(LSResourceResolver) method, or null
         if that method has never been called since this Validator
         has created. - `org.w3c.dom.ls.LSResourceResolver`"
-  ([this]
+  ([^javax.xml.validation.Validator this]
     (-> this (.getResourceResolver))))
 
 (defn set-resource-resolver
@@ -76,7 +76,7 @@
    this field is set to null.
 
   resource-resolver - A new resource resolver to be set. This parameter can be null. - `org.w3c.dom.ls.LSResourceResolver`"
-  ([this resource-resolver]
+  ([^javax.xml.validation.Validator this ^org.w3c.dom.ls.LSResourceResolver resource-resolver]
     (-> this (.setResourceResolver resource-resolver))))
 
 (defn validate
@@ -153,9 +153,9 @@
   result - The Result object that receives (possibly augmented) XML. This parameter can be null if the caller is not interested in it. Note that when a DOMResult is used, a validator might just pass the same DOM node from DOMSource to DOMResult (in which case source.getNode()==result.getNode()), it might copy the entire DOM tree, or it might alter the node given by the source. - `javax.xml.transform.Result`
 
   throws: java.lang.IllegalArgumentException - If the Result type doesn't match the Source type of if the Source is an XML artifact that the implementation cannot validate (for example, a processing instruction)."
-  ([this source result]
+  ([^javax.xml.validation.Validator this ^javax.xml.transform.Source source ^javax.xml.transform.Result result]
     (-> this (.validate source result)))
-  ([this source]
+  ([^javax.xml.validation.Validator this ^javax.xml.transform.Source source]
     (-> this (.validate source))))
 
 (defn get-error-handler
@@ -165,7 +165,7 @@
         the setErrorHandler(ErrorHandler) method, or null
         if that method has never been called since this Validator
         has created. - `org.xml.sax.ErrorHandler`"
-  ([this]
+  ([^javax.xml.validation.Validator this]
     (-> this (.getErrorHandler))))
 
 (defn reset
@@ -179,7 +179,7 @@
    The reset Validator is not guaranteed to have the same LSResourceResolver or ErrorHandler
    Objects, e.g. Object.equals(Object obj).  It is guaranteed to have a functionally equal
    LSResourceResolver and ErrorHandler."
-  ([this]
+  ([^javax.xml.validation.Validator this]
     (-> this (.reset))))
 
 (defn set-error-handler
@@ -230,7 +230,7 @@
    this field is set to null.
 
   error-handler - A new error handler to be set. This parameter can be null. - `org.xml.sax.ErrorHandler`"
-  ([this error-handler]
+  ([^javax.xml.validation.Validator this ^org.xml.sax.ErrorHandler error-handler]
     (-> this (.setErrorHandler error-handler))))
 
 (defn get-property
@@ -253,7 +253,7 @@
   returns: The current value of the property. - `java.lang.Object`
 
   throws: org.xml.sax.SAXNotRecognizedException - If the property value can't be assigned or retrieved."
-  ([this name]
+  ([^javax.xml.validation.Validator this ^java.lang.String name]
     (-> this (.getProperty name))))
 
 (defn set-feature
@@ -275,7 +275,7 @@
   value - The requested value of the feature (true or false). - `boolean`
 
   throws: org.xml.sax.SAXNotRecognizedException - If the feature value can't be assigned or retrieved."
-  ([this name value]
+  ([^javax.xml.validation.Validator this ^java.lang.String name ^Boolean value]
     (-> this (.setFeature name value))))
 
 (defn set-property
@@ -312,6 +312,6 @@
   object - The requested value for the property. - `java.lang.Object`
 
   throws: org.xml.sax.SAXNotRecognizedException - If the property value can't be assigned or retrieved."
-  ([this name object]
+  ([^javax.xml.validation.Validator this ^java.lang.String name ^java.lang.Object object]
     (-> this (.setProperty name object))))
 

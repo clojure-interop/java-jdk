@@ -20,10 +20,10 @@
   parent - The parent class loader for delegation. - `java.lang.ClassLoader`
   factory - The URLStreamHandlerFactory to use when creating URLs. - `java.net.URLStreamHandlerFactory`
   delegate-to-clr - True if, when a class is not found in either the parent ClassLoader or the URLs, the MLet should delegate to its containing MBeanServer's ClassLoaderRepository. - `boolean`"
-  ([urls parent factory delegate-to-clr]
+  ([^java.net.URL[] urls ^java.lang.ClassLoader parent ^java.net.URLStreamHandlerFactory factory ^Boolean delegate-to-clr]
     (new PrivateMLet urls parent factory delegate-to-clr))
-  ([urls parent delegate-to-clr]
+  ([^java.net.URL[] urls ^java.lang.ClassLoader parent ^Boolean delegate-to-clr]
     (new PrivateMLet urls parent delegate-to-clr))
-  ([urls delegate-to-clr]
+  ([^java.net.URL[] urls ^Boolean delegate-to-clr]
     (new PrivateMLet urls delegate-to-clr)))
 

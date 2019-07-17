@@ -79,7 +79,7 @@
   actions - the action string. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - If actions is null, empty or contains an action other than the specified possible actions."
-  ([path actions]
+  ([^java.lang.String path ^java.lang.String actions]
     (new FilePermission path actions)))
 
 (defn implies
@@ -100,7 +100,7 @@
   returns: true if the specified permission is not
                     null and is implied by this object,
                     false otherwise. - `boolean`"
-  ([this p]
+  ([^java.io.FilePermission this ^java.security.Permission p]
     (-> this (.implies p))))
 
 (defn equals
@@ -112,14 +112,14 @@
   returns: true if obj is a FilePermission, and has the same
             pathname and actions as this FilePermission object,
             false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.io.FilePermission this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Returns the hash code value for this object.
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^java.io.FilePermission this]
     (-> this (.hashCode))))
 
 (defn get-actions
@@ -130,7 +130,7 @@
    will return the string `read,write`.
 
   returns: the canonical string representation of the actions. - `java.lang.String`"
-  ([this]
+  ([^java.io.FilePermission this]
     (-> this (.getActions))))
 
 (defn new-permission-collection
@@ -163,6 +163,6 @@
 
   returns: a new PermissionCollection object suitable for storing
    FilePermissions. - `java.security.PermissionCollection`"
-  ([this]
+  ([^java.io.FilePermission this]
     (-> this (.newPermissionCollection))))
 

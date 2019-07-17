@@ -33,7 +33,7 @@
    name.
 
   node-name - the name of the node, as a String. - `java.lang.String`"
-  ([node-name]
+  ([^java.lang.String node-name]
     (new IIOMetadataNode node-name))
   ([]
     (new IIOMetadataNode )))
@@ -47,21 +47,21 @@
   returns: The Attr node with the specified attribute local
      name and namespace URI or null if there is no such
      attribute. - `org.w3c.dom.Attr`"
-  ([this namespace-uri local-name]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^java.lang.String namespace-uri ^java.lang.String local-name]
     (-> this (.getAttributeNodeNS namespace-uri local-name))))
 
 (defn get-node-value
   "Returns the value associated with this node.
 
   returns: the node value, as a String. - `java.lang.String`"
-  ([this]
+  ([^javax.imageio.metadata.IIOMetadataNode this]
     (-> this (.getNodeValue))))
 
 (defn set-prefix
   "Does nothing, since namespaces are not supported.
 
   prefix - a String, which is ignored. - `java.lang.String`"
-  ([this prefix]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^java.lang.String prefix]
     (-> this (.setPrefix prefix))))
 
 (defn get-elements-by-tag-name
@@ -70,7 +70,7 @@
   name - The name of the tag to match on. The special value `*` matches all tags. - `java.lang.String`
 
   returns: A list of matching Element nodes. - `org.w3c.dom.NodeList`"
-  ([this name]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^java.lang.String name]
     (-> this (.getElementsByTagName name))))
 
 (defn get-owner-document
@@ -78,14 +78,14 @@
    do not belong to any Document.
 
   returns: null. - `org.w3c.dom.Document`"
-  ([this]
+  ([^javax.imageio.metadata.IIOMetadataNode this]
     (-> this (.getOwnerDocument))))
 
 (defn set-user-object
   "Sets the value associated with this node.
 
   user-object - the user Object. - `java.lang.Object`"
-  ([this user-object]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^java.lang.Object user-object]
     (-> this (.setUserObject user-object))))
 
 (defn get-schema-type-info
@@ -95,7 +95,7 @@
   returns: `org.w3c.dom.TypeInfo`
 
   throws: org.w3c.dom.DOMException - - always."
-  ([this]
+  ([^javax.imageio.metadata.IIOMetadataNode this]
     (-> this (.getSchemaTypeInfo))))
 
 (defn get-attribute-ns
@@ -106,7 +106,7 @@
 
   returns: The Attr value as a string, or the empty string
      if that attribute does not have a specified or default value. - `java.lang.String`"
-  ([this namespace-uri local-name]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^java.lang.String namespace-uri ^java.lang.String local-name]
     (-> this (.getAttributeNS namespace-uri local-name))))
 
 (defn get-feature
@@ -126,7 +126,7 @@
      childNodes, etc. - `java.lang.Object`
 
   throws: org.w3c.dom.DOMException - - always."
-  ([this feature version]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^java.lang.String feature ^java.lang.String version]
     (-> this (.getFeature feature version))))
 
 (defn get-namespace-uri
@@ -135,13 +135,13 @@
   returns: `java.lang.String`
 
   throws: org.w3c.dom.DOMException"
-  ([this]
+  ([^javax.imageio.metadata.IIOMetadataNode this]
     (-> this (.getNamespaceURI))))
 
 (defn normalize
   "Does nothing, since IIOMetadataNodes do not
    contain Text children."
-  ([this]
+  ([^javax.imageio.metadata.IIOMetadataNode this]
     (-> this (.normalize))))
 
 (defn set-text-content
@@ -151,7 +151,7 @@
   text-content - `java.lang.String`
 
   throws: org.w3c.dom.DOMException - - always."
-  ([this text-content]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^java.lang.String text-content]
     (-> this (.setTextContent text-content))))
 
 (defn set-id-attribute-ns
@@ -163,7 +163,7 @@
   is-id - Whether the attribute is a of type ID. - `boolean`
 
   throws: org.w3c.dom.DOMException - - always."
-  ([this namespace-uri local-name is-id]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^java.lang.String namespace-uri ^java.lang.String local-name ^Boolean is-id]
     (-> this (.setIdAttributeNS namespace-uri local-name is-id))))
 
 (defn get-parent-node
@@ -174,7 +174,7 @@
    appendChild methods.
 
   returns: the parent, as a Node. - `org.w3c.dom.Node`"
-  ([this]
+  ([^javax.imageio.metadata.IIOMetadataNode this]
     (-> this (.getParentNode))))
 
 (defn get-attribute-node
@@ -185,7 +185,7 @@
   returns: The Attr node with the specified name (
      nodeName) or null if there is no such
      attribute. - `org.w3c.dom.Attr`"
-  ([this name]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^java.lang.String name]
     (-> this (.getAttributeNode name))))
 
 (defn set-attribute-ns
@@ -194,7 +194,7 @@
   namespace-uri - The namespace URI of the attribute to create or alter. - `java.lang.String`
   qualified-name - The qualified name of the attribute to create or alter. - `java.lang.String`
   value - The value to set in string form. - `java.lang.String`"
-  ([this namespace-uri qualified-name value]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^java.lang.String namespace-uri ^java.lang.String qualified-name ^java.lang.String value]
     (-> this (.setAttributeNS namespace-uri qualified-name value))))
 
 (defn set-id-attribute
@@ -205,7 +205,7 @@
   is-id - Whether the attribute is a of type ID. - `boolean`
 
   throws: org.w3c.dom.DOMException - - always."
-  ([this name is-id]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^java.lang.String name ^Boolean is-id]
     (-> this (.setIdAttribute name is-id))))
 
 (defn append-child
@@ -217,7 +217,7 @@
   returns: the node added. - `org.w3c.dom.Node`
 
   throws: java.lang.IllegalArgumentException - if newChild is null."
-  ([this new-child]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^org.w3c.dom.Node new-child]
     (-> this (.appendChild new-child))))
 
 (defn remove-attribute-ns
@@ -225,7 +225,7 @@
 
   namespace-uri - The namespace URI of the attribute to remove. - `java.lang.String`
   local-name - The local name of the attribute to remove. - `java.lang.String`"
-  ([this namespace-uri local-name]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^java.lang.String namespace-uri ^java.lang.String local-name]
     (-> this (.removeAttributeNS namespace-uri local-name))))
 
 (defn get-user-data
@@ -238,7 +238,7 @@
      key on this node, or null if there was none. - `java.lang.Object`
 
   throws: org.w3c.dom.DOMException - - always."
-  ([this key]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^java.lang.String key]
     (-> this (.getUserData key))))
 
 (defn get-node-type
@@ -246,7 +246,7 @@
    ELEMENT_NODE.
 
   returns: the short value ELEMENT_NODE. - `short`"
-  ([this]
+  ([^javax.imageio.metadata.IIOMetadataNode this]
     (-> this (.getNodeType))))
 
 (defn get-text-content
@@ -256,7 +256,7 @@
   returns: `java.lang.String`
 
   throws: org.w3c.dom.DOMException - - always."
-  ([this]
+  ([^javax.imageio.metadata.IIOMetadataNode this]
     (-> this (.getTextContent))))
 
 (defn get-next-sibling
@@ -265,7 +265,7 @@
 
   returns: the next sibling, as a Node, or
    null. - `org.w3c.dom.Node`"
-  ([this]
+  ([^javax.imageio.metadata.IIOMetadataNode this]
     (-> this (.getNextSibling))))
 
 (defn has-attributes?
@@ -273,7 +273,7 @@
 
   returns: Returns true if this node has any attributes,
      false otherwise. - `boolean`"
-  ([this]
+  ([^javax.imageio.metadata.IIOMetadataNode this]
     (-> this (.hasAttributes))))
 
 (defn replace-child
@@ -287,7 +287,7 @@
   returns: the node replaced. - `org.w3c.dom.Node`
 
   throws: java.lang.IllegalArgumentException - if newChild is null."
-  ([this new-child old-child]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^org.w3c.dom.Node new-child ^org.w3c.dom.Node old-child]
     (-> this (.replaceChild new-child old-child))))
 
 (defn get-last-child
@@ -296,7 +296,7 @@
 
   returns: the last child, as a Node, or
    null. - `org.w3c.dom.Node`"
-  ([this]
+  ([^javax.imageio.metadata.IIOMetadataNode this]
     (-> this (.getLastChild))))
 
 (defn get-attribute
@@ -306,7 +306,7 @@
 
   returns: The Attr value as a string, or the empty string
    if that attribute does not have a specified or default value. - `java.lang.String`"
-  ([this name]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^java.lang.String name]
     (-> this (.getAttribute name))))
 
 (defn insert-before
@@ -321,7 +321,7 @@
   returns: the node being inserted. - `org.w3c.dom.Node`
 
   throws: java.lang.IllegalArgumentException - if newChild is null."
-  ([this new-child ref-child]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^org.w3c.dom.Node new-child ^org.w3c.dom.Node ref-child]
     (-> this (.insertBefore new-child ref-child))))
 
 (defn set-id-attribute-node
@@ -332,7 +332,7 @@
   is-id - Whether the attribute is a of type ID. - `boolean`
 
   throws: org.w3c.dom.DOMException - - always."
-  ([this id-attr is-id]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^org.w3c.dom.Attr id-attr ^Boolean is-id]
     (-> this (.setIdAttributeNode id-attr is-id))))
 
 (defn get-elements-by-tag-name-ns
@@ -343,7 +343,7 @@
 
   returns: A new NodeList object containing all the matched
      Elements. - `org.w3c.dom.NodeList`"
-  ([this namespace-uri local-name]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^java.lang.String namespace-uri ^java.lang.String local-name]
     (-> this (.getElementsByTagNameNS namespace-uri local-name))))
 
 (defn has-attribute-ns?
@@ -355,14 +355,14 @@
   returns: true if an attribute with the given local name
      and namespace URI is specified or has a default value on this
      element, false otherwise. - `boolean`"
-  ([this namespace-uri local-name]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^java.lang.String namespace-uri ^java.lang.String local-name]
     (-> this (.hasAttributeNS namespace-uri local-name))))
 
 (defn remove-attribute
   "Description copied from interface: Element
 
   name - The name of the attribute to remove. - `java.lang.String`"
-  ([this name]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^java.lang.String name]
     (-> this (.removeAttribute name))))
 
 (defn lookup-namespace-uri
@@ -375,14 +375,14 @@
      none is found. - `java.lang.String`
 
   throws: org.w3c.dom.DOMException - - always."
-  ([this prefix]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^java.lang.String prefix]
     (-> this (.lookupNamespaceURI prefix))))
 
 (defn get-node-name
   "Returns the node name associated with this node.
 
   returns: the node name, as a String. - `java.lang.String`"
-  ([this]
+  ([^javax.imageio.metadata.IIOMetadataNode this]
     (-> this (.getNodeName))))
 
 (defn item
@@ -393,7 +393,7 @@
   returns: The node at the indexth position in the
      NodeList, or null if that is not a valid
      index. - `org.w3c.dom.Node`"
-  ([this index]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^Integer index]
     (-> this (.item index))))
 
 (defn get-base-uri
@@ -403,7 +403,7 @@
   returns: `java.lang.String`
 
   throws: org.w3c.dom.DOMException - - always."
-  ([this]
+  ([^javax.imageio.metadata.IIOMetadataNode this]
     (-> this (.getBaseURI))))
 
 (defn set-attribute
@@ -411,7 +411,7 @@
 
   name - The name of the attribute to create or alter. - `java.lang.String`
   value - Value to set in string form. - `java.lang.String`"
-  ([this name value]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^java.lang.String name ^java.lang.String value]
     (-> this (.setAttribute name value))))
 
 (defn compare-document-position
@@ -424,14 +424,14 @@
      node. - `short`
 
   throws: org.w3c.dom.DOMException - - always."
-  ([this other]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^org.w3c.dom.Node other]
     (-> this (.compareDocumentPosition other))))
 
 (defn get-length
   "Description copied from interface: NodeList
 
   returns: `int`"
-  ([this]
+  ([^javax.imageio.metadata.IIOMetadataNode this]
     (-> this (.getLength))))
 
 (defn default-namespace?
@@ -445,7 +445,7 @@
      false otherwise. - `boolean`
 
   throws: org.w3c.dom.DOMException - - always."
-  ([this namespace-uri]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^java.lang.String namespace-uri]
     (-> this (.isDefaultNamespace namespace-uri))))
 
 (defn get-child-nodes
@@ -454,7 +454,7 @@
    no nodes.
 
   returns: the children as a NodeList - `org.w3c.dom.NodeList`"
-  ([this]
+  ([^javax.imageio.metadata.IIOMetadataNode this]
     (-> this (.getChildNodes))))
 
 (defn lookup-prefix
@@ -469,7 +469,7 @@
      is implementation dependent. - `java.lang.String`
 
   throws: org.w3c.dom.DOMException - - always."
-  ([this namespace-uri]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^java.lang.String namespace-uri]
     (-> this (.lookupPrefix namespace-uri))))
 
 (defn get-previous-sibling
@@ -478,7 +478,7 @@
 
   returns: the previous sibling, as a Node, or
    null. - `org.w3c.dom.Node`"
-  ([this]
+  ([^javax.imageio.metadata.IIOMetadataNode this]
     (-> this (.getPreviousSibling))))
 
 (defn supported?
@@ -489,7 +489,7 @@
   version - a String, which is ignored. - `java.lang.String`
 
   returns: false. - `boolean`"
-  ([this feature version]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^java.lang.String feature ^java.lang.String version]
     (-> this (.isSupported feature version))))
 
 (defn remove-attribute-node
@@ -498,7 +498,7 @@
   old-attr - The Attr node to remove from the attribute list. - `org.w3c.dom.Attr`
 
   returns: The Attr node that was removed. - `org.w3c.dom.Attr`"
-  ([this old-attr]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^org.w3c.dom.Attr old-attr]
     (-> this (.removeAttributeNode old-attr))))
 
 (defn set-attribute-node-ns
@@ -510,7 +510,7 @@
      attribute with the same local name and namespace URI, the replaced
      Attr node is returned, otherwise null is
      returned. - `org.w3c.dom.Attr`"
-  ([this new-attr]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^org.w3c.dom.Attr new-attr]
     (-> this (.setAttributeNodeNS new-attr))))
 
 (defn get-first-child
@@ -519,7 +519,7 @@
 
   returns: the first child, as a Node, or
    null - `org.w3c.dom.Node`"
-  ([this]
+  ([^javax.imageio.metadata.IIOMetadataNode this]
     (-> this (.getFirstChild))))
 
 (defn has-attribute?
@@ -530,21 +530,21 @@
   returns: true if an attribute with the given name is
      specified on this element or has a default value, false
       otherwise. - `boolean`"
-  ([this name]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^java.lang.String name]
     (-> this (.hasAttribute name))))
 
 (defn has-child-nodes?
   "Returns true if this node has child nodes.
 
   returns: true if this node has children. - `boolean`"
-  ([this]
+  ([^javax.imageio.metadata.IIOMetadataNode this]
     (-> this (.hasChildNodes))))
 
 (defn get-prefix
   "Returns null, since namespaces are not supported.
 
   returns: null. - `java.lang.String`"
-  ([this]
+  ([^javax.imageio.metadata.IIOMetadataNode this]
     (-> this (.getPrefix))))
 
 (defn set-attribute-node
@@ -557,7 +557,7 @@
      otherwise null is returned. - `org.w3c.dom.Attr`
 
   throws: org.w3c.dom.DOMException - WRONG_DOCUMENT_ERR: Raised if newAttr was created from a different document than the one that created the element. NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly. INUSE_ATTRIBUTE_ERR: Raised if newAttr is already an attribute of another Element object. The DOM user must explicitly clone Attr nodes to re-use them in other elements."
-  ([this new-attr]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^org.w3c.dom.Attr new-attr]
     (-> this (.setAttributeNode new-attr))))
 
 (defn clone-node
@@ -571,7 +571,7 @@
   deep - if true, recursively clone the subtree under the specified node; if false, clone only the node itself. - `boolean`
 
   returns: the duplicate node. - `org.w3c.dom.Node`"
-  ([this deep]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^Boolean deep]
     (-> this (.cloneNode deep))))
 
 (defn remove-child
@@ -583,14 +583,14 @@
   returns: the node removed. - `org.w3c.dom.Node`
 
   throws: java.lang.IllegalArgumentException - if oldChild is null."
-  ([this old-child]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^org.w3c.dom.Node old-child]
     (-> this (.removeChild old-child))))
 
 (defn get-local-name
   "Equivalent to getNodeName.
 
   returns: the node name, as a String. - `java.lang.String`"
-  ([this]
+  ([^javax.imageio.metadata.IIOMetadataNode this]
     (-> this (.getLocalName))))
 
 (defn equal-node?
@@ -603,7 +603,7 @@
      false otherwise. - `boolean`
 
   throws: org.w3c.dom.DOMException - - always."
-  ([this node]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^org.w3c.dom.Node node]
     (-> this (.isEqualNode node))))
 
 (defn same-node?
@@ -616,7 +616,7 @@
      false otherwise. - `boolean`
 
   throws: org.w3c.dom.DOMException - - always."
-  ([this node]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^org.w3c.dom.Node node]
     (-> this (.isSameNode node))))
 
 (defn get-attributes
@@ -625,7 +625,7 @@
 
   returns: a NamedNodeMap containing the attributes of
    this node. - `org.w3c.dom.NamedNodeMap`"
-  ([this]
+  ([^javax.imageio.metadata.IIOMetadataNode this]
     (-> this (.getAttributes))))
 
 (defn set-user-data
@@ -640,27 +640,27 @@
      the given key on this node, or null if there was none. - `java.lang.Object`
 
   throws: org.w3c.dom.DOMException - - always."
-  ([this key data handler]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^java.lang.String key ^java.lang.Object data ^org.w3c.dom.UserDataHandler handler]
     (-> this (.setUserData key data handler))))
 
 (defn get-tag-name
   "Equivalent to getNodeName.
 
   returns: the node name, as a String - `java.lang.String`"
-  ([this]
+  ([^javax.imageio.metadata.IIOMetadataNode this]
     (-> this (.getTagName))))
 
 (defn get-user-object
   "Returns the Object value associated with this node.
 
   returns: the user Object. - `java.lang.Object`"
-  ([this]
+  ([^javax.imageio.metadata.IIOMetadataNode this]
     (-> this (.getUserObject))))
 
 (defn set-node-value
   "Sets the String value associated with this node.
 
   node-value - `java.lang.String`"
-  ([this node-value]
+  ([^javax.imageio.metadata.IIOMetadataNode this ^java.lang.String node-value]
     (-> this (.setNodeValue node-value))))
 

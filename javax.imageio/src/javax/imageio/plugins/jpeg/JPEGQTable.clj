@@ -75,7 +75,7 @@
    of ints in natural (not zig-zag) order.
 
   returns: A copy of the current quantization table. - `int[]`"
-  ([this]
+  ([^javax.imageio.plugins.jpeg.JPEGQTable this]
     (-> this (.getTable))))
 
 (defn get-scaled-instance
@@ -92,13 +92,13 @@
 
   returns: a new quantization table that is a linear multiple
    of the current table. - `javax.imageio.plugins.jpeg.JPEGQTable`"
-  ([this scale-factor force-baseline]
+  ([^javax.imageio.plugins.jpeg.JPEGQTable this ^Float scale-factor ^Boolean force-baseline]
     (-> this (.getScaledInstance scale-factor force-baseline))))
 
 (defn to-string
   "Returns a String representing this quantization table.
 
   returns: a String representing this quantization table. - `java.lang.String`"
-  ([this]
+  ([^javax.imageio.plugins.jpeg.JPEGQTable this]
     (-> this (.toString))))
 

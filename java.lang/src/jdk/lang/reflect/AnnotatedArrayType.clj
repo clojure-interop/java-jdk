@@ -9,6 +9,6 @@
   "Returns the potentially annotated generic component type of this array type.
 
   returns: the potentially annotated generic component type of this array type - `java.lang.reflect.AnnotatedType`"
-  ([this]
+  ([^. this]
     (-> this (.getAnnotatedGenericComponentType))))
 

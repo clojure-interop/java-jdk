@@ -54,7 +54,7 @@
 
   returns: The non-null object identifier string representing the LDAP
            ExtendedRequest.requestName component. - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getID))))
 
 (defn get-encoded-value
@@ -71,7 +71,7 @@
            component. - `byte[]`
 
   throws: java.lang.IllegalStateException - If the encoded value cannot be retrieved because the request contains insufficient or invalid data/state."
-  ([this]
+  ([^. this]
     (-> this (.getEncodedValue))))
 
 (defn create-extended-response
@@ -98,6 +98,6 @@
   returns: A non-null object. - `javax.naming.ldap.ExtendedResponse`
 
   throws: javax.naming.NamingException - if cannot create extended response due to an error."
-  ([this id ber-value offset length]
+  ([^. this ^java.lang.String id ber-value ^Integer offset ^Integer length]
     (-> this (.createExtendedResponse id ber-value offset length))))
 

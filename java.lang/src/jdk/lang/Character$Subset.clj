@@ -18,7 +18,7 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.lang.Character$Subset this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -29,13 +29,13 @@
    be consistent in all subclasses.
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^java.lang.Character$Subset this]
     (-> this (.hashCode))))
 
 (defn to-string
   "Returns the name of this subset.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^java.lang.Character$Subset this]
     (-> this (.toString))))
 

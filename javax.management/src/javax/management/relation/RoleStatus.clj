@@ -76,6 +76,6 @@
   status - a status code. - `int`
 
   returns: true if this value is a known role status. - `boolean`"
-  ([status]
+  ([^Integer status]
     (RoleStatus/isRoleStatus status)))
 

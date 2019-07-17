@@ -31,7 +31,7 @@
   encrypted-data - encrypted data. The contents of encrypedData are copied to protect against subsequent modification when constructing this object. - `byte[]`
 
   throws: java.lang.NullPointerException - if algName or encryptedData is null."
-  ([alg-name encrypted-data]
+  ([^java.lang.String alg-name encrypted-data]
     (new EncryptedPrivateKeyInfo alg-name encrypted-data))
   ([encoded]
     (new EncryptedPrivateKeyInfo encoded)))
@@ -46,14 +46,14 @@
    for information about standard Cipher algorithm names.
 
   returns: the encryption algorithm name. - `java.lang.String`"
-  ([this]
+  ([^javax.crypto.EncryptedPrivateKeyInfo this]
     (-> this (.getAlgName))))
 
 (defn get-alg-parameters
   "Returns the algorithm parameters used by the encryption algorithm.
 
   returns: the algorithm parameters. - `java.security.AlgorithmParameters`"
-  ([this]
+  ([^javax.crypto.EncryptedPrivateKeyInfo this]
     (-> this (.getAlgParameters))))
 
 (defn get-encrypted-data
@@ -61,7 +61,7 @@
 
   returns: the encrypted data. Returns a new array
    each time this method is called. - `byte[]`"
-  ([this]
+  ([^javax.crypto.EncryptedPrivateKeyInfo this]
     (-> this (.getEncryptedData))))
 
 (defn get-key-spec
@@ -74,9 +74,9 @@
   returns: the PKCS8EncodedKeySpec object. - `java.security.spec.PKCS8EncodedKeySpec`
 
   throws: java.lang.NullPointerException - if decryptKey or providerName is null."
-  ([this decrypt-key provider-name]
+  ([^javax.crypto.EncryptedPrivateKeyInfo this ^java.security.Key decrypt-key ^java.lang.String provider-name]
     (-> this (.getKeySpec decrypt-key provider-name)))
-  ([this cipher]
+  ([^javax.crypto.EncryptedPrivateKeyInfo this ^javax.crypto.Cipher cipher]
     (-> this (.getKeySpec cipher))))
 
 (defn get-encoded
@@ -86,6 +86,6 @@
    each time this method is called. - `byte[]`
 
   throws: java.io.IOException - if error occurs when constructing its ASN.1 encoding."
-  ([this]
+  ([^javax.crypto.EncryptedPrivateKeyInfo this]
     (-> this (.getEncoded))))
 

@@ -33,7 +33,7 @@
    bounds of the component).
 
   e - `java.awt.event.MouseEvent`"
-  ([this e]
+  ([^java.awt.event.MouseMotionAdapter this ^java.awt.event.MouseEvent e]
     (-> this (.mouseDragged e))))
 
 (defn mouse-moved
@@ -41,6 +41,6 @@
    (with no buttons no down).
 
   e - `java.awt.event.MouseEvent`"
-  ([this e]
+  ([^java.awt.event.MouseMotionAdapter this ^java.awt.event.MouseEvent e]
     (-> this (.mouseMoved e))))
 

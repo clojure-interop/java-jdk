@@ -17,7 +17,7 @@
    using the argument supplied.
 
   explanation - possibly null detail about this exception. - `java.lang.String`"
-  ([explanation]
+  ([^java.lang.String explanation]
     (new TimeLimitExceededException explanation))
   ([]
     (new TimeLimitExceededException )))

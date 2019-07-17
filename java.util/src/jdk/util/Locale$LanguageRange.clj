@@ -38,9 +38,9 @@
   weight - a weight value between MIN_WEIGHT and MAX_WEIGHT - `double`
 
   throws: java.lang.NullPointerException - if the given range is null"
-  ([range weight]
+  ([^java.lang.String range ^Double weight]
     (new Locale$LanguageRange range weight))
-  ([range]
+  ([^java.lang.String range]
     (new Locale$LanguageRange range)))
 
 (def *-max-weight
@@ -74,9 +74,9 @@
        modifiable. - `java.util.List<java.util.Locale.LanguageRange>`
 
   throws: java.lang.NullPointerException - if ranges is null"
-  ([ranges map]
+  ([^java.lang.String ranges ^java.util.Map> map]
     (Locale$LanguageRange/parse ranges map))
-  ([ranges]
+  ([^java.lang.String ranges]
     (Locale$LanguageRange/parse ranges)))
 
 (defn *map-equivalents
@@ -126,28 +126,28 @@
        modifiable. - `java.util.List<java.util.Locale.LanguageRange>`
 
   throws: java.lang.NullPointerException - if priorityList is null"
-  ([priority-list map]
+  ([^java.util.List priority-list ^java.util.Map> map]
     (Locale$LanguageRange/mapEquivalents priority-list map)))
 
 (defn get-range
   "Returns the language range of this LanguageRange.
 
   returns: the language range. - `java.lang.String`"
-  ([this]
+  ([^java.util.Locale$LanguageRange this]
     (-> this (.getRange))))
 
 (defn get-weight
   "Returns the weight of this LanguageRange.
 
   returns: the weight value. - `double`"
-  ([this]
+  ([^java.util.Locale$LanguageRange this]
     (-> this (.getWeight))))
 
 (defn hash-code
   "Returns a hash code value for the object.
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^java.util.Locale$LanguageRange this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -161,6 +161,6 @@
   returns: true if this object's range and
        weight are the same as the obj's; false
        otherwise. - `boolean`"
-  ([this obj]
+  ([^java.util.Locale$LanguageRange this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

@@ -19,9 +19,9 @@
 
   graphics - the Graphics context to slow down - `java.awt.Graphics`
   component - the JComponent to draw slowly - `javax.swing.JComponent`"
-  ([graphics component]
+  ([^java.awt.Graphics graphics ^javax.swing.JComponent component]
     (new DebugGraphics graphics component))
-  ([graphics]
+  ([^java.awt.Graphics graphics]
     (new DebugGraphics graphics))
   ([]
     (new DebugGraphics )))
@@ -62,7 +62,7 @@
   "Sets the Color used to flash drawing operations.
 
   flash-color - `java.awt.Color`"
-  ([flash-color]
+  ([^java.awt.Color flash-color]
     (DebugGraphics/setFlashColor flash-color)))
 
 (defn *flash-color
@@ -76,7 +76,7 @@
   "Sets the time delay of drawing operation flashing.
 
   flash-time - `int`"
-  ([flash-time]
+  ([^Integer flash-time]
     (DebugGraphics/setFlashTime flash-time)))
 
 (defn *flash-time
@@ -90,7 +90,7 @@
   "Sets the number of times that drawing operations will flash.
 
   flash-count - `int`"
-  ([flash-count]
+  ([^Integer flash-count]
     (DebugGraphics/setFlashCount flash-count)))
 
 (defn *flash-count
@@ -104,7 +104,7 @@
   "Sets the stream to which the DebugGraphics logs drawing operations.
 
   stream - `java.io.PrintStream`"
-  ([stream]
+  ([^java.io.PrintStream stream]
     (DebugGraphics/setLogStream stream)))
 
 (defn *log-stream
@@ -124,7 +124,7 @@
    the current value. To disable debugging use NONE_OPTION.
 
   options - `int`"
-  ([this options]
+  ([^javax.swing.DebugGraphics this ^Integer options]
     (-> this (.setDebugOptions options))))
 
 (defn draw-image
@@ -144,17 +144,17 @@
 
   returns: false if the image pixels are still changing;
              true otherwise. - `boolean`"
-  ([this img dx-1 dy-1 dx-2 dy-2 sx-1 sy-1 sx-2 sy-2 bgcolor observer]
+  ([^javax.swing.DebugGraphics this ^java.awt.Image img ^Integer dx-1 ^Integer dy-1 ^Integer dx-2 ^Integer dy-2 ^Integer sx-1 ^Integer sy-1 ^Integer sx-2 ^Integer sy-2 ^java.awt.Color bgcolor ^java.awt.image.ImageObserver observer]
     (-> this (.drawImage img dx-1 dy-1 dx-2 dy-2 sx-1 sy-1 sx-2 sy-2 bgcolor observer)))
-  ([this img dx-1 dy-1 dx-2 dy-2 sx-1 sy-1 sx-2 sy-2 observer]
+  ([^javax.swing.DebugGraphics this ^java.awt.Image img ^Integer dx-1 ^Integer dy-1 ^Integer dx-2 ^Integer dy-2 ^Integer sx-1 ^Integer sy-1 ^Integer sx-2 ^Integer sy-2 ^java.awt.image.ImageObserver observer]
     (-> this (.drawImage img dx-1 dy-1 dx-2 dy-2 sx-1 sy-1 sx-2 sy-2 observer)))
-  ([this img x y width height bgcolor observer]
+  ([^javax.swing.DebugGraphics this ^java.awt.Image img ^Integer x ^Integer y ^Integer width ^Integer height ^java.awt.Color bgcolor ^java.awt.image.ImageObserver observer]
     (-> this (.drawImage img x y width height bgcolor observer)))
-  ([this img x y width height observer]
+  ([^javax.swing.DebugGraphics this ^java.awt.Image img ^Integer x ^Integer y ^Integer width ^Integer height ^java.awt.image.ImageObserver observer]
     (-> this (.drawImage img x y width height observer)))
-  ([this img x y bgcolor observer]
+  ([^javax.swing.DebugGraphics this ^java.awt.Image img ^Integer x ^Integer y ^java.awt.Color bgcolor ^java.awt.image.ImageObserver observer]
     (-> this (.drawImage img x y bgcolor observer)))
-  ([this img x y observer]
+  ([^javax.swing.DebugGraphics this ^java.awt.Image img ^Integer x ^Integer y ^java.awt.image.ImageObserver observer]
     (-> this (.drawImage img x y observer))))
 
 (defn draw-arc
@@ -166,7 +166,7 @@
   height - the height of the arc to be drawn. - `int`
   start-angle - the beginning angle. - `int`
   arc-angle - the angular extent of the arc, relative to the start angle. - `int`"
-  ([this x y width height start-angle arc-angle]
+  ([^javax.swing.DebugGraphics this ^Integer x ^Integer y ^Integer width ^Integer height ^Integer start-angle ^Integer arc-angle]
     (-> this (.drawArc x y width height start-angle arc-angle))))
 
 (defn copy-area
@@ -178,7 +178,7 @@
   height - the height of the source rectangle. - `int`
   dest-x - the horizontal distance to copy the pixels. - `int`
   dest-y - the vertical distance to copy the pixels. - `int`"
-  ([this x y width height dest-x dest-y]
+  ([^javax.swing.DebugGraphics this ^Integer x ^Integer y ^Integer width ^Integer height ^Integer dest-x ^Integer dest-y]
     (-> this (.copyArea x y width height dest-x dest-y))))
 
 (defn draw-oval
@@ -188,7 +188,7 @@
   y - the y coordinate of the upper left corner of the oval to be drawn. - `int`
   width - the width of the oval to be drawn. - `int`
   height - the height of the oval to be drawn. - `int`"
-  ([this x y width height]
+  ([^javax.swing.DebugGraphics this ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.drawOval x y width height))))
 
 (defn get-clip
@@ -197,14 +197,14 @@
   returns: a Shape object representing the
                 current clipping area, or null if
                 no clip is set. - `java.awt.Shape`"
-  ([this]
+  ([^javax.swing.DebugGraphics this]
     (-> this (.getClip))))
 
 (defn drawing-buffer?
   "Returns the drawingBuffer value.
 
   returns: true if this object is drawing from a Buffer - `boolean`"
-  ([this]
+  ([^javax.swing.DebugGraphics this]
     (-> this (.isDrawingBuffer))))
 
 (defn translate
@@ -212,7 +212,7 @@
 
   x - the x coordinate. - `int`
   y - the y coordinate. - `int`"
-  ([this x y]
+  ([^javax.swing.DebugGraphics this ^Integer x ^Integer y]
     (-> this (.translate x y))))
 
 (defn clip-rect
@@ -222,7 +222,7 @@
   y - the y coordinate of the rectangle to intersect the clip with - `int`
   width - the width of the rectangle to intersect the clip with - `int`
   height - the height of the rectangle to intersect the clip with - `int`"
-  ([this x y width height]
+  ([^javax.swing.DebugGraphics this ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.clipRect x y width height))))
 
 (defn draw-polyline
@@ -231,12 +231,12 @@
   x-points - an array of x points - `int[]`
   y-points - an array of y points - `int[]`
   n-points - the total number of points - `int`"
-  ([this x-points y-points n-points]
+  ([^javax.swing.DebugGraphics this x-points y-points ^Integer n-points]
     (-> this (.drawPolyline x-points y-points n-points))))
 
 (defn dispose
   "Overrides Graphics.dispose."
-  ([this]
+  ([^javax.swing.DebugGraphics this]
     (-> this (.dispose))))
 
 (defn fill-polygon
@@ -245,7 +245,7 @@
   x-points - a an array of x coordinates. - `int[]`
   y-points - a an array of y coordinates. - `int[]`
   n-points - a the total number of points. - `int`"
-  ([this x-points y-points n-points]
+  ([^javax.swing.DebugGraphics this x-points y-points ^Integer n-points]
     (-> this (.fillPolygon x-points y-points n-points))))
 
 (defn get-clip-bounds
@@ -253,7 +253,7 @@
 
   returns: the bounding rectangle of the current clipping area,
                 or null if no clip is set. - `java.awt.Rectangle`"
-  ([this]
+  ([^javax.swing.DebugGraphics this]
     (-> this (.getClipBounds))))
 
 (defn fill-3-d-rect
@@ -264,7 +264,7 @@
   width - the width of the rectangle to be filled. - `int`
   height - the height of the rectangle to be filled. - `int`
   raised - a boolean value that determines whether the rectangle appears to be raised above the surface or etched into the surface. - `boolean`"
-  ([this x y width height raised]
+  ([^javax.swing.DebugGraphics this ^Integer x ^Integer y ^Integer width ^Integer height ^Boolean raised]
     (-> this (.fill3DRect x y width height raised))))
 
 (defn draw-line
@@ -274,7 +274,7 @@
   y-1 - the first point's y coordinate. - `int`
   x-2 - the second point's x coordinate. - `int`
   y-2 - the second point's y coordinate. - `int`"
-  ([this x-1 y-1 x-2 y-2]
+  ([^javax.swing.DebugGraphics this ^Integer x-1 ^Integer y-1 ^Integer x-2 ^Integer y-2]
     (-> this (.drawLine x-1 y-1 x-2 y-2))))
 
 (defn draw-bytes
@@ -285,7 +285,7 @@
   length - the number of bytes that are drawn - `int`
   x - the x coordinate of the baseline of the text - `int`
   y - the y coordinate of the baseline of the text - `int`"
-  ([this data offset length x y]
+  ([^javax.swing.DebugGraphics this data ^Integer offset ^Integer length ^Integer x ^Integer y]
     (-> this (.drawBytes data offset length x y))))
 
 (defn draw-polygon
@@ -294,7 +294,7 @@
   x-points - a an array of x coordinates. - `int[]`
   y-points - a an array of y coordinates. - `int[]`
   n-points - a the total number of points. - `int`"
-  ([this x-points y-points n-points]
+  ([^javax.swing.DebugGraphics this x-points y-points ^Integer n-points]
     (-> this (.drawPolygon x-points y-points n-points))))
 
 (defn get-font-metrics
@@ -303,9 +303,9 @@
   f - the specified font - `java.awt.Font`
 
   returns: the font metrics for the specified font. - `java.awt.FontMetrics`"
-  ([this f]
+  ([^javax.swing.DebugGraphics this ^java.awt.Font f]
     (-> this (.getFontMetrics f)))
-  ([this]
+  ([^javax.swing.DebugGraphics this]
     (-> this (.getFontMetrics))))
 
 (defn draw-string
@@ -314,7 +314,7 @@
   a-string - the string to be drawn. - `java.lang.String`
   x - the x coordinate. - `int`
   y - the y coordinate. - `int`"
-  ([this a-string x y]
+  ([^javax.swing.DebugGraphics this ^java.lang.String a-string ^Integer x ^Integer y]
     (-> this (.drawString a-string x y))))
 
 (defn set-clip
@@ -324,9 +324,9 @@
   y - the y coordinate of the new clip rectangle. - `int`
   width - the width of the new clip rectangle. - `int`
   height - the height of the new clip rectangle. - `int`"
-  ([this x y width height]
+  ([^javax.swing.DebugGraphics this ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.setClip x y width height)))
-  ([this clip]
+  ([^javax.swing.DebugGraphics this ^java.awt.Shape clip]
     (-> this (.setClip clip))))
 
 (defn fill-arc
@@ -338,21 +338,21 @@
   height - the height of the arc to be filled. - `int`
   start-angle - the beginning angle. - `int`
   arc-angle - the angular extent of the arc, relative to the start angle. - `int`"
-  ([this x y width height start-angle arc-angle]
+  ([^javax.swing.DebugGraphics this ^Integer x ^Integer y ^Integer width ^Integer height ^Integer start-angle ^Integer arc-angle]
     (-> this (.fillArc x y width height start-angle arc-angle))))
 
 (defn set-xor-mode
   "Overrides Graphics.setXORMode.
 
   a-color - the XOR alternation color - `java.awt.Color`"
-  ([this a-color]
+  ([^javax.swing.DebugGraphics this ^java.awt.Color a-color]
     (-> this (.setXORMode a-color))))
 
 (defn set-color
   "Sets the color to be used for drawing and filling lines and shapes.
 
   a-color - the new rendering color. - `java.awt.Color`"
-  ([this a-color]
+  ([^javax.swing.DebugGraphics this ^java.awt.Color a-color]
     (-> this (.setColor a-color))))
 
 (defn draw-rect
@@ -362,7 +362,7 @@
   y - the y coordinate of the rectangle to be drawn. - `int`
   width - the width of the rectangle to be drawn. - `int`
   height - the height of the rectangle to be drawn. - `int`"
-  ([this x y width height]
+  ([^javax.swing.DebugGraphics this ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.drawRect x y width height))))
 
 (defn fill-round-rect
@@ -374,21 +374,21 @@
   height - the height of the rectangle to be filled. - `int`
   arc-width - the horizontal diameter of the arc at the four corners. - `int`
   arc-height - the vertical diameter of the arc at the four corners. - `int`"
-  ([this x y width height arc-width arc-height]
+  ([^javax.swing.DebugGraphics this ^Integer x ^Integer y ^Integer width ^Integer height ^Integer arc-width ^Integer arc-height]
     (-> this (.fillRoundRect x y width height arc-width arc-height))))
 
 (defn get-debug-options
   "Returns the current debugging options for this DebugGraphics.
 
   returns: `int`"
-  ([this]
+  ([^javax.swing.DebugGraphics this]
     (-> this (.getDebugOptions))))
 
 (defn set-font
   "Sets the Font used for text drawing operations.
 
   a-font - the font. - `java.awt.Font`"
-  ([this a-font]
+  ([^javax.swing.DebugGraphics this ^java.awt.Font a-font]
     (-> this (.setFont a-font))))
 
 (defn draw-3-d-rect
@@ -399,7 +399,7 @@
   width - the width of the rectangle to be drawn. - `int`
   height - the height of the rectangle to be drawn. - `int`
   raised - a boolean that determines whether the rectangle appears to be raised above the surface or sunk into the surface. - `boolean`"
-  ([this x y width height raised]
+  ([^javax.swing.DebugGraphics this ^Integer x ^Integer y ^Integer width ^Integer height ^Boolean raised]
     (-> this (.draw3DRect x y width height raised))))
 
 (defn create
@@ -411,21 +411,21 @@
   height - the height of the clipping rectangle. - `int`
 
   returns: a new graphics context. - `java.awt.Graphics`"
-  ([this x y width height]
+  ([^javax.swing.DebugGraphics this ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.create x y width height)))
-  ([this]
+  ([^javax.swing.DebugGraphics this]
     (-> this (.create))))
 
 (defn set-paint-mode
   "Overrides Graphics.setPaintMode."
-  ([this]
+  ([^javax.swing.DebugGraphics this]
     (-> this (.setPaintMode))))
 
 (defn get-font
   "Returns the Font used for text drawing operations.
 
   returns: this graphics context's current font. - `java.awt.Font`"
-  ([this]
+  ([^javax.swing.DebugGraphics this]
     (-> this (.getFont))))
 
 (defn draw-round-rect
@@ -437,7 +437,7 @@
   height - the height of the rectangle to be drawn. - `int`
   arc-width - the horizontal diameter of the arc at the four corners. - `int`
   arc-height - the vertical diameter of the arc at the four corners. - `int`"
-  ([this x y width height arc-width arc-height]
+  ([^javax.swing.DebugGraphics this ^Integer x ^Integer y ^Integer width ^Integer height ^Integer arc-width ^Integer arc-height]
     (-> this (.drawRoundRect x y width height arc-width arc-height))))
 
 (defn draw-chars
@@ -448,14 +448,14 @@
   length - the number of characters to be drawn - `int`
   x - the x coordinate of the baseline of the text - `int`
   y - the y coordinate of the baseline of the text - `int`"
-  ([this data offset length x y]
+  ([^javax.swing.DebugGraphics this data ^Integer offset ^Integer length ^Integer x ^Integer y]
     (-> this (.drawChars data offset length x y))))
 
 (defn get-color
   "Returns the Color used for text drawing operations.
 
   returns: this graphics context's current color. - `java.awt.Color`"
-  ([this]
+  ([^javax.swing.DebugGraphics this]
     (-> this (.getColor))))
 
 (defn clear-rect
@@ -465,7 +465,7 @@
   y - the y coordinate of the rectangle to clear. - `int`
   width - the width of the rectangle to clear. - `int`
   height - the height of the rectangle to clear. - `int`"
-  ([this x y width height]
+  ([^javax.swing.DebugGraphics this ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.clearRect x y width height))))
 
 (defn fill-rect
@@ -475,7 +475,7 @@
   y - the y coordinate of the rectangle to be filled. - `int`
   width - the width of the rectangle to be filled. - `int`
   height - the height of the rectangle to be filled. - `int`"
-  ([this x y width height]
+  ([^javax.swing.DebugGraphics this ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.fillRect x y width height))))
 
 (defn fill-oval
@@ -485,6 +485,6 @@
   y - the y coordinate of the upper left corner of the oval to be filled. - `int`
   width - the width of the oval to be filled. - `int`
   height - the height of the oval to be filled. - `int`"
-  ([this x y width height]
+  ([^javax.swing.DebugGraphics this ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.fillOval x y width height))))
 

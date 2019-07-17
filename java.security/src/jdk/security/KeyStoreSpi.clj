@@ -19,7 +19,7 @@
 
   returns: the creation date of this entry, or null if the given alias does
    not exist - `java.util.Date`"
-  ([this alias]
+  ([^java.security.KeyStoreSpi this ^java.lang.String alias]
     (-> this (.engineGetCreationDate alias))))
 
 (defn engine-set-entry
@@ -35,7 +35,7 @@
   prot-param - the ProtectionParameter used to protect the Entry, which may be null - `java.security.KeyStore.ProtectionParameter`
 
   throws: java.security.KeyStoreException - if this operation fails"
-  ([this alias entry prot-param]
+  ([^java.security.KeyStoreSpi this ^java.lang.String alias ^java.security.KeyStore.Entry entry ^java.security.KeyStore.ProtectionParameter prot-param]
     (-> this (.engineSetEntry alias entry prot-param))))
 
 (defn engine-entry-instance-of
@@ -49,14 +49,14 @@
   returns: true if the keystore Entry for the specified
             alias is an instance or subclass of the
             specified entryClass, false otherwise - `boolean`"
-  ([this alias entry-class]
+  ([^java.security.KeyStoreSpi this ^java.lang.String alias ^java.security.KeyStore.Entry> entry-class]
     (-> this (.engineEntryInstanceOf alias entry-class))))
 
 (defn engine-aliases
   "Lists all the alias names of this keystore.
 
   returns: enumeration of the alias names - `java.util.Enumeration<java.lang.String>`"
-  ([this]
+  ([^java.security.KeyStoreSpi this]
     (-> this (.engineAliases))))
 
 (defn engine-set-key-entry
@@ -77,16 +77,16 @@
   chain - the certificate chain for the corresponding public key (only required if the given key is of type java.security.PrivateKey). - `java.security.cert.Certificate[]`
 
   throws: java.security.KeyStoreException - if the given key cannot be protected, or this operation fails for some other reason"
-  ([this alias key password chain]
+  ([^java.security.KeyStoreSpi this ^java.lang.String alias ^java.security.Key key password ^java.security.cert.Certificate[] chain]
     (-> this (.engineSetKeyEntry alias key password chain)))
-  ([this alias key chain]
+  ([^java.security.KeyStoreSpi this ^java.lang.String alias key ^java.security.cert.Certificate[] chain]
     (-> this (.engineSetKeyEntry alias key chain))))
 
 (defn engine-size
   "Retrieves the number of entries in this keystore.
 
   returns: the number of entries in this keystore - `int`"
-  ([this]
+  ([^java.security.KeyStoreSpi this]
     (-> this (.engineSize))))
 
 (defn engine-contains-alias
@@ -95,7 +95,7 @@
   alias - the alias name - `java.lang.String`
 
   returns: true if the alias exists, false otherwise - `boolean`"
-  ([this alias]
+  ([^java.security.KeyStoreSpi this ^java.lang.String alias]
     (-> this (.engineContainsAlias alias))))
 
 (defn engine-store
@@ -106,9 +106,9 @@
   password - the password to generate the keystore integrity check - `char[]`
 
   throws: java.io.IOException - if there was an I/O problem with data"
-  ([this stream password]
+  ([^java.security.KeyStoreSpi this ^java.io.OutputStream stream password]
     (-> this (.engineStore stream password)))
-  ([this param]
+  ([^java.security.KeyStoreSpi this ^java.security.KeyStore.LoadStoreParameter param]
     (-> this (.engineStore param))))
 
 (defn engine-get-entry
@@ -122,7 +122,7 @@
             or null if there is no such entry - `java.security.KeyStore.Entry`
 
   throws: java.security.KeyStoreException - if the operation failed"
-  ([this alias prot-param]
+  ([^java.security.KeyStoreSpi this ^java.lang.String alias ^java.security.KeyStore.ProtectionParameter prot-param]
     (-> this (.engineGetEntry alias prot-param))))
 
 (defn engine-get-certificate-chain
@@ -137,7 +137,7 @@
   returns: the certificate chain (ordered with the user's certificate first
    and the root certificate authority last), or null if the given alias
    does not exist or does not contain a certificate chain - `java.security.cert.Certificate[]`"
-  ([this alias]
+  ([^java.security.KeyStoreSpi this ^java.lang.String alias]
     (-> this (.engineGetCertificateChain alias))))
 
 (defn engine-get-key
@@ -154,7 +154,7 @@
    or does not identify a key-related entry. - `java.security.Key`
 
   throws: java.security.NoSuchAlgorithmException - if the algorithm for recovering the key cannot be found"
-  ([this alias password]
+  ([^java.security.KeyStoreSpi this ^java.lang.String alias password]
     (-> this (.engineGetKey alias password))))
 
 (defn engine-load
@@ -170,9 +170,9 @@
   password - the password used to check the integrity of the keystore, the password used to unlock the keystore, or null - `char[]`
 
   throws: java.io.IOException - if there is an I/O or format problem with the keystore data, if a password is required but not given, or if the given password was incorrect. If the error is due to a wrong password, the cause of the IOException should be an UnrecoverableKeyException"
-  ([this stream password]
+  ([^java.security.KeyStoreSpi this ^java.io.InputStream stream password]
     (-> this (.engineLoad stream password)))
-  ([this param]
+  ([^java.security.KeyStoreSpi this ^java.security.KeyStore.LoadStoreParameter param]
     (-> this (.engineLoad param))))
 
 (defn engine-delete-entry
@@ -181,7 +181,7 @@
   alias - the alias name - `java.lang.String`
 
   throws: java.security.KeyStoreException - if the entry cannot be removed."
-  ([this alias]
+  ([^java.security.KeyStoreSpi this ^java.lang.String alias]
     (-> this (.engineDeleteEntry alias))))
 
 (defn engine-is-key-entry
@@ -194,7 +194,7 @@
 
   returns: true if the entry identified by the given alias is a
    key-related, false otherwise. - `boolean`"
-  ([this alias]
+  ([^java.security.KeyStoreSpi this ^java.lang.String alias]
     (-> this (.engineIsKeyEntry alias))))
 
 (defn engine-set-certificate-entry
@@ -211,7 +211,7 @@
   cert - the certificate - `java.security.cert.Certificate`
 
   throws: java.security.KeyStoreException - if the given alias already exists and does not identify an entry containing a trusted certificate, or this operation fails for some other reason."
-  ([this alias cert]
+  ([^java.security.KeyStoreSpi this ^java.lang.String alias ^java.security.cert.Certificate cert]
     (-> this (.engineSetCertificateEntry alias cert))))
 
 (defn engine-is-certificate-entry
@@ -224,7 +224,7 @@
 
   returns: true if the entry identified by the given alias contains a
    trusted certificate, false otherwise. - `boolean`"
-  ([this alias]
+  ([^java.security.KeyStoreSpi this ^java.lang.String alias]
     (-> this (.engineIsCertificateEntry alias))))
 
 (defn engine-get-certificate-alias
@@ -249,7 +249,7 @@
 
   returns: the alias name of the first entry with matching certificate,
    or null if no such entry exists in this keystore. - `java.lang.String`"
-  ([this cert]
+  ([^java.security.KeyStoreSpi this ^java.security.cert.Certificate cert]
     (-> this (.engineGetCertificateAlias cert))))
 
 (defn engine-get-certificate
@@ -272,6 +272,6 @@
 
   returns: the certificate, or null if the given alias does not exist or
    does not contain a certificate. - `java.security.cert.Certificate`"
-  ([this alias]
+  ([^java.security.KeyStoreSpi this ^java.lang.String alias]
     (-> this (.engineGetCertificate alias))))
 

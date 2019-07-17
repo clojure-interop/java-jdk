@@ -24,6 +24,6 @@
   "Fetches the current offset within the document.
 
   returns: the offset >= 0 - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getOffset))))
 

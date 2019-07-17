@@ -13,13 +13,13 @@
   Constructor for the HTTPException
 
   status-code - int for the HTTP status code - `int`"
-  ([status-code]
+  ([^Integer status-code]
     (new HTTPException status-code)))
 
 (defn get-status-code
   "Gets the HTTP status code.
 
   returns: HTTP status code - `int`"
-  ([this]
+  ([^javax.xml.ws.http.HTTPException this]
     (-> this (.getStatusCode))))
 

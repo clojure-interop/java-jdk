@@ -31,6 +31,6 @@
   Creates a new StyledTextAction from a string action name.
 
   nm - the name of the action - `java.lang.String`"
-  ([nm]
+  ([^java.lang.String nm]
     (new StyledEditorKit$StyledTextAction nm)))
 

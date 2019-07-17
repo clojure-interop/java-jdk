@@ -25,7 +25,7 @@
   data - an array of byte arrays representing a lookup table for each band - `byte[][]`
 
   throws: java.lang.IllegalArgumentException - if offset is is less than 0 or if the length of data is less than 1"
-  ([offset data]
+  ([^Integer offset data]
     (new ByteLookupTable offset data)))
 
 (defn get-table
@@ -34,7 +34,7 @@
    array is one.
 
   returns: the data array of this ByteLookupTable. - `byte[][]`"
-  ([this]
+  ([^java.awt.image.ByteLookupTable this]
     (-> this (.getTable))))
 
 (defn lookup-pixel
@@ -49,6 +49,6 @@
            samples. - `int[]`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if src is longer than dst or if for any element i of src, src[i]-offset is either less than zero or greater than or equal to the length of the lookup table for any band."
-  ([this src dst]
+  ([^java.awt.image.ByteLookupTable this src dst]
     (-> this (.lookupPixel src dst))))
 

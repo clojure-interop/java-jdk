@@ -12,6 +12,6 @@
   tab-offset - the position within the text stream that the tab occurred at >= 0. - `int`
 
   returns: the next tab stop >= 0 - `float`"
-  ([this x tab-offset]
+  ([^. this ^Float x ^Integer tab-offset]
     (-> this (.nextTabStop x tab-offset))))
 

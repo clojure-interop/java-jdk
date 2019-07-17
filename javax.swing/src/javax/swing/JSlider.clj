@@ -52,13 +52,13 @@
   value - the initial value of the slider - `int`
 
   throws: java.lang.IllegalArgumentException - if orientation is not one of VERTICAL, HORIZONTAL"
-  ([orientation min max value]
+  ([^Integer orientation ^Integer min ^Integer max ^Integer value]
     (new JSlider orientation min max value))
-  ([min max value]
+  ([^Integer min ^Integer max ^Integer value]
     (new JSlider min max value))
-  ([min max]
+  ([^Integer min ^Integer max]
     (new JSlider min max))
-  ([orientation]
+  ([^Integer orientation]
     (new JSlider orientation))
   ([]
     (new JSlider )))
@@ -74,14 +74,14 @@
    set to true.
 
   n - new value for the minorTickSpacing property - `int`"
-  ([this n]
+  ([^javax.swing.JSlider this ^Integer n]
     (-> this (.setMinorTickSpacing n))))
 
 (defn add-change-listener
   "Adds a ChangeListener to the slider.
 
   l - the ChangeListener to add - `javax.swing.event.ChangeListener`"
-  ([this l]
+  ([^javax.swing.JSlider this ^javax.swing.event.ChangeListener l]
     (-> this (.addChangeListener l))))
 
 (defn get-value-is-adjusting?
@@ -90,7 +90,7 @@
    documentation.
 
   returns: the value of the model's valueIsAdjusting property - `boolean`"
-  ([this]
+  ([^javax.swing.JSlider this]
     (-> this (.getValueIsAdjusting))))
 
 (defn get-orientation
@@ -98,7 +98,7 @@
 
   returns: SwingConstants.VERTICAL or
     SwingConstants.HORIZONTAL - `int`"
-  ([this]
+  ([^javax.swing.JSlider this]
     (-> this (.getOrientation))))
 
 (defn get-snap-to-ticks?
@@ -107,7 +107,7 @@
    positioned the knob.
 
   returns: true if the value snaps to the nearest tick mark, else false - `boolean`"
-  ([this]
+  ([^javax.swing.JSlider this]
     (-> this (.getSnapToTicks))))
 
 (defn get-minimum
@@ -115,7 +115,7 @@
    from the BoundedRangeModel.
 
   returns: the value of the model's minimum property - `int`"
-  ([this]
+  ([^javax.swing.JSlider this]
     (-> this (.getMinimum))))
 
 (defn set-inverted
@@ -132,7 +132,7 @@
    By default, the value of this property is false.
 
   b - true to reverse the slider values from their normal order - `boolean`"
-  ([this b]
+  ([^javax.swing.JSlider this ^Boolean b]
     (-> this (.setInverted b))))
 
 (defn get-minor-tick-spacing
@@ -143,7 +143,7 @@
    0, 10, 20, 30, 40, 50.
 
   returns: the number of values between minor ticks - `int`"
-  ([this]
+  ([^javax.swing.JSlider this]
     (-> this (.getMinorTickSpacing))))
 
 (defn create-standard-labels
@@ -166,9 +166,9 @@
   returns: a new Hashtable of labels - `java.util.Hashtable`
 
   throws: java.lang.IllegalArgumentException - if start is out of range, or if increment is less than or equal to zero"
-  ([this increment start]
+  ([^javax.swing.JSlider this ^Integer increment ^Integer start]
     (-> this (.createStandardLabels increment start)))
-  ([this increment]
+  ([^javax.swing.JSlider this ^Integer increment]
     (-> this (.createStandardLabels increment))))
 
 (defn get-extent
@@ -176,7 +176,7 @@
    This represents the range of values `covered` by the knob.
 
   returns: an int representing the extent - `int`"
-  ([this]
+  ([^javax.swing.JSlider this]
     (-> this (.getExtent))))
 
 (defn set-extent
@@ -194,14 +194,14 @@
    all change listeners are notified.
 
   extent - the new extent - `int`"
-  ([this extent]
+  ([^javax.swing.JSlider this ^Integer extent]
     (-> this (.setExtent extent))))
 
 (defn get-ui-class-id
   "Returns the name of the L&F class that renders this component.
 
   returns: `SliderUI` - `java.lang.String`"
-  ([this]
+  ([^javax.swing.JSlider this]
     (-> this (.getUIClassID))))
 
 (defn get-value
@@ -209,14 +209,14 @@
    from the BoundedRangeModel.
 
   returns: the current value of the slider - `int`"
-  ([this]
+  ([^javax.swing.JSlider this]
     (-> this (.getValue))))
 
 (defn remove-change-listener
   "Removes a ChangeListener from the slider.
 
   l - the ChangeListener to remove - `javax.swing.event.ChangeListener`"
-  ([this l]
+  ([^javax.swing.JSlider this ^javax.swing.event.ChangeListener l]
     (-> this (.removeChangeListener l))))
 
 (defn get-change-listeners
@@ -225,7 +225,7 @@
 
   returns: all of the ChangeListeners added or an empty
            array if no listeners have been added - `javax.swing.event.ChangeListener[]`"
-  ([this]
+  ([^javax.swing.JSlider this]
     (-> this (.getChangeListeners))))
 
 (defn get-label-table
@@ -233,7 +233,7 @@
 
   returns: the Dictionary containing labels and
       where to draw them - `java.util.Dictionary`"
-  ([this]
+  ([^javax.swing.JSlider this]
     (-> this (.getLabelTable))))
 
 (defn set-paint-labels
@@ -250,21 +250,21 @@
    By default, this property is false.
 
   b - whether or not to paint labels - `boolean`"
-  ([this b]
+  ([^javax.swing.JSlider this ^Boolean b]
     (-> this (.setPaintLabels b))))
 
 (defn set-ui
   "Sets the UI object which implements the L&F for this component.
 
   ui - the SliderUI L&F object - `javax.swing.plaf.SliderUI`"
-  ([this ui]
+  ([^javax.swing.JSlider this ^javax.swing.plaf.SliderUI ui]
     (-> this (.setUI ui))))
 
 (defn get-paint-ticks?
   "Tells if tick marks are to be painted.
 
   returns: true if tick marks are painted, else false - `boolean`"
-  ([this]
+  ([^javax.swing.JSlider this]
     (-> this (.getPaintTicks))))
 
 (defn set-maximum
@@ -280,7 +280,7 @@
    all change listeners are notified.
 
   maximum - the new maximum - `int`"
-  ([this maximum]
+  ([^javax.swing.JSlider this ^Integer maximum]
     (-> this (.setMaximum maximum))))
 
 (defn set-paint-ticks
@@ -288,14 +288,14 @@
    By default, this property is false.
 
   b - whether or not tick marks should be painted - `boolean`"
-  ([this b]
+  ([^javax.swing.JSlider this ^Boolean b]
     (-> this (.setPaintTicks b))))
 
 (defn get-ui
   "Gets the UI object which implements the L&F for this component.
 
   returns: the SliderUI object that implements the Slider L&F - `javax.swing.plaf.SliderUI`"
-  ([this]
+  ([^javax.swing.JSlider this]
     (-> this (.getUI))))
 
 (defn set-value-is-adjusting
@@ -304,21 +304,21 @@
    a knob drag begins, and to false when the drag ends.
 
   b - the new value for the valueIsAdjusting property - `boolean`"
-  ([this b]
+  ([^javax.swing.JSlider this ^Boolean b]
     (-> this (.setValueIsAdjusting b))))
 
 (defn set-font
   "Sets the font for this component.
 
   font - the desired Font for this component - `java.awt.Font`"
-  ([this font]
+  ([^javax.swing.JSlider this ^java.awt.Font font]
     (-> this (.setFont font))))
 
 (defn get-paint-track?
   "Tells if the track (area the slider slides in) is to be painted.
 
   returns: true if track is painted, else false - `boolean`"
-  ([this]
+  ([^javax.swing.JSlider this]
     (-> this (.getPaintTrack))))
 
 (defn get-accessible-context
@@ -329,7 +329,7 @@
 
   returns: an AccessibleJSlider that serves as the
            AccessibleContext of this JSlider - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^javax.swing.JSlider this]
     (-> this (.getAccessibleContext))))
 
 (defn set-value
@@ -345,7 +345,7 @@
    all change listeners are notified.
 
   n - the new value - `int`"
-  ([this n]
+  ([^javax.swing.JSlider this ^Integer n]
     (-> this (.setValue n))))
 
 (defn image-update
@@ -386,7 +386,7 @@
 
   returns: false if the infoflags indicate that the
               image is completely loaded; true otherwise. - `boolean`"
-  ([this img infoflags x y w h]
+  ([^javax.swing.JSlider this ^java.awt.Image img ^Integer infoflags ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.imageUpdate img infoflags x y w h))))
 
 (defn set-orientation
@@ -396,7 +396,7 @@
   orientation - HORIZONTAL or VERTICAL - `int`
 
   throws: java.lang.IllegalArgumentException - if orientation is not one of VERTICAL, HORIZONTAL"
-  ([this orientation]
+  ([^javax.swing.JSlider this ^Integer orientation]
     (-> this (.setOrientation orientation))))
 
 (defn get-major-tick-spacing
@@ -407,7 +407,7 @@
    0, 10, 20, 30, 40, 50.
 
   returns: the number of values between major ticks - `int`"
-  ([this]
+  ([^javax.swing.JSlider this]
     (-> this (.getMajorTickSpacing))))
 
 (defn set-label-table
@@ -423,7 +423,7 @@
    property is true.
 
   labels - new Dictionary of labels, or null to remove all labels - `java.util.Dictionary`"
-  ([this labels]
+  ([^javax.swing.JSlider this ^java.util.Dictionary labels]
     (-> this (.setLabelTable labels))))
 
 (defn set-paint-track
@@ -431,14 +431,14 @@
    By default, this property is true.
 
   b - whether or not to paint the slider track - `boolean`"
-  ([this b]
+  ([^javax.swing.JSlider this ^Boolean b]
     (-> this (.setPaintTrack b))))
 
 (defn get-paint-labels?
   "Tells if labels are to be painted.
 
   returns: true if labels are painted, else false - `boolean`"
-  ([this]
+  ([^javax.swing.JSlider this]
     (-> this (.getPaintLabels))))
 
 (defn get-model
@@ -446,7 +446,7 @@
    fundamental properties: minimum, maximum, value.
 
   returns: the data model for this component - `javax.swing.BoundedRangeModel`"
-  ([this]
+  ([^javax.swing.JSlider this]
     (-> this (.getModel))))
 
 (defn set-minimum
@@ -462,7 +462,7 @@
    all change listeners are notified.
 
   minimum - the new minimum - `int`"
-  ([this minimum]
+  ([^javax.swing.JSlider this ^Integer minimum]
     (-> this (.setMinimum minimum))))
 
 (defn set-snap-to-ticks
@@ -472,7 +472,7 @@
    By default, this property is false.
 
   b - true to snap the knob to the nearest tick mark - `boolean`"
-  ([this b]
+  ([^javax.swing.JSlider this ^Boolean b]
     (-> this (.setSnapToTicks b))))
 
 (defn get-maximum
@@ -480,7 +480,7 @@
    from the BoundedRangeModel.
 
   returns: the value of the model's maximum property - `int`"
-  ([this]
+  ([^javax.swing.JSlider this]
     (-> this (.getMaximum))))
 
 (defn set-major-tick-spacing
@@ -504,7 +504,7 @@
    setLabelTable.
 
   n - new value for the majorTickSpacing property - `int`"
-  ([this n]
+  ([^javax.swing.JSlider this ^Integer n]
     (-> this (.setMajorTickSpacing n))))
 
 (defn set-model
@@ -515,18 +515,18 @@
    undefined behavior, and, most likely, exceptions.
 
   new-model - the new, non-null BoundedRangeModel to use - `javax.swing.BoundedRangeModel`"
-  ([this new-model]
+  ([^javax.swing.JSlider this ^javax.swing.BoundedRangeModel new-model]
     (-> this (.setModel new-model))))
 
 (defn update-ui
   "Resets the UI property to a value from the current look and feel."
-  ([this]
+  ([^javax.swing.JSlider this]
     (-> this (.updateUI))))
 
 (defn get-inverted?
   "Returns true if the value-range shown for the slider is reversed,
 
   returns: true if the slider values are reversed from their normal order - `boolean`"
-  ([this]
+  ([^javax.swing.JSlider this]
     (-> this (.getInverted))))
 

@@ -161,9 +161,9 @@
   returns: A new asynchronous file channel - `java.nio.channels.AsynchronousFileChannel`
 
   throws: java.lang.IllegalArgumentException - If the set contains an invalid combination of options"
-  ([file options executor attrs]
+  ([^java.nio.file.Path file ^java.nio.file.OpenOption> options ^java.util.concurrent.ExecutorService executor ^java.nio.file.attribute.FileAttribute attrs]
     (AsynchronousFileChannel/open file options executor attrs))
-  ([file options]
+  ([^java.nio.file.Path file ^java.nio.file.OpenOption options]
     (AsynchronousFileChannel/open file options)))
 
 (defn size
@@ -172,7 +172,7 @@
   returns: The current size of this channel's file, measured in bytes - `long`
 
   throws: java.nio.channels.ClosedChannelException - If this channel is closed"
-  ([this]
+  ([^java.nio.channels.AsynchronousFileChannel this]
     (-> this (.size))))
 
 (defn truncate
@@ -188,7 +188,7 @@
   returns: This file channel - `java.nio.channels.AsynchronousFileChannel`
 
   throws: java.nio.channels.NonWritableChannelException - If this channel was not opened for writing"
-  ([this size]
+  ([^java.nio.channels.AsynchronousFileChannel this ^Long size]
     (-> this (.truncate size))))
 
 (defn force
@@ -225,7 +225,7 @@
   meta-data - If true then this method is required to force changes to both the file's content and metadata to be written to storage; otherwise, it need only force content changes to be written - `boolean`
 
   throws: java.nio.channels.ClosedChannelException - If this channel is closed"
-  ([this meta-data]
+  ([^java.nio.channels.AsynchronousFileChannel this ^Boolean meta-data]
     (-> this (.force meta-data))))
 
 (defn lock
@@ -276,13 +276,13 @@
   returns: `<A> void`
 
   throws: java.nio.channels.OverlappingFileLockException - If a lock that overlaps the requested region is already held by this Java virtual machine, or there is already a pending attempt to lock an overlapping region"
-  ([this position size shared attachment handler]
+  ([^java.nio.channels.AsynchronousFileChannel this ^Long position ^Long size ^Boolean shared attachment handler]
     (-> this (.lock position size shared attachment handler)))
-  ([this position size shared]
+  ([^java.nio.channels.AsynchronousFileChannel this ^Long position ^Long size ^Boolean shared]
     (-> this (.lock position size shared)))
-  ([this attachment handler]
+  ([^java.nio.channels.AsynchronousFileChannel this attachment handler]
     (-> this (.lock attachment handler)))
-  ([this]
+  ([^java.nio.channels.AsynchronousFileChannel this]
     (-> this (.lock))))
 
 (defn try-lock
@@ -303,9 +303,9 @@
             because another program holds an overlapping lock - `java.nio.channels.FileLock`
 
   throws: java.lang.IllegalArgumentException - If the preconditions on the parameters do not hold"
-  ([this position size shared]
+  ([^java.nio.channels.AsynchronousFileChannel this ^Long position ^Long size ^Boolean shared]
     (-> this (.tryLock position size shared)))
-  ([this]
+  ([^java.nio.channels.AsynchronousFileChannel this]
     (-> this (.tryLock))))
 
 (defn read
@@ -331,9 +331,9 @@
   returns: `<A> void`
 
   throws: java.lang.IllegalArgumentException - If the position is negative or the buffer is read-only"
-  ([this dst position attachment handler]
+  ([^java.nio.channels.AsynchronousFileChannel this ^java.nio.ByteBuffer dst ^Long position attachment handler]
     (-> this (.read dst position attachment handler)))
-  ([this dst position]
+  ([^java.nio.channels.AsynchronousFileChannel this ^java.nio.ByteBuffer dst ^Long position]
     (-> this (.read dst position))))
 
 (defn write
@@ -355,8 +355,8 @@
   returns: `<A> void`
 
   throws: java.lang.IllegalArgumentException - If the position is negative"
-  ([this src position attachment handler]
+  ([^java.nio.channels.AsynchronousFileChannel this ^java.nio.ByteBuffer src ^Long position attachment handler]
     (-> this (.write src position attachment handler)))
-  ([this src position]
+  ([^java.nio.channels.AsynchronousFileChannel this ^java.nio.ByteBuffer src ^Long position]
     (-> this (.write src position))))
 

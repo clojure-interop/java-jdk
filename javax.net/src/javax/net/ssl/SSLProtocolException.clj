@@ -11,6 +11,6 @@
    detected by an SSL subsystem.
 
   reason - describes the problem. - `java.lang.String`"
-  ([reason]
+  ([^java.lang.String reason]
     (new SSLProtocolException reason)))
 

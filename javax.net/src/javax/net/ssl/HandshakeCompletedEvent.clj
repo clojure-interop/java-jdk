@@ -17,14 +17,14 @@
 
   sock - the SSLSocket acting as the source of the event - `javax.net.ssl.SSLSocket`
   s - the SSLSession this event is associated with - `javax.net.ssl.SSLSession`"
-  ([sock s]
+  ([^javax.net.ssl.SSLSocket sock ^javax.net.ssl.SSLSession s]
     (new HandshakeCompletedEvent sock s)))
 
 (defn get-session
   "Returns the session that triggered this event.
 
   returns: the SSLSession for this handshake - `javax.net.ssl.SSLSession`"
-  ([this]
+  ([^javax.net.ssl.HandshakeCompletedEvent this]
     (-> this (.getSession))))
 
 (defn get-cipher-suite
@@ -33,7 +33,7 @@
    getting the ciphersuite from the SSLsession.)
 
   returns: the name of the cipher suite negotiated during this session. - `java.lang.String`"
-  ([this]
+  ([^javax.net.ssl.HandshakeCompletedEvent this]
     (-> this (.getCipherSuite))))
 
 (defn get-local-certificates
@@ -52,7 +52,7 @@
             certificate first followed by any
             certificate authorities.  If no certificates were sent,
             then null is returned. - `java.security.cert.Certificate[]`"
-  ([this]
+  ([^javax.net.ssl.HandshakeCompletedEvent this]
     (-> this (.getLocalCertificates))))
 
 (defn get-peer-certificates
@@ -67,7 +67,7 @@
             any certificate authorities. - `java.security.cert.Certificate[]`
 
   throws: javax.net.ssl.SSLPeerUnverifiedException - if the peer is not verified."
-  ([this]
+  ([^javax.net.ssl.HandshakeCompletedEvent this]
     (-> this (.getPeerCertificates))))
 
 (defn get-peer-certificate-chain
@@ -88,7 +88,7 @@
             X509Certificate format). - `javax.security.cert.X509Certificate[]`
 
   throws: javax.net.ssl.SSLPeerUnverifiedException - if the peer is not verified."
-  ([this]
+  ([^javax.net.ssl.HandshakeCompletedEvent this]
     (-> this (.getPeerCertificateChain))))
 
 (defn get-peer-principal
@@ -100,7 +100,7 @@
    KerberosPrincipal for Kerberos cipher suites. - `java.security.Principal`
 
   throws: javax.net.ssl.SSLPeerUnverifiedException - if the peer's identity has not been verified"
-  ([this]
+  ([^javax.net.ssl.HandshakeCompletedEvent this]
     (-> this (.getPeerPrincipal))))
 
 (defn get-local-principal
@@ -110,7 +110,7 @@
    of the end-entity certificate for X509-based cipher suites, and
    KerberosPrincipal for Kerberos cipher suites. If no principal was
    sent, then null is returned. - `java.security.Principal`"
-  ([this]
+  ([^javax.net.ssl.HandshakeCompletedEvent this]
     (-> this (.getLocalPrincipal))))
 
 (defn get-socket
@@ -119,6 +119,6 @@
    write code without type casts.)
 
   returns: the socket on which the connection was made. - `javax.net.ssl.SSLSocket`"
-  ([this]
+  ([^javax.net.ssl.HandshakeCompletedEvent this]
     (-> this (.getSocket))))
 

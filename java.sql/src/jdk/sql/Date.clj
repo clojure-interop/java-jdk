@@ -22,9 +22,9 @@
    machine running the application) that corresponds to zero GMT.
 
   date - milliseconds since January 1, 1970, 00:00:00 GMT not to exceed the milliseconds representation for the year 8099. A negative number indicates the number of milliseconds before January 1, 1970, 00:00:00 GMT. - `long`"
-  ([date]
+  ([^Long date]
     (new Date date))
-  ([year month day]
+  ([^Integer year ^Integer month ^Integer day]
     (new Date year month day)))
 
 (defn *value-of
@@ -37,7 +37,7 @@
            given date - `java.sql.Date`
 
   throws: java.lang.IllegalArgumentException - if the date given is not in the JDBC date escape format (yyyy-[m]m-[d]d)"
-  ([s]
+  ([^java.lang.String s]
     (Date/valueOf s)))
 
 (defn to-instant
@@ -49,7 +49,7 @@
     this Date object - `java.time.Instant`
 
   throws: java.lang.UnsupportedOperationException - if this method is invoked"
-  ([this]
+  ([^java.sql.Date this]
     (-> this (.toInstant))))
 
 (defn set-seconds
@@ -60,7 +60,7 @@
   returns: `java.lang.  void`
 
   throws: java.lang.IllegalArgumentException - if this method is invoked"
-  ([this i]
+  ([^java.sql.Date this ^Integer i]
     (-> this (.setSeconds i))))
 
 (defn set-time
@@ -72,7 +72,7 @@
    machine running the application) that corresponds to zero GMT.
 
   date - milliseconds since January 1, 1970, 00:00:00 GMT not to exceed the milliseconds representation for the year 8099. A negative number indicates the number of milliseconds before January 1, 1970, 00:00:00 GMT. - `long`"
-  ([this date]
+  ([^java.sql.Date this ^Long date]
     (-> this (.setTime date))))
 
 (defn get-hours
@@ -81,7 +81,7 @@
   returns: the hour represented by this date. - `java.lang.  int`
 
   throws: java.lang.IllegalArgumentException - if this method is invoked"
-  ([this]
+  ([^java.sql.Date this]
     (-> this (.getHours))))
 
 (defn set-hours
@@ -92,14 +92,14 @@
   returns: `java.lang.  void`
 
   throws: java.lang.IllegalArgumentException - if this method is invoked"
-  ([this i]
+  ([^java.sql.Date this ^Integer i]
     (-> this (.setHours i))))
 
 (defn to-string
   "Formats a date in the date escape format yyyy-mm-dd.
 
   returns: a String in yyyy-mm-dd format - `java.lang.String`"
-  ([this]
+  ([^java.sql.Date this]
     (-> this (.toString))))
 
 (defn set-minutes
@@ -110,7 +110,7 @@
   returns: `java.lang.  void`
 
   throws: java.lang.IllegalArgumentException - if this method is invoked"
-  ([this i]
+  ([^java.sql.Date this ^Integer i]
     (-> this (.setMinutes i))))
 
 (defn get-seconds
@@ -119,7 +119,7 @@
   returns: the number of seconds past the minute represented by this date. - `java.lang.  int`
 
   throws: java.lang.IllegalArgumentException - if this method is invoked"
-  ([this]
+  ([^java.sql.Date this]
     (-> this (.getSeconds))))
 
 (defn to-local-date
@@ -129,7 +129,7 @@
    date value as this Date in local time zone
 
   returns: a LocalDate object representing the same date value - `java.time.LocalDate`"
-  ([this]
+  ([^java.sql.Date this]
     (-> this (.toLocalDate))))
 
 (defn get-minutes
@@ -138,6 +138,6 @@
   returns: the number of minutes past the hour represented by this date. - `java.lang.  int`
 
   throws: java.lang.IllegalArgumentException - if this method is invoked"
-  ([this]
+  ([^java.sql.Date this]
     (-> this (.getMinutes))))
 

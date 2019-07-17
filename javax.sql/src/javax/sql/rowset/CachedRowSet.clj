@@ -619,7 +619,7 @@
    the rowset's Java VM resources.
 
   throws: java.sql.SQLException - if an error occurs flushing the contents of this CachedRowSet object"
-  ([this]
+  ([^. this]
     (-> this (.release))))
 
 (defn get-table-name
@@ -634,7 +634,7 @@
            if no name has been set for the table - `java.lang.String`
 
   throws: java.sql.SQLException - if an error is encountered returning the table name"
-  ([this]
+  ([^. this]
     (-> this (.getTableName))))
 
 (defn get-sync-provider
@@ -670,7 +670,7 @@
         was instantiated, or if none was was set, the default provider - `javax.sql.rowset.spi.SyncProvider`
 
   throws: java.sql.SQLException - if an error occurs while returning the SyncProvider object"
-  ([this]
+  ([^. this]
     (-> this (.getSyncProvider))))
 
 (defn populate
@@ -693,9 +693,9 @@
   start-row - the position in the ResultSet from where to start populating the records in this CachedRowSet - `int`
 
   throws: java.sql.SQLException - if a null ResultSet object is supplied or this CachedRowSet object cannot retrieve the associated ResultSetMetaData object"
-  ([this rs start-row]
+  ([^. this ^java.sql.ResultSet rs ^Integer start-row]
     (-> this (.populate rs start-row)))
-  ([this data]
+  ([^. this ^java.sql.ResultSet data]
     (-> this (.populate data))))
 
 (defn undo-insert
@@ -715,14 +715,14 @@
    CachedRowSet.last
 
   throws: java.sql.SQLException - if (1) the current row has not been inserted or (2) the cursor is before the first row, after the last row, or on the insert row"
-  ([this]
+  ([^. this]
     (-> this (.undoInsert))))
 
 (defn get-page-size
   "Returns the page-size for the CachedRowSet object
 
   returns: an int page size - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getPageSize))))
 
 (defn next-page
@@ -734,7 +734,7 @@
   returns: true if more pages exist; false if this is the last page - `boolean`
 
   throws: java.sql.SQLException - if an error occurs fetching the next page, or if this method is called prematurely before populate or execute."
-  ([this]
+  ([^. this]
     (-> this (.nextPage))))
 
 (defn row-set-populated
@@ -748,7 +748,7 @@
   num-rows - when populating, the number of rows interval on which the CachedRowSet populated should fire; the default value is zero; cannot be less than fetchSize or zero - `int`
 
   throws: java.sql.SQLException - numRows < 0 or numRows < getFetchSize()"
-  ([this event num-rows]
+  ([^. this ^javax.sql.RowSetEvent event ^Integer num-rows]
     (-> this (.rowSetPopulated event num-rows))))
 
 (defn undo-update
@@ -764,7 +764,7 @@
    effect until further modification to the rowset data has occurred.
 
   throws: java.sql.SQLException - if the cursor is before the first row or after the last row in in this CachedRowSet object"
-  ([this]
+  ([^. this]
     (-> this (.undoUpdate))))
 
 (defn set-meta-data
@@ -781,7 +781,7 @@
   md - a RowSetMetaData object containing metadata about the columns in this CachedRowSet object - `javax.sql.RowSetMetaData`
 
   throws: java.sql.SQLException - if invalid metadata is supplied to the rowset"
-  ([this md]
+  ([^. this ^javax.sql.RowSetMetaData md]
     (-> this (.setMetaData md))))
 
 (defn column-updated
@@ -794,7 +794,7 @@
    false otherwise - `boolean`
 
   throws: java.sql.SQLException - if the cursor is on the insert row, before the first row, or after the last row"
-  ([this idx]
+  ([^. this ^Integer idx]
     (-> this (.columnUpdated idx))))
 
 (defn accept-changes
@@ -857,9 +857,9 @@
   con - a standard JDBC Connection object - `java.sql.Connection`
 
   throws: javax.sql.rowset.spi.SyncProviderException - if the underlying synchronization provider's writer fails to write the updates back to the data source"
-  ([this con]
+  ([^. this ^java.sql.Connection con]
     (-> this (.acceptChanges con)))
-  ([this]
+  ([^. this]
     (-> this (.acceptChanges))))
 
 (defn restore-original
@@ -878,7 +878,7 @@
    should be fired to notify all registered listeners.
 
   throws: java.sql.SQLException - if an error occurs rolling back the current value of this CachedRowSet object to its previous value"
-  ([this]
+  ([^. this]
     (-> this (.restoreOriginal))))
 
 (defn get-original
@@ -907,7 +907,7 @@
            this CachedRowSet object - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if an error occurs producing the ResultSet object"
-  ([this]
+  ([^. this]
     (-> this (.getOriginal))))
 
 (defn set-table-name
@@ -924,7 +924,7 @@
   tab-name - a String object identifying the table from which this CachedRowSet object was derived; cannot be null but may be an empty string - `java.lang.String`
 
   throws: java.sql.SQLException - if an error is encountered naming the table or tabName is null"
-  ([this tab-name]
+  ([^. this ^java.lang.String tab-name]
     (-> this (.setTableName tab-name))))
 
 (defn commit
@@ -939,7 +939,7 @@
    be used only when auto-commit mode has been disabled.
 
   throws: java.sql.SQLException - if a database access error occurs or this Connection object within this CachedRowSet is in auto-commit mode"
-  ([this]
+  ([^. this]
     (-> this (.commit))))
 
 (defn to-collection
@@ -966,9 +966,9 @@
    object - `java.util.Collection<?>`
 
   throws: java.sql.SQLException - if an error occurs generating the collection or an invalid column id is provided"
-  ([this column]
+  ([^. this ^Integer column]
     (-> this (.toCollection column)))
-  ([this]
+  ([^. this]
     (-> this (.toCollection))))
 
 (defn set-page-size
@@ -981,7 +981,7 @@
   size - the page-size of the CachedRowSet - `int`
 
   throws: java.sql.SQLException - if an error occurs setting the CachedRowSet page size or if the page size is less than 0."
-  ([this size]
+  ([^. this ^Integer size]
     (-> this (.setPageSize size))))
 
 (defn get-row-set-warnings
@@ -997,7 +997,7 @@
    object reported or null if there are none - `javax.sql.rowset.RowSetWarning`
 
   throws: java.sql.SQLException - if this method is called on a closed RowSet"
-  ([this]
+  ([^. this]
     (-> this (.getRowSetWarnings))))
 
 (defn set-sync-provider
@@ -1022,7 +1022,7 @@
   provider - a String object giving the fully qualified class name of a SyncProvider implementation - `java.lang.String`
 
   throws: java.sql.SQLException - if an error occurs while attempting to reset the SyncProvider implementation"
-  ([this provider]
+  ([^. this ^java.lang.String provider]
     (-> this (.setSyncProvider provider))))
 
 (defn set-key-columns
@@ -1038,7 +1038,7 @@
   keys - an array of int indicating the columns that form a primary key for this CachedRowSet object; every element in the array must be greater than 0 and less than or equal to the number of columns in this rowset - `int[]`
 
   throws: java.sql.SQLException - if any of the numbers in the given array are not valid for this rowset"
-  ([this keys]
+  ([^. this keys]
     (-> this (.setKeyColumns keys))))
 
 (defn get-show-deleted?
@@ -1063,7 +1063,7 @@
            false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a rowset implementation is unable to to determine whether rows marked for deletion are visible"
-  ([this]
+  ([^. this]
     (-> this (.getShowDeleted))))
 
 (defn get-original-row
@@ -1081,7 +1081,7 @@
   returns: the original result set of the row - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if there is no current row"
-  ([this]
+  ([^. this]
     (-> this (.getOriginalRow))))
 
 (defn get-key-columns
@@ -1095,7 +1095,7 @@
          empty if no columns are representative of a primary key. - `int[]`
 
   throws: java.sql.SQLException - if this CachedRowSet object is empty"
-  ([this]
+  ([^. this]
     (-> this (.getKeyColumns))))
 
 (defn create-copy-no-constraints
@@ -1116,7 +1116,7 @@
        completely independent of this  CachedRowSet object - `javax.sql.rowset.CachedRowSet`
 
   throws: java.sql.SQLException - if an error occurs in generating the copy of the of this CachedRowSet object"
-  ([this]
+  ([^. this]
     (-> this (.createCopyNoConstraints))))
 
 (defn previous-page
@@ -1130,7 +1130,7 @@
        is the first page. - `boolean`
 
   throws: java.sql.SQLException - if an error occurs fetching the previous page, or if this method is called prematurely before populate or execute."
-  ([this]
+  ([^. this]
     (-> this (.previousPage))))
 
 (defn create-copy-schema
@@ -1152,7 +1152,7 @@
   returns: An empty copy of this CachedRowSet object - `javax.sql.rowset.CachedRowSet`
 
   throws: java.sql.SQLException - if an error occurs in cloning the structure of this CachedRowSet object"
-  ([this]
+  ([^. this]
     (-> this (.createCopySchema))))
 
 (defn execute
@@ -1177,7 +1177,7 @@
   conn - a standard JDBC Connection object with valid properties - `java.sql.Connection`
 
   throws: java.sql.SQLException - if an invalid Connection object is supplied or an error occurs in establishing the connection to the data source"
-  ([this conn]
+  ([^. this ^java.sql.Connection conn]
     (-> this (.execute conn))))
 
 (defn rollback
@@ -1192,9 +1192,9 @@
   s - A Savepoint transaction marker - `java.sql.Savepoint`
 
   throws: java.sql.SQLException - if a database access error occurs or this Connection object within this CachedRowSet is in auto-commit mode."
-  ([this s]
+  ([^. this ^java.sql.Savepoint s]
     (-> this (.rollback s)))
-  ([this]
+  ([^. this]
     (-> this (.rollback))))
 
 (defn size
@@ -1202,7 +1202,7 @@
    object.
 
   returns: number of rows in the rowset - `int`"
-  ([this]
+  ([^. this]
     (-> this (.size))))
 
 (defn create-copy
@@ -1221,7 +1221,7 @@
    completely independent of this CachedRowSet object - `javax.sql.rowset.CachedRowSet`
 
   throws: java.sql.SQLException - if an error occurs in generating the copy of the of this CachedRowSet object"
-  ([this]
+  ([^. this]
     (-> this (.createCopy))))
 
 (defn create-shared
@@ -1252,7 +1252,7 @@
            the same data - `javax.sql.RowSet`
 
   throws: java.sql.SQLException - if an error occurs or cloning is not supported in the underlying platform"
-  ([this]
+  ([^. this]
     (-> this (.createShared))))
 
 (defn set-show-deleted
@@ -1272,7 +1272,7 @@
   b - true if deleted rows should be shown; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a rowset implementation is unable to to reset whether deleted rows should be visible"
-  ([this b]
+  ([^. this ^Boolean b]
     (-> this (.setShowDeleted b))))
 
 (defn undo-delete
@@ -1290,7 +1290,7 @@
    CachedRowSet.last
 
   throws: java.sql.SQLException - if (1) the current row has not been deleted or (2) the cursor is on the insert row, before the first row, or after the last row"
-  ([this]
+  ([^. this]
     (-> this (.undoDelete))))
 
 (defn set-original-row
@@ -1304,6 +1304,6 @@
    A call to setOriginalRow is irreversible.
 
   throws: java.sql.SQLException - if there is no current row or an error is encountered resetting the contents of the original row"
-  ([this]
+  ([^. this]
     (-> this (.setOriginalRow))))
 

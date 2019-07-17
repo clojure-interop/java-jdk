@@ -26,9 +26,9 @@
 
   s - the detail message - `java.lang.String`
   cause - the cause - `java.lang.Throwable`"
-  ([s cause]
+  ([^java.lang.String s ^java.lang.Throwable cause]
     (new RemoteException s cause))
-  ([s]
+  ([^java.lang.String s]
     (new RemoteException s))
   ([]
     (new RemoteException )))
@@ -51,7 +51,7 @@
    any, of this exception.
 
   returns: the detail message - `java.lang.String`"
-  ([this]
+  ([^java.rmi.RemoteException this]
     (-> this (.getMessage))))
 
 (defn get-cause
@@ -59,6 +59,6 @@
    of the detail field.
 
   returns: the cause, which may be null. - `java.lang.Throwable`"
-  ([this]
+  ([^java.rmi.RemoteException this]
     (-> this (.getCause))))
 

@@ -38,11 +38,11 @@
   text - the text of the check box. - `java.lang.String`
   icon - the Icon image to display - `javax.swing.Icon`
   selected - a boolean value indicating the initial selection state. If true the check box is selected - `boolean`"
-  ([text icon selected]
+  ([^java.lang.String text ^javax.swing.Icon icon ^Boolean selected]
     (new JCheckBox text icon selected))
-  ([icon selected]
+  ([^javax.swing.Icon icon ^Boolean selected]
     (new JCheckBox icon selected))
-  ([icon]
+  ([^javax.swing.Icon icon]
     (new JCheckBox icon))
   ([]
     (new JCheckBox )))
@@ -69,19 +69,19 @@
    they will ignore this property.
 
   b - true requests that the border be painted flat; false requests normal borders - `boolean`"
-  ([this b]
+  ([^javax.swing.JCheckBox this ^Boolean b]
     (-> this (.setBorderPaintedFlat b))))
 
 (defn border-painted-flat?
   "Gets the value of the borderPaintedFlat property.
 
   returns: the value of the borderPaintedFlat property - `boolean`"
-  ([this]
+  ([^javax.swing.JCheckBox this]
     (-> this (.isBorderPaintedFlat))))
 
 (defn update-ui
   "Resets the UI property to a value from the current look and feel."
-  ([this]
+  ([^javax.swing.JCheckBox this]
     (-> this (.updateUI))))
 
 (defn get-ui-class-id
@@ -89,7 +89,7 @@
    that renders this component.
 
   returns: the string `CheckBoxUI` - `java.lang.String`"
-  ([this]
+  ([^javax.swing.JCheckBox this]
     (-> this (.getUIClassID))))
 
 (defn get-accessible-context
@@ -100,6 +100,6 @@
 
   returns: an AccessibleJCheckBox that serves as the
            AccessibleContext of this JCheckBox - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^javax.swing.JCheckBox this]
     (-> this (.getAccessibleContext))))
 

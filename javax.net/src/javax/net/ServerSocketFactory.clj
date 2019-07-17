@@ -47,12 +47,12 @@
   returns: the ServerSocket - `java.net.ServerSocket`
 
   throws: java.io.IOException - for networking errors"
-  ([this port backlog if-address]
+  ([^javax.net.ServerSocketFactory this ^Integer port ^Integer backlog ^java.net.InetAddress if-address]
     (-> this (.createServerSocket port backlog if-address)))
-  ([this port backlog]
+  ([^javax.net.ServerSocketFactory this ^Integer port ^Integer backlog]
     (-> this (.createServerSocket port backlog)))
-  ([this port]
+  ([^javax.net.ServerSocketFactory this ^Integer port]
     (-> this (.createServerSocket port)))
-  ([this]
+  ([^javax.net.ServerSocketFactory this]
     (-> this (.createServerSocket))))
 

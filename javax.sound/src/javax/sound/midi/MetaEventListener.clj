@@ -14,6 +14,6 @@
    a MetaMessage in the Sequence it is processing.
 
   meta - the meta-message that the sequencer encountered - `javax.sound.midi.MetaMessage`"
-  ([this meta]
+  ([^. this ^javax.sound.midi.MetaMessage meta]
     (-> this (.meta meta))))
 

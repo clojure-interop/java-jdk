@@ -23,11 +23,11 @@
   txt - the text for the element - `char[]`
   offs - the offset into the text >= 0 - `int`
   len - the length of the text >= 0 - `int`"
-  ([a type txt offs len]
+  ([^javax.swing.text.AttributeSet a ^Short type txt ^Integer offs ^Integer len]
     (new DefaultStyledDocument$ElementSpec a type txt offs len))
-  ([a type len]
+  ([^javax.swing.text.AttributeSet a ^Short type ^Integer len]
     (new DefaultStyledDocument$ElementSpec a type len))
-  ([a type]
+  ([^javax.swing.text.AttributeSet a ^Short type]
     (new DefaultStyledDocument$ElementSpec a type)))
 
 (def *-start-tag-type
@@ -106,7 +106,7 @@
   "Sets the direction.
 
   direction - the direction (JoinPreviousDirection, JoinNextDirection) - `short`"
-  ([this direction]
+  ([^javax.swing.text.DefaultStyledDocument$ElementSpec this ^Short direction]
     (-> this (.setDirection direction))))
 
 (defn get-type
@@ -114,55 +114,55 @@
 
   returns: the type of the element (StartTagType, EndTagType,
     ContentType) - `short`"
-  ([this]
+  ([^javax.swing.text.DefaultStyledDocument$ElementSpec this]
     (-> this (.getType))))
 
 (defn set-type
   "Sets the element type.
 
   type - the type of the element (StartTagType, EndTagType, ContentType) - `short`"
-  ([this type]
+  ([^javax.swing.text.DefaultStyledDocument$ElementSpec this ^Short type]
     (-> this (.setType type))))
 
 (defn to-string
   "Converts the element to a string.
 
   returns: the string - `java.lang.String`"
-  ([this]
+  ([^javax.swing.text.DefaultStyledDocument$ElementSpec this]
     (-> this (.toString))))
 
 (defn get-direction
   "Gets the direction.
 
   returns: the direction (JoinPreviousDirection, JoinNextDirection) - `short`"
-  ([this]
+  ([^javax.swing.text.DefaultStyledDocument$ElementSpec this]
     (-> this (.getDirection))))
 
 (defn get-offset
   "Gets the starting offset.
 
   returns: the offset >= 0 - `int`"
-  ([this]
+  ([^javax.swing.text.DefaultStyledDocument$ElementSpec this]
     (-> this (.getOffset))))
 
 (defn get-array
   "Gets the array of characters.
 
   returns: the array - `char[]`"
-  ([this]
+  ([^javax.swing.text.DefaultStyledDocument$ElementSpec this]
     (-> this (.getArray))))
 
 (defn get-length
   "Gets the length.
 
   returns: the length >= 0 - `int`"
-  ([this]
+  ([^javax.swing.text.DefaultStyledDocument$ElementSpec this]
     (-> this (.getLength))))
 
 (defn get-attributes
   "Gets the element attributes.
 
   returns: the attribute set - `javax.swing.text.AttributeSet`"
-  ([this]
+  ([^javax.swing.text.DefaultStyledDocument$ElementSpec this]
     (-> this (.getAttributes))))
 

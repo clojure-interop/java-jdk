@@ -31,6 +31,6 @@
   "Returns the string form of the operation.
 
   returns: the string form of the operation - `java.lang.String`"
-  ([this]
+  ([^javax.xml.crypto.dsig.spec.XPathType$Filter this]
     (-> this (.toString))))
 

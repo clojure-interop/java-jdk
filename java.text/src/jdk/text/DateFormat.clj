@@ -306,9 +306,9 @@
   a-locale - the given locale. - `java.util.Locale`
 
   returns: a time formatter. - `java.text.DateFormat`"
-  ([style a-locale]
+  ([^Integer style ^java.util.Locale a-locale]
     (DateFormat/getTimeInstance style a-locale))
-  ([style]
+  ([^Integer style]
     (DateFormat/getTimeInstance style))
   ([]
     (DateFormat/getTimeInstance )))
@@ -321,9 +321,9 @@
   a-locale - the given locale. - `java.util.Locale`
 
   returns: a date formatter. - `java.text.DateFormat`"
-  ([style a-locale]
+  ([^Integer style ^java.util.Locale a-locale]
     (DateFormat/getDateInstance style a-locale))
-  ([style]
+  ([^Integer style]
     (DateFormat/getDateInstance style))
   ([]
     (DateFormat/getDateInstance )))
@@ -337,9 +337,9 @@
   a-locale - the given locale. - `java.util.Locale`
 
   returns: a date/time formatter. - `java.text.DateFormat`"
-  ([date-style time-style a-locale]
+  ([^Integer date-style ^Integer time-style ^java.util.Locale a-locale]
     (DateFormat/getDateTimeInstance date-style time-style a-locale))
-  ([date-style time-style]
+  ([^Integer date-style ^Integer time-style]
     (DateFormat/getDateTimeInstance date-style time-style))
   ([]
     (DateFormat/getDateTimeInstance )))
@@ -381,14 +381,14 @@
    a result of a call to the parse method.
 
   zone - the given new time zone. - `java.util.TimeZone`"
-  ([this zone]
+  ([^java.text.DateFormat this ^java.util.TimeZone zone]
     (-> this (.setTimeZone zone))))
 
 (defn set-number-format
   "Allows you to set the number formatter.
 
   new-number-format - the given new NumberFormat. - `java.text.NumberFormat`"
-  ([this new-number-format]
+  ([^java.text.DateFormat this ^java.text.NumberFormat new-number-format]
     (-> this (.setNumberFormat new-number-format))))
 
 (defn parse-object
@@ -415,7 +415,7 @@
            error, returns null. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if pos is null."
-  ([this source pos]
+  ([^java.text.DateFormat this ^java.lang.String source ^java.text.ParsePosition pos]
     (-> this (.parseObject source pos))))
 
 (defn set-lenient
@@ -432,14 +432,14 @@
    This leniency value is overwritten by a call to setCalendar().
 
   lenient - when true, parsing is lenient - `boolean`"
-  ([this lenient]
+  ([^java.text.DateFormat this ^Boolean lenient]
     (-> this (.setLenient lenient))))
 
 (defn get-calendar
   "Gets the calendar associated with this date/time formatter.
 
   returns: the calendar associated with this date/time formatter. - `java.util.Calendar`"
-  ([this]
+  ([^java.text.DateFormat this]
     (-> this (.getCalendar))))
 
 (defn lenient?
@@ -451,7 +451,7 @@
 
   returns: true if the calendar is lenient;
            false otherwise. - `boolean`"
-  ([this]
+  ([^java.text.DateFormat this]
     (-> this (.isLenient))))
 
 (defn get-time-zone
@@ -462,7 +462,7 @@
    getCalendar().getTimeZone()
 
   returns: the time zone associated with the calendar of DateFormat. - `java.util.TimeZone`"
-  ([this]
+  ([^java.text.DateFormat this]
     (-> this (.getTimeZone))))
 
 (defn get-number-format
@@ -470,7 +470,7 @@
    format and parse a time.
 
   returns: the number formatter which this date/time formatter uses. - `java.text.NumberFormat`"
-  ([this]
+  ([^java.text.DateFormat this]
     (-> this (.getNumberFormat))))
 
 (defn set-calendar
@@ -481,14 +481,14 @@
    overwritten by newCalendar's values.
 
   new-calendar - the new Calendar to be used by the date format - `java.util.Calendar`"
-  ([this new-calendar]
+  ([^java.text.DateFormat this ^java.util.Calendar new-calendar]
     (-> this (.setCalendar new-calendar))))
 
 (defn clone
   "Overrides Cloneable
 
   returns: a clone of this instance. - `java.lang.Object`"
-  ([this]
+  ([^java.text.DateFormat this]
     (-> this (.clone))))
 
 (defn parse
@@ -512,16 +512,16 @@
   pos - On input, the position at which to start parsing; on output, the position at which parsing terminated, or the start position if the parse failed. - `java.text.ParsePosition`
 
   returns: A Date, or null if the input could not be parsed - `java.util.Date`"
-  ([this source pos]
+  ([^java.text.DateFormat this ^java.lang.String source ^java.text.ParsePosition pos]
     (-> this (.parse source pos)))
-  ([this source]
+  ([^java.text.DateFormat this ^java.lang.String source]
     (-> this (.parse source))))
 
 (defn hash-code
   "Overrides hashCode
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^java.text.DateFormat this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -531,7 +531,7 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.text.DateFormat this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn format
@@ -544,8 +544,8 @@
   field-position - keeps track of the position of the field within the returned string. On input: an alignment field, if desired. On output: the offsets of the alignment field. For example, given a time text `1996.07.10 AD at 15:08:56 PDT`, if the given fieldPosition is DateFormat.YEAR_FIELD, the begin index and end index of fieldPosition will be set to 0 and 4, respectively. Notice that if the same time field appears more than once in a pattern, the fieldPosition will be set for the first occurrence of that time field. For instance, formatting a Date to the time string `1 PM PDT (Pacific Daylight Time)` using the pattern `h a z (zzzz)` and the alignment field DateFormat.TIMEZONE_FIELD, the begin index and end index of fieldPosition will be set to 5 and 8, respectively, for the first occurrence of the timezone pattern character 'z'. - `java.text.FieldPosition`
 
   returns: the string buffer passed in as toAppendTo, with formatted text appended. - `java.lang.StringBuffer`"
-  ([this obj to-append-to field-position]
+  ([^java.text.DateFormat this ^java.lang.Object obj ^java.lang.StringBuffer to-append-to ^java.text.FieldPosition field-position]
     (-> this (.format obj to-append-to field-position)))
-  ([this date]
+  ([^java.text.DateFormat this ^java.util.Date date]
     (-> this (.format date))))
 

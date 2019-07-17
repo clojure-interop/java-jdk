@@ -47,6 +47,6 @@
    to make their close methods idempotent.
 
   throws: java.lang.Exception - if this resource cannot be closed"
-  ([this]
+  ([^. this]
     (-> this (.close))))
 

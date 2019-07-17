@@ -746,9 +746,9 @@
   a-locale - the locale for the week data - `java.util.Locale`
 
   returns: a Calendar. - `java.util.Calendar`"
-  ([zone a-locale]
+  ([^java.util.TimeZone zone ^java.util.Locale a-locale]
     (Calendar/getInstance zone a-locale))
-  ([zone]
+  ([^java.util.TimeZone zone]
     (Calendar/getInstance zone))
   ([]
     (Calendar/getInstance )))
@@ -783,14 +783,14 @@
    must be a full week, use value 7.
 
   value - the given minimal days required in the first week of the year. - `int`"
-  ([this value]
+  ([^java.util.Calendar this ^Integer value]
     (-> this (.setMinimalDaysInFirstWeek value))))
 
 (defn set-time-zone
   "Sets the time zone with the given time zone value.
 
   value - the given time zone. - `java.util.TimeZone`"
-  ([this value]
+  ([^java.util.Calendar this ^java.util.TimeZone value]
     (-> this (.setTimeZone value))))
 
 (defn to-instant
@@ -800,7 +800,7 @@
    same point on the time-line as this Calendar.
 
   returns: the instant representing the same point on the time-line - `java.time.Instant`"
-  ([this]
+  ([^java.util.Calendar this]
     (-> this (.toInstant))))
 
 (defn get-minimum
@@ -813,7 +813,7 @@
   field - the calendar field. - `int`
 
   returns: the minimum value for the given calendar field. - `int`"
-  ([this field]
+  ([^java.util.Calendar this ^Integer field]
     (-> this (.getMinimum field))))
 
 (defn set-time
@@ -824,7 +824,7 @@
    may yield incorrect field values from get().
 
   date - the given Date. - `java.util.Date`"
-  ([this date]
+  ([^java.util.Calendar this ^java.util.Date date]
     (-> this (.setTime date))))
 
 (defn after
@@ -842,7 +842,7 @@
   returns: true if the time of this Calendar is
    after the time represented by when; false
    otherwise. - `boolean`"
-  ([this when]
+  ([^java.util.Calendar this ^java.lang.Object when]
     (-> this (.after when))))
 
 (defn get-first-day-of-week
@@ -850,14 +850,14 @@
    MONDAY in France.
 
   returns: the first day of the week. - `int`"
-  ([this]
+  ([^java.util.Calendar this]
     (-> this (.getFirstDayOfWeek))))
 
 (defn set-time-in-millis
   "Sets this Calendar's current time from the given long value.
 
   millis - the new time in UTC milliseconds from the epoch. - `long`"
-  ([this millis]
+  ([^java.util.Calendar this ^Long millis]
     (-> this (.setTimeInMillis millis))))
 
 (defn get-actual-minimum
@@ -874,7 +874,7 @@
 
   returns: the minimum of the given calendar field for the time
    value of this Calendar - `int`"
-  ([this field]
+  ([^java.util.Calendar this ^Integer field]
     (-> this (.getActualMinimum field))))
 
 (defn set-lenient
@@ -885,7 +885,7 @@
    thrown. The default is lenient.
 
   lenient - true if the lenient mode is to be turned on; false if it is to be turned off. - `boolean`"
-  ([this lenient]
+  ([^java.util.Calendar this ^Boolean lenient]
     (-> this (.setLenient lenient))))
 
 (defn to-string
@@ -895,7 +895,7 @@
    The returned string may be empty but may not be null.
 
   returns: a string representation of this calendar. - `java.lang.String`"
-  ([this]
+  ([^java.util.Calendar this]
     (-> this (.toString))))
 
 (defn get-least-maximum
@@ -912,7 +912,7 @@
   field - the calendar field. - `int`
 
   returns: the lowest maximum value for the given calendar field. - `int`"
-  ([this field]
+  ([^java.util.Calendar this ^Integer field]
     (-> this (.getLeastMaximum field))))
 
 (defn set-week-date
@@ -933,7 +933,7 @@
   day-of-week - the day of week value: one of the constants for the DAY_OF_WEEK field: SUNDAY, ..., SATURDAY. - `int`
 
   throws: java.lang.IllegalArgumentException - if any of the given date specifiers is invalid or any of the calendar fields are inconsistent with the given date specifiers in non-lenient mode"
-  ([this week-year week-of-year day-of-week]
+  ([^java.util.Calendar this ^Integer week-year ^Integer week-of-year ^Integer day-of-week]
     (-> this (.setWeekDate week-year week-of-year day-of-week))))
 
 (defn get-display-name
@@ -967,7 +967,7 @@
           applicable. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if field or style is invalid, or if this Calendar is non-lenient and any of the calendar fields have invalid values"
-  ([this field style locale]
+  ([^java.util.Calendar this ^Integer field ^Integer style ^java.util.Locale locale]
     (-> this (.getDisplayName field style locale))))
 
 (defn lenient?
@@ -975,7 +975,7 @@
 
   returns: true if the interpretation mode of this calendar is lenient;
    false otherwise. - `boolean`"
-  ([this]
+  ([^java.util.Calendar this]
     (-> this (.isLenient))))
 
 (defn get-greatest-minimum
@@ -988,7 +988,7 @@
   field - the calendar field. - `int`
 
   returns: the highest minimum value for the given calendar field. - `int`"
-  ([this field]
+  ([^java.util.Calendar this ^Integer field]
     (-> this (.getGreatestMinimum field))))
 
 (defn set?
@@ -1000,14 +1000,14 @@
 
   returns: true if the given calendar field has a value set;
    false otherwise. - `boolean`"
-  ([this field]
+  ([^java.util.Calendar this ^Integer field]
     (-> this (.isSet field))))
 
 (defn get-time-zone
   "Gets the time zone.
 
   returns: the time zone object associated with this calendar. - `java.util.TimeZone`"
-  ([this]
+  ([^java.util.Calendar this]
     (-> this (.getTimeZone))))
 
 (defn get-calendar-type
@@ -1022,7 +1022,7 @@
 
   returns: the LDML-defined calendar type or the class name of this
            Calendar instance - `java.lang.String`"
-  ([this]
+  ([^java.util.Calendar this]
     (-> this (.getCalendarType))))
 
 (defn get-actual-maximum
@@ -1041,7 +1041,7 @@
 
   returns: the maximum of the given calendar field for the time
    value of this Calendar - `int`"
-  ([this field]
+  ([^java.util.Calendar this ^Integer field]
     (-> this (.getActualMaximum field))))
 
 (defn get-week-year
@@ -1055,7 +1055,7 @@
   returns: the week year of this Calendar - `int`
 
   throws: java.lang.UnsupportedOperationException - if any week year numbering isn't supported in this Calendar."
-  ([this]
+  ([^java.util.Calendar this]
     (-> this (.getWeekYear))))
 
 (defn get-weeks-in-week-year
@@ -1068,7 +1068,7 @@
   returns: the number of weeks in the week year. - `int`
 
   throws: java.lang.UnsupportedOperationException - if any week year numbering isn't supported in this Calendar."
-  ([this]
+  ([^java.util.Calendar this]
     (-> this (.getWeeksInWeekYear))))
 
 (defn get-display-names
@@ -1107,14 +1107,14 @@
           are defined for field - `java.util.Map<java.lang.String,java.lang.Integer>`
 
   throws: java.lang.IllegalArgumentException - if field or style is invalid, or if this Calendar is non-lenient and any of the calendar fields have invalid values"
-  ([this field style locale]
+  ([^java.util.Calendar this ^Integer field ^Integer style ^java.util.Locale locale]
     (-> this (.getDisplayNames field style locale))))
 
 (defn get-time-in-millis
   "Returns this Calendar's time value in milliseconds.
 
   returns: the current time as UTC milliseconds from the epoch. - `long`"
-  ([this]
+  ([^java.util.Calendar this]
     (-> this (.getTimeInMillis))))
 
 (defn set-first-day-of-week
@@ -1122,14 +1122,14 @@
    MONDAY in France.
 
   value - the given first day of the week. - `int`"
-  ([this value]
+  ([^java.util.Calendar this ^Integer value]
     (-> this (.setFirstDayOfWeek value))))
 
 (defn clone
   "Creates and returns a copy of this object.
 
   returns: a copy of this object. - `java.lang.Object`"
-  ([this]
+  ([^java.util.Calendar this]
     (-> this (.clone))))
 
 (defn roll
@@ -1148,14 +1148,14 @@
 
   field - the time field. - `int`
   up - indicates if the value of the specified time field is to be rolled up or rolled down. Use true if rolling up, false otherwise. - `boolean`"
-  ([this field up]
+  ([^java.util.Calendar this ^Integer field ^Boolean up]
     (-> this (.roll field up))))
 
 (defn hash-code
   "Returns a hash code for this calendar.
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^java.util.Calendar this]
     (-> this (.hashCode))))
 
 (defn add
@@ -1166,7 +1166,7 @@
 
   field - the calendar field. - `int`
   amount - the amount of date or time to be added to the field. - `int`"
-  ([this field amount]
+  ([^java.util.Calendar this ^Integer field ^Integer amount]
     (-> this (.add field amount))))
 
 (defn set
@@ -1182,13 +1182,13 @@
   hour-of-day - the value used to set the HOUR_OF_DAY calendar field. - `int`
   minute - the value used to set the MINUTE calendar field. - `int`
   second - the value used to set the SECOND calendar field. - `int`"
-  ([this year month date hour-of-day minute second]
+  ([^java.util.Calendar this ^Integer year ^Integer month ^Integer date ^Integer hour-of-day ^Integer minute ^Integer second]
     (-> this (.set year month date hour-of-day minute second)))
-  ([this year month date hour-of-day minute]
+  ([^java.util.Calendar this ^Integer year ^Integer month ^Integer date ^Integer hour-of-day ^Integer minute]
     (-> this (.set year month date hour-of-day minute)))
-  ([this year month date]
+  ([^java.util.Calendar this ^Integer year ^Integer month ^Integer date]
     (-> this (.set year month date)))
-  ([this field value]
+  ([^java.util.Calendar this ^Integer field ^Integer value]
     (-> this (.set field value))))
 
 (defn week-date-supported?
@@ -1198,7 +1198,7 @@
 
   returns: true if this Calendar supports week dates;
            false otherwise. - `boolean`"
-  ([this]
+  ([^java.util.Calendar this]
     (-> this (.isWeekDateSupported))))
 
 (defn clear
@@ -1217,9 +1217,9 @@
    value.
 
   field - the calendar field to be cleared. - `int`"
-  ([this field]
+  ([^java.util.Calendar this ^Integer field]
     (-> this (.clear field)))
-  ([this]
+  ([^java.util.Calendar this]
     (-> this (.clear))))
 
 (defn compare-to
@@ -1236,7 +1236,7 @@
    time represented by the argument. - `int`
 
   throws: java.lang.NullPointerException - if the specified Calendar is null."
-  ([this another-calendar]
+  ([^java.util.Calendar this ^java.util.Calendar another-calendar]
     (-> this (.compareTo another-calendar))))
 
 (defn get-minimal-days-in-first-week
@@ -1247,7 +1247,7 @@
    returns 7.
 
   returns: the minimal days required in the first week of the year. - `int`"
-  ([this]
+  ([^java.util.Calendar this]
     (-> this (.getMinimalDaysInFirstWeek))))
 
 (defn before
@@ -1265,7 +1265,7 @@
   returns: true if the time of this
    Calendar is before the time represented by
    when; false otherwise. - `boolean`"
-  ([this when]
+  ([^java.util.Calendar this ^java.lang.Object when]
     (-> this (.before when))))
 
 (defn get-time
@@ -1273,7 +1273,7 @@
    Calendar's time value (millisecond offset from the Epoch`).
 
   returns: a Date representing the time value. - `java.util.Date`"
-  ([this]
+  ([^java.util.Calendar this]
     (-> this (.getTime))))
 
 (defn get-maximum
@@ -1286,7 +1286,7 @@
   field - the calendar field. - `int`
 
   returns: the maximum value for the given calendar field. - `int`"
-  ([this field]
+  ([^java.util.Calendar this ^Integer field]
     (-> this (.getMaximum field))))
 
 (defn get
@@ -1303,7 +1303,7 @@
   returns: the value for the given calendar field. - `int`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if the specified field is out of range (field < 0 || field >= FIELD_COUNT)."
-  ([this field]
+  ([^java.util.Calendar this ^Integer field]
     (-> this (.get field))))
 
 (defn equals
@@ -1328,6 +1328,6 @@
 
   returns: true if this object is equal to obj;
    false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.util.Calendar this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

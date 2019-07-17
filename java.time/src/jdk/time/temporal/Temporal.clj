@@ -65,7 +65,7 @@
   unit - the unit to check, null returns false - `java.time.temporal.TemporalUnit`
 
   returns: true if the unit can be added/subtracted, false if not - `boolean`"
-  ([this unit]
+  ([^. this ^java.time.temporal.TemporalUnit unit]
     (-> this (.isSupported unit))))
 
 (defn with
@@ -86,9 +86,9 @@
   returns: an object of the same type with the specified field set, not null - `java.time.temporal.Temporal`
 
   throws: java.time.DateTimeException - if the field cannot be set"
-  ([this field new-value]
+  ([^. this ^java.time.temporal.TemporalField field ^Long new-value]
     (-> this (.with field new-value)))
-  ([this adjuster]
+  ([^. this ^java.time.temporal.TemporalAdjuster adjuster]
     (-> this (.with adjuster))))
 
 (defn plus
@@ -109,9 +109,9 @@
   returns: an object of the same type with the specified period added, not null - `java.time.temporal.Temporal`
 
   throws: java.time.DateTimeException - if the unit cannot be added"
-  ([this amount-to-add unit]
+  ([^. this ^Long amount-to-add ^java.time.temporal.TemporalUnit unit]
     (-> this (.plus amount-to-add unit)))
-  ([this amount]
+  ([^. this ^java.time.temporal.TemporalAmount amount]
     (-> this (.plus amount))))
 
 (defn minus
@@ -132,9 +132,9 @@
   returns: an object of the same type with the specified period subtracted, not null - `default java.time.temporal.Temporal`
 
   throws: java.time.DateTimeException - if the unit cannot be subtracted"
-  ([this amount-to-subtract unit]
+  ([^. this ^Long amount-to-subtract ^java.time.temporal.TemporalUnit unit]
     (-> this (.minus amount-to-subtract unit)))
-  ([this amount]
+  ([^. this ^java.time.temporal.TemporalAmount amount]
     (-> this (.minus amount))))
 
 (defn until
@@ -179,6 +179,6 @@
     negative if it is earlier than this one - `long`
 
   throws: java.time.DateTimeException - if the amount cannot be calculated, or the end temporal cannot be converted to the same type as this temporal"
-  ([this end-exclusive unit]
+  ([^. this ^java.time.temporal.Temporal end-exclusive ^java.time.temporal.TemporalUnit unit]
     (-> this (.until end-exclusive unit))))
 

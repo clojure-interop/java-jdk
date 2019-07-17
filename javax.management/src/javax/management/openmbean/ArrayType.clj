@@ -116,7 +116,7 @@
   element-type - the open type of element values contained in the arrays described by this ArrayType instance; must be an instance of either SimpleType, CompositeType, TabularType or another ArrayType with a SimpleType, CompositeType or TabularType as its elementType. - `javax.management.openmbean.OpenType<?>`
 
   throws: java.lang.IllegalArgumentException - if dimension is not a positive integer."
-  ([dimension element-type]
+  ([^Integer dimension ^javax.management.openmbean.OpenType element-type]
     (new ArrayType dimension element-type)))
 
 (defn *get-array-type
@@ -151,7 +151,7 @@
   returns: `<E> javax.management.openmbean.ArrayType<E[]>`
 
   throws: javax.management.openmbean.OpenDataException - if elementType's className is not one of the allowed Java class names for open data."
-  ([element-type]
+  ([^javax.management.openmbean.OpenType element-type]
     (ArrayType/getArrayType element-type)))
 
 (defn *get-primitive-array-type
@@ -181,21 +181,21 @@
   returns: `<T> javax.management.openmbean.ArrayType<T>`
 
   throws: java.lang.IllegalArgumentException - if arrayClass is not a primitive array."
-  ([array-class]
+  ([^java.lang.Class array-class]
     (ArrayType/getPrimitiveArrayType array-class)))
 
 (defn get-dimension
   "Returns the dimension of arrays described by this ArrayType instance.
 
   returns: the dimension. - `int`"
-  ([this]
+  ([^javax.management.openmbean.ArrayType this]
     (-> this (.getDimension))))
 
 (defn get-element-open-type
   "Returns the open type of element values contained in the arrays described by this ArrayType instance.
 
   returns: the element type. - `javax.management.openmbean.OpenType<?>`"
-  ([this]
+  ([^javax.management.openmbean.ArrayType this]
     (-> this (.getElementOpenType))))
 
 (defn primitive-array?
@@ -203,7 +203,7 @@
    type describes are primitive arrays, false otherwise.
 
   returns: true if this is a primitive array type. - `boolean`"
-  ([this]
+  ([^javax.management.openmbean.ArrayType this]
     (-> this (.isPrimitiveArray))))
 
 (defn value?
@@ -232,7 +232,7 @@
 
   returns: true if obj is a value for this
    ArrayType instance. - `boolean`"
-  ([this obj]
+  ([^javax.management.openmbean.ArrayType this ^java.lang.Object obj]
     (-> this (.isValue obj))))
 
 (defn equals
@@ -247,7 +247,7 @@
 
   returns: true if the specified object is equal to
            this ArrayType instance. - `boolean`"
-  ([this obj]
+  ([^javax.management.openmbean.ArrayType this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -270,7 +270,7 @@
    for subsequent calls.
 
   returns: the hash code value for this ArrayType instance - `int`"
-  ([this]
+  ([^javax.management.openmbean.ArrayType this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -287,6 +287,6 @@
    then the same value is returned for subsequent calls.
 
   returns: a string representation of this ArrayType instance - `java.lang.String`"
-  ([this]
+  ([^javax.management.openmbean.ArrayType this]
     (-> this (.toString))))
 

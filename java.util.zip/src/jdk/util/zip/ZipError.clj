@@ -9,6 +9,6 @@
   Constructs a ZipError with the given detail message.
 
   s - the String containing a detail message - `java.lang.String`"
-  ([s]
+  ([^java.lang.String s]
     (new ZipError s)))
 

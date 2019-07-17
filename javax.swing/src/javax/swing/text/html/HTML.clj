@@ -44,7 +44,7 @@
 
   returns: a tag constant corresponding to the tagName,
       or null if not found - `javax.swing.text.html.HTML.Tag`"
-  ([tag-name]
+  ([^java.lang.String tag-name]
     (HTML/getTag tag-name)))
 
 (defn *get-integer-attribute-value
@@ -57,7 +57,7 @@
   def - the default value to use if the attribute isn't defined or there is an error converting to an integer - `int`
 
   returns: `int`"
-  ([attr key def]
+  ([^javax.swing.text.AttributeSet attr ^javax.swing.text.html.HTML.Attribute key ^Integer def]
     (HTML/getIntegerAttributeValue attr key def)))
 
 (defn *get-all-attribute-keys
@@ -87,6 +87,6 @@
   att-name - the String requested - `java.lang.String`
 
   returns: the Attribute corresponding to attName - `javax.swing.text.html.HTML.Attribute`"
-  ([att-name]
+  ([^java.lang.String att-name]
     (HTML/getAttributeKey att-name)))
 

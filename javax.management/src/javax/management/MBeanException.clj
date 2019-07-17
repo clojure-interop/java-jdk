@@ -14,22 +14,22 @@
 
   e - the wrapped exception. - `java.lang.Exception`
   message - the detail message. - `java.lang.String`"
-  ([e message]
+  ([^java.lang.Exception e ^java.lang.String message]
     (new MBeanException e message))
-  ([e]
+  ([^java.lang.Exception e]
     (new MBeanException e)))
 
 (defn get-target-exception
   "Return the actual Exception thrown.
 
   returns: the wrapped exception. - `java.lang.Exception`"
-  ([this]
+  ([^javax.management.MBeanException this]
     (-> this (.getTargetException))))
 
 (defn get-cause
   "Return the actual Exception thrown.
 
   returns: the wrapped exception. - `java.lang.Throwable`"
-  ([this]
+  ([^javax.management.MBeanException this]
     (-> this (.getCause))))
 

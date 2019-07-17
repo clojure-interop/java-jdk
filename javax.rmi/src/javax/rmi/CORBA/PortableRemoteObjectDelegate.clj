@@ -17,7 +17,7 @@
   obj - `java.rmi.Remote`
 
   throws: java.rmi.RemoteException"
-  ([this obj]
+  ([^. this ^java.rmi.Remote obj]
     (-> this (.exportObject obj))))
 
 (defn to-stub
@@ -28,7 +28,7 @@
   returns: `java.rmi.Remote`
 
   throws: java.rmi.NoSuchObjectException"
-  ([this obj]
+  ([^. this ^java.rmi.Remote obj]
     (-> this (.toStub obj))))
 
 (defn unexport-object
@@ -37,7 +37,7 @@
   obj - `java.rmi.Remote`
 
   throws: java.rmi.NoSuchObjectException"
-  ([this obj]
+  ([^. this ^java.rmi.Remote obj]
     (-> this (.unexportObject obj))))
 
 (defn narrow
@@ -49,7 +49,7 @@
   returns: `java.lang.Object`
 
   throws: java.lang.ClassCastException"
-  ([this narrow-from narrow-to]
+  ([^. this ^java.lang.Object narrow-from ^java.lang.Class narrow-to]
     (-> this (.narrow narrow-from narrow-to))))
 
 (defn connect
@@ -59,6 +59,6 @@
   source - `java.rmi.Remote`
 
   throws: java.rmi.RemoteException"
-  ([this target source]
+  ([^. this ^java.rmi.Remote target ^java.rmi.Remote source]
     (-> this (.connect target source))))
 

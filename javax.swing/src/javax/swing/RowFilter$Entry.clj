@@ -18,7 +18,7 @@
   "Returns the underlying model.
 
   returns: the model containing the data that this entry represents - `RowFilter.Entry.M`"
-  ([this]
+  ([^javax.swing.RowFilter$Entry this]
     (-> this (.getModel))))
 
 (defn get-value-count
@@ -27,7 +27,7 @@
    number of columns.
 
   returns: number of values in the object being filtered - `int`"
-  ([this]
+  ([^javax.swing.RowFilter$Entry this]
     (-> this (.getValueCount))))
 
 (defn get-value
@@ -40,7 +40,7 @@
   returns: value at the specified index - `java.lang.Object`
 
   throws: java.lang.IndexOutOfBoundsException - if index < 0 or >= getValueCount"
-  ([this index]
+  ([^javax.swing.RowFilter$Entry this ^Integer index]
     (-> this (.getValue index))))
 
 (defn get-string-value
@@ -60,7 +60,7 @@
   returns: non-null string at the specified index - `java.lang.String`
 
   throws: java.lang.IndexOutOfBoundsException - if index < 0 || >= getValueCount"
-  ([this index]
+  ([^javax.swing.RowFilter$Entry this ^Integer index]
     (-> this (.getStringValue index))))
 
 (defn get-identifier
@@ -70,6 +70,6 @@
 
   returns: a model-based (not view-based) identifier for
            this entry - `RowFilter.Entry.I`"
-  ([this]
+  ([^javax.swing.RowFilter$Entry this]
     (-> this (.getIdentifier))))
 

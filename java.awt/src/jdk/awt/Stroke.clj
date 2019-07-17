@@ -37,6 +37,6 @@
   p - a Shape to be stroked - `java.awt.Shape`
 
   returns: the stroked outline Shape. - `java.awt.Shape`"
-  ([this p]
+  ([^. this ^java.awt.Shape p]
     (-> this (.createStrokedShape p))))
 

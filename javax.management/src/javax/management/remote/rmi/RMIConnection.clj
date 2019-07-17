@@ -42,7 +42,7 @@
    the result of invoking the operation on the MBean specified. - `java.lang.Object`
 
   throws: javax.management.InstanceNotFoundException - The MBean specified is not registered in the MBean server."
-  ([this name operation-name params signature delegation-subject]
+  ([^. this ^javax.management.ObjectName name ^java.lang.String operation-name ^java.rmi.MarshalledObject params ^java.lang.String[] signature ^javax.security.auth.Subject delegation-subject]
     (-> this (.invoke name operation-name params signature delegation-subject))))
 
 (defn query-m-beans
@@ -59,7 +59,7 @@
    query an empty list is returned. - `java.util.Set<javax.management.ObjectInstance>`
 
   throws: java.lang.SecurityException - if the client, or the delegated Subject if any, does not have permission to perform this operation."
-  ([this name query delegation-subject]
+  ([^. this ^javax.management.ObjectName name ^java.rmi.MarshalledObject query ^javax.security.auth.Subject delegation-subject]
     (-> this (.queryMBeans name query delegation-subject))))
 
 (defn query-names
@@ -76,7 +76,7 @@
    returned. - `java.util.Set<javax.management.ObjectName>`
 
   throws: java.lang.SecurityException - if the client, or the delegated Subject if any, does not have permission to perform this operation."
-  ([this name query delegation-subject]
+  ([^. this ^javax.management.ObjectName name ^java.rmi.MarshalledObject query ^javax.security.auth.Subject delegation-subject]
     (-> this (.queryNames name query delegation-subject))))
 
 (defn remove-notification-listeners
@@ -97,7 +97,7 @@
   delegation-subject - The Subject containing the delegation principals or null if the authentication principal is used instead. - `javax.security.auth.Subject`
 
   throws: javax.management.InstanceNotFoundException - if the given name does not correspond to any registered MBean."
-  ([this name listener-i-ds delegation-subject]
+  ([^. this ^javax.management.ObjectName name ^java.lang.Integer[] listener-i-ds ^javax.security.auth.Subject delegation-subject]
     (-> this (.removeNotificationListeners name listener-i-ds delegation-subject))))
 
 (defn remove-notification-listener
@@ -114,9 +114,9 @@
   delegation-subject - The Subject containing the delegation principals or null if the authentication principal is used instead. - `javax.security.auth.Subject`
 
   throws: javax.management.InstanceNotFoundException - The MBean name provided does not match any of the registered MBeans."
-  ([this name listener filter handback delegation-subject]
+  ([^. this ^javax.management.ObjectName name ^javax.management.ObjectName listener ^java.rmi.MarshalledObject filter ^java.rmi.MarshalledObject handback ^javax.security.auth.Subject delegation-subject]
     (-> this (.removeNotificationListener name listener filter handback delegation-subject)))
-  ([this name listener delegation-subject]
+  ([^. this ^javax.management.ObjectName name ^javax.management.ObjectName listener ^javax.security.auth.Subject delegation-subject]
     (-> this (.removeNotificationListener name listener delegation-subject))))
 
 (defn get-attribute
@@ -130,7 +130,7 @@
   returns: The value of the retrieved attribute. - `java.lang.Object`
 
   throws: javax.management.AttributeNotFoundException - The attribute specified is not accessible in the MBean."
-  ([this name attribute delegation-subject]
+  ([^. this ^javax.management.ObjectName name ^java.lang.String attribute ^javax.security.auth.Subject delegation-subject]
     (-> this (.getAttribute name attribute delegation-subject))))
 
 (defn get-m-bean-info
@@ -144,7 +144,7 @@
    retrieval of all attributes and operations of this MBean. - `javax.management.MBeanInfo`
 
   throws: javax.management.IntrospectionException - An exception occurred during introspection."
-  ([this name delegation-subject]
+  ([^. this ^javax.management.ObjectName name ^javax.security.auth.Subject delegation-subject]
     (-> this (.getMBeanInfo name delegation-subject))))
 
 (defn create-m-bean
@@ -167,13 +167,13 @@
    getMBeanInfo(n).getClassName(). - `javax.management.ObjectInstance`
 
   throws: javax.management.MBeanException - The constructor of the MBean has thrown an exception."
-  ([this class-name name loader-name params signature delegation-subject]
+  ([^. this ^java.lang.String class-name ^javax.management.ObjectName name ^javax.management.ObjectName loader-name ^java.rmi.MarshalledObject params ^java.lang.String[] signature ^javax.security.auth.Subject delegation-subject]
     (-> this (.createMBean class-name name loader-name params signature delegation-subject)))
-  ([this class-name name params signature delegation-subject]
+  ([^. this ^java.lang.String class-name ^javax.management.ObjectName name ^java.rmi.MarshalledObject params ^java.lang.String[] signature ^javax.security.auth.Subject delegation-subject]
     (-> this (.createMBean class-name name params signature delegation-subject)))
-  ([this class-name name loader-name delegation-subject]
+  ([^. this ^java.lang.String class-name ^javax.management.ObjectName name ^javax.management.ObjectName loader-name ^javax.security.auth.Subject delegation-subject]
     (-> this (.createMBean class-name name loader-name delegation-subject)))
-  ([this class-name name delegation-subject]
+  ([^. this ^java.lang.String class-name ^javax.management.ObjectName name ^javax.security.auth.Subject delegation-subject]
     (-> this (.createMBean class-name name delegation-subject))))
 
 (defn get-m-bean-count
@@ -185,7 +185,7 @@
   returns: the number of MBeans registered. - `java.lang.Integer`
 
   throws: java.lang.SecurityException - if the client, or the delegated Subject if any, does not have permission to perform this operation."
-  ([this delegation-subject]
+  ([^. this ^javax.security.auth.Subject delegation-subject]
     (-> this (.getMBeanCount delegation-subject))))
 
 (defn registered?
@@ -199,7 +199,7 @@
    server, false otherwise. - `boolean`
 
   throws: javax.management.RuntimeOperationsException - Wraps a java.lang.IllegalArgumentException: The object name in parameter is null."
-  ([this name delegation-subject]
+  ([^. this ^javax.management.ObjectName name ^javax.security.auth.Subject delegation-subject]
     (-> this (.isRegistered name delegation-subject))))
 
 (defn add-notification-listeners
@@ -231,7 +231,7 @@
    the parameters. - `java.lang.Integer[]`
 
   throws: java.lang.IllegalArgumentException - if names or filters is null, or if names contains a null element, or if the three arrays do not all have the same size."
-  ([this names filters delegation-subjects]
+  ([^. this ^javax.management.ObjectName[] names ^java.rmi.MarshalledObject[] filters ^javax.security.auth.Subject[] delegation-subjects]
     (-> this (.addNotificationListeners names filters delegation-subjects))))
 
 (defn unregister-m-bean
@@ -242,7 +242,7 @@
   delegation-subject - The Subject containing the delegation principals or null if the authentication principal is used instead. - `javax.security.auth.Subject`
 
   throws: javax.management.InstanceNotFoundException - The MBean specified is not registered in the MBean server."
-  ([this name delegation-subject]
+  ([^. this ^javax.management.ObjectName name ^javax.security.auth.Subject delegation-subject]
     (-> this (.unregisterMBean name delegation-subject))))
 
 (defn get-default-domain
@@ -254,7 +254,7 @@
   returns: the default domain. - `java.lang.String`
 
   throws: java.lang.SecurityException - if the client, or the delegated Subject if any, does not have permission to perform this operation."
-  ([this delegation-subject]
+  ([^. this ^javax.security.auth.Subject delegation-subject]
     (-> this (.getDefaultDomain delegation-subject))))
 
 (defn set-attribute
@@ -267,7 +267,7 @@
   delegation-subject - The Subject containing the delegation principals or null if the authentication principal is used instead. - `javax.security.auth.Subject`
 
   throws: javax.management.InstanceNotFoundException - The MBean specified is not registered in the MBean server."
-  ([this name attribute delegation-subject]
+  ([^. this ^javax.management.ObjectName name ^java.rmi.MarshalledObject attribute ^javax.security.auth.Subject delegation-subject]
     (-> this (.setAttribute name attribute delegation-subject))))
 
 (defn get-object-instance
@@ -283,7 +283,7 @@
    getMBeanInfo(name).getClassName(). - `javax.management.ObjectInstance`
 
   throws: javax.management.InstanceNotFoundException - The MBean specified is not registered in the MBean server."
-  ([this name delegation-subject]
+  ([^. this ^javax.management.ObjectName name ^javax.security.auth.Subject delegation-subject]
     (-> this (.getObjectInstance name delegation-subject))))
 
 (defn get-domains
@@ -295,7 +295,7 @@
   returns: the list of domains. - `java.lang.String[]`
 
   throws: java.lang.SecurityException - if the client, or the delegated Subject if any, does not have permission to perform this operation."
-  ([this delegation-subject]
+  ([^. this ^javax.security.auth.Subject delegation-subject]
     (-> this (.getDomains delegation-subject))))
 
 (defn close
@@ -304,7 +304,7 @@
    remote calls to it will fail.
 
   throws: java.io.IOException - if the connection could not be closed, or the Remote object could not be unexported, or there was a communication failure when transmitting the remote close request."
-  ([this]
+  ([^. this]
     (-> this (.close))))
 
 (defn get-connection-id
@@ -314,7 +314,7 @@
   returns: the connection ID - `java.lang.String`
 
   throws: java.io.IOException - if a general communication exception occurred."
-  ([this]
+  ([^. this]
     (-> this (.getConnectionId))))
 
 (defn set-attributes
@@ -330,7 +330,7 @@
    values. - `javax.management.AttributeList`
 
   throws: javax.management.InstanceNotFoundException - The MBean specified is not registered in the MBean server."
-  ([this name attributes delegation-subject]
+  ([^. this ^javax.management.ObjectName name ^java.rmi.MarshalledObject attributes ^javax.security.auth.Subject delegation-subject]
     (-> this (.setAttributes name attributes delegation-subject))))
 
 (defn fetch-notifications
@@ -355,7 +355,7 @@
   returns: A NotificationResult. - `javax.management.remote.NotificationResult`
 
   throws: java.io.IOException - if a general communication exception occurred."
-  ([this client-sequence-number max-notifications timeout]
+  ([^. this ^Long client-sequence-number ^Integer max-notifications ^Long timeout]
     (-> this (.fetchNotifications client-sequence-number max-notifications timeout))))
 
 (defn add-notification-listener
@@ -373,7 +373,7 @@
   delegation-subject - The Subject containing the delegation principals or null if the authentication principal is used instead. - `javax.security.auth.Subject`
 
   throws: javax.management.InstanceNotFoundException - The MBean name of the notification listener or of the notification broadcaster does not match any of the registered MBeans."
-  ([this name listener filter handback delegation-subject]
+  ([^. this ^javax.management.ObjectName name ^javax.management.ObjectName listener ^java.rmi.MarshalledObject filter ^java.rmi.MarshalledObject handback ^javax.security.auth.Subject delegation-subject]
     (-> this (.addNotificationListener name listener filter handback delegation-subject))))
 
 (defn get-attributes
@@ -387,7 +387,7 @@
   returns: The list of the retrieved attributes. - `javax.management.AttributeList`
 
   throws: javax.management.InstanceNotFoundException - The MBean specified is not registered in the MBean server."
-  ([this name attributes delegation-subject]
+  ([^. this ^javax.management.ObjectName name ^java.lang.String[] attributes ^javax.security.auth.Subject delegation-subject]
     (-> this (.getAttributes name attributes delegation-subject))))
 
 (defn instance-of?
@@ -402,6 +402,6 @@
    specified class according to the rules above, false otherwise. - `boolean`
 
   throws: javax.management.InstanceNotFoundException - The MBean specified is not registered in the MBean server."
-  ([this name class-name delegation-subject]
+  ([^. this ^javax.management.ObjectName name ^java.lang.String class-name ^javax.security.auth.Subject delegation-subject]
     (-> this (.isInstanceOf name class-name delegation-subject))))
 

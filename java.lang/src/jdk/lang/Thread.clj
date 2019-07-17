@@ -142,13 +142,13 @@
   stack-size - the desired stack size for the new thread, or zero to indicate that this parameter is to be ignored. - `long`
 
   throws: java.lang.SecurityException - if the current thread cannot create a thread in the specified thread group"
-  ([group target name stack-size]
+  ([^java.lang.ThreadGroup group ^java.lang.Runnable target ^java.lang.String name ^Long stack-size]
     (new Thread group target name stack-size))
-  ([group target name]
+  ([^java.lang.ThreadGroup group ^java.lang.Runnable target ^java.lang.String name]
     (new Thread group target name))
-  ([group target]
+  ([^java.lang.ThreadGroup group ^java.lang.Runnable target]
     (new Thread group target))
-  ([target]
+  ([^java.lang.Runnable target]
     (new Thread target))
   ([]
     (new Thread )))
@@ -263,7 +263,7 @@
   eh - the object to use as the default uncaught exception handler. If null then there is no default handler. - `java.lang.Thread.UncaughtExceptionHandler`
 
   throws: java.lang.SecurityException - if a security manager is present and it denies RuntimePermission (`setDefaultUncaughtExceptionHandler`)"
-  ([eh]
+  ([^java.lang.Thread.UncaughtExceptionHandler eh]
     (Thread/setDefaultUncaughtExceptionHandler eh)))
 
 (defn *sleep
@@ -277,9 +277,9 @@
   nanos - 0-999999 additional nanoseconds to sleep - `int`
 
   throws: java.lang.IllegalArgumentException - if the value of millis is negative, or the value of nanos is not in the range 0-999999"
-  ([millis nanos]
+  ([^Long millis ^Integer nanos]
     (Thread/sleep millis nanos))
-  ([millis]
+  ([^Long millis]
     (Thread/sleep millis)))
 
 (defn *interrupted
@@ -321,7 +321,7 @@
   returns: the number of threads put into the array - `int`
 
   throws: java.lang.SecurityException - if ThreadGroup.checkAccess() determines that the current thread cannot access its thread group"
-  ([tarray]
+  ([^java.lang.Thread[] tarray]
     (Thread/enumerate tarray)))
 
 (defn *holds-lock
@@ -340,7 +340,7 @@
            the specified object. - `boolean`
 
   throws: java.lang.NullPointerException - if obj is null"
-  ([obj]
+  ([^java.lang.Object obj]
     (Thread/holdsLock obj)))
 
 (defn *active-count
@@ -382,7 +382,7 @@
   cl - the context ClassLoader for this Thread, or null indicating the system class loader (or, failing that, the bootstrap class loader) - `java.lang.ClassLoader`
 
   throws: java.lang.SecurityException - if the current thread cannot set the context ClassLoader"
-  ([this cl]
+  ([^java.lang.Thread this ^java.lang.ClassLoader cl]
     (-> this (.setContextClassLoader cl))))
 
 (defn stop
@@ -408,9 +408,9 @@
   returns: `java.lang.   void`
 
   throws: java.lang.SecurityException - if the current thread cannot modify this thread."
-  ([this]
+  ([^java.lang.Thread this]
     (-> this (.stop)))
-  ([this obj]
+  ([^java.lang.Thread this ^java.lang.Throwable obj]
     (-> this (.stop obj))))
 
 (defn get-stack-trace
@@ -440,7 +440,7 @@
    each represents one stack frame. - `java.lang.StackTraceElement[]`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPermission method doesn't allow getting the stack trace of thread."
-  ([this]
+  ([^java.lang.Thread this]
     (-> this (.getStackTrace))))
 
 (defn get-thread-group
@@ -449,7 +449,7 @@
    (been stopped).
 
   returns: this thread's thread group. - `java.lang.ThreadGroup`"
-  ([this]
+  ([^java.lang.Thread this]
     (-> this (.getThreadGroup))))
 
 (defn alive?
@@ -458,7 +458,7 @@
 
   returns: true if this thread is alive;
             false otherwise. - `boolean`"
-  ([this]
+  ([^java.lang.Thread this]
     (-> this (.isAlive))))
 
 (defn suspend
@@ -476,7 +476,7 @@
   returns: `java.lang.   void`
 
   throws: java.lang.SecurityException - if the current thread cannot modify this thread."
-  ([this]
+  ([^java.lang.Thread this]
     (-> this (.suspend))))
 
 (defn set-name
@@ -490,7 +490,7 @@
   name - the new name for this thread. - `java.lang.String`
 
   throws: java.lang.SecurityException - if the current thread cannot modify this thread."
-  ([this name]
+  ([^java.lang.Thread this ^java.lang.String name]
     (-> this (.setName name))))
 
 (defn run
@@ -500,7 +500,7 @@
    otherwise, this method does nothing and returns.
 
    Subclasses of Thread should override this method."
-  ([this]
+  ([^java.lang.Thread this]
     (-> this (.run))))
 
 (defn get-uncaught-exception-handler
@@ -511,7 +511,7 @@
    has terminated, in which case null is returned.
 
   returns: the uncaught exception handler for this thread - `java.lang.Thread.UncaughtExceptionHandler`"
-  ([this]
+  ([^java.lang.Thread this]
     (-> this (.getUncaughtExceptionHandler))))
 
 (defn to-string
@@ -519,7 +519,7 @@
    thread's name, priority, and thread group.
 
   returns: a string representation of this thread. - `java.lang.String`"
-  ([this]
+  ([^java.lang.Thread this]
     (-> this (.toString))))
 
 (defn check-access
@@ -531,14 +531,14 @@
    throwing a SecurityException.
 
   throws: java.lang.SecurityException - if the current thread is not allowed to access this thread."
-  ([this]
+  ([^java.lang.Thread this]
     (-> this (.checkAccess))))
 
 (defn get-name
   "Returns this thread's name.
 
   returns: this thread's name. - `java.lang.String`"
-  ([this]
+  ([^java.lang.Thread this]
     (-> this (.getName))))
 
 (defn get-state
@@ -547,7 +547,7 @@
    not for synchronization control.
 
   returns: this thread's state. - `java.lang.Thread.State`"
-  ([this]
+  ([^java.lang.Thread this]
     (-> this (.getState))))
 
 (defn get-context-class-loader
@@ -570,7 +570,7 @@
             bootstrap class loader) - `java.lang.ClassLoader`
 
   throws: java.lang.SecurityException - if the current thread cannot get the context ClassLoader"
-  ([this]
+  ([^java.lang.Thread this]
     (-> this (.getContextClassLoader))))
 
 (defn destroy
@@ -590,7 +590,7 @@
   returns: `java.lang.  void`
 
   throws: java.lang.NoSuchMethodError - always"
-  ([this]
+  ([^java.lang.Thread this]
     (-> this (.destroy))))
 
 (defn interrupted?
@@ -603,7 +603,7 @@
 
   returns: true if this thread has been interrupted;
             false otherwise. - `boolean`"
-  ([this]
+  ([^java.lang.Thread this]
     (-> this (.isInterrupted))))
 
 (defn start
@@ -620,7 +620,7 @@
    execution.
 
   throws: java.lang.IllegalThreadStateException - if the thread was already started."
-  ([this]
+  ([^java.lang.Thread this]
     (-> this (.start))))
 
 (defn count-stack-frames
@@ -631,7 +631,7 @@
   returns: the number of stack frames in this thread. - `java.lang.  int`
 
   throws: java.lang.IllegalThreadStateException - if this thread is not suspended."
-  ([this]
+  ([^java.lang.Thread this]
     (-> this (.countStackFrames))))
 
 (defn set-priority
@@ -648,7 +648,7 @@
   new-priority - priority to set this thread to - `int`
 
   throws: java.lang.IllegalArgumentException - If the priority is not in the range MIN_PRIORITY to MAX_PRIORITY."
-  ([this new-priority]
+  ([^java.lang.Thread this ^Integer new-priority]
     (-> this (.setPriority new-priority))))
 
 (defn get-id
@@ -658,7 +658,7 @@
    When a thread is terminated, this thread ID may be reused.
 
   returns: this thread's ID. - `long`"
-  ([this]
+  ([^java.lang.Thread this]
     (-> this (.getId))))
 
 (defn interrupt
@@ -688,7 +688,7 @@
     Interrupting a thread that is not alive need not have any effect.
 
   throws: java.lang.SecurityException - if the current thread cannot modify this thread"
-  ([this]
+  ([^java.lang.Thread this]
     (-> this (.interrupt))))
 
 (defn daemon?
@@ -696,7 +696,7 @@
 
   returns: true if this thread is a daemon thread;
             false otherwise. - `boolean`"
-  ([this]
+  ([^java.lang.Thread this]
     (-> this (.isDaemon))))
 
 (defn join
@@ -713,11 +713,11 @@
   nanos - 0-999999 additional nanoseconds to wait - `int`
 
   throws: java.lang.IllegalArgumentException - if the value of millis is negative, or the value of nanos is not in the range 0-999999"
-  ([this millis nanos]
+  ([^java.lang.Thread this ^Long millis ^Integer nanos]
     (-> this (.join millis nanos)))
-  ([this millis]
+  ([^java.lang.Thread this ^Long millis]
     (-> this (.join millis)))
-  ([this]
+  ([^java.lang.Thread this]
     (-> this (.join))))
 
 (defn set-daemon
@@ -730,14 +730,14 @@
   on - if true, marks this thread as a daemon thread - `boolean`
 
   throws: java.lang.IllegalThreadStateException - if this thread is alive"
-  ([this on]
+  ([^java.lang.Thread this ^Boolean on]
     (-> this (.setDaemon on))))
 
 (defn get-priority
   "Returns this thread's priority.
 
   returns: this thread's priority. - `int`"
-  ([this]
+  ([^java.lang.Thread this]
     (-> this (.getPriority))))
 
 (defn set-uncaught-exception-handler
@@ -751,7 +751,7 @@
   eh - the object to use as this thread's uncaught exception handler. If null then this thread has no explicit handler. - `java.lang.Thread.UncaughtExceptionHandler`
 
   throws: java.lang.SecurityException - if the current thread is not allowed to modify this thread."
-  ([this eh]
+  ([^java.lang.Thread this ^java.lang.Thread.UncaughtExceptionHandler eh]
     (-> this (.setUncaughtExceptionHandler eh))))
 
 (defn resume
@@ -764,6 +764,6 @@
   returns: `java.lang.   void`
 
   throws: java.lang.SecurityException - if the current thread cannot modify this thread."
-  ([this]
+  ([^java.lang.Thread this]
     (-> this (.resume))))
 

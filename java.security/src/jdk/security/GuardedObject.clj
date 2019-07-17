@@ -23,7 +23,7 @@
 
   object - the object to be guarded. - `java.lang.Object`
   guard - the Guard object that guards access to the object. - `java.security.Guard`"
-  ([object guard]
+  ([^java.lang.Object object ^java.security.Guard guard]
     (new GuardedObject object guard)))
 
 (defn get-object
@@ -33,6 +33,6 @@
   returns: the guarded object. - `java.lang.Object`
 
   throws: java.lang.SecurityException - if access to the guarded object is denied."
-  ([this]
+  ([^java.security.GuardedObject this]
     (-> this (.getObject))))
 

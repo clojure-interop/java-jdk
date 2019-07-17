@@ -47,7 +47,7 @@
   returns: array of matching PrintService objects
    representing print services that support the specified flavor
    attributes.  If no services match, the array is zero-length. - `javax.print.PrintService[]`"
-  ([flavor attributes]
+  ([^javax.print.DocFlavor flavor ^javax.print.attribute.AttributeSet attributes]
     (PrintServiceLookup/lookupPrintServices flavor attributes)))
 
 (defn *lookup-multi-doc-print-services
@@ -64,7 +64,7 @@
 
   returns: array of matching MultiDocPrintService objects.
    If no services match, the array is zero-length. - `javax.print.MultiDocPrintService[]`"
-  ([flavors attributes]
+  ([^javax.print.DocFlavor[] flavors ^javax.print.attribute.AttributeSet attributes]
     (PrintServiceLookup/lookupMultiDocPrintServices flavors attributes)))
 
 (defn *lookup-default-print-service
@@ -102,7 +102,7 @@
 
   returns: true if the new lookup service is newly
            registered; false otherwise. - `boolean`"
-  ([sp]
+  ([^javax.print.PrintServiceLookup sp]
     (PrintServiceLookup/registerServiceProvider sp)))
 
 (defn *register-service
@@ -124,7 +124,7 @@
 
   returns: true if the service is newly
            registered; false otherwise. - `boolean`"
-  ([service]
+  ([^javax.print.PrintService service]
     (PrintServiceLookup/registerService service)))
 
 (defn get-print-services
@@ -146,9 +146,9 @@
 
   returns: array of matching PrintServices. If no services match, the
    array is zero-length. - `javax.print.PrintService[]`"
-  ([this flavor attributes]
+  ([^javax.print.PrintServiceLookup this ^javax.print.DocFlavor flavor ^javax.print.attribute.AttributeSet attributes]
     (-> this (.getPrintServices flavor attributes)))
-  ([this]
+  ([^javax.print.PrintServiceLookup this]
     (-> this (.getPrintServices))))
 
 (defn get-multi-doc-print-services
@@ -165,7 +165,7 @@
 
   returns: array of matching PrintServices. If no services match, the
    array is zero-length. - `javax.print.MultiDocPrintService[]`"
-  ([this flavors attributes]
+  ([^javax.print.PrintServiceLookup this ^javax.print.DocFlavor[] flavors ^javax.print.attribute.AttributeSet attributes]
     (-> this (.getMultiDocPrintServices flavors attributes))))
 
 (defn get-default-print-service
@@ -175,6 +175,6 @@
 
   returns: the default PrintService for this lookup service.
    If there is no default, returns null. - `javax.print.PrintService`"
-  ([this]
+  ([^javax.print.PrintServiceLookup this]
     (-> this (.getDefaultPrintService))))
 

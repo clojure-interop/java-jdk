@@ -14,9 +14,9 @@
 
   message - The detail message. - `java.lang.String`
   cause - The exception or error to be encapsulated in a SchemaFactoryConfigurationError. - `java.lang.Throwable`"
-  ([message cause]
+  ([^java.lang.String message ^java.lang.Throwable cause]
     (new SchemaFactoryConfigurationError message cause))
-  ([message]
+  ([^java.lang.String message]
     (new SchemaFactoryConfigurationError message))
   ([]
     (new SchemaFactoryConfigurationError )))

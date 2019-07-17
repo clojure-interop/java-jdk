@@ -31,23 +31,23 @@
   result - the result to return on successful completion. If you don't need a particular result, consider using constructions of the form: Future<?> f = new FutureTask<Void>(runnable, null) - `FutureTask.V`
 
   throws: java.lang.NullPointerException - if the runnable is null"
-  ([runnable result]
+  ([^java.lang.Runnable runnable ^FutureTask.V result]
     (new FutureTask runnable result))
-  ([callable]
+  ([^java.util.concurrent.Callable callable]
     (new FutureTask callable)))
 
 (defn cancelled?
   "Description copied from interface: Future
 
   returns: true if this task was cancelled before it completed - `boolean`"
-  ([this]
+  ([^java.util.concurrent.FutureTask this]
     (-> this (.isCancelled))))
 
 (defn done?
   "Description copied from interface: Future
 
   returns: true if this task completed - `boolean`"
-  ([this]
+  ([^java.util.concurrent.FutureTask this]
     (-> this (.isDone))))
 
 (defn cancel
@@ -58,7 +58,7 @@
   returns: false if the task could not be cancelled,
    typically because it has already completed normally;
    true otherwise - `boolean`"
-  ([this may-interrupt-if-running]
+  ([^java.util.concurrent.FutureTask this ^Boolean may-interrupt-if-running]
     (-> this (.cancel may-interrupt-if-running))))
 
 (defn get
@@ -70,13 +70,13 @@
   returns: the computed result - `FutureTask.V`
 
   throws: java.util.concurrent.CancellationException - if the computation was cancelled"
-  ([this timeout unit]
+  ([^java.util.concurrent.FutureTask this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.get timeout unit)))
-  ([this]
+  ([^java.util.concurrent.FutureTask this]
     (-> this (.get))))
 
 (defn run
   "Description copied from interface: RunnableFuture"
-  ([this]
+  ([^java.util.concurrent.FutureTask this]
     (-> this (.run))))
 

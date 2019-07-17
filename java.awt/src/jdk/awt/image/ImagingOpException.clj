@@ -12,6 +12,6 @@
    specified message.
 
   s - the message to generate when a ImagingOpException is thrown - `java.lang.String`"
-  ([s]
+  ([^java.lang.String s]
     (new ImagingOpException s)))
 

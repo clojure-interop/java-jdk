@@ -15,19 +15,19 @@
 
 (defn show
   "Shows the popup"
-  ([this]
+  ([^. this]
     (-> this (.show))))
 
 (defn hide
   "Hides the popup"
-  ([this]
+  ([^. this]
     (-> this (.hide))))
 
 (defn visible?
   "Returns true if the popup is visible (currently being displayed).
 
   returns: true if the component is visible; false otherwise. - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.isVisible))))
 
 (defn get-list
@@ -36,7 +36,7 @@
    for general list manipulation.
 
   returns: `javax.swing.JList`"
-  ([this]
+  ([^. this]
     (-> this (.getList))))
 
 (defn get-mouse-listener
@@ -44,7 +44,7 @@
    If this method returns null then it will not be added to the combo box.
 
   returns: a MouseListener or null - `java.awt.event.MouseListener`"
-  ([this]
+  ([^. this]
     (-> this (.getMouseListener))))
 
 (defn get-mouse-motion-listener
@@ -52,7 +52,7 @@
    If this method returns null then it will not be added to the combo box.
 
   returns: a MouseMotionListener or null - `java.awt.event.MouseMotionListener`"
-  ([this]
+  ([^. this]
     (-> this (.getMouseMotionListener))))
 
 (defn get-key-listener
@@ -60,12 +60,12 @@
    If this method returns null then it will not be added to the combo box.
 
   returns: `java.awt.event.KeyListener`"
-  ([this]
+  ([^. this]
     (-> this (.getKeyListener))))
 
 (defn uninstalling-ui
   "Called to inform the ComboPopup that the UI is uninstalling.
    If the ComboPopup added any listeners in the component, it should remove them here."
-  ([this]
+  ([^. this]
     (-> this (.uninstallingUI))))
 

@@ -56,7 +56,7 @@
   Creates an RespectBindingFeature
 
   enabled - specifies whether this feature should be enabled or not. - `boolean`"
-  ([enabled]
+  ([^Boolean enabled]
     (new RespectBindingFeature enabled))
   ([]
     (new RespectBindingFeature )))
@@ -73,6 +73,6 @@
   "Get the unique identifier for this WebServiceFeature.
 
   returns: the unique identifier for this feature. - `java.lang.String`"
-  ([this]
+  ([^javax.xml.ws.RespectBindingFeature this]
     (-> this (.getID))))
 

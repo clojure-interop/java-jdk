@@ -82,9 +82,9 @@
   transfer-type - the type of array used to represent pixel values - `int`
 
   throws: java.lang.IllegalArgumentException - if space is not a TYPE_RGB space"
-  ([space bits rmask gmask bmask amask is-alpha-premultiplied trans transfer-type]
+  ([^java.awt.color.ColorSpace space ^Integer bits ^Integer rmask ^Integer gmask ^Integer bmask ^Integer amask ^Boolean is-alpha-premultiplied ^Integer trans ^Integer transfer-type]
     (new PackedColorModel space bits rmask gmask bmask amask is-alpha-premultiplied trans transfer-type))
-  ([space bits color-mask-array alpha-mask is-alpha-premultiplied trans transfer-type]
+  ([^java.awt.color.ColorSpace space ^Integer bits color-mask-array ^Integer alpha-mask ^Boolean is-alpha-premultiplied ^Integer trans ^Integer transfer-type]
     (new PackedColorModel space bits color-mask-array alpha-mask is-alpha-premultiplied trans transfer-type)))
 
 (defn get-mask
@@ -106,7 +106,7 @@
            by index. - `int`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if index is greater than the number of components minus 1 in this PackedColorModel or if index is less than zero"
-  ([this index]
+  ([^java.awt.image.PackedColorModel this ^Integer index]
     (-> this (.getMask index))))
 
 (defn get-masks
@@ -116,7 +116,7 @@
   returns: the mask array , which indicates which bits of the
            int pixel
            representation contain the color or alpha samples. - `int[]`"
-  ([this]
+  ([^java.awt.image.PackedColorModel this]
     (-> this (.getMasks))))
 
 (defn create-compatible-sample-model
@@ -130,7 +130,7 @@
   returns: the newly created SampleModel. - `java.awt.image.SampleModel`
 
   throws: java.lang.IllegalArgumentException - if w or h is not greater than 0"
-  ([this w h]
+  ([^java.awt.image.PackedColorModel this ^Integer w ^Integer h]
     (-> this (.createCompatibleSampleModel w h))))
 
 (defn compatible-sample-model?
@@ -143,7 +143,7 @@
   returns: true if the specified SampleModel
            is compatible with this ColorModel;
            false otherwise. - `boolean`"
-  ([this sm]
+  ([^java.awt.image.PackedColorModel this ^java.awt.image.SampleModel sm]
     (-> this (.isCompatibleSampleModel sm))))
 
 (defn get-alpha-raster
@@ -160,7 +160,7 @@
 
   returns: a WritableRaster that represents the alpha
            channel of the image contained in raster. - `java.awt.image.WritableRaster`"
-  ([this raster]
+  ([^java.awt.image.PackedColorModel this ^java.awt.image.WritableRaster raster]
     (-> this (.getAlphaRaster raster))))
 
 (defn equals
@@ -173,6 +173,6 @@
   returns: true if the specified Object
    is an instance of PackedColorModel and equals this
    PackedColorModel; false otherwise. - `boolean`"
-  ([this obj]
+  ([^java.awt.image.PackedColorModel this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

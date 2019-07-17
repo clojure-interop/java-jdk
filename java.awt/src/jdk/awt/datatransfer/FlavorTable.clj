@@ -20,7 +20,7 @@
   returns: a java.util.List of java.lang.String
            objects which are platform-specific representations of platform-
            specific data formats - `java.util.List<java.lang.String>`"
-  ([this flav]
+  ([^. this ^java.awt.datatransfer.DataFlavor flav]
     (-> this (.getNativesForFlavor flav))))
 
 (defn get-flavors-for-native
@@ -38,6 +38,6 @@
   returns: a java.util.List of DataFlavor
            objects into which platform-specific data in the specified,
            platform-specific native can be translated - `java.util.List<java.awt.datatransfer.DataFlavor>`"
-  ([this nat]
+  ([^. this ^java.lang.String nat]
     (-> this (.getFlavorsForNative nat))))
 

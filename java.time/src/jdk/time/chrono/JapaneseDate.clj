@@ -39,7 +39,7 @@
   zone - the zone ID to use, not null - `java.time.ZoneId`
 
   returns: the current date using the system clock, not null - `java.time.chrono.JapaneseDate`"
-  ([zone]
+  ([^java.time.ZoneId zone]
     (JapaneseDate/now zone))
   ([]
     (JapaneseDate/now )))
@@ -69,9 +69,9 @@
   returns: the date in Japanese calendar system, not null - `java.time.chrono.JapaneseDate`
 
   throws: java.time.DateTimeException - if the value of any field is out of range, or if the day-of-month is invalid for the month-year, or if the date is not a Japanese era"
-  ([era year-of-era month day-of-month]
+  ([^java.time.chrono.JapaneseEra era ^Integer year-of-era ^Integer month ^Integer day-of-month]
     (JapaneseDate/of era year-of-era month day-of-month))
-  ([proleptic-year month day-of-month]
+  ([^Integer proleptic-year ^Integer month ^Integer day-of-month]
     (JapaneseDate/of proleptic-year month day-of-month)))
 
 (defn *from
@@ -92,14 +92,14 @@
   returns: the date in Japanese calendar system, not null - `java.time.chrono.JapaneseDate`
 
   throws: java.time.DateTimeException - if unable to convert to a JapaneseDate"
-  ([temporal]
+  ([^java.time.temporal.TemporalAccessor temporal]
     (JapaneseDate/from temporal)))
 
 (defn length-of-year
   "Description copied from interface: ChronoLocalDate
 
   returns: the length of the year in days - `int`"
-  ([this]
+  ([^java.time.chrono.JapaneseDate this]
     (-> this (.lengthOfYear))))
 
 (defn range
@@ -108,7 +108,7 @@
   field - the field to query the range for, not null - `java.time.temporal.TemporalField`
 
   returns: the range of valid values for the field, not null - `java.time.temporal.ValueRange`"
-  ([this field]
+  ([^java.time.chrono.JapaneseDate this ^java.time.temporal.TemporalField field]
     (-> this (.range field))))
 
 (defn get-era
@@ -117,14 +117,14 @@
    The Japanese calendar system has multiple eras defined by JapaneseEra.
 
   returns: the era applicable at this date, not null - `java.time.chrono.JapaneseEra`"
-  ([this]
+  ([^java.time.chrono.JapaneseDate this]
     (-> this (.getEra))))
 
 (defn to-epoch-day
   "Description copied from interface: ChronoLocalDate
 
   returns: the Epoch Day equivalent to this date - `long`"
-  ([this]
+  ([^java.time.chrono.JapaneseDate this]
     (-> this (.toEpochDay))))
 
 (defn plus
@@ -134,16 +134,16 @@
   unit - the unit of the amount to add, not null - `java.time.temporal.TemporalUnit`
 
   returns: an object of the same type with the specified period added, not null - `java.time.chrono.JapaneseDate`"
-  ([this amount-to-add unit]
+  ([^java.time.chrono.JapaneseDate this ^Long amount-to-add ^java.time.temporal.TemporalUnit unit]
     (-> this (.plus amount-to-add unit)))
-  ([this amount]
+  ([^java.time.chrono.JapaneseDate this ^java.time.temporal.TemporalAmount amount]
     (-> this (.plus amount))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^java.time.chrono.JapaneseDate this]
     (-> this (.toString))))
 
 (defn minus
@@ -153,9 +153,9 @@
   unit - the unit of the amount to subtract, not null - `java.time.temporal.TemporalUnit`
 
   returns: an object of the same type with the specified period subtracted, not null - `java.time.chrono.JapaneseDate`"
-  ([this amount-to-add unit]
+  ([^java.time.chrono.JapaneseDate this ^Long amount-to-add ^java.time.temporal.TemporalUnit unit]
     (-> this (.minus amount-to-add unit)))
-  ([this amount]
+  ([^java.time.chrono.JapaneseDate this ^java.time.temporal.TemporalAmount amount]
     (-> this (.minus amount))))
 
 (defn get-long
@@ -164,7 +164,7 @@
   field - the field to get, not null - `java.time.temporal.TemporalField`
 
   returns: the value for the field - `long`"
-  ([this field]
+  ([^java.time.chrono.JapaneseDate this ^java.time.temporal.TemporalField field]
     (-> this (.getLong field))))
 
 (defn length-of-month
@@ -174,7 +174,7 @@
    Month lengths match those of the ISO calendar system.
 
   returns: the length of the month in days - `int`"
-  ([this]
+  ([^java.time.chrono.JapaneseDate this]
     (-> this (.lengthOfMonth))))
 
 (defn until
@@ -184,9 +184,9 @@
   unit - the unit to measure the amount in, not null - `java.time.temporal.TemporalUnit`
 
   returns: the amount of time between this date and the end date - `long`"
-  ([this end-exclusive unit]
+  ([^java.time.chrono.JapaneseDate this ^java.time.temporal.Temporal end-exclusive ^java.time.temporal.TemporalUnit unit]
     (-> this (.until end-exclusive unit)))
-  ([this end-date]
+  ([^java.time.chrono.JapaneseDate this ^java.time.chrono.ChronoLocalDate end-date]
     (-> this (.until end-date))))
 
 (defn supported?
@@ -219,7 +219,7 @@
   field - the field to check, null returns false - `java.time.temporal.TemporalField`
 
   returns: true if the field is supported on this date, false if not - `boolean`"
-  ([this field]
+  ([^java.time.chrono.JapaneseDate this ^java.time.temporal.TemporalField field]
     (-> this (.isSupported field))))
 
 (defn get-chronology
@@ -229,14 +229,14 @@
    The era and other fields in ChronoField are defined by the chronology.
 
   returns: the Japanese chronology, not null - `java.time.chrono.JapaneseChronology`"
-  ([this]
+  ([^java.time.chrono.JapaneseDate this]
     (-> this (.getChronology))))
 
 (defn hash-code
   "A hash code for this date.
 
   returns: a suitable hash code based only on the Chronology and the date - `int`"
-  ([this]
+  ([^java.time.chrono.JapaneseDate this]
     (-> this (.hashCode))))
 
 (defn with
@@ -246,9 +246,9 @@
   new-value - the new value of the field in the result - `long`
 
   returns: an object of the same type with the specified field set, not null - `java.time.chrono.JapaneseDate`"
-  ([this field new-value]
+  ([^java.time.chrono.JapaneseDate this ^java.time.temporal.TemporalField field ^Long new-value]
     (-> this (.with field new-value)))
-  ([this adjuster]
+  ([^java.time.chrono.JapaneseDate this ^java.time.temporal.TemporalAdjuster adjuster]
     (-> this (.with adjuster))))
 
 (defn equals
@@ -263,7 +263,7 @@
   obj - the object to check, null returns false - `java.lang.Object`
 
   returns: true if this is equal to the other date - `boolean`"
-  ([this obj]
+  ([^java.time.chrono.JapaneseDate this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn at-time
@@ -272,6 +272,6 @@
   local-time - the local time to use, not null - `java.time.LocalTime`
 
   returns: the local date-time formed from this date and the specified time, not null - `java.time.chrono.ChronoLocalDateTime<java.time.chrono.JapaneseDate>`"
-  ([this local-time]
+  ([^java.time.chrono.JapaneseDate this ^java.time.LocalTime local-time]
     (-> this (.atTime local-time))))
 

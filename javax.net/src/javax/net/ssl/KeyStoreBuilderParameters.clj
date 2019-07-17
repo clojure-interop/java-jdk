@@ -13,7 +13,7 @@
   builder - the Builder object - `java.security.KeyStore.Builder`
 
   throws: java.lang.NullPointerException - if builder is null"
-  ([builder]
+  ([^java.security.KeyStore.Builder builder]
     (new KeyStoreBuilderParameters builder)))
 
 (defn get-parameters
@@ -24,6 +24,6 @@
   returns: the unmodifiable List of the
    java.security.KeyStore.Builders
    encapsulated by this object. - `java.util.List<java.security.KeyStore.Builder>`"
-  ([this]
+  ([^javax.net.ssl.KeyStoreBuilderParameters this]
     (-> this (.getParameters))))
 

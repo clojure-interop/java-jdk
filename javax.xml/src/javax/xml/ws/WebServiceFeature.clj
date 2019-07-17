@@ -18,13 +18,13 @@
   "Get the unique identifier for this WebServiceFeature.
 
   returns: the unique identifier for this feature. - `java.lang.String`"
-  ([this]
+  ([^javax.xml.ws.WebServiceFeature this]
     (-> this (.getID))))
 
 (defn enabled?
   "Returns true if this feature is enabled.
 
   returns: true if and only if the feature is enabled . - `boolean`"
-  ([this]
+  ([^javax.xml.ws.WebServiceFeature this]
     (-> this (.isEnabled))))
 

@@ -39,9 +39,9 @@
   p - a visitor-specified parameter - `AbstractTypeVisitor6.P`
 
   returns: a visitor-specified result - `AbstractTypeVisitor6.R`"
-  ([this t p]
+  ([^javax.lang.model.util.AbstractTypeVisitor6 this ^javax.lang.model.type.TypeMirror t ^AbstractTypeVisitor6.P p]
     (-> this (.visit t p)))
-  ([this t]
+  ([^javax.lang.model.util.AbstractTypeVisitor6 this ^javax.lang.model.type.TypeMirror t]
     (-> this (.visit t))))
 
 (defn visit-union
@@ -51,7 +51,7 @@
   p - a visitor-specified parameter - `AbstractTypeVisitor6.P`
 
   returns: the result of visitUnknown - `AbstractTypeVisitor6.R`"
-  ([this t p]
+  ([^javax.lang.model.util.AbstractTypeVisitor6 this ^javax.lang.model.type.UnionType t ^AbstractTypeVisitor6.P p]
     (-> this (.visitUnion t p))))
 
 (defn visit-intersection
@@ -61,7 +61,7 @@
   p - a visitor-specified parameter - `AbstractTypeVisitor6.P`
 
   returns: the result of visitUnknown - `AbstractTypeVisitor6.R`"
-  ([this t p]
+  ([^javax.lang.model.util.AbstractTypeVisitor6 this ^javax.lang.model.type.IntersectionType t ^AbstractTypeVisitor6.P p]
     (-> this (.visitIntersection t p))))
 
 (defn visit-unknown
@@ -78,6 +78,6 @@
   returns: a visitor-specified result - `AbstractTypeVisitor6.R`
 
   throws: javax.lang.model.type.UnknownTypeException - a visitor implementation may optionally throw this exception"
-  ([this t p]
+  ([^javax.lang.model.util.AbstractTypeVisitor6 this ^javax.lang.model.type.TypeMirror t ^AbstractTypeVisitor6.P p]
     (-> this (.visitUnknown t p))))
 

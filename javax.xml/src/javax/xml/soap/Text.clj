@@ -9,6 +9,6 @@
 
   returns: true if this Text object is a
            comment; false otherwise - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.isComment))))
 

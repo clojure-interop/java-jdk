@@ -13,9 +13,9 @@
 
   s - the detail message. - `java.lang.String`
   cause - the cause, may be null - `java.lang.Throwable`"
-  ([s cause]
+  ([^java.lang.String s ^java.lang.Throwable cause]
     (new LinkageError s cause))
-  ([s]
+  ([^java.lang.String s]
     (new LinkageError s))
   ([]
     (new LinkageError )))

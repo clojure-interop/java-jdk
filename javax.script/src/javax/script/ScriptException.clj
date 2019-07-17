@@ -16,11 +16,11 @@
   file-name - The filename - `java.lang.String`
   line-number - the line number. - `int`
   column-number - the column number. - `int`"
-  ([message file-name line-number column-number]
+  ([^java.lang.String message ^java.lang.String file-name ^Integer line-number ^Integer column-number]
     (new ScriptException message file-name line-number column-number))
-  ([message file-name line-number]
+  ([^java.lang.String message ^java.lang.String file-name ^Integer line-number]
     (new ScriptException message file-name line-number))
-  ([s]
+  ([^java.lang.String s]
     (new ScriptException s)))
 
 (defn get-message
@@ -28,21 +28,21 @@
    line and column numbers and filename if any of these are known.
 
   returns: The error message. - `java.lang.String`"
-  ([this]
+  ([^javax.script.ScriptException this]
     (-> this (.getMessage))))
 
 (defn get-line-number
   "Get the line number on which an error occurred.
 
   returns: The line number.  Returns -1 if a line number is unavailable. - `int`"
-  ([this]
+  ([^javax.script.ScriptException this]
     (-> this (.getLineNumber))))
 
 (defn get-column-number
   "Get the column number on which an error occurred.
 
   returns: The column number.  Returns -1 if a column number is unavailable. - `int`"
-  ([this]
+  ([^javax.script.ScriptException this]
     (-> this (.getColumnNumber))))
 
 (defn get-file-name
@@ -51,6 +51,6 @@
   returns: The file name of the script or some other string describing the script
    source.  May return some implementation-defined string such as <unknown>
    if a description of the source is unavailable. - `java.lang.String`"
-  ([this]
+  ([^javax.script.ScriptException this]
     (-> this (.getFileName))))
 

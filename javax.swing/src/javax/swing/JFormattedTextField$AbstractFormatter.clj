@@ -64,7 +64,7 @@
    different time than JFormattedTextField does.
 
   ftf - JFormattedTextField to format for, may be null indicating uninstall from current JFormattedTextField. - `javax.swing.JFormattedTextField`"
-  ([this ftf]
+  ([^javax.swing.JFormattedTextField$AbstractFormatter this ^javax.swing.JFormattedTextField ftf]
     (-> this (.install ftf))))
 
 (defn uninstall
@@ -73,7 +73,7 @@
    DocumentFilter, NavigationFilter
    and additional Actions installed on the
    JFormattedTextField."
-  ([this]
+  ([^javax.swing.JFormattedTextField$AbstractFormatter this]
     (-> this (.uninstall))))
 
 (defn string-to-value
@@ -85,7 +85,7 @@
   returns: Object representation of text - `java.lang.Object`
 
   throws: java.text.ParseException - if there is an error in the conversion"
-  ([this text]
+  ([^javax.swing.JFormattedTextField$AbstractFormatter this ^java.lang.String text]
     (-> this (.stringToValue text))))
 
 (defn value-to-string
@@ -96,6 +96,6 @@
   returns: String representation of value - `java.lang.String`
 
   throws: java.text.ParseException - if there is an error in the conversion"
-  ([this value]
+  ([^javax.swing.JFormattedTextField$AbstractFormatter this ^java.lang.Object value]
     (-> this (.valueToString value))))
 

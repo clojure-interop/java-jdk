@@ -42,7 +42,7 @@
   returns: a reference for a remote object - `java.rmi.Remote`
 
   throws: java.rmi.NotBoundException - if name is not currently bound"
-  ([name]
+  ([^java.lang.String name]
     (Naming/lookup name)))
 
 (defn *bind
@@ -52,7 +52,7 @@
   obj - a reference for the remote object (usually a stub) - `java.rmi.Remote`
 
   throws: java.rmi.AlreadyBoundException - if name is already bound"
-  ([name obj]
+  ([^java.lang.String name ^java.rmi.Remote obj]
     (Naming/bind name obj)))
 
 (defn *unbind
@@ -62,7 +62,7 @@
   name - a name in URL format (without the scheme component) - `java.lang.String`
 
   throws: java.rmi.NotBoundException - if name is not currently bound"
-  ([name]
+  ([^java.lang.String name]
     (Naming/unbind name)))
 
 (defn *rebind
@@ -73,7 +73,7 @@
   obj - new remote object to associate with the name - `java.rmi.Remote`
 
   throws: java.net.MalformedURLException - if the name is not an appropriately formatted URL"
-  ([name obj]
+  ([^java.lang.String name ^java.rmi.Remote obj]
     (Naming/rebind name obj)))
 
 (defn *list
@@ -88,6 +88,6 @@
             in the registry - `java.lang.String[]`
 
   throws: java.net.MalformedURLException - if the name is not an appropriately formatted URL"
-  ([name]
+  ([^java.lang.String name]
     (Naming/list name)))
 

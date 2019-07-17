@@ -28,14 +28,14 @@
    vector has no components.
 
   returns: the first component of this list - `DefaultListModel.E`"
-  ([this]
+  ([^javax.swing.DefaultListModel this]
     (-> this (.firstElement))))
 
 (defn add-element
   "Adds the specified component to the end of this list.
 
   element - the component to be added - `DefaultListModel.E`"
-  ([this element]
+  ([^javax.swing.DefaultListModel this ^DefaultListModel.E element]
     (-> this (.addElement element))))
 
 (defn contains
@@ -45,7 +45,7 @@
 
   returns: true if the specified object
             is the same as a component in this list - `boolean`"
-  ([this elem]
+  ([^javax.swing.DefaultListModel this ^java.lang.Object elem]
     (-> this (.contains elem))))
 
 (defn to-string
@@ -53,7 +53,7 @@
    object's properties.
 
   returns: a String representation of this object - `java.lang.String`"
-  ([this]
+  ([^javax.swing.DefaultListModel this]
     (-> this (.toString))))
 
 (defn insert-element-at
@@ -71,7 +71,7 @@
   index - where to insert the new component - `int`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if the index was invalid"
-  ([this element index]
+  ([^javax.swing.DefaultListModel this ^DefaultListModel.E element ^Integer index]
     (-> this (.insertElementAt element index))))
 
 (defn remove-all-elements
@@ -80,7 +80,7 @@
    Note: Although this method is not deprecated, the preferred
       method to use is clear, which implements the
       List interface defined in the 1.2 Collections framework."
-  ([this]
+  ([^javax.swing.DefaultListModel this]
     (-> this (.removeAllElements))))
 
 (defn get-element-at
@@ -95,7 +95,7 @@
   returns: the component at the specified index - `DefaultListModel.E`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if the index is negative or greater than the current size of this list"
-  ([this index]
+  ([^javax.swing.DefaultListModel this ^Integer index]
     (-> this (.getElementAt index))))
 
 (defn last-index-of
@@ -108,9 +108,9 @@
   returns: the index of the last occurrence of the elem
             in this list at position less than index;
             returns -1 if the object is not found - `int`"
-  ([this elem index]
+  ([^javax.swing.DefaultListModel this ^java.lang.Object elem ^Integer index]
     (-> this (.lastIndexOf elem index)))
-  ([this elem]
+  ([^javax.swing.DefaultListModel this ^java.lang.Object elem]
     (-> this (.lastIndexOf elem))))
 
 (defn remove-element
@@ -121,7 +121,7 @@
 
   returns: true if the argument was a component of this
             list; false otherwise - `boolean`"
-  ([this obj]
+  ([^javax.swing.DefaultListModel this ^java.lang.Object obj]
     (-> this (.removeElement obj))))
 
 (defn set-element-at
@@ -138,7 +138,7 @@
 
   element - what the component is to be set to - `DefaultListModel.E`
   index - the specified index - `int`"
-  ([this element index]
+  ([^javax.swing.DefaultListModel this ^DefaultListModel.E element ^Integer index]
     (-> this (.setElementAt element index))))
 
 (defn remove
@@ -152,7 +152,7 @@
   index - the index of the element to removed - `int`
 
   returns: the element previously at the specified position - `DefaultListModel.E`"
-  ([this index]
+  ([^javax.swing.DefaultListModel this ^Integer index]
     (-> this (.remove index))))
 
 (defn copy-into
@@ -161,7 +161,7 @@
    else an IndexOutOfBoundsException is thrown.
 
   an-array - the array into which the components get copied - `java.lang.Object[]`"
-  ([this an-array]
+  ([^javax.swing.DefaultListModel this ^java.lang.Object[] an-array]
     (-> this (.copyInto an-array))))
 
 (defn ensure-capacity
@@ -170,7 +170,7 @@
    the minimum capacity argument.
 
   min-capacity - the desired minimum capacity - `int`"
-  ([this min-capacity]
+  ([^javax.swing.DefaultListModel this ^Integer min-capacity]
     (-> this (.ensureCapacity min-capacity))))
 
 (defn element-at
@@ -185,14 +185,14 @@
   index - an index into this list - `int`
 
   returns: the component at the specified index - `DefaultListModel.E`"
-  ([this index]
+  ([^javax.swing.DefaultListModel this ^Integer index]
     (-> this (.elementAt index))))
 
 (defn set-size
   "Sets the size of this list.
 
   new-size - the new size of this list - `int`"
-  ([this new-size]
+  ([^javax.swing.DefaultListModel this ^Integer new-size]
     (-> this (.setSize new-size))))
 
 (defn add
@@ -204,7 +204,7 @@
 
   index - index at which the specified element is to be inserted - `int`
   element - element to be inserted - `DefaultListModel.E`"
-  ([this index element]
+  ([^javax.swing.DefaultListModel this ^Integer index ^DefaultListModel.E element]
     (-> this (.add index element))))
 
 (defn set
@@ -219,7 +219,7 @@
   element - element to be stored at the specified position - `DefaultListModel.E`
 
   returns: the element previously at the specified position - `DefaultListModel.E`"
-  ([this index element]
+  ([^javax.swing.DefaultListModel this ^Integer index ^DefaultListModel.E element]
     (-> this (.set index element))))
 
 (defn empty?
@@ -228,20 +228,20 @@
   returns: true if and only if this list has
             no components, that is, its size is zero;
             false otherwise - `boolean`"
-  ([this]
+  ([^javax.swing.DefaultListModel this]
     (-> this (.isEmpty))))
 
 (defn size
   "Returns the number of components in this list.
 
   returns: the number of components in this list - `int`"
-  ([this]
+  ([^javax.swing.DefaultListModel this]
     (-> this (.size))))
 
 (defn clear
   "Removes all of the elements from this list.  The list will
    be empty after this call returns (unless it throws an exception)."
-  ([this]
+  ([^javax.swing.DefaultListModel this]
     (-> this (.clear))))
 
 (defn index-of
@@ -254,9 +254,9 @@
   returns: the index where the first occurrence of elem
             is found after index; returns -1
             if the elem is not found in the list - `int`"
-  ([this elem index]
+  ([^javax.swing.DefaultListModel this ^java.lang.Object elem ^Integer index]
     (-> this (.indexOf elem index)))
-  ([this elem]
+  ([^javax.swing.DefaultListModel this ^java.lang.Object elem]
     (-> this (.indexOf elem))))
 
 (defn to-array
@@ -264,7 +264,7 @@
    correct order.
 
   returns: an array containing the elements of the list - `java.lang.Object[]`"
-  ([this]
+  ([^javax.swing.DefaultListModel this]
     (-> this (.toArray))))
 
 (defn last-element
@@ -273,7 +273,7 @@
    has no components.
 
   returns: the last component of the list - `DefaultListModel.E`"
-  ([this]
+  ([^javax.swing.DefaultListModel this]
     (-> this (.lastElement))))
 
 (defn get-size
@@ -285,7 +285,7 @@
    size is identifiable as a JavaBean property.
 
   returns: the number of components in this list - `int`"
-  ([this]
+  ([^javax.swing.DefaultListModel this]
     (-> this (.getSize))))
 
 (defn get
@@ -298,14 +298,14 @@
   index - index of element to return - `int`
 
   returns: `DefaultListModel.E`"
-  ([this index]
+  ([^javax.swing.DefaultListModel this ^Integer index]
     (-> this (.get index))))
 
 (defn capacity
   "Returns the current capacity of this list.
 
   returns: the current capacity - `int`"
-  ([this]
+  ([^javax.swing.DefaultListModel this]
     (-> this (.capacity))))
 
 (defn remove-element-at
@@ -319,19 +319,19 @@
       List interface defined in the 1.2 Collections framework.
 
   index - the index of the object to remove - `int`"
-  ([this index]
+  ([^javax.swing.DefaultListModel this ^Integer index]
     (-> this (.removeElementAt index))))
 
 (defn elements
   "Returns an enumeration of the components of this list.
 
   returns: an enumeration of the components of this list - `java.util.Enumeration<DefaultListModel.E>`"
-  ([this]
+  ([^javax.swing.DefaultListModel this]
     (-> this (.elements))))
 
 (defn trim-to-size
   "Trims the capacity of this list to be the list's current size."
-  ([this]
+  ([^javax.swing.DefaultListModel this]
     (-> this (.trimToSize))))
 
 (defn remove-range
@@ -347,6 +347,6 @@
 
   from-index - the index of the lower end of the range - `int`
   to-index - the index of the upper end of the range - `int`"
-  ([this from-index to-index]
+  ([^javax.swing.DefaultListModel this ^Integer from-index ^Integer to-index]
     (-> this (.removeRange from-index to-index))))
 

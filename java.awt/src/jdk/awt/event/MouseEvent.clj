@@ -171,11 +171,11 @@
   button - An integer that indicates, which of the mouse buttons has changed its state. The following rules are applied to this parameter: If support for the extended mouse buttons is disabled by Java then it is allowed to create MouseEvent objects only with the standard buttons: NOBUTTON, BUTTON1, BUTTON2, and BUTTON3. If support for the extended mouse buttons is enabled by Java then it is allowed to create MouseEvent objects with the standard buttons. In case the support for extended mouse buttons is enabled by Java, then in addition to the standard buttons, MouseEvent objects can be created using buttons from the range starting from 4 to MouseInfo.getNumberOfButtons() if the mouse has more than three buttons. - `int`
 
   throws: java.lang.IllegalArgumentException - if source is null"
-  ([source id when modifiers x y x-abs y-abs click-count popup-trigger button]
+  ([^java.awt.Component source ^Integer id ^Long when ^Integer modifiers ^Integer x ^Integer y ^Integer x-abs ^Integer y-abs ^Integer click-count ^Boolean popup-trigger ^Integer button]
     (new MouseEvent source id when modifiers x y x-abs y-abs click-count popup-trigger button))
-  ([source id when modifiers x y click-count popup-trigger button]
+  ([^java.awt.Component source ^Integer id ^Long when ^Integer modifiers ^Integer x ^Integer y ^Integer click-count ^Boolean popup-trigger ^Integer button]
     (new MouseEvent source id when modifiers x y click-count popup-trigger button))
-  ([source id when modifiers x y click-count popup-trigger]
+  ([^java.awt.Component source ^Integer id ^Long when ^Integer modifiers ^Integer x ^Integer y ^Integer click-count ^Boolean popup-trigger]
     (new MouseEvent source id when modifiers x y click-count popup-trigger)))
 
 (def *-mouse-first
@@ -322,7 +322,7 @@
 
   returns: string   string text description of the combination of modifier
                     keys and mouse buttons that were down during the event - `java.lang.String`"
-  ([modifiers]
+  ([^Integer modifiers]
     (MouseEvent/getMouseModifiersText modifiers)))
 
 (defn translate-point
@@ -332,14 +332,14 @@
 
   x - the horizontal x value to add to the current x coordinate position - `int`
   y - the vertical y value to add to the current y coordinate position - `int`"
-  ([this x y]
+  ([^java.awt.event.MouseEvent this ^Integer x ^Integer y]
     (-> this (.translatePoint x y))))
 
 (defn get-click-count
   "Returns the number of mouse clicks associated with this event.
 
   returns: integer value for the number of clicks - `int`"
-  ([this]
+  ([^java.awt.event.MouseEvent this]
     (-> this (.getClickCount))))
 
 (defn get-x-on-screen
@@ -351,7 +351,7 @@
    associated with the Component's GraphicsConfiguration.
 
   returns: x  an integer indicating absolute horizontal position. - `int`"
-  ([this]
+  ([^java.awt.event.MouseEvent this]
     (-> this (.getXOnScreen))))
 
 (defn get-location-on-screen
@@ -364,7 +364,7 @@
 
   returns: a Point object containing the absolute  x
     and y coordinates. - `java.awt.Point`"
-  ([this]
+  ([^java.awt.event.MouseEvent this]
     (-> this (.getLocationOnScreen))))
 
 (defn popup-trigger?
@@ -378,7 +378,7 @@
 
   returns: boolean, true if this event is the popup menu trigger
            for this platform - `boolean`"
-  ([this]
+  ([^java.awt.event.MouseEvent this]
     (-> this (.isPopupTrigger))))
 
 (defn get-modifiers-ex
@@ -417,7 +417,7 @@
    The above code will work even if new modifiers are added.
 
   returns: `int`"
-  ([this]
+  ([^java.awt.event.MouseEvent this]
     (-> this (.getModifiersEx))))
 
 (defn get-y-on-screen
@@ -429,7 +429,7 @@
    associated with the Component's GraphicsConfiguration.
 
   returns: y  an integer indicating absolute vertical position. - `int`"
-  ([this]
+  ([^java.awt.event.MouseEvent this]
     (-> this (.getYOnScreen))))
 
 (defn get-y
@@ -438,7 +438,7 @@
 
   returns: y  an integer indicating vertical position relative to
               the component - `int`"
-  ([this]
+  ([^java.awt.event.MouseEvent this]
     (-> this (.getY))))
 
 (defn get-x
@@ -447,7 +447,7 @@
 
   returns: x  an integer indicating horizontal position relative to
               the component - `int`"
-  ([this]
+  ([^java.awt.event.MouseEvent this]
     (-> this (.getX))))
 
 (defn get-button
@@ -496,7 +496,7 @@
 
            NOBUTTON, BUTTON1, BUTTON2 or BUTTON3
            if support for the extended mouse buttons is disabled by Java - `int`"
-  ([this]
+  ([^java.awt.event.MouseEvent this]
     (-> this (.getButton))))
 
 (defn param-string
@@ -504,7 +504,7 @@
    This method is useful for event-logging and for debugging.
 
   returns: a string identifying the event and its attributes - `java.lang.String`"
-  ([this]
+  ([^java.awt.event.MouseEvent this]
     (-> this (.paramString))))
 
 (defn get-point
@@ -512,6 +512,6 @@
 
   returns: a Point object containing the x and y coordinates
            relative to the source component - `java.awt.Point`"
-  ([this]
+  ([^java.awt.event.MouseEvent this]
     (-> this (.getPoint))))
 

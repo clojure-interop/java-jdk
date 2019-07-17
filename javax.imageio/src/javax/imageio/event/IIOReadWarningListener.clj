@@ -19,6 +19,6 @@
 
   source - the ImageReader object calling this method. - `javax.imageio.ImageReader`
   warning - a String containing the warning. - `java.lang.String`"
-  ([this source warning]
+  ([^. this ^javax.imageio.ImageReader source ^java.lang.String warning]
     (-> this (.warningOccurred source warning))))
 

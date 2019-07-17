@@ -17,7 +17,7 @@
   env - the environment map. Can be null. - `java.util.Map<java.lang.String,?>`
 
   throws: java.io.IOException - if the RMIServer object cannot be created."
-  ([port csf ssf env]
+  ([^Integer port ^java.rmi.server.RMIClientSocketFactory csf ^java.rmi.server.RMIServerSocketFactory ssf ^java.util.Map env]
     (new RMIJRMPServerImpl port csf ssf env)))
 
 (defn to-stub
@@ -26,6 +26,6 @@
   returns: a serializable stub. - `java.rmi.Remote`
 
   throws: java.io.IOException - if the stub cannot be obtained - e.g the RMIJRMPServerImpl has not been exported yet."
-  ([this]
+  ([^javax.management.remote.rmi.RMIJRMPServerImpl this]
     (-> this (.toStub))))
 

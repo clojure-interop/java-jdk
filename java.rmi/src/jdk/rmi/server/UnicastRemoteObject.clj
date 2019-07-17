@@ -113,11 +113,11 @@
   returns: remote object stub - `java.rmi.Remote`
 
   throws: java.rmi.RemoteException - if export fails"
-  ([obj port csf ssf]
+  ([^java.rmi.Remote obj ^Integer port ^java.rmi.server.RMIClientSocketFactory csf ^java.rmi.server.RMIServerSocketFactory ssf]
     (UnicastRemoteObject/exportObject obj port csf ssf))
-  ([obj port]
+  ([^java.rmi.Remote obj ^Integer port]
     (UnicastRemoteObject/exportObject obj port))
-  ([obj]
+  ([^java.rmi.Remote obj]
     (UnicastRemoteObject/exportObject obj)))
 
 (defn *unexport-object
@@ -135,7 +135,7 @@
   returns: true if operation is successful, false otherwise - `boolean`
 
   throws: java.rmi.NoSuchObjectException - if the remote object is not currently exported"
-  ([obj force]
+  ([^java.rmi.Remote obj ^Boolean force]
     (UnicastRemoteObject/unexportObject obj force)))
 
 (defn clone
@@ -145,6 +145,6 @@
   returns: the new remote object - `java.lang.Object`
 
   throws: java.lang.CloneNotSupportedException - if clone failed due to a RemoteException."
-  ([this]
+  ([^java.rmi.server.UnicastRemoteObject this]
     (-> this (.clone))))
 

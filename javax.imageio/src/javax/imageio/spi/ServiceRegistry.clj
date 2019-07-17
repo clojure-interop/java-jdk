@@ -68,7 +68,7 @@
   categories - an Iterator containing Class objects to be used to define categories. - `java.util.Iterator<java.lang.Class<?>>`
 
   throws: java.lang.IllegalArgumentException - if categories is null."
-  ([categories]
+  ([^java.util.Iterator> categories]
     (new ServiceRegistry categories)))
 
 (defn *lookup-providers
@@ -98,9 +98,9 @@
    cannot be found and instantiated. - `<T> java.util.Iterator<T>`
 
   throws: java.lang.IllegalArgumentException - if providerClass is null."
-  ([provider-class loader]
+  ([^java.lang.Class provider-class ^java.lang.ClassLoader loader]
     (ServiceRegistry/lookupProviders provider-class loader))
-  ([provider-class]
+  ([^java.lang.Class provider-class]
     (ServiceRegistry/lookupProviders provider-class)))
 
 (defn register-service-providers
@@ -120,7 +120,7 @@
   providers - an Iterator containing service provider objects to be registered. - `java.util.Iterator<?>`
 
   throws: java.lang.IllegalArgumentException - if providers is null or contains a null entry."
-  ([this providers]
+  ([^javax.imageio.spi.ServiceRegistry this ^java.util.Iterator providers]
     (-> this (.registerServiceProviders providers))))
 
 (defn contains
@@ -133,7 +133,7 @@
    registered. - `boolean`
 
   throws: java.lang.IllegalArgumentException - if provider is null."
-  ([this provider]
+  ([^javax.imageio.spi.ServiceRegistry this ^java.lang.Object provider]
     (-> this (.contains provider))))
 
 (defn deregister-all
@@ -143,9 +143,9 @@
   category - the category to be emptied. - `java.lang.Class<?>`
 
   throws: java.lang.IllegalArgumentException - if there is no category corresponding to category."
-  ([this category]
+  ([^javax.imageio.spi.ServiceRegistry this ^java.lang.Class category]
     (-> this (.deregisterAll category)))
-  ([this]
+  ([^javax.imageio.spi.ServiceRegistry this]
     (-> this (.deregisterAll))))
 
 (defn get-service-providers
@@ -166,9 +166,9 @@
    objects from the given category, possibly in order. - `<T> java.util.Iterator<T>`
 
   throws: java.lang.IllegalArgumentException - if there is no category corresponding to category."
-  ([this category filter use-ordering]
+  ([^javax.imageio.spi.ServiceRegistry this ^java.lang.Class category ^javax.imageio.spi.ServiceRegistry.Filter filter ^Boolean use-ordering]
     (-> this (.getServiceProviders category filter use-ordering)))
-  ([this category use-ordering]
+  ([^javax.imageio.spi.ServiceRegistry this ^java.lang.Class category ^Boolean use-ordering]
     (-> this (.getServiceProviders category use-ordering))))
 
 (defn deregister-service-provider
@@ -192,9 +192,9 @@
    false otherwise. - `<T> boolean`
 
   throws: java.lang.IllegalArgumentException - if there is no category corresponding to category."
-  ([this provider category]
+  ([^javax.imageio.spi.ServiceRegistry this provider ^java.lang.Class category]
     (-> this (.deregisterServiceProvider provider category)))
-  ([this provider]
+  ([^javax.imageio.spi.ServiceRegistry this ^java.lang.Object provider]
     (-> this (.deregisterServiceProvider provider))))
 
 (defn get-service-provider-by-class
@@ -211,7 +211,7 @@
    present. - `<T> T`
 
   throws: java.lang.IllegalArgumentException - if providerClass is null."
-  ([this provider-class]
+  ([^javax.imageio.spi.ServiceRegistry this ^java.lang.Class provider-class]
     (-> this (.getServiceProviderByClass provider-class))))
 
 (defn set-ordering
@@ -235,7 +235,7 @@
    was established. - `<T> boolean`
 
   throws: java.lang.IllegalArgumentException - if there is no category corresponding to category."
-  ([this category first-provider second-provider]
+  ([^javax.imageio.spi.ServiceRegistry this ^java.lang.Class category first-provider second-provider]
     (-> this (.setOrdering category first-provider second-provider))))
 
 (defn get-categories
@@ -245,7 +245,7 @@
 
   returns: an Iterator containing
    Classobjects. - `java.util.Iterator<java.lang.Class<?>>`"
-  ([this]
+  ([^javax.imageio.spi.ServiceRegistry this]
     (-> this (.getCategories))))
 
 (defn register-service-provider
@@ -266,9 +266,9 @@
    registered in the same category category. - `<T> boolean`
 
   throws: java.lang.IllegalArgumentException - if there is no category corresponding to category."
-  ([this provider category]
+  ([^javax.imageio.spi.ServiceRegistry this provider ^java.lang.Class category]
     (-> this (.registerServiceProvider provider category)))
-  ([this provider]
+  ([^javax.imageio.spi.ServiceRegistry this ^java.lang.Object provider]
     (-> this (.registerServiceProvider provider))))
 
 (defn unset-ordering
@@ -290,7 +290,7 @@
    disestablished. - `<T> boolean`
 
   throws: java.lang.IllegalArgumentException - if there is no category corresponding to category."
-  ([this category first-provider second-provider]
+  ([^javax.imageio.spi.ServiceRegistry this ^java.lang.Class category first-provider second-provider]
     (-> this (.unsetOrdering category first-provider second-provider))))
 
 (defn finalize
@@ -300,6 +300,6 @@
    be called from application code.
 
   throws: java.lang.Throwable - if an error occurs during superclass finalization."
-  ([this]
+  ([^javax.imageio.spi.ServiceRegistry this]
     (-> this (.finalize))))
 

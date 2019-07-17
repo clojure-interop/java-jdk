@@ -35,7 +35,7 @@
   returns: the new stream - `java.util.stream.IntStream`
 
   throws: java.lang.IllegalArgumentException - if n is negative"
-  ([this n]
+  ([^. this ^Long n]
     (-> this (.skip n))))
 
 (defn map
@@ -48,7 +48,7 @@
   mapper - a non-interfering, stateless function to apply to each element - `java.util.function.IntUnaryOperator`
 
   returns: the new stream - `java.util.stream.IntStream`"
-  ([this mapper]
+  ([^. this ^java.util.function.IntUnaryOperator mapper]
     (-> this (.map mapper))))
 
 (defn *range
@@ -61,7 +61,7 @@
 
   returns: a sequential IntStream for the range of int
            elements - `java.util.stream.IntStream`"
-  ([start-inclusive end-exclusive]
+  ([^Integer start-inclusive ^Integer end-exclusive]
     (null/range start-inclusive end-exclusive)))
 
 (defn peek
@@ -80,7 +80,7 @@
   action - a non-interfering action to perform on the elements as they are consumed from the stream - `java.util.function.IntConsumer`
 
   returns: the new stream - `java.util.stream.IntStream`"
-  ([this action]
+  ([^. this ^java.util.function.IntConsumer action]
     (-> this (.peek action))))
 
 (defn min
@@ -96,14 +96,14 @@
 
   returns: an OptionalInt containing the minimum element of this
    stream, or an empty OptionalInt if the stream is empty - `java.util.OptionalInt`"
-  ([this]
+  ([^. this]
     (-> this (.min))))
 
 (defn spliterator
   "Description copied from interface: BaseStream
 
   returns: the element spliterator for this stream - `java.util.Spliterator.OfInt`"
-  ([this]
+  ([^. this]
     (-> this (.spliterator))))
 
 (defn for-each
@@ -120,7 +120,7 @@
    responsible for providing the required synchronization.
 
   action - a non-interfering action to perform on the elements - `java.util.function.IntConsumer`"
-  ([this action]
+  ([^. this ^java.util.function.IntConsumer action]
     (-> this (.forEach action))))
 
 (defn for-each-ordered
@@ -132,7 +132,7 @@
    operation.
 
   action - a non-interfering action to perform on the elements - `java.util.function.IntConsumer`"
-  ([this action]
+  ([^. this ^java.util.function.IntConsumer action]
     (-> this (.forEachOrdered action))))
 
 (defn *of
@@ -141,14 +141,14 @@
   t - the single element - `int`
 
   returns: a singleton sequential stream - `java.util.stream.IntStream`"
-  ([t]
+  ([^Integer t]
     (null/of t)))
 
 (defn sequential
   "Description copied from interface: BaseStream
 
   returns: a sequential stream - `java.util.stream.IntStream`"
-  ([this]
+  ([^. this]
     (-> this (.sequential))))
 
 (defn find-first
@@ -161,7 +161,7 @@
 
   returns: an OptionalInt describing the first element of this stream,
    or an empty OptionalInt if the stream is empty - `java.util.OptionalInt`"
-  ([this]
+  ([^. this]
     (-> this (.findFirst))))
 
 (defn average
@@ -175,7 +175,7 @@
 
   returns: an OptionalDouble containing the average element of this
    stream, or an empty optional if the stream is empty - `java.util.OptionalDouble`"
-  ([this]
+  ([^. this]
     (-> this (.average))))
 
 (defn all-match
@@ -191,14 +191,14 @@
 
   returns: true if either all elements of the stream match the
    provided predicate or the stream is empty, otherwise false - `boolean`"
-  ([this predicate]
+  ([^. this ^java.util.function.IntPredicate predicate]
     (-> this (.allMatch predicate))))
 
 (defn parallel
   "Description copied from interface: BaseStream
 
   returns: a parallel stream - `java.util.stream.IntStream`"
-  ([this]
+  ([^. this]
     (-> this (.parallel))))
 
 (defn sum
@@ -213,7 +213,7 @@
    operation.
 
   returns: the sum of elements in this stream - `int`"
-  ([this]
+  ([^. this]
     (-> this (.sum))))
 
 (defn sorted
@@ -224,7 +224,7 @@
    intermediate operation.
 
   returns: the new stream - `java.util.stream.IntStream`"
-  ([this]
+  ([^. this]
     (-> this (.sorted))))
 
 (defn map-to-long
@@ -237,7 +237,7 @@
   mapper - a non-interfering, stateless function to apply to each element - `java.util.function.IntToLongFunction`
 
   returns: the new stream - `java.util.stream.LongStream`"
-  ([this mapper]
+  ([^. this ^java.util.function.IntToLongFunction mapper]
     (-> this (.mapToLong mapper))))
 
 (defn *iterate
@@ -255,7 +255,7 @@
   f - a function to be applied to to the previous element to produce a new element - `java.util.function.IntUnaryOperator`
 
   returns: A new sequential IntStream - `java.util.stream.IntStream`"
-  ([seed f]
+  ([^Integer seed ^java.util.function.IntUnaryOperator f]
     (null/iterate seed f)))
 
 (defn max
@@ -272,7 +272,7 @@
 
   returns: an OptionalInt containing the maximum element of this
    stream, or an empty OptionalInt if the stream is empty - `java.util.OptionalInt`"
-  ([this]
+  ([^. this]
     (-> this (.max))))
 
 (defn *generate
@@ -283,7 +283,7 @@
   s - the IntSupplier for generated elements - `java.util.function.IntSupplier`
 
   returns: a new infinite sequential unordered IntStream - `java.util.stream.IntStream`"
-  ([s]
+  ([^java.util.function.IntSupplier s]
     (null/generate s)))
 
 (defn *builder
@@ -304,7 +304,7 @@
    This is a terminal operation.
 
   returns: the count of elements in this stream - `long`"
-  ([this]
+  ([^. this]
     (-> this (.count))))
 
 (defn map-to-double
@@ -317,14 +317,14 @@
   mapper - a non-interfering, stateless function to apply to each element - `java.util.function.IntToDoubleFunction`
 
   returns: the new stream - `java.util.stream.DoubleStream`"
-  ([this mapper]
+  ([^. this ^java.util.function.IntToDoubleFunction mapper]
     (-> this (.mapToDouble mapper))))
 
 (defn iterator
   "Description copied from interface: BaseStream
 
   returns: the element iterator for this stream - `java.util.PrimitiveIterator.OfInt`"
-  ([this]
+  ([^. this]
     (-> this (.iterator))))
 
 (defn distinct
@@ -334,7 +334,7 @@
    intermediate operation.
 
   returns: the new stream - `java.util.stream.IntStream`"
-  ([this]
+  ([^. this]
     (-> this (.distinct))))
 
 (defn boxed
@@ -346,7 +346,7 @@
 
   returns: a Stream consistent of the elements of this stream,
    each boxed to an Integer - `java.util.stream.Stream<java.lang.Integer>`"
-  ([this]
+  ([^. this]
     (-> this (.boxed))))
 
 (defn limit
@@ -361,7 +361,7 @@
   returns: the new stream - `java.util.stream.IntStream`
 
   throws: java.lang.IllegalArgumentException - if maxSize is negative"
-  ([this max-size]
+  ([^. this ^Long max-size]
     (-> this (.limit max-size))))
 
 (defn flat-map
@@ -378,7 +378,7 @@
   mapper - a non-interfering, stateless function to apply to each element which produces an IntStream of new values - `java.util.stream.IntStream>`
 
   returns: the new stream - `java.util.stream.IntStream`"
-  ([this mapper]
+  ([^. this ^java.util.stream.IntStream> mapper]
     (-> this (.flatMap mapper))))
 
 (defn *concat
@@ -393,7 +393,7 @@
   b - the second stream - `java.util.stream.IntStream`
 
   returns: the concatenation of the two input streams - `java.util.stream.IntStream`"
-  ([a b]
+  ([^java.util.stream.IntStream a ^java.util.stream.IntStream b]
     (null/concat a b)))
 
 (defn filter
@@ -406,7 +406,7 @@
   predicate - a non-interfering, stateless predicate to apply to each element to determine if it should be included - `java.util.function.IntPredicate`
 
   returns: the new stream - `java.util.stream.IntStream`"
-  ([this predicate]
+  ([^. this ^java.util.function.IntPredicate predicate]
     (-> this (.filter predicate))))
 
 (defn *empty
@@ -426,7 +426,7 @@
   mapper - a non-interfering, stateless function to apply to each element - `U>`
 
   returns: the new stream - `<U> java.util.stream.Stream<U>`"
-  ([this mapper]
+  ([^. this mapper]
     (-> this (.mapToObj mapper))))
 
 (defn find-any
@@ -444,7 +444,7 @@
 
   returns: an OptionalInt describing some element of this stream, or
    an empty OptionalInt if the stream is empty - `java.util.OptionalInt`"
-  ([this]
+  ([^. this]
     (-> this (.findAny))))
 
 (defn summary-statistics
@@ -457,7 +457,7 @@
 
   returns: an IntSummaryStatistics describing various summary data
    about the elements of this stream - `java.util.IntSummaryStatistics`"
-  ([this]
+  ([^. this]
     (-> this (.summaryStatistics))))
 
 (defn collect
@@ -485,7 +485,7 @@
   combiner - an associative, non-interfering, stateless function for combining two values, which must be compatible with the accumulator function - `java.util.function.BiConsumer<R,R>`
 
   returns: the result of the reduction - `<R> R`"
-  ([this supplier accumulator combiner]
+  ([^. this ^java.util.function.Supplier supplier ^java.util.function.ObjIntConsumer accumulator ^java.util.function.BiConsumer combiner]
     (-> this (.collect supplier accumulator combiner))))
 
 (defn any-match
@@ -501,7 +501,7 @@
 
   returns: true if any elements of the stream match the provided
    predicate, otherwise false - `boolean`"
-  ([this predicate]
+  ([^. this ^java.util.function.IntPredicate predicate]
     (-> this (.anyMatch predicate))))
 
 (defn none-match
@@ -517,7 +517,7 @@
 
   returns: true if either no elements of the stream match the
    provided predicate or the stream is empty, otherwise false - `boolean`"
-  ([this predicate]
+  ([^. this ^java.util.function.IntPredicate predicate]
     (-> this (.noneMatch predicate))))
 
 (defn reduce
@@ -548,9 +548,9 @@
   op - an associative, non-interfering, stateless function for combining two values - `java.util.function.IntBinaryOperator`
 
   returns: the result of the reduction - `int`"
-  ([this identity op]
+  ([^. this ^Integer identity ^java.util.function.IntBinaryOperator op]
     (-> this (.reduce identity op)))
-  ([this op]
+  ([^. this ^java.util.function.IntBinaryOperator op]
     (-> this (.reduce op))))
 
 (defn as-long-stream
@@ -562,7 +562,7 @@
 
   returns: a LongStream consisting of the elements of this stream,
    converted to long - `java.util.stream.LongStream`"
-  ([this]
+  ([^. this]
     (-> this (.asLongStream))))
 
 (defn to-array
@@ -572,7 +572,7 @@
    operation.
 
   returns: an array containing the elements of this stream - `int[]`"
-  ([this]
+  ([^. this]
     (-> this (.toArray))))
 
 (defn as-double-stream
@@ -584,7 +584,7 @@
 
   returns: a DoubleStream consisting of the elements of this stream,
    converted to double - `java.util.stream.DoubleStream`"
-  ([this]
+  ([^. this]
     (-> this (.asDoubleStream))))
 
 (defn *range-closed
@@ -597,6 +597,6 @@
 
   returns: a sequential IntStream for the range of int
            elements - `java.util.stream.IntStream`"
-  ([start-inclusive end-inclusive]
+  ([^Integer start-inclusive ^Integer end-inclusive]
     (null/rangeClosed start-inclusive end-inclusive)))
 

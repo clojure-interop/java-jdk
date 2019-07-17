@@ -13,7 +13,7 @@
   env - the environment containing attributes for the new RMIServerImpl. Can be null, which is equivalent to an empty Map. - `java.util.Map<java.lang.String,?>`
 
   throws: java.io.IOException - if the RMI object cannot be created."
-  ([env]
+  ([^java.util.Map env]
     (new RMIIIOPServerImpl env)))
 
 (defn to-stub
@@ -24,6 +24,6 @@
   returns: an IIOP stub. - `java.rmi.Remote`
 
   throws: java.io.IOException - if the stub cannot be created - e.g the RMIIIOPServerImpl has not been exported yet."
-  ([this]
+  ([^javax.management.remote.rmi.RMIIIOPServerImpl this]
     (-> this (.toStub))))
 

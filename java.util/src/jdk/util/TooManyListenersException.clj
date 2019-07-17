@@ -20,7 +20,7 @@
    A detail message is a String that describes this particular exception.
 
   s - the detail message - `java.lang.String`"
-  ([s]
+  ([^java.lang.String s]
     (new TooManyListenersException s))
   ([]
     (new TooManyListenersException )))

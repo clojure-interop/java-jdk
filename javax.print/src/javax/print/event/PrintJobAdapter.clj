@@ -23,14 +23,14 @@
    receiving this event.
 
   pje - the event being notified - `javax.print.event.PrintJobEvent`"
-  ([this pje]
+  ([^javax.print.event.PrintJobAdapter this ^javax.print.event.PrintJobEvent pje]
     (-> this (.printDataTransferCompleted pje))))
 
 (defn print-job-completed
   "Called to notify the client that the job completed successfully.
 
   pje - the event being notified - `javax.print.event.PrintJobEvent`"
-  ([this pje]
+  ([^javax.print.event.PrintJobAdapter this ^javax.print.event.PrintJobEvent pje]
     (-> this (.printJobCompleted pje))))
 
 (defn print-job-failed
@@ -38,7 +38,7 @@
    successfully and will have to be resubmitted.
 
   pje - the event being notified - `javax.print.event.PrintJobEvent`"
-  ([this pje]
+  ([^javax.print.event.PrintJobAdapter this ^javax.print.event.PrintJobEvent pje]
     (-> this (.printJobFailed pje))))
 
 (defn print-job-canceled
@@ -46,7 +46,7 @@
    by user or program.
 
   pje - the event being notified - `javax.print.event.PrintJobEvent`"
-  ([this pje]
+  ([^javax.print.event.PrintJobAdapter this ^javax.print.event.PrintJobEvent pje]
     (-> this (.printJobCanceled pje))))
 
 (defn print-job-no-more-events
@@ -58,7 +58,7 @@
    terminal events (completed/failed/canceled) are delivered.
 
   pje - the event being notified - `javax.print.event.PrintJobEvent`"
-  ([this pje]
+  ([^javax.print.event.PrintJobAdapter this ^javax.print.event.PrintJobEvent pje]
     (-> this (.printJobNoMoreEvents pje))))
 
 (defn print-job-requires-attention
@@ -66,6 +66,6 @@
    problem occurs (eg printer out of paper).
 
   pje - the event being notified - `javax.print.event.PrintJobEvent`"
-  ([this pje]
+  ([^javax.print.event.PrintJobAdapter this ^javax.print.event.PrintJobEvent pje]
     (-> this (.printJobRequiresAttention pje))))
 

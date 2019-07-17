@@ -47,7 +47,7 @@
    children: the glassPane and the layeredPane.
 
   returns: this components single JRootPane child. - `javax.swing.JRootPane`"
-  ([this]
+  ([^. this]
     (-> this (.getRootPane))))
 
 (defn set-content-pane
@@ -63,14 +63,14 @@
   content-pane - the Container to use for the contents of this JRootPane - `java.awt.Container`
 
   throws: java.awt.IllegalComponentStateException - (a runtime exception) if the content pane parameter is null"
-  ([this content-pane]
+  ([^. this ^java.awt.Container content-pane]
     (-> this (.setContentPane content-pane))))
 
 (defn get-content-pane
   "Returns the contentPane.
 
   returns: the value of the contentPane property. - `java.awt.Container`"
-  ([this]
+  ([^. this]
     (-> this (.getContentPane))))
 
 (defn set-layered-pane
@@ -88,14 +88,14 @@
   layered-pane - `javax.swing.JLayeredPane`
 
   throws: java.awt.IllegalComponentStateException - (a runtime exception) if the layered pane parameter is null"
-  ([this layered-pane]
+  ([^. this ^javax.swing.JLayeredPane layered-pane]
     (-> this (.setLayeredPane layered-pane))))
 
 (defn get-layered-pane
   "Returns the layeredPane.
 
   returns: the value of the layeredPane property. - `javax.swing.JLayeredPane`"
-  ([this]
+  ([^. this]
     (-> this (.getLayeredPane))))
 
 (defn set-glass-pane
@@ -112,13 +112,13 @@
    getRootPane().setGlassPane(glassPane);
 
   glass-pane - `java.awt.Component`"
-  ([this glass-pane]
+  ([^. this ^java.awt.Component glass-pane]
     (-> this (.setGlassPane glass-pane))))
 
 (defn get-glass-pane
   "Returns the glassPane.
 
   returns: the value of the glassPane property. - `java.awt.Component`"
-  ([this]
+  ([^. this]
     (-> this (.getGlassPane))))
 

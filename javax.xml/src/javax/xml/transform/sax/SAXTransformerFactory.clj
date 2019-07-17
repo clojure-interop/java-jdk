@@ -44,9 +44,9 @@
   returns: TransformerHandler ready to transform SAX events. - `javax.xml.transform.sax.TransformerHandler`
 
   throws: javax.xml.transform.TransformerConfigurationException - If for some reason the TransformerHandler can not be created."
-  ([this src]
+  ([^javax.xml.transform.sax.SAXTransformerFactory this ^javax.xml.transform.Source src]
     (-> this (.newTransformerHandler src)))
-  ([this]
+  ([^javax.xml.transform.sax.SAXTransformerFactory this]
     (-> this (.newTransformerHandler))))
 
 (defn new-templates-handler
@@ -57,7 +57,7 @@
    be used as a ContentHandler for SAX parse events. - `javax.xml.transform.sax.TemplatesHandler`
 
   throws: javax.xml.transform.TransformerConfigurationException - If for some reason the TemplatesHandler cannot be created."
-  ([this]
+  ([^javax.xml.transform.sax.SAXTransformerFactory this]
     (-> this (.newTemplatesHandler))))
 
 (defn new-xml-filter
@@ -69,6 +69,6 @@
   returns: An XMLFilter object, or null if this feature is not supported. - `org.xml.sax.XMLFilter`
 
   throws: javax.xml.transform.TransformerConfigurationException - If for some reason the TemplatesHandler cannot be created."
-  ([this src]
+  ([^javax.xml.transform.sax.SAXTransformerFactory this ^javax.xml.transform.Source src]
     (-> this (.newXMLFilter src))))
 

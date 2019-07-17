@@ -14,14 +14,14 @@
   params - the associated elliptic curve domain parameters. - `java.security.spec.ECParameterSpec`
 
   throws: java.lang.NullPointerException - if s or params is null."
-  ([s params]
+  ([^java.math.BigInteger s ^java.security.spec.ECParameterSpec params]
     (new ECPrivateKeySpec s params)))
 
 (defn get-s
   "Returns the private value S.
 
   returns: the private value S. - `java.math.BigInteger`"
-  ([this]
+  ([^java.security.spec.ECPrivateKeySpec this]
     (-> this (.getS))))
 
 (defn get-params
@@ -29,6 +29,6 @@
    parameters.
 
   returns: the EC domain parameters. - `java.security.spec.ECParameterSpec`"
-  ([this]
+  ([^java.security.spec.ECPrivateKeySpec this]
     (-> this (.getParams))))
 

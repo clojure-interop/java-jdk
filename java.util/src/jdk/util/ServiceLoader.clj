@@ -146,9 +146,9 @@
   loader - The class loader to be used to load provider-configuration files and provider classes, or null if the system class loader (or, failing that, the bootstrap class loader) is to be used - `java.lang.ClassLoader`
 
   returns: A new service loader - `<S> java.util.ServiceLoader<S>`"
-  ([service loader]
+  ([^java.lang.Class service ^java.lang.ClassLoader loader]
     (ServiceLoader/load service loader))
-  ([service]
+  ([^java.lang.Class service]
     (ServiceLoader/load service)))
 
 (defn *load-installed
@@ -174,7 +174,7 @@
   service - The interface or abstract class representing the service - `java.lang.Class<S>`
 
   returns: A new service loader - `<S> java.util.ServiceLoader<S>`"
-  ([service]
+  ([^java.lang.Class service]
     (ServiceLoader/loadInstalled service)))
 
 (defn reload
@@ -186,7 +186,7 @@
 
     This method is intended for use in situations in which new providers
    can be installed into a running Java virtual machine."
-  ([this]
+  ([^java.util.ServiceLoader this]
     (-> this (.reload))))
 
 (defn iterator
@@ -226,13 +226,13 @@
 
   returns: An iterator that lazily loads providers for this loader's
             service - `java.util.Iterator<ServiceLoader.S>`"
-  ([this]
+  ([^java.util.ServiceLoader this]
     (-> this (.iterator))))
 
 (defn to-string
   "Returns a string describing this service.
 
   returns: A descriptive string - `java.lang.String`"
-  ([this]
+  ([^java.util.ServiceLoader this]
     (-> this (.toString))))
 

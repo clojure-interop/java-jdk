@@ -43,7 +43,7 @@
   f - `java.io.File`
 
   returns: `java.lang.String`"
-  ([this f]
+  ([^javax.swing.filechooser.FileView this ^java.io.File f]
     (-> this (.getName f))))
 
 (defn get-description
@@ -54,7 +54,7 @@
   f - `java.io.File`
 
   returns: `java.lang.String`"
-  ([this f]
+  ([^javax.swing.filechooser.FileView this ^java.io.File f]
     (-> this (.getDescription f))))
 
 (defn get-type-description
@@ -65,7 +65,7 @@
   f - `java.io.File`
 
   returns: `java.lang.String`"
-  ([this f]
+  ([^javax.swing.filechooser.FileView this ^java.io.File f]
     (-> this (.getTypeDescription f))))
 
 (defn get-icon
@@ -74,7 +74,7 @@
   f - `java.io.File`
 
   returns: `javax.swing.Icon`"
-  ([this f]
+  ([^javax.swing.filechooser.FileView this ^java.io.File f]
     (-> this (.getIcon f))))
 
 (defn traversable?
@@ -85,6 +85,6 @@
   f - `java.io.File`
 
   returns: `java.lang.Boolean`"
-  ([this f]
+  ([^javax.swing.filechooser.FileView this ^java.io.File f]
     (-> this (.isTraversable f))))
 

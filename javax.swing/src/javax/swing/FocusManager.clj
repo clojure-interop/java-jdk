@@ -57,7 +57,7 @@
   a-focus-manager - the new KeyboardFocusManager for this thread's context - `javax.swing.FocusManager`
 
   throws: java.lang.SecurityException - if the calling thread does not have permission to replace the current KeyboardFocusManager"
-  ([a-focus-manager]
+  ([^javax.swing.FocusManager a-focus-manager]
     (FocusManager/setCurrentManager a-focus-manager)))
 
 (defn *disable-swing-focus-manager

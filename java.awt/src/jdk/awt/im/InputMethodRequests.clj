@@ -56,7 +56,7 @@
   offset - the offset within the composed text, if there is composed text; null otherwise - `java.awt.font.TextHitInfo`
 
   returns: a rectangle representing the screen location of the offset - `java.awt.Rectangle`"
-  ([this offset]
+  ([^. this ^java.awt.font.TextHitInfo offset]
     (-> this (.getTextLocation offset))))
 
 (defn get-location-offset
@@ -74,7 +74,7 @@
   y - the absolute y coordinate on screen - `int`
 
   returns: a text hit info describing the offset in the composed text. - `java.awt.font.TextHitInfo`"
-  ([this x y]
+  ([^. this ^Integer x ^Integer y]
     (-> this (.getLocationOffset x y))))
 
 (defn get-insert-position-offset
@@ -85,7 +85,7 @@
    insert position.
 
   returns: the offset of the insert position - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getInsertPositionOffset))))
 
 (defn get-committed-text
@@ -106,7 +106,7 @@
   attributes - a list of attributes that the input method is interested in - `java.text.AttributedCharacterIterator.Attribute[]`
 
   returns: an iterator providing access to the text and its attributes - `java.text.AttributedCharacterIterator`"
-  ([this begin-index end-index attributes]
+  ([^. this ^Integer begin-index ^Integer end-index ^java.text.AttributedCharacterIterator.Attribute[] attributes]
     (-> this (.getCommittedText begin-index end-index attributes))))
 
 (defn get-committed-text-length
@@ -114,7 +114,7 @@
    editing component except for uncommitted (composed) text.
 
   returns: the length of the text except for uncommitted text - `int`"
-  ([this]
+  ([^. this]
     (-> this (.getCommittedTextLength))))
 
 (defn cancel-latest-committed-text
@@ -140,7 +140,7 @@
 
   returns: the latest committed text, or null when the `Undo Commit`
    feature is not supported - `java.text.AttributedCharacterIterator`"
-  ([this attributes]
+  ([^. this ^java.text.AttributedCharacterIterator.Attribute[] attributes]
     (-> this (.cancelLatestCommittedText attributes))))
 
 (defn get-selected-text
@@ -163,6 +163,6 @@
   attributes - a list of attributes that the input method is interested in - `java.text.AttributedCharacterIterator.Attribute[]`
 
   returns: the currently selected text - `java.text.AttributedCharacterIterator`"
-  ([this attributes]
+  ([^. this ^java.text.AttributedCharacterIterator.Attribute[] attributes]
     (-> this (.getSelectedText attributes))))
 

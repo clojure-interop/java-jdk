@@ -9,6 +9,6 @@
   left - `int`
   bottom - `int`
   right - `int`"
-  ([top left bottom right]
+  ([^Integer top ^Integer left ^Integer bottom ^Integer right]
     (new InsetsUIResource top left bottom right)))
 

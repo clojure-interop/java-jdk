@@ -101,21 +101,21 @@
    size, position, or the viewport's extent size has changed.
 
   l - the ChangeListener to add - `javax.swing.event.ChangeListener`"
-  ([this l]
+  ([^javax.swing.JViewport this ^javax.swing.event.ChangeListener l]
     (-> this (.addChangeListener l))))
 
 (defn get-view
   "Returns the JViewport's one child or null.
 
   returns: the viewports child, or null if none exists - `java.awt.Component`"
-  ([this]
+  ([^javax.swing.JViewport this]
     (-> this (.getView))))
 
 (defn get-scroll-mode
   "Returns the current scrolling mode.
 
   returns: the scrollMode property - `int`"
-  ([this]
+  ([^javax.swing.JViewport this]
     (-> this (.getScrollMode))))
 
 (defn get-view-position
@@ -123,7 +123,7 @@
    hand corner of the viewport, or 0,0 if there's no view.
 
   returns: a Point object giving the upper left coordinates - `java.awt.Point`"
-  ([this]
+  ([^javax.swing.JViewport this]
     (-> this (.getViewPosition))))
 
 (defn get-insets
@@ -135,9 +135,9 @@
   insets - the Insets object which can be reused - `java.awt.Insets`
 
   returns: this viewports inset values - `java.awt.Insets`"
-  ([this insets]
+  ([^javax.swing.JViewport this ^java.awt.Insets insets]
     (-> this (.getInsets insets)))
-  ([this]
+  ([^javax.swing.JViewport this]
     (-> this (.getInsets))))
 
 (defn scroll-rect-to-visible
@@ -157,14 +157,14 @@
    bounds.
 
   content-rect - the Rectangle to display - `java.awt.Rectangle`"
-  ([this content-rect]
+  ([^javax.swing.JViewport this ^java.awt.Rectangle content-rect]
     (-> this (.scrollRectToVisible content-rect))))
 
 (defn get-extent-size
   "Returns the size of the visible part of the view in view coordinates.
 
   returns: a Dimension object giving the size of the view - `java.awt.Dimension`"
-  ([this]
+  ([^javax.swing.JViewport this]
     (-> this (.getExtentSize))))
 
 (defn set-scroll-mode
@@ -173,7 +173,7 @@
    use case.
 
   mode - one of the following values: JViewport.BLIT_SCROLL_MODE JViewport.BACKINGSTORE_SCROLL_MODE JViewport.SIMPLE_SCROLL_MODE - `int`"
-  ([this mode]
+  ([^javax.swing.JViewport this ^Integer mode]
     (-> this (.setScrollMode mode))))
 
 (defn get-ui-class-id
@@ -181,21 +181,21 @@
    that renders this component.
 
   returns: the string `ViewportUI` - `java.lang.String`"
-  ([this]
+  ([^javax.swing.JViewport this]
     (-> this (.getUIClassID))))
 
 (defn set-extent-size
   "Sets the size of the visible part of the view using view coordinates.
 
   new-extent - a Dimension object specifying the size of the view - `java.awt.Dimension`"
-  ([this new-extent]
+  ([^javax.swing.JViewport this ^java.awt.Dimension new-extent]
     (-> this (.setExtentSize new-extent))))
 
 (defn set-view-size
   "Sets the size of the view.  A state changed event will be fired.
 
   new-size - a Dimension object specifying the new size of the view - `java.awt.Dimension`"
-  ([this new-size]
+  ([^javax.swing.JViewport this ^java.awt.Dimension new-size]
     (-> this (.setViewSize new-size))))
 
 (defn reshape
@@ -206,7 +206,7 @@
   y - top edge of the origin - `int`
   w - width in pixels - `int`
   h - height in pixels - `int`"
-  ([this x y w h]
+  ([^javax.swing.JViewport this ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.reshape x y w h))))
 
 (defn get-view-rect
@@ -216,7 +216,7 @@
 
   returns: a Rectangle giving the visible part of
             the view using view coordinates. - `java.awt.Rectangle`"
-  ([this]
+  ([^javax.swing.JViewport this]
     (-> this (.getViewRect))))
 
 (defn set-view-position
@@ -224,7 +224,7 @@
    hand corner of the viewport, does nothing if there's no view.
 
   p - a Point object giving the upper left coordinates - `java.awt.Point`"
-  ([this p]
+  ([^javax.swing.JViewport this ^java.awt.Point p]
     (-> this (.setViewPosition p))))
 
 (defn is-backing-store-enabled
@@ -233,7 +233,7 @@
 
   returns: true if scrollMode is
       BACKINGSTORE_SCROLL_MODE - `java.lang.  boolean`"
-  ([this]
+  ([^javax.swing.JViewport this]
     (-> this (.isBackingStoreEnabled))))
 
 (defn remove-change-listener
@@ -242,7 +242,7 @@
    has changed.
 
   l - the ChangeListener to remove - `javax.swing.event.ChangeListener`"
-  ([this l]
+  ([^javax.swing.JViewport this ^javax.swing.event.ChangeListener l]
     (-> this (.removeChangeListener l))))
 
 (defn get-change-listeners
@@ -251,28 +251,28 @@
 
   returns: all of the ChangeListeners added or an empty
            array if no listeners have been added - `javax.swing.event.ChangeListener[]`"
-  ([this]
+  ([^javax.swing.JViewport this]
     (-> this (.getChangeListeners))))
 
 (defn set-ui
   "Sets the L&F object that renders this component.
 
   ui - the ViewportUI L&F object - `javax.swing.plaf.ViewportUI`"
-  ([this ui]
+  ([^javax.swing.JViewport this ^javax.swing.plaf.ViewportUI ui]
     (-> this (.setUI ui))))
 
 (defn remove
   "Removes the Viewports one lightweight child.
 
   child - the component to be removed - `java.awt.Component`"
-  ([this child]
+  ([^javax.swing.JViewport this ^java.awt.Component child]
     (-> this (.remove child))))
 
 (defn get-ui
   "Returns the L&F object that renders this component.
 
   returns: a ViewportUI object - `javax.swing.plaf.ViewportUI`"
-  ([this]
+  ([^javax.swing.JViewport this]
     (-> this (.getUI))))
 
 (defn repaint
@@ -284,7 +284,7 @@
   y - the y coordinate (pixels down from top) - `int`
   w - the width - `int`
   h - the height - `int`"
-  ([this tm x y w h]
+  ([^javax.swing.JViewport this ^Long tm ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.repaint tm x y w h))))
 
 (defn get-view-size
@@ -293,7 +293,7 @@
    If there is no view, return 0,0.
 
   returns: a Dimension object specifying the size of the view - `java.awt.Dimension`"
-  ([this]
+  ([^javax.swing.JViewport this]
     (-> this (.getViewSize))))
 
 (defn paint
@@ -307,7 +307,7 @@
    bits. (In case you were curious.)
 
   g - the Graphics context within which to paint - `java.awt.Graphics`"
-  ([this g]
+  ([^javax.swing.JViewport this ^java.awt.Graphics g]
     (-> this (.paint g))))
 
 (defn get-accessible-context
@@ -318,7 +318,7 @@
 
   returns: an AccessibleJViewport that serves as the
            AccessibleContext of this JViewport - `javax.accessibility.AccessibleContext`"
-  ([this]
+  ([^javax.swing.JViewport this]
     (-> this (.getAccessibleContext))))
 
 (defn set-backing-store-enabled
@@ -328,7 +328,7 @@
   enabled - if true, maintain an offscreen backing store - `boolean`
 
   returns: `java.lang.  void`"
-  ([this enabled]
+  ([^javax.swing.JViewport this ^Boolean enabled]
     (-> this (.setBackingStoreEnabled enabled))))
 
 (defn to-view-coordinates
@@ -339,7 +339,7 @@
   size - a Dimension object using pixel coordinates - `java.awt.Dimension`
 
   returns: a Dimension object converted to view coordinates - `java.awt.Dimension`"
-  ([this size]
+  ([^javax.swing.JViewport this ^java.awt.Dimension size]
     (-> this (.toViewCoordinates size))))
 
 (defn set-border
@@ -357,12 +357,12 @@
   border - the Border to set - `javax.swing.border.Border`
 
   throws: java.lang.IllegalArgumentException - this method is not implemented"
-  ([this border]
+  ([^javax.swing.JViewport this ^javax.swing.border.Border border]
     (-> this (.setBorder border))))
 
 (defn update-ui
   "Resets the UI property to a value from the current look and feel."
-  ([this]
+  ([^javax.swing.JViewport this]
     (-> this (.updateUI))))
 
 (defn set-view
@@ -370,7 +370,7 @@
    (view), which can be null.
 
   view - the viewport's new lightweight child - `java.awt.Component`"
-  ([this view]
+  ([^javax.swing.JViewport this ^java.awt.Component view]
     (-> this (.setView view))))
 
 (defn optimized-drawing-enabled?
@@ -383,6 +383,6 @@
    children directly.
 
   returns: false - `boolean`"
-  ([this]
+  ([^javax.swing.JViewport this]
     (-> this (.isOptimizedDrawingEnabled))))
 

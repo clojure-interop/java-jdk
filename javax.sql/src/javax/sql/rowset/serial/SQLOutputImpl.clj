@@ -36,7 +36,7 @@
   map - a java.util.Map object containing zero or more entries, with each entry consisting of 1) a String giving the fully qualified name of a UDT and 2) the Class object for the SQLData implementation that defines how the UDT is to be mapped - `java.util.Map<java.lang.String,?>`
 
   throws: java.sql.SQLException - if the attributes or the map is a null value"
-  ([attributes map]
+  ([^java.util.Vector attributes ^java.util.Map map]
     (new SQLOutputImpl attributes map)))
 
 (defn write-date
@@ -47,7 +47,7 @@
   x - the value to pass to the database - `java.sql.Date`
 
   throws: java.sql.SQLException - if the SQLOutputImpl object is in use by a SQLData object attempting to write the attribute values of a UDT to the database."
-  ([this x]
+  ([^javax.sql.rowset.serial.SQLOutputImpl this ^java.sql.Date x]
     (-> this (.writeDate x))))
 
 (defn write-time
@@ -58,7 +58,7 @@
   x - the value to pass to the database - `java.sql.Time`
 
   throws: java.sql.SQLException - if the SQLOutputImpl object is in use by a SQLData object attempting to write the attribute values of a UDT to the database."
-  ([this x]
+  ([^javax.sql.rowset.serial.SQLOutputImpl this ^java.sql.Time x]
     (-> this (.writeTime x))))
 
 (defn write-url
@@ -70,7 +70,7 @@
   url - an object representing a SQL DATALINK value - `java.net.URL`
 
   throws: java.sql.SQLException - if the SQLOutputImpl object is in use by a SQLData object attempting to write the attribute values of a UDT to the database."
-  ([this url]
+  ([^javax.sql.rowset.serial.SQLOutputImpl this ^java.net.URL url]
     (-> this (.writeURL url))))
 
 (defn write-bytes
@@ -82,7 +82,7 @@
   x - the value to pass to the database - `byte[]`
 
   throws: java.sql.SQLException - if the SQLOutputImpl object is in use by a SQLData object attempting to write the attribute values of a UDT to the database."
-  ([this x]
+  ([^javax.sql.rowset.serial.SQLOutputImpl this x]
     (-> this (.writeBytes x))))
 
 (defn write-double
@@ -93,7 +93,7 @@
   x - the value to pass to the database - `double`
 
   throws: java.sql.SQLException - if the SQLOutputImpl object is in use by a SQLData object attempting to write the attribute values of a UDT to the database."
-  ([this x]
+  ([^javax.sql.rowset.serial.SQLOutputImpl this ^Double x]
     (-> this (.writeDouble x))))
 
 (defn write-clob
@@ -105,7 +105,7 @@
   x - an object representing an SQL CLOB value - `java.sql.Clob`
 
   throws: java.sql.SQLException - if the SQLOutputImpl object is in use by a SQLData object attempting to write the attribute values of a UDT to the database."
-  ([this x]
+  ([^javax.sql.rowset.serial.SQLOutputImpl this ^java.sql.Clob x]
     (-> this (.writeClob x))))
 
 (defn write-object
@@ -128,7 +128,7 @@
   x - the object representing data of an SQL structured or distinct type - `java.sql.SQLData`
 
   throws: java.sql.SQLException - if the SQLOutputImpl object is in use by a SQLData object attempting to write the attribute values of a UDT to the database."
-  ([this x]
+  ([^javax.sql.rowset.serial.SQLOutputImpl this ^java.sql.SQLData x]
     (-> this (.writeObject x))))
 
 (defn write-boolean
@@ -139,7 +139,7 @@
   x - the value to pass to the database - `boolean`
 
   throws: java.sql.SQLException - if the SQLOutputImpl object is in use by a SQLData object attempting to write the attribute values of a UDT to the database."
-  ([this x]
+  ([^javax.sql.rowset.serial.SQLOutputImpl this ^Boolean x]
     (-> this (.writeBoolean x))))
 
 (defn write-long
@@ -150,7 +150,7 @@
   x - the value to pass to the database - `long`
 
   throws: java.sql.SQLException - if the SQLOutputImpl object is in use by a SQLData object attempting to write the attribute values of a UDT to the database."
-  ([this x]
+  ([^javax.sql.rowset.serial.SQLOutputImpl this ^Long x]
     (-> this (.writeLong x))))
 
 (defn write-short
@@ -161,7 +161,7 @@
   x - the value to pass to the database - `short`
 
   throws: java.sql.SQLException - if the SQLOutputImpl object is in use by a SQLData object attempting to write the attribute values of a UDT to the database."
-  ([this x]
+  ([^javax.sql.rowset.serial.SQLOutputImpl this ^Short x]
     (-> this (.writeShort x))))
 
 (defn write-binary-stream
@@ -171,7 +171,7 @@
   x - the value to pass to the database - `java.io.InputStream`
 
   throws: java.sql.SQLException - if the SQLOutputImpl object is in use by a SQLData object attempting to write the attribute values of a UDT to the database."
-  ([this x]
+  ([^javax.sql.rowset.serial.SQLOutputImpl this ^java.io.InputStream x]
     (-> this (.writeBinaryStream x))))
 
 (defn write-blob
@@ -183,7 +183,7 @@
   x - an object representing an SQL BLOB value - `java.sql.Blob`
 
   throws: java.sql.SQLException - if the SQLOutputImpl object is in use by a SQLData object attempting to write the attribute values of a UDT to the database."
-  ([this x]
+  ([^javax.sql.rowset.serial.SQLOutputImpl this ^java.sql.Blob x]
     (-> this (.writeBlob x))))
 
 (defn write-array
@@ -196,7 +196,7 @@
   x - an object representing an SQL ARRAY value - `java.sql.Array`
 
   throws: java.sql.SQLException - if the SQLOutputImpl object is in use by a SQLData object attempting to write the attribute values of a UDT to the database."
-  ([this x]
+  ([^javax.sql.rowset.serial.SQLOutputImpl this ^java.sql.Array x]
     (-> this (.writeArray x))))
 
 (defn write-string
@@ -208,7 +208,7 @@
   x - the value to pass to the database - `java.lang.String`
 
   throws: java.sql.SQLException - if the SQLOutputImpl object is in use by a SQLData object attempting to write the attribute values of a UDT to the database."
-  ([this x]
+  ([^javax.sql.rowset.serial.SQLOutputImpl this ^java.lang.String x]
     (-> this (.writeString x))))
 
 (defn write-character-stream
@@ -219,7 +219,7 @@
   x - the value to pass to the database - `java.io.Reader`
 
   throws: java.sql.SQLException - if the SQLOutputImpl object is in use by a SQLData object attempting to write the attribute values of a UDT to the database."
-  ([this x]
+  ([^javax.sql.rowset.serial.SQLOutputImpl this ^java.io.Reader x]
     (-> this (.writeCharacterStream x))))
 
 (defn write-struct
@@ -237,7 +237,7 @@
   x - an object representing the attributes of an SQL structured type - `java.sql.Struct`
 
   throws: java.sql.SQLException - if the SQLOutputImpl object is in use by a SQLData object attempting to write the attribute values of a UDT to the database."
-  ([this x]
+  ([^javax.sql.rowset.serial.SQLOutputImpl this ^java.sql.Struct x]
     (-> this (.writeStruct x))))
 
 (defn write-n-string
@@ -252,7 +252,7 @@
   x - the value to pass to the database - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this x]
+  ([^javax.sql.rowset.serial.SQLOutputImpl this ^java.lang.String x]
     (-> this (.writeNString x))))
 
 (defn write-int
@@ -263,7 +263,7 @@
   x - the value to pass to the database - `int`
 
   throws: java.sql.SQLException - if the SQLOutputImpl object is in use by a SQLData object attempting to write the attribute values of a UDT to the database."
-  ([this x]
+  ([^javax.sql.rowset.serial.SQLOutputImpl this ^Integer x]
     (-> this (.writeInt x))))
 
 (defn write-float
@@ -274,7 +274,7 @@
   x - the value to pass to the database - `float`
 
   throws: java.sql.SQLException - if the SQLOutputImpl object is in use by a SQLData object attempting to write the attribute values of a UDT to the database."
-  ([this x]
+  ([^javax.sql.rowset.serial.SQLOutputImpl this ^Float x]
     (-> this (.writeFloat x))))
 
 (defn write-n-clob
@@ -283,7 +283,7 @@
   x - a NClob object representing data of an SQL NCLOB value - `java.sql.NClob`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this x]
+  ([^javax.sql.rowset.serial.SQLOutputImpl this ^java.sql.NClob x]
     (-> this (.writeNClob x))))
 
 (defn write-timestamp
@@ -294,7 +294,7 @@
   x - the value to pass to the database - `java.sql.Timestamp`
 
   throws: java.sql.SQLException - if the SQLOutputImpl object is in use by a SQLData object attempting to write the attribute values of a UDT to the database."
-  ([this x]
+  ([^javax.sql.rowset.serial.SQLOutputImpl this ^java.sql.Timestamp x]
     (-> this (.writeTimestamp x))))
 
 (defn write-ascii-stream
@@ -305,7 +305,7 @@
   x - the value to pass to the database - `java.io.InputStream`
 
   throws: java.sql.SQLException - if the SQLOutputImpl object is in use by a SQLData object attempting to write the attribute values of a UDT to the database."
-  ([this x]
+  ([^javax.sql.rowset.serial.SQLOutputImpl this ^java.io.InputStream x]
     (-> this (.writeAsciiStream x))))
 
 (defn write-sqlxml
@@ -314,7 +314,7 @@
   x - a SQLXML object representing data of an SQL XML value - `java.sql.SQLXML`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this x]
+  ([^javax.sql.rowset.serial.SQLOutputImpl this ^java.sql.SQLXML x]
     (-> this (.writeSQLXML x))))
 
 (defn write-big-decimal
@@ -325,7 +325,7 @@
   x - the value to pass to the database - `java.math.BigDecimal`
 
   throws: java.sql.SQLException - if the SQLOutputImpl object is in use by a SQLData object attempting to write the attribute values of a UDT to the database."
-  ([this x]
+  ([^javax.sql.rowset.serial.SQLOutputImpl this ^java.math.BigDecimal x]
     (-> this (.writeBigDecimal x))))
 
 (defn write-byte
@@ -336,7 +336,7 @@
   x - the value to pass to the database - `byte`
 
   throws: java.sql.SQLException - if the SQLOutputImpl object is in use by a SQLData object attempting to write the attribute values of a UDT to the database."
-  ([this x]
+  ([^javax.sql.rowset.serial.SQLOutputImpl this ^Byte x]
     (-> this (.writeByte x))))
 
 (defn write-ref
@@ -348,7 +348,7 @@
   x - an object representing an SQL REF value - `java.sql.Ref`
 
   throws: java.sql.SQLException - if the SQLOutputImpl object is in use by a SQLData object attempting to write the attribute values of a UDT to the database."
-  ([this x]
+  ([^javax.sql.rowset.serial.SQLOutputImpl this ^java.sql.Ref x]
     (-> this (.writeRef x))))
 
 (defn write-row-id
@@ -357,6 +357,6 @@
   x - a RowId object representing data of an SQL ROWID value - `java.sql.RowId`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([this x]
+  ([^javax.sql.rowset.serial.SQLOutputImpl this ^java.sql.RowId x]
     (-> this (.writeRowId x))))
 

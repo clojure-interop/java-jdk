@@ -14,6 +14,6 @@
   value - the function argument - `long`
 
   returns: the function result - `int`"
-  ([this value]
+  ([^. this ^Long value]
     (-> this (.applyAsInt value))))
 

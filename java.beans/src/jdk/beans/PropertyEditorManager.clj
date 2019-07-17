@@ -44,7 +44,7 @@
   editor-class - the class object of the editor class - `java.lang.Class<?>`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPropertiesAccess method doesn't allow setting of system properties"
-  ([target-type editor-class]
+  ([^java.lang.Class target-type ^java.lang.Class editor-class]
     (PropertyEditorManager/registerEditor target-type editor-class)))
 
 (defn *find-editor
@@ -54,7 +54,7 @@
 
   returns: An editor object for the given target class.
    The result is null if no suitable editor can be found. - `java.beans.PropertyEditor`"
-  ([target-type]
+  ([^java.lang.Class target-type]
     (PropertyEditorManager/findEditor target-type)))
 
 (defn *get-editor-search-path
@@ -77,6 +77,6 @@
   path - Array of package names. - `java.lang.String[]`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPropertiesAccess method doesn't allow setting of system properties."
-  ([path]
+  ([^java.lang.String[] path]
     (PropertyEditorManager/setEditorSearchPath path)))
 

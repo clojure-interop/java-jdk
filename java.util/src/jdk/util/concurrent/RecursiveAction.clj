@@ -136,6 +136,6 @@
   "Always returns null.
 
   returns: null always - `java.lang.Void`"
-  ([this]
+  ([^java.util.concurrent.RecursiveAction this]
     (-> this (.getRawResult))))
 

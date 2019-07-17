@@ -12,14 +12,14 @@
   Constructs an instance of this class with the specified flags.
 
   f - The set of format flags which contain an illegal combination - `java.lang.String`"
-  ([f]
+  ([^java.lang.String f]
     (new IllegalFormatFlagsException f)))
 
 (defn get-flags
   "Returns the set of flags which contains an illegal combination.
 
   returns: The flags - `java.lang.String`"
-  ([this]
+  ([^java.util.IllegalFormatFlagsException this]
     (-> this (.getFlags))))
 
 (defn get-message
@@ -27,6 +27,6 @@
 
   returns: the detail message string of this Throwable instance
             (which may be null). - `java.lang.String`"
-  ([this]
+  ([^java.util.IllegalFormatFlagsException this]
     (-> this (.getMessage))))
 

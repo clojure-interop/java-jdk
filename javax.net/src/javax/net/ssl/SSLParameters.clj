@@ -35,9 +35,9 @@
 
   cipher-suites - the array of ciphersuites (or null) - `java.lang.String[]`
   protocols - the array of protocols (or null) - `java.lang.String[]`"
-  ([cipher-suites protocols]
+  ([^java.lang.String[] cipher-suites ^java.lang.String[] protocols]
     (new SSLParameters cipher-suites protocols))
-  ([cipher-suites]
+  ([^java.lang.String[] cipher-suites]
     (new SSLParameters cipher-suites))
   ([]
     (new SSLParameters )))
@@ -46,7 +46,7 @@
   "Returns whether client authentication should be required.
 
   returns: whether client authentication should be required. - `boolean`"
-  ([this]
+  ([^javax.net.ssl.SSLParameters this]
     (-> this (.getNeedClientAuth))))
 
 (defn get-use-cipher-suites-order?
@@ -54,14 +54,14 @@
 
   returns: whether local cipher suites order in #getCipherSuites
            should be honored during SSL/TLS handshaking. - `boolean`"
-  ([this]
+  ([^javax.net.ssl.SSLParameters this]
     (-> this (.getUseCipherSuitesOrder))))
 
 (defn set-use-cipher-suites-order
   "Sets whether the local cipher suites preference should be honored.
 
   honor-order - whether local cipher suites order in #getCipherSuites should be honored during SSL/TLS handshaking. - `boolean`"
-  ([this honor-order]
+  ([^javax.net.ssl.SSLParameters this ^Boolean honor-order]
     (-> this (.setUseCipherSuitesOrder honor-order))))
 
 (defn set-server-names
@@ -77,7 +77,7 @@
   server-names - the list of desired SNIServerNames (or null) - `java.util.List<javax.net.ssl.SNIServerName>`
 
   throws: java.lang.NullPointerException - if the serverNames contains null element"
-  ([this server-names]
+  ([^javax.net.ssl.SSLParameters this ^java.util.List server-names]
     (-> this (.setServerNames server-names))))
 
 (defn get-sni-matchers
@@ -92,7 +92,7 @@
    extension and continue the handshake.
 
   returns: null or an immutable collection of non-null SNIMatchers - `java.util.Collection<javax.net.ssl.SNIMatcher>`"
-  ([this]
+  ([^javax.net.ssl.SSLParameters this]
     (-> this (.getSNIMatchers))))
 
 (defn set-algorithm-constraints
@@ -104,7 +104,7 @@
    SSL/TLS handshake must be permitted by the constraints.
 
   constraints - the algorithm constraints (or null) - `java.security.AlgorithmConstraints`"
-  ([this constraints]
+  ([^javax.net.ssl.SSLParameters this ^java.security.AlgorithmConstraints constraints]
     (-> this (.setAlgorithmConstraints constraints))))
 
 (defn set-want-client-auth
@@ -112,7 +112,7 @@
    this method clears the needClientAuth flag.
 
   want-client-auth - whether client authentication should be requested - `boolean`"
-  ([this want-client-auth]
+  ([^javax.net.ssl.SSLParameters this ^Boolean want-client-auth]
     (-> this (.setWantClientAuth want-client-auth))))
 
 (defn get-algorithm-constraints
@@ -120,14 +120,14 @@
 
   returns: the cryptographic algorithm constraints, or null if the
        constraints have not been set - `java.security.AlgorithmConstraints`"
-  ([this]
+  ([^javax.net.ssl.SSLParameters this]
     (-> this (.getAlgorithmConstraints))))
 
 (defn set-cipher-suites
   "Sets the array of ciphersuites.
 
   cipher-suites - the array of ciphersuites (or null) - `java.lang.String[]`"
-  ([this cipher-suites]
+  ([^javax.net.ssl.SSLParameters this ^java.lang.String[] cipher-suites]
     (-> this (.setCipherSuites cipher-suites))))
 
 (defn set-sni-matchers
@@ -143,7 +143,7 @@
   matchers - the collection of SNIMatchers (or null) - `java.util.Collection<javax.net.ssl.SNIMatcher>`
 
   throws: java.lang.NullPointerException - if the matchers contains null element"
-  ([this matchers]
+  ([^javax.net.ssl.SSLParameters this ^java.util.Collection matchers]
     (-> this (.setSNIMatchers matchers))))
 
 (defn get-server-names
@@ -177,7 +177,7 @@
            sslContext.createSSLEngine(`www.example.com`, 443);
 
   returns: null or an immutable list of non-null SNIServerNames - `java.util.List<javax.net.ssl.SNIServerName>`"
-  ([this]
+  ([^javax.net.ssl.SSLParameters this]
     (-> this (.getServerNames))))
 
 (defn get-protocols
@@ -186,7 +186,7 @@
 
   returns: a copy of the array of protocols or null if none
    have been set. - `java.lang.String[]`"
-  ([this]
+  ([^javax.net.ssl.SSLParameters this]
     (-> this (.getProtocols))))
 
 (defn get-cipher-suites
@@ -195,7 +195,7 @@
 
   returns: a copy of the array of ciphersuites or null if none
    have been set. - `java.lang.String[]`"
-  ([this]
+  ([^javax.net.ssl.SSLParameters this]
     (-> this (.getCipherSuites))))
 
 (defn get-endpoint-identification-algorithm
@@ -203,7 +203,7 @@
 
   returns: the endpoint identification algorithm, or null if none
    has been set. - `java.lang.String`"
-  ([this]
+  ([^javax.net.ssl.SSLParameters this]
     (-> this (.getEndpointIdentificationAlgorithm))))
 
 (defn set-endpoint-identification-algorithm
@@ -214,7 +214,7 @@
    SSL/TLS handshaking.  This is to prevent man-in-the-middle attacks.
 
   algorithm - The standard string name of the endpoint identification algorithm (or null). See Appendix A in the Java Cryptography Architecture API Specification & Reference for information about standard algorithm names. - `java.lang.String`"
-  ([this algorithm]
+  ([^javax.net.ssl.SSLParameters this ^java.lang.String algorithm]
     (-> this (.setEndpointIdentificationAlgorithm algorithm))))
 
 (defn set-need-client-auth
@@ -222,20 +222,20 @@
    this method clears the wantClientAuth flag.
 
   need-client-auth - whether client authentication should be required - `boolean`"
-  ([this need-client-auth]
+  ([^javax.net.ssl.SSLParameters this ^Boolean need-client-auth]
     (-> this (.setNeedClientAuth need-client-auth))))
 
 (defn get-want-client-auth?
   "Returns whether client authentication should be requested.
 
   returns: whether client authentication should be requested. - `boolean`"
-  ([this]
+  ([^javax.net.ssl.SSLParameters this]
     (-> this (.getWantClientAuth))))
 
 (defn set-protocols
   "Sets the array of protocols.
 
   protocols - the array of protocols (or null) - `java.lang.String[]`"
-  ([this protocols]
+  ([^javax.net.ssl.SSLParameters this ^java.lang.String[] protocols]
     (-> this (.setProtocols protocols))))
 

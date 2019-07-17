@@ -9,7 +9,7 @@
   "Description copied from interface: JavaFileObject
 
   returns: the kind - `javax.tools.JavaFileObject.Kind`"
-  ([this]
+  ([^javax.tools.ForwardingJavaFileObject this]
     (-> this (.getKind))))
 
 (defn name-compatible?
@@ -20,7 +20,7 @@
 
   returns: true if this file object is compatible; false
    otherwise - `boolean`"
-  ([this simple-name kind]
+  ([^javax.tools.ForwardingJavaFileObject this ^java.lang.String simple-name ^javax.tools.JavaFileObject.Kind kind]
     (-> this (.isNameCompatible simple-name kind))))
 
 (defn get-nesting-kind
@@ -28,13 +28,13 @@
 
   returns: the nesting kind, or null if the nesting kind
    is not known - `javax.lang.model.element.NestingKind`"
-  ([this]
+  ([^javax.tools.ForwardingJavaFileObject this]
     (-> this (.getNestingKind))))
 
 (defn get-access-level
   "Description copied from interface: JavaFileObject
 
   returns: the access level - `javax.lang.model.element.Modifier`"
-  ([this]
+  ([^javax.tools.ForwardingJavaFileObject this]
     (-> this (.getAccessLevel))))
 

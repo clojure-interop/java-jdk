@@ -47,6 +47,6 @@
   p - a visitor-specified parameter - `SimpleElementVisitor7.P`
 
   returns: the result of defaultAction - `SimpleElementVisitor7.R`"
-  ([this e p]
+  ([^javax.lang.model.util.SimpleElementVisitor7 this ^javax.lang.model.element.VariableElement e ^SimpleElementVisitor7.P p]
     (-> this (.visitVariable e p))))
 

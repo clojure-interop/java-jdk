@@ -62,7 +62,7 @@
 
   returns: a short array where array[k-1]
    is equal to the number of values in the table of length k. - `short[]`"
-  ([this]
+  ([^javax.imageio.plugins.jpeg.JPEGHuffmanTable this]
     (-> this (.getLengths))))
 
 (defn get-values
@@ -72,13 +72,13 @@
    from getLengths. The returned array is a copy.
 
   returns: a short array of values. - `short[]`"
-  ([this]
+  ([^javax.imageio.plugins.jpeg.JPEGHuffmanTable this]
     (-> this (.getValues))))
 
 (defn to-string
   "Returns a String representing this Huffman table.
 
   returns: a String representing this Huffman table. - `java.lang.String`"
-  ([this]
+  ([^javax.imageio.plugins.jpeg.JPEGHuffmanTable this]
     (-> this (.toString))))
 

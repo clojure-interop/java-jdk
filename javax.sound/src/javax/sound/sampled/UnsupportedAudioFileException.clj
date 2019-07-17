@@ -12,7 +12,7 @@
    the specified detail message.
 
   message - a string containing the error detail message - `java.lang.String`"
-  ([message]
+  ([^java.lang.String message]
     (new UnsupportedAudioFileException message))
   ([]
     (new UnsupportedAudioFileException )))

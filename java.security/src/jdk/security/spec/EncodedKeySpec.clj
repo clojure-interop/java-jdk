@@ -19,7 +19,7 @@
 
   returns: the encoded key. Returns a new array each time
    this method is called. - `byte[]`"
-  ([this]
+  ([^java.security.spec.EncodedKeySpec this]
     (-> this (.getEncoded))))
 
 (defn get-format
@@ -36,6 +36,6 @@
    of this key specification.
 
   returns: a string representation of the encoding format. - `java.lang.String`"
-  ([this]
+  ([^java.security.spec.EncodedKeySpec this]
     (-> this (.getFormat))))
 

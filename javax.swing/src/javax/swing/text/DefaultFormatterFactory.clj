@@ -50,13 +50,13 @@
   display-format - JFormattedTextField.AbstractFormatter to be used when the JFormattedTextField does not have focus. - `javax.swing.JFormattedTextField.AbstractFormatter`
   edit-format - JFormattedTextField.AbstractFormatter to be used when the JFormattedTextField has focus. - `javax.swing.JFormattedTextField.AbstractFormatter`
   null-format - JFormattedTextField.AbstractFormatter to be used when the JFormattedTextField has a null value. - `javax.swing.JFormattedTextField.AbstractFormatter`"
-  ([default-format display-format edit-format null-format]
+  ([^javax.swing.JFormattedTextField.AbstractFormatter default-format ^javax.swing.JFormattedTextField.AbstractFormatter display-format ^javax.swing.JFormattedTextField.AbstractFormatter edit-format ^javax.swing.JFormattedTextField.AbstractFormatter null-format]
     (new DefaultFormatterFactory default-format display-format edit-format null-format))
-  ([default-format display-format edit-format]
+  ([^javax.swing.JFormattedTextField.AbstractFormatter default-format ^javax.swing.JFormattedTextField.AbstractFormatter display-format ^javax.swing.JFormattedTextField.AbstractFormatter edit-format]
     (new DefaultFormatterFactory default-format display-format edit-format))
-  ([default-format display-format]
+  ([^javax.swing.JFormattedTextField.AbstractFormatter default-format ^javax.swing.JFormattedTextField.AbstractFormatter display-format]
     (new DefaultFormatterFactory default-format display-format))
-  ([default-format]
+  ([^javax.swing.JFormattedTextField.AbstractFormatter default-format]
     (new DefaultFormatterFactory default-format))
   ([]
     (new DefaultFormatterFactory )))
@@ -66,7 +66,7 @@
 
   returns: JFormattedTextField.AbstractFormatter to use when the value is
            null - `javax.swing.JFormattedTextField.AbstractFormatter`"
-  ([this]
+  ([^javax.swing.text.DefaultFormatterFactory this]
     (-> this (.getNullFormatter))))
 
 (defn get-edit-formatter
@@ -77,7 +77,7 @@
 
   returns: JFormattedTextField.AbstractFormatter to use when the
            component has focus - `javax.swing.JFormattedTextField.AbstractFormatter`"
-  ([this]
+  ([^javax.swing.text.DefaultFormatterFactory this]
     (-> this (.getEditFormatter))))
 
 (defn set-display-formatter
@@ -87,7 +87,7 @@
    has not been specified.
 
   atf - JFormattedTextField.AbstractFormatter to use when the JFormattedTextField does not have focus - `javax.swing.JFormattedTextField.AbstractFormatter`"
-  ([this atf]
+  ([^javax.swing.text.DefaultFormatterFactory this ^javax.swing.JFormattedTextField.AbstractFormatter atf]
     (-> this (.setDisplayFormatter atf))))
 
 (defn set-null-formatter
@@ -95,7 +95,7 @@
    null.
 
   atf - JFormattedTextField.AbstractFormatter to use when the value of the JFormattedTextField is null. - `javax.swing.JFormattedTextField.AbstractFormatter`"
-  ([this atf]
+  ([^javax.swing.text.DefaultFormatterFactory this ^javax.swing.JFormattedTextField.AbstractFormatter atf]
     (-> this (.setNullFormatter atf))))
 
 (defn set-default-formatter
@@ -105,7 +105,7 @@
    specified.
 
   atf - JFormattedTextField.AbstractFormatter used if a more specific is not specified - `javax.swing.JFormattedTextField.AbstractFormatter`"
-  ([this atf]
+  ([^javax.swing.text.DefaultFormatterFactory this ^javax.swing.JFormattedTextField.AbstractFormatter atf]
     (-> this (.setDefaultFormatter atf))))
 
 (defn get-formatter
@@ -117,7 +117,7 @@
 
   returns: JFormattedTextField.AbstractFormatter to handle
            formatting duties. - `javax.swing.JFormattedTextField.AbstractFormatter`"
-  ([this source]
+  ([^javax.swing.text.DefaultFormatterFactory this ^javax.swing.JFormattedTextField source]
     (-> this (.getFormatter source))))
 
 (defn set-edit-formatter
@@ -127,7 +127,7 @@
    has not been specified.
 
   atf - JFormattedTextField.AbstractFormatter to use when the component has focus - `javax.swing.JFormattedTextField.AbstractFormatter`"
-  ([this atf]
+  ([^javax.swing.text.DefaultFormatterFactory this ^javax.swing.JFormattedTextField.AbstractFormatter atf]
     (-> this (.setEditFormatter atf))))
 
 (defn get-default-formatter
@@ -138,7 +138,7 @@
 
   returns: JFormattedTextField.AbstractFormatter used if a more specific
            one is not specified. - `javax.swing.JFormattedTextField.AbstractFormatter`"
-  ([this]
+  ([^javax.swing.text.DefaultFormatterFactory this]
     (-> this (.getDefaultFormatter))))
 
 (defn get-display-formatter
@@ -149,6 +149,6 @@
 
   returns: JFormattedTextField.AbstractFormatter to use when the
            JFormattedTextField does not have focus - `javax.swing.JFormattedTextField.AbstractFormatter`"
-  ([this]
+  ([^javax.swing.text.DefaultFormatterFactory this]
     (-> this (.getDisplayFormatter))))
 

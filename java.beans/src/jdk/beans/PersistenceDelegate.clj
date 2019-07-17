@@ -79,6 +79,6 @@
   out - The stream to which this expression will be written. - `java.beans.Encoder`
 
   throws: java.lang.NullPointerException - if out is null"
-  ([this old-instance out]
+  ([^java.beans.PersistenceDelegate this ^java.lang.Object old-instance ^java.beans.Encoder out]
     (-> this (.writeObject old-instance out))))
 

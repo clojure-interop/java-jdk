@@ -28,14 +28,14 @@
 
   returns: true if the specified object represents the same
             name as this - `boolean`"
-  ([this obj]
+  ([^. this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Obeys the general contract of Object.hashCode.
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^. this]
     (-> this (.hashCode))))
 
 (defn content-equals
@@ -48,6 +48,6 @@
   returns: true if this name represents the same sequence
    of char values as the specified sequence, false
    otherwise - `boolean`"
-  ([this cs]
+  ([^. this ^java.lang.CharSequence cs]
     (-> this (.contentEquals cs))))
 

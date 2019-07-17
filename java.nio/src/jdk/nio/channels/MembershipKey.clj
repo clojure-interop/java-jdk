@@ -28,7 +28,7 @@
 
   returns: true if this membership key is valid, false
             otherwise - `boolean`"
-  ([this]
+  ([^java.nio.channels.MembershipKey this]
     (-> this (.isValid))))
 
 (defn drop
@@ -50,7 +50,7 @@
    If the multicast group membership is already invalid then invoking this
    method has no effect. Once a multicast group membership is invalid,
    it remains invalid forever."
-  ([this]
+  ([^java.nio.channels.MembershipKey this]
     (-> this (.drop))))
 
 (defn block
@@ -69,7 +69,7 @@
   returns: This membership key - `java.nio.channels.MembershipKey`
 
   throws: java.lang.IllegalArgumentException - If the source parameter is not a unicast address or is not the same address type as the multicast group"
-  ([this source]
+  ([^java.nio.channels.MembershipKey this ^java.net.InetAddress source]
     (-> this (.block source))))
 
 (defn unblock
@@ -81,7 +81,7 @@
   returns: This membership key - `java.nio.channels.MembershipKey`
 
   throws: java.lang.IllegalStateException - If the given source address is not currently blocked or the membership key is no longer valid"
-  ([this source]
+  ([^java.nio.channels.MembershipKey this ^java.net.InetAddress source]
     (-> this (.unblock source))))
 
 (defn channel
@@ -90,7 +90,7 @@
    becomes invalid.
 
   returns: the channel - `java.nio.s.MulticastChannel`"
-  ([this]
+  ([^java.nio.channels.MembershipKey this]
     (-> this (.channel))))
 
 (defn group
@@ -99,7 +99,7 @@
    becomes invalid.
 
   returns: the multicast group - `java.net.InetAddress`"
-  ([this]
+  ([^java.nio.channels.MembershipKey this]
     (-> this (.group))))
 
 (defn network-interface
@@ -108,7 +108,7 @@
    membership becomes invalid.
 
   returns: the network interface - `java.net.NetworkInterface`"
-  ([this]
+  ([^java.nio.channels.MembershipKey this]
     (-> this (.networkInterface))))
 
 (defn source-address
@@ -117,6 +117,6 @@
 
   returns: The source address if this membership key is source-specific,
             otherwise null - `java.net.InetAddress`"
-  ([this]
+  ([^java.nio.channels.MembershipKey this]
     (-> this (.sourceAddress))))
 

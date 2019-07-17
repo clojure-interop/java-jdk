@@ -307,7 +307,7 @@
    that will produce one. - `javax.security.sasl.SaslClient`
 
   throws: javax.security.sasl.SaslException - If cannot create a SaslClient because of an error."
-  ([mechanisms authorization-id protocol server-name props cbh]
+  ([^java.lang.String[] mechanisms ^java.lang.String authorization-id ^java.lang.String protocol ^java.lang.String server-name ^java.util.Map props ^javax.security.auth.callback.CallbackHandler cbh]
     (Sasl/createSaslClient mechanisms authorization-id protocol server-name props cbh)))
 
 (defn *create-sasl-server
@@ -356,7 +356,7 @@
    that will produce one. - `javax.security.sasl.SaslServer`
 
   throws: javax.security.sasl.SaslException - If cannot create a SaslServer because of an error."
-  ([mechanism protocol server-name props cbh]
+  ([^java.lang.String mechanism ^java.lang.String protocol ^java.lang.String server-name ^java.util.Map props ^javax.security.auth.callback.CallbackHandler cbh]
     (Sasl/createSaslServer mechanism protocol server-name props cbh)))
 
 (defn *get-sasl-client-factories

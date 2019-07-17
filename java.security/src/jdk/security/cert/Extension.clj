@@ -34,14 +34,14 @@
   "Gets the extensions's object identifier.
 
   returns: the object identifier as a String - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getId))))
 
 (defn critical?
   "Gets the extension's criticality setting.
 
   returns: true if this is a critical extension. - `boolean`"
-  ([this]
+  ([^. this]
     (-> this (.isCritical))))
 
 (defn get-value
@@ -51,7 +51,7 @@
 
   returns: a copy of the extension's value, or null if no
       extension value is present. - `byte[]`"
-  ([this]
+  ([^. this]
     (-> this (.getValue))))
 
 (defn encode
@@ -61,6 +61,6 @@
   out - the output stream - `java.io.OutputStream`
 
   throws: java.io.IOException - on encoding or output error."
-  ([this out]
+  ([^. this ^java.io.OutputStream out]
     (-> this (.encode out))))
 

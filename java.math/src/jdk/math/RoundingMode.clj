@@ -251,6 +251,6 @@
   returns: the enum constant with the specified name - `java.math.RoundingMode`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  ([name]
+  ([^java.lang.String name]
     (RoundingMode/valueOf name)))
 

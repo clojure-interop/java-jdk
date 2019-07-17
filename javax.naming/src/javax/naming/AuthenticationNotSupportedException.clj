@@ -29,7 +29,7 @@
    an explanation. All other fields default to null.
 
   explanation - A possibly null string containing additional detail about this exception. - `java.lang.String`"
-  ([explanation]
+  ([^java.lang.String explanation]
     (new AuthenticationNotSupportedException explanation))
   ([]
     (new AuthenticationNotSupportedException )))

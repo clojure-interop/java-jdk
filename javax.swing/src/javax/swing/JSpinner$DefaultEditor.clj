@@ -40,7 +40,7 @@
    and adds it to this DefaultEditor.
 
   spinner - the spinner whose model this editor will monitor - `javax.swing.JSpinner`"
-  ([spinner]
+  ([^javax.swing.JSpinner spinner]
     (new JSpinner$DefaultEditor spinner)))
 
 (defn state-changed
@@ -49,7 +49,7 @@
    value of the spinners model.
 
   e - the ChangeEvent whose source is the JSpinner whose model has changed. - `javax.swing.event.ChangeEvent`"
-  ([this e]
+  ([^javax.swing.JSpinner$DefaultEditor this ^javax.swing.event.ChangeEvent e]
     (-> this (.stateChanged e))))
 
 (defn commit-edit
@@ -59,7 +59,7 @@
    JFormattedTextField.
 
   throws: java.text.ParseException - if the edited value is not legal"
-  ([this]
+  ([^javax.swing.JSpinner$DefaultEditor this]
     (-> this (.commitEdit))))
 
 (defn dismiss
@@ -68,7 +68,7 @@
    itself from the spinners ChangeListener list.
 
   spinner - the JSpinner to disconnect this editor from; the same spinner as was passed to the constructor. - `javax.swing.JSpinner`"
-  ([this spinner]
+  ([^javax.swing.JSpinner$DefaultEditor this ^javax.swing.JSpinner spinner]
     (-> this (.dismiss spinner))))
 
 (defn preferred-layout-size
@@ -79,7 +79,7 @@
 
   returns: the preferred dimensions to lay out the subcomponents
             of the specified container. - `java.awt.Dimension`"
-  ([this parent]
+  ([^javax.swing.JSpinner$DefaultEditor this ^java.awt.Container parent]
     (-> this (.preferredLayoutSize parent))))
 
 (defn get-text-field
@@ -89,7 +89,7 @@
 
   returns: the JFormattedTextField that gives the user
        access to the SpinnerDateModel's value. - `javax.swing.JFormattedTextField`"
-  ([this]
+  ([^javax.swing.JSpinner$DefaultEditor this]
     (-> this (.getTextField))))
 
 (defn get-spinner
@@ -103,7 +103,7 @@
 
   returns: JSpinner ancestor; null
            if none of the ancestors are a JSpinner - `javax.swing.JSpinner`"
-  ([this]
+  ([^javax.swing.JSpinner$DefaultEditor this]
     (-> this (.getSpinner))))
 
 (defn get-baseline-resize-behavior
@@ -114,7 +114,7 @@
            size changes - `java.awt.Component.BaselineResizeBehavior`
 
   throws: java.lang.NullPointerException"
-  ([this]
+  ([^javax.swing.JSpinner$DefaultEditor this]
     (-> this (.getBaselineResizeBehavior))))
 
 (defn property-change
@@ -129,7 +129,7 @@
    PropertyChangeListener on other objects.
 
   e - the PropertyChangeEvent whose source is the JFormattedTextField created by this class. - `java.beans.PropertyChangeEvent`"
-  ([this e]
+  ([^javax.swing.JSpinner$DefaultEditor this ^java.beans.PropertyChangeEvent e]
     (-> this (.propertyChange e))))
 
 (defn minimum-layout-size
@@ -140,7 +140,7 @@
 
   returns: the minimum dimensions needed to lay out the subcomponents
             of the specified container. - `java.awt.Dimension`"
-  ([this parent]
+  ([^javax.swing.JSpinner$DefaultEditor this ^java.awt.Container parent]
     (-> this (.minimumLayoutSize parent))))
 
 (defn add-layout-component
@@ -150,7 +150,7 @@
 
   name - ignored - `java.lang.String`
   child - ignored - `java.awt.Component`"
-  ([this name child]
+  ([^javax.swing.JSpinner$DefaultEditor this ^java.lang.String name ^java.awt.Component child]
     (-> this (.addLayoutComponent name child))))
 
 (defn get-baseline
@@ -163,7 +163,7 @@
            baseline - `int`
 
   throws: java.lang.IllegalArgumentException - if width or height is < 0"
-  ([this width height]
+  ([^javax.swing.JSpinner$DefaultEditor this ^Integer width ^Integer height]
     (-> this (.getBaseline width height))))
 
 (defn remove-layout-component
@@ -171,7 +171,7 @@
    isn't any per-child state.
 
   child - ignored - `java.awt.Component`"
-  ([this child]
+  ([^javax.swing.JSpinner$DefaultEditor this ^java.awt.Component child]
     (-> this (.removeLayoutComponent child))))
 
 (defn layout-container
@@ -179,6 +179,6 @@
    within the parents insets.
 
   parent - the container to be laid out - `java.awt.Container`"
-  ([this parent]
+  ([^javax.swing.JSpinner$DefaultEditor this ^java.awt.Container parent]
     (-> this (.layoutContainer parent))))
 

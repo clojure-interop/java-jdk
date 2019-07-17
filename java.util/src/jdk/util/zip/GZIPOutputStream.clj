@@ -15,11 +15,11 @@
   sync-flush - if true invocation of the inherited flush() method of this instance flushes the compressor with flush mode Deflater.SYNC_FLUSH before flushing the output stream, otherwise only flushes the output stream - `boolean`
 
   throws: java.io.IOException - If an I/O error has occurred."
-  ([out size sync-flush]
+  ([^java.io.OutputStream out ^Integer size ^Boolean sync-flush]
     (new GZIPOutputStream out size sync-flush))
-  ([out size]
+  ([^java.io.OutputStream out ^Integer size]
     (new GZIPOutputStream out size))
-  ([out]
+  ([^java.io.OutputStream out]
     (new GZIPOutputStream out)))
 
 (defn write
@@ -31,7 +31,7 @@
   len - the length of the data - `int`
 
   throws: java.io.IOException - If an I/O error has occurred."
-  ([this buf off len]
+  ([^java.util.zip.GZIPOutputStream this buf ^Integer off ^Integer len]
     (-> this (.write buf off len))))
 
 (defn finish
@@ -40,6 +40,6 @@
    in succession to the same output stream.
 
   throws: java.io.IOException - if an I/O error has occurred"
-  ([this]
+  ([^java.util.zip.GZIPOutputStream this]
     (-> this (.finish))))
 

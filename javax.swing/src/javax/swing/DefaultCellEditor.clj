@@ -18,20 +18,20 @@
   Constructs a DefaultCellEditor that uses a text field.
 
   text-field - a JTextField object - `javax.swing.JTextField`"
-  ([text-field]
+  ([^javax.swing.JTextField text-field]
     (new DefaultCellEditor text-field)))
 
 (defn cancel-cell-editing
   "Forwards the message from the CellEditor to
    the delegate."
-  ([this]
+  ([^javax.swing.DefaultCellEditor this]
     (-> this (.cancelCellEditing))))
 
 (defn get-component
   "Returns a reference to the editor component.
 
   returns: the editor Component - `java.awt.Component`"
-  ([this]
+  ([^javax.swing.DefaultCellEditor this]
     (-> this (.getComponent))))
 
 (defn stop-cell-editing
@@ -39,7 +39,7 @@
    the delegate.
 
   returns: true - `boolean`"
-  ([this]
+  ([^javax.swing.DefaultCellEditor this]
     (-> this (.stopCellEditing))))
 
 (defn get-cell-editor-value
@@ -47,7 +47,7 @@
    the delegate.
 
   returns: the value contained in the editor - `java.lang.Object`"
-  ([this]
+  ([^javax.swing.DefaultCellEditor this]
     (-> this (.getCellEditorValue))))
 
 (defn get-tree-cell-editor-component
@@ -61,14 +61,14 @@
   row - the row index of the node being edited - `int`
 
   returns: the component for editing - `java.awt.Component`"
-  ([this tree value is-selected expanded leaf row]
+  ([^javax.swing.DefaultCellEditor this ^javax.swing.JTree tree ^java.lang.Object value ^Boolean is-selected ^Boolean expanded ^Boolean leaf ^Integer row]
     (-> this (.getTreeCellEditorComponent tree value is-selected expanded leaf row))))
 
 (defn get-click-count-to-start
   "Returns the number of clicks needed to start editing.
 
   returns: the number of clicks needed to start editing - `int`"
-  ([this]
+  ([^javax.swing.DefaultCellEditor this]
     (-> this (.getClickCountToStart))))
 
 (defn cell-editable?
@@ -78,7 +78,7 @@
   an-event - an event object - `java.util.EventObject`
 
   returns: true - `boolean`"
-  ([this an-event]
+  ([^javax.swing.DefaultCellEditor this ^java.util.EventObject an-event]
     (-> this (.isCellEditable an-event))))
 
 (defn should-select-cell?
@@ -88,14 +88,14 @@
   an-event - an event object - `java.util.EventObject`
 
   returns: true - `boolean`"
-  ([this an-event]
+  ([^javax.swing.DefaultCellEditor this ^java.util.EventObject an-event]
     (-> this (.shouldSelectCell an-event))))
 
 (defn set-click-count-to-start
   "Specifies the number of clicks needed to start editing.
 
   count - an int specifying the number of clicks needed to start editing - `int`"
-  ([this count]
+  ([^javax.swing.DefaultCellEditor this ^Integer count]
     (-> this (.setClickCountToStart count))))
 
 (defn get-table-cell-editor-component
@@ -108,6 +108,6 @@
   column - the column of the cell being edited - `int`
 
   returns: the component for editing - `java.awt.Component`"
-  ([this table value is-selected row column]
+  ([^javax.swing.DefaultCellEditor this ^javax.swing.JTable table ^java.lang.Object value ^Boolean is-selected ^Integer row ^Integer column]
     (-> this (.getTableCellEditorComponent table value is-selected row column))))
 

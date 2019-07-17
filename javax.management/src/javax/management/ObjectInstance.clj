@@ -15,7 +15,7 @@
   class-name - The full class name, including the package name, of the object instance. If the MBean is a Dynamic MBean the class name corresponds to its getMBeanInfo().getClassName(). - `java.lang.String`
 
   throws: javax.management.MalformedObjectNameException - The string passed as a parameter does not have the right format."
-  ([object-name class-name]
+  ([^java.lang.String object-name ^java.lang.String class-name]
     (new ObjectInstance object-name class-name)))
 
 (defn equals
@@ -24,28 +24,28 @@
   object - The object instance that the current object instance is to be compared with. - `java.lang.Object`
 
   returns: True if the two object instances are equal, otherwise false. - `boolean`"
-  ([this object]
+  ([^javax.management.ObjectInstance this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^javax.management.ObjectInstance this]
     (-> this (.hashCode))))
 
 (defn get-object-name
   "Returns the object name part.
 
   returns: the object name. - `javax.management.ObjectName`"
-  ([this]
+  ([^javax.management.ObjectInstance this]
     (-> this (.getObjectName))))
 
 (defn get-class-name
   "Returns the class part.
 
   returns: the class name. - `java.lang.String`"
-  ([this]
+  ([^javax.management.ObjectInstance this]
     (-> this (.getClassName))))
 
 (defn to-string
@@ -54,6 +54,6 @@
    string if and only if they are equal.
 
   returns: a string representation of the object. - `java.lang.String`"
-  ([this]
+  ([^javax.management.ObjectInstance this]
     (-> this (.toString))))
 

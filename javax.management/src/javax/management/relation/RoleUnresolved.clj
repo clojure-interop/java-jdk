@@ -18,14 +18,14 @@
   pb-type - type of problem (according to known problem types, listed as static final members). - `int`
 
   throws: java.lang.IllegalArgumentException - if null parameter or incorrect problem type"
-  ([name value pb-type]
+  ([^java.lang.String name ^java.util.List value ^Integer pb-type]
     (new RoleUnresolved name value pb-type)))
 
 (defn get-role-name
   "Retrieves role name.
 
   returns: the role name. - `java.lang.String`"
-  ([this]
+  ([^javax.management.relation.RoleUnresolved this]
     (-> this (.getRoleName))))
 
 (defn get-role-value
@@ -34,7 +34,7 @@
   returns: an ArrayList of ObjectName objects, the one provided to be set
    in given role. Null if the unresolved role is returned for a read
    access. - `java.util.List<javax.management.ObjectName>`"
-  ([this]
+  ([^javax.management.relation.RoleUnresolved this]
     (-> this (.getRoleValue))))
 
 (defn get-problem-type
@@ -42,7 +42,7 @@
 
   returns: an integer corresponding to a problem, those being described as
    static final members of current class. - `int`"
-  ([this]
+  ([^javax.management.relation.RoleUnresolved this]
     (-> this (.getProblemType))))
 
 (defn set-role-name
@@ -51,14 +51,14 @@
   name - the new role name. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if null parameter"
-  ([this name]
+  ([^javax.management.relation.RoleUnresolved this ^java.lang.String name]
     (-> this (.setRoleName name))))
 
 (defn set-role-value
   "Sets role value.
 
   value - List of ObjectName objects for referenced MBeans not set in role. - `java.util.List<javax.management.ObjectName>`"
-  ([this value]
+  ([^javax.management.relation.RoleUnresolved this ^java.util.List value]
     (-> this (.setRoleValue value))))
 
 (defn set-problem-type
@@ -67,20 +67,20 @@
   pb-type - integer corresponding to a problem. Must be one of those described as static final members of current class. - `int`
 
   throws: java.lang.IllegalArgumentException - if incorrect problem type"
-  ([this pb-type]
+  ([^javax.management.relation.RoleUnresolved this ^Integer pb-type]
     (-> this (.setProblemType pb-type))))
 
 (defn clone
   "Clone this object.
 
   returns: an independent clone. - `java.lang.Object`"
-  ([this]
+  ([^javax.management.relation.RoleUnresolved this]
     (-> this (.clone))))
 
 (defn to-string
   "Return a string describing this object.
 
   returns: a description of this RoleUnresolved object. - `java.lang.String`"
-  ([this]
+  ([^javax.management.relation.RoleUnresolved this]
     (-> this (.toString))))
 

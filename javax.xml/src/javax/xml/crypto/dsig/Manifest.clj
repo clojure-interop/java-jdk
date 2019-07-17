@@ -31,7 +31,7 @@
 
   returns: the Id  of this Manifest (or null
       if not specified) - `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getId))))
 
 (defn get-references
@@ -40,6 +40,6 @@
    Manifest.
 
   returns: an unmodifiable list of one or more References - `java.util.List`"
-  ([this]
+  ([^. this]
     (-> this (.getReferences))))
 

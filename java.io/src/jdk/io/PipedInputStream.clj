@@ -32,9 +32,9 @@
   pipe-size - the size of the pipe's buffer. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([src pipe-size]
+  ([^java.io.PipedOutputStream src ^Integer pipe-size]
     (new PipedInputStream src pipe-size))
-  ([src]
+  ([^java.io.PipedOutputStream src]
     (new PipedInputStream src))
   ([]
     (new PipedInputStream )))
@@ -66,7 +66,7 @@
   src - The piped output stream to connect to. - `java.io.PipedOutputStream`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this src]
+  ([^java.io.PipedInputStream this ^java.io.PipedOutputStream src]
     (-> this (.connect src))))
 
 (defn read
@@ -88,9 +88,9 @@
                the stream has been reached. - `int`
 
   throws: java.lang.NullPointerException - If b is null."
-  ([this b off len]
+  ([^java.io.PipedInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  ([this]
+  ([^java.io.PipedInputStream this]
     (-> this (.read))))
 
 (defn available
@@ -104,7 +104,7 @@
              broken. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this]
+  ([^java.io.PipedInputStream this]
     (-> this (.available))))
 
 (defn close
@@ -112,6 +112,6 @@
    associated with the stream.
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([this]
+  ([^java.io.PipedInputStream this]
     (-> this (.close))))
 

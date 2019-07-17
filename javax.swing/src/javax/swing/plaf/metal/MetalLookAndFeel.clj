@@ -125,7 +125,7 @@
   theme - the theme to use - `javax.swing.plaf.metal.MetalTheme`
 
   throws: java.lang.NullPointerException - if theme is null"
-  ([theme]
+  ([^javax.swing.plaf.metal.MetalTheme theme]
     (MetalLookAndFeel/setCurrentTheme theme)))
 
 (defn *get-control-dark-shadow
@@ -422,7 +422,7 @@
 
   returns: Disabled and Selected icon, or null if a suitable Icon can not
            be generated. - `javax.swing.Icon`"
-  ([this component icon]
+  ([^javax.swing.plaf.metal.MetalLookAndFeel this ^javax.swing.JComponent component ^javax.swing.Icon icon]
     (-> this (.getDisabledSelectedIcon component icon))))
 
 (defn get-supports-window-decorations?
@@ -430,7 +430,7 @@
    decorations.
 
   returns: true - `boolean`"
-  ([this]
+  ([^javax.swing.plaf.metal.MetalLookAndFeel this]
     (-> this (.getSupportsWindowDecorations))))
 
 (defn get-defaults
@@ -443,7 +443,7 @@
    look and feel and after initialize has been invoked.
 
   returns: the look and feel defaults - `javax.swing.UIDefaults`"
-  ([this]
+  ([^javax.swing.plaf.metal.MetalLookAndFeel this]
     (-> this (.getDefaults))))
 
 (defn get-name
@@ -451,7 +451,7 @@
    `Metal`.
 
   returns: the name of this look and feel - `java.lang.String`"
-  ([this]
+  ([^javax.swing.plaf.metal.MetalLookAndFeel this]
     (-> this (.getName))))
 
 (defn get-layout-style
@@ -461,7 +461,7 @@
 
   returns: LayoutStyle implementing the Java look and feel design
            guidelines - `javax.swing.LayoutStyle`"
-  ([this]
+  ([^javax.swing.plaf.metal.MetalLookAndFeel this]
     (-> this (.getLayoutStyle))))
 
 (defn get-description
@@ -469,7 +469,7 @@
    `The Java(tm) Look and Feel`.
 
   returns: a short description for the look and feel - `java.lang.String`"
-  ([this]
+  ([^javax.swing.plaf.metal.MetalLookAndFeel this]
     (-> this (.getDescription))))
 
 (defn supported-look-and-feel?
@@ -477,7 +477,7 @@
    any platform.
 
   returns: true - `boolean`"
-  ([this]
+  ([^javax.swing.plaf.metal.MetalLookAndFeel this]
     (-> this (.isSupportedLookAndFeel))))
 
 (defn provide-error-feedback
@@ -488,7 +488,7 @@
    the additional feedback.
 
   component - the Component the error occurred in, may be null indicating the error condition is not directly associated with a Component - `java.awt.Component`"
-  ([this component]
+  ([^javax.swing.plaf.metal.MetalLookAndFeel this ^java.awt.Component component]
     (-> this (.provideErrorFeedback component))))
 
 (defn native-look-and-feel?
@@ -496,7 +496,7 @@
    look and feel.
 
   returns: false - `boolean`"
-  ([this]
+  ([^javax.swing.plaf.metal.MetalLookAndFeel this]
     (-> this (.isNativeLookAndFeel))))
 
 (defn get-id
@@ -504,7 +504,7 @@
    `Metal`.
 
   returns: the identifier of this look and feel - `java.lang.String`"
-  ([this]
+  ([^javax.swing.plaf.metal.MetalLookAndFeel this]
     (-> this (.getID))))
 
 (defn get-disabled-icon
@@ -524,6 +524,6 @@
 
   returns: Disabled icon, or null if a suitable Icon can not be
            generated. - `javax.swing.Icon`"
-  ([this component icon]
+  ([^javax.swing.plaf.metal.MetalLookAndFeel this ^javax.swing.JComponent component ^javax.swing.Icon icon]
     (-> this (.getDisabledIcon component icon))))
 

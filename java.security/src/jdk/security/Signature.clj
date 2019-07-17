@@ -82,9 +82,9 @@
   returns: the new Signature object. - `java.security.Signature`
 
   throws: java.security.NoSuchAlgorithmException - if a SignatureSpi implementation for the specified algorithm is not available from the specified provider."
-  ([algorithm provider]
+  ([^java.lang.String algorithm ^java.lang.String provider]
     (Signature/getInstance algorithm provider))
-  ([algorithm]
+  ([^java.lang.String algorithm]
     (Signature/getInstance algorithm)))
 
 (defn to-string
@@ -93,7 +93,7 @@
    and the name of the algorithm used.
 
   returns: a string representation of this signature object. - `java.lang.String`"
-  ([this]
+  ([^java.security.Signature this]
     (-> this (.toString))))
 
 (defn get-parameters
@@ -107,14 +107,14 @@
 
   returns: the parameters used with this signature, or null if this
    signature does not use any parameters. - `java.security.AlgorithmParameters`"
-  ([this]
+  ([^java.security.Signature this]
     (-> this (.getParameters))))
 
 (defn get-provider
   "Returns the provider of this signature object.
 
   returns: the provider of this signature object - `java.security.Provider`"
-  ([this]
+  ([^java.security.Signature this]
     (-> this (.getProvider))))
 
 (defn update
@@ -126,9 +126,9 @@
   len - the number of bytes to use, starting at offset. - `int`
 
   throws: java.security.SignatureException - if this signature object is not initialized properly."
-  ([this data off len]
+  ([^java.security.Signature this data ^Integer off ^Integer len]
     (-> this (.update data off len)))
-  ([this b]
+  ([^java.security.Signature this ^Byte b]
     (-> this (.update b))))
 
 (defn verify
@@ -148,16 +148,16 @@
   returns: true if the signature was verified, false if not. - `boolean`
 
   throws: java.security.SignatureException - if this signature object is not initialized properly, the passed-in signature is improperly encoded or of the wrong type, if this signature algorithm is unable to process the input data provided, etc."
-  ([this signature offset length]
+  ([^java.security.Signature this signature ^Integer offset ^Integer length]
     (-> this (.verify signature offset length)))
-  ([this signature]
+  ([^java.security.Signature this signature]
     (-> this (.verify signature))))
 
 (defn get-algorithm
   "Returns the name of the algorithm for this signature object.
 
   returns: the name of the algorithm for this signature object. - `java.lang.String`"
-  ([this]
+  ([^java.security.Signature this]
     (-> this (.getAlgorithm))))
 
 (defn get-parameter
@@ -169,7 +169,7 @@
    there is none. - `java.lang.   java.lang.Object`
 
   throws: java.security.InvalidParameterException - if param is an invalid parameter for this engine, or another exception occurs while trying to get this parameter."
-  ([this param]
+  ([^java.security.Signature this ^java.lang.String param]
     (-> this (.getParameter param))))
 
 (defn init-verify
@@ -180,7 +180,7 @@
   public-key - the public key of the identity whose signature is going to be verified. - `java.security.PublicKey`
 
   throws: java.security.InvalidKeyException - if the key is invalid."
-  ([this public-key]
+  ([^java.security.Signature this ^java.security.PublicKey public-key]
     (-> this (.initVerify public-key))))
 
 (defn clone
@@ -189,7 +189,7 @@
   returns: a clone if the implementation is cloneable. - `java.lang.Object`
 
   throws: java.lang.CloneNotSupportedException - if this is called on an implementation that does not support Cloneable."
-  ([this]
+  ([^java.security.Signature this]
     (-> this (.clone))))
 
 (defn init-sign
@@ -201,9 +201,9 @@
   random - the source of randomness for this signature. - `java.security.SecureRandom`
 
   throws: java.security.InvalidKeyException - if the key is invalid."
-  ([this private-key random]
+  ([^java.security.Signature this ^java.security.PrivateKey private-key ^java.security.SecureRandom random]
     (-> this (.initSign private-key random)))
-  ([this private-key]
+  ([^java.security.Signature this ^java.security.PrivateKey private-key]
     (-> this (.initSign private-key))))
 
 (defn set-parameter
@@ -212,9 +212,9 @@
   params - the parameters - `java.security.spec.AlgorithmParameterSpec`
 
   throws: java.security.InvalidAlgorithmParameterException - if the given parameters are inappropriate for this signature engine"
-  ([this params]
+  ([^java.security.Signature this ^java.security.spec.AlgorithmParameterSpec params]
     (-> this (.setParameter params)))
-  ([this param value]
+  ([^java.security.Signature this ^java.lang.String param ^java.lang.Object value]
     (-> this (.setParameter param value))))
 
 (defn sign
@@ -235,8 +235,8 @@
   returns: the number of bytes placed into outbuf. - `int`
 
   throws: java.security.SignatureException - if this signature object is not initialized properly, if this signature algorithm is unable to process the input data provided, or if len is less than the actual signature length."
-  ([this outbuf offset len]
+  ([^java.security.Signature this outbuf ^Integer offset ^Integer len]
     (-> this (.sign outbuf offset len)))
-  ([this]
+  ([^java.security.Signature this]
     (-> this (.sign))))
 

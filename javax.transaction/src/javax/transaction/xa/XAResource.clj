@@ -46,7 +46,7 @@
    XAException. - `javax.transaction.xa.Xid[]`
 
   throws: javax.transaction.xa.XAException - An error has occurred. Possible values are XAER_RMERR, XAER_RMFAIL, XAER_INVAL, and XAER_PROTO."
-  ([this flag]
+  ([^. this ^Integer flag]
     (-> this (.recover flag))))
 
 (defn forget
@@ -56,7 +56,7 @@
   xid - A global transaction identifier. - `javax.transaction.xa.Xid`
 
   throws: javax.transaction.xa.XAException - An error has occurred. Possible exception values are XAER_RMERR, XAER_RMFAIL, XAER_NOTA, XAER_INVAL, or XAER_PROTO."
-  ([this xid]
+  ([^. this ^javax.transaction.xa.Xid xid]
     (-> this (.forget xid))))
 
 (defn get-transaction-timeout
@@ -70,7 +70,7 @@
   returns: the transaction timeout value in seconds. - `int`
 
   throws: javax.transaction.xa.XAException - An error has occurred. Possible exception values are XAER_RMERR and XAER_RMFAIL."
-  ([this]
+  ([^. this]
     (-> this (.getTransactionTimeout))))
 
 (defn set-transaction-timeout
@@ -91,7 +91,7 @@
          otherwise false. - `boolean`
 
   throws: javax.transaction.xa.XAException - An error has occurred. Possible exception values are XAER_RMERR, XAER_RMFAIL, or XAER_INVAL."
-  ([this seconds]
+  ([^. this ^Integer seconds]
     (-> this (.setTransactionTimeout seconds))))
 
 (defn commit
@@ -101,7 +101,7 @@
   one-phase - If true, the resource manager should use a one-phase commit protocol to commit the work done on behalf of xid. - `boolean`
 
   throws: javax.transaction.xa.XAException - An error has occurred. Possible XAExceptions are XA_HEURHAZ, XA_HEURCOM, XA_HEURRB, XA_HEURMIX, XAER_RMERR, XAER_RMFAIL, XAER_NOTA, XAER_INVAL, or XAER_PROTO. If the resource manager did not commit the transaction and the paramether onePhase is set to true, the resource manager may throw one of the XA_RB* exceptions. Upon return, the resource manager has rolled back the branch's work and has released all held resources."
-  ([this xid one-phase]
+  ([^. this ^javax.transaction.xa.Xid xid ^Boolean one-phase]
     (-> this (.commit xid one-phase))))
 
 (defn start
@@ -122,7 +122,7 @@
   flags - One of TMNOFLAGS, TMJOIN, or TMRESUME. - `int`
 
   throws: javax.transaction.xa.XAException - An error has occurred. Possible exceptions are XA_RB*, XAER_RMERR, XAER_RMFAIL, XAER_DUPID, XAER_OUTSIDE, XAER_NOTA, XAER_INVAL, or XAER_PROTO."
-  ([this xid flags]
+  ([^. this ^javax.transaction.xa.Xid xid ^Integer flags]
     (-> this (.start xid flags))))
 
 (defn same-rm?
@@ -136,7 +136,7 @@
          false. - `boolean`
 
   throws: javax.transaction.xa.XAException - An error has occurred. Possible exception values are XAER_RMERR and XAER_RMFAIL."
-  ([this xares]
+  ([^. this ^javax.transaction.xa.XAResource xares]
     (-> this (.isSameRM xares))))
 
 (defn rollback
@@ -146,7 +146,7 @@
   xid - A global transaction identifier. - `javax.transaction.xa.Xid`
 
   throws: javax.transaction.xa.XAException - An error has occurred."
-  ([this xid]
+  ([^. this ^javax.transaction.xa.Xid xid]
     (-> this (.rollback xid))))
 
 (defn prepare
@@ -162,7 +162,7 @@
    in the prepare method. - `int`
 
   throws: javax.transaction.xa.XAException - An error has occurred. Possible exception values are: XA_RB*, XAER_RMERR, XAER_RMFAIL, XAER_NOTA, XAER_INVAL, or XAER_PROTO."
-  ([this xid]
+  ([^. this ^javax.transaction.xa.Xid xid]
     (-> this (.prepare xid))))
 
 (defn end
@@ -186,6 +186,6 @@
   flags - One of TMSUCCESS, TMFAIL, or TMSUSPEND. - `int`
 
   throws: javax.transaction.xa.XAException - An error has occurred. Possible XAException values are XAER_RMERR, XAER_RMFAILED, XAER_NOTA, XAER_INVAL, XAER_PROTO, or XA_RB*."
-  ([this xid flags]
+  ([^. this ^javax.transaction.xa.Xid xid ^Integer flags]
     (-> this (.end xid flags))))
 

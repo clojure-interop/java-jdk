@@ -13,20 +13,20 @@
   "The notation name.
 
   returns: `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getName))))
 
 (defn get-public-id
   "The notation's public identifier, or null if none was given.
 
   returns: `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getPublicId))))
 
 (defn get-system-id
   "The notation's system identifier, or null if none was given.
 
   returns: `java.lang.String`"
-  ([this]
+  ([^. this]
     (-> this (.getSystemId))))
 

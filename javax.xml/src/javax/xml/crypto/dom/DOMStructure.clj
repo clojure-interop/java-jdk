@@ -22,14 +22,14 @@
   node - the node - `org.w3c.dom.Node`
 
   throws: java.lang.NullPointerException - if node is null"
-  ([node]
+  ([^org.w3c.dom.Node node]
     (new DOMStructure node)))
 
 (defn get-node
   "Returns the node contained in this DOMStructure.
 
   returns: the node - `org.w3c.dom.Node`"
-  ([this]
+  ([^javax.xml.crypto.dom.DOMStructure this]
     (-> this (.getNode))))
 
 (defn feature-supported?
@@ -41,6 +41,6 @@
       false otherwise - `boolean`
 
   throws: java.lang.NullPointerException - if feature is null"
-  ([this feature]
+  ([^javax.xml.crypto.dom.DOMStructure this ^java.lang.String feature]
     (-> this (.isFeatureSupported feature))))
 

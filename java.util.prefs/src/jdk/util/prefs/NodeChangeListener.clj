@@ -7,13 +7,13 @@
   "This method gets called when a child node is added.
 
   evt - A node change event object describing the parent and child node. - `java.util.prefs.NodeChangeEvent`"
-  ([this evt]
+  ([^. this ^java.util.prefs.NodeChangeEvent evt]
     (-> this (.childAdded evt))))
 
 (defn child-removed
   "This method gets called when a child node is removed.
 
   evt - A node change event object describing the parent and child node. - `java.util.prefs.NodeChangeEvent`"
-  ([this evt]
+  ([^. this ^java.util.prefs.NodeChangeEvent evt]
     (-> this (.childRemoved evt))))
 

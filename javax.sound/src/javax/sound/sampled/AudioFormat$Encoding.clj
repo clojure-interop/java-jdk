@@ -32,7 +32,7 @@
   Constructs a new encoding.
 
   name - the name of the new type of encoding - `java.lang.String`"
-  ([name]
+  ([^java.lang.String name]
     (new AudioFormat$Encoding name)))
 
 (def *-pcm-signed
@@ -82,14 +82,14 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  ([this obj]
+  ([^javax.sound.sampled.AudioFormat$Encoding this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Finalizes the hashCode method
 
   returns: a hash code value for this object. - `int`"
-  ([this]
+  ([^javax.sound.sampled.AudioFormat$Encoding this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -99,6 +99,6 @@
    the name `pcm_signed`.
 
   returns: the encoding name - `java.lang.String`"
-  ([this]
+  ([^javax.sound.sampled.AudioFormat$Encoding this]
     (-> this (.toString))))
 
