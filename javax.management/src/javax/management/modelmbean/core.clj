@@ -1,0 +1,16 @@
+(ns javax.management.modelmbean.core
+  (:refer-clojure :only [require comment defn ->])
+  (:import ))
+
+(require '[javax.management.modelmbean.DescriptorSupport])
+(require '[javax.management.modelmbean.InvalidTargetObjectTypeException])
+(require '[javax.management.modelmbean.ModelMBean])
+(require '[javax.management.modelmbean.ModelMBeanAttributeInfo])
+(require '[javax.management.modelmbean.ModelMBeanConstructorInfo])
+(require '[javax.management.modelmbean.ModelMBeanInfo])
+(require '[javax.management.modelmbean.ModelMBeanInfoSupport])
+(require '[javax.management.modelmbean.ModelMBeanNotificationBroadcaster])
+(require '[javax.management.modelmbean.ModelMBeanNotificationInfo])
+(require '[javax.management.modelmbean.ModelMBeanOperationInfo])
+(require '[javax.management.modelmbean.RequiredModelMBean])
+(require '[javax.management.modelmbean.XMLParseException])

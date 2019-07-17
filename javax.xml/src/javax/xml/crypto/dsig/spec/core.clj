@@ -1,0 +1,15 @@
+(ns javax.xml.crypto.dsig.spec.core
+  (:refer-clojure :only [require comment defn ->])
+  (:import ))
+
+(require '[javax.xml.crypto.dsig.spec.C14NMethodParameterSpec])
+(require '[javax.xml.crypto.dsig.spec.DigestMethodParameterSpec])
+(require '[javax.xml.crypto.dsig.spec.ExcC14NParameterSpec])
+(require '[javax.xml.crypto.dsig.spec.HMACParameterSpec])
+(require '[javax.xml.crypto.dsig.spec.SignatureMethodParameterSpec])
+(require '[javax.xml.crypto.dsig.spec.TransformParameterSpec])
+(require '[javax.xml.crypto.dsig.spec.XPathFilter2ParameterSpec])
+(require '[javax.xml.crypto.dsig.spec.XPathFilterParameterSpec])
+(require '[javax.xml.crypto.dsig.spec.XPathType$Filter])
+(require '[javax.xml.crypto.dsig.spec.XPathType])
+(require '[javax.xml.crypto.dsig.spec.XSLTTransformParameterSpec])

@@ -1,0 +1,16 @@
+(ns jdk.util.concurrent.locks.core
+  (:refer-clojure :only [require comment defn ->])
+  (:import ))
+
+(require '[jdk.util.concurrent.locks.AbstractOwnableSynchronizer])
+(require '[jdk.util.concurrent.locks.AbstractQueuedLongSynchronizer])
+(require '[jdk.util.concurrent.locks.AbstractQueuedSynchronizer])
+(require '[jdk.util.concurrent.locks.Condition])
+(require '[jdk.util.concurrent.locks.Lock])
+(require '[jdk.util.concurrent.locks.LockSupport])
+(require '[jdk.util.concurrent.locks.ReadWriteLock])
+(require '[jdk.util.concurrent.locks.ReentrantLock])
+(require '[jdk.util.concurrent.locks.ReentrantReadWriteLock$ReadLock])
+(require '[jdk.util.concurrent.locks.ReentrantReadWriteLock$WriteLock])
+(require '[jdk.util.concurrent.locks.ReentrantReadWriteLock])
+(require '[jdk.util.concurrent.locks.StampedLock])

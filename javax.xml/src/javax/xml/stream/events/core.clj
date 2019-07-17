@@ -1,0 +1,18 @@
+(ns javax.xml.stream.events.core
+  (:refer-clojure :only [require comment defn ->])
+  (:import ))
+
+(require '[javax.xml.stream.events.Attribute])
+(require '[javax.xml.stream.events.Characters])
+(require '[javax.xml.stream.events.Comment])
+(require '[javax.xml.stream.events.DTD])
+(require '[javax.xml.stream.events.EndDocument])
+(require '[javax.xml.stream.events.EndElement])
+(require '[javax.xml.stream.events.EntityDeclaration])
+(require '[javax.xml.stream.events.EntityReference])
+(require '[javax.xml.stream.events.Namespace])
+(require '[javax.xml.stream.events.NotationDeclaration])
+(require '[javax.xml.stream.events.ProcessingInstruction])
+(require '[javax.xml.stream.events.StartDocument])
+(require '[javax.xml.stream.events.StartElement])
+(require '[javax.xml.stream.events.XMLEvent])

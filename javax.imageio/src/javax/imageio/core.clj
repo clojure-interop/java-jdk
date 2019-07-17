@@ -1,0 +1,15 @@
+(ns javax.imageio.core
+  (:refer-clojure :only [require comment defn ->])
+  (:import ))
+
+(require '[javax.imageio.IIOException])
+(require '[javax.imageio.IIOImage])
+(require '[javax.imageio.IIOParam])
+(require '[javax.imageio.IIOParamController])
+(require '[javax.imageio.ImageIO])
+(require '[javax.imageio.ImageReadParam])
+(require '[javax.imageio.ImageReader])
+(require '[javax.imageio.ImageTranscoder])
+(require '[javax.imageio.ImageTypeSpecifier])
+(require '[javax.imageio.ImageWriteParam])
+(require '[javax.imageio.ImageWriter])

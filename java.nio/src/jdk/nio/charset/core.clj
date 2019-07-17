@@ -1,0 +1,16 @@
+(ns jdk.nio.charset.core
+  (:refer-clojure :only [require comment defn ->])
+  (:import ))
+
+(require '[jdk.nio.charset.CharacterCodingException])
+(require '[jdk.nio.charset.Charset])
+(require '[jdk.nio.charset.CharsetDecoder])
+(require '[jdk.nio.charset.CharsetEncoder])
+(require '[jdk.nio.charset.CoderMalfunctionError])
+(require '[jdk.nio.charset.CoderResult])
+(require '[jdk.nio.charset.CodingErrorAction])
+(require '[jdk.nio.charset.IllegalCharsetNameException])
+(require '[jdk.nio.charset.MalformedInputException])
+(require '[jdk.nio.charset.StandardCharsets])
+(require '[jdk.nio.charset.UnmappableCharacterException])
+(require '[jdk.nio.charset.UnsupportedCharsetException])

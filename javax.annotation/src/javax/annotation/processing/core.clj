@@ -1,0 +1,16 @@
+(ns javax.annotation.processing.core
+  (:refer-clojure :only [require comment defn ->])
+  (:import ))
+
+(require '[javax.annotation.processing.AbstractProcessor])
+(require '[javax.annotation.processing.Completion])
+(require '[javax.annotation.processing.Completions])
+(require '[javax.annotation.processing.Filer])
+(require '[javax.annotation.processing.FilerException])
+(require '[javax.annotation.processing.Messager])
+(require '[javax.annotation.processing.ProcessingEnvironment])
+(require '[javax.annotation.processing.Processor])
+(require '[javax.annotation.processing.RoundEnvironment])
+(require '[javax.annotation.processing.SupportedAnnotationTypes])
+(require '[javax.annotation.processing.SupportedOptions])
+(require '[javax.annotation.processing.SupportedSourceVersion])

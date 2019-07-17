@@ -1,0 +1,17 @@
+(ns jdk.security.interfaces.core
+  (:refer-clojure :only [require comment defn ->])
+  (:import ))
+
+(require '[jdk.security.interfaces.DSAKey])
+(require '[jdk.security.interfaces.DSAKeyPairGenerator])
+(require '[jdk.security.interfaces.DSAParams])
+(require '[jdk.security.interfaces.DSAPrivateKey])
+(require '[jdk.security.interfaces.DSAPublicKey])
+(require '[jdk.security.interfaces.ECKey])
+(require '[jdk.security.interfaces.ECPrivateKey])
+(require '[jdk.security.interfaces.ECPublicKey])
+(require '[jdk.security.interfaces.RSAKey])
+(require '[jdk.security.interfaces.RSAMultiPrimePrivateCrtKey])
+(require '[jdk.security.interfaces.RSAPrivateCrtKey])
+(require '[jdk.security.interfaces.RSAPrivateKey])
+(require '[jdk.security.interfaces.RSAPublicKey])

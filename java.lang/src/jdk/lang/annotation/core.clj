@@ -1,0 +1,16 @@
+(ns jdk.lang.annotation.core
+  (:refer-clojure :only [require comment defn ->])
+  (:import ))
+
+(require '[jdk.lang.annotation.Annotation])
+(require '[jdk.lang.annotation.AnnotationFormatError])
+(require '[jdk.lang.annotation.AnnotationTypeMismatchException])
+(require '[jdk.lang.annotation.Documented])
+(require '[jdk.lang.annotation.ElementType])
+(require '[jdk.lang.annotation.IncompleteAnnotationException])
+(require '[jdk.lang.annotation.Inherited])
+(require '[jdk.lang.annotation.Native])
+(require '[jdk.lang.annotation.Repeatable])
+(require '[jdk.lang.annotation.Retention])
+(require '[jdk.lang.annotation.RetentionPolicy])
+(require '[jdk.lang.annotation.Target])

@@ -1,0 +1,15 @@
+(ns javax.swing.border.core
+  (:refer-clojure :only [require comment defn ->])
+  (:import ))
+
+(require '[javax.swing.border.AbstractBorder])
+(require '[javax.swing.border.BevelBorder])
+(require '[javax.swing.border.Border])
+(require '[javax.swing.border.CompoundBorder])
+(require '[javax.swing.border.EmptyBorder])
+(require '[javax.swing.border.EtchedBorder])
+(require '[javax.swing.border.LineBorder])
+(require '[javax.swing.border.MatteBorder])
+(require '[javax.swing.border.SoftBevelBorder])
+(require '[javax.swing.border.StrokeBorder])
+(require '[javax.swing.border.TitledBorder])

@@ -1,0 +1,16 @@
+(ns jdk.awt.datatransfer.core
+  (:refer-clojure :only [require comment defn ->])
+  (:import ))
+
+(require '[jdk.awt.datatransfer.Clipboard])
+(require '[jdk.awt.datatransfer.ClipboardOwner])
+(require '[jdk.awt.datatransfer.DataFlavor])
+(require '[jdk.awt.datatransfer.FlavorEvent])
+(require '[jdk.awt.datatransfer.FlavorListener])
+(require '[jdk.awt.datatransfer.FlavorMap])
+(require '[jdk.awt.datatransfer.FlavorTable])
+(require '[jdk.awt.datatransfer.MimeTypeParseException])
+(require '[jdk.awt.datatransfer.StringSelection])
+(require '[jdk.awt.datatransfer.SystemFlavorMap])
+(require '[jdk.awt.datatransfer.Transferable])
+(require '[jdk.awt.datatransfer.UnsupportedFlavorException])

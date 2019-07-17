@@ -1,0 +1,16 @@
+(ns javax.sql.rowset.core
+  (:refer-clojure :only [require comment defn ->])
+  (:import ))
+
+(require '[javax.sql.rowset.BaseRowSet])
+(require '[javax.sql.rowset.CachedRowSet])
+(require '[javax.sql.rowset.FilteredRowSet])
+(require '[javax.sql.rowset.JdbcRowSet])
+(require '[javax.sql.rowset.JoinRowSet])
+(require '[javax.sql.rowset.Joinable])
+(require '[javax.sql.rowset.Predicate])
+(require '[javax.sql.rowset.RowSetFactory])
+(require '[javax.sql.rowset.RowSetMetaDataImpl])
+(require '[javax.sql.rowset.RowSetProvider])
+(require '[javax.sql.rowset.RowSetWarning])
+(require '[javax.sql.rowset.WebRowSet])

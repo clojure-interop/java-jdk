@@ -1,0 +1,16 @@
+(ns javax.naming.spi.core
+  (:refer-clojure :only [require comment defn ->])
+  (:import ))
+
+(require '[javax.naming.spi.DirObjectFactory])
+(require '[javax.naming.spi.DirStateFactory$Result])
+(require '[javax.naming.spi.DirStateFactory])
+(require '[javax.naming.spi.DirectoryManager])
+(require '[javax.naming.spi.InitialContextFactory])
+(require '[javax.naming.spi.InitialContextFactoryBuilder])
+(require '[javax.naming.spi.NamingManager])
+(require '[javax.naming.spi.ObjectFactory])
+(require '[javax.naming.spi.ObjectFactoryBuilder])
+(require '[javax.naming.spi.ResolveResult])
+(require '[javax.naming.spi.Resolver])
+(require '[javax.naming.spi.StateFactory])

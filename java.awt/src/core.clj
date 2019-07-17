@@ -1,0 +1,16 @@
+(ns core
+  (:refer-clojure :only [require comment defn ->])
+  (:import ))
+
+(require '[jdk.awt.core])
+(require '[jdk.awt.color.core])
+(require '[jdk.awt.datatransfer.core])
+(require '[jdk.awt.dnd.core])
+(require '[jdk.awt.event.core])
+(require '[jdk.awt.font.core])
+(require '[jdk.awt.geom.core])
+(require '[jdk.awt.im.core])
+(require '[jdk.awt.im.spi.core])
+(require '[jdk.awt.image.core])
+(require '[jdk.awt.image.renderable.core])
+(require '[jdk.awt.print.core])

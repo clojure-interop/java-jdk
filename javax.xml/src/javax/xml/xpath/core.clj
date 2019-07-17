@@ -1,0 +1,15 @@
+(ns javax.xml.xpath.core
+  (:refer-clojure :only [require comment defn ->])
+  (:import ))
+
+(require '[javax.xml.xpath.XPath])
+(require '[javax.xml.xpath.XPathConstants])
+(require '[javax.xml.xpath.XPathException])
+(require '[javax.xml.xpath.XPathExpression])
+(require '[javax.xml.xpath.XPathExpressionException])
+(require '[javax.xml.xpath.XPathFactory])
+(require '[javax.xml.xpath.XPathFactoryConfigurationException])
+(require '[javax.xml.xpath.XPathFunction])
+(require '[javax.xml.xpath.XPathFunctionException])
+(require '[javax.xml.xpath.XPathFunctionResolver])
+(require '[javax.xml.xpath.XPathVariableResolver])

@@ -1,0 +1,17 @@
+(ns jdk.util.stream.core
+  (:refer-clojure :only [require comment defn ->])
+  (:import ))
+
+(require '[jdk.util.stream.BaseStream>])
+(require '[jdk.util.stream.Collector$Characteristics])
+(require '[jdk.util.stream.Collector])
+(require '[jdk.util.stream.Collectors])
+(require '[jdk.util.stream.DoubleStream$Builder])
+(require '[jdk.util.stream.DoubleStream])
+(require '[jdk.util.stream.IntStream$Builder])
+(require '[jdk.util.stream.IntStream])
+(require '[jdk.util.stream.LongStream$Builder])
+(require '[jdk.util.stream.LongStream])
+(require '[jdk.util.stream.Stream$Builder])
+(require '[jdk.util.stream.Stream])
+(require '[jdk.util.stream.StreamSupport])

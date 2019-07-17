@@ -1,0 +1,16 @@
+(ns javax.script.core
+  (:refer-clojure :only [require comment defn ->])
+  (:import ))
+
+(require '[javax.script.AbstractScriptEngine])
+(require '[javax.script.Bindings])
+(require '[javax.script.Compilable])
+(require '[javax.script.CompiledScript])
+(require '[javax.script.Invocable])
+(require '[javax.script.ScriptContext])
+(require '[javax.script.ScriptEngine])
+(require '[javax.script.ScriptEngineFactory])
+(require '[javax.script.ScriptEngineManager])
+(require '[javax.script.ScriptException])
+(require '[javax.script.SimpleBindings])
+(require '[javax.script.SimpleScriptContext])

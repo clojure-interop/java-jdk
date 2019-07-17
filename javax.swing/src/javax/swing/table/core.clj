@@ -1,0 +1,17 @@
+(ns javax.swing.table.core
+  (:refer-clojure :only [require comment defn ->])
+  (:import ))
+
+(require '[javax.swing.table.AbstractTableModel])
+(require '[javax.swing.table.DefaultTableCellRenderer$UIResource])
+(require '[javax.swing.table.DefaultTableCellRenderer])
+(require '[javax.swing.table.DefaultTableColumnModel])
+(require '[javax.swing.table.DefaultTableModel])
+(require '[javax.swing.table.JTableHeader])
+(require '[javax.swing.table.TableCellEditor])
+(require '[javax.swing.table.TableCellRenderer])
+(require '[javax.swing.table.TableColumn])
+(require '[javax.swing.table.TableColumnModel])
+(require '[javax.swing.table.TableModel])
+(require '[javax.swing.table.TableRowSorter])
+(require '[javax.swing.table.TableStringConverter])

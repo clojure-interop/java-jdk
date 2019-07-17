@@ -1,0 +1,16 @@
+(ns core
+  (:refer-clojure :only [require comment defn ->])
+  (:import ))
+
+(require '[jdk.util.core])
+(require '[jdk.util.concurrent.core])
+(require '[jdk.util.concurrent.atomic.core])
+(require '[jdk.util.concurrent.locks.core])
+(require '[jdk.util.function.core])
+(require '[jdk.util.jar.core])
+(require '[jdk.util.logging.core])
+(require '[jdk.util.prefs.core])
+(require '[jdk.util.regex.core])
+(require '[jdk.util.spi.core])
+(require '[jdk.util.stream.core])
+(require '[jdk.util.zip.core])
