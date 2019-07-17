@@ -11,6 +11,24 @@ All namespaces starting with **java.** are renamed to **jdk.** (java compiler li
 
 **java.io.File** renamed to **jdk.io.File** for example. 
 
+## Clojars
+
+You can find clojars in README of packages.
+
+## Usage
+
+```
+(require '[jdk.io.File :as f])
+
+(-> "./resource/MyFile.txt"
+  f/->file
+  f/exists?)
+
+(-> "./resource/MyAnotherFile.txt"
+  f/->file
+  f/mkdirs)
+```
+
 
 
 
