@@ -22,7 +22,7 @@
    return an element rather than throwing an exception.)
 
   returns: true if the iteration has more elements - `boolean`"
-  ([^. this]
+  ([^java.util.Iterator this]
     (-> this (.hasNext))))
 
 (defn next
@@ -31,7 +31,7 @@
   returns: the next element in the iteration - `Iterator.E`
 
   throws: java.util.NoSuchElementException - if the iteration has no more elements"
-  ([^. this]
+  ([^java.util.Iterator this]
     (-> this (.next))))
 
 (defn remove
@@ -45,7 +45,7 @@
   returns: `default void`
 
   throws: java.lang.UnsupportedOperationException - if the remove operation is not supported by this iterator"
-  ([^. this]
+  ([^java.util.Iterator this]
     (-> this (.remove))))
 
 (defn for-each-remaining
@@ -59,6 +59,6 @@
   returns: `default void`
 
   throws: java.lang.NullPointerException - if the specified action is null"
-  ([^. this ^Iterator.E> action]
+  ([^java.util.Iterator this ^Iterator.E> action]
     (-> this (.forEachRemaining action))))
 

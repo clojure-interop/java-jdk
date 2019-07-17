@@ -13,5 +13,5 @@
 
   returns: a unary operator that always returns its input argument - `<T> java.util.function.UnaryOperator<T>`"
   ([]
-    (null/identity )))
+    (UnaryOperator/identity )))
 

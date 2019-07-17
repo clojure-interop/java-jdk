@@ -14,26 +14,26 @@
    possible key.
 
   returns: the default action - `javax.swing.Action`"
-  ([^. this]
+  ([^javax.swing.text.Keymap this]
     (-> this (.getDefaultAction))))
 
 (defn remove-key-stroke-binding
   "Removes a binding from the keymap.
 
   keys - the key sequence - `javax.swing.KeyStroke`"
-  ([^. this ^javax.swing.KeyStroke keys]
+  ([^javax.swing.text.Keymap this ^javax.swing.KeyStroke keys]
     (-> this (.removeKeyStrokeBinding keys))))
 
 (defn get-bound-actions
   "Fetches all of the actions defined in this keymap.
 
   returns: the list of actions - `javax.swing.Action[]`"
-  ([^. this]
+  ([^javax.swing.text.Keymap this]
     (-> this (.getBoundActions))))
 
 (defn remove-bindings
   "Removes all bindings from the keymap."
-  ([^. this]
+  ([^javax.swing.text.Keymap this]
     (-> this (.removeBindings))))
 
 (defn set-resolve-parent
@@ -43,7 +43,7 @@
    as one of its resolve parents.
 
   parent - the parent keymap - `javax.swing.text.Keymap`"
-  ([^. this ^javax.swing.text.Keymap parent]
+  ([^javax.swing.text.Keymap this ^javax.swing.text.Keymap parent]
     (-> this (.setResolveParent parent))))
 
 (defn get-action
@@ -57,21 +57,21 @@
 
   returns: the action associated with the key
     sequence if one is defined, otherwise null - `javax.swing.Action`"
-  ([^. this ^javax.swing.KeyStroke key]
+  ([^javax.swing.text.Keymap this ^javax.swing.KeyStroke key]
     (-> this (.getAction key))))
 
 (defn get-resolve-parent
   "Fetches the parent keymap used to resolve key-bindings.
 
   returns: the keymap - `javax.swing.text.Keymap`"
-  ([^. this]
+  ([^javax.swing.text.Keymap this]
     (-> this (.getResolveParent))))
 
 (defn get-name
   "Fetches the name of the set of key-bindings.
 
   returns: the name - `java.lang.String`"
-  ([^. this]
+  ([^javax.swing.text.Keymap this]
     (-> this (.getName))))
 
 (defn add-action-for-key-stroke
@@ -79,7 +79,7 @@
 
   key - the key sequence - `javax.swing.KeyStroke`
   a - the action - `javax.swing.Action`"
-  ([^. this ^javax.swing.KeyStroke key ^javax.swing.Action a]
+  ([^javax.swing.text.Keymap this ^javax.swing.KeyStroke key ^javax.swing.Action a]
     (-> this (.addActionForKeyStroke key a))))
 
 (defn get-key-strokes-for-action
@@ -89,7 +89,7 @@
   a - the action - `javax.swing.Action`
 
   returns: the list of keystrokes - `javax.swing.KeyStroke[]`"
-  ([^. this ^javax.swing.Action a]
+  ([^javax.swing.text.Keymap this ^javax.swing.Action a]
     (-> this (.getKeyStrokesForAction a))))
 
 (defn locally-defined?
@@ -98,14 +98,14 @@
   key - the key sequence - `javax.swing.KeyStroke`
 
   returns: true if the key sequence is locally defined else false - `boolean`"
-  ([^. this ^javax.swing.KeyStroke key]
+  ([^javax.swing.text.Keymap this ^javax.swing.KeyStroke key]
     (-> this (.isLocallyDefined key))))
 
 (defn set-default-action
   "Set the default action to fire if a key is typed.
 
   a - the action - `javax.swing.Action`"
-  ([^. this ^javax.swing.Action a]
+  ([^javax.swing.text.Keymap this ^javax.swing.Action a]
     (-> this (.setDefaultAction a))))
 
 (defn get-bound-key-strokes
@@ -113,6 +113,6 @@
    are bound to some action.
 
   returns: the list of keystrokes - `javax.swing.KeyStroke[]`"
-  ([^. this]
+  ([^javax.swing.text.Keymap this]
     (-> this (.getBoundKeyStrokes))))
 

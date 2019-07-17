@@ -92,7 +92,7 @@
 
   returns: A sorted association of property key strings to property
    values. - `java.util.SortedMap<java.lang.String,java.lang.String>`"
-  ([^. this]
+  ([^java.util.jar.Pack200$Packer this]
     (-> this (.properties))))
 
 (defn pack
@@ -104,7 +104,7 @@
   out - an OutputStream - `java.io.OutputStream`
 
   throws: java.io.IOException - if an error is encountered."
-  ([^. this ^java.util.jar.JarFile in ^java.io.OutputStream out]
+  ([^java.util.jar.Pack200$Packer this ^java.util.jar.JarFile in ^java.io.OutputStream out]
     (-> this (.pack in out))))
 
 (defn add-property-change-listener
@@ -119,7 +119,7 @@
   listener - An object to be invoked when a property is changed. - `java.beans.PropertyChangeListener`
 
   returns: `java.lang. default void`"
-  ([^. this ^java.beans.PropertyChangeListener listener]
+  ([^java.util.jar.Pack200$Packer this ^java.beans.PropertyChangeListener listener]
     (-> this (.addPropertyChangeListener listener))))
 
 (defn remove-property-change-listener
@@ -131,6 +131,6 @@
   listener - The PropertyChange listener to be removed. - `java.beans.PropertyChangeListener`
 
   returns: `java.lang. default void`"
-  ([^. this ^java.beans.PropertyChangeListener listener]
+  ([^java.util.jar.Pack200$Packer this ^java.beans.PropertyChangeListener listener]
     (-> this (.removePropertyChangeListener listener))))
 

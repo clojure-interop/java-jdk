@@ -22,6 +22,6 @@
   "Called when an unsolicited notification has been received.
 
   evt - The non-null UnsolicitedNotificationEvent - `javax.naming.ldap.UnsolicitedNotificationEvent`"
-  ([^. this ^javax.naming.ldap.UnsolicitedNotificationEvent evt]
+  ([^javax.naming.ldap.UnsolicitedNotificationListener this ^javax.naming.ldap.UnsolicitedNotificationEvent evt]
     (-> this (.notificationReceived evt))))
 

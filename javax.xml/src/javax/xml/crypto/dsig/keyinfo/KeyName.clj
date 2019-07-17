@@ -26,6 +26,6 @@
 
   returns: the name of this KeyName (never
       null) - `java.lang.String`"
-  ([^. this]
+  ([^javax.xml.crypto.dsig.keyinfo.KeyName this]
     (-> this (.getName))))
 

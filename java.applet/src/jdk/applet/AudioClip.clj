@@ -9,16 +9,16 @@
 (defn play
   "Starts playing this audio clip. Each time this method is called,
    the clip is restarted from the beginning."
-  ([^. this]
+  ([^java.applet.AudioClip this]
     (-> this (.play))))
 
 (defn loop
   "Starts playing this audio clip in a loop."
-  ([^. this]
+  ([^java.applet.AudioClip this]
     (-> this (.loop))))
 
 (defn stop
   "Stops playing this audio clip."
-  ([^. this]
+  ([^java.applet.AudioClip this]
     (-> this (.stop))))
 

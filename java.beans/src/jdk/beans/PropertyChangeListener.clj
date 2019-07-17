@@ -9,6 +9,6 @@
   "This method gets called when a bound property is changed.
 
   evt - A PropertyChangeEvent object describing the event source and the property that has changed. - `java.beans.PropertyChangeEvent`"
-  ([^. this ^java.beans.PropertyChangeEvent evt]
+  ([^java.beans.PropertyChangeListener this ^java.beans.PropertyChangeEvent evt]
     (-> this (.propertyChange evt))))
 

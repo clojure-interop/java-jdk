@@ -12,7 +12,7 @@
    and warnings, or to resolve relative output identifiers.
 
   system-id - The system identifier as a URI string. - `java.lang.String`"
-  ([^. this ^java.lang.String system-id]
+  ([^javax.xml.transform.Result this ^java.lang.String system-id]
     (-> this (.setSystemId system-id))))
 
 (defn get-system-id
@@ -20,6 +20,6 @@
 
   returns: The system identifier that was set with setSystemId,
    or null if setSystemId was not called. - `java.lang.String`"
-  ([^. this]
+  ([^javax.xml.transform.Result this]
     (-> this (.getSystemId))))
 

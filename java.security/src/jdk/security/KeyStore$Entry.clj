@@ -9,6 +9,6 @@
    The default implementation returns an empty Set.
 
   returns: an unmodifiable Set of attributes, possibly empty - `default java.util.Set<java.security.KeyStore.Entry.Attribute>`"
-  ([^. this]
+  ([^java.security.KeyStore$Entry this]
     (-> this (.getAttributes))))
 

@@ -48,7 +48,7 @@
    the result of invoking the operation on the MBean specified. - `java.lang.Object`
 
   throws: javax.management.InstanceNotFoundException - The MBean specified is not registered in the MBean server."
-  ([^. this ^javax.management.ObjectName name ^java.lang.String operation-name ^java.lang.Object[] params ^java.lang.String[] signature]
+  ([^javax.management.MBeanServerConnection this ^javax.management.ObjectName name ^java.lang.String operation-name ^java.lang.Object[] params ^java.lang.String[] signature]
     (-> this (.invoke name operation-name params signature))))
 
 (defn query-m-beans
@@ -71,7 +71,7 @@
    query an empty list is returned. - `java.util.Set<javax.management.ObjectInstance>`
 
   throws: java.io.IOException - A communication problem occurred when talking to the MBean server."
-  ([^. this ^javax.management.ObjectName name ^javax.management.QueryExp query]
+  ([^javax.management.MBeanServerConnection this ^javax.management.ObjectName name ^javax.management.QueryExp query]
     (-> this (.queryMBeans name query))))
 
 (defn query-names
@@ -93,7 +93,7 @@
    returned. - `java.util.Set<javax.management.ObjectName>`
 
   throws: java.io.IOException - A communication problem occurred when talking to the MBean server."
-  ([^. this ^javax.management.ObjectName name ^javax.management.QueryExp query]
+  ([^javax.management.MBeanServerConnection this ^javax.management.ObjectName name ^javax.management.QueryExp query]
     (-> this (.queryNames name query))))
 
 (defn remove-notification-listener
@@ -114,9 +114,9 @@
   handback - The handback that was specified when the listener was added. - `java.lang.Object`
 
   throws: javax.management.InstanceNotFoundException - The MBean name provided does not match any of the registered MBeans."
-  ([^. this ^javax.management.ObjectName name ^javax.management.ObjectName listener ^javax.management.NotificationFilter filter ^java.lang.Object handback]
+  ([^javax.management.MBeanServerConnection this ^javax.management.ObjectName name ^javax.management.ObjectName listener ^javax.management.NotificationFilter filter ^java.lang.Object handback]
     (-> this (.removeNotificationListener name listener filter handback)))
-  ([^. this ^javax.management.ObjectName name ^javax.management.ObjectName listener]
+  ([^javax.management.MBeanServerConnection this ^javax.management.ObjectName name ^javax.management.ObjectName listener]
     (-> this (.removeNotificationListener name listener))))
 
 (defn get-attribute
@@ -129,7 +129,7 @@
   returns: The value of the retrieved attribute. - `java.lang.Object`
 
   throws: javax.management.AttributeNotFoundException - The attribute specified is not accessible in the MBean."
-  ([^. this ^javax.management.ObjectName name ^java.lang.String attribute]
+  ([^javax.management.MBeanServerConnection this ^javax.management.ObjectName name ^java.lang.String attribute]
     (-> this (.getAttribute name attribute))))
 
 (defn get-m-bean-info
@@ -142,7 +142,7 @@
    retrieval of all attributes and operations of this MBean. - `javax.management.MBeanInfo`
 
   throws: javax.management.IntrospectionException - An exception occurred during introspection."
-  ([^. this ^javax.management.ObjectName name]
+  ([^javax.management.MBeanServerConnection this ^javax.management.ObjectName name]
     (-> this (.getMBeanInfo name))))
 
 (defn create-m-bean
@@ -168,13 +168,13 @@
    getMBeanInfo(n).getClassName(). - `javax.management.ObjectInstance`
 
   throws: javax.management.MBeanException - The constructor of the MBean has thrown an exception"
-  ([^. this ^java.lang.String class-name ^javax.management.ObjectName name ^javax.management.ObjectName loader-name ^java.lang.Object[] params ^java.lang.String[] signature]
+  ([^javax.management.MBeanServerConnection this ^java.lang.String class-name ^javax.management.ObjectName name ^javax.management.ObjectName loader-name ^java.lang.Object[] params ^java.lang.String[] signature]
     (-> this (.createMBean class-name name loader-name params signature)))
-  ([^. this ^java.lang.String class-name ^javax.management.ObjectName name ^java.lang.Object[] params ^java.lang.String[] signature]
+  ([^javax.management.MBeanServerConnection this ^java.lang.String class-name ^javax.management.ObjectName name ^java.lang.Object[] params ^java.lang.String[] signature]
     (-> this (.createMBean class-name name params signature)))
-  ([^. this ^java.lang.String class-name ^javax.management.ObjectName name ^javax.management.ObjectName loader-name]
+  ([^javax.management.MBeanServerConnection this ^java.lang.String class-name ^javax.management.ObjectName name ^javax.management.ObjectName loader-name]
     (-> this (.createMBean class-name name loader-name)))
-  ([^. this ^java.lang.String class-name ^javax.management.ObjectName name]
+  ([^javax.management.MBeanServerConnection this ^java.lang.String class-name ^javax.management.ObjectName name]
     (-> this (.createMBean class-name name))))
 
 (defn get-m-bean-count
@@ -183,7 +183,7 @@
   returns: the number of MBeans registered. - `java.lang.Integer`
 
   throws: java.io.IOException - A communication problem occurred when talking to the MBean server."
-  ([^. this]
+  ([^javax.management.MBeanServerConnection this]
     (-> this (.getMBeanCount))))
 
 (defn registered?
@@ -196,7 +196,7 @@
    server, false otherwise. - `boolean`
 
   throws: javax.management.RuntimeOperationsException - Wraps a java.lang.IllegalArgumentException: The object name in parameter is null."
-  ([^. this ^javax.management.ObjectName name]
+  ([^javax.management.MBeanServerConnection this ^javax.management.ObjectName name]
     (-> this (.isRegistered name))))
 
 (defn unregister-m-bean
@@ -208,7 +208,7 @@
   name - The object name of the MBean to be unregistered. - `javax.management.ObjectName`
 
   throws: javax.management.InstanceNotFoundException - The MBean specified is not registered in the MBean server."
-  ([^. this ^javax.management.ObjectName name]
+  ([^javax.management.MBeanServerConnection this ^javax.management.ObjectName name]
     (-> this (.unregisterMBean name))))
 
 (defn get-default-domain
@@ -219,7 +219,7 @@
   returns: the default domain. - `java.lang.String`
 
   throws: java.io.IOException - A communication problem occurred when talking to the MBean server."
-  ([^. this]
+  ([^javax.management.MBeanServerConnection this]
     (-> this (.getDefaultDomain))))
 
 (defn set-attribute
@@ -230,7 +230,7 @@
   attribute - The identification of the attribute to be set and the value it is to be set to. - `javax.management.Attribute`
 
   throws: javax.management.InstanceNotFoundException - The MBean specified is not registered in the MBean server."
-  ([^. this ^javax.management.ObjectName name ^javax.management.Attribute attribute]
+  ([^javax.management.MBeanServerConnection this ^javax.management.ObjectName name ^javax.management.Attribute attribute]
     (-> this (.setAttribute name attribute))))
 
 (defn get-object-instance
@@ -245,7 +245,7 @@
    getMBeanInfo(name).getClassName(). - `javax.management.ObjectInstance`
 
   throws: javax.management.InstanceNotFoundException - The MBean specified is not registered in the MBean server."
-  ([^. this ^javax.management.ObjectName name]
+  ([^javax.management.MBeanServerConnection this ^javax.management.ObjectName name]
     (-> this (.getObjectInstance name))))
 
 (defn get-domains
@@ -259,7 +259,7 @@
   returns: the list of domains. - `java.lang.String[]`
 
   throws: java.io.IOException - A communication problem occurred when talking to the MBean server."
-  ([^. this]
+  ([^javax.management.MBeanServerConnection this]
     (-> this (.getDomains))))
 
 (defn set-attributes
@@ -302,7 +302,7 @@
    values. - `javax.management.AttributeList`
 
   throws: javax.management.InstanceNotFoundException - The MBean specified is not registered in the MBean server."
-  ([^. this ^javax.management.ObjectName name ^javax.management.AttributeList attributes]
+  ([^javax.management.MBeanServerConnection this ^javax.management.ObjectName name ^javax.management.AttributeList attributes]
     (-> this (.setAttributes name attributes))))
 
 (defn add-notification-listener
@@ -315,7 +315,7 @@
   handback - The context to be sent to the listener when a notification is emitted. - `java.lang.Object`
 
   throws: javax.management.InstanceNotFoundException - The MBean name provided does not match any of the registered MBeans."
-  ([^. this ^javax.management.ObjectName name ^javax.management.NotificationListener listener ^javax.management.NotificationFilter filter ^java.lang.Object handback]
+  ([^javax.management.MBeanServerConnection this ^javax.management.ObjectName name ^javax.management.NotificationListener listener ^javax.management.NotificationFilter filter ^java.lang.Object handback]
     (-> this (.addNotificationListener name listener filter handback))))
 
 (defn get-attributes
@@ -351,7 +351,7 @@
   returns: The list of the retrieved attributes. - `javax.management.AttributeList`
 
   throws: javax.management.InstanceNotFoundException - The MBean specified is not registered in the MBean server."
-  ([^. this ^javax.management.ObjectName name ^java.lang.String[] attributes]
+  ([^javax.management.MBeanServerConnection this ^javax.management.ObjectName name ^java.lang.String[] attributes]
     (-> this (.getAttributes name attributes))))
 
 (defn instance-of?
@@ -384,6 +384,6 @@
    specified class according to the rules above, false otherwise. - `boolean`
 
   throws: javax.management.InstanceNotFoundException - The MBean specified is not registered in the MBean server."
-  ([^. this ^javax.management.ObjectName name ^java.lang.String class-name]
+  ([^javax.management.MBeanServerConnection this ^javax.management.ObjectName name ^java.lang.String class-name]
     (-> this (.isInstanceOf name class-name))))
 

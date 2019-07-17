@@ -13,9 +13,9 @@
   returns: the Class object representing the loaded class - `java.lang..lang.Class<?>`
 
   throws: java.net.MalformedURLException - if the codebase paramater contains an invalid URL"
-  ([^. this ^java.net.URL codebase ^java.lang.String name]
+  ([^java.rmi.server.LoaderHandler this ^java.net.URL codebase ^java.lang.String name]
     (-> this (.loadClass codebase name)))
-  ([^. this ^java.lang.String name]
+  ([^java.rmi.server.LoaderHandler this ^java.lang.String name]
     (-> this (.loadClass name))))
 
 (defn get-security-context
@@ -24,6 +24,6 @@
   loader - a class loader from which to get the security context - `java.lang.ClassLoader`
 
   returns: the security context - `java.lang..lang.Object`"
-  ([^. this ^java.lang.ClassLoader loader]
+  ([^java.rmi.server.LoaderHandler this ^java.lang.ClassLoader loader]
     (-> this (.getSecurityContext loader))))
 

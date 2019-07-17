@@ -117,7 +117,7 @@
   returns: a JavaFileObject to write the new source file - `javax.tools.JavaFileObject`
 
   throws: javax.annotation.processing.FilerException - if the same pathname has already been created, the same type has already been created, or the name is not valid for a type"
-  ([^. this ^java.lang.CharSequence name ^javax.lang.model.element.Element originating-elements]
+  ([^javax.annotation.processing.Filer this ^java.lang.CharSequence name ^javax.lang.model.element.Element originating-elements]
     (-> this (.createSourceFile name originating-elements))))
 
 (defn create-class-file
@@ -141,7 +141,7 @@
   returns: a JavaFileObject to write the new class file - `javax.tools.JavaFileObject`
 
   throws: javax.annotation.processing.FilerException - if the same pathname has already been created, the same type has already been created, or the name is not valid for a type"
-  ([^. this ^java.lang.CharSequence name ^javax.lang.model.element.Element originating-elements]
+  ([^javax.annotation.processing.Filer this ^java.lang.CharSequence name ^javax.lang.model.element.Element originating-elements]
     (-> this (.createClassFile name originating-elements))))
 
 (defn create-resource
@@ -168,7 +168,7 @@
   returns: a FileObject to write the new resource - `javax.tools.FileObject`
 
   throws: java.io.IOException - if the file cannot be created"
-  ([^. this ^javax.tools.JavaFileManager.Location location ^java.lang.CharSequence pkg ^java.lang.CharSequence relative-name ^javax.lang.model.element.Element originating-elements]
+  ([^javax.annotation.processing.Filer this ^javax.tools.JavaFileManager.Location location ^java.lang.CharSequence pkg ^java.lang.CharSequence relative-name ^javax.lang.model.element.Element originating-elements]
     (-> this (.createResource location pkg relative-name originating-elements))))
 
 (defn get-resource
@@ -184,6 +184,6 @@
   returns: an object to read the file - `javax.tools.FileObject`
 
   throws: javax.annotation.processing.FilerException - if the same pathname has already been opened for writing"
-  ([^. this ^javax.tools.JavaFileManager.Location location ^java.lang.CharSequence pkg ^java.lang.CharSequence relative-name]
+  ([^javax.annotation.processing.Filer this ^javax.tools.JavaFileManager.Location location ^java.lang.CharSequence pkg ^java.lang.CharSequence relative-name]
     (-> this (.getResource location pkg relative-name))))
 

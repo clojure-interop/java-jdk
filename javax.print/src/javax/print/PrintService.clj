@@ -55,7 +55,7 @@
             for this attribute. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if category is null."
-  ([^. this ^javax.print.attribute.Attribute> category]
+  ([^javax.print.PrintService this ^javax.print.attribute.Attribute> category]
     (-> this (.getDefaultAttributeValue category))))
 
 (defn doc-flavor-supported?
@@ -74,7 +74,7 @@
    specified DocFlavor; false otherwise. - `boolean`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if flavor is null."
-  ([^. this ^javax.print.DocFlavor flavor]
+  ([^javax.print.PrintService this ^javax.print.DocFlavor flavor]
     (-> this (.isDocFlavorSupported flavor))))
 
 (defn attribute-value-supported?
@@ -112,7 +112,7 @@
             Print Request, false if it doesn't. - `boolean`
 
   throws: java.lang.NullPointerException - (unchecked exception) if attrval is null."
-  ([^. this ^javax.print.attribute.Attribute attrval ^javax.print.DocFlavor flavor ^javax.print.attribute.AttributeSet attributes]
+  ([^javax.print.PrintService this ^javax.print.attribute.Attribute attrval ^javax.print.DocFlavor flavor ^javax.print.attribute.AttributeSet attributes]
     (-> this (.isAttributeValueSupported attrval flavor attributes))))
 
 (defn get-unsupported-attributes
@@ -152,7 +152,7 @@
    specification, else the unsupported attributes. - `javax.print.attribute.AttributeSet`
 
   throws: java.lang.IllegalArgumentException - ifflavor is not supported by this PrintService."
-  ([^. this ^javax.print.DocFlavor flavor ^javax.print.attribute.AttributeSet attributes]
+  ([^javax.print.PrintService this ^javax.print.DocFlavor flavor ^javax.print.attribute.AttributeSet attributes]
     (-> this (.getUnsupportedAttributes flavor attributes))))
 
 (defn get-supported-attribute-categories
@@ -176,7 +176,7 @@
             specify as a doc-level or job-level attribute in a Print
             Request. Each element in the array is a Class that implements interface Attribute.
             The array is empty if no categories are supported. - `java.lang.Class<?>[]`"
-  ([^. this]
+  ([^javax.print.PrintService this]
     (-> this (.getSupportedAttributeCategories))))
 
 (defn get-attribute
@@ -190,7 +190,7 @@
    attribute is not supported by this service. - `<T extends javax.print.attribute.PrintServiceAttribute> T`
 
   throws: java.lang.NullPointerException - if the category is null."
-  ([^. this ^java.lang.Class category]
+  ([^javax.print.PrintService this ^java.lang.Class category]
     (-> this (.getAttribute category))))
 
 (defn get-name
@@ -204,7 +204,7 @@
    attribute.
 
   returns: name of the service. - `java.lang.String`"
-  ([^. this]
+  ([^javax.print.PrintService this]
     (-> this (.getName))))
 
 (defn get-supported-attribute-values
@@ -265,7 +265,7 @@
             a Print Request. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if category is null."
-  ([^. this ^javax.print.attribute.Attribute> category ^javax.print.DocFlavor flavor ^javax.print.attribute.AttributeSet attributes]
+  ([^javax.print.PrintService this ^javax.print.attribute.Attribute> category ^javax.print.DocFlavor flavor ^javax.print.attribute.AttributeSet attributes]
     (-> this (.getSupportedAttributeValues category flavor attributes))))
 
 (defn get-service-ui-factory
@@ -279,7 +279,7 @@
    See ServiceUIFactory for more information.
 
   returns: null or a factory for UI components. - `javax.print.ServiceUIFactory`"
-  ([^. this]
+  ([^javax.print.PrintService this]
     (-> this (.getServiceUIFactory))))
 
 (defn attribute-category-supported?
@@ -308,7 +308,7 @@
             Request; false if it doesn't. - `boolean`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if category is null."
-  ([^. this ^javax.print.attribute.Attribute> category]
+  ([^javax.print.PrintService this ^javax.print.attribute.Attribute> category]
     (-> this (.isAttributeCategorySupported category))))
 
 (defn remove-print-service-attribute-listener
@@ -317,7 +317,7 @@
    PrintService events.
 
   listener - a PrintServiceAttributeListener object - `javax.print.event.PrintServiceAttributeListener`"
-  ([^. this ^javax.print.event.PrintServiceAttributeListener listener]
+  ([^javax.print.PrintService this ^javax.print.event.PrintServiceAttributeListener listener]
     (-> this (.removePrintServiceAttributeListener listener))))
 
 (defn get-supported-doc-flavors
@@ -333,7 +333,7 @@
 
   returns: Array of supported doc flavors, should have at least
             one element. - `javax.print.DocFlavor[]`"
-  ([^. this]
+  ([^javax.print.PrintService this]
     (-> this (.getSupportedDocFlavors))))
 
 (defn hash-code
@@ -341,14 +341,14 @@
    equals(Object).
 
   returns: hash code of this object. - `int`"
-  ([^. this]
+  ([^javax.print.PrintService this]
     (-> this (.hashCode))))
 
 (defn add-print-service-attribute-listener
   "Registers a listener for events on this PrintService.
 
   listener - a PrintServiceAttributeListener, which monitors the status of a print service - `javax.print.event.PrintServiceAttributeListener`"
-  ([^. this ^javax.print.event.PrintServiceAttributeListener listener]
+  ([^javax.print.PrintService this ^javax.print.event.PrintServiceAttributeListener listener]
     (-> this (.addPrintServiceAttributeListener listener))))
 
 (defn equals
@@ -370,7 +370,7 @@
 
   returns: true if this service is the same as the obj argument,
    false otherwise. - `boolean`"
-  ([^. this ^java.lang.Object obj]
+  ([^javax.print.PrintService this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn get-attributes
@@ -387,7 +387,7 @@
 
   returns: Unmodifiable snapshot of this Print Service's attribute set.
             May be empty, but not null. - `javax.print.attribute.PrintServiceAttributeSet`"
-  ([^. this]
+  ([^javax.print.PrintService this]
     (-> this (.getAttributes))))
 
 (defn create-print-job
@@ -395,6 +395,6 @@
    any of the supported document flavors.
 
   returns: a DocPrintJob object - `javax.print.DocPrintJob`"
-  ([^. this]
+  ([^javax.print.PrintService this]
     (-> this (.createPrintJob))))
 

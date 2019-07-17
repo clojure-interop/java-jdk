@@ -21,7 +21,7 @@
   event - `java.awt.event.MouseEvent`
   path - `javax.swing.MenuElement[]`
   manager - `javax.swing.MenuSelectionManager`"
-  ([^. this ^java.awt.event.MouseEvent event ^javax.swing.MenuElement[] path ^javax.swing.MenuSelectionManager manager]
+  ([^javax.swing.MenuElement this ^java.awt.event.MouseEvent event ^javax.swing.MenuElement[] path ^javax.swing.MenuSelectionManager manager]
     (-> this (.processMouseEvent event path manager))))
 
 (defn process-key-event
@@ -30,7 +30,7 @@
   event - `java.awt.event.KeyEvent`
   path - `javax.swing.MenuElement[]`
   manager - `javax.swing.MenuSelectionManager`"
-  ([^. this ^java.awt.event.KeyEvent event ^javax.swing.MenuElement[] path ^javax.swing.MenuSelectionManager manager]
+  ([^javax.swing.MenuElement this ^java.awt.event.KeyEvent event ^javax.swing.MenuElement[] path ^javax.swing.MenuSelectionManager manager]
     (-> this (.processKeyEvent event path manager))))
 
 (defn menu-selection-changed
@@ -39,14 +39,14 @@
    the menu selection.
 
   is-included - `boolean`"
-  ([^. this ^Boolean is-included]
+  ([^javax.swing.MenuElement this ^Boolean is-included]
     (-> this (.menuSelectionChanged is-included))))
 
 (defn get-sub-elements
   "This method should return an array containing the sub-elements for the receiving menu element
 
   returns: an array of MenuElements - `javax.swing.MenuElement[]`"
-  ([^. this]
+  ([^javax.swing.MenuElement this]
     (-> this (.getSubElements))))
 
 (defn get-component
@@ -55,6 +55,6 @@
    a MenuElement's component.
 
   returns: the Component value - `java.awt.Component`"
-  ([^. this]
+  ([^javax.swing.MenuElement this]
     (-> this (.getComponent))))
 

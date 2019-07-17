@@ -104,7 +104,7 @@
    to do that.
 
   throws: java.lang.SecurityException - if a security manager exists and shutting down this ExecutorService may manipulate threads that the caller is not permitted to modify because it does not hold RuntimePermission(`modifyThread`), or the security manager's checkAccess method denies access."
-  ([^. this]
+  ([^java.util.concurrent.ExecutorService this]
     (-> this (.shutdown))))
 
 (defn shutdown-now
@@ -124,14 +124,14 @@
   returns: list of tasks that never commenced execution - `java.util.List<java.lang.Runnable>`
 
   throws: java.lang.SecurityException - if a security manager exists and shutting down this ExecutorService may manipulate threads that the caller is not permitted to modify because it does not hold RuntimePermission(`modifyThread`), or the security manager's checkAccess method denies access."
-  ([^. this]
+  ([^java.util.concurrent.ExecutorService this]
     (-> this (.shutdownNow))))
 
 (defn shutdown?
   "Returns true if this executor has been shut down.
 
   returns: true if this executor has been shut down - `boolean`"
-  ([^. this]
+  ([^java.util.concurrent.ExecutorService this]
     (-> this (.isShutdown))))
 
 (defn terminated?
@@ -140,7 +140,7 @@
    either shutdown or shutdownNow was called first.
 
   returns: true if all tasks have completed following shut down - `boolean`"
-  ([^. this]
+  ([^java.util.concurrent.ExecutorService this]
     (-> this (.isTerminated))))
 
 (defn await-termination
@@ -155,7 +155,7 @@
            false if the timeout elapsed before termination - `boolean`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([^. this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  ([^java.util.concurrent.ExecutorService this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.awaitTermination timeout unit))))
 
 (defn submit
@@ -169,9 +169,9 @@
   returns: a Future representing pending completion of the task - `<T> java.util.concurrent.Future<T>`
 
   throws: java.util.concurrent.RejectedExecutionException - if the task cannot be scheduled for execution"
-  ([^. this ^java.lang.Runnable task result]
+  ([^java.util.concurrent.ExecutorService this ^java.lang.Runnable task result]
     (-> this (.submit task result)))
-  ([^. this ^java.util.concurrent.Callable task]
+  ([^java.util.concurrent.ExecutorService this ^java.util.concurrent.Callable task]
     (-> this (.submit task))))
 
 (defn invoke-all
@@ -197,9 +197,9 @@
            of these tasks will not have completed. - `<T> java.util.List<java.util.concurrent.Future<T>>`
 
   throws: java.lang.InterruptedException - if interrupted while waiting, in which case unfinished tasks are cancelled"
-  ([^. this ^java.util.concurrent.Callable> tasks ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  ([^java.util.concurrent.ExecutorService this ^java.util.concurrent.Callable> tasks ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.invokeAll tasks timeout unit)))
-  ([^. this ^java.util.concurrent.Callable> tasks]
+  ([^java.util.concurrent.ExecutorService this ^java.util.concurrent.Callable> tasks]
     (-> this (.invokeAll tasks))))
 
 (defn invoke-any
@@ -218,8 +218,8 @@
   returns: the result returned by one of the tasks - `<T> T`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([^. this ^java.util.concurrent.Callable> tasks ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  ([^java.util.concurrent.ExecutorService this ^java.util.concurrent.Callable> tasks ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.invokeAny tasks timeout unit)))
-  ([^. this ^java.util.concurrent.Callable> tasks]
+  ([^java.util.concurrent.ExecutorService this ^java.util.concurrent.Callable> tasks]
     (-> this (.invokeAny tasks))))
 

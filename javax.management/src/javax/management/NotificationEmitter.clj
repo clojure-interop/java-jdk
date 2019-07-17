@@ -55,6 +55,6 @@
   handback - The handback that was specified when the listener was added. - `java.lang.Object`
 
   throws: javax.management.ListenerNotFoundException - The listener is not registered with the MBean, or it is not registered with the given filter and handback."
-  ([^. this ^javax.management.NotificationListener listener ^javax.management.NotificationFilter filter ^java.lang.Object handback]
+  ([^javax.management.NotificationEmitter this ^javax.management.NotificationListener listener ^javax.management.NotificationFilter filter ^java.lang.Object handback]
     (-> this (.removeNotificationListener listener filter handback))))
 

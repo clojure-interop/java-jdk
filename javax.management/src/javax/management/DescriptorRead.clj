@@ -9,6 +9,6 @@
 
   returns: Descriptor associated with the component implementing this interface.
    The return value is never null, but the returned descriptor may be empty. - `javax.management.Descriptor`"
-  ([^. this]
+  ([^javax.management.DescriptorRead this]
     (-> this (.getDescriptor))))
 

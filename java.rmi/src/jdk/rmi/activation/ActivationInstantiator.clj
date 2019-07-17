@@ -34,6 +34,6 @@
    representation of remote object's stub - `java.rmi.MarshalledObject<? extends java.rmi.Remote>`
 
   throws: java.rmi.activation.ActivationException - if object activation fails"
-  ([^. this ^java.rmi.activation.ActivationID id ^java.rmi.activation.ActivationDesc desc]
+  ([^java.rmi.activation.ActivationInstantiator this ^java.rmi.activation.ActivationID id ^java.rmi.activation.ActivationDesc desc]
     (-> this (.newInstance id desc))))
 

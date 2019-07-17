@@ -13,7 +13,7 @@
 
 (defn dispose
   "Releases the resources allocated for the operation."
-  ([^. this]
+  ([^java.awt.PaintContext this]
     (-> this (.dispose))))
 
 (defn get-color-model
@@ -26,7 +26,7 @@
    ColorModel.
 
   returns: the ColorModel of the output. - `java.awt.image.ColorModel`"
-  ([^. this]
+  ([^java.awt.PaintContext this]
     (-> this (.getColorModel))))
 
 (defn get-raster
@@ -41,6 +41,6 @@
   returns: a Raster representing the specified
    rectangular area and containing the colors generated for
    the graphics operation. - `java.awt.image.Raster`"
-  ([^. this ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^java.awt.PaintContext this ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.getRaster x y w h))))
 

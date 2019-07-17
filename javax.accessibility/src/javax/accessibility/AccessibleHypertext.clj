@@ -16,7 +16,7 @@
   "Returns the number of links within this hypertext document.
 
   returns: number of links in this hypertext doc. - `int`"
-  ([^. this]
+  ([^javax.accessibility.AccessibleHypertext this]
     (-> this (.getLinkCount))))
 
 (defn get-link
@@ -25,7 +25,7 @@
   link-index - within the links of this Hypertext - `int`
 
   returns: Link object encapsulating the nth link(s) - `javax.accessibility.AccessibleHyperlink`"
-  ([^. this ^Integer link-index]
+  ([^javax.accessibility.AccessibleHypertext this ^Integer link-index]
     (-> this (.getLink link-index))))
 
 (defn get-link-index
@@ -36,6 +36,6 @@
   char-index - index within the text - `int`
 
   returns: index into the set of hyperlinks for this hypertext doc. - `int`"
-  ([^. this ^Integer char-index]
+  ([^javax.accessibility.AccessibleHypertext this ^Integer char-index]
     (-> this (.getLinkIndex char-index))))
 

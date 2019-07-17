@@ -16,7 +16,7 @@
    If no children are selected, the return value will be 0.
 
   returns: the number of items currently selected. - `int`"
-  ([^. this]
+  ([^javax.accessibility.AccessibleSelection this]
     (-> this (.getAccessibleSelectionCount))))
 
 (defn get-accessible-selection
@@ -30,7 +30,7 @@
   i - the zero-based index of selected children - `int`
 
   returns: the i-th selected child - `javax.accessibility.Accessible`"
-  ([^. this ^Integer i]
+  ([^javax.accessibility.AccessibleSelection this ^Integer i]
     (-> this (.getAccessibleSelection i))))
 
 (defn accessible-child-selected?
@@ -39,7 +39,7 @@
   i - the zero-based index of the child in this Accessible object. - `int`
 
   returns: true if the current child of this object is selected; else false. - `boolean`"
-  ([^. this ^Integer i]
+  ([^javax.accessibility.AccessibleSelection this ^Integer i]
     (-> this (.isAccessibleChildSelected i))))
 
 (defn add-accessible-selection
@@ -50,7 +50,7 @@
    specified child is already selected, this method has no effect.
 
   i - the zero-based index of the child - `int`"
-  ([^. this ^Integer i]
+  ([^javax.accessibility.AccessibleSelection this ^Integer i]
     (-> this (.addAccessibleSelection i))))
 
 (defn remove-accessible-selection
@@ -59,18 +59,18 @@
    method has no effect.
 
   i - the zero-based index of the child - `int`"
-  ([^. this ^Integer i]
+  ([^javax.accessibility.AccessibleSelection this ^Integer i]
     (-> this (.removeAccessibleSelection i))))
 
 (defn clear-accessible-selection
   "Clears the selection in the object, so that no children in the
    object are selected."
-  ([^. this]
+  ([^javax.accessibility.AccessibleSelection this]
     (-> this (.clearAccessibleSelection))))
 
 (defn select-all-accessible-selection
   "Causes every child of the object to be selected
    if the object supports multiple selections."
-  ([^. this]
+  ([^javax.accessibility.AccessibleSelection this]
     (-> this (.selectAllAccessibleSelection))))
 

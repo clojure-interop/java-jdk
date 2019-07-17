@@ -53,7 +53,7 @@
   returns: an unmodifiable list of one or more XMLStructures
       in this KeyInfo. Never returns null or an
       empty list. - `java.util.List`"
-  ([^. this]
+  ([^javax.xml.crypto.dsig.keyinfo.KeyInfo this]
     (-> this (.getContent))))
 
 (defn get-id
@@ -63,7 +63,7 @@
 
   returns: the Id attribute of this KeyInfo (may be
       null if not specified) - `java.lang.String`"
-  ([^. this]
+  ([^javax.xml.crypto.dsig.keyinfo.KeyInfo this]
     (-> this (.getId))))
 
 (defn marshal
@@ -73,6 +73,6 @@
   context - the XMLCryptoContext containing additional context (may be null if not applicable) - `javax.xml.crypto.XMLCryptoContext`
 
   throws: java.lang.ClassCastException - if the type of parent or context is not compatible with this key info"
-  ([^. this ^javax.xml.crypto.XMLStructure parent ^javax.xml.crypto.XMLCryptoContext context]
+  ([^javax.xml.crypto.dsig.keyinfo.KeyInfo this ^javax.xml.crypto.XMLStructure parent ^javax.xml.crypto.XMLCryptoContext context]
     (-> this (.marshal parent context))))
 

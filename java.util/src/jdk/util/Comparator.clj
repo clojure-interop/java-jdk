@@ -101,7 +101,7 @@
            second. - `int`
 
   throws: java.lang.NullPointerException - if an argument is null and this comparator does not permit null arguments"
-  ([^. this ^Comparator.T o-1 ^Comparator.T o-2]
+  ([^java.util.Comparator this ^Comparator.T o-1 ^Comparator.T o-2]
     (-> this (.compare o-1 o-2))))
 
 (defn reversed
@@ -110,7 +110,7 @@
 
   returns: a comparator that imposes the reverse ordering of this
            comparator. - `default java.util.Comparator<Comparator.T>`"
-  ([^. this]
+  ([^java.util.Comparator this]
     (-> this (.reversed))))
 
 (defn *nulls-first
@@ -129,7 +129,7 @@
            non-null, and compares non-null objects with the supplied
            Comparator. - `<T> java.util.Comparator<T>`"
   ([comparator]
-    (null/nullsFirst comparator)))
+    (Comparator/nullsFirst comparator)))
 
 (defn then-comparing-long
   "Returns a lexicographic-order comparator with a function that
@@ -141,7 +141,7 @@
            long sort key - `default java.util.Comparator<Comparator.T>`
 
   throws: java.lang.NullPointerException - if the argument is null."
-  ([^. this ^Comparator.T> key-extractor]
+  ([^java.util.Comparator this ^Comparator.T> key-extractor]
     (-> this (.thenComparingLong key-extractor))))
 
 (defn then-comparing-int
@@ -154,7 +154,7 @@
            int sort key - `default java.util.Comparator<Comparator.T>`
 
   throws: java.lang.NullPointerException - if the argument is null."
-  ([^. this ^Comparator.T> key-extractor]
+  ([^java.util.Comparator this ^Comparator.T> key-extractor]
     (-> this (.thenComparingInt key-extractor))))
 
 (defn *comparing-double
@@ -171,7 +171,7 @@
 
   throws: java.lang.NullPointerException - if the argument is null"
   ([key-extractor]
-    (null/comparingDouble key-extractor)))
+    (Comparator/comparingDouble key-extractor)))
 
 (defn then-comparing
   "Returns a lexicographic-order comparator with a function that
@@ -184,9 +184,9 @@
            and then comparing on the key extracted by the keyExtractor function - `default <U> java.util.Comparator<Comparator.T>`
 
   throws: java.lang.NullPointerException - if either argument is null."
-  ([^. this key-extractor key-comparator]
+  ([^java.util.Comparator this key-extractor key-comparator]
     (-> this (.thenComparing key-extractor key-comparator)))
-  ([^. this ^Comparator.T> other]
+  ([^java.util.Comparator this ^Comparator.T> other]
     (-> this (.thenComparing other))))
 
 (defn *natural-order
@@ -197,7 +197,7 @@
 
   returns: a comparator that imposes the natural ordering on Comparable objects. - `<T extends java.lang.Comparable<? super T>> java.util.Comparator<T>`"
   ([]
-    (null/naturalOrder )))
+    (Comparator/naturalOrder )))
 
 (defn then-comparing-double
   "Returns a lexicographic-order comparator with a function that
@@ -209,7 +209,7 @@
            double sort key - `default java.util.Comparator<Comparator.T>`
 
   throws: java.lang.NullPointerException - if the argument is null."
-  ([^. this ^Comparator.T> key-extractor]
+  ([^java.util.Comparator this ^Comparator.T> key-extractor]
     (-> this (.thenComparingDouble key-extractor))))
 
 (defn *reverse-order
@@ -221,7 +221,7 @@
   returns: a comparator that imposes the reverse of the natural
            ordering on Comparable objects. - `<T extends java.lang.Comparable<? super T>> java.util.Comparator<T>`"
   ([]
-    (null/reverseOrder )))
+    (Comparator/reverseOrder )))
 
 (defn *comparing-long
   "Accepts a function that extracts a long sort key from a type
@@ -237,7 +237,7 @@
 
   throws: java.lang.NullPointerException - if the argument is null"
   ([key-extractor]
-    (null/comparingLong key-extractor)))
+    (Comparator/comparingLong key-extractor)))
 
 (defn *comparing
   "Accepts a function that extracts a sort key from a type T, and
@@ -255,9 +255,9 @@
 
   throws: java.lang.NullPointerException - if either argument is null"
   ([key-extractor key-comparator]
-    (null/comparing key-extractor key-comparator))
+    (Comparator/comparing key-extractor key-comparator))
   ([key-extractor]
-    (null/comparing key-extractor)))
+    (Comparator/comparing key-extractor)))
 
 (defn *comparing-int
   "Accepts a function that extracts an int sort key from a type
@@ -273,7 +273,7 @@
 
   throws: java.lang.NullPointerException - if the argument is null"
   ([key-extractor]
-    (null/comparingInt key-extractor)))
+    (Comparator/comparingInt key-extractor)))
 
 (defn equals
   "Indicates whether some other object is `equal to` this
@@ -295,7 +295,7 @@
   returns: true only if the specified object is also
             a comparator and it imposes the same ordering as this
             comparator. - `boolean`"
-  ([^. this ^java.lang.Object obj]
+  ([^java.util.Comparator this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn *nulls-last
@@ -314,5 +314,5 @@
            non-null, and compares non-null objects with the supplied
            Comparator. - `<T> java.util.Comparator<T>`"
   ([comparator]
-    (null/nullsLast comparator)))
+    (Comparator/nullsLast comparator)))
 

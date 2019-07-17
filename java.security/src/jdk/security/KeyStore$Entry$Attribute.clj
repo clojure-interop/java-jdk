@@ -8,7 +8,7 @@
   "Returns the attribute's name.
 
   returns: the attribute name - `java.lang.String`"
-  ([^. this]
+  ([^java.security.KeyStore$Entry$Attribute this]
     (-> this (.getName))))
 
 (defn get-value
@@ -16,6 +16,6 @@
    Multi-valued attributes encode their values as a single string.
 
   returns: the attribute value - `java.lang.String`"
-  ([^. this]
+  ([^java.security.KeyStore$Entry$Attribute this]
     (-> this (.getValue))))
 

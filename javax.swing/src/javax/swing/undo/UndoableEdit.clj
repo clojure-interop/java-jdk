@@ -48,14 +48,14 @@
 
    Note that this is a one-way operation. There is no `un-die`
    method."
-  ([^. this]
+  ([^javax.swing.undo.UndoableEdit this]
     (-> this (.die))))
 
 (defn redo
   "Re-applies the edit.
 
   throws: javax.swing.undo.CannotRedoException - if this edit can not be redone"
-  ([^. this]
+  ([^javax.swing.undo.UndoableEdit this]
     (-> this (.redo))))
 
 (defn significant?
@@ -65,7 +65,7 @@
    or redo, all insignificant edits to the next significant edit.
 
   returns: true if this edit is significant - `boolean`"
-  ([^. this]
+  ([^javax.swing.undo.UndoableEdit this]
     (-> this (.isSignificant))))
 
 (defn add-edit
@@ -96,7 +96,7 @@
 
   returns: true if anEdit may be incorporated into this
                 edit - `boolean`"
-  ([^. this ^javax.swing.undo.UndoableEdit an-edit]
+  ([^javax.swing.undo.UndoableEdit this ^javax.swing.undo.UndoableEdit an-edit]
     (-> this (.addEdit an-edit))))
 
 (defn get-undo-presentation-name
@@ -105,21 +105,21 @@
    This is typically derived from getPresentationName.
 
   returns: a description of the undoable form of this edit - `java.lang.String`"
-  ([^. this]
+  ([^javax.swing.undo.UndoableEdit this]
     (-> this (.getUndoPresentationName))))
 
 (defn undo
   "Undo the edit.
 
   throws: javax.swing.undo.CannotUndoException - if this edit can not be undone"
-  ([^. this]
+  ([^javax.swing.undo.UndoableEdit this]
     (-> this (.undo))))
 
 (defn can-redo?
   "Returns true if this edit may be redone.
 
   returns: true if this edit may be redone - `boolean`"
-  ([^. this]
+  ([^javax.swing.undo.UndoableEdit this]
     (-> this (.canRedo))))
 
 (defn get-presentation-name
@@ -127,7 +127,7 @@
    for use in a change log, for example.
 
   returns: description of this edit - `java.lang.String`"
-  ([^. this]
+  ([^javax.swing.undo.UndoableEdit this]
     (-> this (.getPresentationName))))
 
 (defn replace-edit
@@ -150,7 +150,7 @@
   an-edit - the edit that replaces the current edit - `javax.swing.undo.UndoableEdit`
 
   returns: true if this edit should replace anEdit - `boolean`"
-  ([^. this ^javax.swing.undo.UndoableEdit an-edit]
+  ([^javax.swing.undo.UndoableEdit this ^javax.swing.undo.UndoableEdit an-edit]
     (-> this (.replaceEdit an-edit))))
 
 (defn get-redo-presentation-name
@@ -159,13 +159,13 @@
    typically derived from getPresentationName.
 
   returns: a description of the redoable form of this edit - `java.lang.String`"
-  ([^. this]
+  ([^javax.swing.undo.UndoableEdit this]
     (-> this (.getRedoPresentationName))))
 
 (defn can-undo?
   "Returns true if this edit may be undone.
 
   returns: true if this edit may be undone - `boolean`"
-  ([^. this]
+  ([^javax.swing.undo.UndoableEdit this]
     (-> this (.canUndo))))
 

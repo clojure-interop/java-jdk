@@ -15,6 +15,6 @@
   u - the second function argument - `ToDoubleBiFunction.U`
 
   returns: the function result - `double`"
-  ([^. this ^ToDoubleBiFunction.T t ^ToDoubleBiFunction.U u]
+  ([^java.util.function.ToDoubleBiFunction this ^ToDoubleBiFunction.T t ^ToDoubleBiFunction.U u]
     (-> this (.applyAsDouble t u))))
 

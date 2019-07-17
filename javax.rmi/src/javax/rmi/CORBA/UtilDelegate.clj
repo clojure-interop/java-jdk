@@ -19,7 +19,7 @@
   returns: `boolean`
 
   throws: java.rmi.RemoteException"
-  ([^. this ^javax.rmi.CORBA.Stub stub]
+  ([^javax.rmi.CORBA.UtilDelegate this ^javax.rmi.CORBA.Stub stub]
     (-> this (.isLocal stub))))
 
 (defn register-target
@@ -27,7 +27,7 @@
 
   tie - `javax.rmi.CORBA.Tie`
   target - `java.rmi.Remote`"
-  ([^. this ^javax.rmi.CORBA.Tie tie ^java.rmi.Remote target]
+  ([^javax.rmi.CORBA.UtilDelegate this ^javax.rmi.CORBA.Tie tie ^java.rmi.Remote target]
     (-> this (.registerTarget tie target))))
 
 (defn copy-objects
@@ -39,7 +39,7 @@
   returns: `java.lang.Object[]`
 
   throws: java.rmi.RemoteException"
-  ([^. this ^java.lang.Object[] obj ^org.omg.CORBA.ORB orb]
+  ([^javax.rmi.CORBA.UtilDelegate this ^java.lang.Object[] obj ^org.omg.CORBA.ORB orb]
     (-> this (.copyObjects obj orb))))
 
 (defn copy-object
@@ -51,7 +51,7 @@
   returns: `java.lang.Object`
 
   throws: java.rmi.RemoteException"
-  ([^. this ^java.lang.Object obj ^org.omg.CORBA.ORB orb]
+  ([^javax.rmi.CORBA.UtilDelegate this ^java.lang.Object obj ^org.omg.CORBA.ORB orb]
     (-> this (.copyObject obj orb))))
 
 (defn write-any
@@ -59,7 +59,7 @@
 
   out - `org.omg.CORBA.portable.OutputStream`
   obj - `java.lang.Object`"
-  ([^. this ^org.omg.CORBA.portable.OutputStream out ^java.lang.Object obj]
+  ([^javax.rmi.CORBA.UtilDelegate this ^org.omg.CORBA.portable.OutputStream out ^java.lang.Object obj]
     (-> this (.writeAny out obj))))
 
 (defn write-abstract-object
@@ -67,7 +67,7 @@
 
   out - `org.omg.CORBA.portable.OutputStream`
   obj - `java.lang.Object`"
-  ([^. this ^org.omg.CORBA.portable.OutputStream out ^java.lang.Object obj]
+  ([^javax.rmi.CORBA.UtilDelegate this ^org.omg.CORBA.portable.OutputStream out ^java.lang.Object obj]
     (-> this (.writeAbstractObject out obj))))
 
 (defn unexport-object
@@ -76,7 +76,7 @@
   target - `java.rmi.Remote`
 
   throws: java.rmi.NoSuchObjectException"
-  ([^. this ^java.rmi.Remote target]
+  ([^javax.rmi.CORBA.UtilDelegate this ^java.rmi.Remote target]
     (-> this (.unexportObject target))))
 
 (defn read-any
@@ -85,7 +85,7 @@
   in - `org.omg.CORBA.portable.InputStream`
 
   returns: `java.lang.Object`"
-  ([^. this ^org.omg.CORBA.portable.InputStream in]
+  ([^javax.rmi.CORBA.UtilDelegate this ^org.omg.CORBA.portable.InputStream in]
     (-> this (.readAny in))))
 
 (defn load-class
@@ -98,14 +98,14 @@
   returns: `java.lang.Class`
 
   throws: java.lang.ClassNotFoundException"
-  ([^. this ^java.lang.String class-name ^java.lang.String remote-codebase ^java.lang.ClassLoader loader]
+  ([^javax.rmi.CORBA.UtilDelegate this ^java.lang.String class-name ^java.lang.String remote-codebase ^java.lang.ClassLoader loader]
     (-> this (.loadClass class-name remote-codebase loader))))
 
 (defn create-value-handler
   "Delegation call for Util.createValueHandler().
 
   returns: `javax.rmi.CORBA.ValueHandler`"
-  ([^. this]
+  ([^javax.rmi.CORBA.UtilDelegate this]
     (-> this (.createValueHandler))))
 
 (defn wrap-exception
@@ -114,7 +114,7 @@
   obj - `java.lang.Throwable`
 
   returns: `java.rmi.RemoteException`"
-  ([^. this ^java.lang.Throwable obj]
+  ([^javax.rmi.CORBA.UtilDelegate this ^java.lang.Throwable obj]
     (-> this (.wrapException obj))))
 
 (defn get-tie
@@ -123,7 +123,7 @@
   target - `java.rmi.Remote`
 
   returns: `javax.rmi.CORBA.Tie`"
-  ([^. this ^java.rmi.Remote target]
+  ([^javax.rmi.CORBA.UtilDelegate this ^java.rmi.Remote target]
     (-> this (.getTie target))))
 
 (defn write-remote-object
@@ -131,7 +131,7 @@
 
   out - `org.omg.CORBA.portable.OutputStream`
   obj - `java.lang.Object`"
-  ([^. this ^org.omg.CORBA.portable.OutputStream out ^java.lang.Object obj]
+  ([^javax.rmi.CORBA.UtilDelegate this ^org.omg.CORBA.portable.OutputStream out ^java.lang.Object obj]
     (-> this (.writeRemoteObject out obj))))
 
 (defn get-codebase
@@ -140,7 +140,7 @@
   clz - `java.lang.Class`
 
   returns: `java.lang.String`"
-  ([^. this ^java.lang.Class clz]
+  ([^javax.rmi.CORBA.UtilDelegate this ^java.lang.Class clz]
     (-> this (.getCodebase clz))))
 
 (defn map-system-exception
@@ -149,6 +149,6 @@
   ex - `org.omg.CORBA.SystemException`
 
   returns: `java.rmi.RemoteException`"
-  ([^. this ^org.omg.CORBA.SystemException ex]
+  ([^javax.rmi.CORBA.UtilDelegate this ^org.omg.CORBA.SystemException ex]
     (-> this (.mapSystemException ex))))
 

@@ -14,6 +14,6 @@
   value - the function argument - `int`
 
   returns: the function result - `double`"
-  ([^. this ^Integer value]
+  ([^java.util.function.IntToDoubleFunction this ^Integer value]
     (-> this (.applyAsDouble value))))
 

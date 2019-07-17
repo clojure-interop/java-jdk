@@ -12,7 +12,7 @@
   t - the function argument - `Function.T`
 
   returns: the function result - `Function.R`"
-  ([^. this ^Function.T t]
+  ([^java.util.function.Function this ^Function.T t]
     (-> this (.apply t))))
 
 (defn compose
@@ -27,7 +27,7 @@
    function and then applies this function - `default <V> java.util.function.Function<V,Function.R>`
 
   throws: java.lang.NullPointerException - if before is null"
-  ([^. this ^Function.T> before]
+  ([^java.util.function.Function this ^Function.T> before]
     (-> this (.compose before))))
 
 (defn and-then
@@ -42,7 +42,7 @@
    applies the after function - `default <V> java.util.function.Function<Function.T,V>`
 
   throws: java.lang.NullPointerException - if after is null"
-  ([^. this after]
+  ([^java.util.function.Function this after]
     (-> this (.andThen after))))
 
 (defn *identity
@@ -50,5 +50,5 @@
 
   returns: a function that always returns its input argument - `<T> java.util.function.Function<T,T>`"
   ([]
-    (null/identity )))
+    (Function/identity )))
 

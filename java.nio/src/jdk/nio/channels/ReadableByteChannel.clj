@@ -47,6 +47,6 @@
             channel has reached end-of-stream - `int`
 
   throws: java.nio.channels.NonReadableChannelException - If this channel was not opened for reading"
-  ([^. this ^java.nio.ByteBuffer dst]
+  ([^java.nio.channels.ReadableByteChannel this ^java.nio.ByteBuffer dst]
     (-> this (.read dst))))
 

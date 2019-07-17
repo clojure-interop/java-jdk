@@ -23,7 +23,7 @@
    the returned value. - `javax.management.ObjectName`
 
   throws: java.lang.Exception - This exception will be caught by the MBean Server and re-thrown as an MBeanRegistrationException."
-  ([^. this ^javax.management.MBeanServer server ^javax.management.ObjectName name]
+  ([^javax.management.MBeanRegistration this ^javax.management.MBeanServer server ^javax.management.ObjectName name]
     (-> this (.preRegister server name))))
 
 (defn post-register
@@ -44,7 +44,7 @@
    can be avoided.
 
   registration-done - Indicates whether or not the MBean has been successfully registered in the MBean server. The value false means that the registration phase has failed. - `java.lang.Boolean`"
-  ([^. this ^java.lang.Boolean registration-done]
+  ([^javax.management.MBeanRegistration this ^java.lang.Boolean registration-done]
     (-> this (.postRegister registration-done))))
 
 (defn pre-deregister
@@ -52,7 +52,7 @@
    being unregistered by the MBean server.
 
   throws: java.lang.Exception - This exception will be caught by the MBean server and re-thrown as an MBeanRegistrationException."
-  ([^. this]
+  ([^javax.management.MBeanRegistration this]
     (-> this (.preDeregister))))
 
 (defn post-deregister
@@ -69,6 +69,6 @@
    has failed. Therefore it is recommended that implementations of
    postDeregister do not throw Runtime Exceptions or Errors if it
    can be avoided."
-  ([^. this]
+  ([^javax.management.MBeanRegistration this]
     (-> this (.postDeregister))))
 

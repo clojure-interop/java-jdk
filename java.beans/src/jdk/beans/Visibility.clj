@@ -15,17 +15,17 @@
 
   returns: True if the bean absolutely needs a GUI available in
             order to get its work done. - `boolean`"
-  ([^. this]
+  ([^java.beans.Visibility this]
     (-> this (.needsGui))))
 
 (defn dont-use-gui
   "This method instructs the bean that it should not use the Gui."
-  ([^. this]
+  ([^java.beans.Visibility this]
     (-> this (.dontUseGui))))
 
 (defn ok-to-use-gui
   "This method instructs the bean that it is OK to use the Gui."
-  ([^. this]
+  ([^java.beans.Visibility this]
     (-> this (.okToUseGui))))
 
 (defn avoiding-gui
@@ -33,6 +33,6 @@
 
   returns: true if the bean is currently avoiding use of the Gui.
      e.g. due to a call on dontUseGui(). - `boolean`"
-  ([^. this]
+  ([^java.beans.Visibility this]
     (-> this (.avoidingGui))))
 

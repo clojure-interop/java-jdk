@@ -115,7 +115,7 @@
   column-idx - an int identifying the index of the column to be set as the match column - `int`
 
   throws: java.sql.SQLException - if an invalid column index is set"
-  ([^. this ^Integer column-idx]
+  ([^javax.sql.rowset.Joinable this ^Integer column-idx]
     (-> this (.setMatchColumn column-idx))))
 
 (defn get-match-column-indexes
@@ -127,7 +127,7 @@
            that were set as the match columns for this RowSet object - `int[]`
 
   throws: java.sql.SQLException - if no match column has been set"
-  ([^. this]
+  ([^javax.sql.rowset.Joinable this]
     (-> this (.getMatchColumnIndexes))))
 
 (defn get-match-column-names
@@ -139,7 +139,7 @@
            set as the match columns for this RowSet object - `java.lang.String[]`
 
   throws: java.sql.SQLException - if no match column has been set"
-  ([^. this]
+  ([^javax.sql.rowset.Joinable this]
     (-> this (.getMatchColumnNames))))
 
 (defn unset-match-column
@@ -154,6 +154,6 @@
   column-idx - an int that identifies the index of the column that is to be unset as a match column - `int`
 
   throws: java.sql.SQLException - if an invalid column index is designated or if the designated column was not previously set as a match column"
-  ([^. this ^Integer column-idx]
+  ([^javax.sql.rowset.Joinable this ^Integer column-idx]
     (-> this (.unsetMatchColumn column-idx))))
 

@@ -37,6 +37,6 @@
   returns: always return a non-null valid object which was unmarshalled. - `java.lang.Object`
 
   throws: java.lang.IllegalStateException - if this method is called before this handler receives the endDocument event."
-  ([^. this]
+  ([^javax.xml.bind.UnmarshallerHandler this]
     (-> this (.getResult))))
 

@@ -107,7 +107,7 @@
            false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a rowset implementation is unable to to determine whether rows marked for deletion remain visible"
-  ([^. this]
+  ([^javax.sql.rowset.JdbcRowSet this]
     (-> this (.getShowDeleted))))
 
 (defn set-show-deleted
@@ -127,7 +127,7 @@
   b - true if deleted rows should be shown; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a rowset implementation is unable to to reset whether deleted rows should be visible"
-  ([^. this ^Boolean b]
+  ([^javax.sql.rowset.JdbcRowSet this ^Boolean b]
     (-> this (.setShowDeleted b))))
 
 (defn get-row-set-warnings
@@ -161,7 +161,7 @@
    or null if there are none - `javax.sql.rowset.RowSetWarning`
 
   throws: java.sql.SQLException - if this method is called on a closed JdbcRowSet object"
-  ([^. this]
+  ([^javax.sql.rowset.JdbcRowSet this]
     (-> this (.getRowSetWarnings))))
 
 (defn commit
@@ -176,7 +176,7 @@
    been disabled.
 
   throws: java.sql.SQLException - if a database access error occurs or this Connection object within this JdbcRowSet is in auto-commit mode"
-  ([^. this]
+  ([^javax.sql.rowset.JdbcRowSet this]
     (-> this (.commit))))
 
 (defn get-auto-commit?
@@ -196,7 +196,7 @@
   returns: true if auto-commit is enabled; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this]
+  ([^javax.sql.rowset.JdbcRowSet this]
     (-> this (.getAutoCommit))))
 
 (defn set-auto-commit
@@ -210,7 +210,7 @@
   auto-commit - true to enable auto-commit; false to disable auto-commit - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^Boolean auto-commit]
+  ([^javax.sql.rowset.JdbcRowSet this ^Boolean auto-commit]
     (-> this (.setAutoCommit auto-commit))))
 
 (defn rollback
@@ -223,8 +223,8 @@
   s - The Savepoint to rollback to - `java.sql.Savepoint`
 
   throws: java.sql.SQLException - if a database access error occurs or this Connection object within this JdbcRowSet is in auto-commit mode."
-  ([^. this ^java.sql.Savepoint s]
+  ([^javax.sql.rowset.JdbcRowSet this ^java.sql.Savepoint s]
     (-> this (.rollback s)))
-  ([^. this]
+  ([^javax.sql.rowset.JdbcRowSet this]
     (-> this (.rollback))))
 

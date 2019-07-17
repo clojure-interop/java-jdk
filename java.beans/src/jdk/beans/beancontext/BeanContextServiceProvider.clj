@@ -30,7 +30,7 @@
   service-selector - the service dependent parameter for a particular service, or null if not applicable. - `java.lang.Object`
 
   returns: a reference to the requested service - `java.lang.Object`"
-  ([^. this ^java.beans.beancontext.BeanContextServices bcs ^java.lang.Object requestor ^java.lang.Class service-class ^java.lang.Object service-selector]
+  ([^java.beans.beancontext.BeanContextServiceProvider this ^java.beans.beancontext.BeanContextServices bcs ^java.lang.Object requestor ^java.lang.Class service-class ^java.lang.Object service-selector]
     (-> this (.getService bcs requestor service-class service-selector))))
 
 (defn release-service
@@ -42,7 +42,7 @@
   bcs - the BeanContextServices associated with this particular release request - `java.beans.beancontext.BeanContextServices`
   requestor - the object requesting the service to be released - `java.lang.Object`
   service - the service that is to be released - `java.lang.Object`"
-  ([^. this ^java.beans.beancontext.BeanContextServices bcs ^java.lang.Object requestor ^java.lang.Object service]
+  ([^java.beans.beancontext.BeanContextServiceProvider this ^java.beans.beancontext.BeanContextServices bcs ^java.lang.Object requestor ^java.lang.Object service]
     (-> this (.releaseService bcs requestor service))))
 
 (defn get-current-service-selectors
@@ -58,6 +58,6 @@
   service-class - the specified service - `java.lang.Class`
 
   returns: the current service selectors for the specified serviceClass - `java.util.Iterator`"
-  ([^. this ^java.beans.beancontext.BeanContextServices bcs ^java.lang.Class service-class]
+  ([^java.beans.beancontext.BeanContextServiceProvider this ^java.beans.beancontext.BeanContextServices bcs ^java.lang.Class service-class]
     (-> this (.getCurrentServiceSelectors bcs service-class))))
 

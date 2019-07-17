@@ -15,14 +15,14 @@
   returns: a Position - `javax.swing.text.Position`
 
   throws: javax.swing.text.BadLocationException - for an invalid offset"
-  ([^. this ^Integer offset]
+  ([^javax.swing.text.AbstractDocument$Content this ^Integer offset]
     (-> this (.createPosition offset))))
 
 (defn length
   "Current length of the sequence of character content.
 
   returns: the length >= 0 - `int`"
-  ([^. this]
+  ([^javax.swing.text.AbstractDocument$Content this]
     (-> this (.length))))
 
 (defn insert-string
@@ -36,7 +36,7 @@
       otherwise returns null - `javax.swing.undo.UndoableEdit`
 
   throws: javax.swing.text.BadLocationException - thrown if the area covered by the arguments is not contained in the character sequence"
-  ([^. this ^Integer where ^java.lang.String str]
+  ([^javax.swing.text.AbstractDocument$Content this ^Integer where ^java.lang.String str]
     (-> this (.insertString where str))))
 
 (defn remove
@@ -50,7 +50,7 @@
       otherwise null. - `javax.swing.undo.UndoableEdit`
 
   throws: javax.swing.text.BadLocationException - Thrown if the area covered by the arguments is not contained in the character sequence."
-  ([^. this ^Integer where ^Integer nitems]
+  ([^javax.swing.text.AbstractDocument$Content this ^Integer where ^Integer nitems]
     (-> this (.remove where nitems))))
 
 (defn get-string
@@ -62,7 +62,7 @@
   returns: the string - `java.lang.String`
 
   throws: javax.swing.text.BadLocationException - Thrown if the area covered by the arguments is not contained in the character sequence."
-  ([^. this ^Integer where ^Integer len]
+  ([^javax.swing.text.AbstractDocument$Content this ^Integer where ^Integer len]
     (-> this (.getString where len))))
 
 (defn get-chars
@@ -73,6 +73,6 @@
   txt - the target location to copy into - `javax.swing.text.Segment`
 
   throws: javax.swing.text.BadLocationException - Thrown if the area covered by the arguments is not contained in the character sequence."
-  ([^. this ^Integer where ^Integer len ^javax.swing.text.Segment txt]
+  ([^javax.swing.text.AbstractDocument$Content this ^Integer where ^Integer len ^javax.swing.text.Segment txt]
     (-> this (.getChars where len txt))))
 

@@ -7,6 +7,6 @@
   "Returns the modulus.
 
   returns: the modulus - `java.math.BigInteger`"
-  ([^. this]
+  ([^java.security.interfaces.RSAKey this]
     (-> this (.getModulus))))
 

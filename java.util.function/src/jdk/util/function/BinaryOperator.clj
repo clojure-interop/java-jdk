@@ -20,7 +20,7 @@
 
   throws: java.lang.NullPointerException - if the argument is null"
   ([comparator]
-    (null/minBy comparator)))
+    (BinaryOperator/minBy comparator)))
 
 (defn *max-by
   "Returns a BinaryOperator which returns the greater of two elements
@@ -33,5 +33,5 @@
 
   throws: java.lang.NullPointerException - if the argument is null"
   ([comparator]
-    (null/maxBy comparator)))
+    (BinaryOperator/maxBy comparator)))
 

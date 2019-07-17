@@ -13,7 +13,7 @@
   "Returns the number of key bindings for this object
 
   returns: the zero-based number of key bindings for this object - `int`"
-  ([^. this]
+  ([^javax.accessibility.AccessibleKeyBinding this]
     (-> this (.getAccessibleKeyBindingCount))))
 
 (defn get-accessible-key-binding
@@ -24,6 +24,6 @@
   i - zero-based index of the key bindings - `int`
 
   returns: a javax.lang.Object which specifies the key binding - `java.lang.Object`"
-  ([^. this ^Integer i]
+  ([^javax.accessibility.AccessibleKeyBinding this ^Integer i]
     (-> this (.getAccessibleKeyBinding i))))
 

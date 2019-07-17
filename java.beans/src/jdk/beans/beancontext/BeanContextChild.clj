@@ -37,7 +37,7 @@
   bc - The BeanContext with which to associate this BeanContextChild. - `java.beans.beancontext.BeanContext`
 
   throws: java.beans.PropertyVetoException - if the addition of the specified BeanContext is refused."
-  ([^. this ^java.beans.beancontext.BeanContext bc]
+  ([^java.beans.beancontext.BeanContextChild this ^java.beans.beancontext.BeanContext bc]
     (-> this (.setBeanContext bc))))
 
 (defn get-bean-context
@@ -46,7 +46,7 @@
 
   returns: the BeanContext associated
    with this BeanContextChild. - `java.beans.beancontext.BeanContext`"
-  ([^. this]
+  ([^java.beans.beancontext.BeanContextChild this]
     (-> this (.getBeanContext))))
 
 (defn add-property-change-listener
@@ -57,7 +57,7 @@
 
   name - the name of the property to listen on - `java.lang.String`
   pcl - the PropertyChangeListener to add - `java.beans.PropertyChangeListener`"
-  ([^. this ^java.lang.String name ^java.beans.PropertyChangeListener pcl]
+  ([^java.beans.beancontext.BeanContextChild this ^java.lang.String name ^java.beans.PropertyChangeListener pcl]
     (-> this (.addPropertyChangeListener name pcl))))
 
 (defn remove-property-change-listener
@@ -68,7 +68,7 @@
 
   name - the name of the property that was listened on - `java.lang.String`
   pcl - the PropertyChangeListener to remove - `java.beans.PropertyChangeListener`"
-  ([^. this ^java.lang.String name ^java.beans.PropertyChangeListener pcl]
+  ([^java.beans.beancontext.BeanContextChild this ^java.lang.String name ^java.beans.PropertyChangeListener pcl]
     (-> this (.removePropertyChangeListener name pcl))))
 
 (defn add-vetoable-change-listener
@@ -78,7 +78,7 @@
 
   name - the name of the property to listen on - `java.lang.String`
   vcl - the VetoableChangeListener to add - `java.beans.VetoableChangeListener`"
-  ([^. this ^java.lang.String name ^java.beans.VetoableChangeListener vcl]
+  ([^java.beans.beancontext.BeanContextChild this ^java.lang.String name ^java.beans.VetoableChangeListener vcl]
     (-> this (.addVetoableChangeListener name vcl))))
 
 (defn remove-vetoable-change-listener
@@ -88,6 +88,6 @@
 
   name - the name of the property that was listened on. - `java.lang.String`
   vcl - the VetoableChangeListener to remove. - `java.beans.VetoableChangeListener`"
-  ([^. this ^java.lang.String name ^java.beans.VetoableChangeListener vcl]
+  ([^java.beans.beancontext.BeanContextChild this ^java.lang.String name ^java.beans.VetoableChangeListener vcl]
     (-> this (.removeVetoableChangeListener name vcl))))
 

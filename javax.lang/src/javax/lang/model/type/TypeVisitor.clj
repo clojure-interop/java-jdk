@@ -43,9 +43,9 @@
   p - a visitor-specified parameter - `TypeVisitor.P`
 
   returns: a visitor-specified result - `TypeVisitor.R`"
-  ([^. this ^javax.lang.model.type.TypeMirror t ^TypeVisitor.P p]
+  ([^javax.lang.model.type.TypeVisitor this ^javax.lang.model.type.TypeMirror t ^TypeVisitor.P p]
     (-> this (.visit t p)))
-  ([^. this ^javax.lang.model.type.TypeMirror t]
+  ([^javax.lang.model.type.TypeVisitor this ^javax.lang.model.type.TypeMirror t]
     (-> this (.visit t))))
 
 (defn visit-intersection
@@ -55,7 +55,7 @@
   p - a visitor-specified parameter - `TypeVisitor.P`
 
   returns: a visitor-specified result - `TypeVisitor.R`"
-  ([^. this ^javax.lang.model.type.IntersectionType t ^TypeVisitor.P p]
+  ([^javax.lang.model.type.TypeVisitor this ^javax.lang.model.type.IntersectionType t ^TypeVisitor.P p]
     (-> this (.visitIntersection t p))))
 
 (defn visit-declared
@@ -65,7 +65,7 @@
   p - a visitor-specified parameter - `TypeVisitor.P`
 
   returns: a visitor-specified result - `TypeVisitor.R`"
-  ([^. this ^javax.lang.model.type.DeclaredType t ^TypeVisitor.P p]
+  ([^javax.lang.model.type.TypeVisitor this ^javax.lang.model.type.DeclaredType t ^TypeVisitor.P p]
     (-> this (.visitDeclared t p))))
 
 (defn visit-array
@@ -75,7 +75,7 @@
   p - a visitor-specified parameter - `TypeVisitor.P`
 
   returns: a visitor-specified result - `TypeVisitor.R`"
-  ([^. this ^javax.lang.model.type.ArrayType t ^TypeVisitor.P p]
+  ([^javax.lang.model.type.TypeVisitor this ^javax.lang.model.type.ArrayType t ^TypeVisitor.P p]
     (-> this (.visitArray t p))))
 
 (defn visit-type-variable
@@ -85,7 +85,7 @@
   p - a visitor-specified parameter - `TypeVisitor.P`
 
   returns: a visitor-specified result - `TypeVisitor.R`"
-  ([^. this ^javax.lang.model.type.TypeVariable t ^TypeVisitor.P p]
+  ([^javax.lang.model.type.TypeVisitor this ^javax.lang.model.type.TypeVariable t ^TypeVisitor.P p]
     (-> this (.visitTypeVariable t p))))
 
 (defn visit-null
@@ -95,7 +95,7 @@
   p - a visitor-specified parameter - `TypeVisitor.P`
 
   returns: a visitor-specified result - `TypeVisitor.R`"
-  ([^. this ^javax.lang.model.type.NullType t ^TypeVisitor.P p]
+  ([^javax.lang.model.type.TypeVisitor this ^javax.lang.model.type.NullType t ^TypeVisitor.P p]
     (-> this (.visitNull t p))))
 
 (defn visit-no-type
@@ -105,7 +105,7 @@
   p - a visitor-specified parameter - `TypeVisitor.P`
 
   returns: a visitor-specified result - `TypeVisitor.R`"
-  ([^. this ^javax.lang.model.type.NoType t ^TypeVisitor.P p]
+  ([^javax.lang.model.type.TypeVisitor this ^javax.lang.model.type.NoType t ^TypeVisitor.P p]
     (-> this (.visitNoType t p))))
 
 (defn visit-wildcard
@@ -115,7 +115,7 @@
   p - a visitor-specified parameter - `TypeVisitor.P`
 
   returns: a visitor-specified result - `TypeVisitor.R`"
-  ([^. this ^javax.lang.model.type.WildcardType t ^TypeVisitor.P p]
+  ([^javax.lang.model.type.TypeVisitor this ^javax.lang.model.type.WildcardType t ^TypeVisitor.P p]
     (-> this (.visitWildcard t p))))
 
 (defn visit-primitive
@@ -125,7 +125,7 @@
   p - a visitor-specified parameter - `TypeVisitor.P`
 
   returns: a visitor-specified result - `TypeVisitor.R`"
-  ([^. this ^javax.lang.model.type.PrimitiveType t ^TypeVisitor.P p]
+  ([^javax.lang.model.type.TypeVisitor this ^javax.lang.model.type.PrimitiveType t ^TypeVisitor.P p]
     (-> this (.visitPrimitive t p))))
 
 (defn visit-union
@@ -135,7 +135,7 @@
   p - a visitor-specified parameter - `TypeVisitor.P`
 
   returns: a visitor-specified result - `TypeVisitor.R`"
-  ([^. this ^javax.lang.model.type.UnionType t ^TypeVisitor.P p]
+  ([^javax.lang.model.type.TypeVisitor this ^javax.lang.model.type.UnionType t ^TypeVisitor.P p]
     (-> this (.visitUnion t p))))
 
 (defn visit-executable
@@ -145,7 +145,7 @@
   p - a visitor-specified parameter - `TypeVisitor.P`
 
   returns: a visitor-specified result - `TypeVisitor.R`"
-  ([^. this ^javax.lang.model.type.ExecutableType t ^TypeVisitor.P p]
+  ([^javax.lang.model.type.TypeVisitor this ^javax.lang.model.type.ExecutableType t ^TypeVisitor.P p]
     (-> this (.visitExecutable t p))))
 
 (defn visit-error
@@ -155,7 +155,7 @@
   p - a visitor-specified parameter - `TypeVisitor.P`
 
   returns: a visitor-specified result - `TypeVisitor.R`"
-  ([^. this ^javax.lang.model.type.ErrorType t ^TypeVisitor.P p]
+  ([^javax.lang.model.type.TypeVisitor this ^javax.lang.model.type.ErrorType t ^TypeVisitor.P p]
     (-> this (.visitError t p))))
 
 (defn visit-unknown
@@ -169,6 +169,6 @@
   returns: a visitor-specified result - `TypeVisitor.R`
 
   throws: javax.lang.model.type.UnknownTypeException - a visitor implementation may optionally throw this exception"
-  ([^. this ^javax.lang.model.type.TypeMirror t ^TypeVisitor.P p]
+  ([^javax.lang.model.type.TypeVisitor this ^javax.lang.model.type.TypeMirror t ^TypeVisitor.P p]
     (-> this (.visitUnknown t p))))
 

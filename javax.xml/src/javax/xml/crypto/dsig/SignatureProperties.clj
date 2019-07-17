@@ -30,7 +30,7 @@
 
   returns: the Id of this SignatureProperties (or
       null if not specified) - `java.lang.String`"
-  ([^. this]
+  ([^javax.xml.crypto.dsig.SignatureProperties this]
     (-> this (.getId))))
 
 (defn get-properties
@@ -40,6 +40,6 @@
 
   returns: an unmodifiable list of one or more
       SignaturePropertys - `java.util.List`"
-  ([^. this]
+  ([^javax.xml.crypto.dsig.SignatureProperties this]
     (-> this (.getProperties))))
 

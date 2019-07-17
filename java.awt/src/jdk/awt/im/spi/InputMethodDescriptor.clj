@@ -30,7 +30,7 @@
   returns: the locales supported by the input method - `java.util.Locale[]`
 
   throws: java.awt.AWTException - if it can be determined that the input method is inoperable, for example, because of incomplete installation."
-  ([^. this]
+  ([^java.awt.im.spi.InputMethodDescriptor this]
     (-> this (.getAvailableLocales))))
 
 (defn has-dynamic-locale-list?
@@ -39,7 +39,7 @@
    that access real input methods over the network.
 
   returns: `boolean`"
-  ([^. this]
+  ([^java.awt.im.spi.InputMethodDescriptor this]
     (-> this (.hasDynamicLocaleList))))
 
 (defn get-input-method-display-name
@@ -61,7 +61,7 @@
   display-language - the language in which the name will be displayed - `java.util.Locale`
 
   returns: `java.lang.String`"
-  ([^. this ^java.util.Locale input-locale ^java.util.Locale display-language]
+  ([^java.awt.im.spi.InputMethodDescriptor this ^java.util.Locale input-locale ^java.util.Locale display-language]
     (-> this (.getInputMethodDisplayName input-locale display-language))))
 
 (defn get-input-method-icon
@@ -80,7 +80,7 @@
   input-locale - the locale for which text input is supported, or null - `java.util.Locale`
 
   returns: an icon for the corresponding input method, or null - `java.awt.Image`"
-  ([^. this ^java.util.Locale input-locale]
+  ([^java.awt.im.spi.InputMethodDescriptor this ^java.util.Locale input-locale]
     (-> this (.getInputMethodIcon input-locale))))
 
 (defn create-input-method
@@ -89,6 +89,6 @@
   returns: a new instance of the corresponding input method - `java.awt.im.spi.InputMethod`
 
   throws: java.lang.Exception - any exception that may occur while creating the input method instance"
-  ([^. this]
+  ([^java.awt.im.spi.InputMethodDescriptor this]
     (-> this (.createInputMethod))))
 

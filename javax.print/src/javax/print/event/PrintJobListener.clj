@@ -18,14 +18,14 @@
    event (completed/canceled/failed) before freeing the resources.
 
   pje - the job generating this event - `javax.print.event.PrintJobEvent`"
-  ([^. this ^javax.print.event.PrintJobEvent pje]
+  ([^javax.print.event.PrintJobListener this ^javax.print.event.PrintJobEvent pje]
     (-> this (.printDataTransferCompleted pje))))
 
 (defn print-job-completed
   "Called to notify the client that the job completed successfully.
 
   pje - the job generating this event - `javax.print.event.PrintJobEvent`"
-  ([^. this ^javax.print.event.PrintJobEvent pje]
+  ([^javax.print.event.PrintJobListener this ^javax.print.event.PrintJobEvent pje]
     (-> this (.printJobCompleted pje))))
 
 (defn print-job-failed
@@ -33,7 +33,7 @@
    successfully and will have to be resubmitted.
 
   pje - the job generating this event - `javax.print.event.PrintJobEvent`"
-  ([^. this ^javax.print.event.PrintJobEvent pje]
+  ([^javax.print.event.PrintJobListener this ^javax.print.event.PrintJobEvent pje]
     (-> this (.printJobFailed pje))))
 
 (defn print-job-canceled
@@ -41,7 +41,7 @@
    by a user or a program.
 
   pje - the job generating this event - `javax.print.event.PrintJobEvent`"
-  ([^. this ^javax.print.event.PrintJobEvent pje]
+  ([^javax.print.event.PrintJobListener this ^javax.print.event.PrintJobEvent pje]
     (-> this (.printJobCanceled pje))))
 
 (defn print-job-no-more-events
@@ -53,7 +53,7 @@
    terminal events (completed/failed/canceled) are delivered.
 
   pje - the job generating this event - `javax.print.event.PrintJobEvent`"
-  ([^. this ^javax.print.event.PrintJobEvent pje]
+  ([^javax.print.event.PrintJobListener this ^javax.print.event.PrintJobEvent pje]
     (-> this (.printJobNoMoreEvents pje))))
 
 (defn print-job-requires-attention
@@ -62,6 +62,6 @@
    generate this event is when the printer runs out of paper.
 
   pje - the job generating this event - `javax.print.event.PrintJobEvent`"
-  ([^. this ^javax.print.event.PrintJobEvent pje]
+  ([^javax.print.event.PrintJobListener this ^javax.print.event.PrintJobEvent pje]
     (-> this (.printJobRequiresAttention pje))))
 

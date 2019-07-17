@@ -7,7 +7,7 @@
   "This method is called before the popup menu becomes visible
 
   e - `javax.swing.event.PopupMenuEvent`"
-  ([^. this ^javax.swing.event.PopupMenuEvent e]
+  ([^javax.swing.event.PopupMenuListener this ^javax.swing.event.PopupMenuEvent e]
     (-> this (.popupMenuWillBecomeVisible e))))
 
 (defn popup-menu-will-become-invisible
@@ -15,13 +15,13 @@
    Note that a JPopupMenu can become invisible any time
 
   e - `javax.swing.event.PopupMenuEvent`"
-  ([^. this ^javax.swing.event.PopupMenuEvent e]
+  ([^javax.swing.event.PopupMenuListener this ^javax.swing.event.PopupMenuEvent e]
     (-> this (.popupMenuWillBecomeInvisible e))))
 
 (defn popup-menu-canceled
   "This method is called when the popup menu is canceled
 
   e - `javax.swing.event.PopupMenuEvent`"
-  ([^. this ^javax.swing.event.PopupMenuEvent e]
+  ([^javax.swing.event.PopupMenuListener this ^javax.swing.event.PopupMenuEvent e]
     (-> this (.popupMenuCanceled e))))
 

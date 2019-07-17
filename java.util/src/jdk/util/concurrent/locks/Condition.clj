@@ -151,9 +151,9 @@
            before return from the method, else true - `boolean`
 
   throws: java.lang.InterruptedException - if the current thread is interrupted (and interruption of thread suspension is supported)"
-  ([^. this ^Long time ^java.util.concurrent.TimeUnit unit]
+  ([^java.util.concurrent.locks.Condition this ^Long time ^java.util.concurrent.TimeUnit unit]
     (-> this (.await time unit)))
-  ([^. this]
+  ([^java.util.concurrent.locks.Condition this]
     (-> this (.await))))
 
 (defn await-uninterruptibly
@@ -189,7 +189,7 @@
    the case and if not, how to respond. Typically, an exception will be
    thrown (such as IllegalMonitorStateException) and the
    implementation must document that fact."
-  ([^. this]
+  ([^java.util.concurrent.locks.Condition this]
     (-> this (.awaitUninterruptibly))))
 
 (defn await-nanos
@@ -282,7 +282,7 @@
            indicates that no time remains. - `long`
 
   throws: java.lang.InterruptedException - if the current thread is interrupted (and interruption of thread suspension is supported)"
-  ([^. this ^Long nanos-timeout]
+  ([^java.util.concurrent.locks.Condition this ^Long nanos-timeout]
     (-> this (.awaitNanos nanos-timeout))))
 
 (defn await-until
@@ -361,7 +361,7 @@
            true - `boolean`
 
   throws: java.lang.InterruptedException - if the current thread is interrupted (and interruption of thread suspension is supported)"
-  ([^. this ^java.util.Date deadline]
+  ([^java.util.concurrent.locks.Condition this ^java.util.Date deadline]
     (-> this (.awaitUntil deadline))))
 
 (defn signal
@@ -377,7 +377,7 @@
    current thread hold the lock associated with this Condition when this method is called. Implementations must
    document this precondition and any actions taken if the lock is
    not held. Typically, an exception such as IllegalMonitorStateException will be thrown."
-  ([^. this]
+  ([^java.util.concurrent.locks.Condition this]
     (-> this (.signal))))
 
 (defn signal-all
@@ -393,6 +393,6 @@
    current thread hold the lock associated with this Condition when this method is called. Implementations must
    document this precondition and any actions taken if the lock is
    not held. Typically, an exception such as IllegalMonitorStateException will be thrown."
-  ([^. this]
+  ([^java.util.concurrent.locks.Condition this]
     (-> this (.signalAll))))
 

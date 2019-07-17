@@ -51,7 +51,7 @@
             X509Certificate format.) - `javax.security.cert.X509Certificate[]`
 
   throws: javax.net.ssl.SSLPeerUnverifiedException - if the peer's identity has not been verified"
-  ([^. this]
+  ([^javax.net.ssl.SSLSession this]
     (-> this (.getPeerCertificateChain))))
 
 (defn get-cipher-suite
@@ -63,7 +63,7 @@
    of encryption used and most aspects of how authentication is done.
 
   returns: the name of the session's cipher suite - `java.lang.String`"
-  ([^. this]
+  ([^javax.net.ssl.SSLSession this]
     (-> this (.getCipherSuite))))
 
 (defn get-local-principal
@@ -73,7 +73,7 @@
    of the end-entity certificate for X509-based cipher suites, and
    KerberosPrincipal for Kerberos cipher suites. If no principal was
    sent, then null is returned. - `java.security.Principal`"
-  ([^. this]
+  ([^javax.net.ssl.SSLSession this]
     (-> this (.getLocalPrincipal))))
 
 (defn put-value
@@ -93,7 +93,7 @@
   value - the data object to be bound. This may not be null. - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if either argument is null."
-  ([^. this ^java.lang.String name ^java.lang.Object value]
+  ([^javax.net.ssl.SSLSession this ^java.lang.String name ^java.lang.Object value]
     (-> this (.putValue name value))))
 
 (defn remove-value
@@ -109,7 +109,7 @@
   name - the name of the object to remove visible across different access control contexts - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if the argument is null."
-  ([^. this ^java.lang.String name]
+  ([^javax.net.ssl.SSLSession this ^java.lang.String name]
     (-> this (.removeValue name))))
 
 (defn get-value
@@ -125,7 +125,7 @@
             not exist. - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if the argument is null."
-  ([^. this ^java.lang.String name]
+  ([^javax.net.ssl.SSLSession this ^java.lang.String name]
     (-> this (.getValue name))))
 
 (defn get-packet-buffer-size
@@ -139,7 +139,7 @@
    performing wrap and unwrap calls.
 
   returns: the current maximum expected network packet size - `int`"
-  ([^. this]
+  ([^javax.net.ssl.SSLSession this]
     (-> this (.getPacketBufferSize))))
 
 (defn invalidate
@@ -149,14 +149,14 @@
    resume or join this session.  However, any existing connection
    using this session can continue to use the session until the
    connection is closed."
-  ([^. this]
+  ([^javax.net.ssl.SSLSession this]
     (-> this (.invalidate))))
 
 (defn get-id
   "Returns the identifier assigned to this Session.
 
   returns: the Session identifier - `byte[]`"
-  ([^. this]
+  ([^javax.net.ssl.SSLSession this]
     (-> this (.getId))))
 
 (defn get-peer-certificates
@@ -172,7 +172,7 @@
             certificate authorities. - `java.security.cert.Certificate[]`
 
   throws: javax.net.ssl.SSLPeerUnverifiedException - if the peer's identity has not been verified"
-  ([^. this]
+  ([^javax.net.ssl.SSLSession this]
     (-> this (.getPeerCertificates))))
 
 (defn get-peer-host
@@ -192,7 +192,7 @@
 
   returns: the host name of the peer host, or null if no information
             is available. - `java.lang.String`"
-  ([^. this]
+  ([^javax.net.ssl.SSLSession this]
     (-> this (.getPeerHost))))
 
 (defn valid?
@@ -200,7 +200,7 @@
    joining.
 
   returns: true if this session may be rejoined. - `boolean`"
-  ([^. this]
+  ([^javax.net.ssl.SSLSession this]
     (-> this (.isValid))))
 
 (defn get-session-context
@@ -220,7 +220,7 @@
    if the context is unavailable. - `javax.net.ssl.SSLSessionContext`
 
   throws: java.lang.SecurityException - if the calling thread does not have permission to get SSL session context."
-  ([^. this]
+  ([^javax.net.ssl.SSLSession this]
     (-> this (.getSessionContext))))
 
 (defn get-local-certificates
@@ -240,7 +240,7 @@
    with the local certificate first followed by any
    certificate authorities.  If no certificates were sent,
    then null is returned. - `java.security.cert.Certificate[]`"
-  ([^. this]
+  ([^javax.net.ssl.SSLSession this]
     (-> this (.getLocalCertificates))))
 
 (defn get-protocol
@@ -251,7 +251,7 @@
 
   returns: the standard name of the protocol used for all
    connections in the session. - `java.lang.String`"
-  ([^. this]
+  ([^javax.net.ssl.SSLSession this]
     (-> this (.getProtocol))))
 
 (defn get-value-names
@@ -263,7 +263,7 @@
 
   returns: a non-null (possibly empty) array of names of the objects
     bound to this Session. - `java.lang.String[]`"
-  ([^. this]
+  ([^javax.net.ssl.SSLSession this]
     (-> this (.getValueNames))))
 
 (defn get-application-buffer-size
@@ -276,7 +276,7 @@
    application data buffers can be of any size.
 
   returns: the current maximum expected application packet size - `int`"
-  ([^. this]
+  ([^javax.net.ssl.SSLSession this]
     (-> this (.getApplicationBufferSize))))
 
 (defn get-peer-principal
@@ -288,7 +288,7 @@
    KerberosPrincipal for Kerberos cipher suites. - `java.security.Principal`
 
   throws: javax.net.ssl.SSLPeerUnverifiedException - if the peer's identity has not been verified"
-  ([^. this]
+  ([^javax.net.ssl.SSLSession this]
     (-> this (.getPeerPrincipal))))
 
 (defn get-peer-port
@@ -303,7 +303,7 @@
 
   returns: the port number of the peer host, or -1 if no information
             is available. - `int`"
-  ([^. this]
+  ([^javax.net.ssl.SSLSession this]
     (-> this (.getPeerPort))))
 
 (defn get-last-accessed-time
@@ -321,7 +321,7 @@
    or, the sessions might be sorted according to age to optimize some task.
 
   returns: the last time this Session was accessed - `long`"
-  ([^. this]
+  ([^javax.net.ssl.SSLSession this]
     (-> this (.getLastAccessedTime))))
 
 (defn get-creation-time
@@ -329,6 +329,6 @@
    in milliseconds since midnight, January 1, 1970 UTC.
 
   returns: the time this Session was created - `long`"
-  ([^. this]
+  ([^javax.net.ssl.SSLSession this]
     (-> this (.getCreationTime))))
 

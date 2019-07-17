@@ -76,7 +76,7 @@
   returns: the comparator used to order the elements in this set,
            or null if this set uses the natural ordering
            of its elements - `java.util.Comparator<? super SortedSet.E>`"
-  ([^. this]
+  ([^java.util.SortedSet this]
     (-> this (.comparator))))
 
 (defn sub-set
@@ -98,7 +98,7 @@
            fromElement, inclusive, to toElement, exclusive - `java.util.SortedSet<SortedSet.E>`
 
   throws: java.lang.ClassCastException - if fromElement and toElement cannot be compared to one another using this set's comparator (or, if the set has no comparator, using natural ordering). Implementations may, but are not required to, throw this exception if fromElement or toElement cannot be compared to elements currently in the set."
-  ([^. this ^SortedSet.E from-element ^SortedSet.E to-element]
+  ([^java.util.SortedSet this ^SortedSet.E from-element ^SortedSet.E to-element]
     (-> this (.subSet from-element to-element))))
 
 (defn head-set
@@ -117,7 +117,7 @@
            less than toElement - `java.util.SortedSet<SortedSet.E>`
 
   throws: java.lang.ClassCastException - if toElement is not compatible with this set's comparator (or, if the set has no comparator, if toElement does not implement Comparable). Implementations may, but are not required to, throw this exception if toElement cannot be compared to elements currently in the set."
-  ([^. this ^SortedSet.E to-element]
+  ([^java.util.SortedSet this ^SortedSet.E to-element]
     (-> this (.headSet to-element))))
 
 (defn tail-set
@@ -136,7 +136,7 @@
            than or equal to fromElement - `java.util.SortedSet<SortedSet.E>`
 
   throws: java.lang.ClassCastException - if fromElement is not compatible with this set's comparator (or, if the set has no comparator, if fromElement does not implement Comparable). Implementations may, but are not required to, throw this exception if fromElement cannot be compared to elements currently in the set."
-  ([^. this ^SortedSet.E from-element]
+  ([^java.util.SortedSet this ^SortedSet.E from-element]
     (-> this (.tailSet from-element))))
 
 (defn first
@@ -145,7 +145,7 @@
   returns: the first (lowest) element currently in this set - `SortedSet.E`
 
   throws: java.util.NoSuchElementException - if this set is empty"
-  ([^. this]
+  ([^java.util.SortedSet this]
     (-> this (.first))))
 
 (defn last
@@ -154,7 +154,7 @@
   returns: the last (highest) element currently in this set - `SortedSet.E`
 
   throws: java.util.NoSuchElementException - if this set is empty"
-  ([^. this]
+  ([^java.util.SortedSet this]
     (-> this (.last))))
 
 (defn spliterator
@@ -172,6 +172,6 @@
    same total ordering as the sorted set's comparator.
 
   returns: a Spliterator over the elements in this sorted set - `default java.util.Spliterator<SortedSet.E>`"
-  ([^. this]
+  ([^java.util.SortedSet this]
     (-> this (.spliterator))))
 

@@ -109,7 +109,7 @@
   returns: the new stream - `java.util.stream.Stream<Stream.T>`
 
   throws: java.lang.IllegalArgumentException - if n is negative"
-  ([^. this ^Long n]
+  ([^java.util.stream.Stream this ^Long n]
     (-> this (.skip n))))
 
 (defn map
@@ -122,7 +122,7 @@
   mapper - a non-interfering, stateless function to apply to each element - `R>`
 
   returns: the new stream - `<R> java.util.stream.Stream<R>`"
-  ([^. this mapper]
+  ([^java.util.stream.Stream this mapper]
     (-> this (.map mapper))))
 
 (defn peek
@@ -141,7 +141,7 @@
   action - a non-interfering action to perform on the elements as they are consumed from the stream - `Stream.T>`
 
   returns: the new stream - `java.util.stream.Stream<Stream.T>`"
-  ([^. this ^Stream.T> action]
+  ([^java.util.stream.Stream this ^Stream.T> action]
     (-> this (.peek action))))
 
 (defn flat-map-to-int
@@ -158,7 +158,7 @@
   mapper - a non-interfering, stateless function to apply to each element which produces a stream of new values - `java.util.stream.IntStream>`
 
   returns: the new stream - `java.util.stream.IntStream`"
-  ([^. this ^java.util.stream.IntStream> mapper]
+  ([^java.util.stream.Stream this ^java.util.stream.IntStream> mapper]
     (-> this (.flatMapToInt mapper))))
 
 (defn min
@@ -174,7 +174,7 @@
    or an empty Optional if the stream is empty - `java.util.Optional<Stream.T>`
 
   throws: java.lang.NullPointerException - if the minimum element is null"
-  ([^. this ^Stream.T> comparator]
+  ([^java.util.stream.Stream this ^Stream.T> comparator]
     (-> this (.min comparator))))
 
 (defn for-each
@@ -192,7 +192,7 @@
    responsible for providing the required synchronization.
 
   action - a non-interfering action to perform on the elements - `Stream.T>`"
-  ([^. this ^Stream.T> action]
+  ([^java.util.stream.Stream this ^Stream.T> action]
     (-> this (.forEach action))))
 
 (defn for-each-ordered
@@ -209,7 +209,7 @@
    the action may be performed in whatever thread the library chooses.
 
   action - a non-interfering action to perform on the elements - `Stream.T>`"
-  ([^. this ^Stream.T> action]
+  ([^java.util.stream.Stream this ^Stream.T> action]
     (-> this (.forEachOrdered action))))
 
 (defn *of
@@ -219,7 +219,7 @@
 
   returns: a singleton sequential stream - `<T> java.util.stream.Stream<T>`"
   ([t]
-    (null/of t)))
+    (Stream/of t)))
 
 (defn find-first
   "Returns an Optional describing the first element of this stream,
@@ -233,7 +233,7 @@
    or an empty Optional if the stream is empty - `java.util.Optional<Stream.T>`
 
   throws: java.lang.NullPointerException - if the element selected is null"
-  ([^. this]
+  ([^java.util.stream.Stream this]
     (-> this (.findFirst))))
 
 (defn all-match
@@ -249,7 +249,7 @@
 
   returns: true if either all elements of the stream match the
    provided predicate or the stream is empty, otherwise false - `boolean`"
-  ([^. this ^Stream.T> predicate]
+  ([^java.util.stream.Stream this ^Stream.T> predicate]
     (-> this (.allMatch predicate))))
 
 (defn flat-map-to-long
@@ -266,7 +266,7 @@
   mapper - a non-interfering, stateless function to apply to each element which produces a stream of new values - `java.util.stream.LongStream>`
 
   returns: the new stream - `java.util.stream.LongStream`"
-  ([^. this ^java.util.stream.LongStream> mapper]
+  ([^java.util.stream.Stream this ^java.util.stream.LongStream> mapper]
     (-> this (.flatMapToLong mapper))))
 
 (defn sorted
@@ -282,9 +282,9 @@
   comparator - a non-interfering, stateless Comparator to be used to compare stream elements - `Stream.T>`
 
   returns: the new stream - `java.util.stream.Stream<Stream.T>`"
-  ([^. this ^Stream.T> comparator]
+  ([^java.util.stream.Stream this ^Stream.T> comparator]
     (-> this (.sorted comparator)))
-  ([^. this]
+  ([^java.util.stream.Stream this]
     (-> this (.sorted))))
 
 (defn map-to-long
@@ -297,7 +297,7 @@
   mapper - a non-interfering, stateless function to apply to each element - `Stream.T>`
 
   returns: the new stream - `java.util.stream.LongStream`"
-  ([^. this ^Stream.T> mapper]
+  ([^java.util.stream.Stream this ^Stream.T> mapper]
     (-> this (.mapToLong mapper))))
 
 (defn *iterate
@@ -316,7 +316,7 @@
 
   returns: a new sequential Stream - `<T> java.util.stream.Stream<T>`"
   ([seed ^java.util.function.UnaryOperator f]
-    (null/iterate seed f)))
+    (Stream/iterate seed f)))
 
 (defn max
   "Returns the maximum element of this stream according to the provided
@@ -332,7 +332,7 @@
    or an empty Optional if the stream is empty - `java.util.Optional<Stream.T>`
 
   throws: java.lang.NullPointerException - if the maximum element is null"
-  ([^. this ^Stream.T> comparator]
+  ([^java.util.stream.Stream this ^Stream.T> comparator]
     (-> this (.max comparator))))
 
 (defn *generate
@@ -344,14 +344,14 @@
 
   returns: a new infinite sequential unordered Stream - `<T> java.util.stream.Stream<T>`"
   ([^java.util.function.Supplier s]
-    (null/generate s)))
+    (Stream/generate s)))
 
 (defn *builder
   "Returns a builder for a Stream.
 
   returns: a stream builder - `<T> java.util.stream.Stream.Builder<T>`"
   ([]
-    (null/builder )))
+    (Stream/builder )))
 
 (defn count
   "Returns the count of elements in this stream.  This is a special case of
@@ -364,7 +364,7 @@
    This is a terminal operation.
 
   returns: the count of elements in this stream - `long`"
-  ([^. this]
+  ([^java.util.stream.Stream this]
     (-> this (.count))))
 
 (defn map-to-double
@@ -377,7 +377,7 @@
   mapper - a non-interfering, stateless function to apply to each element - `Stream.T>`
 
   returns: the new stream - `java.util.stream.DoubleStream`"
-  ([^. this ^Stream.T> mapper]
+  ([^java.util.stream.Stream this ^Stream.T> mapper]
     (-> this (.mapToDouble mapper))))
 
 (defn map-to-int
@@ -390,7 +390,7 @@
   mapper - a non-interfering, stateless function to apply to each element - `Stream.T>`
 
   returns: the new stream - `java.util.stream.IntStream`"
-  ([^. this ^Stream.T> mapper]
+  ([^java.util.stream.Stream this ^Stream.T> mapper]
     (-> this (.mapToInt mapper))))
 
 (defn distinct
@@ -406,7 +406,7 @@
    intermediate operation.
 
   returns: the new stream - `java.util.stream.Stream<Stream.T>`"
-  ([^. this]
+  ([^java.util.stream.Stream this]
     (-> this (.distinct))))
 
 (defn limit
@@ -421,7 +421,7 @@
   returns: the new stream - `java.util.stream.Stream<Stream.T>`
 
   throws: java.lang.IllegalArgumentException - if maxSize is negative"
-  ([^. this ^Long max-size]
+  ([^java.util.stream.Stream this ^Long max-size]
     (-> this (.limit max-size))))
 
 (defn flat-map
@@ -438,7 +438,7 @@
   mapper - a non-interfering, stateless function to apply to each element which produces a stream of new values - `R>>`
 
   returns: the new stream - `<R> java.util.stream.Stream<R>`"
-  ([^. this mapper]
+  ([^java.util.stream.Stream this mapper]
     (-> this (.flatMap mapper))))
 
 (defn flat-map-to-double
@@ -455,7 +455,7 @@
   mapper - a non-interfering, stateless function to apply to each element which produces a stream of new values - `java.util.stream.DoubleStream>`
 
   returns: the new stream - `java.util.stream.DoubleStream`"
-  ([^. this ^java.util.stream.DoubleStream> mapper]
+  ([^java.util.stream.Stream this ^java.util.stream.DoubleStream> mapper]
     (-> this (.flatMapToDouble mapper))))
 
 (defn *concat
@@ -471,7 +471,7 @@
 
   returns: the concatenation of the two input streams - `<T> java.util.stream.Stream<T>`"
   ([a b]
-    (null/concat a b)))
+    (Stream/concat a b)))
 
 (defn filter
   "Returns a stream consisting of the elements of this stream that match
@@ -483,7 +483,7 @@
   predicate - a non-interfering, stateless predicate to apply to each element to determine if it should be included - `Stream.T>`
 
   returns: the new stream - `java.util.stream.Stream<Stream.T>`"
-  ([^. this ^Stream.T> predicate]
+  ([^java.util.stream.Stream this ^Stream.T> predicate]
     (-> this (.filter predicate))))
 
 (defn *empty
@@ -491,7 +491,7 @@
 
   returns: an empty sequential stream - `<T> java.util.stream.Stream<T>`"
   ([]
-    (null/empty )))
+    (Stream/empty )))
 
 (defn find-any
   "Returns an Optional describing some element of the stream, or an
@@ -510,7 +510,7 @@
    empty Optional if the stream is empty - `java.util.Optional<Stream.T>`
 
   throws: java.lang.NullPointerException - if the element selected is null"
-  ([^. this]
+  ([^java.util.stream.Stream this]
     (-> this (.findAny))))
 
 (defn collect
@@ -538,9 +538,9 @@
   combiner - an associative, non-interfering, stateless function for combining two values, which must be compatible with the accumulator function - `java.util.function.BiConsumer<R,R>`
 
   returns: the result of the reduction - `<R> R`"
-  ([^. this ^java.util.function.Supplier supplier ^Stream.T> accumulator ^java.util.function.BiConsumer combiner]
+  ([^java.util.stream.Stream this ^java.util.function.Supplier supplier ^Stream.T> accumulator ^java.util.function.BiConsumer combiner]
     (-> this (.collect supplier accumulator combiner)))
-  ([^. this ^Stream.T,A,R> collector]
+  ([^java.util.stream.Stream this ^Stream.T,A,R> collector]
     (-> this (.collect collector))))
 
 (defn any-match
@@ -556,7 +556,7 @@
 
   returns: true if any elements of the stream match the provided
    predicate, otherwise false - `boolean`"
-  ([^. this ^Stream.T> predicate]
+  ([^java.util.stream.Stream this ^Stream.T> predicate]
     (-> this (.anyMatch predicate))))
 
 (defn none-match
@@ -572,7 +572,7 @@
 
   returns: true if either no elements of the stream match the
    provided predicate or the stream is empty, otherwise false - `boolean`"
-  ([^. this ^Stream.T> predicate]
+  ([^java.util.stream.Stream this ^Stream.T> predicate]
     (-> this (.noneMatch predicate))))
 
 (defn reduce
@@ -605,11 +605,11 @@
   combiner - an associative, non-interfering, stateless function for combining two values, which must be compatible with the accumulator function - `java.util.function.BinaryOperator<U>`
 
   returns: the result of the reduction - `<U> U`"
-  ([^. this identity ^Stream.T,U> accumulator ^java.util.function.BinaryOperator combiner]
+  ([^java.util.stream.Stream this identity ^Stream.T,U> accumulator ^java.util.function.BinaryOperator combiner]
     (-> this (.reduce identity accumulator combiner)))
-  ([^. this ^Stream.T identity ^java.util.function.BinaryOperator accumulator]
+  ([^java.util.stream.Stream this ^Stream.T identity ^java.util.function.BinaryOperator accumulator]
     (-> this (.reduce identity accumulator)))
-  ([^. this ^java.util.function.BinaryOperator accumulator]
+  ([^java.util.stream.Stream this ^java.util.function.BinaryOperator accumulator]
     (-> this (.reduce accumulator))))
 
 (defn to-array
@@ -626,8 +626,8 @@
   returns: an array containing the elements in this stream - `<A> A[]`
 
   throws: java.lang.ArrayStoreException - if the runtime type of the array returned from the array generator is not a supertype of the runtime type of every element in this stream"
-  ([^. this ^java.util.function.IntFunction generator]
+  ([^java.util.stream.Stream this ^java.util.function.IntFunction generator]
     (-> this (.toArray generator)))
-  ([^. this]
+  ([^java.util.stream.Stream this]
     (-> this (.toArray))))
 

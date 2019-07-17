@@ -13,7 +13,7 @@
 
   returns: true if the input argument matches the predicate,
    otherwise false - `boolean`"
-  ([^. this ^Predicate.T t]
+  ([^java.util.function.Predicate this ^Predicate.T t]
     (-> this (.test t))))
 
 (defn and
@@ -32,7 +32,7 @@
    AND of this predicate and the other predicate - `default java.util.function.Predicate<Predicate.T>`
 
   throws: java.lang.NullPointerException - if other is null"
-  ([^. this ^Predicate.T> other]
+  ([^java.util.function.Predicate this ^Predicate.T> other]
     (-> this (.and other))))
 
 (defn negate
@@ -41,7 +41,7 @@
 
   returns: a predicate that represents the logical negation of this
    predicate - `default java.util.function.Predicate<Predicate.T>`"
-  ([^. this]
+  ([^java.util.function.Predicate this]
     (-> this (.negate))))
 
 (defn or
@@ -60,7 +60,7 @@
    OR of this predicate and the other predicate - `default java.util.function.Predicate<Predicate.T>`
 
   throws: java.lang.NullPointerException - if other is null"
-  ([^. this ^Predicate.T> other]
+  ([^java.util.function.Predicate this ^Predicate.T> other]
     (-> this (.or other))))
 
 (defn *is-equal
@@ -72,5 +72,5 @@
   returns: a predicate that tests if two arguments are equal according
    to Objects.equals(Object, Object) - `<T> java.util.function.Predicate<T>`"
   ([^java.lang.Object target-ref]
-    (null/isEqual target-ref)))
+    (Predicate/isEqual target-ref)))
 

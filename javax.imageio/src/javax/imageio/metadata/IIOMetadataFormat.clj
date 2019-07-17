@@ -50,7 +50,7 @@
   returns: an array of Strings, or null. - `java.lang.String[]`
 
   throws: java.lang.IllegalArgumentException - if elementName is null or is not a legal element name for this format."
-  ([^. this ^java.lang.String element-name]
+  ([^javax.imageio.metadata.IIOMetadataFormat this ^java.lang.String element-name]
     (-> this (.getChildNames element-name))))
 
 (defn get-object-max-value
@@ -66,7 +66,7 @@
   returns: the smallest legal value for the attribute. - `java.lang.Comparable<?>`
 
   throws: java.lang.IllegalArgumentException - if the Object is not defined as a range."
-  ([^. this ^java.lang.String element-name]
+  ([^javax.imageio.metadata.IIOMetadataFormat this ^java.lang.String element-name]
     (-> this (.getObjectMaxValue element-name))))
 
 (defn can-node-appear?
@@ -82,7 +82,7 @@
 
   returns: true if the node is meaningful for images
    of the given type. - `boolean`"
-  ([^. this ^java.lang.String element-name ^javax.imageio.ImageTypeSpecifier image-type]
+  ([^javax.imageio.metadata.IIOMetadataFormat this ^java.lang.String element-name ^javax.imageio.ImageTypeSpecifier image-type]
     (-> this (.canNodeAppear element-name image-type))))
 
 (defn get-object-default-value
@@ -95,7 +95,7 @@
   returns: an Object. - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if the named element cannot contain an object value (i.e., if getObjectValueType(elementName) == VALUE_NONE)."
-  ([^. this ^java.lang.String element-name]
+  ([^javax.imageio.metadata.IIOMetadataFormat this ^java.lang.String element-name]
     (-> this (.getObjectDefaultValue element-name))))
 
 (defn get-object-class
@@ -116,7 +116,7 @@
   returns: a Class object. - `java.lang.Class<?>`
 
   throws: java.lang.IllegalArgumentException - if the named element cannot contain an object value (i.e., if getObjectValueType(elementName) == VALUE_NONE)."
-  ([^. this ^java.lang.String element-name]
+  ([^javax.imageio.metadata.IIOMetadataFormat this ^java.lang.String element-name]
     (-> this (.getObjectClass element-name))))
 
 (defn get-object-enumerations
@@ -136,7 +136,7 @@
   returns: an array of Objects. - `java.lang.Object[]`
 
   throws: java.lang.IllegalArgumentException - if the Object is not defined as an enumeration."
-  ([^. this ^java.lang.String element-name]
+  ([^javax.imageio.metadata.IIOMetadataFormat this ^java.lang.String element-name]
     (-> this (.getObjectEnumerations element-name))))
 
 (defn get-attribute-min-value
@@ -156,7 +156,7 @@
    value for the attribute. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if the given attribute is not defined as a range."
-  ([^. this ^java.lang.String element-name ^java.lang.String attr-name]
+  ([^javax.imageio.metadata.IIOMetadataFormat this ^java.lang.String element-name ^java.lang.String attr-name]
     (-> this (.getAttributeMinValue element-name attr-name))))
 
 (defn get-child-policy
@@ -169,7 +169,7 @@
   returns: one of the CHILD_POLICY_* constants. - `int`
 
   throws: java.lang.IllegalArgumentException - if elementName is null or is not a legal element name for this format."
-  ([^. this ^java.lang.String element-name]
+  ([^javax.imageio.metadata.IIOMetadataFormat this ^java.lang.String element-name]
     (-> this (.getChildPolicy element-name))))
 
 (defn get-attribute-max-value
@@ -189,7 +189,7 @@
    value for the attribute. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if the given attribute is not defined as a range."
-  ([^. this ^java.lang.String element-name ^java.lang.String attr-name]
+  ([^javax.imageio.metadata.IIOMetadataFormat this ^java.lang.String element-name ^java.lang.String attr-name]
     (-> this (.getAttributeMaxValue element-name attr-name))))
 
 (defn get-attribute-description
@@ -208,7 +208,7 @@
   returns: the attribute description. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if attrName is null or is not a legal attribute name for this element."
-  ([^. this ^java.lang.String element-name ^java.lang.String attr-name ^java.util.Locale locale]
+  ([^javax.imageio.metadata.IIOMetadataFormat this ^java.lang.String element-name ^java.lang.String attr-name ^java.util.Locale locale]
     (-> this (.getAttributeDescription element-name attr-name locale))))
 
 (defn get-element-min-children
@@ -223,7 +223,7 @@
   returns: an int. - `int`
 
   throws: java.lang.IllegalArgumentException - if the named element does not have a child policy of CHILD_POLICY_REPEAT."
-  ([^. this ^java.lang.String element-name]
+  ([^javax.imageio.metadata.IIOMetadataFormat this ^java.lang.String element-name]
     (-> this (.getElementMinChildren element-name))))
 
 (defn get-element-max-children
@@ -239,14 +239,14 @@
   returns: an int. - `int`
 
   throws: java.lang.IllegalArgumentException - if the named element does not have a child policy of CHILD_POLICY_REPEAT."
-  ([^. this ^java.lang.String element-name]
+  ([^javax.imageio.metadata.IIOMetadataFormat this ^java.lang.String element-name]
     (-> this (.getElementMaxChildren element-name))))
 
 (defn get-root-name
   "Returns the name of the root element of the format.
 
   returns: a String. - `java.lang.String`"
-  ([^. this]
+  ([^javax.imageio.metadata.IIOMetadataFormat this]
     (-> this (.getRootName))))
 
 (defn get-object-array-min-length
@@ -262,7 +262,7 @@
    Object reference. - `int`
 
   throws: java.lang.IllegalArgumentException - if the Object is not an array."
-  ([^. this ^java.lang.String element-name]
+  ([^javax.imageio.metadata.IIOMetadataFormat this ^java.lang.String element-name]
     (-> this (.getObjectArrayMinLength element-name))))
 
 (defn get-object-value-type
@@ -282,7 +282,7 @@
   returns: one of the VALUE_* constants. - `int`
 
   throws: java.lang.IllegalArgumentException - if elementName is null or is not a legal element name for this format."
-  ([^. this ^java.lang.String element-name]
+  ([^javax.imageio.metadata.IIOMetadataFormat this ^java.lang.String element-name]
     (-> this (.getObjectValueType element-name))))
 
 (defn attribute-required?
@@ -295,7 +295,7 @@
   returns: true if the attribute must be present. - `boolean`
 
   throws: java.lang.IllegalArgumentException - if attrName is null or is not a legal attribute name for this element."
-  ([^. this ^java.lang.String element-name ^java.lang.String attr-name]
+  ([^javax.imageio.metadata.IIOMetadataFormat this ^java.lang.String element-name ^java.lang.String attr-name]
     (-> this (.isAttributeRequired element-name attr-name))))
 
 (defn get-attribute-list-min-length
@@ -313,7 +313,7 @@
    attribute. - `int`
 
   throws: java.lang.IllegalArgumentException - if the given attribute is not defined as a list."
-  ([^. this ^java.lang.String element-name ^java.lang.String attr-name]
+  ([^javax.imageio.metadata.IIOMetadataFormat this ^java.lang.String element-name ^java.lang.String attr-name]
     (-> this (.getAttributeListMinLength element-name attr-name))))
 
 (defn get-object-array-max-length
@@ -330,7 +330,7 @@
    Object reference. - `int`
 
   throws: java.lang.IllegalArgumentException - if the Object is not an array."
-  ([^. this ^java.lang.String element-name]
+  ([^javax.imageio.metadata.IIOMetadataFormat this ^java.lang.String element-name]
     (-> this (.getObjectArrayMaxLength element-name))))
 
 (defn get-attribute-enumerations
@@ -346,7 +346,7 @@
   returns: an array of Strings. - `java.lang.String[]`
 
   throws: java.lang.IllegalArgumentException - if the given attribute is not defined as an enumeration."
-  ([^. this ^java.lang.String element-name ^java.lang.String attr-name]
+  ([^javax.imageio.metadata.IIOMetadataFormat this ^java.lang.String element-name ^java.lang.String attr-name]
     (-> this (.getAttributeEnumerations element-name attr-name))))
 
 (defn get-object-min-value
@@ -362,7 +362,7 @@
   returns: the smallest legal value for the attribute. - `java.lang.Comparable<?>`
 
   throws: java.lang.IllegalArgumentException - if the Object is not defined as a range."
-  ([^. this ^java.lang.String element-name]
+  ([^javax.imageio.metadata.IIOMetadataFormat this ^java.lang.String element-name]
     (-> this (.getObjectMinValue element-name))))
 
 (defn get-attribute-list-max-length
@@ -382,7 +382,7 @@
    attribute. - `int`
 
   throws: java.lang.IllegalArgumentException - if the given attribute is not defined as a list."
-  ([^. this ^java.lang.String element-name ^java.lang.String attr-name]
+  ([^javax.imageio.metadata.IIOMetadataFormat this ^java.lang.String element-name ^java.lang.String attr-name]
     (-> this (.getAttributeListMaxLength element-name attr-name))))
 
 (defn get-attribute-data-type
@@ -399,7 +399,7 @@
   returns: one of the DATATYPE_* constants. - `int`
 
   throws: java.lang.IllegalArgumentException - if attrName is null or is not a legal attribute name for this element."
-  ([^. this ^java.lang.String element-name ^java.lang.String attr-name]
+  ([^javax.imageio.metadata.IIOMetadataFormat this ^java.lang.String element-name ^java.lang.String attr-name]
     (-> this (.getAttributeDataType element-name attr-name))))
 
 (defn get-attribute-default-value
@@ -415,7 +415,7 @@
    null. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if attrName is null or is not a legal attribute name for this element."
-  ([^. this ^java.lang.String element-name ^java.lang.String attr-name]
+  ([^javax.imageio.metadata.IIOMetadataFormat this ^java.lang.String element-name ^java.lang.String attr-name]
     (-> this (.getAttributeDefaultValue element-name attr-name))))
 
 (defn get-attribute-names
@@ -427,7 +427,7 @@
   returns: an array of Strings. - `java.lang.String[]`
 
   throws: java.lang.IllegalArgumentException - if elementName is null or is not a legal element name for this format."
-  ([^. this ^java.lang.String element-name]
+  ([^javax.imageio.metadata.IIOMetadataFormat this ^java.lang.String element-name]
     (-> this (.getAttributeNames element-name))))
 
 (defn get-element-description
@@ -445,7 +445,7 @@
   returns: the element description. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if elementName is null, or is not a legal element name for this format."
-  ([^. this ^java.lang.String element-name ^java.util.Locale locale]
+  ([^javax.imageio.metadata.IIOMetadataFormat this ^java.lang.String element-name ^java.util.Locale locale]
     (-> this (.getElementDescription element-name locale))))
 
 (defn get-attribute-value-type
@@ -461,6 +461,6 @@
   returns: one of the VALUE_* constants. - `int`
 
   throws: java.lang.IllegalArgumentException - if attrName is null or is not a legal attribute name for this element."
-  ([^. this ^java.lang.String element-name ^java.lang.String attr-name]
+  ([^javax.imageio.metadata.IIOMetadataFormat this ^java.lang.String element-name ^java.lang.String attr-name]
     (-> this (.getAttributeValueType element-name attr-name))))
 

@@ -9,6 +9,6 @@
   "Validates the object.
 
   throws: java.io.InvalidObjectException - If the object cannot validate itself."
-  ([^. this]
+  ([^java.io.ObjectInputValidation this]
     (-> this (.validateObject))))
 

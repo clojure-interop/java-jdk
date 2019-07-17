@@ -165,7 +165,7 @@
 
   returns: the approximate number objects for which finalization
    is pending. - `int`"
-  ([^. this]
+  ([^java.lang.management.MemoryMXBean this]
     (-> this (.getObjectPendingFinalizationCount))))
 
 (defn get-heap-memory-usage
@@ -191,7 +191,7 @@
 
   returns: a MemoryUsage object representing
    the heap memory usage. - `java.lang.management.MemoryUsage`"
-  ([^. this]
+  ([^java.lang.management.MemoryMXBean this]
     (-> this (.getHeapMemoryUsage))))
 
 (defn get-non-heap-memory-usage
@@ -214,7 +214,7 @@
 
   returns: a MemoryUsage object representing
    the non-heap memory usage. - `java.lang.management.MemoryUsage`"
-  ([^. this]
+  ([^java.lang.management.MemoryMXBean this]
     (-> this (.getNonHeapMemoryUsage))))
 
 (defn verbose?
@@ -222,7 +222,7 @@
 
   returns: true if verbose output for the memory
    system is enabled; false otherwise. - `boolean`"
-  ([^. this]
+  ([^java.lang.management.MemoryMXBean this]
     (-> this (.isVerbose))))
 
 (defn set-verbose
@@ -239,7 +239,7 @@
   value - true to enable verbose output; false to disable. - `boolean`
 
   throws: java.lang.SecurityException - if a security manager exists and the caller does not have ManagementPermission(`control`)."
-  ([^. this ^Boolean value]
+  ([^java.lang.management.MemoryMXBean this ^Boolean value]
     (-> this (.setVerbose value))))
 
 (defn gc
@@ -249,6 +249,6 @@
 
 
    System.gc()"
-  ([^. this]
+  ([^java.lang.management.MemoryMXBean this]
     (-> this (.gc))))
 

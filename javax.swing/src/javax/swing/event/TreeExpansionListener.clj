@@ -11,13 +11,13 @@
   "Called whenever an item in the tree has been expanded.
 
   event - `javax.swing.event.TreeExpansionEvent`"
-  ([^. this ^javax.swing.event.TreeExpansionEvent event]
+  ([^javax.swing.event.TreeExpansionListener this ^javax.swing.event.TreeExpansionEvent event]
     (-> this (.treeExpanded event))))
 
 (defn tree-collapsed
   "Called whenever an item in the tree has been collapsed.
 
   event - `javax.swing.event.TreeExpansionEvent`"
-  ([^. this ^javax.swing.event.TreeExpansionEvent event]
+  ([^javax.swing.event.TreeExpansionListener this ^javax.swing.event.TreeExpansionEvent event]
     (-> this (.treeCollapsed event))))
 

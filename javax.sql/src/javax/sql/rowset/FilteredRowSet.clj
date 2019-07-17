@@ -106,7 +106,7 @@
   p - a Predicate object defining the filter for this FilteredRowSet object. Setting a null value will clear the predicate, allowing all rows to become visible. - `javax.sql.rowset.Predicate`
 
   throws: java.sql.SQLException - if an error occurs when setting the Predicate object"
-  ([^. this ^javax.sql.rowset.Predicate p]
+  ([^javax.sql.rowset.FilteredRowSet this ^javax.sql.rowset.Predicate p]
     (-> this (.setFilter p))))
 
 (defn get-filter
@@ -114,6 +114,6 @@
 
   returns: p the Predicate for this FilteredRowSet
    object; null if no filter has been set. - `javax.sql.rowset.Predicate`"
-  ([^. this]
+  ([^javax.sql.rowset.FilteredRowSet this]
     (-> this (.getFilter))))
 

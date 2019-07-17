@@ -15,13 +15,13 @@
    have changed.
 
   an-item - the list object to select or null to clear the selection - `java.lang.Object`"
-  ([^. this ^java.lang.Object an-item]
+  ([^javax.swing.ComboBoxModel this ^java.lang.Object an-item]
     (-> this (.setSelectedItem an-item))))
 
 (defn get-selected-item
   "Returns the selected item
 
   returns: The selected item or null if there is no selection - `java.lang.Object`"
-  ([^. this]
+  ([^javax.swing.ComboBoxModel this]
     (-> this (.getSelectedItem))))
 

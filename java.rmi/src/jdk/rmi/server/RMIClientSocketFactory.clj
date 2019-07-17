@@ -33,6 +33,6 @@
   returns: a socket connected to the specified host and port. - `java.net.Socket`
 
   throws: java.io.IOException - if an I/O error occurs during socket creation"
-  ([^. this ^java.lang.String host ^Integer port]
+  ([^java.rmi.server.RMIClientSocketFactory this ^java.lang.String host ^Integer port]
     (-> this (.createSocket host port))))
 

@@ -24,9 +24,9 @@
             itself did not match anything - `int`
 
   throws: java.lang.IllegalStateException - If no match has yet been attempted, or if the previous match operation failed"
-  ([^. this ^Integer group]
+  ([^java.util.regex.MatchResult this ^Integer group]
     (-> this (.start group)))
-  ([^. this]
+  ([^java.util.regex.MatchResult this]
     (-> this (.start))))
 
 (defn end
@@ -45,9 +45,9 @@
             but the group itself did not match anything - `int`
 
   throws: java.lang.IllegalStateException - If no match has yet been attempted, or if the previous match operation failed"
-  ([^. this ^Integer group]
+  ([^java.util.regex.MatchResult this ^Integer group]
     (-> this (.end group)))
-  ([^. this]
+  ([^java.util.regex.MatchResult this]
     (-> this (.end))))
 
 (defn group
@@ -77,9 +77,9 @@
             failed to match part of the input - `java.lang.String`
 
   throws: java.lang.IllegalStateException - If no match has yet been attempted, or if the previous match operation failed"
-  ([^. this ^Integer group]
+  ([^java.util.regex.MatchResult this ^Integer group]
     (-> this (.group group)))
-  ([^. this]
+  ([^java.util.regex.MatchResult this]
     (-> this (.group))))
 
 (defn group-count
@@ -93,6 +93,6 @@
    this matcher.
 
   returns: The number of capturing groups in this matcher's pattern - `int`"
-  ([^. this]
+  ([^java.util.regex.MatchResult this]
     (-> this (.groupCount))))
 

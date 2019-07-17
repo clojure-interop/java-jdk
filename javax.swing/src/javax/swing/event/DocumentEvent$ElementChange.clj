@@ -8,7 +8,7 @@
    that was changed.
 
   returns: the element - `javax.swing.text.Element`"
-  ([^. this]
+  ([^javax.swing.event.DocumentEvent$ElementChange this]
     (-> this (.getElement))))
 
 (defn get-index
@@ -17,7 +17,7 @@
    and/or removed.
 
   returns: the index >= 0 - `int`"
-  ([^. this]
+  ([^javax.swing.event.DocumentEvent$ElementChange this]
     (-> this (.getIndex))))
 
 (defn get-children-removed
@@ -27,7 +27,7 @@
    the document, and must be contiguous.
 
   returns: the child elements - `javax.swing.text.Element[]`"
-  ([^. this]
+  ([^javax.swing.event.DocumentEvent$ElementChange this]
     (-> this (.getChildrenRemoved))))
 
 (defn get-children-added
@@ -37,6 +37,6 @@
    be contiguous.
 
   returns: the child elements - `javax.swing.text.Element[]`"
-  ([^. this]
+  ([^javax.swing.event.DocumentEvent$ElementChange this]
     (-> this (.getChildrenAdded))))
 

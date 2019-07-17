@@ -16,7 +16,7 @@
 
   result - The result of the I/O operation. - `CompletionHandler.V`
   attachment - The object attached to the I/O operation when it was initiated. - `CompletionHandler.A`"
-  ([^. this ^CompletionHandler.V result ^CompletionHandler.A attachment]
+  ([^java.nio.channels.CompletionHandler this ^CompletionHandler.V result ^CompletionHandler.A attachment]
     (-> this (.completed result attachment))))
 
 (defn failed
@@ -24,6 +24,6 @@
 
   exc - The exception to indicate why the I/O operation failed - `java.lang.Throwable`
   attachment - The object attached to the I/O operation when it was initiated. - `CompletionHandler.A`"
-  ([^. this ^java.lang.Throwable exc ^CompletionHandler.A attachment]
+  ([^java.nio.channels.CompletionHandler this ^java.lang.Throwable exc ^CompletionHandler.A attachment]
     (-> this (.failed exc attachment))))
 

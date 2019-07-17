@@ -18,6 +18,6 @@
    the controller was set.
 
   event - the control-change event that the sequencer encountered in the sequence it is processing - `javax.sound.midi.ShortMessage`"
-  ([^. this ^javax.sound.midi.ShortMessage event]
+  ([^javax.sound.midi.ControllerEventListener this ^javax.sound.midi.ShortMessage event]
     (-> this (.controlChange event))))
 

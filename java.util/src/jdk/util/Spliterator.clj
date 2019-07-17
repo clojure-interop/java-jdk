@@ -106,7 +106,7 @@
    upon entry to this method, else true. - `boolean`
 
   throws: java.lang.NullPointerException - if the specified action is null"
-  ([^. this ^Spliterator.T> action]
+  ([^java.util.Spliterator this ^Spliterator.T> action]
     (-> this (.tryAdvance action))))
 
 (defn for-each-remaining
@@ -121,7 +121,7 @@
   returns: `default void`
 
   throws: java.lang.NullPointerException - if the specified action is null"
-  ([^. this ^Spliterator.T> action]
+  ([^java.util.Spliterator this ^Spliterator.T> action]
     (-> this (.forEachRemaining action))))
 
 (defn try-split
@@ -152,7 +152,7 @@
 
   returns: a Spliterator covering some portion of the
    elements, or null if this spliterator cannot be split - `java.util.Spliterator<Spliterator.T>`"
-  ([^. this]
+  ([^java.util.Spliterator this]
     (-> this (.trySplit))))
 
 (defn estimate-size
@@ -168,7 +168,7 @@
 
   returns: the estimated size, or Long.MAX_VALUE if infinite,
            unknown, or too expensive to compute. - `long`"
-  ([^. this]
+  ([^java.util.Spliterator this]
     (-> this (.estimateSize))))
 
 (defn get-exact-size-if-known
@@ -176,7 +176,7 @@
    Spliterator is SIZED, else -1.
 
   returns: the exact size, if known, else -1. - `default long`"
-  ([^. this]
+  ([^java.util.Spliterator this]
     (-> this (.getExactSizeIfKnown))))
 
 (defn characteristics
@@ -193,7 +193,7 @@
    about any computation using this Spliterator.
 
   returns: a representation of characteristics - `int`"
-  ([^. this]
+  ([^java.util.Spliterator this]
     (-> this (.characteristics))))
 
 (defn has-characteristics
@@ -203,7 +203,7 @@
 
   returns: true if all the specified characteristics are present,
    else false - `default boolean`"
-  ([^. this ^Integer characteristics]
+  ([^java.util.Spliterator this ^Integer characteristics]
     (-> this (.hasCharacteristics characteristics))))
 
 (defn get-comparator
@@ -216,6 +216,6 @@
    natural order. - `default java.util.Comparator<? super Spliterator.T>`
 
   throws: java.lang.IllegalStateException - if the spliterator does not report a characteristic of SORTED."
-  ([^. this]
+  ([^java.util.Spliterator this]
     (-> this (.getComparator))))
 

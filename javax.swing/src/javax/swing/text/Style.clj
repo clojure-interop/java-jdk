@@ -16,7 +16,7 @@
    associated with the style.
 
   returns: the name - `java.lang.String`"
-  ([^. this]
+  ([^javax.swing.text.Style this]
     (-> this (.getName))))
 
 (defn add-change-listener
@@ -24,13 +24,13 @@
    has been changed.
 
   l - the change listener - `javax.swing.event.ChangeListener`"
-  ([^. this ^javax.swing.event.ChangeListener l]
+  ([^javax.swing.text.Style this ^javax.swing.event.ChangeListener l]
     (-> this (.addChangeListener l))))
 
 (defn remove-change-listener
   "Removes a listener that was tracking attribute changes.
 
   l - the change listener - `javax.swing.event.ChangeListener`"
-  ([^. this ^javax.swing.event.ChangeListener l]
+  ([^javax.swing.text.Style this ^javax.swing.event.ChangeListener l]
     (-> this (.removeChangeListener l))))
 

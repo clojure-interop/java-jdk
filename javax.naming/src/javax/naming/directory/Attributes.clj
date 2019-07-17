@@ -28,14 +28,14 @@
    attribute identifiers when retrieving or adding attributes.
 
   returns: true if case is ignored; false otherwise. - `boolean`"
-  ([^. this]
+  ([^javax.naming.directory.Attributes this]
     (-> this (.isCaseIgnored))))
 
 (defn size
   "Retrieves the number of attributes in the attribute set.
 
   returns: The nonnegative number of attributes in this attribute set. - `int`"
-  ([^. this]
+  ([^javax.naming.directory.Attributes this]
     (-> this (.size))))
 
 (defn get
@@ -45,7 +45,7 @@
   attr-id - The non-null id of the attribute to retrieve. If this attribute set ignores the character case of its attribute ids, the case of attrID is ignored. - `java.lang.String`
 
   returns: The attribute identified by attrID; null if not found. - `javax.naming.directory.Attribute`"
-  ([^. this ^java.lang.String attr-id]
+  ([^javax.naming.directory.Attributes this ^java.lang.String attr-id]
     (-> this (.get attr-id))))
 
 (defn get-all
@@ -57,7 +57,7 @@
            Each element of the enumeration is of class Attribute.
            If attribute set has zero attributes, an empty enumeration
            is returned. - `javax.naming.NamingEnumeration<? extends javax.naming.directory.Attribute>`"
-  ([^. this]
+  ([^javax.naming.directory.Attributes this]
     (-> this (.getAll))))
 
 (defn get-i-ds
@@ -71,7 +71,7 @@
            of class String.
            If attribute set has zero attributes, an empty enumeration
            is returned. - `javax.naming.NamingEnumeration<java.lang.String>`"
-  ([^. this]
+  ([^javax.naming.directory.Attributes this]
     (-> this (.getIDs))))
 
 (defn put
@@ -82,9 +82,9 @@
 
   returns: The Attribute with attrID that was previous in this attribute set;
            null if no such attribute existed. - `javax.naming.directory.Attribute`"
-  ([^. this ^java.lang.String attr-id ^java.lang.Object val]
+  ([^javax.naming.directory.Attributes this ^java.lang.String attr-id ^java.lang.Object val]
     (-> this (.put attr-id val)))
-  ([^. this ^javax.naming.directory.Attribute attr]
+  ([^javax.naming.directory.Attributes this ^javax.naming.directory.Attribute attr]
     (-> this (.put attr))))
 
 (defn remove
@@ -96,7 +96,7 @@
   returns: The Attribute with the same ID as attrID that was previous
            in the attribute set;
            null if no such attribute existed. - `javax.naming.directory.Attribute`"
-  ([^. this ^java.lang.String attr-id]
+  ([^javax.naming.directory.Attributes this ^java.lang.String attr-id]
     (-> this (.remove attr-id))))
 
 (defn clone
@@ -106,6 +106,6 @@
    Changes to the copy will not affect the original and vice versa.
 
   returns: A non-null copy of this attribute set. - `java.lang.Object`"
-  ([^. this]
+  ([^javax.naming.directory.Attributes this]
     (-> this (.clone))))
 

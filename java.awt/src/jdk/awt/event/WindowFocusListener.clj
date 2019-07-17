@@ -22,7 +22,7 @@
    events.
 
   e - `java.awt.event.WindowEvent`"
-  ([^. this ^java.awt.event.WindowEvent e]
+  ([^java.awt.event.WindowFocusListener this ^java.awt.event.WindowEvent e]
     (-> this (.windowGainedFocus e))))
 
 (defn window-lost-focus
@@ -31,6 +31,6 @@
    its subcomponents.
 
   e - `java.awt.event.WindowEvent`"
-  ([^. this ^java.awt.event.WindowEvent e]
+  ([^java.awt.event.WindowFocusListener this ^java.awt.event.WindowEvent e]
     (-> this (.windowLostFocus e))))
 

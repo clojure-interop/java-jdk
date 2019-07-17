@@ -12,7 +12,7 @@
   "Returns the length of the list.
 
   returns: the length of the list - `int`"
-  ([^. this]
+  ([^javax.swing.ListModel this]
     (-> this (.getSize))))
 
 (defn get-element-at
@@ -21,7 +21,7 @@
   index - the requested index - `int`
 
   returns: the value at index - `ListModel.E`"
-  ([^. this ^Integer index]
+  ([^javax.swing.ListModel this ^Integer index]
     (-> this (.getElementAt index))))
 
 (defn add-list-data-listener
@@ -29,7 +29,7 @@
    to the data model occurs.
 
   l - the ListDataListener to be added - `javax.swing.event.ListDataListener`"
-  ([^. this ^javax.swing.event.ListDataListener l]
+  ([^javax.swing.ListModel this ^javax.swing.event.ListDataListener l]
     (-> this (.addListDataListener l))))
 
 (defn remove-list-data-listener
@@ -37,6 +37,6 @@
    change to the data model occurs.
 
   l - the ListDataListener to be removed - `javax.swing.event.ListDataListener`"
-  ([^. this ^javax.swing.event.ListDataListener l]
+  ([^javax.swing.ListModel this ^javax.swing.event.ListDataListener l]
     (-> this (.removeListDataListener l))))
 

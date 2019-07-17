@@ -30,7 +30,7 @@
    PreparedStatement is closed.
 
   event - an event object describing the source of the event and that the PreparedStatement was closed. - `javax.sql.StatementEvent`"
-  ([^. this ^javax.sql.StatementEvent event]
+  ([^javax.sql.StatementEventListener this ^javax.sql.StatementEvent event]
     (-> this (.statementClosed event))))
 
 (defn statement-error-occurred
@@ -41,6 +41,6 @@
    contained in the given event, to the application.
 
   event - an event object describing the source of the event, the statement that is invalid and the exception the driver is about to throw. The source of the event is the PooledConnection which the invalid PreparedStatement is associated with. - `javax.sql.StatementEvent`"
-  ([^. this ^javax.sql.StatementEvent event]
+  ([^javax.sql.StatementEventListener this ^javax.sql.StatementEvent event]
     (-> this (.statementErrorOccurred event))))
 

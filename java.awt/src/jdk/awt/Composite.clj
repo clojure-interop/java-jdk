@@ -47,6 +47,6 @@
 
   returns: the CompositeContext object used to perform the
    compositing operation. - `java.awt.CompositeContext`"
-  ([^. this ^java.awt.image.ColorModel src-color-model ^java.awt.image.ColorModel dst-color-model ^java.awt.RenderingHints hints]
+  ([^java.awt.Composite this ^java.awt.image.ColorModel src-color-model ^java.awt.image.ColorModel dst-color-model ^java.awt.RenderingHints hints]
     (-> this (.createContext src-color-model dst-color-model hints))))
 

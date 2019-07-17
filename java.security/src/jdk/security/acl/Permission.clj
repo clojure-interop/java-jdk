@@ -11,13 +11,13 @@
   another - the Permission object to compare with. - `java.lang.Object`
 
   returns: true if the Permission objects are equal, false otherwise - `boolean`"
-  ([^. this ^java.lang.Object another]
+  ([^java.security.acl.Permission this ^java.lang.Object another]
     (-> this (.equals another))))
 
 (defn to-string
   "Prints a string representation of this permission.
 
   returns: the string representation of the permission. - `java.lang.String`"
-  ([^. this]
+  ([^java.security.acl.Permission this]
     (-> this (.toString))))
 

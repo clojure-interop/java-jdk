@@ -14,6 +14,6 @@
   value - the function argument - `long`
 
   returns: the function result - `double`"
-  ([^. this ^Long value]
+  ([^java.util.function.LongToDoubleFunction this ^Long value]
     (-> this (.applyAsDouble value))))
 

@@ -33,7 +33,7 @@
    non-null file keys, then their file keys are equal.
 
   returns: an object that uniquely identifies the given file, or null - `java.lang.Object`"
-  ([^. this]
+  ([^java.nio.file.attribute.BasicFileAttributes this]
     (-> this (.fileKey))))
 
 (defn last-modified-time
@@ -46,21 +46,21 @@
 
   returns: a FileTime representing the time the file was last
             modified - `java.nio.file.attribute.FileTime`"
-  ([^. this]
+  ([^java.nio.file.attribute.BasicFileAttributes this]
     (-> this (.lastModifiedTime))))
 
 (defn symbolic-link?
   "Tells whether the file is a symbolic link.
 
   returns: true if the file is a symbolic link - `boolean`"
-  ([^. this]
+  ([^java.nio.file.attribute.BasicFileAttributes this]
     (-> this (.isSymbolicLink))))
 
 (defn regular-file?
   "Tells whether the file is a regular file with opaque content.
 
   returns: true if the file is a regular file with opaque content - `boolean`"
-  ([^. this]
+  ([^java.nio.file.attribute.BasicFileAttributes this]
     (-> this (.isRegularFile))))
 
 (defn last-access-time
@@ -72,14 +72,14 @@
    representing the epoch (1970-01-01T00:00:00Z).
 
   returns: a FileTime representing the time of last access - `java.nio.file.attribute.FileTime`"
-  ([^. this]
+  ([^java.nio.file.attribute.BasicFileAttributes this]
     (-> this (.lastAccessTime))))
 
 (defn directory?
   "Tells whether the file is a directory.
 
   returns: true if the file is a directory - `boolean`"
-  ([^. this]
+  ([^java.nio.file.attribute.BasicFileAttributes this]
     (-> this (.isDirectory))))
 
 (defn other?
@@ -88,7 +88,7 @@
 
   returns: true if the file something other than a regular file,
            directory or symbolic link - `boolean`"
-  ([^. this]
+  ([^java.nio.file.attribute.BasicFileAttributes this]
     (-> this (.isOther))))
 
 (defn creation-time
@@ -101,7 +101,7 @@
    representing the epoch (1970-01-01T00:00:00Z).
 
   returns: a FileTime representing the time the file was created - `java.nio.file.attribute.FileTime`"
-  ([^. this]
+  ([^java.nio.file.attribute.BasicFileAttributes this]
     (-> this (.creationTime))))
 
 (defn size
@@ -111,6 +111,6 @@
    therefore unspecified.
 
   returns: the file size, in bytes - `long`"
-  ([^. this]
+  ([^java.nio.file.attribute.BasicFileAttributes this]
     (-> this (.size))))
 

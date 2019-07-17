@@ -42,7 +42,7 @@
 
   returns: true if a critical extension is found that is
    not supported, otherwise false. - `boolean`"
-  ([^. this]
+  ([^java.security.cert.X509Extension this]
     (-> this (.hasUnsupportedCriticalExtension))))
 
 (defn get-critical-extension-oi-ds
@@ -72,7 +72,7 @@
    the extension OID strings for extensions that are marked critical.
    If there are no extensions present at all, then this method returns
    null. - `java.util.Set<java.lang.String>`"
-  ([^. this]
+  ([^java.security.cert.X509Extension this]
     (-> this (.getCriticalExtensionOIDs))))
 
 (defn get-non-critical-extension-oi-ds
@@ -109,7 +109,7 @@
    the extension OID strings for extensions that are marked non-critical.
    If there are no extensions present at all, then this method returns
    null. - `java.util.Set<java.lang.String>`"
-  ([^. this]
+  ([^java.security.cert.X509Extension this]
     (-> this (.getNonCriticalExtensionOIDs))))
 
 (defn get-extension-value
@@ -150,6 +150,6 @@
 
   returns: the DER-encoded octet string of the extension value or
    null if it is not present. - `byte[]`"
-  ([^. this ^java.lang.String oid]
+  ([^java.security.cert.X509Extension this ^java.lang.String oid]
     (-> this (.getExtensionValue oid))))
 

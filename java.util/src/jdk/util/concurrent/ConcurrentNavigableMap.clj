@@ -20,9 +20,9 @@
            fromKey to toKey - `java.util.concurrent.ConcurrentNavigableMap<ConcurrentNavigableMap.K,ConcurrentNavigableMap.V>`
 
   throws: java.lang.ClassCastException - if fromKey and toKey cannot be compared to one another using this map's comparator (or, if the map has no comparator, using natural ordering). Implementations may, but are not required to, throw this exception if fromKey or toKey cannot be compared to keys currently in the map."
-  ([^. this ^ConcurrentNavigableMap.K from-key ^Boolean from-inclusive ^ConcurrentNavigableMap.K to-key ^Boolean to-inclusive]
+  ([^java.util.concurrent.ConcurrentNavigableMap this ^ConcurrentNavigableMap.K from-key ^Boolean from-inclusive ^ConcurrentNavigableMap.K to-key ^Boolean to-inclusive]
     (-> this (.subMap from-key from-inclusive to-key to-inclusive)))
-  ([^. this ^ConcurrentNavigableMap.K from-key ^ConcurrentNavigableMap.K to-key]
+  ([^java.util.concurrent.ConcurrentNavigableMap this ^ConcurrentNavigableMap.K from-key ^ConcurrentNavigableMap.K to-key]
     (-> this (.subMap from-key to-key))))
 
 (defn head-map
@@ -35,9 +35,9 @@
            (or equal to, if inclusive is true) toKey - `java.util.concurrent.ConcurrentNavigableMap<ConcurrentNavigableMap.K,ConcurrentNavigableMap.V>`
 
   throws: java.lang.ClassCastException - if toKey is not compatible with this map's comparator (or, if the map has no comparator, if toKey does not implement Comparable). Implementations may, but are not required to, throw this exception if toKey cannot be compared to keys currently in the map."
-  ([^. this ^ConcurrentNavigableMap.K to-key ^Boolean inclusive]
+  ([^java.util.concurrent.ConcurrentNavigableMap this ^ConcurrentNavigableMap.K to-key ^Boolean inclusive]
     (-> this (.headMap to-key inclusive)))
-  ([^. this ^ConcurrentNavigableMap.K to-key]
+  ([^java.util.concurrent.ConcurrentNavigableMap this ^ConcurrentNavigableMap.K to-key]
     (-> this (.headMap to-key))))
 
 (defn tail-map
@@ -50,9 +50,9 @@
            (or equal to, if inclusive is true) fromKey - `java.util.concurrent.ConcurrentNavigableMap<ConcurrentNavigableMap.K,ConcurrentNavigableMap.V>`
 
   throws: java.lang.ClassCastException - if fromKey is not compatible with this map's comparator (or, if the map has no comparator, if fromKey does not implement Comparable). Implementations may, but are not required to, throw this exception if fromKey cannot be compared to keys currently in the map."
-  ([^. this ^ConcurrentNavigableMap.K from-key ^Boolean inclusive]
+  ([^java.util.concurrent.ConcurrentNavigableMap this ^ConcurrentNavigableMap.K from-key ^Boolean inclusive]
     (-> this (.tailMap from-key inclusive)))
-  ([^. this ^ConcurrentNavigableMap.K from-key]
+  ([^java.util.concurrent.ConcurrentNavigableMap this ^ConcurrentNavigableMap.K from-key]
     (-> this (.tailMap from-key))))
 
 (defn descending-map
@@ -66,7 +66,7 @@
    view of m essentially equivalent to m.
 
   returns: a reverse order view of this map - `java.util.concurrent.ConcurrentNavigableMap<ConcurrentNavigableMap.K,ConcurrentNavigableMap.V>`"
-  ([^. this]
+  ([^java.util.concurrent.ConcurrentNavigableMap this]
     (-> this (.descendingMap))))
 
 (defn navigable-key-set
@@ -84,7 +84,7 @@
    weakly consistent.
 
   returns: a navigable set view of the keys in this map - `java.util.NavigableSet<ConcurrentNavigableMap.K>`"
-  ([^. this]
+  ([^java.util.concurrent.ConcurrentNavigableMap this]
     (-> this (.navigableKeySet))))
 
 (defn key-set
@@ -104,7 +104,7 @@
    This method is equivalent to method navigableKeySet.
 
   returns: a navigable set view of the keys in this map - `java.util.NavigableSet<ConcurrentNavigableMap.K>`"
-  ([^. this]
+  ([^java.util.concurrent.ConcurrentNavigableMap this]
     (-> this (.keySet))))
 
 (defn descending-key-set
@@ -122,6 +122,6 @@
    weakly consistent.
 
   returns: a reverse order navigable set view of the keys in this map - `java.util.NavigableSet<ConcurrentNavigableMap.K>`"
-  ([^. this]
+  ([^java.util.concurrent.ConcurrentNavigableMap this]
     (-> this (.descendingKeySet))))
 

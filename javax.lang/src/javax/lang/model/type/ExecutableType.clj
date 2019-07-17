@@ -17,7 +17,7 @@
 
   returns: the type variables declared by the formal type parameters,
             or an empty list if there are none - `java.util.List<? extends javax.lang.model.type.TypeVariable>`"
-  ([^. this]
+  ([^javax.lang.model.type.ExecutableType this]
     (-> this (.getTypeVariables))))
 
 (defn get-return-type
@@ -27,7 +27,7 @@
    return a value.
 
   returns: the return type of this executable - `javax.lang.model.type.TypeMirror`"
-  ([^. this]
+  ([^javax.lang.model.type.ExecutableType this]
     (-> this (.getReturnType))))
 
 (defn get-parameter-types
@@ -35,7 +35,7 @@
 
   returns: the types of this executable's formal parameters,
             or an empty list if there are none - `java.util.List<? extends javax.lang.model.type.TypeMirror>`"
-  ([^. this]
+  ([^javax.lang.model.type.ExecutableType this]
     (-> this (.getParameterTypes))))
 
 (defn get-receiver-type
@@ -52,7 +52,7 @@
    receiver type.
 
   returns: the receiver type of this executable - `javax.lang.model.type.TypeMirror`"
-  ([^. this]
+  ([^javax.lang.model.type.ExecutableType this]
     (-> this (.getReceiverType))))
 
 (defn get-thrown-types
@@ -62,6 +62,6 @@
   returns: the exceptions and other throwables listed in this
             executable's throws clause,
             or an empty list if there are none. - `java.util.List<? extends javax.lang.model.type.TypeMirror>`"
-  ([^. this]
+  ([^javax.lang.model.type.ExecutableType this]
     (-> this (.getThrownTypes))))
 

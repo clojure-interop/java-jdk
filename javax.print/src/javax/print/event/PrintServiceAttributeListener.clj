@@ -15,6 +15,6 @@
    or subsequent event notifications may be blocked.
 
   psae - the event being notified - `javax.print.event.PrintServiceAttributeEvent`"
-  ([^. this ^javax.print.event.PrintServiceAttributeEvent psae]
+  ([^javax.print.event.PrintServiceAttributeListener this ^javax.print.event.PrintServiceAttributeEvent psae]
     (-> this (.attributeUpdate psae))))
 

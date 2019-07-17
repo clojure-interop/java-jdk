@@ -27,7 +27,7 @@
   returns: precision - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^Integer param]
+  ([^java.sql.ParameterMetaData this ^Integer param]
     (-> this (.getPrecision param))))
 
 (defn get-parameter-count
@@ -38,7 +38,7 @@
   returns: the number of parameters - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this]
+  ([^java.sql.ParameterMetaData this]
     (-> this (.getParameterCount))))
 
 (defn get-scale
@@ -50,7 +50,7 @@
   returns: scale - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^Integer param]
+  ([^java.sql.ParameterMetaData this ^Integer param]
     (-> this (.getScale param))))
 
 (defn get-parameter-type-name
@@ -62,7 +62,7 @@
    a user-defined type, then a fully-qualified type name is returned. - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^Integer param]
+  ([^java.sql.ParameterMetaData this ^Integer param]
     (-> this (.getParameterTypeName param))))
 
 (defn get-parameter-class-name
@@ -78,7 +78,7 @@
            for custom mapping. - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^Integer param]
+  ([^java.sql.ParameterMetaData this ^Integer param]
     (-> this (.getParameterClassName param))))
 
 (defn signed?
@@ -89,7 +89,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^Integer param]
+  ([^java.sql.ParameterMetaData this ^Integer param]
     (-> this (.isSigned param))))
 
 (defn get-parameter-type
@@ -100,7 +100,7 @@
   returns: SQL type from java.sql.Types - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^Integer param]
+  ([^java.sql.ParameterMetaData this ^Integer param]
     (-> this (.getParameterType param))))
 
 (defn is-nullable
@@ -114,7 +114,7 @@
           ParameterMetaData.parameterNullableUnknown - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^Integer param]
+  ([^java.sql.ParameterMetaData this ^Integer param]
     (-> this (.isNullable param))))
 
 (defn get-parameter-mode
@@ -129,6 +129,6 @@
           ParameterMetaData.parameterModeUnknown. - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^Integer param]
+  ([^java.sql.ParameterMetaData this ^Integer param]
     (-> this (.getParameterMode param))))
 

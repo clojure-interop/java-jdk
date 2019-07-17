@@ -34,7 +34,7 @@
   offset - the offset to use for the conversion, not null - `java.time.ZoneOffset`
 
   returns: an Instant representing the same instant, not null - `default java.time.Instant`"
-  ([^. this ^java.time.ZoneOffset offset]
+  ([^java.time.chrono.ChronoLocalDateTime this ^java.time.ZoneOffset offset]
     (-> this (.toInstant offset))))
 
 (defn is-equal
@@ -51,7 +51,7 @@
   other - the other date-time to compare to, not null - `java.time.chrono.ChronoLocalDateTime<?>`
 
   returns: true if the underlying date-time is equal to the specified date-time on the timeline - `default boolean`"
-  ([^. this ^java.time.chrono.ChronoLocalDateTime other]
+  ([^java.time.chrono.ChronoLocalDateTime this ^java.time.chrono.ChronoLocalDateTime other]
     (-> this (.isEqual other))))
 
 (defn plus
@@ -72,9 +72,9 @@
   returns: an object of the same type with the specified period added, not null - `java.time.chrono.ChronoLocalDateTime<ChronoLocalDateTime.D>`
 
   throws: java.time.DateTimeException - if the unit cannot be added"
-  ([^. this ^Long amount-to-add ^java.time.temporal.TemporalUnit unit]
+  ([^java.time.chrono.ChronoLocalDateTime this ^Long amount-to-add ^java.time.temporal.TemporalUnit unit]
     (-> this (.plus amount-to-add unit)))
-  ([^. this ^java.time.temporal.TemporalAmount amount]
+  ([^java.time.chrono.ChronoLocalDateTime this ^java.time.temporal.TemporalAmount amount]
     (-> this (.plus amount))))
 
 (defn *time-line-order
@@ -89,7 +89,7 @@
 
   returns: a comparator that compares in time-line order ignoring the chronology - `java.util.Comparator<java.time.chrono.ChronoLocalDateTime<?>>`"
   ([]
-    (null/timeLineOrder )))
+    (ChronoLocalDateTime/timeLineOrder )))
 
 (defn query
   "Queries this date-time using the specified query.
@@ -108,7 +108,7 @@
   returns: the query result, null may be returned (defined by the query) - `default <R> R`
 
   throws: java.time.DateTimeException - if unable to query (defined by the query)"
-  ([^. this ^java.time.temporal.TemporalQuery query]
+  ([^java.time.chrono.ChronoLocalDateTime this ^java.time.temporal.TemporalQuery query]
     (-> this (.query query))))
 
 (defn to-string
@@ -117,7 +117,7 @@
    The output will include the full local date-time.
 
   returns: a string representation of this date-time, not null - `java.lang.String`"
-  ([^. this]
+  ([^java.time.chrono.ChronoLocalDateTime this]
     (-> this (.toString))))
 
 (defn is-before
@@ -134,7 +134,7 @@
   other - the other date-time to compare to, not null - `java.time.chrono.ChronoLocalDateTime<?>`
 
   returns: true if this is before the specified date-time - `default boolean`"
-  ([^. this ^java.time.chrono.ChronoLocalDateTime other]
+  ([^java.time.chrono.ChronoLocalDateTime this ^java.time.chrono.ChronoLocalDateTime other]
     (-> this (.isBefore other))))
 
 (defn minus
@@ -155,9 +155,9 @@
   returns: an object of the same type with the specified period subtracted, not null - `default java.time.chrono.ChronoLocalDateTime<ChronoLocalDateTime.D>`
 
   throws: java.time.DateTimeException - if the unit cannot be subtracted"
-  ([^. this ^Long amount-to-subtract ^java.time.temporal.TemporalUnit unit]
+  ([^java.time.chrono.ChronoLocalDateTime this ^Long amount-to-subtract ^java.time.temporal.TemporalUnit unit]
     (-> this (.minus amount-to-subtract unit)))
-  ([^. this ^java.time.temporal.TemporalAmount amount]
+  ([^java.time.chrono.ChronoLocalDateTime this ^java.time.temporal.TemporalAmount amount]
     (-> this (.minus amount))))
 
 (defn at-zone
@@ -187,7 +187,7 @@
   zone - the time-zone to use, not null - `java.time.ZoneId`
 
   returns: the zoned date-time formed from this date-time, not null - `java.time.chrono.ChronoZonedDateTime<ChronoLocalDateTime.D>`"
-  ([^. this ^java.time.ZoneId zone]
+  ([^java.time.chrono.ChronoLocalDateTime this ^java.time.ZoneId zone]
     (-> this (.atZone zone))))
 
 (defn to-local-time
@@ -197,7 +197,7 @@
    nanosecond as this date-time.
 
   returns: the time part of this date-time, not null - `java.time.LocalTime`"
-  ([^. this]
+  ([^java.time.chrono.ChronoLocalDateTime this]
     (-> this (.toLocalTime))))
 
 (defn to-epoch-second
@@ -214,7 +214,7 @@
   offset - the offset to use for the conversion, not null - `java.time.ZoneOffset`
 
   returns: the number of seconds from the epoch of 1970-01-01T00:00:00Z - `default long`"
-  ([^. this ^java.time.ZoneOffset offset]
+  ([^java.time.chrono.ChronoLocalDateTime this ^java.time.ZoneOffset offset]
     (-> this (.toEpochSecond offset))))
 
 (defn *from
@@ -239,7 +239,7 @@
 
   throws: java.time.DateTimeException - if unable to convert to a ChronoLocalDateTime"
   ([^java.time.temporal.TemporalAccessor temporal]
-    (null/from temporal)))
+    (ChronoLocalDateTime/from temporal)))
 
 (defn is-after
   "Checks if this date-time is after the specified date-time ignoring the chronology.
@@ -255,7 +255,7 @@
   other - the other date-time to compare to, not null - `java.time.chrono.ChronoLocalDateTime<?>`
 
   returns: true if this is after the specified date-time - `default boolean`"
-  ([^. this ^java.time.chrono.ChronoLocalDateTime other]
+  ([^java.time.chrono.ChronoLocalDateTime this ^java.time.chrono.ChronoLocalDateTime other]
     (-> this (.isAfter other))))
 
 (defn supported?
@@ -277,7 +277,7 @@
   field - the field to check, null returns false - `java.time.temporal.TemporalField`
 
   returns: true if the field can be queried, false if not - `boolean`"
-  ([^. this ^java.time.temporal.TemporalField field]
+  ([^java.time.chrono.ChronoLocalDateTime this ^java.time.temporal.TemporalField field]
     (-> this (.isSupported field))))
 
 (defn get-chronology
@@ -287,7 +287,7 @@
    The era and other fields in ChronoField are defined by the chronology.
 
   returns: the chronology, not null - `default java.time.chrono.Chronology`"
-  ([^. this]
+  ([^java.time.chrono.ChronoLocalDateTime this]
     (-> this (.getChronology))))
 
 (defn to-local-date
@@ -297,14 +297,14 @@
    as this date-time.
 
   returns: the date part of this date-time, not null - `ChronoLocalDateTime.D`"
-  ([^. this]
+  ([^java.time.chrono.ChronoLocalDateTime this]
     (-> this (.toLocalDate))))
 
 (defn hash-code
   "A hash code for this date-time.
 
   returns: a suitable hash code - `int`"
-  ([^. this]
+  ([^java.time.chrono.ChronoLocalDateTime this]
     (-> this (.hashCode))))
 
 (defn adjust-into
@@ -332,7 +332,7 @@
   returns: the adjusted object, not null - `default java.time.temporal.Temporal`
 
   throws: java.time.DateTimeException - if unable to make the adjustment"
-  ([^. this ^java.time.temporal.Temporal temporal]
+  ([^java.time.chrono.ChronoLocalDateTime this ^java.time.temporal.Temporal temporal]
     (-> this (.adjustInto temporal))))
 
 (defn with
@@ -353,9 +353,9 @@
   returns: an object of the same type with the specified field set, not null - `java.time.chrono.ChronoLocalDateTime<ChronoLocalDateTime.D>`
 
   throws: java.time.DateTimeException - if the field cannot be set"
-  ([^. this ^java.time.temporal.TemporalField field ^Long new-value]
+  ([^java.time.chrono.ChronoLocalDateTime this ^java.time.temporal.TemporalField field ^Long new-value]
     (-> this (.with field new-value)))
-  ([^. this ^java.time.temporal.TemporalAdjuster adjuster]
+  ([^java.time.chrono.ChronoLocalDateTime this ^java.time.temporal.TemporalAdjuster adjuster]
     (-> this (.with adjuster))))
 
 (defn compare-to
@@ -384,7 +384,7 @@
   other - the other date-time to compare to, not null - `java.time.chrono.ChronoLocalDateTime<?>`
 
   returns: the comparator value, negative if less, positive if greater - `default int`"
-  ([^. this ^java.time.chrono.ChronoLocalDateTime other]
+  ([^java.time.chrono.ChronoLocalDateTime this ^java.time.chrono.ChronoLocalDateTime other]
     (-> this (.compareTo other))))
 
 (defn equals
@@ -395,7 +395,7 @@
   obj - the object to check, null returns false - `java.lang.Object`
 
   returns: true if this is equal to the other date - `boolean`"
-  ([^. this ^java.lang.Object obj]
+  ([^java.time.chrono.ChronoLocalDateTime this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn format
@@ -413,6 +413,6 @@
   returns: the formatted date-time string, not null - `default java.lang.String`
 
   throws: java.time.DateTimeException - if an error occurs during printing"
-  ([^. this ^java.time.format.DateTimeFormatter formatter]
+  ([^java.time.chrono.ChronoLocalDateTime this ^java.time.format.DateTimeFormatter formatter]
     (-> this (.format formatter))))
 

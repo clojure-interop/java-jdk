@@ -10,6 +10,6 @@
    created during key generation.
 
   returns: the associated domain parameters. - `java.security.spec.ECParameterSpec`"
-  ([^. this]
+  ([^java.security.interfaces.ECKey this]
     (-> this (.getParams))))
 

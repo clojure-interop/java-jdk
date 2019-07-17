@@ -8,6 +8,6 @@
    been caught.
 
   e - The exception that was caught. - `java.lang.Exception`"
-  ([^. this ^java.lang.Exception e]
+  ([^java.beans.ExceptionListener this ^java.lang.Exception e]
     (-> this (.exceptionThrown e))))
 

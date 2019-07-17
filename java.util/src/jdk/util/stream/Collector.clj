@@ -121,14 +121,14 @@
   "A function that creates and returns a new mutable result container.
 
   returns: a function which returns a new, mutable result container - `java.util.function.Supplier<Collector.A>`"
-  ([^. this]
+  ([^java.util.stream.Collector this]
     (-> this (.supplier))))
 
 (defn accumulator
   "A function that folds a value into a mutable result container.
 
   returns: a function which folds a value into a mutable result container - `java.util.function.BiConsumer<Collector.A,Collector.T>`"
-  ([^. this]
+  ([^java.util.stream.Collector this]
     (-> this (.accumulator))))
 
 (defn combiner
@@ -138,7 +138,7 @@
 
   returns: a function which combines two partial results into a combined
    result - `java.util.function.BinaryOperator<Collector.A>`"
-  ([^. this]
+  ([^java.util.stream.Collector this]
     (-> this (.combiner))))
 
 (defn finisher
@@ -151,7 +151,7 @@
 
   returns: a function which transforms the intermediate result to the final
    result - `java.util.function.Function<Collector.A,Collector.R>`"
-  ([^. this]
+  ([^java.util.stream.Collector this]
     (-> this (.finisher))))
 
 (defn characteristics
@@ -159,7 +159,7 @@
    the characteristics of this Collector.  This set should be immutable.
 
   returns: an immutable set of collector characteristics - `java.util.Set<java.util.stream.Collector.Characteristics>`"
-  ([^. this]
+  ([^java.util.stream.Collector this]
     (-> this (.characteristics))))
 
 (defn *of
@@ -176,7 +176,7 @@
 
   throws: java.lang.NullPointerException - if any argument is null"
   ([^java.util.function.Supplier supplier ^java.util.function.BiConsumer accumulator ^java.util.function.BinaryOperator combiner ^java.util.function.Function finisher ^java.util.stream.Collector.Characteristics characteristics]
-    (null/of supplier accumulator combiner finisher characteristics))
+    (Collector/of supplier accumulator combiner finisher characteristics))
   ([^java.util.function.Supplier supplier ^java.util.function.BiConsumer accumulator ^java.util.function.BinaryOperator combiner ^java.util.stream.Collector.Characteristics characteristics]
-    (null/of supplier accumulator combiner characteristics)))
+    (Collector/of supplier accumulator combiner characteristics)))
 

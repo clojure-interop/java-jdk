@@ -9,14 +9,14 @@
   "Returns the QName for this attribute
 
   returns: `javax.xml.namespace.QName`"
-  ([^. this]
+  ([^javax.xml.stream.events.Attribute this]
     (-> this (.getName))))
 
 (defn get-value
   "Gets the normalized value of this attribute
 
   returns: `java.lang.String`"
-  ([^. this]
+  ([^javax.xml.stream.events.Attribute this]
     (-> this (.getValue))))
 
 (defn get-dtd-type
@@ -24,7 +24,7 @@
    the String `CDATA`
 
   returns: the type as a String, default is `CDATA` - `java.lang.String`"
-  ([^. this]
+  ([^javax.xml.stream.events.Attribute this]
     (-> this (.getDTDType))))
 
 (defn specified?
@@ -32,6 +32,6 @@
    specified in the start-tag of its element, or was defaulted from the schema.
 
   returns: returns true if this was specified in the start element - `boolean`"
-  ([^. this]
+  ([^javax.xml.stream.events.Attribute this]
     (-> this (.isSpecified))))
 

@@ -31,6 +31,6 @@
   returns: the algorithm-specific input parameters of this
       SignatureMethod (may be null if not
       specified) - `java.security.spec.AlgorithmParameterSpec`"
-  ([^. this]
+  ([^javax.xml.crypto.dsig.SignatureMethod this]
     (-> this (.getParameterSpec))))
 

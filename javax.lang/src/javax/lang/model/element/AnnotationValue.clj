@@ -15,7 +15,7 @@
   "Returns the value.
 
   returns: the value - `java.lang.Object`"
-  ([^. this]
+  ([^javax.lang.model.element.AnnotationValue this]
     (-> this (.getValue))))
 
 (defn to-string
@@ -24,7 +24,7 @@
    in the source code of an annotation.
 
   returns: a string representation of this value - `java.lang.String`"
-  ([^. this]
+  ([^javax.lang.model.element.AnnotationValue this]
     (-> this (.toString))))
 
 (defn accept
@@ -34,6 +34,6 @@
   p - additional parameter to the visitor - `P`
 
   returns: a visitor-specified result - `<R,P> R`"
-  ([^. this ^javax.lang.model.element.AnnotationValueVisitor v p]
+  ([^javax.lang.model.element.AnnotationValue this ^javax.lang.model.element.AnnotationValueVisitor v p]
     (-> this (.accept v p))))
 

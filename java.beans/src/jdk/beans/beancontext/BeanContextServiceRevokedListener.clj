@@ -11,6 +11,6 @@
    this service will no longer be satisfied.
 
   bcsre - the BeanContextServiceRevokedEvent received by this listener. - `java.beans.beancontext.BeanContextServiceRevokedEvent`"
-  ([^. this ^java.beans.beancontext.BeanContextServiceRevokedEvent bcsre]
+  ([^java.beans.beancontext.BeanContextServiceRevokedListener this ^java.beans.beancontext.BeanContextServiceRevokedEvent bcsre]
     (-> this (.serviceRevoked bcsre))))
 

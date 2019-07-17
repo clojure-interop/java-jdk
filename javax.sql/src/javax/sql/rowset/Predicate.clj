@@ -83,8 +83,8 @@
        false otherwise - `boolean`
 
   throws: java.sql.SQLException - if the column is not part of filtering criteria"
-  ([^. this ^java.lang.Object value ^Integer column]
+  ([^javax.sql.rowset.Predicate this ^java.lang.Object value ^Integer column]
     (-> this (.evaluate value column)))
-  ([^. this ^javax.sql.RowSet rs]
+  ([^javax.sql.rowset.Predicate this ^javax.sql.RowSet rs]
     (-> this (.evaluate rs))))
 

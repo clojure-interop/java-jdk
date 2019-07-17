@@ -18,7 +18,7 @@
 
   returns: the zero-based row of the table if one exists;
    otherwise -1. - `int`"
-  ([^. this ^Integer index]
+  ([^javax.accessibility.AccessibleExtendedTable this ^Integer index]
     (-> this (.getAccessibleRow index))))
 
 (defn get-accessible-column
@@ -28,7 +28,7 @@
 
   returns: the zero-based column of the table if one exists;
    otherwise -1. - `int`"
-  ([^. this ^Integer index]
+  ([^javax.accessibility.AccessibleExtendedTable this ^Integer index]
     (-> this (.getAccessibleColumn index))))
 
 (defn get-accessible-index
@@ -40,6 +40,6 @@
   returns: the zero-based index in the table if one exists;
    otherwise -1.  The index is  the table cell offset from
    row == 0 and column == 0. - `int`"
-  ([^. this ^Integer r ^Integer c]
+  ([^javax.accessibility.AccessibleExtendedTable this ^Integer r ^Integer c]
     (-> this (.getAccessibleIndex r c))))
 

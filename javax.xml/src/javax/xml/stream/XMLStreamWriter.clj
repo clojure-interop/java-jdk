@@ -160,7 +160,7 @@
   uri - the uri to bind to the prefix, may be null - `java.lang.String`
 
   throws: javax.xml.stream.XMLStreamException"
-  ([^. this ^java.lang.String prefix ^java.lang.String uri]
+  ([^javax.xml.stream.XMLStreamWriter this ^java.lang.String prefix ^java.lang.String uri]
     (-> this (.setPrefix prefix uri))))
 
 (defn write-namespace
@@ -172,7 +172,7 @@
   namespace-uri - the uri to bind the prefix to - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if the current state does not allow Namespace writing"
-  ([^. this ^java.lang.String prefix ^java.lang.String namespace-uri]
+  ([^javax.xml.stream.XMLStreamWriter this ^java.lang.String prefix ^java.lang.String namespace-uri]
     (-> this (.writeNamespace prefix namespace-uri))))
 
 (defn write-dtd
@@ -182,7 +182,7 @@
   dtd - the DTD to be written - `java.lang.String`
 
   throws: javax.xml.stream.XMLStreamException"
-  ([^. this ^java.lang.String dtd]
+  ([^javax.xml.stream.XMLStreamWriter this ^java.lang.String dtd]
     (-> this (.writeDTD dtd))))
 
 (defn set-namespace-context
@@ -200,7 +200,7 @@
   context - the namespace context to use for this writer, may not be null - `javax.xml.namespace.NamespaceContext`
 
   throws: javax.xml.stream.XMLStreamException"
-  ([^. this ^javax.xml.namespace.NamespaceContext context]
+  ([^javax.xml.stream.XMLStreamWriter this ^javax.xml.namespace.NamespaceContext context]
     (-> this (.setNamespaceContext context))))
 
 (defn write-default-namespace
@@ -209,14 +209,14 @@
   namespace-uri - the uri to bind the default namespace to - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if the current state does not allow Namespace writing"
-  ([^. this ^java.lang.String namespace-uri]
+  ([^javax.xml.stream.XMLStreamWriter this ^java.lang.String namespace-uri]
     (-> this (.writeDefaultNamespace namespace-uri))))
 
 (defn flush
   "Write any cached data to the underlying output mechanism.
 
   throws: javax.xml.stream.XMLStreamException"
-  ([^. this]
+  ([^javax.xml.stream.XMLStreamWriter this]
     (-> this (.flush))))
 
 (defn write-comment
@@ -225,7 +225,7 @@
   data - the data contained in the comment, may be null - `java.lang.String`
 
   throws: javax.xml.stream.XMLStreamException"
-  ([^. this ^java.lang.String data]
+  ([^javax.xml.stream.XMLStreamWriter this ^java.lang.String data]
     (-> this (.writeComment data))))
 
 (defn write-start-document
@@ -238,11 +238,11 @@
   version - version of the xml document - `java.lang.String`
 
   throws: javax.xml.stream.XMLStreamException - If given encoding does not match encoding of the underlying stream"
-  ([^. this ^java.lang.String encoding ^java.lang.String version]
+  ([^javax.xml.stream.XMLStreamWriter this ^java.lang.String encoding ^java.lang.String version]
     (-> this (.writeStartDocument encoding version)))
-  ([^. this ^java.lang.String version]
+  ([^javax.xml.stream.XMLStreamWriter this ^java.lang.String version]
     (-> this (.writeStartDocument version)))
-  ([^. this]
+  ([^javax.xml.stream.XMLStreamWriter this]
     (-> this (.writeStartDocument))))
 
 (defn write-processing-instruction
@@ -252,9 +252,9 @@
   data - the data contained in the processing instruction, may not be null - `java.lang.String`
 
   throws: javax.xml.stream.XMLStreamException"
-  ([^. this ^java.lang.String target ^java.lang.String data]
+  ([^javax.xml.stream.XMLStreamWriter this ^java.lang.String target ^java.lang.String data]
     (-> this (.writeProcessingInstruction target data)))
-  ([^. this ^java.lang.String target]
+  ([^javax.xml.stream.XMLStreamWriter this ^java.lang.String target]
     (-> this (.writeProcessingInstruction target))))
 
 (defn set-default-namespace
@@ -267,7 +267,7 @@
   uri - the uri to bind to the default namespace, may be null - `java.lang.String`
 
   throws: javax.xml.stream.XMLStreamException"
-  ([^. this ^java.lang.String uri]
+  ([^javax.xml.stream.XMLStreamWriter this ^java.lang.String uri]
     (-> this (.setDefaultNamespace uri))))
 
 (defn write-characters
@@ -278,16 +278,16 @@
   len - the number of characters to write - `int`
 
   throws: javax.xml.stream.XMLStreamException"
-  ([^. this text ^Integer start ^Integer len]
+  ([^javax.xml.stream.XMLStreamWriter this text ^Integer start ^Integer len]
     (-> this (.writeCharacters text start len)))
-  ([^. this ^java.lang.String text]
+  ([^javax.xml.stream.XMLStreamWriter this ^java.lang.String text]
     (-> this (.writeCharacters text))))
 
 (defn get-namespace-context
   "Returns the current namespace context.
 
   returns: the current NamespaceContext - `javax.xml.namespace.NamespaceContext`"
-  ([^. this]
+  ([^javax.xml.stream.XMLStreamWriter this]
     (-> this (.getNamespaceContext))))
 
 (defn write-start-element
@@ -298,11 +298,11 @@
   namespace-uri - the uri to bind the prefix to, may not be null - `java.lang.String`
 
   throws: javax.xml.stream.XMLStreamException"
-  ([^. this ^java.lang.String prefix ^java.lang.String local-name ^java.lang.String namespace-uri]
+  ([^javax.xml.stream.XMLStreamWriter this ^java.lang.String prefix ^java.lang.String local-name ^java.lang.String namespace-uri]
     (-> this (.writeStartElement prefix local-name namespace-uri)))
-  ([^. this ^java.lang.String namespace-uri ^java.lang.String local-name]
+  ([^javax.xml.stream.XMLStreamWriter this ^java.lang.String namespace-uri ^java.lang.String local-name]
     (-> this (.writeStartElement namespace-uri local-name)))
-  ([^. this ^java.lang.String local-name]
+  ([^javax.xml.stream.XMLStreamWriter this ^java.lang.String local-name]
     (-> this (.writeStartElement local-name))))
 
 (defn write-c-data
@@ -311,7 +311,7 @@
   data - the data contained in the CData Section, may not be null - `java.lang.String`
 
   throws: javax.xml.stream.XMLStreamException"
-  ([^. this ^java.lang.String data]
+  ([^javax.xml.stream.XMLStreamWriter this ^java.lang.String data]
     (-> this (.writeCData data))))
 
 (defn close
@@ -319,7 +319,7 @@
    writer.  This must not close the underlying output stream.
 
   throws: javax.xml.stream.XMLStreamException"
-  ([^. this]
+  ([^javax.xml.stream.XMLStreamWriter this]
     (-> this (.close))))
 
 (defn get-property
@@ -330,7 +330,7 @@
   returns: The value of the property - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if the property is not supported"
-  ([^. this ^java.lang.String name]
+  ([^javax.xml.stream.XMLStreamWriter this ^java.lang.String name]
     (-> this (.getProperty name))))
 
 (defn write-attribute
@@ -342,11 +342,11 @@
   value - the value of the attribute - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if the current state does not allow Attribute writing"
-  ([^. this ^java.lang.String prefix ^java.lang.String namespace-uri ^java.lang.String local-name ^java.lang.String value]
+  ([^javax.xml.stream.XMLStreamWriter this ^java.lang.String prefix ^java.lang.String namespace-uri ^java.lang.String local-name ^java.lang.String value]
     (-> this (.writeAttribute prefix namespace-uri local-name value)))
-  ([^. this ^java.lang.String namespace-uri ^java.lang.String local-name ^java.lang.String value]
+  ([^javax.xml.stream.XMLStreamWriter this ^java.lang.String namespace-uri ^java.lang.String local-name ^java.lang.String value]
     (-> this (.writeAttribute namespace-uri local-name value)))
-  ([^. this ^java.lang.String local-name ^java.lang.String value]
+  ([^javax.xml.stream.XMLStreamWriter this ^java.lang.String local-name ^java.lang.String value]
     (-> this (.writeAttribute local-name value))))
 
 (defn get-prefix
@@ -357,7 +357,7 @@
   returns: the prefix or null - `java.lang.String`
 
   throws: javax.xml.stream.XMLStreamException"
-  ([^. this ^java.lang.String uri]
+  ([^javax.xml.stream.XMLStreamWriter this ^java.lang.String uri]
     (-> this (.getPrefix uri))))
 
 (defn write-entity-ref
@@ -366,7 +366,7 @@
   name - the name of the entity - `java.lang.String`
 
   throws: javax.xml.stream.XMLStreamException"
-  ([^. this ^java.lang.String name]
+  ([^javax.xml.stream.XMLStreamWriter this ^java.lang.String name]
     (-> this (.writeEntityRef name))))
 
 (defn write-empty-element
@@ -377,18 +377,18 @@
   namespace-uri - the uri to bind the tag to, may not be null - `java.lang.String`
 
   throws: javax.xml.stream.XMLStreamException"
-  ([^. this ^java.lang.String prefix ^java.lang.String local-name ^java.lang.String namespace-uri]
+  ([^javax.xml.stream.XMLStreamWriter this ^java.lang.String prefix ^java.lang.String local-name ^java.lang.String namespace-uri]
     (-> this (.writeEmptyElement prefix local-name namespace-uri)))
-  ([^. this ^java.lang.String namespace-uri ^java.lang.String local-name]
+  ([^javax.xml.stream.XMLStreamWriter this ^java.lang.String namespace-uri ^java.lang.String local-name]
     (-> this (.writeEmptyElement namespace-uri local-name)))
-  ([^. this ^java.lang.String local-name]
+  ([^javax.xml.stream.XMLStreamWriter this ^java.lang.String local-name]
     (-> this (.writeEmptyElement local-name))))
 
 (defn write-end-document
   "Closes any start tags and writes corresponding end tags.
 
   throws: javax.xml.stream.XMLStreamException"
-  ([^. this]
+  ([^javax.xml.stream.XMLStreamWriter this]
     (-> this (.writeEndDocument))))
 
 (defn write-end-element
@@ -397,6 +397,6 @@
    of the event.
 
   throws: javax.xml.stream.XMLStreamException"
-  ([^. this]
+  ([^javax.xml.stream.XMLStreamWriter this]
     (-> this (.writeEndElement))))
 

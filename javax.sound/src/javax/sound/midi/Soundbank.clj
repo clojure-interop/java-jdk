@@ -34,14 +34,14 @@
   "Obtains the name of the sound bank.
 
   returns: a String naming the sound bank - `java.lang.String`"
-  ([^. this]
+  ([^javax.sound.midi.Soundbank this]
     (-> this (.getName))))
 
 (defn get-version
   "Obtains the version string for the sound bank.
 
   returns: a String that indicates the sound bank's version - `java.lang.String`"
-  ([^. this]
+  ([^javax.sound.midi.Soundbank this]
     (-> this (.getVersion))))
 
 (defn get-vendor
@@ -49,14 +49,14 @@
    sound bank
 
   returns: the vendor string - `java.lang.String`"
-  ([^. this]
+  ([^javax.sound.midi.Soundbank this]
     (-> this (.getVendor))))
 
 (defn get-description
   "Obtains a textual description of the sound bank, suitable for display.
 
   returns: a String that describes the sound bank - `java.lang.String`"
-  ([^. this]
+  ([^javax.sound.midi.Soundbank this]
     (-> this (.getDescription))))
 
 (defn get-resources
@@ -64,7 +64,7 @@
 
   returns: an array of resources, excluding instruments.  If the sound bank contains
    no resources (other than instruments), returns an array of length 0. - `javax.sound.midi.SoundbankResource[]`"
-  ([^. this]
+  ([^javax.sound.midi.Soundbank this]
     (-> this (.getResources))))
 
 (defn get-instruments
@@ -73,7 +73,7 @@
   returns: an array of the Instruments in this
    SoundBank
    If the sound bank contains no instruments, returns an array of length 0. - `javax.sound.midi.Instrument[]`"
-  ([^. this]
+  ([^javax.sound.midi.Soundbank this]
     (-> this (.getInstruments))))
 
 (defn get-instrument
@@ -83,6 +83,6 @@
 
   returns: the requested instrument, or null if the
    sound bank doesn't contain that instrument - `javax.sound.midi.Instrument`"
-  ([^. this ^javax.sound.midi.Patch patch]
+  ([^javax.sound.midi.Soundbank this ^javax.sound.midi.Patch patch]
     (-> this (.getInstrument patch))))
 

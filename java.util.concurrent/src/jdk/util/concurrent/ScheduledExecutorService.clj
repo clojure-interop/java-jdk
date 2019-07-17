@@ -66,7 +66,7 @@
            null upon completion - `java.util.concurrent.ScheduledFuture<?>`
 
   throws: java.util.concurrent.RejectedExecutionException - if the task cannot be scheduled for execution"
-  ([^. this ^java.lang.Runnable command ^Long delay ^java.util.concurrent.TimeUnit unit]
+  ([^java.util.concurrent.ScheduledExecutorService this ^java.lang.Runnable command ^Long delay ^java.util.concurrent.TimeUnit unit]
     (-> this (.schedule command delay unit))))
 
 (defn schedule-at-fixed-rate
@@ -92,7 +92,7 @@
            exception upon cancellation - `java.util.concurrent.ScheduledFuture<?>`
 
   throws: java.util.concurrent.RejectedExecutionException - if the task cannot be scheduled for execution"
-  ([^. this ^java.lang.Runnable command ^Long initial-delay ^Long period ^java.util.concurrent.TimeUnit unit]
+  ([^java.util.concurrent.ScheduledExecutorService this ^java.lang.Runnable command ^Long initial-delay ^Long period ^java.util.concurrent.TimeUnit unit]
     (-> this (.scheduleAtFixedRate command initial-delay period unit))))
 
 (defn schedule-with-fixed-delay
@@ -114,6 +114,6 @@
            exception upon cancellation - `java.util.concurrent.ScheduledFuture<?>`
 
   throws: java.util.concurrent.RejectedExecutionException - if the task cannot be scheduled for execution"
-  ([^. this ^java.lang.Runnable command ^Long initial-delay ^Long delay ^java.util.concurrent.TimeUnit unit]
+  ([^java.util.concurrent.ScheduledExecutorService this ^java.lang.Runnable command ^Long initial-delay ^Long delay ^java.util.concurrent.TimeUnit unit]
     (-> this (.scheduleWithFixedDelay command initial-delay delay unit))))
 

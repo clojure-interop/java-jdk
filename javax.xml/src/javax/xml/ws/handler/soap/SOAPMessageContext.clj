@@ -14,7 +14,7 @@
 
   returns: Returns the SOAPMessage; returns null if no
             SOAPMessage is present in this message context - `javax.xml.soap.SOAPMessage`"
-  ([^. this]
+  ([^javax.xml.ws.handler.soap.SOAPMessageContext this]
     (-> this (.getMessage))))
 
 (defn set-message
@@ -23,7 +23,7 @@
   message - SOAP message - `javax.xml.soap.SOAPMessage`
 
   throws: WebServiceException - If any error during the setting of the SOAPMessage in this message context"
-  ([^. this ^javax.xml.soap.SOAPMessage message]
+  ([^javax.xml.ws.handler.soap.SOAPMessageContext this ^javax.xml.soap.SOAPMessage message]
     (-> this (.setMessage message))))
 
 (defn get-headers
@@ -40,7 +40,7 @@
             the supplied qualified name. - `java.lang.Object[]`
 
   throws: WebServiceException - If an error occurs when using the supplied JAXBContext to unmarshall. The cause of the WebServiceException is the original JAXBException."
-  ([^. this ^javax.xml.namespace.QName header ^javax.xml.bind.JAXBContext context ^Boolean all-roles]
+  ([^javax.xml.ws.handler.soap.SOAPMessageContext this ^javax.xml.namespace.QName header ^javax.xml.bind.JAXBContext context ^Boolean all-roles]
     (-> this (.getHeaders header context all-roles))))
 
 (defn get-roles
@@ -55,6 +55,6 @@
     SOAP message through the handler chain.
 
   returns: Array of String for SOAP actor roles - `java.util.Set<java.lang.String>`"
-  ([^. this]
+  ([^javax.xml.ws.handler.soap.SOAPMessageContext this]
     (-> this (.getRoles))))
 

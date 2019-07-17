@@ -11,6 +11,6 @@
   evt - a PropertyChangeEvent object describing the event source and the property that has changed. - `java.beans.PropertyChangeEvent`
 
   throws: java.beans.PropertyVetoException - if the recipient wishes the property change to be rolled back."
-  ([^. this ^java.beans.PropertyChangeEvent evt]
+  ([^java.beans.VetoableChangeListener this ^java.beans.PropertyChangeEvent evt]
     (-> this (.vetoableChange evt))))
 

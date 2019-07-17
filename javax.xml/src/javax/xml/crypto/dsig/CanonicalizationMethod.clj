@@ -30,6 +30,6 @@
 
   returns: the algorithm-specific input parameters (may be
       null if not specified) - `java.security.spec.AlgorithmParameterSpec`"
-  ([^. this]
+  ([^javax.xml.crypto.dsig.CanonicalizationMethod this]
     (-> this (.getParameterSpec))))
 

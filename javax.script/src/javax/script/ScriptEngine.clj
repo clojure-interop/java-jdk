@@ -19,7 +19,7 @@
   "Returns an uninitialized Bindings.
 
   returns: A Bindings that can be used to replace the state of this ScriptEngine. - `javax.script.Bindings`"
-  ([^. this]
+  ([^javax.script.ScriptEngine this]
     (-> this (.createBindings))))
 
 (defn put
@@ -32,7 +32,7 @@
   value - The value of named value to add. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if key is null."
-  ([^. this ^java.lang.String key ^java.lang.Object value]
+  ([^javax.script.ScriptEngine this ^java.lang.String key ^java.lang.Object value]
     (-> this (.put key value))))
 
 (defn set-context
@@ -42,7 +42,7 @@
   context - A ScriptContext that will replace the default ScriptContext in the ScriptEngine. - `javax.script.ScriptContext`
 
   throws: java.lang.NullPointerException - if context is null."
-  ([^. this ^javax.script.ScriptContext context]
+  ([^javax.script.ScriptEngine this ^javax.script.ScriptContext context]
     (-> this (.setContext context))))
 
 (defn eval
@@ -57,16 +57,16 @@
   returns: The value returned from the execution of the script. - `java.lang.Object`
 
   throws: javax.script.ScriptException - if an error occurs in script. ScriptEngines should create and throw ScriptException wrappers for checked Exceptions thrown by underlying scripting implementations."
-  ([^. this ^java.lang.String script ^javax.script.ScriptContext context]
+  ([^javax.script.ScriptEngine this ^java.lang.String script ^javax.script.ScriptContext context]
     (-> this (.eval script context)))
-  ([^. this ^java.lang.String script]
+  ([^javax.script.ScriptEngine this ^java.lang.String script]
     (-> this (.eval script))))
 
 (defn get-factory
   "Returns a ScriptEngineFactory for the class to which this ScriptEngine belongs.
 
   returns: The ScriptEngineFactory - `javax.script.ScriptEngineFactory`"
-  ([^. this]
+  ([^javax.script.ScriptEngine this]
     (-> this (.getFactory))))
 
 (defn get-context
@@ -74,7 +74,7 @@
    and Writers are used for script executions when no ScriptContext is specified.
 
   returns: The default ScriptContext of the ScriptEngine. - `javax.script.ScriptContext`"
-  ([^. this]
+  ([^javax.script.ScriptEngine this]
     (-> this (.getContext))))
 
 (defn get-bindings
@@ -101,7 +101,7 @@
   returns: The Bindings with the specified scope. - `javax.script.Bindings`
 
   throws: java.lang.IllegalArgumentException - if specified scope is invalid"
-  ([^. this ^Integer scope]
+  ([^javax.script.ScriptEngine this ^Integer scope]
     (-> this (.getBindings scope))))
 
 (defn get
@@ -115,7 +115,7 @@
   returns: the value for the given key - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if key is null."
-  ([^. this ^java.lang.String key]
+  ([^javax.script.ScriptEngine this ^java.lang.String key]
     (-> this (.get key))))
 
 (defn set-bindings
@@ -140,6 +140,6 @@
   scope - The specified scope. Either ScriptContext.ENGINE_SCOPE, ScriptContext.GLOBAL_SCOPE, or any other valid value of scope. - `int`
 
   throws: java.lang.IllegalArgumentException - if the scope is invalid"
-  ([^. this ^javax.script.Bindings bindings ^Integer scope]
+  ([^javax.script.ScriptEngine this ^javax.script.Bindings bindings ^Integer scope]
     (-> this (.setBindings bindings scope))))
 

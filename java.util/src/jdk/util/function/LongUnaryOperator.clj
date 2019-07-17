@@ -14,7 +14,7 @@
   operand - the operand - `long`
 
   returns: the operator result - `long`"
-  ([^. this ^Long operand]
+  ([^java.util.function.LongUnaryOperator this ^Long operand]
     (-> this (.applyAsLong operand))))
 
 (defn compose
@@ -29,7 +29,7 @@
    operator and then applies this operator - `default java.util.function.LongUnaryOperator`
 
   throws: java.lang.NullPointerException - if before is null"
-  ([^. this ^java.util.function.LongUnaryOperator before]
+  ([^java.util.function.LongUnaryOperator this ^java.util.function.LongUnaryOperator before]
     (-> this (.compose before))))
 
 (defn and-then
@@ -44,7 +44,7 @@
    applies the after operator - `default java.util.function.LongUnaryOperator`
 
   throws: java.lang.NullPointerException - if after is null"
-  ([^. this ^java.util.function.LongUnaryOperator after]
+  ([^java.util.function.LongUnaryOperator this ^java.util.function.LongUnaryOperator after]
     (-> this (.andThen after))))
 
 (defn *identity
@@ -52,5 +52,5 @@
 
   returns: a unary operator that always returns its input argument - `java.util.function.LongUnaryOperator`"
   ([]
-    (null/identity )))
+    (LongUnaryOperator/identity )))
 

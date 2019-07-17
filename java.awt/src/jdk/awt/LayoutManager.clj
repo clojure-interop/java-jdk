@@ -18,14 +18,14 @@
 
   name - the string to be associated with the component - `java.lang.String`
   comp - the component to be added - `java.awt.Component`"
-  ([^. this ^java.lang.String name ^java.awt.Component comp]
+  ([^java.awt.LayoutManager this ^java.lang.String name ^java.awt.Component comp]
     (-> this (.addLayoutComponent name comp))))
 
 (defn remove-layout-component
   "Removes the specified component from the layout.
 
   comp - the component to be removed - `java.awt.Component`"
-  ([^. this ^java.awt.Component comp]
+  ([^java.awt.LayoutManager this ^java.awt.Component comp]
     (-> this (.removeLayoutComponent comp))))
 
 (defn preferred-layout-size
@@ -35,7 +35,7 @@
   parent - the container to be laid out - `java.awt.Container`
 
   returns: `java.awt.Dimension`"
-  ([^. this ^java.awt.Container parent]
+  ([^java.awt.LayoutManager this ^java.awt.Container parent]
     (-> this (.preferredLayoutSize parent))))
 
 (defn minimum-layout-size
@@ -45,13 +45,13 @@
   parent - the component to be laid out - `java.awt.Container`
 
   returns: `java.awt.Dimension`"
-  ([^. this ^java.awt.Container parent]
+  ([^java.awt.LayoutManager this ^java.awt.Container parent]
     (-> this (.minimumLayoutSize parent))))
 
 (defn layout-container
   "Lays out the specified container.
 
   parent - the container to be laid out - `java.awt.Container`"
-  ([^. this ^java.awt.Container parent]
+  ([^java.awt.LayoutManager this ^java.awt.Container parent]
     (-> this (.layoutContainer parent))))
 

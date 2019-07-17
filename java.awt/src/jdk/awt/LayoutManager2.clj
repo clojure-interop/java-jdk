@@ -19,7 +19,7 @@
 
   comp - the component to be added - `java.awt.Component`
   constraints - where/how the component is added to the layout. - `java.lang.Object`"
-  ([^. this ^java.awt.Component comp ^java.lang.Object constraints]
+  ([^java.awt.LayoutManager2 this ^java.awt.Component comp ^java.lang.Object constraints]
     (-> this (.addLayoutComponent comp constraints))))
 
 (defn maximum-layout-size
@@ -29,7 +29,7 @@
   target - `java.awt.Container`
 
   returns: `java.awt.Dimension`"
-  ([^. this ^java.awt.Container target]
+  ([^java.awt.LayoutManager2 this ^java.awt.Container target]
     (-> this (.maximumLayoutSize target))))
 
 (defn get-layout-alignment-x
@@ -42,7 +42,7 @@
   target - `java.awt.Container`
 
   returns: `float`"
-  ([^. this ^java.awt.Container target]
+  ([^java.awt.LayoutManager2 this ^java.awt.Container target]
     (-> this (.getLayoutAlignmentX target))))
 
 (defn get-layout-alignment-y
@@ -55,7 +55,7 @@
   target - `java.awt.Container`
 
   returns: `float`"
-  ([^. this ^java.awt.Container target]
+  ([^java.awt.LayoutManager2 this ^java.awt.Container target]
     (-> this (.getLayoutAlignmentY target))))
 
 (defn invalidate-layout
@@ -63,6 +63,6 @@
    has cached information it should be discarded.
 
   target - `java.awt.Container`"
-  ([^. this ^java.awt.Container target]
+  ([^java.awt.LayoutManager2 this ^java.awt.Container target]
     (-> this (.invalidateLayout target))))
 

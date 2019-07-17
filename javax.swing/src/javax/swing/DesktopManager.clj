@@ -22,7 +22,7 @@
   f - `javax.swing.JComponent`
   new-x - `int`
   new-y - `int`"
-  ([^. this ^javax.swing.JComponent f ^Integer new-x ^Integer new-y]
+  ([^javax.swing.DesktopManager this ^javax.swing.JComponent f ^Integer new-x ^Integer new-y]
     (-> this (.dragFrame f new-x new-y))))
 
 (defn begin-dragging-frame
@@ -32,7 +32,7 @@
    necessary state. Normally f will be a JInternalFrame.
 
   f - `javax.swing.JComponent`"
-  ([^. this ^javax.swing.JComponent f]
+  ([^javax.swing.DesktopManager this ^javax.swing.JComponent f]
     (-> this (.beginDraggingFrame f))))
 
 (defn resize-frame
@@ -45,7 +45,7 @@
   new-y - `int`
   new-width - `int`
   new-height - `int`"
-  ([^. this ^javax.swing.JComponent f ^Integer new-x ^Integer new-y ^Integer new-width ^Integer new-height]
+  ([^javax.swing.DesktopManager this ^javax.swing.JComponent f ^Integer new-x ^Integer new-y ^Integer new-width ^Integer new-height]
     (-> this (.resizeFrame f new-x new-y new-width new-height))))
 
 (defn activate-frame
@@ -53,7 +53,7 @@
    the JInternalFrame's IS_SELECTED_PROPERTY has been set to true.
 
   f - `javax.swing.JInternalFrame`"
-  ([^. this ^javax.swing.JInternalFrame f]
+  ([^javax.swing.DesktopManager this ^javax.swing.JInternalFrame f]
     (-> this (.activateFrame f))))
 
 (defn minimize-frame
@@ -61,21 +61,21 @@
    size and position prior to a maximizeFrame() call.
 
   f - `javax.swing.JInternalFrame`"
-  ([^. this ^javax.swing.JInternalFrame f]
+  ([^javax.swing.DesktopManager this ^javax.swing.JInternalFrame f]
     (-> this (.minimizeFrame f))))
 
 (defn maximize-frame
   "Generally, the frame should be resized to match it's parents bounds.
 
   f - `javax.swing.JInternalFrame`"
-  ([^. this ^javax.swing.JInternalFrame f]
+  ([^javax.swing.DesktopManager this ^javax.swing.JInternalFrame f]
     (-> this (.maximizeFrame f))))
 
 (defn close-frame
   "Generally, this call should remove the frame from it's parent.
 
   f - `javax.swing.JInternalFrame`"
-  ([^. this ^javax.swing.JInternalFrame f]
+  ([^javax.swing.DesktopManager this ^javax.swing.JInternalFrame f]
     (-> this (.closeFrame f))))
 
 (defn end-resizing-frame
@@ -83,7 +83,7 @@
    the DesktopManager can be removed here.  Normally f will be a JInternalFrame.
 
   f - `javax.swing.JComponent`"
-  ([^. this ^javax.swing.JComponent f]
+  ([^javax.swing.DesktopManager this ^javax.swing.JComponent f]
     (-> this (.endResizingFrame f))))
 
 (defn open-frame
@@ -92,7 +92,7 @@
    will add the frame to the appropriate parent.
 
   f - `javax.swing.JInternalFrame`"
-  ([^. this ^javax.swing.JInternalFrame f]
+  ([^javax.swing.DesktopManager this ^javax.swing.JInternalFrame f]
     (-> this (.openFrame f))))
 
 (defn set-bounds-for-frame
@@ -103,7 +103,7 @@
   new-y - `int`
   new-width - `int`
   new-height - `int`"
-  ([^. this ^javax.swing.JComponent f ^Integer new-x ^Integer new-y ^Integer new-width ^Integer new-height]
+  ([^javax.swing.DesktopManager this ^javax.swing.JComponent f ^Integer new-x ^Integer new-y ^Integer new-width ^Integer new-height]
     (-> this (.setBoundsForFrame f new-x new-y new-width new-height))))
 
 (defn deiconify-frame
@@ -111,7 +111,7 @@
    frame to it's original size and location.
 
   f - `javax.swing.JInternalFrame`"
-  ([^. this ^javax.swing.JInternalFrame f]
+  ([^javax.swing.DesktopManager this ^javax.swing.JInternalFrame f]
     (-> this (.deiconifyFrame f))))
 
 (defn deactivate-frame
@@ -119,7 +119,7 @@
    after the JInternalFrame's IS_SELECTED_PROPERTY has been set to false.
 
   f - `javax.swing.JInternalFrame`"
-  ([^. this ^javax.swing.JInternalFrame f]
+  ([^javax.swing.DesktopManager this ^javax.swing.JInternalFrame f]
     (-> this (.deactivateFrame f))))
 
 (defn end-dragging-frame
@@ -127,7 +127,7 @@
    the DesktopManager can be removed here.  Normally f will be a JInternalFrame.
 
   f - `javax.swing.JComponent`"
-  ([^. this ^javax.swing.JComponent f]
+  ([^javax.swing.DesktopManager this ^javax.swing.JComponent f]
     (-> this (.endDraggingFrame f))))
 
 (defn begin-resizing-frame
@@ -138,13 +138,13 @@
 
   f - `javax.swing.JComponent`
   direction - `int`"
-  ([^. this ^javax.swing.JComponent f ^Integer direction]
+  ([^javax.swing.DesktopManager this ^javax.swing.JComponent f ^Integer direction]
     (-> this (.beginResizingFrame f direction))))
 
 (defn iconify-frame
   "Generally, remove this frame from it's parent and add an iconic representation.
 
   f - `javax.swing.JInternalFrame`"
-  ([^. this ^javax.swing.JInternalFrame f]
+  ([^javax.swing.DesktopManager this ^javax.swing.JInternalFrame f]
     (-> this (.iconifyFrame f))))
 

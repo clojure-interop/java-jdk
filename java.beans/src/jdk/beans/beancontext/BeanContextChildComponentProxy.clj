@@ -11,6 +11,6 @@
 
   returns: the AWT Component associated with
    this BeanContextChild - `java.awt.Component`"
-  ([^. this]
+  ([^java.beans.beancontext.BeanContextChildComponentProxy this]
     (-> this (.getComponent))))
 

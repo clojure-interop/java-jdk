@@ -98,6 +98,6 @@
   command - the runnable task - `java.lang.Runnable`
 
   throws: java.util.concurrent.RejectedExecutionException - if this task cannot be accepted for execution"
-  ([^. this ^java.lang.Runnable command]
+  ([^java.util.concurrent.Executor this ^java.lang.Runnable command]
     (-> this (.execute command))))
 

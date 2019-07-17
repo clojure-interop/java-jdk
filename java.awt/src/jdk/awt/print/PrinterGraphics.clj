@@ -13,6 +13,6 @@
 
   returns: the PrinterJob controlling the current
    rendering request. - `java.awt.print.PrinterJob`"
-  ([^. this]
+  ([^java.awt.print.PrinterGraphics this]
     (-> this (.getPrinterJob))))
 

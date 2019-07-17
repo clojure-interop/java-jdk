@@ -71,7 +71,7 @@
   resolver - XPath function resolver. - `javax.xml.xpath.XPathFunctionResolver`
 
   throws: java.lang.NullPointerException - If resolver is null."
-  ([^. this ^javax.xml.xpath.XPathFunctionResolver resolver]
+  ([^javax.xml.xpath.XPath this ^javax.xml.xpath.XPathFunctionResolver resolver]
     (-> this (.setXPathFunctionResolver resolver))))
 
 (defn set-x-path-variable-resolver
@@ -82,7 +82,7 @@
   resolver - Variable resolver. - `javax.xml.xpath.XPathVariableResolver`
 
   throws: java.lang.NullPointerException - If resolver is null."
-  ([^. this ^javax.xml.xpath.XPathVariableResolver resolver]
+  ([^javax.xml.xpath.XPath this ^javax.xml.xpath.XPathVariableResolver resolver]
     (-> this (.setXPathVariableResolver resolver))))
 
 (defn set-namespace-context
@@ -93,7 +93,7 @@
   ns-context - Namespace context to use. - `javax.xml.namespace.NamespaceContext`
 
   throws: java.lang.NullPointerException - If nsContext is null."
-  ([^. this ^javax.xml.namespace.NamespaceContext ns-context]
+  ([^javax.xml.xpath.XPath this ^javax.xml.namespace.NamespaceContext ns-context]
     (-> this (.setNamespaceContext ns-context))))
 
 (defn reset
@@ -108,7 +108,7 @@
    or NamespaceContext Objects, e.g. Object.equals(Object obj).
    It is guaranteed to have a functionally equal XPathFunctionResolver, XPathVariableResolver
    and NamespaceContext."
-  ([^. this]
+  ([^javax.xml.xpath.XPath this]
     (-> this (.reset))))
 
 (defn evaluate
@@ -138,9 +138,9 @@
   returns: Result of evaluating an XPath expression as an Object of returnType. - `java.lang.Object`
 
   throws: javax.xml.xpath.XPathExpressionException - If expression cannot be evaluated."
-  ([^. this ^java.lang.String expression ^java.lang.Object item ^javax.xml.namespace.QName return-type]
+  ([^javax.xml.xpath.XPath this ^java.lang.String expression ^java.lang.Object item ^javax.xml.namespace.QName return-type]
     (-> this (.evaluate expression item return-type)))
-  ([^. this ^java.lang.String expression ^java.lang.Object item]
+  ([^javax.xml.xpath.XPath this ^java.lang.String expression ^java.lang.Object item]
     (-> this (.evaluate expression item))))
 
 (defn get-namespace-context
@@ -149,7 +149,7 @@
    null is returned in no namespace context is in effect.
 
   returns: Current Namespace context. - `javax.xml.namespace.NamespaceContext`"
-  ([^. this]
+  ([^javax.xml.xpath.XPath this]
     (-> this (.getNamespaceContext))))
 
 (defn compile
@@ -172,7 +172,7 @@
   returns: Compiled XPath expression. - `javax.xml.xpath.XPathExpression`
 
   throws: javax.xml.xpath.XPathExpressionException - If expression cannot be compiled."
-  ([^. this ^java.lang.String expression]
+  ([^javax.xml.xpath.XPath this ^java.lang.String expression]
     (-> this (.compile expression))))
 
 (defn get-x-path-function-resolver
@@ -181,7 +181,7 @@
    null is returned in no function resolver is in effect.
 
   returns: Current function resolver. - `javax.xml.xpath.XPathFunctionResolver`"
-  ([^. this]
+  ([^javax.xml.xpath.XPath this]
     (-> this (.getXPathFunctionResolver))))
 
 (defn get-x-path-variable-resolver
@@ -190,6 +190,6 @@
    null is returned in no variable resolver is in effect.
 
   returns: Current variable resolver. - `javax.xml.xpath.XPathVariableResolver`"
-  ([^. this]
+  ([^javax.xml.xpath.XPath this]
     (-> this (.getXPathVariableResolver))))
 

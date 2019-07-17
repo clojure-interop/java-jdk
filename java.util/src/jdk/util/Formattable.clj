@@ -93,6 +93,6 @@
   precision - The maximum number of characters to be written to the output. The precision is applied before the width, thus the output will be truncated to precision characters even if the width is greater than the precision. If precision is -1 then there is no explicit limit on the number of characters. - `int`
 
   throws: java.util.IllegalFormatException - If any of the parameters are invalid. For specification of all possible formatting errors, see the Details section of the formatter class specification."
-  ([^. this ^java.util.Formatter formatter ^Integer flags ^Integer width ^Integer precision]
+  ([^java.util.Formattable this ^java.util.Formatter formatter ^Integer flags ^Integer width ^Integer precision]
     (-> this (.formatTo formatter flags width precision))))
 

@@ -16,7 +16,7 @@
   t - the input argument - `long`
 
   throws: java.lang.IllegalStateException - if the builder has already transitioned to the built state"
-  ([^. this ^Long t]
+  ([^java.util.stream.LongStream$Builder this ^Long t]
     (-> this (.accept t))))
 
 (defn add
@@ -27,7 +27,7 @@
   returns: this builder - `default java.util.stream.LongStream.Builder`
 
   throws: java.lang.IllegalStateException - if the builder has already transitioned to the built state"
-  ([^. this ^Long t]
+  ([^java.util.stream.LongStream$Builder this ^Long t]
     (-> this (.add t))))
 
 (defn build
@@ -39,6 +39,6 @@
   returns: the built stream - `java.util.stream.LongStream`
 
   throws: java.lang.IllegalStateException - if the builder has already transitioned to the built state"
-  ([^. this]
+  ([^java.util.stream.LongStream$Builder this]
     (-> this (.build))))
 

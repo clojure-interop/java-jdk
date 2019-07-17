@@ -7,6 +7,6 @@
   "Returns the key parameters.
 
   returns: the key parameters - `javax.crypto.spec.DHParameterSpec`"
-  ([^. this]
+  ([^javax.crypto.interfaces.DHKey this]
     (-> this (.getParams))))
 

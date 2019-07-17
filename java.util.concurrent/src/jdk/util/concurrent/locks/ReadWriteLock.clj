@@ -77,13 +77,13 @@
   "Returns the lock used for reading.
 
   returns: the lock used for reading - `java.util.concurrent.locks.Lock`"
-  ([^. this]
+  ([^java.util.concurrent.locks.ReadWriteLock this]
     (-> this (.readLock))))
 
 (defn write-lock
   "Returns the lock used for writing.
 
   returns: the lock used for writing - `java.util.concurrent.locks.Lock`"
-  ([^. this]
+  ([^java.util.concurrent.locks.ReadWriteLock this]
     (-> this (.writeLock))))
 

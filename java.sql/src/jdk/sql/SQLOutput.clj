@@ -27,7 +27,7 @@
   x - the value to pass to the database - `java.sql.Date`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^java.sql.Date x]
+  ([^java.sql.SQLOutput this ^java.sql.Date x]
     (-> this (.writeDate x))))
 
 (defn write-time
@@ -38,7 +38,7 @@
   x - the value to pass to the database - `java.sql.Time`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^java.sql.Time x]
+  ([^java.sql.SQLOutput this ^java.sql.Time x]
     (-> this (.writeTime x))))
 
 (defn write-url
@@ -47,7 +47,7 @@
   x - a java.net.URL object representing the data of SQL DATALINK type - `java.net.URL`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^java.net.URL x]
+  ([^java.sql.SQLOutput this ^java.net.URL x]
     (-> this (.writeURL x))))
 
 (defn write-bytes
@@ -58,7 +58,7 @@
   x - the value to pass to the database - `byte[]`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this x]
+  ([^java.sql.SQLOutput this x]
     (-> this (.writeBytes x))))
 
 (defn write-double
@@ -69,7 +69,7 @@
   x - the value to pass to the database - `double`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^Double x]
+  ([^java.sql.SQLOutput this ^Double x]
     (-> this (.writeDouble x))))
 
 (defn write-clob
@@ -78,7 +78,7 @@
   x - a Clob object representing data of an SQL CLOB value - `java.sql.Clob`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^java.sql.Clob x]
+  ([^java.sql.SQLOutput this ^java.sql.Clob x]
     (-> this (.writeClob x))))
 
 (defn write-object
@@ -107,9 +107,9 @@
   returns: `default void`
 
   throws: java.sql.SQLException - if a database access error occurs or if the Java Object specified by x is an InputStream or Reader object and the value of the scale parameter is less than zero"
-  ([^. this ^java.lang.Object x ^java.sql.SQLType target-sql-type]
+  ([^java.sql.SQLOutput this ^java.lang.Object x ^java.sql.SQLType target-sql-type]
     (-> this (.writeObject x target-sql-type)))
-  ([^. this ^java.sql.SQLData x]
+  ([^java.sql.SQLOutput this ^java.sql.SQLData x]
     (-> this (.writeObject x))))
 
 (defn write-boolean
@@ -120,7 +120,7 @@
   x - the value to pass to the database - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^Boolean x]
+  ([^java.sql.SQLOutput this ^Boolean x]
     (-> this (.writeBoolean x))))
 
 (defn write-long
@@ -131,7 +131,7 @@
   x - the value to pass to the database - `long`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^Long x]
+  ([^java.sql.SQLOutput this ^Long x]
     (-> this (.writeLong x))))
 
 (defn write-short
@@ -142,7 +142,7 @@
   x - the value to pass to the database - `short`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^Short x]
+  ([^java.sql.SQLOutput this ^Short x]
     (-> this (.writeShort x))))
 
 (defn write-binary-stream
@@ -152,7 +152,7 @@
   x - the value to pass to the database - `java.io.InputStream`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^java.io.InputStream x]
+  ([^java.sql.SQLOutput this ^java.io.InputStream x]
     (-> this (.writeBinaryStream x))))
 
 (defn write-blob
@@ -161,7 +161,7 @@
   x - a Blob object representing data of an SQL BLOB value - `java.sql.Blob`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^java.sql.Blob x]
+  ([^java.sql.SQLOutput this ^java.sql.Blob x]
     (-> this (.writeBlob x))))
 
 (defn write-array
@@ -170,7 +170,7 @@
   x - an Array object representing data of an SQL ARRAY type - `java.sql.Array`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^java.sql.Array x]
+  ([^java.sql.SQLOutput this ^java.sql.Array x]
     (-> this (.writeArray x))))
 
 (defn write-string
@@ -180,7 +180,7 @@
   x - the value to pass to the database - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^java.lang.String x]
+  ([^java.sql.SQLOutput this ^java.lang.String x]
     (-> this (.writeString x))))
 
 (defn write-character-stream
@@ -189,7 +189,7 @@
   x - the value to pass to the database - `java.io.Reader`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^java.io.Reader x]
+  ([^java.sql.SQLOutput this ^java.io.Reader x]
     (-> this (.writeCharacterStream x))))
 
 (defn write-struct
@@ -198,7 +198,7 @@
   x - a Struct object representing data of an SQL structured type - `java.sql.Struct`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^java.sql.Struct x]
+  ([^java.sql.SQLOutput this ^java.sql.Struct x]
     (-> this (.writeStruct x))))
 
 (defn write-n-string
@@ -213,7 +213,7 @@
   x - the value to pass to the database - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^java.lang.String x]
+  ([^java.sql.SQLOutput this ^java.lang.String x]
     (-> this (.writeNString x))))
 
 (defn write-int
@@ -224,7 +224,7 @@
   x - the value to pass to the database - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^Integer x]
+  ([^java.sql.SQLOutput this ^Integer x]
     (-> this (.writeInt x))))
 
 (defn write-float
@@ -235,7 +235,7 @@
   x - the value to pass to the database - `float`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^Float x]
+  ([^java.sql.SQLOutput this ^Float x]
     (-> this (.writeFloat x))))
 
 (defn write-n-clob
@@ -244,7 +244,7 @@
   x - a NClob object representing data of an SQL NCLOB value - `java.sql.NClob`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^java.sql.NClob x]
+  ([^java.sql.SQLOutput this ^java.sql.NClob x]
     (-> this (.writeNClob x))))
 
 (defn write-timestamp
@@ -255,7 +255,7 @@
   x - the value to pass to the database - `java.sql.Timestamp`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^java.sql.Timestamp x]
+  ([^java.sql.SQLOutput this ^java.sql.Timestamp x]
     (-> this (.writeTimestamp x))))
 
 (defn write-ascii-stream
@@ -264,7 +264,7 @@
   x - the value to pass to the database - `java.io.InputStream`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^java.io.InputStream x]
+  ([^java.sql.SQLOutput this ^java.io.InputStream x]
     (-> this (.writeAsciiStream x))))
 
 (defn write-sqlxml
@@ -273,7 +273,7 @@
   x - a SQLXML object representing data of an SQL XML value - `java.sql.SQLXML`
 
   throws: java.sql.SQLException - if a database access error occurs, the java.xml.transform.Result, Writer or OutputStream has not been closed for the SQLXML object or if there is an error processing the XML value. The getCause method of the exception may provide a more detailed exception, for example, if the stream does not contain valid XML."
-  ([^. this ^java.sql.SQLXML x]
+  ([^java.sql.SQLOutput this ^java.sql.SQLXML x]
     (-> this (.writeSQLXML x))))
 
 (defn write-big-decimal
@@ -284,7 +284,7 @@
   x - the value to pass to the database - `java.math.BigDecimal`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^java.math.BigDecimal x]
+  ([^java.sql.SQLOutput this ^java.math.BigDecimal x]
     (-> this (.writeBigDecimal x))))
 
 (defn write-byte
@@ -295,7 +295,7 @@
   x - the value to pass to the database - `byte`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^Byte x]
+  ([^java.sql.SQLOutput this ^Byte x]
     (-> this (.writeByte x))))
 
 (defn write-ref
@@ -304,7 +304,7 @@
   x - a Ref object representing data of an SQL REF value - `java.sql.Ref`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^java.sql.Ref x]
+  ([^java.sql.SQLOutput this ^java.sql.Ref x]
     (-> this (.writeRef x))))
 
 (defn write-row-id
@@ -313,6 +313,6 @@
   x - a RowId object representing data of an SQL ROWID value - `java.sql.RowId`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^java.sql.RowId x]
+  ([^java.sql.SQLOutput this ^java.sql.RowId x]
     (-> this (.writeRowId x))))
 

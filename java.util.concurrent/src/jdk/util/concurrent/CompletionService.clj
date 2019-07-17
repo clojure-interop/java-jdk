@@ -36,9 +36,9 @@
            result value upon completion - `java.util.concurrent.Future<CompletionService.V>`
 
   throws: java.util.concurrent.RejectedExecutionException - if the task cannot be scheduled for execution"
-  ([^. this ^java.lang.Runnable task ^CompletionService.V result]
+  ([^java.util.concurrent.CompletionService this ^java.lang.Runnable task ^CompletionService.V result]
     (-> this (.submit task result)))
-  ([^. this ^java.util.concurrent.Callable task]
+  ([^java.util.concurrent.CompletionService this ^java.util.concurrent.Callable task]
     (-> this (.submit task))))
 
 (defn take
@@ -48,7 +48,7 @@
   returns: the Future representing the next completed task - `java.util.concurrent.Future<CompletionService.V>`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([^. this]
+  ([^java.util.concurrent.CompletionService this]
     (-> this (.take))))
 
 (defn poll
@@ -64,8 +64,8 @@
            before one is present - `java.util.concurrent.Future<CompletionService.V>`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([^. this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  ([^java.util.concurrent.CompletionService this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.poll timeout unit)))
-  ([^. this]
+  ([^java.util.concurrent.CompletionService this]
     (-> this (.poll))))
 

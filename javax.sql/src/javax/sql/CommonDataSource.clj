@@ -23,7 +23,7 @@
           logging is disabled - `java.io.PrintWriter`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this]
+  ([^javax.sql.CommonDataSource this]
     (-> this (.getLogWriter))))
 
 (defn set-log-writer
@@ -44,7 +44,7 @@
   out - the new log writer; to disable logging, set to null - `java.io.PrintWriter`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^java.io.PrintWriter out]
+  ([^javax.sql.CommonDataSource this ^java.io.PrintWriter out]
     (-> this (.setLogWriter out))))
 
 (defn set-login-timeout
@@ -58,7 +58,7 @@
   seconds - the data source login time limit - `int`
 
   throws: java.sql.SQLException - if a database access error occurs."
-  ([^. this ^Integer seconds]
+  ([^javax.sql.CommonDataSource this ^Integer seconds]
     (-> this (.setLoginTimeout seconds))))
 
 (defn get-login-timeout
@@ -72,7 +72,7 @@
   returns: the data source login time limit - `int`
 
   throws: java.sql.SQLException - if a database access error occurs."
-  ([^. this]
+  ([^javax.sql.CommonDataSource this]
     (-> this (.getLoginTimeout))))
 
 (defn get-parent-logger
@@ -85,6 +85,6 @@
   returns: the parent Logger for this data source - `java.util.logging.Logger`
 
   throws: java.sql.SQLFeatureNotSupportedException - if the data source does not use java.util.logging"
-  ([^. this]
+  ([^javax.sql.CommonDataSource this]
     (-> this (.getParentLogger))))
 

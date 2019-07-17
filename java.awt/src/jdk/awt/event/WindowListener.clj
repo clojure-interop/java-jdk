@@ -17,7 +17,7 @@
   "Invoked the first time a window is made visible.
 
   e - `java.awt.event.WindowEvent`"
-  ([^. this ^java.awt.event.WindowEvent e]
+  ([^java.awt.event.WindowListener this ^java.awt.event.WindowEvent e]
     (-> this (.windowOpened e))))
 
 (defn window-closing
@@ -25,7 +25,7 @@
    from the window's system menu.
 
   e - `java.awt.event.WindowEvent`"
-  ([^. this ^java.awt.event.WindowEvent e]
+  ([^java.awt.event.WindowListener this ^java.awt.event.WindowEvent e]
     (-> this (.windowClosing e))))
 
 (defn window-closed
@@ -33,7 +33,7 @@
    of calling dispose on the window.
 
   e - `java.awt.event.WindowEvent`"
-  ([^. this ^java.awt.event.WindowEvent e]
+  ([^java.awt.event.WindowListener this ^java.awt.event.WindowEvent e]
     (-> this (.windowClosed e))))
 
 (defn window-iconified
@@ -43,7 +43,7 @@
    iconImage property.
 
   e - `java.awt.event.WindowEvent`"
-  ([^. this ^java.awt.event.WindowEvent e]
+  ([^java.awt.event.WindowListener this ^java.awt.event.WindowEvent e]
     (-> this (.windowIconified e))))
 
 (defn window-deiconified
@@ -51,7 +51,7 @@
    to a normal state.
 
   e - `java.awt.event.WindowEvent`"
-  ([^. this ^java.awt.event.WindowEvent e]
+  ([^java.awt.event.WindowListener this ^java.awt.event.WindowEvent e]
     (-> this (.windowDeiconified e))))
 
 (defn window-activated
@@ -63,7 +63,7 @@
    focused Window.
 
   e - `java.awt.event.WindowEvent`"
-  ([^. this ^java.awt.event.WindowEvent e]
+  ([^java.awt.event.WindowListener this ^java.awt.event.WindowEvent e]
     (-> this (.windowActivated e))))
 
 (defn window-deactivated
@@ -75,6 +75,6 @@
    Window.
 
   e - `java.awt.event.WindowEvent`"
-  ([^. this ^java.awt.event.WindowEvent e]
+  ([^java.awt.event.WindowListener this ^java.awt.event.WindowEvent e]
     (-> this (.windowDeactivated e))))
 

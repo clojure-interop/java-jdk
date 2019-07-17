@@ -39,7 +39,7 @@
   exception - The warning information encapsulated in a transformer exception. - `javax.xml.transform.TransformerException`
 
   throws: javax.xml.transform.TransformerException - if the application chooses to discontinue the transformation."
-  ([^. this ^javax.xml.transform.TransformerException exception]
+  ([^javax.xml.transform.ErrorListener this ^javax.xml.transform.TransformerException exception]
     (-> this (.warning exception))))
 
 (defn error
@@ -53,7 +53,7 @@
   exception - The error information encapsulated in a transformer exception. - `javax.xml.transform.TransformerException`
 
   throws: javax.xml.transform.TransformerException - if the application chooses to discontinue the transformation."
-  ([^. this ^javax.xml.transform.TransformerException exception]
+  ([^javax.xml.transform.ErrorListener this ^javax.xml.transform.TransformerException exception]
     (-> this (.error exception))))
 
 (defn fatal-error
@@ -70,6 +70,6 @@
   exception - The error information encapsulated in a TransformerException. - `javax.xml.transform.TransformerException`
 
   throws: javax.xml.transform.TransformerException - if the application chooses to discontinue the transformation."
-  ([^. this ^javax.xml.transform.TransformerException exception]
+  ([^javax.xml.transform.ErrorListener this ^javax.xml.transform.TransformerException exception]
     (-> this (.fatalError exception))))
 

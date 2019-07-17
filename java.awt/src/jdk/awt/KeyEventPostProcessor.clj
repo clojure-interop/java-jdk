@@ -53,6 +53,6 @@
 
   returns: true if the AWT should take no further action with
            regard to the KeyEvent; false otherwise - `boolean`"
-  ([^. this ^java.awt.event.KeyEvent e]
+  ([^java.awt.KeyEventPostProcessor this ^java.awt.event.KeyEvent e]
     (-> this (.postProcessKeyEvent e))))
 

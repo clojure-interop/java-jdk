@@ -9,7 +9,7 @@
    BeanContext that this listener is registered with.
 
   bcme - The BeanContextMembershipEvent describing the change that occurred. - `java.beans.beancontext.BeanContextMembershipEvent`"
-  ([^. this ^java.beans.beancontext.BeanContextMembershipEvent bcme]
+  ([^java.beans.beancontext.BeanContextMembershipListener this ^java.beans.beancontext.BeanContextMembershipEvent bcme]
     (-> this (.childrenAdded bcme))))
 
 (defn children-removed
@@ -18,6 +18,6 @@
    is registered with.
 
   bcme - The BeanContextMembershipEvent describing the change that occurred. - `java.beans.beancontext.BeanContextMembershipEvent`"
-  ([^. this ^java.beans.beancontext.BeanContextMembershipEvent bcme]
+  ([^java.beans.beancontext.BeanContextMembershipListener this ^java.beans.beancontext.BeanContextMembershipEvent bcme]
     (-> this (.childrenRemoved bcme))))
 

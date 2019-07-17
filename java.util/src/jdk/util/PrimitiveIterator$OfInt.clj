@@ -9,7 +9,7 @@
   returns: the next int element in the iteration - `int`
 
   throws: java.util.NoSuchElementException - if the iteration has no more elements"
-  ([^. this]
+  ([^java.util.PrimitiveIterator$OfInt this]
     (-> this (.nextInt))))
 
 (defn for-each-remaining
@@ -23,13 +23,13 @@
   returns: `default void`
 
   throws: java.lang.NullPointerException - if the specified action is null"
-  ([^. this ^java.util.function.IntConsumer action]
+  ([^java.util.PrimitiveIterator$OfInt this ^java.util.function.IntConsumer action]
     (-> this (.forEachRemaining action))))
 
 (defn next
   "Returns the next element in the iteration.
 
   returns: the next element in the iteration - `default java.lang.Integer`"
-  ([^. this]
+  ([^java.util.PrimitiveIterator$OfInt this]
     (-> this (.next))))
 

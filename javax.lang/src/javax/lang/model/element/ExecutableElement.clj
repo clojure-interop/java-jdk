@@ -12,7 +12,7 @@
 
   returns: the exceptions and other throwables listed in the
    throws clause, or an empty list if there are none - `java.util.List<? extends javax.lang.model.type.TypeMirror>`"
-  ([^. this]
+  ([^javax.lang.model.element.ExecutableElement this]
     (-> this (.getThrownTypes))))
 
 (defn var-args?
@@ -21,7 +21,7 @@
 
   returns: true if this method or constructor accepts a variable
    number of arguments and false otherwise - `boolean`"
-  ([^. this]
+  ([^javax.lang.model.element.ExecutableElement this]
     (-> this (.isVarArgs))))
 
 (defn get-parameters
@@ -30,7 +30,7 @@
 
   returns: the formal parameters,
    or an empty list if there are none - `java.util.List<? extends javax.lang.model.element.VariableElement>`"
-  ([^. this]
+  ([^javax.lang.model.element.ExecutableElement this]
     (-> this (.getParameters))))
 
 (defn get-default-value
@@ -40,7 +40,7 @@
    with no default value.
 
   returns: the default value, or null if none - `javax.lang.model.element.AnnotationValue`"
-  ([^. this]
+  ([^javax.lang.model.element.ExecutableElement this]
     (-> this (.getDefaultValue))))
 
 (defn get-type-parameters
@@ -49,7 +49,7 @@
 
   returns: the formal type parameters, or an empty list
    if there are none - `java.util.List<? extends javax.lang.model.element.TypeParameterElement>`"
-  ([^. this]
+  ([^javax.lang.model.element.ExecutableElement this]
     (-> this (.getTypeParameters))))
 
 (defn get-return-type
@@ -59,7 +59,7 @@
    return a value.
 
   returns: the return type of this executable - `javax.lang.model.type.TypeMirror`"
-  ([^. this]
+  ([^javax.lang.model.element.ExecutableElement this]
     (-> this (.getReturnType))))
 
 (defn get-receiver-type
@@ -76,7 +76,7 @@
    receiver type.
 
   returns: the receiver type of this executable - `javax.lang.model.type.TypeMirror`"
-  ([^. this]
+  ([^javax.lang.model.element.ExecutableElement this]
     (-> this (.getReceiverType))))
 
 (defn get-simple-name
@@ -88,7 +88,7 @@
 
   returns: the simple name of a constructor, method, or
    initializer - `javax.lang.model.element.Name`"
-  ([^. this]
+  ([^javax.lang.model.element.ExecutableElement this]
     (-> this (.getSimpleName))))
 
 (defn default?
@@ -97,6 +97,6 @@
 
   returns: true if this method is a default method and
    false otherwise - `boolean`"
-  ([^. this]
+  ([^javax.lang.model.element.ExecutableElement this]
     (-> this (.isDefault))))
 

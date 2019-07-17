@@ -283,7 +283,7 @@
   am - `javax.xml.bind.attachment.AttachmentMarshaller`
 
   throws: java.lang.IllegalStateException - if attempt to concurrently call this method during a marshal operation."
-  ([^. this ^javax.xml.bind.attachment.AttachmentMarshaller am]
+  ([^javax.xml.bind.Marshaller this ^javax.xml.bind.attachment.AttachmentMarshaller am]
     (-> this (.setAttachmentMarshaller am))))
 
 (defn marshal
@@ -301,7 +301,7 @@
   result - XML will be sent to this Result - `javax.xml.transform.Result`
 
   throws: javax.xml.bind.JAXBException - If any unexpected problem occurs during the marshalling."
-  ([^. this ^java.lang.Object jaxb-element ^javax.xml.transform.Result result]
+  ([^javax.xml.bind.Marshaller this ^java.lang.Object jaxb-element ^javax.xml.transform.Result result]
     (-> this (.marshal jaxb-element result))))
 
 (defn set-event-handler
@@ -320,7 +320,7 @@
   handler - the validation event handler - `javax.xml.bind.ValidationEventHandler`
 
   throws: javax.xml.bind.JAXBException - if an error was encountered while setting the event handler"
-  ([^. this ^javax.xml.bind.ValidationEventHandler handler]
+  ([^javax.xml.bind.Marshaller this ^javax.xml.bind.ValidationEventHandler handler]
     (-> this (.setEventHandler handler))))
 
 (defn get-event-handler
@@ -331,7 +331,7 @@
            if it hasn't been set - `javax.xml.bind.ValidationEventHandler`
 
   throws: javax.xml.bind.JAXBException - if an error was encountered while getting the current event handler"
-  ([^. this]
+  ([^javax.xml.bind.Marshaller this]
     (-> this (.getEventHandler))))
 
 (defn get-node
@@ -347,7 +347,7 @@
   returns: the DOM tree view of the contentTree - `org.w3c.dom.Node`
 
   throws: java.lang.UnsupportedOperationException - If the JAXB provider implementation does not support a DOM view of the content tree"
-  ([^. this ^java.lang.Object content-tree]
+  ([^javax.xml.bind.Marshaller this ^java.lang.Object content-tree]
     (-> this (.getNode content-tree))))
 
 (defn set-listener
@@ -358,7 +358,7 @@
    One can unregister current Listener by setting listener to null.
 
   listener - an instance of a class that implements Marshaller.Listener - `javax.xml.bind.Marshaller.Listener`"
-  ([^. this ^javax.xml.bind.Marshaller.Listener listener]
+  ([^javax.xml.bind.Marshaller this ^javax.xml.bind.Marshaller.Listener listener]
     (-> this (.setListener listener))))
 
 (defn get-adapter
@@ -371,12 +371,12 @@
   returns: `<A extends javax.xml.bind.annotation.adapters.XmlAdapter> A`
 
   throws: java.lang.IllegalArgumentException - if the type parameter is null."
-  ([^. this ^java.lang.Class type]
+  ([^javax.xml.bind.Marshaller this ^java.lang.Class type]
     (-> this (.getAdapter type))))
 
 (defn get-attachment-marshaller
   "returns: `javax.xml.bind.attachment.AttachmentMarshaller`"
-  ([^. this]
+  ([^javax.xml.bind.Marshaller this]
     (-> this (.getAttachmentMarshaller))))
 
 (defn set-schema
@@ -393,7 +393,7 @@
   schema - Schema object to validate marshal operations against or null to disable validation - `javax.xml.validation.Schema`
 
   throws: java.lang.UnsupportedOperationException - could be thrown if this method is invoked on an Marshaller created from a JAXBContext referencing JAXB 1.0 mapped classes"
-  ([^. this ^javax.xml.validation.Schema schema]
+  ([^javax.xml.bind.Marshaller this ^javax.xml.validation.Schema schema]
     (-> this (.setSchema schema))))
 
 (defn get-property
@@ -409,14 +409,14 @@
   returns: the value of the requested property - `java.lang.Object`
 
   throws: javax.xml.bind.PropertyException - when there is an error retrieving the given property or value property name"
-  ([^. this ^java.lang.String name]
+  ([^javax.xml.bind.Marshaller this ^java.lang.String name]
     (-> this (.getProperty name))))
 
 (defn get-listener
   "Return Marshaller.Listener registered with this Marshaller.
 
   returns: registered Marshaller.Listener or null if no Listener is registered with this Marshaller. - `javax.xml.bind.Marshaller.Listener`"
-  ([^. this]
+  ([^javax.xml.bind.Marshaller this]
     (-> this (.getListener))))
 
 (defn get-schema
@@ -429,7 +429,7 @@
         validation or null if not present. - `javax.xml.validation.Schema`
 
   throws: java.lang.UnsupportedOperationException - could be thrown if this method is invoked on an Marshaller created from a JAXBContext referencing JAXB 1.0 mapped classes"
-  ([^. this]
+  ([^javax.xml.bind.Marshaller this]
     (-> this (.getSchema))))
 
 (defn set-property
@@ -444,7 +444,7 @@
   value - the value of the property to be set - `java.lang.Object`
 
   throws: javax.xml.bind.PropertyException - when there is an error processing the given property or value"
-  ([^. this ^java.lang.String name ^java.lang.Object value]
+  ([^javax.xml.bind.Marshaller this ^java.lang.String name ^java.lang.Object value]
     (-> this (.setProperty name value))))
 
 (defn set-adapter
@@ -467,8 +467,8 @@
   returns: `<A extends javax.xml.bind.annotation.adapters.XmlAdapter> void`
 
   throws: java.lang.IllegalArgumentException - if the type parameter is null."
-  ([^. this ^java.lang.Class type adapter]
+  ([^javax.xml.bind.Marshaller this ^java.lang.Class type adapter]
     (-> this (.setAdapter type adapter)))
-  ([^. this ^javax.xml.bind.annotation.adapters.XmlAdapter adapter]
+  ([^javax.xml.bind.Marshaller this ^javax.xml.bind.annotation.adapters.XmlAdapter adapter]
     (-> this (.setAdapter adapter))))
 

@@ -24,6 +24,6 @@
 
   returns: an ObjectName instance representing
    the object name of this platform managed object. - `javax.management.ObjectName`"
-  ([^. this]
+  ([^java.lang.management.PlatformManagedObject this]
     (-> this (.getObjectName))))
 

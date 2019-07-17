@@ -20,7 +20,7 @@
   returns: the value of this variable if this is a final
    field initialized to a compile-time constant, or null
    otherwise - `java.lang.Object`"
-  ([^. this]
+  ([^javax.lang.model.element.VariableElement this]
     (-> this (.getConstantValue))))
 
 (defn get-simple-name
@@ -33,7 +33,7 @@
    subject to the distinctness requirement above.
 
   returns: the simple name of this variable element - `javax.lang.model.element.Name`"
-  ([^. this]
+  ([^javax.lang.model.element.VariableElement this]
     (-> this (.getSimpleName))))
 
 (defn get-enclosing-element
@@ -43,6 +43,6 @@
    the executable declaring the parameter.
 
   returns: the enclosing element of this variable - `javax.lang.model.element.Element`"
-  ([^. this]
+  ([^javax.lang.model.element.VariableElement this]
     (-> this (.getEnclosingElement))))
 

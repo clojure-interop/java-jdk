@@ -14,6 +14,6 @@
   "Gets a result.
 
   returns: a result - `long`"
-  ([^. this]
+  ([^java.util.function.LongSupplier this]
     (-> this (.getAsLong))))
 

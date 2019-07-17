@@ -15,7 +15,7 @@
            object's command - `java.lang.Object[]`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this]
+  ([^javax.sql.RowSetInternal this]
     (-> this (.getParams))))
 
 (defn get-connection
@@ -26,7 +26,7 @@
         or null if none was passed - `java.sql.Connection`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this]
+  ([^javax.sql.RowSetInternal this]
     (-> this (.getConnection))))
 
 (defn set-meta-data
@@ -39,7 +39,7 @@
   md - the RowSetMetaData object that will be set with information about the rowset's columns - `javax.sql.RowSetMetaData`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^javax.sql.RowSetMetaData md]
+  ([^javax.sql.RowSetInternal this ^javax.sql.RowSetMetaData md]
     (-> this (.setMetaData md))))
 
 (defn get-original
@@ -53,7 +53,7 @@
   returns: the original value of the rowset - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this]
+  ([^javax.sql.RowSetInternal this]
     (-> this (.getOriginal))))
 
 (defn get-original-row
@@ -66,6 +66,6 @@
             object - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called while the cursor is on the insert row, before the first row, or after the last row"
-  ([^. this]
+  ([^javax.sql.RowSetInternal this]
     (-> this (.getOriginalRow))))
 

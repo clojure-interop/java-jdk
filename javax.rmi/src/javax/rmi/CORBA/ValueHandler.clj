@@ -9,7 +9,7 @@
 
   out - the stream to write the value to. - `org.omg.CORBA.portable.OutputStream`
   value - the value to be written to the stream. - `java.io.Serializable`"
-  ([^. this ^org.omg.CORBA.portable.OutputStream out ^java.io.Serializable value]
+  ([^javax.rmi.CORBA.ValueHandler this ^org.omg.CORBA.portable.OutputStream out ^java.io.Serializable value]
     (-> this (.writeValue out value))))
 
 (defn read-value
@@ -22,7 +22,7 @@
   sender - the sending context runtime codebase. - `org.omg.SendingContext.RunTime`
 
   returns: the value read from the stream. - `java.io.Serializable`"
-  ([^. this ^org.omg.CORBA.portable.InputStream in ^Integer offset ^java.lang.Class clz ^java.lang.String repository-id ^org.omg.SendingContext.RunTime sender]
+  ([^javax.rmi.CORBA.ValueHandler this ^org.omg.CORBA.portable.InputStream in ^Integer offset ^java.lang.Class clz ^java.lang.String repository-id ^org.omg.SendingContext.RunTime sender]
     (-> this (.readValue in offset clz repository-id sender))))
 
 (defn get-rmi-repository-id
@@ -31,7 +31,7 @@
   clz - a Java class. - `java.lang.Class`
 
   returns: the CORBA RepositoryId for the class. - `java.lang.String`"
-  ([^. this ^java.lang.Class clz]
+  ([^javax.rmi.CORBA.ValueHandler this ^java.lang.Class clz]
     (-> this (.getRMIRepositoryID clz))))
 
 (defn custom-marshaled?
@@ -42,7 +42,7 @@
 
   returns: true if the class performs custom marshaling, false
    if it does not. - `boolean`"
-  ([^. this ^java.lang.Class clz]
+  ([^javax.rmi.CORBA.ValueHandler this ^java.lang.Class clz]
     (-> this (.isCustomMarshaled clz))))
 
 (defn get-run-time-code-base
@@ -52,7 +52,7 @@
    does the same on the first GIOP request.
 
   returns: the SendingContext.CodeBase of this ValueHandler. - `org.omg.SendingContext.RunTime`"
-  ([^. this]
+  ([^javax.rmi.CORBA.ValueHandler this]
     (-> this (.getRunTimeCodeBase))))
 
 (defn write-replace
@@ -62,6 +62,6 @@
   value - the value to be marshaled. - `java.io.Serializable`
 
   returns: the true value to marshal on the wire. - `java.io.Serializable`"
-  ([^. this ^java.io.Serializable value]
+  ([^javax.rmi.CORBA.ValueHandler this ^java.io.Serializable value]
     (-> this (.writeReplace value))))
 

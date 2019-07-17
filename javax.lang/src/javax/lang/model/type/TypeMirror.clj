@@ -21,7 +21,7 @@
   "Returns the kind of this type.
 
   returns: the kind of this type - `javax.lang.model.type.TypeKind`"
-  ([^. this]
+  ([^javax.lang.model.type.TypeMirror this]
     (-> this (.getKind))))
 
 (defn equals
@@ -36,14 +36,14 @@
   obj - the object to be compared with this type - `java.lang.Object`
 
   returns: true if the specified object is equal to this one - `boolean`"
-  ([^. this ^java.lang.Object obj]
+  ([^javax.lang.model.type.TypeMirror this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Obeys the general contract of Object.hashCode.
 
   returns: a hash code value for this object. - `int`"
-  ([^. this]
+  ([^javax.lang.model.type.TypeMirror this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -53,7 +53,7 @@
    the result are qualified if possible.
 
   returns: a string representation of this type - `java.lang.String`"
-  ([^. this]
+  ([^javax.lang.model.type.TypeMirror this]
     (-> this (.toString))))
 
 (defn accept
@@ -63,6 +63,6 @@
   p - additional parameter to the visitor - `P`
 
   returns: a visitor-specified result - `<R,P> R`"
-  ([^. this ^javax.lang.model.type.TypeVisitor v p]
+  ([^javax.lang.model.type.TypeMirror this ^javax.lang.model.type.TypeVisitor v p]
     (-> this (.accept v p))))
 

@@ -8,6 +8,6 @@
   "Returns the value of the public key, y.
 
   returns: the value of the public key, y. - `java.math.BigInteger`"
-  ([^. this]
+  ([^java.security.interfaces.DSAPublicKey this]
     (-> this (.getY))))
 

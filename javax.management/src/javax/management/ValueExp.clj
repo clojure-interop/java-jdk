@@ -13,7 +13,7 @@
   returns: The ValueExp. - `javax.management.ValueExp`
 
   throws: javax.management.BadStringOperationException"
-  ([^. this ^javax.management.ObjectName name]
+  ([^javax.management.ValueExp this ^javax.management.ObjectName name]
     (-> this (.apply name))))
 
 (defn set-m-bean-server
@@ -24,6 +24,6 @@
   s - The MBean server on which the query is to be performed. - `javax.management.MBeanServer`
 
   returns: `java.lang. void`"
-  ([^. this ^javax.management.MBeanServer s]
+  ([^javax.management.ValueExp this ^javax.management.MBeanServer s]
     (-> this (.setMBeanServer s))))
 

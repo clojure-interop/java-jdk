@@ -16,7 +16,7 @@
    variable returned by the script method to a Java Object are implementation-specific. - `java.lang.Object`
 
   throws: javax.script.ScriptException - if an error occurs during invocation of the method."
-  ([^. this ^java.lang.Object thiz ^java.lang.String name ^java.lang.Object args]
+  ([^javax.script.Invocable this ^java.lang.Object thiz ^java.lang.String name ^java.lang.Object args]
     (-> this (.invokeMethod thiz name args))))
 
 (defn invoke-function
@@ -28,7 +28,7 @@
   returns: The value returned by the procedure or function - `java.lang.Object`
 
   throws: javax.script.ScriptException - if an error occurs during invocation of the method."
-  ([^. this ^java.lang.String name ^java.lang.Object args]
+  ([^javax.script.Invocable this ^java.lang.String name ^java.lang.Object args]
     (-> this (.invokeFunction name args))))
 
 (defn get-interface
@@ -44,8 +44,8 @@
    the ones in the requested interface. - `<T> T`
 
   throws: java.lang.IllegalArgumentException - if the specified Class object is null or is not an interface, or if the specified Object is null or does not represent a scripting object."
-  ([^. this ^java.lang.Object thiz ^java.lang.Class clasz]
+  ([^javax.script.Invocable this ^java.lang.Object thiz ^java.lang.Class clasz]
     (-> this (.getInterface thiz clasz)))
-  ([^. this ^java.lang.Class clasz]
+  ([^javax.script.Invocable this ^java.lang.Class clasz]
     (-> this (.getInterface clasz))))
 

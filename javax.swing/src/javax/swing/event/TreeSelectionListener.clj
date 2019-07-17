@@ -11,6 +11,6 @@
   "Called whenever the value of the selection changes.
 
   e - the event that characterizes the change. - `javax.swing.event.TreeSelectionEvent`"
-  ([^. this ^javax.swing.event.TreeSelectionEvent e]
+  ([^javax.swing.event.TreeSelectionListener this ^javax.swing.event.TreeSelectionEvent e]
     (-> this (.valueChanged e))))
 

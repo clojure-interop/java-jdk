@@ -23,8 +23,8 @@
             a distributed transaction - `javax.sql.XAConnection`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^java.lang.String user ^java.lang.String password]
+  ([^javax.sql.XADataSource this ^java.lang.String user ^java.lang.String password]
     (-> this (.getXAConnection user password)))
-  ([^. this]
+  ([^javax.sql.XADataSource this]
     (-> this (.getXAConnection))))
 

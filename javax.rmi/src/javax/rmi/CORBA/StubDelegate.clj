@@ -18,7 +18,7 @@
   self - `javax.rmi.CORBA.Stub`
 
   returns: `int`"
-  ([^. this ^javax.rmi.CORBA.Stub self]
+  ([^javax.rmi.CORBA.StubDelegate this ^javax.rmi.CORBA.Stub self]
     (-> this (.hashCode self))))
 
 (defn equals
@@ -28,7 +28,7 @@
   obj - `java.lang.Object`
 
   returns: `boolean`"
-  ([^. this ^javax.rmi.CORBA.Stub self ^java.lang.Object obj]
+  ([^javax.rmi.CORBA.StubDelegate this ^javax.rmi.CORBA.Stub self ^java.lang.Object obj]
     (-> this (.equals self obj))))
 
 (defn to-string
@@ -37,7 +37,7 @@
   self - `javax.rmi.CORBA.Stub`
 
   returns: `java.lang.String`"
-  ([^. this ^javax.rmi.CORBA.Stub self]
+  ([^javax.rmi.CORBA.StubDelegate this ^javax.rmi.CORBA.Stub self]
     (-> this (.toString self))))
 
 (defn connect
@@ -47,7 +47,7 @@
   orb - `org.omg.CORBA.ORB`
 
   throws: java.rmi.RemoteException"
-  ([^. this ^javax.rmi.CORBA.Stub self ^org.omg.CORBA.ORB orb]
+  ([^javax.rmi.CORBA.StubDelegate this ^javax.rmi.CORBA.Stub self ^org.omg.CORBA.ORB orb]
     (-> this (.connect self orb))))
 
 (defn read-object
@@ -58,7 +58,7 @@
   s - `java.io.ObjectInputStream`
 
   throws: java.io.IOException"
-  ([^. this ^javax.rmi.CORBA.Stub self ^java.io.ObjectInputStream s]
+  ([^javax.rmi.CORBA.StubDelegate this ^javax.rmi.CORBA.Stub self ^java.io.ObjectInputStream s]
     (-> this (.readObject self s))))
 
 (defn write-object
@@ -69,6 +69,6 @@
   s - `java.io.ObjectOutputStream`
 
   throws: java.io.IOException"
-  ([^. this ^javax.rmi.CORBA.Stub self ^java.io.ObjectOutputStream s]
+  ([^javax.rmi.CORBA.StubDelegate this ^javax.rmi.CORBA.Stub self ^java.io.ObjectOutputStream s]
     (-> this (.writeObject self s))))
 

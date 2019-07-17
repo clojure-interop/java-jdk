@@ -12,7 +12,7 @@
   returns: The value of the attribute retrieved. - `java.lang.Object`
 
   throws: javax.management.AttributeNotFoundException"
-  ([^. this ^java.lang.String attribute]
+  ([^javax.management.DynamicMBean this ^java.lang.String attribute]
     (-> this (.getAttribute attribute))))
 
 (defn set-attribute
@@ -21,7 +21,7 @@
   attribute - The identification of the attribute to be set and the value it is to be set to. - `javax.management.Attribute`
 
   throws: javax.management.AttributeNotFoundException"
-  ([^. this ^javax.management.Attribute attribute]
+  ([^javax.management.DynamicMBean this ^javax.management.Attribute attribute]
     (-> this (.setAttribute attribute))))
 
 (defn get-attributes
@@ -30,7 +30,7 @@
   attributes - A list of the attributes to be retrieved. - `java.lang.String[]`
 
   returns: The list of attributes retrieved. - `javax.management.AttributeList`"
-  ([^. this ^java.lang.String[] attributes]
+  ([^javax.management.DynamicMBean this ^java.lang.String[] attributes]
     (-> this (.getAttributes attributes))))
 
 (defn set-attributes
@@ -39,7 +39,7 @@
   attributes - A list of attributes: The identification of the attributes to be set and the values they are to be set to. - `javax.management.AttributeList`
 
   returns: The list of attributes that were set, with their new values. - `javax.management.AttributeList`"
-  ([^. this ^javax.management.AttributeList attributes]
+  ([^javax.management.DynamicMBean this ^javax.management.AttributeList attributes]
     (-> this (.setAttributes attributes))))
 
 (defn invoke
@@ -53,7 +53,7 @@
    invoking the action on the MBean specified. - `java.lang.Object`
 
   throws: javax.management.MBeanException - Wraps a java.lang.Exception thrown by the MBean's invoked method."
-  ([^. this ^java.lang.String action-name ^java.lang.Object[] params ^java.lang.String[] signature]
+  ([^javax.management.DynamicMBean this ^java.lang.String action-name ^java.lang.Object[] params ^java.lang.String[] signature]
     (-> this (.invoke action-name params signature))))
 
 (defn get-m-bean-info
@@ -61,6 +61,6 @@
 
   returns: An instance of MBeanInfo allowing all attributes and actions
    exposed by this Dynamic MBean to be retrieved. - `javax.management.MBeanInfo`"
-  ([^. this]
+  ([^javax.management.DynamicMBean this]
     (-> this (.getMBeanInfo))))
 

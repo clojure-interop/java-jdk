@@ -14,28 +14,28 @@
 
   returns: true if the principal passed in is the same as that
    encapsulated by this principal, and false otherwise. - `boolean`"
-  ([^. this ^java.lang.Object another]
+  ([^java.security.Principal this ^java.lang.Object another]
     (-> this (.equals another))))
 
 (defn to-string
   "Returns a string representation of this principal.
 
   returns: a string representation of this principal. - `java.lang.String`"
-  ([^. this]
+  ([^java.security.Principal this]
     (-> this (.toString))))
 
 (defn hash-code
   "Returns a hashcode for this principal.
 
   returns: a hashcode for this principal. - `int`"
-  ([^. this]
+  ([^java.security.Principal this]
     (-> this (.hashCode))))
 
 (defn get-name
   "Returns the name of this principal.
 
   returns: the name of this principal. - `java.lang.String`"
-  ([^. this]
+  ([^java.security.Principal this]
     (-> this (.getName))))
 
 (defn implies
@@ -52,6 +52,6 @@
 
   returns: true if subject is non-null and is
                 implied by this principal, or false otherwise. - `default boolean`"
-  ([^. this ^javax.security.auth.Subject subject]
+  ([^java.security.Principal this ^javax.security.auth.Subject subject]
     (-> this (.implies subject))))
 

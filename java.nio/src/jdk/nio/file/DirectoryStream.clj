@@ -86,6 +86,6 @@
   returns: the iterator associated with this DirectoryStream - `java.util.Iterator<DirectoryStream.T>`
 
   throws: java.lang.IllegalStateException - if this directory stream is closed or the iterator has already been returned"
-  ([^. this]
+  ([^java.nio.file.DirectoryStream this]
     (-> this (.iterator))))
 

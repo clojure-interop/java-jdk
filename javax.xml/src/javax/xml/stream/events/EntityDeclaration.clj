@@ -9,28 +9,28 @@
   "The entity's public identifier, or null if none was given
 
   returns: the public ID for this declaration or null - `java.lang.String`"
-  ([^. this]
+  ([^javax.xml.stream.events.EntityDeclaration this]
     (-> this (.getPublicId))))
 
 (defn get-system-id
   "The entity's system identifier.
 
   returns: the system ID for this declaration or null - `java.lang.String`"
-  ([^. this]
+  ([^javax.xml.stream.events.EntityDeclaration this]
     (-> this (.getSystemId))))
 
 (defn get-name
   "The entity's name
 
   returns: the name, may not be null - `java.lang.String`"
-  ([^. this]
+  ([^javax.xml.stream.events.EntityDeclaration this]
     (-> this (.getName))))
 
 (defn get-notation-name
   "The name of the associated notation.
 
   returns: the notation name - `java.lang.String`"
-  ([^. this]
+  ([^javax.xml.stream.events.EntityDeclaration this]
     (-> this (.getNotationName))))
 
 (defn get-replacement-text
@@ -39,7 +39,7 @@
    if this is an internal entity.
 
   returns: null or the replacment text - `java.lang.String`"
-  ([^. this]
+  ([^javax.xml.stream.events.EntityDeclaration this]
     (-> this (.getReplacementText))))
 
 (defn get-base-uri
@@ -47,6 +47,6 @@
    or null if this information is not available
 
   returns: the base URI or null - `java.lang.String`"
-  ([^. this]
+  ([^javax.xml.stream.events.EntityDeclaration this]
     (-> this (.getBaseURI))))
 

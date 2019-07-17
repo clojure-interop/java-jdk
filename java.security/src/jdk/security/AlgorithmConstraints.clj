@@ -29,10 +29,10 @@
        specified cryptographic primitives - `boolean`
 
   throws: java.lang.IllegalArgumentException - if primitives or algorithm is null or empty, or the key is null"
-  ([^. this ^java.util.Set primitives ^java.lang.String algorithm ^java.security.Key key ^java.security.AlgorithmParameters parameters]
+  ([^java.security.AlgorithmConstraints this ^java.util.Set primitives ^java.lang.String algorithm ^java.security.Key key ^java.security.AlgorithmParameters parameters]
     (-> this (.permits primitives algorithm key parameters)))
-  ([^. this ^java.util.Set primitives ^java.lang.String algorithm ^java.security.AlgorithmParameters parameters]
+  ([^java.security.AlgorithmConstraints this ^java.util.Set primitives ^java.lang.String algorithm ^java.security.AlgorithmParameters parameters]
     (-> this (.permits primitives algorithm parameters)))
-  ([^. this ^java.util.Set primitives ^java.security.Key key]
+  ([^java.security.AlgorithmConstraints this ^java.util.Set primitives ^java.security.Key key]
     (-> this (.permits primitives key))))
 

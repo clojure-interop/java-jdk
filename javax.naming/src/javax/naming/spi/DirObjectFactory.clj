@@ -73,6 +73,6 @@
   returns: The object created; null if an object cannot be created. - `java.lang.Object`
 
   throws: java.lang.Exception - If this object factory encountered an exception while attempting to create an object, and no other object factories are to be tried."
-  ([^. this ^java.lang.Object obj ^javax.naming.Name name ^javax.naming.Context name-ctx ^java.util.Hashtable environment ^javax.naming.directory.Attributes attrs]
+  ([^javax.naming.spi.DirObjectFactory this ^java.lang.Object obj ^javax.naming.Name name ^javax.naming.Context name-ctx ^java.util.Hashtable environment ^javax.naming.directory.Attributes attrs]
     (-> this (.getObjectInstance obj name name-ctx environment attrs))))
 

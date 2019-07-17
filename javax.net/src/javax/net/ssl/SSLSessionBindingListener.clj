@@ -12,7 +12,7 @@
    an SSLSession.
 
   event - the event identifying the SSLSession into which the listener is being bound. - `javax.net.ssl.SSLSessionBindingEvent`"
-  ([^. this ^javax.net.ssl.SSLSessionBindingEvent event]
+  ([^javax.net.ssl.SSLSessionBindingListener this ^javax.net.ssl.SSLSessionBindingEvent event]
     (-> this (.valueBound event))))
 
 (defn value-unbound
@@ -20,6 +20,6 @@
    from a SSLSession.
 
   event - the event identifying the SSLSession from which the listener is being unbound. - `javax.net.ssl.SSLSessionBindingEvent`"
-  ([^. this ^javax.net.ssl.SSLSessionBindingEvent event]
+  ([^javax.net.ssl.SSLSessionBindingListener this ^javax.net.ssl.SSLSessionBindingEvent event]
     (-> this (.valueUnbound event))))
 

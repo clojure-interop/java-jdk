@@ -31,7 +31,7 @@
    To determine if the duration is an estimate, use isDurationEstimated().
 
   returns: the duration of this unit, which may be an estimate, not null - `java.time.Duration`"
-  ([^. this]
+  ([^java.time.temporal.TemporalUnit this]
     (-> this (.getDuration))))
 
 (defn duration-estimated?
@@ -44,7 +44,7 @@
    accurate. Note that accurate/estimated ignores leap seconds.
 
   returns: true if the duration is estimated, false if accurate - `boolean`"
-  ([^. this]
+  ([^java.time.temporal.TemporalUnit this]
     (-> this (.isDurationEstimated))))
 
 (defn date-based?
@@ -57,7 +57,7 @@
    to return false, such as when representing a unit like 36 hours.
 
   returns: true if this unit is a component of a date - `boolean`"
-  ([^. this]
+  ([^java.time.temporal.TemporalUnit this]
     (-> this (.isDateBased))))
 
 (defn time-based?
@@ -70,7 +70,7 @@
    to return false, such as when representing a unit like 36 hours.
 
   returns: true if this unit is a component of a time - `boolean`"
-  ([^. this]
+  ([^java.time.temporal.TemporalUnit this]
     (-> this (.isTimeBased))))
 
 (defn is-supported-by
@@ -85,7 +85,7 @@
   temporal - the temporal object to check, not null - `java.time.temporal.Temporal`
 
   returns: true if the unit is supported - `default boolean`"
-  ([^. this ^java.time.temporal.Temporal temporal]
+  ([^java.time.temporal.TemporalUnit this ^java.time.temporal.Temporal temporal]
     (-> this (.isSupportedBy temporal))))
 
 (defn add-to
@@ -121,7 +121,7 @@
   returns: the adjusted temporal object, not null - `<R extends java.time.temporal.Temporal> R`
 
   throws: java.time.DateTimeException - if the amount cannot be added"
-  ([^. this temporal ^Long amount]
+  ([^java.time.temporal.TemporalUnit this temporal ^Long amount]
     (-> this (.addTo temporal amount))))
 
 (defn between
@@ -171,7 +171,7 @@
     temporal1Inclusive, negative if earlier - `long`
 
   throws: java.time.DateTimeException - if the amount cannot be calculated, or the end temporal cannot be converted to the same type as the start temporal"
-  ([^. this ^java.time.temporal.Temporal temporal-1-inclusive ^java.time.temporal.Temporal temporal-2-exclusive]
+  ([^java.time.temporal.TemporalUnit this ^java.time.temporal.Temporal temporal-1-inclusive ^java.time.temporal.Temporal temporal-2-exclusive]
     (-> this (.between temporal-1-inclusive temporal-2-exclusive))))
 
 (defn to-string
@@ -180,6 +180,6 @@
    This should be in the plural and upper-first camel case, such as 'Days' or 'Minutes'.
 
   returns: the name of this unit, not null - `java.lang.String`"
-  ([^. this]
+  ([^java.time.temporal.TemporalUnit this]
     (-> this (.toString))))
 

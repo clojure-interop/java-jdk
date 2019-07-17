@@ -186,7 +186,7 @@
   key - `java.lang.String`
 
   returns: `java.lang.Object`"
-  ([^. this ^java.lang.String key]
+  ([^javax.swing.Action this ^java.lang.String key]
     (-> this (.getValue key))))
 
 (defn put-value
@@ -197,7 +197,7 @@
 
   key - a String containing the key - `java.lang.String`
   value - an Object value - `java.lang.Object`"
-  ([^. this ^java.lang.String key ^java.lang.Object value]
+  ([^javax.swing.Action this ^java.lang.String key ^java.lang.Object value]
     (-> this (.putValue key value))))
 
 (defn set-enabled
@@ -208,7 +208,7 @@
    to listeners.
 
   b - true to enable this Action, false to disable it - `boolean`"
-  ([^. this ^Boolean b]
+  ([^javax.swing.Action this ^Boolean b]
     (-> this (.setEnabled b))))
 
 (defn enabled?
@@ -217,7 +217,7 @@
    able to fire this object's actionPerformed method.
 
   returns: true if this Action is enabled - `boolean`"
-  ([^. this]
+  ([^javax.swing.Action this]
     (-> this (.isEnabled))))
 
 (defn add-property-change-listener
@@ -227,13 +227,13 @@
    changes, the registered listeners are informed of the change.
 
   listener - a PropertyChangeListener object - `java.beans.PropertyChangeListener`"
-  ([^. this ^java.beans.PropertyChangeListener listener]
+  ([^javax.swing.Action this ^java.beans.PropertyChangeListener listener]
     (-> this (.addPropertyChangeListener listener))))
 
 (defn remove-property-change-listener
   "Removes a PropertyChange listener.
 
   listener - a PropertyChangeListener object - `java.beans.PropertyChangeListener`"
-  ([^. this ^java.beans.PropertyChangeListener listener]
+  ([^javax.swing.Action this ^java.beans.PropertyChangeListener listener]
     (-> this (.removePropertyChangeListener listener))))
 

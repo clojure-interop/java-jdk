@@ -21,7 +21,7 @@
   attr - an attribute set - `javax.swing.text.AttributeSet`
 
   returns: true if the sets are equivalent - `boolean`"
-  ([^. this ^javax.swing.text.AttributeSet attr]
+  ([^javax.swing.text.AttributeSet this ^javax.swing.text.AttributeSet attr]
     (-> this (.isEqual attr))))
 
 (defn get-attribute-count
@@ -29,14 +29,14 @@
    Attributes that are defined in the parent set are not included.
 
   returns: the number of attributes >= 0 - `int`"
-  ([^. this]
+  ([^javax.swing.text.AttributeSet this]
     (-> this (.getAttributeCount))))
 
 (defn get-resolve-parent
   "Gets the resolving parent.
 
   returns: the parent - `javax.swing.text.AttributeSet`"
-  ([^. this]
+  ([^javax.swing.text.AttributeSet this]
     (-> this (.getResolveParent))))
 
 (defn get-attribute
@@ -49,7 +49,7 @@
   key - the non-null key of the attribute binding - `java.lang.Object`
 
   returns: the value of the attribute, or null if not found - `java.lang.Object`"
-  ([^. this ^java.lang.Object key]
+  ([^javax.swing.text.AttributeSet this ^java.lang.Object key]
     (-> this (.getAttribute key))))
 
 (defn copy-attributes
@@ -57,7 +57,7 @@
    to change over time.
 
   returns: a copy of the attribute set - `javax.swing.text.AttributeSet`"
-  ([^. this]
+  ([^javax.swing.text.AttributeSet this]
     (-> this (.copyAttributes))))
 
 (defn defined?
@@ -68,7 +68,7 @@
   attr-name - the attribute name - `java.lang.Object`
 
   returns: true if the attribute has a value specified - `boolean`"
-  ([^. this ^java.lang.Object attr-name]
+  ([^javax.swing.text.AttributeSet this ^java.lang.Object attr-name]
     (-> this (.isDefined attr-name))))
 
 (defn contains-attributes
@@ -82,7 +82,7 @@
                 values, either locally or through its resolving parent - `boolean`
 
   throws: java.lang.NullPointerException - if attributes is null"
-  ([^. this ^javax.swing.text.AttributeSet attributes]
+  ([^javax.swing.text.AttributeSet this ^javax.swing.text.AttributeSet attributes]
     (-> this (.containsAttributes attributes))))
 
 (defn contains-attribute
@@ -97,7 +97,7 @@
        equal value, either locally or through its resolving parent - `boolean`
 
   throws: java.lang.NullPointerException - if either name or value is null"
-  ([^. this ^java.lang.Object name ^java.lang.Object value]
+  ([^javax.swing.text.AttributeSet this ^java.lang.Object name ^java.lang.Object value]
     (-> this (.containsAttribute name value))))
 
 (defn get-attribute-names
@@ -111,6 +111,6 @@
    returns an empty Enumeration.
 
   returns: the names - `java.util.Enumeration<?>`"
-  ([^. this]
+  ([^javax.swing.text.AttributeSet this]
     (-> this (.getAttributeNames))))
 

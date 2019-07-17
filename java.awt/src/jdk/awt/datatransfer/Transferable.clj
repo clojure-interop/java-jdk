@@ -15,7 +15,7 @@
    for providing the data (from most richly descriptive to least descriptive).
 
   returns: an array of data flavors in which this data can be transferred - `java.awt.datatransfer.DataFlavor[]`"
-  ([^. this]
+  ([^java.awt.datatransfer.Transferable this]
     (-> this (.getTransferDataFlavors))))
 
 (defn data-flavor-supported?
@@ -25,7 +25,7 @@
   flavor - the requested flavor for the data - `java.awt.datatransfer.DataFlavor`
 
   returns: boolean indicating whether or not the data flavor is supported - `boolean`"
-  ([^. this ^java.awt.datatransfer.DataFlavor flavor]
+  ([^java.awt.datatransfer.Transferable this ^java.awt.datatransfer.DataFlavor flavor]
     (-> this (.isDataFlavorSupported flavor))))
 
 (defn get-transfer-data
@@ -37,6 +37,6 @@
   returns: `java.lang.Object`
 
   throws: java.io.IOException - if the data is no longer available in the requested flavor."
-  ([^. this ^java.awt.datatransfer.DataFlavor flavor]
+  ([^java.awt.datatransfer.Transferable this ^java.awt.datatransfer.DataFlavor flavor]
     (-> this (.getTransferData flavor))))
 

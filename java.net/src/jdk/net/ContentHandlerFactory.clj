@@ -16,6 +16,6 @@
 
   returns: a new ContentHandler to read an object from a
             URLStreamHandler. - `java.net.ContentHandler`"
-  ([^. this ^java.lang.String mimetype]
+  ([^java.net.ContentHandlerFactory this ^java.lang.String mimetype]
     (-> this (.createContentHandler mimetype))))
 

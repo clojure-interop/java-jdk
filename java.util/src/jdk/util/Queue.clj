@@ -104,7 +104,7 @@
   returns: true (as specified by Collection.add(E)) - `boolean`
 
   throws: java.lang.IllegalStateException - if the element cannot be added at this time due to capacity restrictions"
-  ([^. this ^Queue.E e]
+  ([^java.util.Queue this ^Queue.E e]
     (-> this (.add e))))
 
 (defn offer
@@ -120,7 +120,7 @@
            false - `boolean`
 
   throws: java.lang.ClassCastException - if the class of the specified element prevents it from being added to this queue"
-  ([^. this ^Queue.E e]
+  ([^java.util.Queue this ^Queue.E e]
     (-> this (.offer e))))
 
 (defn remove
@@ -131,7 +131,7 @@
   returns: the head of this queue - `Queue.E`
 
   throws: java.util.NoSuchElementException - if this queue is empty"
-  ([^. this]
+  ([^java.util.Queue this]
     (-> this (.remove))))
 
 (defn poll
@@ -139,7 +139,7 @@
    or returns null if this queue is empty.
 
   returns: the head of this queue, or null if this queue is empty - `Queue.E`"
-  ([^. this]
+  ([^java.util.Queue this]
     (-> this (.poll))))
 
 (defn element
@@ -150,7 +150,7 @@
   returns: the head of this queue - `Queue.E`
 
   throws: java.util.NoSuchElementException - if this queue is empty"
-  ([^. this]
+  ([^java.util.Queue this]
     (-> this (.element))))
 
 (defn peek
@@ -158,6 +158,6 @@
    or returns null if this queue is empty.
 
   returns: the head of this queue, or null if this queue is empty - `Queue.E`"
-  ([^. this]
+  ([^java.util.Queue this]
     (-> this (.peek))))
 

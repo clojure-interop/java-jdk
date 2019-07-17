@@ -17,7 +17,7 @@
    BeanContext - `java.lang.Object`
 
   throws: java.io.IOException - if an IO problem occurs"
-  ([^. this ^java.lang.String bean-name]
+  ([^java.beans.beancontext.BeanContext this ^java.lang.String bean-name]
     (-> this (.instantiateChild bean-name))))
 
 (defn get-resource-as-stream
@@ -34,7 +34,7 @@
    be found. - `java.io.InputStream`
 
   throws: java.lang.IllegalArgumentException - if the resource is not valid"
-  ([^. this ^java.lang.String name ^java.beans.beancontext.BeanContextChild bcc]
+  ([^java.beans.beancontext.BeanContext this ^java.lang.String name ^java.beans.beancontext.BeanContextChild bcc]
     (-> this (.getResourceAsStream name bcc))))
 
 (defn get-resource
@@ -50,7 +50,7 @@
    resource for the specified child - `java.net.URL`
 
   throws: java.lang.IllegalArgumentException - if the resource is not valid"
-  ([^. this ^java.lang.String name ^java.beans.beancontext.BeanContextChild bcc]
+  ([^java.beans.beancontext.BeanContext this ^java.lang.String name ^java.beans.beancontext.BeanContextChild bcc]
     (-> this (.getResource name bcc))))
 
 (defn add-bean-context-membership-listener
@@ -60,7 +60,7 @@
    or removes a child Component(s).
 
   bcml - the BeanContextMembershipListener to be added - `java.beans.beancontext.BeanContextMembershipListener`"
-  ([^. this ^java.beans.beancontext.BeanContextMembershipListener bcml]
+  ([^java.beans.beancontext.BeanContext this ^java.beans.beancontext.BeanContextMembershipListener bcml]
     (-> this (.addBeanContextMembershipListener bcml))))
 
 (defn remove-bean-context-membership-listener
@@ -69,6 +69,6 @@
    when the child Component(s) are added or removed.
 
   bcml - the BeanContextMembershipListener to be removed - `java.beans.beancontext.BeanContextMembershipListener`"
-  ([^. this ^java.beans.beancontext.BeanContextMembershipListener bcml]
+  ([^java.beans.beancontext.BeanContext this ^java.beans.beancontext.BeanContextMembershipListener bcml]
     (-> this (.removeBeanContextMembershipListener bcml))))
 

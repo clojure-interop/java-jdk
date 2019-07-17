@@ -10,6 +10,6 @@
   notification - The notification to be sent. - `javax.management.Notification`
 
   returns: true if the notification has to be sent to the listener, false otherwise. - `boolean`"
-  ([^. this ^javax.management.Notification notification]
+  ([^javax.management.NotificationFilter this ^javax.management.Notification notification]
     (-> this (.isNotificationEnabled notification))))
 

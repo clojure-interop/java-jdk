@@ -42,14 +42,14 @@
    elements, such as a default constructor, is not specified.)
 
   returns: the enclosed elements in proper order, or an empty list if none - `java.util.List<? extends javax.lang.model.element.Element>`"
-  ([^. this]
+  ([^javax.lang.model.element.TypeElement this]
     (-> this (.getEnclosedElements))))
 
 (defn get-nesting-kind
   "Returns the nesting kind of this type element.
 
   returns: the nesting kind of this type element - `javax.lang.model.element.NestingKind`"
-  ([^. this]
+  ([^javax.lang.model.element.TypeElement this]
     (-> this (.getNestingKind))))
 
 (defn get-qualified-name
@@ -67,7 +67,7 @@
 
   returns: the fully qualified name of this class or interface, or
    an empty name if none - `javax.lang.model.element.Name`"
-  ([^. this]
+  ([^javax.lang.model.element.TypeElement this]
     (-> this (.getQualifiedName))))
 
 (defn get-simple-name
@@ -77,7 +77,7 @@
 
   returns: the simple name of this class or interface,
    an empty name for an anonymous class - `javax.lang.model.element.Name`"
-  ([^. this]
+  ([^javax.lang.model.element.TypeElement this]
     (-> this (.getSimpleName))))
 
 (defn get-superclass
@@ -87,7 +87,7 @@
    with kind NONE is returned.
 
   returns: the direct superclass, or a NoType if there is none - `javax.lang.model.type.TypeMirror`"
-  ([^. this]
+  ([^javax.lang.model.element.TypeElement this]
     (-> this (.getSuperclass))))
 
 (defn get-interfaces
@@ -96,7 +96,7 @@
 
   returns: the interface types directly implemented by this class
    or extended by this interface, or an empty list if there are none - `java.util.List<? extends javax.lang.model.type.TypeMirror>`"
-  ([^. this]
+  ([^javax.lang.model.element.TypeElement this]
     (-> this (.getInterfaces))))
 
 (defn get-type-parameters
@@ -105,7 +105,7 @@
 
   returns: the formal type parameters, or an empty list
    if there are none - `java.util.List<? extends javax.lang.model.element.TypeParameterElement>`"
-  ([^. this]
+  ([^javax.lang.model.element.TypeElement this]
     (-> this (.getTypeParameters))))
 
 (defn get-enclosing-element
@@ -114,6 +114,6 @@
 
   returns: the package of a top-level type, the immediately
    lexically enclosing element for a nested type - `javax.lang.model.element.Element`"
-  ([^. this]
+  ([^javax.lang.model.element.TypeElement this]
     (-> this (.getEnclosingElement))))
 

@@ -11,7 +11,7 @@
    by the implementation of this interface.
 
   c - the JTextComponent editor - `javax.swing.text.JTextComponent`"
-  ([^. this ^javax.swing.text.JTextComponent c]
+  ([^javax.swing.text.Highlighter this ^javax.swing.text.JTextComponent c]
     (-> this (.install c))))
 
 (defn deinstall
@@ -20,14 +20,14 @@
    unregister any listeners that were attached.
 
   c - the JTextComponent editor - `javax.swing.text.JTextComponent`"
-  ([^. this ^javax.swing.text.JTextComponent c]
+  ([^javax.swing.text.Highlighter this ^javax.swing.text.JTextComponent c]
     (-> this (.deinstall c))))
 
 (defn paint
   "Renders the highlights.
 
   g - the graphics context. - `java.awt.Graphics`"
-  ([^. this ^java.awt.Graphics g]
+  ([^javax.swing.text.Highlighter this ^java.awt.Graphics g]
     (-> this (.paint g))))
 
 (defn add-highlight
@@ -41,19 +41,19 @@
   returns: an object that refers to the highlight - `java.lang.Object`
 
   throws: javax.swing.text.BadLocationException - for an invalid range specification"
-  ([^. this ^Integer p-0 ^Integer p-1 ^javax.swing.text.Highlighter.HighlightPainter p]
+  ([^javax.swing.text.Highlighter this ^Integer p-0 ^Integer p-1 ^javax.swing.text.Highlighter.HighlightPainter p]
     (-> this (.addHighlight p-0 p-1 p))))
 
 (defn remove-highlight
   "Removes a highlight from the view.
 
   tag - which highlight to remove - `java.lang.Object`"
-  ([^. this ^java.lang.Object tag]
+  ([^javax.swing.text.Highlighter this ^java.lang.Object tag]
     (-> this (.removeHighlight tag))))
 
 (defn remove-all-highlights
   "Removes all highlights this highlighter is responsible for."
-  ([^. this]
+  ([^javax.swing.text.Highlighter this]
     (-> this (.removeAllHighlights))))
 
 (defn change-highlight
@@ -67,13 +67,13 @@
   p-1 - the end of the range >= p0 - `int`
 
   throws: javax.swing.text.BadLocationException - for an invalid range specification"
-  ([^. this ^java.lang.Object tag ^Integer p-0 ^Integer p-1]
+  ([^javax.swing.text.Highlighter this ^java.lang.Object tag ^Integer p-0 ^Integer p-1]
     (-> this (.changeHighlight tag p-0 p-1))))
 
 (defn get-highlights
   "Fetches the current list of highlights.
 
   returns: the highlight list - `javax.swing.text.Highlighter.Highlight[]`"
-  ([^. this]
+  ([^javax.swing.text.Highlighter this]
     (-> this (.getHighlights))))
 

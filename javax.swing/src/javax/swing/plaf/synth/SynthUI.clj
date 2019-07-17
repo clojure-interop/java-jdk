@@ -9,7 +9,7 @@
   c - Component requesting SynthContext. - `javax.swing.JComponent`
 
   returns: SynthContext describing component. - `javax.swing.plaf.synth.SynthContext`"
-  ([^. this ^javax.swing.JComponent c]
+  ([^javax.swing.plaf.synth.SynthUI this ^javax.swing.JComponent c]
     (-> this (.getContext c))))
 
 (defn paint-border
@@ -21,6 +21,6 @@
   y - the Y coordinate - `int`
   w - width of the border - `int`
   h - height of the border - `int`"
-  ([^. this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^javax.swing.plaf.synth.SynthUI this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintBorder context g x y w h))))
 

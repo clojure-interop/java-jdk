@@ -16,7 +16,7 @@
   returns: the key corresponding to this entry - `Map.Entry.K`
 
   throws: java.lang.IllegalStateException - implementations may, but are not required to, throw this exception if the entry has been removed from the backing map."
-  ([^. this]
+  ([^java.util.Map$Entry this]
     (-> this (.getKey))))
 
 (defn get-value
@@ -27,7 +27,7 @@
   returns: the value corresponding to this entry - `Map.Entry.V`
 
   throws: java.lang.IllegalStateException - implementations may, but are not required to, throw this exception if the entry has been removed from the backing map."
-  ([^. this]
+  ([^java.util.Map$Entry this]
     (-> this (.getValue))))
 
 (defn set-value
@@ -41,7 +41,7 @@
   returns: old value corresponding to the entry - `Map.Entry.V`
 
   throws: java.lang.UnsupportedOperationException - if the put operation is not supported by the backing map"
-  ([^. this ^Map.Entry.V value]
+  ([^java.util.Map$Entry this ^Map.Entry.V value]
     (-> this (.setValue value))))
 
 (defn equals
@@ -62,7 +62,7 @@
 
   returns: true if the specified object is equal to this map
            entry - `boolean`"
-  ([^. this ^java.lang.Object o]
+  ([^java.util.Map$Entry this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn hash-code
@@ -77,7 +77,7 @@
    contract of Object.hashCode.
 
   returns: the hash code value for this map entry - `int`"
-  ([^. this]
+  ([^java.util.Map$Entry this]
     (-> this (.hashCode))))
 
 (defn *comparing-by-key
@@ -91,9 +91,9 @@
 
   returns: a comparator that compares Map.Entry by the key. - `<K,V> java.util.Comparator<java.util.Map.Entry<K,V>>`"
   ([cmp]
-    (null/comparingByKey cmp))
+    (Map$Entry/comparingByKey cmp))
   ([]
-    (null/comparingByKey )))
+    (Map$Entry/comparingByKey )))
 
 (defn *comparing-by-value
   "Returns a comparator that compares Map.Entry by value using the given
@@ -106,7 +106,7 @@
 
   returns: a comparator that compares Map.Entry by the value. - `<K,V> java.util.Comparator<java.util.Map.Entry<K,V>>`"
   ([cmp]
-    (null/comparingByValue cmp))
+    (Map$Entry/comparingByValue cmp))
   ([]
-    (null/comparingByValue )))
+    (Map$Entry/comparingByValue )))
 

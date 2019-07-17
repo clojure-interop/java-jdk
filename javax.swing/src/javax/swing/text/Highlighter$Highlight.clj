@@ -6,20 +6,20 @@
   "Gets the starting model offset for the highlight.
 
   returns: the starting offset >= 0 - `int`"
-  ([^. this]
+  ([^javax.swing.text.Highlighter$Highlight this]
     (-> this (.getStartOffset))))
 
 (defn get-end-offset
   "Gets the ending model offset for the highlight.
 
   returns: the ending offset >= 0 - `int`"
-  ([^. this]
+  ([^javax.swing.text.Highlighter$Highlight this]
     (-> this (.getEndOffset))))
 
 (defn get-painter
   "Gets the painter for the highlighter.
 
   returns: the painter - `javax.swing.text.Highlighter.HighlightPainter`"
-  ([^. this]
+  ([^javax.swing.text.Highlighter$Highlight this]
     (-> this (.getPainter))))
 

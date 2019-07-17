@@ -13,6 +13,6 @@
   value - the function argument - `ToIntFunction.T`
 
   returns: the function result - `int`"
-  ([^. this ^ToIntFunction.T value]
+  ([^java.util.function.ToIntFunction this ^ToIntFunction.T value]
     (-> this (.applyAsInt value))))
 

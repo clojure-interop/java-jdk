@@ -52,6 +52,6 @@
   returns: the queried value, may return null to indicate not found - `TemporalQuery.R`
 
   throws: java.time.DateTimeException - if unable to query"
-  ([^. this ^java.time.temporal.TemporalAccessor temporal]
+  ([^java.time.temporal.TemporalQuery this ^java.time.temporal.TemporalAccessor temporal]
     (-> this (.queryFrom temporal))))
 

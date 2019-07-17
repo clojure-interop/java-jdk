@@ -11,6 +11,6 @@
   "Returns the name of the attribute view.
 
   returns: the name of the attribute view - `java.lang.String`"
-  ([^. this]
+  ([^java.nio.file.attribute.AttributeView this]
     (-> this (.name))))
 

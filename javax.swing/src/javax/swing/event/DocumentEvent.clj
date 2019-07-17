@@ -13,28 +13,28 @@
    of the change.
 
   returns: the offset >= 0 - `int`"
-  ([^. this]
+  ([^javax.swing.event.DocumentEvent this]
     (-> this (.getOffset))))
 
 (defn get-length
   "Returns the length of the change.
 
   returns: the length >= 0 - `int`"
-  ([^. this]
+  ([^javax.swing.event.DocumentEvent this]
     (-> this (.getLength))))
 
 (defn get-document
   "Gets the document that sourced the change event.
 
   returns: the document - `javax.swing.text.Document`"
-  ([^. this]
+  ([^javax.swing.event.DocumentEvent this]
     (-> this (.getDocument))))
 
 (defn get-type
   "Gets the type of event.
 
   returns: the type - `javax.swing.event.DocumentEvent.EventType`"
-  ([^. this]
+  ([^javax.swing.event.DocumentEvent this]
     (-> this (.getType))))
 
 (defn get-change
@@ -66,6 +66,6 @@
 
   returns: the change information, or null if the
      element was not modified - `javax.swing.event.DocumentEvent.ElementChange`"
-  ([^. this ^javax.swing.text.Element elem]
+  ([^javax.swing.event.DocumentEvent this ^javax.swing.text.Element elem]
     (-> this (.getChange elem))))
 

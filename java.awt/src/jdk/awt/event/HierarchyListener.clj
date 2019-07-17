@@ -20,6 +20,6 @@
    type of change, call HierarchyEvent.getChangeFlags().
 
   e - `java.awt.event.HierarchyEvent`"
-  ([^. this ^java.awt.event.HierarchyEvent e]
+  ([^java.awt.event.HierarchyListener this ^java.awt.event.HierarchyEvent e]
     (-> this (.hierarchyChanged e))))
 

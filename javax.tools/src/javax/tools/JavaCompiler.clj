@@ -196,7 +196,7 @@
   returns: an object representing the compilation - `javax.tools.JavaCompiler.CompilationTask`
 
   throws: java.lang.RuntimeException - if an unrecoverable error occurred in a user supplied component. The cause will be the error in user code."
-  ([^. this ^java.io.Writer out ^javax.tools.JavaFileManager file-manager ^javax.tools.JavaFileObject> diagnostic-listener ^java.lang.Iterable options ^java.lang.Iterable classes ^javax.tools.JavaFileObject> compilation-units]
+  ([^javax.tools.JavaCompiler this ^java.io.Writer out ^javax.tools.JavaFileManager file-manager ^javax.tools.JavaFileObject> diagnostic-listener ^java.lang.Iterable options ^java.lang.Iterable classes ^javax.tools.JavaFileObject> compilation-units]
     (-> this (.getTask out file-manager diagnostic-listener options classes compilation-units))))
 
 (defn get-standard-file-manager
@@ -214,6 +214,6 @@
   charset - the character set used for decoding bytes; if null use the platform default - `java.nio.charset.Charset`
 
   returns: the standard file manager - `javax.tools.StandardJavaFileManager`"
-  ([^. this ^javax.tools.JavaFileObject> diagnostic-listener ^java.util.Locale locale ^java.nio.charset.Charset charset]
+  ([^javax.tools.JavaCompiler this ^javax.tools.JavaFileObject> diagnostic-listener ^java.util.Locale locale ^java.nio.charset.Charset charset]
     (-> this (.getStandardFileManager diagnostic-listener locale charset))))
 

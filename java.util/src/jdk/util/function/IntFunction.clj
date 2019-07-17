@@ -14,6 +14,6 @@
   value - the function argument - `int`
 
   returns: the function result - `IntFunction.R`"
-  ([^. this ^Integer value]
+  ([^java.util.function.IntFunction this ^Integer value]
     (-> this (.apply value))))
 

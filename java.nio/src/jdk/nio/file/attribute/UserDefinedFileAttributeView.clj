@@ -37,7 +37,7 @@
    have the name `user`.
 
   returns: the name of the attribute view - `java.lang.String`"
-  ([^. this]
+  ([^java.nio.file.attribute.UserDefinedFileAttributeView this]
     (-> this (.name))))
 
 (defn list
@@ -47,7 +47,7 @@
             user-defined - `java.util.List<java.lang.String>`
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^. this]
+  ([^java.nio.file.attribute.UserDefinedFileAttributeView this]
     (-> this (.list))))
 
 (defn size
@@ -58,7 +58,7 @@
   returns: The size of the attribute value, in bytes. - `int`
 
   throws: java.lang.ArithmeticException - If the size of the attribute is larger than Integer.MAX_VALUE"
-  ([^. this ^java.lang.String name]
+  ([^java.nio.file.attribute.UserDefinedFileAttributeView this ^java.lang.String name]
     (-> this (.size name))))
 
 (defn read
@@ -92,7 +92,7 @@
   returns: The number of bytes read, possibly zero - `int`
 
   throws: java.lang.IllegalArgumentException - If the destination buffer is read-only"
-  ([^. this ^java.lang.String name ^java.nio.ByteBuffer dst]
+  ([^java.nio.file.attribute.UserDefinedFileAttributeView this ^java.lang.String name ^java.nio.ByteBuffer dst]
     (-> this (.read name dst))))
 
 (defn write
@@ -130,7 +130,7 @@
   returns: The number of bytes written, possibly zero - `int`
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^. this ^java.lang.String name ^java.nio.ByteBuffer src]
+  ([^java.nio.file.attribute.UserDefinedFileAttributeView this ^java.lang.String name ^java.nio.ByteBuffer src]
     (-> this (.write name src))))
 
 (defn delete
@@ -139,6 +139,6 @@
   name - The attribute name - `java.lang.String`
 
   throws: java.io.IOException - If an I/O error occurs or the attribute does not exist"
-  ([^. this ^java.lang.String name]
+  ([^java.nio.file.attribute.UserDefinedFileAttributeView this ^java.lang.String name]
     (-> this (.delete name))))
 

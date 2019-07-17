@@ -19,7 +19,7 @@
 
   returns: a String with the uri of the namespace that has
           the given prefix - `java.lang.String`"
-  ([^. this ^java.lang.String prefix]
+  ([^javax.xml.soap.SOAPElement this ^java.lang.String prefix]
     (-> this (.getNamespaceURI prefix))))
 
 (defn get-element-name
@@ -27,7 +27,7 @@
 
   returns: a Name object with the name of this
            SOAPElement object - `javax.xml.soap.Name`"
-  ([^. this]
+  ([^javax.xml.soap.SOAPElement this]
     (-> this (.getElementName))))
 
 (defn add-text-node
@@ -40,7 +40,7 @@
            the new Text object was inserted - `javax.xml.soap.SOAPElement`
 
   throws: javax.xml.soap.SOAPException - if there is an error in creating the new Text object or if it is not legal to attach it as a child to this SOAPElement"
-  ([^. this ^java.lang.String text]
+  ([^javax.xml.soap.SOAPElement this ^java.lang.String text]
     (-> this (.addTextNode text))))
 
 (defn remove-contents
@@ -51,7 +51,7 @@
    preparation for sending a fault when an error condition is detected. It
    is also useful for recycling portions of a document within a SOAP
    message."
-  ([^. this]
+  ([^javax.xml.soap.SOAPElement this]
     (-> this (.removeContents))))
 
 (defn add-child-element
@@ -66,11 +66,11 @@
   returns: the new SOAPElement object that was created - `javax.xml.soap.SOAPElement`
 
   throws: javax.xml.soap.SOAPException - if there is an error in creating the SOAPElement object"
-  ([^. this ^java.lang.String local-name ^java.lang.String prefix ^java.lang.String uri]
+  ([^javax.xml.soap.SOAPElement this ^java.lang.String local-name ^java.lang.String prefix ^java.lang.String uri]
     (-> this (.addChildElement local-name prefix uri)))
-  ([^. this ^java.lang.String local-name ^java.lang.String prefix]
+  ([^javax.xml.soap.SOAPElement this ^java.lang.String local-name ^java.lang.String prefix]
     (-> this (.addChildElement local-name prefix)))
-  ([^. this ^javax.xml.soap.Name name]
+  ([^javax.xml.soap.SOAPElement this ^javax.xml.soap.Name name]
     (-> this (.addChildElement name))))
 
 (defn get-all-attributes-as-q-names
@@ -81,7 +81,7 @@
    the value of each attribute.
 
   returns: an iterator over the QNames of the attributes - `java.util.Iterator`"
-  ([^. this]
+  ([^javax.xml.soap.SOAPElement this]
     (-> this (.getAllAttributesAsQNames))))
 
 (defn get-namespace-prefixes
@@ -92,7 +92,7 @@
 
   returns: an iterator over the namespace prefixes in this
            SOAPElement object - `java.util.Iterator`"
-  ([^. this]
+  ([^javax.xml.soap.SOAPElement this]
     (-> this (.getNamespacePrefixes))))
 
 (defn set-encoding-style
@@ -102,7 +102,7 @@
   encoding-style - a String giving the encoding style - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if there was a problem in the encoding style being set."
-  ([^. this ^java.lang.String encoding-style]
+  ([^javax.xml.soap.SOAPElement this ^java.lang.String encoding-style]
     (-> this (.setEncodingStyle encoding-style))))
 
 (defn remove-namespace-declaration
@@ -112,7 +112,7 @@
 
   returns: true if the namespace declaration was
            removed successfully; false if it was not - `boolean`"
-  ([^. this ^java.lang.String prefix]
+  ([^javax.xml.soap.SOAPElement this ^java.lang.String prefix]
     (-> this (.removeNamespaceDeclaration prefix))))
 
 (defn remove-attribute
@@ -122,14 +122,14 @@
 
   returns: true if the attribute was
            removed successfully; false if it was not - `boolean`"
-  ([^. this ^javax.xml.soap.Name name]
+  ([^javax.xml.soap.SOAPElement this ^javax.xml.soap.Name name]
     (-> this (.removeAttribute name))))
 
 (defn get-encoding-style
   "Returns the encoding style for this SOAPElement object.
 
   returns: a String giving the encoding style - `java.lang.String`"
-  ([^. this]
+  ([^javax.xml.soap.SOAPElement this]
     (-> this (.getEncodingStyle))))
 
 (defn get-child-elements
@@ -152,9 +152,9 @@
   name - `javax.xml.soap.Name`
 
   returns: `java.util.Iterator`"
-  ([^. this ^javax.xml.soap.Name name]
+  ([^javax.xml.soap.SOAPElement this ^javax.xml.soap.Name name]
     (-> this (.getChildElements name)))
-  ([^. this]
+  ([^javax.xml.soap.SOAPElement this]
     (-> this (.getChildElements))))
 
 (defn get-attribute-value
@@ -164,7 +164,7 @@
 
   returns: a String giving the value of the specified
            attribute, Null if there is no such attribute - `java.lang.String`"
-  ([^. this ^javax.xml.soap.Name name]
+  ([^javax.xml.soap.SOAPElement this ^javax.xml.soap.Name name]
     (-> this (.getAttributeValue name))))
 
 (defn add-namespace-declaration
@@ -178,7 +178,7 @@
             namespace declaration was inserted. - `javax.xml.soap.SOAPElement`
 
   throws: javax.xml.soap.SOAPException - if there is an error in creating the namespace"
-  ([^. this ^java.lang.String prefix ^java.lang.String uri]
+  ([^javax.xml.soap.SOAPElement this ^java.lang.String prefix ^java.lang.String uri]
     (-> this (.addNamespaceDeclaration prefix uri))))
 
 (defn create-q-name
@@ -200,7 +200,7 @@
             prefix as it's parameter. - `javax.xml.namespace.QName`
 
   throws: javax.xml.soap.SOAPException - if the QName cannot be created."
-  ([^. this ^java.lang.String local-name ^java.lang.String prefix]
+  ([^javax.xml.soap.SOAPElement this ^java.lang.String local-name ^java.lang.String prefix]
     (-> this (.createQName local-name prefix))))
 
 (defn get-all-attributes
@@ -212,7 +212,7 @@
    attribute.
 
   returns: an iterator over the names of the attributes - `java.util.Iterator`"
-  ([^. this]
+  ([^javax.xml.soap.SOAPElement this]
     (-> this (.getAllAttributes))))
 
 (defn get-visible-namespace-prefixes
@@ -223,7 +223,7 @@
 
   returns: an iterator over the namespace prefixes are within scope of this
            SOAPElement object - `java.util.Iterator`"
-  ([^. this]
+  ([^javax.xml.soap.SOAPElement this]
     (-> this (.getVisibleNamespacePrefixes))))
 
 (defn get-element-q-name
@@ -231,7 +231,7 @@
 
   returns: a QName object with the qname of this
            SOAPElement object - `javax.xml.namespace.QName`"
-  ([^. this]
+  ([^javax.xml.soap.SOAPElement this]
     (-> this (.getElementQName))))
 
 (defn add-attribute
@@ -245,7 +245,7 @@
            inserted - `javax.xml.soap.SOAPElement`
 
   throws: javax.xml.soap.SOAPException - if there is an error in creating the Attribute, or it is invalid to set an attribute with Name name on this SOAPElement."
-  ([^. this ^javax.xml.soap.Name name ^java.lang.String value]
+  ([^javax.xml.soap.SOAPElement this ^javax.xml.soap.Name name ^java.lang.String value]
     (-> this (.addAttribute name value))))
 
 (defn set-element-q-name
@@ -263,6 +263,6 @@
   returns: The renamed Node - `javax.xml.soap.SOAPElement`
 
   throws: javax.xml.soap.SOAPException - if changing the name of this Element is not allowed."
-  ([^. this ^javax.xml.namespace.QName new-name]
+  ([^javax.xml.soap.SOAPElement this ^javax.xml.namespace.QName new-name]
     (-> this (.setElementQName new-name))))
 

@@ -8,7 +8,7 @@
   "Gets the roles played by the SOAP binding instance.
 
   returns: Set<String> The set of roles played by the binding instance. - `java.util.Set<java.lang.String>`"
-  ([^. this]
+  ([^javax.xml.ws.soap.SOAPBinding this]
     (-> this (.getRoles))))
 
 (defn set-roles
@@ -17,14 +17,14 @@
   roles - The set of roles played by the binding instance. - `java.util.Set<java.lang.String>`
 
   throws: WebServiceException - On an error in the configuration of the list of roles."
-  ([^. this ^java.util.Set roles]
+  ([^javax.xml.ws.soap.SOAPBinding this ^java.util.Set roles]
     (-> this (.setRoles roles))))
 
 (defn mtom-enabled?
   "Returns true if the use of MTOM is enabled.
 
   returns: true if and only if the use of MTOM is enabled. - `boolean`"
-  ([^. this]
+  ([^javax.xml.ws.soap.SOAPBinding this]
     (-> this (.isMTOMEnabled))))
 
 (defn set-mtom-enabled
@@ -33,20 +33,20 @@
   flag - A boolean specifying whether the use of MTOM should be enabled or disabled. - `boolean`
 
   throws: WebServiceException - If the specified setting is not supported by this binding instance."
-  ([^. this ^Boolean flag]
+  ([^javax.xml.ws.soap.SOAPBinding this ^Boolean flag]
     (-> this (.setMTOMEnabled flag))))
 
 (defn get-soap-factory
   "Gets the SAAJ SOAPFactory instance used by this SOAP binding.
 
   returns: SOAPFactory instance used by this SOAP binding. - `javax.xml.soap.SOAPFactory`"
-  ([^. this]
+  ([^javax.xml.ws.soap.SOAPBinding this]
     (-> this (.getSOAPFactory))))
 
 (defn get-message-factory
   "Gets the SAAJ MessageFactory instance used by this SOAP binding.
 
   returns: MessageFactory instance used by this SOAP binding. - `javax.xml.soap.MessageFactory`"
-  ([^. this]
+  ([^javax.xml.ws.soap.SOAPBinding this]
     (-> this (.getMessageFactory))))
 

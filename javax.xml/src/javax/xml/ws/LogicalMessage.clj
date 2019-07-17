@@ -16,9 +16,9 @@
             payload is present in this message - `java.lang.Object`
 
   throws: javax.xml.ws.WebServiceException - If an error occurs when using a supplied JAXBContext to unmarshall the payload. The cause of the WebServiceException is the original JAXBException."
-  ([^. this ^javax.xml.bind.JAXBContext context]
+  ([^javax.xml.ws.LogicalMessage this ^javax.xml.bind.JAXBContext context]
     (-> this (.getPayload context)))
-  ([^. this]
+  ([^javax.xml.ws.LogicalMessage this]
     (-> this (.getPayload))))
 
 (defn set-payload
@@ -28,8 +28,8 @@
   context - The JAXBContext that should be used to marshall the payload - `javax.xml.bind.JAXBContext`
 
   throws: java.lang.UnsupportedOperationException - If this operation is not supported"
-  ([^. this ^java.lang.Object payload ^javax.xml.bind.JAXBContext context]
+  ([^javax.xml.ws.LogicalMessage this ^java.lang.Object payload ^javax.xml.bind.JAXBContext context]
     (-> this (.setPayload payload context)))
-  ([^. this ^javax.xml.transform.Source payload]
+  ([^javax.xml.ws.LogicalMessage this ^javax.xml.transform.Source payload]
     (-> this (.setPayload payload))))
 

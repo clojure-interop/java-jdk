@@ -21,7 +21,7 @@
    least descriptive).
 
   returns: The DataFlavors. - `java.awt.datatransfer.DataFlavor[]`"
-  ([^. this]
+  ([^javax.activation.DataContentHandler this]
     (-> this (.getTransferDataFlavors))))
 
 (defn get-transfer-data
@@ -35,7 +35,7 @@
   returns: The constructed Object. - `java.lang.Object`
 
   throws: java.awt.datatransfer.UnsupportedFlavorException - if the handler doesn't support the requested flavor"
-  ([^. this ^java.awt.datatransfer.DataFlavor df ^javax.activation.DataSource ds]
+  ([^javax.activation.DataContentHandler this ^java.awt.datatransfer.DataFlavor df ^javax.activation.DataSource ds]
     (-> this (.getTransferData df ds))))
 
 (defn get-content
@@ -48,7 +48,7 @@
   returns: The constructed Object. - `java.lang.Object`
 
   throws: java.io.IOException - if the data can't be accessed"
-  ([^. this ^javax.activation.DataSource ds]
+  ([^javax.activation.DataContentHandler this ^javax.activation.DataSource ds]
     (-> this (.getContent ds))))
 
 (defn write-to
@@ -60,6 +60,6 @@
   os - The output stream into which to write the converted byte stream. - `java.io.OutputStream`
 
   throws: java.io.IOException - errors writing to the stream"
-  ([^. this ^java.lang.Object obj ^java.lang.String mime-type ^java.io.OutputStream os]
+  ([^javax.activation.DataContentHandler this ^java.lang.Object obj ^java.lang.String mime-type ^java.io.OutputStream os]
     (-> this (.writeTo obj mime-type os))))
 

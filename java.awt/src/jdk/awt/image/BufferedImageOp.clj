@@ -39,7 +39,7 @@
   returns: The filtered BufferedImage. - `java.awt.image.BufferedImage`
 
   throws: java.lang.IllegalArgumentException - If the source and/or destination image is not compatible with the types of images allowed by the class implementing this filter."
-  ([^. this ^java.awt.image.BufferedImage src ^java.awt.image.BufferedImage dest]
+  ([^java.awt.image.BufferedImageOp this ^java.awt.image.BufferedImage src ^java.awt.image.BufferedImage dest]
     (-> this (.filter src dest))))
 
 (defn get-bounds-2-d
@@ -52,7 +52,7 @@
 
   returns: The Rectangle2D representing the destination
    image's bounding box. - `java.awt.geom.Rectangle2D`"
-  ([^. this ^java.awt.image.BufferedImage src]
+  ([^java.awt.image.BufferedImageOp this ^java.awt.image.BufferedImage src]
     (-> this (.getBounds2D src))))
 
 (defn create-compatible-dest-image
@@ -66,7 +66,7 @@
   dest-cm - ColorModel of the destination. If null, the ColorModel of the source is used. - `java.awt.image.ColorModel`
 
   returns: The zeroed destination image. - `java.awt.image.BufferedImage`"
-  ([^. this ^java.awt.image.BufferedImage src ^java.awt.image.ColorModel dest-cm]
+  ([^java.awt.image.BufferedImageOp this ^java.awt.image.BufferedImage src ^java.awt.image.ColorModel dest-cm]
     (-> this (.createCompatibleDestImage src dest-cm))))
 
 (defn get-point-2-d
@@ -79,7 +79,7 @@
 
   returns: The Point2D in the destination image that
    corresponds to the specified point in the source image. - `java.awt.geom.Point2D`"
-  ([^. this ^java.awt.geom.Point2D src-pt ^java.awt.geom.Point2D dst-pt]
+  ([^java.awt.image.BufferedImageOp this ^java.awt.geom.Point2D src-pt ^java.awt.geom.Point2D dst-pt]
     (-> this (.getPoint2D src-pt dst-pt))))
 
 (defn get-rendering-hints
@@ -88,6 +88,6 @@
   returns: The RenderingHints object for this
    BufferedImageOp.  Returns
    null if no hints have been set. - `java.awt.RenderingHints`"
-  ([^. this]
+  ([^java.awt.image.BufferedImageOp this]
     (-> this (.getRenderingHints))))
 

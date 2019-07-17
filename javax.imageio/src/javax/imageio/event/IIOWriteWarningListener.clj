@@ -20,6 +20,6 @@
   source - the ImageWriter object calling this method. - `javax.imageio.ImageWriter`
   image-index - the index, starting with 0, of the image generating the warning. - `int`
   warning - a String containing the warning. - `java.lang.String`"
-  ([^. this ^javax.imageio.ImageWriter source ^Integer image-index ^java.lang.String warning]
+  ([^javax.imageio.event.IIOWriteWarningListener this ^javax.imageio.ImageWriter source ^Integer image-index ^java.lang.String warning]
     (-> this (.warningOccurred source image-index warning))))
 

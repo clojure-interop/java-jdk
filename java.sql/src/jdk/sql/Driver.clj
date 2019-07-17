@@ -53,7 +53,7 @@
            connection to the URL - `java.sql.Connection`
 
   throws: java.sql.SQLException - if a database access error occurs or the url is null"
-  ([^. this ^java.lang.String url ^java.util.Properties info]
+  ([^java.sql.Driver this ^java.lang.String url ^java.util.Properties info]
     (-> this (.connect url info))))
 
 (defn accepts-url
@@ -68,7 +68,7 @@
            false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs or the url is null"
-  ([^. this ^java.lang.String url]
+  ([^java.sql.Driver this ^java.lang.String url]
     (-> this (.acceptsURL url))))
 
 (defn get-property-info
@@ -90,21 +90,21 @@
             no properties are required. - `java.sql.DriverPropertyInfo[]`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^java.lang.String url ^java.util.Properties info]
+  ([^java.sql.Driver this ^java.lang.String url ^java.util.Properties info]
     (-> this (.getPropertyInfo url info))))
 
 (defn get-major-version
   "Retrieves the driver's major version number. Initially this should be 1.
 
   returns: this driver's major version number - `int`"
-  ([^. this]
+  ([^java.sql.Driver this]
     (-> this (.getMajorVersion))))
 
 (defn get-minor-version
   "Gets the driver's minor version number. Initially this should be 0.
 
   returns: this driver's minor version number - `int`"
-  ([^. this]
+  ([^java.sql.Driver this]
     (-> this (.getMinorVersion))))
 
 (defn jdbc-compliant
@@ -126,7 +126,7 @@
 
   returns: true if this driver is JDBC Compliant; false
            otherwise - `boolean`"
-  ([^. this]
+  ([^java.sql.Driver this]
     (-> this (.jdbcCompliant))))
 
 (defn get-parent-logger
@@ -139,6 +139,6 @@
   returns: the parent Logger for this driver - `java.util.logging.Logger`
 
   throws: java.sql.SQLFeatureNotSupportedException - if the driver does not use java.util.logging."
-  ([^. this]
+  ([^java.sql.Driver this]
     (-> this (.getParentLogger))))
 

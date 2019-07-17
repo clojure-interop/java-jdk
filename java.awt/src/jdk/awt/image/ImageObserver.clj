@@ -39,6 +39,6 @@
 
   returns: false if the infoflags indicate that the
               image is completely loaded; true otherwise. - `boolean`"
-  ([^. this ^java.awt.Image img ^Integer infoflags ^Integer x ^Integer y ^Integer width ^Integer height]
+  ([^java.awt.image.ImageObserver this ^java.awt.Image img ^Integer infoflags ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.imageUpdate img infoflags x y width height))))
 

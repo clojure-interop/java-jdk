@@ -25,7 +25,7 @@
    the Java virtual machine has started execution.
 
   returns: the total number of classes loaded. - `long`"
-  ([^. this]
+  ([^java.lang.management.ClassLoadingMXBean this]
     (-> this (.getTotalLoadedClassCount))))
 
 (defn get-loaded-class-count
@@ -33,7 +33,7 @@
    Java virtual machine.
 
   returns: the number of currently loaded classes. - `int`"
-  ([^. this]
+  ([^java.lang.management.ClassLoadingMXBean this]
     (-> this (.getLoadedClassCount))))
 
 (defn get-unloaded-class-count
@@ -41,7 +41,7 @@
    has started execution.
 
   returns: the total number of unloaded classes. - `long`"
-  ([^. this]
+  ([^java.lang.management.ClassLoadingMXBean this]
     (-> this (.getUnloadedClassCount))))
 
 (defn verbose?
@@ -49,7 +49,7 @@
 
   returns: true if the verbose output for the class loading
    system is enabled; false otherwise. - `boolean`"
-  ([^. this]
+  ([^java.lang.management.ClassLoadingMXBean this]
     (-> this (.isVerbose))))
 
 (defn set-verbose
@@ -66,6 +66,6 @@
   value - true to enable the verbose output; false to disable. - `boolean`
 
   throws: java.lang.SecurityException - if a security manager exists and the caller does not have ManagementPermission(`control`)."
-  ([^. this ^Boolean value]
+  ([^java.lang.management.ClassLoadingMXBean this ^Boolean value]
     (-> this (.setVerbose value))))
 

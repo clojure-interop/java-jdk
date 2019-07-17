@@ -39,7 +39,7 @@
   in-model-m-bean-info - The ModelMBeanInfo object to be used by the ModelMBean. - `javax.management.modelmbean.ModelMBeanInfo`
 
   throws: javax.management.MBeanException - Wraps a distributed communication Exception."
-  ([^. this ^javax.management.modelmbean.ModelMBeanInfo in-model-m-bean-info]
+  ([^javax.management.modelmbean.ModelMBean this ^javax.management.modelmbean.ModelMBeanInfo in-model-m-bean-info]
     (-> this (.setModelMBeanInfo in-model-m-bean-info))))
 
 (defn set-managed-resource
@@ -51,6 +51,6 @@
   mr-type - The type of reference for the managed resource. Can be: ObjectReference, Handle, IOR, EJBHandle, RMIReference. If the MBeanServer cannot process the mr_type passed in, an InvalidTargetTypeException will be thrown. - `java.lang.String`
 
   throws: javax.management.MBeanException - The initializer of the object has thrown an exception."
-  ([^. this ^java.lang.Object mr ^java.lang.String mr-type]
+  ([^javax.management.modelmbean.ModelMBean this ^java.lang.Object mr ^java.lang.String mr-type]
     (-> this (.setManagedResource mr mr-type))))
 

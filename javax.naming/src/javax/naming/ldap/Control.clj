@@ -21,7 +21,7 @@
   "Retrieves the object identifier assigned for the LDAP control.
 
   returns: The non-null object identifier string. - `java.lang.String`"
-  ([^. this]
+  ([^javax.naming.ldap.Control this]
     (-> this (.getID))))
 
 (defn critical?
@@ -33,7 +33,7 @@
    and an OperationNotSupportedException will be thrown.
 
   returns: true if this control is critical; false otherwise. - `boolean`"
-  ([^. this]
+  ([^javax.naming.ldap.Control this]
     (-> this (.isCritical))))
 
 (defn get-encoded-value
@@ -45,6 +45,6 @@
 
   returns: A possibly null byte array representing the ASN.1 BER encoded
            value of the LDAP control. - `byte[]`"
-  ([^. this]
+  ([^javax.naming.ldap.Control this]
     (-> this (.getEncodedValue))))
 

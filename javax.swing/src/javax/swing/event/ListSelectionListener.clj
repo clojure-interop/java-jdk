@@ -8,6 +8,6 @@
   "Called whenever the value of the selection changes.
 
   e - the event that characterizes the change. - `javax.swing.event.ListSelectionEvent`"
-  ([^. this ^javax.swing.event.ListSelectionEvent e]
+  ([^javax.swing.event.ListSelectionListener this ^javax.swing.event.ListSelectionEvent e]
     (-> this (.valueChanged e))))
 

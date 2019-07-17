@@ -30,7 +30,7 @@
   returns: This channel - `java.nio.channels.NetworkChannel`
 
   throws: java.nio.channels.AlreadyBoundException - If the socket is already bound"
-  ([^. this ^java.net.SocketAddress local]
+  ([^java.nio.channels.NetworkChannel this ^java.net.SocketAddress local]
     (-> this (.bind local))))
 
 (defn get-local-address
@@ -43,7 +43,7 @@
             if the channel's socket is not bound - `java.net.SocketAddress`
 
   throws: java.nio.channels.ClosedChannelException - If the channel is closed"
-  ([^. this]
+  ([^java.nio.channels.NetworkChannel this]
     (-> this (.getLocalAddress))))
 
 (defn set-option
@@ -55,7 +55,7 @@
   returns: This channel - `<T> java.nio.channels.NetworkChannel`
 
   throws: java.lang.UnsupportedOperationException - If the socket option is not supported by this channel"
-  ([^. this ^java.net.SocketOption name value]
+  ([^java.nio.channels.NetworkChannel this ^java.net.SocketOption name value]
     (-> this (.setOption name value))))
 
 (defn get-option
@@ -67,7 +67,7 @@
             a valid value for some socket options. - `<T> T`
 
   throws: java.lang.UnsupportedOperationException - If the socket option is not supported by this channel"
-  ([^. this ^java.net.SocketOption name]
+  ([^java.nio.channels.NetworkChannel this ^java.net.SocketOption name]
     (-> this (.getOption name))))
 
 (defn supported-options
@@ -77,6 +77,6 @@
    channel has been closed.
 
   returns: A set of the socket options supported by this channel - `java.util.Set<java.net.SocketOption<?>>`"
-  ([^. this]
+  ([^java.nio.channels.NetworkChannel this]
     (-> this (.supportedOptions))))
 

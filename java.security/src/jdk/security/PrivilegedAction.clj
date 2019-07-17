@@ -16,6 +16,6 @@
            computation. Each class that implements
            PrivilegedAction
            should document what (if anything) this value represents. - `PrivilegedAction.T`"
-  ([^. this]
+  ([^java.security.PrivilegedAction this]
     (-> this (.run))))
 

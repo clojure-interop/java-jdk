@@ -21,7 +21,7 @@
    OpenMBeanOperationInfo interface (typically OpenMBeanOperationInfoSupport).
 
   returns: the operation array. - `javax.management.MBeanOperationInfo[]`"
-  ([^. this]
+  ([^javax.management.openmbean.OpenMBeanInfo this]
     (-> this (.getOperations))))
 
 (defn get-class-name
@@ -29,7 +29,7 @@
    instances this OpenMBeanInfo describes.
 
   returns: the class name. - `java.lang.String`"
-  ([^. this]
+  ([^javax.management.openmbean.OpenMBeanInfo this]
     (-> this (.getClassName))))
 
 (defn get-notifications
@@ -38,7 +38,7 @@
    described by this OpenMBeanInfo instance.
 
   returns: the notification array. - `javax.management.MBeanNotificationInfo[]`"
-  ([^. this]
+  ([^javax.management.openmbean.OpenMBeanInfo this]
     (-> this (.getNotifications))))
 
 (defn to-string
@@ -49,7 +49,7 @@
    and the string representation of infos on attributes, constructors, operations and notifications of the described MBean.
 
   returns: a string representation of this OpenMBeanInfo instance - `java.lang.String`"
-  ([^. this]
+  ([^javax.management.openmbean.OpenMBeanInfo this]
     (-> this (.toString))))
 
 (defn get-description
@@ -57,7 +57,7 @@
    instances this OpenMBeanInfo describes.
 
   returns: the description. - `java.lang.String`"
-  ([^. this]
+  ([^javax.management.openmbean.OpenMBeanInfo this]
     (-> this (.getDescription))))
 
 (defn hash-code
@@ -75,7 +75,7 @@
    Object.hashCode().
 
   returns: the hash code value for this OpenMBeanInfo instance - `int`"
-  ([^. this]
+  ([^javax.management.openmbean.OpenMBeanInfo this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -94,7 +94,7 @@
   obj - the object to be compared for equality with this OpenMBeanInfo instance; - `java.lang.Object`
 
   returns: true if the specified object is equal to this OpenMBeanInfo instance. - `boolean`"
-  ([^. this ^java.lang.Object obj]
+  ([^javax.management.openmbean.OpenMBeanInfo this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn get-constructors
@@ -106,7 +106,7 @@
    OpenMBeanConstructorInfo interface (typically OpenMBeanConstructorInfoSupport).
 
   returns: the constructor array. - `javax.management.MBeanConstructorInfo[]`"
-  ([^. this]
+  ([^javax.management.openmbean.OpenMBeanInfo this]
     (-> this (.getConstructors))))
 
 (defn get-attributes
@@ -118,6 +118,6 @@
    OpenMBeanAttributeInfo interface (typically OpenMBeanAttributeInfoSupport).
 
   returns: the attribute array. - `javax.management.MBeanAttributeInfo[]`"
-  ([^. this]
+  ([^javax.management.openmbean.OpenMBeanInfo this]
     (-> this (.getAttributes))))
 

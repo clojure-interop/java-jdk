@@ -9,6 +9,6 @@
   "Called by the RMI runtime sometime after the runtime determines that
    the reference list, the list of clients referencing the remote object,
    becomes empty."
-  ([^. this]
+  ([^java.rmi.server.Unreferenced this]
     (-> this (.unreferenced))))
 

@@ -37,7 +37,7 @@
    element which declares the parameter is returned.
 
   returns: the enclosing element, or null if there is none - `javax.lang.model.element.Element`"
-  ([^. this]
+  ([^javax.lang.model.element.Element this]
     (-> this (.getEnclosingElement))))
 
 (defn get-annotation-mirrors
@@ -48,14 +48,14 @@
 
   returns: the annotations directly present on this
    construct; an empty list if there are none - `java.util.List<? extends javax.lang.model.element.AnnotationMirror>`"
-  ([^. this]
+  ([^javax.lang.model.element.Element this]
     (-> this (.getAnnotationMirrors))))
 
 (defn get-kind
   "Returns the kind of this element.
 
   returns: the kind of this element - `javax.lang.model.element.ElementKind`"
-  ([^. this]
+  ([^javax.lang.model.element.Element this]
     (-> this (.getKind))))
 
 (defn get-enclosed-elements
@@ -78,7 +78,7 @@
    methods in ElementFilter.
 
   returns: the enclosed elements, or an empty list if none - `java.util.List<? extends javax.lang.model.element.Element>`"
-  ([^. this]
+  ([^javax.lang.model.element.Element this]
     (-> this (.getEnclosedElements))))
 
 (defn get-modifiers
@@ -87,7 +87,7 @@
    modifiers of interface members, are included.
 
   returns: the modifiers of this element, or an empty set if there are none - `java.util.Set<javax.lang.model.element.Modifier>`"
-  ([^. this]
+  ([^javax.lang.model.element.Element this]
     (-> this (.getModifiers))))
 
 (defn as-type
@@ -104,7 +104,7 @@
    for obtaining the full range of types defined by an element.
 
   returns: the type defined by this element - `javax.lang.model.type.TypeMirror`"
-  ([^. this]
+  ([^javax.lang.model.element.Element this]
     (-> this (.asType))))
 
 (defn get-annotation
@@ -139,7 +139,7 @@
 
   returns: this construct's annotation for the specified
    annotation type if present, else null - `<A extends java.lang.annotation.Annotation> A`"
-  ([^. this ^java.lang.Class annotation-type]
+  ([^javax.lang.model.element.Element this ^java.lang.Class annotation-type]
     (-> this (.getAnnotation annotation-type))))
 
 (defn accept
@@ -149,14 +149,14 @@
   p - additional parameter to the visitor - `P`
 
   returns: a visitor-specified result - `<R,P> R`"
-  ([^. this ^javax.lang.model.element.ElementVisitor v p]
+  ([^javax.lang.model.element.Element this ^javax.lang.model.element.ElementVisitor v p]
     (-> this (.accept v p))))
 
 (defn hash-code
   "Obeys the general contract of Object.hashCode.
 
   returns: a hash code value for this object. - `int`"
-  ([^. this]
+  ([^javax.lang.model.element.Element this]
     (-> this (.hashCode))))
 
 (defn get-simple-name
@@ -176,7 +176,7 @@
    If it represents an anonymous class or instance initializer, an empty name is returned.
 
   returns: the simple name of this element - `javax.lang.model.element.Name`"
-  ([^. this]
+  ([^javax.lang.model.element.Element this]
     (-> this (.getSimpleName))))
 
 (defn equals
@@ -196,6 +196,6 @@
 
   returns: true if the specified object represents the same
             element as this - `boolean`"
-  ([^. this ^java.lang.Object obj]
+  ([^javax.lang.model.element.Element this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

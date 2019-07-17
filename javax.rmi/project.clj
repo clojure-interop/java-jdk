@@ -1,4 +1,4 @@
-(defproject clojure-interop/javax.rmi "1.0.1"
+(defproject clojure-interop/javax.rmi "1.0.2"
   :description "Clojure to Java Interop Bindings for javax.rmi"
   :url "https://github.com/clojure-interop/java-jdk"
   :license {:name "Eclipse Public License"

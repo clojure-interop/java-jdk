@@ -13,20 +13,20 @@
     the port being accessed.
 
   returns: javax.xml.namespace.QName The qualified name of the WSDL service. - `javax.xml.namespace.QName`"
-  ([^. this]
+  ([^javax.xml.ws.handler.PortInfo this]
     (-> this (.getServiceName))))
 
 (defn get-port-name
   "Gets the qualified name of the WSDL port being accessed.
 
   returns: javax.xml.namespace.QName The qualified name of the WSDL port. - `javax.xml.namespace.QName`"
-  ([^. this]
+  ([^javax.xml.ws.handler.PortInfo this]
     (-> this (.getPortName))))
 
 (defn get-binding-id
   "Gets the URI identifying the binding used by the port being accessed.
 
   returns: String The binding identifier for the port. - `java.lang.String`"
-  ([^. this]
+  ([^javax.xml.ws.handler.PortInfo this]
     (-> this (.getBindingID))))
 

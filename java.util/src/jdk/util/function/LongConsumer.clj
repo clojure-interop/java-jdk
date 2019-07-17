@@ -13,7 +13,7 @@
   "Performs this operation on the given argument.
 
   value - the input argument - `long`"
-  ([^. this ^Long value]
+  ([^java.util.function.LongConsumer this ^Long value]
     (-> this (.accept value))))
 
 (defn and-then
@@ -29,6 +29,6 @@
    operation followed by the after operation - `default java.util.function.LongConsumer`
 
   throws: java.lang.NullPointerException - if after is null"
-  ([^. this ^java.util.function.LongConsumer after]
+  ([^java.util.function.LongConsumer this ^java.util.function.LongConsumer after]
     (-> this (.andThen after))))
 

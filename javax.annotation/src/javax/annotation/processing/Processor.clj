@@ -167,7 +167,7 @@
 
   returns: the options recognized by this processor or an
            empty collection if none - `java.util.Set<java.lang.String>`"
-  ([^. this]
+  ([^javax.annotation.processing.Processor this]
     (-> this (.getSupportedOptions))))
 
 (defn get-supported-annotation-types
@@ -200,7 +200,7 @@
    The Java™ Language Specification.
 
   returns: the names of the annotation types supported by this processor - `java.util.Set<java.lang.String>`"
-  ([^. this]
+  ([^javax.annotation.processing.Processor this]
     (-> this (.getSupportedAnnotationTypes))))
 
 (defn get-supported-source-version
@@ -209,14 +209,14 @@
 
   returns: the latest source version supported by this annotation
    processor. - `javax.lang.model.SourceVersion`"
-  ([^. this]
+  ([^javax.annotation.processing.Processor this]
     (-> this (.getSupportedSourceVersion))))
 
 (defn init
   "Initializes the processor with the processing environment.
 
   processing-env - environment for facilities the tool framework provides to the processor - `javax.annotation.processing.ProcessingEnvironment`"
-  ([^. this ^javax.annotation.processing.ProcessingEnvironment processing-env]
+  ([^javax.annotation.processing.Processor this ^javax.annotation.processing.ProcessingEnvironment processing-env]
     (-> this (.init processing-env))))
 
 (defn process
@@ -235,7 +235,7 @@
   round-env - environment for information about the current and prior round - `javax.annotation.processing.RoundEnvironment`
 
   returns: whether or not the set of annotation types are claimed by this processor - `boolean`"
-  ([^. this ^javax.lang.model.element.TypeElement> annotations ^javax.annotation.processing.RoundEnvironment round-env]
+  ([^javax.annotation.processing.Processor this ^javax.lang.model.element.TypeElement> annotations ^javax.annotation.processing.RoundEnvironment round-env]
     (-> this (.process annotations round-env))))
 
 (defn get-completions
@@ -359,6 +359,6 @@
   user-text - source code text to be completed - `java.lang.String`
 
   returns: suggested completions to the annotation - `java.lang.Iterable<? extends javax.annotation.processing.Completion>`"
-  ([^. this ^javax.lang.model.element.Element element ^javax.lang.model.element.AnnotationMirror annotation ^javax.lang.model.element.ExecutableElement member ^java.lang.String user-text]
+  ([^javax.annotation.processing.Processor this ^javax.lang.model.element.Element element ^javax.lang.model.element.AnnotationMirror annotation ^javax.lang.model.element.ExecutableElement member ^java.lang.String user-text]
     (-> this (.getCompletions element annotation member user-text))))
 

@@ -69,7 +69,7 @@
             this PooledConnection object - `java.sql.Connection`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this]
+  ([^javax.sql.PooledConnection this]
     (-> this (.getConnection))))
 
 (defn close
@@ -81,7 +81,7 @@
    information.
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this]
+  ([^javax.sql.PooledConnection this]
     (-> this (.close))))
 
 (defn add-connection-event-listener
@@ -89,7 +89,7 @@
    when an event occurs on this PooledConnection object.
 
   listener - a component, usually the connection pool manager, that has implemented the ConnectionEventListener interface and wants to be notified when the connection is closed or has an error - `javax.sql.ConnectionEventListener`"
-  ([^. this ^javax.sql.ConnectionEventListener listener]
+  ([^javax.sql.PooledConnection this ^javax.sql.ConnectionEventListener listener]
     (-> this (.addConnectionEventListener listener))))
 
 (defn remove-connection-event-listener
@@ -98,7 +98,7 @@
    PooledConnection object.
 
   listener - a component, usually the connection pool manager, that has implemented the ConnectionEventListener interface and been registered with this PooledConnection object as a listener - `javax.sql.ConnectionEventListener`"
-  ([^. this ^javax.sql.ConnectionEventListener listener]
+  ([^javax.sql.PooledConnection this ^javax.sql.ConnectionEventListener listener]
     (-> this (.removeConnectionEventListener listener))))
 
 (defn add-statement-event-listener
@@ -108,7 +108,7 @@
    to register a StatementEventListener with this PooledConnection object.
 
   listener - an component which implements the StatementEventListener interface that is to be registered with this PooledConnection object - `javax.sql.StatementEventListener`"
-  ([^. this ^javax.sql.StatementEventListener listener]
+  ([^javax.sql.PooledConnection this ^javax.sql.StatementEventListener listener]
     (-> this (.addStatementEventListener listener))))
 
 (defn remove-statement-event-listener
@@ -117,6 +117,6 @@
    PreparedStatement has been closed or is invalid.
 
   listener - the component which implements the StatementEventListener interface that was previously registered with this PooledConnection object - `javax.sql.StatementEventListener`"
-  ([^. this ^javax.sql.StatementEventListener listener]
+  ([^javax.sql.PooledConnection this ^javax.sql.StatementEventListener listener]
     (-> this (.removeStatementEventListener listener))))
 

@@ -66,6 +66,6 @@
   returns: the remote object (a stub) in a marshalled form - `java.rmi.MarshalledObject<? extends java.rmi.Remote>`
 
   throws: java.rmi.activation.ActivationException - if object activation fails"
-  ([^. this ^java.rmi.activation.ActivationID id ^Boolean force]
+  ([^java.rmi.activation.Activator this ^java.rmi.activation.ActivationID id ^Boolean force]
     (-> this (.activate id force))))
 

@@ -14,6 +14,6 @@
   value - the function argument - `long`
 
   returns: the function result - `LongFunction.R`"
-  ([^. this ^Long value]
+  ([^java.util.function.LongFunction this ^Long value]
     (-> this (.apply value))))
 

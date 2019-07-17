@@ -41,6 +41,6 @@
   column - the column index of the cell being drawn - `int`
 
   returns: `java.awt.Component`"
-  ([^. this ^javax.swing.JTable table ^java.lang.Object value ^Boolean is-selected ^Boolean has-focus ^Integer row ^Integer column]
+  ([^javax.swing.table.TableCellRenderer this ^javax.swing.JTable table ^java.lang.Object value ^Boolean is-selected ^Boolean has-focus ^Integer row ^Integer column]
     (-> this (.getTableCellRendererComponent table value is-selected has-focus row column))))
 

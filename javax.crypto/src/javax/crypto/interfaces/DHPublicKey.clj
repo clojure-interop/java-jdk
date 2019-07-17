@@ -7,6 +7,6 @@
   "Returns the public value, y.
 
   returns: the public value, y - `java.math.BigInteger`"
-  ([^. this]
+  ([^javax.crypto.interfaces.DHPublicKey this]
     (-> this (.getY))))
 

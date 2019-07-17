@@ -20,7 +20,7 @@
 
   returns: true if the CRL should be selected,
    false otherwise - `boolean`"
-  ([^. this ^java.security.cert.CRL crl]
+  ([^java.security.cert.CRLSelector this ^java.security.cert.CRL crl]
     (-> this (.match crl))))
 
 (defn clone
@@ -28,6 +28,6 @@
    copy will not affect the original and vice versa.
 
   returns: a copy of this CRLSelector - `java.lang.Object`"
-  ([^. this]
+  ([^java.security.cert.CRLSelector this]
     (-> this (.clone))))
 

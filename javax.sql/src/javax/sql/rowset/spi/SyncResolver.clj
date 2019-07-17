@@ -212,7 +212,7 @@
            SyncResolver.DELETE_ROW_CONFLICT,
            SyncResolver.INSERT_ROW_CONFLICT, or
            SyncResolver.NO_ROW_CONFLICT - `int`"
-  ([^. this]
+  ([^javax.sql.rowset.spi.SyncResolver this]
     (-> this (.getStatus))))
 
 (defn get-conflict-value
@@ -226,7 +226,7 @@
            SyncResolver object - `java.lang.Object`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^Integer index]
+  ([^javax.sql.rowset.spi.SyncResolver this ^Integer index]
     (-> this (.getConflictValue index))))
 
 (defn set-resolved-value
@@ -238,7 +238,7 @@
   obj - an Object that is the value to be set in the RowSet object and persisted in the data source - `java.lang.Object`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this ^Integer index ^java.lang.Object obj]
+  ([^javax.sql.rowset.spi.SyncResolver this ^Integer index ^java.lang.Object obj]
     (-> this (.setResolvedValue index obj))))
 
 (defn next-conflict
@@ -256,7 +256,7 @@
            if there are no more rows - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs or the result set type is TYPE_FORWARD_ONLY"
-  ([^. this]
+  ([^javax.sql.rowset.spi.SyncResolver this]
     (-> this (.nextConflict))))
 
 (defn previous-conflict
@@ -271,6 +271,6 @@
        if it is off the result set - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs or the result set type is TYPE_FORWARD_ONLY"
-  ([^. this]
+  ([^javax.sql.rowset.spi.SyncResolver this]
     (-> this (.previousConflict))))
 

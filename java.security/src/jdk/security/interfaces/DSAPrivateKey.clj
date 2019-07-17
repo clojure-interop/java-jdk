@@ -8,6 +8,6 @@
   "Returns the value of the private key, x.
 
   returns: the value of the private key, x. - `java.math.BigInteger`"
-  ([^. this]
+  ([^java.security.interfaces.DSAPrivateKey this]
     (-> this (.getX))))
 

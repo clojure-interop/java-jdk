@@ -8,41 +8,41 @@
   "Returns the public exponent.
 
   returns: the public exponent - `java.math.BigInteger`"
-  ([^. this]
+  ([^java.security.interfaces.RSAPrivateCrtKey this]
     (-> this (.getPublicExponent))))
 
 (defn get-prime-p
   "Returns the primeP.
 
   returns: the primeP - `java.math.BigInteger`"
-  ([^. this]
+  ([^java.security.interfaces.RSAPrivateCrtKey this]
     (-> this (.getPrimeP))))
 
 (defn get-prime-q
   "Returns the primeQ.
 
   returns: the primeQ - `java.math.BigInteger`"
-  ([^. this]
+  ([^java.security.interfaces.RSAPrivateCrtKey this]
     (-> this (.getPrimeQ))))
 
 (defn get-prime-exponent-p
   "Returns the primeExponentP.
 
   returns: the primeExponentP - `java.math.BigInteger`"
-  ([^. this]
+  ([^java.security.interfaces.RSAPrivateCrtKey this]
     (-> this (.getPrimeExponentP))))
 
 (defn get-prime-exponent-q
   "Returns the primeExponentQ.
 
   returns: the primeExponentQ - `java.math.BigInteger`"
-  ([^. this]
+  ([^java.security.interfaces.RSAPrivateCrtKey this]
     (-> this (.getPrimeExponentQ))))
 
 (defn get-crt-coefficient
   "Returns the crtCoefficient.
 
   returns: the crtCoefficient - `java.math.BigInteger`"
-  ([^. this]
+  ([^java.security.interfaces.RSAPrivateCrtKey this]
     (-> this (.getCrtCoefficient))))
 

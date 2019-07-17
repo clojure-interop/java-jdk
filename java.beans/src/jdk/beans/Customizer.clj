@@ -14,7 +14,7 @@
    once, before the Customizer has been added to any parent AWT container.
 
   bean - The object to be customized. - `java.lang.Object`"
-  ([^. this ^java.lang.Object bean]
+  ([^java.beans.Customizer this ^java.lang.Object bean]
     (-> this (.setObject bean))))
 
 (defn add-property-change-listener
@@ -24,13 +24,13 @@
    refreshed.
 
   listener - An object to be invoked when a PropertyChange event is fired. - `java.beans.PropertyChangeListener`"
-  ([^. this ^java.beans.PropertyChangeListener listener]
+  ([^java.beans.Customizer this ^java.beans.PropertyChangeListener listener]
     (-> this (.addPropertyChangeListener listener))))
 
 (defn remove-property-change-listener
   "Remove a listener for the PropertyChange event.
 
   listener - The PropertyChange listener to be removed. - `java.beans.PropertyChangeListener`"
-  ([^. this ^java.beans.PropertyChangeListener listener]
+  ([^java.beans.Customizer this ^java.beans.PropertyChangeListener listener]
     (-> this (.removePropertyChangeListener listener))))
 

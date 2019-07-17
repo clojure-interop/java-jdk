@@ -21,7 +21,7 @@
   url - an absolute URL giving the location of the image. - `java.net.URL`
 
   returns: the image at the specified URL. - `java.awt.Image`"
-  ([^. this ^java.net.URL url]
+  ([^java.applet.AppletContext this ^java.net.URL url]
     (-> this (.getImage url))))
 
 (defn get-applets
@@ -30,7 +30,7 @@
 
   returns: an enumeration of all applets in the document represented by
             this applet context. - `java.util.Enumeration<java.applet.Applet>`"
-  ([^. this]
+  ([^java.applet.AppletContext this]
     (-> this (.getApplets))))
 
 (defn get-applet
@@ -42,7 +42,7 @@
 
   returns: the applet with the given name, or null if
             not found. - `java.applet.Applet`"
-  ([^. this ^java.lang.String name]
+  ([^java.applet.AppletContext this ^java.lang.String name]
     (-> this (.getApplet name))))
 
 (defn get-stream-keys
@@ -54,7 +54,7 @@
 
   returns: an Iterator of all the names of the streams in this applet
             context. - `java.util.Iterator<java.lang.String>`"
-  ([^. this]
+  ([^java.applet.AppletContext this]
     (-> this (.getStreamKeys))))
 
 (defn get-stream
@@ -69,7 +69,7 @@
   key - key whose associated stream is to be returned. - `java.lang.String`
 
   returns: the stream to which this applet context maps the key - `java.io.InputStream`"
-  ([^. this ^java.lang.String key]
+  ([^java.applet.AppletContext this ^java.lang.String key]
     (-> this (.getStream key))))
 
 (defn set-stream
@@ -85,7 +85,7 @@
   stream - stream to be associated with the specified key. If this parameter is null, the specified key is removed in this applet context. - `java.io.InputStream`
 
   throws: java.io.IOException - if the stream size exceeds a certain size limit. Size limit is decided by the implementor of this interface."
-  ([^. this ^java.lang.String key ^java.io.InputStream stream]
+  ([^java.applet.AppletContext this ^java.lang.String key ^java.io.InputStream stream]
     (-> this (.setStream key stream))))
 
 (defn show-status
@@ -95,7 +95,7 @@
    its current state.
 
   status - a string to display in the status window. - `java.lang.String`"
-  ([^. this ^java.lang.String status]
+  ([^java.applet.AppletContext this ^java.lang.String status]
     (-> this (.showStatus status))))
 
 (defn show-document
@@ -127,9 +127,9 @@
 
   url - an absolute URL giving the location of the document. - `java.net.URL`
   target - a String indicating where to display the page. - `java.lang.String`"
-  ([^. this ^java.net.URL url ^java.lang.String target]
+  ([^java.applet.AppletContext this ^java.net.URL url ^java.lang.String target]
     (-> this (.showDocument url target)))
-  ([^. this ^java.net.URL url]
+  ([^java.applet.AppletContext this ^java.net.URL url]
     (-> this (.showDocument url))))
 
 (defn get-audio-clip
@@ -138,6 +138,6 @@
   url - an absolute URL giving the location of the audio clip. - `java.net.URL`
 
   returns: the audio clip at the specified URL. - `java.applet.AudioClip`"
-  ([^. this ^java.net.URL url]
+  ([^java.applet.AppletContext this ^java.net.URL url]
     (-> this (.getAudioClip url))))
 

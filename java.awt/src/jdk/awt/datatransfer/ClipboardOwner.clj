@@ -18,6 +18,6 @@
 
   clipboard - the clipboard that is no longer owned - `java.awt.datatransfer.Clipboard`
   contents - the contents which this owner had placed on the clipboard - `java.awt.datatransfer.Transferable`"
-  ([^. this ^java.awt.datatransfer.Clipboard clipboard ^java.awt.datatransfer.Transferable contents]
+  ([^java.awt.datatransfer.ClipboardOwner this ^java.awt.datatransfer.Clipboard clipboard ^java.awt.datatransfer.Transferable contents]
     (-> this (.lostOwnership clipboard contents))))
 

@@ -76,6 +76,6 @@
      This method otherwise behaves exactly as specified by the Channel interface.
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^. this]
+  ([^java.nio.channels.AsynchronousChannel this]
     (-> this (.close))))
 

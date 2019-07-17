@@ -95,6 +95,6 @@
    attributes to be bound; null if the object don't use this factory. - `javax.naming.spi.DirStateFactory.Result`
 
   throws: javax.naming.NamingException - If this factory encountered an exception while attempting to get the object's state, and no other factories are to be tried."
-  ([^. this ^java.lang.Object obj ^javax.naming.Name name ^javax.naming.Context name-ctx ^java.util.Hashtable environment ^javax.naming.directory.Attributes in-attrs]
+  ([^javax.naming.spi.DirStateFactory this ^java.lang.Object obj ^javax.naming.Name name ^javax.naming.Context name-ctx ^java.util.Hashtable environment ^javax.naming.directory.Attributes in-attrs]
     (-> this (.getStateToBind obj name name-ctx environment in-attrs))))
 

@@ -22,7 +22,7 @@
   returns: 0 for success; nonzero otherwise - `int`
 
   throws: java.lang.NullPointerException - if the array of arguments contains any null elements."
-  ([^. this ^java.io.InputStream in ^java.io.OutputStream out ^java.io.OutputStream err ^java.lang.String arguments]
+  ([^javax.tools.Tool this ^java.io.InputStream in ^java.io.OutputStream out ^java.io.OutputStream err ^java.lang.String arguments]
     (-> this (.run in out err arguments))))
 
 (defn get-source-versions
@@ -30,6 +30,6 @@
    supported by this tool.
 
   returns: a set of supported source versions - `java.util.Set<javax.lang.model.SourceVersion>`"
-  ([^. this]
+  ([^javax.tools.Tool this]
     (-> this (.getSourceVersions))))
 

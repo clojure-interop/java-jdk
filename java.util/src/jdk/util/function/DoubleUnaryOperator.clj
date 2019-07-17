@@ -14,7 +14,7 @@
   operand - the operand - `double`
 
   returns: the operator result - `double`"
-  ([^. this ^Double operand]
+  ([^java.util.function.DoubleUnaryOperator this ^Double operand]
     (-> this (.applyAsDouble operand))))
 
 (defn compose
@@ -29,7 +29,7 @@
    operator and then applies this operator - `default java.util.function.DoubleUnaryOperator`
 
   throws: java.lang.NullPointerException - if before is null"
-  ([^. this ^java.util.function.DoubleUnaryOperator before]
+  ([^java.util.function.DoubleUnaryOperator this ^java.util.function.DoubleUnaryOperator before]
     (-> this (.compose before))))
 
 (defn and-then
@@ -44,7 +44,7 @@
    applies the after operator - `default java.util.function.DoubleUnaryOperator`
 
   throws: java.lang.NullPointerException - if after is null"
-  ([^. this ^java.util.function.DoubleUnaryOperator after]
+  ([^java.util.function.DoubleUnaryOperator this ^java.util.function.DoubleUnaryOperator after]
     (-> this (.andThen after))))
 
 (defn *identity
@@ -52,5 +52,5 @@
 
   returns: a unary operator that always returns its input argument - `java.util.function.DoubleUnaryOperator`"
   ([]
-    (null/identity )))
+    (DoubleUnaryOperator/identity )))
 

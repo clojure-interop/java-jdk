@@ -27,7 +27,7 @@
   returns: `default void`
 
   throws: java.lang.NullPointerException - if the specified action is null"
-  ([^. this ^ConcurrentMap.V> action]
+  ([^java.util.concurrent.ConcurrentMap this ^ConcurrentMap.V> action]
     (-> this (.forEach action))))
 
 (defn replace-all
@@ -41,7 +41,7 @@
   returns: `default void`
 
   throws: java.lang.UnsupportedOperationException - if the set operation is not supported by this map's entry set iterator."
-  ([^. this ^ConcurrentMap.V> function]
+  ([^java.util.concurrent.ConcurrentMap this ^ConcurrentMap.V> function]
     (-> this (.replaceAll function))))
 
 (defn put-if-absent
@@ -67,7 +67,7 @@
            if the implementation supports null values.) - `ConcurrentMap.V`
 
   throws: java.lang.UnsupportedOperationException - if the put operation is not supported by this map"
-  ([^. this ^ConcurrentMap.K key ^ConcurrentMap.V value]
+  ([^java.util.concurrent.ConcurrentMap this ^ConcurrentMap.K key ^ConcurrentMap.V value]
     (-> this (.putIfAbsent key value))))
 
 (defn get-or-default
@@ -81,7 +81,7 @@
    defaultValue if this map contains no mapping for the key - `default ConcurrentMap.V`
 
   throws: java.lang.ClassCastException - if the key is of an inappropriate type for this map (optional)"
-  ([^. this ^java.lang.Object key ^ConcurrentMap.V default-value]
+  ([^java.util.concurrent.ConcurrentMap this ^java.lang.Object key ^ConcurrentMap.V default-value]
     (-> this (.getOrDefault key default-value))))
 
 (defn replace
@@ -104,9 +104,9 @@
   returns: true if the value was replaced - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the put operation is not supported by this map"
-  ([^. this ^ConcurrentMap.K key ^ConcurrentMap.V old-value ^ConcurrentMap.V new-value]
+  ([^java.util.concurrent.ConcurrentMap this ^ConcurrentMap.K key ^ConcurrentMap.V old-value ^ConcurrentMap.V new-value]
     (-> this (.replace key old-value new-value)))
-  ([^. this ^ConcurrentMap.K key ^ConcurrentMap.V value]
+  ([^java.util.concurrent.ConcurrentMap this ^ConcurrentMap.K key ^ConcurrentMap.V value]
     (-> this (.replace key value))))
 
 (defn remove
@@ -128,7 +128,7 @@
   returns: true if the value was removed - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the remove operation is not supported by this map"
-  ([^. this ^java.lang.Object key ^java.lang.Object value]
+  ([^java.util.concurrent.ConcurrentMap this ^java.lang.Object key ^java.lang.Object value]
     (-> this (.remove key value))))
 
 (defn compute-if-present
@@ -145,7 +145,7 @@
   returns: the new value associated with the specified key, or null if none - `default ConcurrentMap.V`
 
   throws: java.lang.UnsupportedOperationException - if the put operation is not supported by this map (optional)"
-  ([^. this ^ConcurrentMap.K key ^ConcurrentMap.V> remapping-function]
+  ([^java.util.concurrent.ConcurrentMap this ^ConcurrentMap.K key ^ConcurrentMap.V> remapping-function]
     (-> this (.computeIfPresent key remapping-function))))
 
 (defn merge
@@ -173,7 +173,7 @@
            value is associated with the key - `default ConcurrentMap.V`
 
   throws: java.lang.UnsupportedOperationException - if the put operation is not supported by this map (optional)"
-  ([^. this ^ConcurrentMap.K key ^ConcurrentMap.V value ^ConcurrentMap.V> remapping-function]
+  ([^java.util.concurrent.ConcurrentMap this ^ConcurrentMap.K key ^ConcurrentMap.V value ^ConcurrentMap.V> remapping-function]
     (-> this (.merge key value remapping-function))))
 
 (defn compute
@@ -198,7 +198,7 @@
   returns: the new value associated with the specified key, or null if none - `default ConcurrentMap.V`
 
   throws: java.lang.UnsupportedOperationException - if the put operation is not supported by this map (optional)"
-  ([^. this ^ConcurrentMap.K key ^ConcurrentMap.V> remapping-function]
+  ([^java.util.concurrent.ConcurrentMap this ^ConcurrentMap.K key ^ConcurrentMap.V> remapping-function]
     (-> this (.compute key remapping-function))))
 
 (defn compute-if-absent
@@ -230,6 +230,6 @@
            the specified key, or null if the computed value is null - `default ConcurrentMap.V`
 
   throws: java.lang.UnsupportedOperationException - if the put operation is not supported by this map (optional)"
-  ([^. this ^ConcurrentMap.K key ^ConcurrentMap.V> mapping-function]
+  ([^java.util.concurrent.ConcurrentMap this ^ConcurrentMap.K key ^ConcurrentMap.V> mapping-function]
     (-> this (.computeIfAbsent key mapping-function))))
 

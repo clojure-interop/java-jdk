@@ -41,7 +41,7 @@
   returns: the PGP public key identifier (may be null if
       not specified). Each invocation of this method returns a new clone
       to protect against subsequent modification. - `byte[]`"
-  ([^. this]
+  ([^javax.xml.crypto.dsig.keyinfo.PGPData this]
     (-> this (.getKeyId))))
 
 (defn get-key-packet
@@ -52,7 +52,7 @@
   returns: the PGP key material packet (may be null if not
       specified). Each invocation of this method returns a new clone to
       protect against subsequent modification. - `byte[]`"
-  ([^. this]
+  ([^javax.xml.crypto.dsig.keyinfo.PGPData this]
     (-> this (.getKeyPacket))))
 
 (defn get-external-elements
@@ -62,6 +62,6 @@
 
   returns: an unmodifiable list of XMLStructures (may be
       empty, but never null) - `java.util.List`"
-  ([^. this]
+  ([^javax.xml.crypto.dsig.keyinfo.PGPData this]
     (-> this (.getExternalElements))))
 

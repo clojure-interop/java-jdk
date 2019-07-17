@@ -52,7 +52,7 @@
    name for a base type that is a UDT - `java.lang.String`
 
   throws: java.sql.SQLException - if an error occurs while attempting to access the type name"
-  ([^. this]
+  ([^java.sql.Array this]
     (-> this (.getBaseTypeName))))
 
 (defn get-base-type
@@ -64,7 +64,7 @@
    Array object - `int`
 
   throws: java.sql.SQLException - if an error occurs while attempting to access the base type"
-  ([^. this]
+  ([^java.sql.Array this]
     (-> this (.getBaseType))))
 
 (defn get-array
@@ -96,13 +96,13 @@
    index - `java.lang.Object`
 
   throws: java.sql.SQLException - if an error occurs while attempting to access the array"
-  ([^. this ^Long index ^Integer count ^java.util.Map> map]
+  ([^java.sql.Array this ^Long index ^Integer count ^java.util.Map> map]
     (-> this (.getArray index count map)))
-  ([^. this ^Long index ^Integer count]
+  ([^java.sql.Array this ^Long index ^Integer count]
     (-> this (.getArray index count)))
-  ([^. this ^java.util.Map> map]
+  ([^java.sql.Array this ^java.util.Map> map]
     (-> this (.getArray map)))
-  ([^. this]
+  ([^java.sql.Array this]
     (-> this (.getArray))))
 
 (defn get-result-set
@@ -135,13 +135,13 @@
    index index. - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if an error occurs while attempting to access the array"
-  ([^. this ^Long index ^Integer count ^java.util.Map> map]
+  ([^java.sql.Array this ^Long index ^Integer count ^java.util.Map> map]
     (-> this (.getResultSet index count map)))
-  ([^. this ^Long index ^Integer count]
+  ([^java.sql.Array this ^Long index ^Integer count]
     (-> this (.getResultSet index count)))
-  ([^. this ^java.util.Map> map]
+  ([^java.sql.Array this ^java.util.Map> map]
     (-> this (.getResultSet map)))
-  ([^. this]
+  ([^java.sql.Array this]
     (-> this (.getResultSet))))
 
 (defn free
@@ -155,6 +155,6 @@
    calls to free are treated as a no-op.
 
   throws: java.sql.SQLException - if an error occurs releasing the Array's resources"
-  ([^. this]
+  ([^java.sql.Array this]
     (-> this (.free))))
 

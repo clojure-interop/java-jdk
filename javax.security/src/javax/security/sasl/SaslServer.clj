@@ -57,7 +57,7 @@
    (e.g. `CRAM-MD5`, `GSSAPI`).
 
   returns: A non-null string representing the IANA-registered mechanism name. - `java.lang.String`"
-  ([^. this]
+  ([^javax.security.sasl.SaslServer this]
     (-> this (.getMechanismName))))
 
 (defn evaluate-response
@@ -81,7 +81,7 @@
    no more challenge data to be sent to the client. - `byte[]`
 
   throws: javax.security.sasl.SaslException - If an error occurred while processing the response or generating a challenge."
-  ([^. this response]
+  ([^javax.security.sasl.SaslServer this response]
     (-> this (.evaluateResponse response))))
 
 (defn complete?
@@ -91,7 +91,7 @@
    authentication has completed successfully or should be continued.
 
   returns: true if the authentication exchange has completed; false otherwise. - `boolean`"
-  ([^. this]
+  ([^javax.security.sasl.SaslServer this]
     (-> this (.isComplete))))
 
 (defn get-authorization-id
@@ -102,7 +102,7 @@
   returns: The authorization ID of the client. - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if this authentication session has not completed"
-  ([^. this]
+  ([^javax.security.sasl.SaslServer this]
     (-> this (.getAuthorizationID))))
 
 (defn unwrap
@@ -125,7 +125,7 @@
   returns: A non-null byte array containing the decoded bytes. - `byte[]`
 
   throws: javax.security.sasl.SaslException - if incoming cannot be successfully unwrapped."
-  ([^. this incoming ^Integer offset ^Integer len]
+  ([^javax.security.sasl.SaslServer this incoming ^Integer offset ^Integer len]
     (-> this (.unwrap incoming offset len))))
 
 (defn wrap
@@ -148,7 +148,7 @@
   returns: A non-null byte array containing the encoded bytes. - `byte[]`
 
   throws: javax.security.sasl.SaslException - if outgoing cannot be successfully wrapped."
-  ([^. this outgoing ^Integer offset ^Integer len]
+  ([^javax.security.sasl.SaslServer this outgoing ^Integer offset ^Integer len]
     (-> this (.wrap outgoing offset len))))
 
 (defn get-negotiated-property
@@ -163,7 +163,7 @@
    not negotiated or is not applicable to this mechanism. - `java.lang.Object`
 
   throws: java.lang.IllegalStateException - if this authentication exchange has not completed"
-  ([^. this ^java.lang.String prop-name]
+  ([^javax.security.sasl.SaslServer this ^java.lang.String prop-name]
     (-> this (.getNegotiatedProperty prop-name))))
 
 (defn dispose
@@ -172,6 +172,6 @@
    the SaslServer instance. This method is idempotent.
 
   throws: javax.security.sasl.SaslException - If a problem was encountered while disposing the resources."
-  ([^. this]
+  ([^javax.security.sasl.SaslServer this]
     (-> this (.dispose))))
 

@@ -25,7 +25,7 @@
    The drop site accepts the drag.
 
   dsde - the DragSourceDragEvent - `java.awt.dnd.DragSourceDragEvent`"
-  ([^. this ^java.awt.dnd.DragSourceDragEvent dsde]
+  ([^java.awt.dnd.DragSourceListener this ^java.awt.dnd.DragSourceDragEvent dsde]
     (-> this (.dragEnter dsde))))
 
 (defn drag-over
@@ -39,7 +39,7 @@
    The drop site accepts the drag.
 
   dsde - the DragSourceDragEvent - `java.awt.dnd.DragSourceDragEvent`"
-  ([^. this ^java.awt.dnd.DragSourceDragEvent dsde]
+  ([^java.awt.dnd.DragSourceListener this ^java.awt.dnd.DragSourceDragEvent dsde]
     (-> this (.dragOver dsde))))
 
 (defn drop-action-changed
@@ -50,7 +50,7 @@
    modifiers that the user is interacting with.
 
   dsde - the DragSourceDragEvent - `java.awt.dnd.DragSourceDragEvent`"
-  ([^. this ^java.awt.dnd.DragSourceDragEvent dsde]
+  ([^java.awt.dnd.DragSourceListener this ^java.awt.dnd.DragSourceDragEvent dsde]
     (-> this (.dropActionChanged dsde))))
 
 (defn drag-exit
@@ -71,7 +71,7 @@
    has rejected the drag.
 
   dse - the DragSourceEvent - `java.awt.dnd.DragSourceEvent`"
-  ([^. this ^java.awt.dnd.DragSourceEvent dse]
+  ([^java.awt.dnd.DragSourceListener this ^java.awt.dnd.DragSourceEvent dse]
     (-> this (.dragExit dse))))
 
 (defn drag-drop-end
@@ -85,6 +85,6 @@
    associated resources become invalid.
 
   dsde - the DragSourceDropEvent - `java.awt.dnd.DragSourceDropEvent`"
-  ([^. this ^java.awt.dnd.DragSourceDropEvent dsde]
+  ([^java.awt.dnd.DragSourceListener this ^java.awt.dnd.DragSourceDropEvent dsde]
     (-> this (.dragDropEnd dsde))))
 

@@ -19,6 +19,6 @@
    notifications should be occasional.
 
   e - a FlavorEvent object - `java.awt.datatransfer.FlavorEvent`"
-  ([^. this ^java.awt.datatransfer.FlavorEvent e]
+  ([^java.awt.datatransfer.FlavorListener this ^java.awt.datatransfer.FlavorEvent e]
     (-> this (.flavorsChanged e))))
 

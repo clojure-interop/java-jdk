@@ -65,13 +65,13 @@
    (i.e., if isReleasable would return true) - `boolean`
 
   throws: java.lang.InterruptedException - if interrupted while waiting (the method is not required to do so, but is allowed to)"
-  ([^. this]
+  ([^java.util.concurrent.ForkJoinPool$ManagedBlocker this]
     (-> this (.block))))
 
 (defn releasable?
   "Returns true if blocking is unnecessary.
 
   returns: true if blocking is unnecessary - `boolean`"
-  ([^. this]
+  ([^java.util.concurrent.ForkJoinPool$ManagedBlocker this]
     (-> this (.isReleasable))))
 

@@ -10,7 +10,7 @@
   returns: output stream for arguments/results - `java.lang..io.ObjectOutput`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^. this]
+  ([^java.rmi.server.RemoteCall this]
     (-> this (.getOutputStream))))
 
 (defn release-output-stream
@@ -19,7 +19,7 @@
   returns: `java.lang. void`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^. this]
+  ([^java.rmi.server.RemoteCall this]
     (-> this (.releaseOutputStream))))
 
 (defn get-input-stream
@@ -28,7 +28,7 @@
   returns: input stream for reading arguments/results - `java.lang..io.ObjectInput`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^. this]
+  ([^java.rmi.server.RemoteCall this]
     (-> this (.getInputStream))))
 
 (defn release-input-stream
@@ -37,7 +37,7 @@
   returns: `java.lang. void`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^. this]
+  ([^java.rmi.server.RemoteCall this]
     (-> this (.releaseInputStream))))
 
 (defn get-result-stream
@@ -48,7 +48,7 @@
   returns: output stream for writing call result - `java.lang..io.ObjectOutput`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^. this ^Boolean success]
+  ([^java.rmi.server.RemoteCall this ^Boolean success]
     (-> this (.getResultStream success))))
 
 (defn execute-call
@@ -57,7 +57,7 @@
   returns: `java.lang. void`
 
   throws: java.lang.Exception - if a general exception occurs."
-  ([^. this]
+  ([^java.rmi.server.RemoteCall this]
     (-> this (.executeCall))))
 
 (defn done
@@ -66,6 +66,6 @@
   returns: `java.lang. void`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^. this]
+  ([^java.rmi.server.RemoteCall this]
     (-> this (.done))))
 

@@ -18,6 +18,6 @@
   returns: The non-null Reference of this object. - `javax.naming.Reference`
 
   throws: javax.naming.NamingException - If a naming exception was encountered while retrieving the reference."
-  ([^. this]
+  ([^javax.naming.Referenceable this]
     (-> this (.getReference))))
 

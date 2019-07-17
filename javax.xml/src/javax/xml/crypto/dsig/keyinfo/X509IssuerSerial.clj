@@ -38,13 +38,13 @@
 
   returns: the X.500 distinguished name in RFC 2253 String format (never
       null) - `java.lang.String`"
-  ([^. this]
+  ([^javax.xml.crypto.dsig.keyinfo.X509IssuerSerial this]
     (-> this (.getIssuerName))))
 
 (defn get-serial-number
   "Returns the serial number of this X509IssuerSerial.
 
   returns: the serial number (never null) - `java.math.BigInteger`"
-  ([^. this]
+  ([^javax.xml.crypto.dsig.keyinfo.X509IssuerSerial this]
     (-> this (.getSerialNumber))))
 

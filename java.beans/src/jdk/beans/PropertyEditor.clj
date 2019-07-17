@@ -31,7 +31,7 @@
   "Determines whether this property editor is paintable.
 
   returns: True if the class will honor the paintValue method. - `boolean`"
-  ([^. this]
+  ([^java.beans.PropertyEditor this]
     (-> this (.isPaintable))))
 
 (defn paint-value
@@ -48,7 +48,7 @@
 
   gfx - Graphics object to paint into. - `java.awt.Graphics`
   box - Rectangle within graphics object into which we should paint. - `java.awt.Rectangle`"
-  ([^. this ^java.awt.Graphics gfx ^java.awt.Rectangle box]
+  ([^java.beans.PropertyEditor this ^java.awt.Graphics gfx ^java.awt.Rectangle box]
     (-> this (.paintValue gfx box))))
 
 (defn set-as-text
@@ -60,7 +60,7 @@
   text - The string to be parsed. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException"
-  ([^. this ^java.lang.String text]
+  ([^java.beans.PropertyEditor this ^java.lang.String text]
     (-> this (.setAsText text))))
 
 (defn get-as-text
@@ -70,7 +70,7 @@
       Returns null if the value can't be expressed as an editable string.
       If a non-null value is returned, then the PropertyEditor should
          be prepared to parse that string back in setAsText(). - `java.lang.String`"
-  ([^. this]
+  ([^java.beans.PropertyEditor this]
     (-> this (.getAsText))))
 
 (defn get-java-initialization-string
@@ -102,14 +102,14 @@
   returns: a fragment of Java code representing an initializer for the
            current value. It should not contain a semi-colon
            (';') to end the expression. - `java.lang.String`"
-  ([^. this]
+  ([^java.beans.PropertyEditor this]
     (-> this (.getJavaInitializationString))))
 
 (defn supports-custom-editor
   "Determines whether this property editor supports a custom editor.
 
   returns: True if the propertyEditor can provide a custom editor. - `boolean`"
-  ([^. this]
+  ([^java.beans.PropertyEditor this]
     (-> this (.supportsCustomEditor))))
 
 (defn get-value
@@ -117,7 +117,7 @@
 
   returns: The value of the property.  Primitive types such as `int` will
    be wrapped as the corresponding object type such as `java.lang.Integer`. - `java.lang.Object`"
-  ([^. this]
+  ([^java.beans.PropertyEditor this]
     (-> this (.getValue))))
 
 (defn get-custom-editor
@@ -133,14 +133,14 @@
   returns: A java.awt.Component that will allow a human to directly
         edit the current property value.  May be null if this is
         not supported. - `java.awt.Component`"
-  ([^. this]
+  ([^java.beans.PropertyEditor this]
     (-> this (.getCustomEditor))))
 
 (defn remove-property-change-listener
   "Removes a listener for the value change.
 
   listener - the PropertyChangeListener to remove - `java.beans.PropertyChangeListener`"
-  ([^. this ^java.beans.PropertyChangeListener listener]
+  ([^java.beans.PropertyEditor this ^java.beans.PropertyChangeListener listener]
     (-> this (.removePropertyChangeListener listener))))
 
 (defn get-tags
@@ -153,7 +153,7 @@
 
   returns: The tag values for this property.  May be null if this
      property cannot be represented as a tagged value. - `java.lang.String[]`"
-  ([^. this]
+  ([^java.beans.PropertyEditor this]
     (-> this (.getTags))))
 
 (defn set-value
@@ -162,7 +162,7 @@
    `java.lang.Integer`.
 
   value - The new target object to be edited. Note that this object should not be modified by the PropertyEditor, rather the PropertyEditor should create a new object to hold any modified value. - `java.lang.Object`"
-  ([^. this ^java.lang.Object value]
+  ([^java.beans.PropertyEditor this ^java.lang.Object value]
     (-> this (.setValue value))))
 
 (defn add-property-change-listener
@@ -174,6 +174,6 @@
    and itself as the source.
 
   listener - the PropertyChangeListener to add - `java.beans.PropertyChangeListener`"
-  ([^. this ^java.beans.PropertyChangeListener listener]
+  ([^java.beans.PropertyEditor this ^java.beans.PropertyChangeListener listener]
     (-> this (.addPropertyChangeListener listener))))
 

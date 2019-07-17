@@ -199,7 +199,7 @@
        type is present on this element, else false - `default boolean`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  ([^. this ^java.lang.annotation.Annotation> annotation-class]
+  ([^java.lang.reflect.AnnotatedElement this ^java.lang.annotation.Annotation> annotation-class]
     (-> this (.isAnnotationPresent annotation-class))))
 
 (defn get-annotation
@@ -212,7 +212,7 @@
        present on this element, else null - `<T extends java.lang.annotation.Annotation> T`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  ([^. this ^java.lang.Class annotation-class]
+  ([^java.lang.reflect.AnnotatedElement this ^java.lang.Class annotation-class]
     (-> this (.getAnnotation annotation-class))))
 
 (defn get-annotations
@@ -225,7 +225,7 @@
    have no effect on the arrays returned to other callers.
 
   returns: annotations present on this element - `java.lang.annotation.Annotation[]`"
-  ([^. this]
+  ([^java.lang.reflect.AnnotatedElement this]
     (-> this (.getAnnotations))))
 
 (defn get-annotations-by-type
@@ -249,7 +249,7 @@
        associated with this element, else an array of length zero - `default <T extends java.lang.annotation.Annotation> T[]`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  ([^. this ^java.lang.Class annotation-class]
+  ([^java.lang.reflect.AnnotatedElement this ^java.lang.Class annotation-class]
     (-> this (.getAnnotationsByType annotation-class))))
 
 (defn get-declared-annotation
@@ -265,7 +265,7 @@
        directly present on this element, else null - `default <T extends java.lang.annotation.Annotation> T`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  ([^. this ^java.lang.Class annotation-class]
+  ([^java.lang.reflect.AnnotatedElement this ^java.lang.Class annotation-class]
     (-> this (.getDeclaredAnnotation annotation-class))))
 
 (defn get-declared-annotations-by-type
@@ -292,7 +292,7 @@
        directly or indirectly present on this element, else an array of length zero - `default <T extends java.lang.annotation.Annotation> T[]`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  ([^. this ^java.lang.Class annotation-class]
+  ([^java.lang.reflect.AnnotatedElement this ^java.lang.Class annotation-class]
     (-> this (.getDeclaredAnnotationsByType annotation-class))))
 
 (defn get-declared-annotations
@@ -306,6 +306,6 @@
    have no effect on the arrays returned to other callers.
 
   returns: annotations directly present on this element - `java.lang.annotation.Annotation[]`"
-  ([^. this]
+  ([^java.lang.reflect.AnnotatedElement this]
     (-> this (.getDeclaredAnnotations))))
 

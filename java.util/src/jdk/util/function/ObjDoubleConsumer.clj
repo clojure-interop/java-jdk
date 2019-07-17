@@ -15,6 +15,6 @@
 
   t - the first input argument - `ObjDoubleConsumer.T`
   value - the second input argument - `double`"
-  ([^. this ^ObjDoubleConsumer.T t ^Double value]
+  ([^java.util.function.ObjDoubleConsumer this ^ObjDoubleConsumer.T t ^Double value]
     (-> this (.accept t value))))
 

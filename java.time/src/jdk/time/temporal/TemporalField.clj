@@ -26,7 +26,7 @@
    'YearOfForever'. It therefore has a unit of 'Years' and a range of 'Forever'.
 
   returns: the unit defining the range of the field, not null - `java.time.temporal.TemporalUnit`"
-  ([^. this]
+  ([^java.time.temporal.TemporalField this]
     (-> this (.getRangeUnit))))
 
 (defn range
@@ -41,7 +41,7 @@
    could be values within the range that are invalid for the field.
 
   returns: the range of valid values for the field, not null - `java.time.temporal.ValueRange`"
-  ([^. this]
+  ([^java.time.temporal.TemporalField this]
     (-> this (.range))))
 
 (defn resolve
@@ -61,7 +61,7 @@
     changed the map, or no resolve occurred - `default java.time.temporal.TemporalAccessor`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs"
-  ([^. this ^java.util.Map field-values ^java.time.temporal.TemporalAccessor partial-temporal ^java.time.format.ResolverStyle resolver-style]
+  ([^java.time.temporal.TemporalField this ^java.util.Map field-values ^java.time.temporal.TemporalAccessor partial-temporal ^java.time.format.ResolverStyle resolver-style]
     (-> this (.resolve field-values partial-temporal resolver-style))))
 
 (defn get-base-unit
@@ -72,7 +72,7 @@
    See also getRangeUnit().
 
   returns: the unit defining the base unit of the field, not null - `java.time.temporal.TemporalUnit`"
-  ([^. this]
+  ([^java.time.temporal.TemporalField this]
     (-> this (.getBaseUnit))))
 
 (defn to-string
@@ -83,7 +83,7 @@
    the base unit is mentioned, such as 'Year' or 'Era'.
 
   returns: the name of the field, not null - `java.lang.String`"
-  ([^. this]
+  ([^java.time.temporal.TemporalField this]
     (-> this (.toString))))
 
 (defn date-based?
@@ -95,7 +95,7 @@
    to return false, such as when representing a field like minute-of-week.
 
   returns: true if this field is a component of a date - `boolean`"
-  ([^. this]
+  ([^java.time.temporal.TemporalField this]
     (-> this (.isDateBased))))
 
 (defn get-display-name
@@ -109,7 +109,7 @@
   locale - the locale to use, not null - `java.util.Locale`
 
   returns: the display name for the locale or a suitable default, not null - `default java.lang.String`"
-  ([^. this ^java.util.Locale locale]
+  ([^java.time.temporal.TemporalField this ^java.util.Locale locale]
     (-> this (.getDisplayName locale))))
 
 (defn supported-by?
@@ -135,7 +135,7 @@
   temporal - the temporal object to query, not null - `java.time.temporal.TemporalAccessor`
 
   returns: true if the date-time can be queried for this field, false if not - `boolean`"
-  ([^. this ^java.time.temporal.TemporalAccessor temporal]
+  ([^java.time.temporal.TemporalField this ^java.time.temporal.TemporalAccessor temporal]
     (-> this (.isSupportedBy temporal))))
 
 (defn range-refined-by
@@ -169,7 +169,7 @@
   returns: the range of valid values for this field, not null - `java.time.temporal.ValueRange`
 
   throws: java.time.DateTimeException - if the range for the field cannot be obtained"
-  ([^. this ^java.time.temporal.TemporalAccessor temporal]
+  ([^java.time.temporal.TemporalField this ^java.time.temporal.TemporalAccessor temporal]
     (-> this (.rangeRefinedBy temporal))))
 
 (defn adjust-into
@@ -211,7 +211,7 @@
   returns: the adjusted temporal object, not null - `<R extends java.time.temporal.Temporal> R`
 
   throws: java.time.DateTimeException - if the field cannot be set"
-  ([^. this temporal ^Long new-value]
+  ([^java.time.temporal.TemporalField this temporal ^Long new-value]
     (-> this (.adjustInto temporal new-value))))
 
 (defn get-from
@@ -240,7 +240,7 @@
   returns: the value of this field, not null - `long`
 
   throws: java.time.DateTimeException - if a value for the field cannot be obtained"
-  ([^. this ^java.time.temporal.TemporalAccessor temporal]
+  ([^java.time.temporal.TemporalField this ^java.time.temporal.TemporalAccessor temporal]
     (-> this (.getFrom temporal))))
 
 (defn time-based?
@@ -252,6 +252,6 @@
    to return false, such as when representing a field like minute-of-week.
 
   returns: true if this field is a component of a time - `boolean`"
-  ([^. this]
+  ([^java.time.temporal.TemporalField this]
     (-> this (.isTimeBased))))
 

@@ -87,7 +87,7 @@
     This method otherwise behaves exactly as specified by the Channel interface.
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^. this]
+  ([^java.nio.channels.MulticastChannel this]
     (-> this (.close))))
 
 (defn join
@@ -111,8 +111,8 @@
   returns: The membership key - `java.nio.channels.MembershipKey`
 
   throws: java.lang.IllegalArgumentException - If the group parameter is not a multicast address, the source parameter is not a unicast address, the group parameter is an address type that is not supported by this channel, or the source parameter is not the same address type as the group"
-  ([^. this ^java.net.InetAddress group ^java.net.NetworkInterface interf ^java.net.InetAddress source]
+  ([^java.nio.channels.MulticastChannel this ^java.net.InetAddress group ^java.net.NetworkInterface interf ^java.net.InetAddress source]
     (-> this (.join group interf source)))
-  ([^. this ^java.net.InetAddress group ^java.net.NetworkInterface interf]
+  ([^java.nio.channels.MulticastChannel this ^java.net.InetAddress group ^java.net.NetworkInterface interf]
     (-> this (.join group interf))))
 

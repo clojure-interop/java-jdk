@@ -7,6 +7,6 @@
   "Returns the private value, x.
 
   returns: the private value, x - `java.math.BigInteger`"
-  ([^. this]
+  ([^javax.crypto.interfaces.DHPrivateKey this]
     (-> this (.getX))))
 

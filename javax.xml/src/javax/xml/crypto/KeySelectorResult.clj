@@ -13,6 +13,6 @@
   "Returns the selected key.
 
   returns: the selected key, or null if none can be found - `java.security.Key`"
-  ([^. this]
+  ([^javax.xml.crypto.KeySelectorResult this]
     (-> this (.getKey))))
 

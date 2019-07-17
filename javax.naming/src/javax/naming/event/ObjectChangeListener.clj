@@ -32,6 +32,6 @@
    can be obtained using evt.getOldBinding().
 
   evt - The nonnull naming event. - `javax.naming.event.NamingEvent`"
-  ([^. this ^javax.naming.event.NamingEvent evt]
+  ([^javax.naming.event.ObjectChangeListener this ^javax.naming.event.NamingEvent evt]
     (-> this (.objectChanged evt))))
 

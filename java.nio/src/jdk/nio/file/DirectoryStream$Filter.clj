@@ -15,6 +15,6 @@
   returns: true if the directory entry should be accepted - `boolean`
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^. this ^DirectoryStream.Filter.T entry]
+  ([^java.nio.file.DirectoryStream$Filter this ^DirectoryStream.Filter.T entry]
     (-> this (.accept entry))))
 

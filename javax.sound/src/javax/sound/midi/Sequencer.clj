@@ -32,7 +32,7 @@
    if any.
 
   throws: java.lang.IllegalStateException - if the Sequencer is closed."
-  ([^. this]
+  ([^javax.sound.midi.Sequencer this]
     (-> this (.stop))))
 
 (defn recording?
@@ -42,7 +42,7 @@
    is called.
 
   returns: true if the Sequencer is recording, otherwise false - `boolean`"
-  ([^. this]
+  ([^javax.sound.midi.Sequencer this]
     (-> this (.isRecording))))
 
 (defn get-tick-position
@@ -52,7 +52,7 @@
    Sequence.)
 
   returns: current tick - `long`"
-  ([^. this]
+  ([^javax.sound.midi.Sequencer this]
     (-> this (.getTickPosition))))
 
 (defn get-track-solo?
@@ -65,7 +65,7 @@
   track - the track number. Tracks in the current sequence are numbered from 0 to the number of tracks in the sequence minus 1. - `int`
 
   returns: true if solo'd, false if not. - `boolean`"
-  ([^. this ^Integer track]
+  ([^javax.sound.midi.Sequencer this ^Integer track]
     (-> this (.getTrackSolo track))))
 
 (defn set-track-mute
@@ -77,7 +77,7 @@
 
   track - the track number. Tracks in the current sequence are numbered from 0 to the number of tracks in the sequence minus 1. - `int`
   mute - the new mute state for the track. true implies the track should be muted, false implies the track should be unmuted. - `boolean`"
-  ([^. this ^Integer track ^Boolean mute]
+  ([^javax.sound.midi.Sequencer this ^Integer track ^Boolean mute]
     (-> this (.setTrackMute track mute))))
 
 (defn get-microsecond-position
@@ -85,7 +85,7 @@
    microseconds.
 
   returns: the current position in microseconds - `long`"
-  ([^. this]
+  ([^javax.sound.midi.Sequencer this]
     (-> this (.getMicrosecondPosition))))
 
 (defn get-loop-count
@@ -95,7 +95,7 @@
   returns: the number of loops after which
            playback plays to the end of the
            sequence - `int`"
-  ([^. this]
+  ([^javax.sound.midi.Sequencer this]
     (-> this (.getLoopCount))))
 
 (defn set-master-sync-mode
@@ -107,7 +107,7 @@
    getMasterSyncModes().
 
   sync - the desired master synchronization mode - `javax.sound.midi.Sequencer.SyncMode`"
-  ([^. this ^javax.sound.midi.Sequencer.SyncMode sync]
+  ([^javax.sound.midi.Sequencer this ^javax.sound.midi.Sequencer.SyncMode sync]
     (-> this (.setMasterSyncMode sync))))
 
 (defn record-enable
@@ -118,7 +118,7 @@
   channel - the channel on which events will be received. If -1 is specified for the channel value, the track will receive data from all channels. - `int`
 
   throws: java.lang.IllegalArgumentException - thrown if the track is not part of the current sequence."
-  ([^. this ^javax.sound.midi.Track track ^Integer channel]
+  ([^javax.sound.midi.Sequencer this ^javax.sound.midi.Track track ^Integer channel]
     (-> this (.recordEnable track channel))))
 
 (defn add-controller-event-listener
@@ -145,7 +145,7 @@
 
   returns: the numbers of all the MIDI controllers whose changes will
    now be reported to the specified listener - `int[]`"
-  ([^. this ^javax.sound.midi.ControllerEventListener listener controllers]
+  ([^javax.sound.midi.Sequencer this ^javax.sound.midi.ControllerEventListener listener controllers]
     (-> this (.addControllerEventListener listener controllers))))
 
 (defn get-sequence
@@ -155,14 +155,14 @@
    Sequencer is closed.
 
   returns: the current sequence, or null if no sequence is currently set. - `javax.sound.midi.Sequence`"
-  ([^. this]
+  ([^javax.sound.midi.Sequencer this]
     (-> this (.getSequence))))
 
 (defn get-master-sync-mode
   "Obtains the current master synchronization mode for this sequencer.
 
   returns: the current master synchronization mode - `javax.sound.midi.Sequencer.SyncMode`"
-  ([^. this]
+  ([^javax.sound.midi.Sequencer this]
     (-> this (.getMasterSyncMode))))
 
 (defn set-tempo-in-mpq
@@ -171,14 +171,14 @@
    factor.
 
   mpq - desired new tempo in microseconds per quarter note. - `float`"
-  ([^. this ^Float mpq]
+  ([^javax.sound.midi.Sequencer this ^Float mpq]
     (-> this (.setTempoInMPQ mpq))))
 
 (defn set-microsecond-position
   "Sets the current position in the sequence, expressed in microseconds
 
   microseconds - desired position in microseconds - `long`"
-  ([^. this ^Long microseconds]
+  ([^javax.sound.midi.Sequencer this ^Long microseconds]
     (-> this (.setMicrosecondPosition microseconds))))
 
 (defn get-master-sync-modes
@@ -186,14 +186,14 @@
    sequencer.
 
   returns: the available master synchronization modes - `javax.sound.midi.Sequencer.SyncMode[]`"
-  ([^. this]
+  ([^javax.sound.midi.Sequencer this]
     (-> this (.getMasterSyncModes))))
 
 (defn get-slave-sync-modes
   "Obtains the set of slave synchronization modes supported by the sequencer.
 
   returns: the available slave synchronization modes - `javax.sound.midi.Sequencer.SyncMode[]`"
-  ([^. this]
+  ([^javax.sound.midi.Sequencer this]
     (-> this (.getSlaveSyncModes))))
 
 (defn set-loop-start-point
@@ -214,7 +214,7 @@
   tick - the loop's starting position, in MIDI ticks (zero-based) - `long`
 
   throws: java.lang.IllegalArgumentException - if the requested loop start point cannot be set, usually because it falls outside the sequence's duration or because the start point is after the end point"
-  ([^. this ^Long tick]
+  ([^javax.sound.midi.Sequencer this ^Long tick]
     (-> this (.setLoopStartPoint tick))))
 
 (defn get-track-mute?
@@ -227,14 +227,14 @@
   track - the track number. Tracks in the current sequence are numbered from 0 to the number of tracks in the sequence minus 1. - `int`
 
   returns: true if muted, false if not. - `boolean`"
-  ([^. this ^Integer track]
+  ([^javax.sound.midi.Sequencer this ^Integer track]
     (-> this (.getTrackMute track))))
 
 (defn stop-recording
   "Stops recording, if active.  Playback of the current sequence continues.
 
   throws: java.lang.IllegalStateException - if the Sequencer is closed."
-  ([^. this]
+  ([^javax.sound.midi.Sequencer this]
     (-> this (.stopRecording))))
 
 (defn get-tempo-in-bpm
@@ -243,7 +243,7 @@
    and the tempo factor.
 
   returns: the current tempo in beats per minute - `float`"
-  ([^. this]
+  ([^javax.sound.midi.Sequencer this]
     (-> this (.getTempoInBPM))))
 
 (defn get-microsecond-length
@@ -251,7 +251,7 @@
    or 0 if no sequence is set.
 
   returns: length of the sequence in microseconds. - `long`"
-  ([^. this]
+  ([^javax.sound.midi.Sequencer this]
     (-> this (.getMicrosecondLength))))
 
 (defn record-disable
@@ -259,7 +259,7 @@
    into this track.
 
   track - the track to disable for recording, or null to disable recording for all tracks. - `javax.sound.midi.Track`"
-  ([^. this ^javax.sound.midi.Track track]
+  ([^javax.sound.midi.Sequencer this ^javax.sound.midi.Track track]
     (-> this (.recordDisable track))))
 
 (defn start-recording
@@ -274,7 +274,7 @@
    at least one track must be specifically enabled for recording.
 
   throws: java.lang.IllegalStateException - if the Sequencer is closed."
-  ([^. this]
+  ([^javax.sound.midi.Sequencer this]
     (-> this (.startRecording))))
 
 (defn get-loop-end-point
@@ -284,7 +284,7 @@
   returns: the end position of the loop, in MIDI
            ticks (zero-based), or -1 to indicate
            the end of the sequence - `long`"
-  ([^. this]
+  ([^javax.sound.midi.Sequencer this]
     (-> this (.getLoopEndPoint))))
 
 (defn get-tick-length
@@ -292,7 +292,7 @@
    or 0 if no sequence is set.
 
   returns: length of the sequence in ticks - `long`"
-  ([^. this]
+  ([^javax.sound.midi.Sequencer this]
     (-> this (.getTickLength))))
 
 (defn start
@@ -312,7 +312,7 @@
    controllers, pitch bend, and program change events.
 
   throws: java.lang.IllegalStateException - if the Sequencer is closed."
-  ([^. this]
+  ([^javax.sound.midi.Sequencer this]
     (-> this (.start))))
 
 (defn get-tempo-in-mpq
@@ -321,7 +321,7 @@
    value and the tempo factor.
 
   returns: the current tempo in microseconds per quarter note - `float`"
-  ([^. this]
+  ([^javax.sound.midi.Sequencer this]
     (-> this (.getTempoInMPQ))))
 
 (defn set-sequence
@@ -333,7 +333,7 @@
   sequence - the sequence to be loaded. - `javax.sound.midi.Sequence`
 
   throws: javax.sound.midi.InvalidMidiDataException - if the sequence contains invalid MIDI data, or is not supported."
-  ([^. this ^javax.sound.midi.Sequence sequence]
+  ([^javax.sound.midi.Sequencer this ^javax.sound.midi.Sequence sequence]
     (-> this (.setSequence sequence))))
 
 (defn remove-meta-event-listener
@@ -341,7 +341,7 @@
    list of registered listeners, if in fact the listener is registered.
 
   listener - the meta-event listener to remove - `javax.sound.midi.MetaEventListener`"
-  ([^. this ^javax.sound.midi.MetaEventListener listener]
+  ([^javax.sound.midi.Sequencer this ^javax.sound.midi.MetaEventListener listener]
     (-> this (.removeMetaEventListener listener))))
 
 (defn set-loop-end-point
@@ -362,7 +362,7 @@
   tick - the loop's ending position, in MIDI ticks (zero-based), or -1 to indicate the final tick - `long`
 
   throws: java.lang.IllegalArgumentException - if the requested loop point cannot be set, usually because it falls outside the sequence's duration or because the ending point is before the starting point"
-  ([^. this ^Long tick]
+  ([^javax.sound.midi.Sequencer this ^Long tick]
     (-> this (.setLoopEndPoint tick))))
 
 (defn set-tempo-in-bpm
@@ -370,7 +370,7 @@
    is the product of the specified value and the tempo factor.
 
   bpm - desired new tempo in beats per minute - `float`"
-  ([^. this ^Float bpm]
+  ([^javax.sound.midi.Sequencer this ^Float bpm]
     (-> this (.setTempoInBPM bpm))))
 
 (defn set-track-solo
@@ -387,7 +387,7 @@
 
   track - the track number. Tracks in the current sequence are numbered from 0 to the number of tracks in the sequence minus 1. - `int`
   solo - the new solo state for the track. true implies the track should be solo'd, false implies the track should not be solo'd. - `boolean`"
-  ([^. this ^Integer track ^Boolean solo]
+  ([^javax.sound.midi.Sequencer this ^Integer track ^Boolean solo]
     (-> this (.setTrackSolo track solo))))
 
 (defn running?
@@ -397,7 +397,7 @@
    sequence completes or stop() is called.
 
   returns: true if the Sequencer is running, otherwise false - `boolean`"
-  ([^. this]
+  ([^javax.sound.midi.Sequencer this]
     (-> this (.isRunning))))
 
 (defn set-loop-count
@@ -426,21 +426,21 @@
   count - the number of times playback should loop back from the loop's end position to the loop's start position, or LOOP_CONTINUOUSLY to indicate that looping should continue until interrupted - `int`
 
   throws: java.lang.IllegalArgumentException - if count is negative and not equal to LOOP_CONTINUOUSLY"
-  ([^. this ^Integer count]
+  ([^javax.sound.midi.Sequencer this ^Integer count]
     (-> this (.setLoopCount count))))
 
 (defn set-tick-position
   "Sets the current sequencer position in MIDI ticks
 
   tick - the desired tick position - `long`"
-  ([^. this ^Long tick]
+  ([^javax.sound.midi.Sequencer this ^Long tick]
     (-> this (.setTickPosition tick))))
 
 (defn get-slave-sync-mode
   "Obtains the current slave synchronization mode for this sequencer.
 
   returns: the current slave synchronization mode - `javax.sound.midi.Sequencer.SyncMode`"
-  ([^. this]
+  ([^javax.sound.midi.Sequencer this]
     (-> this (.getSlaveSyncMode))))
 
 (defn set-tempo-factor
@@ -456,7 +456,7 @@
    setTempoFactor always sets the tempo factor to 1.0.
 
   factor - the requested tempo scalar - `float`"
-  ([^. this ^Float factor]
+  ([^javax.sound.midi.Sequencer this ^Float factor]
     (-> this (.setTempoFactor factor))))
 
 (defn add-meta-event-listener
@@ -470,7 +470,7 @@
 
   returns: true if the listener was successfully added,
    otherwise false - `boolean`"
-  ([^. this ^javax.sound.midi.MetaEventListener listener]
+  ([^javax.sound.midi.Sequencer this ^javax.sound.midi.MetaEventListener listener]
     (-> this (.addMetaEventListener listener))))
 
 (defn remove-controller-event-listener
@@ -490,7 +490,7 @@
 
   returns: the numbers of all the MIDI controllers whose changes will
    now be reported to the specified listener - `int[]`"
-  ([^. this ^javax.sound.midi.ControllerEventListener listener controllers]
+  ([^javax.sound.midi.Sequencer this ^javax.sound.midi.ControllerEventListener listener controllers]
     (-> this (.removeControllerEventListener listener controllers))))
 
 (defn set-slave-sync-mode
@@ -501,7 +501,7 @@
    getSlaveSyncModes().
 
   sync - the desired slave synchronization mode - `javax.sound.midi.Sequencer.SyncMode`"
-  ([^. this ^javax.sound.midi.Sequencer.SyncMode sync]
+  ([^javax.sound.midi.Sequencer this ^javax.sound.midi.Sequencer.SyncMode sync]
     (-> this (.setSlaveSyncMode sync))))
 
 (defn get-tempo-factor
@@ -509,7 +509,7 @@
    1.0.
 
   returns: tempo factor. - `float`"
-  ([^. this]
+  ([^javax.sound.midi.Sequencer this]
     (-> this (.getTempoFactor))))
 
 (defn get-loop-start-point
@@ -518,6 +518,6 @@
 
   returns: the start position of the loop,
                  in MIDI ticks (zero-based) - `long`"
-  ([^. this]
+  ([^javax.sound.midi.Sequencer this]
     (-> this (.getLoopStartPoint))))
 

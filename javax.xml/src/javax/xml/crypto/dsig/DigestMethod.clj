@@ -29,6 +29,6 @@
 
   returns: the algorithm-specific parameters (may be null if
       not specified) - `java.security.spec.AlgorithmParameterSpec`"
-  ([^. this]
+  ([^javax.xml.crypto.dsig.DigestMethod this]
     (-> this (.getParameterSpec))))
 

@@ -7,13 +7,13 @@
   "Returns the name of the event kind.
 
   returns: the name of the event kind - `java.lang.String`"
-  ([^. this]
+  ([^java.nio.file.WatchEvent$Kind this]
     (-> this (.name))))
 
 (defn type
   "Returns the type of the context value.
 
   returns: the type of the context value - `java.lang.Class<WatchEvent.Kind.T>`"
-  ([^. this]
+  ([^java.nio.file.WatchEvent$Kind this]
     (-> this (.type))))
 

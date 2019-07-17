@@ -17,7 +17,7 @@
   returns: the numeric ID of this savepoint - `int`
 
   throws: java.sql.SQLException - if this is a named savepoint"
-  ([^. this]
+  ([^java.sql.Savepoint this]
     (-> this (.getSavepointId))))
 
 (defn get-savepoint-name
@@ -27,6 +27,6 @@
   returns: the name of this savepoint - `java.lang.String`
 
   throws: java.sql.SQLException - if this is an un-named savepoint"
-  ([^. this]
+  ([^java.sql.Savepoint this]
     (-> this (.getSavepointName))))
 

@@ -13,7 +13,7 @@
 
   returns: a collection view (Collection<CompositeData>)
    of the rows contained in this TabularData instance. - `java.util.Collection<?>`"
-  ([^. this]
+  ([^javax.management.openmbean.TabularData this]
     (-> this (.values))))
 
 (defn put-all
@@ -26,7 +26,7 @@
   values - the array of composite data values to be added as new rows to this TabularData instance; if values is null or empty, this method returns without doing anything. - `javax.management.openmbean.CompositeData[]`
 
   throws: java.lang.NullPointerException - if an element of values is null"
-  ([^. this ^javax.management.openmbean.CompositeData[] values]
+  ([^javax.management.openmbean.TabularData this ^javax.management.openmbean.CompositeData[] values]
     (-> this (.putAll values))))
 
 (defn get-tabular-type
@@ -34,7 +34,7 @@
    TabularData instance.
 
   returns: the tabular type. - `javax.management.openmbean.TabularType`"
-  ([^. this]
+  ([^javax.management.openmbean.TabularData this]
     (-> this (.getTabularType))))
 
 (defn put
@@ -51,7 +51,7 @@
   value - the composite data value to be added as a new row to this TabularData instance; must be of the same composite type as this instance's row type; must not be null. - `javax.management.openmbean.CompositeData`
 
   throws: java.lang.NullPointerException - if value is null"
-  ([^. this ^javax.management.openmbean.CompositeData value]
+  ([^javax.management.openmbean.TabularData this ^javax.management.openmbean.CompositeData value]
     (-> this (.put value))))
 
 (defn to-string
@@ -61,7 +61,7 @@
    and the tabular type of this instance.
 
   returns: a string representation of this TabularData instance - `java.lang.String`"
-  ([^. this]
+  ([^javax.management.openmbean.TabularData this]
     (-> this (.toString))))
 
 (defn contains-value
@@ -72,7 +72,7 @@
   value - the row value whose presence in this TabularData instance is to be tested. - `javax.management.openmbean.CompositeData`
 
   returns: true if this TabularData instance contains the specified row value. - `boolean`"
-  ([^. this ^javax.management.openmbean.CompositeData value]
+  ([^javax.management.openmbean.TabularData this ^javax.management.openmbean.CompositeData value]
     (-> this (.containsValue value))))
 
 (defn remove
@@ -85,7 +85,7 @@
            if there was no mapping for key. - `javax.management.openmbean.CompositeData`
 
   throws: java.lang.NullPointerException - if the key is null"
-  ([^. this ^java.lang.Object[] key]
+  ([^javax.management.openmbean.TabularData this ^java.lang.Object[] key]
     (-> this (.remove key))))
 
 (defn key-set
@@ -98,7 +98,7 @@
 
   returns: a set view (Set<List<?>>) of the index values
    used in this TabularData instance. - `java.util.Set<?>`"
-  ([^. this]
+  ([^javax.management.openmbean.TabularData this]
     (-> this (.keySet))))
 
 (defn hash-code
@@ -114,7 +114,7 @@
    Object.hashCode().
 
   returns: the hash code value for this TabularDataSupport instance - `int`"
-  ([^. this]
+  ([^javax.management.openmbean.TabularData this]
     (-> this (.hashCode))))
 
 (defn empty?
@@ -123,7 +123,7 @@
    TabularData instance is zero.
 
   returns: true if this TabularData is empty. - `boolean`"
-  ([^. this]
+  ([^javax.management.openmbean.TabularData this]
     (-> this (.isEmpty))))
 
 (defn size
@@ -132,12 +132,12 @@
    instance.
 
   returns: the number of values contained. - `int`"
-  ([^. this]
+  ([^javax.management.openmbean.TabularData this]
     (-> this (.size))))
 
 (defn clear
   "Removes all CompositeData values (ie rows) from this TabularData instance."
-  ([^. this]
+  ([^javax.management.openmbean.TabularData this]
     (-> this (.clear))))
 
 (defn calculate-index
@@ -151,7 +151,7 @@
   returns: the index that the specified value would have in this TabularData instance. - `java.lang.Object[]`
 
   throws: java.lang.NullPointerException - if value is null"
-  ([^. this ^javax.management.openmbean.CompositeData value]
+  ([^javax.management.openmbean.TabularData this ^javax.management.openmbean.CompositeData value]
     (-> this (.calculateIndex value))))
 
 (defn contains-key
@@ -162,7 +162,7 @@
   key - the index value whose presence in this TabularData instance is to be tested. - `java.lang.Object[]`
 
   returns: true if this TabularData indexes a row value with the specified key. - `boolean`"
-  ([^. this ^java.lang.Object[] key]
+  ([^javax.management.openmbean.TabularData this ^java.lang.Object[] key]
     (-> this (.containsKey key))))
 
 (defn get
@@ -175,7 +175,7 @@
   returns: the value corresponding to key. - `javax.management.openmbean.CompositeData`
 
   throws: java.lang.NullPointerException - if the key is null"
-  ([^. this ^java.lang.Object[] key]
+  ([^javax.management.openmbean.TabularData this ^java.lang.Object[] key]
     (-> this (.get key))))
 
 (defn equals
@@ -194,6 +194,6 @@
   obj - the object to be compared for equality with this TabularData instance; - `java.lang.Object`
 
   returns: true if the specified object is equal to this TabularData instance. - `boolean`"
-  ([^. this ^java.lang.Object obj]
+  ([^javax.management.openmbean.TabularData this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

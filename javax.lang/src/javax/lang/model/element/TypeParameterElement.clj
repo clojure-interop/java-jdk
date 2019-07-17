@@ -11,7 +11,7 @@
 
   returns: the generic class, interface, method, or constructor that is
    parameterized by this type parameter - `javax.lang.model.element.Element`"
-  ([^. this]
+  ([^javax.lang.model.element.TypeParameterElement this]
     (-> this (.getGenericElement))))
 
 (defn get-bounds
@@ -23,13 +23,13 @@
 
   returns: the bounds of this type parameter, or an empty list if
    there are none - `java.util.List<? extends javax.lang.model.type.TypeMirror>`"
-  ([^. this]
+  ([^javax.lang.model.element.TypeParameterElement this]
     (-> this (.getBounds))))
 
 (defn get-enclosing-element
   "Returns the generic element of this type parameter.
 
   returns: the generic element of this type parameter - `javax.lang.model.element.Element`"
-  ([^. this]
+  ([^javax.lang.model.element.TypeParameterElement this]
     (-> this (.getEnclosingElement))))
 

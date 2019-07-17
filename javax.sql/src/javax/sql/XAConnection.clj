@@ -19,6 +19,6 @@
   returns: the XAResource object - `javax.transaction.xa.XAResource`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^. this]
+  ([^javax.sql.XAConnection this]
     (-> this (.getXAResource))))
 

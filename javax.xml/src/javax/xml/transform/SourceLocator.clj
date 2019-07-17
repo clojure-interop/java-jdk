@@ -13,7 +13,7 @@
 
   returns: A string containing the public identifier, or
            null if none is available. - `java.lang.String`"
-  ([^. this]
+  ([^javax.xml.transform.SourceLocator this]
     (-> this (.getPublicId))))
 
 (defn get-system-id
@@ -28,7 +28,7 @@
 
   returns: A string containing the system identifier, or null
            if none is available. - `java.lang.String`"
-  ([^. this]
+  ([^javax.xml.transform.SourceLocator this]
     (-> this (.getSystemId))))
 
 (defn get-line-number
@@ -44,7 +44,7 @@
    markup that triggered the event appears.
 
   returns: The line number, or -1 if none is available. - `int`"
-  ([^. this]
+  ([^javax.xml.transform.SourceLocator this]
     (-> this (.getLineNumber))))
 
 (defn get-column-number
@@ -60,6 +60,6 @@
    markup that triggered the event appears.
 
   returns: The column number, or -1 if none is available. - `int`"
-  ([^. this]
+  ([^javax.xml.transform.SourceLocator this]
     (-> this (.getColumnNumber))))
 

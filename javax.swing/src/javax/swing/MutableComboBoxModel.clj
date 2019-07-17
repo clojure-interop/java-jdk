@@ -9,7 +9,7 @@
    item has been added.
 
   item - the item to be added - `MutableComboBoxModel.E`"
-  ([^. this ^MutableComboBoxModel.E item]
+  ([^javax.swing.MutableComboBoxModel this ^MutableComboBoxModel.E item]
     (-> this (.addElement item))))
 
 (defn remove-element
@@ -18,7 +18,7 @@
    item has been removed.
 
   obj - the Object to be removed - `java.lang.Object`"
-  ([^. this ^java.lang.Object obj]
+  ([^javax.swing.MutableComboBoxModel this ^java.lang.Object obj]
     (-> this (.removeElement obj))))
 
 (defn insert-element-at
@@ -28,7 +28,7 @@
 
   item - the item to be added - `MutableComboBoxModel.E`
   index - location to add the object - `int`"
-  ([^. this ^MutableComboBoxModel.E item ^Integer index]
+  ([^javax.swing.MutableComboBoxModel this ^MutableComboBoxModel.E item ^Integer index]
     (-> this (.insertElementAt item index))))
 
 (defn remove-element-at
@@ -37,6 +37,6 @@
    item has been removed.
 
   index - location of the item to be removed - `int`"
-  ([^. this ^Integer index]
+  ([^javax.swing.MutableComboBoxModel this ^Integer index]
     (-> this (.removeElementAt index))))
 
