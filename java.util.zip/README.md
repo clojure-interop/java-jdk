@@ -17,7 +17,7 @@ All namespaces starting with **java.** are renamed to **jdk.** (java compiler li
 ## Clojars
 
 ```
-[clojure-interop/java.util.zip "0.1.0-SNAPSHOT"]
+[clojure-interop/java.util.zip "1.0.0"]
 ```
 
 ## Class Members Naming Conventions
